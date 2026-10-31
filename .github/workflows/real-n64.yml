@@ -1,0 +1,51 @@
+name: N64 reel - branche de developpement uniquement
+on:
+  push:
+    branches: [emulateur-reel]
+    paths: ['real-n64/**', '.github/workflows/real-n64.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  homebrew-web:
+    if: github.ref == 'refs/heads/emulateur-reel'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Installer la chaine officielle et compiler les sources
+        working-directory: real-n64
+        run: |
+          python3 homebrew/setup-toolchain.py --jobs 4
+          N64_INST="$PWD/cache/toolchain/opt/libdragon" bash homebrew/build.sh
+          python3 homebrew/fallback-open/build.py
+      - name: Telecharger et verifier le runtime officiel fige
+        working-directory: real-n64
+        run: |
+          python3 tools/fetch_runtime.py
+          python3 tools/fetch_runtime.py --verify-only
+      - name: Installer les outils de test
+        run: |
+          python3 -m pip install playwright==1.62.0 pillow==12.3.0
+          python3 -m playwright install --with-deps chromium
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr
+      - name: Tester le vrai moteur et le clavier, PCM et video
+        working-directory: real-n64
+        run: |
+          export CHROMIUM_PATH="$(find "$HOME/.cache/ms-playwright" -type f -name chrome -print -quit)"
+          test -n "$CHROMIUM_PATH"
+          timeout --kill-after=5s 180s python3 tests/browser_real.py
+      - name: Deposer les preuves et la ROM autonome MIT
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: emuperso-homebrew-reel-${{ github.sha }}
+          path: |
+            real-n64/homebrew/fallback-open/demo-emuperso-open.z64
+            real-n64/homebrew/fallback-open/build-info.json
+            real-n64/homebrew/fallback-open/LICENSE
+            real-n64/evidence/
+          retention-days: 14

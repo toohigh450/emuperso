@@ -1,0 +1,17 @@
+{
+  "scope": "EXPERIMENTAL_EMULATOR_8MIB_BOOT_NOT_PHYSICAL_N64_VALIDATION",
+  "base_sdk_commit": "e356bf3f56f7afbf7e5246329562f145965cfdfc",
+  "application_source_unchanged": true,
+  "boot_patch": "Cold-boot path assumes preinitialized emulator 8 MiB RAM and clears it while preserving reserved loader memory; no RDRAM calibration.",
+  "rom": {
+    "file": "demo-emuperso-emulator.z64",
+    "bytes": 147456,
+    "sha256": "4e1ebc226685e0e312fa6874f5afdf0d21a036d884675bd1e9829f8e1271631a",
+    "header_hex": "80371240"
+  },
+  "boot_header_sha256": "69d7dde394ab1d1ca8dc763acc99fae07aa08f57f24583ae57d448026d0cbebe",
+  "tested": {
+    "compiled": true,
+    "browser_boot": "NOT_TESTED_BY_BUILD_AGENT"
+  }
+}

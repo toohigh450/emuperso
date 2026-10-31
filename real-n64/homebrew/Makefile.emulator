@@ -1,0 +1,12 @@
+# Separate variant: unchanged Claude application, open emulator-only 8 MiB IPL3.
+BUILD_DIR=build-emulator
+include $(N64_INST)/include/n64.mk
+
+all: demo-emuperso-emulator.z64
+OBJS = $(BUILD_DIR)/main.o
+
+demo-emuperso-emulator.z64: N64_ROM_TITLE="DEMO EMULATEUR 8MB"
+demo-emuperso-emulator.z64: N64_ROM_HEADER=emulator-boot/bin/ipl3_dev.z64
+$(BUILD_DIR)/demo-emuperso-emulator.elf: $(OBJS)
+-include $(wildcard $(BUILD_DIR)/*.d)
+.PHONY: all

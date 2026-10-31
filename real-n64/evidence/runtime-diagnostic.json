@@ -1,0 +1,150 @@
+{
+  "schema": "emuperso/real-engine-diagnostic/v1",
+  "scope": "REAL_ENGINE_TRIAL_NOT_SYNTHETIC_LAB",
+  "warning": "Runtime observations do not validate Karl\u2019s device, commercial games, Conker or Sonic.",
+  "host": {
+    "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "cross_origin_isolated": true
+  },
+  "rom_build": {
+    "scope": "FREESTANDING_REAL_N64_CODE_EMULATOR_ONLY_8MIB_CPU_BOOT",
+    "rom": {
+      "file": "demo-emuperso-open.z64",
+      "bytes": 6144,
+      "sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+      "header_hex": "80371240"
+    },
+    "source": "New freestanding C port of MIT Claude demo behavior; no libdragon runtime linked. VI timings from libdragon Unlicense, elementary font by Codex.",
+    "compiled": true,
+    "tested_browser": "PENDING",
+    "libraries_linked": [],
+    "bootstrap": "Own MIT CPU loader, no physical RDRAM training, no RSP",
+    "notes": [
+      "Audio and SI input need independent real-engine verification.",
+      "Physical-console and hardware Gamepad not validated."
+    ]
+  },
+  "contexts": [
+    {
+      "state": "running",
+      "sample_rate": 44100
+    }
+  ],
+  "records": [
+    {
+      "seq": 1,
+      "utc": "2026-10-31T18:05:10.078Z",
+      "host_monotonic_ms": 460.8950000000186,
+      "type": "page.open",
+      "data": {
+        "engine_started": false
+      }
+    },
+    {
+      "seq": 2,
+      "utc": "2026-10-31T18:05:10.340Z",
+      "host_monotonic_ms": 722.9949999996461,
+      "type": "rom.fetched",
+      "data": {
+        "bytes": 6144,
+        "sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+      }
+    },
+    {
+      "seq": 3,
+      "utc": "2026-10-31T18:05:10.340Z",
+      "host_monotonic_ms": 723.0200000000186,
+      "type": "rom.validated",
+      "data": {
+        "name": "demo-emuperso-open.z64",
+        "sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "license": "MIT source; linked notices in homebrew/"
+      }
+    },
+    {
+      "seq": 4,
+      "utc": "2026-10-31T18:05:10.342Z",
+      "host_monotonic_ms": 724.5849999999627,
+      "type": "engine.loader.requested",
+      "data": {
+        "core": "mupen64plus_next",
+        "threads": false
+      }
+    },
+    {
+      "seq": 5,
+      "utc": "2026-10-31T18:05:10.437Z",
+      "host_monotonic_ms": 819.7549999998882,
+      "type": "runtime.update_check.local",
+      "data": {}
+    },
+    {
+      "seq": 6,
+      "utc": "2026-10-31T18:05:10.653Z",
+      "host_monotonic_ms": 1035.3299999996088,
+      "type": "video.context.created",
+      "data": {
+        "kind": "webgl2"
+      }
+    },
+    {
+      "seq": 7,
+      "utc": "2026-10-31T18:05:10.707Z",
+      "host_monotonic_ms": 1089.2749999999069,
+      "type": "engine.ready",
+      "data": {}
+    },
+    {
+      "seq": 8,
+      "utc": "2026-10-31T18:05:11.462Z",
+      "host_monotonic_ms": 1844.6749999998137,
+      "type": "wasm.instantiated",
+      "data": {
+        "method": "instantiateStreaming",
+        "export_count": 69
+      }
+    },
+    {
+      "seq": 9,
+      "utc": "2026-10-31T18:05:11.633Z",
+      "host_monotonic_ms": 2016,
+      "type": "video.context.created",
+      "data": {
+        "kind": "webgl2"
+      }
+    },
+    {
+      "seq": 10,
+      "utc": "2026-10-31T18:05:11.762Z",
+      "host_monotonic_ms": 2144.779999999795,
+      "type": "audio.context.created",
+      "data": {
+        "sample_rate": 44100,
+        "state": "running"
+      }
+    },
+    {
+      "seq": 11,
+      "utc": "2026-10-31T18:05:11.941Z",
+      "host_monotonic_ms": 2323.3549999999814,
+      "type": "engine.start.callback",
+      "data": {}
+    },
+    {
+      "seq": 12,
+      "utc": "2026-10-31T18:05:12.349Z",
+      "host_monotonic_ms": 2731.654999999795,
+      "type": "audio.context.state",
+      "data": {
+        "state": "running"
+      }
+    },
+    {
+      "seq": 13,
+      "utc": "2026-10-31T18:05:28.626Z",
+      "host_monotonic_ms": 19008.549999999814,
+      "type": "audio.resume.requested",
+      "data": {}
+    }
+  ]
+}
