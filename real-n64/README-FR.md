@@ -1,4 +1,4 @@
-# Opération N64 Web — prototype réel, v0.2.0 — import local
+# Opération N64 Web — livraison 0.2.1 — lancement Windows simplifié
 
 **Branche `emulateur-reel` seulement. Aucun remplacement du Lab, aucune fusion main.**
 
@@ -62,23 +62,46 @@ Ce n’est pas une ROM tierce précompilée téléchargée ni une simulation Jav
 
 ## Lancer sur Windows avec Chrome
 
-Python 3.10+ doit être installé (`py -3 --version`). Depuis ce dossier :
+**Extraire le ZIP complet, puis double-cliquer `DEMARRER-N64.bat` à sa racine.**
+Le fichier `lancer.bat` dans `real-n64` effectue le même lancement.
+Ne pas ouvrir le HTML du laboratoire synthétique à la racine.
 
-1. `py -3 tools/fetch_runtime.py` — première préparation : télécharge deux paquets
-   NPM officiels figés, vérifie SHA-256/SHA-512 et installe localement 39 assets.
-   Aucun npm, compte, script d’installation NPM ou abonnement requis. Internet
-   nécessaire à cette étape seulement ; le moteur binaire n’est pas inclus dans Git.
-2. `py -3 tools/fetch_runtime.py --verify-only`.
-3. `py -3 tools/serve.py`.
-4. Dans **Google Chrome**, ouvrir `http://127.0.0.1:8770/` puis Lancer la démo.
-   Ne pas ouvrir le HTML en file:// : le moteur nécessite un serveur local.
-5. Cliquer dans le jeu : **X = A**, **S = B**. A déclenche la tonalité.
+Le premier lancement prépare automatiquement un **Python portable officiel**
+dans `.python/`, puis les 39 fichiers vérifiés du moteur dans `vendor/`.
+Le serveur démarre sur `127.0.0.1:8770` et ouvre Chrome après vérification de
+son identité. Si Chrome est absent, le navigateur par défaut est utilisé.
+Windows 10/11 64 bits et Windows PowerShell 5.1 sont requis. Aucune installation
+Python système, commande manuelle, modification du PATH, npm, compte ni droit
+administrateur n’est nécessaire au lanceur.
+
+Internet est nécessaire à la première préparation seulement : Python 3.12.10
+embedded amd64 (~11 Mo), puis les deux paquets NPM officiels figés. L’archive
+Python et chacun de ses fichiers installés sont vérifiés en SHA-256 ; les paquets
+moteur sont vérifiés en SHA-256/SHA-512. Les versions et empreintes sont dans
+`docs/portable-python-lock.json` et `docs/runtime-lock.json`. Aucun script npm
+n’est exécuté, aucune ROM n’est téléchargée. Les composants tiers restent exclus
+de Git et du ZIP de sources ; leurs licences sont conservées à l’installation.
+
+1. Attendre l’ouverture de l’interface, puis **Choisir une ROM** ou **Lancer la démo homebrew**.
+2. Garder la fenêtre du lanceur ouverte pendant l’utilisation.
+3. Cliquer dans le jeu : **X = A**, **S = B**. A déclenche la tonalité.
    « Activer / reprendre l’audio » permet de reprendre un AudioContext suspendu.
-6. Exporter le diagnostic, puis arrêter le serveur avec Ctrl+C.
+4. Exporter le diagnostic, puis arrêter le serveur avec Ctrl+C.
 
-`lancer.bat` vérifie les dépendances déjà préparées puis démarre le serveur.
-Les instructions Windows et ce lanceur n’ont pas été exécutés sur le PC de Karl.
-Sous Linux : remplacer `py -3` par `python3`.
+Le batch marque une pause à la fin, y compris en cas d’erreur. Journaux persistants :
+`cache/launcher-bootstrap.log` et `cache/launcher.log`. Un port déjà occupé produit
+une erreur explicite ; aucun autre service n’est arrêté. Un Python portable altéré
+est refusé avant son exécution. Une préparation interrompue peut être relancée.
+
+Le workflow Windows exécute `tests/windows-launcher.ps1 -RequireFresh` dans un chemin
+avec espaces, apostrophe et accent. Ses résultats sont publiés dans l’artefact
+`n64-lancement-windows-<commit>`, fichier `windows-launcher/results.json`.
+Consulter son statut réel dans GitHub Actions ; le double-clic visuel dans Explorer,
+le Chrome du PC de Karl et ses ROM restent à valider par Karl.
+
+Sous Linux, avec Python 3.10+ installé : `python3 tools/launcher.py`.
+Pour un diagnostic automatisé : `--prepare-only`, `--no-browser`, `--offline`
+et `--port` sont disponibles (équivalents PowerShell `-PrepareOnly`, etc.).
 
 Après préparation, le lancement ne dépend d’aucun service externe. Le contrôle de
 mise à jour CDN du frontend est redirigé vers le fichier de version local figé.

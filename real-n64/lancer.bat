@@ -1,12 +1,20 @@
 @echo off
 setlocal
 cd /d "%~dp0"
-py -3 tools\fetch_runtime.py --verify-only
-if errorlevel 1 (
-  echo Preparation requise : py -3 tools\fetch_runtime.py
-  pause
-  exit /b 1
+title N64 Web - demarrage local
+echo N64 Web - preparation et lancement automatiques
+echo Aucune commande ni installation de Python n'est necessaire.
+echo Gardez cette fenetre ouverte pendant l'utilisation.
+echo.
+"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoLogo -NoProfile -ExecutionPolicy Bypass -File "%~dp0tools\launch-windows.ps1"
+set "N64_LAUNCH_RESULT=%errorlevel%"
+echo.
+if not "%N64_LAUNCH_RESULT%"=="0" (
+  echo Le lancement a rencontre un probleme. Le message reste affiche ici.
+  echo Les details sont dans real-n64\cache\launcher-bootstrap.log et launcher.log.
+  echo Une capture de cette fenetre permet de diagnostiquer le probleme.
+) else (
+  echo Le serveur local est arrete.
 )
-echo Ouvrir Google Chrome sur http://127.0.0.1:8770/
-echo Ctrl+C pour arreter le serveur local.
-py -3 tools\serve.py
+pause
+exit /b %N64_LAUNCH_RESULT%

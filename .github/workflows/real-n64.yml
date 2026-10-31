@@ -2,11 +2,35 @@ name: N64 reel - branche de developpement uniquement
 on:
   push:
     branches: [emulateur-reel]
-    paths: ['real-n64/**', '.github/workflows/real-n64.yml']
+    paths: ['real-n64/**', 'DEMARRER-N64.bat', '.github/workflows/real-n64.yml']
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
+  windows-one-click:
+    if: github.ref == 'refs/heads/emulateur-reel'
+    runs-on: windows-2022
+    timeout-minutes: 12
+    defaults:
+      run:
+        shell: powershell
+        working-directory: "N64 Lab d'Karl-épreuve/real-n64"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          path: "N64 Lab d'Karl-épreuve"
+      - name: Tester le lancement Windows avec Python portable vierge
+        run: ./tests/windows-launcher.ps1 -RequireFresh
+      - name: Deposer les journaux Windows sans ROM utilisateur
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: n64-lancement-windows-${{ github.sha }}
+          path: |
+            N64 Lab d'Karl-épreuve/real-n64/evidence/windows-launcher/
+            N64 Lab d'Karl-épreuve/real-n64/cache/launcher*.log
+          retention-days: 14
   homebrew-web:
     if: github.ref == 'refs/heads/emulateur-reel'
     runs-on: ubuntu-24.04
@@ -26,6 +50,7 @@ jobs:
         run: |
           python3 tools/fetch_runtime.py
           python3 tools/fetch_runtime.py --verify-only
+          python3 tests/launcher_native.py
       - name: Tester la validation des formats ROM
         working-directory: real-n64
         run: node tests/rom-file.test.mjs

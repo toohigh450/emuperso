@@ -1,0 +1,28 @@
+N64 WEB - LANCEMENT WINDOWS SIMPLIFIE
+
+1. Extraire TOUT le ZIP dans un dossier.
+2. Double-cliquer DEMARRER-N64.bat (a cote de ce document).
+3. Attendre la preparation puis l'ouverture automatique du navigateur.
+
+Choisir une ROM permet d'ouvrir un fichier .z64, .n64 ou .v64 extrait sur le PC.
+La ROM reste dans le navigateur. Le ZIP d'un jeu doit etre extrait auparavant.
+Lancer la demo homebrew reste disponible comme test de reference.
+
+Ne pas ouvrir N64-Web-Lab-Phase1A.html : c'est le laboratoire de simulation
+preserve, qui ne contient pas le nouvel import de ROM.
+
+Premier lancement : Internet requis pour preparer Python portable (~11 Mo)
+et le moteur officiel. Aucune commande, aucun Python systeme, aucun npm,
+aucun compte et aucun droit administrateur demandes par notre lanceur.
+Windows 10/11 64 bits et Google Chrome recommandes.
+
+Garder la fenetre du lanceur ouverte pendant le jeu.
+Ctrl+C permet d'arreter le serveur local. La fenetre affiche une pause a la fin.
+En cas d'erreur, le message reste visible : envoyer une capture de la fenetre.
+Journaux : real-n64/cache/launcher-bootstrap.log et launcher.log.
+Si Chrome est introuvable, le navigateur par defaut est utilise.
+Adresse locale : http://127.0.0.1:8770/
+
+Apres preparation, le lancement normal utilise les fichiers deja verifies
+localement. Aucun telechargement de ROM n'est effectue par ce lanceur.
+Aucune compatibilite avec un jeu commercial n'est garantie.

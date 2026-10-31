@@ -16,3 +16,15 @@ Les auteurs et licences des composants tiers restent distincts.
 
 Les URLs et SHA-256/SHA-512 de chaque paquet runtime sont dans runtime-lock.json.
 Aucun fichier de BIOS ou boot commercial Nintendo n’a été téléchargé ou inclus.
+
+## Python portable du lanceur Windows 0.2.1
+
+CPython 3.12.10 embedded Windows amd64 est téléchargé directement depuis
+`https://www.python.org/ftp/python/3.12.10/python-3.12.10-embed-amd64.zip`.
+Sa taille, son SHA-256 et les SHA-256 de ses 35 fichiers sont dans
+`portable-python-lock.json`. La licence officielle complète et les notices des
+composants associés sont conservées sans modification dans `.python/LICENSE.txt`.
+L’archive officielle est vérifiée avant extraction et tous les fichiers sont
+revérifiés avant chaque utilisation. Le lanceur ne modifie ni le code de Python,
+ni le PATH système, ni la politique d’exécution PowerShell globale.
+Cette dépendance reste exclue de Git et du ZIP de sources (téléchargement utilisateur).
