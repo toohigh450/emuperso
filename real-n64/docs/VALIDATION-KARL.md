@@ -19,3 +19,13 @@ Noter Windows/version, Chrome/version, modèle de manette et SHA de la ROM.
 Ne pas charger de ROM commerciale, de vraie sauvegarde, de Conker ou TN-1.
 Les variantes libdragon standard sont des recherches échouées, pas la ROM validée.
 Le test porte sur le port autonome ; aucune compatibilité console physique prouvée.
+
+## Import local 0.2.0 — à réaliser sur le PC, NON EXÉCUTÉ par Codex
+
+- Choisir un fichier extrait .z64/.v64/.n64 ; vérifier format, taille et deux hashes.
+- Lancer la ROM choisie et relever image, commandes, audio et erreurs éventuelles.
+- Recharger pour revenir à la démo de référence.
+- Dans Réseau : aucun POST/PUT et aucun corps de requête contenant la ROM attendu.
+- Le jeu fourni en ZIP pendant cette tâche n’a pas été testé ici (limite de transfert).
+- Ne transmettre aucune ROM privée dans GitHub ou les rapports publics ; un diagnostic
+  peut révéler son nom et ses empreintes, à partager uniquement volontairement.

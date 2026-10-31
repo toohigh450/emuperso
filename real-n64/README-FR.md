@@ -1,4 +1,4 @@
-# Opération N64 Web — premier prototype réel, v0.1.0
+# Opération N64 Web — prototype réel, v0.2.0 — import local
 
 **Branche `emulateur-reel` seulement. Aucun remplacement du Lab, aucune fusion main.**
 
@@ -6,6 +6,45 @@ La ROM autonome `homebrew/fallback-open/demo-emuperso-open.z64` démarre réelle
 avec EmulatorJS 4.2.3 / mupen64plus_next (build 2.0.2). Vidéo, animation, clavier A/B
 et PCM WebAudio ont été testés dans Chromium/Linux. Le test final du Chrome de Karl
 reste à faire. Aucun jeu commercial ni sauvegarde originale utilisés.
+
+## Importer une ROM depuis votre PC — nouveauté 0.2.0
+
+Après préparation et ouverture du serveur local dans Chrome :
+
+1. Cliquer **Choisir une ROM** et sélectionner un fichier extrait **.z64, .n64 ou .v64**.
+   Les ZIP doivent être décompressés sur le PC ; ils ne sont pas importés.
+2. Vérifier le nom, le format détecté, la taille et les deux SHA-256 affichés.
+3. Cliquer **Lancer la ROM choisie**. Après un lancement, recharger la page pour changer
+   de ROM ; un seul moteur est créé par page.
+4. **Lancer la démo homebrew** reste le test de référence, disponible avant lancement.
+
+Le fichier est lu par File.arrayBuffer dans le navigateur puis transmis au moteur par
+URL Blob. Aucun upload, aucun chemin serveur construit à partir du nom du fichier.
+Seules les ressources fixes du moteur sont demandées au serveur local. La politique CSP
+interdit les connexions externes. Le diagnostic contient des métadonnées (nom, taille,
+empreintes), **jamais les octets de la ROM** ; son export est volontaire et local.
+Le rechargement exige de sélectionner le fichier à nouveau. Le moteur peut conserver
+ses sauvegardes internes dans IndexedDB local ; son nom de jeu est isolé par le SHA du
+contenu normalisé et ne reprend pas le nom de fichier utilisateur.
+
+Validation : taille entre 4 Kio et 64 Mio inclus, multiple de quatre octets, signature
+80371240 (Z64), 37804012 (V64) ou 40123780 (N64). V64 est inversé par paires, N64 par
+mots de quatre ; le moteur reçoit du Z64. Le SHA du fichier source est conservé séparément.
+Un nom avec extension incohérente produit un avertissement : la signature est prioritaire.
+Ni CRC, ni code exécutable, ni compatibilité, ni droits d’un jeu ne sont démontrés par
+cette validation. Les jeux commerciaux ne sont pas déclarés compatibles.
+
+**Aucune ROM utilisateur dans Git, les artefacts CI ou les ZIP de livraison.** Les tests
+utilisent uniquement notre homebrew MIT convertie dans les trois ordres d’octets et des
+fichiers invalides synthétiques. L’archive privée fournie pendant cette tâche n’a pas pu
+être transférée (limite outil 32 Mio) : aucun test du jeu qu’elle contient n’est revendiqué.
+
+Rapport courant : **docs/IMPORT-ROM-0.2.0.html**. Tests :
+`node tests/rom-file.test.mjs` (12) ; `python tests/browser_import.py` (9 contrôles
+Chromium) ; régression `python tests/browser_real.py` (7 contrôles). Les conversions
+sont rehashées dans le FS du cœur réel ; les requêtes HTTP sont observées côté navigateur
+et serveur pour vérifier absence d’envoi. Les sélections concurrentes, noms hostiles,
+fichiers invalides, export sans contenu ROM et tailles de vues sont testés.
 
 ## Important : deux résultats distincts
 
@@ -79,7 +118,7 @@ leurs sources et empreintes permettent de les reconstruire.
   symlinks, hashes des ROM locales de recherche et préservation des originaux.
   Le test de toutes variantes nécessite leur compilation locale préalable.
 - Résultats : `evidence/browser-real-results.json`, captures et journal de console.
-- Rapport : `docs/RAPPORT.html`. Protocole terrain : `docs/VALIDATION-KARL.md`.
+- Rapport historique du premier démarrage : `docs/RAPPORT.html`. Rapport courant : `docs/IMPORT-ROM-0.2.0.html`. Protocole terrain : `docs/VALIDATION-KARL.md`.
 
 Les buffers PCM sont ceux réellement ordonnancés par le moteur via WebAudio,
 observés sans modifier leurs données. Ce test ne remplace pas l’écoute sur des

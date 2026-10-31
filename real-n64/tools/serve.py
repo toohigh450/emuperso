@@ -12,6 +12,7 @@ def allowed_path(url,root=ROOT):
  if parts and parts[0] in ('cache','.python'):return False
  return root.joinpath(*parts).resolve().is_relative_to(root.resolve())
 class Handler(SimpleHTTPRequestHandler):
+ extensions_map={**SimpleHTTPRequestHandler.extensions_map,'.mjs':'text/javascript'}
  def __init__(self,*args,**kwargs):super().__init__(*args,directory=str(ROOT),**kwargs)
  def end_headers(self):
   self.send_header('Cross-Origin-Opener-Policy','same-origin')
@@ -22,6 +23,9 @@ class Handler(SimpleHTTPRequestHandler):
  def do_GET(self):
   if not allowed_path(self.path):self.send_error(403);return
   super().do_GET()
+ def do_HEAD(self):
+  if not allowed_path(self.path):self.send_error(403);return
+  super().do_HEAD()
  def list_directory(self,path):self.send_error(403,'Directory listing disabled');return None
  def log_message(self,format,*args):pass
 if __name__=='__main__':

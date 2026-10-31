@@ -13,6 +13,14 @@ def ok(name,proof):
 def shot(canvas,name):
  data=canvas.screenshot(path=str(E/name));return Image.open(io.BytesIO(data)).convert('RGB')
 def color(image):return image.getpixel((image.width//2,image.height//2))
+def wait_ocr(canvas,capture_name,ocr_name,word):
+ # Rendering and OCR are asynchronous; observe a bounded series of real frames.
+ last=''
+ for attempt in range(6):
+  image=shot(canvas,capture_name);last=ocr(image,ocr_name)
+  if word in last.upper():return image,last
+  canvas.page.wait_for_timeout(250)
+ raise AssertionError('No matching rendered text after 6 observations: '+last)
 def ocr(image,name):
  path=E/name;image.resize((image.width*2,image.height*2)).save(path)
  p=subprocess.run(['tesseract',str(path),'stdout','--psm','6'],capture_output=True,text=True)
@@ -38,9 +46,9 @@ try:
    loaded=page.evaluate('''async () => {const e=EJS_emulator,b=e.gameManager.FS.readFile(e.fileName);const hash=await crypto.subtle.digest('SHA-256',b);return {path:e.fileName,bytes:b.length,sha256:[...new Uint8Array(hash)].map(x=>x.toString(16).padStart(2,'0')).join('')};}''')
    expected=json.loads((ROOT/'homebrew/fallback-open/build-info.json').read_text())['rom']['sha256'];assert loaded['sha256']==expected
    ok('Identité des octets remis au cœur',loaded)
-   canvas.click();page.keyboard.down('x');page.wait_for_timeout(900);imageA=shot(canvas,'keyboard-A.png');textA=ocr(imageA,'keyboard-A-ocr.png');page.keyboard.up('x')
+   canvas.click();page.keyboard.down('x');page.wait_for_timeout(900);imageA,textA=wait_ocr(canvas,'keyboard-A.png','keyboard-A-ocr.png','PRESSE');page.keyboard.up('x')
    assert 'PRESSE' in textA.upper(),textA
-   page.wait_for_timeout(300);page.keyboard.down('s');page.wait_for_timeout(900);imageB=shot(canvas,'keyboard-B.png');textB=ocr(imageB,'keyboard-B-ocr.png');page.keyboard.up('s')
+   page.wait_for_timeout(300);page.keyboard.down('s');page.wait_for_timeout(900);imageB,textB=wait_ocr(canvas,'keyboard-B.png','keyboard-B-ocr.png','PRESSE');page.keyboard.up('s')
    assert 'PRESSE' in textB.upper(),textB
    ok('Clavier navigateur : X/A et S/B reçus par la ROM',{'ocr_A':textA,'ocr_B':textB,'captures':['keyboard-A.png','keyboard-B.png']})
    # Observe actual buffers scheduled by the core, preserving their samples and native start.
