@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contre-audit Méo — N64 Web Lab Phase 1A v1.0.1</title>
+<style>
+:root{--ink:#182d3e;--muted:#526a7b;--line:#cbd9e2;--accent:#17635b;--warn:#a37525}
+*{box-sizing:border-box}
+body{margin:0;background:#e9eff2;color:var(--ink);font:16px/1.7 system-ui,sans-serif}
+main{max-width:1160px;margin:auto;background:#fff;padding:48px 54px}
+header{border-top:7px solid var(--accent);padding-top:20px}
+h1{font-size:38px;line-height:1.2;letter-spacing:-.6px}
+h2{font-size:25px;margin-top:42px;border-bottom:2px solid var(--line);padding-bottom:9px}
+h3{font-size:19px}
+.eyebrow{font-size:12px;font-weight:750;color:var(--accent);letter-spacing:2px}
+.meta,small{color:var(--muted);font-size:13px}
+.box{border-left:5px solid var(--accent);background:#eef8f4;padding:18px 24px;margin:22px 0}
+.warn{border-color:var(--warn);background:#fff6e5}
+.bad{border-color:#8a2a2a;background:#fdf0f0}
+table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.6;margin:20px 0}
+td,th{border:1px solid var(--line);padding:10px;vertical-align:top;text-align:left}
+th{background:#edf4f7}
+code{font:12px ui-monospace,monospace;background:#edf4f6;padding:2px 4px;overflow-wrap:anywhere}
+.hash{font:10px ui-monospace,monospace;word-break:break-all}
+li{margin:7px 0}
+footer{border-top:1px solid var(--line);padding-top:16px;margin-top:40px;color:var(--muted);font-size:12px}
+@media(max-width:700px){main{padding:22px}h1{font-size:28px}table{font-size:12px}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<p class="eyebrow">KARL — DÉCIDEUR UNIQUE</p>
+<h1>Contre-audit Méo<br>N64 Web Lab — Phase 1A v1.0.1</h1>
+<p class="meta">Auditeur : Méo (Muse) • Livraison auditée : Codex • Date de l'audit : 28 octobre 2026<br>
+Fichiers reçus de Karl le 28 octobre 2026 à 16h06 (audit autorisé par Karl le même jour) : ZIP 1.0.1, rapport Codex séparé, fichier .sha256 séparé, audit GPT 1.0.1.<br>
+Méthode : vérification indépendante, sur copies. Les originaux n'ont jamais été modifiés. Ce document est autonome : aucun lien externe, aucun moteur, aucune ROM, aucun état original, aucun appel réseau.</p>
+</header>
+
+<div class="box">
+<strong>VERDICT — ACCEPTÉ comme banc synthétique dans son périmètre, avec réserves.</strong>
+<p>La révision 1.0.1 est un banc de contrats synthétique réellement implémenté et testé, pas un émulateur. Méo a reproduit indépendamment : le manifeste complet (55/55), les tests JavaScript (59/59), les tests Python (8/8), la vérification syntaxique des 8 modules (8/8) et la reconstruction déterministe du HTML (octet pour octet, deux copies indépendantes). Le correctif asynchrone 1.0.1 est réel, ciblé et vérifié au niveau du code et de sa primitive. Le périmètre du mandat est respecté : aucun moteur N64 réel compilé ou exécuté, aucune ROM, aucun fichier original utilisé, aucun autre projet modifié.</p>
+</div>
+
+<div class="box warn">
+<strong>REJETÉ comme preuve d'émulation, de compatibilité Conker PAL ou de correctif Sonic.</strong>
+<p>Rien dans cette livraison ne prouve que Conker PAL fonctionne, que la vitesse ou l'audio N64 sont compris, ou que le bogue Sonic est corrigé. Les sondes sont des données de modèle. Les 59 + 8 tests reproduits par Méo sont des tests de laboratoire synthétique. Les 21 contrôles Chromium et les 4 contrôles DOM à réponses inversées restent des résultats annoncés par Codex seulement : Méo n'a pas pu les exécuter (ni Chromium, ni Playwright dans sa VM), et GPT non plus (navigation bloquée dans son environnement). Toute phrase qui transformerait ces chiffres en « tests d'émulation » est fausse.</p>
+</div>
+
+<div class="box bad">
+<strong>STOP — Ce qui reste interdit sans un nouveau GO explicite de Karl.</strong>
+<p>Compilation ou exécution d'un moteur N64 réel ; utilisation d'une ROM ou d'un .sav / .srm / .state original ; modification de Conker Web, TN-1, Trio Debug Hub ou de tout autre projet ; publication, déploiement ou dépense ; distribution d'une pile moteur tant que les droits et les sources correspondantes ne sont pas établis ; toute annonce d'émulateur fonctionnel, de compatibilité Conker PAL ou de correction Sonic.</p>
+</div>
+
+<h2>1. Objet audité — identité vérifiée par Méo</h2>
+<table>
+<tr><th>Élément</th><th>Valeur vérifiée par Méo</th></tr>
+<tr><td>ZIP reçu</td><td><code>N64-Web-Lab-Phase1A-1.0.1_76_skyy.zip</code> — 9 426 093 octets, 56 entrées (55 fichiers listés au manifeste + le manifeste lui-même), CRC ZIP correct</td></tr>
+<tr><td>SHA-256 du ZIP</td><td class="hash">b18576c4ef4acedb37f9ad51dd799fb87afaf067d40a9a3573f242314084454a</td></tr>
+<tr><td>Empreinte attendue (.sha256 séparé)</td><td class="hash">b18576c4ef4acedb37f9ad51dd799fb87afaf067d40a9a3573f242314084454a — CONCORDANTE (re-vérifiée par Méo)</td></tr>
+<tr><td>Rapport Codex séparé</td><td><code>Rapport-Phase1A__1__77_gg9z.html</code> — 13 550 octets, SHA-256 <span class="hash">ba4420e78472b0212013c3fdbf4599672e10604636da0a7de45d911161c73444</span>, IDENTIQUE à <code>docs/Rapport-Phase1A.html</code> extrait du ZIP</td></tr>
+<tr><td>Audit GPT 1.0.1 reçu</td><td><code>Audit-GPT-N64-Web-Lab-Phase1A-1.0.1_74_lsek.html</code> — 19 769 octets, SHA-256 <span class="hash">3c7a4d3c905c83e5778350ac11ef524801937735c52bfa9b5c6e6bcb90b9ce34</span> — comparé au §6, jamais copié</td></tr>
+<tr><td>Environnement de Méo</td><td>Node v24.22.1, Python 3.12.3 (GPT : Node 22.16.0, Python 3.13.5 — les mêmes suites passent sur deux environnements différents)</td></tr>
+</table>
+
+<h2>2. Ce que Méo a REPRODUIT (preuves propres)</h2>
+<table>
+<tr><th>Contrôle</th><th>Résultat observé par Méo</th></tr>
+<tr><td>Manifeste <code>tools/verify.py</code></td><td><strong>55/55 fichiers vérifiés SHA-256</strong>, sans erreur. Le script rejette les chemins absolus, les <code>..</code>, les liens symboliques et les doublons (y compris en casse Windows).</td></tr>
+<tr><td>Chemins de l'archive</td><td>Aucune traversée <code>..</code>, aucun chemin absolu, aucune entrée de type lien symbolique (vérifié sur les 56 entrées).</td></tr>
+<tr><td>Fichiers interdits</td><td><strong>Aucun</strong> : zéro <code>.wasm</code>, <code>.n64</code>, <code>.z64</code>, <code>.v64</code>, <code>.rom</code>, <code>.sav</code>, <code>.srm</code>, <code>.state</code>, <code>.exe</code> dans le ZIP. Aucun fichier Conker, TN-1 ou Hub dans la livraison.</td></tr>
+<tr><td>Tests JavaScript <code>node --test tests/core.test.mjs</code></td><td><strong>59/59, 0 échec</strong>. Dont 6 nouveaux contrôles UI 1.0.1 (réponses inversées, erreur obsolète, invalidation, tickets indépendants). Les 200 commandes pseudo-aléatoires et les 100 restaurations à froid sont incluses dans ce total, pas des tests supplémentaires.</td></tr>
+<tr><td>Tests Python <code>python -m unittest discover -s tests -p test_tools.py -v</code></td><td><strong>8/8, OK</strong>.</td></tr>
+<tr><td>Syntaxe <code>node --check</code></td><td><strong>8/8 modules <code>src/*.mjs</code> sans erreur</strong> (common, controller, fixtures, journal, latest-result, simulator, storage, ui).</td></tr>
+<tr><td>Reconstruction déterministe <code>python tools/build.py</code></td><td>Exécutée dans <strong>deux copies indépendantes</strong> du dossier extrait : HTML généré <strong>3 731 389 octets, SHA-256 identique au HTML livré et à l'entrée du manifeste</strong> : <span class="hash">2bf2de158130797e293d66c8c4ff27cf64d581d92a0c2891f7ec6d992b2f6bee</span>. (La 1.0.0 : 3 730 810 octets, SHA <span class="hash">a1d5530defb843e990ef6d39eb88ea93279d1962f27253201c71ee8bb7babbcf</span> — le HTML a bien changé, comme attendu avec le correctif.)</td></tr>
+<tr><td>HTML assemblé hors ligne</td><td><strong>Zéro URL HTTP(S) externe</strong> détectée. CSP présente : <code>default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; img-src data:; base-uri 'none'; form-action 'none'</code> — le <code>'unsafe-inline'</code> est cohérent avec le format autonome, pas une preuve de compatibilité multi-navigateurs. Bannière permanente : « LABORATOIRE SYNTHÉTIQUE — AUCUN MOTEUR N64, AUCUNE ROM, AUCUN SON ÉMULÉ ». Image Goku/Vegeta intégrée en <code>data:image/png;base64</code>.</td></tr>
+<tr><td>Appels d'API interdits</td><td><strong>Aucune invocation</strong> dans <code>src/</code> : pas de <code>fetch</code>, XHR, Worker, WebSocket, stockage, IndexedDB, AudioContext ou WebAssembly instanciés. Seuls des tests de présence par <code>typeof</code> (AudioContext, WebGL2) existent dans l'export de diagnostic — présence déclarée, jamais exécution.</td></tr>
+<tr><td>Primitive de la barrière (test externe de Méo)</td><td>Test Node hors dépôt sur <code>src/latest-result.mjs</code> importé tel quel : <strong>6/6 assertions passent</strong> — un ticket reste valide jusqu'au ticket suivant ou à l'invalidation ; l'ancien devient faux immédiatement ; après invalidation, tout ticket antérieur est faux.</td></tr>
+</table>
+
+<h2>3. Le correctif 1.0.1 — vérifié dans le code, pas seulement annoncé</h2>
+<p><strong>Problème circonscrit (et honnêtement borné par Codex lui-même) :</strong> dans <code>src/ui.mjs</code>, chaque <code>render(v)</code> lance <code>instance.journal.export()</code> de façon asynchrone. Sans garde d'ordre, une réponse ancienne pouvait théoriquement écrire dans le DOM après une réponse plus récente. <strong>Aucune inversion spontanée en 1.0.0 n'est démontrée</strong> : les tests injectent artificiellement l'inversion. Le correctif ne prétend pas réparer un bogue observé, il ferme une course théorique.</p>
+<p><strong>Implémentation lue par Méo :</strong></p>
+<ul>
+<li><code>src/latest-result.mjs</code> (337 octets, nouveau en 1.0.1) : <code>createLatestResultGate()</code> ; <code>issue()</code> crée un <code>Symbol('render')</code> neuf, le mémorise et retourne un prédicat <code>current === ticket</code> ; <code>invalidate()</code> annule le ticket courant. Les Symboles évitent toute collision d'identifiant.</li>
+<li><code>src/ui.mjs</code> : <code>createLab()</code> appelle <code>journalRenderGate.invalidate()</code> ; <code>render(v)</code> capture <strong>simultanément</strong> l'instance (<code>const instance = laboratory</code>) et le ticket (<code>isCurrentRender = journalRenderGate.issue()</code>) <em>avant</em> l'export ; le callback de succès vérifie les <strong>deux conditions</strong> (<code>laboratory !== instance || !isCurrentRender()</code> → abandon) avant d'écrire dans le DOM ; le <code>catch</code> vérifie les mêmes deux conditions avant d'afficher une erreur.</li>
+<li><strong>Le journal, les événements, leurs chaînes SHA-256, le stockage et l'adaptateur synthétique ne sont pas modifiés par cette barrière</strong> — confirmé par la comparaison §5 : <code>journal.mjs</code> est octet pour octet identique à la 1.0.0.</li>
+</ul>
+<p><strong>Comportement résiduel explicitement accepté (à ne pas mal interpréter) :</strong> si l'export courant échoue, les dernières lignes du journal précédemment affichées restent à l'écran et un message d'erreur apparaît. Ce n'est pas une corruption du journal, mais les lignes visibles ne doivent pas être lues comme une actualisation réussie après l'erreur. La barrière n'interrompt pas physiquement l'export en cours : elle ignore sa réponse devenue périmée. De même, les champs synchrones de <code>render(v)</code> (état, identités, métriques) ne sont pas filtrés par la barrière — c'est la section journal asynchrone qui l'est, et c'est bien là que se situait la course.</p>
+
+<h2>4. Ce que Méo n'a PAS reproduit — annoncé par Codex seulement</h2>
+<table>
+<tr><th>Contrôle</th><th>Statut chez Méo</th></tr>
+<tr><td>21 contrôles Chromium (<code>tests/browser_check.py</code>)</td><td><strong>NON REPRODUITS.</strong> Aucun binaire Chromium/Firefox et pas de Playwright dans la VM de Méo. Script <strong>lu et jugé substantiel</strong> : contexte hors ligne, réponse locale interceptée en mémoire, refus d'API interdites par script d'initialisation (fetch, XHR, Worker, AudioContext, WebAssembly, Canvas, Gamepad, stockage…), parcours complet init → sélection → chargement → lancement, snapshot exporté avec deux SHA-256 recomputés en Python, copie altérée refusée, dérive et suspension audio, vérification de la chaîne du journal, largeurs 360/390/768/1440, captures, rechargement vers IDLE sans persistance. Traces <code>evidence/tests-navigateur.txt</code> inspectées, pas confirmées.</td></tr>
+<tr><td>4 contrôles DOM à réponses inversées (<code>tests/browser_journal_race.py</code>)</td><td><strong>NON REPRODUITS</strong> (même cause). Script <strong>lu et jugé substantiel</strong> : succès retardés délivrés en ordre inverse, erreurs obsolètes ignorées sans masquer le message courant, erreur courante toujours affichée, changement de laboratoire neutralisant les anciens callbacks. <strong>Point vérifié par Méo :</strong> l'instrumentation <code>__testJournalClass</code> n'existe que dans la copie HTML <strong>en mémoire</strong> servie par le test (remplacement de chaîne dans une variable, jamais écrit dans le fichier livré) ; le script n'écrit que son fichier de traces. Le HTML livré ne contient pas cette instrumentation.</td></tr>
+<tr><td>Windows / Edge / Firefox / <code>file://</code> sur le PC de Karl</td><td><strong>NON TESTÉS par quiconque.</strong> Le formulaire <code>docs/VALIDATION-PC-KARL.md</code> est entièrement à l'état NON EXÉCUTÉ, sans aucun résultat prérempli. Un succès Chromium/Linux ne vaudrait pas pour ces navigateurs.</td></tr>
+</table>
+
+<h2>5. Traçabilité vs 1.0.0 — la réserve de GPT, tranchée indépendamment par Méo</h2>
+<p>GPT avait réservé que sa comparaison avec la 1.0.0 reposait sur un relevé historique <em>fourni dans le ZIP 1.0.1 lui-même</em> (<code>evidence/reference-v1.0.0-avant.json</code>), pas sur l'archive 1.0.0 originale. Méo possède l'originale 1.0.0 (ZIP SHA-256 <span class="hash">4edef1f9db2bb0a3864fb4dc6951af6afa8b365a343f2114deb3c5b2ea29a8b2</span>, extraction intacte) et a comparé fichier par fichier. <strong>Résultat : le relevé interne est corroboré.</strong></p>
+<table>
+<tr><th>Composant substantiel</th><th>1.0.0 originale</th><th>1.0.1</th><th>Conclusion Méo</th></tr>
+<tr><td>common.mjs</td><td class="hash">9248afa0628a1591629019f2857de5e30dee9aa396934c4400e792bd9a87c20c</td><td class="hash">9248afa0628a1591629019f2857de5e30dee9aa396934c4400e792bd9a87c20c</td><td>IDENTIQUE</td></tr>
+<tr><td>controller.mjs</td><td class="hash">31483aa950fe2c967fdbf0790cc185ebd445fbaea2c610da278d537ff9346f8c</td><td class="hash">31483aa950fe2c967fdbf0790cc185ebd445fbaea2c610da278d537ff9346f8c</td><td>IDENTIQUE</td></tr>
+<tr><td>fixtures.mjs</td><td class="hash">e27e76279d667701da53b9fc4cc2abc5d8264dcb664079f5b008c95d5951aff2</td><td class="hash">e27e76279d667701da53b9fc4cc2abc5d8264dcb664079f5b008c95d5951aff2</td><td>IDENTIQUE</td></tr>
+<tr><td>journal.mjs</td><td class="hash">8ea5bbc71a666a3742a7f22a94dfc720cda70efbb13668716d63a45e41e72888</td><td class="hash">8ea5bbc71a666a3742a7f22a94dfc720cda70efbb13668716d63a45e41e72888</td><td>IDENTIQUE</td></tr>
+<tr><td>simulator.mjs</td><td class="hash">da014a9fd56654a185a17f288002e165fa120fbd0c89b5f302729091ad59c54c</td><td class="hash">da014a9fd56654a185a17f288002e165fa120fbd0c89b5f302729091ad59c54c</td><td>IDENTIQUE</td></tr>
+<tr><td>storage.mjs</td><td class="hash">5c7c5dec33e78e94d76a930e2ac75b61cffd6a7134bb0ad8b51ed40c4edb1b38</td><td class="hash">5c7c5dec33e78e94d76a930e2ac75b61cffd6a7134bb0ad8b51ed40c4edb1b38</td><td>IDENTIQUE</td></tr>
+<tr><td>interface.html</td><td class="hash">5b195a07d627bccf956199b1d4cd03585b1c9d7c5da17bfbfc48bd9d779f1952</td><td class="hash">5b195a07d627bccf956199b1d4cd03585b1c9d7c5da17bfbfc48bd9d779f1952</td><td>IDENTIQUE</td></tr>
+<tr><td>style.css</td><td class="hash">6394ad96c122bea54bf8b08b1843cd5e11e5b0ae935fed531fc6804886d324d6</td><td class="hash">6394ad96c122bea54bf8b08b1843cd5e11e5b0ae935fed531fc6804886d324d6</td><td>IDENTIQUE</td></tr>
+<tr><td>ui.mjs (hors des 8, modifié comme attendu)</td><td class="hash">eec4bf9c3e4f39cb20aa680ebcba448b432dd964df5e6d287307bae975737ad2</td><td class="hash">b6bf91bcd948dd06ec19cfcd44b706baa7f5d954abe035e656ff592fb3d8a75a</td><td>MODIFIÉ (intégration de la barrière)</td></tr>
+</table>
+<p>Au-delà des 8 composants : par rapport au relevé 1.0.0, 20 fichiers du manifeste sont inchangés (dont l'inventaire de candidats, les échantillons de licences, le verrou de sources, <code>browser_check.py</code>, <code>verify.py</code>), 15 sont modifiés (HTML livré, README, architecture, problèmes ouverts, rapport, <code>ui.mjs</code>, <code>core.test.mjs</code>, <code>build.py</code> — qui ajoute <code>latest-result.mjs</code> à l'ordre d'assemblage — <code>package.py</code>, traces), et 20 sont nouveaux (dont <code>src/latest-result.mjs</code>, <code>tests/browser_journal_race.py</code>, <code>docs/VALIDATION-PC-KARL.md</code>, la copie du rapport 1.0.0, les audits 1.0.0 reçus — dont le contre-audit Méo 1.0.0, SHA <span class="hash">98b70bbc83af5beaf046730e88baaccc442704a7a19dd529803a90596057f0c5</span>, identique au document livré par Méo — et l'archive de preuves 1.0.0). <strong>Le changement 1.0.1 est donc bien circonscrit : UI + tests + docs + assemblage, cœur synthétique intact.</strong></p>
+
+<h2>6. Comparaison avec l'audit GPT 1.0.1 (comparé, pas copié)</h2>
+<p>L'audit GPT 1.0.1 (verdict « ACCEPTABLE AVEC RÉSERVES ») affirme : ZIP SHA <span class="hash">b18576c4…</span>, manifeste 55/55, JS 59/59, Python 8/8, HTML reconstruit 3 731 389 octets SHA <span class="hash">2bf2de15…</span>, navigateur 21 + 4 non reproduits par GPT. <strong>Méo confirme indépendamment chacun de ces chiffres, sauf le navigateur qu'il n'a pas pu exécuter non plus</strong> — sur ce point, GPT et Méo sont dans la même situation, et tous deux le disent. Précision de comptage : le manifeste liste 55 fichiers ; le ZIP en contient 56 avec le manifeste lui-même. Divergence apparente, aucune : GPT parlait des fichiers du manifeste.</p>
+<p><strong>Apport propre de Méo par rapport à GPT :</strong> (1) la comparaison 1.0.0 indépendante du §5, qui lève la réserve de GPT sur le relevé interne ; (2) le test externe de la primitive à tickets (§2) ; (3) la vérification que l'instrumentation DOM du test de course n'existe que dans la copie en mémoire (§4) ; (4) la vérification que les audits 1.0.0 embarqués dans le ZIP correspondent bien aux documents réellement livrés.</p>
+
+<h2>7. Réserves et limites réelles (toujours ouvertes)</h2>
+<ul>
+<li><strong>Parcours navigateur non revalidé indépendamment</strong> (21 Chromium + 4 DOM) — la prochaine étape légitime est la validation terrain Windows sans ROM, pas un passage à un moteur.</li>
+<li><strong>Problèmes ouverts O1 à O12</strong> (<code>docs/PROBLEMES-OUVERTS.md</code>) : aucun moteur réel, fermeture licences/dépendances incomplète, hashes SDK/toolchain non vérifiés, terminaison hôte non conçue pour un moteur non coopératif, inventaire = 309 chemins candidats, pas des fichiers réellement liés, SHA ≠ signature. Le correctif UI n'en résout aucun.</li>
+<li><strong>Preuve limitée par construction</strong> : une concordance SHA-256 constate l'identité des octets vis-à-vis d'une empreinte fournie ; ce n'est ni une signature, ni une garantie d'auteur, ni une preuve de fonctionnement en conditions réelles.</li>
+<li><strong>Journal périmé après erreur</strong> (§3) : comportement conservateur documenté, à garder en tête dans toute lecture future d'écran.</li>
+<li><strong>Contenu embarqué non ré-audité ici</strong> : les copies d'audits 1.0.0 et de preuves 1.0.0 dans le ZIP sont des archives, vérifiées par leurs SHA, pas des résultats re-testés dans ce contre-audit.</li>
+</ul>
+
+<h2>8. Originaux vérifiés inchangés après cet audit</h2>
+<table>
+<tr><th>Original</th><th>SHA-256 constaté par Méo</th></tr>
+<tr><td>Phase 1A 1.0.0 (ZIP)</td><td class="hash">4edef1f9db2bb0a3864fb4dc6951af6afa8b365a343f2114deb3c5b2ea29a8b2 — INCHANGÉ</td></tr>
+<tr><td>TN-1 V7 (deux copies)</td><td class="hash">87770ce6e7c9ed8c70d5d464e0b30f5ed66907c9a7531f31d69d08272a9dd0f2 — INCHANGÉ</td></tr>
+<tr><td>Conker Web V9.0-GPT (diagnostic)</td><td class="hash">ef1d715b0868b609a86fc1d4c56ac24886cf2fe94d4b7c68036290a7cae6d02d — INCHANGÉ</td></tr>
+<tr><td>Phase 1A 1.0.1 (originaux reçus)</td><td>ZIP <span class="hash">b18576c4ef4acedb37f9ad51dd799fb87afaf067d40a9a3573f242314084454a</span> et rapport <span class="hash">ba4420e78472b0212013c3fdbf4599672e10604636da0a7de45d911161c73444</span> — INCHANGÉS après audit (travail sur copies uniquement)</td></tr>
+</table>
+
+<h2>9. Reproduction des vérifications</h2>
+<p>Dans le dossier extrait <code>N64-Web-Lab-Phase1A/</code>, lancer séparément :</p>
+<pre><code>python3 tools/verify.py
+node --test tests/core.test.mjs
+python3 -m unittest discover -s tests -p test_tools.py -v
+for f in src/*.mjs; do node --check "$f"; done
+# Reconstruction : uniquement dans une copie du dossier extrait
+python3 tools/build.py
+# Navigateur : seulement là où Playwright et Chromium peuvent réellement naviguer
+python3 tests/browser_check.py
+python3 tests/browser_journal_race.py</code></pre>
+<p><small>Références primaires internes à l'archive : <code>src/latest-result.mjs</code>, <code>src/ui.mjs</code>, <code>src/journal.mjs</code>, <code>tests/core.test.mjs</code>, <code>tests/browser_journal_race.py</code>, <code>evidence/reference-v1.0.0-avant.json</code>, <code>docs/PROBLEMES-OUVERTS.md</code>, <code>docs/VALIDATION-PC-KARL.md</code>, <code>MANIFEST-SHA256.txt</code>.</small></p>
+
+<footer>Contre-audit réalisé par Méo à partir des pièces remises par Karl le 28 octobre 2026 à 16h06. Ce document est une analyse indépendante limitée aux tests effectivement exécutés et aux éléments inspectables. Il ne valide aucune autorisation de dépasser la Phase 1A. Transmission prévue à GPT ; Karl reste seul décideur.<br><br>Conclusion : <strong>socle synthétique cohérent, correctif de rendu raisonnable et vérifié, traçabilité 1.0.0 confirmée indépendamment, vérification navigateur encore nécessaire.</strong></footer>
+</main>
+</body>
+</html>

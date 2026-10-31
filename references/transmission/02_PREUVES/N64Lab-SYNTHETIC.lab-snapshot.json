@@ -1,0 +1,24 @@
+{
+  "schema": "n64lab/synthetic-snapshot/v1",
+  "simulated": true,
+  "fixture_sha256": "0d9bfd51a308c97522cc7c75312640684e35ddf0544e19e0edc56e8c7f2acc5a",
+  "adapter_build": "synthetic-adapter/1.0.0",
+  "profile": "Karl-lab",
+  "region": "PAL",
+  "payload_bytes": 187,
+  "payload_sha256": "dab2427186d40adc150ee4838415e985fda22b3ab887fcd614c53414012e7797",
+  "engine_wasm_sha256": null,
+  "payload": {
+    "schema": "n64lab/synthetic-core/v1",
+    "synthetic": true,
+    "region": "PAL",
+    "emulated_ms": 4600,
+    "cpu_steps": 46000,
+    "rsp_tasks": 3,
+    "rdp_batches": 3,
+    "vi_count": 230,
+    "ai_count": 3,
+    "ai_status": 3221225472
+  },
+  "envelope_sha256": "ebaef8a0433018c73af5462a9d8a095e5b0d1c52495a3d62a3e4181fc465171d"
+}

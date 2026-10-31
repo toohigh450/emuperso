@@ -1,0 +1,41 @@
+{
+  "scope": "Laboratoire synthétique uniquement — aucun moteur N64",
+  "javascript": {
+    "passed": 53,
+    "failed": 0,
+    "included_scenarios": [
+      "200 commandes pseudo-aléatoires",
+      "100 restaurations à froid synthétiques"
+    ]
+  },
+  "python": {
+    "version": "3.12.14",
+    "passed": 8,
+    "failed": 0
+  },
+  "browser": {
+    "passed": 21,
+    "failed": 0,
+    "widths_px": [
+      360,
+      390,
+      768,
+      1440
+    ],
+    "environment": "Chromium, document local intercepté en mémoire, contexte hors ligne"
+  },
+  "not_tested": [
+    "Moteur N64 réel et ROM",
+    "Compatibilité ou correction Sonic",
+    "Windows, Edge, Firefox et ouverture directe file://"
+  ],
+  "node": "v24.19.0",
+  "artifact_sha256": {
+    "N64-Web-Lab-Phase1A.html": "a1d5530defb843e990ef6d39eb88ea93279d1962f27253201c71ee8bb7babbcf",
+    "src/controller.mjs": "31483aa950fe2c967fdbf0790cc185ebd445fbaea2c610da278d537ff9346f8c",
+    "src/simulator.mjs": "da014a9fd56654a185a17f288002e165fa120fbd0c89b5f302729091ad59c54c",
+    "src/journal.mjs": "8ea5bbc71a666a3742a7f22a94dfc720cda70efbb13668716d63a45e41e72888",
+    "src/storage.mjs": "5c7c5dec33e78e94d76a930e2ac75b61cffd6a7134bb0ad8b51ed40c4edb1b38",
+    "assets/goku-vegeta-transformations.png": "3e3c86992b59bd3b86fe2c189589633b4d16cda8b9da617ca42ca9cb4481fbec"
+  }
+}

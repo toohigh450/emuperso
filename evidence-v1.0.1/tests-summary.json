@@ -1,0 +1,46 @@
+{
+  "version": "1.0.1-phase1a",
+  "scope": "SIMULATION_ONLY_NOT_ROM_EXECUTION",
+  "javascript": {
+    "passed": 59,
+    "failed": 0,
+    "old_tests": 53,
+    "new_ui_tests": 6,
+    "included_in_total": [
+      "200 commandes pseudo-aléatoires",
+      "100 restaurations synthétiques à froid"
+    ]
+  },
+  "python": {
+    "passed": 8,
+    "failed": 0
+  },
+  "browser_delivered_html": {
+    "passed": 21,
+    "failed": 0,
+    "environment": "Chromium Linux, contexte hors ligne, document loopback intercepté en mémoire"
+  },
+  "browser_instrumented_html": {
+    "passed": 4,
+    "failed": 0,
+    "scope": "Accès à Journal exposé seulement dans la copie en mémoire de test ; promesses export retardées/inversées ; DOM réel"
+  },
+  "not_tested": [
+    "Windows / Edge / Firefox / file:// terrain",
+    "Moteur N64 réel",
+    "ROM et états originaux",
+    "Compatibilité Conker PAL et Sonic"
+  ],
+  "node_version": "v24.19.0",
+  "python_version": "3.12.14",
+  "artifact_sha256": {
+    "N64-Web-Lab-Phase1A.html": "2bf2de158130797e293d66c8c4ff27cf64d581d92a0c2891f7ec6d992b2f6bee",
+    "src/ui.mjs": "b6bf91bcd948dd06ec19cfcd44b706baa7f5d954abe035e656ff592fb3d8a75a",
+    "src/latest-result.mjs": "9ad671073c50bc1c7cb1b62dbdfcdfdc02dd44bb731153bed9c28d01e5f7d81f",
+    "src/controller.mjs": "31483aa950fe2c967fdbf0790cc185ebd445fbaea2c610da278d537ff9346f8c",
+    "src/journal.mjs": "8ea5bbc71a666a3742a7f22a94dfc720cda70efbb13668716d63a45e41e72888",
+    "tests/core.test.mjs": "f2c75c42c5d1e310054f1b6b4c4c096441791500a53523b46d06f26394de58da",
+    "tests/browser_check.py": "479605ba278a96d796944fb49b45d59b89a57b30bd29ee151e2d594cc2eb7a37",
+    "tests/browser_journal_race.py": "d59c656be49fed4dd292b33e70cbe4972f982ed6d6ea3d110b6ef2c8b5af0ac2"
+  }
+}

@@ -1,0 +1,31 @@
+✔ Q1 : 67 hashes, tête, payload 187 octets et enveloppe 548 recomputés indépendamment (3.637401ms)
+✔ Q1 : SHA brut distinct du SHA canonique, reformattage sans altérer la chaîne (3.421124ms)
+✔ Q1 : sérialisation ECMAScript, UTF-16 et nombres, sans approximation Python (0.381547ms)
+✔ Q1 négatif : liens déclarés cohérents ne suffisent pas après altération événement (1.829627ms)
+✔ Q1 négatif : tête, payload et enveloppe altérés sont détectés séparément (8.87716ms)
+✔ Q1 négatif : JSON invalide, UTF-8 invalide, taille excessive et non-fini refusés (3.94481ms)
+✔ Q2 : trois E_IDENTITY sur fixture, configuration journalisée avant refus, aucun lancement (18.253335ms)
+✔ Q2 : nouvelle initialisation trace la nouvelle configuration au lieu du choix précédent (6.557867ms)
+✔ Q2 : identité mensongère au start détruit la boucle et ne confirme aucun lancement (2.329013ms)
+✔ Q3 : frontières 0.949/0.950/0.951 et 1.049/1.050/1.051 (19.65217ms)
+✔ Q3 : fenêtre cumulative et réancrage à la reprise, pas vitesse depuis zéro absolu (4.83991ms)
+✔ Q3 : fenêtres invalides refusées avant mutation, instance et génération conservées (6.666612ms)
+✔ Q3 : options PCM mal typées ou champs inconnus refusés sans coercition (3.899097ms)
+✔ Q3 : adaptateur direct refuse aussi les options invalides sans mutation (2.085585ms)
+✔ Q3 : pénurie PCM historique ne re-pause pas une fenêtre normale ; nouvelle pénurie oui (3.896793ms)
+✔ Q3 : FULL reste compatible avec cadence normale et compteur historique conservé (2.221269ms)
+✔ Q4 : snapshot candidat restauré en mémoire, réancrage, aucun système réécrit (7.798029ms)
+✔ Q4 : corruption et fixture incompatible rehashée refusées avant mutation ou écriture (3.043063ms)
+✔ Q4 : échec après restauration avant reprise, aucune méthode resume appelée (3.05387ms)
+✔ Q4 : arrêt pendant restauration retardée interdit toute reprise tardive (94.769674ms)
+✔ Q5 : paramètres step et commande audio consignés, chaîne toujours valide (6.239787ms)
+✔ Q4 : reprise mal typée ou option inconnue refusée avant toute restauration (2.725795ms)
+✔ Q4 : ancien export terrain intègre refusé pour build différent, aucune migration implicite (1.58036ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 219.083981

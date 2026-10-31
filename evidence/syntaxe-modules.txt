@@ -1,0 +1,9 @@
+RÉUSSI — 8 modules src/*.mjs vérifiés par node --check.
+src/common.mjs
+src/controller.mjs
+src/fixtures.mjs
+src/journal.mjs
+src/latest-result.mjs
+src/simulator.mjs
+src/storage.mjs
+src/ui.mjs

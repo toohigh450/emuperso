@@ -1,0 +1,8 @@
+{
+  "result": "RÉUSSI",
+  "outer_zip_sha256_unchanged": "8817c561104fdd0c1486786f35c37e65c1266004f0f75b0175345f1271c7be99",
+  "copied_transmission_entries_byte_identical": 12,
+  "source_zip_sha256_unchanged": "b18576c4ef4acedb37f9ad51dd799fb87afaf067d40a9a3573f242314084454a",
+  "original_local_1_0_1_entries_byte_identical": 56,
+  "scope": "Pièces reçues et fichiers présents dans le ZIP 1.0.1 comparés ; aucune nouvelle empreinte Conker/TN-1/Hub revendiquée. Le reste du disque original n’est pas attesté."
+}

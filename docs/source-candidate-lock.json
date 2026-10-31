@@ -1,0 +1,56 @@
+{
+  "schema": "n64lab/source-candidate-lock/v1",
+  "status": "DOCUMENTARY_SELECTION_NOT_COMPILED_OR_LICENSE_CLEARED",
+  "selection": {
+    "ui": {
+      "repo": "EmulatorJS/EmulatorJS",
+      "commit": "478ef785f2766efedd4d5a71a102d47dcf0c9f54",
+      "reason": "Matches gitlink recorded in pinned frontend tree; moving tip 5a65bde5 excluded."
+    },
+    "frontend": {
+      "repo": "EmulatorJS/RetroArch",
+      "commit": "97f2cfa65d01d57406e4ce9459242c8ada7c7e3b"
+    },
+    "n64_core": {
+      "repo": "EmulatorJS/mupen64plus-libretro-nx",
+      "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68"
+    },
+    "recipe_reference": {
+      "repo": "EmulatorJS/build",
+      "commit": "677b1334ab1721a1e31b918f211b68f4e54f67a8"
+    },
+    "toolchain_reference": {
+      "repo": "emscripten-core/emsdk",
+      "commit": "3d6d8ee910466516a53e665b86458faa81dae9ba",
+      "version": "3.1.74",
+      "release_hash": "c2655005234810c7c42e02a18e4696554abe0352"
+    },
+    "gnulib": {
+      "gitlink": "e54b645fc6b8422562327443bda575c65d931fbd",
+      "url_declared_in_parent": "git://git.sv.gnu.org/gnulib.git",
+      "remote_commit_existence": "not_verified",
+      "baseline_need": "parallel RSP alternative, not selected in proposed HLE baseline; exclusion not link-proven"
+    }
+  },
+  "proposed_overlay_not_executed": {
+    "moving_git_pull": "forbidden; replace by exact locked checkouts in a future authorized recipe",
+    "npm_optional_cores_latest": "excluded; no mutable prebuilt core download",
+    "ui_gitlink_override": "none; choose the gitlink revision instead of current UI tip",
+    "candidate_options": {
+      "RSP": "HLE baseline proposed",
+      "RDP": "GLideN64 GLES3/WebGL2 proposed",
+      "native_dynarec": "disabled in inspected emscripten target",
+      "threads": "separate qualification; not presumed",
+      "network_and_updates": "must be removed/disabled and verified in future build",
+      "migrations": "none"
+    }
+  },
+  "unresolved": [
+    "No compiler or linker run (forbidden in Phase 1A).",
+    "Full license and files actually linked remain unverified.",
+    "SDK archive checksums and dependency closure remain unverified.",
+    "Runtime compatibility of selected revisions not established.",
+    "Conditional Makefile branches not evaluated."
+  ],
+  "engine_compilation_authorized": false
+}

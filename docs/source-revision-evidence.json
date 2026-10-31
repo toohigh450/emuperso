@@ -1,0 +1,900 @@
+{
+  "observed_utc": "2026-10-28T01:33:52.918637+00:00",
+  "scope": "Public documentary files only; no build, core binary or ROM",
+  "files": [
+    {
+      "repo": "EmulatorJS/RetroArch",
+      "commit": "97f2cfa65d01d57406e4ce9459242c8ada7c7e3b",
+      "path": "Makefile.emulatorjs",
+      "url": "https://raw.githubusercontent.com/EmulatorJS/RetroArch/97f2cfa65d01d57406e4ce9459242c8ada7c7e3b/Makefile.emulatorjs",
+      "sha256": "33eea13e912a8e125014c30864add410cfe84273fa09a55a856c7511940a78f9",
+      "bytes": 10858,
+      "status": "document_read_not_executed",
+      "dependency_evidence": [
+        {
+          "line": 3,
+          "text": "ifeq ($(LIBRETRO),)"
+        },
+        {
+          "line": 5,
+          "text": "LIBRETRO = dummy"
+        },
+        {
+          "line": 7,
+          "text": "TARGET := $(LIBRETRO)_libretro.js"
+        },
+        {
+          "line": 23,
+          "text": "HAVE_LIBRETRODB = 1"
+        },
+        {
+          "line": 63,
+          "text": "HAVE_AUDIOWORKLET ?= 0"
+        },
+        {
+          "line": 65,
+          "text": "# doesn't work on PROXY_TO_PTHREAD"
+        },
+        {
+          "line": 66,
+          "text": "HAVE_RWEBAUDIO ?= 1"
+        },
+        {
+          "line": 68,
+          "text": "# requires ASYNC or PROXY_TO_PTHREAD"
+        },
+        {
+          "line": 80,
+          "text": "PROXY_TO_PTHREAD ?= 0"
+        },
+        {
+          "line": 85,
+          "text": "# enables OPFS (origin private file system) and FETCHFS, requires PROXY_TO_PTHREAD"
+        },
+        {
+          "line": 141,
+          "text": "   ifeq ($(PROXY_TO_PTHREAD), 0)"
+        },
+        {
+          "line": 142,
+          "text": "      $(error ERROR: HAVE_EXTRA_WASMFS requires PROXY_TO_PTHREAD)"
+        },
+        {
+          "line": 150,
+          "text": "# note: real PROXY_TO_PTHREAD is not used here; we do the pthread management ourselves"
+        },
+        {
+          "line": 151,
+          "text": "ifeq ($(PROXY_TO_PTHREAD), 1)"
+        },
+        {
+          "line": 153,
+          "text": "   DEFINES += -DPROXY_TO_PTHREAD -DEMSCRIPTEN_STACK_SIZE=$(STACK_SIZE)"
+        },
+        {
+          "line": 202,
+          "text": "ifeq ($(HAVE_RWEBAUDIO), 1)"
+        },
+        {
+          "line": 204,
+          "text": "   DEFINES += -DHAVE_RWEBAUDIO"
+        },
+        {
+          "line": 205,
+          "text": "   ifeq ($(PROXY_TO_PTHREAD), 1)"
+        },
+        {
+          "line": 206,
+          "text": "      $(error ERROR: RWEBAUDIO is incompatible with PROXY_TO_PTHREAD)"
+        },
+        {
+          "line": 210,
+          "text": "ifeq ($(HAVE_AUDIOWORKLET), 1)"
+        },
+        {
+          "line": 212,
+          "text": "   DEFINES += -DHAVE_AUDIOWORKLET"
+        },
+        {
+          "line": 224,
+          "text": "ifeq ($(PROXY_TO_PTHREAD), 1)"
+        },
+        {
+          "line": 248,
+          "text": "# when building with either PROXY_TO_PTHREAD or ASYNC (full asyncify), none of the above are required."
+        }
+      ]
+    },
+    {
+      "repo": "EmulatorJS/RetroArch",
+      "commit": "97f2cfa65d01d57406e4ce9459242c8ada7c7e3b",
+      "path": "COPYING",
+      "url": "https://raw.githubusercontent.com/EmulatorJS/RetroArch/97f2cfa65d01d57406e4ce9459242c8ada7c7e3b/COPYING",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147,
+      "status": "document_read_not_executed"
+    },
+    {
+      "repo": "EmulatorJS/mupen64plus-libretro-nx",
+      "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+      "path": "Makefile",
+      "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/Makefile",
+      "sha256": "46f06aa71c7cf8feb356a36e4ce9a6b4807eff7e1ef17677a3f10eacfa34ba14",
+      "bytes": 21563,
+      "status": "document_read_not_executed"
+    },
+    {
+      "repo": "EmulatorJS/mupen64plus-libretro-nx",
+      "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+      "path": "Makefile.common",
+      "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/Makefile.common",
+      "sha256": "e79f798a12bb0f8b4384a487388f523c56ba9e7d477700e4a6d8e5885095ffe7",
+      "bytes": 25053,
+      "status": "document_read_not_executed",
+      "dependency_evidence": [
+        {
+          "line": 1,
+          "text": "RSPDIR             = $(ROOT_DIR)/mupen64plus-rsp-hle"
+        },
+        {
+          "line": 4,
+          "text": "LIBRETRO_COMM_DIR  = $(ROOT_DIR)/libretro-common"
+        },
+        {
+          "line": 5,
+          "text": "RSPDIR_PARALLEL    = $(ROOT_DIR)/mupen64plus-rsp-paraLLEl"
+        },
+        {
+          "line": 6,
+          "text": "AUDIO_LIBRETRO_DIR = $(ROOT_DIR)/custom/mupen64plus-core/plugin/audio_libretro"
+        },
+        {
+          "line": 7,
+          "text": "VIDEODIR_GLIDEN64  = $(ROOT_DIR)/GLideN64"
+        },
+        {
+          "line": 23,
+          "text": "\t-I$(VIDEODIR_GLIDEN64)/src \\"
+        },
+        {
+          "line": 24,
+          "text": "\t-I$(VIDEODIR_GLIDEN64)/src/osal \\"
+        },
+        {
+          "line": 27,
+          "text": "\t-I$(AUDIO_LIBRETRO_DIR) \\"
+        },
+        {
+          "line": 28,
+          "text": "\t-I$(LIBRETRO_COMM_DIR)/include \\"
+        },
+        {
+          "line": 29,
+          "text": "\t-I$(LIBRETRO_DIR) \\"
+        },
+        {
+          "line": 30,
+          "text": "\t-I$(VIDEODIR_GLIDEN64)/src/inc"
+        },
+        {
+          "line": 37,
+          "text": "SOURCES_C = \\"
+        },
+        {
+          "line": 102,
+          "text": "MINIZIP_SOURCES_C = \\"
+        },
+        {
+          "line": 107,
+          "text": "LIBPNG_SOURCES_C = \\"
+        },
+        {
+          "line": 124,
+          "text": "ZLIB_SOURCES_C = \\"
+        },
+        {
+          "line": 145,
+          "text": "SOURCES_C += \\"
+        },
+        {
+          "line": 155,
+          "text": "\tSOURCES_C += $(LIBPNG_SOURCES_C)"
+        },
+        {
+          "line": 164,
+          "text": "\tSOURCES_C += $(MINIZIP_SOURCES_C)"
+        },
+        {
+          "line": 181,
+          "text": "\tSOURCES_C += $(ZLIB_SOURCES_C)"
+        },
+        {
+          "line": 185,
+          "text": "\tSOURCES_C += $(VIDEODIR_GLIDEN64)/src/osal/osal_files_win32.c"
+        },
+        {
+          "line": 187,
+          "text": "\tSOURCES_C += $(VIDEODIR_GLIDEN64)/src/osal/osal_files_unix.c"
+        },
+        {
+          "line": 195,
+          "text": "\tSOURCES_C += \\"
+        },
+        {
+          "line": 204,
+          "text": "\tSOURCES_C += \\"
+        },
+        {
+          "line": 213,
+          "text": "\tSOURCES_C += \\"
+        },
+        {
+          "line": 222,
+          "text": "\tSOURCES_C += \\"
+        },
+        {
+          "line": 234,
+          "text": "SOURCES_C += $(LIBRETRO_DIR)/libretro.c \\"
+        },
+        {
+          "line": 235,
+          "text": "\t$(LIBRETRO_COMM_DIR)/memmap/memalign.c \\"
+        },
+        {
+          "line": 237,
+          "text": "\t$(LIBRETRO_COMM_DIR)/audio/resampler/drivers/sinc_resampler.c \\"
+        },
+        {
+          "line": 238,
+          "text": "\t$(LIBRETRO_COMM_DIR)/audio/resampler/drivers/nearest_resampler.c \\"
+        },
+        {
+          "line": 239,
+          "text": "\t$(LIBRETRO_COMM_DIR)/audio/resampler/audio_resampler.c \\"
+        },
+        {
+          "line": 240,
+          "text": "\t$(AUDIO_LIBRETRO_DIR)/audio_backend_libretro.c \\"
+        },
+        {
+          "line": 241,
+          "text": "\t$(LIBRETRO_COMM_DIR)/file/config_file.c \\"
+        },
+        {
+          "line": 242,
+          "text": "\t$(LIBRETRO_COMM_DIR)/file/config_file_userdata.c \\"
+        },
+        {
+          "line": 243,
+          "text": "\t$(LIBRETRO_COMM_DIR)/file/file_path.c \\"
+        },
+        {
+          "line": 244,
+          "text": "\t$(LIBRETRO_COMM_DIR)/file/file_path_io.c \\"
+        },
+        {
+          "line": 245,
+          "text": "\t$(LIBRETRO_COMM_DIR)/time/rtime.c \\"
+        },
+        {
+          "line": 246,
+          "text": "\t$(LIBRETRO_COMM_DIR)/compat/compat_strl.c \\"
+        },
+        {
+          "line": 247,
+          "text": "\t$(LIBRETRO_COMM_DIR)/compat/compat_posix_string.c \\"
+        },
+        {
+          "line": 248,
+          "text": "\t$(LIBRETRO_COMM_DIR)/compat/compat_strcasestr.c \\"
+        },
+        {
+          "line": 249,
+          "text": "\t$(LIBRETRO_COMM_DIR)/audio/conversion/float_to_s16.c \\"
+        },
+        {
+          "line": 250,
+          "text": "\t$(LIBRETRO_COMM_DIR)/audio/conversion/s16_to_float.c \\"
+        },
+        {
+          "line": 251,
+          "text": "\t$(LIBRETRO_COMM_DIR)/features/features_cpu.c \\"
+        },
+        {
+          "line": 252,
+          "text": "\t$(LIBRETRO_COMM_DIR)/lists/string_list.c \\"
+        },
+        {
+          "line": 253,
+          "text": "\t$(LIBRETRO_COMM_DIR)/encodings/encoding_utf.c \\"
+        },
+        {
+          "line": 254,
+          "text": "\t$(LIBRETRO_COMM_DIR)/string/stdstring.c \\"
+        },
+        {
+          "line": 255,
+          "text": "\t$(LIBRETRO_COMM_DIR)/vfs/vfs_implementation.c \\"
+        },
+        {
+          "line": 256,
+          "text": "\t$(LIBRETRO_COMM_DIR)/streams/file_stream.c \\"
+        },
+        {
+          "line": 257,
+          "text": "\t$(LIBRETRO_COMM_DIR)/compat/fopen_utf8.c \\"
+        },
+        {
+          "line": 259,
+          "text": "\t$(LIBRETRO_COMM_DIR)/glsm/glsm.c"
+        },
+        {
+          "line": 262,
+          "text": "SOURCES_CXX   += \\"
+        },
+        {
+          "line": 263,
+          "text": "\t$(VIDEODIR_GLIDEN64)/src/Combiner.cpp                                                         \\"
+        },
+        {
+          "line": 264,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/CombinerKey.cpp                                                      \\"
+        },
+        {
+          "line": 265,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/CommonPluginAPI.cpp                                                  \\"
+        },
+        {
+          "line": 266,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Config.cpp                                                           \\"
+        },
+        {
+          "line": 267,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/convert.cpp                                                          \\"
+        },
+        {
+          "line": 268,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/DebugDump.cpp                                                        \\"
+        },
+        {
+          "line": 269,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Debugger.cpp                                                         \\"
+        },
+        {
+          "line": 270,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/DepthBuffer.cpp                                                      \\"
+        },
+        {
+          "line": 271,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/DisplayWindow.cpp                                                    \\"
+        },
+        {
+          "line": 272,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/mupen64plus/mupen64plus_DisplayWindow.cpp     \\"
+        },
+        {
+          "line": 273,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/DisplayLoadProgress.cpp                                              \\"
+        },
+        {
+          "line": 274,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/FrameBuffer.cpp                                                      \\"
+        },
+        {
+          "line": 275,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/FrameBufferInfo.cpp                                                  \\"
+        },
+        {
+          "line": 276,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/GBI.cpp                                                              \\"
+        },
+        {
+          "line": 277,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/gDP.cpp                                                              \\"
+        },
+        {
+          "line": 278,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/GLideN64.cpp                                                         \\"
+        },
+        {
+          "line": 279,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/gSP.cpp                                                              \\"
+        },
+        {
+          "line": 280,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/N64.cpp                                                              \\"
+        },
+        {
+          "line": 281,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/TextDrawer.cpp                                                       \\"
+        },
+        {
+          "line": 282,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/PaletteTexture.cpp                                                   \\"
+        },
+        {
+          "line": 283,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Performance.cpp                                                      \\"
+        },
+        {
+          "line": 284,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/PostProcessor.cpp                                                    \\"
+        },
+        {
+          "line": 285,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/RDP.cpp                                                              \\"
+        },
+        {
+          "line": 286,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/RSP.cpp                                                              \\"
+        },
+        {
+          "line": 287,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/SoftwareRender.cpp                                                   \\"
+        },
+        {
+          "line": 288,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/TexrectDrawer.cpp                                                    \\"
+        },
+        {
+          "line": 289,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/TextureFilterHandler.cpp                                             \\"
+        },
+        {
+          "line": 290,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Textures.cpp                                                         \\"
+        },
+        {
+          "line": 291,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/VI.cpp                                                               \\"
+        },
+        {
+          "line": 292,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/ZlutTexture.cpp                                                      \\"
+        },
+        {
+          "line": 293,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/common/CommonAPIImpl_common.cpp                                      \\"
+        },
+        {
+          "line": 294,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/DepthBufferRender/ClipPolygon.cpp                                    \\"
+        },
+        {
+          "line": 295,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/DepthBufferRender/DepthBufferRender.cpp                              \\"
+        },
+        {
+          "line": 296,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/BufferCopy/BlueNoiseTexture.cpp                                    \\"
+        },
+        {
+          "line": 297,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/BufferCopy/ColorBufferToRDRAM.cpp                                    \\"
+        },
+        {
+          "line": 298,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/BufferCopy/DepthBufferToRDRAM.cpp                                    \\"
+        },
+        {
+          "line": 299,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/BufferCopy/RDRAMtoColorBuffer.cpp                                    \\"
+        },
+        {
+          "line": 300,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/GraphicsDrawer.cpp                                                   \\"
+        },
+        {
+          "line": 301,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/Context.cpp                                                 \\"
+        },
+        {
+          "line": 302,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/ColorBufferReader.cpp                                       \\"
+        },
+        {
+          "line": 303,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/CombinerProgram.cpp                                         \\"
+        },
+        {
+          "line": 304,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/ObjectHandle.cpp                                            \\"
+        },
+        {
+          "line": 305,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLFunctions.cpp                               \\"
+        },
+        {
+          "line": 306,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/ThreadedOpenGl/opengl_Wrapper.cpp             \\"
+        },
+        {
+          "line": 307,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/ThreadedOpenGl/opengl_WrappedFunctions.cpp    \\"
+        },
+        {
+          "line": 308,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/ThreadedOpenGl/opengl_Command.cpp             \\"
+        },
+        {
+          "line": 309,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/ThreadedOpenGl/opengl_ObjectPool.cpp          \\"
+        },
+        {
+          "line": 310,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/ThreadedOpenGl/RingBufferPool.cpp             \\"
+        },
+        {
+          "line": 311,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_Attributes.cpp                         \\"
+        },
+        {
+          "line": 312,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_BufferedDrawer.cpp                     \\"
+        },
+        {
+          "line": 313,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_BufferManipulationObjectFactory.cpp    \\"
+        },
+        {
+          "line": 314,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_CachedFunctions.cpp                    \\"
+        },
+        {
+          "line": 315,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_ColorBufferReaderWithBufferStorage.cpp \\"
+        },
+        {
+          "line": 316,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_ColorBufferReaderWithPixelBuffer.cpp   \\"
+        },
+        {
+          "line": 317,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_ColorBufferReaderWithReadPixels.cpp    \\"
+        },
+        {
+          "line": 318,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_ColorBufferReaderWithEGLImage.cpp      \\"
+        },
+        {
+          "line": 319,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_ContextImpl.cpp                        \\"
+        },
+        {
+          "line": 320,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_GLInfo.cpp                             \\"
+        },
+        {
+          "line": 321,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_Parameters.cpp                         \\"
+        },
+        {
+          "line": 322,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_TextureManipulationObjectFactory.cpp   \\"
+        },
+        {
+          "line": 323,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_UnbufferedDrawer.cpp                   \\"
+        },
+        {
+          "line": 324,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_Utils.cpp                              \\"
+        },
+        {
+          "line": 325,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_CombinerInputs.cpp                  \\"
+        },
+        {
+          "line": 326,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramBuilder.cpp          \\"
+        },
+        {
+          "line": 327,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramImpl.cpp             \\"
+        },
+        {
+          "line": 328,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramUniformFactory.cpp   \\"
+        },
+        {
+          "line": 329,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramUniformFactoryAccurate.cpp \\"
+        },
+        {
+          "line": 330,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramUniformFactoryFast.cpp     \\"
+        },
+        {
+          "line": 331,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramUniformFactoryCommon.cpp   \\"
+        },
+        {
+          "line": 332,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramBuilderCommon.cpp    \\"
+        },
+        {
+          "line": 333,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramBuilderAccurate.cpp  \\"
+        },
+        {
+          "line": 334,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramBuilderFast.cpp      \\"
+        },
+        {
+          "line": 335,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_FXAA.cpp                            \\"
+        },
+        {
+          "line": 336,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_ShaderStorage.cpp                   \\"
+        },
+        {
+          "line": 337,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_SpecialShadersFactory.cpp           \\"
+        },
+        {
+          "line": 338,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_Utils.cpp                           \\"
+        },
+        {
+          "line": 339,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GraphicBuffer/PrivateApi/GraphicBuffer.cpp    \\"
+        },
+        {
+          "line": 340,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/mupenplus/MemoryStatus_mupenplus.cpp                                 \\"
+        },
+        {
+          "line": 341,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/F3D.cpp                                                       \\"
+        },
+        {
+          "line": 342,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/F3DAM.cpp                                                     \\"
+        },
+        {
+          "line": 343,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/F3DBETA.cpp                                                   \\"
+        },
+        {
+          "line": 344,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/F3DDKR.cpp                                                    \\"
+        },
+        {
+          "line": 345,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/F3DEX.cpp                                                     \\"
+        },
+        {
+          "line": 346,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/F3DEX2.cpp                                                    \\"
+        },
+        {
+          "line": 347,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/F3DEX3.cpp                                                    \\"
+        },
+        {
+          "line": 348,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/F3DEX095.cpp                                                  \\"
+        },
+        {
+          "line": 349,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/F3DEX2ACCLAIM.cpp                                             \\"
+        },
+        {
+          "line": 350,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/F3DEX2CBFD.cpp                                                \\"
+        },
+        {
+          "line": 351,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/F3DZEX2.cpp                                                   \\"
+        },
+        {
+          "line": 352,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/F3DFLX2.cpp                                                   \\"
+        },
+        {
+          "line": 353,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/F3DGOLDEN.cpp                                                 \\"
+        },
+        {
+          "line": 354,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/F3DPD.cpp                                                     \\"
+        },
+        {
+          "line": 355,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/F3DSETA.cpp                                                   \\"
+        },
+        {
+          "line": 356,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/F5Indi_Naboo.cpp                                              \\"
+        },
+        {
+          "line": 357,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/F5Rogue.cpp                                                   \\"
+        },
+        {
+          "line": 358,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/F3DTEXA.cpp                                                   \\"
+        },
+        {
+          "line": 359,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/L3D.cpp                                                       \\"
+        },
+        {
+          "line": 360,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/L3DEX2.cpp                                                    \\"
+        },
+        {
+          "line": 361,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/L3DEX.cpp                                                     \\"
+        },
+        {
+          "line": 362,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/S2DEX2.cpp                                                    \\"
+        },
+        {
+          "line": 363,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/S2DEX.cpp                                                     \\"
+        },
+        {
+          "line": 364,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/T3DUX.cpp                                                     \\"
+        },
+        {
+          "line": 365,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/Turbo3D.cpp                                                   \\"
+        },
+        {
+          "line": 366,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/ZSort.cpp                                                     \\"
+        },
+        {
+          "line": 367,
+          "text": "    $(VIDEODIR_GLIDEN64)/src/uCodes/ZSortBOSS.cpp                                                 \\"
+        },
+        {
+          "line": 368,
+          "text": "\t$(VIDEODIR_GLIDEN64)/src/MupenPlusPluginAPI.cpp                                               \\"
+        },
+        {
+          "line": 369,
+          "text": "\t$(VIDEODIR_GLIDEN64)/src/mupenplus/MupenPlusAPIImpl.cpp                                       \\"
+        },
+        {
+          "line": 372,
+          "text": "\t$(VIDEODIR_GLIDEN64)/src/Log.cpp"
+        },
+        {
+          "line": 374,
+          "text": "SOURCES_CXX   += \\"
+        },
+        {
+          "line": 375,
+          "text": "\t$(VIDEODIR_GLIDEN64)/src/GLideNHQ/TextureFilters.cpp \\"
+        }
+      ]
+    },
+    {
+      "repo": "EmulatorJS/mupen64plus-libretro-nx",
+      "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+      "path": "mupen64plus-rsp-paraLLEl/lightning/.gitmodules",
+      "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/mupen64plus-rsp-paraLLEl/lightning/.gitmodules",
+      "sha256": "c6752461040d8491947bc323e6ac175b37f9199b17d7deb8004ac1413fc28e77",
+      "bytes": 75,
+      "status": "document_read_not_executed",
+      "gitmodules_text": "[submodule \"gnulib\"]\n\tpath = gnulib\n\turl = git://git.sv.gnu.org/gnulib.git\n"
+    },
+    {
+      "repo": "EmulatorJS/build",
+      "commit": "677b1334ab1721a1e31b918f211b68f4e54f67a8",
+      "path": "build.sh",
+      "url": "https://raw.githubusercontent.com/EmulatorJS/build/677b1334ab1721a1e31b918f211b68f4e54f67a8/build.sh",
+      "sha256": "bea194d4da77301b0d977c6b8c15b8090e24e89c11d6e90d244aae64f97fc82c",
+      "bytes": 15712,
+      "status": "document_read_not_executed",
+      "dependency_evidence": [
+        {
+          "line": 148,
+          "text": "        git clone --depth 1 \"https://github.com/EmulatorJS/RetroArch.git\" \"RetroArch\" || exit 1"
+        },
+        {
+          "line": 151,
+          "text": "    git pull"
+        },
+        {
+          "line": 153,
+          "text": "        git clone \"https://github.com/EmulatorJS/EmulatorJS.git\" \"EmulatorJS\" --depth 1 || exit 1"
+        },
+        {
+          "line": 156,
+          "text": "    git pull"
+        },
+        {
+          "line": 174,
+          "text": "        git clone \"$repo\" \"$name\" --depth 1"
+        },
+        {
+          "line": 184,
+          "text": "    git pull"
+        }
+      ]
+    },
+    {
+      "repo": "EmulatorJS/build",
+      "commit": "677b1334ab1721a1e31b918f211b68f4e54f67a8",
+      "path": "build_env.sh",
+      "url": "https://raw.githubusercontent.com/EmulatorJS/build/677b1334ab1721a1e31b918f211b68f4e54f67a8/build_env.sh",
+      "sha256": "280f024efa6ecac6a119d75c024da74ef5432c23c5dc7712d880171d0b9e877d",
+      "bytes": 184,
+      "status": "document_read_not_executed"
+    },
+    {
+      "repo": "EmulatorJS/EmulatorJS",
+      "commit": "478ef785f2766efedd4d5a71a102d47dcf0c9f54",
+      "path": "package.json",
+      "url": "https://raw.githubusercontent.com/EmulatorJS/EmulatorJS/478ef785f2766efedd4d5a71a102d47dcf0c9f54/package.json",
+      "sha256": "8b8e2afdef6a1516fd7689d7574338014fbefcd5fbf0d4c2ed5ce38376dba3bc",
+      "bytes": 1179,
+      "status": "document_read_not_executed",
+      "metadata": {
+        "name": "@emulatorjs/emulatorjs",
+        "version": "4.2.4",
+        "type": "module",
+        "description": "EmulatorJS is a frontend for RetroArch in the web browser.",
+        "homepage": "https://emulatorjs.org",
+        "license": "GPL-3.0",
+        "sideEffects": true,
+        "repository": {
+          "type": "git",
+          "url": "https://github.com/EmulatorJS/EmulatorJS.git"
+        },
+        "bugs": {
+          "url": "https://github.com/EmulatorJS/EmulatorJS/issues"
+        },
+        "scripts": {
+          "start": "http-server",
+          "minify": "node minify/minify.js",
+          "build": "node build.js",
+          "update": "node update.js",
+          "docs": "jsdoc data/src/*.js -d jsdoc"
+        },
+        "dependencies": {
+          "@node-minify/clean-css": "^10.4.0",
+          "@node-minify/core": "^10.4.0",
+          "http-server": "^14.1.1",
+          "node-7z": "^3.0.0"
+        },
+        "optionalDependencies": {
+          "@emulatorjs/cores": "latest"
+        },
+        "devDependencies": {
+          "@rollup/plugin-terser": "^1.0.0",
+          "eslint": "^10.0.2",
+          "jsdoc": "^4.0.5",
+          "nipplejs": "^0.10.2",
+          "node-fetch": "^3.3.2",
+          "rollup": "^4.59.0",
+          "socket.io": "^4.8.3"
+        }
+      }
+    },
+    {
+      "repo": "EmulatorJS/EmulatorJS",
+      "commit": "478ef785f2766efedd4d5a71a102d47dcf0c9f54",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/EmulatorJS/EmulatorJS/478ef785f2766efedd4d5a71a102d47dcf0c9f54/LICENSE",
+      "sha256": "bad9f6b3ad5c6f4f0e7ff9f70960676e2d1d8111325c64821190d854cb702fd8",
+      "bytes": 35111,
+      "status": "document_read_not_executed"
+    },
+    {
+      "repo": "EmulatorJS/EmulatorJS",
+      "commit": "478ef785f2766efedd4d5a71a102d47dcf0c9f54",
+      "path": "data/src/GameManager.js",
+      "url": "https://raw.githubusercontent.com/EmulatorJS/EmulatorJS/478ef785f2766efedd4d5a71a102d47dcf0c9f54/data/src/GameManager.js",
+      "sha256": "d6e33a9316fe5db1c12bcdd41d83d831b602d9ac5fbc083098c44d18da5c2e7c",
+      "bytes": 20425,
+      "status": "document_read_not_executed"
+    }
+  ]
+}

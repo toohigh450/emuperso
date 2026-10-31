@@ -1,0 +1,288 @@
+[
+  {
+    "path": "libretro/libretro.c",
+    "repo": "EmulatorJS/mupen64plus-libretro-nx",
+    "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+    "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/libretro/libretro.c",
+    "sha256": "ce16bed8b8890d404fbd55fa5c37d96ac8f43bae083c078e5e5582a18a2ce70e",
+    "bytes": 72784,
+    "spdx_explicit": [],
+    "observed_header_grant": "GPL-2.0-or-later (header wording observed; file only)",
+    "copyright_lines": [
+      "Copyright (C) 2020 M4xw <m4x@m4xw.net>"
+    ],
+    "status": "header_sample_only_no_distribution_conclusion"
+  },
+  {
+    "path": "mupen64plus-core/src/device/r4300/cached_interp.c",
+    "repo": "EmulatorJS/mupen64plus-libretro-nx",
+    "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+    "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/mupen64plus-core/src/device/r4300/cached_interp.c",
+    "sha256": "d8707dc5f9dff7d867434b1d089ec1e3e1b1c6cc00551093906b94541d4b2271",
+    "bytes": 32701,
+    "spdx_explicit": [],
+    "observed_header_grant": "GPL-2.0-or-later (header wording observed; file only)",
+    "copyright_lines": [
+      "Copyright (C) 2002 Hacktarux"
+    ],
+    "status": "header_sample_only_no_distribution_conclusion"
+  },
+  {
+    "path": "mupen64plus-core/src/device/r4300/cp0.c",
+    "repo": "EmulatorJS/mupen64plus-libretro-nx",
+    "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+    "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/mupen64plus-core/src/device/r4300/cp0.c",
+    "sha256": "f6909acd7bcb60872a9e22177c7808e97269214fa0c7c732ce2efce208322114",
+    "bytes": 9479,
+    "spdx_explicit": [],
+    "observed_header_grant": "GPL-2.0-or-later (header wording observed; file only)",
+    "copyright_lines": [
+      "Copyright (C) 2002 Hacktarux"
+    ],
+    "status": "header_sample_only_no_distribution_conclusion"
+  },
+  {
+    "path": "mupen64plus-core/src/device/r4300/cp1.c",
+    "repo": "EmulatorJS/mupen64plus-libretro-nx",
+    "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+    "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/mupen64plus-core/src/device/r4300/cp1.c",
+    "sha256": "ba9d82ca1cab7c551ef3b814e2f780889d6cfee54a13323924b830303c8d496e",
+    "bytes": 4927,
+    "spdx_explicit": [],
+    "observed_header_grant": "GPL-2.0-or-later (header wording observed; file only)",
+    "copyright_lines": [
+      "Copyright (C) 2002 Hacktarux"
+    ],
+    "status": "header_sample_only_no_distribution_conclusion"
+  },
+  {
+    "path": "mupen64plus-core/src/main/main.c",
+    "repo": "EmulatorJS/mupen64plus-libretro-nx",
+    "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+    "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/mupen64plus-core/src/main/main.c",
+    "sha256": "9b6496bfa2989f9041894d6f5e8abc41a6d0e46c8252e38cff63b66e1339d342",
+    "bytes": 57639,
+    "spdx_explicit": [],
+    "observed_header_grant": "GPL-2.0-or-later (header wording observed; file only)",
+    "copyright_lines": [
+      "Copyright (C) 2012 CasualJames",
+      "Copyright (C) 2008-2009 Richard Goedeken",
+      "Copyright (C) 2008 Ebenblues Nmn Okaygo Tillin9",
+      "Copyright (C) 2002 Hacktarux"
+    ],
+    "status": "header_sample_only_no_distribution_conclusion"
+  },
+  {
+    "path": "mupen64plus-core/src/main/util.c",
+    "repo": "EmulatorJS/mupen64plus-libretro-nx",
+    "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+    "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/mupen64plus-core/src/main/util.c",
+    "sha256": "450e24e344b6491420cf6358235061ce9449f4cf1e5392ce3376511dbde0d487",
+    "bytes": 156721,
+    "spdx_explicit": [],
+    "observed_header_grant": "GPL-2.0-or-later (header wording observed; file only)",
+    "copyright_lines": [
+      "Copyright (C) 2020 Richard42",
+      "Copyright (C) 2012 CasualJames",
+      "Copyright (C) 2002 Hacktarux"
+    ],
+    "status": "header_sample_only_no_distribution_conclusion"
+  },
+  {
+    "path": "mupen64plus-core/src/main/cheat.c",
+    "repo": "EmulatorJS/mupen64plus-libretro-nx",
+    "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+    "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/mupen64plus-core/src/main/cheat.c",
+    "sha256": "f05af4b436af44530a42efd0c9e35eade7ac522ec9a22a16f150e4998d2ff8a9",
+    "bytes": 16010,
+    "spdx_explicit": [],
+    "observed_header_grant": "GPL-2.0-or-later (header wording observed; file only)",
+    "copyright_lines": [
+      "Copyright (C) 2009 Richard Goedeken",
+      "Copyright (C) 2008 Okaygo"
+    ],
+    "status": "header_sample_only_no_distribution_conclusion"
+  },
+  {
+    "path": "mupen64plus-rsp-hle/src/alist.c",
+    "repo": "EmulatorJS/mupen64plus-libretro-nx",
+    "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+    "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/mupen64plus-rsp-hle/src/alist.c",
+    "sha256": "8f05b4494b9bbf76771d945a4371de30968cbd5c5f68977ba3250bfc86b21f2e",
+    "bytes": 31973,
+    "spdx_explicit": [],
+    "observed_header_grant": "GPL-2.0-or-later (header wording observed; file only)",
+    "copyright_lines": [
+      "Copyright (C) 2014 Bobby Smiles",
+      "Copyright (C) 2009 Richard Goedeken",
+      "Copyright (C) 2002 Hacktarux"
+    ],
+    "status": "header_sample_only_no_distribution_conclusion"
+  },
+  {
+    "path": "mupen64plus-rsp-hle/src/alist_audio.c",
+    "repo": "EmulatorJS/mupen64plus-libretro-nx",
+    "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+    "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/mupen64plus-rsp-hle/src/alist_audio.c",
+    "sha256": "7fb33385a74a28ffcc75a0556e18db9676b4e5df5aafe1a1cd57daf645f6a250",
+    "bytes": 9545,
+    "spdx_explicit": [],
+    "observed_header_grant": "GPL-2.0-or-later (header wording observed; file only)",
+    "copyright_lines": [
+      "Copyright (C) 2014 Bobby Smiles",
+      "Copyright (C) 2009 Richard Goedeken",
+      "Copyright (C) 2002 Hacktarux"
+    ],
+    "status": "header_sample_only_no_distribution_conclusion"
+  },
+  {
+    "path": "mupen64plus-rsp-hle/src/alist_naudio.c",
+    "repo": "EmulatorJS/mupen64plus-libretro-nx",
+    "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+    "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/mupen64plus-rsp-hle/src/alist_naudio.c",
+    "sha256": "638bee8dd8dc37a35ba4ffbc757deabe72368930908fa635c573a01a061fe28c",
+    "bytes": 11359,
+    "spdx_explicit": [],
+    "observed_header_grant": "GPL-2.0-or-later (header wording observed; file only)",
+    "copyright_lines": [
+      "Copyright (C) 2014 Bobby Smiles",
+      "Copyright (C) 2009 Richard Goedeken",
+      "Copyright (C) 2002 Hacktarux"
+    ],
+    "status": "header_sample_only_no_distribution_conclusion"
+  },
+  {
+    "path": "custom/mupen64plus-core/api/config.c",
+    "repo": "EmulatorJS/mupen64plus-libretro-nx",
+    "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+    "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/custom/mupen64plus-core/api/config.c",
+    "sha256": "9840d37b9246ed368fabccae4f63b5aafc18c05bf778f37cba0250735623ba62",
+    "bytes": 42283,
+    "spdx_explicit": [],
+    "observed_header_grant": "GPL-2.0-or-later (header wording observed; file only)",
+    "copyright_lines": [
+      "Copyright (C) 2009 Richard Goedeken"
+    ],
+    "status": "header_sample_only_no_distribution_conclusion"
+  },
+  {
+    "path": "custom/dependencies/libpng/png.c",
+    "repo": "EmulatorJS/mupen64plus-libretro-nx",
+    "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+    "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/custom/dependencies/libpng/png.c",
+    "sha256": "fd3fc1e4b2922205f522a88feb551acab9a3d7d1c532688f57b5536ed6d04970",
+    "bytes": 157895,
+    "spdx_explicit": [],
+    "observed_header_grant": "NOASSERTION",
+    "copyright_lines": [
+      "Copyright (c) 1998-2002,2004,2006-2017 Glenn Randers-Pehrson",
+      "(Version 0.96 Copyright (c) 1996, 1997 Andreas Dilger)",
+      "(Version 0.88 Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.)"
+    ],
+    "status": "header_sample_only_no_distribution_conclusion"
+  },
+  {
+    "path": "custom/dependencies/libpng/pngerror.c",
+    "repo": "EmulatorJS/mupen64plus-libretro-nx",
+    "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+    "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/custom/dependencies/libpng/pngerror.c",
+    "sha256": "60bcf24129bd3aa312d3d1a5b24f7129f03050553b52fcfb579a856acdfc0a52",
+    "bytes": 29230,
+    "spdx_explicit": [],
+    "observed_header_grant": "NOASSERTION",
+    "copyright_lines": [
+      "Copyright (c) 1998-2002,2004,2006-2017 Glenn Randers-Pehrson",
+      "(Version 0.96 Copyright (c) 1996, 1997 Andreas Dilger)",
+      "(Version 0.88 Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.)"
+    ],
+    "status": "header_sample_only_no_distribution_conclusion"
+  },
+  {
+    "path": "libretro-common/memmap/memalign.c",
+    "repo": "EmulatorJS/mupen64plus-libretro-nx",
+    "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+    "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/libretro-common/memmap/memalign.c",
+    "sha256": "2a27ddd071699d6b752d0c4e555c278c974e193da0c7b384be22a166be6a77af",
+    "bytes": 2339,
+    "spdx_explicit": [],
+    "observed_header_grant": "NOASSERTION",
+    "copyright_lines": [
+      "Copyright  (C) 2010-2020 The RetroArch team",
+      "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.",
+      "IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,"
+    ],
+    "status": "header_sample_only_no_distribution_conclusion"
+  },
+  {
+    "path": "libretro-common/audio/resampler/drivers/sinc_resampler.c",
+    "repo": "EmulatorJS/mupen64plus-libretro-nx",
+    "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+    "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/libretro-common/audio/resampler/drivers/sinc_resampler.c",
+    "sha256": "66841a41c7faa87825da5ef1a4cb56e6410202a0688e65f982409f943de05e5d",
+    "bytes": 35575,
+    "spdx_explicit": [],
+    "observed_header_grant": "NOASSERTION",
+    "copyright_lines": [
+      "Copyright  (C) 2010-2020 The RetroArch team",
+      "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.",
+      "IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,"
+    ],
+    "status": "header_sample_only_no_distribution_conclusion"
+  },
+  {
+    "path": "libretro-common/audio/resampler/drivers/nearest_resampler.c",
+    "repo": "EmulatorJS/mupen64plus-libretro-nx",
+    "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+    "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/libretro-common/audio/resampler/drivers/nearest_resampler.c",
+    "sha256": "00c5ec1fb7467a014b8c71e0ef712370e2531efe9b220e7b23289912af3b7497",
+    "bytes": 2955,
+    "spdx_explicit": [],
+    "observed_header_grant": "NOASSERTION",
+    "copyright_lines": [
+      "Copyright  (C) 2010-2020 The RetroArch team",
+      "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.",
+      "IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,"
+    ],
+    "status": "header_sample_only_no_distribution_conclusion"
+  },
+  {
+    "path": "GLideN64/src/osal/osal_files_win32.c",
+    "repo": "EmulatorJS/mupen64plus-libretro-nx",
+    "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+    "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/GLideN64/src/osal/osal_files_win32.c",
+    "sha256": "2d700332544ada43051b96eef9ba8ef24d16eab66695fb08cf77869acef3227c",
+    "bytes": 5443,
+    "spdx_explicit": [],
+    "observed_header_grant": "GPL-2.0-or-later (header wording observed; file only)",
+    "copyright_lines": [
+      "Copyright (C) 2009 Richard Goedeken"
+    ],
+    "status": "header_sample_only_no_distribution_conclusion"
+  },
+  {
+    "path": "GLideN64/src/osal/osal_files_unix.c",
+    "repo": "EmulatorJS/mupen64plus-libretro-nx",
+    "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+    "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/GLideN64/src/osal/osal_files_unix.c",
+    "sha256": "dbb5f9181dd2f92781d9c04f730252c2d7aee9d317b2fc2c6ec942d75e651d9c",
+    "bytes": 4517,
+    "spdx_explicit": [],
+    "observed_header_grant": "GPL-2.0-or-later (header wording observed; file only)",
+    "copyright_lines": [
+      "Copyright (C) 2009 Richard Goedeken"
+    ],
+    "status": "header_sample_only_no_distribution_conclusion"
+  },
+  {
+    "path": "GLideN64/src/Combiner.cpp",
+    "repo": "EmulatorJS/mupen64plus-libretro-nx",
+    "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+    "url": "https://raw.githubusercontent.com/EmulatorJS/mupen64plus-libretro-nx/4a3925d2861f17719586dffb178c1dd5339d3a68/GLideN64/src/Combiner.cpp",
+    "sha256": "2d49f229f9e6d6e0466d1a679b10223da42e2d67cf1f643a50e449609b8c5088",
+    "bytes": 10727,
+    "spdx_explicit": [],
+    "observed_header_grant": "NOASSERTION",
+    "copyright_lines": [],
+    "status": "header_sample_only_no_distribution_conclusion"
+  }
+]

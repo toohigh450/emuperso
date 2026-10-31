@@ -1,0 +1,5 @@
+RÉUSSI — N64-Web-Lab-Phase1A.html : IDs uniques, liens présents, ressources autonomes.
+RÉUSSI — docs/Rapport-Phase1A.html : IDs uniques, liens présents, ressources autonomes.
+RÉUSSI — Reconstruction déterministe et composants identiques à ceux testés.
+RÉUSSI — Décor intégré byte pour byte ; aucun point d’accès Journal réservé au test dans le HTML livré.
+RÉUSSI — Métadonnées JSON lisibles ; rapport sans script.

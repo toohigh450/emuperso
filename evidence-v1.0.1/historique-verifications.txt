@@ -1,0 +1,8 @@
+Révision 1.0.1 — historique et limites de preuve
+RÉUSSI — 59 contrôles JavaScript et 8 contrôles Python après modification.
+RÉUSSI — 21 contrôles Chromium sur le HTML livré, contexte hors ligne et document intercepté en mémoire.
+Tentatives initiales du test DOM ciblé : Chromium refusé par le sandbox (setsockopt EPERM), puis commande interrompue. Aucune réussite déduite de ces tentatives.
+Premier passage du test DOM ciblé : trois cas réussis ; quatrième assertion erronée dans le test (attendait 0 événement à la création alors que le contrôleur écrit lab.open, donc 1). Assertion corrigée sans changer le produit ; passage complet final consigné séparément.
+Les audits GPT/Méo et preuves v1.0.0 sont historiques et ne certifient pas indépendamment v1.0.1.
+Windows, Edge, Firefox et file:// sur le PC de Karl : NON TESTABLE ici.
+Moteur N64, ROM, état original, compatibilité Conker PAL, cause/correction Sonic : NON TESTABLE dans ce mandat ; aucune exécution.

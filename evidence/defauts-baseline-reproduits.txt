@@ -1,0 +1,6 @@
+BASELINE PCM première coupure PAUSED E_PCM_UNDERRUN 1
+BASELINE PCM reprise + fenêtre normale PAUSED E_PCM_UNDERRUN 1 => re-pause injustifiée sur compteur passé
+BASELINE option booléenne invalide acceptée RUNNING => validation de type absente
+BASELINE fenêtre invalide E_CLOCK ERROR => instance détruite pour saisie refusée
+Lecture source : configuration des injections non journalisée ; liste du journal sans statut explicite de fraîcheur.
+BASELINE restore resume="false" (chaîne) accepté comme vrai : RUNNING => option non booléenne provoque une reprise

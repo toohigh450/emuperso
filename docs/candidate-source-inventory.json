@@ -1,0 +1,2340 @@
+{
+  "repo": "EmulatorJS/mupen64plus-libretro-nx",
+  "commit": "4a3925d2861f17719586dffb178c1dd5339d3a68",
+  "recipe": "Makefile.common",
+  "recipe_sha256": "e79f798a12bb0f8b4384a487388f523c56ba9e7d477700e4a6d8e5885095ffe7",
+  "warning": "Conservative literal-path inventory only. Variables expanded for path labels, not build conditions. Wildcards/generated/includes may add files. Not actual linked files; no Makefile or compiler executed.",
+  "variables_for_path_expansion_only": {
+    "ROOT_DIR": ".",
+    "LIBRETRO_DIR": "./libretro",
+    "RSPDIR": "$(ROOT_DIR)/mupen64plus-rsp-hle",
+    "CXD4DIR": "$(ROOT_DIR)/mupen64plus-rsp-cxd4",
+    "CORE_DIR": "$(ROOT_DIR)/mupen64plus-core",
+    "LIBRETRO_COMM_DIR": "$(ROOT_DIR)/libretro-common",
+    "RSPDIR_PARALLEL": "$(ROOT_DIR)/mupen64plus-rsp-paraLLEl",
+    "AUDIO_LIBRETRO_DIR": "$(ROOT_DIR)/custom/mupen64plus-core/plugin/audio_libretro",
+    "VIDEODIR_GLIDEN64": "$(ROOT_DIR)/GLideN64",
+    "VIDEODIR_ANGRYLION": "$(ROOT_DIR)/mupen64plus-video-angrylion",
+    "VIDEODIR_PARALLEL": "$(ROOT_DIR)/mupen64plus-video-paraLLEl",
+    "LIBPNG_DIR": "$(ROOT_DIR)/custom/dependencies/libpng",
+    "XXHASH_DIR": "$(ROOT_DIR)/xxHash",
+    "ZLIB_DIR": "$(ROOT_DIR)/custom/dependencies/libzlib"
+  },
+  "entries": [
+    {
+      "line": 38,
+      "expression": "$(CORE_DIR)/src/asm_defines/asm_defines.c",
+      "candidate_path": "mupen64plus-core/src/asm_defines/asm_defines.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 39,
+      "expression": "$(CORE_DIR)/src/api/callbacks.c",
+      "candidate_path": "mupen64plus-core/src/api/callbacks.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 40,
+      "expression": "$(ROOT_DIR)/custom/mupen64plus-core/api/config.c",
+      "candidate_path": "custom/mupen64plus-core/api/config.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 41,
+      "expression": "$(CORE_DIR)/src/api/debugger.c",
+      "candidate_path": "mupen64plus-core/src/api/debugger.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 42,
+      "expression": "$(CORE_DIR)/src/api/frontend.c",
+      "candidate_path": "mupen64plus-core/src/api/frontend.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 43,
+      "expression": "$(CORE_DIR)/src/backends/plugins_compat/audio_plugin_compat.c",
+      "candidate_path": "mupen64plus-core/src/backends/plugins_compat/audio_plugin_compat.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 44,
+      "expression": "$(CORE_DIR)/src/backends/api/video_capture_backend.c",
+      "candidate_path": "mupen64plus-core/src/backends/api/video_capture_backend.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 45,
+      "expression": "$(CORE_DIR)/src/backends/plugins_compat/input_plugin_compat.c",
+      "candidate_path": "mupen64plus-core/src/backends/plugins_compat/input_plugin_compat.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 46,
+      "expression": "$(CORE_DIR)/src/backends/clock_ctime_plus_delta.c",
+      "candidate_path": "mupen64plus-core/src/backends/clock_ctime_plus_delta.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 47,
+      "expression": "$(CORE_DIR)/src/backends/dummy_video_capture.c",
+      "candidate_path": "mupen64plus-core/src/backends/dummy_video_capture.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 48,
+      "expression": "$(CORE_DIR)/src/backends/file_storage.c",
+      "candidate_path": "mupen64plus-core/src/backends/file_storage.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 49,
+      "expression": "$(CORE_DIR)/src/device/cart/cart.c",
+      "candidate_path": "mupen64plus-core/src/device/cart/cart.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 50,
+      "expression": "$(CORE_DIR)/src/device/cart/af_rtc.c",
+      "candidate_path": "mupen64plus-core/src/device/cart/af_rtc.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 51,
+      "expression": "$(CORE_DIR)/src/device/cart/cart_rom.c",
+      "candidate_path": "mupen64plus-core/src/device/cart/cart_rom.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 52,
+      "expression": "$(CORE_DIR)/src/device/cart/eeprom.c",
+      "candidate_path": "mupen64plus-core/src/device/cart/eeprom.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 53,
+      "expression": "$(CORE_DIR)/src/device/cart/flashram.c",
+      "candidate_path": "mupen64plus-core/src/device/cart/flashram.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 54,
+      "expression": "$(CORE_DIR)/src/device/cart/is_viewer.c",
+      "candidate_path": "mupen64plus-core/src/device/cart/is_viewer.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 55,
+      "expression": "$(CORE_DIR)/src/device/cart/sram.c",
+      "candidate_path": "mupen64plus-core/src/device/cart/sram.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 56,
+      "expression": "$(CORE_DIR)/src/device/controllers/game_controller.c",
+      "candidate_path": "mupen64plus-core/src/device/controllers/game_controller.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 57,
+      "expression": "$(CORE_DIR)/src/device/controllers/vru_controller.c",
+      "candidate_path": "mupen64plus-core/src/device/controllers/vru_controller.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 58,
+      "expression": "$(CORE_DIR)/src/device/controllers/paks/biopak.c",
+      "candidate_path": "mupen64plus-core/src/device/controllers/paks/biopak.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 59,
+      "expression": "$(CORE_DIR)/src/device/controllers/paks/mempak.c",
+      "candidate_path": "mupen64plus-core/src/device/controllers/paks/mempak.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 60,
+      "expression": "$(CORE_DIR)/src/device/controllers/paks/rumblepak.c",
+      "candidate_path": "mupen64plus-core/src/device/controllers/paks/rumblepak.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 61,
+      "expression": "$(CORE_DIR)/src/device/controllers/paks/transferpak.c",
+      "candidate_path": "mupen64plus-core/src/device/controllers/paks/transferpak.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 62,
+      "expression": "$(CORE_DIR)/src/device/dd/dd_controller.c",
+      "candidate_path": "mupen64plus-core/src/device/dd/dd_controller.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 63,
+      "expression": "$(CORE_DIR)/src/device/dd/disk.c",
+      "candidate_path": "mupen64plus-core/src/device/dd/disk.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 64,
+      "expression": "$(CORE_DIR)/src/device/device.c",
+      "candidate_path": "mupen64plus-core/src/device/device.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 65,
+      "expression": "$(CORE_DIR)/src/device/gb/gb_cart.c",
+      "candidate_path": "mupen64plus-core/src/device/gb/gb_cart.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 66,
+      "expression": "$(CORE_DIR)/src/device/gb/mbc3_rtc.c",
+      "candidate_path": "mupen64plus-core/src/device/gb/mbc3_rtc.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 67,
+      "expression": "$(CORE_DIR)/src/device/gb/m64282fp.c",
+      "candidate_path": "mupen64plus-core/src/device/gb/m64282fp.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 68,
+      "expression": "$(CORE_DIR)/src/device/memory/memory.c",
+      "candidate_path": "mupen64plus-core/src/device/memory/memory.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 69,
+      "expression": "$(CORE_DIR)/src/device/pif/bootrom_hle.c",
+      "candidate_path": "mupen64plus-core/src/device/pif/bootrom_hle.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 70,
+      "expression": "$(CORE_DIR)/src/device/pif/cic.c",
+      "candidate_path": "mupen64plus-core/src/device/pif/cic.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 71,
+      "expression": "$(CORE_DIR)/src/device/pif/n64_cic_nus_6105.c",
+      "candidate_path": "mupen64plus-core/src/device/pif/n64_cic_nus_6105.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 72,
+      "expression": "$(CORE_DIR)/src/device/pif/pif.c",
+      "candidate_path": "mupen64plus-core/src/device/pif/pif.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 73,
+      "expression": "$(CORE_DIR)/src/device/r4300/cached_interp.c",
+      "candidate_path": "mupen64plus-core/src/device/r4300/cached_interp.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 74,
+      "expression": "$(CORE_DIR)/src/device/r4300/cp0.c",
+      "candidate_path": "mupen64plus-core/src/device/r4300/cp0.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 75,
+      "expression": "$(CORE_DIR)/src/device/r4300/cp1.c",
+      "candidate_path": "mupen64plus-core/src/device/r4300/cp1.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 76,
+      "expression": "$(CORE_DIR)/src/device/r4300/cp2.c",
+      "candidate_path": "mupen64plus-core/src/device/r4300/cp2.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 77,
+      "expression": "$(CORE_DIR)/src/device/r4300/idec.c",
+      "candidate_path": "mupen64plus-core/src/device/r4300/idec.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 78,
+      "expression": "$(CORE_DIR)/src/device/r4300/interrupt.c",
+      "candidate_path": "mupen64plus-core/src/device/r4300/interrupt.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 79,
+      "expression": "$(CORE_DIR)/src/device/r4300/pure_interp.c",
+      "candidate_path": "mupen64plus-core/src/device/r4300/pure_interp.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 80,
+      "expression": "$(CORE_DIR)/src/device/r4300/r4300_core.c",
+      "candidate_path": "mupen64plus-core/src/device/r4300/r4300_core.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 81,
+      "expression": "$(CORE_DIR)/src/device/r4300/tlb.c",
+      "candidate_path": "mupen64plus-core/src/device/r4300/tlb.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 82,
+      "expression": "$(CORE_DIR)/src/device/rcp/ai/ai_controller.c",
+      "candidate_path": "mupen64plus-core/src/device/rcp/ai/ai_controller.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 83,
+      "expression": "$(CORE_DIR)/src/device/rcp/mi/mi_controller.c",
+      "candidate_path": "mupen64plus-core/src/device/rcp/mi/mi_controller.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 84,
+      "expression": "$(CORE_DIR)/src/device/rcp/pi/pi_controller.c",
+      "candidate_path": "mupen64plus-core/src/device/rcp/pi/pi_controller.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 85,
+      "expression": "$(CORE_DIR)/src/device/rcp/rdp/fb.c",
+      "candidate_path": "mupen64plus-core/src/device/rcp/rdp/fb.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 86,
+      "expression": "$(CORE_DIR)/src/device/rcp/rdp/rdp_core.c",
+      "candidate_path": "mupen64plus-core/src/device/rcp/rdp/rdp_core.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 87,
+      "expression": "$(CORE_DIR)/src/device/rcp/ri/ri_controller.c",
+      "candidate_path": "mupen64plus-core/src/device/rcp/ri/ri_controller.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 88,
+      "expression": "$(CORE_DIR)/src/device/rcp/rsp/rsp_core.c",
+      "candidate_path": "mupen64plus-core/src/device/rcp/rsp/rsp_core.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 89,
+      "expression": "$(CORE_DIR)/src/device/rcp/si/si_controller.c",
+      "candidate_path": "mupen64plus-core/src/device/rcp/si/si_controller.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 90,
+      "expression": "$(CORE_DIR)/src/device/rcp/vi/vi_controller.c",
+      "candidate_path": "mupen64plus-core/src/device/rcp/vi/vi_controller.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 91,
+      "expression": "$(CORE_DIR)/src/device/rdram/rdram.c",
+      "candidate_path": "mupen64plus-core/src/device/rdram/rdram.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 92,
+      "expression": "$(CORE_DIR)/src/main/main.c",
+      "candidate_path": "mupen64plus-core/src/main/main.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 93,
+      "expression": "$(CORE_DIR)/src/main/util.c",
+      "candidate_path": "mupen64plus-core/src/main/util.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 94,
+      "expression": "$(CORE_DIR)/src/main/cheat.c",
+      "candidate_path": "mupen64plus-core/src/main/cheat.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 95,
+      "expression": "$(CORE_DIR)/src/main/rom.c",
+      "candidate_path": "mupen64plus-core/src/main/rom.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 96,
+      "expression": "$(CORE_DIR)/src/main/savestates.c",
+      "candidate_path": "mupen64plus-core/src/main/savestates.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 97,
+      "expression": "$(CORE_DIR)/src/plugin/plugin.c",
+      "candidate_path": "mupen64plus-core/src/plugin/plugin.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 98,
+      "expression": "$(CORE_DIR)/src/plugin/dummy_audio.c",
+      "candidate_path": "mupen64plus-core/src/plugin/dummy_audio.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 99,
+      "expression": "$(CORE_DIR)/src/plugin/dummy_input.c",
+      "candidate_path": "mupen64plus-core/src/plugin/dummy_input.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 100,
+      "expression": "$(CORE_DIR)/src/main/netplay.c",
+      "candidate_path": "mupen64plus-core/src/main/netplay.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 103,
+      "expression": "$(MINIZIP_DIR)/zip.c",
+      "candidate_path": "$(MINIZIP_DIR)/zip.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 104,
+      "expression": "$(MINIZIP_DIR)/unzip.c",
+      "candidate_path": "$(MINIZIP_DIR)/unzip.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 105,
+      "expression": "$(MINIZIP_DIR)/ioapi.c",
+      "candidate_path": "$(MINIZIP_DIR)/ioapi.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 108,
+      "expression": "$(LIBPNG_DIR)/png.c",
+      "candidate_path": "custom/dependencies/libpng/png.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 109,
+      "expression": "$(LIBPNG_DIR)/pngerror.c",
+      "candidate_path": "custom/dependencies/libpng/pngerror.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 110,
+      "expression": "$(LIBPNG_DIR)/pngget.c",
+      "candidate_path": "custom/dependencies/libpng/pngget.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 111,
+      "expression": "$(LIBPNG_DIR)/pngmem.c",
+      "candidate_path": "custom/dependencies/libpng/pngmem.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 112,
+      "expression": "$(LIBPNG_DIR)/pngpread.c",
+      "candidate_path": "custom/dependencies/libpng/pngpread.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 113,
+      "expression": "$(LIBPNG_DIR)/pngread.c",
+      "candidate_path": "custom/dependencies/libpng/pngread.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 114,
+      "expression": "$(LIBPNG_DIR)/pngrio.c",
+      "candidate_path": "custom/dependencies/libpng/pngrio.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 115,
+      "expression": "$(LIBPNG_DIR)/pngrtran.c",
+      "candidate_path": "custom/dependencies/libpng/pngrtran.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 116,
+      "expression": "$(LIBPNG_DIR)/pngrutil.c",
+      "candidate_path": "custom/dependencies/libpng/pngrutil.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 117,
+      "expression": "$(LIBPNG_DIR)/pngset.c",
+      "candidate_path": "custom/dependencies/libpng/pngset.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 118,
+      "expression": "$(LIBPNG_DIR)/pngtrans.c",
+      "candidate_path": "custom/dependencies/libpng/pngtrans.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 119,
+      "expression": "$(LIBPNG_DIR)/pngwio.c",
+      "candidate_path": "custom/dependencies/libpng/pngwio.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 120,
+      "expression": "$(LIBPNG_DIR)/pngwrite.c",
+      "candidate_path": "custom/dependencies/libpng/pngwrite.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 121,
+      "expression": "$(LIBPNG_DIR)/pngwtran.c",
+      "candidate_path": "custom/dependencies/libpng/pngwtran.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 122,
+      "expression": "$(LIBPNG_DIR)/pngwutil.c",
+      "candidate_path": "custom/dependencies/libpng/pngwutil.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 125,
+      "expression": "$(ZLIB_DIR)/adler32.c",
+      "candidate_path": "custom/dependencies/libzlib/adler32.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 126,
+      "expression": "$(ZLIB_DIR)/compress.c",
+      "candidate_path": "custom/dependencies/libzlib/compress.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 127,
+      "expression": "$(ZLIB_DIR)/crc32.c",
+      "candidate_path": "custom/dependencies/libzlib/crc32.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 128,
+      "expression": "$(ZLIB_DIR)/deflate.c",
+      "candidate_path": "custom/dependencies/libzlib/deflate.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 129,
+      "expression": "$(ZLIB_DIR)/gzclose.c",
+      "candidate_path": "custom/dependencies/libzlib/gzclose.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 130,
+      "expression": "$(ZLIB_DIR)/gzlib.c",
+      "candidate_path": "custom/dependencies/libzlib/gzlib.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 131,
+      "expression": "$(ZLIB_DIR)/gzread.c",
+      "candidate_path": "custom/dependencies/libzlib/gzread.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 132,
+      "expression": "$(ZLIB_DIR)/gzwrite.c",
+      "candidate_path": "custom/dependencies/libzlib/gzwrite.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 133,
+      "expression": "$(ZLIB_DIR)/infback.c",
+      "candidate_path": "custom/dependencies/libzlib/infback.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 134,
+      "expression": "$(ZLIB_DIR)/inffast.c",
+      "candidate_path": "custom/dependencies/libzlib/inffast.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 135,
+      "expression": "$(ZLIB_DIR)/inflate.c",
+      "candidate_path": "custom/dependencies/libzlib/inflate.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 136,
+      "expression": "$(ZLIB_DIR)/inftrees.c",
+      "candidate_path": "custom/dependencies/libzlib/inftrees.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 137,
+      "expression": "$(ZLIB_DIR)/trees.c",
+      "candidate_path": "custom/dependencies/libzlib/trees.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 138,
+      "expression": "$(ZLIB_DIR)/uncompr.c",
+      "candidate_path": "custom/dependencies/libzlib/uncompr.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 139,
+      "expression": "$(ZLIB_DIR)/zutil.c",
+      "candidate_path": "custom/dependencies/libzlib/zutil.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 146,
+      "expression": "$(CORE_DIR)/subprojects/md5/md5.c",
+      "candidate_path": "mupen64plus-core/subprojects/md5/md5.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 185,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/osal/osal_files_win32.c",
+      "candidate_path": "GLideN64/src/osal/osal_files_win32.c",
+      "conditions_unevaluated": [
+        "ifneq (,$(findstring win,$(platform)))"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 187,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/osal/osal_files_unix.c",
+      "candidate_path": "GLideN64/src/osal/osal_files_unix.c",
+      "conditions_unevaluated": [
+        "ELSE of ifneq (,$(findstring win,$(platform)))"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 196,
+      "expression": "$(CORE_DIR)/src/device/r4300/new_dynarec/new_dynarec.c",
+      "candidate_path": "mupen64plus-core/src/device/r4300/new_dynarec/new_dynarec.c",
+      "conditions_unevaluated": [
+        "ifdef WITH_DYNAREC",
+        "ifeq ($(WITH_DYNAREC), arm)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 197,
+      "expression": "$(CORE_DIR)/src/device/r4300/new_dynarec/arm/arm_cpu_features.c",
+      "candidate_path": "mupen64plus-core/src/device/r4300/new_dynarec/arm/arm_cpu_features.c",
+      "conditions_unevaluated": [
+        "ifdef WITH_DYNAREC",
+        "ifeq ($(WITH_DYNAREC), arm)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 199,
+      "expression": "$(CORE_DIR)/src/device/r4300/new_dynarec/arm/linkage_arm.S",
+      "candidate_path": "mupen64plus-core/src/device/r4300/new_dynarec/arm/linkage_arm.S",
+      "conditions_unevaluated": [
+        "ifdef WITH_DYNAREC",
+        "ifeq ($(WITH_DYNAREC), arm)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 205,
+      "expression": "$(CORE_DIR)/src/device/r4300/new_dynarec/new_dynarec.c",
+      "candidate_path": "mupen64plus-core/src/device/r4300/new_dynarec/new_dynarec.c",
+      "conditions_unevaluated": [
+        "ifdef WITH_DYNAREC",
+        "ifeq ($(WITH_DYNAREC), aarch64)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 207,
+      "expression": "$(CORE_DIR)/src/device/r4300/new_dynarec/arm64/linkage_arm64.S",
+      "candidate_path": "mupen64plus-core/src/device/r4300/new_dynarec/arm64/linkage_arm64.S",
+      "conditions_unevaluated": [
+        "ifdef WITH_DYNAREC",
+        "ifeq ($(WITH_DYNAREC), aarch64)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 214,
+      "expression": "$(CORE_DIR)/src/device/r4300/new_dynarec/new_dynarec.c",
+      "candidate_path": "mupen64plus-core/src/device/r4300/new_dynarec/new_dynarec.c",
+      "conditions_unevaluated": [
+        "ifdef WITH_DYNAREC",
+        "ifeq ($(WITH_DYNAREC), x86)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 216,
+      "expression": "$(CORE_DIR)/src/device/r4300/new_dynarec/x86/linkage_x86.asm",
+      "candidate_path": "mupen64plus-core/src/device/r4300/new_dynarec/x86/linkage_x86.asm",
+      "conditions_unevaluated": [
+        "ifdef WITH_DYNAREC",
+        "ifeq ($(WITH_DYNAREC), x86)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 223,
+      "expression": "$(CORE_DIR)/src/device/r4300/new_dynarec/new_dynarec.c",
+      "candidate_path": "mupen64plus-core/src/device/r4300/new_dynarec/new_dynarec.c",
+      "conditions_unevaluated": [
+        "ifdef WITH_DYNAREC",
+        "ifeq ($(WITH_DYNAREC), $(filter $(WITH_DYNAREC), x86_64 x64))"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 225,
+      "expression": "$(CORE_DIR)/src/device/r4300/new_dynarec/x64/linkage_x64.asm",
+      "candidate_path": "mupen64plus-core/src/device/r4300/new_dynarec/x64/linkage_x64.asm",
+      "conditions_unevaluated": [
+        "ifdef WITH_DYNAREC",
+        "ifeq ($(WITH_DYNAREC), $(filter $(WITH_DYNAREC), x86_64 x64))"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 234,
+      "expression": "$(LIBRETRO_DIR)/libretro.c",
+      "candidate_path": "libretro/libretro.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 235,
+      "expression": "$(LIBRETRO_COMM_DIR)/memmap/memalign.c",
+      "candidate_path": "libretro-common/memmap/memalign.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 236,
+      "expression": "$(ROOT_DIR)/custom/mupen64plus-core/plugin/emulate_game_controller_via_libretro.c",
+      "candidate_path": "custom/mupen64plus-core/plugin/emulate_game_controller_via_libretro.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 237,
+      "expression": "$(LIBRETRO_COMM_DIR)/audio/resampler/drivers/sinc_resampler.c",
+      "candidate_path": "libretro-common/audio/resampler/drivers/sinc_resampler.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 238,
+      "expression": "$(LIBRETRO_COMM_DIR)/audio/resampler/drivers/nearest_resampler.c",
+      "candidate_path": "libretro-common/audio/resampler/drivers/nearest_resampler.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 239,
+      "expression": "$(LIBRETRO_COMM_DIR)/audio/resampler/audio_resampler.c",
+      "candidate_path": "libretro-common/audio/resampler/audio_resampler.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 240,
+      "expression": "$(AUDIO_LIBRETRO_DIR)/audio_backend_libretro.c",
+      "candidate_path": "custom/mupen64plus-core/plugin/audio_libretro/audio_backend_libretro.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 241,
+      "expression": "$(LIBRETRO_COMM_DIR)/file/config_file.c",
+      "candidate_path": "libretro-common/file/config_file.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 242,
+      "expression": "$(LIBRETRO_COMM_DIR)/file/config_file_userdata.c",
+      "candidate_path": "libretro-common/file/config_file_userdata.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 243,
+      "expression": "$(LIBRETRO_COMM_DIR)/file/file_path.c",
+      "candidate_path": "libretro-common/file/file_path.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 244,
+      "expression": "$(LIBRETRO_COMM_DIR)/file/file_path_io.c",
+      "candidate_path": "libretro-common/file/file_path_io.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 245,
+      "expression": "$(LIBRETRO_COMM_DIR)/time/rtime.c",
+      "candidate_path": "libretro-common/time/rtime.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 246,
+      "expression": "$(LIBRETRO_COMM_DIR)/compat/compat_strl.c",
+      "candidate_path": "libretro-common/compat/compat_strl.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 247,
+      "expression": "$(LIBRETRO_COMM_DIR)/compat/compat_posix_string.c",
+      "candidate_path": "libretro-common/compat/compat_posix_string.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 248,
+      "expression": "$(LIBRETRO_COMM_DIR)/compat/compat_strcasestr.c",
+      "candidate_path": "libretro-common/compat/compat_strcasestr.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 249,
+      "expression": "$(LIBRETRO_COMM_DIR)/audio/conversion/float_to_s16.c",
+      "candidate_path": "libretro-common/audio/conversion/float_to_s16.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 250,
+      "expression": "$(LIBRETRO_COMM_DIR)/audio/conversion/s16_to_float.c",
+      "candidate_path": "libretro-common/audio/conversion/s16_to_float.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 251,
+      "expression": "$(LIBRETRO_COMM_DIR)/features/features_cpu.c",
+      "candidate_path": "libretro-common/features/features_cpu.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 252,
+      "expression": "$(LIBRETRO_COMM_DIR)/lists/string_list.c",
+      "candidate_path": "libretro-common/lists/string_list.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 253,
+      "expression": "$(LIBRETRO_COMM_DIR)/encodings/encoding_utf.c",
+      "candidate_path": "libretro-common/encodings/encoding_utf.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 254,
+      "expression": "$(LIBRETRO_COMM_DIR)/string/stdstring.c",
+      "candidate_path": "libretro-common/string/stdstring.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 255,
+      "expression": "$(LIBRETRO_COMM_DIR)/vfs/vfs_implementation.c",
+      "candidate_path": "libretro-common/vfs/vfs_implementation.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 256,
+      "expression": "$(LIBRETRO_COMM_DIR)/streams/file_stream.c",
+      "candidate_path": "libretro-common/streams/file_stream.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 257,
+      "expression": "$(LIBRETRO_COMM_DIR)/compat/fopen_utf8.c",
+      "candidate_path": "libretro-common/compat/fopen_utf8.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 258,
+      "expression": "$(ROOT_DIR)/custom/mupen64plus-core/api/vidext_libretro.c",
+      "candidate_path": "custom/mupen64plus-core/api/vidext_libretro.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 259,
+      "expression": "$(LIBRETRO_COMM_DIR)/glsm/glsm.c",
+      "candidate_path": "libretro-common/glsm/glsm.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 263,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Combiner.cpp",
+      "candidate_path": "GLideN64/src/Combiner.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 264,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/CombinerKey.cpp",
+      "candidate_path": "GLideN64/src/CombinerKey.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 265,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/CommonPluginAPI.cpp",
+      "candidate_path": "GLideN64/src/CommonPluginAPI.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 266,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Config.cpp",
+      "candidate_path": "GLideN64/src/Config.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 267,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/convert.cpp",
+      "candidate_path": "GLideN64/src/convert.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 268,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/DebugDump.cpp",
+      "candidate_path": "GLideN64/src/DebugDump.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 269,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Debugger.cpp",
+      "candidate_path": "GLideN64/src/Debugger.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 270,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/DepthBuffer.cpp",
+      "candidate_path": "GLideN64/src/DepthBuffer.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 271,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/DisplayWindow.cpp",
+      "candidate_path": "GLideN64/src/DisplayWindow.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 272,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/mupen64plus/mupen64plus_DisplayWindow.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/mupen64plus/mupen64plus_DisplayWindow.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 273,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/DisplayLoadProgress.cpp",
+      "candidate_path": "GLideN64/src/DisplayLoadProgress.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 274,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/FrameBuffer.cpp",
+      "candidate_path": "GLideN64/src/FrameBuffer.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 275,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/FrameBufferInfo.cpp",
+      "candidate_path": "GLideN64/src/FrameBufferInfo.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 276,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/GBI.cpp",
+      "candidate_path": "GLideN64/src/GBI.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 277,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/gDP.cpp",
+      "candidate_path": "GLideN64/src/gDP.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 278,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/GLideN64.cpp",
+      "candidate_path": "GLideN64/src/GLideN64.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 279,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/gSP.cpp",
+      "candidate_path": "GLideN64/src/gSP.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 280,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/N64.cpp",
+      "candidate_path": "GLideN64/src/N64.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 281,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/TextDrawer.cpp",
+      "candidate_path": "GLideN64/src/TextDrawer.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 282,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/PaletteTexture.cpp",
+      "candidate_path": "GLideN64/src/PaletteTexture.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 283,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Performance.cpp",
+      "candidate_path": "GLideN64/src/Performance.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 284,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/PostProcessor.cpp",
+      "candidate_path": "GLideN64/src/PostProcessor.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 285,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/RDP.cpp",
+      "candidate_path": "GLideN64/src/RDP.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 286,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/RSP.cpp",
+      "candidate_path": "GLideN64/src/RSP.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 287,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/SoftwareRender.cpp",
+      "candidate_path": "GLideN64/src/SoftwareRender.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 288,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/TexrectDrawer.cpp",
+      "candidate_path": "GLideN64/src/TexrectDrawer.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 289,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/TextureFilterHandler.cpp",
+      "candidate_path": "GLideN64/src/TextureFilterHandler.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 290,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Textures.cpp",
+      "candidate_path": "GLideN64/src/Textures.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 291,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/VI.cpp",
+      "candidate_path": "GLideN64/src/VI.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 292,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/ZlutTexture.cpp",
+      "candidate_path": "GLideN64/src/ZlutTexture.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 293,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/common/CommonAPIImpl_common.cpp",
+      "candidate_path": "GLideN64/src/common/CommonAPIImpl_common.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 294,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/DepthBufferRender/ClipPolygon.cpp",
+      "candidate_path": "GLideN64/src/DepthBufferRender/ClipPolygon.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 295,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/DepthBufferRender/DepthBufferRender.cpp",
+      "candidate_path": "GLideN64/src/DepthBufferRender/DepthBufferRender.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 296,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/BufferCopy/BlueNoiseTexture.cpp",
+      "candidate_path": "GLideN64/src/BufferCopy/BlueNoiseTexture.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 297,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/BufferCopy/ColorBufferToRDRAM.cpp",
+      "candidate_path": "GLideN64/src/BufferCopy/ColorBufferToRDRAM.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 298,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/BufferCopy/DepthBufferToRDRAM.cpp",
+      "candidate_path": "GLideN64/src/BufferCopy/DepthBufferToRDRAM.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 299,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/BufferCopy/RDRAMtoColorBuffer.cpp",
+      "candidate_path": "GLideN64/src/BufferCopy/RDRAMtoColorBuffer.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 300,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/GraphicsDrawer.cpp",
+      "candidate_path": "GLideN64/src/GraphicsDrawer.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 301,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/Context.cpp",
+      "candidate_path": "GLideN64/src/Graphics/Context.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 302,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/ColorBufferReader.cpp",
+      "candidate_path": "GLideN64/src/Graphics/ColorBufferReader.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 303,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/CombinerProgram.cpp",
+      "candidate_path": "GLideN64/src/Graphics/CombinerProgram.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 304,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/ObjectHandle.cpp",
+      "candidate_path": "GLideN64/src/Graphics/ObjectHandle.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 305,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLFunctions.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/GLFunctions.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 306,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/ThreadedOpenGl/opengl_Wrapper.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/ThreadedOpenGl/opengl_Wrapper.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 307,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/ThreadedOpenGl/opengl_WrappedFunctions.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/ThreadedOpenGl/opengl_WrappedFunctions.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 308,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/ThreadedOpenGl/opengl_Command.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/ThreadedOpenGl/opengl_Command.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 309,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/ThreadedOpenGl/opengl_ObjectPool.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/ThreadedOpenGl/opengl_ObjectPool.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 310,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/ThreadedOpenGl/RingBufferPool.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/ThreadedOpenGl/RingBufferPool.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 311,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_Attributes.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/opengl_Attributes.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 312,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_BufferedDrawer.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/opengl_BufferedDrawer.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 313,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_BufferManipulationObjectFactory.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/opengl_BufferManipulationObjectFactory.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 314,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_CachedFunctions.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/opengl_CachedFunctions.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 315,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_ColorBufferReaderWithBufferStorage.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/opengl_ColorBufferReaderWithBufferStorage.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 316,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_ColorBufferReaderWithPixelBuffer.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/opengl_ColorBufferReaderWithPixelBuffer.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 317,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_ColorBufferReaderWithReadPixels.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/opengl_ColorBufferReaderWithReadPixels.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 318,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_ColorBufferReaderWithEGLImage.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/opengl_ColorBufferReaderWithEGLImage.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 319,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_ContextImpl.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/opengl_ContextImpl.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 320,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_GLInfo.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/opengl_GLInfo.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 321,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_Parameters.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/opengl_Parameters.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 322,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_TextureManipulationObjectFactory.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/opengl_TextureManipulationObjectFactory.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 323,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_UnbufferedDrawer.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/opengl_UnbufferedDrawer.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 324,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/opengl_Utils.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/opengl_Utils.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 325,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_CombinerInputs.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/GLSL/glsl_CombinerInputs.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 326,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramBuilder.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramBuilder.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 327,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramImpl.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramImpl.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 328,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramUniformFactory.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramUniformFactory.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 329,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramUniformFactoryAccurate.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramUniformFactoryAccurate.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 330,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramUniformFactoryFast.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramUniformFactoryFast.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 331,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramUniformFactoryCommon.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramUniformFactoryCommon.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 332,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramBuilderCommon.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramBuilderCommon.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 333,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramBuilderAccurate.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramBuilderAccurate.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 334,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramBuilderFast.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/GLSL/glsl_CombinerProgramBuilderFast.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 335,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_FXAA.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/GLSL/glsl_FXAA.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 336,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_ShaderStorage.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/GLSL/glsl_ShaderStorage.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 337,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_SpecialShadersFactory.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/GLSL/glsl_SpecialShadersFactory.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 338,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GLSL/glsl_Utils.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/GLSL/glsl_Utils.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 339,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GraphicBuffer/PrivateApi/GraphicBuffer.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/GraphicBuffer/PrivateApi/GraphicBuffer.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 340,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/mupenplus/MemoryStatus_mupenplus.cpp",
+      "candidate_path": "GLideN64/src/mupenplus/MemoryStatus_mupenplus.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 341,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/F3D.cpp",
+      "candidate_path": "GLideN64/src/uCodes/F3D.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 342,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/F3DAM.cpp",
+      "candidate_path": "GLideN64/src/uCodes/F3DAM.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 343,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/F3DBETA.cpp",
+      "candidate_path": "GLideN64/src/uCodes/F3DBETA.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 344,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/F3DDKR.cpp",
+      "candidate_path": "GLideN64/src/uCodes/F3DDKR.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 345,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/F3DEX.cpp",
+      "candidate_path": "GLideN64/src/uCodes/F3DEX.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 346,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/F3DEX2.cpp",
+      "candidate_path": "GLideN64/src/uCodes/F3DEX2.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 347,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/F3DEX3.cpp",
+      "candidate_path": "GLideN64/src/uCodes/F3DEX3.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 348,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/F3DEX095.cpp",
+      "candidate_path": "GLideN64/src/uCodes/F3DEX095.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 349,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/F3DEX2ACCLAIM.cpp",
+      "candidate_path": "GLideN64/src/uCodes/F3DEX2ACCLAIM.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 350,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/F3DEX2CBFD.cpp",
+      "candidate_path": "GLideN64/src/uCodes/F3DEX2CBFD.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 351,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/F3DZEX2.cpp",
+      "candidate_path": "GLideN64/src/uCodes/F3DZEX2.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 352,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/F3DFLX2.cpp",
+      "candidate_path": "GLideN64/src/uCodes/F3DFLX2.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 353,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/F3DGOLDEN.cpp",
+      "candidate_path": "GLideN64/src/uCodes/F3DGOLDEN.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 354,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/F3DPD.cpp",
+      "candidate_path": "GLideN64/src/uCodes/F3DPD.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 355,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/F3DSETA.cpp",
+      "candidate_path": "GLideN64/src/uCodes/F3DSETA.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 356,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/F5Indi_Naboo.cpp",
+      "candidate_path": "GLideN64/src/uCodes/F5Indi_Naboo.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 357,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/F5Rogue.cpp",
+      "candidate_path": "GLideN64/src/uCodes/F5Rogue.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 358,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/F3DTEXA.cpp",
+      "candidate_path": "GLideN64/src/uCodes/F3DTEXA.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 359,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/L3D.cpp",
+      "candidate_path": "GLideN64/src/uCodes/L3D.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 360,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/L3DEX2.cpp",
+      "candidate_path": "GLideN64/src/uCodes/L3DEX2.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 361,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/L3DEX.cpp",
+      "candidate_path": "GLideN64/src/uCodes/L3DEX.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 362,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/S2DEX2.cpp",
+      "candidate_path": "GLideN64/src/uCodes/S2DEX2.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 363,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/S2DEX.cpp",
+      "candidate_path": "GLideN64/src/uCodes/S2DEX.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 364,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/T3DUX.cpp",
+      "candidate_path": "GLideN64/src/uCodes/T3DUX.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 365,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/Turbo3D.cpp",
+      "candidate_path": "GLideN64/src/uCodes/Turbo3D.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 366,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/ZSort.cpp",
+      "candidate_path": "GLideN64/src/uCodes/ZSort.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 367,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/uCodes/ZSortBOSS.cpp",
+      "candidate_path": "GLideN64/src/uCodes/ZSortBOSS.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 368,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/MupenPlusPluginAPI.cpp",
+      "candidate_path": "GLideN64/src/MupenPlusPluginAPI.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 369,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/mupenplus/MupenPlusAPIImpl.cpp",
+      "candidate_path": "GLideN64/src/mupenplus/MupenPlusAPIImpl.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 370,
+      "expression": "$(ROOT_DIR)/custom/GLideN64/mupenplus/Config_mupenplus.cpp",
+      "candidate_path": "custom/GLideN64/mupenplus/Config_mupenplus.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 371,
+      "expression": "$(ROOT_DIR)/custom/GLideN64/mupenplus/CommonAPIImpl_mupenplus.cpp",
+      "candidate_path": "custom/GLideN64/mupenplus/CommonAPIImpl_mupenplus.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 372,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Log.cpp",
+      "candidate_path": "GLideN64/src/Log.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 375,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/GLideNHQ/TextureFilters.cpp",
+      "candidate_path": "GLideN64/src/GLideNHQ/TextureFilters.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 376,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/GLideNHQ/TextureFilters_2xsai.cpp",
+      "candidate_path": "GLideN64/src/GLideNHQ/TextureFilters_2xsai.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 377,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/GLideNHQ/TextureFilters_hq2x.cpp",
+      "candidate_path": "GLideN64/src/GLideNHQ/TextureFilters_hq2x.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 378,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/GLideNHQ/TextureFilters_hq4x.cpp",
+      "candidate_path": "GLideN64/src/GLideNHQ/TextureFilters_hq4x.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 379,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/GLideNHQ/TextureFilters_xbrz.cpp",
+      "candidate_path": "GLideN64/src/GLideNHQ/TextureFilters_xbrz.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 380,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/GLideNHQ/TxCache.cpp",
+      "candidate_path": "GLideN64/src/GLideNHQ/TxCache.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 381,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/GLideNHQ/TxDbg.cpp",
+      "candidate_path": "GLideN64/src/GLideNHQ/TxDbg.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 382,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/GLideNHQ/TxFilter.cpp",
+      "candidate_path": "GLideN64/src/GLideNHQ/TxFilter.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 383,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/GLideNHQ/TxFilterExport.cpp",
+      "candidate_path": "GLideN64/src/GLideNHQ/TxFilterExport.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 384,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/GLideNHQ/TxHiResCache.cpp",
+      "candidate_path": "GLideN64/src/GLideNHQ/TxHiResCache.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 385,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/GLideNHQ/TxHiResNoCache.cpp",
+      "candidate_path": "GLideN64/src/GLideNHQ/TxHiResNoCache.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 386,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/GLideNHQ/TxHiResLoader.cpp",
+      "candidate_path": "GLideN64/src/GLideNHQ/TxHiResLoader.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 387,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/GLideNHQ/TxImage.cpp",
+      "candidate_path": "GLideN64/src/GLideNHQ/TxImage.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 388,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/GLideNHQ/TxQuantize.cpp",
+      "candidate_path": "GLideN64/src/GLideNHQ/TxQuantize.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 389,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/GLideNHQ/TxReSample.cpp",
+      "candidate_path": "GLideN64/src/GLideNHQ/TxReSample.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 390,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/GLideNHQ/TxTexCache.cpp",
+      "candidate_path": "GLideN64/src/GLideNHQ/TxTexCache.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 391,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/GLideNHQ/TxUtil.cpp",
+      "candidate_path": "GLideN64/src/GLideNHQ/TxUtil.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 392,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/RSP_LoadMatrix.cpp",
+      "candidate_path": "GLideN64/src/RSP_LoadMatrix.cpp",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 398,
+      "expression": "$(VIDEODIR_ANGRYLION)/parallel_al.cpp",
+      "candidate_path": "mupen64plus-video-angrylion/parallel_al.cpp",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_THR_AL), 1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 399,
+      "expression": "$(VIDEODIR_ANGRYLION)/interface.c",
+      "candidate_path": "mupen64plus-video-angrylion/interface.c",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_THR_AL), 1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 400,
+      "expression": "$(VIDEODIR_ANGRYLION)/n64video.c",
+      "candidate_path": "mupen64plus-video-angrylion/n64video.c",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_THR_AL), 1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 404,
+      "expression": "$(RSPDIR)/src/alist.c",
+      "candidate_path": "mupen64plus-rsp-hle/src/alist.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 405,
+      "expression": "$(RSPDIR)/src/alist_audio.c",
+      "candidate_path": "mupen64plus-rsp-hle/src/alist_audio.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 406,
+      "expression": "$(RSPDIR)/src/alist_naudio.c",
+      "candidate_path": "mupen64plus-rsp-hle/src/alist_naudio.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 407,
+      "expression": "$(RSPDIR)/src/alist_nead.c",
+      "candidate_path": "mupen64plus-rsp-hle/src/alist_nead.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 408,
+      "expression": "$(RSPDIR)/src/audio.c",
+      "candidate_path": "mupen64plus-rsp-hle/src/audio.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 409,
+      "expression": "$(RSPDIR)/src/cicx105.c",
+      "candidate_path": "mupen64plus-rsp-hle/src/cicx105.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 410,
+      "expression": "$(RSPDIR)/src/hle.c",
+      "candidate_path": "mupen64plus-rsp-hle/src/hle.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 411,
+      "expression": "$(RSPDIR)/src/hvqm.c",
+      "candidate_path": "mupen64plus-rsp-hle/src/hvqm.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 412,
+      "expression": "$(RSPDIR)/src/jpeg.c",
+      "candidate_path": "mupen64plus-rsp-hle/src/jpeg.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 413,
+      "expression": "$(RSPDIR)/src/memory.c",
+      "candidate_path": "mupen64plus-rsp-hle/src/memory.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 414,
+      "expression": "$(RSPDIR)/src/mp3.c",
+      "candidate_path": "mupen64plus-rsp-hle/src/mp3.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 415,
+      "expression": "$(RSPDIR)/src/musyx.c",
+      "candidate_path": "mupen64plus-rsp-hle/src/musyx.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 416,
+      "expression": "$(RSPDIR)/src/re2.c",
+      "candidate_path": "mupen64plus-rsp-hle/src/re2.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 417,
+      "expression": "$(RSPDIR)/src/plugin.c",
+      "candidate_path": "mupen64plus-rsp-hle/src/plugin.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 420,
+      "expression": "$(CXD4DIR)/rsp.c",
+      "candidate_path": "mupen64plus-rsp-cxd4/rsp.c",
+      "conditions_unevaluated": [
+        "ifeq ($(LLE), 1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 429,
+      "expression": "$(VIDEODIR_PARALLEL)/parallel.cpp",
+      "candidate_path": "mupen64plus-video-paraLLEl/parallel.cpp",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_PARALLEL_RDP),1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 429,
+      "expression": "$(VIDEODIR_PARALLEL)/rdp.cpp",
+      "candidate_path": "mupen64plus-video-paraLLEl/rdp.cpp",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_PARALLEL_RDP),1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 436,
+      "expression": "$(RSPDIR_PARALLEL)/parallel.cpp",
+      "candidate_path": "mupen64plus-rsp-paraLLEl/parallel.cpp",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_PARALLEL_RSP), 1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 437,
+      "expression": "$(RSPDIR_PARALLEL)/rsp_disasm.cpp",
+      "candidate_path": "mupen64plus-rsp-paraLLEl/rsp_disasm.cpp",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_PARALLEL_RSP), 1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 438,
+      "expression": "$(RSPDIR_PARALLEL)/jit_allocator.cpp",
+      "candidate_path": "mupen64plus-rsp-paraLLEl/jit_allocator.cpp",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_PARALLEL_RSP), 1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 443,
+      "expression": "$(RSPDIR_PARALLEL)/debug_jit.cpp",
+      "candidate_path": "mupen64plus-rsp-paraLLEl/debug_jit.cpp",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_PARALLEL_RSP), 1)",
+        "ifneq ($(DEBUG_JIT),)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 444,
+      "expression": "$(RSPDIR_PARALLEL)/rsp.cpp",
+      "candidate_path": "mupen64plus-rsp-paraLLEl/rsp.cpp",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_PARALLEL_RSP), 1)",
+        "ifneq ($(DEBUG_JIT),)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 447,
+      "expression": "$(RSPDIR_PARALLEL)/rsp_jit.cpp",
+      "candidate_path": "mupen64plus-rsp-paraLLEl/rsp_jit.cpp",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_PARALLEL_RSP), 1)",
+        "ELSE of ifneq ($(DEBUG_JIT),)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 449,
+      "expression": "$(RSPDIR_PARALLEL)/lightning/lib/jit_disasm.c",
+      "candidate_path": "mupen64plus-rsp-paraLLEl/lightning/lib/jit_disasm.c",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_PARALLEL_RSP), 1)",
+        "ELSE of ifneq ($(DEBUG_JIT),)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 450,
+      "expression": "$(RSPDIR_PARALLEL)/lightning/lib/jit_memory.c",
+      "candidate_path": "mupen64plus-rsp-paraLLEl/lightning/lib/jit_memory.c",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_PARALLEL_RSP), 1)",
+        "ELSE of ifneq ($(DEBUG_JIT),)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 451,
+      "expression": "$(RSPDIR_PARALLEL)/lightning/lib/jit_names.c",
+      "candidate_path": "mupen64plus-rsp-paraLLEl/lightning/lib/jit_names.c",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_PARALLEL_RSP), 1)",
+        "ELSE of ifneq ($(DEBUG_JIT),)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 452,
+      "expression": "$(RSPDIR_PARALLEL)/lightning/lib/jit_note.c",
+      "candidate_path": "mupen64plus-rsp-paraLLEl/lightning/lib/jit_note.c",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_PARALLEL_RSP), 1)",
+        "ELSE of ifneq ($(DEBUG_JIT),)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 453,
+      "expression": "$(RSPDIR_PARALLEL)/lightning/lib/jit_print.c",
+      "candidate_path": "mupen64plus-rsp-paraLLEl/lightning/lib/jit_print.c",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_PARALLEL_RSP), 1)",
+        "ELSE of ifneq ($(DEBUG_JIT),)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 454,
+      "expression": "$(RSPDIR_PARALLEL)/lightning/lib/jit_size.c",
+      "candidate_path": "mupen64plus-rsp-paraLLEl/lightning/lib/jit_size.c",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_PARALLEL_RSP), 1)",
+        "ELSE of ifneq ($(DEBUG_JIT),)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 455,
+      "expression": "$(RSPDIR_PARALLEL)/lightning/lib/lightning.c",
+      "candidate_path": "mupen64plus-rsp-paraLLEl/lightning/lib/lightning.c",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_PARALLEL_RSP), 1)",
+        "ELSE of ifneq ($(DEBUG_JIT),)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 464,
+      "expression": "$(RSPDIR_PARALLEL)/win32/mman/sys/mman.c",
+      "candidate_path": "mupen64plus-rsp-paraLLEl/win32/mman/sys/mman.c",
+      "conditions_unevaluated": [
+        "ifneq (,$(findstring win,$(platform)))"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 468,
+      "expression": "$(LIBRETRO_COMM_DIR)/libco/libco.c",
+      "candidate_path": "libretro-common/libco/libco.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 471,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/CRC32_ARMV8.cpp",
+      "candidate_path": "GLideN64/src/CRC32_ARMV8.cpp",
+      "conditions_unevaluated": [
+        "ifeq ($(platform), $(filter $(platform), rpi3 rpi4 libnx jetson-xavier))"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 473,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/CRC_OPT.cpp",
+      "candidate_path": "GLideN64/src/CRC_OPT.cpp",
+      "conditions_unevaluated": [
+        "ELSE of ifeq ($(platform), $(filter $(platform), rpi3 rpi4 libnx jetson-xavier))"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 477,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Neon/3DMathNeon.cpp",
+      "candidate_path": "GLideN64/src/Neon/3DMathNeon.cpp",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_NEON),1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 478,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Neon/gSPNeon.cpp",
+      "candidate_path": "GLideN64/src/Neon/gSPNeon.cpp",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_NEON),1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 480,
+      "expression": "$(LIBRETRO_COMM_DIR)/audio/conversion/float_to_s16_neon.S",
+      "candidate_path": "libretro-common/audio/conversion/float_to_s16_neon.S",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_NEON),1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 481,
+      "expression": "$(LIBRETRO_COMM_DIR)/audio/conversion/s16_to_float_neon.S",
+      "candidate_path": "libretro-common/audio/conversion/s16_to_float_neon.S",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_NEON),1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 482,
+      "expression": "$(LIBRETRO_COMM_DIR)/audio/resampler/drivers/sinc_resampler_neon.S",
+      "candidate_path": "libretro-common/audio/resampler/drivers/sinc_resampler_neon.S",
+      "conditions_unevaluated": [
+        "ifeq ($(HAVE_NEON),1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 484,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/3DMath.cpp",
+      "candidate_path": "GLideN64/src/3DMath.cpp",
+      "conditions_unevaluated": [
+        "ELSE of ifeq ($(HAVE_NEON),1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 490,
+      "expression": "$(ROOT_DIR)/custom/ios/compat.c",
+      "candidate_path": "custom/ios/compat.c",
+      "conditions_unevaluated": [
+        "ELSE of ifneq ($(platform), $(filter $(platform), ios-arm64 tvos-arm64))"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 500,
+      "expression": "$(LIBRETRO_COMM_DIR)/glsym/glsym_es3.c",
+      "candidate_path": "libretro-common/glsym/glsym_es3.c",
+      "conditions_unevaluated": [
+        "ifeq ($(GLES3),1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 502,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GraphicBuffer/GraphicBufferWrapper.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/GraphicBuffer/GraphicBufferWrapper.cpp",
+      "conditions_unevaluated": [
+        "ifeq ($(GLES3),1)",
+        "ifeq ($(ANDROID),1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 503,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GraphicBuffer/PublicApi/android_hardware_buffer_compat.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/GraphicBuffer/PublicApi/android_hardware_buffer_compat.cpp",
+      "conditions_unevaluated": [
+        "ifeq ($(GLES3),1)",
+        "ifeq ($(ANDROID),1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 508,
+      "expression": "$(LIBRETRO_COMM_DIR)/glsym/glsym_es2.c",
+      "candidate_path": "libretro-common/glsym/glsym_es2.c",
+      "conditions_unevaluated": [
+        "ELSE of ifeq ($(GLES3),1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 511,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GraphicBuffer/GraphicBufferWrapper.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/GraphicBuffer/GraphicBufferWrapper.cpp",
+      "conditions_unevaluated": [
+        "ELSE of ifeq ($(GLES3),1)",
+        "ifeq ($(ANDROID),1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 512,
+      "expression": "$(VIDEODIR_GLIDEN64)/src/Graphics/OpenGLContext/GraphicBuffer/PublicApi/android_hardware_buffer_compat.cpp",
+      "candidate_path": "GLideN64/src/Graphics/OpenGLContext/GraphicBuffer/PublicApi/android_hardware_buffer_compat.cpp",
+      "conditions_unevaluated": [
+        "ELSE of ifeq ($(GLES3),1)",
+        "ifeq ($(ANDROID),1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 519,
+      "expression": "$(LIBRETRO_COMM_DIR)/glsym/glsym_gl.c",
+      "candidate_path": "libretro-common/glsym/glsym_gl.c",
+      "conditions_unevaluated": [
+        "ELSE of ELSE of ifeq ($(GLES3),1)"
+      ],
+      "status": "static_source_candidate_not_link_trace"
+    },
+    {
+      "line": 521,
+      "expression": "$(LIBRETRO_COMM_DIR)/glsym/rglgen.c",
+      "candidate_path": "libretro-common/glsym/rglgen.c",
+      "conditions_unevaluated": [],
+      "status": "static_source_candidate_not_link_trace"
+    }
+  ]
+}

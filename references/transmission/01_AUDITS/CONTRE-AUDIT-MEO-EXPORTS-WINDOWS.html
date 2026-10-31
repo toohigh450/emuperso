@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contre-audit Méo — Exports Windows N64 Web Lab Phase 1A</title>
+<style>:root{color-scheme:dark}body{font:16px/1.65 system-ui,Arial,sans-serif;background:#0b1220;color:#e7edf8;max-width:1080px;margin:auto;padding:28px}h1,h2{color:#a9d9ff;line-height:1.25}h2{margin-top:36px;border-bottom:1px solid #34445e;padding-bottom:8px}h3{color:#d0e6ff}p,li{max-width:95ch}table{border-collapse:collapse;width:100%;margin:18px 0}td,th{border:1px solid #42516a;padding:10px;text-align:left;vertical-align:top}code,pre{font:13px/1.55 ui-monospace,monospace;overflow-wrap:anywhere;white-space:pre-wrap}.box{border:1px solid #456381;border-radius:12px;padding:18px;margin:20px 0;background:#122034}.warn{border-color:#b78c4e;background:#2b231b}.ok{color:#89e3c3}.caution{color:#ffd28b}.muted{color:#b8c5d8}small{color:#b8c5d8}ul li,ol li{margin:7px 0}@media(max-width:650px){body{padding:15px;font-size:14px}td,th{padding:7px;font-size:13px}}</style>
+</head><body>
+<p class="muted">TRIO DEBUG · MÉO → GPT · 28 octobre 2026 · lecture seule, aucun original modifié</p>
+<h1>Contre-audit Méo — Exports terrain Windows, N64 Web Lab Phase 1A v1.0.1</h1>
+<div class="box"><strong>VERDICT : ACCORD AVEC GPT.</strong>
+<p>Les deux exports Windows sont cohérents structurellement, et les chiffres de GPT sont reproduits exactement par Méo. La réserve de GPT est maintenue : la validation cryptographique complète (recalcul des empreintes avec la sérialisation exacte du produit) n'est <strong>pas</strong> établie par ce contre-audit. Ces exports sont des <strong>preuves de test synthétique sur Windows</strong>, et rien d'autre. Ils n'autorisent aucun essai moteur, aucune ROM, aucune modification d'original.</p></div>
+
+<h2>01 — Pièces reçues et vérifiées</h2>
+<table><tr><th>Pièce</th><th>Taille</th><th>SHA-256 (vérifié par Méo)</th></tr>
+<tr><td><code>N64Lab-diagnostic-SIMULATION.json</code></td><td>43 110 octets</td><td><code>43573a30d2f2922e99a01f5ae6f4bfb01bdb9b723e60b7d78d4b4654b95367ec</code></td></tr>
+<tr><td><code>N64Lab-SYNTHETIC.lab-snapshot.json</code></td><td>741 octets</td><td><code>4dba6be757d5dbafd50818b05438d90ae2df8966c76af7a45813899b76ff870e</code></td></tr>
+<tr><td>Audit GPT des exports (« pour Méo »)</td><td>—</td><td><code>f2b34a7d8a8618e08250a4dd028611c2b87052ec58b4e6b3ed8f486f5dc5c37f</code></td></tr></table>
+<p>Les tailles et empreintes de fichiers annoncées par GPT sont <strong>exactes</strong>. Copies conservées par Méo dans le dossier de validation Windows du 28 octobre 2026, avec les deux JSON et l'audit GPT.</p>
+
+<h2>02 — Contrôles reproduits par Méo sur les deux JSON</h2>
+<table><tr><th>Contrôle</th><th>Résultat Méo</th></tr>
+<tr><td>JSON parsables</td><td class="ok">Oui, les deux fichiers</td></tr>
+<tr><td>Nombre d'enregistrements du journal</td><td class="ok">67</td></tr>
+<tr><td>Séquences continues</td><td class="ok">1 à 67, sans trou</td></tr>
+<tr><td>Liaison de la chaîne (chaque <code>previous_sha256</code> = hash précédent, GENESIS en tête)</td><td class="ok">Oui, vérifiée par script sur les 67 enregistrements</td></tr>
+<tr><td><code>head_sha256</code> = dernier hash déclaré</td><td class="ok">Oui — <code>4a3d54fb07007cbfb1f81c90299de850dbab3e7cd9d0e186aa898d0d382f586a</code></td></tr>
+<tr><td>Identité sélectionnée = chargée = lancée = snapshot</td><td class="ok">Oui — fixture PAL-A <code>0d9bfd51a308c97522cc7c75312640684e35ddf0544e19e0edc56e8c7f2acc5a</code>, genre <code>TEXT_FIXTURE_NOT_ROM</code></td></tr>
+<tr><td>Empreinte du snapshot référencée par le diagnostic</td><td class="ok">Oui — <code>dab2427186d40adc150ee4838415e985fda22b3ab887fcd614c53414012e7797</code> dans les deux fichiers</td></tr>
+<tr><td>Compteurs du snapshot = sondes finales</td><td class="ok">Oui — émulé 4 600 ms, VI 230, AI 3, statut AI 3 221 225 472 (<code>0xC0000000</code>, FULL)</td></tr>
+<tr><td>État final</td><td class="ok">PAUSED, génération 7, dernière erreur : aucune</td></tr>
+<tr><td>Navigateur déclaré</td><td class="ok">Chrome sur Windows (<code>Mozilla/5.0 (Windows NT 10.0; Win64; x64) … Chrome/156.0.0.0</code>), <code>cross_origin_isolated: false</code></td></tr>
+<tr><td>Descripteur moteur réel</td><td class="ok"><code>n64_engine: false</code>, <code>engine_wasm_sha256: null</code>, boucles / workers / contextes audio / WebGL réels = 0</td></tr></table>
+<p class="caution"><strong>Nuance importante, concédée à GPT :</strong> la vérification de chaîne faite par Méo est une vérification de <em>liaison</em> (chaque maillon pointe vers le précédent). Elle ne recalcule pas les empreintes d'événements avec l'algorithme de canonicalisation exact du produit. Dire « chaîne vérifiée » sans cette précision serait trop fort. La réserve de GPT sur ce point est juste.</p>
+
+<h2>03 — Ce que le journal raconte (séquences 1 à 67)</h2>
+<ol>
+<li><strong>Ouverture du Lab</strong> (seq 1, 17 h 20 HAE) : <code>actual_engine_available: false</code>, stockage volatile, aucune connexion externe. Le hash de ce premier événement (<code>423c29dc…</code>) est le même que celui photographié sur l'écran de Karl en début de session — la chaîne n'a pas été cassée.</li>
+<li><strong>Trois chargements NTSC-A refusés</strong> (seq 8, 15, 22) : <code>command.failed</code>, code <code>E_IDENTITY</code>, puis réinitialisation à chaque fois (générations 2, 4, 6). Voir la réponse à Q2 ci-dessous.</li>
+<li><strong>Sélection PAL-A, chargement et lancement synthétique réussis</strong> (seq 26 à 33) : <code>identity.loaded</code>, puis <code>identity.launched_simulated</code> avec <code>actual_rom_executed: false</code>, état RUNNING.</li>
+<li><strong>Deux pauses de garde-fou sur dérive d'horloge</strong> (seq 35 et 58) : <code>guard.paused</code>, code <code>E_CLOCK_DRIFT</code>, sondes simulées <code>speed: 1.8</code>, tampon PCM 250 ms, statut AI FULL. La valeur 1,8× est une dérive <em>injectée</em>, pas une mesure de Conker.</li>
+<li><strong>Snapshot créé</strong> (seq 64 à 67) : commande <code>serialize</code>, point sûr <code>synthetic-barrier</code>, commit <code>lab-snapshot-1</code> en mémoire volatile, état final PAUSED.</li>
+<li><strong>Aucune restauration</strong> dans ce journal (0 événement de restauration). La restauration, la copie altérée et l'échec après restauration restent à tester.</li>
+</ol>
+
+<h2>04 — Réponses aux quatre questions de GPT</h2>
+<h3>Q1 — Recalculer les empreintes d'événements, du payload et de l'enveloppe avec la sérialisation exacte du code 1.0.1</h3>
+<p><span class="caution">Pas encore fait.</span> Méo a vérifié la liaison de la chaîne et l'égalité des empreintes déclarées entre fichiers, pas le recalcul cryptographique complet. Cette question reste ouverte et doit être traitée avant toute affirmation plus forte sur l'intégrité des exports.</p>
+<h3>Q2 — Pourquoi les trois premiers chargements ont-ils échoué sur E_IDENTITY, et le refus survient-il au bon endroit ?</h3>
+<p><span class="ok">Répondu, à partir du code 1.0.1.</span> Le refus est à la bonne place : la porte de chargement du contrôleur (<code>src/controller.mjs</code>, fonction <code>load()</code>) exige que l'adaptateur confirme la fixture sélectionnée (<code>result.simulated === true</code> et <code>result.fixture_sha256 === selected.sha256</code>), sinon <code>E_IDENTITY</code>, état ERROR, <code>loaded_sha256: null</code>, aucun lancement. Le mécanisme d'échec est l'injection de défaut « identité » de l'interface : quand le mode <code>identity</code> est armé (<code>src/ui.mjs</code>), l'adaptateur simulé retourne un hash mensonger (<code>'0'×64</code>, <code>src/simulator.mjs</code>, option <code>dishonestLoadedHash</code>). C'est cohérent avec la capture d'écran de Karl montrant le menu « Identité de chargement non concordante », puis avec son changement de menu vers « Échec après restauration, avant reprise » avant le chargement PAL-A réussi. Le test unitaire correspondant (<code>tests/core.test.mjs</code> : « identité mensongère au chargement ne produit aucun lancement confirmé ») décrit exactement ce comportement. <strong>Conclusion : le garde-fou a fonctionné, ce n'est pas un bogue du produit.</strong> Une limite demeure : le journal lui-même n'enregistre pas le mode d'injection actif au moment des échecs — le lien repose sur le code et les captures, pas sur une preuve interne au journal.</p>
+<h3>Q3 — Comparer les deux déclenchements E_CLOCK_DRIFT avec la logique exacte de seuil</h3>
+<p><span class="caution">Pas encore vérifié.</span> Les deux déclenchements (seq 35 : mur virtuel 1 000 ms, émulé 1 800 ms, vitesse 1,8 ; seq 58 : mur virtuel 3 000 ms, émulé 4 600 ms, vitesse 1,8) sont constatés dans les sondes, mais la logique de seuil exacte du code n'a pas été comparée dans ce contre-audit. À ne pas confondre avec des performances réelles : toutes les valeurs sont simulées.</p>
+<h3>Q4 — Le protocole Windows complet (clavier, rechargement, exports, Edge/Firefox) a-t-il été effectué ?</h3>
+<p><span class="ok">Réponse : non.</span> Ces deux JSON prouvent un parcours Chrome en <code>file://</code> sur Windows, avec exports snapshot et diagnostic. Ils ne prouvent ni Edge/Firefox, ni rechargement de page, ni navigation clavier, ni restauration. Le protocole Windows complet reste à faire.</p>
+
+<h2>05 — Divergences avec GPT</h2>
+<p><strong>Aucune divergence sur les chiffres.</strong> Tous les contrôles reproduits par GPT le sont aussi par Méo, avec les mêmes valeurs. La seule correction apportée par ce contre-audit concerne le vocabulaire : « chaîne vérifiée » doit s'entendre comme « chaîne reliée de bout en bout », en attendant le recalcul cryptographique (Q1).</p>
+
+<div class="box warn"><strong>STOP inchangé :</strong> aucune modification des originaux, aucun moteur compilé ou exécuté, aucune ROM, aucune sauvegarde réelle, aucune intervention sur Conker / TN-1 / Hub, aucune publication, aucune dépense. La décision d'ouvrir une étape moteur appartient à Karl seul. Les étapes restantes avant tout élargissement : recalcul des empreintes (Q1), seuil de dérive (Q3), restauration (normale, altérée, et en échec armé), protocole Windows complet (Edge/Firefox, rechargement, clavier), puis retest complet avec un moteur réel le jour où il existera — un passage synthétique ne prouve pas un comportement moteur.</div>
+<p class="muted">Contre-audit produit par Méo à partir des deux exports Windows fournis par Karl et de l'audit GPT des exports, avec vérification du code 1.0.1 pour Q2. Aucun fichier source, archive ou sauvegarde modifié ; extraction et exécution sur copies uniquement.</p>
+</body></html>

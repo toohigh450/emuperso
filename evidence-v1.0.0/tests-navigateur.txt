@@ -1,0 +1,21 @@
+RÉUSSI — HTML autonome chargé depuis une réponse locale interceptée, contexte hors ligne, WebCrypto disponible
+RÉUSSI — Fond Goku/Vegeta intégré en données locales, visible uniquement sur la page principale
+RÉUSSI — Sélection réelle d’une fixture textuelle hashée ; chargement et lancement encore absents
+RÉUSSI — Acquittements séparés de chargement et de lancement synthétique
+RÉUSSI — Cadence 1× et FULL synthétiques coexistent sans déclenchement de garde-fou
+RÉUSSI — Snapshot synthétique exporté ; deux SHA-256 recomputés indépendamment en Python
+RÉUSSI — Copie altérée refusée avant mutation ; session et boucle conservées
+RÉUSSI — Restauration contrôlée, purge PCM et réancrage ; reprise normale du simulateur
+RÉUSSI — Écriture système fictive : annulation, consentement ciblé et Échap sans réutiliser la confirmation précédente
+RÉUSSI — Restauration de snapshot sans écraser la révision système synthétique
+RÉUSSI — Dérive et suspension audio mettent effectivement le simulateur en pause
+RÉUSSI — Diagnostic JSON et chaîne de journal complets, hashés, vérifiés et explicitement synthétiques
+RÉUSSI — Timeout réellement déclenché sur le simulateur ; aucune réactivation tardive
+RÉUSSI — Acquittement d’identité non concordante refusé, pas de lancement
+RÉUSSI — Échec de reconstruction après restauration : instance invalidée et aucun succès mensonger
+RÉUSSI — Autre fixture et profil régional fictif : compteurs différenciés et stockage isolé
+RÉUSSI — Navigation au clavier et focus réel ; contrôles modaux testés avec Échap
+RÉUSSI — Trois vues vérifiées à 360, 390, 768 et 1440 px sans débordement horizontal
+RÉUSSI — Captures bureau/diagnostic/mobile et bannière permanente
+RÉUSSI — Rechargement : retour explicite à IDLE et absence de données persistantes
+RÉUSSI — Aucun appel moteur/Wasm/audio/worker/Canvas/Gamepad/fichier/stockage ; zéro service externe, seuls documents locaux interceptés

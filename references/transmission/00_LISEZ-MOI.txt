@@ -1,0 +1,9 @@
+TRANSMISSION À CODEX — N64 WEB LAB PHASE 1A 1.0.1
+Date : 28 octobre 2026
+
+OUVRIR D'ABORD : 00_MANDAT/MANDAT-CODEX.html ou .md
+
+Le mandat AUTORISE les améliorations sur COPIE CANDIDATE du laboratoire synthétique, pas la modification des originaux ni l'ouverture d'un vrai moteur N64.
+Les quatre rapports sont des pièces de référence et non une preuve de tests que Codex aurait lui-même exécutés.
+Les deux JSON sont des exports terrain en lecture seule. Le ZIP 1.0.1 est la référence source intacte.
+MANIFESTE-SHA256.txt donne les SHA-256 de tous les éléments du paquet (hors manifeste lui-même).

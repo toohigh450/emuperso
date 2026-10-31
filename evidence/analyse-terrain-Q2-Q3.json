@@ -1,0 +1,131 @@
+{
+  "scope": "Lecture des exports terrain fournis ; pas une exécution Windows par Codex",
+  "identity_failures": [
+    {
+      "seq": 8,
+      "utc": "2026-10-28T21:24:32.191Z",
+      "host_monotonic_ms": 252980.20000000298,
+      "generation": 2,
+      "type": "command.failed",
+      "evidence_domain": "SIMULATION_ONLY",
+      "data": {
+        "request_id": 3,
+        "operation": "load",
+        "code": "E_IDENTITY",
+        "touched_adapter": true
+      }
+    },
+    {
+      "seq": 15,
+      "utc": "2026-10-28T21:24:54.470Z",
+      "host_monotonic_ms": 275258.299999997,
+      "generation": 4,
+      "type": "command.failed",
+      "evidence_domain": "SIMULATION_ONLY",
+      "data": {
+        "request_id": 6,
+        "operation": "load",
+        "code": "E_IDENTITY",
+        "touched_adapter": true
+      }
+    },
+    {
+      "seq": 22,
+      "utc": "2026-10-28T21:25:01.351Z",
+      "host_monotonic_ms": 282139.39999999106,
+      "generation": 6,
+      "type": "command.failed",
+      "evidence_domain": "SIMULATION_ONLY",
+      "data": {
+        "request_id": 9,
+        "operation": "load",
+        "code": "E_IDENTITY",
+        "touched_adapter": true
+      }
+    }
+  ],
+  "clock_guards": [
+    {
+      "seq": 35,
+      "utc": "2026-10-28T21:26:59.009Z",
+      "host_monotonic_ms": 399797.59999999404,
+      "generation": 7,
+      "type": "guard.paused",
+      "evidence_domain": "SIMULATION_ONLY",
+      "data": {
+        "code": "E_CLOCK_DRIFT",
+        "probes": {
+          "domain": "SIMULATION_ONLY",
+          "virtual_wall_ms": 1000,
+          "emulated_ms": 1800,
+          "window_wall_ms": 1000,
+          "window_emulated_ms": 1800,
+          "speed": 1.8,
+          "vi_count": 90,
+          "ai_count": 1,
+          "ai_status": 3221225472,
+          "simulated_audio_state": "running",
+          "simulated_pcm_ms": 250,
+          "simulated_underruns": 0,
+          "simulated_loops": 1,
+          "actual_n64_loops": 0,
+          "actual_audio_contexts": 0,
+          "actual_workers": 0,
+          "actual_webgl_contexts": 0
+        }
+      }
+    },
+    {
+      "seq": 58,
+      "utc": "2026-10-28T21:29:14.666Z",
+      "host_monotonic_ms": 535455.099999994,
+      "generation": 7,
+      "type": "guard.paused",
+      "evidence_domain": "SIMULATION_ONLY",
+      "data": {
+        "code": "E_CLOCK_DRIFT",
+        "probes": {
+          "domain": "SIMULATION_ONLY",
+          "virtual_wall_ms": 3000,
+          "emulated_ms": 4600,
+          "window_wall_ms": 1000,
+          "window_emulated_ms": 1800,
+          "speed": 1.8,
+          "vi_count": 230,
+          "ai_count": 3,
+          "ai_status": 3221225472,
+          "simulated_audio_state": "running",
+          "simulated_pcm_ms": 250,
+          "simulated_underruns": 0,
+          "simulated_loops": 1,
+          "actual_n64_loops": 0,
+          "actual_audio_contexts": 0,
+          "actual_workers": 0,
+          "actual_webgl_contexts": 0
+        }
+      }
+    }
+  ],
+  "configuration_events": [],
+  "restore_events": [],
+  "final_state": "PAUSED",
+  "generation": 7,
+  "host_reported": {
+    "monotonic_ms": 591631.599999994,
+    "measurement_scope": "UI HOST ONLY, NOT N64 PERFORMANCE",
+    "browser_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "capability_presence_only": {
+      "crypto_subtle": true,
+      "cross_origin_isolated": false,
+      "audio_constructor_present": true,
+      "webgl2_constructor_present": true
+    }
+  },
+  "conclusions": [
+    "Trois refus avant identité chargée/lancée confirmée pour ces tentatives.",
+    "Injection historique non prouvée : pas de configuration active consignée.",
+    "Fenêtres de garde 1800/1000=1.8 depuis ancrage, pas rapport des compteurs absolus.",
+    "Aucune restauration attestée dans les 67 événements.",
+    "User-agent et présence API sont déclaratifs ; aucun protocole Windows complet démontré."
+  ]
+}

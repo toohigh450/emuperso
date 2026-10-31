@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contre-audit Méo — N64 Web Lab Phase 1A v1.0.0</title>
+<style>
+:root{--ink:#182d3e;--muted:#526a7b;--line:#cbd9e2;--accent:#17635b;--warn:#a37525}
+*{box-sizing:border-box}
+body{margin:0;background:#e9eff2;color:var(--ink);font:16px/1.7 system-ui,sans-serif}
+main{max-width:1160px;margin:auto;background:#fff;padding:48px 54px}
+header{border-top:7px solid var(--accent);padding-top:20px}
+h1{font-size:38px;line-height:1.2;letter-spacing:-.6px}
+h2{font-size:25px;margin-top:42px;border-bottom:2px solid var(--line);padding-bottom:9px}
+h3{font-size:19px}
+.eyebrow{font-size:12px;font-weight:750;color:var(--accent);letter-spacing:2px}
+.meta,small{color:var(--muted);font-size:13px}
+.box{border-left:5px solid var(--accent);background:#eef8f4;padding:18px 24px;margin:22px 0}
+.warn{border-color:var(--warn);background:#fff6e5}
+.bad{border-color:#8a2a2a;background:#fdf0f0}
+table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.6;margin:20px 0}
+td,th{border:1px solid var(--line);padding:10px;vertical-align:top;text-align:left}
+th{background:#edf4f7}
+code{font:12px ui-monospace,monospace;background:#edf4f6;padding:2px 4px;overflow-wrap:anywhere}
+.hash{font:10px ui-monospace,monospace;word-break:break-all}
+li{margin:7px 0}
+footer{border-top:1px solid var(--line);padding-top:16px;margin-top:40px;color:var(--muted);font-size:12px}
+@media(max-width:700px){main{padding:22px}h1{font-size:28px}table{font-size:12px}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<p class="eyebrow">KARL — DÉCIDEUR UNIQUE</p>
+<h1>Contre-audit Méo<br>N64 Web Lab — Phase 1A v1.0.0</h1>
+<p class="meta">Auditeur : Méo (Muse) • Livraison auditée : Codex • Date de l'audit : 28 octobre 2026<br>
+Fichiers reçus de Karl le 28 octobre 2026 vers midi : ZIP, rapport HTML, README-FR, fichier .sha256 séparé.<br>
+Ce document est autonome : aucun moteur, aucune ROM, aucun état original, aucun appel réseau.</p>
+</header>
+
+<div class="box">
+<strong>VERDICT — ACCEPTÉ dans son périmètre, avec clarifications.</strong>
+<p>La livraison Phase 1A est un banc de contrats synthétique réellement implémenté et testé, pas une maquette animée et pas un émulateur. Méo a reproduit indépendamment les tests JavaScript (53/53) et Python (8/8), vérifié le manifeste complet (36/36) et reproduit la construction du HTML (SHA identique). Le périmètre du mandat est respecté : aucun moteur N64 réel compilé ou exécuté, aucune ROM, aucun fichier original utilisé, aucun autre projet modifié dans la livraison.</p>
+</div>
+
+<div class="box warn">
+<strong>REJETÉ comme preuve d'émulation, de compatibilité Conker ou de correction Sonic.</strong>
+<p>Rien dans cette livraison ne prouve que Conker PAL fonctionne, que la vitesse ou l'audio N64 sont compris, ou que le bogue Sonic est corrigé. Les sondes sont des données de modèle. Toute phrase qui transformerait les 53 + 8 + 21 tests en « 82 tests d'émulation » est fausse : ce sont des tests de laboratoire synthétique, plus 21 contrôles navigateur rapportés par Codex et non reproduits par Méo (voir §2).</p>
+</div>
+
+<div class="box bad">
+<strong>STOP — Ce qui reste interdit sans un nouveau GO explicite de Karl.</strong>
+<p>Compilation ou exécution d'un moteur N64 réel ; utilisation d'une ROM ou d'un .sav / .srm / .state original ; modification d'un autre projet ; publication, déploiement ou dépense ; toute annonce d'émulateur fonctionnel, de compatibilité Conker PAL ou de correction Sonic.</p>
+</div>
+
+<h2>1. Objet audité — identité vérifiée</h2>
+<table>
+<tr><th>Élément</th><th>Valeur vérifiée par Méo</th></tr>
+<tr><td>ZIP reçu</td><td><code>N64-Web-Lab-Phase1A-1.0.0.zip</code> — 7 492 800 octets</td></tr>
+<tr><td>SHA-256 du ZIP</td><td class="hash">4edef1f9db2bb0a3864fb4dc6951af6afa8b365a343f2114deb3c5b2ea29a8b2</td></tr>
+<tr><td>Fichier .sha256 séparé</td><td>Identique au SHA calculé par Méo. Le ZIP n'a pas été altéré entre Codex et Karl, à la mesure de ce hash.</td></tr>
+<tr><td>Contenu</td><td>37 fichiers : HTML autonome, README-FR, image Goku/Vegeta, docs (architecture, problèmes ouverts, lock source, inventaires), preuves (captures, journaux de tests), sources modulaires, tests, outils de build et de vérification.</td></tr>
+<tr><td>Manifeste interne</td><td><code>MANIFEST-SHA256.txt</code> — 36 fichiers listés, 36/36 vérifiés OK par Méo. Le manifeste ne couvre pas sa propre empreinte, ce que le rapport dit lui-même.</td></tr>
+<tr><td>HTML livré</td><td class="hash">a1d5530defb843e990ef6d39eb88ea93279d1962f27253201c71ee8bb7babbcf</td></tr>
+<tr><td>Fichiers interdits</td><td>Aucun fichier .rom, .sav, .srm, .state, .wasm, .z64, .n64 ou .v64 dans le ZIP. Aucun fichier Conker, TN-1 ou Hub dans le ZIP.</td></tr>
+<tr><td>Rapport et README joints</td><td>Byte pour byte identiques aux copies contenues dans le ZIP (diff vérifié par Méo).</td></tr>
+</table>
+
+<h2>2. Ce que Méo a reproduit — et ce qu'il n'a pas reproduit</h2>
+<table>
+<tr><th>Contrôle</th><th>Résultat Méo</th><th>Portée</th></tr>
+<tr><td>Tests JavaScript du socle</td><td><strong>53/53 reproduits</strong> par Méo (<code>node tests/core.test.mjs</code>), dont 200 commandes pseudo-aléatoires et 100 restaurations à froid synthétiques.</td><td>Environnement Méo : Node v24.22.1 (Codex annonçait v24.19.0). L'écart de version mineure n'a pas changé le résultat.</td></tr>
+<tr><td>Tests Python des outils</td><td><strong>8/8 reproduits</strong> par Méo (chemins, manifestes, symlinks, lock, inventaire, fichier altéré).</td><td>Environnement Méo : Python 3.12.3 (Codex annonçait 3.12.14). Même remarque.</td></tr>
+<tr><td>Construction du HTML</td><td><strong>Reproduction exacte</strong> : <code>python tools/build.py</code> relancé par Méo produit un HTML de 3 730 810 octets, SHA-256 identique à celui livré.</td><td>Preuve que le HTML n'est pas un fichier à part : il est bien construit depuis les modules livrés, sans moteur.</td></tr>
+<tr><td>Garde-fous statiques</td><td><strong>Aucune invocation</strong> trouvée dans les sources et le HTML livré pour : <code>new AudioContext</code>, <code>new Worker</code>, <code>WebAssembly</code>, <code>fetch</code>, <code>XMLHttpRequest</code>, <code>indexedDB</code>, <code>localStorage</code>, <code>FileReader</code>, <code>getGamepad</code>, Canvas. Aucune URL externe dans le HTML livré.</td><td>La seule mention d'AudioContext est un test de <em>présence</em> du constructeur dans le diagnostic (<code>typeof AudioContext === 'function'</code>), pas une création. C'est conforme au rapport.</td></tr>
+<tr><td>CSP et bannière</td><td>CSP présente (<code>default-src 'none'</code>, <code>connect-src 'none'</code>, <code>img-src data:</code>), image Goku/Vegeta en data URI, bannière « LABORATOIRE SYNTHÉTIQUE — AUCUN MOTEUR N64, AUCUNE ROM, AUCUN SON ÉMULÉ » présente.</td><td>Vérifié dans le HTML livré.</td></tr>
+<tr><td>Contrôles navigateur (21)</td><td><strong>Non reproduits par Méo.</strong> Le script <code>tests/browser_check.py</code> a été lu et jugé substantiel : il intercepte le document en mémoire, neutralise les API interdites (fetch, Worker, AudioContext, Wasm, Canvas, stockage, etc.), affirme les parcours, les largeurs 360/390/768/1440 px et l'absence de débordement.</td><td>La machine de Méo ne dispose ni de Playwright ni de Chromium (<code>/usr/bin/chromium</code> absent), donc le 21/21 reste une <strong>affirmation de Codex</strong>, étayée par un script crédible et par les captures jointes, mais pas une reproduction Méo.</td></tr>
+<tr><td>Windows / Edge / Firefox / PC de Karl / ouverture file://</td><td><strong>Non testés</strong>, par Codex comme par Méo. Le rapport et le README le disent explicitement.</td><td>Ne jamais présenter les résultats Chromium/Linux comme une validation multi-navigateurs.</td></tr>
+</table>
+
+<h2>3. Conformité au mandat Phase 1A de Karl</h2>
+<table>
+<tr><th>Exigence du mandat</th><th>Constat Méo</th></tr>
+<tr><td>Nouveau dossier isolé, sans modifier les autres projets</td><td>Conforme dans la livraison. Les preuves Codex vérifient les fichiers listés par les manifestes des phases 0/0B et du Trio Debug Hub (inchangés). Pour Conker/TN-1, le rapport affirme qu'ils n'ont pas été ouverts ni manipulés, sans contrôle SHA joint dans la livraison — c'est une limite de preuve, pas une preuve de modification. De son côté, Méo a vérifié que ses propres copies de référence sont intactes à l'heure de l'audit : TN-1 V7 <span class="hash">87770ce6…</span> (original et copie sécurisée, identiques) et V9.0-GPT <span class="hash">ef1d715b…</span>, inchangés.</td></tr>
+<tr><td>Aucune ROM, aucun .sav / .srm / .state original</td><td>Conforme. Fixtures textuelles uniquement, formats étrangers refusés (testé).</td></tr>
+<tr><td>Aucune compilation ni exécution d'un moteur réel</td><td>Conforme. <code>tools/build.py</code> ne fait que concaténer le JavaScript du laboratoire. Le lock source porte la mention <code>engine_compilation_authorized: false</code> et le statut <code>DOCUMENTARY_SELECTION_NOT_COMPILED_OR_LICENSE_CLEARED</code>.</td></tr>
+<tr><td>Architecture, contrôleur, adaptateurs, diagnostics</td><td>Livrés et testés : machine d'états, génération, verrou de concurrence, acquittements séparés sélection / chargement / lancement, snapshots JSON à double hash, consentement à usage unique lié à la génération, journal chaîné SHA-256, exports.</td></tr>
+<tr><td>Simulateurs sans ROM et tests automatisés</td><td>Livrés : transitions, audio fictif, horloges, erreurs, restaurations, défauts injectables (dérive 1,8×, suspension audio, PCM plein sans dérive, timeout, identité mensongère, échec post-restauration).</td></tr>
+<tr><td>Journal distinguant sélection / chargement / lancement réel</td><td>Conforme sur le simulateur : trois identités séparées, domaine <code>SIMULATION_ONLY_NOT_ROM_EXECUTION</code>. Ce n'est pas encore la preuve future « buffer réellement remis au cœur », et le rapport le dit.</td></tr>
+<tr><td>Sondes futures préparées</td><td>Préparées comme champs de modèle : vitesse, VI/AI, AI_STATUS, PCM, boucles, génération. Aucune sonde réelle de moteur n'existe — ce sont des emplacements, pas des mesures.</td></tr>
+<tr><td>Leçons TN-1 / Conker comme spécifications, sans modifier ces projets</td><td>Reprises comme spécifications dans le rapport §8, sans réouverture d'états originaux. Le test « FULL synthétique sans dérive » reprend correctement la leçon de Méo : FULL à la sauvegarde ne suffit pas à déclarer un état fautif.</td></tr>
+<tr><td>Corriger librement les défauts des NOUVEAUX fichiers</td><td>Fait et documenté : modèle PCM, contrôle de génération au commit, consentements liés à la génération, exports concurrents, saturation du journal, panne cryptographique, inventaire (chiffres dans les variables, ex. GLideN64).</td></tr>
+<tr><td>Aucun achat, publication, déploiement, accès aux comptes</td><td>Aucun indice contraire dans la livraison. Le rapport l'affirme aussi.</td></tr>
+<tr><td>Ne pas annoncer un émulateur fonctionnel</td><td>Le rapport et le README respectent cette règle, avec des sections NON TESTABLE / NON DÉMONTRÉ explicites.</td></tr>
+</table>
+
+<h2>4. Clarifications C1–C8 — à lire avant de réutiliser ce document</h2>
+<ol>
+<li><strong>C1 — Auteur réel : Codex, pas Claude.</strong> L'en-tête du rapport signe « Réalisation : Codex ». Les messages qui attribueraient ce laboratoire à Claude, ou qui décriraient un « local codé par Claude pour les 4 IA », ne correspondent pas à la livraison. Le laboratoire est un fichier HTML autonome, pas une application partagée.</li>
+<li><strong>C2 — Aucun pont automatique vers les 4 IA.</strong> La livraison n'envoie aucun fichier à GPT, Codex, Claude ou Méo, et ne reçoit rien d'eux. Le rapport dit explicitement : aucun envoi de message à une autre IA, aucun agent extérieur. Le partage entre IA reste manuel (copier-coller, Trio Debug Hub en import/export), comme avant. Ne pas présenter le Lab comme le pont local de la phase 4.</li>
+<li><strong>C3 — L'inventaire n'est pas la liste des fichiers liés.</strong> 314 expressions de chemins relevées dans Makefile.common, 309 chemins candidats distincts, 19 en-têtes échantillonnés. Les conditions, wildcards, fichiers générés et branches conditionnelles ne sont pas évalués. Le rapport et les problèmes ouverts O2/O11 le disent : ce n'est pas la fermeture réellement liée, et ce n'est pas une autorisation de distribution.</li>
+<li><strong>C4 — Divergences Git : progrès documentaire, pas résolution complète.</strong> Choix explicite du gitlink UI <code>478ef785…</code> (le tip <code>5a65bde5…</code> est exclu), frontal <code>97f2cfa6…</code>, cœur <code>4a3925d2…</code>, recette <code>677b1334…</code>, emsdk 3.1.74. Restent non vérifiés : existence distante du commit gnulib et son inclusion réelle, exclusion effective du RSP paraLLEl alternatif, hashes des archives SDK/LLVM/Binaryen/ports, compatibilité d'exécution des révisions choisies. L'overlay de recette n'est pas exécuté.</li>
+<li><strong>C5 — Licences : échantillon, pas feu vert.</strong> Plusieurs fichiers échantillonnés portent GPL-2.0-or-later, d'autres restent NOASSERTION dans le relevé. GPL-2.0-only et GPL v3 ne doivent pas être présumées combinables. Aucune distribution de pile moteur n'est juridiquement validée par ce document. Ce n'est pas un avis juridique.</li>
+<li><strong>C6 — Image Goku/Vegeta : décor seulement.</strong> Illustration générée, intégrée localement, visible uniquement sur la page principale, vues d'états et de diagnostic sobres. Le rapport ne prétend acquérir aucun droit de franchise ni de diffusion publique. Ne pas la présenter comme une image de jeu.</li>
+<li><strong>C7 — Pause nocturne de Codex : question ouverte, sans effet sur le contenu.</strong> Karl avait mis Codex en pause dans la nuit du 27 au 28 octobre. La livraison finale est datée du 28 octobre à midi, mais la livraison elle-même ne documente pas qui a relancé Codex ni quand. Méo pose la question à Karl ; cela ne change rien aux vérifications ci-dessus, qui portent sur les fichiers livrés.</li>
+<li><strong>C8 — Ce que les chiffres ne disent pas.</strong> « 53 + 8 + 21 » ne mesure ni la vitesse d'un jeu, ni la fidélité audio, ni la compatibilité d'un état réel. Un test de timeout à 70 ms contre 150 ms de retard injecté prouve un mécanisme de temporisation du laboratoire, pas une latence d'émulation. Un arrêt logique (AbortSignal) ne tue pas un moteur natif non coopératif : le rapport l'admet, et une future intégration devra concevoir l'isolation et la terminaison hôte.</li>
+</ol>
+
+<h2>5. Recommandation Méo</h2>
+<div class="box">
+<strong>GO — Utiliser la Phase 1A comme banc de contrats.</strong>
+<p>Le laboratoire peut servir dès maintenant à écrire et à tester des contrats (identités, transitions, erreurs, intégrité des snapshots, consentements) sans ROM et sans moteur, et à préparer les sondes futures. Les captures bureau / mobile / diagnostic jointes montrent une interface lisible, y compris avec le fond décoratif.</p>
+</div>
+<div class="box warn">
+<strong>STOP — Moteur réel, revendications de jeu, redistribution.</strong>
+<p>Aucune compilation, exécution, ROM ou état original sans un nouveau GO explicite et séparé de Karl. Aucune annonce de compatibilité, de performance ou de correction Sonic. Aucune distribution de pile moteur tant que la fermeture des fichiers, les licences et les sources correspondantes ne sont pas établies. La décision finale reste Karl.</p>
+</div>
+<p><strong>Prochaines étapes possibles, dans l'ordre :</strong> (1) Karl ouvre le HTML livré sur son PC (contrôle visuel Windows / file:// restant) ; (2) Karl décide s'il veut un test terrain TN-1 V7 en parallèle — le Lab ne remplace pas cette preuve ; (3) seulement ensuite, si Karl le veut, discussion d'un GO distinct et borné pour une phase moteur, avec isolation, terminaison et inventaire complet en conditions préalables.</p>
+
+<h2>6. Note pour GPT (et pour tout relecteur futur)</h2>
+<p>Si tu reprends ce contre-audit, ne transforme pas les mesures du simulateur en mesures N64. Les compteurs VI/AI, la vitesse 1,00×, le PCM 0 ms et le statut FULL synthétique sont des valeurs de modèle, pas des observations de Conker. La seule chose que Méo certifie ici, c'est que le laboratoire synthétique fait ce qu'il annonce, dans les limites qu'il annonce, et que les fichiers livrés sont intègres et reproductibles. La cause du bogue Sonic reste inconnue. La compatibilité Conker PAL reste non démontrée.</p>
+
+<footer>
+Contre-audit Méo — N64 Web Lab Phase 1A v1.0.0 — 28 octobre 2026.<br>
+Copies de la livraison conservées par Méo dans son espace de travail (ZIP, rapport, README, .sha256). Originaux de Karl non modifiés par cet audit : l'audit a travaillé sur une copie extraite, en lecture seule sur les fichiers reçus.<br>
+Laboratoire synthétique instrumenté ; pas un émulateur Nintendo 64. Décideur final : Karl.
+</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "n64-web-lab-phase1a",
+  "version": "1.0.2-candidate",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/core.test.mjs tests/revision.test.mjs"
+  },
+  "description": "ROM-free simulated laboratory foundations. No N64 engine."
+}

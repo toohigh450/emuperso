@@ -1,0 +1,10 @@
+{
+  "version": "1.0.1",
+  "html_sha256": "2bf2de158130797e293d66c8c4ff27cf64d581d92a0c2891f7ec6d992b2f6bee",
+  "javascript": 59,
+  "python": 8,
+  "browser_delivered": 21,
+  "browser_instrumented": 4,
+  "status": "RÉUSSI",
+  "note": "HTML référence inchangé avant reconstruction candidate ; code source candidate non chargé par ces navigateurs."
+}

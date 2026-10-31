@@ -1,0 +1,13 @@
+test_empty_and_malformed (test_tools.ToolTests.test_empty_and_malformed) ... ok
+test_no_engine_or_original_data_in_project (test_tools.ToolTests.test_no_engine_or_original_data_in_project) ... ok
+test_paths_and_case_duplicates (test_tools.ToolTests.test_paths_and_case_duplicates) ... ok
+test_source_lock_excludes_moving_ui (test_tools.ToolTests.test_source_lock_excludes_moving_ui) ... ok
+test_static_inventory_keeps_digits_and_conditions (test_tools.ToolTests.test_static_inventory_keeps_digits_and_conditions) ... ok
+test_symlink_rejected (test_tools.ToolTests.test_symlink_rejected) ... ok
+test_tampered_file (test_tools.ToolTests.test_tampered_file) ... ok
+test_valid_manifest (test_tools.ToolTests.test_valid_manifest) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.008s
+
+OK

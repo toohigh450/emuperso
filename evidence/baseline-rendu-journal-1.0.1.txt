@@ -1,0 +1,4 @@
+RÉUSSI — DOM réel : succès retardés délivrés en ordre inverse, compteur et tête courants conservés
+RÉUSSI — DOM réel : erreurs obsolètes ignorées sans masquer le message courant
+RÉUSSI — DOM réel : erreur de la requête courante toujours affichée
+RÉUSSI — DOM réel : changement de laboratoire neutralise les anciens callbacks ; aucune erreur JS ni requête externe

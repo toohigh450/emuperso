@@ -1,0 +1,4 @@
+Référence 1.0.1 extraite du ZIP fourni : 59 tests JS, 8 Python, 21 Chromium et 4 DOM exécutés avec succès avant reconstruction candidate (preuves baseline-*).
+Candidate : un premier parcours Chromium a détecté un débordement horizontal à 360 px sur la nouvelle ligne de configuration d’injection. Correction CSS ciblée overflow-wrap:anywhere ; relance complète requise et résultat final dans tests-navigateur.txt.
+Tests DOM ciblés de fraîcheur : quatre contrôles réussis après ajouts d’assertions pending/current/stale.
+Les exports Windows reçus ne sont jamais réécrits ni présentés comme un parcours complet exécuté par Codex.

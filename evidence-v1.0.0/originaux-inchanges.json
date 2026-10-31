@@ -1,0 +1,30 @@
+[
+  {
+    "project": "etude-n64-web-phase0",
+    "manifest": "MANIFEST-SHA256.txt",
+    "listed_files_checked": 3,
+    "result": "RÉUSSI",
+    "scope": "Files listed in existing manifest are unchanged. No claim about files not listed."
+  },
+  {
+    "project": "n64-web-phase0b",
+    "manifest": "livraison/N64-Web-Lab-Maquette-Phase0B-MANIFEST-SHA256.txt",
+    "listed_files_checked": 14,
+    "result": "RÉUSSI",
+    "scope": "Files listed in existing manifest are unchanged. No claim about files not listed."
+  },
+  {
+    "project": "n64-web-phase0b",
+    "manifest": "livraison/N64-Web-Etude-Phase0B-MANIFEST-SHA256.txt",
+    "listed_files_checked": 16,
+    "result": "RÉUSSI",
+    "scope": "Files listed in existing manifest are unchanged. No claim about files not listed."
+  },
+  {
+    "project": "trio-debug-hub",
+    "manifest": "MANIFEST-SHA256.txt",
+    "listed_files_checked": 16,
+    "result": "RÉUSSI",
+    "scope": "Files listed in existing manifest are unchanged. No claim about files not listed."
+  }
+]

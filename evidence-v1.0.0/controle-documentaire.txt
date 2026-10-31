@@ -1,0 +1,5 @@
+RÉUSSI — N64-Web-Lab-Phase1A.html : liens internes, IDs et dépendances externes contrôlés.
+RÉUSSI — docs/Rapport-Phase1A.html : liens internes, IDs et dépendances externes contrôlés.
+RÉUSSI — Reconstruction déterministe du HTML depuis les modules, le style et l’image, sans moteur.
+RÉUSSI — Image Goku/Vegeta intégrée sans altération ; aucune ressource image distante.
+RÉUSSI — JSON documentaires lisibles ; les inconnues de licences et de lien restent explicites.
