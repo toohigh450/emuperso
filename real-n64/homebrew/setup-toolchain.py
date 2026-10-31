@@ -14,6 +14,17 @@ def sha(path):
 def run(argv,**kwargs):
  print('+ '+' '.join(map(str,argv)),flush=True)
  subprocess.run(list(map(str,argv)),check=True,**kwargs)
+def checkout_sdk(sdk,repository,commit):
+ if not sdk.exists():
+  run(['git','init',sdk])
+  run(['git','-C',sdk,'remote','add','origin',repository])
+ else:
+  status=subprocess.check_output(['git','-C',str(sdk),'status','--porcelain','--untracked-files=no'],text=True)
+  if status.strip():raise SystemExit('Source SDK suivie modifiée ; refus de l’écraser.')
+ run(['git','-C',sdk,'fetch','--depth','1','origin',commit])
+ run(['git','-C',sdk,'checkout','--detach',commit])
+ actual=subprocess.check_output(['git','-C',str(sdk),'rev-parse','HEAD'],text=True).strip()
+ if actual!=commit:raise SystemExit('Révision SDK inattendue.')
 def main():
  parser=argparse.ArgumentParser(description=__doc__)
  parser.add_argument('--cache',type=Path,default=DEFAULT_CACHE)
@@ -37,13 +48,7 @@ def main():
  if not compiler.is_file():raise SystemExit('Préfixe toolchain inattendu.')
  run([compiler,'--version'])
  sdk=cache/'libdragon';commit=lock['libdragon']['commit']
- if not sdk.exists():run(['git','clone','--no-checkout',lock['libdragon']['repository'],sdk])
- status=subprocess.check_output(['git','-C',str(sdk),'status','--porcelain','--untracked-files=no'],text=True)
- if status.strip():raise SystemExit('Source SDK suivie modifiée ; refus de l’écraser.')
- run(['git','-C',sdk,'fetch','--depth','1','origin',commit])
- run(['git','-C',sdk,'checkout','--detach',commit])
- actual=subprocess.check_output(['git','-C',str(sdk),'rev-parse','HEAD'],text=True).strip()
- if actual!=commit:raise SystemExit('Révision SDK inattendue.')
+ checkout_sdk(sdk,lock['libdragon']['repository'],commit)
  env=os.environ.copy();env['N64_INST']=str(prefix)
  run(['make','install-mk'],cwd=sdk,env=env)
  run(['make',f'-j{args.jobs}','libdragon','tools'],cwd=sdk,env=env)

@@ -92,3 +92,5 @@ séparément des résultats locaux, sans présumer qu’il a réussi.
 
 Suite : audit GPT, contre-audit Méo, test Chrome de Karl. Aucune correction Sonic,
 compatibilité Conker ou performance générale N64 revendiquée.
+
+Correction CI : le premier bootstrap vierge refusait à tort le clone sans checkout. Correction et test de non-régression ajoutés ; cinq tests outils passent. Le statut CI final est à lire dans GitHub Actions.

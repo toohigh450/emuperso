@@ -39,3 +39,5 @@ Mise à jour de fin : sept groupes navigateur RÉUSSIS, zéro erreur console/pag
 PCMmax0.13619avecA,silenceavant/après;30s stabilitéobservée. RapportRAPPORT.html,
 README-FR.md, workflowdebrancheetROMautonomeprêts. Rebuildbinaireidentique.
 Commit etarchiveàretrouverdansGit/delivery ; pasdefusionmain.
+
+Commit initial effectué :26d849191f9383a325fc585ff5ca34b70f152c14. CI1 échoué surbootstrapSDKvierge (fauxdirtyaprèsclone no-checkout). Correctiflocalinit/fetch exact+testnonrégression PASS5outils ; commitcorrectifàvenir.

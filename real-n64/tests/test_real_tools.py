@@ -1,5 +1,5 @@
 from pathlib import Path
-import sys,tempfile,unittest,json,hashlib
+import sys,tempfile,unittest,json,hashlib,importlib.util,subprocess
 R=Path(__file__).resolve().parents[1];sys.path.insert(0,str(R/'tools'))
 from serve import allowed_path
 class Tests(unittest.TestCase):
@@ -17,4 +17,13 @@ class Tests(unittest.TestCase):
  def test_originals_preserved(self):
   baseline=json.loads((R/'evidence/baseline-protected.json').read_text())
   for n,h in baseline['files'].items():self.assertEqual(hashlib.sha256((R.parent/n).read_bytes()).hexdigest(),h,n)
+ def test_fresh_sdk_checkout_and_dirty_guard(self):
+  spec=importlib.util.spec_from_file_location('sdk_setup',R/'homebrew/setup-toolchain.py');module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+  with tempfile.TemporaryDirectory() as folder:
+   root=Path(folder);upstream=root/'upstream';upstream.mkdir();subprocess.run(['git','init',str(upstream)],check=True,capture_output=True);(upstream/'test.txt').write_text('test SDK only')
+   subprocess.run(['git','-C',str(upstream),'add','test.txt'],check=True)
+   subprocess.run(['git','-C',str(upstream),'-c','user.name=N64 test','-c','user.email=n64-test@example.invalid','commit','-m','synthetic SDK fixture'],check=True,capture_output=True)
+   sha=subprocess.check_output(['git','-C',str(upstream),'rev-parse','HEAD'],text=True).strip();target=root/'checkout'
+   module.checkout_sdk(target,str(upstream),sha);self.assertEqual((target/'test.txt').read_text(),'test SDK only')
+   (target/'test.txt').write_text('local change');self.assertRaises(SystemExit,module.checkout_sdk,target,str(upstream),sha);self.assertEqual((target/'test.txt').read_text(),'local change')
 if __name__=='__main__':unittest.main(verbosity=2)
