@@ -4,8 +4,11 @@ N64 WEB - LANCEMENT WINDOWS SIMPLIFIE
 2. Double-cliquer DEMARRER-N64.bat (a cote de ce document).
 3. Attendre la preparation puis l'ouverture automatique du navigateur.
 
-Choisir une ROM permet d'ouvrir un fichier .z64, .n64 ou .v64 extrait sur le PC.
-La ROM reste dans le navigateur. Le ZIP d'un jeu doit etre extrait auparavant.
+Choisir une ROM accepte .z64, .n64, .v64 et directement .zip.
+Une ROM dans le ZIP : extraction automatique dans le navigateur.
+Plusieurs ROM : choisir une entree puis Preparer cette ROM.
+La ROM reste dans le navigateur ; aucun envoi au serveur.
+ZIP non chiffre Stockage/Deflate jusqu a 96 Mio ; ROM jusqu a 64 Mio.
 Lancer la demo homebrew reste disponible comme test de reference.
 
 Ne pas ouvrir N64-Web-Lab-Phase1A.html : c'est le laboratoire de simulation

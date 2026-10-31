@@ -47,8 +47,8 @@
   "records": [
     {
       "seq": 1,
-      "utc": "2026-10-31T18:52:35.004Z",
-      "host_monotonic_ms": 289.4750000005588,
+      "utc": "2026-10-31T20:25:43.286Z",
+      "host_monotonic_ms": 256.714999999851,
       "type": "page.open",
       "data": {
         "engine_started": false
@@ -56,8 +56,8 @@
     },
     {
       "seq": 2,
-      "utc": "2026-10-31T18:52:35.289Z",
-      "host_monotonic_ms": 574.4400000004098,
+      "utc": "2026-10-31T20:25:43.495Z",
+      "host_monotonic_ms": 466.0949999988079,
       "type": "rom.fetched",
       "data": {
         "bytes": 6144,
@@ -66,8 +66,8 @@
     },
     {
       "seq": 3,
-      "utc": "2026-10-31T18:52:35.306Z",
-      "host_monotonic_ms": 590.6699999999255,
+      "utc": "2026-10-31T20:25:43.525Z",
+      "host_monotonic_ms": 495.7099999990314,
       "type": "rom.validated",
       "data": {
         "source": "reference-demo",
@@ -85,8 +85,8 @@
     },
     {
       "seq": 4,
-      "utc": "2026-10-31T18:52:35.309Z",
-      "host_monotonic_ms": 593.9599999999627,
+      "utc": "2026-10-31T20:25:43.529Z",
+      "host_monotonic_ms": 500.09999999962747,
       "type": "engine.loader.requested",
       "data": {
         "core": "mupen64plus_next",
@@ -97,15 +97,15 @@
     },
     {
       "seq": 5,
-      "utc": "2026-10-31T18:52:35.405Z",
-      "host_monotonic_ms": 689.7700000004843,
+      "utc": "2026-10-31T20:25:43.649Z",
+      "host_monotonic_ms": 620.0399999991059,
       "type": "runtime.update_check.local",
       "data": {}
     },
     {
       "seq": 6,
-      "utc": "2026-10-31T18:52:35.761Z",
-      "host_monotonic_ms": 1046.140000000596,
+      "utc": "2026-10-31T20:25:43.963Z",
+      "host_monotonic_ms": 934.4049999993294,
       "type": "video.context.created",
       "data": {
         "kind": "webgl2"
@@ -113,15 +113,15 @@
     },
     {
       "seq": 7,
-      "utc": "2026-10-31T18:52:35.809Z",
-      "host_monotonic_ms": 1093.5449999999255,
+      "utc": "2026-10-31T20:25:43.989Z",
+      "host_monotonic_ms": 960.0499999988824,
       "type": "engine.ready",
       "data": {}
     },
     {
       "seq": 8,
-      "utc": "2026-10-31T18:52:36.582Z",
-      "host_monotonic_ms": 1866.6900000004098,
+      "utc": "2026-10-31T20:25:44.616Z",
+      "host_monotonic_ms": 1586.589999999851,
       "type": "wasm.instantiated",
       "data": {
         "method": "instantiateStreaming",
@@ -130,8 +130,8 @@
     },
     {
       "seq": 9,
-      "utc": "2026-10-31T18:52:36.781Z",
-      "host_monotonic_ms": 2066.31500000041,
+      "utc": "2026-10-31T20:25:44.724Z",
+      "host_monotonic_ms": 1695.2400000002235,
       "type": "video.context.created",
       "data": {
         "kind": "webgl2"
@@ -139,8 +139,8 @@
     },
     {
       "seq": 10,
-      "utc": "2026-10-31T18:52:36.886Z",
-      "host_monotonic_ms": 2171.0800000000745,
+      "utc": "2026-10-31T20:25:44.845Z",
+      "host_monotonic_ms": 1816.219999998808,
       "type": "audio.context.created",
       "data": {
         "sample_rate": 44100,
@@ -149,15 +149,15 @@
     },
     {
       "seq": 11,
-      "utc": "2026-10-31T18:52:37.047Z",
-      "host_monotonic_ms": 2332.0600000005215,
+      "utc": "2026-10-31T20:25:45.026Z",
+      "host_monotonic_ms": 1997.0849999990314,
       "type": "engine.start.callback",
       "data": {}
     },
     {
       "seq": 12,
-      "utc": "2026-10-31T18:52:37.441Z",
-      "host_monotonic_ms": 2726.230000000447,
+      "utc": "2026-10-31T20:25:45.414Z",
+      "host_monotonic_ms": 2384.7050000000745,
       "type": "audio.context.state",
       "data": {
         "state": "running"
@@ -165,8 +165,8 @@
     },
     {
       "seq": 13,
-      "utc": "2026-10-31T18:52:53.328Z",
-      "host_monotonic_ms": 18613.260000000708,
+      "utc": "2026-10-31T20:25:59.202Z",
+      "host_monotonic_ms": 16172.834999999031,
       "type": "audio.resume.requested",
       "data": {}
     }

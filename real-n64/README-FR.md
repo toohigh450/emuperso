@@ -1,4 +1,4 @@
-# Opération N64 Web — livraison 0.2.1 — lancement Windows simplifié
+# Opération N64 Web — livraison 0.3.0 — import ZIP local
 
 **Branche `emulateur-reel` seulement. Aucun remplacement du Lab, aucune fusion main.**
 
@@ -7,18 +7,22 @@ avec EmulatorJS 4.2.3 / mupen64plus_next (build 2.0.2). Vidéo, animation, clavi
 et PCM WebAudio ont été testés dans Chromium/Linux. Le test final du Chrome de Karl
 reste à faire. Aucun jeu commercial ni sauvegarde originale utilisés.
 
-## Importer une ROM depuis votre PC — nouveauté 0.2.0
+## Importer une ROM ou un ZIP depuis votre PC — 0.3.0
 
 Après préparation et ouverture du serveur local dans Chrome :
 
-1. Cliquer **Choisir une ROM** et sélectionner un fichier extrait **.z64, .n64 ou .v64**.
-   Les ZIP doivent être décompressés sur le PC ; ils ne sont pas importés.
+1. Cliquer **Choisir une ROM** et sélectionner un fichier **.z64, .n64, .v64 ou .zip**.
+   Un ZIP contenant une seule ROM est extrait automatiquement dans le navigateur.
+   Avec plusieurs ROM, choisir une entrée puis **Préparer cette ROM**.
+   Les fichiers annexes sûrs sont ignorés ; aucun fichier n’est écrit sur le PC.
 2. Vérifier le nom, le format détecté, la taille et les deux SHA-256 affichés.
 3. Cliquer **Lancer la ROM choisie**. Après un lancement, recharger la page pour changer
    de ROM ; un seul moteur est créé par page.
 4. **Lancer la démo homebrew** reste le test de référence, disponible avant lancement.
 
-Le fichier est lu par File.arrayBuffer dans le navigateur puis transmis au moteur par
+Le fichier est lu par File.arrayBuffer dans le navigateur. Dans un ZIP, la ROM choisie
+est décompressée en mémoire, vérifiée par CRC-32 puis validée comme une ROM brute.
+Elle est transmise au moteur par
 URL Blob. Aucun upload, aucun chemin serveur construit à partir du nom du fichier.
 Seules les ressources fixes du moteur sont demandées au serveur local. La politique CSP
 interdit les connexions externes. Le diagnostic contient des métadonnées (nom, taille,
@@ -34,12 +38,35 @@ Un nom avec extension incohérente produit un avertissement : la signature est p
 Ni CRC, ni code exécutable, ni compatibilité, ni droits d’un jeu ne sont démontrés par
 cette validation. Les jeux commerciaux ne sont pas déclarés compatibles.
 
+### Limites et garde-fous ZIP
+
+ZIP32 standard, non chiffré, compression Stockage (0) ou Deflate (8), jusqu’à
+96 Mio. Maximum 512 entrées, répertoire central 2 Mio, somme des tailles déclarées
+256 Mio ; ROM de 4 Kio à 64 Mio, taille multiple de quatre. Une ROM synthétique très
+compressible de 64 Mio est réellement testée, sans imposer un ratio arbitraire.
+
+En-têtes local/central et descripteurs doivent correspondre. Tailles, CRC-32,
+chemins dangereux, liens, chevauchements et noms dupliqués sont contrôlés.
+La sortie Deflate est limitée pendant sa lecture. ZIP64, volumes multiples, mots
+de passe, autres compressions, archives imbriquées et auto-extractibles ne sont
+pas pris en charge. Aucun script ou fichier annexe n’est exécuté. Les noms historiques
+non UTF-8 peuvent être affichés avec des caractères approximatifs.
+
+Une nouvelle sélection ou le lancement de la référence invalide la lecture précédente
+et annule sa décompression. Annuler la liste abandonne le ZIP. Après l’échec d’une entrée,
+resélectionner le ZIP pour choisir à nouveau. Le diagnostic peut contenir noms et
+empreintes d’archive/entrée, jamais leur contenu. Son export reste volontaire.
+
+Deflate utilise `DecompressionStream('deflate-raw')` : Chrome récent requis.
+Aucun CDN ni dépendance ZIP externe ajouté. Tests dédiés :
+`node tests/zip-rom.test.mjs` et `python3 tests/browser_zip.py`.
+
 **Aucune ROM utilisateur dans Git, les artefacts CI ou les ZIP de livraison.** Les tests
 utilisent uniquement notre homebrew MIT convertie dans les trois ordres d’octets et des
 fichiers invalides synthétiques. L’archive privée fournie pendant cette tâche n’a pas pu
 être transférée (limite outil 32 Mio) : aucun test du jeu qu’elle contient n’est revendiqué.
 
-Rapport courant : **docs/IMPORT-ROM-0.2.0.html**. Tests :
+Rapport courant : **docs/IMPORT-ZIP-0.3.0.html**. Tests de régression :
 `node tests/rom-file.test.mjs` (12) ; `python tests/browser_import.py` (9 contrôles
 Chromium) ; régression `python tests/browser_real.py` (7 contrôles). Les conversions
 sont rehashées dans le FS du cœur réel ; les requêtes HTTP sont observées côté navigateur

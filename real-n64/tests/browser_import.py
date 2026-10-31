@@ -47,9 +47,9 @@ try:
    ok('Import '+ext.upper()+' : vrai fichier local, normalisation et octets chargés dans le cœur conformes',actual)
    context.close()
   context,page=newpage()
-  for name,bad in [('archive.zip',b'PK'+bytes(4094)),('short.z64',b'\x80\x37\x12\x40'),('invalid.n64',bytes(4096)),('odd.v64',b'\x37\x80\x40\x12'+bytes(4094))]:
+  for name,bad in [('invalid-archive.zip',b'PK'+bytes(4094)),('short.z64',b'\x80\x37\x12\x40'),('invalid.n64',bytes(4096)),('odd.v64',b'\x37\x80\x40\x12'+bytes(4094))]:
    page.locator('#rom-file').set_input_files(payload(name,bad));expect(page.locator('#status')).to_have_class('error');assert page.locator('#launch-local').is_disabled();assert page.evaluate('!!window.EJS_emulator') is False
-  ok('ZIP, signature fausse, fichier tronqué et taille non alignée refusés sans moteur',{'engine_loaded':False})
+  ok('ZIP invalide, signature fausse, fichier tronqué et taille non alignée refusés sans moteur',{'engine_loaded':False})
   name="<img src=x onerror=window.__badName=1>.n64"
   page.locator('#rom-file').set_input_files(payload(name));selected(page,name)
   assert page.locator('#rom-name').inner_text()==name;assert page.evaluate('window.__badName??null') is None;expect(page.locator('#status')).to_contain_text('signature est prioritaire')

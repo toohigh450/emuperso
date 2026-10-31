@@ -1,0 +1,1026 @@
+{
+  "schema": "emuperso/zip-browser-tests/v1",
+  "results": [
+    {
+      "test": "ZIP Z64 local : extraction puis démarrage réel",
+      "status": "RÉUSSI",
+      "proof": {
+        "compression": 0,
+        "source_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "canonical_core_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "nested_path": true
+      }
+    },
+    {
+      "test": "ZIP V64 local : extraction puis démarrage réel",
+      "status": "RÉUSSI",
+      "proof": {
+        "compression": 8,
+        "source_sha256": "284d9389b80c7fcf774df16fd9db4156525bda8fd10decf2071bcde523e7ee4a",
+        "canonical_core_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "nested_path": true
+      }
+    },
+    {
+      "test": "ZIP N64 local : extraction puis démarrage réel",
+      "status": "RÉUSSI",
+      "proof": {
+        "compression": 8,
+        "source_sha256": "0e7286d641f19afa020deba8c82f6e22c309888e7a2f8425ce8b57bd24ea92ad",
+        "canonical_core_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "nested_path": true
+      }
+    },
+    {
+      "test": "Limite positive réelle : ZIP synthétique de 64 Mio préparé dans Chromium",
+      "status": "RÉUSSI",
+      "proof": {
+        "uncompressed_bytes": 67108864,
+        "zip_bytes": 67002,
+        "canonical_sha256": "fdab078349fe0360f29f104a3a581bd22f0bda6e74489268649561eb58114668",
+        "engine_started": false,
+        "scope": "MIT demo prefix padded with zeroes; validation/extraction only, not game compatibility"
+      }
+    },
+    {
+      "test": "Plusieurs ROM : choix explicite avant toute préparation et tout moteur",
+      "status": "RÉUSSI",
+      "proof": {
+        "chosen": "folder/second.n64",
+        "canonical_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+      }
+    },
+    {
+      "test": "Annulation de sélection puis nouvel import",
+      "status": "RÉUSSI",
+      "proof": {
+        "selected_after_cancel": "after-cancel.z64"
+      }
+    },
+    {
+      "test": "Archives invalides refusées avant le moteur",
+      "status": "RÉUSSI",
+      "proof": {
+        "cases": [
+          "fixture-malformed.zip",
+          "fixture-no-rom.zip",
+          "fixture-traversal.zip",
+          "fixture-bad-crc.zip",
+          "fixture-oversized.zip",
+          "fixture-not-n64.zip"
+        ],
+        "engine_loaded": false
+      }
+    },
+    {
+      "test": "Nom de membre traité comme texte et diagnostic sans contenu ROM/ZIP",
+      "status": "RÉUSSI",
+      "proof": {
+        "canonical_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+      }
+    },
+    {
+      "test": "Lectures ZIP concurrentes et référence : aucun résultat tardif ne remplace le choix actif",
+      "status": "RÉUSSI",
+      "proof": {
+        "latest_selection": "newest.n64",
+        "final_source": "reference-demo"
+      }
+    },
+    {
+      "test": "Confidentialité ZIP : aucune donnée ni nom d’archive envoyé",
+      "status": "RÉUSSI",
+      "proof": {
+        "browser_http_requests": 92,
+        "server_requests": 92,
+        "private_rom_used": false
+      }
+    }
+  ],
+  "page_errors": [],
+  "http": [
+    {
+      "url": "http://127.0.0.1:8772/",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/style.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/app.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/rom-file.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/zip-rom.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/loader.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/localization/en-US.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/style.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/app.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/rom-file.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/zip-rom.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/loader.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/localization/en-US.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/style.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/app.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/rom-file.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/zip-rom.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/loader.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/localization/en-US.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/style.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/app.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/rom-file.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/zip-rom.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/style.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/app.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/rom-file.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/zip-rom.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/style.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/app.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/rom-file.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/zip-rom.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/homebrew/fallback-open/build-info.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/homebrew/fallback-open/demo-emuperso-open.z64",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/loader.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/localization/en-US.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8772/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    }
+  ],
+  "server_requests": [
+    [
+      "GET",
+      "/",
+      0
+    ],
+    [
+      "GET",
+      "/style.css",
+      0
+    ],
+    [
+      "GET",
+      "/app.js",
+      0
+    ],
+    [
+      "GET",
+      "/rom-file.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/zip-rom.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/loader.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/emulator.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/nipplejs.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/shaders.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/storage.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/gamepad.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/GameManager.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/socket.io.min.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/compression.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/emulator.css",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/localization/en-US.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/version.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/reports/mupen64plus_next.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/mupen64plus_next-wasm.data",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/compression/extract7z.js",
+      0
+    ],
+    [
+      "GET",
+      "/",
+      0
+    ],
+    [
+      "GET",
+      "/style.css",
+      0
+    ],
+    [
+      "GET",
+      "/app.js",
+      0
+    ],
+    [
+      "GET",
+      "/zip-rom.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/rom-file.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/loader.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/emulator.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/nipplejs.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/shaders.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/storage.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/gamepad.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/GameManager.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/socket.io.min.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/compression.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/emulator.css",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/localization/en-US.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/version.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/reports/mupen64plus_next.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/mupen64plus_next-wasm.data",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/compression/extract7z.js",
+      0
+    ],
+    [
+      "GET",
+      "/",
+      0
+    ],
+    [
+      "GET",
+      "/style.css",
+      0
+    ],
+    [
+      "GET",
+      "/app.js",
+      0
+    ],
+    [
+      "GET",
+      "/zip-rom.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/rom-file.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/loader.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/emulator.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/nipplejs.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/shaders.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/storage.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/gamepad.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/GameManager.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/socket.io.min.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/compression.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/emulator.css",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/localization/en-US.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/version.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/reports/mupen64plus_next.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/mupen64plus_next-wasm.data",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/compression/extract7z.js",
+      0
+    ],
+    [
+      "GET",
+      "/",
+      0
+    ],
+    [
+      "GET",
+      "/app.js",
+      0
+    ],
+    [
+      "GET",
+      "/style.css",
+      0
+    ],
+    [
+      "GET",
+      "/rom-file.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/zip-rom.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/",
+      0
+    ],
+    [
+      "GET",
+      "/style.css",
+      0
+    ],
+    [
+      "GET",
+      "/app.js",
+      0
+    ],
+    [
+      "GET",
+      "/rom-file.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/zip-rom.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/",
+      0
+    ],
+    [
+      "GET",
+      "/style.css",
+      0
+    ],
+    [
+      "GET",
+      "/app.js",
+      0
+    ],
+    [
+      "GET",
+      "/rom-file.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/zip-rom.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/homebrew/fallback-open/build-info.json",
+      0
+    ],
+    [
+      "GET",
+      "/homebrew/fallback-open/demo-emuperso-open.z64",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/loader.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/emulator.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/nipplejs.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/shaders.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/storage.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/gamepad.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/GameManager.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/socket.io.min.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/compression.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/emulator.css",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/localization/en-US.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/version.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/reports/mupen64plus_next.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/mupen64plus_next-wasm.data",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/compression/extract7z.js",
+      0
+    ]
+  ],
+  "scope": "Only project MIT demo, generated byte orders and invalid ZIP fixtures. No user ROM."
+}

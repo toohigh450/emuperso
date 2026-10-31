@@ -9,8 +9,8 @@
         "wasm_events": [
           {
             "seq": 8,
-            "utc": "2026-10-31T18:52:36.582Z",
-            "host_monotonic_ms": 1866.6900000004098,
+            "utc": "2026-10-31T20:25:44.616Z",
+            "host_monotonic_ms": 1586.589999999851,
             "type": "wasm.instantiated",
             "data": {
               "method": "instantiateStreaming",
@@ -24,9 +24,9 @@
       "test": "Affichage homebrew et animation",
       "status": "RÉUSSI",
       "proof": {
-        "frame_before": 39,
-        "frame_after": 100,
-        "ocr": "DEMO Me4+ EMUPERSO\n\nFRAME 44\n\nH RELACHE\n\nE RELACHE\n\nCPU WI SI AL REELS\na\n",
+        "frame_before": 40,
+        "frame_after": 104,
+        "ocr": "DEMO he4+ EMUPERSO\nFRAME +44\nAH RELALCHE\nE RELACHE\nCPU WI SI AL REELS\na\ncle © Ye = .” &\n",
         "captures": [
           "boot.png",
           "animation.png"
@@ -46,8 +46,8 @@
       "test": "Clavier navigateur : X/A et S/B reçus par la ROM",
       "status": "RÉUSSI",
       "proof": {
-        "ocr_A": "DEMO Me4+ EMUPERSO\nFRAME 14\nH PRESSE SOM\nE RELACHE\nCPU WI SI AL REELS\n=\ncle © )=—@— =.” &\n",
-        "ocr_B": "DEMO Me4+ EMUPERSO\n\nFRAME 166\n\nH RELHCHE\n\nBE PRESSE\n\nCPU WI SI AL REELS\na\n",
+        "ocr_A": "DEMO Me4+ EMUPERSO\nFRAME 125\nH PRESSE SOM\nE RELACHE\nCPU WI SI AL REELS\n=\ncle © )=—@— = .”2 &\n",
+        "ocr_B": "DEMO Me4+ EMUPERSO\n\nFRAME 1495\n\nAH RELACHE\n\nBE PRESSE\n\nCPU WI SI AL REELS\na\n",
         "captures": [
           "keyboard-A.png",
           "keyboard-B.png"
@@ -59,9 +59,9 @@
       "status": "RÉUSSI",
       "proof": {
         "silent_max_rms": 0,
-        "tone_max_rms": 0.1361506468827664,
+        "tone_max_rms": 0.13621290148493234,
         "released_max_rms": 0,
-        "scheduled_tone_buffers": 53,
+        "scheduled_tone_buffers": 123,
         "physical_speakers": "NON TESTABLE"
       }
     },
@@ -69,8 +69,8 @@
       "test": "Stabilité observée pendant 30 secondes supplémentaires",
       "status": "RÉUSSI",
       "proof": {
-        "frame_before": 251,
-        "frame_after": 540,
+        "frame_before": 299,
+        "frame_after": 844,
         "page_errors": []
       }
     },
@@ -78,7 +78,7 @@
       "test": "Ressources moteur servies localement, sans service externe au lancement",
       "status": "RÉUSSI",
       "proof": {
-        "http_responses": 25
+        "http_responses": 26
       }
     }
   ],
@@ -1279,6 +1279,10 @@
       "status": 200
     },
     {
+      "url": "http://127.0.0.1:8770/zip-rom.mjs",
+      "status": 200
+    },
+    {
       "url": "http://127.0.0.1:8770/homebrew/fallback-open/build-info.json",
       "status": 200
     },
@@ -1347,19 +1351,19 @@
       "status": 200
     },
     {
-      "url": "blob:http://127.0.0.1:8770/d63d10dc-7063-439c-b093-c976cced44ca",
+      "url": "blob:http://127.0.0.1:8770/b4fa7777-660e-47ac-a3b1-a0b6d4202b42",
       "status": 200
     },
     {
-      "url": "blob:http://127.0.0.1:8770/51965e8c-912a-4daf-8677-50fc97c9f706",
+      "url": "blob:http://127.0.0.1:8770/2456cb1e-9c55-4236-8d80-cc07a7e8f18a",
       "status": 200
     },
     {
-      "url": "blob:http://127.0.0.1:8770/0042e8b8-5b9e-4a02-b1c0-0b73d2534b3b",
+      "url": "blob:http://127.0.0.1:8770/046c54b9-3816-470c-9cee-c44b45f35b8e",
       "status": 200
     },
     {
-      "url": "blob:http://127.0.0.1:8770/8e3118d8-7167-4ed5-bd42-47efd2642a34",
+      "url": "blob:http://127.0.0.1:8770/b17eb6f6-1d2c-49ed-adb2-40fa4b901c9a",
       "status": 200
     }
   ]

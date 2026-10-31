@@ -51,9 +51,14 @@ jobs:
           python3 tools/fetch_runtime.py
           python3 tools/fetch_runtime.py --verify-only
           python3 tests/launcher_native.py
-      - name: Tester la validation des formats ROM
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Tester la validation des formats ROM et ZIP
         working-directory: real-n64
-        run: node tests/rom-file.test.mjs
+        run: |
+          node tests/rom-file.test.mjs
+          node tests/zip-rom.test.mjs
       - name: Installer les outils de test
         run: |
           python3 -m pip install playwright==1.62.0 pillow==12.3.0
@@ -67,6 +72,7 @@ jobs:
           test -n "$CHROMIUM_PATH"
           timeout --kill-after=5s 180s python3 tests/browser_real.py
           timeout --kill-after=5s 180s python3 tests/browser_import.py
+          timeout --kill-after=5s 180s python3 tests/browser_zip.py
       - name: Deposer les preuves et la ROM autonome MIT
         if: always()
         uses: actions/upload-artifact@v4

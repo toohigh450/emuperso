@@ -7,7 +7,7 @@ export class RomFileError extends Error {
 }
 function assert(ok, code, message) { if (!ok) throw new RomFileError(code, message); }
 export function validateFileDescriptor(file) {
-  assert(file && typeof file.name === 'string' && /\.(z64|n64|v64)$/i.test(file.name), 'E_EXTENSION', 'Choisissez une ROM extraite .z64, .n64 ou .v64. Les archives ZIP ne sont pas acceptées.');
+  assert(file && typeof file.name === 'string' && /\.(z64|n64|v64)$/i.test(file.name), 'E_EXTENSION', 'Format ROM attendu : .z64, .n64 ou .v64. Pour un ZIP, utilisez Choisir une ROM dans l’interface.');
   assert(Number.isSafeInteger(file.size) && file.size >= MIN_ROM_BYTES, 'E_SIZE', 'Fichier trop court : au moins 4 096 octets sont requis.');
   assert(file.size <= MAX_ROM_BYTES, 'E_SIZE', 'Ce prototype accepte au maximum 64 Mio par ROM.');
   assert(file.size % 4 === 0, 'E_ALIGNMENT', 'La taille de la ROM doit être un multiple de quatre octets.');
