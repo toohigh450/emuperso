@@ -1,8 +1,9 @@
 """Real v0.4 UI/session/cheat/state integration, with the project's MIT ROM only.
 
 The RAM marker is a controlled test input in unused diagnostic-ROM memory, never
-an original save or commercial ROM. A read-only, independent code/framebuffer
-probe locates actual live RDRAM for every session; ambiguity fails the test.
+an original save or commercial ROM. An independent code/framebuffer probe locates
+actual live RDRAM for every session; its fallback restores a temporary unused-RAM
+nonce in finally. Ambiguity fails the test.
 """
 from pathlib import Path
 import base64

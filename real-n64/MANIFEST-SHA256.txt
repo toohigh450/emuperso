@@ -1,4 +1,4 @@
-17ad97b0d2fa59bf93a50c83a94e531dc6a8f3623a23311056e5e72c386dec8c  .github/workflows/real-n64.yml
+87ed491e2d13225cdff4575777f70e82d9448e187e733cd0b04972e8ec5072ac  .github/workflows/real-n64.yml
 ef073e6847b5c8b37f9acb7b8b7b90262aa27b5eabcf9b9771d9d63478f59f6c  DEMARRER-N64.bat
 1a528ee310090c9e0b840edf00aa215081de638e6d2126338f68d67f75580c4b  LIRE-POUR-LANCER-N64.txt
 547ee2d5d95598abc50abdb4cd752cd4fb4ea3c0bb02608f4ecaa38dce02e220  real-n64/.gitignore
@@ -9,7 +9,7 @@ d150eb5dc38678a61610ce9fc0b67082d1746cf4e96f4c55b794322fbf8734e2  real-n64/asset
 2c5ffdda3d4c998369548e10cf100be67897ac258c1aa1b24404cbd541e352b9  real-n64/assets/goku-vegeta-fusions.png
 d3d74931a6392a93343730ad3ba96729c01521044e8d85368965ec4b7a45f361  real-n64/cheat-catalog.mjs
 3b356552768afa698701ca2759e4c9523d088e4dfa7ac41e90a2915b1e6886ed  real-n64/docs/ETAT-REPRISE.md
-f788707f87e3de3378b0f30339c9634c981105d8a6f2bb315e2475d7a93f97e6  real-n64/docs/HUB-0.4.0.html
+d41904d6fc2e5e3689c83ea6f44f97de796ae1f000cab403731cf2b835bd490d  real-n64/docs/HUB-0.4.0.html
 d313e77e5cb4978fc009dc8ecaa7c2c76f013747ea332afe872a31492c79b3f8  real-n64/docs/IMPORT-ROM-0.2.0.html
 38c77e6586bf090253d74889b349f93ddbe51ea01850ef32adac3b879a90c391  real-n64/docs/IMPORT-ZIP-0.3.0.html
 ee04fc09c780a889c5b4b85a8200b4f614b8e6029b7df5afff7007c298e6b354  real-n64/docs/LANCEMENT-0.2.1.html
@@ -41,6 +41,7 @@ f826c2bfabfaff61fae30fc08cf5a8d9950b2cfbc56bf0d9028fae866eeb9f16  real-n64/evide
 031d81aec7e869d93c6de3ba9278a3799bdb1e3ce66ad1b5a329bcb115b66983  real-n64/evidence/build-minimal.txt
 970e3ef2da33da08d3946409a7ae9daa1b9272bba30d3684ee94edc03e3fc48f  real-n64/evidence/build-reproduced-final.txt
 9c6df11b973909762512955ed742b832d6bb69e4f2168cadbc9b57b638d53f2a  real-n64/evidence/ci-bootstrap-failure.txt
+9b3537247178a028e96fa7b6319859f3cb88be38aca4c3174e42226c26da639a  real-n64/evidence/decor-layout.json
 4629b44c3bb644cd3c0fbd61810f15b07856d0704a7dd0bc4e36d8c191497606  real-n64/evidence/fallback-link-map.txt
 7f5142a138db3d8bc533e7fd2bc9f64da43ecac9c08a7a87bad6afb7056d8f3a  real-n64/evidence/import-summary.json
 1ae0ac922ca927b11fd332e6a40a5cad3ce69960019e350664284102f4e3c9b2  real-n64/evidence/launcher-native-results.json
@@ -66,6 +67,7 @@ f7a066e9996f24fb135d80e34a18d545c442a3a977f42ddb1f93d99de73e5e04  real-n64/evide
 f428412191619ca28653da1977499932a892eda889d15df4ad7e0610bd3bc353  real-n64/evidence/tests-save-store-browser.json
 22d4dcaaaa599bd9490c8b6bea3280c55bc20a75162641098eb06ba654d0ca51  real-n64/evidence/tests-tools.txt
 e9c2f071799111e42d3e7b6cc76a5516f396840d051f30c50ec9599f2a4073f7  real-n64/evidence/tests-zip-browser.json
+19a34852cf2ffeaece9d3e8b20e19a3259caf259e095cbc175f95f3a94b09457  real-n64/evidence/windows-hub-launcher.json
 7d0cbc1e38884a4f285111e6dea0104d5d5bb76abf705c4117c7ccfdca0cb17d  real-n64/evidence/zip-tests-summary.json
 4d21d187f379dd9cfbd6004ad70b9a962218b2e50417481dff22dda692d5d905  real-n64/homebrew/BOOT-COMPATIBILITY-ANALYSIS.md
 3504ff9738471418a6ba806a0e70b470aa1158767d703122a206572166ee0917  real-n64/homebrew/LICENSE
@@ -130,7 +132,7 @@ f8dd4c52396dc4a307449516dd55633e2d6a86b4371a78d99407668e03c5e3f4  real-n64/lance
 9e451ceedb81bedc7ac5b15042cd1bd519c62fb33f15ac483e81851fbb91dae0  real-n64/session-controller.mjs
 9e21254ce47b398a9f418d216fb5715c93bf2d3f0877c55b18fd2cb4dc0e5a85  real-n64/state-bundle.mjs
 938b05509e578475ab59293b1003a0fed89bf80aca4542299c4794d5f9ed5ce3  real-n64/style.css
-e360279acf6613e4b6ceb52f6c0526e0ea4a696fa452471b9f3c389aebb0914b  real-n64/tests/browser_hub.py
+8012cf987979acce03c9f5f9c7166cf50c03adfa2a4c072d4d0cc79859b5be7c  real-n64/tests/browser_hub.py
 7dca904dbbf7fd143be6e296181cb003604e61fbe7c4436f56c7628bd16e1bd6  real-n64/tests/browser_import.py
 9ad29b21fbca057044d5bd5405cd16662a0293b1608551ebb15b86086c350876  real-n64/tests/browser_legacy_battery.py
 b738f2e6a14f2ebd674cef203584137950ede69494aa9129b5eec1517d418e0c  real-n64/tests/browser_real.py

@@ -66,11 +66,17 @@ jobs:
           node tests/cheat-catalog.test.mjs
           python3 -m unittest discover -s tests -p test_cheat_installer.py -v
       - name: Installer les outils de test
+        timeout-minutes: 8
         run: |
-          python3 -m pip install playwright==1.62.0 pillow==12.3.0
-          python3 -m playwright install --with-deps chromium
-          sudo apt-get update
-          sudo apt-get install -y tesseract-ocr
+          timeout --kill-after=5s 120s python3 -m pip install --timeout 30 --retries 2 playwright==1.62.0 pillow==12.3.0
+          # The Azure mirror stalled this runner for 24 minutes (run 41250044375).
+          # Keep Ubuntu's signed packages and TLS, using its official archive.
+          if test -f /etc/apt/apt-mirrors.txt; then
+            printf '%s\n' 'https://archive.ubuntu.com/ubuntu/' | sudo tee /etc/apt/apt-mirrors.txt
+          fi
+          timeout --kill-after=5s 120s sudo apt-get -o Acquire::Retries=1 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 update
+          timeout --kill-after=5s 120s sudo apt-get -o Acquire::Retries=1 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 install -y --no-install-recommends tesseract-ocr
+          timeout --kill-after=5s 300s python3 -m playwright install --with-deps chromium
       - name: Tester le vrai moteur et le clavier, PCM et video
         working-directory: real-n64
         run: |
