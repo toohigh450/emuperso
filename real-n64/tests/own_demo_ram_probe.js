@@ -1,4 +1,5 @@
-// Read-only research helper for the repository's MIT homebrew, never another ROM.
+// Controlled research helper for the repository's MIT homebrew, never another ROM.
+// If timing samples alias, a temporary unused-RAM nonce is restored in finally.
 // Evaluate this file in the top page, then await findOwnDemoRam().
 async function findOwnDemoRam() {
   const emulator = window.RealN64?.engineWindow?.EJS_emulator ?? window.EJS_emulator;
@@ -24,7 +25,35 @@ async function findOwnDemoRam() {
     for (const c of candidates) c.pointers.push(view.getUint32(c.base + 0xb78, c.wordSwapped));
     await new Promise(resolve => setTimeout(resolve, 180));
   }
-  const live = candidates.filter(c => c.pointers.includes(0xa0100000) && c.pointers.includes(0xa0140000));
+  let live = candidates.filter(c => c.pointers.includes(0xa0100000) && c.pointers.includes(0xa0140000));
+  if (live.length !== 1) {
+    // Sampling a double buffer at a fixed interval can hit the same parity on
+    // every observation. Prove live RAM by a reversible marker reflected in a
+    // fresh native state after actual frame progression, rather than guessing.
+    const snapshot = gm.getState(), stateRegions = [];
+    for (const [wordSwapped, pattern] of [[false, normal], [true, swapped]]) {
+      for (let i = 0; i <= snapshot.length - pattern.length; i += 4) {
+        if (snapshot[i] === pattern[0] && pattern.every((value, j) => snapshot[i + j] === value)) stateRegions.push({ base: i - 0x400, wordSwapped });
+      }
+    }
+    if (stateRegions.length !== 1) throw new Error('Native RAM state is not uniquely identified');
+    const physical = 0x10010, nonce = new Uint8Array([0x71,0x39,0xb2,0x4e,0x25,0xd8,0x6a,0xc1]);
+    const region = stateRegions[0], proven = [];
+    for (const candidate of candidates.filter(c => c.pointers.every(value => value === 0xa0100000 || value === 0xa0140000))) {
+      const original = nonce.map((_, i) => gm.Module.HEAPU8[candidate.base + (candidate.wordSwapped ? (physical + i) ^ 3 : physical + i)]);
+      try {
+        nonce.forEach((value, i) => { gm.Module.HEAPU8[candidate.base + (candidate.wordSwapped ? (physical + i) ^ 3 : physical + i)] = value; });
+        const before = gm.getFrameNum(), deadline = performance.now() + 4000;
+        while (gm.getFrameNum() < before + 2 && performance.now() < deadline) await new Promise(resolve => setTimeout(resolve, 30));
+        if (gm.getFrameNum() < before + 2) throw new Error('No real frame progression during RAM proof');
+        const fresh = gm.getState();
+        if (nonce.every((value, i) => fresh[region.base + (region.wordSwapped ? (physical + i) ^ 3 : physical + i)] === value)) proven.push(candidate);
+      } finally {
+        original.forEach((value, i) => { gm.Module.HEAPU8[candidate.base + (candidate.wordSwapped ? (physical + i) ^ 3 : physical + i)] = value; });
+      }
+    }
+    live = proven;
+  }
   if (live.length !== 1) throw new Error('Live RAM not uniquely identified: ' + JSON.stringify(candidates));
   const found = live[0];
   window.ownDemoReadBytes = (physicalAddress, length) => {

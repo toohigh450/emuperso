@@ -109,6 +109,12 @@ encore enregistrée. L’absence de bugs de chargement sur tous les jeux n’est
 La validation automatisée porte sur notre démo MIT et des données synthétiques, sans ROM
 commerciale. Le retour de Karl sur lancement et manette en 0.2.1 est consigné séparément.
 
+Le décor Goku/Vegeta et fusions est servi localement. La bannière montre l’image entière,
+les panneaux restent lisibles et aucun calque décoratif ne capte les commandes.
+Le parcours complet 0.4 est testé avec Chrome for Testing 151.0.7922.34. Un défaut
+d’export après relance de profil est observé dans notre Chromium 154 Linux sans interface ;
+il n’est pas déduit que Chrome Windows présente ce défaut.
+
 ## Important : deux résultats distincts
 
 Les sources libdragon de Claude (`demo-n64/`) ont été examinées puis compilées sur
