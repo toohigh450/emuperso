@@ -13,7 +13,10 @@ def encode(width):return b''.join(ROM[i:i+width][::-1] for i in range(0,len(ROM)
 def payload(name,data=ROM):return {'name':name,'mimeType':'application/octet-stream','buffer':data}
 def selected(page,name):page.wait_for_function('(n)=>RealN64.diagnostic().local_selection?.name===n',arg=name)
 def ready(page):page.wait_for_function('()=>!!window.RealN64')
-def boot(page):page.wait_for_function('()=>window.EJS_emulator?.gameManager?.getFrameNum()>15',timeout=45000)
+def boot(page):
+ page.wait_for_function('()=>window.EJS_emulator?.gameManager?.getFrameNum()>15',timeout=45000)
+ assert page.locator('iframe.engine-frame').count()==1
+ assert page.evaluate('EJS_emulator===RealN64.engineWindow.EJS_emulator'), 'Expected the actual child engine object'
 class AuditHandler(Handler):
  requests=[]
  def do_GET(self):self.requests.append((self.command,self.path,int(self.headers.get('Content-Length','0'))));super().do_GET()
@@ -38,7 +41,8 @@ try:
    actual=page.evaluate('''async()=>{const e=EJS_emulator,b=e.gameManager.FS.readFile(e.fileName);return {file:e.fileName,hash:[...new Uint8Array(await crypto.subtle.digest('SHA-256',b))].map(x=>x.toString(16).padStart(2,'0')).join(''),url:e.config.gameUrl};}''')
    assert actual['hash']==SHA and actual['file'].startswith('EMUPERSO_LOCAL_') and actual['url'].startswith('blob:')
    assert not any('/homebrew/' in r['url'] for r in all_requests[begin:] if r['url'].startswith(URL)), 'Import must not fetch a ROM from the server'
-   assert name not in actual['file'];assert page.locator('#choose-rom').is_disabled() and page.locator('#start').is_disabled()
+   # Mid-game ROM changes are now supported by replacing the isolated session.
+   assert name not in actual['file'];assert page.locator('#choose-rom').is_enabled() and page.locator('#start').is_enabled()
    d=page.evaluate('RealN64.diagnostic()');assert d['active_rom']['source']=='local-file';assert 'MIT' not in json.dumps([r for r in d['records'] if r['type']=='rom.validated'])
    assert base64.b64encode(ROM).decode() not in json.dumps(d)
    for width in [390,1280]:

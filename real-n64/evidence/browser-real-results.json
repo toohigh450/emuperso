@@ -8,13 +8,14 @@
         "core": "mupen64plus_next",
         "wasm_events": [
           {
-            "seq": 8,
-            "utc": "2026-10-31T20:25:44.616Z",
-            "host_monotonic_ms": 1586.589999999851,
+            "seq": 5,
+            "utc": "2026-10-31T21:13:58.442Z",
+            "host_monotonic_ms": 1854.710000000894,
             "type": "wasm.instantiated",
             "data": {
               "method": "instantiateStreaming",
-              "export_count": 69
+              "export_count": 69,
+              "session_generation": 1
             }
           }
         ]
@@ -25,8 +26,8 @@
       "status": "RÉUSSI",
       "proof": {
         "frame_before": 40,
-        "frame_after": 104,
-        "ocr": "DEMO he4+ EMUPERSO\nFRAME +44\nAH RELALCHE\nE RELACHE\nCPU WI SI AL REELS\na\ncle © Ye = .” &\n",
+        "frame_after": 102,
+        "ocr": "DEMO Me4+ EMUPERSO\n\nFRAME 45\n\nH RELACHE\n\nE RELACHE\n\nCPU WI SI AL REELS\na\n",
         "captures": [
           "boot.png",
           "animation.png"
@@ -46,8 +47,8 @@
       "test": "Clavier navigateur : X/A et S/B reçus par la ROM",
       "status": "RÉUSSI",
       "proof": {
-        "ocr_A": "DEMO Me4+ EMUPERSO\nFRAME 125\nH PRESSE SOM\nE RELACHE\nCPU WI SI AL REELS\n=\ncle © )=—@— = .”2 &\n",
-        "ocr_B": "DEMO Me4+ EMUPERSO\n\nFRAME 1495\n\nAH RELACHE\n\nBE PRESSE\n\nCPU WI SI AL REELS\na\n",
+        "ocr_A": "DEMO M64 EMUPERSO\nFRAME 1225\nAH PRESSE SUH\nE RELACHE\nCPU WI SL AL REELS\n=\nlo 1 =—@— = & ,’\n",
+        "ocr_B": "DEMO Me4+ EMUPERSO\n\nFRAME irl\n\nH RELACHE\n\nBE PRESSE\n\nCPU WI SI AL REELS\na\n",
         "captures": [
           "keyboard-A.png",
           "keyboard-B.png"
@@ -59,9 +60,9 @@
       "status": "RÉUSSI",
       "proof": {
         "silent_max_rms": 0,
-        "tone_max_rms": 0.13621290148493234,
+        "tone_max_rms": 0.13630239126206992,
         "released_max_rms": 0,
-        "scheduled_tone_buffers": 123,
+        "scheduled_tone_buffers": 117,
         "physical_speakers": "NON TESTABLE"
       }
     },
@@ -69,8 +70,8 @@
       "test": "Stabilité observée pendant 30 secondes supplémentaires",
       "status": "RÉUSSI",
       "proof": {
-        "frame_before": 299,
-        "frame_after": 844,
+        "frame_before": 273,
+        "frame_after": 719,
         "page_errors": []
       }
     },
@@ -78,90 +79,18 @@
       "test": "Ressources moteur servies localement, sans service externe au lancement",
       "status": "RÉUSSI",
       "proof": {
-        "http_responses": 26
+        "http_responses": 33
       }
     }
   ],
   "console": [
     {
-      "type": "log",
-      "text": "Loading language en-US"
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for 'Exit Emulation'. Language set to 'en-US'"
+      "type": "warning",
+      "text": "Button \"rightClick\" is not a valid button."
     },
     {
       "type": "log",
       "text": "{playPause: Object, play: Object, pause: Object, restart: Object, mute: Object}"
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for 'D-PAD UP'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for 'D-PAD DOWN'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for 'D-PAD LEFT'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for 'D-PAD RIGHT'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for 'LEFT_BOTTOM_SHOULDER'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for '-1'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for '+1'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for '-1'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for '+1'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for '-1'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for '+1'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for '-1'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for '+1'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for 'CU'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for 'CD'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for 'CL'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for 'CR'. Language set to 'en-US'"
     },
     {
       "type": "log",
@@ -569,19 +498,11 @@
     },
     {
       "type": "log",
-      "text": "Translation not found for 'Core (Requires restart)'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
       "text": "retroarch_core mupen64plus_next"
     },
     {
       "type": "log",
       "text": "invalid core option retroarch_core. This is not an error."
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for 'Threads'. Language set to 'en-US'"
     },
     {
       "type": "log",
@@ -681,19 +602,11 @@
     },
     {
       "type": "log",
-      "text": "Translation not found for 'Screenshot Source'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
       "text": "screenshotSource canvas"
     },
     {
       "type": "log",
       "text": "invalid core option screenshotSource. This is not an error."
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for 'Screenshot Format'. Language set to 'en-US'"
     },
     {
       "type": "log",
@@ -705,19 +618,11 @@
     },
     {
       "type": "log",
-      "text": "Translation not found for 'Screenshot Upscale'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
       "text": "screenshotUpscale 1"
     },
     {
       "type": "log",
       "text": "invalid core option screenshotUpscale. This is not an error."
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for 'Screen Recording FPS'. Language set to 'en-US'"
     },
     {
       "type": "log",
@@ -729,19 +634,11 @@
     },
     {
       "type": "log",
-      "text": "Translation not found for 'Screen Recording Format'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
       "text": "screenRecordFormat mp4"
     },
     {
       "type": "log",
       "text": "invalid core option screenRecordFormat. This is not an error."
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for 'Screen Recording Upscale'. Language set to 'en-US'"
     },
     {
       "type": "log",
@@ -753,19 +650,11 @@
     },
     {
       "type": "log",
-      "text": "Translation not found for 'Screen Recording Video Bitrate'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
       "text": "screenRecordVideoBitrate 2621440"
     },
     {
       "type": "log",
       "text": "invalid core option screenRecordVideoBitrate. This is not an error."
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for 'Screen Recording Audio Bitrate'. Language set to 'en-US'"
     },
     {
       "type": "log",
@@ -817,27 +706,11 @@
     },
     {
       "type": "log",
-      "text": "Translation not found for 'Menubar Mouse Trigger'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for 'Downward Movement'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for 'Movement Anywhere'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
       "text": "menubarBehavior downward"
     },
     {
       "type": "log",
       "text": "invalid core option menubarBehavior. This is not an error."
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for 'Direct Keyboard Input'. Language set to 'en-US'"
     },
     {
       "type": "log",
@@ -849,19 +722,11 @@
     },
     {
       "type": "log",
-      "text": "Translation not found for 'Forward Alt key'. Language set to 'en-US'"
-    },
-    {
-      "type": "log",
       "text": "altKeyboardInput disabled"
     },
     {
       "type": "log",
       "text": "invalid core option altKeyboardInput. This is not an error."
-    },
-    {
-      "type": "log",
-      "text": "Translation not found for 'Lock Mouse'. Language set to 'en-US'"
     },
     {
       "type": "log",
@@ -1257,6 +1122,30 @@
     },
     {
       "type": "log",
+      "text": "[INFO] [SRAM]: Saving RAM type #0 to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [SRAM]: Saved successfully to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [SRAM]: Saving RAM type #0 to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [SRAM]: Saved successfully to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [SRAM]: Saving RAM type #0 to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [SRAM]: Saved successfully to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\"."
+    },
+    {
+      "type": "log",
       "text": "[INFO] Setting real canvas size: 1026 x 560"
     }
   ],
@@ -1275,11 +1164,23 @@
       "status": 200
     },
     {
-      "url": "http://127.0.0.1:8770/rom-file.mjs",
+      "url": "http://127.0.0.1:8770/zip-rom.mjs",
       "status": 200
     },
     {
-      "url": "http://127.0.0.1:8770/zip-rom.mjs",
+      "url": "http://127.0.0.1:8770/save-store.mjs",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8770/session-controller.mjs",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8770/cheat-catalog.mjs",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8770/rom-file.mjs",
       "status": 200
     },
     {
@@ -1291,7 +1192,19 @@
       "status": 200
     },
     {
-      "url": "http://127.0.0.1:8770/vendor/data/loader.js",
+      "url": "http://127.0.0.1:8770/engine.html",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8770/engine.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8770/engine-session.mjs",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8770/docs/runtime-lock.json",
       "status": 200
     },
     {
@@ -1331,10 +1244,6 @@
       "status": 200
     },
     {
-      "url": "http://127.0.0.1:8770/vendor/data/localization/en-US.json",
-      "status": 200
-    },
-    {
       "url": "http://127.0.0.1:8770/vendor/data/version.json",
       "status": 200
     },
@@ -1351,19 +1260,27 @@
       "status": 200
     },
     {
-      "url": "blob:http://127.0.0.1:8770/b4fa7777-660e-47ac-a3b1-a0b6d4202b42",
+      "url": "blob:http://127.0.0.1:8770/c644f5f7-a024-47fc-bb51-2a41aaa05d2c",
       "status": 200
     },
     {
-      "url": "blob:http://127.0.0.1:8770/2456cb1e-9c55-4236-8d80-cc07a7e8f18a",
+      "url": "blob:http://127.0.0.1:8770/5a8a6fd6-3f90-486f-8429-ca0d00dbfd2b",
       "status": 200
     },
     {
-      "url": "blob:http://127.0.0.1:8770/046c54b9-3816-470c-9cee-c44b45f35b8e",
+      "url": "blob:http://127.0.0.1:8770/da95ed76-b0fd-489d-aea9-74a07217858c",
       "status": 200
     },
     {
-      "url": "blob:http://127.0.0.1:8770/b17eb6f6-1d2c-49ed-adb2-40fa4b901c9a",
+      "url": "blob:http://127.0.0.1:8770/c24307c1-b374-48dd-b7d9-15f318bb47b7",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8770/docs/cheat-catalog-lock.json",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8770/vendor/cheats/mupencheat.txt",
       "status": 200
     }
   ]

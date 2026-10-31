@@ -50,6 +50,7 @@ jobs:
         run: |
           python3 tools/fetch_runtime.py
           python3 tools/fetch_runtime.py --verify-only
+          python3 tools/fetch_cheats.py
           python3 tests/launcher_native.py
       - uses: actions/setup-node@v4
         with:
@@ -59,6 +60,11 @@ jobs:
         run: |
           node tests/rom-file.test.mjs
           node tests/zip-rom.test.mjs
+          node tests/save-store.test.mjs
+          node tests/state-bundle.test.mjs
+          node tests/legacy-battery.test.mjs
+          node tests/cheat-catalog.test.mjs
+          python3 -m unittest discover -s tests -p test_cheat_installer.py -v
       - name: Installer les outils de test
         run: |
           python3 -m pip install playwright==1.62.0 pillow==12.3.0
@@ -73,6 +79,10 @@ jobs:
           timeout --kill-after=5s 180s python3 tests/browser_real.py
           timeout --kill-after=5s 180s python3 tests/browser_import.py
           timeout --kill-after=5s 180s python3 tests/browser_zip.py
+          timeout --kill-after=5s 180s python3 tests/browser_save_store.py
+          timeout --kill-after=5s 180s python3 tests/browser_legacy_battery.py
+          timeout --kill-after=5s 240s python3 tests/probe_native_roundtrip.py
+          timeout --kill-after=5s 600s python3 tests/browser_hub.py
       - name: Deposer les preuves et la ROM autonome MIT
         if: always()
         uses: actions/upload-artifact@v4

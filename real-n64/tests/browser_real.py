@@ -35,8 +35,12 @@ try:
    page.goto('http://127.0.0.1:8770/');page.locator('#start').click()
    page.wait_for_function('() => window.EJS_emulator?.gameManager?.getFrameNum() > 10 || RealN64.diagnostic().records.some(r=>r.type==="browser.error")',timeout=45000)
    assert page.evaluate('EJS_emulator.gameManager.getFrameNum()')>10,errors
+   assert page.locator('iframe.engine-frame').count()==1
+   assert page.evaluate('EJS_emulator===RealN64.engineWindow.EJS_emulator'), 'Expected the actual child engine object'
    ok('Cœur N64 réel chargé et compteur en progression',{'frame':page.evaluate('EJS_emulator.gameManager.getFrameNum()'),'core':page.evaluate('EJS_emulator.config.system'),'wasm_events':page.evaluate('RealN64.diagnostic().records.filter(r=>r.type==="wasm.instantiated")')})
-   canvas=page.locator('#game canvas').first;page.wait_for_timeout(1500)
+   # Real rendering now lives in the isolated engine realm. Screenshots still
+   # observe the actual core canvas, never a parent preview or simulated frame.
+   canvas=page.frame_locator('iframe.engine-frame').locator('canvas').first;page.wait_for_timeout(1500)
    frame0=page.evaluate('EJS_emulator.gameManager.getFrameNum()');image0=shot(canvas,'boot.png');text0=ocr(image0,'boot-ocr.png')
    page.wait_for_timeout(1500);image1=shot(canvas,'animation.png');frame1=page.evaluate('EJS_emulator.gameManager.getFrameNum()')
    assert frame1>frame0 and ImageChops.difference(image0,image1).getbbox() is not None
@@ -52,8 +56,8 @@ try:
    assert 'PRESSE' in textB.upper(),textB
    ok('Clavier navigateur : X/A et S/B reçus par la ROM',{'ocr_A':textA,'ocr_B':textB,'captures':['keyboard-A.png','keyboard-B.png']})
    # Observe actual buffers scheduled by the core, preserving their samples and native start.
-   page.locator('#audio').click();page.evaluate('scheduledAudio=[]');page.wait_for_timeout(700);silent=page.evaluate('scheduledAudio');page.evaluate('scheduledAudio=[];capturePCM=true')
-   canvas.click();page.keyboard.down('x');page.wait_for_timeout(1800);tone=page.evaluate('scheduledAudio');page.keyboard.up('x');page.wait_for_timeout(900);page.evaluate('scheduledAudio=[];capturePCM=false');page.wait_for_timeout(700);after=page.evaluate('scheduledAudio')
+   page.locator('#audio').click();page.evaluate('(RealN64.engineWindow||window).scheduledAudio=[]');page.wait_for_timeout(700);silent=page.evaluate('(RealN64.engineWindow||window).scheduledAudio');page.evaluate('()=>{const engine=RealN64.engineWindow||window;engine.scheduledAudio=[];engine.capturePCM=true;}')
+   canvas.click();page.keyboard.down('x');page.wait_for_timeout(1800);tone=page.evaluate('(RealN64.engineWindow||window).scheduledAudio');page.keyboard.up('x');page.wait_for_timeout(900);page.evaluate('()=>{const engine=RealN64.engineWindow||window;engine.scheduledAudio=[];engine.capturePCM=false;}');page.wait_for_timeout(700);after=page.evaluate('(RealN64.engineWindow||window).scheduledAudio')
    maximum=lambda buffers:max([a['rms'] for a in buffers] or [0])
    assert tone and maximum(tone)>0.001 and maximum(tone)>maximum(silent)*3
    assert after and maximum(after)<0.001

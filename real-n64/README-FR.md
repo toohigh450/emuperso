@@ -1,4 +1,4 @@
-# Opération N64 Web — livraison 0.3.0 — import ZIP local
+# Opération N64 Web — livraison 0.4.0 — sessions, cheats et sauvegardes
 
 **Branche `emulateur-reel` seulement. Aucun remplacement du Lab, aucune fusion main.**
 
@@ -16,9 +16,9 @@ Après préparation et ouverture du serveur local dans Chrome :
    Avec plusieurs ROM, choisir une entrée puis **Préparer cette ROM**.
    Les fichiers annexes sûrs sont ignorés ; aucun fichier n’est écrit sur le PC.
 2. Vérifier le nom, le format détecté, la taille et les deux SHA-256 affichés.
-3. Cliquer **Lancer la ROM choisie**. Après un lancement, recharger la page pour changer
-   de ROM ; un seul moteur est créé par page.
-4. **Lancer la démo homebrew** reste le test de référence, disponible avant lancement.
+3. Cliquer **Lancer la ROM choisie**. Pendant une partie, choisir une autre ROM puis
+   **Changer pour cette ROM** : l’ancienne session est sauvegardée et remplacée.
+4. **Lancer la démo homebrew** reste le test de référence, disponible aussi pendant une partie.
 
 Le fichier est lu par File.arrayBuffer dans le navigateur. Dans un ZIP, la ROM choisie
 est décompressée en mémoire, vérifiée par CRC-32 puis validée comme une ROM brute.
@@ -27,9 +27,9 @@ URL Blob. Aucun upload, aucun chemin serveur construit à partir du nom du fichi
 Seules les ressources fixes du moteur sont demandées au serveur local. La politique CSP
 interdit les connexions externes. Le diagnostic contient des métadonnées (nom, taille,
 empreintes), **jamais les octets de la ROM** ; son export est volontaire et local.
-Le rechargement exige de sélectionner le fichier à nouveau. Le moteur peut conserver
-ses sauvegardes internes dans IndexedDB local ; son nom de jeu est isolé par le SHA du
-contenu normalisé et ne reprend pas le nom de fichier utilisateur.
+Le rechargement exige de sélectionner le fichier à nouveau. Les sauvegardes sont gérées dans notre coffre IndexedDB dédié ; le montage IDBFS
+automatique du moteur est remplacé par une mémoire de session. Son nom de jeu est
+isolé par le SHA du contenu normalisé et ne reprend pas le nom de fichier utilisateur.
 
 Validation : taille entre 4 Kio et 64 Mio inclus, multiple de quatre octets, signature
 80371240 (Z64), 37804012 (V64) ou 40123780 (N64). V64 est inversé par paires, N64 par
@@ -66,12 +66,48 @@ utilisent uniquement notre homebrew MIT convertie dans les trois ordres d’octe
 fichiers invalides synthétiques. L’archive privée fournie pendant cette tâche n’a pas pu
 être transférée (limite outil 32 Mio) : aucun test du jeu qu’elle contient n’est revendiqué.
 
-Rapport courant : **docs/IMPORT-ZIP-0.3.0.html**. Tests de régression :
+Rapport courant : **docs/HUB-0.4.0.html**. Tests de régression :
 `node tests/rom-file.test.mjs` (12) ; `python tests/browser_import.py` (9 contrôles
 Chromium) ; régression `python tests/browser_real.py` (7 contrôles). Les conversions
 sont rehashées dans le FS du cœur réel ; les requêtes HTTP sont observées côté navigateur
 et serveur pour vérifier absence d’envoi. Les sélections concurrentes, noms hostiles,
 fichiers invalides, export sans contenu ROM et tailles de vues sont testés.
+
+## Fonctions 0.4.0
+
+- **Changer de jeu** : choisir et valider le prochain fichier pendant la partie. Au lancement,
+  la session précédente est mise en pause ; elle est fermée après démarrage du candidat,
+  ou reprise si celui-ci échoue. Aucun effacement des sauvegardes lors du changement.
+- **Cheats** : catalogue officiel Mupen64Plus figé, téléchargé automatiquement avec sa
+  licence GPL-2.0+ : 558 versions et 9 238 codes répertoriés, 556 identités d’en-tête.
+  Reconnaissance CRC1/CRC2/région, jamais nom de fichier. Les variantes ambiguës exigent
+  un choix. Tous désactivés par défaut ; codes non pris en charge visibles mais désactivés.
+  Recherche, paramètres proposés et ajout manuel GameShark (64 lignes maximum).
+  Une correspondance de catalogue ne certifie pas l’effet du code sur votre ROM.
+- **Sauvegardes** : natives périodiques et avant changement de session ; trois emplacements
+  de save states avec copie précédente. Chaque état groupe atomiquement la RAM et sa
+  sauvegarde native, pour conserver un point cohérent. SHA-256 du contenu/métadonnées,
+  SHA ROM normalisée, empreintes moteur/configuration et format contrôlés avant chargement.
+  Chargement dans une session neuve, avec retour à l’ancienne en cas d’échec détecté.
+  Export/import JSON local des états ; aucun accès aux sauvegardes des autres projets.
+- **Réinitialiser sans cheats** : nouvelle RAM et paramètres fixes, conservation de la
+  sauvegarde native. Les effets déjà enregistrés dans cette dernière peuvent rester.
+- **Revenir avant les cheats** : point RAM+natif créé avant la première activation ; restaure
+  ce point après confirmation et abandonne la progression depuis. Les états utilisateur
+  restent conservés. Les mémoires marquées par des cheats restent identifiées comme telles.
+
+Les chargements rapides/contextuels et par glisser-déposer du moteur sont bloqués pour
+passer par les contrôles du coffre. Les réglages du moteur sont fixes pour préserver
+l’identité de configuration ; volume, clavier et configuration des manettes restent disponibles.
+Une ancienne sauvegarde native 0.3 du même contenu peut être copiée en lecture seule,
+uniquement par son chemin exact ; l’ancienne base n’est jamais modifiée.
+
+Le navigateur peut refuser le stockage persistant, manquer d’espace ou perdre ses données
+lors d’un effacement. Les transactions conservent la révision précédente en cas d’échec,
+mais exportez les états importants. Un arrêt brutal peut perdre la dernière période non
+encore enregistrée. L’absence de bugs de chargement sur tous les jeux n’est pas garantie.
+La validation automatisée porte sur notre démo MIT et des données synthétiques, sans ROM
+commerciale. Le retour de Karl sur lancement et manette en 0.2.1 est consigné séparément.
 
 ## Important : deux résultats distincts
 

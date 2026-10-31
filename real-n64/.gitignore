@@ -22,3 +22,19 @@ homebrew/emulator-boot/bin/
 *.d
 *.map
 .python/
+# User games and save exports are private; only the owned MIT demo is distributed.
+*.[zZ]64
+*.[nN]64
+*.[vV]64
+*.[zZ][iI][pP]
+*.sav
+*.srm
+*.state
+*.eep
+*.fla
+*.mpk
+*.pak
+N64-sauvegarde-emplacement-*.json
+EMUPERSO-moteur-reel-diagnostic.json
+EMUPERSO-moteur-reel-diagnostic-*.json
+!homebrew/fallback-open/demo-emuperso-open.z64

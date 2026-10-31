@@ -26,6 +26,7 @@ ROOT = Path(__file__).resolve().parents[1]
 # CPython's embedded _pth mode does not add the script directory automatically.
 sys.path.insert(0, str(ROOT / 'tools'))
 import fetch_runtime
+import fetch_cheats
 from serve import Handler
 
 HEALTH_PATH = '/__n64lab_health'
@@ -57,6 +58,11 @@ def prepare(offline: bool) -> None:
         LOG.info('Preparation du moteur local. Le premier lancement necessite Internet.')
         count = fetch_runtime.install(lock, ROOT / 'cache', ROOT / 'vendor', offline)
         LOG.info('Preparation terminee : %s fichiers verifies.', count)
+    try:
+        count = fetch_cheats.install(offline=offline)
+        LOG.info('Catalogue de cheats local verifie : %s fichiers. Aucun code active automatiquement.', count)
+    except (OSError, ValueError, KeyError) as error:
+        LOG.warning('Catalogue de cheats indisponible ; le jeu reste utilisable : %s', error)
 
 
 def make_server(port: int, instance: str) -> ThreadingHTTPServer:

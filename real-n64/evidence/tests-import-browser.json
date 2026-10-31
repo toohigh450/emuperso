@@ -6,7 +6,7 @@
       "proof": {
         "file": "EMUPERSO_LOCAL_f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252.z64",
         "hash": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
-        "url": "blob:http://127.0.0.1:8771/8b6f2a1e-d6b1-42ff-89e5-1ceb83e85a60"
+        "url": "blob:http://127.0.0.1:8771/9bb6c1f3-b213-4fce-9626-2b80580c1912"
       }
     },
     {
@@ -15,7 +15,7 @@
       "proof": {
         "file": "EMUPERSO_LOCAL_f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252.z64",
         "hash": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
-        "url": "blob:http://127.0.0.1:8771/bbb56d5e-7ddf-450c-9468-36a7072a0ca0"
+        "url": "blob:http://127.0.0.1:8771/a2d2fc39-215a-41f9-8581-78dfbbec2a51"
       }
     },
     {
@@ -24,7 +24,7 @@
       "proof": {
         "file": "EMUPERSO_LOCAL_f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252.z64",
         "hash": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
-        "url": "blob:http://127.0.0.1:8771/5b1503c0-2ef1-45cc-b1c3-560f37b68003"
+        "url": "blob:http://127.0.0.1:8771/a06bf7dc-3acc-4553-89a8-5ef152b4bf34"
       }
     },
     {
@@ -67,8 +67,8 @@
       "test": "Confidentialité : aucun POST/PUT, aucun corps HTTP, aucun domaine externe ni nom de fichier importé envoyé",
       "status": "RÉUSSI",
       "proof": {
-        "browser_http_requests": 87,
-        "server_requests": 87,
+        "browser_http_requests": 118,
+        "server_requests": 118,
         "private_rom_used": false
       }
     }
@@ -101,7 +101,37 @@
       "body_bytes": 0
     },
     {
-      "url": "http://127.0.0.1:8771/vendor/data/loader.js",
+      "url": "http://127.0.0.1:8771/save-store.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/session-controller.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/cheat-catalog.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/docs/runtime-lock.json",
       "method": "GET",
       "body_bytes": 0
     },
@@ -151,11 +181,6 @@
       "body_bytes": 0
     },
     {
-      "url": "http://127.0.0.1:8771/vendor/data/localization/en-US.json",
-      "method": "GET",
-      "body_bytes": 0
-    },
-    {
       "url": "http://127.0.0.1:8771/vendor/data/version.json",
       "method": "GET",
       "body_bytes": 0
@@ -172,6 +197,16 @@
     },
     {
       "url": "http://127.0.0.1:8771/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/docs/cheat-catalog-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/vendor/cheats/mupencheat.txt",
       "method": "GET",
       "body_bytes": 0
     },
@@ -201,7 +236,37 @@
       "body_bytes": 0
     },
     {
-      "url": "http://127.0.0.1:8771/vendor/data/loader.js",
+      "url": "http://127.0.0.1:8771/save-store.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/session-controller.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/cheat-catalog.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/docs/runtime-lock.json",
       "method": "GET",
       "body_bytes": 0
     },
@@ -251,11 +316,6 @@
       "body_bytes": 0
     },
     {
-      "url": "http://127.0.0.1:8771/vendor/data/localization/en-US.json",
-      "method": "GET",
-      "body_bytes": 0
-    },
-    {
       "url": "http://127.0.0.1:8771/vendor/data/version.json",
       "method": "GET",
       "body_bytes": 0
@@ -272,6 +332,16 @@
     },
     {
       "url": "http://127.0.0.1:8771/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/docs/cheat-catalog-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/vendor/cheats/mupencheat.txt",
       "method": "GET",
       "body_bytes": 0
     },
@@ -301,7 +371,37 @@
       "body_bytes": 0
     },
     {
-      "url": "http://127.0.0.1:8771/vendor/data/loader.js",
+      "url": "http://127.0.0.1:8771/save-store.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/session-controller.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/cheat-catalog.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/docs/runtime-lock.json",
       "method": "GET",
       "body_bytes": 0
     },
@@ -351,11 +451,6 @@
       "body_bytes": 0
     },
     {
-      "url": "http://127.0.0.1:8771/vendor/data/localization/en-US.json",
-      "method": "GET",
-      "body_bytes": 0
-    },
-    {
       "url": "http://127.0.0.1:8771/vendor/data/version.json",
       "method": "GET",
       "body_bytes": 0
@@ -376,27 +471,12 @@
       "body_bytes": 0
     },
     {
-      "url": "http://127.0.0.1:8771/",
+      "url": "http://127.0.0.1:8771/docs/cheat-catalog-lock.json",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "http://127.0.0.1:8771/style.css",
-      "method": "GET",
-      "body_bytes": 0
-    },
-    {
-      "url": "http://127.0.0.1:8771/app.js",
-      "method": "GET",
-      "body_bytes": 0
-    },
-    {
-      "url": "http://127.0.0.1:8771/rom-file.mjs",
-      "method": "GET",
-      "body_bytes": 0
-    },
-    {
-      "url": "http://127.0.0.1:8771/zip-rom.mjs",
+      "url": "http://127.0.0.1:8771/vendor/cheats/mupencheat.txt",
       "method": "GET",
       "body_bytes": 0
     },
@@ -422,6 +502,61 @@
     },
     {
       "url": "http://127.0.0.1:8771/zip-rom.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/save-store.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/session-controller.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/cheat-catalog.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/style.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/app.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/rom-file.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/zip-rom.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/save-store.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/session-controller.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/cheat-catalog.mjs",
       "method": "GET",
       "body_bytes": 0
     },
@@ -436,7 +571,22 @@
       "body_bytes": 0
     },
     {
-      "url": "http://127.0.0.1:8771/vendor/data/loader.js",
+      "url": "http://127.0.0.1:8771/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/docs/runtime-lock.json",
       "method": "GET",
       "body_bytes": 0
     },
@@ -486,11 +636,6 @@
       "body_bytes": 0
     },
     {
-      "url": "http://127.0.0.1:8771/vendor/data/localization/en-US.json",
-      "method": "GET",
-      "body_bytes": 0
-    },
-    {
       "url": "http://127.0.0.1:8771/vendor/data/version.json",
       "method": "GET",
       "body_bytes": 0
@@ -507,6 +652,16 @@
     },
     {
       "url": "http://127.0.0.1:8771/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/docs/cheat-catalog-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8771/vendor/cheats/mupencheat.txt",
       "method": "GET",
       "body_bytes": 0
     }
@@ -534,12 +689,42 @@
     ],
     [
       "GET",
+      "/save-store.mjs",
+      0
+    ],
+    [
+      "GET",
       "/zip-rom.mjs",
       0
     ],
     [
       "GET",
-      "/vendor/data/loader.js",
+      "/session-controller.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/cheat-catalog.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/engine.html",
+      0
+    ],
+    [
+      "GET",
+      "/engine.css",
+      0
+    ],
+    [
+      "GET",
+      "/engine-session.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/docs/runtime-lock.json",
       0
     ],
     [
@@ -589,11 +774,6 @@
     ],
     [
       "GET",
-      "/vendor/data/localization/en-US.json",
-      0
-    ],
-    [
-      "GET",
       "/vendor/data/version.json",
       0
     ],
@@ -614,6 +794,16 @@
     ],
     [
       "GET",
+      "/docs/cheat-catalog-lock.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/cheats/mupencheat.txt",
+      0
+    ],
+    [
+      "GET",
       "/",
       0
     ],
@@ -629,17 +819,47 @@
     ],
     [
       "GET",
-      "/rom-file.mjs",
-      0
-    ],
-    [
-      "GET",
       "/zip-rom.mjs",
       0
     ],
     [
       "GET",
-      "/vendor/data/loader.js",
+      "/save-store.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/session-controller.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/rom-file.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/cheat-catalog.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/engine.html",
+      0
+    ],
+    [
+      "GET",
+      "/engine.css",
+      0
+    ],
+    [
+      "GET",
+      "/engine-session.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/docs/runtime-lock.json",
       0
     ],
     [
@@ -689,11 +909,6 @@
     ],
     [
       "GET",
-      "/vendor/data/localization/en-US.json",
-      0
-    ],
-    [
-      "GET",
       "/vendor/data/version.json",
       0
     ],
@@ -710,6 +925,16 @@
     [
       "GET",
       "/vendor/data/compression/extract7z.js",
+      0
+    ],
+    [
+      "GET",
+      "/docs/cheat-catalog-lock.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/cheats/mupencheat.txt",
       0
     ],
     [
@@ -739,7 +964,37 @@
     ],
     [
       "GET",
-      "/vendor/data/loader.js",
+      "/save-store.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/session-controller.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/cheat-catalog.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/engine.html",
+      0
+    ],
+    [
+      "GET",
+      "/engine.css",
+      0
+    ],
+    [
+      "GET",
+      "/engine-session.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/docs/runtime-lock.json",
       0
     ],
     [
@@ -789,11 +1044,6 @@
     ],
     [
       "GET",
-      "/vendor/data/localization/en-US.json",
-      0
-    ],
-    [
-      "GET",
       "/vendor/data/version.json",
       0
     ],
@@ -814,27 +1064,12 @@
     ],
     [
       "GET",
-      "/",
+      "/docs/cheat-catalog-lock.json",
       0
     ],
     [
       "GET",
-      "/app.js",
-      0
-    ],
-    [
-      "GET",
-      "/style.css",
-      0
-    ],
-    [
-      "GET",
-      "/rom-file.mjs",
-      0
-    ],
-    [
-      "GET",
-      "/zip-rom.mjs",
+      "/vendor/cheats/mupencheat.txt",
       0
     ],
     [
@@ -859,7 +1094,62 @@
     ],
     [
       "GET",
+      "/session-controller.mjs",
+      0
+    ],
+    [
+      "GET",
       "/zip-rom.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/cheat-catalog.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/save-store.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/",
+      0
+    ],
+    [
+      "GET",
+      "/style.css",
+      0
+    ],
+    [
+      "GET",
+      "/app.js",
+      0
+    ],
+    [
+      "GET",
+      "/zip-rom.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/rom-file.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/save-store.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/session-controller.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/cheat-catalog.mjs",
       0
     ],
     [
@@ -874,7 +1164,22 @@
     ],
     [
       "GET",
-      "/vendor/data/loader.js",
+      "/engine.html",
+      0
+    ],
+    [
+      "GET",
+      "/engine.css",
+      0
+    ],
+    [
+      "GET",
+      "/engine-session.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/docs/runtime-lock.json",
       0
     ],
     [
@@ -924,11 +1229,6 @@
     ],
     [
       "GET",
-      "/vendor/data/localization/en-US.json",
-      0
-    ],
-    [
-      "GET",
       "/vendor/data/version.json",
       0
     ],
@@ -945,6 +1245,16 @@
     [
       "GET",
       "/vendor/data/compression/extract7z.js",
+      0
+    ],
+    [
+      "GET",
+      "/docs/cheat-catalog-lock.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/cheats/mupencheat.txt",
       0
     ]
   ],

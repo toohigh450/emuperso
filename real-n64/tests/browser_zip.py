@@ -58,6 +58,8 @@ def prepared(page, suffix, timeout=30000):
 
 def engine_boot(page):
     page.wait_for_function('()=>window.EJS_emulator?.gameManager?.getFrameNum()>15', timeout=45000)
+    assert page.locator('iframe.engine-frame').count() == 1
+    assert page.evaluate('EJS_emulator===RealN64.engineWindow.EJS_emulator'), 'Expected the actual child engine object'
 
 
 def corrupt_crc(data):

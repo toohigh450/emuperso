@@ -1,7 +1,7 @@
 {
-  "schema": "emuperso/real-engine-diagnostic/v1",
+  "schema": "emuperso/real-engine-diagnostic/v2",
   "scope": "REAL_ENGINE_TRIAL_NOT_SYNTHETIC_LAB",
-  "warning": "Format recognition and engine callbacks do not prove compatibility. No ROM bytes are included.",
+  "warning": "No ROM or save payload bytes in this diagnostic. Metadata can reveal game and cheat names.",
   "host": {
     "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
     "cross_origin_isolated": true
@@ -20,6 +20,37 @@
     "canonical_format": "z64",
     "validation_scope": "Signature, taille et ordre des octets seulement ; CRC, code et compatibilit\u00e9 non valid\u00e9s."
   },
+  "identity": {
+    "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+    "engine_sha256": "76f1e9315302e1996454839bcde48aabe0fad399bf333ee0f5f66e698b28574c",
+    "config_sha256": "4e78a12696bbdf17d0c8f232689375ebff860e0f1b3796154c949329914ed571",
+    "state_schema": "emuperso-real-state-v1"
+  },
+  "session": {
+    "generation": 1,
+    "active_generation": 1,
+    "candidate_generation": null,
+    "disposed": 0,
+    "active": {
+      "session_id": 1,
+      "closed": false,
+      "started": true,
+      "paused": false,
+      "frame": 731,
+      "contexts": [
+        {
+          "state": "running",
+          "sample_rate": 44100
+        }
+      ]
+    },
+    "frame_count": 1
+  },
+  "cheats": {
+    "active": [],
+    "tainted": false
+  },
+  "saves": [],
   "rom_build": {
     "scope": "FREESTANDING_REAL_N64_CODE_EMULATOR_ONLY_8MIB_CPU_BOOT",
     "rom": {
@@ -47,8 +78,8 @@
   "records": [
     {
       "seq": 1,
-      "utc": "2026-10-31T20:25:43.286Z",
-      "host_monotonic_ms": 256.714999999851,
+      "utc": "2026-10-31T21:13:57.036Z",
+      "host_monotonic_ms": 448.9300000015646,
       "type": "page.open",
       "data": {
         "engine_started": false
@@ -56,8 +87,8 @@
     },
     {
       "seq": 2,
-      "utc": "2026-10-31T20:25:43.495Z",
-      "host_monotonic_ms": 466.0949999988079,
+      "utc": "2026-10-31T21:13:57.388Z",
+      "host_monotonic_ms": 800.8950000014156,
       "type": "rom.fetched",
       "data": {
         "bytes": 6144,
@@ -66,8 +97,89 @@
     },
     {
       "seq": 3,
-      "utc": "2026-10-31T20:25:43.525Z",
-      "host_monotonic_ms": 495.7099999990314,
+      "utc": "2026-10-31T21:13:57.728Z",
+      "host_monotonic_ms": 1140.464999999851,
+      "type": "video.context.created",
+      "data": {
+        "kind": "webgl2",
+        "session_generation": 1
+      }
+    },
+    {
+      "seq": 4,
+      "utc": "2026-10-31T21:13:57.781Z",
+      "host_monotonic_ms": 1193.2200000006706,
+      "type": "engine.ready",
+      "data": {
+        "session_generation": 1
+      }
+    },
+    {
+      "seq": 5,
+      "utc": "2026-10-31T21:13:58.442Z",
+      "host_monotonic_ms": 1854.710000000894,
+      "type": "wasm.instantiated",
+      "data": {
+        "method": "instantiateStreaming",
+        "export_count": 69,
+        "session_generation": 1
+      }
+    },
+    {
+      "seq": 6,
+      "utc": "2026-10-31T21:13:58.611Z",
+      "host_monotonic_ms": 2023.9750000014901,
+      "type": "video.context.created",
+      "data": {
+        "kind": "webgl2",
+        "session_generation": 1
+      }
+    },
+    {
+      "seq": 7,
+      "utc": "2026-10-31T21:13:58.716Z",
+      "host_monotonic_ms": 2128.3100000005215,
+      "type": "audio.context.created",
+      "data": {
+        "state": "running",
+        "sample_rate": 44100,
+        "session_generation": 1
+      }
+    },
+    {
+      "seq": 8,
+      "utc": "2026-10-31T21:13:58.851Z",
+      "host_monotonic_ms": 2263.425000000745,
+      "type": "engine.start.callback",
+      "data": {
+        "session_generation": 1
+      }
+    },
+    {
+      "seq": 9,
+      "utc": "2026-10-31T21:13:59.213Z",
+      "host_monotonic_ms": 2625.9500000011176,
+      "type": "audio.context.state",
+      "data": {
+        "state": "running",
+        "session_generation": 1
+      }
+    },
+    {
+      "seq": 10,
+      "utc": "2026-10-31T21:13:59.777Z",
+      "host_monotonic_ms": 3190.1450000014156,
+      "type": "session.committed",
+      "data": {
+        "generation": 1,
+        "previous_generation": null,
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+      }
+    },
+    {
+      "seq": 11,
+      "utc": "2026-10-31T21:13:59.797Z",
+      "host_monotonic_ms": 3209.7949999999255,
       "type": "rom.validated",
       "data": {
         "source": "reference-demo",
@@ -84,91 +196,15 @@
       }
     },
     {
-      "seq": 4,
-      "utc": "2026-10-31T20:25:43.529Z",
-      "host_monotonic_ms": 500.09999999962747,
-      "type": "engine.loader.requested",
-      "data": {
-        "core": "mupen64plus_next",
-        "threads": false,
-        "source": "reference-demo",
-        "canonical_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
-      }
-    },
-    {
-      "seq": 5,
-      "utc": "2026-10-31T20:25:43.649Z",
-      "host_monotonic_ms": 620.0399999991059,
-      "type": "runtime.update_check.local",
-      "data": {}
-    },
-    {
-      "seq": 6,
-      "utc": "2026-10-31T20:25:43.963Z",
-      "host_monotonic_ms": 934.4049999993294,
-      "type": "video.context.created",
-      "data": {
-        "kind": "webgl2"
-      }
-    },
-    {
-      "seq": 7,
-      "utc": "2026-10-31T20:25:43.989Z",
-      "host_monotonic_ms": 960.0499999988824,
-      "type": "engine.ready",
-      "data": {}
-    },
-    {
-      "seq": 8,
-      "utc": "2026-10-31T20:25:44.616Z",
-      "host_monotonic_ms": 1586.589999999851,
-      "type": "wasm.instantiated",
-      "data": {
-        "method": "instantiateStreaming",
-        "export_count": 69
-      }
-    },
-    {
-      "seq": 9,
-      "utc": "2026-10-31T20:25:44.724Z",
-      "host_monotonic_ms": 1695.2400000002235,
-      "type": "video.context.created",
-      "data": {
-        "kind": "webgl2"
-      }
-    },
-    {
-      "seq": 10,
-      "utc": "2026-10-31T20:25:44.845Z",
-      "host_monotonic_ms": 1816.219999998808,
-      "type": "audio.context.created",
-      "data": {
-        "sample_rate": 44100,
-        "state": "running"
-      }
-    },
-    {
-      "seq": 11,
-      "utc": "2026-10-31T20:25:45.026Z",
-      "host_monotonic_ms": 1997.0849999990314,
-      "type": "engine.start.callback",
-      "data": {}
-    },
-    {
       "seq": 12,
-      "utc": "2026-10-31T20:25:45.414Z",
-      "host_monotonic_ms": 2384.7050000000745,
-      "type": "audio.context.state",
+      "utc": "2026-10-31T21:14:12.086Z",
+      "host_monotonic_ms": 15498.88000000082,
+      "type": "battery.saved",
       "data": {
-        "state": "running"
+        "bytes": 296960,
+        "slot": 1,
+        "payload_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795"
       }
-    },
-    {
-      "seq": 13,
-      "utc": "2026-10-31T20:25:59.202Z",
-      "host_monotonic_ms": 16172.834999999031,
-      "type": "audio.resume.requested",
-      "data": {}
     }
   ]
 }

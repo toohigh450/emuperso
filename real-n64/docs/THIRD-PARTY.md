@@ -28,3 +28,14 @@ L’archive officielle est vérifiée avant extraction et tous les fichiers sont
 revérifiés avant chaque utilisation. Le lanceur ne modifie ni le code de Python,
 ni le PATH système, ni la politique d’exécution PowerShell globale.
 Cette dépendance reste exclue de Git et du ZIP de sources (téléchargement utilisateur).
+
+## Catalogue de cheats 0.4.0
+
+Source officielle non modifiée : mupen64plus/mupen64plus-core,
+commit dc1411a196b0e35745e9a5661a44e60809fad250, data/mupencheat.txt.
+L’en-tête annonce une relicence GPL-2.0+ avec permission de Gent ; la licence
+complète doc/gpl-license est téléchargée avec le catalogue, sans modification.
+Les deux fichiers sont vérifiés SHA-256, conservés ensemble dans vendor/cheats,
+exclus de Git/ZIP. Commit, URLs, tailles, empreintes et comptes dans
+cheat-catalog-lock.json. Code d’intégration original MIT ; aucun code commercial
+certifié par l’import du catalogue. Les obligations du moteur restent distinctes.
