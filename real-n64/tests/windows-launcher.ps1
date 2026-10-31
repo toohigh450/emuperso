@@ -38,9 +38,13 @@ function Stop-TestProcess($Process) {
 function Start-Launcher([string]$Name, [string[]]$Options) {
     # All options below are fixed switches/integers; only the quoted file path varies.
     $arguments = '-NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File "' + $script:launcherPath + '" ' + ($Options -join ' ')
-    return Start-Process -FilePath $script:shellPath -ArgumentList $arguments -PassThru -WindowStyle Hidden `
+    $process = Start-Process -FilePath $script:shellPath -ArgumentList $arguments -PassThru -WindowStyle Hidden `
         -RedirectStandardOutput (Join-Path $script:evidence ($Name + '.stdout.txt')) `
         -RedirectStandardError (Join-Path $script:evidence ($Name + '.stderr.txt'))
+    # Windows PowerShell 5.1 may lose ExitCode unless its process handle was
+    # opened while the child was still running. Keep that handle before waiting.
+    $null = $process.Handle
+    return $process
 }
 
 function Invoke-Launcher([string]$Name, [string[]]$Options, [int]$TimeoutSeconds = 180) {
@@ -49,9 +53,10 @@ function Invoke-Launcher([string]$Name, [string[]]$Options, [int]$TimeoutSeconds
         Stop-TestProcess $process
         throw "Timeout: $Name ($TimeoutSeconds secondes)."
     }
-    # Refresh after WaitForExit to make ExitCode available on PowerShell 5.1.
-    $process.Refresh()
-    return $process.ExitCode
+    $process.WaitForExit()
+    $code = $process.ExitCode
+    if ($null -eq $code) { throw "Code de sortie non disponible pour $Name (erreur du banc de test)." }
+    return $code
 }
 
 function Get-HttpStatus([string]$Url, [string]$Method = 'GET') {
