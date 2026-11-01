@@ -66,7 +66,7 @@ def main():
                 result['checks'][name + '_native'] = passed
             page.evaluate('window.__cheatController.disableAll()')
             calls = frame.evaluate('window.__trace.length')
-            result['rejected_32bit'] = page.evaluate('''async()=>{const c=window.__cheatController;const before=c.view().cheats.length;try{await c.addManual('invalid32','C2011000 0004\n80011008 12345678')}catch{}return c.view().cheats.length===before}''')
+            result['rejected_32bit'] = page.evaluate('''async(code)=>{const c=window.__cheatController;const before=c.view().cheats.length;try{await c.addManual('invalid32',code)}catch{}return c.view().cheats.length===before}''', 'C2011000 0004\n80011008 12345678')
             result['checks']['reject_32bit_without_native_call'] = result['rejected_32bit'] and frame.evaluate('window.__trace.length') == calls
             result['native_trace'] = frame.evaluate('window.__trace')
             # Keep a known state/card revision, then refuse the archive BEFORE capture.
