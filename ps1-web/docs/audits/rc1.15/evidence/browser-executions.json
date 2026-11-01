@@ -1,0 +1,43 @@
+[
+  {
+    "command": [
+      "python3",
+      "tools/browser_real.py",
+      "--output",
+      "/workspace/ps1-rc114-counter-audit/final/native",
+      "--chromium",
+      "/usr/bin/chromium"
+    ],
+    "start_utc": "2026-11-01T22:23:55.768041+00:00",
+    "end_utc": "2026-11-01T22:24:20.787382+00:00",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "python3",
+      "tools/browser_storage.py",
+      "--output",
+      "/workspace/ps1-rc114-counter-audit/final/native",
+      "--chromium",
+      "/usr/bin/chromium"
+    ],
+    "start_utc": "2026-11-01T22:24:20.788345+00:00",
+    "end_utc": "2026-11-01T22:24:52.155072+00:00",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "python3",
+      "tools/browser_faults.py",
+      "--fixture",
+      "/workspace/ps1-rc114-counter-audit/final/native/synthetic-demo.iso",
+      "--output",
+      "/workspace/ps1-rc114-counter-audit/final/faults",
+      "--chromium",
+      "/usr/bin/chromium"
+    ],
+    "start_utc": "2026-11-01T22:24:52.156932+00:00",
+    "end_utc": "2026-11-01T22:25:04.342443+00:00",
+    "exit_code": 0
+  }
+]

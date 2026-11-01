@@ -1,0 +1,130 @@
+TAP version 13
+# Subtest: stripDiscExtension retire les extensions
+ok 1 - stripDiscExtension retire les extensions
+  ---
+  duration_ms: 5.283668
+  type: 'test'
+  ...
+# Subtest: titleStem normalise les titres
+ok 2 - titleStem normalise les titres
+  ---
+  duration_ms: 1.885745
+  type: 'test'
+  ...
+# Subtest: NBA Jam Extreme (E).chd -> candidat World, 12 codes
+ok 3 - NBA Jam Extreme (E).chd -> candidat World, 12 codes
+  ---
+  duration_ms: 58.800617
+  type: 'test'
+  ...
+# Subtest: Dave Mirra : USA et World séparés, jamais mélangés
+ok 4 - Dave Mirra : USA et World séparés, jamais mélangés
+  ---
+  duration_ms: 25.846942
+  type: 'test'
+  ...
+# Subtest: Dave Mirra World : Timer Frozen parsable
+ok 5 - Dave Mirra World : Timer Frozen parsable
+  ---
+  duration_ms: 21.931982
+  type: 'test'
+  ...
+# Subtest: Dave Mirra USA : Xploder marqués incompatibles
+ok 6 - Dave Mirra USA : Xploder marqués incompatibles
+  ---
+  duration_ms: 45.943682
+  type: 'test'
+  ...
+# Subtest: detectRegion identifie les régions
+ok 7 - detectRegion identifie les régions
+  ---
+  duration_ms: 1.30057
+  type: 'test'
+  ...
+# Subtest: FF5 FR.pbp : langue ambiguë, région inconnue face au catalogue USA
+ok 8 - FF5 FR.pbp : langue ambiguë, région inconnue face au catalogue USA
+  ---
+  duration_ms: 0.873812
+  type: 'test'
+  ...
+# Subtest: serialMap enrichi : 13+ serials connus
+ok 9 - serialMap enrichi : 13+ serials connus
+  ---
+  duration_ms: 27.297465
+  type: 'test'
+  ...
+# Subtest: lookup par serial exact : SLUS-00879 -> FFV Anthology
+ok 10 - lookup par serial exact : SLUS-00879 -> FFV Anthology
+  ---
+  duration_ms: 21.653639
+  type: 'test'
+  ...
+# Subtest: RC-1.9 : FF VII (Disc 1) reconnu par nom de fichier
+ok 11 - RC-1.9 : FF VII (Disc 1) reconnu par nom de fichier
+  ---
+  duration_ms: 57.404177
+  type: 'test'
+  ...
+# Subtest: RC-1.9 : tags multidisque et Rev retirés du stem
+ok 12 - RC-1.9 : tags multidisque et Rev retirés du stem
+  ---
+  duration_ms: 0.278349
+  type: 'test'
+  ...
+# Subtest: RC-1.9 : tags de langues multilingues retirés du stem
+ok 13 - RC-1.9 : tags de langues multilingues retirés du stem
+  ---
+  duration_ms: 0.450325
+  type: 'test'
+  ...
+# Subtest: RC-1.9 : éditions distinctes restent des candidats séparés (pas de faux match unique)
+ok 14 - RC-1.9 : éditions distinctes restent des candidats séparés (pas de faux match unique)
+  ---
+  duration_ms: 15.121288
+  type: 'test'
+  ...
+# Subtest: RC-1.10 : listes de langues ne sont pas prises pour une région
+ok 15 - RC-1.10 : listes de langues ne sont pas prises pour une région
+  ---
+  duration_ms: 1.249056
+  type: 'test'
+  ...
+# Subtest: RC-1.10 : suffixe FR ambigu reste inconnu
+ok 16 - RC-1.10 : suffixe FR ambigu reste inconnu
+  ---
+  duration_ms: 0.187823
+  type: 'test'
+  ...
+# Subtest: RC-1.10 : GT2 avec suffixes à tirets reconnu, Europe en tête
+ok 17 - RC-1.10 : GT2 avec suffixes à tirets reconnu, Europe en tête
+  ---
+  duration_ms: 17.95955
+  type: 'test'
+  ...
+# Subtest: RC-1.10 : tokens à tirets ne cassent pas les titres légitimes
+ok 18 - RC-1.10 : tokens à tirets ne cassent pas les titres légitimes
+  ---
+  duration_ms: 0.267328
+  type: 'test'
+  ...
+# Subtest: RC-1.11 : listes de langues à sous-tags composés ne donnent pas de région
+ok 19 - RC-1.11 : listes de langues à sous-tags composés ne donnent pas de région
+  ---
+  duration_ms: 0.404677
+  type: 'test'
+  ...
+# Subtest: RC-1.11 : (US,EU) reste des régions, pas des langues
+ok 20 - RC-1.11 : (US,EU) reste des régions, pas des langues
+  ---
+  duration_ms: 0.171905
+  type: 'test'
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 20
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 407.650195

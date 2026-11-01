@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: P1-A : detectMod utilise titre brut (pas titleStem)
+ok 1 - P1-A : detectMod utilise titre brut (pas titleStem)
+  ---
+  duration_ms: 10.908912
+  type: 'test'
+  ...
+# Subtest: P1-B : tri candidats avec région du titre original
+ok 2 - P1-B : tri candidats avec région du titre original
+  ---
+  duration_ms: 3.357653
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 38.684987

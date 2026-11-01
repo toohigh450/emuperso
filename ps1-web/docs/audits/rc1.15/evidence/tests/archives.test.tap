@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: signatures : RAR4, RAR5, ZIP, 7z reconnus comme le moteur ; le reste non
+ok 1 - signatures : RAR4, RAR5, ZIP, 7z reconnus comme le moteur ; le reste non
+  ---
+  duration_ms: 2.011554
+  type: 'test'
+  ...
+# Subtest: archive acceptée : empreinte de l’archive, pas de série, remarque explicite
+ok 2 - archive acceptée : empreinte de l’archive, pas de série, remarque explicite
+  ---
+  duration_ms: 16.882575
+  type: 'test'
+  ...
+# Subtest: extension et contenu discordants : refus clair, sans deviner
+ok 3 - extension et contenu discordants : refus clair, sans deviner
+  ---
+  duration_ms: 11.943235
+  type: 'test'
+  ...
+# Subtest: plafond de 900 Mio maintenu pour tous les formats, PBP compris, avec la raison mesurée
+ok 4 - plafond de 900 Mio maintenu pour tous les formats, PBP compris, avec la raison mesurée
+  ---
+  duration_ms: 2.754227
+  type: 'test'
+  ...
+# Subtest: archive pendant un jeu : accord demandé ; refus => le jeu en cours reste ouvert
+ok 5 - archive pendant un jeu : accord demandé ; refus => le jeu en cours reste ouvert
+  ---
+  duration_ms: 178.623529
+  type: 'test'
+  ...
+# Subtest: archive pendant un jeu : accord => ancien jeu fermé d’abord, puis lancement
+ok 6 - archive pendant un jeu : accord => ancien jeu fermé d’abord, puis lancement
+  ---
+  duration_ms: 77.814099
+  type: 'test'
+  ...
+# Subtest: garde-fou mémoire : refus explicite si l’onglet ne peut pas décompresser l’archive
+ok 7 - garde-fou mémoire : refus explicite si l’onglet ne peut pas décompresser l’archive
+  ---
+  duration_ms: 2.507557
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 365.668317

@@ -1,0 +1,64 @@
+TAP version 13
+# Subtest: Configuration : ordre des propriétés stable, changement de valeur distinct
+ok 1 - Configuration : ordre des propriétés stable, changement de valeur distinct
+  ---
+  duration_ms: 37.182154
+  type: 'test'
+  ...
+# Subtest: Enveloppe : copie source, empreinte indépendante et lecture exacte
+ok 2 - Enveloppe : copie source, empreinte indépendante et lecture exacte
+  ---
+  duration_ms: 7.673051
+  type: 'test'
+  ...
+# Subtest: Toute différence ROM, moteur, configuration ou format est bloquée
+ok 3 - Toute différence ROM, moteur, configuration ou format est bloquée
+  ---
+  duration_ms: 2.501346
+  type: 'test'
+  ...
+# Subtest: Contenu et métadonnées modifiés sont refusés
+ok 4 - Contenu et métadonnées modifiés sont refusés
+  ---
+  duration_ms: 3.093867
+  type: 'test'
+  ...
+# Subtest: État, sauvegarde système et checkpoint sont des types séparés
+ok 5 - État, sauvegarde système et checkpoint sont des types séparés
+  ---
+  duration_ms: 1.644306
+  type: 'test'
+  ...
+# Subtest: Schéma, dates et métadonnées invalides sont refusés proprement
+ok 6 - Schéma, dates et métadonnées invalides sont refusés proprement
+  ---
+  duration_ms: 1.182847
+  type: 'test'
+  ...
+# Subtest: Aucune ROM brute ne passe pour un état ; bornes appliquées avant copie
+ok 7 - Aucune ROM brute ne passe pour un état ; bornes appliquées avant copie
+  ---
+  duration_ms: 5.251903
+  type: 'test'
+  ...
+# Subtest: Limite positive : 64 Mio synthétiques vérifiés, sans moteur
+ok 8 - Limite positive : 64 Mio synthétiques vérifiés, sans moteur
+  ---
+  duration_ms: 616.684509
+  type: 'test'
+  ...
+# Subtest: La base est distincte des stockages moteur et des projets originaux
+ok 9 - La base est distincte des stockages moteur et des projets originaux
+  ---
+  duration_ms: 0.918709
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 697.108844

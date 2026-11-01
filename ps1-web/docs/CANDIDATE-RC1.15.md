@@ -2,8 +2,12 @@
 
 Base exacte : `70df42eed84434efabe84f4d4a94a70f44bc8f73`, elle-même fille directe
 de Claude `d4d06eaa779d25f2fd049f2d2d4d743c077d5c41`.
-Branche locale dédiée : `codex/ps1-rc1.15-audits`. Aucun push de cette candidate,
-aucune fusion main, release ou mise en ligne n’est effectué dans ce chantier.
+Branche dédiée : `codex/ps1-rc1.15-audits`. Karl a autorisé la publication des
+sources et preuves partageables sur cette branche pour contre-audit GPT/Méo.
+Aucune fusion main, release ou mise en ligne de site n’est effectuée.
+Le code testé correspond à `a2ff191ccb8b52356c37ef5fb81761da94f187d3` ;
+le commit de livraison ajoute uniquement documentation et preuves publiques.
+Voir [le dossier d’audit public](audits/rc1.15/README.md).
 
 R1 : le contrôle mémoire des archives a lieu avant toute capture et toute fermeture,
 puis à nouveau après confirmation. Refus conservateur si le tas actuellement libre
@@ -41,9 +45,11 @@ mémoire : le contrôleur, l’application, Chromium et PCSX sont réels, sans p
 d’épuisement mémoire. Les slides/copies/conditions sont observés dans la RAM synthétique,
 avec traces des appels au gestionnaire natif, pas avec un accusé de réception WASM.
 
-La CI Windows/Linux existante de RC-1.14 prouve les suites Node/Python de **cette base**.
-Elle ne prouve ni cette nouvelle candidate ni des essais navigateur Windows. Consulter
-le dossier d’audit pour les tests effectivement exécutés, commits, empreintes et captures.
+Les sorties locales de cette candidate prouvent 185 tests JavaScript et 10 Python,
+ainsi que les essais synthétiques sous Chromium Linux. La CI de la branche dédiée
+exécute séparément Node/Python sous Windows/Linux ; son résultat doit être consulté
+pour le commit de livraison exact. Elle n’exécute pas les navigateurs Windows/Linux.
+Voir le dossier d’audit pour les limites, empreintes et captures des essais locaux.
 
 R4/R5 restent ouverts : pas d’ACK exhaustif des cheats, pas d’authentification complète
 d’un état, pas de validation manette physique/audio/jeux commerciaux/RAR/7z de Karl.

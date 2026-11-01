@@ -1,0 +1,52 @@
+R1 UI cochés: [
+  'Mon codeProvenance : manuel (saisie manuelle) · Format : GameShark · État : appliqué dans le moteur'
+] | moteur actif: [ '8001AB00 0001' ] | info: ⚠️ Le moteur a refusé le changement : liste précédente restaurée.
+R2 moteur actif après 1 clic, sans confirmation: 0 | boutons confirmation: [
+  'Je confirme : appliquer les codes de SLUS-00594 à mon disque',
+  'Castlevania - Symphony of the Night (Europe) (30 codes)',
+  'Castlevania - Symphony of the Night (USA) (353 codes)'
+]
+R3 UI cochés: [] | moteur (nouveau jeu): [] | statut: Session lancée. Vérifiez l’image, le son et la manette ; vous pouvez choisir un autre jeu sans fermer la page.
+R4 boutons avant: [
+  'Je confirme : appliquer mes codes manuels à cette session',
+  'Castlevania - Symphony of the Night (Europe) (30 codes)',
+  'Castlevania - Symphony of the Night (USA) (353 codes)'
+] | après: [
+  'Je confirme : appliquer ces codes non vérifiés à cette session',
+  'Castlevania - Symphony of the Night (Europe) (30 codes)',
+  'Castlevania - Symphony of the Night (USA) (353 codes) ✔ choisie'
+]
+TAP version 13
+# Subtest: R1 serial-apply : échec moteur puis resynchro réussie => cheats fantômes ?
+ok 1 - R1 serial-apply : échec moteur puis resynchro réussie => cheats fantômes ?
+  ---
+  duration_ms: 114.609576
+  type: 'test'
+  ...
+# Subtest: R2 serial-apply : confirmation régionale contournée ?
+ok 2 - R2 serial-apply : confirmation régionale contournée ?
+  ---
+  duration_ms: 62.96914
+  type: 'test'
+  ...
+# Subtest: R3 changement de jeu : loadCheats échoue => liste du jeu précédent encore affichée ?
+ok 3 - R3 changement de jeu : loadCheats échoue => liste du jeu précédent encore affichée ?
+  ---
+  duration_ms: 36.250379
+  type: 'test'
+  ...
+# Subtest: R4 choix d'édition : peut-on corriger un mauvais choix ?
+ok 4 - R4 choix d'édition : peut-on corriger un mauvais choix ?
+  ---
+  duration_ms: 57.25757
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 334.651388
