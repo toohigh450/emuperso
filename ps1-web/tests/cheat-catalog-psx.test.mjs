@@ -65,3 +65,27 @@ test('B04 : detectRegion ne confond pas NTSC générique avec Japan', async () =
   assert.equal(detectRegion('Game (E)'), 'Europe');
   assert.equal(detectRegion('Game (J)'), 'Japan');
 });
+
+// R1 (audit GPT RC-1.2) : detectRegions retourne l'ensemble des régions
+test('R1 : detectRegions multi-région (USA, Europe)', async () => {
+  const { detectRegions, regionsCompatible } = await import('../cheat-catalog-psx.mjs');
+  // Catalogue multi-région
+  const regions = detectRegions('Disney-Pixar Toy Story 2 - Buzz Lightyear to the Rescue! (USA, Europe)');
+  assert.ok(Array.isArray(regions), 'retourne un tableau');
+  assert.ok(regions.includes('USA'), 'contient USA');
+  assert.ok(regions.includes('Europe'), 'contient Europe');
+  // Pas de faux conflit : Europe ∈ {USA, Europe}
+  assert.equal(regionsCompatible('Europe', regions), true, 'Europe compatible avec (USA, Europe)');
+  assert.equal(regionsCompatible('USA', regions), true, 'USA compatible avec (USA, Europe)');
+  assert.equal(regionsCompatible('Japan', regions), false, 'Japan NON compatible avec (USA, Europe)');
+  // World est compatible avec tout
+  assert.equal(regionsCompatible('Europe', ['World']), true, 'World compatible avec tout');
+});
+
+// R2 (audit GPT RC-1.2) : région inconnue ≠ région compatible
+test('R2 : région inconnue ne doit pas être traitée comme compatible', async () => {
+  const { detectRegion } = await import('../cheat-catalog-psx.mjs');
+  // "Final Fantasy 5.pbp" sans suffixe → région null (inconnue)
+  assert.equal(detectRegion('Final Fantasy 5.pbp'), null, 'pas de région détectée');
+  assert.equal(detectRegion('Final Fantasy 5'), null, 'pas de région détectée sans extension');
+});

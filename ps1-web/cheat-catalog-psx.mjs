@@ -79,7 +79,8 @@ export async function findCheatsForGame(serial, title) {
     const candidates = candidatesByStem(catalog, title);
     if (candidates.length === 1) {
       return { status: 'match', cheats: candidates[0].codes.map(c => ({ ...c, validated: false })), candidates: [],
-               catalogTitle: candidates[0].catalogTitle, catalogRegion: detectRegion(candidates[0].catalogTitle) };
+               catalogTitle: candidates[0].catalogTitle, catalogRegion: detectRegion(candidates[0].catalogTitle),
+               catalogRegions: detectRegions(candidates[0].catalogTitle) };
     }
     if (candidates.length > 1) {
       return { status: 'ambiguous', cheats: [], candidates };
@@ -95,7 +96,8 @@ export async function findCheatsForGame(serial, title) {
     }
     if (wordCandidates.length === 1) {
       return { status: 'match', cheats: wordCandidates[0].codes.map(c => ({ ...c, validated: false })), candidates: [],
-               catalogTitle: wordCandidates[0].catalogTitle, catalogRegion: detectRegion(wordCandidates[0].catalogTitle) };
+               catalogTitle: wordCandidates[0].catalogTitle, catalogRegion: detectRegion(wordCandidates[0].catalogTitle),
+               catalogRegions: detectRegions(wordCandidates[0].catalogTitle) };
     }
     if (wordCandidates.length > 1) {
       return { status: 'ambiguous', cheats: [], candidates: wordCandidates };
@@ -141,6 +143,43 @@ export function detectRegion(value) {
   if (r === 'WORLD') return 'World';
   // "NTSC" seul sans suffixe U/J : ambigu, ne pas déduire
   return null;
+}
+
+/**
+ * R1 (audit GPT RC-1.2) : détecte l'ENSEMBLE des régions d'un titre.
+ * Ex: "Toy Story 2 (USA, Europe)" → ['USA', 'Europe']
+ * Un catalogue multi-région ne doit pas créer un faux conflit.
+ */
+export function detectRegions(value) {
+  const v = String(value || '');
+  const regions = new Set();
+  // NTSC-U / NTSC-J explicites
+  const ntscMatch = v.match(/\bNTSC[\s\-_]?(U|J)\b/i);
+  if (ntscMatch) {
+    regions.add(ntscMatch[1].toUpperCase() === 'U' ? 'USA' : 'Japan');
+  }
+  // Toutes les occurrences de régions (pas seulement la première)
+  const pattern = /\b(USA|US|Europe|EUR|EU|Japan|JAP|World|PAL|FR|France|Germany|Italy|Spain)\b|\(([EUJ])\)/gi;
+  let m;
+  while ((m = pattern.exec(v)) !== null) {
+    const r = (m[1] || m[2]).toUpperCase();
+    if (['USA', 'US'].includes(r)) regions.add('USA');
+    else if (['EUROPE', 'EUR', 'EU', 'E', 'PAL', 'FR', 'FRANCE', 'GERMANY', 'ITALY', 'SPAIN'].includes(r)) regions.add('Europe');
+    else if (['JAPAN', 'JAP', 'J'].includes(r)) regions.add('Japan');
+    else if (r === 'WORLD') regions.add('World');
+  }
+  return regions.size > 0 ? [...regions] : null;
+}
+
+/**
+ * R1 : vérifie si la région du jeu est compatible avec l'ensemble des régions du catalogue.
+ * Ex: gameRegion='Europe', catalogRegions=['USA','Europe'] → true (pas de conflit)
+ */
+export function regionsCompatible(gameRegion, catalogRegions) {
+  if (!gameRegion || !catalogRegions || catalogRegions.length === 0) return false;
+  // 'World' est compatible avec tout (mais ne garantit pas l'efficacité des codes)
+  if (catalogRegions.includes('World')) return true;
+  return catalogRegions.includes(gameRegion);
 }
 
 /**

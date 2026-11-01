@@ -93,9 +93,9 @@ test('B02 : loadCheats applique pending seulement si édition sûre', async () =
   // Vérifier la NOUVELLE logique de sécurité (RC-1.2) : identifiedEdition ET regionSafe
   assert.ok(src.includes("const isSafe = identifiedEdition && regionSafe && !result.error"),
     'condition isSafe doit vérifier identifiedEdition ET regionSafe');
-  // Vérifier que regionSafe tient compte de _regionConfirmed
-  assert.ok(src.includes("const regionSafe = !regionMismatch || window._regionConfirmed === true"),
-    'regionSafe doit vérifier _regionConfirmed');
+  // Vérifier que regionSafe tient compte de _regionConfirmed et regionUncertain (R2)
+  assert.ok(src.includes("const regionSafe = (!regionMismatch && !regionUncertain) || window._regionConfirmed === true"),
+    'regionSafe doit vérifier _regionConfirmed et regionUncertain');
   // L'ancien code BUG ne doit plus exister
   assert.ok(!src.includes("const isSafe = fromMemory ||"),
     'ancien code BUG (fromMemory || ...) supprimé');

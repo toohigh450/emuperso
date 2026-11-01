@@ -1,5 +1,29 @@
 # CHANGELOG — EMUPERSO PS1
 
+## RC-1.3 (Méo, 1er nov. ~02h45) — Correctifs audit GPT RC-1.2
+**Base** : RC-1.2 + correctifs de l'audit GPT `AUDIT_GPT_EMUPERSO_PS1_RC-1.2_BLOCAGE_MOTEUR_MULTI_REGION.html`
+
+### 🔴 P0 BLOQUANT corrigé — serveur bloquait EmulatorJS
+- **Cause** : mon durcissement B05 (whitelist par chemins) bloquait `/vendor/` → 403 sur `emulator.js`, 36/36 fichiers du lock refusés. 4 échecs Windows confirmés.
+- **Correctif** : `vendor/` servi **fichier par fichier** depuis les clés exactes `files` de `docs/runtime-lock.json`. Chargé à chaque requête (le lock s'enrichit au premier lancement). Anti-traversal, anti-symlink, vérification `is_file()`.
+- **Tests** : 5 tests HTTP réels (GET/HEAD) dans `tests/test_serve.py` — vendor du lock → 200, hors lock → 403, dossiers sensibles → 403.
+
+### 🟡 R1 — catalogue multi-région
+- **Cause** : `detectRegion("Toy Story 2 (USA, Europe)")` retournait `USA` seul → faux conflit avec disque Europe.
+- **Correctif** : nouvelles fonctions `detectRegions()` (retourne tableau) et `regionsCompatible()` (vérifie appartenance). `regionsCompatible('Europe', ['USA','Europe'])` → true.
+
+### 🔴 R2 — région inconnue ≠ compatible
+- **Cause** : `"Final Fantasy 5.pbp"` (sans suffixe) → `detectRegion` null → `regionMismatch` faux → `isSafe` vrai → réinjection USA sans preuve.
+- **Correctif** : nouveau flag `regionUncertain` quand gameRegion est null mais catalogue a une région. `regionSafe` exige `!regionUncertain` sauf confirmation explicite. UI adaptée ("région de votre disque est inconnue").
+
+### Divers
+- `index.html` : RC-1.0 → RC-1.3 (cohérent avec diagnostic).
+- `APP_VERSION` : RC-1.2 → RC-1.3.
+
+**Tests** : 56/56 JS + 8/8 Python PASS (2 nouveaux tests R1/R2, 5 tests HTTP).
+
+---
+
 ## RC-1.2 (Méo, 1er nov. ~02h30) — Correctifs audit GPT RC-1.1
 **Base** : RC-1.1 + correctifs de l'audit GPT `AUDIT_GPT_EMUPERSO_PS1_RC-1.1_MULTI_REGION.html`
 

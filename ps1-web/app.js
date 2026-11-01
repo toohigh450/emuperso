@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 // Version de l'application — mettre à jour à chaque release
-const APP_VERSION = 'RC-1.2';
+const APP_VERSION = 'RC-1.3';
 import { prepareDisc } from './disc-file.mjs';
 import { SaveStore, makeStateEnvelope } from './save-store.mjs';
 import { packStateBundle, unpackStateBundle } from './state-bundle.mjs';
@@ -60,9 +60,14 @@ function renderCheats() {
     const rm = window._regionMismatch;
     const warn = document.createElement('div');
     warn.style.cssText = 'padding:8px;margin-bottom:8px;border:1px solid #a90;background:#3a2a00;border-radius:6px;';
-    warn.textContent = `⚠️ Ces codes viennent de l'édition ${rm.catalogRegion} (${rm.catalogTitle}), votre disque semble être ${rm.gameRegion}. Ils peuvent ne pas fonctionner ou corrompre votre partie.`;
+    // R2: message adapté si région incertaine
+    warn.textContent = rm.uncertain
+      ? `⚠️ Ces codes viennent de l'édition ${rm.catalogRegion} (${rm.catalogTitle}), mais la région de votre disque est inconnue (nom sans suffixe). Ils peuvent ne pas fonctionner ou corrompre votre partie.`
+      : `⚠️ Ces codes viennent de l'édition ${rm.catalogRegion} (${rm.catalogTitle}), votre disque semble être ${rm.gameRegion}. Ils peuvent ne pas fonctionner ou corrompre votre partie.`;
     const btn = document.createElement('button');
-    btn.textContent = `Je confirme : activer les codes ${rm.catalogRegion} sur mon disque ${rm.gameRegion}`;
+    btn.textContent = rm.uncertain
+      ? `Je confirme : mon disque est bien l'édition ${rm.catalogRegion}`
+      : `Je confirme : activer les codes ${rm.catalogRegion} sur mon disque ${rm.gameRegion}`;
     btn.onclick = () => { window._regionConfirmed = true; say('cheat-info', 'Région confirmée. Vous pouvez maintenant cocher les codes.', false); renderCheats(); };
     warn.append(document.createElement('br'), btn);
     // B02 (audit GPT RC-1.1) : si des cheats restaurés sont en attente, proposer de les appliquer explicitement
@@ -194,7 +199,7 @@ async function loadCheats(m, activeList = []) {
   window._regionConfirmed = false;
   window._regionMismatch = null;
   window._pendingActiveList = null;
-  const { detectRegion } = await import('./cheat-catalog-psx.mjs');
+  const { detectRegion, detectRegions, regionsCompatible } = await import('./cheat-catalog-psx.mjs');
   // PRIORITÉ 0 : mémoire locale du choix d'édition (par empreinte SHA-256 du fichier)
   // Honnêteté (B03) : c'est une mémorisation du choix précédent, PAS une lecture du serial interne.
   let result = null;
@@ -207,6 +212,7 @@ async function loadCheats(m, activeList = []) {
       if (codes) {
         result = { status: 'match', cheats: codes.map(c => ({ ...c, validated: false })), candidates: [],
                    catalogTitle: remembered.catalogTitle, catalogRegion: detectRegion(remembered.catalogTitle),
+                   catalogRegions: detectRegions(remembered.catalogTitle),
                    fromVerifiedMemory: true };
         fromMemory = true;
       }
@@ -248,10 +254,15 @@ async function loadCheats(m, activeList = []) {
     return;
   }
   const catalogCheats = Array.isArray(result.cheats) ? result.cheats : [];
-  // FIX 1: détecter le décalage de région (ex: FR.pbp -> catalogue USA)
+  // R1 (audit GPT RC-1.2) : détecter le décalage de région avec ensembles multi-régions
+  // Ex: catalogue "(USA, Europe)" + jeu "Europe" → PAS de conflit (Europe ∈ {USA, Europe})
   const gameRegion = detectRegion(m.name);
   const catalogRegion = result.catalogRegion || null;
-  const regionMismatch = gameRegion && catalogRegion && gameRegion !== catalogRegion;
+  const catalogRegions = result.catalogRegions || (catalogRegion ? [catalogRegion] : null);
+  // R1: utiliser regionsCompatible pour les catalogues multi-régions
+  // R2: si gameRegion est null (inconnu), on ne peut PAS conclure qu'il n'y a pas de conflit
+  const regionMismatch = gameRegion && catalogRegions && !regionsCompatible(gameRegion, catalogRegions);
+  const regionUncertain = !gameRegion && catalogRegion; // R2: région du disque inconnue
   const known = catalogCheats.filter(c => c && typeof c.code === 'string').map((c, idx) => {
     const displayName = c.name || `Code sans nom #${idx + 1} — non vérifié`;
     const isXploder = c.source === 'Xploder' || /^\$/.test(c.code.trim());
@@ -271,8 +282,11 @@ async function loadCheats(m, activeList = []) {
     else cheats.push({ name: a.name, code: a.code, source: 'état', on: true });
   }
   // FIX 1: si décalage de région, exiger confirmation avant activation
+  // R2: si région incertaine, exiger aussi confirmation
   if (regionMismatch) {
     window._regionMismatch = { gameRegion, catalogRegion, catalogTitle: result.catalogTitle };
+  } else if (regionUncertain) {
+    window._regionMismatch = { gameRegion: 'inconnue', catalogRegion, catalogTitle: result.catalogTitle, uncertain: true };
   } else {
     window._regionMismatch = null;
   }
@@ -280,7 +294,10 @@ async function loadCheats(m, activeList = []) {
   // B02 (audit GPT RC-1.1) : la mémoire locale ne doit JAMAIS contourner un désaccord de région.
   // Même si fromMemory=true, un regionMismatch non confirmé bloque l'injection.
   // Principe : ne pas faire confiance à la mémoire pour ignorer un conflit USA/Europe/World.
-  const regionSafe = !regionMismatch || window._regionConfirmed === true;
+  // R2 (audit GPT RC-1.2) : région INCONNUE ≠ région compatible.
+  // Si gameRegion est null (ex: "Final Fantasy 5.pbp" sans suffixe) et que le catalogue
+  // a une région, on ne peut PAS conclure à la sécurité — exiger confirmation.
+  const regionSafe = (!regionMismatch && !regionUncertain) || window._regionConfirmed === true;
   const identifiedEdition = result.status === 'match';
   const isSafe = identifiedEdition && regionSafe && !result.error;
   const pendingRestore = window._pendingCheatRestore || [];
@@ -438,7 +455,7 @@ $('serial-apply').onclick = () => operation(async () => {
     }
   } catch (e) { console.warn('Mémorisation serial:', e.message); }
   // Afficher les cheats
-  const { detectRegion } = await import('./cheat-catalog-psx.mjs');
+  const { detectRegion, detectRegions, regionsCompatible } = await import('./cheat-catalog-psx.mjs');
   window._regionMismatch = null;
   window._regionConfirmed = true; // Serial = identification exacte, pas besoin de confirmation région
   const known = codes.filter(c => c && typeof c.code === 'string').map((c, idx) => {

@@ -3,17 +3,15 @@ from pathlib import Path
 from http.server import SimpleHTTPRequestHandler,ThreadingHTTPServer
 from urllib.parse import urlsplit,unquote
 import argparse
+import json
 ROOT=Path(__file__).resolve().parents[1]
 
-# B05 (audit GPT RC-1.0, renforcé RC-1.1) : liste blanche stricte des contenus servis.
-# Seules les ressources web explicites sont autorisées. Les dossiers sensibles
-# (roms, bios, saves, exports, diagnostics) sont TOUJOURS bloqués, même si
-# l'utilisateur y copie des fichiers par erreur.
-#
-# B05-RC-1.1 : whitelist par CHEMINS, pas seulement par extensions.
-# Un fichier .json dans un répertoire "private/" ne doit PAS être servi.
+# B05 (audit GPT RC-1.0, renforcé RC-1.1, corrigé RC-1.3) : liste blanche stricte.
+# P0 (audit GPT RC-1.2) : vendor/ doit être servi fichier par fichier depuis
+# docs/runtime-lock.json, sinon EmulatorJS ne charge pas (403 sur emulator.js).
 BLOCKED_DIRS = frozenset({'roms', 'bios', 'saves', 'cache', '.python', '__pycache__', 'exports', 'diagnostics', 'private', 'personal', 'tools', 'tests'})
 # Répertoires dont le contenu PEUT être servi (whitelist explicite)
+# Note : 'vendor' est traité séparément (fichier par fichier depuis le lock)
 ALLOWED_DIRS = frozenset({'assets', 'data', 'cheats', 'docs'})
 # Extensions web autorisées (pour les fichiers à la racine et dans ALLOWED_DIRS)
 ALLOWED_EXTENSIONS = frozenset({
@@ -26,13 +24,59 @@ ALLOWED_EXTENSIONS = frozenset({
     '.bat',   # Lanceur Windows (téléchargement)
 })
 
+def _vendor_files(root=ROOT):
+    """Retourne l'ensemble des chemins vendor/ autorisés depuis runtime-lock.json.
+    Chargé à chaque requête (pas de liste figée) car le lock peut s'enrichir
+    au premier lancement via prepare()."""
+    try:
+        lock_path = root / 'docs' / 'runtime-lock.json'
+        lock = json.loads(lock_path.read_text(encoding='utf-8'))
+        files = lock.get('files', {})
+        # Les clés sont comme 'data/src/emulator.js' (relatif à vendor/)
+        return frozenset(files.keys())
+    except Exception:
+        return frozenset()
+
+def _is_vendor_allowed(parts, root=ROOT):
+    """Vérifie si un chemin /vendor/... est dans la whitelist du lock."""
+    # parts[0] == 'vendor', le reste est le chemin relatif
+    if len(parts) < 2:
+        return False
+    relative = '/'.join(parts[1:])
+    # Normaliser : pas de .., pas de chemin absolu
+    if '..' in parts or relative.startswith('/'):
+        return False
+    allowed = _vendor_files(root)
+    if relative not in allowed:
+        return False
+    # Vérifier que le fichier résolu reste sous root/vendor/ (anti-traversal)
+    # et n'est pas un symlink (sécurité)
+    try:
+        full = root.joinpath(*parts).resolve()
+        vendor_root = (root / 'vendor').resolve()
+        if not full.is_relative_to(vendor_root):
+            return False
+        # Refuser les symlinks
+        if full.is_symlink() or any(p.is_symlink() for p in full.parents if p != vendor_root and vendor_root in p.parents):
+            # Vérification simplifiée : le fichier final ne doit pas être un lien
+            if (root.joinpath(*parts)).is_symlink():
+                return False
+        return full.is_file()
+    except Exception:
+        return False
+
 def allowed_path(url,root=ROOT):
  path=unquote(urlsplit(url).path)
  parts=path.strip('/').split('/') if path.strip('/') else []
  if '\\' in path or ':' in path or any(ord(c)<32 for c in path):return False
  if any(p.startswith('.') or p in ('..','.') for p in parts):return False
  # B05 : bloquer explicitement les dossiers sensibles (n'importe où dans le chemin)
+ # Exception : 'vendor' est autorisé mais filtré fichier par fichier ci-dessous
  if any(p.lower() in BLOCKED_DIRS for p in parts):return False
+ # P0 (RC-1.3) : vendor/ servi fichier par fichier depuis runtime-lock.json
+ # Sans ça, EmulatorJS ne charge pas (403 sur emulator.js = régression B05)
+ if parts and parts[0].lower() == 'vendor':
+  return _is_vendor_allowed(parts, root)
  # B05-RC-1.1 : whitelist par chemins
  # - Racine (/) : autorisée (pour index.html)
  # - Fichier à la racine : extension doit être autorisée
