@@ -16,3 +16,55 @@ Branche : `emulateur-ps1` (créée depuis `main`, sans toucher à `main` ni à `
 5. Le mode PS1 confort moderne vise le mapping positionnel OEM et le joystick gauche; validation terrain à faire.
 
 **Note :** le code PS1 0.1.1 doit être importé depuis l'archive source fournie par Karl; le simple statut « branche créée » ne signifie pas que le projet a été déployé ou testé.
+
+## Journal des versions — 0.1.1 → 0.1.10 (1 novembre 2026)
+
+### 0.1.1 (Claude)
+- `input-profile.mjs` : mapping positionnel OEM (Gamepad-standard → RetroPad), `normalizeInput` (deadzone 0.05–0.6), `padType()`.
+- Tests : 18/18 PASS (vérifiés par Méo).
+
+### 0.1.2 (Méo) — ⚠️ CASSE LE LANCEMENT
+- Intégration des profils nommés dans l'UI (`input-presets.mjs` : "PS1 authentique" / "Confort moderne").
+- **Régression** : erreur « Cannot read properties of undefined (reading '0') » — 3 tentatives, rollback OK.
+- **NE PAS REDISTRIBUER.**
+
+### 0.1.3 (Méo) — ⚠️ CASSE LE LANCEMENT
+- Fix : profil `_profile` préservé, `applyProfileToUI` synchronise `in-native`, stack traces capturées.
+- **Toujours le crash** — la stack révèle : `EmulatorJS.setupKeys` → `this.controls[1]` undefined.
+- **NE PAS REDISTRIBUER.**
+
+### 0.1.4 (Méo) — ✅ FONCTIONNE
+- **Fix critique** (audit GPT) : `defaultControllers = { 0: unbound, 1: {}, 2: {}, 3: {} }` — les 4 joueurs définis.
+- Test de contrat `engine-input-contract.test.mjs` (4 tests).
+- **Karl confirme : « ça fonctionne »** — le jeu démarre.
+- 29/29 JS + 3/3 Python PASS.
+
+### 0.1.5 (Méo)
+- Fond d'écran style Gran Turismo (image originale générée, sans logos).
+- 0.1.4 + wallpaper.
+
+### 0.1.6 (Méo)
+- **Catalogue cheats PS1** : 1 394 jeux / 18 640 cheats (libretro-database, CC BY-SA 4.0).
+- Panneau cheats sous l'émulateur, badges 📥/✅, tous désactivés par défaut.
+- 33/33 JS + 3/3 Python PASS.
+
+### 0.1.7 (Méo)
+- Fix matching : mots entiers + chiffres romains→arabes (V→5, VII→7).
+- **Problème** : FF5 charge mais cheats invisibles (titre « Final Fantasy 5 FR.pbp » non matché).
+- 35/35 JS PASS.
+
+### 0.1.8 (Méo)
+- Titre nettoyé (extension + région retirées), validateur multi-instructions, Xploder marqués ⚠️, ancien catalogue supprimé.
+- 35/35 JS PASS.
+
+### 0.1.9 (Méo) — ⚠️ RÉGRESSION
+- Sélection de région explicite, états `loaded|load_error|no_match|match|ambiguous`, 6 tests d'intégration.
+- **Régression** (audit GPT) : `findCheatsForGame` retourne un objet mais `loadCheats` utilisait l'ancien contrat → « catalogCheats.filter is not a function ».
+- 41/41 JS PASS (les tests ne capturaient pas le contrat brisé).
+
+### 0.1.10 (Méo) — ✅ CONTRAT RÉPARÉ
+- `loadCheats` réécrit pour le nouveau contrat (result.status/result.cheats).
+- `renderCheatCandidates` appelé pour l'état ambiguous.
+- Garde anti-undefined sur `applyProfileToUI`.
+- 41/41 JS PASS.
+- **En attente des tests terrain de Karl** (FF5, NBA Jam, Dave Mirra USA/World).
