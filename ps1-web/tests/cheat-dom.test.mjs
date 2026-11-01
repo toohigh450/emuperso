@@ -126,3 +126,16 @@ test('B06 : UI synchronisée avec état réel du moteur', async () => {
   assert.ok(src.includes("if (restoredApplied)"),
     'vérification restoredApplied avant d\'afficher les messages');
 });
+
+// BLOCAGE A (audit GPT RC-1.3) : needsRegionConfirm doit bloquer aussi quand région inconnue
+// Avant : !!regionMismatch seul → "Final Fantasy 5.pbp" (région null) permettait l'activation manuelle
+test('BLOCAGE A : needsRegionConfirm inclut regionUncertain', async () => {
+  const src = await readFile(new URL('../app.js', import.meta.url), 'utf8');
+  // La nouvelle logique doit combiner regionMismatch OU regionUncertain
+  assert.ok(src.includes("needsConfirmation = Boolean(regionMismatch || regionUncertain)") ||
+            src.includes("Boolean(regionMismatch || regionUncertain)"),
+    'needsConfirmation doit combiner regionMismatch et regionUncertain');
+  // L'ancien code BUG ne doit plus exister
+  assert.ok(!src.includes("needsRegionConfirm: !!regionMismatch,"),
+    'ancien code BUG (needsRegionConfirm: !!regionMismatch) supprimé');
+});

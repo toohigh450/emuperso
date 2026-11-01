@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 // Version de l'application — mettre à jour à chaque release
-const APP_VERSION = 'RC-1.3';
+const APP_VERSION = 'RC-1.4';
 import { prepareDisc } from './disc-file.mjs';
 import { SaveStore, makeStateEnvelope } from './save-store.mjs';
 import { packStateBundle, unpackStateBundle } from './state-bundle.mjs';
@@ -199,7 +199,7 @@ async function loadCheats(m, activeList = []) {
   window._regionConfirmed = false;
   window._regionMismatch = null;
   window._pendingActiveList = null;
-  const { detectRegion, detectRegions, regionsCompatible } = await import('./cheat-catalog-psx.mjs');
+  const { detectRegion, detectRegions, regionsCompatible, detectMod } = await import('./cheat-catalog-psx.mjs');
   // PRIORITÉ 0 : mémoire locale du choix d'édition (par empreinte SHA-256 du fichier)
   // Honnêteté (B03) : c'est une mémorisation du choix précédent, PAS une lecture du serial interne.
   let result = null;
@@ -222,7 +222,7 @@ async function loadCheats(m, activeList = []) {
     result = await findCheatsForGame(m.serial, m.name).catch(err => ({ status: 'load_error', cheats: [], candidates: [], error: err.message }));
   }
   const mine = ((await cheatDB.get(gameKey(m)).catch(() => null)) ?? []).filter(c => codeValid(c.code)).map(c => ({ ...c, source: 'manuel', on: false }));
-  if (!result || !['match', 'ambiguous', 'no_match', 'load_error'].includes(result.status)) {
+  if (!result || !['match', 'ambiguous', 'mod_candidate', 'no_match', 'load_error'].includes(result.status)) {
     throw new Error('Réponse du catalogue de cheats invalide');
   }
   // Branche ambiguous : afficher d'abord les codes existants, PUIS ajouter les boutons
@@ -241,6 +241,45 @@ async function loadCheats(m, activeList = []) {
       ? `⚠️ ${nActive} code(s) restauré(s) sont ACTIFS dans le moteur. Choisissez votre édition pour les voir et les gérer.`
       : 'Plusieurs éditions : choisissez celle de votre disque. Aucun code activé.', nActive > 0);
     return; // NE PAS rappeler renderCheats() ici
+  }
+  // P1 (audit GPT RC-1.3) : mod détecté — proposer les cheats du jeu de base
+  // comme CANDIDATS NON VÉRIFIÉS. Jamais auto-activés.
+  if (result.status === 'mod_candidate') {
+    cheats = mine; // Seulement les codes manuels pour l'instant
+    renderCheats();
+    const modInfo = result.modInfo || {};
+    say('cheat-info', `🎮 Mod détecté : "${modInfo.originalTitle || m.name}". Aucun cheat spécifique trouvé.`, false);
+    // Afficher les candidats du jeu de base avec avertissement
+    const list = $('cheat-list');
+    const warn = document.createElement('div');
+    warn.style.cssText = 'padding:10px;margin:8px 0;border:2px solid #f90;background:#2a1a00;border-radius:6px;';
+    warn.innerHTML = `⚠️ <strong>Jeu modifié détecté</strong> (base : ${modInfo.baseTitle || 'inconnue'}).<br>` +
+      `Les codes ci-dessous viennent du jeu <strong>original non modifié</strong> et sont <strong>NON VÉRIFIÉS</strong> pour ce mod.<br>` +
+      `Ils peuvent ne pas fonctionner ou corrompre votre partie. <strong>Jamais activés automatiquement.</strong>`;
+    list.append(warn);
+    // Boutons pour chaque candidat du jeu de base
+    result.candidates.forEach((cand) => {
+      const btn = document.createElement('button');
+      btn.style.cssText = 'margin:4px;';
+      btn.textContent = `Voir les ${cand.codes.length} codes de "${cand.catalogTitle}" (NON VÉRIFIÉS)`;
+      btn.onclick = () => operation(async () => {
+        // Afficher les codes comme candidats non vérifiés, tous désactivés
+        const known = cand.codes.filter(c => c && typeof c.code === 'string').map((c) => ({
+          name: (c.name || 'Code sans nom') + ' ⚠️ (NON VÉRIFIÉ pour ce mod)',
+          code: c.code, source: 'catalogue', validated: false,
+          incompatible: false, on: false,
+          needsRegionConfirm: true, // Toujours exiger confirmation pour un mod
+          isModCandidate: true,
+        }));
+        cheats = [...known, ...mine.map(c => ({ ...c, on: false }))];
+        window._regionMismatch = { gameRegion: 'mod', catalogRegion: 'original', catalogTitle: cand.catalogTitle, isMod: true };
+        window._regionConfirmed = false;
+        renderCheats();
+        say('cheat-info', `⚠️ ${known.length} code(s) du jeu original affichés comme NON VÉRIFIÉS. Confirmez avant d'activer.`, true);
+      });
+      list.append(btn);
+    });
+    return;
   }
   if (result.status === 'load_error') {
     cheats = mine;
@@ -267,12 +306,17 @@ async function loadCheats(m, activeList = []) {
     const displayName = c.name || `Code sans nom #${idx + 1} — non vérifié`;
     const isXploder = c.source === 'Xploder' || /^\$/.test(c.code.trim());
     const valid = codeValid(c.code);
+    // BLOCAGE A (audit GPT RC-1.3) : needsRegionConfirm doit inclure regionUncertain.
+    // Avant : !!regionMismatch seul → un jeu à région inconnue (ex: "Final Fantasy 5.pbp")
+    // permettait l'activation manuelle sans confirmation.
+    const needsConfirmation = Boolean(regionMismatch || regionUncertain);
     return {
-      name: displayName + (isXploder ? ' ⚠️ (Xploder: non supporté)' : (!valid ? ' ⚠️ (incompatible)' : '') + (regionMismatch ? ` ⚠️ (région ${catalogRegion}, votre disque: ${gameRegion})` : '')),
+      name: displayName + (isXploder ? ' ⚠️ (Xploder: non supporté)' : (!valid ? ' ⚠️ (incompatible)' : '') + (regionMismatch ? ` ⚠️ (région ${catalogRegion}, votre disque: ${gameRegion})` : '') + (regionUncertain ? ` ⚠️ (région du disque inconnue)` : '')),
       code: c.code, source: 'catalogue', validated: false,
       incompatible: isXploder || !valid, on: false,
       regionMismatch: !!regionMismatch,
-      needsRegionConfirm: !!regionMismatch,
+      regionUncertain: !!regionUncertain,
+      needsRegionConfirm: needsConfirmation,
     };
   });
   cheats = [...known, ...mine];
@@ -339,7 +383,13 @@ async function loadCheats(m, activeList = []) {
   if (restoredApplied) {
     // Le message de restauration a déjà été affiché ci-dessus, ne pas le masquer
   } else if (result.status === 'no_match') {
-    say('cheat-info', 'Aucun catalogue correspondant au disque. Codes manuels conservés.', false);
+    // P1 (audit GPT RC-1.3) : message différencié — éviter "aucun cheat" quand c'est juste non reconnu
+    const modCheck = (() => { try { return detectMod(m.name || ''); } catch { return { isMod: false }; } })();
+    if (modCheck.isMod) {
+      say('cheat-info', `🎮 Mod détecté mais jeu de base introuvable dans le catalogue. Vous pouvez ajouter des codes manuellement ci-dessous.`, false);
+    } else {
+      say('cheat-info', `🔍 Jeu non reconnu dans le catalogue (${m.name || 'sans nom'}). Ce n'est pas forcément qu'il n'existe pas de cheats — le titre peut différer. Codes manuels conservés.`, false);
+    }
   } else if (fromMemory && !regionMismatch) {
     say('cheat-info', `✅ Édition mémorisée reconnue (${result.catalogTitle}). ${cheats.length} code(s), tous désactivés par défaut. Choix précédent sur cet appareil.`, false);
   } else if (fromMemory && regionMismatch) {

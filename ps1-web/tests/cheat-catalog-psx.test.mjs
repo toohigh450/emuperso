@@ -89,3 +89,19 @@ test('R2 : région inconnue ne doit pas être traitée comme compatible', async 
   assert.equal(detectRegion('Final Fantasy 5.pbp'), null, 'pas de région détectée');
   assert.equal(detectRegion('Final Fantasy 5'), null, 'pas de région détectée sans extension');
 });
+
+// P1 (audit GPT RC-1.3) : détection de mods
+test('P1 : detectMod identifie les jeux modifiés', async () => {
+  const { detectMod } = await import('../cheat-catalog-psx.mjs');
+  // GT2 Plus Beta v6.1 → mod détecté
+  const gt2plus = detectMod('Gran Turismo 2 Plus (Beta v6.1) (Simulation Mode)');
+  assert.equal(gt2plus.isMod, true, 'GT2 Plus détecté comme mod');
+  assert.ok(gt2plus.baseTitle.toLowerCase().includes('gran turismo 2'), 'titre de base extrait');
+  assert.ok(!gt2plus.baseTitle.toLowerCase().includes('plus'), 'Plus retiré du titre de base');
+  // Jeu normal → pas un mod
+  const normal = detectMod('Gran Turismo 2 (Europe)');
+  assert.equal(normal.isMod, false, 'GT2 Europe n\'est pas un mod');
+  // Autres indicateurs
+  assert.equal(detectMod('Game Hack v1.0').isMod, true, 'Hack détecté');
+  assert.equal(detectMod('Game Randomizer').isMod, true, 'Randomizer détecté');
+});

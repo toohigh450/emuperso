@@ -83,6 +83,18 @@ export async function findCheatsForGame(serial, title) {
                catalogRegions: detectRegions(candidates[0].catalogTitle) };
     }
     if (candidates.length > 1) {
+      // P1 (audit GPT RC-1.3) : classer les candidats par région connue.
+      // Ex: "GT2 (Europe).bin" → candidat Europe en premier, pas USA.
+      const gameReg = detectRegion(titleStem(title || ''));
+      if (gameReg) {
+        candidates.sort((a, b) => {
+          const aRegions = detectRegions(a.catalogTitle) || [];
+          const bRegions = detectRegions(b.catalogTitle) || [];
+          const aMatch = regionsCompatible(gameReg, aRegions) ? 0 : 1;
+          const bMatch = regionsCompatible(gameReg, bRegions) ? 0 : 1;
+          return aMatch - bMatch;
+        });
+      }
       return { status: 'ambiguous', cheats: [], candidates };
     }
     // 3b. Fallback P2: matching par mots sur le titre nettoyé
@@ -100,10 +112,44 @@ export async function findCheatsForGame(serial, title) {
                catalogRegions: detectRegions(wordCandidates[0].catalogTitle) };
     }
     if (wordCandidates.length > 1) {
+      // P1 : même classement par région pour le fallback par mots
+      const gameReg = detectRegion(titleStem(title || ''));
+      if (gameReg) {
+        wordCandidates.sort((a, b) => {
+          const aRegions = detectRegions(a.catalogTitle) || [];
+          const bRegions = detectRegions(b.catalogTitle) || [];
+          const aMatch = regionsCompatible(gameReg, aRegions) ? 0 : 1;
+          const bMatch = regionsCompatible(gameReg, bRegions) ? 0 : 1;
+          return aMatch - bMatch;
+        });
+      }
       return { status: 'ambiguous', cheats: [], candidates: wordCandidates };
     }
   }
-  
+
+  // P1 (audit GPT RC-1.3) : si aucun match mais titre ressemble à un mod,
+  // chercher le jeu de base et le proposer comme CANDIDAT NON VÉRIFIÉ.
+  // Jamais auto-activé — l'utilisateur doit choisir explicitement.
+  const modInfo = detectMod(titleStem(title || ''));
+  if (modInfo.isMod && modInfo.baseTitle) {
+    // Chercher le jeu de base (récursif, mais sans re-détecter les mods)
+    const baseStem = titleStem(modInfo.baseTitle);
+    const baseCandidates = [];
+    for (const [catalogTitle, codes] of Object.entries(catalog.byTitle)) {
+      if (titleMatches(baseStem, catalogTitle)) {
+        baseCandidates.push({ catalogTitle, codes });
+      }
+    }
+    if (baseCandidates.length > 0) {
+      return {
+        status: 'mod_candidate',
+        cheats: [],
+        candidates: baseCandidates,
+        modInfo: { originalTitle: title, baseTitle: modInfo.baseTitle },
+      };
+    }
+  }
+
   return { status: 'no_match', cheats: [], candidates: [] };
 }
 
@@ -183,8 +229,28 @@ export function regionsCompatible(gameRegion, catalogRegions) {
 }
 
 /**
- * Retire l'extension du fichier disque (.chd, .pbp, .iso, etc.)
+ * P1 (audit GPT RC-1.3) : détecte si un titre ressemble à un mod/hack.
+ * Ex: "Gran Turismo 2 Plus (Beta v6.1)" → { isMod: true, baseTitle: "Gran Turismo 2" }
+ * Les cheats du jeu de base sont proposés comme CANDIDATS NON VÉRIFIÉS, jamais auto-activés.
  */
+export function detectMod(title) {
+  const v = String(title || '');
+  // Indicateurs de mods/hacks/versions modifiées
+  const modPattern = /\b(plus|beta|alpha|mod|hack|patched|undub|retrostage|kaizo|randomizer|rebirth|remix|deluxe|extended|ultimate)\b/i;
+  const versionPattern = /\bv\d+\.\d+/i; // v6.1, v1.2, etc.
+  const isMod = modPattern.test(v) || versionPattern.test(v);
+  if (!isMod) return { isMod: false, baseTitle: null };
+  // Extraire le titre de base en retirant les indicateurs de mod
+  let base = v
+    .replace(/\b(plus|beta|alpha|mod|hack|patched|undub|retrostage|kaizo|randomizer|rebirth|remix|deluxe|extended|ultimate)\b/gi, '')
+    .replace(/\bv\d+\.\d+[^)]*/gi, '') // v6.1, v6.1 (Simulation Mode), etc.
+    .replace(/\([^)]*(simulation mode|arcade mode)[^)]*\)/gi, '') // (Simulation Mode)
+    .replace(/\s+/g, ' ')
+    .trim();
+  // Nettoyer les parenthèses vides restantes
+  base = base.replace(/\(\s*\)/g, '').replace(/\s+/g, ' ').trim();
+  return { isMod: true, baseTitle: base || null };
+}
 export function stripDiscExtension(filename) {
   return String(filename ?? '').replace(/\.(chd|pbp|iso|bin|img|cue)$/i, '').trim();
 }

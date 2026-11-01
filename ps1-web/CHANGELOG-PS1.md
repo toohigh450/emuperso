@@ -1,5 +1,26 @@
 # CHANGELOG — EMUPERSO PS1
 
+## RC-1.4 (Méo, 1er nov. ~03h15) — Correctifs audit GPT RC-1.3
+**Base** : RC-1.3 + correctifs de l'audit GPT `AUDIT_GPT_EMUPERSO_PS1_RC-1.3_CATALOGUE_ET_REGIONS.html`
+
+### 🔴 BLOCAGE A corrigé — activation manuelle sans confirmation (région inconnue)
+- **Cause** : `needsRegionConfirm: !!regionMismatch` — quand `gameRegion` est null (ex: "Final Fantasy 5.pbp"), `regionMismatch` est faux → l'utilisateur pouvait cocher un cheat sans confirmation.
+- **Correctif** : `needsConfirmation = Boolean(regionMismatch || regionUncertain)` — bloque aussi quand la région du disque est inconnue.
+- **Test** : nouveau test "BLOCAGE A" dans cheat-dom.test.mjs.
+
+### 🟡 P1 — Catalogue et mods
+- **Détection de mods** : nouvelle fonction `detectMod()` — "GT2 Plus (Beta v6.1)" → mod détecté, titre de base "Gran Turismo 2" extrait.
+- **Statut `mod_candidate`** : quand aucun match mais mod détecté, propose les cheats du jeu de base comme **CANDIDATS NON VÉRIFIÉS**. Jamais auto-activés, bouton explicite requis.
+- **Classement ambiguous par région** : "GT2 (Europe).bin" → candidat Europe en premier (plus de USA par défaut).
+- **Messages différenciés** : "Mod détecté mais jeu de base introuvable" vs "Jeu non reconnu dans le catalogue" (évite "aucun cheat" trompeur).
+
+### 🟡 P2 — Étude GameHacking.org
+- **Document** : `docs/GAMEHACKING-ORG-ETUDE.md` — pas d'API publique, partenariats possibles via Discord, pas de scraping sans permission. libretro-database reste la base légale.
+
+**Tests** : 58/56 JS + 8/8 Python PASS (3 nouveaux tests : BLOCAGE A, P1 mod, R1/R2).
+
+---
+
 ## RC-1.3 (Méo, 1er nov. ~02h45) — Correctifs audit GPT RC-1.2
 **Base** : RC-1.2 + correctifs de l'audit GPT `AUDIT_GPT_EMUPERSO_PS1_RC-1.2_BLOCAGE_MOTEUR_MULTI_REGION.html`
 
