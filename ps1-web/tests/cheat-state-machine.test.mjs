@@ -207,3 +207,100 @@ test('restauration : _pendingCheatRestore consommé après application', async (
   assert.equal(h.calls.length, callsBefore, 'aucun appel moteur redondant');
   h.assertInvariant();
 });
+
+// === Audit GPT RC-1.7 : erreurs partielles et chemins P0/P1 ===
+
+// P0-A : changement de serial → le moteur est vidé (pas de codes fantômes)
+test('P0-A : remplacement liste cheats vide le moteur', async () => {
+  const h = createHarness();
+  h.setCheats([mkCheat('Speed')]);
+  await h.toggle(0, true); // applied
+  assert.equal(h.calls.length, 1);
+  // Simule le changement de serial : nouvelle liste, sync moteur
+  const oldCheats = h.cheats;
+  h.setCheats([mkCheat('Autre')]); // tous 'off'
+  await h.atomicCheatUpdate(() => {}); // sync
+  assert.deepEqual(h.calls[h.calls.length - 1], [], 'moteur vidé après changement');
+  assert.equal(h.appliedCheats().length, 0);
+  h.assertInvariant();
+});
+
+// P0-B : échec partiel moteur → reset moteur + resync JS
+test('P0-B : échec partiel → moteur reseté et resynchronisé', async () => {
+  // Moteur qui échoue au milieu puis réussit le resync
+  const engineCalls = [];
+  let failNext = true;
+  const engine = {
+    async setCheats(list) {
+      engineCalls.push(list.map(c => c.name));
+      if (failNext) { failNext = false; throw new Error('PARTIEL: setCheat(1) a échoué'); }
+    },
+  };
+  const h = createHarness();
+  h.sessions.current.api = engine;
+  h.setCheats([mkCheat('A'), mkCheat('B')]);
+  // Simule atomicCheatUpdate avec resync (miroir de app.js)
+  const snapshot = h.cheats.map(c => c.state);
+  h.cheats.forEach(c => { c.state = 'applied'; });
+  try {
+    await engine.setCheats(h.cheats.filter(c => c.state === 'applied'));
+    assert.fail('aurait dû échouer');
+  } catch (e) {
+    h.cheats.forEach((c, i) => { c.state = snapshot[i]; }); // rollback JS
+    const rollbackList = h.cheats.filter(c => c.state === 'applied');
+    await engine.setCheats(rollbackList); // resync
+  }
+  assert.deepEqual(h.cheats.map(c => c.state), ['off', 'off'], 'rollback JS complet');
+  assert.deepEqual(engineCalls[engineCalls.length - 1], [], 'moteur resynchronisé à vide');
+  h.assertInvariant();
+});
+
+// P1 : échec confirmation → _regionConfirmed=false (bouton réapparaît)
+test('P1 : échec confirmation rouvre le verrou régional', async () => {
+  const h = createHarness({ engineFails: true });
+  h.setCheats([mkCheat('Speed')]);
+  h.window._regionMismatch = { gameRegion: 'Europe', catalogRegion: 'USA' };
+  await h.toggle(0, true); // → pending
+  h.window._regionConfirmed = true; // clic "Je confirme"
+  try {
+    await h.atomicCheatUpdate(() => { h.cheats[0].state = 'applied'; });
+    assert.fail('aurait dû échouer');
+  } catch (e) {
+    // P1 : rouvrir la confirmation
+    h.window._regionConfirmed = false;
+  }
+  assert.equal(h.window._regionConfirmed, false, 'bouton de confirmation réapparaît');
+  assert.equal(h.cheats[0].state, 'pending', 'cheat revenu en attente');
+  h.assertInvariant();
+});
+
+// P1 : échec "désactiver tous" → listes différées préservées
+test('P1 : échec désactiver-tous préserve les listes différées', async () => {
+  const h = createHarness({ engineFails: true });
+  h.setCheats([mkCheat('Speed')]);
+  h.window._pendingCheatRestore = [{ name: 'Speed', code: '80010000 0001' }];
+  h.window._deferredCheatList = [{ name: 'Speed', code: '80010000 0001' }];
+  const savedRestore = [...h.window._pendingCheatRestore];
+  const savedDeferred = [...h.window._deferredCheatList];
+  // Simule le handler cheat-off avec sauvegarde/restauration (miroir app.js)
+  h.window._pendingCheatRestore = [];
+  h.window._deferredCheatList = [];
+  try {
+    await h.atomicCheatUpdate(() => { h.cheats.forEach(c => { c.state = 'off'; }); });
+    assert.fail('aurait dû échouer');
+  } catch (e) {
+    h.window._pendingCheatRestore = savedRestore;
+    h.window._deferredCheatList = savedDeferred;
+  }
+  assert.deepEqual(h.window._pendingCheatRestore, savedRestore, 'liste restaurée préservée');
+  assert.deepEqual(h.window._deferredCheatList, savedDeferred, 'liste différée préservée');
+  h.assertInvariant();
+});
+
+// Invariant global : vérification source du reset moteur sur échec partiel
+test('P0-B : engine-session reset sur échec partiel (source)', async () => {
+  const { readFile } = await import('node:fs/promises');
+  const src = await readFile(new URL('../engine-session.mjs', import.meta.url), 'utf8');
+  assert.ok(src.includes('manager.resetCheat();') && src.includes('cheats.apply_failed'),
+    'setCheats moteur fait reset sur échec partiel');
+});

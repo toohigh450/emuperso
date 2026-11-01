@@ -217,7 +217,15 @@ async function loadState(bytes) {
 }
 function setCheats(cheats) {
   const manager = gm(); manager.resetCheat();
-  cheats.forEach((cheat, index) => manager.setCheat(index, true, cheat.code));
+  try {
+    cheats.forEach((cheat, index) => manager.setCheat(index, true, cheat.code));
+  } catch (error) {
+    // P0-B (audit GPT RC-1.7) : ne jamais laisser d'application partielle.
+    // Si setCheat() échoue au milieu de la liste, tout effacer pour un état déterministe.
+    try { manager.resetCheat(); } catch {}
+    note('cheats.apply_failed', { message: String((error && error.message) || error) });
+    throw error;
+  }
   note('cheats.applied', { count: cheats.length });
 }
 window.PS1Engine = Object.freeze({ start, close, pause, play, resumeAudio, snapshot, captureState,

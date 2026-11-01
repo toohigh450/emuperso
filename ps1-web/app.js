@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 // Version de l'application — mettre à jour à chaque release
-const APP_VERSION = 'RC-1.7';
+const APP_VERSION = 'RC-1.8';
 import { prepareDisc } from './disc-file.mjs';
 import { SaveStore, makeStateEnvelope } from './save-store.mjs';
 import { packStateBundle, unpackStateBundle } from './state-bundle.mjs';
@@ -55,7 +55,17 @@ async function atomicCheatUpdate(mutate) {
     if (sessions.current) await sessions.current.api.setCheats(list);
     event('cheats.applied', { count: list.length });
   } catch (error) {
+    // Rollback JS
     cheats.forEach((c, i) => { c.state = snapshot[i]; });
+    // P0-B (audit GPT RC-1.7) : resynchroniser le moteur avec l'état restauré.
+    // Le moteur a fait resetCheat() sur échec partiel ; le remettre en phase avec JS.
+    const rollbackList = appliedCheats().map(c => ({ name: c.name, code: lines(c.code).join('+') }));
+    try {
+      if (sessions.current) await sessions.current.api.setCheats(rollbackList);
+      event('cheats.resynced', { count: rollbackList.length });
+    } catch (error2) {
+      event('cheats.resync_failed', { message: String((error2 && error2.message) || error2) });
+    }
     event('cheats.apply_failed', { message: String((error && error.message) || error) });
     throw error;
   }
@@ -166,7 +176,11 @@ function renderCheats() {
           ? `✅ Région confirmée. ${newlyApplied} cheat(s) en attente appliqué(s).`
           : 'Région confirmée. Vous pouvez maintenant cocher les codes.', false);
       } catch (error) {
-        say('cheat-info', `⚠️ Le moteur a refusé l'application : les cheats restent en attente.`, true);
+        // P1 (audit GPT RC-1.7) : sur échec, rouvrir la confirmation.
+        // Avant : _regionConfirmed restait true, le bouton disparaissait
+        // alors que les cheats étaient revenus en attente.
+        window._regionConfirmed = false;
+        say('cheat-info', `⚠️ Le moteur a refusé l'application : les cheats restent en attente. Confirmez à nouveau pour réessayer.`, true);
       }
       renderCheats();
     });
@@ -198,7 +212,9 @@ function renderCheats() {
             ? `✅ ${appliedCount} cheat(s) restauré(s) appliqué(s) après votre confirmation explicite.`
             : `⚠️ Aucun cheat restauré trouvé dans cette édition.`, appliedCount === 0);
         } catch (error) {
-          say('cheat-info', `⚠️ Le moteur a refusé l'application : les cheats restent en attente.`, true);
+          // P1 (audit GPT RC-1.7) : rouvrir la confirmation sur échec.
+          window._regionConfirmed = false;
+          say('cheat-info', `⚠️ Le moteur a refusé l'application : les cheats restent en attente. Confirmez à nouveau pour réessayer.`, true);
         }
         renderCheats();
       });
@@ -667,6 +683,10 @@ $('cheat-off').onclick = () => operation(async () => {
   // P0 (audit GPT RC-1.6) : "tout désactiver" purge aussi les intentions différées.
   // Avant : pending et _pendingCheatRestore survivaient, une confirmation ultérieure
   // pouvait réactiver des codes que l'utilisateur pensait neutralisés.
+  // P1 (audit GPT RC-1.7) : sur échec moteur, restaurer les listes (pas seulement les états).
+  const savedRestore = window._pendingCheatRestore || [];
+  const savedDeferred = window._deferredCheatList || [];
+  const savedActive = window._pendingActiveList;
   window._pendingCheatRestore = [];
   window._deferredCheatList = [];
   window._pendingActiveList = null;
@@ -674,7 +694,10 @@ $('cheat-off').onclick = () => operation(async () => {
     await atomicCheatUpdate(() => { cheats.forEach(c => { c.state = 'off'; }); });
     say('cheat-info', 'Tous les cheats désactivés, y compris les restaurations en attente.', false);
   } catch (error) {
-    say('cheat-info', '⚠️ Le moteur a refusé la désactivation : états restaurés.', true);
+    window._pendingCheatRestore = savedRestore;
+    window._deferredCheatList = savedDeferred;
+    window._pendingActiveList = savedActive;
+    say('cheat-info', '⚠️ Le moteur a refusé la désactivation : états et listes restaurés.', true);
   }
   renderCheats();
 });
@@ -727,7 +750,18 @@ $('serial-apply').onclick = () => operation(async () => {
     };
   });
   const mine = ((await cheatDB.get(gameKey(meta)).catch(() => null)) ?? []).filter(c => codeValid(c.code)).map(c => ({ ...c, source: 'manuel', state: 'off' }));
+  // P0-A (audit GPT RC-1.7) : le remplacement de la liste doit aussi vider le moteur.
+  // Avant : les anciens codes restaient actifs dans le moteur malgré l'affichage OFF.
+  const oldCheats = cheats;
   cheats = [...known, ...mine];
+  try {
+    await atomicCheatUpdate(() => {}); // synchronise le moteur (liste 'applied' vide)
+  } catch (error) {
+    cheats = oldCheats; // échec : restaurer l'ancienne liste
+    say('cheat-info', `⚠️ Le moteur a refusé le changement : liste précédente restaurée.`, true);
+    renderCheats();
+    return;
+  }
   renderCheats();
   say('cheat-info', `✅ Jeu identifié : ${catalogTitle} (${input}). ${cheats.length} code(s), tous désactivés. Mémorisé pour la prochaine fois.`, false);
 });

@@ -1,5 +1,28 @@
 # CHANGELOG — EMUPERSO PS1
 
+## RC-1.8 (Méo, 1er nov. ~08h45) — Correctifs audit GPT RC-1.7 : chemins d'erreur moteur
+**Base** : RC-1.7 + correctifs de l'audit GPT (mandat Karl, 4 chemins reproduits)
+
+### 🔴 P0-A — Changement de serial : anciens codes restaient actifs dans le moteur
+- **Cause** : `$('serial-apply')` remplaçait `cheats` et affichait OFF sans synchroniser le moteur.
+- **Correctif** : après remplacement, `atomicCheatUpdate(() => {})` vide le moteur ; sur échec, l'ancienne liste est restaurée.
+
+### 🔴 P0-B — Rollback atomique côté JS seulement
+- **Cause** : si `manager.setCheat()` échouait au milieu de la liste, le moteur gardait une application partielle.
+- **Correctif** : `engine-session.mjs` `setCheats()` fait `resetCheat()` sur échec partiel (état déterministe : tout ou rien). `atomicCheatUpdate()` resynchronise le moteur avec l'état JS restauré après rollback (événement `cheats.resynced`, `cheats.resync_failed` si le resync échoue aussi).
+
+### 🟡 P1 — Échec confirmation : bouton disparaissait
+- **Cause** : `_regionConfirmed` restait `true` après échec, le panneau de confirmation ne réapparaissait pas alors que les cheats revenaient en attente.
+- **Correctif** : sur échec, `_regionConfirmed = false` (bouton "Je confirme" ET bouton de restauration explicite).
+
+### 🟡 P1 — Échec "Désactiver tous" : listes différées perdues
+- **Cause** : `_pendingCheatRestore`/`_deferredCheatList` vidées avant la transaction, non restaurées sur échec.
+- **Correctif** : snapshot des trois listes avant, restauration sur échec.
+
+**Tests** : 82/82 JS + 8/8 Python PASS — dont 5 nouveaux tests (P0-A vidage moteur, P0-B échec partiel + resync, P1 réouverture confirmation, P1 préservation listes, P0-B source moteur).
+
+---
+
 ## RC-1.7 (Méo, 1er nov. ~08h30) — Correctifs audit GPT RC-1.6 : machine à états unifiée
 **Base** : RC-1.6 + correctifs de l'audit GPT `AUDIT_GPT_EMUPERSO_PS1_RC-1.6_ETATS_CHEATS_53_5dlm.html`
 

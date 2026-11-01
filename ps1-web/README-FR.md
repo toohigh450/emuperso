@@ -1,4 +1,4 @@
-# EMUPERSO PS1 — Release Candidate 1.7
+# EMUPERSO PS1 — Release Candidate 1.8
 
 
 **Statut** : Candidate pour audits finaux et essais Windows de Karl.
