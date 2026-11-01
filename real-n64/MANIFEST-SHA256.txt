@@ -14,11 +14,12 @@ d313e77e5cb4978fc009dc8ecaa7c2c76f013747ea332afe872a31492c79b3f8  real-n64/docs/
 38c77e6586bf090253d74889b349f93ddbe51ea01850ef32adac3b879a90c391  real-n64/docs/IMPORT-ZIP-0.3.0.html
 ee04fc09c780a889c5b4b85a8200b4f614b8e6029b7df5afff7007c298e6b354  real-n64/docs/LANCEMENT-0.2.1.html
 91195ee8a49db1c1cb8e602ca15f138b65c4e5618c0997ea1781d550a66010d5  real-n64/docs/RAPPORT.html
-8ce516aac293b5063feef93a77a1236fb9eed32b49183b16c26ee095da89ebad  real-n64/docs/RC-0.5.0.html
+6acc8a41644b97be3152e4138292fad44c4301be4fc67c8665bfff330ebc83fd  real-n64/docs/RC-0.5.0.html
 531b6618384fdd5d0e98be00f22082ceccfa745a6be4b08d5b50e2130aba7634  real-n64/docs/REDISTRIBUTION-RC.md
 9937f2e96037d129a1c2bde5ca053f8df0628585c90cc5714999a2411498aa33  real-n64/docs/RESTORE-INDEPENDENT-RC.md
 a805d5f7af9dd7651df0dbe0363cdc4137ce5bb4a84ad3ae05a037c450d00e89  real-n64/docs/SAVE-STORE-CONTRACT.md
 6f024f16a41d5eacb10e528b1d066404fc2e3c6314487644c84c75f77bbb812d  real-n64/docs/THIRD-PARTY.md
+4d9603c3a45c5c07540e19ba0a0f482fcb4fe8889b32c9fb8f051c0b8853c723  real-n64/docs/TRANSMISSION-RC-0.5.0.md
 0d87a9c3167ac4b56f1a7cdf1c90cc2ffa1cef4f96fa59515575209633dcddbd  real-n64/docs/VALIDATION-KARL.md
 714ea747cf19d8cd052cdd7281bfd22f28f4e554b21288f12f531cd3cd6f436b  real-n64/docs/WEB-RC.md
 4a448c6b421d962df7dccd4228a5cba2c5367a829d4c800c17076b6fe903322d  real-n64/docs/cheat-catalog-lock.json
@@ -56,11 +57,13 @@ f826c2bfabfaff61fae30fc08cf5a8d9950b2cfbc56bf0d9028fae866eeb9f16  real-n64/evide
 5b71931aa9758f245927d6ec6611ccd56d65e4233a662dfd7ac94d72910d2ab3  real-n64/evidence/ci-first-rc-failure.json
 f042433f18e63e63300c2303eda7665f185b4d79ad370731f5d6c3b770a535bf  real-n64/evidence/ci-second-rc-failure.json
 298daee0a1ee31c66eb69a15565ca4a428c62f685d0616b5d5c7def82824c46c  real-n64/evidence/ci-third-rc-failure.json
+6c68b4d7b70624ec97857ec16ab8c87df083a12cc802bb0bf069b8b94f8fd64a  real-n64/evidence/ci-validation-rc.json
 9b3537247178a028e96fa7b6319859f3cb88be38aca4c3174e42226c26da639a  real-n64/evidence/decor-layout.json
 4629b44c3bb644cd3c0fbd61810f15b07856d0704a7dd0bc4e36d8c191497606  real-n64/evidence/fallback-link-map.txt
 7f5142a138db3d8bc533e7fd2bc9f64da43ecac9c08a7a87bad6afb7056d8f3a  real-n64/evidence/import-summary.json
 1ae0ac922ca927b11fd332e6a40a5cad3ce69960019e350664284102f4e3c9b2  real-n64/evidence/launcher-native-results.json
 c5c8b551014342d2ea3ff6eb7754c451a7b5b07a5bc10afbcb6d37bd916aca44  real-n64/evidence/preservation-final.json
+83311455b9d90bf41086a7d3312c90c4058787a6256c67bfdafd7e7af5c96198  real-n64/evidence/preservation-rc.json
 6f308ce23bda39e676478a5c09c07f2fe786f1fb5acc58f1f050318aaee054f4  real-n64/evidence/probe-autosave-readonly-rc.json
 2fae1e6c1b311b98ccb54711367d197e649e51b0a82cf62494443502b536257d  real-n64/evidence/probe-cpu.txt
 8a70da517698574e87fca2dd8acd78b75bd778fb0529756a005bce75f1d27f51  real-n64/evidence/probe-cpu2.txt
