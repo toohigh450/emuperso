@@ -169,7 +169,8 @@ def _metadata(kind: str, files: dict[str, bytes], gate: dict, for_publication: b
         'scope': 'Démo MIT et ressources explicites seulement ; aucune ROM commerciale, sauvegarde ou diagnostic utilisateur.',
         'public_url_test': 'NON TESTABLE : aucun déploiement ni URL publique autorisés par cette opération.',
         'contains_runtime': kind == 'web',
-        'runtime_network_downloads': False,
+        'packaging_network_downloads': False,
+        'first_launch_network_downloads': kind == 'windows',
         'manifest_excludes_itself': True,
     })
 

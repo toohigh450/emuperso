@@ -71,7 +71,8 @@ class DistributionTests(unittest.TestCase):
                 meta = json.loads(archive.read(package.METADATA))
                 self.assertEqual(meta['status'], 'REVUE-PRIVEE-NON-PUBLIEE')
                 self.assertFalse(meta['publication_allowed'])
-                self.assertFalse(meta['runtime_network_downloads'])
+                self.assertFalse(meta['packaging_network_downloads'])
+                self.assertEqual(meta['first_launch_network_downloads'], result.kind == 'windows')
                 self.assertIn('NON TESTABLE', meta['public_url_test'])
         with zipfile.ZipFile(windows.archive) as archive:
             self.assertIn('DEMARRER-N64.bat', archive.namelist())

@@ -15,8 +15,8 @@
           "bytes": 6144,
           "sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
         },
-        "frame_before": 41,
-        "frame_after": 60,
+        "frame_before": 39,
+        "frame_after": 57,
         "iframe_count": 1,
         "cheats_active_by_default": 0
       }
@@ -46,9 +46,9 @@
             "slot": 1,
             "kind": "state",
             "revision": 2,
-            "id": "0e07c779321838d08e45a3f1351765f8",
-            "created_utc": "2026-11-01T01:55:54.584Z",
-            "updated_utc": "2026-11-01T01:55:54.781Z",
+            "id": "100eccabc50ea4e61cd3779e0c155aa0",
+            "created_utc": "2026-11-01T13:07:24.815Z",
+            "updated_utc": "2026-11-01T13:07:25.038Z",
             "label": "same-name.z64",
             "cheats": [],
             "payload_size": 17090424,
@@ -59,9 +59,9 @@
             "slot": 2,
             "kind": "state",
             "revision": 1,
-            "id": "07fa42d73f1a5e5449cf8eff5dcd94f8",
-            "created_utc": "2026-11-01T01:55:55.282Z",
-            "updated_utc": "2026-11-01T01:55:55.342Z",
+            "id": "772d8edb906326256cc6d5c523e0fb12",
+            "created_utc": "2026-11-01T13:07:25.595Z",
+            "updated_utc": "2026-11-01T13:07:25.721Z",
             "label": "same-name.z64",
             "cheats": [],
             "payload_size": 17090424,
@@ -72,9 +72,9 @@
             "slot": 3,
             "kind": "state",
             "revision": 1,
-            "id": "05947fe761ee42c181a2b76d6c3289c6",
-            "created_utc": "2026-11-01T01:55:55.929Z",
-            "updated_utc": "2026-11-01T01:55:56.037Z",
+            "id": "9e4c80812c295fd8332965598dc6134a",
+            "created_utc": "2026-11-01T13:07:26.230Z",
+            "updated_utc": "2026-11-01T13:07:26.379Z",
             "label": "same-name.z64",
             "cheats": [],
             "payload_size": 17090424,
@@ -82,8 +82,8 @@
             "payload_verified": false
           }
         ],
-        "current_payload_sha256": "60138e374d31289e40fc484fd34e6b6e9b76a2f24f71194abebc10bf611c560b",
-        "previous_payload_sha256": "9eb1f918f97f4d308c17a4960fd292fb7b7966a7cfec7f8aa6ccbff74fcce931"
+        "current_payload_sha256": "6527aef1ee558eba4b49c1b7a162f963d89ab9cacd3edd0a2d02b9438b77f3ed",
+        "previous_payload_sha256": "e0907b7c2b460ccea3a276d147940e9a5fe4c1704f7a66d133a2dfcdd2d63819"
       }
     },
     {
@@ -95,19 +95,19 @@
       }
     },
     {
-      "test": "Export utilisateur d’un véritable état intègre, sans fichier ROM joint",
+      "test": "Export utilisateur d’un véritable état intègre, copie privée de la mémoire du jeu",
       "status": "RÉUSSI",
       "proof": {
         "payload_size": 17090424,
-        "payload_sha256": "60138e374d31289e40fc484fd34e6b6e9b76a2f24f71194abebc10bf611c560b",
-        "download_name": "N64-sauvegarde-emplacement-1-2026-11-01T01-55-57-617Z.json"
+        "payload_sha256": "6527aef1ee558eba4b49c1b7a162f963d89ab9cacd3edd0a2d02b9438b77f3ed",
+        "download_name": "N64-sauvegarde-emplacement-1-2026-11-01T13-07-28-327Z.json"
       }
     },
     {
       "test": "Import d’état vérifié : aucun lancement implicite, checksum altéré refusé sans écrasement",
       "status": "RÉUSSI",
       "proof": {
-        "imported_payload_sha256": "60138e374d31289e40fc484fd34e6b6e9b76a2f24f71194abebc10bf611c560b",
+        "imported_payload_sha256": "6527aef1ee558eba4b49c1b7a162f963d89ab9cacd3edd0a2d02b9438b77f3ed",
         "target_slot": 3,
         "bad_checksum_rejected": true,
         "live_ram_unchanged": 9320
@@ -140,7 +140,7 @@
           ],
           "timeout": false
         },
-        "old_counter_stable": 226
+        "old_counter_stable": 246
       }
     },
     {
@@ -166,12 +166,12 @@
           "config_sha256": "4e78a12696bbdf17d0c8f232689375ebff860e0f1b3796154c949329914ed571",
           "state_schema": "emuperso-real-state-v2"
         },
-        "payload_sha256": "60138e374d31289e40fc484fd34e6b6e9b76a2f24f71194abebc10bf611c560b",
+        "payload_sha256": "6527aef1ee558eba4b49c1b7a162f963d89ab9cacd3edd0a2d02b9438b77f3ed",
         "ram_marker": 9320,
         "audio": {
-          "tone_max_rms": 0.13621488950964522,
+          "tone_max_rms": 0.13614241659777052,
           "released_max_rms": 0,
-          "frame_delta_per_observed_second": 17,
+          "frame_delta_per_observed_second": 15,
           "physical_speakers": "NON TESTABLE"
         },
         "rom_reselected_by_user": true,
@@ -183,7 +183,7 @@
       "status": "RÉUSSI",
       "proof": {
         "marker": 4951,
-        "payload_sha256": "9eb1f918f97f4d308c17a4960fd292fb7b7966a7cfec7f8aa6ccbff74fcce931",
+        "payload_sha256": "e0907b7c2b460ccea3a276d147940e9a5fe4c1704f7a66d133a2dfcdd2d63819",
         "current_slot_revision_preserved": 2
       }
     },
@@ -237,9 +237,9 @@
           "sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795"
         },
         "audio": {
-          "tone_max_rms": 0.13627335034692542,
+          "tone_max_rms": 0.13622343136133466,
           "released_max_rms": 0,
-          "frame_delta_per_observed_second": 17,
+          "frame_delta_per_observed_second": 15,
           "physical_speakers": "NON TESTABLE"
         }
       }
@@ -255,7 +255,7 @@
       "test": "Diagnostics et confidentialité : aucune ROM/sauvegarde envoyée",
       "status": "RÉUSSI",
       "proof": {
-        "http_requests": 164,
+        "http_requests": 172,
         "diagnostic_contains_save_payload": false,
         "page_errors": [],
         "private_rom_used": false
@@ -340,6 +340,11 @@
       "body_bytes": 0
     },
     {
+      "url": "http://127.0.0.1:8776/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
       "url": "http://127.0.0.1:8776/docs/runtime-lock.json",
       "method": "GET",
       "body_bytes": 0
@@ -410,22 +415,22 @@
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/3e87c5b4-e86b-4d93-bc6b-08e00476a01f",
+      "url": "blob:http://127.0.0.1:8776/fe849a64-111b-4fe3-aaf5-05b49b015a9a",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/94a7261a-2b1f-4ee8-adee-0ea4f5e2a8a6",
+      "url": "blob:http://127.0.0.1:8776/2b5c0bff-98c2-48a6-84b8-edc46c015912",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/6f156c1b-70f7-4895-b2e1-83f7f3265f8c",
+      "url": "blob:http://127.0.0.1:8776/0fe0d81d-16a5-4c47-8ffc-39d6429795c3",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/f99b705f-73ba-4d09-b322-08819ce3cff6",
+      "url": "blob:http://127.0.0.1:8776/884839df-8488-4253-a758-361a7454b2ce",
       "method": "GET",
       "body_bytes": 0
     },
@@ -460,6 +465,11 @@
       "body_bytes": 0
     },
     {
+      "url": "http://127.0.0.1:8776/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
       "url": "http://127.0.0.1:8776/vendor/data/src/emulator.js",
       "method": "GET",
       "body_bytes": 0
@@ -525,22 +535,22 @@
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/f2a48fe6-5fc6-4315-aba2-5628f2571d4b",
+      "url": "blob:http://127.0.0.1:8776/f6df9afe-6997-416f-8e95-3db4b338740c",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/52205e14-82a0-407f-a6d0-02c6fd63da7a",
+      "url": "blob:http://127.0.0.1:8776/8c6c44d7-c389-44b1-9b53-ce006f13a4bf",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/add9e2cd-7f72-4700-982d-51bfbc2babff",
+      "url": "blob:http://127.0.0.1:8776/a94069db-aa78-4daa-9381-2d32202c9a9b",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/36398cb8-da5c-4ee9-9d75-5919e8e458a1",
+      "url": "blob:http://127.0.0.1:8776/38911ae9-fd2d-436e-8fda-bcc9340139f7",
       "method": "GET",
       "body_bytes": 0
     },
@@ -565,6 +575,11 @@
       "body_bytes": 0
     },
     {
+      "url": "http://127.0.0.1:8776/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
       "url": "http://127.0.0.1:8776/vendor/data/src/emulator.js",
       "method": "GET",
       "body_bytes": 0
@@ -630,22 +645,22 @@
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/2a67c95b-1cd1-44cf-93ac-791233dc273f",
+      "url": "blob:http://127.0.0.1:8776/bce672b4-9d06-405d-ba2a-7d3af5eb49e1",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/8c49ca0b-aedc-4606-90cb-1a69502d2e61",
+      "url": "blob:http://127.0.0.1:8776/65dec031-861f-4448-b559-05764991ae41",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/236c0a2d-9c62-43a8-85ad-70abdd0ff193",
+      "url": "blob:http://127.0.0.1:8776/8b2a47c4-26b7-4e44-94b4-1a6b01db5085",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/8e032900-3b48-45e9-b399-186614fbd480",
+      "url": "blob:http://127.0.0.1:8776/11f49e7b-02c3-4457-8dca-ed07a4123fde",
       "method": "GET",
       "body_bytes": 0
     },
@@ -725,6 +740,11 @@
       "body_bytes": 0
     },
     {
+      "url": "http://127.0.0.1:8776/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
       "url": "http://127.0.0.1:8776/docs/runtime-lock.json",
       "method": "GET",
       "body_bytes": 0
@@ -795,22 +815,22 @@
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/82e725a6-e6de-4f70-87a3-398b92ae0fdd",
+      "url": "blob:http://127.0.0.1:8776/bfbd4aa8-9958-40f5-bf62-01aca0c82c0b",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/be6bd72b-7ac8-49bf-9a9d-0ad0ac133487",
+      "url": "blob:http://127.0.0.1:8776/240f4647-8de9-4f10-8a40-6586b762f3a6",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/44652f99-abfb-4ab4-b622-342d8f6b2333",
+      "url": "blob:http://127.0.0.1:8776/7970c4a5-2014-41ff-b840-9dcd36fd9ac5",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/014c3b6b-eae6-4068-821f-3464645cc2a0",
+      "url": "blob:http://127.0.0.1:8776/77b5564e-3045-423d-93c2-3a83fd000480",
       "method": "GET",
       "body_bytes": 0
     },
@@ -845,6 +865,11 @@
       "body_bytes": 0
     },
     {
+      "url": "http://127.0.0.1:8776/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
       "url": "http://127.0.0.1:8776/vendor/data/src/emulator.js",
       "method": "GET",
       "body_bytes": 0
@@ -910,22 +935,22 @@
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/93f01ec2-6fec-445b-b0e8-c0d93ca0b341",
+      "url": "blob:http://127.0.0.1:8776/14966214-3619-4845-b6b0-43a23b99201b",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/d3cd886e-c0c1-41d6-97f2-c564f1f338f7",
+      "url": "blob:http://127.0.0.1:8776/9eaecdeb-279a-44f9-97e5-559be4e569a2",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/78bcdaad-eac9-4c43-9166-1884ae7c4e92",
+      "url": "blob:http://127.0.0.1:8776/603828d0-4c92-4dae-84fc-83d10a314515",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/572a7869-f98f-43ad-9677-d78981dbd3e9",
+      "url": "blob:http://127.0.0.1:8776/6735df4b-57b0-4245-8ff7-6914a52b569a",
       "method": "GET",
       "body_bytes": 0
     },
@@ -950,6 +975,11 @@
       "body_bytes": 0
     },
     {
+      "url": "http://127.0.0.1:8776/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
       "url": "http://127.0.0.1:8776/vendor/data/src/emulator.js",
       "method": "GET",
       "body_bytes": 0
@@ -1015,22 +1045,22 @@
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/1152fa57-fb79-419a-aa68-b32e407a668c",
+      "url": "blob:http://127.0.0.1:8776/4dafbb6a-1b74-4b22-bdbd-0bc1bf704b5f",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/3b6d579c-f8ec-4541-9c5e-71b903b3f3d7",
+      "url": "blob:http://127.0.0.1:8776/e20ed508-1249-4931-a7e6-6a4fbb128b6b",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/9812c6c8-463b-4591-9897-857d642fbea2",
+      "url": "blob:http://127.0.0.1:8776/4a9a39e2-ee2b-4b2f-af7a-ee39bdcbe820",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/ea916595-bb22-43cb-bd1b-9b8e64bc6cac",
+      "url": "blob:http://127.0.0.1:8776/632b3c7c-45d2-4932-aec3-86e69e50895c",
       "method": "GET",
       "body_bytes": 0
     },
@@ -1055,6 +1085,11 @@
       "body_bytes": 0
     },
     {
+      "url": "http://127.0.0.1:8776/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
       "url": "http://127.0.0.1:8776/vendor/data/src/emulator.js",
       "method": "GET",
       "body_bytes": 0
@@ -1120,22 +1155,22 @@
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/7889b432-1efb-47f7-b252-c6e43430d3b4",
+      "url": "blob:http://127.0.0.1:8776/72f8f1d9-4693-4d39-b0d9-7b031e797872",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/7b960a31-55c9-4bcb-b6f3-f2bc58264355",
+      "url": "blob:http://127.0.0.1:8776/b08902ce-e46b-444e-8f2d-ee58674eb05d",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/010ff2b2-54cd-4370-b05c-e09f39bd6992",
+      "url": "blob:http://127.0.0.1:8776/9c7c177b-04e5-4bc8-98fe-478d9a937af8",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/4e729a02-1fcf-43bb-bdd7-4106893f4e55",
+      "url": "blob:http://127.0.0.1:8776/3426d073-0042-4780-9cbb-97bfe6cd7944",
       "method": "GET",
       "body_bytes": 0
     },
@@ -1160,6 +1195,11 @@
       "body_bytes": 0
     },
     {
+      "url": "http://127.0.0.1:8776/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
       "url": "http://127.0.0.1:8776/vendor/data/src/emulator.js",
       "method": "GET",
       "body_bytes": 0
@@ -1225,22 +1265,22 @@
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/d21e3321-53cd-4b89-abdb-31e1a7b55436",
+      "url": "blob:http://127.0.0.1:8776/d134e385-4f92-4990-aaae-fadd9e5b86fc",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/44f56369-f194-4d1c-a4fc-9443baf1fe72",
+      "url": "blob:http://127.0.0.1:8776/fed5e07f-7753-47f7-845c-a932137d3787",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/a0a09c49-6952-48c3-bb38-ba65e03a634e",
+      "url": "blob:http://127.0.0.1:8776/0553a7c5-10ad-4368-ab4d-b9be8e3be684",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/bfcf3697-0493-420e-abf6-366cde27e629",
+      "url": "blob:http://127.0.0.1:8776/85a88227-acc3-45dc-bdb1-e93a78d4e952",
       "method": "GET",
       "body_bytes": 0
     }
@@ -1263,12 +1303,12 @@
     ],
     [
       "GET",
-      "/app.js",
+      "/assets/emuperso-banner.png",
       0
     ],
     [
       "GET",
-      "/assets/emuperso-banner.png",
+      "/app.js",
       0
     ],
     [
@@ -1298,12 +1338,12 @@
     ],
     [
       "GET",
-      "/cheat-catalog.mjs",
+      "/state-bundle.mjs",
       0
     ],
     [
       "GET",
-      "/state-bundle.mjs",
+      "/cheat-catalog.mjs",
       0
     ],
     [
@@ -1313,17 +1353,22 @@
     ],
     [
       "GET",
-      "/engine-session.mjs",
-      0
-    ],
-    [
-      "GET",
       "/engine.css",
       0
     ],
     [
       "GET",
+      "/engine-session.mjs",
+      0
+    ],
+    [
+      "GET",
       "/native-state.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/runtime-integrity.mjs",
       0
     ],
     [
@@ -1428,6 +1473,11 @@
     ],
     [
       "GET",
+      "/runtime-integrity.mjs",
+      0
+    ],
+    [
+      "GET",
       "/vendor/data/src/emulator.js",
       0
     ],
@@ -1509,6 +1559,11 @@
     [
       "GET",
       "/native-state.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/runtime-integrity.mjs",
       0
     ],
     [
@@ -1588,32 +1643,12 @@
     ],
     [
       "GET",
-      "/app.js",
-      0
-    ],
-    [
-      "GET",
       "/assets/emuperso-banner.png",
       0
     ],
     [
       "GET",
-      "/save-store.mjs",
-      0
-    ],
-    [
-      "GET",
-      "/zip-rom.mjs",
-      0
-    ],
-    [
-      "GET",
-      "/rom-file.mjs",
-      0
-    ],
-    [
-      "GET",
-      "/session-controller.mjs",
+      "/app.js",
       0
     ],
     [
@@ -1623,7 +1658,27 @@
     ],
     [
       "GET",
+      "/rom-file.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/save-store.mjs",
+      0
+    ],
+    [
+      "GET",
       "/state-bundle.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/session-controller.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/zip-rom.mjs",
       0
     ],
     [
@@ -1649,6 +1704,11 @@
     [
       "GET",
       "/native-state.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/runtime-integrity.mjs",
       0
     ],
     [
@@ -1753,87 +1813,7 @@
     ],
     [
       "GET",
-      "/vendor/data/src/emulator.js",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/src/nipplejs.js",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/src/shaders.js",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/src/storage.js",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/src/gamepad.js",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/src/GameManager.js",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/src/socket.io.min.js",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/src/compression.js",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/emulator.css",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/version.json",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/cores/reports/mupen64plus_next.json",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/cores/mupen64plus_next-wasm.data",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/compression/extract7z.js",
-      0
-    ],
-    [
-      "GET",
-      "/engine.html",
-      0
-    ],
-    [
-      "GET",
-      "/engine.css",
-      0
-    ],
-    [
-      "GET",
-      "/engine-session.mjs",
-      0
-    ],
-    [
-      "GET",
-      "/native-state.mjs",
+      "/runtime-integrity.mjs",
       0
     ],
     [
@@ -1923,6 +1903,101 @@
     ],
     [
       "GET",
+      "/runtime-integrity.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/emulator.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/nipplejs.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/shaders.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/storage.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/gamepad.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/GameManager.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/socket.io.min.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/compression.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/emulator.css",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/version.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/reports/mupen64plus_next.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/mupen64plus_next-wasm.data",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/compression/extract7z.js",
+      0
+    ],
+    [
+      "GET",
+      "/engine.html",
+      0
+    ],
+    [
+      "GET",
+      "/engine-session.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/engine.css",
+      0
+    ],
+    [
+      "GET",
+      "/native-state.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/runtime-integrity.mjs",
+      0
+    ],
+    [
+      "GET",
       "/vendor/data/src/emulator.js",
       0
     ],
@@ -1999,6 +2074,11 @@
     [
       "GET",
       "/engine-session.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/runtime-integrity.mjs",
       0
     ],
     [
@@ -2079,15 +2159,16 @@
         "base": 258801664,
         "wordSwapped": true,
         "pointers": [
-          2685665280,
-          2685403136,
           2685403136,
           2685665280,
           2685403136,
-          2685665280
+          2685665280,
+          2685665280,
+          2685403136
         ],
         "candidates": 2,
-        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "identification_method": "framebuffer-alternation"
       },
       {
         "generation": 3,
@@ -2097,27 +2178,29 @@
           2685403136,
           2685665280,
           2685665280,
-          2685403136,
           2685665280,
+          2685403136,
           2685403136
         ],
         "candidates": 2,
-        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "identification_method": "framebuffer-alternation"
       },
       {
         "generation": 1,
         "base": 258801664,
         "wordSwapped": true,
         "pointers": [
+          2685665280,
           2685403136,
           2685403136,
           2685665280,
           2685403136,
-          2685403136,
-          2685403136
+          2685665280
         ],
         "candidates": 2,
-        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "identification_method": "framebuffer-alternation"
       },
       {
         "generation": 2,
@@ -2127,34 +2210,36 @@
           2685665280,
           2685403136,
           2685403136,
-          2685665280,
+          2685403136,
           2685403136,
           2685403136
         ],
         "candidates": 5,
-        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "identification_method": "framebuffer-alternation"
       },
       {
         "generation": 3,
         "base": 258801664,
         "wordSwapped": true,
         "pointers": [
+          2685403136,
+          2685665280,
           2685665280,
           2685665280,
           2685403136,
-          2685665280,
-          2685403136,
-          2685403136
+          2685665280
         ],
         "candidates": 5,
-        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "identification_method": "framebuffer-alternation"
       },
       {
         "generation": 4,
         "base": 258801664,
         "wordSwapped": true,
         "pointers": [
-          2685665280,
+          2685403136,
           2685665280,
           2685403136,
           2685403136,
@@ -2162,7 +2247,8 @@
           2685665280
         ],
         "candidates": 5,
-        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "identification_method": "framebuffer-alternation"
       },
       {
         "generation": 5,
@@ -2170,14 +2256,15 @@
         "wordSwapped": true,
         "pointers": [
           2685665280,
-          2685665280,
+          2685403136,
           2685665280,
           2685403136,
-          2685403136,
-          2685403136
+          2685665280,
+          2685665280
         ],
         "candidates": 2,
-        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "identification_method": "framebuffer-alternation"
       }
     ],
     "physical_marker_address": 65536

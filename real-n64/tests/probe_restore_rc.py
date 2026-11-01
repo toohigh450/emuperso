@@ -40,7 +40,9 @@ try:
   page.goto('http://127.0.0.1:8787/')
   page.locator('#start').click()
   page.wait_for_function("()=>RealN64.diagnostic().phase==='started'&&EJS_emulator.gameManager.getFrameNum()>10",timeout=60000)
-  page.evaluate((ROOT/'tests/own_demo_ram_probe.js').read_text())
+  # Playwright invokes an evaluated function result with a null argument. Install
+  # the helper inside an IIFE so injection does not implicitly call the probe.
+  page.evaluate('(function(){'+(ROOT/'tests/own_demo_ram_probe.js').read_text(encoding='utf-8')+'\n})()')
   ram=page.evaluate('async()=>{window.__proofRAM=await findOwnDemoRam();return __proofRAM}')
   def marker(value=None):
    return page.evaluate('''value=>{const p=window.__proofRAM,heap=EJS_emulator.Module.HEAPU8,a=0x10000;const idx=x=>p.base+(p.wordSwapped?x^3:x);if(value!==null){heap[idx(a)]=value>>>8;heap[idx(a+1)]=value&255;}return(heap[idx(a)]<<8)|heap[idx(a+1)]}''',value)
