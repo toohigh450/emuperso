@@ -340,12 +340,20 @@ def main():
 
             launch(page,VARIANT,VARIANT_SHA)
             assert diagnostic(page)['saves']==[]
+            # Prime the new game's native row before the immutable-vault baseline.
+            # A genuine periodic autosave may otherwise create it independently
+            # between the snapshot and click. The timer remains enabled, and the
+            # entire vault (including every prior copy) must still compare equal.
+            native_priming=action(page,'#battery-save','battery.saved')
+            baseline_sequence=diagnostic(page)['records'][-1]['seq']
             no_other_game=vault(page);count=len(events(page,'operation.failed'));page.locator('#state-load').click()
             page.wait_for_function('n=>RealN64.diagnostic().records.filter(row=>row.type==="operation.failed").length>n',arg=count);idle(page)
-            assert vault(page)==no_other_game
+            after_wrong_game=vault(page)
+            wrong_game_events=[row for row in diagnostic(page)['records']if row['seq']>baseline_sequence]
+            assert after_wrong_game==no_other_game,{'before':no_other_game,'after':after_wrong_game,'native_priming':native_priming,'events':wrong_game_events}
             launch(page);assert native(page)==native_b
             assert [row['slot']for row in diagnostic(page)['saves']]==[1,2,3]
-            record('Changement de ROM : états isolés, refus du mauvais jeu et récupération du natif au retour',{'other_rom':VARIANT_SHA,'restored_rom':SHA,'native':native_b,'slots':[1,2,3]})
+            record('Changement de ROM : états isolés, refus du mauvais jeu et récupération du natif au retour',{'other_rom':VARIANT_SHA,'restored_rom':SHA,'native':native_b,'slots':[1,2,3],'native_priming':native_priming,'vault_before_rejected_load':no_other_game,'vault_after_rejected_load':after_wrong_game,'rejected_load_events':wrong_game_events})
             context.close();context=launch_context();page=new_page(context);launch(page)
             assert native(page)==native_b
             fresh_after_reopen=visual(page)
