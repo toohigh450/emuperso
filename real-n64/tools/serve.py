@@ -23,7 +23,7 @@ DEMO_SHA256 = 'f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252'
 # Exact names, never suffix rules, globbing or a directory walk. This is also
 # the source of truth for creating a separate public static distribution.
 APP_FILES = frozenset({
-    'index.html', 'app.js', 'style.css', 'engine.html', 'engine.css',
+    'index.html', 'app.js', 'style.css', 'alphatest.html', 'alphatest.js', 'engine.html', 'engine.css',
     'engine-session.mjs', 'session-controller.mjs', 'native-state.mjs', 'runtime-integrity.mjs', 'rom-file.mjs',
     'zip-rom.mjs', 'save-store.mjs', 'state-bundle.mjs', 'legacy-battery.mjs',
     'cheat-catalog.mjs', 'README-FR.md', 'LICENSE',
