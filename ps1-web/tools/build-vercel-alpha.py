@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
 LOCK = json.loads((ROOT / 'docs/runtime-lock.json').read_text(encoding='utf-8'))
 FILES = (
-    'index.html', 'engine.html', 'app.js', 'engine-session.mjs',
+    'index.html', 'engine.html', 'alphatest.html', 'alphatest.js', 'app.js', 'engine-session.mjs',
     'style.css', 'engine.css', 'cheat-catalog-psx.mjs',
     'cheat-controller.mjs', 'core-options.mjs', 'disc-file.mjs',
     'input-presets.mjs', 'input-profile.mjs', 'region-evidence.mjs',
