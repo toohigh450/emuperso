@@ -19,8 +19,8 @@ ultérieures des constats C01/C02.
 
 | Constat | État initial | Réponse et preuve attendue |
 | --- | --- | --- |
-| **N64-C01 — changement de variante et cheats fantômes** | **EN RÉSOLUTION** | Constat retenu. Le changement de catalogue ne doit pas laisser des codes actifs invisibles dans le cœur. La correction doit conserver une correspondance explicite entre variante affichée, liste active et session. Tester les changements successifs de variante avec un code actif, puis les erreurs de remise à zéro ; aucun succès ne doit être annoncé sur la seule modification du panneau. |
-| **N64-C02 — application partielle de cheats** | **EN RÉSOLUTION** | Constat retenu. Après une exception de `setCheat`, la liste JavaScript seule ne décrit plus nécessairement le cœur. La correction doit rétablir un état connu ou imposer une session neuve sûre si la récupération échoue. Tester l’échec du deuxième et du troisième code, puis l’échec de `resetCheat`/de la récupération elle-même. Distinguer l’acquittement d’un appel API de la preuve de son effet. |
+| **N64-C01 — changement de variante et cheats fantômes** | **CORRIGÉ ET TESTÉ RC2 — réaudit attendu** | Constat retenu. Le changement de catalogue ne doit pas laisser des codes actifs invisibles dans le cœur. La correction doit conserver une correspondance explicite entre variante affichée, liste active et session. Tester les changements successifs de variante avec un code actif, puis les erreurs de remise à zéro ; aucun succès ne doit être annoncé sur la seule modification du panneau. |
+| **N64-C02 — application partielle de cheats** | **CORRIGÉ ET TESTÉ RC2 — réaudit attendu** | Constat retenu. Après une exception de `setCheat`, la liste JavaScript seule ne décrit plus nécessairement le cœur. La correction doit rétablir un état connu ou imposer une session neuve sûre si la récupération échoue. Tester l’échec du deuxième et du troisième code, puis l’échec de `resetCheat`/de la récupération elle-même. Distinguer l’acquittement d’un appel API de la preuve de son effet. |
 | **N64-L01 — attestation RAM partielle** | **LIMITE MAINTENUE** | Aucun changement de niveau de garantie. Les ancres RAM vérifient une transition de données sélectionnées, pas tout l’état CPU/RSP/RDP/audio. Le cas déjà équivalent reste distinct d’une restauration prouvée. Un état proche du démarrage peut être refusé légitimement faute de témoins distinctifs ; ce refus ne prouve pas une corruption du fichier. |
 | **F6 — sources correspondantes, recettes et licences** | **STOP PUBLICATION MAINTENU** | Les empreintes des paquets ne prouvent pas leurs sources correspondantes. Révisions Mupen/RetroArch, recette effective, extracteurs compilés, notices et qualification de l’intégration restent à établir. Aucun binaire du bundle Web ne doit entrer dans une release, un artefact public ou un hébergement tant que F6 et le GO de Karl ne sont pas levés. |
 | **N64-L02 — ZIP finaux non reçus par GPT** | **ARCHIVES RC1 SCELLÉES ; AUDIT EXTERNE À COMPLÉTER** | Les empreintes ci-dessous identifient les trois archives privées déjà construites. Leur vérification locale ne remplace pas la réception et la vérification indépendantes de ces mêmes octets par GPT/Méo. Ne pas remplacer les archives RC1 par une correction sous le même nom. |
@@ -125,7 +125,7 @@ ni publication de téléchargement. Aucun travail externe de ce type n’a été
 effectué dans cette réponse documentaire.
 
 **Conclusion initiale : GO pour les corrections autorisées et leurs vérifications
-privées ; STOP publication. C01/C02 en résolution, L01 maintenue, L02 à faire
+privées ; STOP publication. C01/C02 corrigés et testés dans la RC2, L01 maintenue, L02 soumis à une nouvelle vérification des archives exactes
 examiner sur les ZIP scellés, L03 en attente de Karl, F6 ouvert.**
 
 ## Compléments justifiés découverts pendant les régressions
@@ -136,13 +136,19 @@ examiner sur les ZIP scellés, L03 en attente de Karl, F6 ouvert.**
 - C04 : l’ancien gestionnaire de fichier d’état ignorait un changement de fichier
   si une sauvegarde native occupait l’application pendant le choix dans Windows.
   Le fichier est maintenant retenu et traité après cette opération (attente bornée
-  de30s), ou refusé explicitement si la partie a changé. Le groupe7 du Hub maintient
+  de30 s), ou refusé explicitement si la partie a changé. Le groupe 7 du Hub maintient
   réellement une capture native en attente, exige l’événement de mise en file puis
   vérifie l’import réel. Les identités, empreintes et contrôles de format restent actifs.
   Le premier essai local a expiré sur l’import sans diagnostic exploitable : son
   ordre exact reste inconnu et est conservé dans rc2-first-hub-attempt.json. Cette
   correction ne démontre pas la cause du blocage de chargement du PC de Karl.
 
-Résultats locaux disponibles avant la nouvelleCI :4groupes de fautes de cheats,
-17groupes du Hub,9tests catalogue,10tests de distribution et13groupes HTTP réussis.
+Résultats locaux disponibles avant la nouvelleCI :4 groupes de fautes de cheats,
+17 groupes du Hub,9 tests catalogue,10 tests de distribution et13groupes HTTP réussis.
 Ils ne remplacent ni la nouvelleCI ni un essai sur le PC de Karl.
+
+## Validation RC2 terminée
+
+CI https://github.com/toohigh450/emuperso/actions/runs/41335193583 :Windows/Linux RÉUSSI, artefacts SHA vérifiés.
+C01/C02/C03/C04 sont couverts par les nouveaux scénarios réels.
+La revue indépendante GPT/Méo de cette RC2, F6 et le test PC de Karl restent en attente.
