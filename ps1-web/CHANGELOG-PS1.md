@@ -1,5 +1,30 @@
 # CHANGELOG — EMUPERSO PS1
 
+## RC-1.13-claude.2 (Claude Code, 1er novembre 2026) — jeux en archive .rar / .zip / .7z
+
+Demande de Karl : 1 515 jeux PS1 en .rar (435 Go), sans tout décompresser. Branche claude/ps1-archives.
+- Le moteur figé (EmulatorJS 4.2.3) contient déjà libunrar.wasm, extractzip et extract7z
+  (data/src/compression.js) et choisit le .cue de l'archive : l'application ne décompresse rien,
+  elle cesse simplement de refuser ces fichiers. disc-file.mjs vérifie la signature (RAR4, RAR5, ZIP,
+  7z, mêmes règles que le moteur) ; extension et contenu discordants => refus explicite.
+- Vérifié dans Chromium 152 avec le vrai moteur et de vrais RAR de Karl : Skullmonkeys (428 Mio, 1 piste),
+  Rollcage (582 Mio, 16 pistes : les jeux multi-pistes deviennent jouables via l'archive) et
+  WWF SmackDown! 2 (517 Mio) démarrent ; décompression 6 à 16 s. Image non vérifiée (page en arrière-plan).
+- Mémoire : décompression en mémoire ≈ 4 × la taille de l'archive. En remplacement d'un jeu ouvert, le
+  tas a atteint 3 823 Mio sur 4 192. Désormais, pour une archive, le jeu en cours est fermé AVANT le
+  lancement (carte mémoire enregistrée, accord demandé) ; pic mesuré 3 228 Mio. Garde-fou : si
+  4,5 × la taille dépasse la mémoire libre de l'onglet, refus clair (« rechargez la page »).
+- engine-session.mjs : délai de démarrage porté à 5 min pour une archive, progression du moteur
+  (« Decompress Game Data NN% ») et fichier choisi dans l'archive recopiés dans le diagnostic.
+- Corrigé : le chemin de la carte mémoire était calculé avec le sous-dossier de l'archive
+  (« Jeu/Jeu.srm ») alors que le cœur utilise « Jeu.srm » : tout lancement d'archive avec une carte
+  mémoire existante aurait échoué. Vérifié avec le vrai cœur (carte de 128 Kio injectée puis relue).
+- Plafond de 900 Mio MAINTENU, PBP compris : un PBP complet de 980 Mio (Chrono Cross FR) fait échouer le
+  moteur (ErrnoError 28 dans son système de fichiers) alors qu'un PBP de 518 Mio (Darkstone FR) démarre.
+- Limites : une archive n'a pas de numéro de série lisible (cheats par le nom, sauvegardes liées à
+  l'empreinte de l'archive : un même jeu en .rar et en .bin a des sauvegardes séparées). Licence UnRAR
+  à vérifier avant toute publication. Tests : 141 JS (+7) et 9 Python.
+
 ## RC-1.13-claude.1 (Claude Code, 1er novembre 2026) — chargements « figés » et cheats « incompatible »
 
 Base : RC-1.13-audit (Codex). Correctifs isolés, à intégrer dans RC-1.14 ; aucun GO de publication.

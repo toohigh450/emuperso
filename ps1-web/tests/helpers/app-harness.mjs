@@ -125,6 +125,7 @@ export async function makeHarness({ appPath = 'app.js', catalogFile = 'data/psx-
     }
     async start(candidate) { this.current = candidate; h.engine = candidate.engine; }
     async dispose() {}
+    async close() { h.closed = (h.closed ?? 0) + 1; this.current = null; h.engine = null; }
     diagnostic() { return {}; }
   }
   class FakeSaveStore {
@@ -154,8 +155,8 @@ export async function makeHarness({ appPath = 'app.js', catalogFile = 'data/psx-
   await fn(document, win, idb, msg => { confirms.push(msg); return h.answerConfirm; }, mods, { search: '' }, quietConsole);
 
   h.window = win;
-  h.disc = (name, { serial = null, sha = null } = {}) => {
-    const metadata = { name, serial, canonical_sha256: sha ?? ('f'.repeat(60) + String(name.length).padStart(4, '0')), size: 1000, detected_format: 'bin', notes: [] };
+  h.disc = (name, { serial = null, sha = null, size = 1000 } = {}) => {
+    const metadata = { name, serial, canonical_sha256: sha ?? ('f'.repeat(60) + String(name.length).padStart(4, '0')), size, detected_format: 'bin', notes: [] };
     preparedByName.set(name, { metadata, file: { name } });
     return name;
   };

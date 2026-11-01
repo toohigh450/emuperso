@@ -3,18 +3,36 @@
 export const MIN_BYTES = 64 * 1024, MAX_BYTES = 900 * 1024 * 1024;
 export class DiscFileError extends Error { constructor(code, message) { super(message); this.name = 'DiscFileError'; this.code = code; } }
 const fail = (code, message) => { throw new DiscFileError(code, message); };
+// Archives (mandat Karl, 1 515 jeux en .rar) : le moteur EmulatorJS 4.2.3 les décompresse lui-même
+// (data/src/compression.js : libunrar.wasm, extractzip, extract7z) et choisit le .cue s'il y en a un.
+// L'application ne décompresse rien : elle vérifie la signature et prend l'empreinte de l'archive.
+export const ARCHIVE_EXTENSIONS = ['rar', 'zip', '7z'];
+export const isArchive = ext => ARCHIVE_EXTENSIONS.includes(ext);
+export function archiveKind(bytes) {
+  const b = i => bytes[i];
+  if (b(0) === 0x50 && b(1) === 0x4b && [0x0304, 0x0506, 0x0708].includes((b(2) << 8) | b(3))) return 'zip';
+  if (b(0) === 0x37 && b(1) === 0x7a && b(2) === 0xbc && b(3) === 0xaf && b(4) === 0x27 && b(5) === 0x1c) return '7z';
+  if (b(0) === 0x52 && b(1) === 0x61 && b(2) === 0x72 && b(3) === 0x21 && b(4) === 0x1a && b(5) === 0x07 && (b(6) === 0 || (b(6) === 1 && b(7) === 0))) return 'rar';
+  return null;
+}
 export function validateDescriptor(file) {
   const ext = /\.([a-z0-9]+)$/i.exec(file?.name ?? '')?.[1]?.toLowerCase();
-  if (ext === 'cue') fail('E_CUE', 'Un fichier .cue ne contient pas le jeu. Choisissez le .bin (jeu à piste unique), un .iso ou un .chd. Les jeux à plusieurs pistes .bin ne sont pas pris en charge dans cette version.');
-  if (!['iso', 'bin', 'img', 'chd', 'pbp'].includes(ext)) fail('E_EXTENSION', 'Format attendu : .iso, .bin, .img, .chd ou .pbp.');
+  if (ext === 'cue') fail('E_CUE', 'Un fichier .cue ne contient pas le jeu. Choisissez le .bin (jeu à piste unique), un .iso, un .chd, ou l’archive .rar/.zip/.7z qui contient le .cue et ses pistes.');
+  if (!['iso', 'bin', 'img', 'chd', 'pbp', ...ARCHIVE_EXTENSIONS].includes(ext)) fail('E_EXTENSION', 'Format attendu : .iso, .bin, .img, .chd, .pbp, ou une archive .rar, .zip, .7z.');
   if (!Number.isSafeInteger(file.size) || file.size < MIN_BYTES) fail('E_SIZE', 'Fichier trop court pour un disque PS1 (minimum 64 Kio).');
-  if (file.size > MAX_BYTES) fail('E_SIZE', 'Ce prototype accepte au maximum 900 Mio par disque.');
+  // Mesuré (Chromium 152, EmulatorJS 4.2.3) : un PBP de 518 Mio démarre ; un PBP complet de 980 Mio
+  // fait échouer le moteur (ErrnoError 28 dans son système de fichiers). Plafond maintenu.
+  if (file.size > MAX_BYTES) fail('E_SIZE', `Ce prototype accepte au maximum 900 Mio par fichier : au-delà, le moteur échoue au chargement (mesuré avec un PBP de 980 Mio).${ext === 'pbp' ? ' Pour un PBP multi-disques, utilisez un fichier par disque (.chd ou .bin/.cue).' : ''}`);
   return ext;
 }
 export function inspectDisc(bytes, size, ext) {
   const notes = [], text = n => new TextDecoder('latin1').decode(bytes.subarray(0, Math.min(n, bytes.length)));
   let serial = null, sector = null;
-  if (ext === 'chd' || ext === 'pbp') {
+  if (isArchive(ext)) {
+    const kind = archiveKind(bytes);
+    if (kind !== ext) fail('E_FORMAT', kind ? `Ce fichier est une archive ${kind.toUpperCase()} nommée .${ext} : renommez-le en .${kind}.` : `Signature ${ext.toUpperCase()} absente : le nom du fichier ne suffit pas.`);
+    notes.push(`Archive ${ext.toUpperCase()} : décompressée en mémoire par le moteur au lancement (plus long qu’un .bin). Numéro de série non lisible : la clé de ce jeu est l’empreinte de l’archive.`);
+  } else if (ext === 'chd' || ext === 'pbp') {
     if (ext === 'chd' && text(8) !== 'MComprHD') fail('E_FORMAT', 'Signature CHD absente : le nom du fichier ne suffit pas.');
     if (ext === 'pbp' && (bytes[0] !== 0 || text(4).slice(1) !== 'PBP')) fail('E_FORMAT', 'Signature PBP absente : le nom du fichier ne suffit pas.');
     notes.push('Fichier compressé : numéro de série non lisible, la clé de ce jeu est l’empreinte du fichier.');

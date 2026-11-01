@@ -43,5 +43,16 @@ Un format reconnu n'est pas un format compatible.
 3. Contrôle positif : lancer `Crash Bandicoot (USA).bin`, activer un code GameShark accepté
    (format 80xxxxxx yyyy), confirmer la région, vérifier un effet visible en jeu.
 
+## F. Archives .rar (RC-1.13-claude.2)
+
+1. Choisir directement `Skullmonkeys (USA) [SLUS-00601].rar` (sans décompresser).
+   Attendu : « Disque prêt » puis, après Lancer, « Decompress Game Data NN% » puis le jeu
+   (image + son). Noter la durée.
+2. Jeu multi-pistes : `Rollcage (USA).rar`. Vérifier la musique en course (pistes audio).
+3. Avec un jeu en cours, choisir un autre .rar : une confirmation doit annoncer la fermeture
+   du jeu en cours ; répondre Non (le jeu continue) puis Oui (remplacement).
+4. Carte mémoire : sauvegarder dans le jeu, quitter, relancer le même .rar, vérifier la sauvegarde.
+5. Exporter le diagnostic : événements `engine.archive.*` et `archive.memory.check`.
+
 À remettre : diagnostics JSON, durées notées, captures de l'état et de la liste des cheats,
 résultat attendu/observé par étape. Aucun GO de publication avant contre-audits GPT et Méo.

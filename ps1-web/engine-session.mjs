@@ -129,6 +129,11 @@ function verifyInput(profile) {
   inputState.mode = 'custom';
   inputState.reason = (live ? '' : 'Table des commandes du moteur illisible : doubles commandes possibles. ') + (line ? (inputState.pad_type_listed ? '' : 'Valeur « ' + wanted + ' » absente de l’option du cœur. ') : 'Le cœur utilise les périphériques libretro, non exposés par ce runtime : type de manette demandé non vérifié. ');
 }
+const baseStem = name => String(name).split('/').pop().replace(/\.[^.]+$/, '');
+function heap() {
+  const m = performance.memory;
+  return m ? { js_heap_used_mib: Math.round(m.usedJSHeapSize / 1048576), js_heap_limit_mib: Math.round(m.jsHeapSizeLimit / 1048576) } : {};
+}
 async function start(config, callback) {
   if (emulator || closed) throw new Error('Une session isolée ne peut démarrer qu’une seule fois.');
   notify = callback; sessionId = config.sessionId;
@@ -180,7 +185,9 @@ async function start(config, callback) {
   const originalStart = window.EmulatorJS.prototype.startGame;
   window.EmulatorJS.prototype.startGame = function() {
     if (config.battery?.length) {
-      const stem = this.fileName.replace(/\.[^.]+$/, '');
+      // Une archive place le jeu dans un sous-dossier (« Jeu (USA)/Jeu (USA).cue ») ; le cœur
+      // nomme la sauvegarde d'après le seul nom de fichier.
+      const stem = baseStem(this.fileName);
       this.gameManager.writeFile('/data/saves/PCSX-ReARMed/' + stem + '.srm', new Uint8Array(config.battery));
     }
     originalStart.call(this);
@@ -205,17 +212,30 @@ async function start(config, callback) {
   emulator.on('ready', () => note('engine.ready'));
   emulator.on('start', () => note('engine.start.callback'));
   emulator.on('exit', () => note('engine.exit'));
-  const deadline = performance.now() + 45000;
+  // Une archive est décompressée en mémoire par le moteur avant le démarrage : délai étendu
+  // et progression du moteur (« Decompress Game Data NN% ») recopiée dans le diagnostic.
+  const archive = /\.(rar|zip|7z)$/i.test(config.file?.name ?? '');
+  const t0 = performance.now(), deadline = t0 + (archive ? 300000 : 45000);
+  let lastText = '', lastNote = 0;
+  if (archive) note('engine.archive.start', { name: config.file.name, size: config.file.size });
   while (!closed && (!emulator.started || !emulator.gameManager || emulator.gameManager.getFrameNum() < 5)) {
     if (startupFailure) throw new Error(startupFailure);
-    if (performance.now() > deadline || emulator.failedToStart) throw new Error('Le moteur n’a pas confirmé son démarrage dans le délai prévu.');
+    if (performance.now() > deadline || emulator.failedToStart) throw new Error(archive
+      ? 'Le moteur n’a pas fini de décompresser et démarrer l’archive dans le délai prévu (5 min). Mémoire insuffisante possible : essayez la version décompressée.'
+      : 'Le moteur n’a pas confirmé son démarrage dans le délai prévu.');
+    const text = archive ? String(emulator.textElem?.innerText ?? '') : '';
+    if (text && text !== lastText && performance.now() - lastNote > 2000) {
+      lastText = text; lastNote = performance.now();
+      note('engine.archive.progress', { text: text.slice(0, 80), ms: Math.round(performance.now() - t0), ...heap() });
+    }
     await wait(50);
   }
+  if (archive) note('engine.archive.done', { file_in_archive: emulator.fileName, ms: Math.round(performance.now() - t0), ...heap() });
   if (startupFailure) throw new Error(startupFailure);
   if (closed) throw new Error('Session interrompue.');
   if (config.battery?.length) {
     const actual = emulator.gameManager.getSaveFilePath();
-    const expected = '/data/saves/PCSX-ReARMed/' + emulator.fileName.replace(/\.[^.]+$/, '') + '.srm';
+    const expected = '/data/saves/PCSX-ReARMed/' + baseStem(emulator.fileName) + '.srm';
     if (actual !== expected) throw new Error('Chemin de sauvegarde native différent du chemin préparé.');
     note('battery.injected', { bytes: config.battery.length });
   }

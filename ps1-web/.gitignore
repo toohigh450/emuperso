@@ -12,6 +12,8 @@ __pycache__/
 *.pbp
 *.cue
 *.zip
+*.rar
+*.7z
 *.sav
 *.srm
 *.mcr

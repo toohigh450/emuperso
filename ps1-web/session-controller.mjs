@@ -61,6 +61,12 @@ export class SessionController {
       throw error;
     }
   }
+  /** Ferme la session en cours sans remplaçante (libère sa mémoire avant un lancement lourd). */
+  async close() {
+    const session = this.current; if (!session) return;
+    this.current = null; await this.dispose(session);
+    this.report('session.closed', { generation: session.id });
+  }
   async dispose(session) {
     try {
       const result = await Promise.race([session.api.close(), wait(1500).then(() => null)]);
