@@ -12,9 +12,9 @@ threading.Thread(target=server.serve_forever,daemon=True).start()
 base=f'http://127.0.0.1:{server.server_port}/'
 result={'scope':'real synthetic ISO, native state/card plumbing, Chromium IndexedDB, browser process restart; no gameplay save or audio waveform proof','errors':[]}
 profile=OUT.parent/'browser-profile-storage'
-args=['--no-sandbox','--enable-unsafe-swiftshader','--use-gl=angle','--use-angle=swiftshader']
+chrome_args=['--no-sandbox','--enable-unsafe-swiftshader','--use-gl=angle','--use-angle=swiftshader']
 def open_context(p):
- c=p.chromium.launch_persistent_context(str(profile),executable_path=args.chromium,headless=True,args=args)
+ c=p.chromium.launch_persistent_context(str(profile),executable_path=args.chromium,headless=True,args=chrome_args)
  page=c.new_page();page.on('dialog',lambda d:d.accept());page.on('pageerror',lambda e:result['errors'].append(str(e)))
  page.goto(base);page.wait_for_function('window.__cheatController !== undefined');return c,page
 def launch(page,payload):

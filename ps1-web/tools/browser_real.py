@@ -12,7 +12,7 @@ args=parser.parse_args()
 sys.path.insert(0, str(ROOT / 'tools'))
 from serve import Handler
 OUT = args.output/'logs'
-OUT.mkdir(exist_ok=True)
+OUT.mkdir(parents=True,exist_ok=True)
 rom = bytearray(65536)
 rom[:8] = b'PS-X EXE'
 for offset, value in {0x10:0x80010000, 0x18:0x80010000, 0x1c:len(rom)-2048, 0x30:0x801fff00}.items():
