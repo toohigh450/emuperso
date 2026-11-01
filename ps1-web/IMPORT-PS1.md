@@ -82,3 +82,10 @@ Branche : `emulateur-ps1` (créée depuis `main`, sans toucher à `main` ni à `
 - **Interface** : message fidèle au nombre réel de codes actifs.
 - 43/43 JS PASS (2 nouveaux tests detectRegion).
 - **En attente des tests terrain de Karl. Aucun GO de publication.**
+
+### 0.1.13 (Méo) — ✅ FIX DOM DAVE MIRRA (audit GPT)
+- **DOM** : `renderCheatCandidates()` ne vide plus la liste ; ordre corrigé (`renderCheats()` PUIS boutons).
+- **Réinjection** : cheats restaurés différés si édition ambiguë (pas d'injection avant choix utilisateur).
+- **Tests DOM** : 3 nouveaux tests (boutons survivent au rendu).
+- 46/46 JS PASS.
+- **En attente des tests terrain de Karl. Aucun GO de publication.**
