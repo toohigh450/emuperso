@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Portables : Game Boy, Color, Advance et DS</title>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body data-state="idle">
+<header class="top">
+  <h1>Portables</h1>
+  <p>Game Boy, Game Boy Color, Game Boy Advance et DS dans Chrome. Un seul jeu à la fois.</p>
+</header>
+
+<main class="layout">
+  <section class="rail" aria-label="Jeu et réglages">
+    <div class="slot" id="slot">
+      <div class="slot-empty" id="slotEmpty">
+        <p class="slot-title">La fente est vide</p>
+        <p class="muted">Choisis un fichier .gb, .gbc, .gba, .nds ou un .zip qui en contient un. Rien n'est envoyé sur Internet.</p>
+        <button class="btn primary" id="pickGame" type="button">Choisir un jeu</button>
+        <p class="muted small-text">Tu peux aussi glisser le fichier sur la page.</p>
+      </div>
+      <div class="slot-game" id="slotGame" hidden>
+        <p class="slot-title" id="gameTitle"></p>
+        <dl class="facts">
+          <div><dt>Console</dt><dd id="gameSystem"></dd></div>
+          <div><dt>Version</dt><dd id="gameRegion"></dd></div>
+          <div><dt>Fichier</dt><dd id="gameFile"></dd></div>
+          <div><dt>Empreinte</dt><dd id="gameHash"></dd></div>
+          <div><dt>Cœur</dt><dd id="gameCore"></dd></div>
+          <div><dt>En-tête</dt><dd id="gameHeader"></dd></div>
+        </dl>
+        <ul class="warnings" id="gameWarnings" hidden></ul>
+        <div class="actions">
+          <button class="btn" id="changeGame" type="button">Changer de jeu</button>
+          <button class="btn danger" id="closeGame" type="button">Fermer le jeu</button>
+        </div>
+      </div>
+      <input type="file" id="romInput" accept=".gb,.gbc,.gba,.nds,.sgb,.srl,.bin,.rom,.dsi,.zip" class="visually-hidden" tabindex="-1">
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Réglages">
+      <button role="tab" id="tabSaves" aria-controls="panelSaves" type="button">Sauvegardes</button>
+      <button role="tab" id="tabCheats" aria-controls="panelCheats" type="button">Codes</button>
+      <button role="tab" id="tabPad" aria-controls="panelPad" type="button">Manette</button>
+      <button role="tab" id="tabEngine" aria-controls="panelEngine" type="button">Moteur</button>
+    </div>
+
+    <section class="panel" id="panelSaves" role="tabpanel" aria-labelledby="tabSaves">
+      <p class="muted">Chaque jeu a son propre espace de sauvegarde, identifié par l'empreinte du fichier et le cœur utilisé. Les sauvegardes du moteur restent dans ce navigateur. Une copie de sécurité (3 versions) est gardée en plus : elle ne remplace jamais la précédente sans la conserver.</p>
+      <div id="saveMirror"></div>
+      <h2>Jeux déjà ouverts</h2>
+      <div id="history"></div>
+    </section>
+
+    <section class="panel" id="panelCheats" role="tabpanel" aria-labelledby="tabCheats" hidden>
+      <p class="muted">Importe tes fichiers de codes au format .cht (par exemple le dossier « cht » de la base libretro). Les noms servent de suggestions. Confirme une association pour l’enregistrer pour cette ROM, même renommée. Une empreinte rom_sha256 déclarée dans le .cht permet aussi de l’identifier. Les nouveaux codes sont proposés désactivés ; le moteur peut mémoriser tes activations.</p>
+      <div class="actions">
+        <button class="btn" id="cheatFolderBtn" type="button">Importer un dossier</button>
+        <button class="btn" id="cheatFilesBtn" type="button">Importer des fichiers</button>
+        <button class="btn danger" id="cheatClear" type="button">Tout supprimer</button>
+      </div>
+      <input type="file" id="cheatFolder" webkitdirectory multiple class="visually-hidden" tabindex="-1">
+      <input type="file" id="cheatFiles" accept=".cht" multiple class="visually-hidden" tabindex="-1">
+      <div id="cheatInfo"></div>
+      <div id="cheatMatches"></div>
+      <label class="field" for="cheatSearch">Chercher un fichier de codes pour ce jeu</label>
+      <input type="search" id="cheatSearch" placeholder="Nom du jeu" autocomplete="off">
+      <div id="cheatSearchResults"></div>
+    </section>
+
+    <section class="panel" id="panelPad" role="tabpanel" aria-labelledby="tabPad" hidden>
+      <p class="muted">Profil de la manette Xbox 360 pour les prochains jeux ouverts. Le clavier et la manette restent utilisables dans tous les cas.</p>
+      <div id="controlProfiles" class="choices"></div>
+      <p class="muted small-text">Le profil positionnel est à valider avec ta manette.</p>
+    </section>
+
+    <section class="panel" id="panelEngine" role="tabpanel" aria-labelledby="tabEngine" hidden>
+      <p id="engineInfo" class="muted"></p>
+      <h2>Cœur DS</h2>
+      <p class="muted">Changer de cœur crée un autre espace de sauvegarde pour le même jeu.</p>
+      <div id="dsCores" class="choices"></div>
+      <p id="biosState" class="muted small-text"></p>
+      <div class="actions">
+        <button class="btn" id="biosBtn" type="button">Importer le BIOS DS (ZIP)</button>
+        <button class="btn danger" id="biosClear" type="button">Retirer le BIOS</button>
+      </div>
+      <input type="file" id="biosInput" accept=".zip" class="visually-hidden" tabindex="-1">
+    </section>
+  </section>
+
+  <section class="stage" aria-label="Écran">
+    <div class="console">
+      <div class="screen" id="screen" style="--aspect: 3 / 2">
+        <div id="playerMount"></div>
+        <div class="screen-empty" id="screenEmpty">
+          <p>Aucun jeu actif</p>
+        </div>
+      </div>
+    </div>
+    <p id="status" role="status" aria-live="polite">Aucun jeu actif.</p>
+  </section>
+</main>
+
+<div class="drop-hint" aria-hidden="true">Relâche le fichier pour ouvrir le jeu</div>
+<script type="module" src="js/app.mjs"></script>
+</body>
+</html>

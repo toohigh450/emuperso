@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moteur</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #1b1940; overflow: hidden; }
+  #game { width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<div id="game"></div>
+<script>
+(function () {
+  var id = new URLSearchParams(location.search).get('id');
+  var entry = window.parent && window.parent.__portablesBoots && window.parent.__portablesBoots[id];
+  if (!entry) { document.body.textContent = 'Session introuvable.'; return; }
+  var boot = entry.boot, events = entry.events;
+
+  // Variables globales lues par EmulatorJS.
+  Object.keys(boot.ejs).forEach(function (k) { window[k] = boot.ejs[k]; });
+  // Le fichier est créé dans CE document (et non dans la page parente) pour éviter les
+  // problèmes d'instanceof entre fenêtres, puis la page parente libère sa copie en mémoire.
+  window.EJS_gameUrl = new File([boot.rom.bytes], boot.rom.name);
+  boot.rom.bytes = null;
+  if (boot.bios) {
+    window.EJS_biosUrl = new File([boot.bios.bytes], boot.bios.name);
+    boot.bios.bytes = null;
+  }
+  window.EJS_player = '#game';
+  window.EJS_ready = function () { events.onReady(); };
+  window.EJS_onGameStart = function () { events.onStart(); };
+  window.EJS_onExit = function () { events.onExit(); };
+  window.EJS_onSaveUpdate = function (e) {
+    try { if (boot.onSaveUpdate) boot.onSaveUpdate(e); } catch (err) { console.error(err); }
+  };
+
+  var candidates = boot.enginePaths.slice();
+  var timer = setTimeout(function () {
+    events.onError("Le moteur ne répond pas après 60 secondes. Vérifie ta connexion Internet ou installe le moteur en local (voir LISEZMOI.md).");
+  }, 60000);
+  var origReady = window.EJS_ready;
+  window.EJS_ready = function () { clearTimeout(timer); origReady(); };
+
+  function tryNext() {
+    if (!candidates.length) {
+      clearTimeout(timer);
+      events.onError("Impossible de charger le moteur EmulatorJS (aucune source disponible).");
+      return;
+    }
+    var base = candidates.shift();
+    window.EJS_pathtodata = base;
+    var s = document.createElement('script');
+    s.src = base + 'loader.js';
+    s.onerror = function () { s.remove(); tryNext(); };
+    document.body.appendChild(s);
+  }
+  tryNext();
+})();
+</script>
+</body>
+</html>

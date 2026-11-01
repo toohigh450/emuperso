@@ -1,0 +1,10 @@
+Moteur local (facultatif)
+
+Par defaut, la page charge EmulatorJS depuis Internet.
+Pour jouer hors ligne : telecharge EmulatorJS depuis le site officiel (emulatorjs.org, page
+"Getting started"), puis copie son dossier "data" ici, pour obtenir :
+
+    emulatorjs/data/loader.js
+
+Au prochain demarrage, la page detecte le moteur local et l'utilise en premier.
+Les licences d'EmulatorJS et des coeurs s'appliquent : verifie-les avant toute publication.
