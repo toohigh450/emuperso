@@ -1,4 +1,6 @@
 // SPDX-License-Identifier: MIT
+// Version de l'application — mettre à jour à chaque release
+const APP_VERSION = 'RC-1.2';
 import { prepareDisc } from './disc-file.mjs';
 import { SaveStore, makeStateEnvelope } from './save-store.mjs';
 import { packStateBundle, unpackStateBundle } from './state-bundle.mjs';
@@ -63,6 +65,37 @@ function renderCheats() {
     btn.textContent = `Je confirme : activer les codes ${rm.catalogRegion} sur mon disque ${rm.gameRegion}`;
     btn.onclick = () => { window._regionConfirmed = true; say('cheat-info', 'Région confirmée. Vous pouvez maintenant cocher les codes.', false); renderCheats(); };
     warn.append(document.createElement('br'), btn);
+    // B02 (audit GPT RC-1.1) : si des cheats restaurés sont en attente, proposer de les appliquer explicitement
+    const pendingCount = (window._pendingCheatRestore || []).length;
+    if (pendingCount > 0) {
+      const btnRestore = document.createElement('button');
+      btnRestore.style.cssText = 'margin-top:8px;background:#7a2a00;border-color:#f90;';
+      btnRestore.textContent = `⚠️ Appliquer les ${pendingCount} cheat(s) restauré(s) malgré le décalage de région`;
+      btnRestore.onclick = () => operation(async () => {
+        // L'utilisateur confirme explicitement : appliquer les pending
+        window._regionConfirmed = true;
+        const pending = window._pendingCheatRestore || [];
+        window._pendingCheatRestore = [];
+        let appliedCount = 0;
+        for (const p of pending) {
+          const existing = cheats.find(c => c.name === p.name && c.code === p.code);
+          if (existing && !existing.incompatible) {
+            existing.on = true;
+            appliedCount++;
+          }
+        }
+        if (appliedCount > 0 && sessions.current) {
+          const toApply = cheats.filter(c => c.on && !c.incompatible).map(c => ({ name: c.name, code: lines(c.code).join('+') }));
+          sessions.current.api.setCheats(toApply);
+          event('cheats.restored', { count: appliedCount, afterExplicitConfirm: true });
+          say('cheat-info', `✅ ${appliedCount} cheat(s) restauré(s) appliqué(s) après votre confirmation explicite.`, false);
+        } else {
+          say('cheat-info', `⚠️ Aucun cheat restauré trouvé dans cette édition.`, true);
+        }
+        renderCheats();
+      });
+      warn.append(document.createElement('br'), document.createElement('br'), btnRestore);
+    }
     list.append(warn);
   }
   // FIX 3: message fidèle à l'état réel
@@ -244,13 +277,16 @@ async function loadCheats(m, activeList = []) {
     window._regionMismatch = null;
   }
   renderCheats();
-  // B02 (audit GPT RC-1.0) : appliquer les cheats restaurés SEULEMENT si l'édition est sûre.
-  // Sûr = mémoire vérifiée (fromMemory) OU serial manuel (région confirmée) OU match sans décalage région.
-  // Jamais en cas de ambiguous, no_match, load_error, ou regionMismatch non confirmé.
+  // B02 (audit GPT RC-1.1) : la mémoire locale ne doit JAMAIS contourner un désaccord de région.
+  // Même si fromMemory=true, un regionMismatch non confirmé bloque l'injection.
+  // Principe : ne pas faire confiance à la mémoire pour ignorer un conflit USA/Europe/World.
+  const regionSafe = !regionMismatch || window._regionConfirmed === true;
+  const identifiedEdition = result.status === 'match';
+  const isSafe = identifiedEdition && regionSafe && !result.error;
   const pendingRestore = window._pendingCheatRestore || [];
   window._pendingCheatRestore = [];
+  let restoredApplied = false; // Pour sync UI : vrai si on a vraiment injecté
   if (pendingRestore.length > 0 && sessions.current) {
-    const isSafe = fromMemory || (result.status === 'match' && !regionMismatch);
     if (isSafe) {
       // Appliquer : marquer les cheats correspondants comme "on" et les envoyer au moteur
       let appliedCount = 0;
@@ -265,8 +301,9 @@ async function loadCheats(m, activeList = []) {
         const toApply = cheats.filter(c => c.on && !c.incompatible).map(c => ({ name: c.name, code: lines(c.code).join('+') }));
         sessions.current.api.setCheats(toApply);
         event('cheats.restored', { count: appliedCount, safe: true });
+        restoredApplied = true; // B02: marquer l'injection réelle pour sync UI
         renderCheats();
-        say('cheat-info', `✅ ${appliedCount} cheat(s) restauré(s) et appliqué(s) — édition mémorisée (${result.catalogTitle}).`, false);
+        say('cheat-info', `✅ ${appliedCount} cheat(s) restauré(s) et appliqué(s) — édition confirmée (${result.catalogTitle}).`, false);
       } else {
         say('cheat-info', `⚠️ ${pendingRestore.length} cheat(s) restauré(s) non trouvés dans le catalogue de cette édition. Aucune injection.`, true);
       }
@@ -281,10 +318,16 @@ async function loadCheats(m, activeList = []) {
       console.warn('B02: Restauration différée —', reason);
     }
   }
-  if (result.status === 'no_match') {
+  // B02: ne pas écraser le message de restauration avec "tous désactivés" si on vient d'injecter
+  if (restoredApplied) {
+    // Le message de restauration a déjà été affiché ci-dessus, ne pas le masquer
+  } else if (result.status === 'no_match') {
     say('cheat-info', 'Aucun catalogue correspondant au disque. Codes manuels conservés.', false);
-  } else if (fromMemory) {
+  } else if (fromMemory && !regionMismatch) {
     say('cheat-info', `✅ Édition mémorisée reconnue (${result.catalogTitle}). ${cheats.length} code(s), tous désactivés par défaut. Choix précédent sur cet appareil.`, false);
+  } else if (fromMemory && regionMismatch) {
+    // B02: mémoire + décalage région = avertissement, PAS de "désactivés par défaut" trompeur
+    say('cheat-info', `⚠️ Édition mémorisée (${result.catalogTitle}, ${catalogRegion}) mais votre disque semble être ${gameRegion}. Confirmez ci-dessous avant d'activer.`, true);
   } else if (regionMismatch) {
     say('cheat-info', `⚠️ Ces codes proviennent de l'édition ${catalogRegion} (${result.catalogTitle}), votre disque semble être ${gameRegion}. Confirmez ci-dessous avant d'activer.`, true);
   }
@@ -421,7 +464,7 @@ $('cheat-add').onclick = () => operation(async () => {
   cheats.push({ name, code, source: 'manuel', on: false }); $('cheat-name').value = ''; $('cheat-code').value = ''; renderCheats(); say('save-note', 'Code ajouté pour ce jeu, désactivé.');
 });
 $('export').onclick = () => {
-  const blob = new Blob([JSON.stringify({ app: 'emuperso-ps1-web RC-1.0', tested: false, game: meta && { name: meta.name, size: meta.size, serial: meta.serial, sha256: meta.canonical_sha256 }, session: sessions.diagnostic(), events: records }, null, 1)], { type: 'application/json' });
+  const blob = new Blob([JSON.stringify({ app: 'emuperso-ps1-web ' + APP_VERSION, tested: false, game: meta && { name: meta.name, size: meta.size, serial: meta.serial, sha256: meta.canonical_sha256 }, session: sessions.diagnostic(), events: records }, null, 1)], { type: 'application/json' });
   const link = document.createElement('a'); link.href = URL.createObjectURL(blob); link.download = 'EMUPERSO-ps1-diagnostic.json'; link.click(); setTimeout(() => URL.revokeObjectURL(link.href), 5000);
 };
 const readInput = () => normalizeInput({ analog: $('in-analog').value, stickToDpad: $('in-dpad').checked, deadzone: Number($('in-dz').value), native: $('in-native').checked });

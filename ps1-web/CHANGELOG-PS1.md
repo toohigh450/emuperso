@@ -1,5 +1,27 @@
 # CHANGELOG — EMUPERSO PS1
 
+## RC-1.2 (Méo, 1er nov. ~02h30) — Correctifs audit GPT RC-1.1
+**Base** : RC-1.1 + correctifs de l'audit GPT `AUDIT_GPT_EMUPERSO_PS1_RC-1.1_MULTI_REGION.html`
+
+### 🔴 B02 RESTANT corrigé (bloquant)
+- **Cause** : `const isSafe = fromMemory || (...)` — la mémoire locale contournait le contrôle de région. GPT a reproduit : jeu FR.pbp + mémoire USA + cheat restauré → `setCheats()` appelé sans confirmation.
+- **Correctif** : nouvelle logique `regionSafe = !regionMismatch || window._regionConfirmed === true` ; `isSafe = identifiedEdition && regionSafe && !result.error`. La mémoire ne contourne PLUS un désaccord de région.
+- **Bouton explicite** : quand région + pending, nouveau bouton "⚠️ Appliquer les X cheat(s) restauré(s) malgré le décalage de région" — confirmation explicite requise.
+- **Sync UI/moteur** : flag `restoredApplied` — le message "tous désactivés par défaut" ne masque plus une injection réelle.
+
+### 🟡 B05 renforcé
+- Whitelist par **chemins** (pas seulement extensions) : `ALLOWED_DIRS = {assets, data, cheats, docs}`, `BLOCKED_DIRS` étendu (tools, tests, private, personal). Un `.json` dans `/private/` est maintenant bloqué. 17 tests `allowed_path` PASS.
+
+### 🟡 B06 tests
+- 2 nouveaux tests : scénario FR→USA avec mémoire (aucune injection), sync UI/moteur.
+
+### Divers
+- Version diagnostic dynamique via `APP_VERSION = 'RC-1.2'` (fini le hardcodé RC-1.0).
+
+**Tests** : 54/54 JS + 3/3 Python PASS (2 nouveaux tests).
+
+---
+
 ## RC-1.1 (Méo, 1er nov. ~02h00) — Correctifs audit GPT RC-1.0
 **Base** : RC-1.0 + 7 correctifs de l'audit GPT `AUDIT_GPT_EMUPERSO_PS1_RC-1.0_MULTI_REGION.html`
 

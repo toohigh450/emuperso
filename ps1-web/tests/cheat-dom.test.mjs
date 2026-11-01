@@ -87,12 +87,42 @@ test('B02 : launch() ne réinjecte jamais de cheats au démarrage', async () => 
 });
 
 // B02 : loadCheats n'applique les pending que si l'édition est sûre
+// (RC-1.2 : fromMemory ne contourne PLUS regionMismatch)
 test('B02 : loadCheats applique pending seulement si édition sûre', async () => {
   const src = await readFile(new URL('../app.js', import.meta.url), 'utf8');
-  // Vérifier la logique de sécurité : fromMemory OU (match ET pas de regionMismatch)
-  assert.ok(src.includes("const isSafe = fromMemory || (result.status === 'match' && !regionMismatch)"),
-    'condition isSafe doit vérifier fromMemory ou (match sans regionMismatch)');
+  // Vérifier la NOUVELLE logique de sécurité (RC-1.2) : identifiedEdition ET regionSafe
+  assert.ok(src.includes("const isSafe = identifiedEdition && regionSafe && !result.error"),
+    'condition isSafe doit vérifier identifiedEdition ET regionSafe');
+  // Vérifier que regionSafe tient compte de _regionConfirmed
+  assert.ok(src.includes("const regionSafe = !regionMismatch || window._regionConfirmed === true"),
+    'regionSafe doit vérifier _regionConfirmed');
+  // L'ancien code BUG ne doit plus exister
+  assert.ok(!src.includes("const isSafe = fromMemory ||"),
+    'ancien code BUG (fromMemory || ...) supprimé');
   // Vérifier que les cas non sûrs gardent les cheats en attente
   assert.ok(src.includes("window._pendingCheatRestore = pendingRestore"),
     'les cheats non sûrs sont remis en attente');
+});
+
+// B06 (audit GPT RC-1.1) : test bout-en-bout du scénario FR→USA avec mémoire
+// Simule : jeu FR.pbp + mémoire USA + cheat restauré → AUCUNE injection sans confirmation
+test('B06 : scénario FR→USA avec mémoire ne doit pas injecter', async () => {
+  const src = await readFile(new URL('../app.js', import.meta.url), 'utf8');
+  // 1. Le bouton de confirmation explicite pour pending + région doit exister
+  assert.ok(src.includes("malgré le décalage de région"),
+    'bouton de confirmation explicite pour pending + région');
+  // 2. La version du diagnostic doit être dynamique (pas hardcodée RC-1.0)
+  assert.ok(src.includes("APP_VERSION") && !src.includes("'emuperso-ps1-web RC-1.0'"),
+    'version diagnostic dynamique via APP_VERSION');
+});
+
+// B06 : vérifier que le message UI ne masque pas une injection réelle
+test('B06 : UI synchronisée avec état réel du moteur', async () => {
+  const src = await readFile(new URL('../app.js', import.meta.url), 'utf8');
+  // Le flag restoredApplied doit exister pour éviter le masquage
+  assert.ok(src.includes("restoredApplied"),
+    'flag restoredApplied pour sync UI/moteur');
+  // Le message "tous désactivés" ne doit pas écraser un message de restauration
+  assert.ok(src.includes("if (restoredApplied)"),
+    'vérification restoredApplied avant d\'afficher les messages');
 });

@@ -5,12 +5,17 @@ from urllib.parse import urlsplit,unquote
 import argparse
 ROOT=Path(__file__).resolve().parents[1]
 
-# B05 (audit GPT RC-1.0) : liste blanche stricte des contenus servis.
+# B05 (audit GPT RC-1.0, renforcé RC-1.1) : liste blanche stricte des contenus servis.
 # Seules les ressources web explicites sont autorisées. Les dossiers sensibles
 # (roms, bios, saves, exports, diagnostics) sont TOUJOURS bloqués, même si
 # l'utilisateur y copie des fichiers par erreur.
-BLOCKED_DIRS = frozenset({'roms', 'bios', 'saves', 'cache', '.python', '__pycache__', 'exports', 'diagnostics'})
-# Extensions web autorisées
+#
+# B05-RC-1.1 : whitelist par CHEMINS, pas seulement par extensions.
+# Un fichier .json dans un répertoire "private/" ne doit PAS être servi.
+BLOCKED_DIRS = frozenset({'roms', 'bios', 'saves', 'cache', '.python', '__pycache__', 'exports', 'diagnostics', 'private', 'personal', 'tools', 'tests'})
+# Répertoires dont le contenu PEUT être servi (whitelist explicite)
+ALLOWED_DIRS = frozenset({'assets', 'data', 'cheats', 'docs'})
+# Extensions web autorisées (pour les fichiers à la racine et dans ALLOWED_DIRS)
 ALLOWED_EXTENSIONS = frozenset({
     '.html', '.htm', '.js', '.mjs', '.css', '.json',
     '.png', '.jpg', '.jpeg', '.gif', '.webp', '.svg', '.ico',
@@ -18,6 +23,7 @@ ALLOWED_EXTENSIONS = frozenset({
     '.txt', '.md',
     '.wasm',  # Cœur EmulatorJS/PCSX
     '.data',  # Données EmulatorJS
+    '.bat',   # Lanceur Windows (téléchargement)
 })
 
 def allowed_path(url,root=ROOT):
@@ -25,21 +31,32 @@ def allowed_path(url,root=ROOT):
  parts=path.strip('/').split('/') if path.strip('/') else []
  if '\\' in path or ':' in path or any(ord(c)<32 for c in path):return False
  if any(p.startswith('.') or p in ('..','.') for p in parts):return False
- # B05 : bloquer explicitement les dossiers sensibles
- if parts and parts[0].lower() in BLOCKED_DIRS:return False
+ # B05 : bloquer explicitement les dossiers sensibles (n'importe où dans le chemin)
  if any(p.lower() in BLOCKED_DIRS for p in parts):return False
- # B05 : seuls les fichiers avec extension autorisée (ou répertoire racine)
- if parts:
-  last = parts[-1]
-  # Permettre l'accès à la racine et aux répertoires (pour index.html implicite)
-  # mais le list_directory est désactivé (403), donc seuls les fichiers comptent
+ # B05-RC-1.1 : whitelist par chemins
+ # - Racine (/) : autorisée (pour index.html)
+ # - Fichier à la racine : extension doit être autorisée
+ # - Sous-répertoire : doit être dans ALLOWED_DIRS, ET l'extension autorisée
+ if not parts:
+  return True  # Racine /
+ if len(parts) == 1:
+  # Fichier à la racine
+  last = parts[0]
   if '.' in last:
    ext = '.' + last.rsplit('.', 1)[-1].lower()
    if ext not in ALLOWED_EXTENSIONS:return False
-  else:
-   # Pas d'extension : pourrait être un répertoire, vérifier qu'il n'est pas bloqué
-   # (le listing est désactivé de toute façon)
-   pass
+  # Pas d'extension à la racine : refuser (pas de listing de toute façon)
+  else:return False
+ else:
+  # Sous-répertoire : vérifier qu'il est dans la whitelist
+  topdir = parts[0].lower()
+  if topdir not in ALLOWED_DIRS:return False
+  # Vérifier l'extension du fichier final
+  last = parts[-1]
+  if '.' in last:
+   ext = '.' + last.rsplit('.', 1)[-1].lower()
+   if ext not in ALLOWED_EXTENSIONS:return False
+  else:return False  # Pas d'extension dans un sous-dossier : refuser
  return root.joinpath(*parts).resolve().is_relative_to(root.resolve())
 class Handler(SimpleHTTPRequestHandler):
  extensions_map={**SimpleHTTPRequestHandler.extensions_map,'.mjs':'text/javascript'}
