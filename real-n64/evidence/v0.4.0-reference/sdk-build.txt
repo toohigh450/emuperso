@@ -1,0 +1,359 @@
+    [CC] src/n64sys.c
+    [CC] src/interrupt.c
+    [CC] src/backtrace.c
+    [CC] src/fmath.c
+    [CC] src/dir.c
+    [AS] src/inthandler.S
+    [AS] src/entrypoint.S
+    [CC] src/debug.c
+    [CXX] src/debugcpp.cpp
+    [CC] src/usb.c
+    [CC] src/libcart/cart.c
+    [CC] src/fatfs/ff.c
+    [CC] src/fatfs/ffunicode.c
+    [CC] src/rompak.c
+    [CC] src/dragonfs.c
+    [CC] src/audio.c
+    [CC] src/display.c
+    [CC] src/surface.c
+    [CC] src/console.c
+    [CC] src/asset.c
+    [CC] src/rtc.c
+    [CC] src/graphics.c
+    [CC] src/rdp.c
+    [CC] src/rsp.c
+    [RSP] src/rsp_crash.S
+      text       data        bss      total filename
+       448          4          0        452 build/rsp_crash.elf
+    [CC] src/inspector.c
+[01m[Ksrc/inspector.c:[m[K In function '[01m[Kinspector[m[K':
+[01m[Ksrc/inspector.c:576:13:[m[K [01;35m[Kwarning: [m[K'[01m[Kcontroller_read[m[K' is deprecated: use joypad_read_n64_inputs instead [[01;35m[K-Wdeprecated-declarations[m[K]
+  576 |             [01;35m[Kcontroller_read[m[K(&key_new);
+      |             [01;35m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[Ksrc/inspector.c:7[m[K:
+[01m[K/workspace/emuperso-real/real-n64/cache/libdragon/include/controller.h:260:6:[m[K [01;36m[Knote: [m[Kdeclared here
+  260 | void [01;36m[Kcontroller_read[m[K( struct controller_data * data );
+      |      [01;36m[K^~~~~~~~~~~~~~~[m[K
+    [CC] src/sprite.c
+    [CC] src/dma.c
+    [CC] src/timer.c
+    [CC] src/exception.c
+    [CC] src/do_ctors.c
+    [CC] src/dlfcn.c
+    [CC] src/audio/mixer.c
+    [CC] src/audio/samplebuffer.c
+    [RSP] src/audio/rsp_mixer.S
+    [CC] src/audio/wav64.c
+    [CC] src/audio/xm64.c
+    [CC] src/audio/libxm/play.c
+      text       data        bss      total filename
+      3360        736       3152       7248 build/audio/rsp_mixer.elf
+    [CC] src/audio/libxm/context.c
+    [CC] src/audio/libxm/load.c
+    [CC] src/audio/ym64.c
+    [CC] src/audio/ay8910.c
+    [CC] src/audio/wav64_opus.c
+    [CC] src/audio/wav64_vadpcm.c
+    [CC] src/audio/libopus.c
+    [CC] src/audio/libopus_rsp.c
+    [RSP] src/audio/rsp_opus_dsp.S
+    [RSP] src/audio/rsp_opus_imdct.S
+      text       data        bss      total filename
+      2896        640          0       3536 build/audio/rsp_opus_imdct.elf
+    [RSP] src/audio/rsp_opus_fft_prerot.S
+      text       data        bss      total filename
+       848          4          0        852 build/audio/rsp_opus_fft_prerot.elf
+    [RSP] src/audio/rsp_opus_fft_bfly2.S
+      text       data        bss      total filename
+       236          4          0        240 build/audio/rsp_opus_fft_bfly2.elf
+    [RSP] src/audio/rsp_opus_fft_bfly3.S
+    [RSP] src/audio/rsp_opus_fft_bfly4m1.S
+      text       data        bss      total filename
+      3144        864          0       4008 build/audio/rsp_opus_dsp.elf
+    [RSP] src/audio/rsp_opus_fft_bfly4.S
+      text       data        bss      total filename
+       592          4          0        596 build/audio/rsp_opus_fft_bfly3.elf
+    [RSP] src/audio/rsp_opus_fft_bfly5.S
+      text       data        bss      total filename
+       568          4          0        572 build/audio/rsp_opus_fft_bfly4.elf
+    [RSP] src/audio/rsp_opus_fft_postrot.S
+      text       data        bss      total filename
+       240          4          0        244 build/audio/rsp_opus_fft_bfly4m1.elf
+    [CC] src/joybus/controller.c
+      text       data        bss      total filename
+       508          4          0        512 build/audio/rsp_opus_fft_postrot.elf
+    [CC] src/joybus/eeprom.c
+      text       data        bss      total filename
+       760          4          0        764 build/audio/rsp_opus_fft_bfly5.elf
+    [CC] src/joybus/eepromfs.c
+    [CC] src/joybus/joybus_accessory.c
+    [CC] src/joybus/joybus.c
+    [CC] src/joybus/joypad_accessory.c
+    [CC] src/joybus/joypad.c
+    [CC] src/joybus/mempak.c
+[01m[Ksrc/joybus/mempak.c:[m[K In function '[01m[Kread_mempak_sector[m[K':
+[01m[Ksrc/joybus/mempak.c:36:9:[m[K [01;35m[Kwarning: [m[K'[01m[Kread_mempak_address[m[K' is deprecated: use joybus_accessory_read instead [[01;35m[K-Wdeprecated-declarations[m[K]
+   36 |         [01;35m[Kif[m[K( read_mempak_address( controller, (sector * MEMPAK_BLOCK_SIZE) + (i * 32), sector_data + (i * 32) ) )
+      |         [01;35m[K^~[m[K
+In file included from [01m[Ksrc/joybus/mempak.c:10[m[K:
+[01m[K/workspace/emuperso-real/real-n64/cache/libdragon/include/controller.h:299:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  299 | int [01;36m[Kread_mempak_address[m[K( int controller, uint16_t address, uint8_t *data );
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[Ksrc/joybus/mempak.c:[m[K In function '[01m[Kwrite_mempak_sector[m[K':
+[01m[Ksrc/joybus/mempak.c:54:9:[m[K [01;35m[Kwarning: [m[K'[01m[Kwrite_mempak_address[m[K' is deprecated: use joybus_accessory_write instead [[01;35m[K-Wdeprecated-declarations[m[K]
+   54 |         [01;35m[Kif[m[K( write_mempak_address( controller, (sector * MEMPAK_BLOCK_SIZE) + (i * 32), sector_data + (i * 32) ) )
+      |         [01;35m[K^~[m[K
+[01m[K/workspace/emuperso-real/real-n64/cache/libdragon/include/controller.h:302:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  302 | int [01;36m[Kwrite_mempak_address[m[K( int controller, uint16_t address, uint8_t *data );
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[Ksrc/joybus/mempak.c:[m[K In function '[01m[Kget_mempak_entry[m[K':
+[01m[Ksrc/joybus/mempak.c:687:5:[m[K [01;35m[Kwarning: [m[K'[01m[Kread_mempak_address[m[K' is deprecated: use joybus_accessory_read instead [[01;35m[K-Wdeprecated-declarations[m[K]
+  687 |     [01;35m[Kif[m[K( read_mempak_address( controller, (3 * MEMPAK_BLOCK_SIZE) + (entry * 32), data ) )
+      |     [01;35m[K^~[m[K
+[01m[K/workspace/emuperso-real/real-n64/cache/libdragon/include/controller.h:299:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  299 | int [01;36m[Kread_mempak_address[m[K( int controller, uint16_t address, uint8_t *data );
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[Ksrc/joybus/mempak.c:[m[K In function '[01m[Kwrite_mempak_entry_data[m[K':
+[01m[Ksrc/joybus/mempak.c:971:9:[m[K [01;35m[Kwarning: [m[K'[01m[Kread_mempak_address[m[K' is deprecated: use joybus_accessory_read instead [[01;35m[K-Wdeprecated-declarations[m[K]
+  971 |         [01;35m[Kif[m[K( read_mempak_address( controller, (3 * MEMPAK_BLOCK_SIZE) + (i * 32), tmp_data ) )
+      |         [01;35m[K^~[m[K
+[01m[K/workspace/emuperso-real/real-n64/cache/libdragon/include/controller.h:299:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  299 | int [01;36m[Kread_mempak_address[m[K( int controller, uint16_t address, uint8_t *data );
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[Ksrc/joybus/mempak.c:1014:5:[m[K [01;35m[Kwarning: [m[K'[01m[Kwrite_mempak_address[m[K' is deprecated: use joybus_accessory_write instead [[01;35m[K-Wdeprecated-declarations[m[K]
+ 1014 |     [01;35m[Kif[m[K( write_mempak_address( controller, (3 * MEMPAK_BLOCK_SIZE) + (entry->entry_id * 32), tmp_data ) )
+      |     [01;35m[K^~[m[K
+[01m[K/workspace/emuperso-real/real-n64/cache/libdragon/include/controller.h:302:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  302 | int [01;36m[Kwrite_mempak_address[m[K( int controller, uint16_t address, uint8_t *data );
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[Ksrc/joybus/mempak.c:[m[K In function '[01m[Kdelete_mempak_entry[m[K':
+[01m[Ksrc/joybus/mempak.c:1036:5:[m[K [01;35m[Kwarning: [m[K'[01m[Kread_mempak_address[m[K' is deprecated: use joybus_accessory_read instead [[01;35m[K-Wdeprecated-declarations[m[K]
+ 1036 |     [01;35m[Kif[m[K( read_mempak_address( controller, (3 * MEMPAK_BLOCK_SIZE) + (entry->entry_id * 32), data ) )
+      |     [01;35m[K^~[m[K
+[01m[K/workspace/emuperso-real/real-n64/cache/libdragon/include/controller.h:299:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  299 | int [01;36m[Kread_mempak_address[m[K( int controller, uint16_t address, uint8_t *data );
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[Ksrc/joybus/mempak.c:1056:5:[m[K [01;35m[Kwarning: [m[K'[01m[Kwrite_mempak_address[m[K' is deprecated: use joybus_accessory_write instead [[01;35m[K-Wdeprecated-declarations[m[K]
+ 1056 |     [01;35m[Kif[m[K( write_mempak_address( controller, (3 * MEMPAK_BLOCK_SIZE) + (entry->entry_id * 32), data ) )
+      |     [01;35m[K^~[m[K
+[01m[K/workspace/emuperso-real/real-n64/cache/libdragon/include/controller.h:302:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  302 | int [01;36m[Kwrite_mempak_address[m[K( int controller, uint16_t address, uint8_t *data );
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+    [CC] src/joybus/pixelfx.c
+    [CC] src/joybus/tpak.c
+[01m[Ksrc/joybus/tpak.c:[m[K In function '[01m[Ktpak_set_value[m[K':
+[01m[Ksrc/joybus/tpak.c:50:5:[m[K [01;35m[Kwarning: [m[K'[01m[Kwrite_mempak_address[m[K' is deprecated: use joybus_accessory_write instead [[01;35m[K-Wdeprecated-declarations[m[K]
+   50 |     [01;35m[Kreturn[m[K write_mempak_address(controller, address, block);
+      |     [01;35m[K^~~~~~[m[K
+In file included from [01m[Ksrc/joybus/tpak.c:10[m[K:
+[01m[K/workspace/emuperso-real/real-n64/cache/libdragon/include/controller.h:302:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  302 | int [01;36m[Kwrite_mempak_address[m[K( int controller, uint16_t address, uint8_t *data );
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[Ksrc/joybus/tpak.c:[m[K In function '[01m[Ktpak_init[m[K':
+[01m[Ksrc/joybus/tpak.c:57:5:[m[K [01;35m[Kwarning: [m[K'[01m[Kidentify_accessory[m[K' is deprecated: use joypad_get_accessory_type instead [[01;35m[K-Wdeprecated-declarations[m[K]
+   57 |     [01;35m[Kint[m[K accessory = identify_accessory(controller);
+      |     [01;35m[K^~~[m[K
+[01m[K/workspace/emuperso-real/real-n64/cache/libdragon/include/controller.h:293:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  293 | int [01;36m[Kidentify_accessory[m[K( int controller );
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[Ksrc/joybus/tpak.c:[m[K In function '[01m[Ktpak_get_status[m[K':
+[01m[Ksrc/joybus/tpak.c:93:5:[m[K [01;35m[Kwarning: [m[K'[01m[Kread_mempak_address[m[K' is deprecated: use joybus_accessory_read instead [[01;35m[K-Wdeprecated-declarations[m[K]
+   93 |     [01;35m[Kread_mempak_address[m[K(controller, TPAK_ADDRESS_STATUS, block);
+      |     [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/workspace/emuperso-real/real-n64/cache/libdragon/include/controller.h:299:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  299 | int [01;36m[Kread_mempak_address[m[K( int controller, uint16_t address, uint8_t *data );
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[Ksrc/joybus/tpak.c:[m[K In function '[01m[Ktpak_write[m[K':
+[01m[Ksrc/joybus/tpak.c:136:9:[m[K [01;35m[Kwarning: [m[K'[01m[Kwrite_mempak_address[m[K' is deprecated: use joybus_accessory_write instead [[01;35m[K-Wdeprecated-declarations[m[K]
+  136 |         [01;35m[Kwrite_mempak_address[m[K(controller, adjusted_address, cursor);
+      |         [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/workspace/emuperso-real/real-n64/cache/libdragon/include/controller.h:302:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  302 | int [01;36m[Kwrite_mempak_address[m[K( int controller, uint16_t address, uint8_t *data );
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[Ksrc/joybus/tpak.c:[m[K In function '[01m[Ktpak_read[m[K':
+[01m[Ksrc/joybus/tpak.c:173:9:[m[K [01;35m[Kwarning: [m[K'[01m[Kread_mempak_address[m[K' is deprecated: use joybus_accessory_read instead [[01;35m[K-Wdeprecated-declarations[m[K]
+  173 |         [01;35m[Kread_mempak_address[m[K(controller, adjusted_address, cursor);
+      |         [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/workspace/emuperso-real/real-n64/cache/libdragon/include/controller.h:299:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  299 | int [01;36m[Kread_mempak_address[m[K( int controller, uint16_t address, uint8_t *data );
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+    [CC] src/rspq/rspq.c
+    [RSP] src/rspq/rsp_queue.S
+      text       data        bss      total filename
+       648        512          0       1160 build/rspq/rsp_queue.elf
+    [CC] src/rdpq/rdpq.c
+    [RSP] src/rdpq/rsp_rdpq.S
+    [CC] src/rdpq/rdpq_debug.c
+    [CC] src/rdpq/rdpq_tri.c
+    [CC] src/rdpq/rdpq_rect.c
+      text       data        bss      total filename
+      3768       1096        192       5056 build/rdpq/rsp_rdpq.elf
+    [CC] src/rdpq/rdpq_mode.c
+    [CC] src/rdpq/rdpq_sprite.c
+    [CC] src/rdpq/rdpq_tex.c
+    [CC] src/rdpq/rdpq_attach.c
+    [CC] src/rdpq/rdpq_font.c
+    [CC] src/rdpq/rdpq_text.c
+    [CC] src/rdpq/rdpq_paragraph.c
+    [CC] src/compress/lzh5.c
+    [CC] src/compress/lz4_dec.c
+    [AS] src/compress/lz4_dec_fast.S
+    [CC] src/compress/ringbuf.c
+    [AS] src/compress/aplib_dec_fast.S
+    [CC] src/compress/aplib_dec.c
+    [AS] src/compress/shrinkler_dec_fast.S
+    [CC] src/compress/shrinkler_dec.c
+    [CC] src/system.c
+'n64.mk' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/include/n64.mk'
+make[1]: Entering directory '/workspace/emuperso-real/real-n64/cache/libdragon/tools'
+    [CC] n64tool.o
+make[1]: Entering directory '/workspace/emuperso-real/real-n64/cache/libdragon/tools'
+    [CC] n64tool.o
+    [CC] n64sym.o
+    [CC] n64sym.o
+    [MIPS] common/mips_decomp_l1.bin
+    [MIPS] common/mips_decomp_l2.bin
+    [MIPS] common/mips_decomp_l3.bin
+    [CC] common/assetcomp.o
+    [MIPS] common/mips_decomp_l1.bin
+    [CC] common/assetcomp.o
+    [CC] common/lz4_compress.o
+    [CC] common/lz4_compress.o
+    [CC] common/aplib_compress.o
+    [AR] libdragonsys.a
+    [AR] libdragon.a
+    [CC] common/aplib_compress.o
+    [CXX] common/shrinkler_compress.o
+    [CXX] common/shrinkler_compress.o
+'libdragon.a' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/lib/libdragon.a'
+'n64.ld' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/lib/n64.ld'
+'dso.ld' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/lib/dso.ld'
+'rsp.ld' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/lib/rsp.ld'
+'libdragonsys.a' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/lib/libdragonsys.a'
+'include/asset.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/asset.h'
+'include/audio.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/audio.h'
+'include/ay8910.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/ay8910.h'
+'include/backtrace.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/backtrace.h'
+'include/console.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/console.h'
+'include/controller.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/controller.h'
+'include/cop0.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/cop0.h'
+'include/cop1.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/cop1.h'
+'include/debug.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/debug.h'
+'include/debugcpp.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/debugcpp.h'
+'include/dfsinternal.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/dfsinternal.h'
+'include/dir.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/dir.h'
+'include/display.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/display.h'
+'include/dlfcn.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/dlfcn.h'
+'include/dma.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/dma.h'
+'include/dragonfs.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/dragonfs.h'
+'include/eeprom.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/eeprom.h'
+'include/eepromfs.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/eepromfs.h'
+'include/exception.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/exception.h'
+'include/fmath.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/fmath.h'
+'include/font.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/font.h'
+'include/graphics.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/graphics.h'
+'include/interrupt.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/interrupt.h'
+'include/ioctl.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/ioctl.h'
+'include/joybus.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/joybus.h'
+'include/joybus_accessory.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/joybus_accessory.h'
+'include/joypad.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/joypad.h'
+'include/libdragon.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/libdragon.h'
+'include/mempak.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/mempak.h'
+'include/mi.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/mi.h'
+'include/mixer.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/mixer.h'
+'include/n64sys.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/n64sys.h'
+'include/n64types.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/n64types.h'
+'include/pixelfx.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/pixelfx.h'
+'include/pputils.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/pputils.h'
+'include/rdp.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rdp.h'
+'include/rdpq.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rdpq.h'
+'include/rdpq_attach.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rdpq_attach.h'
+'include/rdpq_constants.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rdpq_constants.h'
+'include/rdpq_debug.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rdpq_debug.h'
+'include/rdpq_font.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rdpq_font.h'
+'include/rdpq_macros.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rdpq_macros.h'
+'include/rdpq_mode.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rdpq_mode.h'
+'include/rdpq_paragraph.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rdpq_paragraph.h'
+'include/rdpq_rect.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rdpq_rect.h'
+'include/rdpq_sprite.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rdpq_sprite.h'
+'include/rdpq_tex.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rdpq_tex.h'
+'include/rdpq_text.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rdpq_text.h'
+'include/rdpq_tri.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rdpq_tri.h'
+'include/regsinternal.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/regsinternal.h'
+'include/rsp.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rsp.h'
+'include/rspq.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rspq.h'
+'include/rspq_constants.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rspq_constants.h'
+'include/rtc.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rtc.h'
+'include/samplebuffer.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/samplebuffer.h'
+'include/sprite.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/sprite.h'
+'include/surface.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/surface.h'
+'include/system.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/system.h'
+'include/timer.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/timer.h'
+'include/tpak.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/tpak.h'
+'include/usb.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/usb.h'
+'include/wav64.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/wav64.h'
+'include/xm64.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/xm64.h'
+'include/ym64.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/ym64.h'
+'include/rsp.inc' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rsp.inc'
+'include/rsp_assert.inc' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rsp_assert.inc'
+'include/rsp_dma.inc' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rsp_dma.inc'
+'include/rsp_queue.inc' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rsp_queue.inc'
+'include/rsp_rdpq.inc' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rsp_rdpq.inc'
+'include/rsp_rdpq_tri.inc' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/rsp_rdpq_tri.inc'
+'include/ucode.S' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/ucode.S'
+'src/libcart/cart.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/libcart/cart.h'
+'src/fatfs/diskio.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/fatfs/diskio.h'
+'src/fatfs/ff.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/fatfs/ff.h'
+'src/fatfs/ffconf.h' -> '/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/mips64-elf/include/fatfs/ffconf.h'
+    [CC] ed64romconfig.o
+    [CC] audioconv64/audioconv64.o
+    [CC] mkdfs/mkdfs.o
+    [CC] dumpdfs/dumpdfs.o
+    [CC] mkasset/mkasset.o
+    [CC] mksprite/mksprite.o
+    [CC] ed64romconfig.o
+    [CC] audioconv64/audioconv64.o
+    [TOOL] mkdfs
+    [TOOL] dumpdfs
+    [CC] mksprite/mksprite.o
+    [CXX] mkfont/mkfont.o
+    [CXX] mkfont/mkfont.o
+    [CC] mkfont/freetype/FreeTypeAmalgam.o
+    [CC] mkfont/freetype/FreeTypeAmalgam.o
+    [CC] mkfont/plutosvg/plutosvg-amalgam.o
+    [CC] n64dso/n64dso.o
+    [CC] mkfont/plutosvg/plutosvg-amalgam.o
+    [CC] n64dso/n64dso-msym.o
+    [CC] n64dso/n64dso-msym.o
+    [CC] n64dso/n64dso-extern.o
+    [CC] n64dso/n64dso-extern.o
+    [TOOL] n64tool
+    [TOOL] n64sym
+    [TOOL] n64tool
+    [TOOL] n64sym
+    [CC] n64elfcompress/n64elfcompress.o
+    [CC] n64elfcompress/n64elfcompress.o
+    [AR] common/assetcomp.a
+    [TOOL] ed64romconfig
+    [AR] common/assetcomp.a
+    [TOOL] audioconv64
+    [TOOL] ed64romconfig
+    [TOOL] audioconv64
+    [TOOL] mkdfs
+    [TOOL] mkasset
+    [TOOL] dumpdfs
+    [TOOL] mksprite
+    [TOOL] mkasset
+    [TOOL] n64dso
+    [TOOL] mksprite
+    [TOOL] n64dso
+    [TOOL] n64dso-msym
+    [TOOL] n64dso-msym
+    [TOOL] n64dso-extern
+    [TOOL] n64elfcompress
+    [TOOL] n64dso-extern
+    [TOOL] n64elfcompress
+    [TOOL] mkfont
+make[1]: Leaving directory '/workspace/emuperso-real/real-n64/cache/libdragon/tools'
+    [TOOL] mkfont
+make[1]: Leaving directory '/workspace/emuperso-real/real-n64/cache/libdragon/tools'

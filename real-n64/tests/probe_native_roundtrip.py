@@ -131,6 +131,35 @@ def main():
                 injected_events=page.evaluate('RealN64.diagnostic().records.filter(r=>r.type==="battery.injected")')
                 assert injected_events
                 record('Persistance native distinctive après fermeture complète du navigateur',{'native':reopened,'different_from_fresh_sha256':before['sha256'],'new_process_profile_reopened':True,'injection_event':injected_events[-1]['data']})
+                def change_fixture_byte(value):
+                    page.evaluate('''async value=>{
+                      const api=RealN64.engineWindow.N64Engine,g=EJS_emulator.gameManager;
+                      await api.pause();
+                      try{const bytes=api.captureBattery();bytes[17]=value;g.FS.writeFile(g.getSaveFilePath(),new RealN64.engineWindow.Uint8Array(bytes));g.functions.loadSaveFiles();}
+                      finally{await api.play();}
+                    }''',value)
+                    return native_snapshot(page)
+                second=change_fixture_byte(changed['byte17']^0x33)
+                assert second['sha256']!=changed['sha256']
+                saved_before=len(page.evaluate('RealN64.diagnostic().records.filter(r=>r.type==="battery.saved")'))
+                page.locator('#battery-save').click()
+                page.wait_for_function('''({count,hash})=>{
+                  const rows=RealN64.diagnostic().records.filter(r=>r.type==='battery.saved');
+                  return rows.length>count&&rows.at(-1).data.payload_sha256===hash&&!document.querySelector('#battery-save').disabled;
+                }''',arg={'count':saved_before,'hash':second['sha256']},timeout=30000)
+                unsaved=change_fixture_byte(second['byte17']^0x17)
+                assert unsaved['sha256'] not in (changed['sha256'],second['sha256'])
+                generation=diagnostic(page)['session']['active_generation']
+                page.locator('#battery-load').click();ready(page,generation)
+                reloaded=native_snapshot(page)
+                assert reloaded==second,{'expected':second,'actual':reloaded,'unsaved':unsaved}
+                record('Bouton natif : copie courante relue sans écraser la cible avec le natif non enregistré',{'saved':second,'unsaved_discarded':unsaved,'reloaded':reloaded,'verification':page.evaluate('RealN64.diagnostic().records.filter(r=>r.type==="battery.loaded").at(-1).data')})
+                change_fixture_byte(second['byte17']^0x17)
+                generation=diagnostic(page)['session']['active_generation']
+                page.locator('#battery-previous').click();ready(page,generation)
+                prior=native_snapshot(page)
+                assert prior==changed,{'expected_previous':changed,'actual':prior}
+                record('Bouton natif précédent : ancienne copie réellement relue par le cœur',{'expected_previous':changed,'reloaded':prior,'verification':page.evaluate('RealN64.diagnostic().records.filter(r=>r.type==="battery.loaded").at(-1).data')})
                 page.screenshot(path=str(ROOT/'evidence/native-roundtrip.png'),full_page=True)
             finally:
                 context.close()

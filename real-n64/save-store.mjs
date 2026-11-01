@@ -4,6 +4,9 @@ export const SAVE_SCHEMA = 'emuperso/save-envelope/v1';
 export const SAVE_DB_NAME = 'emuperso-real-saves-v1';
 export const MAX_SAVE_BYTES = 64 * 1024 * 1024;
 export const SAVE_SLOTS = 3;
+export const MAX_BATCH_SAVES = 9;
+export const MAX_BATCH_BYTES = 2 * MAX_SAVE_BYTES;
+export const STORAGE_TIMEOUT_MS = 8000;
 const HASH = /^[a-f0-9]{64}$/;
 // Checkpoints are separate from the three user state slots. They are internal
 // rollback / pre-cheat snapshots and never replace a user-selected state slot.
@@ -109,32 +112,89 @@ function idbError(error, message = 'Échec du stockage local.') {
   const code = error?.name === 'QuotaExceededError' ? 'E_QUOTA' : 'E_STORAGE';
   return new SaveStoreError(code, code === 'E_QUOTA' ? 'Espace local insuffisant. La sauvegarde précédente est conservée.' : message, error);
 }
-function requestResult(request) {
-  return new Promise((resolve, reject) => { request.onsuccess = () => resolve(request.result); request.onerror = () => reject(idbError(request.error)); });
+function storageTimeout() {
+  return new SaveStoreError('E_STORAGE_TIMEOUT', 'Le stockage local ne répond pas. L’opération a été annulée ; les sauvegardes déjà enregistrées sont conservées. Fermez les autres onglets de l’émulateur, puis réessayez.');
 }
-function transactionDone(transaction) {
-  return new Promise((resolve, reject) => { transaction.oncomplete = resolve; transaction.onabort = () => reject(idbError(transaction.error)); transaction.onerror = () => {}; });
+function transactionDone(transaction, timeoutMs) {
+  return new Promise((resolve, reject) => {
+    let settled = false, timeoutFailure = null;
+    const finish = (ok, value) => {
+      if (settled) return;
+      settled = true; clearTimeout(timer);
+      if (ok) resolve(value); else reject(value);
+    };
+    const timer = setTimeout(() => {
+      if (settled) return;
+      // A rejected timeout must never leave a transaction able to commit later.
+      // If commit is already irreversible, wait for its native completion rather
+      // than falsely report that an existing save was preserved unchanged.
+      timeoutFailure = storageTimeout();
+      try { transaction.abort(); } catch { timeoutFailure = null; return; }
+      finish(false, timeoutFailure);
+    }, timeoutMs);
+    transaction.oncomplete = () => finish(true);
+    transaction.onabort = () => finish(false, timeoutFailure ?? idbError(transaction.error));
+    transaction.onerror = () => {};
+  });
+}
+async function readTransaction(db, timeoutMs, makeRequest) {
+  const transaction = db.transaction('slots', 'readonly'), done = transactionDone(transaction, timeoutMs);
+  let received = false, result;
+  try {
+    const request = makeRequest(transaction.objectStore('slots'));
+    request.onsuccess = () => { received = true; result = request.result; };
+    // An IDB request error aborts its transaction by default.
+    await done;
+    ensure(received, 'E_STORAGE', 'La réponse du stockage local est absente. Aucune donnée enregistrée n’a été modifiée.');
+    return result;
+  } catch (error) {
+    try { transaction.abort(); } catch { /* already complete/aborted */ }
+    void done.catch(() => {});
+    throw idbError(error);
+  }
 }
 
 export class SaveStore {
-  constructor(databaseName = SAVE_DB_NAME) {
+  constructor(databaseName = SAVE_DB_NAME, { timeoutMs = STORAGE_TIMEOUT_MS } = {}) {
     ensure(typeof databaseName === 'string' && /^emuperso-real-saves-v1(?:-[a-zA-Z0-9_-]+)?$/.test(databaseName), 'E_DATABASE', 'Nom de base de sauvegardes interdit.');
+    ensure(Number.isInteger(timeoutMs) && timeoutMs >= 1 && timeoutMs <= 60000, 'E_TIMEOUT', 'Délai de stockage invalide.');
+    this.timeoutMs = timeoutMs;
     this.databaseName = databaseName;
     this.pending = null;
   }
   async open() {
     ensure(globalThis.indexedDB, 'E_STORAGE', 'Stockage IndexedDB indisponible dans ce navigateur.');
-    if (!this.pending) this.pending = new Promise((resolve, reject) => {
-      const request = indexedDB.open(this.databaseName, 1);
-      let blocked = false;
-      request.onupgradeneeded = () => {
-        const store = request.result.createObjectStore('slots', { keyPath: 'key' });
-        store.createIndex('group', 'group', { unique: false });
-      };
-      request.onsuccess = () => { const db = request.result; if (blocked) { db.close(); return; } db.onversionchange = () => { db.close(); this.pending = null; }; resolve(db); };
-      request.onerror = () => { this.pending = null; reject(idbError(request.error)); };
-      request.onblocked = () => { blocked = true; this.pending = null; reject(new SaveStoreError('E_BLOCKED', 'Fermez les autres onglets du laboratoire pour ouvrir les sauvegardes.')); };
-    }).catch(error => { this.pending = null; throw idbError(error); });
+    if (!this.pending) {
+      const opening = new Promise((resolve, reject) => {
+        const request = indexedDB.open(this.databaseName, 1);
+        let settled = false, timeoutFailure = null;
+        const fail = error => {
+          if (settled) return;
+          settled = true; clearTimeout(timer); reject(error);
+        };
+        const timer = setTimeout(() => {
+          if (settled) return;
+          timeoutFailure = storageTimeout();
+          try { request.transaction?.abort(); } catch { /* No active upgrade. */ }
+          fail(timeoutFailure);
+        }, this.timeoutMs);
+        request.onupgradeneeded = () => {
+          if (settled) { try { request.transaction.abort(); } catch {} return; }
+          const store = request.result.createObjectStore('slots', { keyPath: 'key' });
+          store.createIndex('group', 'group', { unique: false });
+        };
+        request.onsuccess = () => {
+          const db = request.result;
+          if (settled) { db.close(); return; }
+          settled = true; clearTimeout(timer);
+          db.onversionchange = () => { db.close(); if (this.pending === opening) this.pending = null; };
+          resolve(db);
+        };
+        request.onerror = () => fail(timeoutFailure ?? idbError(request.error));
+        request.onblocked = () => fail(new SaveStoreError('E_BLOCKED', 'Fermez les autres onglets de l’émulateur pour ouvrir les sauvegardes.'));
+      }).catch(error => { if (this.pending === opening) this.pending = null; throw idbError(error); });
+      this.pending = opening;
+    }
     return this.pending;
   }
   async address(identity, slot, kind) {
@@ -142,42 +202,109 @@ export class SaveStore {
     return { group, key: group + ':' + slotValue(slot) };
   }
   async record(key) {
-    const db = await this.open(), transaction = db.transaction('slots', 'readonly');
-    const done = transactionDone(transaction);
-    const [result] = await Promise.all([requestResult(transaction.objectStore('slots').get(key)), done]);
-    return result;
+    try { return await readTransaction(await this.open(), this.timeoutMs, store => store.get(key)); }
+    catch (error) { throw idbError(error); }
   }
   async put(identity, slot, envelope) {
-    // Clone before awaits: callers cannot mutate bytes midway through validation.
-    let snapshot;
-    try { snapshot = structuredClone(envelope); } catch (error) { throw idbError(error, 'Sauvegarde non sérialisable.'); }
-    const kind = snapshot?.kind;
-    await verifyEnvelope(snapshot, identity, { kind });
-    const address = await this.address(identity, slot, kind);
+    const [written] = await this.putBatch(identity, [{ slot, envelope }]);
+    return written;
+  }
+  async putBatch(identity, entries) {
+    // Clone every input before the first await, including the shared identity.
+    // No checksum work belongs inside the short-lived IDB transaction below.
+    const normalized = normalizeIdentity(identity);
+    ensure(Array.isArray(entries) && entries.length > 0 && entries.length <= MAX_BATCH_SAVES,
+      'E_BATCH', 'Un groupe doit contenir de 1 à 9 sauvegardes.');
+    let totalBytes = 0;
+    for (const entry of entries) {
+      ensure(plain(entry) && plain(entry.envelope), 'E_BATCH', 'Entrée de sauvegarde groupée invalide.');
+      ensure(entry.deduplicate === undefined || typeof entry.deduplicate === 'boolean', 'E_BATCH', 'Option de déduplication invalide.');
+      const payload = entry.envelope.payload;
+      const length = ArrayBuffer.isView(payload) && payload.BYTES_PER_ELEMENT === 1 ? payload.byteLength :
+        Object.prototype.toString.call(payload) === '[object ArrayBuffer]' ? payload.byteLength : 0;
+      ensure(length > 0 && length <= MAX_SAVE_BYTES, 'E_SIZE', 'Sauvegarde vide ou trop volumineuse : maximum 64 Mio.');
+      totalBytes += length;
+    }
+    ensure(totalBytes <= MAX_BATCH_BYTES, 'E_BATCH', 'Groupe de sauvegardes trop volumineux : maximum 128 Mio.');
+    let snapshots;
+    try { snapshots = structuredClone(entries); } catch (error) { throw idbError(error, 'Sauvegardes non sérialisables.'); }
+    const prepared = [], keys = new Set();
+    for (const { slot, envelope, deduplicate = false } of snapshots) {
+      const kind = envelope.kind;
+      await verifyEnvelope(envelope, normalized, { kind });
+      const address = await this.address(normalized, slot, kind);
+      ensure(!keys.has(address.key), 'E_BATCH', 'Un emplacement ne peut apparaître deux fois dans une écriture groupée.');
+      keys.add(address.key);
+      prepared.push({ slot, kind, envelope, address, deduplicate });
+    }
     for (let attempt = 0; attempt < 4; attempt++) {
-      const before = await this.record(address.key);
-      if (before?.current) await verifyEnvelope(before.current, identity, { kind });
+      const before = await Promise.all(prepared.map(entry => this.record(entry.address.key)));
+      await Promise.all(before.map(async (record, index) => {
+        if (!record) return;
+        const { address, slot, kind } = prepared[index];
+        ensure(record.key === address.key && record.group === address.group && record.slot === slot && record.kind === kind &&
+          Number.isSafeInteger(record.revision) && record.revision > 0 && record.current,
+        'E_INTEGRITY', 'Index de sauvegarde corrompu ; aucune écriture effectuée.');
+        await verifyEnvelope(record.current, normalized, { kind });
+      }));
       const db = await this.open();
       try {
-        const revision = await new Promise((resolve, reject) => {
+        return await new Promise((resolve, reject) => {
           const transaction = db.transaction('slots', 'readwrite'), store = transaction.objectStore('slots');
-          let conflict = false, nextRevision, writeFailure;
-          const request = store.get(address.key);
-          request.onsuccess = () => {
-            try {
-              const current = request.result;
-              if ((current?.revision ?? 0) !== (before?.revision ?? 0)) { conflict = true; transaction.abort(); return; }
-              nextRevision = (current?.revision ?? 0) + 1;
-              store.put({ ...address, slot, kind, revision: nextRevision, updated_utc: new Date().toISOString(),
-                current: snapshot, previous: current?.current ?? null });
-            } catch (error) { writeFailure = idbError(error); transaction.abort(); }
-          };
-          transaction.oncomplete = () => resolve(nextRevision);
-          transaction.onerror = () => {};
-          transaction.onabort = () => reject(writeFailure ?? (conflict ? new SaveStoreError('E_CONFLICT', 'Sauvegarde modifiée par un autre onglet ; nouvelle tentative.') : idbError(transaction.error)));
+          const observed = new Array(prepared.length), revisions = new Array(prepared.length);
+          const committed = new Array(prepared.length), skipped = new Array(prepared.length).fill(false);
+          let conflict = false, writeFailure, settled = false, remaining = prepared.length;
+          transactionDone(transaction, this.timeoutMs).then(() => {
+            settled = true;
+            resolve(prepared.map(({ slot, kind }, index) => ({
+              slot, kind, revision: revisions[index], id: committed[index].id, created_utc: committed[index].created_utc,
+              payload_size: committed[index].payload_size, payload_sha256: committed[index].payload_sha256,
+              skipped_unchanged: skipped[index]
+            })));
+          }, error => {
+            settled = true;
+            reject(writeFailure ?? (conflict ? new SaveStoreError('E_CONFLICT', 'Sauvegardes modifiées par un autre onglet ; nouvelle tentative.') : error));
+          });
+          // Read and compare every member before queuing any write. The single
+          // transaction commits all current/previous pairs together or none.
+          for (let index = 0; index < prepared.length; index++) {
+            const request = store.get(prepared[index].address.key);
+            request.onsuccess = () => {
+              if (settled) return;
+              try {
+                observed[index] = request.result;
+                if (--remaining !== 0) return;
+                for (let i = 0; i < prepared.length; i++) {
+                  const current = observed[i], expected = before[i];
+                  if ((current?.revision ?? 0) !== (expected?.revision ?? 0) ||
+                      current?.current?.id !== expected?.current?.id ||
+                      current?.current?.header_sha256 !== expected?.current?.header_sha256) {
+                    conflict = true; transaction.abort(); return;
+                  }
+                  ensure((current?.revision ?? 0) < Number.MAX_SAFE_INTEGER,
+                    'E_INTEGRITY', 'Compteur de révision hors limites ; aucune écriture effectuée.');
+                }
+                const updated = new Date().toISOString();
+                for (let i = 0; i < prepared.length; i++) {
+                  const { address, slot, kind, envelope, deduplicate } = prepared[i], current = observed[i];
+                  // The member remains in every read/CAS even if its write can
+                  // be skipped. An outside-of-transaction dedupe would race a
+                  // concurrent native save and break the state/native pairing.
+                  if (deduplicate && current?.current && current.current.payload_sha256 === envelope.payload_sha256 &&
+                      current.current.payload_size === envelope.payload_size && canonical(current.current.metadata) === canonical(envelope.metadata)) {
+                    revisions[i] = current.revision; committed[i] = current.current; skipped[i] = true;
+                  } else {
+                    revisions[i] = (current?.revision ?? 0) + 1; committed[i] = envelope;
+                    store.put({ ...address, slot, kind, revision: revisions[i], updated_utc: updated,
+                      current: envelope, previous: current?.current ?? null });
+                  }
+                }
+              } catch (error) { writeFailure = idbError(error); transaction.abort(); }
+            };
+          }
+
         });
-        return { slot, kind, revision, id: snapshot.id, created_utc: snapshot.created_utc, payload_size: snapshot.payload_size };
-      } catch (error) { if (error.code !== 'E_CONFLICT' || attempt === 3) throw error; }
+      } catch (error) { const failure = idbError(error); if (failure.code !== 'E_CONFLICT' || attempt === 3) throw failure; }
     }
   }
   async load(identity, slot, { kind = 'state', previous = false } = {}) {
@@ -189,8 +316,7 @@ export class SaveStore {
   }
   async list(identity, { kind = 'state' } = {}) {
     const { group } = await this.address(identity, 1, kind), db = await this.open();
-    const transaction = db.transaction('slots', 'readonly'), done = transactionDone(transaction);
-    const [records] = await Promise.all([requestResult(transaction.objectStore('slots').index('group').getAll(group)), done]);
+    const records = await readTransaction(db, this.timeoutMs, store => store.index('group').getAll(group));
     // Deliberately no save payloads in list/diagnostic data.
     return records.sort((a, b) => a.slot - b.slot).map(record => ({ slot: record.slot, kind: record.kind, revision: record.revision,
       id: record.current.id, created_utc: record.current.created_utc, updated_utc: record.updated_utc,
@@ -199,9 +325,12 @@ export class SaveStore {
   }
   async delete(identity, slot, { kind = 'state' } = {}) {
     const { key } = await this.address(identity, slot, kind), db = await this.open();
-    const transaction = db.transaction('slots', 'readwrite'), done = transactionDone(transaction);
+    const transaction = db.transaction('slots', 'readwrite'), done = transactionDone(transaction, this.timeoutMs);
     transaction.objectStore('slots').delete(key);
     await done;
   }
-  async close() { const db = this.pending ? await this.pending : null; db?.close(); this.pending = null; }
+  async close() {
+    const pending = this.pending, db = pending ? await pending.catch(() => null) : null;
+    db?.close(); if (this.pending === pending) this.pending = null;
+  }
 }

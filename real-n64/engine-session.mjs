@@ -1,9 +1,29 @@
 // SPDX-License-Identifier: MIT
 // One disposable browser realm per engine session. No ROM or save is uploaded.
+import { inspectNativeState, makeRestoreWitness, compareRestoreWitness } from './native-state.mjs';
+import { sriValue, verifyRuntimeBytes } from './runtime-integrity.mjs';
 const contexts = new Set();
 let emulator = null, romURL = null, closed = false, notify = () => {}, sessionId = null;
 const note = (type, data = {}) => { if (!closed) notify(type, data); };
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+const failure = (code, message) => Object.assign(new Error(message), { code });
+async function bounded(promise, milliseconds, code, message) {
+  let timer;
+  try { return await Promise.race([promise, new Promise((_, reject) => { timer = setTimeout(() => reject(failure(code, message)), milliseconds); })]); }
+  finally { clearTimeout(timer); }
+}
+let restoreAttempt = null;
+for (const level of ['log', 'warn', 'error']) {
+  const original = console[level].bind(console);
+  console[level] = (...args) => {
+    const text = args.filter(value => typeof value === 'string').join(' ');
+    if (restoreAttempt && /(?:\[ERROR\]|not a valid.*savestate|failed.{0,80}(?:state|file)|(?:state|savestate).{0,80}(?:failed|invalid|error|cannot))/i.test(text)) {
+      restoreAttempt.errors.push(text.slice(0, 500));
+      note('state.native.rejected', { code: 'E_NATIVE_REJECTED', message: 'Le cœur a signalé une erreur pendant le chargement.' });
+    }
+    original(...args);
+  };
+}
 const NativeContext = window.AudioContext;
 if (NativeContext) {
   window.AudioContext = class extends NativeContext {
@@ -39,10 +59,14 @@ window.addEventListener('error', event => note('browser.error', { message: event
 window.addEventListener('unhandledrejection', event => note('browser.unhandledrejection', { message: String(event.reason) }));
 window.addEventListener('gamepadconnected', event => note('gamepad.connected', { id: event.gamepad.id, mapping: event.gamepad.mapping }));
 
-function loadScript(name) {
+function loadScript(name, files) {
   return new Promise((resolve, reject) => {
-    const script = document.createElement('script'); script.src = 'vendor/data/src/' + name;
-    script.onload = resolve; script.onerror = () => reject(new Error('Dépendance locale absente : ' + name));
+    const resource = 'data/src/' + name, hash = files[resource];
+    const script = document.createElement('script');
+    const timer = setTimeout(() => { script.remove(); reject(failure('E_RUNTIME_SCRIPT_TIMEOUT', 'Le chargement d’une dépendance moteur a expiré : ' + name)); }, 10000);
+    script.integrity = sriValue(hash); script.crossOrigin = 'anonymous'; script.src = 'vendor/' + resource;
+    script.onload = () => { clearTimeout(timer); note('integrity.resource.verified', { resource, sha256: hash, mechanism: 'browser-sri' }); resolve(); };
+    script.onerror = () => { clearTimeout(timer); reject(failure('E_RUNTIME_SCRIPT', 'Dépendance moteur absente, altérée ou refusée : ' + name)); };
     document.head.appendChild(script);
   });
 }
@@ -63,7 +87,9 @@ async function resumeAudio() {
 }
 async function pause() {
   if (emulator?.started) emulator.pause();
-  for (const context of contexts) if (context.state === 'running') await context.suspend();
+  for (const context of contexts) if (context.state === 'running') {
+    await bounded(context.suspend(), 1200, 'E_AUDIO_SUSPEND_TIMEOUT', 'Le système audio n’a pas confirmé sa mise en pause. Chargement annulé ; la partie et les sauvegardes sont conservées. Réactivez l’audio puis réessayez.');
+  }
 }
 async function play() {
   gm().toggleFastForward(0); gm().toggleSlowMotion(0); emulator.play();
@@ -90,8 +116,37 @@ async function start(config, callback) {
   if (emulator || closed) throw new Error('Une session isolée ne peut démarrer qu’une seule fois.');
   notify = callback; sessionId = config.sessionId;
   window.EJS_DEBUG_XX = true;
-  for (const name of ['emulator.js', 'nipplejs.js', 'shaders.js', 'storage.js', 'gamepad.js', 'GameManager.js', 'socket.io.min.js', 'compression.js']) await loadScript(name);
-  const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = 'vendor/data/emulator.css'; document.head.appendChild(css);
+  for (const name of ['emulator.js', 'nipplejs.js', 'shaders.js', 'storage.js', 'gamepad.js', 'GameManager.js', 'socket.io.min.js', 'compression.js']) {
+    await loadScript(name, config.runtimeFiles);
+    if (closed) throw failure('E_SESSION_CLOSED', 'Session interrompue pendant la préparation.');
+  }
+  const originalDownload = window.EmulatorJS.prototype.downloadFile;
+  window.EmulatorJS.prototype.downloadFile = async function(path, progress, notWithPath, options = {}) {
+    if (typeof path !== 'string' || path.startsWith('blob:') || path.startsWith('data:')) return originalDownload.call(this, path, progress, notWithPath, options);
+    const base = new URL(this.config.dataPath, location.href), url = new URL(notWithPath ? path : base.href + path, location.href);
+    if (url.origin !== location.origin || !url.href.startsWith(base.href)) {
+      this.failedToStart = true;
+      throw failure('E_RUNTIME_EXTERNAL', 'Une dépendance moteur extérieure à cette livraison a été refusée.');
+    }
+    const resource = 'data/' + url.href.slice(base.href.length).split('?')[0];
+    try {
+      const response = await nativeFetch(url, { method: options.method ?? 'GET', signal: AbortSignal.timeout(15000) });
+      if (!response.ok) throw failure('E_RUNTIME_HTTP', 'Dépendance moteur indisponible : ' + resource);
+      if (options.method === 'HEAD') return { headers: Object.fromEntries(response.headers) };
+      const buffer = await response.arrayBuffer();
+      const hash = await verifyRuntimeBytes(buffer, config.runtimeFiles[resource], resource);
+      note('integrity.resource.verified', { resource, sha256: hash, mechanism: 'actual-response-bytes' });
+      let data = buffer;
+      if (options.responseType === 'text') { data = new TextDecoder().decode(buffer); try { data = JSON.parse(data); } catch {} }
+      if (progress) progress(' 100%');
+      return { data, headers: Object.fromEntries(response.headers) };
+    } catch (error) {
+      this.failedToStart = true;
+      note('integrity.resource.failed', { resource, code: error.code ?? 'E_RUNTIME_FETCH', message: error.message });
+      return -1;
+    }
+  };
+  const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = 'vendor/data/emulator.css'; css.integrity = sriValue(config.runtimeFiles['data/emulator.css']); css.crossOrigin = 'anonymous'; document.head.appendChild(css);
   // Own adapter: keep the unmodified vendor files hash-verifiable. The engine's
   // automatic IDBFS writes are replaced by a session-local MEMFS directory.
   const OriginalManager = window.EJS_GameManager;
@@ -157,29 +212,113 @@ function captureBattery() {
   const value = gm().getSaveFile();
   return value?.length ? new Uint8Array(value) : null;
 }
-async function loadState(bytes) {
-  const manager = gm();
-  const input = new Uint8Array(bytes), reference = captureState();
-  // Pinned core observations: native load_state returns 0 for valid AND invalid
-  // payloads. It is not a success flag. Validate its actual RASTATE/Mupen header,
-  // version and embedded ROM MD5 against the fresh core before calling it.
-  if (input.length !== reference.length || input.length < 64 ||
-      ![...input.subarray(0, 60)].every((value, index) => value === reference[index])) {
-    throw new Error('Format natif, version ou identité interne de l’état incompatibles.');
+async function waitFrames(manager, count, milliseconds = 3000) {
+  const before = manager.getFrameNum(), deadline = performance.now() + milliseconds;
+  while (manager.getFrameNum() - before < count) {
+    if (closed || performance.now() > deadline) throw failure('E_RESTORE_STALLED', 'Le moteur ne progresse plus pendant la vérification. Chargement annulé ; la session précédente est conservée.');
+    await wait(20);
   }
-  await pause(); manager.toggleFastForward(0); manager.toggleSlowMotion(0);
-  manager.clearEJSResetTimer();
-  const path = '/hub-verified-state.bin'; manager.FS.writeFile(path, new Uint8Array(bytes));
-  let nativeStatus;
-  nativeStatus = manager.functions.loadState(path, 0);
-  // The native frontend can queue a load task. Keep the verified payload until
-  // that task has had time to run, as the pinned upstream wrapper does.
-  setTimeout(() => { try { manager.FS.unlink(path); } catch {} }, 5000);
-  note('state.native.return', { native_status: nativeStatus });
-  await play();
-  const before = manager.getFrameNum(); await wait(450); const after = manager.getFrameNum();
-  if (after <= before || after - before > 90) throw new Error('Progression du moteur anormale après restauration.');
-  return { native_status: nativeStatus, frame_before: before, frame_after: after, contexts: snapshot().contexts };
+}
+async function loadState(bytes) {
+  const manager = gm(), input = new Uint8Array(bytes);
+  const expected = inspectNativeState(input);
+  const path = '/hub-verified-state-' + crypto.randomUUID() + '.bin';
+  const attempt = { errors: [], ranges: [], consumed_bytes: 0 };
+  const originalRead = manager.FS.read;
+  let trackedRead, nativeStatus, stage = 'prepare-memory-witness';
+  try {
+    await pause();
+    const beforeA = captureState();
+    await play(); await waitFrames(manager, 2); await wait(250); await pause();
+    const beforeB = captureState(), fresh = inspectNativeState(beforeB);
+    if (expected.rom_md5 !== fresh.rom_md5 || expected.core_version !== fresh.core_version) {
+      throw failure('E_RESTORE_NATIVE_IDENTITY', 'Le format natif ou l’identité interne de cet état diffère du jeu lancé. Aucune sauvegarde modifiée.');
+    }
+    const witness = makeRestoreWitness(input, beforeA, beforeB);
+    note('state.witness.prepared', { anchors: witness.total, strong: witness.strong, already_equivalent: witness.already_equivalent });
+    manager.toggleFastForward(0); manager.toggleSlowMotion(0); manager.clearEJSResetTimer();
+    manager.FS.writeFile(path, input);
+    // Observe actual reads by the native frontend. A fresh session naturally
+    // reaching the same RAM values is not proof that it consumed this state.
+    trackedRead = function(stream, buffer, offset, length, position, ...rest) {
+      const start = position === undefined ? stream.position : position;
+      const count = originalRead.call(this, stream, buffer, offset, length, position, ...rest);
+      if (stream.path === path && count > 0) {
+        if (!Number.isSafeInteger(start) || start < 0 || start + count > input.length) {
+          attempt.errors.push('Native state read outside verified payload.');
+        } else {
+          let matches = true;
+          for (let i = 0; i < count; i++) if ((buffer[offset + i] & 255) !== input[start + i]) { matches = false; break; }
+          if (!matches) attempt.errors.push('Native state read differs from verified payload.');
+          else {
+            attempt.ranges.push([start, start + count]);
+            attempt.ranges.sort((a, b) => a[0] - b[0]);
+            let end = 0;
+            for (const range of attempt.ranges) { if (range[0] > end) break; end = Math.max(end, range[1]); }
+            attempt.consumed_bytes = end;
+            if (end === input.length && !attempt.immediateScheduled) {
+              attempt.immediateScheduled = true;
+              // Run only after the current native call stack has returned.
+              // Observe, without changing RAM, whether its complete contents
+              // match before another animation-frame iteration can advance it.
+              queueMicrotask(() => {
+                if (closed || restoreAttempt !== attempt) return;
+                try {
+                  const observed = inspectNativeState(captureState()).rdram;
+                  let different = 0;
+                  for (let i = 0; i < observed.length; i++) if (observed[i] !== expected.rdram[i]) different++;
+                  attempt.immediate = { exact_rdram: different === 0, different_bytes: different, bytes: observed.length };
+                  note('state.memory.immediate.observed', attempt.immediate);
+                } catch (error) { note('state.memory.immediate.unavailable', { message: error.message }); }
+              });
+            }
+          }
+        }
+      }
+      return count;
+    };
+    manager.FS.read = trackedRead;
+    restoreAttempt = attempt; stage = 'native-load';
+    nativeStatus = manager.functions.loadState(path, 0);
+    note('state.native.return', { native_status: nativeStatus, success_inferred: false });
+    // The frontend queues this operation; its integer return is NOT an ACK.
+    // Observe the serialized RDRAM of the actual running core, without changing it.
+    emulator.play(); const audio = resumeAudio();
+    stage = 'verify-rdram';
+    const deadline = performance.now() + 6000; let proof = null, lastObserved = null;
+    while (!closed && performance.now() < deadline) {
+      await wait(16);
+      if (attempt.errors.length) throw failure('E_NATIVE_REJECTED', 'Le cœur a refusé le chargement de cet état. La partie précédente et le coffre restent conservés.');
+      const observed = compareRestoreWitness(witness, captureState());
+      lastObserved = observed;
+      if (attempt.consumed_bytes === input.length && (observed.verified || observed.equivalent)) { proof = observed; break; }
+    }
+    if (!proof) {
+      note('state.verify.unconfirmed', { native_payload_read_bytes: attempt.consumed_bytes,
+        native_payload_expected_bytes: input.length, witness: lastObserved, anchors: witness.total });
+      throw failure('E_RESTORE_UNCONFIRMED', 'La mémoire du jeu n’a pas confirmé la restauration dans le délai prévu. Chargement annulé ; aucune sauvegarde écrasée. Exportez le diagnostic pour analyse.');
+    }
+    stage = 'verify-progress';
+    const before = manager.getFrameNum(), startTime = performance.now();
+    await waitFrames(manager, 2);
+    const after = manager.getFrameNum(), elapsed = performance.now() - startTime;
+    if (attempt.errors.length) throw failure('E_NATIVE_REJECTED', 'Le cœur a signalé une erreur après désérialisation. La session précédente est conservée.');
+    await audio;
+    const result = { native_status: nativeStatus, frame_before: before, frame_after: after,
+      observed_elapsed_ms: elapsed, native_payload_read_bytes: attempt.consumed_bytes,
+      native_payload_expected_bytes: input.length, memory: proof, already_equivalent: !!proof.already_equivalent,
+      immediate_memory: attempt.immediate ?? null,
+      contexts: snapshot().contexts };
+    note(proof.verified ? 'state.memory.verified' : 'state.memory.equivalent', result);
+    return result;
+  } catch (error) {
+    note('state.restore.failed', { code: error.code ?? 'E_RESTORE', stage, message: error.message });
+    throw error;
+  } finally {
+    restoreAttempt = null;
+    if (manager.FS.read === trackedRead) manager.FS.read = originalRead;
+    try { manager.FS.unlink(path); } catch {}
+  }
 }
 function setCheats(cheats) {
   const manager = gm(); manager.resetCheat();

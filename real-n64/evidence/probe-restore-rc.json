@@ -1,0 +1,282 @@
+{
+  "schema": "emuperso/restore-independent-probe/v1",
+  "baseline": false,
+  "baseline_commit": null,
+  "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+  "scope": "Repository MIT ROM, fresh browser profile, controlled RAM/MEMFS test only. Not a reproduction of Karl Windows PC.",
+  "results": [
+    {
+      "test": "Valid native state restores actual unused-RAM marker",
+      "status": "RÉUSSI",
+      "expected_ram": 4951,
+      "actual_ram": 4951,
+      "adapter_result": {
+        "native_status": 0,
+        "frame_before": 64,
+        "frame_after": 67,
+        "observed_elapsed_ms": 44.10999999940395,
+        "native_payload_read_bytes": 16793440,
+        "native_payload_expected_bytes": 16793440,
+        "memory": {
+          "matched": 2,
+          "total": 2,
+          "ratio": 1,
+          "matched_strong": 1,
+          "verified": true,
+          "already_equivalent": false,
+          "equivalent": false,
+          "restored": true,
+          "mode": "differential_ram"
+        },
+        "already_equivalent": false,
+        "immediate_memory": {
+          "exact_rdram": false,
+          "different_bytes": 1,
+          "bytes": 8388608
+        },
+        "contexts": [
+          {
+            "state": "running",
+            "sample_rate": 44100
+          }
+        ]
+      }
+    },
+    {
+      "test": "Native queued file-read failure is not accepted as restored",
+      "status": "RÉUSSI",
+      "injection": "Actual native load queued, then its MEMFS file removed before task processing; actual native return unchanged",
+      "adapter": {
+        "accepted": false,
+        "message": "Le cœur a refusé le chargement de cet état. La partie précédente et le coffre restent conservés."
+      },
+      "expected_ram": 4951,
+      "actual_ram": 9320,
+      "native_log": [
+        {
+          "type": "log",
+          "text": "[INFO] [State]: Loading state \"/hub-verified-state-50261a0b-9ba6-4f1e-896c-fd783fcc52d3.bin\", 16793440 bytes."
+        },
+        {
+          "type": "log",
+          "text": "[INFO] [State]: Loading state \"/hub-verified-state-8fdd7f93-ebe9-457b-81ea-9a2a5c8d8583.bin\", 0 bytes."
+        },
+        {
+          "type": "log",
+          "text": "[ERROR] [State]: Failed to load state from \"/hub-verified-state-8fdd7f93-ebe9-457b-81ea-9a2a5c8d8583.bin\"."
+        }
+      ]
+    },
+    {
+      "test": "Pending WebAudio suspend is bounded and releases the UI with an error",
+      "status": "RÉUSSI",
+      "injection": "Existing actual session AudioContext.suspend replaced by a deliberately never-settling promise, simulating an unresolved WebAudio operation",
+      "suspend_calls": 1,
+      "load_button_still_disabled": false,
+      "observed_wait_ms": "bounded by 15000",
+      "message": "Le système audio n’a pas confirmé sa mise en pause. Chargement annulé ; la partie et les sauvegardes sont conservées. Réactivez l’audio puis réessayez."
+    }
+  ],
+  "console": [
+    {
+      "type": "log",
+      "text": "screenshotUpscale 1"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option screenshotUpscale. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "screenRecordFPS 30"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option screenRecordFPS. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "screenRecordFormat mp4"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option screenRecordFormat. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "screenRecordUpscale 1"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option screenRecordUpscale. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "screenRecordVideoBitrate 2621440"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option screenRecordVideoBitrate. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "screenRecordAudioBitrate 196608"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option screenRecordAudioBitrate. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "rewindEnabled disabled"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option rewindEnabled. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "menubarBehavior downward"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option menubarBehavior. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "keyboardInput disabled"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option keyboardInput. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "altKeyboardInput disabled"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option altKeyboardInput. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "lockMouse disabled"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option lockMouse. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "Available core options {retroarch_core: Object, shader: Object, fps: Object, videoRotation: Object, screenshotSource: Object}"
+    },
+    {
+      "type": "log",
+      "text": "[ERROR] [EMSCRIPTEN]: Could not get screen dimensions!"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Game controller 0 (Standard controller) has a Memory pak plugged in"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Game controller 1 (Standard controller) has nothing plugged in"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Game controller 2 (Standard controller) has nothing plugged in"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Game controller 3 (Standard controller) has nothing plugged in"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Unknown CIC type (00000007BA90A53A)! using CIC 6102."
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Using CIC type X102"
+    },
+    {
+      "type": "log",
+      "text": "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\"."
+    },
+    {
+      "type": "log",
+      "text": "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\"."
+    },
+    {
+      "type": "log",
+      "text": "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\"."
+    },
+    {
+      "type": "log",
+      "text": "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\"."
+    },
+    {
+      "type": "log",
+      "text": "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\"."
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Initializing 4 RDRAM modules for a total of 8 MB"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Starting R4300 emulator: Pure Interpreter"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] Setting real canvas size: 1026 x 560"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [SRAM]: Saving RAM type #0 to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [SRAM]: Saved successfully to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [State]: Loading state \"/hub-verified-state-50261a0b-9ba6-4f1e-896c-fd783fcc52d3.bin\", 16793440 bytes."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [State]: Loading state \"/hub-verified-state-8fdd7f93-ebe9-457b-81ea-9a2a5c8d8583.bin\", 0 bytes."
+    },
+    {
+      "type": "log",
+      "text": "[ERROR] [State]: Failed to load state from \"/hub-verified-state-8fdd7f93-ebe9-457b-81ea-9a2a5c8d8583.bin\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [SRAM]: Saving RAM type #0 to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [SRAM]: Saved successfully to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\"."
+    }
+  ]
+}

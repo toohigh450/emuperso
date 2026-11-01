@@ -1,0 +1,32 @@
+{
+  "version": "0.3.0",
+  "zip_unit_tests": {
+    "status": "RÉUSSI",
+    "count": 20,
+    "command": "node tests/zip-rom.test.mjs"
+  },
+  "zip_browser_tests": {
+    "status": "RÉUSSI",
+    "count": 10,
+    "proof": "evidence/tests-zip-browser.json"
+  },
+  "rom_unit_regression": {
+    "status": "RÉUSSI",
+    "count": 12
+  },
+  "rom_browser_regression": {
+    "status": "RÉUSSI",
+    "count": 9,
+    "proof": "evidence/tests-import-browser.json"
+  },
+  "real_core_regression": {
+    "status": "RÉUSSI",
+    "count": 7,
+    "proof": "evidence/browser-real-results.json"
+  },
+  "actual_64MiB_synthetic_fixture": true,
+  "private_rom_used": false,
+  "protected_originals_unchanged": 98,
+  "windows_latest_commit_ci": "See delivered commit run; not presumed",
+  "karl_zip_test": "NON TESTABLE ici"
+}

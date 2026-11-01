@@ -113,6 +113,258 @@
       }
     },
     {
+      "test": "Groupe état+natif : transaction unique et copies précédentes cohérentes",
+      "status": "RÉUSSI",
+      "proof": {
+        "written": [
+          {
+            "slot": 3,
+            "kind": "state",
+            "revision": 2,
+            "id": "b0701dac65419140d98d21ee55a09536",
+            "created_utc": "2026-11-01T02:06:55.110Z",
+            "payload_size": 1,
+            "payload_sha256": "a318c24216defe206feeb73ef5be00033fa9c4a74d0b967f6532a26ca5906d3b",
+            "skipped_unchanged": false
+          },
+          {
+            "slot": 3,
+            "kind": "battery",
+            "revision": 2,
+            "id": "2b8d6e00b00fd1db8b577c8ef6097a47",
+            "created_utc": "2026-11-01T02:06:55.110Z",
+            "payload_size": 1,
+            "payload_sha256": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+            "skipped_unchanged": false
+          }
+        ],
+        "loaded": {
+          "state": 43,
+          "battery": 53,
+          "previousState": 42,
+          "previousBattery": 52,
+          "revisions": [
+            2,
+            2
+          ],
+          "ids": [
+            "b0701dac65419140d98d21ee55a09536",
+            "2b8d6e00b00fd1db8b577c8ef6097a47"
+          ],
+          "previousIds": [
+            "b0d0d0907eec1c9db80beb0e13df78f1",
+            "6b9544b546ebe721fe6a850fcf10684e"
+          ],
+          "label": "État « atomique » 🎮"
+        }
+      }
+    },
+    {
+      "test": "Échec du second membre : aucune écriture partielle ni perte des versions précédentes",
+      "status": "RÉUSSI",
+      "proof": {
+        "code": "E_QUOTA",
+        "writes": 2,
+        "allRecordsUnchanged": true,
+        "failure_is_injected": true
+      }
+    },
+    {
+      "test": "Interruption après succès réel du premier put IDB : groupe entièrement annulé",
+      "status": "RÉUSSI",
+      "proof": {
+        "code": "E_STORAGE",
+        "firstWriteSucceeded": true,
+        "allRecordsUnchanged": true,
+        "abort_is_injected": true
+      }
+    },
+    {
+      "test": "Membre courant corrompu : écriture groupée refusée sans toucher aucun membre",
+      "status": "RÉUSSI",
+      "proof": {
+        "code": "E_INTEGRITY",
+        "stateAndCorruptMemberUnchanged": true,
+        "restoredFixture": true
+      }
+    },
+    {
+      "test": "Groupes concurrents : révisions complètes et paires état+natif jamais mélangées",
+      "status": "RÉUSSI",
+      "proof": {
+        "revisions": [
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "after": {
+          "state": 62,
+          "battery": 72,
+          "previousState": 61,
+          "previousBattery": 71,
+          "revisions": [
+            4,
+            4
+          ],
+          "ids": [
+            "1baf0ee5eea596f8ef46acd0cc7cf7e3",
+            "99715e7433e434d9e940ba0665b5eb53"
+          ],
+          "previousIds": [
+            "1c15b896dd56c83b816a61ebf71f4abe",
+            "7e4c2b18f9d9502d4ff809a3efb794f8"
+          ],
+          "label": "État « atomique » 🎮"
+        }
+      }
+    },
+    {
+      "test": "Copie groupée avant await : mutation des entrées sans effet sur les données enregistrées",
+      "status": "RÉUSSI",
+      "proof": {
+        "state": 81,
+        "battery": 91,
+        "previousState": 62,
+        "previousBattery": 72,
+        "revisions": [
+          5,
+          5
+        ],
+        "ids": [
+          "25e3b37891abe8b0f269c2c6b6743835",
+          "f7174a40ce6ef7630ced9614aadc389e"
+        ],
+        "previousIds": [
+          "1baf0ee5eea596f8ef46acd0cc7cf7e3",
+          "99715e7433e434d9e940ba0665b5eb53"
+        ],
+        "label": "État « atomique » 🎮"
+      }
+    },
+    {
+      "test": "Déduplication dans le groupe : sauvegarde native et copie précédente distincte intactes",
+      "status": "RÉUSSI",
+      "proof": {
+        "written": [
+          {
+            "slot": 1,
+            "kind": "state",
+            "revision": 2,
+            "id": "72317f42af20f5910b1917b8e2a4dfa5",
+            "created_utc": "2026-11-01T02:06:55.154Z",
+            "payload_size": 1,
+            "payload_sha256": "ffe679bb831c95b67dc17819c63c5090d221aac6f4c7bf530f594ab43d21fa1e",
+            "skipped_unchanged": false
+          },
+          {
+            "slot": 1,
+            "kind": "battery",
+            "revision": 2,
+            "id": "b3832164ed97fb7006b794bad1176498",
+            "created_utc": "2026-11-01T02:06:55.152Z",
+            "payload_size": 1,
+            "payload_sha256": "83891d7fe85c33e52c8b4e5814c92fb6a3b9467299200538a6babaa8b452d879",
+            "skipped_unchanged": true
+          }
+        ],
+        "current": 20,
+        "previous": 10,
+        "revision": 2,
+        "retainedId": true,
+        "retainedDate": true,
+        "retainedBackup": true,
+        "returnedStoredId": true,
+        "didNotReturnUnusedId": true
+      }
+    },
+    {
+      "test": "Déduplication concurrente : membre natif relu par CAS, paire cohérente et valeur concurrente récupérable",
+      "status": "RÉUSSI",
+      "proof": {
+        "written": [
+          {
+            "slot": 1,
+            "kind": "state",
+            "revision": 3,
+            "id": "ec51fb050df236e1a6c006984c6561be",
+            "created_utc": "2026-11-01T02:06:55.162Z",
+            "payload_size": 1,
+            "payload_sha256": "32ebb1abcc1c601ceb9c4e3c4faba0caa5b85bb98c4f1e6612c40faa528a91c9",
+            "skipped_unchanged": false
+          },
+          {
+            "slot": 1,
+            "kind": "battery",
+            "revision": 4,
+            "id": "8e58f0d1bfe699fb293c3a787f4d535e",
+            "created_utc": "2026-11-01T02:06:55.162Z",
+            "payload_size": 1,
+            "payload_sha256": "83891d7fe85c33e52c8b4e5814c92fb6a3b9467299200538a6babaa8b452d879",
+            "skipped_unchanged": false
+          }
+        ],
+        "state": 40,
+        "native": 20,
+        "previousNative": 99,
+        "stateRevision": 3,
+        "nativeRevision": 4,
+        "realConcurrentWrite": 99
+      }
+    },
+    {
+      "test": "Déduplication : mêmes octets avec historique différent restent une vraie nouvelle révision",
+      "status": "RÉUSSI",
+      "proof": {
+        "written": [
+          {
+            "slot": 1,
+            "kind": "state",
+            "revision": 4,
+            "id": "89ec948b9d83d9a94ccb40dcfead6024",
+            "created_utc": "2026-11-01T02:06:55.170Z",
+            "payload_size": 1,
+            "payload_sha256": "ba5ec51d07a4ac0e951608704431d59a02b21a4e951acc10505a8dc407c501ee",
+            "skipped_unchanged": false
+          },
+          {
+            "slot": 1,
+            "kind": "battery",
+            "revision": 5,
+            "id": "45d74e3e8c376a516666dde8a731384c",
+            "created_utc": "2026-11-01T02:06:55.170Z",
+            "payload_size": 1,
+            "payload_sha256": "83891d7fe85c33e52c8b4e5814c92fb6a3b9467299200538a6babaa8b452d879",
+            "skipped_unchanged": false
+          }
+        ],
+        "native": 20,
+        "revision": 5,
+        "cheats": 1,
+        "previousWasUnmarked": true
+      }
+    },
+    {
+      "test": "Fermeture du navigateur pendant transaction : tous les membres ou aucun après réouverture",
+      "status": "RÉUSSI",
+      "proof": {
+        "state": 81,
+        "battery": 91,
+        "previousState": 62,
+        "previousBattery": 72,
+        "revisions": [
+          5,
+          5
+        ],
+        "outcome": "all_previous",
+        "physical_power_loss": "NON TESTABLE"
+      }
+    },
+    {
       "test": "Suppression explicite limitée au bon emplacement",
       "status": "RÉUSSI",
       "proof": {
@@ -129,6 +381,26 @@
   ],
   "page_errors": [],
   "http": [
+    {
+      "url": "http://127.0.0.1:8774/tests/save-store-browser.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8774/save-store.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8774/tests/save-store-browser.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8774/save-store.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
     {
       "url": "http://127.0.0.1:8774/tests/save-store-browser.html",
       "method": "GET",

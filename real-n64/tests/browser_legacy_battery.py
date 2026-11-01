@@ -14,7 +14,8 @@ from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
-from serve import Handler
+from serve import test_handler
+Handler = test_handler('tests/legacy-battery-browser.html')
 
 URL = 'http://127.0.0.1:8779/tests/legacy-battery-browser.html'
 results, errors, requests = [], [], []

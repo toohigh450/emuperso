@@ -1,0 +1,7 @@
+RÉUSSI — Cœur N64 réel chargé et compteur en progression
+RÉUSSI — Affichage homebrew et animation
+RÉUSSI — Identité des octets remis au cœur
+RÉUSSI — Clavier navigateur : X/A et S/B reçus par la ROM
+RÉUSSI — Audio réel : PCM non nul ordonnancé vers WebAudio avec A, silence après relâchement
+RÉUSSI — Stabilité observée pendant 30 secondes supplémentaires
+RÉUSSI — Ressources moteur servies localement, sans service externe au lancement

@@ -74,3 +74,111 @@ test('La base est distincte des stockages moteur et des projets originaux', asyn
   const store = new SaveStore();
   await assert.rejects(store.open(), { code: 'E_STORAGE' });
 });
+
+test('Écriture groupée : refus avant ouverture si liste, doublon ou membre invalide', async () => {
+  const store = new SaveStore(); let opened = 0;
+  store.open = async () => { opened++; throw new Error('No database access expected'); };
+  const state = await makeStateEnvelope(payload, identity);
+  await assert.rejects(store.putBatch(identity, []), { code: 'E_BATCH' });
+  await assert.rejects(store.putBatch(identity, Array.from({ length: 10 }, () => ({ slot: 1, envelope: state }))), { code: 'E_BATCH' });
+  await assert.rejects(store.putBatch(identity, [{ slot: 1, envelope: state }, { slot: 1, envelope: state }]), { code: 'E_BATCH' });
+  const corrupt = structuredClone(state); corrupt.payload[0] ^= 255;
+  await assert.rejects(store.putBatch(identity, [{ slot: 1, envelope: state }, { slot: 2, envelope: corrupt }]), { code: 'E_INTEGRITY' });
+  const otherRom = await makeStateEnvelope(payload, { ...identity, rom_sha256: 'd'.repeat(64) });
+  await assert.rejects(store.putBatch(identity, [{ slot: 1, envelope: state }, { slot: 2, envelope: otherRom }]), { code: 'E_INCOMPATIBLE' });
+  assert.equal(opened, 0);
+});
+
+test('Écriture groupée : taille totale bornée avant copie ou accès IndexedDB', async () => {
+  const store = new SaveStore(); let opened = 0;
+  store.open = async () => { opened++; throw new Error('No database access expected'); };
+  const large = new Uint8Array(MAX_SAVE_BYTES);
+  await assert.rejects(store.putBatch(identity, [1, 2, 3].map(slot => ({ slot, envelope: { payload: large } }))), { code: 'E_BATCH' });
+  assert.equal(opened, 0);
+});
+
+async function withIndexedDBFault(api, run) {
+  const original = Object.getOwnPropertyDescriptor(globalThis, 'indexedDB');
+  Object.defineProperty(globalThis, 'indexedDB', { value: api, configurable: true, writable: true });
+  try { await run(); }
+  finally {
+    if (original) Object.defineProperty(globalThis, 'indexedDB', original);
+    else delete globalThis.indexedDB;
+  }
+}
+function heldTransaction(store, { irreversibleCommit = false } = {}) {
+  let aborted = false;
+  return {
+    error: null, aborts: 0,
+    objectStore() { return store; },
+    abort() {
+      if (aborted || irreversibleCommit) throw new DOMException('Transaction already finished', 'InvalidStateError');
+      aborted = true; this.aborts++;
+      queueMicrotask(() => this.onabort?.());
+    }
+  };
+}
+
+test('Ouverture IDB expirée : erreur bornée, connexion tardive fermée et nouvel essai indépendant', async () => {
+  const requests = []; let closed = 0;
+  await withIndexedDBFault({ open() { const request = { result: { close() { closed++; } } }; requests.push(request); return request; } }, async () => {
+    const vault = new SaveStore(undefined, { timeoutMs: 20 });
+    await assert.rejects(vault.open(), { code: 'E_STORAGE_TIMEOUT' });
+    assert.equal(vault.pending, null);
+    requests[0].onsuccess(); assert.equal(closed, 1);
+    let upgradeAborted = 0;
+    requests[0].transaction = { abort() { upgradeAborted++; } };
+    requests[0].onupgradeneeded(); assert.equal(upgradeAborted, 1);
+    const retry = vault.open(); const pending = vault.pending;
+    requests[0].onsuccess(); assert.equal(vault.pending, pending);
+    requests[1].onsuccess(); await retry;
+    await vault.close(); assert.equal(closed, 3);
+  });
+});
+
+test('Lecture IDB bloquée : transaction annulée avant rejet, sans attente de requête isolée', async () => {
+  const request = {}, transaction = heldTransaction({ get() { return request; } });
+  await withIndexedDBFault({}, async () => {
+    const vault = new SaveStore(undefined, { timeoutMs: 20 });
+    vault.pending = Promise.resolve({ transaction() { return transaction; }, close() {} });
+    await assert.rejects(vault.record('synthetic-key'), { code: 'E_STORAGE_TIMEOUT' });
+    assert.equal(transaction.aborts, 1);
+  });
+});
+
+test('Groupe IDB bloqué : abort réel avant rejet et aucun put issu de callbacks tardifs', async () => {
+  const requests = []; let writes = 0;
+  const transaction = heldTransaction({ get() { const request = {}; requests.push(request); return request; }, put() { writes++; } });
+  await withIndexedDBFault({}, async () => {
+    const vault = new SaveStore(undefined, { timeoutMs: 20 });
+    vault.pending = Promise.resolve({ transaction() { return transaction; }, close() {} });
+    vault.record = async () => undefined;
+    const a = await makeStateEnvelope(new Uint8Array([31]), identity);
+    const b = await makeStateEnvelope(new Uint8Array([41]), identity, { kind: 'battery' });
+    await assert.rejects(vault.putBatch(identity, [{ slot: 1, envelope: a }, { slot: 1, envelope: b }]), { code: 'E_STORAGE_TIMEOUT' });
+    assert.equal(transaction.aborts, 1); assert.equal(writes, 0);
+    for (const request of requests) request.onsuccess();
+    assert.equal(writes, 0);
+  });
+});
+
+test('Course avec commit irréversible : attend complete et ne prétend pas avoir annulé une écriture', async () => {
+  let request;
+  const transaction = heldTransaction({ get() { request = {}; setTimeout(() => { request.result = 'committed-result'; request.onsuccess(); }, 1); return request; } }, { irreversibleCommit: true });
+  await withIndexedDBFault({}, async () => {
+    const vault = new SaveStore(undefined, { timeoutMs: 10 });
+    vault.pending = Promise.resolve({ transaction() { setTimeout(() => transaction.oncomplete(), 25); return transaction; }, close() {} });
+    assert.equal(await vault.record('synthetic-key'), 'committed-result');
+    assert.equal(transaction.aborts, 0);
+  });
+});
+
+test('Déduplication groupée : option booléenne explicite, jamais une chaîne coercible', async () => {
+  const vault = new SaveStore(); let opened = 0;
+  vault.open = async () => { opened++; throw new Error('No database access expected'); };
+  const envelope = await makeStateEnvelope(payload, identity, { kind: 'battery' });
+  for (const deduplicate of ['true', 1, null, {}]) {
+    await assert.rejects(vault.putBatch(identity, [{ slot: 1, envelope, deduplicate }]), { code: 'E_BATCH' });
+  }
+  assert.equal(opened, 0);
+});

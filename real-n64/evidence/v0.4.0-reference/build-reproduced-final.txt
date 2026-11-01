@@ -1,0 +1,18 @@
+{
+  "scope": "FREESTANDING_REAL_N64_CODE_EMULATOR_ONLY_8MIB_CPU_BOOT",
+  "rom": {
+    "file": "demo-emuperso-open.z64",
+    "bytes": 6144,
+    "sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+    "header_hex": "80371240"
+  },
+  "source": "New freestanding C port of MIT Claude demo behavior; no libdragon runtime linked. VI timings from libdragon Unlicense, elementary font by Codex.",
+  "compiled": true,
+  "tested_browser": "PENDING",
+  "libraries_linked": [],
+  "bootstrap": "Own MIT CPU loader, no physical RDRAM training, no RSP",
+  "notes": [
+    "Audio and SI input need independent real-engine verification.",
+    "Physical-console and hardware Gamepad not validated."
+  ]
+}

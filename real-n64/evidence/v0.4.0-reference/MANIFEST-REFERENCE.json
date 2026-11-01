@@ -1,0 +1,220 @@
+{
+  "commit": "029845b800a61eeee60915363c16c0b218e6e39e",
+  "files": [
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/audio-probe.json",
+      "source_path": "real-n64/evidence/audio-probe.json",
+      "sha256": "dfee1c5393aa0c0c9e0a5e871f0ef5ac04b8d8fe1fb058399998f557b929888c"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/audio-probe.txt",
+      "source_path": "real-n64/evidence/audio-probe.txt",
+      "sha256": "e8893358f49eeee0d5b7d80782ce887f5eabf28e316a75403ba1b6f8656b70f4"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/audio-samples.json",
+      "source_path": "real-n64/evidence/audio-samples.json",
+      "sha256": "b458654a5a7c97d9e0fef4a1bd3fdaec5177572e021c633d202a88f663319529"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/baseline-protected.json",
+      "source_path": "real-n64/evidence/baseline-protected.json",
+      "sha256": "838c19e6ce36d8e46b60e9f818c91f994f971319f197360bb1c1b3972a258d82"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/browser-real-attempt1.txt",
+      "source_path": "real-n64/evidence/browser-real-attempt1.txt",
+      "sha256": "f826c2bfabfaff61fae30fc08cf5a8d9950b2cfbc56bf0d9028fae866eeb9f16"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/browser-real-attempt2.txt",
+      "source_path": "real-n64/evidence/browser-real-attempt2.txt",
+      "sha256": "64f49ab16fc81ac3172b52d7323b6cbff7994ba68d7447200afe1a27557a9dec"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/browser-real-final.txt",
+      "source_path": "real-n64/evidence/browser-real-final.txt",
+      "sha256": "2ef6d5699d22a11b7b224668d849669fda209cc2271b9a6701ce9d165c27cf78"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/browser-real-results.json",
+      "source_path": "real-n64/evidence/browser-real-results.json",
+      "sha256": "16a8e84e7eb2f60047b2a69feb8a601755a3f478fbcfa5aa0c98a0c99dd98509"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/build-emulator-boot.txt",
+      "source_path": "real-n64/evidence/build-emulator-boot.txt",
+      "sha256": "1b34312e9ad9a696f03bfff68f5919b4cc2f309ddf505b4ecab3769b77cb94bb"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/build-fallback-doublebuffer.txt",
+      "source_path": "real-n64/evidence/build-fallback-doublebuffer.txt",
+      "sha256": "970e3ef2da33da08d3946409a7ae9daa1b9272bba30d3684ee94edc03e3fc48f"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/build-fallback-open.txt",
+      "source_path": "real-n64/evidence/build-fallback-open.txt",
+      "sha256": "15c58dcb093c1ff196580d74a4cc891dac987a0f61174ed4be35fe9b73284abf"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/build-first.txt",
+      "source_path": "real-n64/evidence/build-first.txt",
+      "sha256": "73b33b375be8078ffc8471f360a78238d9fe15d489950b3e01d36e29b22b3375"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/build-minimal.txt",
+      "source_path": "real-n64/evidence/build-minimal.txt",
+      "sha256": "031d81aec7e869d93c6de3ba9278a3799bdb1e3ce66ad1b5a329bcb115b66983"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/build-reproduced-final.txt",
+      "source_path": "real-n64/evidence/build-reproduced-final.txt",
+      "sha256": "970e3ef2da33da08d3946409a7ae9daa1b9272bba30d3684ee94edc03e3fc48f"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/ci-bootstrap-failure.txt",
+      "source_path": "real-n64/evidence/ci-bootstrap-failure.txt",
+      "sha256": "9c6df11b973909762512955ed742b832d6bb69e4f2168cadbc9b57b638d53f2a"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/decor-layout.json",
+      "source_path": "real-n64/evidence/decor-layout.json",
+      "sha256": "9b3537247178a028e96fa7b6319859f3cb88be38aca4c3174e42226c26da639a"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/fallback-link-map.txt",
+      "source_path": "real-n64/evidence/fallback-link-map.txt",
+      "sha256": "4629b44c3bb644cd3c0fbd61810f15b07856d0704a7dd0bc4e36d8c191497606"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/import-summary.json",
+      "source_path": "real-n64/evidence/import-summary.json",
+      "sha256": "7f5142a138db3d8bc533e7fd2bc9f64da43ecac9c08a7a87bad6afb7056d8f3a"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/launcher-native-results.json",
+      "source_path": "real-n64/evidence/launcher-native-results.json",
+      "sha256": "1ae0ac922ca927b11fd332e6a40a5cad3ce69960019e350664284102f4e3c9b2"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/preservation-final.json",
+      "source_path": "real-n64/evidence/preservation-final.json",
+      "sha256": "c5c8b551014342d2ea3ff6eb7754c451a7b5b07a5bc10afbcb6d37bd916aca44"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/probe-cpu.txt",
+      "source_path": "real-n64/evidence/probe-cpu.txt",
+      "sha256": "2fae1e6c1b311b98ccb54711367d197e649e51b0a82cf62494443502b536257d"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/probe-cpu2.txt",
+      "source_path": "real-n64/evidence/probe-cpu2.txt",
+      "sha256": "8a70da517698574e87fca2dd8acd78b75bd778fb0529756a005bce75f1d27f51"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/probe-fallback.txt",
+      "source_path": "real-n64/evidence/probe-fallback.txt",
+      "sha256": "99c62c5ace02b03f14e854686f2f23e0af0ecb2a1fbfaa9eaf643a0aae501fea"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/probe-legacy.txt",
+      "source_path": "real-n64/evidence/probe-legacy.txt",
+      "sha256": "d8b114c735909922b489e9022873cc28c4d0c0363f48a6d5dbdbf91c513ade1e"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/probe-native-roundtrip.json",
+      "source_path": "real-n64/evidence/probe-native-roundtrip.json",
+      "sha256": "4c549e7de5858eca5e992c920268db9d8483f4d18bd469cb47f9b641ea2e47cd"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/probe-pure.txt",
+      "source_path": "real-n64/evidence/probe-pure.txt",
+      "sha256": "0b8fd74639ff7597ca71419e5d2911d2a93ac4aaa6085911375676188453f2f4"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/probe-results.json",
+      "source_path": "real-n64/evidence/probe-results.json",
+      "sha256": "d77ac12cbf39d71d86455395f5b1d5e730e4a9bac4c8a677e1946c18a0402484"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/runtime-diagnostic.json",
+      "source_path": "real-n64/evidence/runtime-diagnostic.json",
+      "sha256": "8c7ef0f31e5a560b37cacc479a0a418e1a18103f9cc8a1ffbe34b63c4d988bca"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/runtime-verified.txt",
+      "source_path": "real-n64/evidence/runtime-verified.txt",
+      "sha256": "b7ceeb61dd4fef67addc7c96eaf114798bf306948f707ec11da5af602d0c2be2"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/sdk-build.txt",
+      "source_path": "real-n64/evidence/sdk-build.txt",
+      "sha256": "1dcf0537177509a61e64808c1c475126c0cc73af96227d5250d7ab68e4cdaebb"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/session-api-probe.json",
+      "source_path": "real-n64/evidence/session-api-probe.json",
+      "sha256": "f6f7da81895d3fb701e70f7ebda9e816ce1f7928f97c2989071ad461adbfb703"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/test-environment.json",
+      "source_path": "real-n64/evidence/test-environment.json",
+      "sha256": "5f54ae36c7bf418fbf192a8c6517a27dde1c5bb6d7dd1c30386318a3e3823ec1"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/tests-hub-browser.json",
+      "source_path": "real-n64/evidence/tests-hub-browser.json",
+      "sha256": "c4c5008249291f706aa97944931a1ab6d198bcf036f4e88c1b23622f3354a088"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/tests-import-browser.json",
+      "source_path": "real-n64/evidence/tests-import-browser.json",
+      "sha256": "0eb202ec7a5d3a466691e94bccfc757646832112f30ee0945df392fcda64f2d3"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/tests-import-browser.txt",
+      "source_path": "real-n64/evidence/tests-import-browser.txt",
+      "sha256": "1db8c4b23b68f663c48c3195b00b39433c0599ea2f4a786f43cdb7bbc26d8d71"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/tests-import-unit.txt",
+      "source_path": "real-n64/evidence/tests-import-unit.txt",
+      "sha256": "f7a066e9996f24fb135d80e34a18d545c442a3a977f42ddb1f93d99de73e5e04"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/tests-legacy-battery-browser.json",
+      "source_path": "real-n64/evidence/tests-legacy-battery-browser.json",
+      "sha256": "7621124709fa4f0d371bc64036cf76299f64ca4812b0dd725620dffc065b8e25"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/tests-reference-v0.2.txt",
+      "source_path": "real-n64/evidence/tests-reference-v0.2.txt",
+      "sha256": "2ef6d5699d22a11b7b224668d849669fda209cc2271b9a6701ce9d165c27cf78"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/tests-save-store-browser.json",
+      "source_path": "real-n64/evidence/tests-save-store-browser.json",
+      "sha256": "f428412191619ca28653da1977499932a892eda889d15df4ad7e0610bd3bc353"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/tests-tools.txt",
+      "source_path": "real-n64/evidence/tests-tools.txt",
+      "sha256": "22d4dcaaaa599bd9490c8b6bea3280c55bc20a75162641098eb06ba654d0ca51"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/tests-zip-browser.json",
+      "source_path": "real-n64/evidence/tests-zip-browser.json",
+      "sha256": "e9c2f071799111e42d3e7b6cc76a5516f396840d051f30c50ec9599f2a4073f7"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/windows-hub-launcher.json",
+      "source_path": "real-n64/evidence/windows-hub-launcher.json",
+      "sha256": "727f07faec7683559cd6ba2705ebb0fe2d7d98cf6975feb4df2f5017a8c36fc5"
+    },
+    {
+      "path": "real-n64/evidence/v0.4.0-reference/zip-tests-summary.json",
+      "source_path": "real-n64/evidence/zip-tests-summary.json",
+      "sha256": "7d0cbc1e38884a4f285111e6dea0104d5d5bb76abf705c4117c7ccfdca0cb17d"
+    }
+  ]
+}

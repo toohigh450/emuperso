@@ -46,9 +46,9 @@
             "slot": 1,
             "kind": "state",
             "revision": 2,
-            "id": "9652bcb0d03c1107699322e9e9e0d2e2",
-            "created_utc": "2026-10-31T22:45:22.226Z",
-            "updated_utc": "2026-10-31T22:45:22.452Z",
+            "id": "0e07c779321838d08e45a3f1351765f8",
+            "created_utc": "2026-11-01T01:55:54.584Z",
+            "updated_utc": "2026-11-01T01:55:54.781Z",
             "label": "same-name.z64",
             "cheats": [],
             "payload_size": 17090424,
@@ -59,9 +59,9 @@
             "slot": 2,
             "kind": "state",
             "revision": 1,
-            "id": "b45f37443a41e30c0af449150ba9b76c",
-            "created_utc": "2026-10-31T22:45:22.928Z",
-            "updated_utc": "2026-10-31T22:45:23.039Z",
+            "id": "07fa42d73f1a5e5449cf8eff5dcd94f8",
+            "created_utc": "2026-11-01T01:55:55.282Z",
+            "updated_utc": "2026-11-01T01:55:55.342Z",
             "label": "same-name.z64",
             "cheats": [],
             "payload_size": 17090424,
@@ -72,9 +72,9 @@
             "slot": 3,
             "kind": "state",
             "revision": 1,
-            "id": "ba8b926b5ce4ffec6e79cf642279e567",
-            "created_utc": "2026-10-31T22:45:23.542Z",
-            "updated_utc": "2026-10-31T22:45:23.635Z",
+            "id": "05947fe761ee42c181a2b76d6c3289c6",
+            "created_utc": "2026-11-01T01:55:55.929Z",
+            "updated_utc": "2026-11-01T01:55:56.037Z",
             "label": "same-name.z64",
             "cheats": [],
             "payload_size": 17090424,
@@ -82,8 +82,8 @@
             "payload_verified": false
           }
         ],
-        "current_payload_sha256": "30302e7c38ab38bad8a20fc5d69649d5f4ffbd825194ff3e972b303058991d47",
-        "previous_payload_sha256": "3767920e8553f797611ecb8d043e03b9d4f518603642e9956348c54973217457"
+        "current_payload_sha256": "60138e374d31289e40fc484fd34e6b6e9b76a2f24f71194abebc10bf611c560b",
+        "previous_payload_sha256": "9eb1f918f97f4d308c17a4960fd292fb7b7966a7cfec7f8aa6ccbff74fcce931"
       }
     },
     {
@@ -99,15 +99,15 @@
       "status": "RÉUSSI",
       "proof": {
         "payload_size": 17090424,
-        "payload_sha256": "30302e7c38ab38bad8a20fc5d69649d5f4ffbd825194ff3e972b303058991d47",
-        "download_name": "N64-sauvegarde-emplacement-1-2026-10-31T22-45-25-318Z.json"
+        "payload_sha256": "60138e374d31289e40fc484fd34e6b6e9b76a2f24f71194abebc10bf611c560b",
+        "download_name": "N64-sauvegarde-emplacement-1-2026-11-01T01-55-57-617Z.json"
       }
     },
     {
       "test": "Import d’état vérifié : aucun lancement implicite, checksum altéré refusé sans écrasement",
       "status": "RÉUSSI",
       "proof": {
-        "imported_payload_sha256": "30302e7c38ab38bad8a20fc5d69649d5f4ffbd825194ff3e972b303058991d47",
+        "imported_payload_sha256": "60138e374d31289e40fc484fd34e6b6e9b76a2f24f71194abebc10bf611c560b",
         "target_slot": 3,
         "bad_checksum_rejected": true,
         "live_ram_unchanged": 9320
@@ -140,7 +140,7 @@
           ],
           "timeout": false
         },
-        "old_counter_stable": 236
+        "old_counter_stable": 226
       }
     },
     {
@@ -166,12 +166,12 @@
           "config_sha256": "4e78a12696bbdf17d0c8f232689375ebff860e0f1b3796154c949329914ed571",
           "state_schema": "emuperso-real-state-v2"
         },
-        "payload_sha256": "30302e7c38ab38bad8a20fc5d69649d5f4ffbd825194ff3e972b303058991d47",
+        "payload_sha256": "60138e374d31289e40fc484fd34e6b6e9b76a2f24f71194abebc10bf611c560b",
         "ram_marker": 9320,
         "audio": {
-          "tone_max_rms": 0.13614781136751197,
+          "tone_max_rms": 0.13621488950964522,
           "released_max_rms": 0,
-          "frame_delta_per_observed_second": 15,
+          "frame_delta_per_observed_second": 17,
           "physical_speakers": "NON TESTABLE"
         },
         "rom_reselected_by_user": true,
@@ -183,7 +183,7 @@
       "status": "RÉUSSI",
       "proof": {
         "marker": 4951,
-        "payload_sha256": "3767920e8553f797611ecb8d043e03b9d4f518603642e9956348c54973217457",
+        "payload_sha256": "9eb1f918f97f4d308c17a4960fd292fb7b7966a7cfec7f8aa6ccbff74fcce931",
         "current_slot_revision_preserved": 2
       }
     },
@@ -237,7 +237,7 @@
           "sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795"
         },
         "audio": {
-          "tone_max_rms": 0.1362283889673065,
+          "tone_max_rms": 0.13627335034692542,
           "released_max_rms": 0,
           "frame_delta_per_observed_second": 17,
           "physical_speakers": "NON TESTABLE"
@@ -255,7 +255,7 @@
       "test": "Diagnostics et confidentialité : aucune ROM/sauvegarde envoyée",
       "status": "RÉUSSI",
       "proof": {
-        "http_requests": 156,
+        "http_requests": 164,
         "diagnostic_contains_save_payload": false,
         "page_errors": [],
         "private_rom_used": false
@@ -275,7 +275,7 @@
       "body_bytes": 0
     },
     {
-      "url": "http://127.0.0.1:8776/assets/goku-vegeta-fusions.png",
+      "url": "http://127.0.0.1:8776/assets/emuperso-banner.png",
       "method": "GET",
       "body_bytes": 0
     },
@@ -331,6 +331,11 @@
     },
     {
       "url": "http://127.0.0.1:8776/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/native-state.mjs",
       "method": "GET",
       "body_bytes": 0
     },
@@ -405,22 +410,22 @@
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/d77ddfd4-0637-4878-8a39-58517c1388c7",
+      "url": "blob:http://127.0.0.1:8776/3e87c5b4-e86b-4d93-bc6b-08e00476a01f",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/2af3d851-a9c4-4124-8237-6eaddc95ed72",
+      "url": "blob:http://127.0.0.1:8776/94a7261a-2b1f-4ee8-adee-0ea4f5e2a8a6",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/f5a92bd3-ed9e-4ffd-b124-323c421aa79e",
+      "url": "blob:http://127.0.0.1:8776/6f156c1b-70f7-4895-b2e1-83f7f3265f8c",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/6fd30bba-c685-44a1-9e7a-280d0c66fcd5",
+      "url": "blob:http://127.0.0.1:8776/f99b705f-73ba-4d09-b322-08819ce3cff6",
       "method": "GET",
       "body_bytes": 0
     },
@@ -450,6 +455,11 @@
       "body_bytes": 0
     },
     {
+      "url": "http://127.0.0.1:8776/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
       "url": "http://127.0.0.1:8776/vendor/data/src/emulator.js",
       "method": "GET",
       "body_bytes": 0
@@ -515,22 +525,22 @@
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/30756fbf-53cc-4ef1-9cac-c028e47c15a7",
+      "url": "blob:http://127.0.0.1:8776/f2a48fe6-5fc6-4315-aba2-5628f2571d4b",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/64f8b953-0060-4ec7-ab81-f12a76937b63",
+      "url": "blob:http://127.0.0.1:8776/52205e14-82a0-407f-a6d0-02c6fd63da7a",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/62d63da1-057d-4ecc-be9f-7b6c3731cdec",
+      "url": "blob:http://127.0.0.1:8776/add9e2cd-7f72-4700-982d-51bfbc2babff",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/46a592c4-fd49-4646-aafa-d007f00250ce",
+      "url": "blob:http://127.0.0.1:8776/36398cb8-da5c-4ee9-9d75-5919e8e458a1",
       "method": "GET",
       "body_bytes": 0
     },
@@ -550,6 +560,11 @@
       "body_bytes": 0
     },
     {
+      "url": "http://127.0.0.1:8776/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
       "url": "http://127.0.0.1:8776/vendor/data/src/emulator.js",
       "method": "GET",
       "body_bytes": 0
@@ -615,22 +630,22 @@
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/2b30a19f-7820-4827-b365-dc4c29d5a890",
+      "url": "blob:http://127.0.0.1:8776/2a67c95b-1cd1-44cf-93ac-791233dc273f",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/820dc234-def2-45a1-83f4-dafd625703e3",
+      "url": "blob:http://127.0.0.1:8776/8c49ca0b-aedc-4606-90cb-1a69502d2e61",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/0228812f-8b20-416c-aabb-39ef30601b39",
+      "url": "blob:http://127.0.0.1:8776/236c0a2d-9c62-43a8-85ad-70abdd0ff193",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/7c5da222-0744-4beb-9a10-4681c26ca508",
+      "url": "blob:http://127.0.0.1:8776/8e032900-3b48-45e9-b399-186614fbd480",
       "method": "GET",
       "body_bytes": 0
     },
@@ -645,7 +660,7 @@
       "body_bytes": 0
     },
     {
-      "url": "http://127.0.0.1:8776/assets/goku-vegeta-fusions.png",
+      "url": "http://127.0.0.1:8776/assets/emuperso-banner.png",
       "method": "GET",
       "body_bytes": 0
     },
@@ -701,6 +716,11 @@
     },
     {
       "url": "http://127.0.0.1:8776/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/native-state.mjs",
       "method": "GET",
       "body_bytes": 0
     },
@@ -775,22 +795,22 @@
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/f363b93a-2b8e-47b2-ae8f-a15a096495af",
+      "url": "blob:http://127.0.0.1:8776/82e725a6-e6de-4f70-87a3-398b92ae0fdd",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/2ef8701c-c2aa-4839-a88b-0a03762e6b49",
+      "url": "blob:http://127.0.0.1:8776/be6bd72b-7ac8-49bf-9a9d-0ad0ac133487",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/74eb30e9-42e8-42ec-ba0b-dd872458e0a8",
+      "url": "blob:http://127.0.0.1:8776/44652f99-abfb-4ab4-b622-342d8f6b2333",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/488c85c2-41fb-40f3-aa6e-589c8adc3b06",
+      "url": "blob:http://127.0.0.1:8776/014c3b6b-eae6-4068-821f-3464645cc2a0",
       "method": "GET",
       "body_bytes": 0
     },
@@ -820,6 +840,11 @@
       "body_bytes": 0
     },
     {
+      "url": "http://127.0.0.1:8776/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
       "url": "http://127.0.0.1:8776/vendor/data/src/emulator.js",
       "method": "GET",
       "body_bytes": 0
@@ -885,22 +910,22 @@
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/de535713-cddc-49c7-9d94-5a86bec7e4f8",
+      "url": "blob:http://127.0.0.1:8776/93f01ec2-6fec-445b-b0e8-c0d93ca0b341",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/5cde96fa-a245-45bd-98c9-7227554dd8aa",
+      "url": "blob:http://127.0.0.1:8776/d3cd886e-c0c1-41d6-97f2-c564f1f338f7",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/895b7768-3a7b-43cd-a6ce-d0d4f71ce06c",
+      "url": "blob:http://127.0.0.1:8776/78bcdaad-eac9-4c43-9166-1884ae7c4e92",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/1ddfd5dd-a6d0-47c0-9fb4-bac1dd849788",
+      "url": "blob:http://127.0.0.1:8776/572a7869-f98f-43ad-9677-d78981dbd3e9",
       "method": "GET",
       "body_bytes": 0
     },
@@ -920,6 +945,11 @@
       "body_bytes": 0
     },
     {
+      "url": "http://127.0.0.1:8776/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
       "url": "http://127.0.0.1:8776/vendor/data/src/emulator.js",
       "method": "GET",
       "body_bytes": 0
@@ -985,22 +1015,22 @@
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/2fa0ee71-87e4-4854-8a85-3e8ee93bed83",
+      "url": "blob:http://127.0.0.1:8776/1152fa57-fb79-419a-aa68-b32e407a668c",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/13cccf09-1a12-4074-95bd-d7ecb3dddfe9",
+      "url": "blob:http://127.0.0.1:8776/3b6d579c-f8ec-4541-9c5e-71b903b3f3d7",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/ff1f96e8-a956-4b0d-91d6-39b33e945a7d",
+      "url": "blob:http://127.0.0.1:8776/9812c6c8-463b-4591-9897-857d642fbea2",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/b0121691-d53d-4a6e-85f3-aa88af5e9573",
+      "url": "blob:http://127.0.0.1:8776/ea916595-bb22-43cb-bd1b-9b8e64bc6cac",
       "method": "GET",
       "body_bytes": 0
     },
@@ -1020,6 +1050,11 @@
       "body_bytes": 0
     },
     {
+      "url": "http://127.0.0.1:8776/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
       "url": "http://127.0.0.1:8776/vendor/data/src/emulator.js",
       "method": "GET",
       "body_bytes": 0
@@ -1085,22 +1120,22 @@
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/5b9a7dca-8b1d-4842-b54a-2d0f6d9edf90",
+      "url": "blob:http://127.0.0.1:8776/7889b432-1efb-47f7-b252-c6e43430d3b4",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/2d8c7834-fa7e-4ac2-abe1-14aa9fb4ea69",
+      "url": "blob:http://127.0.0.1:8776/7b960a31-55c9-4bcb-b6f3-f2bc58264355",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/6031dea5-b2d1-4dcc-bdd4-ff76ae2acefa",
+      "url": "blob:http://127.0.0.1:8776/010ff2b2-54cd-4370-b05c-e09f39bd6992",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/7102bdbc-67ca-422a-bcea-26299d1c6cce",
+      "url": "blob:http://127.0.0.1:8776/4e729a02-1fcf-43bb-bdd7-4106893f4e55",
       "method": "GET",
       "body_bytes": 0
     },
@@ -1120,6 +1155,11 @@
       "body_bytes": 0
     },
     {
+      "url": "http://127.0.0.1:8776/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
       "url": "http://127.0.0.1:8776/vendor/data/src/emulator.js",
       "method": "GET",
       "body_bytes": 0
@@ -1185,22 +1225,22 @@
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/227bba6e-8950-4731-8eef-3e6f040c1476",
+      "url": "blob:http://127.0.0.1:8776/d21e3321-53cd-4b89-abdb-31e1a7b55436",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/1af7551f-d360-4bdb-966a-4487b1bcc57c",
+      "url": "blob:http://127.0.0.1:8776/44f56369-f194-4d1c-a4fc-9443baf1fe72",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/7b1314b4-0049-4e4e-b7ac-5da7d3712d8d",
+      "url": "blob:http://127.0.0.1:8776/a0a09c49-6952-48c3-bb38-ba65e03a634e",
       "method": "GET",
       "body_bytes": 0
     },
     {
-      "url": "blob:http://127.0.0.1:8776/8cc4999c-fc8a-46a2-9550-36ee192887b5",
+      "url": "blob:http://127.0.0.1:8776/bfcf3697-0493-420e-abf6-366cde27e629",
       "method": "GET",
       "body_bytes": 0
     }
@@ -1228,7 +1268,7 @@
     ],
     [
       "GET",
-      "/assets/goku-vegeta-fusions.png",
+      "/assets/emuperso-banner.png",
       0
     ],
     [
@@ -1238,12 +1278,12 @@
     ],
     [
       "GET",
-      "/save-store.mjs",
+      "/zip-rom.mjs",
       0
     ],
     [
       "GET",
-      "/zip-rom.mjs",
+      "/save-store.mjs",
       0
     ],
     [
@@ -1258,12 +1298,12 @@
     ],
     [
       "GET",
-      "/state-bundle.mjs",
+      "/cheat-catalog.mjs",
       0
     ],
     [
       "GET",
-      "/cheat-catalog.mjs",
+      "/state-bundle.mjs",
       0
     ],
     [
@@ -1273,12 +1313,17 @@
     ],
     [
       "GET",
+      "/engine-session.mjs",
+      0
+    ],
+    [
+      "GET",
       "/engine.css",
       0
     ],
     [
       "GET",
-      "/engine-session.mjs",
+      "/native-state.mjs",
       0
     ],
     [
@@ -1378,6 +1423,11 @@
     ],
     [
       "GET",
+      "/native-state.mjs",
+      0
+    ],
+    [
+      "GET",
       "/vendor/data/src/emulator.js",
       0
     ],
@@ -1418,12 +1468,12 @@
     ],
     [
       "GET",
-      "/vendor/data/version.json",
+      "/vendor/data/emulator.css",
       0
     ],
     [
       "GET",
-      "/vendor/data/emulator.css",
+      "/vendor/data/version.json",
       0
     ],
     [
@@ -1454,6 +1504,11 @@
     [
       "GET",
       "/engine-session.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/native-state.mjs",
       0
     ],
     [
@@ -1538,12 +1593,12 @@
     ],
     [
       "GET",
-      "/assets/goku-vegeta-fusions.png",
+      "/assets/emuperso-banner.png",
       0
     ],
     [
       "GET",
-      "/rom-file.mjs",
+      "/save-store.mjs",
       0
     ],
     [
@@ -1553,7 +1608,7 @@
     ],
     [
       "GET",
-      "/save-store.mjs",
+      "/rom-file.mjs",
       0
     ],
     [
@@ -1589,6 +1644,11 @@
     [
       "GET",
       "/engine-session.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/native-state.mjs",
       0
     ],
     [
@@ -1688,82 +1748,7 @@
     ],
     [
       "GET",
-      "/vendor/data/src/emulator.js",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/src/nipplejs.js",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/src/shaders.js",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/src/storage.js",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/src/gamepad.js",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/src/GameManager.js",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/src/socket.io.min.js",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/src/compression.js",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/emulator.css",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/version.json",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/cores/reports/mupen64plus_next.json",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/cores/mupen64plus_next-wasm.data",
-      0
-    ],
-    [
-      "GET",
-      "/vendor/data/compression/extract7z.js",
-      0
-    ],
-    [
-      "GET",
-      "/engine.html",
-      0
-    ],
-    [
-      "GET",
-      "/engine.css",
-      0
-    ],
-    [
-      "GET",
-      "/engine-session.mjs",
+      "/native-state.mjs",
       0
     ],
     [
@@ -1848,6 +1833,11 @@
     ],
     [
       "GET",
+      "/native-state.mjs",
+      0
+    ],
+    [
+      "GET",
       "/vendor/data/src/emulator.js",
       0
     ],
@@ -1924,6 +1914,96 @@
     [
       "GET",
       "/engine-session.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/native-state.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/emulator.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/nipplejs.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/shaders.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/storage.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/gamepad.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/GameManager.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/socket.io.min.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/compression.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/emulator.css",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/version.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/reports/mupen64plus_next.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/mupen64plus_next-wasm.data",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/compression/extract7z.js",
+      0
+    ],
+    [
+      "GET",
+      "/engine.html",
+      0
+    ],
+    [
+      "GET",
+      "/engine.css",
+      0
+    ],
+    [
+      "GET",
+      "/engine-session.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/native-state.mjs",
       0
     ],
     [
@@ -1999,21 +2079,6 @@
         "base": 258801664,
         "wordSwapped": true,
         "pointers": [
-          2685403136,
-          2685403136,
-          2685403136,
-          2685665280,
-          2685665280,
-          2685403136
-        ],
-        "candidates": 2,
-        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
-      },
-      {
-        "generation": 3,
-        "base": 258801664,
-        "wordSwapped": true,
-        "pointers": [
           2685665280,
           2685403136,
           2685403136,
@@ -2025,15 +2090,30 @@
         "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
       },
       {
+        "generation": 3,
+        "base": 258801664,
+        "wordSwapped": true,
+        "pointers": [
+          2685403136,
+          2685665280,
+          2685665280,
+          2685403136,
+          2685665280,
+          2685403136
+        ],
+        "candidates": 2,
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+      },
+      {
         "generation": 1,
         "base": 258801664,
         "wordSwapped": true,
         "pointers": [
-          2685665280,
+          2685403136,
           2685403136,
           2685665280,
           2685403136,
-          2685665280,
+          2685403136,
           2685403136
         ],
         "candidates": 2,
@@ -2044,9 +2124,9 @@
         "base": 258801664,
         "wordSwapped": true,
         "pointers": [
+          2685665280,
           2685403136,
-          2685665280,
-          2685665280,
+          2685403136,
           2685665280,
           2685403136,
           2685403136
@@ -2059,7 +2139,7 @@
         "base": 258801664,
         "wordSwapped": true,
         "pointers": [
-          2685403136,
+          2685665280,
           2685665280,
           2685403136,
           2685665280,
@@ -2074,12 +2154,12 @@
         "base": 258801664,
         "wordSwapped": true,
         "pointers": [
-          2685403136,
+          2685665280,
           2685665280,
           2685403136,
           2685403136,
-          2685665280,
-          2685403136
+          2685403136,
+          2685665280
         ],
         "candidates": 5,
         "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
@@ -2089,11 +2169,11 @@
         "base": 258801664,
         "wordSwapped": true,
         "pointers": [
-          2685403136,
-          2685403136,
+          2685665280,
+          2685665280,
           2685665280,
           2685403136,
-          2685665280,
+          2685403136,
           2685403136
         ],
         "candidates": 2,

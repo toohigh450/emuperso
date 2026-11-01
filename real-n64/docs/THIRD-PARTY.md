@@ -1,3 +1,11 @@
+# Dépendances — EMUPERSO 0.5.0 RC1
+
+**STOP publication :** la présence de licences et d’empreintes ne résout pas les sources correspondantes manquantes du moteur. Voir [l’audit de redistribution](REDISTRIBUTION-RC.md), [sa porte structurée](redistribution-rc.json) et les [licences complètes](licenses/README.md).
+
+La bannière RC est originale ; l’ancien décor Dragon Ball ne fait pas partie des nouvelles distributions. Aucun bundle moteur n’est publié par la préparation de cette RC.
+
+## Inventaire historique vérifié
+
 # Notices et provenance
 
 Les fichiers originaux écrits pour real-n64 et le port homebrew sont MIT (LICENSE).

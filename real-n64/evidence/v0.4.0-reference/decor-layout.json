@@ -1,0 +1,242 @@
+{
+  "browser": "Chrome for Testing 151.0.7922.34",
+  "results": [
+    {
+      "status": "RÉUSSI",
+      "viewport": 390,
+      "document_width": 390,
+      "image_loaded": true,
+      "image_fit": "contain",
+      "background_pointer_events": "none",
+      "background_z": "-1",
+      "buttons": [
+        {
+          "id": "choose-rom",
+          "unobstructed": true
+        },
+        {
+          "id": "launch-local",
+          "unobstructed": true
+        },
+        {
+          "id": "start",
+          "unobstructed": true
+        },
+        {
+          "id": "reload",
+          "unobstructed": true
+        },
+        {
+          "id": "audio",
+          "unobstructed": true
+        },
+        {
+          "id": "reset-clean",
+          "unobstructed": true
+        },
+        {
+          "id": "reset-before-cheats",
+          "unobstructed": true
+        },
+        {
+          "id": "state-save",
+          "unobstructed": true
+        },
+        {
+          "id": "state-load",
+          "unobstructed": true
+        },
+        {
+          "id": "state-previous",
+          "unobstructed": true
+        },
+        {
+          "id": "save-export",
+          "unobstructed": true
+        },
+        {
+          "id": "save-import",
+          "unobstructed": true
+        },
+        {
+          "id": "battery-save",
+          "unobstructed": true
+        },
+        {
+          "id": "persist-request",
+          "unobstructed": true
+        },
+        {
+          "id": "cheat-disable-all",
+          "unobstructed": true
+        },
+        {
+          "id": "cheat-add",
+          "unobstructed": true
+        },
+        {
+          "id": "export",
+          "unobstructed": true
+        }
+      ]
+    },
+    {
+      "status": "RÉUSSI",
+      "viewport": 1280,
+      "document_width": 1280,
+      "image_loaded": true,
+      "image_fit": "contain",
+      "background_pointer_events": "none",
+      "background_z": "-1",
+      "buttons": [
+        {
+          "id": "choose-rom",
+          "unobstructed": true
+        },
+        {
+          "id": "launch-local",
+          "unobstructed": true
+        },
+        {
+          "id": "start",
+          "unobstructed": true
+        },
+        {
+          "id": "reload",
+          "unobstructed": true
+        },
+        {
+          "id": "audio",
+          "unobstructed": true
+        },
+        {
+          "id": "reset-clean",
+          "unobstructed": true
+        },
+        {
+          "id": "reset-before-cheats",
+          "unobstructed": true
+        },
+        {
+          "id": "state-save",
+          "unobstructed": true
+        },
+        {
+          "id": "state-load",
+          "unobstructed": true
+        },
+        {
+          "id": "state-previous",
+          "unobstructed": true
+        },
+        {
+          "id": "save-export",
+          "unobstructed": true
+        },
+        {
+          "id": "save-import",
+          "unobstructed": true
+        },
+        {
+          "id": "battery-save",
+          "unobstructed": true
+        },
+        {
+          "id": "persist-request",
+          "unobstructed": true
+        },
+        {
+          "id": "cheat-disable-all",
+          "unobstructed": true
+        },
+        {
+          "id": "cheat-add",
+          "unobstructed": true
+        },
+        {
+          "id": "export",
+          "unobstructed": true
+        }
+      ]
+    },
+    {
+      "status": "RÉUSSI",
+      "viewport": 3440,
+      "document_width": 3440,
+      "image_loaded": true,
+      "image_fit": "contain",
+      "background_pointer_events": "none",
+      "background_z": "-1",
+      "buttons": [
+        {
+          "id": "choose-rom",
+          "unobstructed": true
+        },
+        {
+          "id": "launch-local",
+          "unobstructed": true
+        },
+        {
+          "id": "start",
+          "unobstructed": true
+        },
+        {
+          "id": "reload",
+          "unobstructed": true
+        },
+        {
+          "id": "audio",
+          "unobstructed": true
+        },
+        {
+          "id": "reset-clean",
+          "unobstructed": true
+        },
+        {
+          "id": "reset-before-cheats",
+          "unobstructed": true
+        },
+        {
+          "id": "state-save",
+          "unobstructed": true
+        },
+        {
+          "id": "state-load",
+          "unobstructed": true
+        },
+        {
+          "id": "state-previous",
+          "unobstructed": true
+        },
+        {
+          "id": "save-export",
+          "unobstructed": true
+        },
+        {
+          "id": "save-import",
+          "unobstructed": true
+        },
+        {
+          "id": "battery-save",
+          "unobstructed": true
+        },
+        {
+          "id": "persist-request",
+          "unobstructed": true
+        },
+        {
+          "id": "cheat-disable-all",
+          "unobstructed": true
+        },
+        {
+          "id": "cheat-add",
+          "unobstructed": true
+        },
+        {
+          "id": "export",
+          "unobstructed": true
+        }
+      ]
+    }
+  ]
+}

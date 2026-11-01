@@ -1,0 +1,516 @@
+{
+  "schema": "emuperso/web-private-https-tests/v1",
+  "results": [
+    {
+      "test": "Assemblage extrait sous un préfixe HTTPS privé : contexte sécurisé et isolation",
+      "status": "RÉUSSI",
+      "proof": {
+        "security": {
+          "secure": true,
+          "isolated": true,
+          "protocol": "https:",
+          "origin": "https://localhost:18880",
+          "gamepad": "function"
+        },
+        "archive_sha256": "911e2ab589fa2f2b93b88cfd4fd9ee12a5b0d372d8306ad6892d97120d198cde",
+        "temporary_self_signed_tls": true,
+        "public_deployment": false
+      }
+    },
+    {
+      "test": "HTTPS : fichiers privés et outils refusés même présents dans le dossier de revue",
+      "status": "RÉUSSI",
+      "proof": {
+        "private.z64": 403,
+        "diagnostic.json": 403,
+        "tools/serve.py": 403,
+        "tests/browser_restore_rc.py": 403,
+        "vendor/../private.z64": 403
+      }
+    },
+    {
+      "test": "Décor original et commandes dégagées à 390 pixels",
+      "status": "RÉUSSI",
+      "proof": {
+        "width": 390,
+        "body_width": 390,
+        "image_width": 1942,
+        "image_fit": "contain",
+        "pointer_events": "none",
+        "buttons": [
+          {
+            "id": "choose-rom",
+            "unobstructed": true
+          },
+          {
+            "id": "launch-local",
+            "unobstructed": true
+          },
+          {
+            "id": "start",
+            "unobstructed": true
+          },
+          {
+            "id": "reload",
+            "unobstructed": true
+          },
+          {
+            "id": "audio",
+            "unobstructed": true
+          },
+          {
+            "id": "reset-clean",
+            "unobstructed": true
+          },
+          {
+            "id": "reset-before-cheats",
+            "unobstructed": true
+          },
+          {
+            "id": "state-save",
+            "unobstructed": true
+          },
+          {
+            "id": "state-load",
+            "unobstructed": true
+          },
+          {
+            "id": "state-previous",
+            "unobstructed": true
+          },
+          {
+            "id": "save-export",
+            "unobstructed": true
+          },
+          {
+            "id": "save-import",
+            "unobstructed": true
+          },
+          {
+            "id": "battery-save",
+            "unobstructed": true
+          },
+          {
+            "id": "battery-load",
+            "unobstructed": true
+          },
+          {
+            "id": "battery-previous",
+            "unobstructed": true
+          },
+          {
+            "id": "persist-request",
+            "unobstructed": true
+          },
+          {
+            "id": "cheat-disable-all",
+            "unobstructed": true
+          },
+          {
+            "id": "cheat-add",
+            "unobstructed": true
+          },
+          {
+            "id": "export",
+            "unobstructed": true
+          }
+        ]
+      }
+    },
+    {
+      "test": "Décor original et commandes dégagées à 1280 pixels",
+      "status": "RÉUSSI",
+      "proof": {
+        "width": 1280,
+        "body_width": 1280,
+        "image_width": 1942,
+        "image_fit": "contain",
+        "pointer_events": "none",
+        "buttons": [
+          {
+            "id": "choose-rom",
+            "unobstructed": true
+          },
+          {
+            "id": "launch-local",
+            "unobstructed": true
+          },
+          {
+            "id": "start",
+            "unobstructed": true
+          },
+          {
+            "id": "reload",
+            "unobstructed": true
+          },
+          {
+            "id": "audio",
+            "unobstructed": true
+          },
+          {
+            "id": "reset-clean",
+            "unobstructed": true
+          },
+          {
+            "id": "reset-before-cheats",
+            "unobstructed": true
+          },
+          {
+            "id": "state-save",
+            "unobstructed": true
+          },
+          {
+            "id": "state-load",
+            "unobstructed": true
+          },
+          {
+            "id": "state-previous",
+            "unobstructed": true
+          },
+          {
+            "id": "save-export",
+            "unobstructed": true
+          },
+          {
+            "id": "save-import",
+            "unobstructed": true
+          },
+          {
+            "id": "battery-save",
+            "unobstructed": true
+          },
+          {
+            "id": "battery-load",
+            "unobstructed": true
+          },
+          {
+            "id": "battery-previous",
+            "unobstructed": true
+          },
+          {
+            "id": "persist-request",
+            "unobstructed": true
+          },
+          {
+            "id": "cheat-disable-all",
+            "unobstructed": true
+          },
+          {
+            "id": "cheat-add",
+            "unobstructed": true
+          },
+          {
+            "id": "export",
+            "unobstructed": true
+          }
+        ]
+      }
+    },
+    {
+      "test": "Décor original et commandes dégagées à 3440 pixels",
+      "status": "RÉUSSI",
+      "proof": {
+        "width": 3440,
+        "body_width": 3440,
+        "image_width": 1942,
+        "image_fit": "contain",
+        "pointer_events": "none",
+        "buttons": [
+          {
+            "id": "choose-rom",
+            "unobstructed": true
+          },
+          {
+            "id": "launch-local",
+            "unobstructed": true
+          },
+          {
+            "id": "start",
+            "unobstructed": true
+          },
+          {
+            "id": "reload",
+            "unobstructed": true
+          },
+          {
+            "id": "audio",
+            "unobstructed": true
+          },
+          {
+            "id": "reset-clean",
+            "unobstructed": true
+          },
+          {
+            "id": "reset-before-cheats",
+            "unobstructed": true
+          },
+          {
+            "id": "state-save",
+            "unobstructed": true
+          },
+          {
+            "id": "state-load",
+            "unobstructed": true
+          },
+          {
+            "id": "state-previous",
+            "unobstructed": true
+          },
+          {
+            "id": "save-export",
+            "unobstructed": true
+          },
+          {
+            "id": "save-import",
+            "unobstructed": true
+          },
+          {
+            "id": "battery-save",
+            "unobstructed": true
+          },
+          {
+            "id": "battery-load",
+            "unobstructed": true
+          },
+          {
+            "id": "battery-previous",
+            "unobstructed": true
+          },
+          {
+            "id": "persist-request",
+            "unobstructed": true
+          },
+          {
+            "id": "cheat-disable-all",
+            "unobstructed": true
+          },
+          {
+            "id": "cheat-add",
+            "unobstructed": true
+          },
+          {
+            "id": "export",
+            "unobstructed": true
+          }
+        ]
+      }
+    },
+    {
+      "test": "Octets altérés refusés avant exécution du cœur : script-sri",
+      "status": "RÉUSSI",
+      "proof": {
+        "resource": "data/src/GameManager.js",
+        "active_generation": null,
+        "error": "Dépendance moteur absente, altérée ou refusée : GameManager.js",
+        "integrity_records": [
+          {
+            "seq": 5,
+            "utc": "2026-11-01T02:14:34.720Z",
+            "host_monotonic_ms": 532.464999999851,
+            "type": "integrity.resource.verified",
+            "data": {
+              "resource": "data/src/emulator.js",
+              "sha256": "24ebac4baf739892046b82c3bdf01d5b6795b801b77d289e43a4c7d59f9666be",
+              "mechanism": "browser-sri",
+              "session_generation": 1
+            }
+          },
+          {
+            "seq": 6,
+            "utc": "2026-11-01T02:14:34.728Z",
+            "host_monotonic_ms": 540.035000000149,
+            "type": "integrity.resource.verified",
+            "data": {
+              "resource": "data/src/nipplejs.js",
+              "sha256": "cf745190f5dc5db942ad54f5683d56c6d6da445646f4b4fc23c049c9985a04df",
+              "mechanism": "browser-sri",
+              "session_generation": 1
+            }
+          },
+          {
+            "seq": 7,
+            "utc": "2026-11-01T02:14:34.735Z",
+            "host_monotonic_ms": 547.3249999992549,
+            "type": "integrity.resource.verified",
+            "data": {
+              "resource": "data/src/shaders.js",
+              "sha256": "79bcd4c35740b2858fc28f2f1894ddb8f483f1aba6f564869a713515726fe902",
+              "mechanism": "browser-sri",
+              "session_generation": 1
+            }
+          },
+          {
+            "seq": 8,
+            "utc": "2026-11-01T02:14:34.740Z",
+            "host_monotonic_ms": 552.4250000007451,
+            "type": "integrity.resource.verified",
+            "data": {
+              "resource": "data/src/storage.js",
+              "sha256": "06759f310bb2d782d2728e1d3417a0d8f613eff935d2959c1a705670041a6f2e",
+              "mechanism": "browser-sri",
+              "session_generation": 1
+            }
+          },
+          {
+            "seq": 9,
+            "utc": "2026-11-01T02:14:34.747Z",
+            "host_monotonic_ms": 559.2199999988079,
+            "type": "integrity.resource.verified",
+            "data": {
+              "resource": "data/src/gamepad.js",
+              "sha256": "27707ee9256cf3e1a6f32d1c3c42f2aed991d637773699fff566008229cc09c8",
+              "mechanism": "browser-sri",
+              "session_generation": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "test": "Octets altérés refusés avant exécution du cœur : core-bytes",
+      "status": "RÉUSSI",
+      "proof": {
+        "resource": "data/cores/mupen64plus_next-wasm.data",
+        "active_generation": null,
+        "error": "Le moteur n’a pas confirmé son démarrage dans le délai prévu.",
+        "integrity_records": [
+          {
+            "seq": 5,
+            "utc": "2026-11-01T02:14:35.416Z",
+            "host_monotonic_ms": 555.070000000298,
+            "type": "integrity.resource.verified",
+            "data": {
+              "resource": "data/src/emulator.js",
+              "sha256": "24ebac4baf739892046b82c3bdf01d5b6795b801b77d289e43a4c7d59f9666be",
+              "mechanism": "browser-sri",
+              "session_generation": 1
+            }
+          },
+          {
+            "seq": 6,
+            "utc": "2026-11-01T02:14:35.423Z",
+            "host_monotonic_ms": 562.5050000026822,
+            "type": "integrity.resource.verified",
+            "data": {
+              "resource": "data/src/nipplejs.js",
+              "sha256": "cf745190f5dc5db942ad54f5683d56c6d6da445646f4b4fc23c049c9985a04df",
+              "mechanism": "browser-sri",
+              "session_generation": 1
+            }
+          },
+          {
+            "seq": 7,
+            "utc": "2026-11-01T02:14:35.430Z",
+            "host_monotonic_ms": 569.765000000596,
+            "type": "integrity.resource.verified",
+            "data": {
+              "resource": "data/src/shaders.js",
+              "sha256": "79bcd4c35740b2858fc28f2f1894ddb8f483f1aba6f564869a713515726fe902",
+              "mechanism": "browser-sri",
+              "session_generation": 1
+            }
+          },
+          {
+            "seq": 8,
+            "utc": "2026-11-01T02:14:35.437Z",
+            "host_monotonic_ms": 576.2200000025332,
+            "type": "integrity.resource.verified",
+            "data": {
+              "resource": "data/src/storage.js",
+              "sha256": "06759f310bb2d782d2728e1d3417a0d8f613eff935d2959c1a705670041a6f2e",
+              "mechanism": "browser-sri",
+              "session_generation": 1
+            }
+          },
+          {
+            "seq": 9,
+            "utc": "2026-11-01T02:14:35.443Z",
+            "host_monotonic_ms": 582.7200000025332,
+            "type": "integrity.resource.verified",
+            "data": {
+              "resource": "data/src/gamepad.js",
+              "sha256": "27707ee9256cf3e1a6f32d1c3c42f2aed991d637773699fff566008229cc09c8",
+              "mechanism": "browser-sri",
+              "session_generation": 1
+            }
+          },
+          {
+            "seq": 10,
+            "utc": "2026-11-01T02:14:35.449Z",
+            "host_monotonic_ms": 588.5600000023842,
+            "type": "integrity.resource.verified",
+            "data": {
+              "resource": "data/src/GameManager.js",
+              "sha256": "f026130eda3648557498c54c70cbb5b36fd71b088e7e42e5a13e413aab11d888",
+              "mechanism": "browser-sri",
+              "session_generation": 1
+            }
+          },
+          {
+            "seq": 11,
+            "utc": "2026-11-01T02:14:35.458Z",
+            "host_monotonic_ms": 597.4350000023842,
+            "type": "integrity.resource.verified",
+            "data": {
+              "resource": "data/src/socket.io.min.js",
+              "sha256": "b0e735814f8dcfecd6cdb8a7ce95a297a7e1e5f2727a29e6f5901801d52fa0c5",
+              "mechanism": "browser-sri",
+              "session_generation": 1
+            }
+          },
+          {
+            "seq": 12,
+            "utc": "2026-11-01T02:14:35.464Z",
+            "host_monotonic_ms": 603.7800000011921,
+            "type": "integrity.resource.verified",
+            "data": {
+              "resource": "data/src/compression.js",
+              "sha256": "bd6723ec29fee8de81118cfbddfcb53301b8f41f7c6fb22c2de44dedbf111c2c",
+              "mechanism": "browser-sri",
+              "session_generation": 1
+            }
+          },
+          {
+            "seq": 15,
+            "utc": "2026-11-01T02:14:35.528Z",
+            "host_monotonic_ms": 667.6150000020862,
+            "type": "integrity.resource.verified",
+            "data": {
+              "resource": "data/cores/reports/mupen64plus_next.json",
+              "sha256": "270105553cec57fd1058c50e0541b8b89dbd30b2323fd70682036f6919b805cc",
+              "mechanism": "actual-response-bytes",
+              "session_generation": 1
+            }
+          },
+          {
+            "seq": 16,
+            "utc": "2026-11-01T02:14:35.586Z",
+            "host_monotonic_ms": 725.144999999553,
+            "type": "integrity.resource.failed",
+            "data": {
+              "resource": "data/cores/mupen64plus_next-wasm.data",
+              "code": "E_RUNTIME_INTEGRITY",
+              "message": "Ressource moteur altérée ou de mauvaise version : data/cores/mupen64plus_next-wasm.data. Le démarrage est annulé.",
+              "session_generation": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "test": "Parcours complet de restauration réel sur le ZIP Web extrait en HTTPS",
+      "status": "RÉUSSI",
+      "proof": {
+        "checks": 9,
+        "report": "tests-web-rc-restoration.json",
+        "no_public_address_test": true
+      }
+    }
+  ],
+  "url": "https://localhost:18880/lab/",
+  "scope": "Temporary local TLS on localhost, exact staged Web archive. Not a publicly deployed site.",
+  "public_url": {
+    "status": "NON TESTABLE",
+    "reason": "No publication authorized by Karl; F6 is open."
+  }
+}

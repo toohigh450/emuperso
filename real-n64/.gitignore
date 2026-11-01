@@ -38,3 +38,7 @@ N64-sauvegarde-emplacement-*.json
 EMUPERSO-moteur-reel-diagnostic.json
 EMUPERSO-moteur-reel-diagnostic-*.json
 !homebrew/fallback-open/demo-emuperso-open.z64
+
+# Fresh platform-scoped CI artifacts stay private local review inputs.
+evidence/linux-browser-rc/
+evidence/windows-browser-rc/
