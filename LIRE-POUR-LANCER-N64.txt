@@ -30,7 +30,7 @@ Apres preparation, le lancement normal utilise les fichiers deja verifies
 localement. Aucun telechargement de ROM n'est effectue par ce lanceur.
 Aucune compatibilite avec un jeu commercial n'est garantie.
 
-VERSION 0.5.0 RC1 - CANDIDATE D AUDIT : changer de jeu pendant la partie, cheats par jeu,
+VERSION 0.5.0 RC2 - CANDIDATE D AUDIT : changer de jeu pendant la partie, cheats par jeu,
 etats internes trois emplacements, copies precedentes et reset sans cheats.
 Un point de retour est cree avant le premier cheat.
 Guide et limites : real-n64/docs/HUB-0.4.0.html.

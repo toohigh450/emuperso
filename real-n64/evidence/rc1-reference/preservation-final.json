@@ -1,0 +1,7 @@
+{
+  "status": "RÉUSSI",
+  "tracked_base_files_unchanged": 98,
+  "base_commit": "1219ecfeb51a43011c050b0113aa01dd5249ed9e",
+  "main_initial": "4936007df68882a5417746e5ef36cfadadf5537e",
+  "scope": "Fichiers suivis avant travaux comparés ; tous les nouveaux fichiers sont dans real-n64/ et nouveau workflow. Aucun test de fichier Conker/TN-1 original inventé."
+}

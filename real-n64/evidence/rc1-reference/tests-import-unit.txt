@@ -1,0 +1,20 @@
+✔ z64 : normalisation exacte de la démo, source inchangée et hash indépendant (4.308621ms)
+✔ v64 : normalisation exacte de la démo, source inchangée et hash indépendant (1.628597ms)
+✔ n64 : normalisation exacte de la démo, source inchangée et hash indépendant (0.759136ms)
+✔ Vecteurs connus : permutation par paire et par mot, pas inversion du fichier entier (0.922723ms)
+✔ Extension trompeuse : signature prioritaire et avertissement explicite (0.613185ms)
+✔ ZIP, exécutable et signature nulle ne deviennent pas ROM en étant renommés (0.531833ms)
+✔ Fichiers ZIP/extension étrangère refusés avant lecture (0.483139ms)
+✔ Tailles invalides/énormes refusées avant lecture et allocation (0.446153ms)
+✔ Alignement4 et limites explicites : 4K et 64M autorisés sans obligation puissance2 (0.234113ms)
+✔ Lectures partielles ou changement de taille refusés (0.381115ms)
+✔ Nom non fiable conservé comme métadonnée, jamais comme chemin de conversion (0.895912ms)
+✔ Aucune normalisation en place : les octets originaux et leur hash restent distincts (0.675309ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 17.907572

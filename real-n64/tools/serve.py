@@ -28,7 +28,7 @@ APP_FILES = frozenset({
     'zip-rom.mjs', 'save-store.mjs', 'state-bundle.mjs', 'legacy-battery.mjs',
     'cheat-catalog.mjs', 'README-FR.md', 'LICENSE',
     'docs/runtime-lock.json', 'docs/cheat-catalog-lock.json',
-    'docs/RC-0.5.0.html', 'docs/THIRD-PARTY.md',
+    'docs/RC-0.5.0.html', 'docs/RC-0.5.0-RC2.html', 'docs/THIRD-PARTY.md',
     'assets/emuperso-banner.png',
     'docs/REDISTRIBUTION-RC.md', 'docs/redistribution-rc.json',
     'docs/licenses/README.md',

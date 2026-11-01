@@ -22,7 +22,7 @@ import tempfile
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '0.5.0-RC1'
+VERSION = '0.5.0-RC2'
 DEMO = 'homebrew/fallback-open/demo-emuperso-open.z64'
 DEMO_SHA = 'f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252'
 MANIFEST = 'MANIFEST-SHA256.txt'
@@ -266,7 +266,7 @@ def build_web(root: Path = ROOT, output_dir: Path | None = None, *, for_publicat
                                       'files': {name: _sha(data) for name, data in sorted(files.items())},
                                       'source_policy': 'tools/serve.py public_file_manifest()',
                                       'deployment_authorized': False})
-    return _write('web', root, output_dir or root / 'delivery/rc-0.5.0', files, gate, for_publication)
+    return _write('web', root, output_dir or root / 'delivery/rc-0.5.0-rc2', files, gate, for_publication)
 
 
 def build_windows(root: Path = ROOT, output_dir: Path | None = None, *, for_publication: bool = False) -> PackageResult:
@@ -278,7 +278,7 @@ def build_windows(root: Path = ROOT, output_dir: Path | None = None, *, for_publ
     for name in WINDOWS_EXTRA_FILES:
         files['real-n64/' + name] = _read(root, name)
     files['DEMARRER-N64.bat'] = _read(root.parent, 'DEMARRER-N64.bat')
-    return _write('windows', root, output_dir or root / 'delivery/rc-0.5.0', files, gate, for_publication)
+    return _write('windows', root, output_dir or root / 'delivery/rc-0.5.0-rc2', files, gate, for_publication)
 
 
 def _archive_bytes(path: Path) -> bytes:

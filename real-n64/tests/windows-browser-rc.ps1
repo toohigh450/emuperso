@@ -215,6 +215,7 @@ print('Observed Windows runner and pinned Chromium ' + chromium_version)
     Invoke-BrowserBench 'restore-independent' 'probe_restore_rc.py' 'probe-restore-rc.json' 'emuperso/restore-independent-probe/v1' 3 120 @()
     Invoke-BrowserBench 'restore-regressions' 'browser_restore_rc.py' 'tests-restore-rc-browser.json' 'emuperso/restore-rc-browser-tests/v1' 9 360 @('restore-rc-final.png', 'restore-rc-failure.png')
     Invoke-BrowserBench 'restore-guards' 'browser_restore_guards_rc.py' 'tests-restore-guards-rc-browser.json' 'emuperso/restore-guards-rc-browser-tests/v1' 4 180 @('restore-guards-rc-final.png', 'restore-guards-rc-failure.png')
+    Invoke-BrowserBench 'cheat-faults' 'probe_cheat_faults_rc.py' 'tests-cheat-faults-rc-browser.json' 'emuperso/cheat-faults-rc-tests/v1' 4 300 @('cheat-faults-rc-final.png', 'cheat-faults-rc-failure.png')
     Invoke-BrowserBench 'hub-full' 'browser_hub.py' 'tests-hub-browser.json' 'emuperso/hub-browser-tests/v1' 17 420 @('hub-first.png', 'hub-animation.png', 'hub-final.png', 'hub-failure.png', 'hub-failure-diagnostic.json')
 } catch {
     $results.Add([ordered]@{ name = 'Windows browser harness'; result = 'ECHOUE'; proof = $_.Exception.Message })
@@ -227,8 +228,8 @@ print('Observed Windows runner and pinned Chromium ' + chromium_version)
         platform = [Environment]::OSVersion.VersionString
         powershell = $PSVersionTable.PSVersion.ToString()
         environment = $environmentMetadata
-        expected_benches = 5
-        expected_groups = 36
+        expected_benches = 6
+        expected_groups = 40
         tests = @($results.ToArray())
         tested_on_karl_pc = $false
         scope = 'Windows Server 2022 CI plus real pinned Chrome, own MIT homebrew only. No original save, private BIOS or commercial ROM.'
@@ -240,5 +241,5 @@ print('Observed Windows runner and pinned Chromium ' + chromium_version)
     [Environment]::SetEnvironmentVariable('PYTHONUNBUFFERED', $oldPythonUnbuffered, 'Process')
 }
 
-if ($results.Count -ne 5 -or @($results | Where-Object { $_.result -ne 'REUSSI' }).Count -gt 0) { exit 1 }
+if ($results.Count -ne 6 -or @($results | Where-Object { $_.result -ne 'REUSSI' }).Count -gt 0) { exit 1 }
 exit 0

@@ -12,7 +12,7 @@
           "origin": "https://localhost:18880",
           "gamepad": "function"
         },
-        "archive_sha256": "9a6629adaea3ce135c9e28af1bc04775d77cdfbea2333fd63c2f0b4b8f1915e2",
+        "archive_sha256": "87fd3e201f02589f40717b63ca12ce5298dea04ab2fc6622036e577076f317c5",
         "temporary_self_signed_tls": true,
         "public_deployment": false
       }
@@ -305,8 +305,8 @@
         "integrity_records": [
           {
             "seq": 5,
-            "utc": "2026-11-01T13:31:02.731Z",
-            "host_monotonic_ms": 708.9249999970198,
+            "utc": "2026-11-01T18:06:42.025Z",
+            "host_monotonic_ms": 716.1050000041723,
             "type": "integrity.resource.verified",
             "data": {
               "resource": "data/src/emulator.js",
@@ -317,8 +317,8 @@
           },
           {
             "seq": 6,
-            "utc": "2026-11-01T13:31:02.741Z",
-            "host_monotonic_ms": 718.9650000035763,
+            "utc": "2026-11-01T18:06:42.032Z",
+            "host_monotonic_ms": 723.8649999946356,
             "type": "integrity.resource.verified",
             "data": {
               "resource": "data/src/nipplejs.js",
@@ -329,8 +329,8 @@
           },
           {
             "seq": 7,
-            "utc": "2026-11-01T13:31:02.750Z",
-            "host_monotonic_ms": 727.9800000041723,
+            "utc": "2026-11-01T18:06:42.040Z",
+            "host_monotonic_ms": 731.9099999964237,
             "type": "integrity.resource.verified",
             "data": {
               "resource": "data/src/shaders.js",
@@ -341,8 +341,8 @@
           },
           {
             "seq": 8,
-            "utc": "2026-11-01T13:31:02.758Z",
-            "host_monotonic_ms": 735.890000000596,
+            "utc": "2026-11-01T18:06:42.047Z",
+            "host_monotonic_ms": 738.5999999940395,
             "type": "integrity.resource.verified",
             "data": {
               "resource": "data/src/storage.js",
@@ -353,8 +353,8 @@
           },
           {
             "seq": 9,
-            "utc": "2026-11-01T13:31:02.766Z",
-            "host_monotonic_ms": 744.265000000596,
+            "utc": "2026-11-01T18:06:42.054Z",
+            "host_monotonic_ms": 745.2249999940395,
             "type": "integrity.resource.verified",
             "data": {
               "resource": "data/src/gamepad.js",
@@ -376,8 +376,8 @@
         "integrity_records": [
           {
             "seq": 5,
-            "utc": "2026-11-01T13:31:03.533Z",
-            "host_monotonic_ms": 619.2849999964237,
+            "utc": "2026-11-01T18:06:42.744Z",
+            "host_monotonic_ms": 557.5400000065565,
             "type": "integrity.resource.verified",
             "data": {
               "resource": "data/src/emulator.js",
@@ -388,8 +388,8 @@
           },
           {
             "seq": 6,
-            "utc": "2026-11-01T13:31:03.541Z",
-            "host_monotonic_ms": 626.6850000023842,
+            "utc": "2026-11-01T18:06:42.751Z",
+            "host_monotonic_ms": 565.2700000107288,
             "type": "integrity.resource.verified",
             "data": {
               "resource": "data/src/nipplejs.js",
@@ -400,8 +400,8 @@
           },
           {
             "seq": 7,
-            "utc": "2026-11-01T13:31:03.549Z",
-            "host_monotonic_ms": 634.3299999982119,
+            "utc": "2026-11-01T18:06:42.759Z",
+            "host_monotonic_ms": 572.7600000053644,
             "type": "integrity.resource.verified",
             "data": {
               "resource": "data/src/shaders.js",
@@ -412,8 +412,8 @@
           },
           {
             "seq": 8,
-            "utc": "2026-11-01T13:31:03.555Z",
-            "host_monotonic_ms": 640.4050000011921,
+            "utc": "2026-11-01T18:06:42.766Z",
+            "host_monotonic_ms": 580.4399999976158,
             "type": "integrity.resource.verified",
             "data": {
               "resource": "data/src/storage.js",
@@ -424,8 +424,8 @@
           },
           {
             "seq": 9,
-            "utc": "2026-11-01T13:31:03.560Z",
-            "host_monotonic_ms": 646.25,
+            "utc": "2026-11-01T18:06:42.772Z",
+            "host_monotonic_ms": 586.4350000023842,
             "type": "integrity.resource.verified",
             "data": {
               "resource": "data/src/gamepad.js",
@@ -436,8 +436,8 @@
           },
           {
             "seq": 10,
-            "utc": "2026-11-01T13:31:03.566Z",
-            "host_monotonic_ms": 652.1799999922514,
+            "utc": "2026-11-01T18:06:42.778Z",
+            "host_monotonic_ms": 592.3299999982119,
             "type": "integrity.resource.verified",
             "data": {
               "resource": "data/src/GameManager.js",
@@ -448,8 +448,8 @@
           },
           {
             "seq": 11,
-            "utc": "2026-11-01T13:31:03.577Z",
-            "host_monotonic_ms": 663.2150000035763,
+            "utc": "2026-11-01T18:06:42.787Z",
+            "host_monotonic_ms": 600.9350000023842,
             "type": "integrity.resource.verified",
             "data": {
               "resource": "data/src/socket.io.min.js",
@@ -460,8 +460,8 @@
           },
           {
             "seq": 12,
-            "utc": "2026-11-01T13:31:03.585Z",
-            "host_monotonic_ms": 670.734999999404,
+            "utc": "2026-11-01T18:06:42.794Z",
+            "host_monotonic_ms": 607.4650000035763,
             "type": "integrity.resource.verified",
             "data": {
               "resource": "data/src/compression.js",
@@ -472,8 +472,8 @@
           },
           {
             "seq": 15,
-            "utc": "2026-11-01T13:31:03.659Z",
-            "host_monotonic_ms": 744.5949999988079,
+            "utc": "2026-11-01T18:06:42.854Z",
+            "host_monotonic_ms": 667.6350000053644,
             "type": "integrity.resource.verified",
             "data": {
               "resource": "data/cores/reports/mupen64plus_next.json",
@@ -484,8 +484,8 @@
           },
           {
             "seq": 16,
-            "utc": "2026-11-01T13:31:03.711Z",
-            "host_monotonic_ms": 797.0750000029802,
+            "utc": "2026-11-01T18:06:43.054Z",
+            "host_monotonic_ms": 867.4650000035763,
             "type": "integrity.resource.failed",
             "data": {
               "resource": "data/cores/mupen64plus_next-wasm.data",

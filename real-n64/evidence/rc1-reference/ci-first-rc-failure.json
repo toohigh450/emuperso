@@ -1,0 +1,22 @@
+{
+  "schema": "emuperso/rc-ci-attempt/v1",
+  "commit": "c8951b523d68cd3515dce0726eb7c49f108960b1",
+  "run_id": 41266751557,
+  "status": "ÉCHOUÉ",
+  "windows_passed_benches": {
+    "restore-independent": 3,
+    "restore-regressions": 9,
+    "restore-guards": 4,
+    "launcher": 11
+  },
+  "linux_failed_bench": "hub-full",
+  "windows_failed_bench": "hub-full",
+  "cause": "Le Hub exigeait les deux pointeurs alternés même lorsque le helper avait identifié positivement la RAM par écho natif. Échantillonnage de parité aliasé, assertion de test incompatible avec le fallback.",
+  "correction": "Preuve bidirectionnelle native de 8 octets, retour initial confirmé dans le heap et une nouvelle capture après deux autres frames ; critère positif explicite dans le Hub. Nouveau banc forcé de 3 contrôles réels.",
+  "product_runtime_changed_by_probe_fix": false,
+  "not_a_diagnosis_on_karl_pc": true,
+  "artifact_sha256": {
+    "windows": "69a7fed3df839728b5bd831735a294fb647bed18c7d3c9de585eb9278b7ef8f3",
+    "linux": "009511a196c12d12e6317221cff3a022118cdba7c39f2f44aabfcf0b56e3bb3e"
+  }
+}

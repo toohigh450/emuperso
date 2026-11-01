@@ -4,6 +4,7 @@ import { inspectNativeState, makeRestoreWitness, compareRestoreWitness } from '.
 import { sriValue, verifyRuntimeBytes } from './runtime-integrity.mjs';
 const contexts = new Set();
 let emulator = null, romURL = null, closed = false, notify = () => {}, sessionId = null;
+let cheatFault = null;
 const note = (type, data = {}) => { if (!closed) notify(type, data); };
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 const failure = (code, message) => Object.assign(new Error(message), { code });
@@ -71,15 +72,19 @@ function loadScript(name, files) {
   });
 }
 function gm() {
+  if (cheatFault) throw cheatFault;
   if (closed || !emulator?.started || !emulator.gameManager) throw new Error('Session moteur non disponible.');
   return emulator.gameManager;
 }
 function snapshot() {
+  let frame = 0;
+  try { frame = emulator?.gameManager?.getFrameNum?.() ?? 0; } catch {}
   return { session_id: sessionId, closed, started: !!emulator?.started, paused: emulator?.paused ?? true,
-    frame: emulator?.gameManager?.getFrameNum?.() ?? 0,
+    frame, poisoned: !!cheatFault, fault_code: cheatFault?.code ?? null,
     contexts: [...contexts].map(context => ({ state: context.state, sample_rate: context.sampleRate })) };
 }
 async function resumeAudio() {
+  if (cheatFault) throw cheatFault;
   await Promise.allSettled([...contexts].filter(context => context.state === 'suspended').map(context =>
     Promise.race([context.resume(), wait(1000)])));
   if ([...contexts].some(context => context.state === 'suspended')) note('audio.resume.pending', { action: 'Cliquer Activer / reprendre l’audio.' });
@@ -320,10 +325,51 @@ async function loadState(bytes) {
     try { manager.FS.unlink(path); } catch {}
   }
 }
+function poisonCheatState(manager, error, requested, applied) {
+  // The pinned vendor API has only void setters, with no native list readback
+  // or transaction ACK. Replaying the old JS list would not verify a rollback.
+  // Retire this realm instead: no further play, capture, save or load is allowed.
+  cheatFault ??= Object.assign(failure('E_CHEAT_STATE_UNKNOWN',
+    'L’application des cheats a échoué ; l’état du moteur est indéterminé. Cette session est arrêtée et ne peut plus être sauvegardée. Redémarrez une session neuve sans cheats.'), { cause: error });
+  try { manager.toggleMainLoop(0); } catch {}
+  try { emulator?.pause(); } catch {}
+  try { emulator?.Module?.pauseMainLoop?.(); } catch {}
+  for (const context of contexts) {
+    if (context.state === 'closed') continue;
+    try { Promise.resolve(context.close()).catch(() => {}); } catch {}
+  }
+  try {
+    note('cheats.state.unknown', { code: cheatFault.code, requested_count: requested,
+      completed_add_calls: applied, native_list_verified: false,
+      recovery: 'fresh-clean-session-only' });
+  } catch {}
+  return cheatFault;
+}
 function setCheats(cheats) {
-  const manager = gm(); manager.resetCheat();
-  cheats.forEach((cheat, index) => manager.setCheat(index, true, cheat.code));
-  note('cheats.applied', { count: cheats.length });
+  const manager = gm();
+  // Validate and copy the COMPLETE request before the first native mutation.
+  // Invalid caller input leaves the previous native list untouched.
+  if (!Array.isArray(cheats) || cheats.length > 256) {
+    throw failure('E_CHEAT_INPUT', 'Liste de cheats invalide ou trop volumineuse. Aucun code modifié.');
+  }
+  const codes = Array.from(cheats, cheat => {
+    const code = cheat?.code;
+    if (typeof code !== 'string' || code.length === 0 || code.length > 65536 ||
+        !/^[0-9A-Fa-f]{8} [0-9A-Fa-f]{4}(?:\+[0-9A-Fa-f]{8} [0-9A-Fa-f]{4})*$/.test(code)) {
+      throw failure('E_CHEAT_INPUT', 'Code de cheat invalide. Aucun code modifié.');
+    }
+    return code;
+  });
+  let applied = 0;
+  try {
+    manager.resetCheat();
+    for (let index = 0; index < codes.length; index++) {
+      manager.setCheat(index, true, codes[index]); applied++;
+    }
+  } catch (error) {
+    throw poisonCheatState(manager, error, codes.length, applied);
+  }
+  note('cheats.applied', { count: codes.length });
 }
 window.N64Engine = Object.freeze({ start, close, pause, play, resumeAudio, snapshot, captureState,
   captureBattery, loadState, setCheats,

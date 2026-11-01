@@ -1,0 +1,74 @@
+{
+  "schema": "emuperso/rc-unit-tests/v1",
+  "results": [
+    {
+      "test": "rom-file.test.mjs",
+      "status": "RÉUSSI",
+      "exit_code": 0,
+      "count": 12
+    },
+    {
+      "test": "zip-rom.test.mjs",
+      "status": "RÉUSSI",
+      "exit_code": 0,
+      "count": 20
+    },
+    {
+      "test": "save-store.test.mjs",
+      "status": "RÉUSSI",
+      "exit_code": 0,
+      "count": 16
+    },
+    {
+      "test": "state-bundle.test.mjs",
+      "status": "RÉUSSI",
+      "exit_code": 0,
+      "count": 8
+    },
+    {
+      "test": "legacy-battery.test.mjs",
+      "status": "RÉUSSI",
+      "exit_code": 0,
+      "count": 3
+    },
+    {
+      "test": "cheat-catalog.test.mjs",
+      "status": "RÉUSSI",
+      "exit_code": 0,
+      "count": 9
+    },
+    {
+      "test": "native-state.test.mjs",
+      "status": "RÉUSSI",
+      "exit_code": 0,
+      "count": 8
+    },
+    {
+      "test": "runtime-integrity.test.mjs",
+      "status": "RÉUSSI",
+      "exit_code": 0,
+      "count": 4
+    },
+    {
+      "test": "test_cheat_installer.py",
+      "status": "RÉUSSI",
+      "exit_code": 0,
+      "count": 5
+    },
+    {
+      "test": "test_distribution.py",
+      "status": "RÉUSSI",
+      "exit_code": 0,
+      "count": 10
+    },
+    {
+      "test": "linux-harness-self-test",
+      "status": "RÉUSSI",
+      "exit_code": 0,
+      "count": 11
+    }
+  ],
+  "log": "tests-unit-rc.txt",
+  "log_sha256": "81e9ea826967f53c5f7019caa3a98e1e3fbbf65bb1ac84fb71e249acb033aae0",
+  "scope": "Node and Python offline tests on Linux; no original ROM/save or Karl PC."
+}

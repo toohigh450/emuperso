@@ -1,0 +1,980 @@
+{
+  "schema": "emuperso/restore-guards-rc-browser-tests/v1",
+  "results": [
+    {
+      "test": "Refus sûr sans témoin précoce ; lecture complète sans désérialisation également refusée",
+      "status": "RÉUSSI",
+      "proof": {
+        "near_boot_without_marker": {
+          "fault_configured": "Only the candidate native load entry is a no-op; the real N64 core keeps running.",
+          "native_fault_reached": false,
+          "disposition": "safe_preflight_refusal_without_memory_witness",
+          "saved_near_boot_native_frame": 11,
+          "saved_unused_nonzero_bytes": 0,
+          "error": {
+            "message": "Cette version ne peut pas confirmer la reprise de cet état, parfois très proche du démarrage. La partie actuelle et les sauvegardes sont conservées. Essayez une autre copie ou la sauvegarde native, puis exportez le diagnostic.",
+            "detail": "Restauration non confirmable : aucun témoin mémoire stable suffisamment distinct du démarrage. L’ancienne session est conservée.",
+            "code": "E_RESTORE_UNPROVEN"
+          },
+          "native_noop_calls": 0,
+          "vault_before": {
+            "record_count": 2,
+            "sha256": "8dc2c5b61d2fca7d10a8f2fbbb922ca03e0ce35dfc3b97f3a7e779b04f5f0059",
+            "records": [
+              {
+                "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+                "kind": "battery",
+                "slot": 1,
+                "revision": 1,
+                "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+                "previous_sha256": null
+              },
+              {
+                "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+                "kind": "state",
+                "slot": 1,
+                "revision": 1,
+                "current_sha256": "2942ab38a4a637c8859d136b2e1dfa791a09a864075584e64e57276e43b63a05",
+                "previous_sha256": null
+              }
+            ]
+          },
+          "vault_after": {
+            "record_count": 2,
+            "sha256": "8dc2c5b61d2fca7d10a8f2fbbb922ca03e0ce35dfc3b97f3a7e779b04f5f0059",
+            "records": [
+              {
+                "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+                "kind": "battery",
+                "slot": 1,
+                "revision": 1,
+                "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+                "previous_sha256": null
+              },
+              {
+                "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+                "kind": "state",
+                "slot": 1,
+                "revision": 1,
+                "current_sha256": "2942ab38a4a637c8859d136b2e1dfa791a09a864075584e64e57276e43b63a05",
+                "previous_sha256": null
+              }
+            ]
+          },
+          "retention": {
+            "after": {
+              "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+              "rom_bytes": 6144,
+              "rdram_bytes": 8388608,
+              "code_sha256": "11112888c33790742692ac1ef405f20335b30c21d82d3be0d5ac86b0c349f438",
+              "unused_sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca",
+              "unused_nonzero_bytes": 0,
+              "native_frame": 22,
+              "paused": false
+            },
+            "frame_after_observation": 30,
+            "same_actual_engine_and_module": true,
+            "ram_scope": "Code and unused RAM unchanged; framebuffer animation legitimately continues."
+          },
+          "no_ram_marker_written_before_this_case": true,
+          "functional_limitation": "Un état authentique proche du démarrage peut être refusé faute de témoin RAM. Ce cas prouve un refus sûr, pas la prise en charge fonctionnelle de ces états ni une injection native jamais atteinte."
+        },
+        "read_all_without_apply": {
+          "injected_fault": "The complete verified input is read through actual FS.readFile, but native deserialization is deliberately omitted.",
+          "native_fault_reached": true,
+          "read_all": {
+            "expected_bytes": 16793440,
+            "read_bytes": 16793440,
+            "native_deserialize_called": false
+          },
+          "error": {
+            "message": "La mémoire du jeu n’a pas confirmé la restauration dans le délai prévu. Chargement annulé ; aucune sauvegarde écrasée. Exportez le diagnostic pour analyse.",
+            "detail": "La mémoire du jeu n’a pas confirmé la restauration dans le délai prévu. Chargement annulé ; aucune sauvegarde écrasée. Exportez le diagnostic pour analyse.",
+            "code": "E_RESTORE_UNCONFIRMED"
+          },
+          "actual_drawn_progression_before_capture": {
+            "surfaces": [
+              {
+                "framebuffer": 1048576,
+                "drawn_frame": 181,
+                "digits": "181"
+              },
+              {
+                "framebuffer": 1310720,
+                "drawn_frame": 180,
+                "digits": "180"
+              }
+            ],
+            "drawn_frame": 181
+          },
+          "saved_markers": {
+            "phase": "saved",
+            "pages": 128,
+            "bytes_per_page": 32,
+            "physical_first": 65536,
+            "physical_last": 585759,
+            "pattern": [
+              19,
+              87,
+              155,
+              223
+            ]
+          },
+          "retained_live_markers": {
+            "phase": "live",
+            "pages": 128,
+            "bytes_per_page": 32,
+            "physical_first": 65536,
+            "physical_last": 585759,
+            "pattern": [
+              36,
+              104,
+              172,
+              224
+            ]
+          },
+          "vault_before": {
+            "record_count": 2,
+            "sha256": "a5d0476a16e44d35736447604e88f384b3ff3cdbb1f6caf41d058a3967aa706d",
+            "records": [
+              {
+                "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+                "kind": "battery",
+                "slot": 1,
+                "revision": 1,
+                "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+                "previous_sha256": null
+              },
+              {
+                "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+                "kind": "state",
+                "slot": 1,
+                "revision": 2,
+                "current_sha256": "01dc8f4779fe03975bb72f485db3f09ca2d6e5aeb1c8f779eedde20fa16732d7",
+                "previous_sha256": "2942ab38a4a637c8859d136b2e1dfa791a09a864075584e64e57276e43b63a05"
+              }
+            ]
+          },
+          "vault_after": {
+            "record_count": 2,
+            "sha256": "a5d0476a16e44d35736447604e88f384b3ff3cdbb1f6caf41d058a3967aa706d",
+            "records": [
+              {
+                "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+                "kind": "battery",
+                "slot": 1,
+                "revision": 1,
+                "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+                "previous_sha256": null
+              },
+              {
+                "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+                "kind": "state",
+                "slot": 1,
+                "revision": 2,
+                "current_sha256": "01dc8f4779fe03975bb72f485db3f09ca2d6e5aeb1c8f779eedde20fa16732d7",
+                "previous_sha256": "2942ab38a4a637c8859d136b2e1dfa791a09a864075584e64e57276e43b63a05"
+              }
+            ]
+          },
+          "retention": {
+            "after": {
+              "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+              "rom_bytes": 6144,
+              "rdram_bytes": 8388608,
+              "code_sha256": "11112888c33790742692ac1ef405f20335b30c21d82d3be0d5ac86b0c349f438",
+              "unused_sha256": "39cbb8e277f4d382f1c4068da0ba6127c8b962535b7234b0d88b038d96caadb6",
+              "unused_nonzero_bytes": 32,
+              "native_frame": 203,
+              "paused": false
+            },
+            "frame_after_observation": 213,
+            "same_actual_engine_and_module": true,
+            "ram_scope": "Code and unused RAM unchanged; framebuffer animation legitimately continues."
+          }
+        },
+        "not_a_test_on_karl_pc": true
+      }
+    },
+    {
+      "test": "Audio bloqué pendant Enregistrer : erreur bornée, coffre intact et boucle réelle reprise",
+      "status": "RÉUSSI",
+      "proof": {
+        "injected_fault": "Actual session AudioContext.suspend returns a never-settling promise",
+        "error": {
+          "message": "Le système audio n’a pas confirmé sa mise en pause. Chargement annulé ; la partie et les sauvegardes sont conservées. Réactivez l’audio puis réessayez.",
+          "detail": "Le système audio n’a pas confirmé sa mise en pause. Chargement annulé ; la partie et les sauvegardes sont conservées. Réactivez l’audio puis réessayez.",
+          "code": "E_AUDIO_SUSPEND_TIMEOUT"
+        },
+        "vault_before": {
+          "record_count": 2,
+          "sha256": "a5d0476a16e44d35736447604e88f384b3ff3cdbb1f6caf41d058a3967aa706d",
+          "records": [
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 1,
+              "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "state",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "01dc8f4779fe03975bb72f485db3f09ca2d6e5aeb1c8f779eedde20fa16732d7",
+              "previous_sha256": "2942ab38a4a637c8859d136b2e1dfa791a09a864075584e64e57276e43b63a05"
+            }
+          ]
+        },
+        "vault_after": {
+          "record_count": 2,
+          "sha256": "a5d0476a16e44d35736447604e88f384b3ff3cdbb1f6caf41d058a3967aa706d",
+          "records": [
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 1,
+              "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "state",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "01dc8f4779fe03975bb72f485db3f09ca2d6e5aeb1c8f779eedde20fa16732d7",
+              "previous_sha256": "2942ab38a4a637c8859d136b2e1dfa791a09a864075584e64e57276e43b63a05"
+            }
+          ]
+        },
+        "retention": {
+          "after": {
+            "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+            "rom_bytes": 6144,
+            "rdram_bytes": 8388608,
+            "code_sha256": "11112888c33790742692ac1ef405f20335b30c21d82d3be0d5ac86b0c349f438",
+            "unused_sha256": "39cbb8e277f4d382f1c4068da0ba6127c8b962535b7234b0d88b038d96caadb6",
+            "unused_nonzero_bytes": 32,
+            "native_frame": 227,
+            "paused": false
+          },
+          "frame_after_observation": 236,
+          "same_actual_engine_and_module": true,
+          "ram_scope": "Code and unused RAM unchanged; framebuffer animation legitimately continues."
+        },
+        "native_frame_before": 217,
+        "operation_success_event_emitted": false,
+        "not_a_test_on_karl_pc": true
+      }
+    },
+    {
+      "test": "Audio bloqué au checkpoint : aucun cheat activé, coffre intact et partie reprise",
+      "status": "RÉUSSI",
+      "proof": {
+        "injected_fault": "Unresolved suspend before the first cheat checkpoint",
+        "error": {
+          "message": "Le système audio n’a pas confirmé sa mise en pause. Chargement annulé ; la partie et les sauvegardes sont conservées. Réactivez l’audio puis réessayez.",
+          "detail": "Le système audio n’a pas confirmé sa mise en pause. Chargement annulé ; la partie et les sauvegardes sont conservées. Réactivez l’audio puis réessayez.",
+          "code": "E_AUDIO_SUSPEND_TIMEOUT"
+        },
+        "vault_before": {
+          "record_count": 2,
+          "sha256": "a5d0476a16e44d35736447604e88f384b3ff3cdbb1f6caf41d058a3967aa706d",
+          "records": [
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 1,
+              "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "state",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "01dc8f4779fe03975bb72f485db3f09ca2d6e5aeb1c8f779eedde20fa16732d7",
+              "previous_sha256": "2942ab38a4a637c8859d136b2e1dfa791a09a864075584e64e57276e43b63a05"
+            }
+          ]
+        },
+        "vault_after": {
+          "record_count": 2,
+          "sha256": "a5d0476a16e44d35736447604e88f384b3ff3cdbb1f6caf41d058a3967aa706d",
+          "records": [
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 1,
+              "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "state",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "01dc8f4779fe03975bb72f485db3f09ca2d6e5aeb1c8f779eedde20fa16732d7",
+              "previous_sha256": "2942ab38a4a637c8859d136b2e1dfa791a09a864075584e64e57276e43b63a05"
+            }
+          ]
+        },
+        "retention": {
+          "after": {
+            "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+            "rom_bytes": 6144,
+            "rdram_bytes": 8388608,
+            "code_sha256": "11112888c33790742692ac1ef405f20335b30c21d82d3be0d5ac86b0c349f438",
+            "unused_sha256": "39cbb8e277f4d382f1c4068da0ba6127c8b962535b7234b0d88b038d96caadb6",
+            "unused_nonzero_bytes": 32,
+            "native_frame": 257,
+            "paused": false
+          },
+          "frame_after_observation": 280,
+          "same_actual_engine_and_module": true,
+          "ram_scope": "Code and unused RAM unchanged; framebuffer animation legitimately continues."
+        },
+        "cheats": {
+          "active": [],
+          "tainted": false
+        },
+        "checkpoint_success_event_emitted": false
+      }
+    },
+    {
+      "test": "Liste IDB en échec après commit : chargement réel réussi avec avertissement distinct",
+      "status": "RÉUSSI",
+      "proof": {
+        "injected_fault": "IDBIndex.getAll throws once, gated by the newer actual session.committed event",
+        "loaded": {
+          "slot": 1,
+          "previous": false,
+          "payload_sha256": "31cc8d8bd8df9e9065b4317ba60f988111b8bad2b021e796f0083cadbde496e8",
+          "verification": {
+            "native_status": 0,
+            "frame_before": 12,
+            "frame_after": 14,
+            "observed_elapsed_ms": 105.4050000011921,
+            "native_payload_read_bytes": 16793440,
+            "native_payload_expected_bytes": 16793440,
+            "memory": {
+              "matched": 128,
+              "total": 128,
+              "ratio": 1,
+              "matched_strong": 128,
+              "verified": true,
+              "already_equivalent": false,
+              "equivalent": false,
+              "restored": true,
+              "mode": "differential_ram"
+            },
+            "already_equivalent": false,
+            "immediate_memory": {
+              "exact_rdram": false,
+              "different_bytes": 2,
+              "bytes": 8388608
+            },
+            "contexts": [
+              {
+                "state": "running",
+                "sample_rate": 44100
+              }
+            ]
+          }
+        },
+        "list_warning": {
+          "code": "E_STORAGE",
+          "message": "Échec du stockage local.",
+          "committed_operation_unchanged": true
+        },
+        "new_generation": 4,
+        "ram_marker_restored": 4951,
+        "operation_failure_count_unchanged": 4,
+        "vault_before": {
+          "record_count": 2,
+          "sha256": "eba799ddfeb2e06e866d2d28917743055962b463f010558ea3ad226e5cd0a952",
+          "records": [
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 1,
+              "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "state",
+              "slot": 1,
+              "revision": 3,
+              "current_sha256": "31cc8d8bd8df9e9065b4317ba60f988111b8bad2b021e796f0083cadbde496e8",
+              "previous_sha256": "01dc8f4779fe03975bb72f485db3f09ca2d6e5aeb1c8f779eedde20fa16732d7"
+            }
+          ]
+        },
+        "vault_after": {
+          "record_count": 2,
+          "sha256": "eba799ddfeb2e06e866d2d28917743055962b463f010558ea3ad226e5cd0a952",
+          "records": [
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 1,
+              "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "state",
+              "slot": 1,
+              "revision": 3,
+              "current_sha256": "31cc8d8bd8df9e9065b4317ba60f988111b8bad2b021e796f0083cadbde496e8",
+              "previous_sha256": "01dc8f4779fe03975bb72f485db3f09ca2d6e5aeb1c8f779eedde20fa16732d7"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "page_errors": [],
+  "http": [
+    {
+      "url": "http://127.0.0.1:18879/",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/style.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/assets/emuperso-banner.png",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/app.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/rom-file.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/zip-rom.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/save-store.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/session-controller.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/legacy-battery.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/state-bundle.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/cheat-catalog.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/homebrew/fallback-open/build-info.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/homebrew/fallback-open/demo-emuperso-open.z64",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/docs/runtime-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18879/bec8db52-8ea5-472c-a447-30defb0c1e97",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18879/616e5f03-4287-436d-96db-8eb57946ef19",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18879/7e4d21b1-3973-46ae-ba52-9e079b8cfa62",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18879/8ccc5ed2-8d9e-4698-bbe6-7e2682ca1cb8",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/docs/cheat-catalog-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/cheats/mupencheat.txt",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18879/4368f803-314f-422b-9445-21f3aa97e55b",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18879/d7228693-e046-4e23-8598-fc458609cd93",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18879/2317dad7-b99c-4b78-a521-32e06d81a9a2",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18879/f2fec153-32b2-4e8b-82de-5ee37782e834",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18879/624691df-47f2-4731-a8fd-3ce7fe1bd903",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18879/8f27951a-2118-4380-b9c7-2834687bd13b",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18879/e340e58d-8362-48aa-8035-ad85149e0163",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18879/58010a2e-5a1e-483b-bbdb-95faed167f25",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18879/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18879/5baba9e9-5496-40d1-ac7d-08ecf97fbe20",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18879/6dd719a7-7a53-4098-8fa0-402105376996",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18879/c3065a32-49f0-43e6-93e3-e00419518678",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18879/fbea27b1-0050-475a-8c5e-1209d7ba1969",
+      "method": "GET",
+      "body_bytes": 0
+    }
+  ],
+  "dialogs": [],
+  "scope": "Actual pinned N64 Wasm engine with only the repository MIT diagnostic ROM. Marker-free near-boot preflight refusal is distinct from a reached fault; a later full-file-read/no-deserialize case uses explicit controlled RAM. WebAudio and post-commit IDB failures are injected.",
+  "functional_limitations": [
+    "Authentic near-boot or graphical states without a usable RAM witness may be refused; safe refusal is not proof of functional support.",
+    "Generic graphical-state and commercial-game compatibility remain unproven; this bench grants no publication approval."
+  ],
+  "original_saves_used": false,
+  "not_tested": [
+    "Karl Windows PC",
+    "Commercial games",
+    "Physical gamepad or speakers"
+  ]
+}

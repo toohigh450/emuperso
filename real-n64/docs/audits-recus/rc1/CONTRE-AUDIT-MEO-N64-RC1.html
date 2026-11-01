@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contre-audit Méo — EMUPERSO N64 RC1 (Codex)</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #1a1a2e; color: #eee; }
+  h1 { color: #00d4ff; border-bottom: 2px solid #00d4ff; padding-bottom: 10px; }
+  h2 { color: #ffaa00; margin-top: 30px; }
+  h3 { color: #88ff88; }
+  .verdict { background: #2d2d44; border-left: 4px solid #ffaa00; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+  .pass { color: #88ff88; font-weight: bold; }
+  .fail { color: #ff6666; font-weight: bold; }
+  .warn { color: #ffaa00; font-weight: bold; }
+  .info { color: #00d4ff; }
+  table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+  th, td { border: 1px solid #444; padding: 10px; text-align: left; }
+  th { background: #2d2d44; color: #00d4ff; }
+  tr:nth-child(even) { background: #22222e; }
+  .finding { background: #2d2d44; padding: 15px; margin: 10px 0; border-radius: 8px; }
+  .finding.critical { border-left: 4px solid #ff6666; }
+  .finding.warning { border-left: 4px solid #ffaa00; }
+  .finding.ok { border-left: 4px solid #88ff88; }
+  code { background: #111; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+  .meta { color: #888; font-size: 0.9em; }
+  ul { line-height: 1.8; }
+</style>
+</head>
+<body>
+
+<h1>🔍 Contre-audit Méo — EMUPERSO N64 RC1</h1>
+<p class="meta">Auditeur : Méo (Muse) | Date : 1er novembre 2026 ~09h15 EST<br>
+Développeur audité : Codex | Branche : <code>emulateur-reel</code><br>
+Commits audités : <code>c8951b5</code> (RC1) → <code>6578382</code> (HEAD)</p>
+
+<div class="verdict">
+  <h2 style="margin-top:0; color:#ffaa00;">⚖️ Verdict : ACCEPTÉ pour audit GPT et tests terrain de Karl — PAS de publication</h2>
+  <p>Le travail de Codex est <strong>sérieux, honnête et vérifiable</strong>. La CI est verte, les preuves sont documentées avec leurs limites explicites. <strong>Cependant</strong>, le bug critique terrain (sauvegardes qui ne rechargent pas sur le PC de Karl) n'est <strong>pas prouvé corrigé</strong> — les tests utilisent uniquement la ROM démo MIT en environnement contrôlé.</p>
+</div>
+
+<h2>✅ Ce qui est VÉRIFIÉ (preuves indépendantes)</h2>
+
+<table>
+  <tr><th>Point</th><th>Statut</th><th>Preuve</th></tr>
+  <tr>
+    <td>CI verte Windows + Linux</td>
+    <td class="pass">✅ CONFIRMÉ</td>
+    <td>GitHub Actions run <code>41311824619</code> (commit <code>aea4eb45</code>) = <strong>success</strong>. Vérifié via API GitHub indépendante.</td>
+  </tr>
+  <tr>
+    <td>Honnêteté des preuves</td>
+    <td class="pass">✅ CONFIRMÉ</td>
+    <td><code>ci-validation-rc.json</code> : <code>publication_allowed: false</code>, <code>tested_on_karl_pc: false</code>. Codex ne prétend pas ce qu'il n'a pas testé.</td>
+  </tr>
+  <tr>
+    <td>F6 (licences) reste ouvert</td>
+    <td class="pass">✅ CONFIRMÉ</td>
+    <td>TRANSMISSION-RC-0.5.0.md : "F6 reste ouvert... Aucun bundle Web avec ces binaires ne doit entrer dans un artefact CI public." Honnête.</td>
+  </tr>
+  <tr>
+    <td>Téléchargement Windows documenté</td>
+    <td class="pass">✅ CONFIRMÉ</td>
+    <td>Le lanceur Windows télécharge Python 3.12.10 embed depuis python.org au premier lancement, avec SHA-256 verrouillé (<code>portable-python-lock.json</code>). Légitime et vérifiable.</td>
+  </tr>
+  <tr>
+    <td>Tests de restauration (sonde RAM)</td>
+    <td class="pass">✅ RÉUSSIS</td>
+    <td><code>probe-restore-rc.json</code> : restauration du marqueur RAM vérifiée (4951/4951). Échec d'injection correctement rejeté.</td>
+  </tr>
+  <tr>
+    <td>Tests coffre autosave</td>
+    <td class="pass">✅ RÉUSSIS</td>
+    <td><code>probe-autosave-readonly-rc.json</code> : 3/3 RÉUSSI (timer 15s, préservation après amorçage, vault inchangé si load manquant).</td>
+  </tr>
+</table>
+
+<h2>⚠️ Points d'attention (pas des blocages, mais à savoir)</h2>
+
+<div class="finding warning">
+  <h3>🟡 P1 — Le bug critique terrain N'EST PAS prouvé corrigé</h3>
+  <p><strong>Constat :</strong> Tous les tests de restauration utilisent la <strong>ROM démo MIT</strong> (<code>f18280a1...</code>) dans un profil navigateur propre et contrôlé.</p>
+  <p><strong>Portée déclarée (honnête) :</strong> <em>"Not a reproduction of Karl Windows PC."</em></p>
+  <p><strong>Impact :</strong> Le bug trouvé par Karl le 31 oct. (sauvegardes qui <strong>sauvegardent mais ne rechargent pas</strong> avec Conker sur son PC Windows) n'est pas reproduit ni prouvé corrigé par ces tests.</p>
+  <p><strong>Recommandation :</strong> Le test terrain de Karl sur son PC avec Conker reste <strong>obligatoire</strong> avant toute décision. C'est lui qui a trouvé le bug, c'est lui qui doit confirmer le fix.</p>
+</div>
+
+<div class="finding warning">
+  <h3>🟡 P1 — F2 : images Dragon Ball toujours dans l'historique Git</h3>
+  <p><strong>Constat :</strong> La nouvelle bannière est abstraite/originale (bien!), mais le document admet : <em>"Le retrait dans la candidate ne supprime pas les anciennes révisions de l'historique Git."</em></p>
+  <p><strong>Impact :</strong> Les images Goku/Vegeta restent accessibles via l'historique. Pour une publication publique, il faudra un nettoyage d'historique (<code>filter-branch</code> ou nouveau dépôt).</p>
+</div>
+
+<div class="finding warning">
+  <h3>🟡 P2 — F1 : serveur local ≠ hébergeur statique</h3>
+  <p><strong>Constat :</strong> L'allowlist du serveur local est en place et testée. Le document note honnêtement : <em>"Le serveur local et un hébergeur statique générique sont deux configurations différentes."</em></p>
+  <p><strong>Impact :</strong> Si le projet est un jour hébergé (GitHub Pages), la config devra être revalidée pour ce contexte.</p>
+</div>
+
+<div class="finding">
+  <h3>🟢 Info — Changement cosmétique dans app.js</h3>
+  <p>Le seul changement fonctionnel dans <code>app.js</code> est un message d'export de sauvegarde reformulé ("Copie d'état exportée... conservez-la privée"). Aucun changement de logique. C'est propre.</p>
+</div>
+
+<h2>📋 Commits de Codex analysés</h2>
+
+<table>
+  <tr><th>Commit</th><th>Description</th><th>Évaluation</th></tr>
+  <tr><td><code>cc2709d</code></td><td>Sonde RAM sans parité des buffers + noms des bancs Windows</td><td class="pass">Solide — corrige une faiblesse méthodologique</td></tr>
+  <tr><td><code>98820c5</code></td><td>Injection sonde indépendante + téléchargements Windows documentés</td><td class="pass">Solide — transparence sur le download Python</td></tr>
+  <tr><td><code>aea4eb4</code></td><td>Isolation contrôle lecture seule vs écriture native périodique</td><td class="pass">Solide — séparation des préoccupations test</td></tr>
+  <tr><td><code>6578382</code></td><td>Scellé rapport RC1 + preuves CI + transmission [skip ci]</td><td class="pass">Documentation — aucun changement applicatif</td></tr>
+</table>
+
+<h2>🎯 Recommandations pour la suite</h2>
+<ol>
+  <li><strong>GPT :</strong> auditer en parallèle — confronter avec ce contre-audit.</li>
+  <li><strong>Karl (test terrain obligatoire) :</strong>
+    <ul>
+      <li>Lancer Conker sur son PC Windows avec la RC1</li>
+      <li><strong>Tester le cycle complet : jouer → sauvegarder → fermer → rouvrir → charger</strong></li>
+      <li>Vérifier que la sauvegarde recharge VRAIMENT (le bug du 31 oct.)</li>
+    </ul>
+  </li>
+  <li><strong>Avant publication :</strong> régler F6 (licences), nettoyer l'historique Git (F2), valider F1 sur hébergeur statique.</li>
+</ol>
+
+<h2>📊 Résumé</h2>
+<table>
+  <tr><th>Critère</th><th>Résultat</th></tr>
+  <tr><td>Qualité du code livré</td><td class="pass">Bonne — changements ciblés, pas de régression visible</td></tr>
+  <tr><td>Honnêteté des preuves</td><td class="pass">Excellente — limites explicites, pas de survente</td></tr>
+  <tr><td>CI verte</td><td class="pass">Confirmée indépendamment</td></tr>
+  <tr><td>Bug critique terrain</td><td class="warn">Non prouvé corrigé — test Karl requis</td></tr>
+  <tr><td>Prêt pour publication</td><td class="fail">NON — F6 ouvert, test terrain manquant</td></tr>
+</table>
+
+<p class="meta" style="margin-top: 30px;">Rapport généré par Méo (Muse) le 1er novembre 2026. Méthode : clone indépendant, vérification API GitHub, lecture des preuves JSON, analyse des diffs. Aucune confiance aveugle dans les affirmations — chaque point vérifié.</p>
+
+</body>
+</html>

@@ -398,8 +398,29 @@ try:
         imported_before = len(events(page, 'state.imported'))
         with page.expect_file_chooser() as chooser:
             page.locator('#save-import').click()
+        # Represent an autosave that starts while the OS picker is open. The
+        # first actual native-save digest is held, not replaced or fabricated.
+        # The file event must queue until that write finishes, rather than vanish.
+        page.evaluate('''()=>{
+          const subtle=crypto.subtle,original=subtle.digest;
+          window.__hubImportGate={blocked:false,release:null,original};
+          subtle.digest=function(...args){
+            const actual=original.apply(this,args),gate=window.__hubImportGate;
+            if(!gate.blocked){gate.blocked=true;return Promise.all([actual,new Promise(resolve=>{gate.release=resolve;})]).then(([bytes])=>bytes);}
+            return actual;
+          };
+          document.querySelector('#battery-save').click();
+        }''')
+        page.wait_for_function('()=>window.__hubImportGate.blocked')
+        queued_before=len(events(page,'state.import.queued'))
         chooser.value.set_files(payload('fixture-owned-state-valid.json', json.dumps(exported_state).encode('utf-8')))
-        page.wait_for_function('n=>RealN64.diagnostic().records.filter(r=>r.type==="state.imported").length>n', arg=imported_before, timeout=60000)
+        page.wait_for_function('n=>RealN64.diagnostic().records.filter(r=>r.type==="state.import.queued").length>n',arg=queued_before)
+        page.evaluate('()=>{crypto.subtle.digest=window.__hubImportGate.original;window.__hubImportGate.release();}')
+        try:
+            page.wait_for_function('n=>RealN64.diagnostic().records.filter(r=>r.type==="state.imported").length>n', arg=imported_before, timeout=60000)
+        except Exception:
+            (EVIDENCE/'hub-failure-diagnostic.json').write_text(json.dumps(diagnostic(page),ensure_ascii=False,indent=2),encoding='utf-8')
+            raise
         wait_idle(page)
         imported = events(page, 'state.imported')[-1]['data']
         assert imported['slot'] == 3 and imported['payload_sha256'] == saved_state_hash

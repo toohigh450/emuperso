@@ -1,0 +1,113 @@
+{
+  "schema": "emuperso/autosave-readonly-probe/v1",
+  "results": [
+    {
+      "test": "Real 15-second timer adds native row outside a load operation",
+      "status": "RÉUSSI",
+      "before": {
+        "record_count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "records": []
+      },
+      "after": {
+        "record_count": 1,
+        "sha256": "0cbe566dc88ed3636162c1df40e154fca7bbb890fd3195c4897ce1f925e2fd3e",
+        "records": [
+          {
+            "key": "battery:359754e3669f6739711a04486845fdbec35ae9ab0fef5e4ef6728e9de46f0e33:1",
+            "kind": "battery",
+            "slot": 1,
+            "revision": 1,
+            "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+            "previous_sha256": null
+          }
+        ]
+      },
+      "events": [
+        {
+          "seq": 26,
+          "utc": "2026-11-01T13:28:02.713Z",
+          "host_monotonic_ms": 15192.379999995232,
+          "type": "battery.saved",
+          "data": {
+            "bytes": 296960,
+            "slot": 1,
+            "payload_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+            "skipped_unchanged": false
+          }
+        }
+      ]
+    },
+    {
+      "test": "Unchanged native autosave preserves full row, revision and previous after priming",
+      "status": "RÉUSSI",
+      "before": {
+        "record_count": 1,
+        "sha256": "0cbe566dc88ed3636162c1df40e154fca7bbb890fd3195c4897ce1f925e2fd3e",
+        "records": [
+          {
+            "key": "battery:359754e3669f6739711a04486845fdbec35ae9ab0fef5e4ef6728e9de46f0e33:1",
+            "kind": "battery",
+            "slot": 1,
+            "revision": 1,
+            "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+            "previous_sha256": null
+          }
+        ]
+      },
+      "after": {
+        "record_count": 1,
+        "sha256": "0cbe566dc88ed3636162c1df40e154fca7bbb890fd3195c4897ce1f925e2fd3e",
+        "records": [
+          {
+            "key": "battery:359754e3669f6739711a04486845fdbec35ae9ab0fef5e4ef6728e9de46f0e33:1",
+            "kind": "battery",
+            "slot": 1,
+            "revision": 1,
+            "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+            "previous_sha256": null
+          }
+        ]
+      }
+    },
+    {
+      "test": "Missing state load leaves entire primed vault unchanged",
+      "status": "RÉUSSI",
+      "before": {
+        "record_count": 1,
+        "sha256": "0cbe566dc88ed3636162c1df40e154fca7bbb890fd3195c4897ce1f925e2fd3e",
+        "records": [
+          {
+            "key": "battery:359754e3669f6739711a04486845fdbec35ae9ab0fef5e4ef6728e9de46f0e33:1",
+            "kind": "battery",
+            "slot": 1,
+            "revision": 1,
+            "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+            "previous_sha256": null
+          }
+        ]
+      },
+      "after": {
+        "record_count": 1,
+        "sha256": "0cbe566dc88ed3636162c1df40e154fca7bbb890fd3195c4897ce1f925e2fd3e",
+        "records": [
+          {
+            "key": "battery:359754e3669f6739711a04486845fdbec35ae9ab0fef5e4ef6728e9de46f0e33:1",
+            "kind": "battery",
+            "slot": 1,
+            "revision": 1,
+            "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+            "previous_sha256": null
+          }
+        ]
+      },
+      "error": {
+        "message": "Cet emplacement est vide pour ce jeu et ce moteur.",
+        "detail": "Cet emplacement est vide pour ce jeu et ce moteur.",
+        "code": "E_EMPTY"
+      }
+    }
+  ],
+  "scope": "Actual periodic timer and core, fresh browser profile, owned MIT variant only; no mocks or personal data.",
+  "failed_ci_cause": "Timer interference demonstrated as a mechanism; failed CI did not log the differing rows, so its exact interleaving remains unobserved."
+}

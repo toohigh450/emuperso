@@ -65,6 +65,12 @@ test('Ambiguous header keys require explicit variant selection', async () => {
   assert.equal(result.ambiguous, true); assert.equal(result.cheats.length, 0);
   const chosen = await lookupCheats('12345678-90ABCDEF-C:50', { catalog: duplicate, variantId: 1 });
   assert.equal(chosen.game.name, 'Second'); assert.equal(chosen.cheats[0].code, '80000040 0002');
+  const fromSelect = await lookupCheats('12345678-90ABCDEF-C:50', { catalog: duplicate, variantId: '1' });
+  assert.equal(fromSelect.game.id, chosen.game.id);
+  assert.equal((await lookupCheats('12345678-90ABCDEF-C:50', { catalog: duplicate, variantId: '0' })).game.name, 'First');
+  for (const invalid of ['1x', '', '01', -1, true, Number.MAX_SAFE_INTEGER + 1]) {
+    await assert.rejects(lookupCheats('12345678-90ABCDEF-C:50', { catalog: duplicate, variantId: invalid }));
+  }
 });
 
 test('Manual codes normalize only allowed hex lines; empty, oversized and executable text refused', () => {

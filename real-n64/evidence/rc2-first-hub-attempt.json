@@ -1,0 +1,15 @@
+{
+  "schema": "emuperso/rc2-local-attempt/v1",
+  "status": "ÉCHOUÉ",
+  "test": "browser_hub.py firstRC2local attempt",
+  "completed_groups": 6,
+  "failure": "waitFor state.imported timed out after60000ms, following valid file chooser selection",
+  "runtime_version": "0.5.0-rc2-cheat-guards",
+  "diagnostic_available": false,
+  "exact_interleaving_demonstrated": false,
+  "related_code_finding": "The file change handler returned silently if busy. An independent native autosave can start while the OS chooser is open.",
+  "correction": "Keep the file and await operation completion up to30s, reject explicitly if the session changed; import identity/hash checks unchanged.",
+  "regression_proof": "Hub group7 now holds the first real native-save digest, selects a real file while busy, requires state.import.queued, then releases the save and verifies actual import and intact active RAM. Controlled scheduling, not Karl PC.",
+  "subsequent_local_result": "17of17PASS, true core and owned MIT ROM only",
+  "not_a_diagnosis_on_karl_pc": true
+}

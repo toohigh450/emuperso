@@ -64,6 +64,8 @@ BENCHES = (
     Bench('restore-regressions', 'browser_restore_rc.py', Report('tests-restore-rc-browser.json', 9, 'emuperso/restore-rc-browser-tests/v1'), 360,
           ('restore-rc-final.png', 'restore-rc-failure.png')),
     Bench('restore-guards', 'browser_restore_guards_rc.py', Report('tests-restore-guards-rc-browser.json', 4, 'emuperso/restore-guards-rc-browser-tests/v1'), 180),
+    Bench('cheat-faults', 'probe_cheat_faults_rc.py', Report('tests-cheat-faults-rc-browser.json', 4, 'emuperso/cheat-faults-rc-tests/v1'), 300,
+          ('cheat-faults-rc-final.png', 'cheat-faults-rc-failure.png')),
     Bench('hub-full', 'browser_hub.py', Report('tests-hub-browser.json', 17, 'emuperso/hub-browser-tests/v1'), 420,
           ('hub-first.png', 'hub-animation.png', 'hub-final.png', 'hub-failure.png', 'hub-failure-diagnostic.json')),
     Bench('web-https-review', 'browser_web_rc.py', Report('tests-web-rc-browser.json', 8, 'emuperso/web-private-https-tests/v1'), 720,

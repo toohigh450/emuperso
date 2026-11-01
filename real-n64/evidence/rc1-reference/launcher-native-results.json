@@ -1,0 +1,41 @@
+{
+  "schema": "emuperso/native-launcher-tests/v1",
+  "platform": "linux",
+  "tests": [
+    {
+      "name": "Préparation locale hors ligne",
+      "result": "RÉUSSI",
+      "proof": "39 assets vérifiés ; aucun téléchargement de ROM."
+    },
+    {
+      "name": "Identité de session",
+      "result": "RÉUSSI",
+      "proof": "Vraie requête HTTP ; jeton correct accepté, jeton erroné refusé."
+    },
+    {
+      "name": "Interface et démo",
+      "result": "RÉUSSI",
+      "proof": "HTTP 200, bouton import, MIME mjs, COOP/COEP et hash démo MIT."
+    },
+    {
+      "name": "Protection HTTP",
+      "result": "RÉUSSI",
+      "proof": "8 GET/HEAD refusés 403 ; POST refusé 501."
+    },
+    {
+      "name": "Second lancement",
+      "result": "RÉUSSI",
+      "proof": "Deuxième bind refusé ; première instance toujours accessible."
+    },
+    {
+      "name": "Journal sans traversée de lien",
+      "result": "RÉUSSI",
+      "proof": "Lien refusé avant écriture ; fichier témoin inchangé."
+    }
+  ],
+  "non_testes": [
+    "Bootstrap Windows : CI séparée",
+    "PC de Karl",
+    "Jeux commerciaux"
+  ]
+}

@@ -1,4 +1,4 @@
-# EMUPERSO N64 — 0.5.0 RC1
+# EMUPERSO N64 — 0.5.0 RC2
 
 Candidate pour l’audit GPT, le contre-audit Méo et les essais de Karl.
 **Cette version n’est pas autorisée à la publication.** Aucun déploiement ni release publique n’est effectué par sa préparation.
@@ -92,6 +92,23 @@ Voir `docs/THIRD-PARTY.md`, `docs/licenses/` et `docs/REDISTRIBUTION-RC.md`.
 La provenance exacte des sources correspondant au binaire Mupen/RetroArch et certaines recettes d’extracteurs reste un obstacle à sa redistribution publique.
 Une empreinte prouve les octets reçus, pas la complétude des obligations de licence.
 
-Rapport autonome : `docs/RC-0.5.0.html`. Protocole restauration : `docs/RESTORE-INDEPENDENT-RC.md`.
+Rapport autonome : `docs/RC-0.5.0-RC2.html`. Protocole restauration : `docs/RESTORE-INDEPENDENT-RC.md`.
 Tests et preuves : `tests/` et `evidence/`. Manifestes SHA-256 dans chaque livraison.
 Le résultat CI décrit son OS et son navigateur ; il ne remplace pas la validation finale du PC de Karl.
+
+## Garde-fous des cheats — RC2
+
+La variante du catalogue reste verrouillée pendant qu’un code est actif. Désactivez
+tous les codes avant de choisir une autre variante. Un code actif restauré reste
+affiché même si son édition n’est pas identifiée dans le catalogue.
+
+Une erreur du moteur pendant l’application ou la suppression de codes arrête la
+session concernée. Sa mémoire incertaine ne peut plus être enregistrée. Le bouton
+**Relancer ce jeu sans cheats** crée un moteur neuf depuis la dernière sauvegarde
+native conservée ; il ne capture pas la session interrompue. Les sauvegardes restent accessibles après relance, ainsi que le point d’avant
+cheats s’il existe dans le coffre. Une sauvegarde native peut
+contenir des effets de cheats antérieurs : cette relance ne prétend pas les annuler.
+
+Les commandes natives ne fournissent pas de lecture certifiée de la liste de codes.
+La RC2 n’annonce donc aucun rollback natif vérifié après une erreur partielle.
+La RC1 et ses archives restent conservées pour comparaison.

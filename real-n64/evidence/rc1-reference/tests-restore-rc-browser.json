@@ -1,0 +1,1959 @@
+{
+  "schema": "emuperso/restore-rc-browser-tests/v1",
+  "results": [
+    {
+      "test": "Progression réellement dessinée par la ROM : chiffres FRAME et pixels du canvas",
+      "status": "RÉUSSI",
+      "proof": {
+        "before": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 31,
+              "digits": "31"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 30,
+              "digits": "30"
+            }
+          ],
+          "drawn_frame": 31
+        },
+        "after": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 51,
+              "digits": "51"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 50,
+              "digits": "50"
+            }
+          ],
+          "drawn_frame": 51
+        },
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+      }
+    },
+    {
+      "test": "Natif distinctif : deux captures réelles et révision précédente, sans sauvegarde personnelle",
+      "status": "RÉUSSI",
+      "proof": {
+        "fresh": {
+          "bytes": 296960,
+          "byte17": 255,
+          "byte18": 255,
+          "sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795"
+        },
+        "first": {
+          "bytes": 296960,
+          "byte17": 165,
+          "byte18": 255,
+          "sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c"
+        },
+        "current": {
+          "bytes": 296960,
+          "byte17": 165,
+          "byte18": 148,
+          "sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd"
+        }
+      }
+    },
+    {
+      "test": "Chargement réel : RAM, compteur dessiné et natif reviennent au point enregistré",
+      "status": "RÉUSSI",
+      "proof": {
+        "saved": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 215,
+              "digits": "215"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 214,
+              "digits": "214"
+            }
+          ],
+          "drawn_frame": 215
+        },
+        "diverged": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 395,
+              "digits": "395"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 396,
+              "digits": "396"
+            }
+          ],
+          "drawn_frame": 396
+        },
+        "restored": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 245,
+              "digits": "245"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 244,
+              "digits": "244"
+            }
+          ],
+          "drawn_frame": 245
+        },
+        "marker": 9320,
+        "native": {
+          "bytes": 296960,
+          "byte17": 165,
+          "byte18": 148,
+          "sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd"
+        }
+      }
+    },
+    {
+      "test": "Changement de ROM : états isolés, refus du mauvais jeu et récupération du natif au retour",
+      "status": "RÉUSSI",
+      "proof": {
+        "other_rom": "e1e80920d13e5968d3755ab19c6948076c3d58e4cf7ef8cb445050b8f9f0fab9",
+        "restored_rom": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "native": {
+          "bytes": 296960,
+          "byte17": 165,
+          "byte18": 148,
+          "sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd"
+        },
+        "slots": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "test": "Fermeture complète : vrai état et version précédente restaurés, natif distinctif conservé",
+      "status": "RÉUSSI",
+      "proof": {
+        "fresh_counter": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 31,
+              "digits": "31"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 30,
+              "digits": "30"
+            }
+          ],
+          "drawn_frame": 31
+        },
+        "current_counter": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 247,
+              "digits": "247"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 248,
+              "digits": "248"
+            }
+          ],
+          "drawn_frame": 248
+        },
+        "previous_counter": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 223,
+              "digits": "223"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 222,
+              "digits": "222"
+            }
+          ],
+          "drawn_frame": 223
+        },
+        "current_marker": 9320,
+        "previous_marker": 4951,
+        "native": {
+          "bytes": 296960,
+          "byte17": 165,
+          "byte18": 148,
+          "sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd"
+        }
+      }
+    },
+    {
+      "test": "Échec format natif : toutes les lignes, révisions et copies précédentes restent identiques",
+      "status": "RÉUSSI",
+      "proof": {
+        "injected_fault": true,
+        "error": {
+          "message": "Le bloc mémoire n’est pas un état Mupen64Plus reconnu.",
+          "code": "E_NATIVE_CORE"
+        },
+        "vault_before": {
+          "record_count": 7,
+          "sha256": "e3331c6ab0e2c5bfd53ee9293782173028f89fe3704a3ba6167d70add1b9ef64",
+          "records": [
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c"
+            },
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "battery",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": null
+            },
+            {
+              "key": "battery:359754e3669f6739711a04486845fdbec35ae9ab0fef5e4ef6728e9de46f0e33:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 1,
+              "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+              "previous_sha256": null
+            },
+            {
+              "key": "checkpoint:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "checkpoint",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "344a5e4775d813be3c8535e3df8227e40862f8d42e696bef994df230a434b424",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "state",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "4ba869fd1fca44a6624fc8538d399727198011f1bb963c75a10f7ef818a73ec1",
+              "previous_sha256": "d2ca12b456db8f94233f4e14d5ad82a4735fba7ed66e7a78c549086de5387acd"
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "state",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "d135f5391a0aa7387019351a6ac77e64e0d755f9d4a188fb21b01830fc7f1eea",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:3",
+              "kind": "state",
+              "slot": 3,
+              "revision": 2,
+              "current_sha256": "cc1cba40985868644385db4f82970bde82b6288a3f9d6e049929c607b5a77fcd",
+              "previous_sha256": "a6f33178e08f2f1c6c97a377ab998147daef03db6f2064cc68198cc0b6aa027f"
+            }
+          ]
+        },
+        "vault_after": {
+          "record_count": 7,
+          "sha256": "e3331c6ab0e2c5bfd53ee9293782173028f89fe3704a3ba6167d70add1b9ef64",
+          "records": [
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c"
+            },
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "battery",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": null
+            },
+            {
+              "key": "battery:359754e3669f6739711a04486845fdbec35ae9ab0fef5e4ef6728e9de46f0e33:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 1,
+              "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+              "previous_sha256": null
+            },
+            {
+              "key": "checkpoint:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "checkpoint",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "344a5e4775d813be3c8535e3df8227e40862f8d42e696bef994df230a434b424",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "state",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "4ba869fd1fca44a6624fc8538d399727198011f1bb963c75a10f7ef818a73ec1",
+              "previous_sha256": "d2ca12b456db8f94233f4e14d5ad82a4735fba7ed66e7a78c549086de5387acd"
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "state",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "d135f5391a0aa7387019351a6ac77e64e0d755f9d4a188fb21b01830fc7f1eea",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:3",
+              "kind": "state",
+              "slot": 3,
+              "revision": 2,
+              "current_sha256": "cc1cba40985868644385db4f82970bde82b6288a3f9d6e049929c607b5a77fcd",
+              "previous_sha256": "a6f33178e08f2f1c6c97a377ab998147daef03db6f2064cc68198cc0b6aa027f"
+            }
+          ]
+        },
+        "retained_generation": 3,
+        "ram_marker": 24158,
+        "visible_before": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 237,
+              "digits": "237"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 236,
+              "digits": "236"
+            }
+          ],
+          "drawn_frame": 237
+        },
+        "visible_after": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 255,
+              "digits": "255"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 256,
+              "digits": "256"
+            }
+          ],
+          "drawn_frame": 256
+        },
+        "old_native_before": {
+          "bytes": 296960,
+          "byte17": 165,
+          "byte18": 148,
+          "sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd"
+        },
+        "old_native_after": {
+          "bytes": 296960,
+          "byte17": 150,
+          "byte18": 148,
+          "sha256": "5c91756d4cd1d617a756acfe327412d37f2a2cbce0a006a9003b840d697011e4"
+        },
+        "real_native_load_noop_calls": null
+      }
+    },
+    {
+      "test": "Échec de préparation candidate : ancienne partie et coffre complets conservés",
+      "status": "RÉUSSI",
+      "proof": {
+        "injected_fault": true,
+        "error": {
+          "message": "Failed to read a named property 'N64Engine' from 'Window': Blocked a frame with origin \"http://127.0.0.1:18876\" from accessing a cross-origin frame.",
+          "code": 18
+        },
+        "vault_before": {
+          "record_count": 7,
+          "sha256": "e3331c6ab0e2c5bfd53ee9293782173028f89fe3704a3ba6167d70add1b9ef64",
+          "records": [
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c"
+            },
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "battery",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": null
+            },
+            {
+              "key": "battery:359754e3669f6739711a04486845fdbec35ae9ab0fef5e4ef6728e9de46f0e33:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 1,
+              "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+              "previous_sha256": null
+            },
+            {
+              "key": "checkpoint:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "checkpoint",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "344a5e4775d813be3c8535e3df8227e40862f8d42e696bef994df230a434b424",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "state",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "4ba869fd1fca44a6624fc8538d399727198011f1bb963c75a10f7ef818a73ec1",
+              "previous_sha256": "d2ca12b456db8f94233f4e14d5ad82a4735fba7ed66e7a78c549086de5387acd"
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "state",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "d135f5391a0aa7387019351a6ac77e64e0d755f9d4a188fb21b01830fc7f1eea",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:3",
+              "kind": "state",
+              "slot": 3,
+              "revision": 2,
+              "current_sha256": "cc1cba40985868644385db4f82970bde82b6288a3f9d6e049929c607b5a77fcd",
+              "previous_sha256": "a6f33178e08f2f1c6c97a377ab998147daef03db6f2064cc68198cc0b6aa027f"
+            }
+          ]
+        },
+        "vault_after": {
+          "record_count": 7,
+          "sha256": "e3331c6ab0e2c5bfd53ee9293782173028f89fe3704a3ba6167d70add1b9ef64",
+          "records": [
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c"
+            },
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "battery",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": null
+            },
+            {
+              "key": "battery:359754e3669f6739711a04486845fdbec35ae9ab0fef5e4ef6728e9de46f0e33:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 1,
+              "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+              "previous_sha256": null
+            },
+            {
+              "key": "checkpoint:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "checkpoint",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "344a5e4775d813be3c8535e3df8227e40862f8d42e696bef994df230a434b424",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "state",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "4ba869fd1fca44a6624fc8538d399727198011f1bb963c75a10f7ef818a73ec1",
+              "previous_sha256": "d2ca12b456db8f94233f4e14d5ad82a4735fba7ed66e7a78c549086de5387acd"
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "state",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "d135f5391a0aa7387019351a6ac77e64e0d755f9d4a188fb21b01830fc7f1eea",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:3",
+              "kind": "state",
+              "slot": 3,
+              "revision": 2,
+              "current_sha256": "cc1cba40985868644385db4f82970bde82b6288a3f9d6e049929c607b5a77fcd",
+              "previous_sha256": "a6f33178e08f2f1c6c97a377ab998147daef03db6f2064cc68198cc0b6aa027f"
+            }
+          ]
+        },
+        "retained_generation": 3,
+        "ram_marker": 24158,
+        "visible_before": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 261,
+              "digits": "261"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 262,
+              "digits": "262"
+            }
+          ],
+          "drawn_frame": 262
+        },
+        "visible_after": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 277,
+              "digits": "277"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 276,
+              "digits": "276"
+            }
+          ],
+          "drawn_frame": 277
+        },
+        "old_native_before": {
+          "bytes": 296960,
+          "byte17": 165,
+          "byte18": 148,
+          "sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd"
+        },
+        "old_native_after": {
+          "bytes": 296960,
+          "byte17": 150,
+          "byte18": 148,
+          "sha256": "5c91756d4cd1d617a756acfe327412d37f2a2cbce0a006a9003b840d697011e4"
+        },
+        "real_native_load_noop_calls": null
+      }
+    },
+    {
+      "test": "Absence de désérialisation : les seules frames réelles ne prouvent pas le chargement",
+      "status": "RÉUSSI",
+      "proof": {
+        "injected_fault": true,
+        "error": {
+          "message": "La mémoire du jeu n’a pas confirmé la restauration dans le délai prévu. Chargement annulé ; aucune sauvegarde écrasée. Exportez le diagnostic pour analyse.",
+          "code": "E_RESTORE_UNCONFIRMED"
+        },
+        "vault_before": {
+          "record_count": 7,
+          "sha256": "e3331c6ab0e2c5bfd53ee9293782173028f89fe3704a3ba6167d70add1b9ef64",
+          "records": [
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c"
+            },
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "battery",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": null
+            },
+            {
+              "key": "battery:359754e3669f6739711a04486845fdbec35ae9ab0fef5e4ef6728e9de46f0e33:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 1,
+              "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+              "previous_sha256": null
+            },
+            {
+              "key": "checkpoint:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "checkpoint",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "344a5e4775d813be3c8535e3df8227e40862f8d42e696bef994df230a434b424",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "state",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "4ba869fd1fca44a6624fc8538d399727198011f1bb963c75a10f7ef818a73ec1",
+              "previous_sha256": "d2ca12b456db8f94233f4e14d5ad82a4735fba7ed66e7a78c549086de5387acd"
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "state",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "d135f5391a0aa7387019351a6ac77e64e0d755f9d4a188fb21b01830fc7f1eea",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:3",
+              "kind": "state",
+              "slot": 3,
+              "revision": 2,
+              "current_sha256": "cc1cba40985868644385db4f82970bde82b6288a3f9d6e049929c607b5a77fcd",
+              "previous_sha256": "a6f33178e08f2f1c6c97a377ab998147daef03db6f2064cc68198cc0b6aa027f"
+            }
+          ]
+        },
+        "vault_after": {
+          "record_count": 7,
+          "sha256": "e3331c6ab0e2c5bfd53ee9293782173028f89fe3704a3ba6167d70add1b9ef64",
+          "records": [
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c"
+            },
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "battery",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": null
+            },
+            {
+              "key": "battery:359754e3669f6739711a04486845fdbec35ae9ab0fef5e4ef6728e9de46f0e33:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 1,
+              "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+              "previous_sha256": null
+            },
+            {
+              "key": "checkpoint:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "checkpoint",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "344a5e4775d813be3c8535e3df8227e40862f8d42e696bef994df230a434b424",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "state",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "4ba869fd1fca44a6624fc8538d399727198011f1bb963c75a10f7ef818a73ec1",
+              "previous_sha256": "d2ca12b456db8f94233f4e14d5ad82a4735fba7ed66e7a78c549086de5387acd"
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "state",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "d135f5391a0aa7387019351a6ac77e64e0d755f9d4a188fb21b01830fc7f1eea",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:3",
+              "kind": "state",
+              "slot": 3,
+              "revision": 2,
+              "current_sha256": "cc1cba40985868644385db4f82970bde82b6288a3f9d6e049929c607b5a77fcd",
+              "previous_sha256": "a6f33178e08f2f1c6c97a377ab998147daef03db6f2064cc68198cc0b6aa027f"
+            }
+          ]
+        },
+        "retained_generation": 3,
+        "ram_marker": 24158,
+        "visible_before": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 281,
+              "digits": "281"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 280,
+              "digits": "280"
+            }
+          ],
+          "drawn_frame": 281
+        },
+        "visible_after": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 295,
+              "digits": "295"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 296,
+              "digits": "296"
+            }
+          ],
+          "drawn_frame": 296
+        },
+        "old_native_before": {
+          "bytes": 296960,
+          "byte17": 165,
+          "byte18": 148,
+          "sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd"
+        },
+        "old_native_after": {
+          "bytes": 296960,
+          "byte17": 150,
+          "byte18": 148,
+          "sha256": "5c91756d4cd1d617a756acfe327412d37f2a2cbce0a006a9003b840d697011e4"
+        },
+        "real_native_load_noop_calls": 1
+      }
+    },
+    {
+      "test": "Audio suspend jamais résolu : commande bornée, contrôles réactivés et résultat explicite",
+      "status": "RÉUSSI",
+      "proof": {
+        "injected_fault": "old AudioContext.suspend returns a never-settling Promise",
+        "outcome": "explicit_error_and_rollback",
+        "not_a_reproduction_on_karl_pc": true
+      }
+    }
+  ],
+  "page_errors": [],
+  "http": [
+    {
+      "url": "http://127.0.0.1:18876/",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/style.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/assets/emuperso-banner.png",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/app.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/rom-file.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/zip-rom.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/save-store.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/session-controller.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/legacy-battery.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/state-bundle.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/cheat-catalog.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/docs/runtime-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/8cb5e4d7-6339-4320-87f8-43db6861cf59",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/c1904620-9f7c-40ae-8de2-40898e201fc4",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/c0bdd394-832c-4f2a-8dfe-95e615138791",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/6091a51f-38c4-4b82-9a17-f309ebf7c02c",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/docs/cheat-catalog-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/cheats/mupencheat.txt",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/78c4385e-217a-4294-b927-7abddb395dd9",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/c0794793-44d7-4e2d-b642-4927182e60a0",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/7362d29d-b7c5-4be3-8298-f46b2d585513",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/f3fd56ff-e318-487d-95f6-32f381a7995c",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/44ebbc7a-10ef-4670-9ea1-89f7b9e68355",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/8de621ad-839a-404a-a27e-d1f3ddcb1fd2",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/7c3bef09-abf0-4309-adbe-43a6d9e87f47",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/4323fbc9-772f-4097-a459-f1c5fbfb7cae",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/c3a06d2b-5728-4bee-af20-6e967a2086ca",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/c675482b-9c96-46a7-9bc2-6c06ddd8ac93",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/620ddaf6-8658-4ea3-8efb-799aa94796e1",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/2be70715-e4a7-4bf0-8702-25a7e2ef981f",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/style.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/assets/emuperso-banner.png",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/app.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/rom-file.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/zip-rom.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/save-store.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/session-controller.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/legacy-battery.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/state-bundle.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/cheat-catalog.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/docs/runtime-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/c78cfe7b-9315-41e4-aab1-96466c3e15b6",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/c49c2629-b196-471a-8d6e-323094ba4afc",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/58006c7b-e0e7-45f9-ba8c-c34e28433bea",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/9ce5c431-6c36-489b-a363-ba44e1eb6cbc",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/docs/cheat-catalog-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/cheats/mupencheat.txt",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/53da699f-81b7-4794-91b6-b5866e2bf457",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/8d3f7ce7-fa78-487e-b0b2-d7385a90f9ae",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/fb10a879-e01f-4b3a-b02b-7a70c1fb41c5",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/1bff44e7-9db4-4bf5-aec5-dcf1409615dd",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/394528fa-a4a2-43eb-a0f4-af770da191f0",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/8917be88-0fa0-42cf-a360-599685a82996",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/341173b8-be72-4677-b344-475b821e0c39",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/92ddb012-0aa1-4f75-8637-573d2f4627ff",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/be23b433-ed50-4257-ac12-e1b23363b91a",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/f5a914e3-b441-4d32-92b1-e358a9ad6ddd",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/fbe0dd11-bdd4-4b9e-8315-e8d75946e7b7",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/8179f320-4ec2-4208-ab6c-e92c8c9c8d92",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/6b781168-21a3-424b-9427-3717b848e9a1",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/fba8d79e-980e-4e9a-85bb-41b0ceb076bc",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/b8c083b8-f156-4934-ad2c-330a2ffd1d49",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:18876/8a898312-7e64-4395-a6c9-f3748d149058",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18876/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    }
+  ],
+  "dialogs": [],
+  "ram_probes": [
+    {
+      "base": 258801664,
+      "wordSwapped": true,
+      "pointers": [
+        2685665280,
+        2685403136,
+        2685665280,
+        2685403136,
+        2685403136,
+        2685403136
+      ],
+      "candidates": 2,
+      "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+    },
+    {
+      "base": 258801664,
+      "wordSwapped": true,
+      "pointers": [
+        2685403136,
+        2685403136,
+        2685403136,
+        2685403136,
+        2685665280,
+        2685665280
+      ],
+      "candidates": 5,
+      "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+    },
+    {
+      "base": 258801664,
+      "wordSwapped": true,
+      "pointers": [
+        2685665280,
+        2685403136,
+        2685665280,
+        2685403136,
+        2685403136,
+        2685665280
+      ],
+      "candidates": 2,
+      "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+    },
+    {
+      "base": 258801664,
+      "wordSwapped": true,
+      "pointers": [
+        2685665280,
+        2685665280,
+        2685403136,
+        2685665280,
+        2685403136,
+        2685403136
+      ],
+      "candidates": 2,
+      "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+    },
+    {
+      "base": 258801664,
+      "wordSwapped": true,
+      "pointers": [
+        2685665280,
+        2685403136,
+        2685403136,
+        2685403136,
+        2685665280,
+        2685665280
+      ],
+      "candidates": 5,
+      "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+    },
+    {
+      "base": 258801664,
+      "wordSwapped": true,
+      "pointers": [
+        2685403136,
+        2685665280,
+        2685665280,
+        2685403136,
+        2685403136,
+        2685403136
+      ],
+      "candidates": 5,
+      "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+    }
+  ],
+  "scope": "Real pinned N64 engine and only our MIT diagnostic ROM; new temporary persistent profile, generated native bytes and explicitly injected failures. Actual RDRAM plus framebuffer digit decoding prove progression restoration; frontend frame counts alone are insufficient.",
+  "not_tested": [
+    "Karl Windows/Chrome device",
+    "Commercial game progression or compatibility",
+    "All native-save peripherals",
+    "Physical gamepad and speakers"
+  ],
+  "original_saves_used": false
+}

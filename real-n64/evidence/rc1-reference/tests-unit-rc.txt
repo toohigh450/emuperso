@@ -1,0 +1,207 @@
+$ node real-n64/tests/rom-file.test.mjs
+✔ z64 : normalisation exacte de la démo, source inchangée et hash indépendant (5.003777ms)
+✔ v64 : normalisation exacte de la démo, source inchangée et hash indépendant (2.269964ms)
+✔ n64 : normalisation exacte de la démo, source inchangée et hash indépendant (0.830804ms)
+✔ Vecteurs connus : permutation par paire et par mot, pas inversion du fichier entier (1.301753ms)
+✔ Extension trompeuse : signature prioritaire et avertissement explicite (0.638083ms)
+✔ ZIP, exécutable et signature nulle ne deviennent pas ROM en étant renommés (0.529248ms)
+✔ Fichiers ZIP/extension étrangère refusés avant lecture (0.268745ms)
+✔ Tailles invalides/énormes refusées avant lecture et allocation (0.542758ms)
+✔ Alignement4 et limites explicites : 4K et 64M autorisés sans obligation puissance2 (0.373974ms)
+✔ Lectures partielles ou changement de taille refusés (0.453985ms)
+✔ Nom non fiable conservé comme métadonnée, jamais comme chemin de conversion (4.271333ms)
+✔ Aucune normalisation en place : les octets originaux et leur hash restent distincts (0.740026ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 23.834591
+
+$ node real-n64/tests/zip-rom.test.mjs
+✔ ZIP stocké : octets exacts, entrée imbriquée et source intacte (4.258734ms)
+✔ ZIP DEFLATE z64 : extraction puis normalisation avec hashes indépendants (12.827939ms)
+✔ ZIP DEFLATE v64 : extraction puis normalisation avec hashes indépendants (3.67959ms)
+✔ ZIP DEFLATE n64 : extraction puis normalisation avec hashes indépendants (5.281306ms)
+✔ Descripteurs de données ZIP32 avec et sans signature (3.678678ms)
+✔ Plusieurs ROM sont listées sans extraction automatique ; fichier annexe ignoré (4.018692ms)
+✔ Absence de ROM, archive vide, fausse signature et troncatures refusées (1.682949ms)
+✔ Le format ROM reste validé après extraction et une extension trompeuse est signalée (4.496743ms)
+✔ CRC incorrect et différence local/central refusés avant tout lancement (4.027175ms)
+✔ Chiffrement, multi-disques, ZIP64 et méthodes non prises en charge refusés (4.326856ms)
+✔ Chemins de traversée, absolus, Windows et contrôles sont refusés (4.688272ms)
+✔ Liens Unix et noms d’entrée dupliqués ambigus sont refusés (1.433222ms)
+✔ Une archive inspectée reste immuable et une copie forgée ne devient pas une archive validée (1.52516ms)
+✔ Les bornes de taille et du nombre d’entrées précèdent toute décompression (25.988841ms)
+✔ DEFLATE à sortie mensongère est interrompu sans accepter le contenu (35.732428ms)
+✔ Limite positive réelle : ROM synthétique de 64 Mio fortement compressée acceptée (2694.876517ms)
+✔ Répertoire central incohérent, offsets hors limites et chevauchements refusés (2.45924ms)
+✔ Commentaire ZIP arbitraire ne cache pas une archive valide derrière un faux EOCD (1.109014ms)
+✔ ZIP trop grand ou extension invalide refusés avant lecture ; lectures partielles refusées (0.335484ms)
+✔ Annulation explicite n’accepte aucune entrée (1.654653ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2828.286941
+
+$ node real-n64/tests/save-store.test.mjs
+✔ Configuration : ordre des propriétés stable, changement de valeur distinct (4.216818ms)
+✔ Enveloppe : copie source, empreinte indépendante et lecture exacte (2.216176ms)
+✔ Toute différence ROM, moteur, configuration ou format est bloquée (1.115044ms)
+✔ Contenu et métadonnées modifiés sont refusés (1.878508ms)
+✔ État, sauvegarde système et checkpoint sont des types séparés (1.540812ms)
+✔ Schéma, dates et métadonnées invalides sont refusés proprement (0.809285ms)
+✔ Aucune ROM brute ne passe pour un état ; bornes appliquées avant copie (0.883245ms)
+✔ Limite positive : 64 Mio synthétiques vérifiés, sans moteur (281.15181ms)
+✔ La base est distincte des stockages moteur et des projets originaux (0.867191ms)
+✔ Écriture groupée : refus avant ouverture si liste, doublon ou membre invalide (2.728214ms)
+✔ Écriture groupée : taille totale bornée avant copie ou accès IndexedDB (0.522875ms)
+✔ Ouverture IDB expirée : erreur bornée, connexion tardive fermée et nouvel essai indépendant (19.981792ms)
+✔ Lecture IDB bloquée : transaction annulée avant rejet, sans attente de requête isolée (20.954702ms)
+✔ Groupe IDB bloqué : abort réel avant rejet et aucun put issu de callbacks tardifs (22.5382ms)
+✔ Course avec commit irréversible : attend complete et ne prétend pas avoir annulé une écriture (24.988263ms)
+✔ Déduplication groupée : option booléenne explicite, jamais une chaîne coercible (0.700181ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 397.643646
+
+$ node real-n64/tests/state-bundle.test.mjs
+✔ État et sauvegarde native sont regroupés et récupérés exactement (1.487151ms)
+✔ Absence de sauvegarde native explicite et état minimal non vide (0.43945ms)
+✔ Copies indépendantes : aucune mutation des entrées ou de la sortie ne traverse le paquet (0.959781ms)
+✔ Vues avec offset et octets venant d’un autre realm acceptés sans octets adjacents (1.354082ms)
+✔ Magic, champs réservés et flags inconnus sont refusés (0.287241ms)
+✔ Troncatures, octets supplémentaires, longueurs mensongères et absence incohérente refusées (0.465067ms)
+✔ Limite native réelle 1 Mio et limite totale réelle 64 Mio, en-tête compris (79.213158ms)
+✔ ROM accidentelle refusée dans les trois ordres d’octets, avant ou après regroupement (0.328904ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 90.944682
+
+$ node real-n64/tests/legacy-battery.test.mjs
+✔ Chemins 0.3 exacts, hash normalisé et aucune recherche par nom de jeu (1.443838ms)
+✔ Sans énumération des bases, aucun open de base n’est tenté (0.313763ms)
+✔ Base historique absente : aucune création ni ouverture d’une autre base (0.335426ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8.238487
+
+$ node real-n64/tests/cheat-catalog.test.mjs
+✔ Canonical ROM identity uses header CRC/country/revision, not filename (1.2135ms)
+✔ Complete parser lists all cheats, notes unsupported code and enables nothing (0.222135ms)
+✔ Only exact CRC/country gets a match, missing ROM does not reuse previous codes (0.25197ms)
+✔ Parameter resolution uses an offered value and supports shared placeholders (0.156345ms)
+✔ Ambiguous header keys require explicit variant selection (0.999158ms)
+✔ Manual codes normalize only allowed hex lines; empty, oversized and executable text refused (0.387275ms)
+✔ Names stay data, result objects immutable, malformed input rejected (0.235986ms)
+✔ Pinned source hash, full entry counts and known ambiguous key are verified locally (60.138483ms)
+✔ Browser loader fetches only fixed local URLs, verifies source hash and rejects corruption (110.602292ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 178.757979
+
+$ node real-n64/tests/native-state.test.mjs
+✔ Pinned RASTATE/Mupen format exposes the exact RAM view and normalized ROM identity (10.996847ms)
+✔ Bounded extension chunks, alignment padding and shifted MEM placement are parsed structurally (24.752825ms)
+✔ Malformed lengths, duplicate memory, absent memory and unsupported native identities are refused (73.452899ms)
+✔ Input types, actual 64 MiB size ceiling, byte offsets and foreign realms are handled correctly (29.79812ms)
+✔ A two-byte progress marker is differential proof only after its entire stable 32-byte anchor returns (73.672519ms)
+✔ Unstable baselines, weak single-byte anchors and incompatible ROMs cannot attest a restore (113.355099ms)
+✔ Witnesses spread over at most 128 distinct RAM pages and enforce the 90 percent threshold (54.324863ms)
+✔ Already equivalent RAM is checked in full and is never labeled a proven load transition (127.913301ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 515.838633
+
+$ node real-n64/tests/runtime-integrity.test.mjs
+✔ Octets réellement reçus vérifiés, y compris une vue avec offset (1.675386ms)
+✔ Modification même syntaxiquement valide du script refusée (1.483858ms)
+✔ Ressource sans empreinte fixée refusée (0.231489ms)
+✔ SRI correspond au SHA exact et refuse une valeur non valide (0.254664ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7.836189
+
+$ python3 -m unittest discover -s real-n64/tests -p test_cheat_installer.py -v
+test_fresh_offline_from_verified_cache_and_reuse (test_cheat_installer.InstallerTests.test_fresh_offline_from_verified_cache_and_reuse) ... ok
+test_missing_offline_never_downloads_or_creates_vendor (test_cheat_installer.InstallerTests.test_missing_offline_never_downloads_or_creates_vendor) ... ok
+test_symlink_vendor_refused (test_cheat_installer.InstallerTests.test_symlink_vendor_refused) ... ok
+test_tampered_second_asset_refuses_before_any_install (test_cheat_installer.InstallerTests.test_tampered_second_asset_refuses_before_any_install) ... ok
+test_wrong_source_path_refused (test_cheat_installer.InstallerTests.test_wrong_source_path_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.010s
+
+OK
+
+$ python3 -m unittest discover -s real-n64/tests -p test_distribution.py -v
+test_fresh_windows_extract_imports_bootstrap_without_runtime_or_system_install (test_distribution.DistributionTests.test_fresh_windows_extract_imports_bootstrap_without_runtime_or_system_install) ... ok
+test_intruders_never_enter_either_archive (test_distribution.DistributionTests.test_intruders_never_enter_either_archive) ... ok
+test_manifest_corruption_duplicates_and_path_traversal_refused_before_extraction (test_distribution.DistributionTests.test_manifest_corruption_duplicates_and_path_traversal_refused_before_extraction) ... ok
+test_output_cannot_replace_sources_existing_extraction_or_follow_checksum_link (test_distribution.DistributionTests.test_output_cannot_replace_sources_existing_extraction_or_follow_checksum_link) ... ok
+test_publication_cli_returns_failure_without_output_or_gate_mutation (test_distribution.DistributionTests.test_publication_cli_returns_failure_without_output_or_gate_mutation) ... ok
+test_publication_gate_cannot_be_approved_by_command_or_partial_flags (test_distribution.DistributionTests.test_publication_gate_cannot_be_approved_by_command_or_partial_flags) ... ok
+test_source_symlink_and_private_rom_added_to_lock_are_refused (test_distribution.DistributionTests.test_source_symlink_and_private_rom_added_to_lock_are_refused) ... ok
+test_tampered_pinned_banner_refused_and_previous_zip_preserved (test_distribution.DistributionTests.test_tampered_pinned_banner_refused_and_previous_zip_preserved) ... ok
+test_two_private_archives_exact_manifests_and_separate_layouts (test_distribution.DistributionTests.test_two_private_archives_exact_manifests_and_separate_layouts) ... ok
+test_windows_builds_without_dependencies_web_refuses_missing_or_corrupt_runtime (test_distribution.DistributionTests.test_windows_builds_without_dependencies_web_refuses_missing_or_corrupt_runtime) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 2.170s
+
+OK
+
+$ python3 real-n64/tests/run_linux_browser_rc.py --self-test
+test_budget_exhaustion_is_not_testable_and_never_a_pass (__main__.HarnessTests.test_budget_exhaustion_is_not_testable_and_never_a_pass) ... ok
+test_copy_failure_does_not_skip_later_source_restorations (__main__.HarnessTests.test_copy_failure_does_not_skip_later_source_restorations) ... ok
+test_fresh_success_and_old_proof_bytes_restored (__main__.HarnessTests.test_fresh_success_and_old_proof_bytes_restored) ... ok
+test_nested_report_is_required_independently_of_outer_success (__main__.HarnessTests.test_nested_report_is_required_independently_of_outer_success) ... ok
+test_nonzero_exit_cannot_be_overridden_by_a_success_report (__main__.HarnessTests.test_nonzero_exit_cannot_be_overridden_by_a_success_report) ... ok
+test_preflight_helper_source_compiles_without_running_a_browser (__main__.HarnessTests.test_preflight_helper_source_compiles_without_running_a_browser) ... ok
+test_restore_failure_keeps_disk_backup_and_continues_other_restorations (__main__.HarnessTests.test_restore_failure_keeps_disk_backup_and_continues_other_restorations) ... ok
+test_schema_group_count_and_test_status_are_all_required (__main__.HarnessTests.test_schema_group_count_and_test_status_are_all_required) ... ok
+test_source_evidence_directory_cannot_redirect_into_another_project (__main__.HarnessTests.test_source_evidence_directory_cannot_redirect_into_another_project) ... ok
+test_stale_success_report_is_never_reused (__main__.HarnessTests.test_stale_success_report_is_never_reused) ... ok
+test_timeout_stops_the_owned_child_and_preserves_source (__main__.HarnessTests.test_timeout_stops_the_owned_child_and_preserves_source) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.399s
+
+OK
+

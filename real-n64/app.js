@@ -10,6 +10,8 @@ const $ = id => document.getElementById(id), records = [], vault = new SaveStore
 let phase = 'idle', busy = false, reading = false, generation = 0, selected = null, activeRom = null, lock = null;
 let zipPending = null, importAbort = null, saveList = [], catalog = null, cheatRows = [], catalogTicket = 0;
 let sequence = 0, lastNativeHash = null;
+let recoveryPrepared = null;
+let operationDone = Promise.resolve();
 const sessions = new SessionController($('game'), (type, data) => {
   event(type, data);
   if (type === 'session.stage') {
@@ -32,6 +34,10 @@ function controls() {
   $('start').disabled = busy; $('choose-rom').disabled = busy; $('reload').disabled = busy;
   $('launch-local').disabled = busy || reading || !selected;
   $('launch-local').textContent = active ? 'Changer pour cette ROM' : 'Lancer la ROM choisie';
+  $('cheat-recover').hidden = !recoveryPrepared;
+  $('cheat-recover').disabled = busy || !recoveryPrepared;
+  $('cheat-variant').disabled = busy || !active || !!sessions.current?.cheats.length;
+  $('cheat-variant').title = sessions.current?.cheats.length ? 'Désactivez tous les cheats avant de changer de variante.' : '';
   $('zip-use').disabled = busy || reading || !zipPending;
   for (const id of ['reset-clean', 'reset-before-cheats', 'state-save', 'state-load', 'state-previous', 'battery-save', 'battery-load', 'battery-previous', 'save-export', 'save-import', 'cheat-add', 'cheat-disable-all']) $(id).disabled = busy || !active;
   for (const input of $('cheat-list').querySelectorAll('input,select')) input.disabled = busy || !active || input.dataset.unsupported === 'true';
@@ -56,16 +62,34 @@ function acceptPrepared(prepared) {
   status(prefix + (prepared.metadata.extension_mismatch ? `En-tête ${prepared.metadata.detected_format.toUpperCase()} malgré l’extension .${prepared.metadata.filename_extension} : la signature est prioritaire. ` : '') + 'Fichier prêt. Cliquez sur le bouton de lancement ; la compatibilité du jeu reste à vérifier.');
 }
 async function operation(task) {
-  if (busy) return; busy = true; controls();
+  if (busy) return;
+  let finish;
+  operationDone = new Promise(resolve => { finish = resolve; });
+  busy = true; controls();
   try { await task(); }
   catch (error) {
-    const message = error.code === 'E_RESTORE_UNPROVEN'
+    let message = error.code === 'E_RESTORE_UNPROVEN'
       ? 'Cette version ne peut pas confirmer la reprise de cet état, parfois très proche du démarrage. La partie actuelle et les sauvegardes sont conservées. Essayez une autre copie ou la sauvegarde native, puis exportez le diagnostic.'
       : error.message || 'Opération interrompue. La session précédente est conservée.';
+    if (error.code === 'E_CHEAT_STATE_UNKNOWN') {
+      const prepared = await sessions.quarantineCurrent();
+      if (prepared) {
+        recoveryPrepared = prepared; activeRom = null; saveList = []; cheatRows = []; ++catalogTicket;
+        $('cheat-list').replaceChildren(); $('cheat-variant').hidden = true;
+        $('rom-current').textContent = 'Partie arrêtée après une erreur de cheats';
+        $('engine-state').textContent = 'Session isolée arrêtée ; aucune capture de mémoire incertaine conservée.';
+        $('slot-info').textContent = 'Vos sauvegardes sont conservées. Relancez ce jeu pour les retrouver.';
+        message = 'Une commande de cheats a échoué. La partie a été arrêtée par précaution, sans enregistrer sa mémoire incertaine. Vos sauvegardes sont conservées. « Relancer ce jeu sans cheats » repart de la dernière sauvegarde native conservée ; le point d’avant cheats reste accessible après relance s’il existe dans le coffre.';
+        $('cheat-status').textContent = message;
+        event('cheats.quarantined', { rom_sha256: prepared.metadata.canonical_sha256, recovery_requires_click: true, unknown_memory_saved: false });
+      } else if (sessions.current) {
+        message = 'Les cheats de la nouvelle session ont échoué. Ce moteur candidat a été arrêté ; la partie précédente et vos sauvegardes sont conservées.';
+      }
+    }
     event('operation.failed', { message, detail: error.message, code: error.code ?? 'E_OPERATION' });
     status(message, true); saveStatus(message, true);
   }
-  finally { busy = false; phase = sessions.current ? 'started' : 'idle'; controls(); }
+  finally { busy = false; phase = sessions.current ? 'started' : 'idle'; finish(); controls(); }
 }
 async function optionalLoad(identity, slot, kind) {
   try { return await vault.load(identity, slot, { kind }); }
@@ -148,7 +172,7 @@ async function startPrepared(prepared, { state = null, batteryOverride, restoreN
       } : null });
   } catch (error) { if (candidate.frame.isConnected && sessions.current !== candidate) await sessions.dispose(candidate); throw error; }
   candidate.history = history.length ? history : inheritedHistory; candidate.cheats = cheats; candidate.tainted = candidate.history.length > 0;
-  activeRom = prepared.metadata; selected = null; lastNativeHash = null; identity(activeRom);
+  activeRom = prepared.metadata; selected = null; recoveryPrepared = null; lastNativeHash = null; identity(activeRom);
   $('rom-current').textContent = activeRom.name; $('engine-state').textContent = 'Moteur lancé : ' + activeRom.name;
   phase = 'started'; status('Session lancée. Vérifiez l’image et le son ; vous pouvez choisir un autre jeu sans fermer l’application.');
   event('rom.validated', { ...activeRom, license: activeRom.source === 'reference-demo' ? 'MIT homebrew reference' : 'Not asserted for local user file' });
@@ -267,7 +291,13 @@ async function toggleCheat(row, enabled, parameter = null) {
 }
 function renderCheatRows() {
   const query = $('cheat-search').value.trim().toLocaleLowerCase('fr-FR'), current = sessions.current; $('cheat-list').replaceChildren();
-  const rows = cheatRows.filter(row => !query || (row.name + ' ' + (row.description ?? '')).toLocaleLowerCase('fr-FR').includes(query));
+  const allRows = [...cheatRows], known = new Set(allRows.map(row => row.id));
+  // A restored state may contain codes from an ambiguous/older catalogue view.
+  // Keep every active code visible and individually disableable even then.
+  for (const row of current?.cheats ?? []) if (!known.has(row.id)) {
+    allRows.push({ ...row, supported: true, parameterized: false, options: [], activeSessionOnly: true }); known.add(row.id);
+  }
+  const rows = allRows.filter(row => !query || (row.name + ' ' + (row.description ?? '')).toLocaleLowerCase('fr-FR').includes(query));
   for (const row of rows) {
     const container = document.createElement('div'); container.className = 'cheat-row';
     const label = document.createElement('label'), input = document.createElement('input'); input.type = 'checkbox'; input.dataset.cheatId = row.id; input.dataset.unsupported = String(!row.supported);
@@ -278,32 +308,56 @@ function renderCheatRows() {
       select = document.createElement('select'); select.setAttribute('aria-label', 'Valeur pour ' + row.name);
       for (const option of row.options) { const item = document.createElement('option'); item.value = option.value; item.textContent = option.label; select.append(item); } container.append(select);
     }
-    const note = document.createElement('small'); note.textContent = row.supported ? row.manual ? 'Code manuel : non validé automatiquement.' : 'Catalogue communautaire : effets non vérifiés sur votre ROM.' : row.unsupported_reason; container.append(note);
+    const note = document.createElement('small'); note.textContent = row.activeSessionOnly ? 'Code actif de cette partie ; désactivez-le avant de choisir une autre variante.' : row.supported ? row.manual ? 'Code manuel : non validé automatiquement.' : 'Catalogue communautaire : effets non vérifiés sur votre ROM.' : row.unsupported_reason; container.append(note);
     input.onchange = () => { const enable = input.checked; void operation(() => toggleCheat(row, enable, select?.value)).then(renderCheatRows); };
     if (select) select.onchange = () => { if (input.checked) void operation(() => toggleCheat(row, true, select.value)); };
     $('cheat-list').append(container);
   }
-  $('cheat-count').textContent = `${rows.length} code(s) affiché(s) sur ${cheatRows.length}.`; controls();
+  $('cheat-count').textContent = `${rows.length} code(s) affiché(s) sur ${allRows.length} · ${current?.cheats.length ?? 0} actif(s).`; controls();
 }
 async function renderCatalog(variantId = null) {
-  const current = sessions.current, ticket = ++catalogTicket; cheatRows = []; $('cheat-list').replaceChildren(); $('cheat-variant').hidden = true; $('cheat-status').textContent = 'Recherche des codes pour ce jeu…';
+  const current = sessions.current;
+  if (!current) return;
+  if (current.catalogInitialized && current.cheats.length && String(variantId) !== String(current.catalogVariant)) {
+    $('cheat-variant').value = current.catalogVariant === null ? '' : String(current.catalogVariant);
+    $('cheat-status').textContent = 'Désactivez tous les cheats avant de changer de variante. Les codes actifs restent affichés et inchangés.';
+    event('cheats.variant.blocked', { active_count: current.cheats.length }); controls(); return;
+  }
+  const ticket = ++catalogTicket; cheatRows = []; $('cheat-list').replaceChildren(); $('cheat-variant').hidden = true; $('cheat-status').textContent = 'Recherche des codes pour ce jeu…';
   try {
     catalog ??= await loadCheatCatalog();
     const result = await lookupCheats(romCheatIdentity(current.prepared.bytes), { catalog, variantId });
     if (ticket !== catalogTicket || current !== sessions.current) return;
-    if (result.ambiguous) {
+    current.catalogVariant = result.game?.id ?? null; current.catalogInitialized = true;
+    if (result.matches.length > 1) {
       $('cheat-variant').replaceChildren(); const empty = document.createElement('option'); empty.value = ''; empty.textContent = 'Identification ambiguë : choisir la variante'; $('cheat-variant').append(empty);
-      for (const game of result.matches) { const option = document.createElement('option'); option.value = game.id; option.textContent = game.name; $('cheat-variant').append(option); } $('cheat-variant').hidden = false;
+      for (const game of result.matches) { const option = document.createElement('option'); option.value = game.id; option.textContent = game.name; $('cheat-variant').append(option); }
+      $('cheat-variant').value = current.catalogVariant === null ? '' : String(current.catalogVariant); $('cheat-variant').hidden = false;
     }
     cheatRows = [...result.cheats];
     const manuals = new Map([...(current.manualCheats ?? []), ...(current.history ?? []).filter(row => row.id.startsWith('manual-'))].map(row => [row.id, row]));
     for (const manual of manuals.values()) cheatRows.push({ ...manual, manual: true, supported: true, options: [] });
     $('cheat-status').textContent = result.ambiguous ? 'Plusieurs variantes partagent cet en-tête : aucun code sélectionné automatiquement.' : result.found ? `${result.game.name} · codes liés à l’en-tête/région, effets non vérifiés ici. Aucun code activé par le catalogue.` : 'Aucun code du catalogue pour cet en-tête. Vous pouvez ajouter un code manuel.';
     $('catalog-info').textContent = `Catalogue local : ${catalog.game_count} versions, ${catalog.cheat_count} codes répertoriés. Une correspondance d’en-tête ne garantit pas la compatibilité d’un code.`; renderCheatRows();
-  } catch (error) { if (ticket === catalogTicket) { $('cheat-status').textContent = error.message + ' Les codes manuels restent disponibles.'; event('cheats.catalog.unavailable', { message: error.message }); } }
+  } catch (error) { if (ticket === catalogTicket && current === sessions.current) { $('cheat-status').textContent = error.message + ' Les codes manuels restent disponibles.'; event('cheats.catalog.unavailable', { message: error.message }); renderCheatRows(); } }
 }
 $('cheat-search').oninput = renderCheatRows;
-$('cheat-variant').onchange = () => { if ($('cheat-variant').value) void renderCatalog($('cheat-variant').value); };
+$('cheat-variant').onchange = () => {
+  const current = sessions.current; if (!current) return;
+  if (busy || current.cheats.length) {
+    $('cheat-variant').value = current.catalogVariant === null ? '' : String(current.catalogVariant);
+    $('cheat-status').textContent = 'Désactivez tous les cheats avant de changer de variante. Les codes actifs restent affichés et inchangés.';
+    event('cheats.variant.blocked', { active_count: current.cheats.length }); controls(); return;
+  }
+  const chosen = $('cheat-variant').value;
+  void operation(() => renderCatalog(chosen === '' ? null : chosen));
+};
+$('cheat-recover').onclick = () => operation(async () => {
+  if (!recoveryPrepared) return;
+  await startPrepared(recoveryPrepared);
+  event('cheats.recovery.clean', { active_count: 0 });
+  status('Jeu relancé dans un moteur neuf, sans code actif. La sauvegarde native conservée peut contenir des effets antérieurs ; le point d’avant cheats reste accessible s’il existe dans le coffre.');
+});
 $('cheat-add').onclick = () => operation(async () => {
   const name = $('cheat-manual-name').value.trim(), code = validateManualCheat($('cheat-manual-code').value);
   if (!name || name.length > 120) throw new Error('Donnez un nom court à ce code.');
@@ -330,8 +384,26 @@ $('save-export').onclick = () => operation(async () => {
   downloadJSON({ ...stored.envelope, payload: undefined, payload_base64: btoa(binary) }, 'N64-sauvegarde-emplacement-' + $('save-slot').value + '.json'); saveStatus('Copie d’état exportée sur votre PC. Elle contient la mémoire du jeu : conservez-la privée.');
 });
 $('save-import').onclick = () => { $('save-import-file').value = ''; $('save-import-file').click(); };
-$('save-import-file').onchange = inputEvent => {
-  const file = inputEvent.target.files[0]; if (!file || busy || !sessions.current) return;
+$('save-import-file').onchange = async inputEvent => {
+  const file = inputEvent.target.files[0], owner = sessions.current;
+  if (!file || !owner) return;
+  // A native autosave can begin while the OS file picker is open. Keep the
+  // chosen file instead of silently dropping its change event while busy.
+  try {
+    const deadline = performance.now() + 30000;
+    if (busy) event('state.import.queued', { reason: 'operation-in-progress' });
+    while (busy) {
+      let timer;
+      try {
+        await Promise.race([operationDone, new Promise((_, reject) => {
+          timer = setTimeout(() => reject(Object.assign(new Error('Une autre opération est encore en cours. Réessayez l’import ; aucune sauvegarde modifiée par cet import.'), { code: 'E_IMPORT_BUSY' })), Math.max(0, deadline - performance.now()));
+        })]);
+      } finally { clearTimeout(timer); }
+    }
+    if (sessions.current !== owner) throw Object.assign(new Error('La partie a changé pendant le choix du fichier. Import annulé ; choisissez de nouveau votre copie.'), { code: 'E_IMPORT_SESSION_CHANGED' });
+  } catch (error) {
+    event('operation.failed', { code: error.code, message: error.message }); status(error.message, true); saveStatus(error.message, true); return;
+  }
   void operation(async () => {
     if (!/\.json$/i.test(file.name) || file.size > 90 * 1024 * 1024) throw new Error('Copie d’état JSON attendue, 90 Mio maximum.');
     const record = JSON.parse(await file.text()), encoded = record.payload_base64;
@@ -360,7 +432,7 @@ function diagnostic() {
     rom_build: lock, contexts: (sessions.current?.api.snapshot().contexts ?? []).map(c => ({ state: c.state, sample_rate: c.sample_rate })), records: structuredClone(records) };
 }
 $('export').onclick = () => downloadJSON(diagnostic(), 'EMUPERSO-moteur-reel-diagnostic.json');
-window.RealN64 = Object.freeze({ diagnostic, version: '0.5.0-rc1-verified-restore', get engineWindow() { return (sessions.candidate ?? sessions.current)?.frame.contentWindow ?? null; } });
+window.RealN64 = Object.freeze({ diagnostic, version: '0.5.0-rc2-cheat-guards', get engineWindow() { return (sessions.candidate ?? sessions.current)?.frame.contentWindow ?? null; } });
 setInterval(() => { audioStatus(); if (!busy && !reading && !zipPending && sessions.current) void operation(() => saveNative()); }, 15000);
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden' && !busy && !reading && !zipPending && sessions.current) void operation(() => saveNative()); });
 window.addEventListener('pagehide', () => { importAbort?.abort(); void sessions.current?.api.close(); });

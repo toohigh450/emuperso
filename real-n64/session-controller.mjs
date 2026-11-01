@@ -80,6 +80,20 @@ export class SessionController {
     } catch (error) { this.report('session.dispose.error', { generation: session.id, message: error.message }); }
     finally { session.frame.remove(); this.disposed++; }
   }
+  async quarantineCurrent() {
+    const session = this.current;
+    if (!session?.api.snapshot().poisoned) return null;
+    // Remove this realm from every capture/autosave path before any await.
+    // Initiate close while its context is still attached, then detach it even
+    // if closing audio or the vendor's cleanup remains pending.
+    this.current = null;
+    const closing = this.dispose(session);
+    session.frame.remove();
+    this.report('session.quarantined', { generation: session.id,
+      reason: 'E_CHEAT_STATE_UNKNOWN', persisted_unknown_memory: false });
+    await closing;
+    return session.prepared;
+  }
   diagnostic() { return { generation: this.generation, active_generation: this.current?.id ?? null,
     candidate_generation: this.candidate?.id ?? null, disposed: this.disposed,
     active: this.current?.api.snapshot() ?? null, frame_count: this.container.querySelectorAll('iframe').length }; }

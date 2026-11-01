@@ -149,13 +149,13 @@ export function validateManualCheat(code) {
 export async function loadCheatCatalog({ fetcher = globalThis.fetch, reload = false } = {}) {
   if (reload) catalogPromise = null;
   if (!catalogPromise) catalogPromise = (async () => {
-    const lockResponse = await fetcher('docs/cheat-catalog-lock.json', { cache: 'no-store' });
+    const lockResponse = await fetcher('docs/cheat-catalog-lock.json', { cache: 'no-store', signal: AbortSignal.timeout(10000) });
     assert(lockResponse.ok, 'Le verrou du catalogue de cheats est absent.');
     const lock = await lockResponse.json();
     assert(lock.schema === 'emuperso/cheat-catalog-lock/v1', 'Verrou des cheats invalide.');
     const asset = lock.assets.find(item => item.file === 'mupencheat.txt');
     assert(asset && asset.bytes <= MAX_TEXT && /^[0-9a-f]{64}$/.test(asset.sha256), 'Empreinte du catalogue invalide.');
-    const response = await fetcher('vendor/cheats/mupencheat.txt', { cache: 'no-store' });
+    const response = await fetcher('vendor/cheats/mupencheat.txt', { cache: 'no-store', signal: AbortSignal.timeout(10000) });
     assert(response.ok, 'Catalogue local absent : relancez DEMARRER-N64 pour le préparer.');
     const buffer = await readExactAsset(response, asset.bytes);
     assert(buffer.byteLength === asset.bytes && await sha256(buffer) === asset.sha256, 'Catalogue de cheats altéré : chargement refusé.');
@@ -173,7 +173,12 @@ export async function lookupCheats(identity, { catalog = null, variantId = null,
   assert(/^[0-9A-F]{8}-[0-9A-F]{8}-C:[0-9A-F]{2}$/.test(key ?? ''), 'Identité de ROM invalide.');
   const matches = catalog.games.filter(game => game.key === key);
   let game = matches.length === 1 ? matches[0] : null;
-  if (variantId !== null) game = matches.find(item => item.id === variantId) ?? null;
+  if (variantId !== null) {
+    // HTML select values are strings; catalogue IDs are integer indices.
+    const chosen = typeof variantId === 'string' && /^(0|[1-9]\d*)$/.test(variantId) ? Number(variantId) : variantId;
+    assert(Number.isSafeInteger(chosen) && chosen >= 0, 'Identifiant de variante invalide.');
+    game = matches.find(item => item.id === chosen) ?? null;
+  }
   return freeze({ identity, key, game, matches: freeze(matches), cheats: game?.cheats ?? freeze([]),
     ambiguous: matches.length > 1 && !game, found: matches.length > 0,
     exact_header_match: matches.length > 0, verified_for_rom: false,
