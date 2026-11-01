@@ -172,3 +172,48 @@ test('P1-B : tri candidats avec région du titre original', async () => {
   assert.ok(!triSection.includes("detectRegion(titleStem("),
     'tri ne doit pas utiliser titleStem (qui supprime la région)');
 });
+
+// P0 (audit GPT RC-1.5) : verrou régional centralisé sur tous les chemins
+test('P0 : isRegionActivationAllowed bloque sans confirmation', async () => {
+  const src = await readFile(new URL('../app.js', import.meta.url), 'utf8');
+  // La fonction centralisée doit exister
+  assert.ok(src.includes('function isRegionActivationAllowed()'),
+    'fonction isRegionActivationAllowed existe');
+  // toggle() doit l'utiliser
+  assert.ok(src.includes('!isRegionActivationAllowed()'),
+    'toggle() utilise le verrou centralisé');
+});
+
+// P0 : cheats candidats marqués needsRegionConfirm
+test('P0 : cheats candidats ont needsRegionConfirm si région non sûre', async () => {
+  const src = await readFile(new URL('../app.js', import.meta.url), 'utf8');
+  assert.ok(src.includes('needsRegionConfirm: !regionSafe'),
+    'cheats candidats marqués needsRegionConfirm');
+});
+
+// P0 : état pending distinct de on
+test('P0 : cheats bloqués utilisent pending, pas on=true', async () => {
+  const src = await readFile(new URL('../app.js', import.meta.url), 'utf8');
+  assert.ok(src.includes('existing.pending = true'),
+    'cheats bloqués marqués pending');
+  assert.ok(src.includes('existing.on = false'),
+    'cheats bloqués explicitement pas actifs');
+  assert.ok(src.includes('EN ATTENTE'),
+    'message EN ATTENTE au lieu de ACTIF');
+});
+
+// P1 : bouton confirmer applique les pending
+test('P1 : bouton confirmer applique les cheats en attente', async () => {
+  const src = await readFile(new URL('../app.js', import.meta.url), 'utf8');
+  assert.ok(src.includes('c.pending = false') && src.includes('c.on = true'),
+    'bouton confirmer convertit pending en on');
+  assert.ok(src.includes('afterRegionConfirm'),
+    'événement après confirmation régionale');
+});
+
+// P2 : édition non marquée confirmée avant vérification
+test('P2 : édition mémorisée comme selected-unverified si non sûre', async () => {
+  const src = await readFile(new URL('../app.js', import.meta.url), 'utf8');
+  assert.ok(src.includes("source: regionSafe ? 'user-confirmed' : 'selected-unverified'"),
+    'édition distinguée selon vérification régionale');
+});

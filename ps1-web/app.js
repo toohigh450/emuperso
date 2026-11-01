@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 // Version de l'application — mettre à jour à chaque release
-const APP_VERSION = 'RC-1.5';
+const APP_VERSION = 'RC-1.6';
 import { prepareDisc } from './disc-file.mjs';
 import { SaveStore, makeStateEnvelope } from './save-store.mjs';
 import { packStateBundle, unpackStateBundle } from './state-bundle.mjs';
@@ -51,6 +51,42 @@ async function operation(task) {
   try { await task(); } catch (error) { say('status', error.message ?? String(error), true); event('operation.error', { code: error.code ?? null, message: error.message ?? String(error), stack: error.stack ? String(error.stack).slice(0, 2000) : null }); }
   finally { busy = false; controls(); }
 }
+/**
+ * VERROU RÉGIONAL CENTRALISÉ (audit GPT RC-1.5 P0)
+ * Vérifie si un cheat peut être activé/injecté sans confirmation explicite.
+ * TOUS les chemins d'activation doivent passer par ici :
+ * - toggle() manuel
+ * - choix d'édition candidate
+ * - restauration de cheats
+ * - application après confirmation
+ * 
+ * @returns {boolean} true si l'activation est autorisée
+ */
+function isRegionActivationAllowed() {
+  // Si pas de décalage détecté, c'est sûr
+  if (!window._regionMismatch) return true;
+  // Si l'utilisateur a confirmé explicitement, c'est autorisé
+  if (window._regionConfirmed === true) return true;
+  // Sinon, BLOQUÉ
+  return false;
+}
+
+/**
+ * Calcule l'état régional pour un choix d'édition candidate.
+ * @param {string} gameName - nom du fichier disque
+ * @param {object} candidate - édition candidate choisie
+ * @returns {Promise<{gameRegion, catalogRegions, regionMismatch, regionUncertain, regionSafe}>}
+ */
+async function computeRegionStateForCandidate(gameName, candidate) {
+  const { detectRegion: dr, detectRegions: drs, regionsCompatible: rc } = await import('./cheat-catalog-psx.mjs');
+  const gRegion = gameName ? dr(gameName) : null;
+  const cRegions = drs(candidate.catalogTitle) || (dr(candidate.catalogTitle) ? [dr(candidate.catalogTitle)] : null);
+  const rMismatch = gRegion && cRegions && !rc(gRegion, cRegions);
+  const rUncertain = !gRegion && cRegions;
+  const rSafe = (!rMismatch && !rUncertain) || window._regionConfirmed === true;
+  return { gameRegion: gRegion, catalogRegions: cRegions, regionMismatch: rMismatch, regionUncertain: rUncertain, regionSafe: rSafe, detectRegion: dr };
+}
+
 function renderCheats() {
   const list = $('cheat-list'); list.replaceChildren();
   const imported = cheats.filter(c => c.source === 'catalogue' && !c.validated).length;
@@ -68,7 +104,42 @@ function renderCheats() {
     btn.textContent = rm.uncertain
       ? `Je confirme : mon disque est bien l'édition ${rm.catalogRegion}`
       : `Je confirme : activer les codes ${rm.catalogRegion} sur mon disque ${rm.gameRegion}`;
-    btn.onclick = () => { window._regionConfirmed = true; say('cheat-info', 'Région confirmée. Vous pouvez maintenant cocher les codes.', false); renderCheats(); };
+    // P1 (audit GPT RC-1.5) : le bouton "Je confirme" doit aussi appliquer les cheats en attente.
+    // Avant : il masquait le panneau sans injecter les pending, qui restaient orphelins.
+    btn.onclick = () => operation(async () => {
+      window._regionConfirmed = true;
+      // Appliquer les cheats marqués 'pending' (en attente de confirmation)
+      let appliedCount = 0;
+      for (const c of cheats) {
+        if (c.pending && !c.incompatible) {
+          c.pending = false;
+          c.on = true;
+          appliedCount++;
+        }
+      }
+      // Aussi appliquer les _pendingCheatRestore s'il y en a
+      const pendingRestore = window._pendingCheatRestore || [];
+      if (pendingRestore.length > 0) {
+        window._pendingCheatRestore = [];
+        for (const p of pendingRestore) {
+          const existing = cheats.find(c => c.name === p.name && c.code === p.code);
+          if (existing && !existing.incompatible && !existing.on) {
+            existing.pending = false;
+            existing.on = true;
+            appliedCount++;
+          }
+        }
+      }
+      if (appliedCount > 0 && sessions.current) {
+        const toApply = cheats.filter(c => c.on && !c.incompatible).map(c => ({ name: c.name, code: lines(c.code).join('+') }));
+        sessions.current.api.setCheats(toApply);
+        event('cheats.applied', { count: appliedCount, afterRegionConfirm: true });
+        say('cheat-info', `✅ Région confirmée. ${appliedCount} cheat(s) en attente appliqué(s).`, false);
+      } else {
+        say('cheat-info', 'Région confirmée. Vous pouvez maintenant cocher les codes.', false);
+      }
+      renderCheats();
+    });
     warn.append(document.createElement('br'), btn);
     // B02 (audit GPT RC-1.1) : si des cheats restaurés sont en attente, proposer de les appliquer explicitement
     const pendingCount = (window._pendingCheatRestore || []).length;
@@ -126,13 +197,29 @@ function renderCheatCandidates(candidates) {
     btn.onclick = () => operation(async () => {
       const pending = window._pendingActiveList || [];
       window._pendingActiveList = null;
-      // Mémoriser le choix d'édition pour ce fichier (proposé auto la prochaine fois sur cet appareil)
+      // P0 (audit GPT RC-1.5) : calculer l'état régional pour CHAQUE choix de candidat,
+      // même sans cheats en attente. Avant, window._regionMismatch restait null et le
+      // toggle manuel permettait l'activation sans confirmation.
+      const regionState = await computeRegionStateForCandidate(meta ? meta.name : null, cand);
+      const { gameRegion, regionMismatch, regionUncertain, regionSafe, detectRegion } = regionState;
+      // Mettre à jour l'état régional global
+      if (regionMismatch || regionUncertain) {
+        window._regionMismatch = regionUncertain
+          ? { gameRegion: 'inconnue', catalogRegion: detectRegion(cand.catalogTitle), catalogTitle: cand.catalogTitle, uncertain: true }
+          : { gameRegion, catalogRegion: detectRegion(cand.catalogTitle), catalogTitle: cand.catalogTitle };
+        window._regionConfirmed = false;
+      } else {
+        window._regionMismatch = null;
+      }
+      // P2 (audit GPT RC-1.5) : ne PAS marquer comme 'user-confirmed' avant vérification régionale.
+      // Utiliser 'selected-unverified' jusqu'à confirmation explicite.
       try {
         if (meta && meta.canonical_sha256) {
           await editionDB.set('sha256:' + meta.canonical_sha256, {
             catalogTitle: cand.catalogTitle,
             verifiedAt: new Date().toISOString(),
-            source: 'user-confirmed',
+            source: regionSafe ? 'user-confirmed' : 'selected-unverified',
+            gameRegion: gameRegion || 'inconnue',
           });
         }
       } catch (e) { console.warn('Mémorisation édition:', e.message); }
@@ -143,6 +230,10 @@ function renderCheatCandidates(candidates) {
           name: c.name + (isXploder ? ' \u26a0\ufe0f (Xploder: non support\u00e9)' : (!valid ? ' \u26a0\ufe0f (incompatible)' : '')),
           code: c.code, source: 'catalogue', validated: false,
           incompatible: isXploder || !valid,
+          // P0 (audit GPT RC-1.5) : marquer needsRegionConfirm sur CHAQUE cheat du candidat
+          // si la région n'est pas sûre. Avant, ce flag était absent et toggle() permettait
+          // l'activation manuelle sans confirmation.
+          needsRegionConfirm: !regionSafe,
         };
       });
       const mine = ((await cheatDB.get(gameKey(meta)).catch(() => null)) ?? []).filter(c => codeValid(c.code)).map(c => ({ ...c, source: 'manuel' }));
@@ -172,14 +263,20 @@ function renderCheatCandidates(candidates) {
         const rSafe = (!rMismatch && !rUncertain) || window._regionConfirmed === true;
         if (!rSafe) {
           // PAS SÛR : remettre en attente, afficher l'avertissement régional
+          // P0 (audit GPT RC-1.5) : NE PAS marquer on=true pour les cheats bloqués.
+          // Utiliser un état 'pending' distinct pour éviter l'affichage trompeur "ACTIF".
           window._pendingCheatRestore = allDeferred;
           window._regionMismatch = rUncertain
             ? { gameRegion: 'inconnue', catalogRegion: dr(cand.catalogTitle), catalogTitle: cand.catalogTitle, uncertain: true }
             : { gameRegion: gRegion, catalogRegion: dr(cand.catalogTitle), catalogTitle: cand.catalogTitle };
-          // Marquer les cheats comme "on" dans l'UI mais NE PAS les injecter
+          // Marquer comme 'pending' (en attente), PAS comme 'on' (actif)
+          // L'UI affichera "EN ATTENTE" au lieu de "ACTIF"
           for (const p of allDeferred) {
             const existing = cheats.find(c => c.name === p.name && c.code === p.code);
-            if (existing && !existing.incompatible) existing.on = true;
+            if (existing && !existing.incompatible) {
+              existing.pending = true;  // En attente de confirmation, pas actif
+              existing.on = false;      // Explicitement pas actif
+            }
           }
           console.warn('P0: édition choisie mais région non confirmée — cheats en attente, setCheats() BLOQUÉ.');
         } else {
@@ -196,7 +293,15 @@ function renderCheatCandidates(candidates) {
         }
       }
       const nActive = cheats.filter(c => c.on).length;
-      say('cheat-info', `${cheats.length} code(s) \u2014 ${cand.catalogTitle}.` + (nActive > 0 ? ` ${nActive} restauré(s) ACTIF(s).` : ' Tous désactivés par défaut.'), nActive > 0);
+      const nPending = cheats.filter(c => c.pending).length;
+      // P0 (audit GPT RC-1.5) : distinguer ACTIF (injecté) vs EN ATTENTE (bloqué)
+      let statusMsg = ' Tous désactivés par défaut.';
+      if (nActive > 0) {
+        statusMsg = ` ${nActive} restauré(s) ACTIF(s).`;
+      } else if (nPending > 0) {
+        statusMsg = ` ${nPending} en ATTENTE de confirmation régionale (non injectés).`;
+      }
+      say('cheat-info', `${cheats.length} code(s) — ${cand.catalogTitle}.` + statusMsg, nActive > 0 || nPending > 0);
       renderCheats();
     });
     list.append(btn);
@@ -210,6 +315,15 @@ async function toggle(index, on) {
     renderCheats();
     return;
   }
+  // P0 (audit GPT RC-1.5) : le verrou régional centralisé s'applique à TOUS les chemins.
+  // Avant : seulement si needsRegionConfirm était défini sur le cheat.
+  // Maintenant : vérifie l'état régional global, pas juste le flag du cheat.
+  if (on && !isRegionActivationAllowed()) {
+    say('save-note', '⚠️ Région différente : confirmez ci-dessous que ces codes correspondent à votre disque avant de les activer.', true);
+    renderCheats();
+    return;
+  }
+  // Ancien check par cheat (gardé pour compatibilité)
   if (on && cheats[index].needsRegionConfirm && !window._regionConfirmed) {
     say('save-note', '⚠️ Région différente : confirmez ci-dessous que ces codes correspondent à votre disque avant de les activer.', true);
     renderCheats();

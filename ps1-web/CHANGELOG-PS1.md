@@ -1,5 +1,35 @@
 # CHANGELOG — EMUPERSO PS1
 
+## RC-1.6 (Méo, 1er nov. ~04h30) — Correctifs audit GPT RC-1.5
+**Base** : RC-1.5 + correctifs de l'audit GPT `AUDIT_GPT_EMUPERSO_PS1_RC-1.5_REGIONS_RESTAURATION.html`
+
+### 🔴 P0 — Activation manuelle USA→Europe sans confirmation (toggle)
+- **Cause** : `renderCheatCandidates()` ne marquait pas les cheats avec `needsRegionConfirm`. `toggle()` vérifiait seulement le flag du cheat, pas l'état régional global.
+- **Correctif** : 
+  - Nouvelle fonction `isRegionActivationAllowed()` — verrou centralisé pour TOUS les chemins.
+  - `toggle()` utilise le verrou centralisé.
+  - Chaque cheat candidat reçoit `needsRegionConfirm: !regionSafe`.
+  - `computeRegionStateForCandidate()` calcule l'état pour CHAQUE choix, même sans pending.
+
+### 🔴 P0 — Restauration bloquée mais affichée "ACTIF"
+- **Cause** : `existing.on = true` était défini avant confirmation, message "ACTIF" trompeur.
+- **Correctif** : état `pending` distinct. Les cheats bloqués ont `pending=true, on=false`. Message "EN ATTENTE de confirmation régionale (non injectés)".
+
+### 🟡 P1 — Bouton "Je confirme" faisait disparaître l'application
+- **Cause** : le bouton mettait `_regionConfirmed=true` et appelait `renderCheats()`, supprimant le panneau sans injecter les pending.
+- **Correctif** : le bouton applique maintenant les cheats `pending` + `_pendingCheatRestore` après confirmation, puis injecte via `setCheats()`.
+
+### 🟡 P2 — Édition mémorisée comme confirmée trop tôt
+- **Cause** : `editionDB.set()` avec `source:'user-confirmed'` avant vérification régionale.
+- **Correctif** : `source: regionSafe ? 'user-confirmed' : 'selected-unverified'`.
+
+### Docs
+- README-FR.md : titre mis à jour RC-1.6.
+
+**Tests** : 66/66 JS + 8/8 Python PASS (5 nouveaux tests comportementaux P0/P1/P2).
+
+---
+
 ## RC-1.5 (Méo, 1er nov. ~04h00) — Correctifs audit GPT RC-1.4
 **Base** : RC-1.4 + correctifs de l'audit GPT `AUDIT_GPT_EMUPERSO_PS1_RC-1.4_TESTS_TERRAIN_CHEATS.html`
 
