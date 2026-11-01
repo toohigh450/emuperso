@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>EMUPERSO — Diagnostic Alphatest</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;font:16px/1.55 system-ui,sans-serif;background:#07111f;color:#eff5fc}main{max-width:780px;padding:26px 17px 70px;margin:auto}h1{font-size:clamp(26px,6vw,36px);line-height:1.2}a{color:#9ee9d1}p{color:#b9cadd}.card{padding:18px;margin:18px 0;background:#132339;border:1px solid #365873;border-radius:12px}button{font:inherit;background:#9ee9d1;color:#092221;border:0;border-radius:8px;padding:12px 16px;cursor:pointer;font-weight:700}button:disabled{opacity:.5}textarea{width:100%;min-height:180px;resize:vertical;background:#0b1728;border:1px solid #4a6984;color:#f7fcff;border-radius:8px;padding:12px;font:13px/1.5 ui-monospace,monospace}#notes{min-height:80px}li{margin:8px 0}strong{color:#fff}small{color:#b9cadd}code{overflow-wrap:anywhere}#status{font-weight:600;color:#b6eddc}
+</style></head><body><main>
+<a href="./">← Retour à l'émulateur</a>
+<h1>🧪 Diagnostic EMUPERSO Alphatest</h1>
+<p>Cette page teste la disponibilité de quelques ressources de l'émulateur et certaines capacités du navigateur. Elle ne teste pas la vitesse des jeux ni la compatibilité des ROMs.</p>
+<div class="card"><button id="check" type="button">Vérifier mon navigateur et le moteur</button>
+<p id="status" role="status">Prêt à vérifier.</p><ul id="checks"></ul></div>
+<div class="card"><h2>Ton retour d'essai</h2><p>Joue d'abord avec un fichier que tu as le droit d'utiliser, puis indique ce qui marche ou plante.</p>
+<label for="notes">Jeu testé, image, son, manette, sauvegardes, message d'erreur</label>
+<textarea id="notes" placeholder="Console / jeu / région :&#10;Image :&#10;Son :&#10;Commandes :&#10;Sauvegarde :&#10;Bug observé :"></textarea>
+<p><button id="copy" type="button">Copier mon rapport</button></p>
+<label for="report">Rapport à partager volontairement</label>
+<textarea id="report" readonly></textarea>
+<small>Aucun jeu, contenu de sauvegarde, nom de fichier personnel ou empreinte de ROM n'est envoyé par ce diagnostic. Le texte de tes notes est seulement copié si tu appuies sur le bouton.</small></div>
+<p><a href="./">Retour au jeu</a></p>
+<script src="alphatest.js" defer></script>
+</main></body></html>
