@@ -1,5 +1,32 @@
 # CHANGELOG — EMUPERSO PS1
 
+## RC-1.5 (Méo, 1er nov. ~04h00) — Correctifs audit GPT RC-1.4
+**Base** : RC-1.4 + correctifs de l'audit GPT `AUDIT_GPT_EMUPERSO_PS1_RC-1.4_TESTS_TERRAIN_CHEATS.html`
+
+### 🔴 P0 BLOCAGE corrigé — setCheats() après choix d'édition sans confirmation
+- **Cause** : `renderCheatCandidates()` appelait `setCheats()` après choix d'une édition USA pour un jeu Europe, sans vérifier `_regionConfirmed`. GPT a reproduit : `{"region_confirmed":false, "api_setCheats_calls":1}`.
+- **Correctif** : le choix d'édition calcule maintenant `rSafe = (!rMismatch && !rUncertain) || _regionConfirmed`. Si pas sûr → cheats remis en attente, `setCheats()` BLOQUÉ, avertissement régional affiché.
+- **Tests** : nouveau test "P0 : choix édition vérifie région avant setCheats".
+
+### 🟡 P1-A — GT2 Plus Beta v6.1 non reconnu
+- **Cause** : `detectMod(titleStem(title))` — `titleStem()` normalise "v6.1" en "v6 1" avant l'analyse.
+- **Correctif** : `detectMod(stripDiscExtension(title))` — titre brut, parenthèses et version intactes.
+
+### 🟡 P1-B — Tri régional inopérant
+- **Cause** : `detectRegion(titleStem(title))` — `titleStem()` supprime l'étiquette de région → null.
+- **Correctif** : `detectRegion(stripDiscExtension(title))` — région préservée pour le tri.
+
+### Notes terrain Karl (RC-1.4)
+- FFVII : refus E_SIZE (limite 900 Mio volontaire, ne pas augmenter arbitrairement).
+- FFV FR : 11 codes USA, avertissement jaune ✅ attendu.
+- Dead or Alive : 14 codes USA, région inconnue, avertissement jaune ✅ attendu.
+- Diablo : no_match (absent du catalogue, normal).
+- Manette : `pcsx_rearmed_pad1type` introuvable dans le cœur — diagnostic honnête, limitation documentée.
+
+**Tests** : 61/61 JS + 8/8 Python PASS (3 nouveaux tests P0/P1-A/P1-B).
+
+---
+
 ## RC-1.4 (Méo, 1er nov. ~03h15) — Correctifs audit GPT RC-1.3
 **Base** : RC-1.3 + correctifs de l'audit GPT `AUDIT_GPT_EMUPERSO_PS1_RC-1.3_CATALOGUE_ET_REGIONS.html`
 

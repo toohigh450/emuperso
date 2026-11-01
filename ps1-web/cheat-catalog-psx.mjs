@@ -85,7 +85,7 @@ export async function findCheatsForGame(serial, title) {
     if (candidates.length > 1) {
       // P1 (audit GPT RC-1.3) : classer les candidats par région connue.
       // Ex: "GT2 (Europe).bin" → candidat Europe en premier, pas USA.
-      const gameReg = detectRegion(titleStem(title || ''));
+      const gameReg = detectRegion(stripDiscExtension(title || ''));
       if (gameReg) {
         candidates.sort((a, b) => {
           const aRegions = detectRegions(a.catalogTitle) || [];
@@ -113,7 +113,7 @@ export async function findCheatsForGame(serial, title) {
     }
     if (wordCandidates.length > 1) {
       // P1 : même classement par région pour le fallback par mots
-      const gameReg = detectRegion(titleStem(title || ''));
+      const gameReg = detectRegion(stripDiscExtension(title || ''));
       if (gameReg) {
         wordCandidates.sort((a, b) => {
           const aRegions = detectRegions(a.catalogTitle) || [];
@@ -130,7 +130,10 @@ export async function findCheatsForGame(serial, title) {
   // P1 (audit GPT RC-1.3) : si aucun match mais titre ressemble à un mod,
   // chercher le jeu de base et le proposer comme CANDIDAT NON VÉRIFIÉ.
   // Jamais auto-activé — l'utilisateur doit choisir explicitement.
-  const modInfo = detectMod(titleStem(title || ''));
+  // P1-A (audit GPT RC-1.4) : détecter le mod sur le titre BRUT, avant titleStem().
+  // titleStem() normalise "v6.1" en "v6 1" et supprime les parenthèses, ce qui casse
+  // la détection de version. Ex: "GT2 Plus (Beta v6.1)" doit donner base "Gran Turismo 2".
+  const modInfo = detectMod(stripDiscExtension(title || ''));
   if (modInfo.isMod && modInfo.baseTitle) {
     // Chercher le jeu de base (récursif, mais sans re-détecter les mods)
     const baseStem = titleStem(modInfo.baseTitle);

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 // Version de l'application — mettre à jour à chaque release
-const APP_VERSION = 'RC-1.4';
+const APP_VERSION = 'RC-1.5';
 import { prepareDisc } from './disc-file.mjs';
 import { SaveStore, makeStateEnvelope } from './save-store.mjs';
 import { packStateBundle, unpackStateBundle } from './state-bundle.mjs';
@@ -154,21 +154,45 @@ function renderCheatCandidates(candidates) {
       }
       // Appliquer les cheats différés qui correspondent à cette édition
       // B02 : vérifier aussi _pendingCheatRestore (nouveau) en plus de _deferredCheatList (ancien)
+      // P0 (audit GPT RC-1.4) : le verrou régional s'applique à TOUS les chemins.
+      // Avant ce fix, le choix d'une édition USA pour un jeu Europe appelait setCheats()
+      // sans vérifier _regionConfirmed. Maintenant on calcule regionSafe comme dans loadCheats().
       const deferred = window._deferredCheatList || [];
       window._deferredCheatList = null;
       const pendingRestore = window._pendingCheatRestore || [];
       window._pendingCheatRestore = [];
       const allDeferred = [...deferred, ...pendingRestore];
       if (allDeferred.length > 0 && sessions.current) {
-        // Marquer les cheats restaurés comme "on" s'ils existent dans cette édition
-        for (const p of allDeferred) {
-          const existing = cheats.find(c => c.name === p.name && c.code === p.code);
-          if (existing && !existing.incompatible) existing.on = true;
-        }
-        const toApply = cheats.filter(c => c.on && !c.incompatible).map(c => ({ name: c.name, code: lines(c.code).join('+') }));
-        if (toApply.length > 0) {
-          sessions.current.api.setCheats(toApply);
-          event('cheats.applied', { count: toApply.length, deferred: true, afterEditionChoice: true });
+        // P0: calculer la sécurité régionale pour cette édition choisie
+        const { detectRegion: dr, detectRegions: drs, regionsCompatible: rc } = await import('./cheat-catalog-psx.mjs');
+        const gRegion = meta ? dr(meta.name) : null;
+        const cRegions = drs(cand.catalogTitle) || (dr(cand.catalogTitle) ? [dr(cand.catalogTitle)] : null);
+        const rMismatch = gRegion && cRegions && !rc(gRegion, cRegions);
+        const rUncertain = !gRegion && cRegions;
+        const rSafe = (!rMismatch && !rUncertain) || window._regionConfirmed === true;
+        if (!rSafe) {
+          // PAS SÛR : remettre en attente, afficher l'avertissement régional
+          window._pendingCheatRestore = allDeferred;
+          window._regionMismatch = rUncertain
+            ? { gameRegion: 'inconnue', catalogRegion: dr(cand.catalogTitle), catalogTitle: cand.catalogTitle, uncertain: true }
+            : { gameRegion: gRegion, catalogRegion: dr(cand.catalogTitle), catalogTitle: cand.catalogTitle };
+          // Marquer les cheats comme "on" dans l'UI mais NE PAS les injecter
+          for (const p of allDeferred) {
+            const existing = cheats.find(c => c.name === p.name && c.code === p.code);
+            if (existing && !existing.incompatible) existing.on = true;
+          }
+          console.warn('P0: édition choisie mais région non confirmée — cheats en attente, setCheats() BLOQUÉ.');
+        } else {
+          // SÛR : marquer et injecter
+          for (const p of allDeferred) {
+            const existing = cheats.find(c => c.name === p.name && c.code === p.code);
+            if (existing && !existing.incompatible) existing.on = true;
+          }
+          const toApply = cheats.filter(c => c.on && !c.incompatible).map(c => ({ name: c.name, code: lines(c.code).join('+') }));
+          if (toApply.length > 0) {
+            sessions.current.api.setCheats(toApply);
+            event('cheats.applied', { count: toApply.length, deferred: true, afterEditionChoice: true, regionSafe: true });
+          }
         }
       }
       const nActive = cheats.filter(c => c.on).length;
