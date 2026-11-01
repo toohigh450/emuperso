@@ -75,3 +75,17 @@ test('FF5 FR.pbp -> décalage région détecté (Europe vs USA)', async () => {
   assert.equal(catalogRegion, 'USA');
   assert.notEqual(gameRegion, catalogRegion, 'Décalage détecté');
 });
+
+test('serialMap enrichi : 13+ serials connus', async () => {
+  const catalog = JSON.parse(await readFile(new URL('../data/psx-catalog.json', import.meta.url), 'utf8'));
+  assert.ok(Object.keys(catalog.serialMap).length >= 13, 'Au moins 13 serials mappés');
+  assert.ok(catalog.serialMap['SLUS-00879'], 'FF Anthology USA mappé');
+  assert.ok(catalog.serialMap['SCUS-94163'], 'FFVII USA mappé');
+});
+
+test('lookup par serial exact : SLUS-00879 -> FFV Anthology', async () => {
+  const catalog = JSON.parse(await readFile(new URL('../data/psx-catalog.json', import.meta.url), 'utf8'));
+  const title = catalog.serialMap['SLUS-00879'];
+  assert.ok(title && title.includes('Final Fantasy V'), 'FFV trouvé par serial');
+  assert.ok(catalog.byTitle[title].length >= 11, '11 codes FFV');
+});

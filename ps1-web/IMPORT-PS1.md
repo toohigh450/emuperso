@@ -89,3 +89,11 @@ Branche : `emulateur-ps1` (créée depuis `main`, sans toucher à `main` ni à `
 - **Tests DOM** : 3 nouveaux tests (boutons survivent au rendu).
 - 46/46 JS PASS.
 - **En attente des tests terrain de Karl. Aucun GO de publication.**
+
+### 0.1.14 (Méo) — 🆕 RECONNAISSANCE AUTOMATIQUE DES JEUX
+- **Mémoire locale d'édition vérifiée** (IndexedDB) : fichier SHA-256 → édition confirmée. Reconnaissance auto aux prochains lancements.
+- **Saisie manuelle du serial** : champ dans le panneau cheats pour identification exacte.
+- **SerialMap enrichi** : 13 numéros (FF Anthology SLUS-00879, FFVII SCUS-94163, MGS, Crash, Tony Hawk...).
+- **Badge ✅** quand l'édition est reconnue automatiquement.
+- 48/48 JS PASS.
+- **En attente des tests terrain de Karl. Aucun GO de publication.**
