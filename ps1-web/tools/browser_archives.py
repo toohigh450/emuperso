@@ -59,7 +59,9 @@ def main():
             for i, (name, code, expected) in enumerate(codes):
                 page.evaluate('window.__cheatController.disableAll()')
                 frame.evaluate('i=>window.EJS_emulator.gameManager.Module.HEAPU8.set([0x68,0x24,0x57,0x13,0xab,0xcd,0xef,0x42,0x81,0xe3,0xa5,0xc7,0x90,0xba,0xdc,0xfe],i)', offset)
-                page.evaluate('i=>window.__cheatController.toggle(i,true)', i); page.wait_for_timeout(250)
+                page.evaluate('i=>window.__cheatController.toggle(i,true)', i)
+                check_offset, check_bytes = (offset, expected) if name == 'slide16' else (offset+8, [0x68,0x24,0x57,0x13]) if name == 'copy4' else (offset+4, [0xcd,0xab])
+                frame.wait_for_function('({offset,bytes})=>{const h=window.EJS_emulator.gameManager.Module.HEAPU8;return bytes.every((b,j)=>h[offset+j]===b)}',arg={'offset':check_offset,'bytes':check_bytes},timeout=10000)
                 data = frame.evaluate('i=>Array.from(window.EJS_emulator.gameManager.Module.HEAPU8.slice(i,i+16))', offset)
                 passed = data[:4] == expected if name == 'slide16' else data[8:12] == [0x68,0x24,0x57,0x13] if name == 'copy4' else data[4:6] == [0xcd,0xab]
                 result['compound'].append({'name': name, 'code': code, 'guest_ram': data, 'pass': passed})
@@ -81,12 +83,13 @@ def main():
             page.wait_for_function("!document.getElementById('launch').disabled")
             page.locator('#launch').click(); page.wait_for_function("!document.getElementById('choose').disabled")
             result['refusal_status'] = page.locator('#status').inner_text()
+            frame.wait_for_function('n=>window.EJS_emulator.gameManager.getFrameNum()>n',arg=before['frame'],timeout=10000)
             after = frame.evaluate('window.PS1Engine.snapshot()'); result['after_refusal'] = after
             result['slots_after'] = page.evaluate(slots_js)
             result['checks']['memory_refusal_retains_real_session'] = after['session_id'] == before['session_id'] and after['frame'] >= before['frame'] and not after['closed'] and 'refusé avant fermeture' in result['refusal_status']
             result['checks']['memory_refusal_retains_guest_ram'] = frame.evaluate('i=>Array.from(window.EJS_emulator.gameManager.Module.HEAPU8.slice(i,i+2))', offset) == [0xfe,0xca]
             result['checks']['memory_refusal_no_capture_or_save_write'] = frame.evaluate('window.__captureCalls') == 0 and result['slots_before'] == result['slots_after']
-            result['refusal_journal'] = page.locator('#log').inner_text()
+            result['refusal_journal'] = page.locator('#log').text_content()
             page.screenshot(path=str(out/'memory-refusal.png'))
             page.evaluate("()=>{if(window.__memoryDescriptor)Object.defineProperty(performance,'memory',window.__memoryDescriptor);else delete performance.memory}")
             accept = False
@@ -96,7 +99,7 @@ def main():
             page.locator('#launch').click(); page.wait_for_function("!document.getElementById('choose').disabled", timeout=60000)
             frame = page.frames[1]
             snapshot = frame.evaluate('window.PS1Engine.snapshot()'); result['zip_snapshot'] = snapshot
-            journal = json.loads(page.locator('#log').inner_text())
+            journal = json.loads(page.locator('#log').text_content())
             result['archive_events'] = [e for e in journal if e['type'].startswith(('archive.', 'engine.archive.', 'session.closed.for_archive'))]
             starts = [e for e in journal if e['type'] == 'engine.archive.decompression.before']
             ends = [e for e in journal if e['type'] == 'engine.archive.decompression.after']

@@ -34,7 +34,7 @@ def main():
         offset=frame.evaluate('''()=>{const h=window.EJS_emulator.gameManager.Module.HEAPU8,p=[0x68,0x24,0x57,0x13,0xab,0xcd,0xef,0x42];for(let i=0;i<h.length-p.length;i++)if(h[i]===p[0]&&p.every((b,j)=>h[i+j]===b))return i;return null;}''')
         assert offset is not None
         await_a=page.evaluate('''async()=>{const c=window.__cheatController;await c.addManual('Synthetic A','80011000 5678');await c.addManual('Synthetic B','80011004 ABCD');await c.confirmRegion();await c.toggle(0,true);return c.view();}''')
-        page.wait_for_timeout(250)
+        frame.wait_for_function('i=>{const h=window.EJS_emulator.gameManager.Module.HEAPU8;return h[i]===0x78&&h[i+1]===0x56}',arg=offset,timeout=10000)
         native_value=lambda f,i:f.evaluate('i=>Array.from(window.EJS_emulator.gameManager.Module.HEAPU8.slice(i,i+6))',i)
         result['initial_ram']=native_value(frame,offset);result['checks']['native_positive']=result['initial_ram'][:2]==[0x78,0x56] and await_a['applied']==1
         # Keep a known snapshot with A already effective in RAM and in its metadata.
@@ -43,7 +43,10 @@ def main():
         frame.evaluate('''()=>{const m=window.EJS_emulator.gameManager;window.__fault={set:m.setCheat.bind(m),reset:m.resetCheat.bind(m),calls:[],nativeAcceptedBeforeFailure:false};m.setCheat=(i,...args)=>{window.__fault.calls.push(i);const result=window.__fault.set(i,...args);if(i===1){window.__fault.nativeAcceptedBeforeFailure=true;throw new Error('SYNTHETIC exception after native setCheat(1)')}return result}}''')
         await_b=page.evaluate('''async()=>{await window.__cheatController.toggle(1,true);return window.__cheatController.view();}''')
         frame.evaluate('i=>window.EJS_emulator.gameManager.Module.HEAPU8.set([0x68,0x24],i)',offset)
-        page.wait_for_timeout(250);result['partial_failure_ram']=native_value(frame,offset)
+        result['rollback_frame_before']=frame.evaluate('window.EJS_emulator.gameManager.getFrameNum()')
+        frame.wait_for_function('i=>{const h=window.EJS_emulator.gameManager.Module.HEAPU8;return h[i]===0x78&&h[i+1]===0x56}',arg=offset,timeout=10000)
+        result['rollback_frame_after']=frame.evaluate('window.EJS_emulator.gameManager.getFrameNum()')
+        result['partial_failure_ram']=native_value(frame,offset)
         result['fault_after_native_set']=frame.evaluate('window.__fault.nativeAcceptedBeforeFailure')
         result['checks']['partial_failure_rollback_native']=result['fault_after_native_set'] and await_b['engineSync']=='ok' and await_b['applied']==1 and result['partial_failure_ram'][:2]==[0x78,0x56] and result['partial_failure_ram'][4:6]==[0xab,0xcd]
         frame.evaluate('''()=>{const m=window.EJS_emulator.gameManager;m.setCheat=window.__fault.set;m.resetCheat=()=>{throw new Error('SYNTHETIC persistent resetCheat exception')}}''')
@@ -76,12 +79,13 @@ def main():
         frame.evaluate('i=>window.EJS_emulator.gameManager.Module.HEAPU8.set([0x68,0x24],i)',offset);page.wait_for_timeout(250)
         result['ram_before_reconfirmation']=native_value(frame,offset)
         result['checks']['no_reinjection_before_confirmation']=result['ram_before_reconfirmation'][:2]==[0x68,0x24]
-        page.evaluate('window.__cheatController.confirmRegion()');page.wait_for_timeout(250)
+        page.evaluate('window.__cheatController.confirmRegion()')
+        frame.wait_for_function('i=>{const h=window.EJS_emulator.gameManager.Module.HEAPU8;return h[i]===0x78&&h[i+1]===0x56}',arg=offset,timeout=10000)
         result['checks']['positive_after_reconfirmation']=native_value(frame,offset)[:2]==[0x78,0x56]
         result['dialogs']=dialogs
         state_dialogs=[d for d in dialogs if 'Cet état' in d]
         result['checks']['accurate_state_warning']=bool(state_dialogs) and all('données RAM' in d and 'Aucun code ne sera réactivé avant' in d for d in state_dialogs)
-        result['journal']=page.locator('#log').inner_text();page.screenshot(path=str(out/'native-faults.png'));browser.close()
+        result['journal']=page.locator('#log').text_content();page.screenshot(path=str(out/'native-faults.png'));browser.close()
     except Exception as error:
         result['failure']=str(error)
     finally:

@@ -113,12 +113,12 @@ try:
           released:calls.some(c=>c[1]===0&&c[2]===0)};
       }""")
       result['available_controller_exports']=frame.evaluate("Object.keys(window.EJS_emulator.gameManager.Module).filter(k=>/controller|port_device/i.test(k))")
-      result['diagnostic']=page.locator('#log').inner_text()
+      result['diagnostic']=page.locator('#log').text_content()
       page.screenshot(path=str(OUT/'real-core.png'))
     except Exception as e:
       result['launch_error']=str(e)
       result['status']=page.locator('#status').inner_text()
-      result['diagnostic']=page.locator('#log').inner_text()
+      result['diagnostic']=page.locator('#log').text_content()
     browser.close()
 finally:
   server.shutdown();server.server_close()

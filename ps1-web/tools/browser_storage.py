@@ -18,7 +18,7 @@ def open_context(p):
  page=c.new_page();page.on('dialog',lambda d:d.accept());page.on('pageerror',lambda e:result['errors'].append(str(e)))
  page.goto(base);page.wait_for_function('window.__cheatController !== undefined');return c,page
 def launch(page,payload):
- old=page.locator('#log').inner_text();page.locator('#disc-file').set_input_files(payload)
+ old=page.locator('#log').text_content();page.locator('#disc-file').set_input_files(payload)
  page.wait_for_function("!document.getElementById('launch').disabled")
  page.locator('#launch').click()
  page.wait_for_function("!document.getElementById('choose').disabled",timeout=60000)
@@ -55,12 +55,12 @@ try:
   result['invalid_replacement_status']=launch(page,{'name':'invalid-synthetic.iso','mimeType':'application/octet-stream','buffer':bytes(65536)})
   result['invalid_retained_game']=page.locator('#current').inner_text()
   result['invalid_frame_count']=page.locator('iframe').count()
-  result['rollback_events']=page.locator('#log').inner_text()
+  result['rollback_events']=page.locator('#log').text_content()
   # Three ordinary replacements, checking realm count and disposal observations.
   result['replacements']=[]
   for i in range(3):
    status=launch(page,str(fixture));result['replacements'].append({'status':status,'frames':page.locator('iframe').count(),'snapshot':frame(page).evaluate('window.PS1Engine.snapshot()')})
-  result['disposal_events']=page.locator('#log').inner_text()
+  result['disposal_events']=page.locator('#log').text_content()
   result['storage_abort_preserves_previous']=page.evaluate("""async()=>{
     const {SaveStore,makeStateEnvelope}=await import('./save-store.mjs');
     const store=new SaveStore('emuperso-real-saves-v1-ps1-audit-abort');
