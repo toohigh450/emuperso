@@ -97,3 +97,13 @@ Branche : `emulateur-ps1` (créée depuis `main`, sans toucher à `main` ni à `
 - **Badge ✅** quand l'édition est reconnue automatiquement.
 - 48/48 JS PASS.
 - **En attente des tests terrain de Karl. Aucun GO de publication.**
+
+### RC-1.0 (Méo, 1 nov.) — 🎯 RELEASE CANDIDATE
+- **Finalisation des 6 modules** du mandat Karl.
+- 48/48 JS + 3/3 Python PASS.
+- Archive : `emuperso-ps1-RC-1.0.zip` (735 Ko)
+- SHA-256 : `49564677180f178d2a93619b3b11a0dea63866cf1451134f9db933d9cff85f51`
+- Rapport technique : `ps1-web/RAPPORT-TECHNIQUE-RC-1.0.md`
+- Changelog : `ps1-web/CHANGELOG-PS1.md`
+- **En attente** : essais Windows Karl, audit Codex, audit GPT final.
+- **AUCUN GO DE PUBLICATION.**
