@@ -110,7 +110,26 @@ def wait_started(page, after_generation=0):
         }''')
         assert found['rom_sha256'] == SHA
         assert found['base'] > 0
-        assert 0xA0100000 in found['pointers'] and 0xA0140000 in found['pointers']
+        method = found.get('identification_method')
+        if method == 'framebuffer-alternation':
+            assert 0xA0100000 in found['pointers'] and 0xA0140000 in found['pointers']
+        else:
+            # Fixed-interval samples can alias the double-buffer parity. Accept
+            # the independent fallback only with a full native-state round trip,
+            # never merely because the helper returned an address.
+            assert method == 'native-state-nonce', found
+            proof = found.get('native_proof')
+            assert proof and proof['heap_base'] == found['base'], found
+            assert proof['physical_address'] == 0x10010 and proof['byte_count'] == 8
+            assert len(proof['nonce']) == len(proof['original']) == 8
+            assert proof['nonce'] != proof['original']
+            assert proof['native_before'] == proof['original']
+            assert proof['positive_matches'] and proof['positive_echo'] == proof['nonce']
+            assert proof['restoration_matches']
+            assert proof['restored_heap'] == proof['restored_native'] == proof['original']
+            for observation in [proof['positive_frames'], proof['restoration_frames']]:
+                assert observation['after'] - observation['before'] >= 2
+                assert observation['delta'] == observation['after'] - observation['before']
         RDRAM_BASE = found['base']
         ram_probes.append({'generation': current['session']['active_generation'], **found})
 
@@ -368,7 +387,7 @@ try:
         assert state_bytes[:4] not in (bytes.fromhex('80371240'), bytes.fromhex('37804012'), bytes.fromhex('40123780'))
         assert 'rom_bytes' not in exported_state and 'rom_base64' not in exported_state
         wait_idle(page)
-        ok('Export utilisateur d’un véritable état intègre, sans fichier ROM joint', {
+        ok('Export utilisateur d’un véritable état intègre, copie privée de la mémoire du jeu', {
             'payload_size': len(state_bytes), 'payload_sha256': digest(state_bytes),
             'download_name': download.value.suggested_filename,
         })

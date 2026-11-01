@@ -327,7 +327,7 @@ function downloadJSON(value, filename) {
 $('save-export').onclick = () => operation(async () => {
   const stored = await vault.load(sessions.current.identity, Number($('save-slot').value), { kind: 'state' }), bytes = stored.bytes;
   let binary = ''; for (let i = 0; i < bytes.length; i += 8192) binary += String.fromCharCode(...bytes.subarray(i, i + 8192));
-  downloadJSON({ ...stored.envelope, payload: undefined, payload_base64: btoa(binary) }, 'N64-sauvegarde-emplacement-' + $('save-slot').value + '.json'); saveStatus('Copie de sauvegarde exportée sur votre PC. Elle contient l’état du jeu, aucune ROM.');
+  downloadJSON({ ...stored.envelope, payload: undefined, payload_base64: btoa(binary) }, 'N64-sauvegarde-emplacement-' + $('save-slot').value + '.json'); saveStatus('Copie d’état exportée sur votre PC. Elle contient la mémoire du jeu : conservez-la privée.');
 });
 $('save-import').onclick = () => { $('save-import-file').value = ''; $('save-import-file').click(); };
 $('save-import-file').onchange = inputEvent => {

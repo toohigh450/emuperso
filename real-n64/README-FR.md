@@ -47,6 +47,8 @@ Un **save state** contient un état du moteur et la copie native prise au même 
 - **Recharger la sauvegarde native** redémarre depuis le natif stocké, sans l’écraser avec la partie en mémoire.
   **Recharger la native précédente** utilise la copie antérieure. La relecture par le cœur est comparée à la copie demandée.
 
+Une copie d’état peut contenir du code ou des images du jeu présents en mémoire, ainsi que votre progression. Traitez les états et natifs exportés comme des fichiers privés ; ne les ajoutez pas aux livraisons publiques. Le diagnostic reste un document distinct, sans ces octets de mémoire.
+
 Les trois emplacements et les types de sauvegarde sont séparés par identité ROM, moteur, configuration et schéma.
 Le coffre conserve les données v0.4 compatibles ; aucun effacement ni montée de version de la base n’est nécessaire.
 Une origine Web, un port ou un profil Chrome différent possède son propre stockage : utiliser des exports pour transférer des copies.

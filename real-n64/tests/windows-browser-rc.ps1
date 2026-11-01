@@ -77,8 +77,10 @@ function Invoke-BrowserBench([string]$Name, [string]$Script, [string]$Report, [s
     try {
         # A stale Linux/source report must never be relabelled as a Windows pass.
         # Preserve prior evidence byte-for-byte and restore it in finally.
-        foreach ($name in $fileNames) {
-            $path = Join-Path (Join-Path $script:root 'evidence') $name
+        # PowerShell variables are case-insensitive: never use $name here,
+        # because that would overwrite the benchmark parameter $Name.
+        foreach ($evidenceName in $fileNames) {
+            $path = Join-Path (Join-Path $script:root 'evidence') $evidenceName
             $exists = Test-Path -LiteralPath $path -PathType Leaf
             $bytes = $null
             $modified = $null
@@ -88,11 +90,11 @@ function Invoke-BrowserBench([string]$Name, [string]$Script, [string]$Report, [s
                 New-Item -ItemType Directory -Force -Path $backupDirectory | Out-Null
                 # Keep a disk backup as well, so a restoration I/O failure cannot
                 # discard the only retained copy when the process exits.
-                [IO.File]::WriteAllBytes((Join-Path $backupDirectory $name), $bytes)
+                [IO.File]::WriteAllBytes((Join-Path $backupDirectory $evidenceName), $bytes)
             }
-            $prior[$name] = @{ exists = $exists; bytes = $bytes; modified = $modified }
+            $prior[$evidenceName] = @{ exists = $exists; bytes = $bytes; modified = $modified }
             if ($exists) { Remove-Item -LiteralPath $path }
-            $null = $cleared.Add($name)
+            $null = $cleared.Add($evidenceName)
         }
         $scriptPath = Join-Path $PSScriptRoot $Script
         Assert-True (Test-Path -LiteralPath $scriptPath -PathType Leaf) "Missing benchmark: $Script"
@@ -124,30 +126,30 @@ function Invoke-BrowserBench([string]$Name, [string]$Script, [string]$Report, [s
         Write-Host ('ECHOUE - ' + $Name + ' : ' + $_.Exception.Message)
     } finally {
         $cleanupErrors = New-Object System.Collections.Generic.List[string]
-        foreach ($name in $fileNames) {
-            $source = Join-Path (Join-Path $script:root 'evidence') $name
+        foreach ($evidenceName in $fileNames) {
+            $source = Join-Path (Join-Path $script:root 'evidence') $evidenceName
             try {
-                if ($cleared.Contains($name) -and (Test-Path -LiteralPath $source -PathType Leaf)) {
-                    $destination = Join-Path $script:evidence $name
+                if ($cleared.Contains($evidenceName) -and (Test-Path -LiteralPath $source -PathType Leaf)) {
+                    $destination = Join-Path $script:evidence $evidenceName
                     Copy-Item -LiteralPath $source -Destination $destination -Force
-                    $generated.Add([ordered]@{ path = $name; sha256 = (Get-FileHash -LiteralPath $destination -Algorithm SHA256).Hash.ToLowerInvariant() })
+                    $generated.Add([ordered]@{ path = $evidenceName; sha256 = (Get-FileHash -LiteralPath $destination -Algorithm SHA256).Hash.ToLowerInvariant() })
                 }
             } catch {
-                $cleanupErrors.Add("Fresh evidence copy failed for ${name}: $($_.Exception.Message)")
+                $cleanupErrors.Add("Fresh evidence copy failed for ${evidenceName}: $($_.Exception.Message)")
             }
             # Each restoration has its own error boundary. Failure to copy or
             # restore one file must not skip the remaining preserved files.
             try {
-                if ($prior.ContainsKey($name)) {
-                    if ($prior[$name].exists) {
-                        [IO.File]::WriteAllBytes($source, [byte[]]$prior[$name].bytes)
-                        [IO.File]::SetLastWriteTimeUtc($source, $prior[$name].modified)
-                    } elseif ($cleared.Contains($name) -and (Test-Path -LiteralPath $source -PathType Leaf)) {
+                if ($prior.ContainsKey($evidenceName)) {
+                    if ($prior[$evidenceName].exists) {
+                        [IO.File]::WriteAllBytes($source, [byte[]]$prior[$evidenceName].bytes)
+                        [IO.File]::SetLastWriteTimeUtc($source, $prior[$evidenceName].modified)
+                    } elseif ($cleared.Contains($evidenceName) -and (Test-Path -LiteralPath $source -PathType Leaf)) {
                         Remove-Item -LiteralPath $source
                     }
                 }
             } catch {
-                $cleanupErrors.Add("Prior evidence restoration failed for ${name}: $($_.Exception.Message); retained backup: $backupDirectory")
+                $cleanupErrors.Add("Prior evidence restoration failed for ${evidenceName}: $($_.Exception.Message); retained backup: $backupDirectory")
             }
         }
         try {
@@ -209,6 +211,7 @@ print('Observed Windows runner and pinned Chromium ' + chromium_version)
     $env:CHROMIUM_PATH = [string]$environmentMetadata.chromium.executable
     Assert-True (Test-Path -LiteralPath $env:CHROMIUM_PATH -PathType Leaf) 'Python did not report an installed Chromium executable.'
 
+    Invoke-BrowserBench 'ram-identification' 'probe_ram_identification_rc.py' 'tests-ram-identification-rc-browser.json' 'emuperso/ram-identification-rc-tests/v1' 3 180 @()
     Invoke-BrowserBench 'restore-independent' 'probe_restore_rc.py' 'probe-restore-rc.json' 'emuperso/restore-independent-probe/v1' 3 120 @()
     Invoke-BrowserBench 'restore-regressions' 'browser_restore_rc.py' 'tests-restore-rc-browser.json' 'emuperso/restore-rc-browser-tests/v1' 9 360 @('restore-rc-final.png', 'restore-rc-failure.png')
     Invoke-BrowserBench 'restore-guards' 'browser_restore_guards_rc.py' 'tests-restore-guards-rc-browser.json' 'emuperso/restore-guards-rc-browser-tests/v1' 4 180 @('restore-guards-rc-final.png', 'restore-guards-rc-failure.png')
@@ -224,8 +227,8 @@ print('Observed Windows runner and pinned Chromium ' + chromium_version)
         platform = [Environment]::OSVersion.VersionString
         powershell = $PSVersionTable.PSVersion.ToString()
         environment = $environmentMetadata
-        expected_benches = 4
-        expected_groups = 33
+        expected_benches = 5
+        expected_groups = 36
         tests = @($results.ToArray())
         tested_on_karl_pc = $false
         scope = 'Windows Server 2022 CI plus real pinned Chrome, own MIT homebrew only. No original save, private BIOS or commercial ROM.'
@@ -237,5 +240,5 @@ print('Observed Windows runner and pinned Chromium ' + chromium_version)
     [Environment]::SetEnvironmentVariable('PYTHONUNBUFFERED', $oldPythonUnbuffered, 'Process')
 }
 
-if ($results.Count -ne 4 -or @($results | Where-Object { $_.result -ne 'REUSSI' }).Count -gt 0) { exit 1 }
+if ($results.Count -ne 5 -or @($results | Where-Object { $_.result -ne 'REUSSI' }).Count -gt 0) { exit 1 }
 exit 0

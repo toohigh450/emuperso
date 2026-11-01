@@ -59,6 +59,7 @@ BENCHES = (
     Bench('legacy-native', 'browser_legacy_battery.py', Report('tests-legacy-battery-browser.json', 7, 'emuperso/legacy-battery-browser-tests/v1'), 90),
     Bench('native-roundtrip', 'probe_native_roundtrip.py', Report('probe-native-roundtrip.json', 5, 'emuperso/native-roundtrip-probe/v1'), 180,
           ('native-roundtrip.png',)),
+    Bench('ram-identification', 'probe_ram_identification_rc.py', Report('tests-ram-identification-rc-browser.json', 3, 'emuperso/ram-identification-rc-tests/v1'), 180),
     Bench('restore-independent', 'probe_restore_rc.py', Report('probe-restore-rc.json', 3, 'emuperso/restore-independent-probe/v1'), 120),
     Bench('restore-regressions', 'browser_restore_rc.py', Report('tests-restore-rc-browser.json', 9, 'emuperso/restore-rc-browser-tests/v1'), 360,
           ('restore-rc-final.png', 'restore-rc-failure.png')),

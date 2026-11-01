@@ -1,7 +1,10 @@
 // Controlled research helper for the repository's MIT homebrew, never another ROM.
-// If timing samples alias, a temporary unused-RAM nonce is restored in finally.
-// Evaluate this file in the top page, then await findOwnDemoRam().
-async function findOwnDemoRam() {
+// Sampling at 180 ms can repeatedly see the same double-buffer parity. The
+// fallback proves an eight-byte native-state echo, then independently proves the
+// original bytes are back in live RAM AND a fresh native state after real frames.
+// forceNativeProof is a test-only research option; no product module uses this file.
+async function findOwnDemoRam({ forceNativeProof = false } = {}) {
+  if (typeof forceNativeProof !== 'boolean') throw new Error('RAM proof option must be boolean');
   const emulator = window.RealN64?.engineWindow?.EJS_emulator ?? window.EJS_emulator;
   const gm = emulator?.gameManager;
   if (!gm) throw new Error('Own-demo engine not ready');
@@ -26,33 +29,59 @@ async function findOwnDemoRam() {
     await new Promise(resolve => setTimeout(resolve, 180));
   }
   let live = candidates.filter(c => c.pointers.includes(0xa0100000) && c.pointers.includes(0xa0140000));
-  if (live.length !== 1) {
-    // Sampling a double buffer at a fixed interval can hit the same parity on
-    // every observation. Prove live RAM by a reversible marker reflected in a
-    // fresh native state after actual frame progression, rather than guessing.
+  let identificationMethod = 'framebuffer-alternation';
+  if (forceNativeProof || live.length !== 1) {
     const snapshot = gm.getState(), stateRegions = [];
     for (const [wordSwapped, pattern] of [[false, normal], [true, swapped]]) {
       for (let i = 0; i <= snapshot.length - pattern.length; i += 4) {
-        if (snapshot[i] === pattern[0] && pattern.every((value, j) => snapshot[i + j] === value)) stateRegions.push({ base: i - 0x400, wordSwapped });
+        const base = i - 0x400;
+        if (base >= 0 && base + 0x800000 <= snapshot.length && snapshot[i] === pattern[0] &&
+            pattern.every((value, j) => snapshot[i + j] === value)) stateRegions.push({ base, wordSwapped });
       }
     }
     if (stateRegions.length !== 1) throw new Error('Native RAM state is not uniquely identified');
-    const physical = 0x10010, nonce = new Uint8Array([0x71,0x39,0xb2,0x4e,0x25,0xd8,0x6a,0xc1]);
-    const region = stateRegions[0], proven = [];
+    const physical = 0x10010, region = stateRegions[0], proven = [];
+    const index = (address, wordSwapped) => wordSwapped ? address ^ 3 : address;
+    const read = (bytes, base, wordSwapped) => Array.from({ length: 8 }, (_, i) => bytes[base + index(physical + i, wordSwapped)]);
+    const same = (left, right) => left.length === right.length && left.every((value, i) => value === right[i]);
+    const frames = async () => {
+      const before = gm.getFrameNum(), deadline = performance.now() + 4000;
+      while (gm.getFrameNum() < before + 2 && performance.now() < deadline) await new Promise(resolve => setTimeout(resolve, 30));
+      const after = gm.getFrameNum();
+      if (!Number.isFinite(before) || !Number.isFinite(after) || after < before + 2)
+        throw new Error('No real frame progression during RAM proof');
+      return { before, after, delta: after - before };
+    };
     for (const candidate of candidates.filter(c => c.pointers.every(value => value === 0xa0100000 || value === 0xa0140000))) {
-      const original = nonce.map((_, i) => gm.Module.HEAPU8[candidate.base + (candidate.wordSwapped ? (physical + i) ^ 3 : physical + i)]);
+      const original = read(gm.Module.HEAPU8, candidate.base, candidate.wordSwapped);
+      const nativeBefore = read(gm.getState(), region.base, region.wordSwapped);
+      if (!same(original, nativeBefore)) continue;
+      const nonce = [0x71, 0x39, 0xb2, 0x4e, 0x25, 0xd8, 0x6a, 0xc1];
+      if (same(nonce, original)) nonce[0] ^= 0xff;
+      let positiveFrames = null, positiveEcho = null, restorationFrames, restoredHeap, restoredNative;
       try {
-        nonce.forEach((value, i) => { gm.Module.HEAPU8[candidate.base + (candidate.wordSwapped ? (physical + i) ^ 3 : physical + i)] = value; });
-        const before = gm.getFrameNum(), deadline = performance.now() + 4000;
-        while (gm.getFrameNum() < before + 2 && performance.now() < deadline) await new Promise(resolve => setTimeout(resolve, 30));
-        if (gm.getFrameNum() < before + 2) throw new Error('No real frame progression during RAM proof');
-        const fresh = gm.getState();
-        if (nonce.every((value, i) => fresh[region.base + (region.wordSwapped ? (physical + i) ^ 3 : physical + i)] === value)) proven.push(candidate);
+        nonce.forEach((value, i) => { gm.Module.HEAPU8[candidate.base + index(physical + i, candidate.wordSwapped)] = value; });
+        positiveFrames = await frames();
+        positiveEcho = read(gm.getState(), region.base, region.wordSwapped);
       } finally {
-        original.forEach((value, i) => { gm.Module.HEAPU8[candidate.base + (candidate.wordSwapped ? (physical + i) ^ 3 : physical + i)] = value; });
+        // Always restore live/candidate bytes, even if a frame or snapshot fails.
+        original.forEach((value, i) => { gm.Module.HEAPU8[candidate.base + index(physical + i, candidate.wordSwapped)] = value; });
+        restorationFrames = await frames();
+        restoredHeap = read(gm.Module.HEAPU8, candidate.base, candidate.wordSwapped);
+        restoredNative = read(gm.getState(), region.base, region.wordSwapped);
+        if (!same(restoredHeap, original) || !same(restoredNative, original))
+          throw new Error('Temporary RAM probe bytes were not demonstrably restored in heap and native state');
       }
+      if (same(positiveEcho, nonce)) proven.push({ ...candidate, native_proof: {
+        forced: forceNativeProof, heap_base: candidate.base, state_ram_base: region.base,
+        physical_address: physical, byte_count: 8, original, nonce,
+        native_before: nativeBefore, positive_echo: positiveEcho,
+        restored_heap: restoredHeap, restored_native: restoredNative,
+        positive_matches: true, restoration_matches: true,
+        positive_frames: positiveFrames, restoration_frames: restorationFrames
+      } });
     }
-    live = proven;
+    live = proven; identificationMethod = 'native-state-nonce';
   }
   if (live.length !== 1) throw new Error('Live RAM not uniquely identified: ' + JSON.stringify(candidates));
   const found = live[0];
@@ -61,6 +90,6 @@ async function findOwnDemoRam() {
     const current = gm.Module.HEAPU8;
     return Array.from({ length }, (_, i) => current[found.base + (found.wordSwapped ? (physicalAddress + i) ^ 3 : physicalAddress + i)]);
   };
-  return { ...found, candidates: candidates.length, rom_sha256: hash };
+  return { ...found, candidates: candidates.length, rom_sha256: hash, identification_method: identificationMethod };
 }
 window.findOwnDemoRam = findOwnDemoRam;
