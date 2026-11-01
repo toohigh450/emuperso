@@ -78,7 +78,8 @@ export async function findCheatsForGame(serial, title) {
   if (title) {
     const candidates = candidatesByStem(catalog, title);
     if (candidates.length === 1) {
-      return { status: 'match', cheats: candidates[0].codes.map(c => ({ ...c, validated: false })), candidates: [] };
+      return { status: 'match', cheats: candidates[0].codes.map(c => ({ ...c, validated: false })), candidates: [],
+               catalogTitle: candidates[0].catalogTitle, catalogRegion: detectRegion(candidates[0].catalogTitle) };
     }
     if (candidates.length > 1) {
       return { status: 'ambiguous', cheats: [], candidates };
@@ -93,7 +94,8 @@ export async function findCheatsForGame(serial, title) {
       }
     }
     if (wordCandidates.length === 1) {
-      return { status: 'match', cheats: wordCandidates[0].codes.map(c => ({ ...c, validated: false })), candidates: [] };
+      return { status: 'match', cheats: wordCandidates[0].codes.map(c => ({ ...c, validated: false })), candidates: [],
+               catalogTitle: wordCandidates[0].catalogTitle, catalogRegion: detectRegion(wordCandidates[0].catalogTitle) };
     }
     if (wordCandidates.length > 1) {
       return { status: 'ambiguous', cheats: [], candidates: wordCandidates };
@@ -115,6 +117,22 @@ export function normalizeTitle(title) {
   const romans = { 'viii': '8', 'vii': '7', 'ix': '9', 'vi': '6', 'iv': '4', 'v': '5', 'iii': '3', 'ii': '2', 'i': '1', 'x': '10' };
   t = t.split(' ').map(w => romans[w] || w).join(' ');
   return t;
+}
+
+/**
+ * Détecte la région d'un titre ou nom de fichier.
+ * Retourne: 'USA' | 'Europe' | 'Japan' | 'World' | null
+ */
+export function detectRegion(value) {
+  const v = String(value || '');
+  const m = v.match(/\b(USA|US|Europe|EUR|EU|Japan|JAP|J|World|PAL|NTSC|FR|France|Germany|Italy|Spain)\b|\(([EUJ])\)/i);
+  if (!m) return null;
+  const r = (m[1] || m[2]).toUpperCase();
+  if (['USA', 'US'].includes(r)) return 'USA';
+  if (['EUROPE', 'EUR', 'EU', 'E', 'PAL', 'FR', 'FRANCE', 'GERMANY', 'ITALY', 'SPAIN'].includes(r)) return 'Europe';
+  if (['JAPAN', 'JAP', 'J', 'NTSC'].includes(r)) return 'Japan';
+  if (r === 'WORLD') return 'World';
+  return null;
 }
 
 /**

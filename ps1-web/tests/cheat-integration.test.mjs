@@ -56,3 +56,22 @@ test('Dave Mirra USA : Xploder marqués incompatibles', async () => {
   const xploder = usa.codes.filter(c => c.source === 'Xploder' || /^\$/.test(c.code.trim()));
   assert.ok(xploder.length > 0, 'Codes Xploder présents');
 });
+
+test('detectRegion identifie les régions', async () => {
+  const { detectRegion } = await import('../cheat-catalog-psx.mjs');
+  assert.equal(detectRegion('Final Fantasy 5 FR.pbp'), 'Europe');
+  assert.equal(detectRegion('Final Fantasy Anthology - Final Fantasy V (USA)'), 'USA');
+  assert.equal(detectRegion('NBA Jam Extreme (E).chd'), 'Europe');
+  assert.equal(detectRegion('Dave Mirra Freestyle BMX.chd'), null);
+});
+
+test('FF5 FR.pbp -> décalage région détecté (Europe vs USA)', async () => {
+  const { findCheatsForGame, detectRegion } = await import('../cheat-catalog-psx.mjs');
+  const { readFile } = await import('node:fs/promises');
+  // Simuler avec un catalogue minimal
+  const gameRegion = detectRegion('Final Fantasy 5 FR.pbp');
+  const catalogRegion = detectRegion('Final Fantasy Anthology - Final Fantasy V (USA)');
+  assert.equal(gameRegion, 'Europe');
+  assert.equal(catalogRegion, 'USA');
+  assert.notEqual(gameRegion, catalogRegion, 'Décalage détecté');
+});

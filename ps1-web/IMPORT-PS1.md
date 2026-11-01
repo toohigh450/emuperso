@@ -68,3 +68,17 @@ Branche : `emulateur-ps1` (créée depuis `main`, sans toucher à `main` ni à `
 - Garde anti-undefined sur `applyProfileToUI`.
 - 41/41 JS PASS.
 - **En attente des tests terrain de Karl** (FF5, NBA Jam, Dave Mirra USA/World).
+
+### 0.1.11 (Méo) — ✅ FF5 FONCTIONNE
+- P1 (audit GPT) : restauration on:true correctement rétablie.
+- P2 : fallback titleMatches sur titre nettoyé — « Final Fantasy 5 FR.pbp » matche l'Anthologie USA (11 cheats).
+- P3 : codes sans nom affichés (« Code sans nom #12 »).
+- **Karl confirme avec screenshot : les 11 cheats de FF5 s'affichent!**
+- 41/41 JS PASS.
+
+### 0.1.12 (Méo)
+- **Compatibilité régionale** : décalage détecté (ex: FR.pbp → catalogue USA) ; warning affiché, activation bloquée jusqu'à confirmation explicite.
+- **Restauration** : codes restaurés marqués on:true même en ambiguïté ; choix d'édition les réapplique.
+- **Interface** : message fidèle au nombre réel de codes actifs.
+- 43/43 JS PASS (2 nouveaux tests detectRegion).
+- **En attente des tests terrain de Karl. Aucun GO de publication.**
