@@ -14,7 +14,13 @@ def fake_tgz():
 class MakeLock(unittest.TestCase):
     def setUp(self):
         self.tmp = Path(tempfile.mkdtemp()); (self.tmp / 'docs').mkdir()
-        shutil.copy(TOOLS.parent / 'docs' / 'runtime-lock.json', self.tmp / 'docs')
+        lock = json.loads((TOOLS.parent / 'docs' / 'runtime-lock.json').read_text())
+        lock['status'] = 'a-generer'
+        lock['packages'] = [p for p in lock['packages'] if p['name'] != make_lock.NAME]
+        lock['files'] = {k: v for k, v in lock['files'].items() if not k.startswith('data/cores/')}
+        (self.tmp / 'docs' / 'runtime-lock.json').write_text(json.dumps(lock))
+        originals = (make_lock.ROOT, make_lock.LOCK, make_lock._get)
+        self.addCleanup(lambda: (setattr(make_lock, 'ROOT', originals[0]), setattr(make_lock, 'LOCK', originals[1]), setattr(make_lock, '_get', originals[2])))
         make_lock.ROOT = self.tmp; make_lock.LOCK = self.tmp / 'docs' / 'runtime-lock.json'
         self.data = fake_tgz(); integrity = 'sha512-' + base64.b64encode(hashlib.sha512(self.data).digest()).decode()
         self.integrity = integrity; self.good = True

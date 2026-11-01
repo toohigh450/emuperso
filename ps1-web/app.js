@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 // Version de l'application — mettre à jour à chaque release
-const APP_VERSION = 'RC-1.12';
+const APP_VERSION = 'RC-1.13-audit';
 import { prepareDisc } from './disc-file.mjs';
 import { SaveStore, makeStateEnvelope } from './save-store.mjs';
 import { packStateBundle, unpackStateBundle } from './state-bundle.mjs';
@@ -122,7 +122,10 @@ async function refreshSlots() {
   say('slot-info', row ? `Emplacement ${slot} : ${new Date(row.created_utc).toLocaleString('fr-FR')} · révision ${row.revision}${row.cheats.length ? ' · cheats actifs à l’enregistrement' : ''}` : `Emplacement ${slot} : vide pour ce jeu et ce moteur.`);
 }
 async function launch(prepared, { state = null, battery, cheatList = [], input } = {}) {
-  if (sessions.current) await saveBattery(false).catch(error => event('battery.save.failed', { message: error.message }));
+  if (sessions.current) {
+    try { await saveBattery(false); }
+    catch (error) { event('battery.save.failed', { message: error.message }); throw new Error('Changement de jeu annulé : sauvegarde native impossible. La session reste ouverte. ' + error.message); }
+  }
   const config = input ?? normalizeInput(await inputDB.get(gameKey(prepared.metadata)).catch(() => null)),
     candidate = await sessions.prepare(prepared, config);
   try {

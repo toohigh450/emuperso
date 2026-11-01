@@ -1,5 +1,15 @@
 # CHANGELOG — EMUPERSO PS1
 
+## RC-1.13-audit (Codex, 1er novembre 2026)
+
+Base effective : e17d5d3 (RC-1.12 avec trois modules rétablis). Candidate pour contre-audits, sans GO de publication.
+Séparation structurée langues/régions ; correspondances de catalogue et numéros de série toujours indicatifs ;
+accord explicite limité à la session pour toute injection de catalogue/restauration. Cas fil/yue/cmn reproduits.
+Rejet natif de contenu détecté malgré frames croissantes ; échec de sauvegarde bloque le remplacement.
+Diagnostic du vrai runtime : pad1type absent, interface libretro non exposée, manette physique ouverte.
+Verrou moteur renseigné, tests manquants restaurés, contrôle de livraison et CI PS1 Windows/Linux ajoutés.
+Voir docs/CANDIDATE-RC1.13.md et le dossier privé d’audit pour les résultats réellement vérifiés.
+
 ## RC-1.12 (Claude Code, 1er nov.) — Détection de région fail-closed + test P0 renforcé
 
 P0 (2e contre-audit GPT) — tags BCP-47 à trois parties encore mal gérés :

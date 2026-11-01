@@ -146,17 +146,14 @@ export function createCheatController({ getEngine, catalog, regions, stores, emi
 
   // --- Évaluation régionale (une seule fonction pour tous les chemins) ---
   function assessCatalogRegion(catalogTitle) {
-    const gameRegion = regions.detectRegion(meta?.name);
-    const catRegions = regions.detectRegions(catalogTitle) || (regions.detectRegion(catalogTitle) ? [regions.detectRegion(catalogTitle)] : null);
-    const mismatch = !!(gameRegion && catRegions && !regions.regionsCompatible(gameRegion, catRegions));
-    const uncertain = !!(!gameRegion && catRegions);
-    if (!mismatch && !uncertain) return { needs: false, mismatch: null };
-    return {
-      needs: true,
-      mismatch: uncertain
-        ? { gameRegion: 'inconnue', catalogRegion: regions.detectRegion(catalogTitle), catalogTitle, uncertain: true }
-        : { gameRegion, catalogRegion: regions.detectRegion(catalogTitle), catalogTitle },
-    };
+    const gameRegion = serialRegion(meta?.serial) || regions.detectRegion(meta?.name);
+    const catRegions = regions.detectRegions(catalogTitle);
+    const catalogRegion = regions.detectRegion(catalogTitle);
+    // A name/catalogue match never confirms the disc edition, even with equal regions.
+    return { needs: true, mismatch: { gameRegion: gameRegion || 'inconnue',
+      catalogRegion: catalogRegion || 'inconnue', catalogTitle,
+      uncertain: !gameRegion || !catalogRegion, unverifiedEdition: true,
+      compatibleHint: !!(gameRegion && catRegions && regions.regionsCompatible(gameRegion, catRegions)) } };
   }
   const setRegion = mismatch => { region = { mismatch: mismatch ?? null, confirmed: false }; };
 
@@ -192,7 +189,7 @@ export function createCheatController({ getEngine, catalog, regions, stores, emi
   function startSession(newMeta, restoreList = []) {
     gen++;
     meta = newMeta;
-    cheats = []; region = { mismatch: null, confirmed: false }; candidates = []; candidateKind = null; chosen = null;
+    cheats = []; region = { mismatch: { gameRegion: 'inconnue', catalogRegion: 'manuel', catalogTitle: 'code manuel', uncertain: true, manual: true }, confirmed: false }; candidates = []; candidateKind = null; chosen = null;
     modInfo = null; editionLabel = null; engineSync = 'ok'; message = null; setNote('');
     pendingRestore = (restoreList ?? []).filter(p => p && typeof p.code === 'string').map(p => ({ name: p.name, code: p.code }));
     setMessage('Chargement des cheats…'); notify();
@@ -263,9 +260,8 @@ export function createCheatController({ getEngine, catalog, regions, stores, emi
     }
 
     // status === 'match'
-    // Une identification par numéro de série exact (aucun titre de catalogue) est sûre.
-    const hasCatalogRegion = !!(result.catalogTitle || result.catalogRegions || result.catalogRegion);
-    const info = hasCatalogRegion ? assessCatalogRegion(result.catalogTitle ?? '') : { needs: false, mismatch: null };
+    // Even a serial is indicative: modified/revised discs can retain it.
+    const info = assessCatalogRegion(result.catalogTitle ?? 'catalogue non vérifié');
     const catalogRegion = result.catalogRegion || null;
     const gameRegion = regions.detectRegion(m.name);
     const known = (Array.isArray(result.cheats) ? result.cheats : []).filter(c => c && typeof c.code === 'string').map((c, i) =>
@@ -283,7 +279,7 @@ export function createCheatController({ getEngine, catalog, regions, stores, emi
           if (count > 0) {
             emit('cheats.restored', { count, safe: true });
             editionLabel = result.catalogTitle ?? null; pendingRestore = [];
-            setMessage(`✅ ${count} cheat(s) restauré(s) et appliqué(s) — édition confirmée (${result.catalogTitle ?? 'numéro de série'}).`);
+            setMessage(`✅ ${count} cheat(s) restauré(s) et appliqué(s) — correspondance par numéro de série indicatif (${result.catalogTitle ?? m.serial}).`);
           } else {
             setMessage(`⚠️ ${pendingRestore.length} cheat(s) restauré(s) non trouvés dans le catalogue de cette édition. Aucune injection.`, true);
             pendingRestore = [];
@@ -365,7 +361,7 @@ export function createCheatController({ getEngine, catalog, regions, stores, emi
       const toApply = cheats.some(c => c.state === CHEAT_STATE.PENDING) || pendingRestore.length > 0;
       if (!toApply) {
         region = { ...region, confirmed: true };
-        setMessage('Région confirmée. Vous pouvez maintenant cocher les codes.'); notify();
+        setMessage('Accord explicite enregistré pour cette session. Vous pouvez maintenant cocher les codes.'); notify();
         return { ok: true, applied: 0 };
       }
       let count = 0;
@@ -384,7 +380,7 @@ export function createCheatController({ getEngine, catalog, regions, stores, emi
       }
       if (g !== gen) return STALE;
       emit('cheats.restored', { count, afterRegionConfirm: true });
-      setMessage(count > 0 ? `✅ Région confirmée. ${count} cheat(s) en attente appliqué(s).` : 'Région confirmée. Vous pouvez maintenant cocher les codes.');
+      setMessage(count > 0 ? `✅ Accord explicite pour cette session. ${count} cheat(s) en attente appliqué(s).` : 'Accord explicite enregistré pour cette session. Vous pouvez maintenant cocher les codes.');
       notify(); return { ok: true, applied: count };
     });
   }
@@ -427,7 +423,7 @@ export function createCheatController({ getEngine, catalog, regions, stores, emi
         try {
           await stores.editions.set('sha256:' + meta.canonical_sha256, {
             catalogTitle: cand.catalogTitle, verifiedAt: new Date().toISOString(),
-            source: info.needs ? 'selected-unverified' : 'user-confirmed', gameRegion: gameRegion || 'inconnue' });
+            source: 'selected-unverified', gameRegion: gameRegion || 'inconnue' });
         } catch (e) { emit('edition.memory.failed', { message: e.message }); }
       }
       setMessage(isMod
@@ -454,11 +450,10 @@ export function createCheatController({ getEngine, catalog, regions, stores, emi
       const catalogTitle = full.serialMap?.[input] ?? null;
       const codes = full.bySerial?.[input] ?? (catalogTitle ? full.byTitle?.[catalogTitle] : null);
       if (!codes) { setMessage(`Aucun jeu trouvé pour le numéro ${input} dans le catalogue.`, true); notify(); return { ok: false, reason: 'not-found' }; }
-      // R2 : un numéro saisi n'est PAS une preuve. Il ne dispense de confirmation que s'il
-      // correspond au numéro lu sur le disque, ou si la région du nom de fichier concorde.
+      // A typed or scanned serial is a catalogue hint, not edition authentication.
       const detected = meta?.serial ?? null;
       let info;
-      if (detected && detected === input) info = { needs: false, mismatch: null };
+      if (detected && detected === input) info = assessCatalogRegion(catalogTitle || input);
       else if (detected) {
         info = { needs: true, mismatch: { gameRegion: serialRegion(detected) || 'inconnue', catalogRegion: serialRegion(input) || regions.detectRegion(catalogTitle || ''),
           catalogTitle: catalogTitle || input, serialDiffers: true, typedSerial: input, detectedSerial: detected } };
@@ -545,12 +540,18 @@ export function createCheatController({ getEngine, catalog, regions, stores, emi
     if (!rm || region.confirmed) return null;
     const restoreCount = pendingRestore.length;
     let text, confirmLabel;
-    if (rm.isMod) {
+    if (rm.manual) {
+      text = '⚠️ Région et édition non vérifiées. Vos codes manuels restent désactivés avant votre accord explicite pour cette session.';
+      confirmLabel = 'Je confirme : appliquer mes codes manuels à cette session';
+    } else if (rm.isMod) {
       text = `⚠️ Jeu modifié détecté : ces codes viennent du jeu original « ${rm.catalogTitle} » et ne sont PAS vérifiés pour ce mod. Ils peuvent ne pas fonctionner ou corrompre votre partie.`;
       confirmLabel = 'Je confirme : appliquer les codes du jeu original à ce mod';
     } else if (rm.serialDiffers) {
       text = `⚠️ Le numéro saisi (${rm.typedSerial}) ne correspond pas au numéro lu sur votre disque (${rm.detectedSerial}). Ces codes ne sont donc pas vérifiés pour votre disque et peuvent corrompre votre partie.`;
       confirmLabel = `Je confirme : appliquer les codes de ${rm.typedSerial} à mon disque`;
+    } else if (rm.unverifiedEdition) {
+      text = `⚠️ Correspondance de catalogue non vérifiée : ${rm.catalogTitle}. Région indicative du disque : ${rm.gameRegion} ; catalogue : ${rm.catalogRegion}. Le nom ne prouve pas l’édition. Aucun code injecté sans votre accord explicite.`;
+      confirmLabel = 'Je confirme : appliquer ces codes non vérifiés à cette session';
     } else if (rm.uncertain) {
       text = `⚠️ Ces codes viennent de l'édition ${rm.catalogRegion} (${rm.catalogTitle}), mais la région de votre disque est inconnue (nom sans suffixe). Ils peuvent ne pas fonctionner ou corrompre votre partie.`;
       confirmLabel = `Je confirme : mon disque est bien l'édition ${rm.catalogRegion}`;
@@ -580,6 +581,7 @@ export function createCheatController({ getEngine, catalog, regions, stores, emi
         validated: !!c.validated, incompatible: !!c.incompatible })),
       applied: applied().length, pending: pending().length, summary: sum, info, note: { ...note },
       engineSync, region: regionPanel(), pendingRestore: pendingRestore.length,
+      editionEvidence: { status: region.confirmed ? 'user-acknowledged-for-session' : 'unverified', authenticated: false, serial: meta?.serial ?? null },
       candidates: candidates.map((cand, index) => ({ index, title: cand.catalogTitle, count: (cand.codes || []).length, chosen: chosen === index })),
       candidateKind, modInfo, editionLabel,
     };

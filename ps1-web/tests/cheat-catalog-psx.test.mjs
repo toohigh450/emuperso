@@ -79,7 +79,7 @@ test('R1 : detectRegions multi-région (USA, Europe)', async () => {
   assert.equal(regionsCompatible('USA', regions), true, 'USA compatible avec (USA, Europe)');
   assert.equal(regionsCompatible('Japan', regions), false, 'Japan NON compatible avec (USA, Europe)');
   // World est compatible avec tout
-  assert.equal(regionsCompatible('Europe', ['World']), true, 'World compatible avec tout');
+  assert.equal(regionsCompatible('Europe', ['World']), false, 'World ne prouve pas une région compatible');
 });
 
 // R2 (audit GPT RC-1.2) : région inconnue ≠ région compatible

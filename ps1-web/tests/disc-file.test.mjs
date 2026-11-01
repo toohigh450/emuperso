@@ -1,6 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { prepareDisc, inspectDisc, validateDescriptor, DiscFileError } from '../disc-file.mjs';
+test('900 Mio boundary is unchanged; oversize rejected before reading any bytes', async () => {
+  const size = 900 * 1024 * 1024;
+  assert.equal(validateDescriptor({ name: 'synthetic.iso', size }), 'iso');
+  let reads = 0;
+  await assert.rejects(prepareDisc({ name: 'synthetic.iso', size: size + 1,
+    arrayBuffer() { reads++; throw new Error('must never read oversized disc'); } }), { code: 'E_SIZE' });
+  assert.equal(reads, 0);
+});
 const disc = (size = 128 * 1024, boot = 'BOOT = cdrom:\\SLUS_006.94;1') => {
   const bytes = new Uint8Array(size), put = (at, s) => bytes.set(new TextEncoder().encode(s), at);
   put(9408, 'Licensed  by  Sony Computer Entertainment Inc.'); put(40000, boot); return bytes;

@@ -170,93 +170,15 @@ export function normalizeTitle(title) {
   return t;
 }
 
-/**
- * Détecte la région d'un titre ou nom de fichier.
- * Retourne: 'USA' | 'Europe' | 'Japan' | 'World' | null
- */
-/**
- * P0 (audit GPT/Méo RC-1.9) : retire les LISTES de langues entre parenthèses/crochets
- * avant toute détection de région. « Demo (En,Fr,Es) » ne doit pas devenir Europe :
- * Fr y est une langue, pas la région France. On ne retire qu'un groupe d'AU MOINS
- * deux codes à deux lettres séparés par des virgules — un « FR » isolé (ex. « FF5 FR »)
- * reste traité comme une région.
- */
-// Jetons qui, dans une liste entre parenthèses, désignent des RÉGIONS (pas des langues).
-// Volontairement limité aux marqueurs régionaux clairs : les codes à deux lettres
-// ambigus (fr, de, it, es, nl, sv…) n'y sont PAS — ce sont des langues. « (US,EU) » est
-// donc une liste de régions conservée ; « (En,Fr,Es) » une liste de langues retirée.
-const REGION_TOKENS = new Set(['usa','us','u','europe','eur','eu','e','japan','jpn','jap','jp','j',
-  'world','asia','korea','kor','k','australia','aus','brazil','bra','canada','can','china','chn',
-  'france','germany','italy','spain','netherlands','sweden','norway','denmark','finland','pal',
-  'ntsc','ntsc-u','ntsc-j','secam']);
-// Un jeton « locale » : base à deux lettres + sous-tags BCP-47 quelconques (zh-Hans-CN,
-// pt-419, sr-Latn-RS…). Le groupe doit contenir au moins deux jetons séparés par des virgules.
-const LOCALE_TOKEN = /^[A-Za-z]{2}(?:-[A-Za-z0-9]+)*$/;
-const PAREN_GROUP = /[\(\[]\s*([^\(\)\[\]]+?)\s*[\)\]]/g;
-/**
- * P0 fail-closed (contre-audit GPT RC-1.11) : retire les groupes de métadonnées
- * linguistiques AVANT toute détection de région. Règle, sans déduction optimiste :
- *  - tous les jetons sont des marqueurs de région  → on GARDE le groupe (détection région) ;
- *  - sinon, tous les jetons sont des codes locale   → on RETIRE le groupe (région inconnue) ;
- *  - sinon (groupe hétérogène ou non pertinent)      → on LAISSE tel quel.
- * Ainsi un sous-tag non reconnu ne peut jamais transformer « Fr » en région Europe.
- */
-export function stripLanguageList(value) {
-  return String(value || '').replace(PAREN_GROUP, (match, inner) => {
-    if (!inner.includes(',')) return match;                 // un seul jeton : pas une liste
-    const tokens = inner.split(',').map(t => t.trim());
-    if (!tokens.every(t => LOCALE_TOKEN.test(t))) return match;  // contient autre chose : on laisse
-    const bases = tokens.map(t => t.toLowerCase());
-    if (bases.every(t => REGION_TOKENS.has(t))) return match;    // liste de régions : on garde
-    return ' ';                                                  // liste de langues/locale : on retire
-  });
-}
-
-export function detectRegion(value) {
-  const v = stripLanguageList(String(value || ''));
-  // B04 (audit GPT RC-1.0) : NTSC seul est AMBIGU (NTSC-U = Amérique du Nord, NTSC-J = Japon).
-  // Ne jamais déduire Japan de "NTSC" générique.
-  // Vérifier d'abord les formes explicites NTSC-U / NTSC-J.
-  const ntscMatch = v.match(/\bNTSC[\s\-_]?(U|J)\b/i);
-  if (ntscMatch) {
-    return ntscMatch[1].toUpperCase() === 'U' ? 'USA' : 'Japan';
-  }
-  const m = v.match(/\b(USA|US|Europe|EUR|EU|Japan|JAP|World|PAL|FR|France|Germany|Italy|Spain)\b|\(([EUJ])\)/i);
-  if (!m) return null;
-  const r = (m[1] || m[2]).toUpperCase();
-  if (['USA', 'US'].includes(r)) return 'USA';
-  if (['EUROPE', 'EUR', 'EU', 'E', 'PAL', 'FR', 'FRANCE', 'GERMANY', 'ITALY', 'SPAIN'].includes(r)) return 'Europe';
-  if (['JAPAN', 'JAP', 'J'].includes(r)) return 'Japan';
-  if (r === 'WORLD') return 'World';
-  // "NTSC" seul sans suffixe U/J : ambigu, ne pas déduire
-  return null;
-}
-
-/**
- * R1 (audit GPT RC-1.2) : détecte l'ENSEMBLE des régions d'un titre.
- * Ex: "Toy Story 2 (USA, Europe)" → ['USA', 'Europe']
- * Un catalogue multi-région ne doit pas créer un faux conflit.
- */
-export function detectRegions(value) {
-  const v = stripLanguageList(String(value || ''));
-  const regions = new Set();
-  // NTSC-U / NTSC-J explicites
-  const ntscMatch = v.match(/\bNTSC[\s\-_]?(U|J)\b/i);
-  if (ntscMatch) {
-    regions.add(ntscMatch[1].toUpperCase() === 'U' ? 'USA' : 'Japan');
-  }
-  // Toutes les occurrences de régions (pas seulement la première)
-  const pattern = /\b(USA|US|Europe|EUR|EU|Japan|JAP|World|PAL|FR|France|Germany|Italy|Spain)\b|\(([EUJ])\)/gi;
-  let m;
-  while ((m = pattern.exec(v)) !== null) {
-    const r = (m[1] || m[2]).toUpperCase();
-    if (['USA', 'US'].includes(r)) regions.add('USA');
-    else if (['EUROPE', 'EUR', 'EU', 'E', 'PAL', 'FR', 'FRANCE', 'GERMANY', 'ITALY', 'SPAIN'].includes(r)) regions.add('Europe');
-    else if (['JAPAN', 'JAP', 'J'].includes(r)) regions.add('Japan');
-    else if (r === 'WORLD') regions.add('World');
-  }
-  return regions.size > 0 ? [...regions] : null;
-}
+// Shared structural metadata parser; no language-to-country inference.
+export { regionEvidence } from './region-evidence.mjs';
+import { regionEvidence, stripLanguageMetadata } from './region-evidence.mjs';
+export const stripLanguageList = stripLanguageMetadata;
+export const detectRegion = value => regionEvidence(value).region;
+export const detectRegions = value => {
+  const evidence = regionEvidence(value);
+  return evidence.regions.length ? evidence.regions : null;
+};
 
 /**
  * R1 : vérifie si la région du jeu est compatible avec l'ensemble des régions du catalogue.
@@ -264,8 +186,6 @@ export function detectRegions(value) {
  */
 export function regionsCompatible(gameRegion, catalogRegions) {
   if (!gameRegion || !catalogRegions || catalogRegions.length === 0) return false;
-  // 'World' est compatible avec tout (mais ne garantit pas l'efficacité des codes)
-  if (catalogRegions.includes('World')) return true;
   return catalogRegions.includes(gameRegion);
 }
 
@@ -310,7 +230,7 @@ export function titleStem(value) {
   const disc = /\s*[\(\[]\s*(disc|disk|disque|cd)\s*\d+[^)\]]*[\)\]]/gi;
   const langList = /\s*[\(\[]\s*([A-Za-z]{2}(\s*,\s*[A-Za-z]{2})+)\s*[\)\]]/g;
   const regionRev = /\s*[\(\[]\s*(USA|Europe|World|Japan|Asia|Germany|France|Italy|Spain|Netherlands|Sweden|Australia|Korea|E|U|J|K|PAL|NTSC(?:[-\s]?[UJ])?|FR|US|EU|JP|En|Fr|De|It|Es|Nl|Sv|Pt|Rev\s*\d+|v\d+(\.\d+)*|Beta|Proto|Demo)([\s,\)\]][^)\]]*)?[\)\]]/gi;
-  let t = stripDiscExtension(value);
+  let t = stripLanguageMetadata(stripDiscExtension(value));
   // P1 (audit GPT/Méo RC-1.9) : suffixes à TIRETS fréquents hors No-Intro
   // (« Gran Turismo 2-PSX-PAL-CD1 »). On ne retire QUE des tokens connus, jamais
   // un mot quelconque, pour ne pas casser « Spider-Man », « X-Men », « Ri-Oh »…

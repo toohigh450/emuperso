@@ -50,6 +50,22 @@
     "package/data/localization/zh-CN.json": "data/localization/zh-CN.json",
     "package/data/compression/libunrar.wasm": "data/compression/libunrar.wasm"
    }
+  },
+  {
+   "name": "@emulatorjs/core-pcsx_rearmed",
+   "version": "4.2.3",
+   "url": "https://registry.npmjs.org/@emulatorjs/core-pcsx_rearmed/-/core-pcsx_rearmed-4.2.3.tgz",
+   "cache_filename": "core-pcsx_rearmed-4.2.3.tgz",
+   "bytes": 4282111,
+   "sha256": "d641b90c4d4bea0a29e55803a5bc7bd02eb9980e7b4684be6e64618ff165d923",
+   "npm_integrity": "sha512-mMbl/NszCryFI15X5QniOqLNL7YGZ6tLP24gr5y1q2ekFOIbtc39BcVTMDEwRndNGovh2nPoCcMjB+W3fgQCog==",
+   "members": {
+    "package/pcsx_rearmed-legacy-wasm.data": "data/cores/pcsx_rearmed-legacy-wasm.data",
+    "package/pcsx_rearmed-thread-legacy-wasm.data": "data/cores/pcsx_rearmed-thread-legacy-wasm.data",
+    "package/pcsx_rearmed-thread-wasm.data": "data/cores/pcsx_rearmed-thread-wasm.data",
+    "package/pcsx_rearmed-wasm.data": "data/cores/pcsx_rearmed-wasm.data",
+    "package/reports/pcsx_rearmed.json": "data/cores/reports/pcsx_rearmed.json"
+   }
   }
  ],
  "files": {
@@ -88,7 +104,12 @@
   "data/src/shaders.js": "79bcd4c35740b2858fc28f2f1894ddb8f483f1aba6f564869a713515726fe902",
   "data/src/socket.io.min.js": "b0e735814f8dcfecd6cdb8a7ce95a297a7e1e5f2727a29e6f5901801d52fa0c5",
   "data/src/storage.js": "06759f310bb2d782d2728e1d3417a0d8f613eff935d2959c1a705670041a6f2e",
-  "data/version.json": "d8991427000a96fb97daefdb62178071e9bbff911760706148e584ae8d69f9e7"
+  "data/version.json": "d8991427000a96fb97daefdb62178071e9bbff911760706148e584ae8d69f9e7",
+  "data/cores/pcsx_rearmed-legacy-wasm.data": "88faee73d06c597a68a8b78e5621d97feefca134c64b623e65f0a900037456da",
+  "data/cores/pcsx_rearmed-thread-legacy-wasm.data": "ce15177e95ab9fa09954c5b32e17f5797844426a4f3b1dd2b296592aa223c57a",
+  "data/cores/pcsx_rearmed-thread-wasm.data": "017cd5727be628983e26fab99c9a7f859cf7d180d7a74798a43f76cd601f2266",
+  "data/cores/pcsx_rearmed-wasm.data": "fe5515f6c29f093f0e8c01824b213804f1f76eb9cb4c97c72fe2cc17606bfbc2",
+  "data/cores/reports/pcsx_rearmed.json": "93b99266955ab16e9aa0faa0d6338f4a29b50c197764dd48be945573a5b449c1"
  },
  "provenance": {
   "release_archive_url": "https://github.com/EmulatorJS/EmulatorJS/releases/download/v4.2.3/4.2.3.7z",
@@ -131,5 +152,6 @@
   ],
   "note": "Cadre EmulatorJS 4.2.3 : empreintes reprises du verrou N64. Le coeur PS1 (pcsx_rearmed) est verrouille au premier lancement par tools/make_lock.py."
  },
- "status": "a-generer"
+ "status": "genere-au-premier-lancement",
+ "trust_note": "Coeur PS1 verrouille au premier telechargement (SHA-512 npm verifie). A relire avant toute publication."
 }

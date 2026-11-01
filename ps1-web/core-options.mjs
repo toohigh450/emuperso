@@ -5,11 +5,28 @@
 // L'ancienne version exigeait exactement « clé; … », d'où « option introuvable »
 // à tort pour pcsx_rearmed_pad1type (mandat §6).
 export function findCoreOptionLine(coreOptions, key) {
-  for (const raw of String(coreOptions ?? '').split('\n')) {
+  if (typeof coreOptions !== 'string') return null;
+  for (const raw of coreOptions.split('\n')) {
     const row = raw.trim();
     const m = row.match(/^([A-Za-z0-9_]+)\s*(?:;|\||=|$)/);
     if (m && m[1] === key) return row;
   }
+  return null;
+}
+export function coreOptionKeys(coreOptions) {
+  if (typeof coreOptions !== 'string') return [];
+  return coreOptions.split('\n').flatMap(row => {
+    const match = row.trim().match(/^([A-Za-z0-9_]+)\s*(?:;|\||=)/);
+    return match ? [match[1]] : [];
+  });
+}
+export function coreOptionCurrent(coreOptions, key) {
+  const line = findCoreOptionLine(coreOptions, key);
+  if (!line) return null;
+  // Pinned EmulatorJS: key|current; value1|value2. No value inferred from listing.
+  const head = line.split(';', 1)[0];
+  if (head.includes('|')) return head.slice(head.indexOf('|') + 1).trim() || null;
+  if (head.includes('=')) return head.slice(head.indexOf('=') + 1).trim() || null;
   return null;
 }
 export function coreOptionLists(coreOptions, key, value) {

@@ -1,9 +1,11 @@
 // SPDX-License-Identifier: MIT
-import { findCoreOptionLine, coreOptionLists } from './core-options.mjs';
+import { findCoreOptionLine, coreOptionLists, coreOptionKeys, coreOptionCurrent } from './core-options.mjs';
+import { contentStartupError } from './startup-error.mjs';
 // One disposable browser realm per engine session. No ROM or save is uploaded.
 import { computeInputs, padType } from './input-profile.mjs';
 const contexts = new Set();
 let emulator = null, romURL = null, closed = false, notify = () => {}, sessionId = null;
+let startupFailure = null;
 const note = (type, data = {}) => { if (!closed) notify(type, data); };
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 const NativeContext = window.AudioContext;
@@ -49,12 +51,14 @@ function loadScript(name) {
   });
 }
 function gm() {
+  if (startupFailure) throw new Error(startupFailure);
   if (closed || !emulator?.started || !emulator.gameManager) throw new Error('Session moteur non disponible.');
   return emulator.gameManager;
 }
 function snapshot() {
   return { session_id: sessionId, closed, started: !!emulator?.started, paused: emulator?.paused ?? true,
     frame: emulator?.gameManager?.getFrameNum?.() ?? 0,
+    startup_failure: startupFailure,
     contexts: [...contexts].map(context => ({ state: context.state, sample_rate: context.sampleRate })) };
 }
 async function resumeAudio() {
@@ -112,9 +116,9 @@ function verifyInput(profile) {
     ? { present: false, type: typeof raw }
     : { present: true, type: typeof raw, length: rawStr.length, lines: rawStr.split('\n').length,
         sample: rawStr.slice(0, 200), mentions_pad: /pad1type/i.test(rawStr) };
-  const line = findCoreOptionLine(rawStr ?? '', 'pcsx_rearmed_pad1type');
-  const optInfo = coreOptionLists(rawStr ?? '', 'pcsx_rearmed_pad1type', wanted);
-  Object.assign(inputState, { pad_type_requested: wanted, pad_type_listed: optInfo.listed, core_option_line: line?.slice(0, 300) ?? null });
+  const line = findCoreOptionLine(raw, 'pcsx_rearmed_pad1type');
+  const optInfo = coreOptionLists(raw, 'pcsx_rearmed_pad1type', wanted);
+  Object.assign(inputState, { pad_type_requested: wanted, pad_type_listed: optInfo.listed, pad_type_reported: coreOptionCurrent(raw, 'pcsx_rearmed_pad1type'), pad_type_verified: false, core_option_line: line?.slice(0, 300) ?? null });
   const snapshotControls = () => Object.fromEntries(Array.from({ length: 24 }, (_, i) => [i, live?.[i] ? { key: live[i].value ?? '', pad: live[i].value2 ?? '' } : null]));
   note('input.verify', { requested_pad_type: wanted, core_option_line: inputState.core_option_line, controls: live ? snapshotControls() : 'table-illisible' });
   if (profile.native) { Object.assign(inputState, { mode: 'native', reason: 'Commandes natives d’EmulatorJS (choix de l’utilisateur).' }); return; }
@@ -123,7 +127,7 @@ function verifyInput(profile) {
   if (bound.length) { Object.assign(inputState, { mode: 'native', reason: 'Liaisons manette natives impossibles à retirer (' + bound.join(',') + ') : ma disposition est désactivée pour éviter les doubles commandes.' }); return; }
   inputProfile = profile; sentInputs.clear(); inputRaf = requestAnimationFrame(pollInputs);
   inputState.mode = 'custom';
-  inputState.reason = (live ? '' : 'Table des commandes du moteur illisible : doubles commandes possibles. ') + (line ? (inputState.pad_type_listed ? '' : 'Valeur « ' + wanted + ' » absente de l’option du cœur. ') : 'Option pcsx_rearmed_pad1type introuvable dans le cœur : type de manette non appliqué. ');
+  inputState.reason = (live ? '' : 'Table des commandes du moteur illisible : doubles commandes possibles. ') + (line ? (inputState.pad_type_listed ? '' : 'Valeur « ' + wanted + ' » absente de l’option du cœur. ') : 'Le cœur utilise les périphériques libretro, non exposés par ce runtime : type de manette demandé non vérifié. ');
 }
 async function start(config, callback) {
   if (emulator || closed) throw new Error('Une session isolée ne peut démarrer qu’une seule fois.');
@@ -150,8 +154,26 @@ async function start(config, callback) {
   document.addEventListener('drop', event => { event.preventDefault(); event.stopImmediatePropagation(); note('state.unguarded.blocked', { source: 'drop' }); }, true);
   document.addEventListener('dragover', event => { event.preventDefault(); event.stopImmediatePropagation(); }, true);
   const originalSettings = window.EmulatorJS.prototype.setupSettingsMenu;
+  const originalInitModule = window.EmulatorJS.prototype.initModule;
+  window.EmulatorJS.prototype.initModule = function(...args) {
+    const runtime = window.EJS_Runtime;
+    window.EJS_Runtime = options => {
+      const observe = message => {
+        const failure = contentStartupError(message);
+        if (failure) { startupFailure = failure; note('engine.content.rejected', { message: failure }); }
+      };
+      return runtime({ ...options,
+        print: message => { observe(message); options.print?.(message); },
+        printErr: message => { observe(message); options.printErr?.(message); },
+      });
+    };
+    return originalInitModule.apply(this, args);
+  };
   window.EmulatorJS.prototype.setupSettingsMenu = function(...args) {
-    const coreKeys = (this.gameManager.getCoreOptions() || '').split('\n').map(line => line.split('; ')[0].split('|')[0]).filter(Boolean);
+    let rawOptions = null;
+    try { rawOptions = this.gameManager.getCoreOptions(); }
+    catch (error) { note('input.options.failed', { message: String(error.message || error) }); }
+    const coreKeys = coreOptionKeys(rawOptions);
     this.config.hideSettings = [...coreKeys, 'webgl2Enabled', 'ejs_threads', 'fastForward', 'ff-ratio', 'slowMotion', 'sm-ratio', 'rewind', 'rewind-granularity', 'vsync', 'save-state-slot', 'save-state-location', 'save-save-interval'];
     return originalSettings.apply(this, args);
   };
@@ -174,7 +196,7 @@ async function start(config, callback) {
     gameUrl: romURL, dataPath: 'vendor/data/', system: 'pcsx_rearmed', gameName: config.gameName,
     startOnLoad: true, ...(profile.native ? {} : { defaultControllers }), threads: false, language: 'en-US', shaders: window.EJS_SHADERS,
     disableDatabases: true, disableLocalStorage: true, cacheLimit: 0, volume: 0.45,
-    defaultOptions: { webgl2Enabled: config.legacy ? 'disabled' : 'enabled', ejs_threads: 'disabled', pcsx_rearmed_pad1type: padType(profile) },
+    defaultOptions: { webgl2Enabled: config.legacy ? 'disabled' : 'enabled', ejs_threads: 'disabled' },
     buttonOpts: { rightClick: false, saveState: false, loadState: false, quickSave: false, quickLoad: false,
       saveSavFiles: false, loadSavFiles: false, cheat: false, restart: false, exitEmulation: false, netplay: false }
   };
@@ -185,9 +207,11 @@ async function start(config, callback) {
   emulator.on('exit', () => note('engine.exit'));
   const deadline = performance.now() + 45000;
   while (!closed && (!emulator.started || !emulator.gameManager || emulator.gameManager.getFrameNum() < 5)) {
+    if (startupFailure) throw new Error(startupFailure);
     if (performance.now() > deadline || emulator.failedToStart) throw new Error('Le moteur n’a pas confirmé son démarrage dans le délai prévu.');
     await wait(50);
   }
+  if (startupFailure) throw new Error(startupFailure);
   if (closed) throw new Error('Session interrompue.');
   if (config.battery?.length) {
     const actual = emulator.gameManager.getSaveFilePath();

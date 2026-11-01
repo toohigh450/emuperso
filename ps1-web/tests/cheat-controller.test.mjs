@@ -10,7 +10,7 @@ const CASTLE_EU = 'Castlevania - Symphony of the Night (Europe).bin';   // édit
 const invariant = h => assert.equal(h.uiChecked().length, h.engine ? h.engine.active.length : 0,
   `UI (${h.uiChecked().length}) doit égaler moteur (${h.engine ? h.engine.active.length : 0})`);
 
-async function addManual(h, name, code = MANUAL) { h.$('cheat-name').value = name; h.$('cheat-code').value = code; await h.$('cheat-add').onclick(); }
+async function addManual(h, name, code = MANUAL) { h.$('cheat-name').value = name; h.$('cheat-code').value = code; await h.$('cheat-add').onclick(); if (h.view().region?.catalogTitle === 'code manuel') await h.ctl().confirmRegion(); }
 
 test('activation simple : coché => appliqué, moteur appelé une fois', async () => {
   const h = await makeHarness(); await h.launch('Jeu X.bin'); await addManual(h, 'A');
@@ -154,11 +154,12 @@ test('numéro de série : codes USA sur disque Europe => confirmation requise, r
   assert.equal(h.engine.active.length, 0, 'aucun code injecté avant confirmation'); invariant(h);
 });
 
-test('numéro de série exact (identique au disque) => pas de confirmation', async () => {
+test('numéro de série exact reste indicatif : confirmation explicite requise', async () => {
   const h = await makeHarness();
   await h.launch('MGS.bin', { serial: 'SLUS-00594' });
   await h.ctl().applySerial('SLUS-00594');
-  assert.equal(h.view().region, null, 'même numéro : aucune confirmation requise'); invariant(h);
+  assert.ok(h.view().region, 'un numéro identique ne prouve pas une édition non modifiée');
+  await h.ctl().confirmRegion(); assert.equal(h.view().region, null); invariant(h);
 });
 
 test('numéro de série introuvable => message clair, liste inchangée', async () => {
@@ -169,7 +170,7 @@ test('numéro de série introuvable => message clair, liste inchangée', async (
 });
 
 // --- P0 (audits GPT/Méo) : une liste de langues ne doit JAMAIS valider une région.
-// Protocole renforcé (exigé par GPT) : moteur RÉELLEMENT actif, on compte les appels
+// Protocole renforcé (exigé par GPT) : adaptateur instrumenté actif (sans WASM), on compte les appels
 // moteur et on vérifie zéro injection + état en attente.
 async function restoreUnderRegion(h, discName) {
   h.findOverride = async () => ({
@@ -209,5 +210,18 @@ test('P0 contrôle positif : disque (USA) avec catalogue USA => restauré et app
   await h.launch('Un Jeu (USA).chd');
   await h.ctl().startSession({ name: 'Un Jeu (USA).chd', canonical_sha256: 'd'.repeat(64) },
     [{ name: 'V', code: '80010000 0001' }]);
-  assert.equal(h.engine.active.length, 1, 'région concordante : restauration appliquée');
+  assert.equal(h.engine.active.length, 0, 'un nom concordant ne confirme pas une édition');
+  await h.ctl().confirmRegion();
+  assert.equal(h.engine.active.length, 1, 'contrôle positif après accord explicite');
+});
+
+// Application-level preservation: failed storage must not destroy the live realm.
+test('battery save failure aborts a game switch and preserves the active session', async () => {
+  const h = await makeHarness(); await h.launch('Jeu A.bin');
+  const old = h.engine, count = h.engines.length;
+  old.captureBattery = () => new Uint8Array([1,2,3]); h.failSave = true;
+  await h.launch('Jeu B.bin');
+  assert.equal(h.engine, old); assert.equal(h.engines.length, count);
+  assert.match(h.status(), /Changement de jeu annulé/);
+  assert.equal(h.$('current').textContent, 'Jeu A.bin');
 });
