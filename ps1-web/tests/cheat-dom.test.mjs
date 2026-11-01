@@ -192,23 +192,52 @@ test('P0 : cheats candidats ont needsRegionConfirm si région non sûre', async 
 });
 
 // P0 : état pending distinct de on
-test('P0 : cheats bloqués utilisent pending, pas on=true', async () => {
+// P0 (révisé audit GPT RC-1.6) : état unique 'pending', pas de booléen on=true
+test('P0 : cheats bloqués utilisent état pending unique', async () => {
   const src = await readFile(new URL('../app.js', import.meta.url), 'utf8');
-  assert.ok(src.includes('existing.pending = true'),
-    'cheats bloqués marqués pending');
-  assert.ok(src.includes('existing.on = false'),
-    'cheats bloqués explicitement pas actifs');
+  assert.ok(src.includes("existing.state = 'pending'"),
+    'cheats bloqués marqués pending (état unique)');
+  assert.ok(!src.includes('existing.pending = true'),
+    'plus de booléen pending séparé');
   assert.ok(src.includes('EN ATTENTE'),
     'message EN ATTENTE au lieu de ACTIF');
 });
 
-// P1 : bouton confirmer applique les pending
-test('P1 : bouton confirmer applique les cheats en attente', async () => {
+// État unique : les trois valeurs existent
+test('État unique : off/pending/applied définis', async () => {
   const src = await readFile(new URL('../app.js', import.meta.url), 'utf8');
-  assert.ok(src.includes('c.pending = false') && src.includes('c.on = true'),
-    'bouton confirmer convertit pending en on');
+  assert.ok(src.includes("state === 'applied'") && src.includes("state === 'pending'"),
+    'états applied et pending utilisés');
+  assert.ok(src.includes("state: 'off'"),
+    'état off par défaut');
+});
+
+// P1 (révisé audit GPT RC-1.6) : bouton confirmer → atomicCheatUpdate, état applied
+test('P1 : bouton confirmer applique les cheats en attente (atomique)', async () => {
+  const src = await readFile(new URL('../app.js', import.meta.url), 'utf8');
+  assert.ok(src.includes('atomicCheatUpdate'),
+    'bouton confirmer utilise la transaction atomique');
+  assert.ok(src.includes("c.state = 'applied'"),
+    "bouton confirmer met l'état applied");
   assert.ok(src.includes('afterRegionConfirm'),
     'événement après confirmation régionale');
+});
+
+// P0 (audit GPT RC-1.6) : "désactiver tous" purge les intentions différées
+test('P0 : désactiver tous purge pending et listes différées', async () => {
+  const src = await readFile(new URL('../app.js', import.meta.url), 'utf8');
+  assert.ok(src.includes('window._pendingCheatRestore = [];') &&
+            src.includes('window._deferredCheatList = [];'),
+    'désactiver tous vide les listes différées');
+});
+
+// P1 (audit GPT RC-1.6) : retour arrière sur échec moteur
+test('P1 : échec setCheats restaure les états (rollback)', async () => {
+  const src = await readFile(new URL('../app.js', import.meta.url), 'utf8');
+  assert.ok(src.includes('cheats.apply_failed'),
+    'échec journalisé');
+  assert.ok(src.includes('c.state = snapshot[i]'),
+    'états restaurés depuis le snapshot');
 });
 
 // P2 : édition non marquée confirmée avant vérification

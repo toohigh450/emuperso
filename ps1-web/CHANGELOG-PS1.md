@@ -1,5 +1,31 @@
 # CHANGELOG — EMUPERSO PS1
 
+## RC-1.7 (Méo, 1er nov. ~08h30) — Correctifs audit GPT RC-1.6 : machine à états unifiée
+**Base** : RC-1.6 + correctifs de l'audit GPT `AUDIT_GPT_EMUPERSO_PS1_RC-1.6_ETATS_CHEATS_53_5dlm.html`
+
+### 🔴 P0 — "Désactiver tous" ne purgeait pas les restaurations en attente
+- **Cause** : `pending=true` et `_pendingCheatRestore` survivaient au "cheat-off". Une confirmation régionale ultérieure réactivait des codes neutralisés.
+- **Correctif** : le handler purge `cheats` (tous → 'off'), `_pendingCheatRestore`, `_deferredCheatList`, `_pendingActiveList`, puis synchronise le moteur (atomique).
+
+### 🟡 P1 — États incohérents (pending + on simultanés)
+- **Cause** : deux booléens `on`/`pending` pouvaient diverger.
+- **Correctif** : **état unique par cheat** — `'off'` (désactivé), `'pending'` (en attente, non injecté), `'applied'` (injecté avec succès). Helpers `appliedCheats()`, `pendingCheats()`.
+
+### 🟡 P1 — Interface masquait "EN ATTENTE"
+- **Cause** : `renderCheatCandidates()` affichait "EN ATTENTE" puis `renderCheats()` écrasait avec "Aucun actif".
+- **Correctif** : **un seul rendu** dans `renderCheats()` — affiche séparément ACTIF(s) et EN ATTENTE, avec l'édition (`_cheatEditionLabel`). Cases : coché = appliqué, ⏳ = en attente.
+
+### 🟡 P1 — Échec moteur sans retour arrière
+- **Cause** : `setCheats()` pouvait échouer après mutation des états → "actifs" fantômes.
+- **Correctif** : **`atomicCheatUpdate(mutate)`** — snapshot avant, `setCheats()`, rollback complet sur exception + événement `cheats.apply_failed`. L'état 'applied' n'est engagé qu'après succès. `toggle()`, bouton "Je confirme", restauration explicite, choix d'édition et `loadCheats` passent tous par cette transaction.
+
+### Docs
+- README-FR.md : "66/66 JS + 8/8 Python" (était "48/48 + 3/3").
+
+**Tests** : 77/77 JS + 8/8 Python PASS — dont 8 nouveaux tests comportementaux `cheat-state-machine.test.mjs` (moteur instrumenté, chemins d'erreur, régression P0 confirmer-après-désactiver).
+
+---
+
 ## RC-1.6 (Méo, 1er nov. ~04h30) — Correctifs audit GPT RC-1.5
 **Base** : RC-1.5 + correctifs de l'audit GPT `AUDIT_GPT_EMUPERSO_PS1_RC-1.5_REGIONS_RESTAURATION.html`
 

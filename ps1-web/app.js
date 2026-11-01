@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 // Version de l'application — mettre à jour à chaque release
-const APP_VERSION = 'RC-1.6';
+const APP_VERSION = 'RC-1.7';
 import { prepareDisc } from './disc-file.mjs';
 import { SaveStore, makeStateEnvelope } from './save-store.mjs';
 import { packStateBundle, unpackStateBundle } from './state-bundle.mjs';
@@ -33,7 +33,34 @@ const codeValid = code => {
   const multi = new RegExp(`^${pair}( ${pair})*$`, 'i');
   return l.length > 0 && l.length <= 64 && l.every(x => multi.test(x.trim()));
 };
-const activeCheats = () => cheats.filter(c => c.on).map(({ name, code }) => ({ name, code, enabled: true }));
+// État unique par cheat (audit GPT RC-1.6) : 'off' | 'pending' | 'applied'
+// 'off' = désactivé, 'pending' = en attente de confirmation (NON injecté),
+// 'applied' = injecté avec succès dans le moteur. Un seul état à la fois,
+// jamais deux indicateurs qui divergent.
+const appliedCheats = () => cheats.filter(c => c.state === 'applied');
+const pendingCheats = () => cheats.filter(c => c.state === 'pending');
+const activeCheats = () => appliedCheats().map(({ name, code }) => ({ name, code, enabled: true }));
+
+/**
+ * Applique une mutation d'état de façon atomique (audit GPT RC-1.6 P1).
+ * mutate() propose les nouveaux états ; le moteur reçoit la liste 'applied'.
+ * Si setCheats() échoue, les états sont restaurés (retour arrière) et
+ * l'erreur est propagée — aucun cheat ne reste marqué actif à tort.
+ */
+async function atomicCheatUpdate(mutate) {
+  const snapshot = cheats.map(c => c.state);
+  mutate();
+  const list = appliedCheats().map(c => ({ name: c.name, code: lines(c.code).join('+') }));
+  try {
+    if (sessions.current) await sessions.current.api.setCheats(list);
+    event('cheats.applied', { count: list.length });
+  } catch (error) {
+    cheats.forEach((c, i) => { c.state = snapshot[i]; });
+    event('cheats.apply_failed', { message: String((error && error.message) || error) });
+    throw error;
+  }
+  return list.length;
+}
 function controls() {
   const on = !!sessions.current;
   $('choose').disabled = busy; $('launch').disabled = busy || !selected; $('launch').textContent = on ? 'Changer pour ce jeu' : 'Lancer';
@@ -90,7 +117,9 @@ async function computeRegionStateForCandidate(gameName, candidate) {
 function renderCheats() {
   const list = $('cheat-list'); list.replaceChildren();
   const imported = cheats.filter(c => c.source === 'catalogue' && !c.validated).length;
-  const nActive = cheats.filter(c => c.on).length;
+  // P1 (audit GPT RC-1.6) : un seul rendu affiche actifs ET en attente séparément.
+  const nApplied = appliedCheats().length;
+  const nPending = pendingCheats().length;
   // FIX 1: bouton de confirmation si décalage de région
   if (window._regionMismatch && !window._regionConfirmed) {
     const rm = window._regionMismatch;
@@ -106,37 +135,38 @@ function renderCheats() {
       : `Je confirme : activer les codes ${rm.catalogRegion} sur mon disque ${rm.gameRegion}`;
     // P1 (audit GPT RC-1.5) : le bouton "Je confirme" doit aussi appliquer les cheats en attente.
     // Avant : il masquait le panneau sans injecter les pending, qui restaient orphelins.
+    // P0/P1 (audit GPT RC-1.6) : confirmation atomique. Les 'pending' et les
+    // _pendingCheatRestore deviennent 'applied' en UNE transaction ; si le moteur
+    // échoue, tout revient à l'état précédent (aucun "actif" fantôme).
     btn.onclick = () => operation(async () => {
       window._regionConfirmed = true;
-      // Appliquer les cheats marqués 'pending' (en attente de confirmation)
-      let appliedCount = 0;
-      for (const c of cheats) {
-        if (c.pending && !c.incompatible) {
-          c.pending = false;
-          c.on = true;
-          appliedCount++;
-        }
-      }
-      // Aussi appliquer les _pendingCheatRestore s'il y en a
       const pendingRestore = window._pendingCheatRestore || [];
-      if (pendingRestore.length > 0) {
-        window._pendingCheatRestore = [];
-        for (const p of pendingRestore) {
-          const existing = cheats.find(c => c.name === p.name && c.code === p.code);
-          if (existing && !existing.incompatible && !existing.on) {
-            existing.pending = false;
-            existing.on = true;
-            appliedCount++;
-          }
-        }
-      }
-      if (appliedCount > 0 && sessions.current) {
-        const toApply = cheats.filter(c => c.on && !c.incompatible).map(c => ({ name: c.name, code: lines(c.code).join('+') }));
-        sessions.current.api.setCheats(toApply);
-        event('cheats.applied', { count: appliedCount, afterRegionConfirm: true });
-        say('cheat-info', `✅ Région confirmée. ${appliedCount} cheat(s) en attente appliqué(s).`, false);
-      } else {
+      // Rien en attente ? Pas d'appel moteur redondant.
+      if (!cheats.some(c => c.state === 'pending') && pendingRestore.length === 0) {
         say('cheat-info', 'Région confirmée. Vous pouvez maintenant cocher les codes.', false);
+        renderCheats();
+        return;
+      }
+      let newlyApplied = 0;
+      try {
+        await atomicCheatUpdate(() => {
+          for (const c of cheats) {
+            if (c.state === 'pending' && !c.incompatible) { c.state = 'applied'; newlyApplied++; }
+          }
+          for (const p of pendingRestore) {
+            const existing = cheats.find(c => c.name === p.name && c.code === p.code);
+            if (existing && !existing.incompatible && existing.state !== 'applied') {
+              existing.state = 'applied'; newlyApplied++;
+            }
+          }
+        });
+        window._pendingCheatRestore = [];
+        event('cheats.restored', { count: newlyApplied, afterRegionConfirm: true });
+        say('cheat-info', newlyApplied > 0
+          ? `✅ Région confirmée. ${newlyApplied} cheat(s) en attente appliqué(s).`
+          : 'Région confirmée. Vous pouvez maintenant cocher les codes.', false);
+      } catch (error) {
+        say('cheat-info', `⚠️ Le moteur a refusé l'application : les cheats restent en attente.`, true);
       }
       renderCheats();
     });
@@ -147,26 +177,28 @@ function renderCheats() {
       const btnRestore = document.createElement('button');
       btnRestore.style.cssText = 'margin-top:8px;background:#7a2a00;border-color:#f90;';
       btnRestore.textContent = `⚠️ Appliquer les ${pendingCount} cheat(s) restauré(s) malgré le décalage de région`;
+      // P1 (audit GPT RC-1.6) : restauration explicite atomique, état unique.
+      // Avant : on=true sans pending=false → les deux vrais simultanément.
       btnRestore.onclick = () => operation(async () => {
-        // L'utilisateur confirme explicitement : appliquer les pending
         window._regionConfirmed = true;
         const pending = window._pendingCheatRestore || [];
-        window._pendingCheatRestore = [];
         let appliedCount = 0;
-        for (const p of pending) {
-          const existing = cheats.find(c => c.name === p.name && c.code === p.code);
-          if (existing && !existing.incompatible) {
-            existing.on = true;
-            appliedCount++;
-          }
-        }
-        if (appliedCount > 0 && sessions.current) {
-          const toApply = cheats.filter(c => c.on && !c.incompatible).map(c => ({ name: c.name, code: lines(c.code).join('+') }));
-          sessions.current.api.setCheats(toApply);
+        try {
+          await atomicCheatUpdate(() => {
+            for (const p of pending) {
+              const existing = cheats.find(c => c.name === p.name && c.code === p.code);
+              if (existing && !existing.incompatible && existing.state !== 'applied') {
+                existing.state = 'applied'; appliedCount++;
+              }
+            }
+          });
+          window._pendingCheatRestore = [];
           event('cheats.restored', { count: appliedCount, afterExplicitConfirm: true });
-          say('cheat-info', `✅ ${appliedCount} cheat(s) restauré(s) appliqué(s) après votre confirmation explicite.`, false);
-        } else {
-          say('cheat-info', `⚠️ Aucun cheat restauré trouvé dans cette édition.`, true);
+          say('cheat-info', appliedCount > 0
+            ? `✅ ${appliedCount} cheat(s) restauré(s) appliqué(s) après votre confirmation explicite.`
+            : `⚠️ Aucun cheat restauré trouvé dans cette édition.`, appliedCount === 0);
+        } catch (error) {
+          say('cheat-info', `⚠️ Le moteur a refusé l'application : les cheats restent en attente.`, true);
         }
         renderCheats();
       });
@@ -174,16 +206,30 @@ function renderCheats() {
     }
     list.append(warn);
   }
-  // FIX 3: message fidèle à l'état réel
-  const msg = !sessions.current ? 'Aucun jeu chargé. Aucun cheat actif.'
-    : cheats.length ? `${cheats.length} code(s) pour ce jeu (${imported} importé(s) non validé(s) 📥).` + (nActive > 0 ? ` ${nActive} ACTIF(s) dans le moteur.` : ' Aucun actif.')
-    : 'Aucun code compatible trouvé pour ce jeu. Vous pouvez en ajouter un manuellement ci-dessous.';
-  say('cheat-info', msg, nActive > 0);
+  // FIX 3 (révisé audit GPT RC-1.6) : message fidèle à l'état réel du moteur.
+  // Un seul rendu : actifs, en attente et désactivés sont distingués.
+  const editionTag = window._cheatEditionLabel ? ` — ${window._cheatEditionLabel}` : '';
+  let msg;
+  if (!sessions.current) {
+    msg = 'Aucun jeu chargé. Aucun cheat actif.';
+  } else if (!cheats.length) {
+    msg = 'Aucun code compatible trouvé pour ce jeu. Vous pouvez en ajouter un manuellement ci-dessous.';
+  } else {
+    const parts = [`${cheats.length} code(s) pour ce jeu${editionTag} (${imported} importé(s) non validé(s) 📥).`];
+    if (nApplied > 0) parts.push(`${nApplied} ACTIF(s) dans le moteur.`);
+    if (nPending > 0) parts.push(`${nPending} EN ATTENTE de confirmation (non injectés).`);
+    if (nApplied === 0 && nPending === 0) parts.push('Aucun actif.');
+    msg = parts.join(' ');
+  }
+  say('cheat-info', msg, nApplied > 0 || nPending > 0);
   cheats.forEach((cheat, index) => {
-    const row = document.createElement('label'), box = document.createElement('input'); box.type = 'checkbox'; box.checked = !!cheat.on;
+    const row = document.createElement('label'), box = document.createElement('input'); box.type = 'checkbox';
+    // P1 (audit GPT RC-1.6) : coché = appliqué dans le moteur. En attente = décoché + ⏳.
+    box.checked = cheat.state === 'applied';
     box.onchange = () => operation(() => toggle(index, box.checked));
     const badge = cheat.source === 'catalogue' ? (cheat.validated ? ' ✅' : ' 📥') : '';
-    row.append(box, ` ${cheat.name} (${cheat.source}${badge})`); list.append(row);
+    const stateTag = cheat.state === 'pending' ? ' ⏳ en attente' : '';
+    row.append(box, ` ${cheat.name} (${cheat.source}${badge}${stateTag})`); list.append(row);
   });
   controls();
 }
@@ -237,11 +283,11 @@ function renderCheatCandidates(candidates) {
         };
       });
       const mine = ((await cheatDB.get(gameKey(meta)).catch(() => null)) ?? []).filter(c => codeValid(c.code)).map(c => ({ ...c, source: 'manuel' }));
-      cheats = [...known, ...mine].map(c => ({ ...c, on: false }));
+      cheats = [...known, ...mine].map(c => ({ ...c, state: 'off' }));
       for (const a of pending) {
         const existing = cheats.find(c => c.name === a.name && c.code === a.code);
-        if (existing) existing.on = true;
-        else cheats.push({ name: a.name, code: a.code, source: 'état', on: true });
+        if (existing) existing.state = 'pending';
+        else cheats.push({ name: a.name, code: a.code, source: 'état', state: 'pending' });
       }
       // Appliquer les cheats différés qui correspondent à cette édition
       // B02 : vérifier aussi _pendingCheatRestore (nouveau) en plus de _deferredCheatList (ancien)
@@ -253,8 +299,9 @@ function renderCheatCandidates(candidates) {
       const pendingRestore = window._pendingCheatRestore || [];
       window._pendingCheatRestore = [];
       const allDeferred = [...deferred, ...pendingRestore];
+      // P0 (audit GPT RC-1.6) : restauration après choix d'édition, atomique.
+      // État unique : 'pending' si région non sûre, 'applied' si sûre ET moteur OK.
       if (allDeferred.length > 0 && sessions.current) {
-        // P0: calculer la sécurité régionale pour cette édition choisie
         const { detectRegion: dr, detectRegions: drs, regionsCompatible: rc } = await import('./cheat-catalog-psx.mjs');
         const gRegion = meta ? dr(meta.name) : null;
         const cRegions = drs(cand.catalogTitle) || (dr(cand.catalogTitle) ? [dr(cand.catalogTitle)] : null);
@@ -262,81 +309,80 @@ function renderCheatCandidates(candidates) {
         const rUncertain = !gRegion && cRegions;
         const rSafe = (!rMismatch && !rUncertain) || window._regionConfirmed === true;
         if (!rSafe) {
-          // PAS SÛR : remettre en attente, afficher l'avertissement régional
-          // P0 (audit GPT RC-1.5) : NE PAS marquer on=true pour les cheats bloqués.
-          // Utiliser un état 'pending' distinct pour éviter l'affichage trompeur "ACTIF".
           window._pendingCheatRestore = allDeferred;
           window._regionMismatch = rUncertain
             ? { gameRegion: 'inconnue', catalogRegion: dr(cand.catalogTitle), catalogTitle: cand.catalogTitle, uncertain: true }
             : { gameRegion: gRegion, catalogRegion: dr(cand.catalogTitle), catalogTitle: cand.catalogTitle };
-          // Marquer comme 'pending' (en attente), PAS comme 'on' (actif)
-          // L'UI affichera "EN ATTENTE" au lieu de "ACTIF"
           for (const p of allDeferred) {
             const existing = cheats.find(c => c.name === p.name && c.code === p.code);
-            if (existing && !existing.incompatible) {
-              existing.pending = true;  // En attente de confirmation, pas actif
-              existing.on = false;      // Explicitement pas actif
-            }
+            if (existing && !existing.incompatible) existing.state = 'pending';
           }
           console.warn('P0: édition choisie mais région non confirmée — cheats en attente, setCheats() BLOQUÉ.');
         } else {
-          // SÛR : marquer et injecter
-          for (const p of allDeferred) {
-            const existing = cheats.find(c => c.name === p.name && c.code === p.code);
-            if (existing && !existing.incompatible) existing.on = true;
-          }
-          const toApply = cheats.filter(c => c.on && !c.incompatible).map(c => ({ name: c.name, code: lines(c.code).join('+') }));
-          if (toApply.length > 0) {
-            sessions.current.api.setCheats(toApply);
-            event('cheats.applied', { count: toApply.length, deferred: true, afterEditionChoice: true, regionSafe: true });
+          try {
+            await atomicCheatUpdate(() => {
+              for (const p of allDeferred) {
+                const existing = cheats.find(c => c.name === p.name && c.code === p.code);
+                if (existing && !existing.incompatible) existing.state = 'applied';
+              }
+            });
+            event('cheats.applied', { deferred: true, afterEditionChoice: true, regionSafe: true });
+          } catch (error) {
+            console.warn('Échec moteur après choix édition : états restaurés.', error.message);
           }
         }
       }
-      const nActive = cheats.filter(c => c.on).length;
-      const nPending = cheats.filter(c => c.pending).length;
-      // P0 (audit GPT RC-1.5) : distinguer ACTIF (injecté) vs EN ATTENTE (bloqué)
-      let statusMsg = ' Tous désactivés par défaut.';
-      if (nActive > 0) {
-        statusMsg = ` ${nActive} restauré(s) ACTIF(s).`;
-      } else if (nPending > 0) {
-        statusMsg = ` ${nPending} en ATTENTE de confirmation régionale (non injectés).`;
-      }
-      say('cheat-info', `${cheats.length} code(s) — ${cand.catalogTitle}.` + statusMsg, nActive > 0 || nPending > 0);
+      // P1 (audit GPT RC-1.6) : un seul rendu. L'édition est mémorisée pour l'affichage.
+      window._cheatEditionLabel = cand.catalogTitle;
       renderCheats();
     });
     list.append(btn);
   });
   controls();
 }
-function applyCheats() { sessions.current.api.setCheats(activeCheats().map(c => ({ name: c.name, code: lines(c.code).join('+') }))); event('cheats.applied', { count: activeCheats().length }); }
+// Synchronise le moteur avec l'état 'applied' actuel (atomique, avec retour arrière).
+function applyCheats() { return atomicCheatUpdate(() => {}); }
 async function toggle(index, on) {
-  if (on && cheats[index].incompatible) {
+  const cheat = cheats[index];
+  if (on && cheat.incompatible) {
     say('save-note', 'Code incompatible : ne peut pas être activé (format non supporté par PCSX ReARMed).', true);
     renderCheats();
     return;
   }
+  if (!on) {
+    // Désactiver : toujours permis, atomique avec retour arrière sur échec moteur.
+    try {
+      await atomicCheatUpdate(() => { cheat.state = 'off'; });
+    } catch (error) {
+      say('save-note', '⚠️ Le moteur a refusé la mise à jour : état restauré.', true);
+    }
+    renderCheats();
+    say('save-note', `Cheats actifs : ${appliedCheats().length}. Un cheat peut modifier la partie de façon durable ; désactiver un code n’annule pas toujours ses effets.`);
+    return;
+  }
+  // on = true : intention d'activer
   // P0 (audit GPT RC-1.5) : le verrou régional centralisé s'applique à TOUS les chemins.
-  // Avant : seulement si needsRegionConfirm était défini sur le cheat.
-  // Maintenant : vérifie l'état régional global, pas juste le flag du cheat.
-  if (on && !isRegionActivationAllowed()) {
+  if (!isRegionActivationAllowed() || (cheat.needsRegionConfirm && !window._regionConfirmed)) {
+    // Région non confirmée : marquer EN ATTENTE, sans appel moteur.
+    cheat.state = 'pending';
     say('save-note', '⚠️ Région différente : confirmez ci-dessous que ces codes correspondent à votre disque avant de les activer.', true);
     renderCheats();
     return;
   }
-  // Ancien check par cheat (gardé pour compatibilité)
-  if (on && cheats[index].needsRegionConfirm && !window._regionConfirmed) {
-    say('save-note', '⚠️ Région différente : confirmez ci-dessous que ces codes correspondent à votre disque avant de les activer.', true);
-    renderCheats();
-    return;
+  // Région OK : proposer 'applied', n'engager qu'après succès moteur.
+  try {
+    await atomicCheatUpdate(() => { cheat.state = 'applied'; });
+  } catch (error) {
+    say('save-note', "⚠️ Le moteur a refusé l'application : le cheat reste désactivé.", true);
   }
-  cheats[index].on = on;
-  try { applyCheats(); } catch (error) { cheats[index].on = !on; renderCheats(); throw error; }
-  renderCheats(); say('save-note', `Cheats actifs : ${activeCheats().length}. Un cheat peut modifier la partie de façon durable ; désactiver un code n’annule pas toujours ses effets.`);
+  renderCheats();
+  say('save-note', `Cheats actifs : ${appliedCheats().length}. Un cheat peut modifier la partie de façon durable ; désactiver un code n’annule pas toujours ses effets.`);
 }
 async function loadCheats(m, activeList = []) {
   window._regionConfirmed = false;
   window._regionMismatch = null;
   window._pendingActiveList = null;
+  window._cheatEditionLabel = null;
   const { detectRegion, detectRegions, regionsCompatible, detectMod } = await import('./cheat-catalog-psx.mjs');
   // PRIORITÉ 0 : mémoire locale du choix d'édition (par empreinte SHA-256 du fichier)
   // Honnêteté (B03) : c'est une mémorisation du choix précédent, PAS une lecture du serial interne.
@@ -359,7 +405,7 @@ async function loadCheats(m, activeList = []) {
   if (!result) {
     result = await findCheatsForGame(m.serial, m.name).catch(err => ({ status: 'load_error', cheats: [], candidates: [], error: err.message }));
   }
-  const mine = ((await cheatDB.get(gameKey(m)).catch(() => null)) ?? []).filter(c => codeValid(c.code)).map(c => ({ ...c, source: 'manuel', on: false }));
+  const mine = ((await cheatDB.get(gameKey(m)).catch(() => null)) ?? []).filter(c => codeValid(c.code)).map(c => ({ ...c, source: 'manuel', state: 'off' }));
   if (!result || !['match', 'ambiguous', 'mod_candidate', 'no_match', 'load_error'].includes(result.status)) {
     throw new Error('Réponse du catalogue de cheats invalide');
   }
@@ -368,8 +414,8 @@ async function loadCheats(m, activeList = []) {
     cheats = mine;
     for (const a of activeList) {
       const existing = cheats.find(c => c.name === a.name && c.code === a.code);
-      if (existing) existing.on = true;
-      else cheats.push({ name: a.name, code: a.code, source: 'état', on: true });
+      if (existing) existing.state = 'pending';
+      else cheats.push({ name: a.name, code: a.code, source: 'état', state: 'pending' });
     }
     window._pendingActiveList = activeList;
     renderCheats(); // D'ABORD : codes manuels/restaurés
@@ -405,11 +451,11 @@ async function loadCheats(m, activeList = []) {
         const known = cand.codes.filter(c => c && typeof c.code === 'string').map((c) => ({
           name: (c.name || 'Code sans nom') + ' ⚠️ (NON VÉRIFIÉ pour ce mod)',
           code: c.code, source: 'catalogue', validated: false,
-          incompatible: false, on: false,
+          incompatible: false, state: 'off',
           needsRegionConfirm: true, // Toujours exiger confirmation pour un mod
           isModCandidate: true,
         }));
-        cheats = [...known, ...mine.map(c => ({ ...c, on: false }))];
+        cheats = [...known, ...mine.map(c => ({ ...c, state: 'off' }))];
         window._regionMismatch = { gameRegion: 'mod', catalogRegion: 'original', catalogTitle: cand.catalogTitle, isMod: true };
         window._regionConfirmed = false;
         renderCheats();
@@ -423,8 +469,8 @@ async function loadCheats(m, activeList = []) {
     cheats = mine;
     for (const a of activeList) {
       const existing = cheats.find(c => c.name === a.name && c.code === a.code);
-      if (existing) existing.on = true;
-      else cheats.push({ name: a.name, code: a.code, source: 'état', on: true });
+      if (existing) existing.state = 'pending';
+      else cheats.push({ name: a.name, code: a.code, source: 'état', state: 'pending' });
     }
     renderCheats();
     say('cheat-info', `Impossible de charger les cheats : ${result.error || 'erreur inconnue'}`, true);
@@ -451,7 +497,7 @@ async function loadCheats(m, activeList = []) {
     return {
       name: displayName + (isXploder ? ' ⚠️ (Xploder: non supporté)' : (!valid ? ' ⚠️ (incompatible)' : '') + (regionMismatch ? ` ⚠️ (région ${catalogRegion}, votre disque: ${gameRegion})` : '') + (regionUncertain ? ` ⚠️ (région du disque inconnue)` : '')),
       code: c.code, source: 'catalogue', validated: false,
-      incompatible: isXploder || !valid, on: false,
+      incompatible: isXploder || !valid, state: 'off',
       regionMismatch: !!regionMismatch,
       regionUncertain: !!regionUncertain,
       needsRegionConfirm: needsConfirmation,
@@ -460,8 +506,8 @@ async function loadCheats(m, activeList = []) {
   cheats = [...known, ...mine];
   for (const a of activeList) {
     const existing = cheats.find(c => c.name === a.name && c.code === a.code);
-    if (existing) existing.on = true;
-    else cheats.push({ name: a.name, code: a.code, source: 'état', on: true });
+    if (existing) existing.state = 'pending';
+    else cheats.push({ name: a.name, code: a.code, source: 'état', state: 'pending' });
   }
   // FIX 1: si décalage de région, exiger confirmation avant activation
   // R2: si région incertaine, exiger aussi confirmation
@@ -487,28 +533,38 @@ async function loadCheats(m, activeList = []) {
   let restoredApplied = false; // Pour sync UI : vrai si on a vraiment injecté
   if (pendingRestore.length > 0 && sessions.current) {
     if (isSafe) {
-      // Appliquer : marquer les cheats correspondants comme "on" et les envoyer au moteur
+      // P1 (audit GPT RC-1.6) : restauration atomique. 'applied' seulement après succès moteur.
       let appliedCount = 0;
-      for (const p of pendingRestore) {
-        const existing = cheats.find(c => c.name === p.name && c.code === p.code);
-        if (existing && !existing.incompatible) {
-          existing.on = true;
-          appliedCount++;
+      try {
+        await atomicCheatUpdate(() => {
+          for (const p of pendingRestore) {
+            const existing = cheats.find(c => c.name === p.name && c.code === p.code);
+            if (existing && !existing.incompatible && existing.state !== 'applied') {
+              existing.state = 'applied'; appliedCount++;
+            }
+          }
+        });
+        if (appliedCount > 0) {
+          event('cheats.restored', { count: appliedCount, safe: true });
+          restoredApplied = true;
+          window._cheatEditionLabel = result.catalogTitle;
+          renderCheats();
+          say('cheat-info', `✅ ${appliedCount} cheat(s) restauré(s) et appliqué(s) — édition confirmée (${result.catalogTitle}).`, false);
+        } else {
+          say('cheat-info', `⚠️ ${pendingRestore.length} cheat(s) restauré(s) non trouvés dans le catalogue de cette édition. Aucune injection.`, true);
         }
-      }
-      if (appliedCount > 0) {
-        const toApply = cheats.filter(c => c.on && !c.incompatible).map(c => ({ name: c.name, code: lines(c.code).join('+') }));
-        sessions.current.api.setCheats(toApply);
-        event('cheats.restored', { count: appliedCount, safe: true });
-        restoredApplied = true; // B02: marquer l'injection réelle pour sync UI
-        renderCheats();
-        say('cheat-info', `✅ ${appliedCount} cheat(s) restauré(s) et appliqué(s) — édition confirmée (${result.catalogTitle}).`, false);
-      } else {
-        say('cheat-info', `⚠️ ${pendingRestore.length} cheat(s) restauré(s) non trouvés dans le catalogue de cette édition. Aucune injection.`, true);
+      } catch (error) {
+        window._pendingCheatRestore = pendingRestore;
+        say('cheat-info', `⚠️ Le moteur a refusé la restauration : cheats remis en attente.`, true);
       }
     } else {
       // Non sûr : garder en attente, l'utilisateur doit confirmer l'édition
+      // P1 (audit GPT RC-1.6) : marquer 'pending' pour affichage, pas 'on'.
       window._pendingCheatRestore = pendingRestore; // Remettre en attente
+      for (const p of pendingRestore) {
+        const existing = cheats.find(c => c.name === p.name && c.code === p.code);
+        if (existing && !existing.incompatible && existing.state === 'off') existing.state = 'pending';
+      }
       const reason = result.status === 'ambiguous' ? 'édition ambiguë' :
                      result.status === 'no_match' ? 'aucune édition trouvée' :
                      result.status === 'load_error' ? 'catalogue indisponible' :
@@ -607,7 +663,21 @@ $('state-save').onclick = () => operation(async () => {
 });
 $('state-load').onclick = () => operation(() => loadState(false));
 $('state-previous').onclick = () => operation(() => loadState(true));
-$('cheat-off').onclick = () => operation(async () => { cheats.forEach(c => { c.on = false; }); applyCheats(); renderCheats(); });
+$('cheat-off').onclick = () => operation(async () => {
+  // P0 (audit GPT RC-1.6) : "tout désactiver" purge aussi les intentions différées.
+  // Avant : pending et _pendingCheatRestore survivaient, une confirmation ultérieure
+  // pouvait réactiver des codes que l'utilisateur pensait neutralisés.
+  window._pendingCheatRestore = [];
+  window._deferredCheatList = [];
+  window._pendingActiveList = null;
+  try {
+    await atomicCheatUpdate(() => { cheats.forEach(c => { c.state = 'off'; }); });
+    say('cheat-info', 'Tous les cheats désactivés, y compris les restaurations en attente.', false);
+  } catch (error) {
+    say('cheat-info', '⚠️ Le moteur a refusé la désactivation : états restaurés.', true);
+  }
+  renderCheats();
+});
 $('serial-apply').onclick = () => operation(async () => {
   const input = $('serial-input').value.trim().toUpperCase().replace(/\s+/g, '');
   if (!/^[A-Z]{4}-\d{5}$/.test(input)) {
@@ -653,10 +723,10 @@ $('serial-apply').onclick = () => operation(async () => {
     return {
       name: displayName + (isXploder ? ' ⚠️ (Xploder: non supporté)' : (!valid ? ' ⚠️ (incompatible)' : '')),
       code: c.code, source: 'catalogue', validated: false,
-      incompatible: isXploder || !valid, on: false,
+      incompatible: isXploder || !valid, state: 'off',
     };
   });
-  const mine = ((await cheatDB.get(gameKey(meta)).catch(() => null)) ?? []).filter(c => codeValid(c.code)).map(c => ({ ...c, source: 'manuel', on: false }));
+  const mine = ((await cheatDB.get(gameKey(meta)).catch(() => null)) ?? []).filter(c => codeValid(c.code)).map(c => ({ ...c, source: 'manuel', state: 'off' }));
   cheats = [...known, ...mine];
   renderCheats();
   say('cheat-info', `✅ Jeu identifié : ${catalogTitle} (${input}). ${cheats.length} code(s), tous désactivés. Mémorisé pour la prochaine fois.`, false);
@@ -666,7 +736,7 @@ $('cheat-add').onclick = () => operation(async () => {
   if (!name || name.length > 120) throw new Error('Donnez un nom au code (120 caractères au plus).');
   if (!codeValid(code)) throw new Error('Code invalide : une ligne par instruction, au format « 8001AB00 0001 » (GameShark).');
   await cheatDB.set(gameKey(meta), [...cheats.filter(c => c.source === 'manuel').map(({ name, code }) => ({ name, code })), { name, code }]);
-  cheats.push({ name, code, source: 'manuel', on: false }); $('cheat-name').value = ''; $('cheat-code').value = ''; renderCheats(); say('save-note', 'Code ajouté pour ce jeu, désactivé.');
+  cheats.push({ name, code, source: 'manuel', state: 'off' }); $('cheat-name').value = ''; $('cheat-code').value = ''; renderCheats(); say('save-note', 'Code ajouté pour ce jeu, désactivé.');
 });
 $('export').onclick = () => {
   const blob = new Blob([JSON.stringify({ app: 'emuperso-ps1-web ' + APP_VERSION, tested: false, game: meta && { name: meta.name, size: meta.size, serial: meta.serial, sha256: meta.canonical_sha256 }, session: sessions.diagnostic(), events: records }, null, 1)], { type: 'application/json' });

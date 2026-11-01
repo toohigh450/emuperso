@@ -1,9 +1,9 @@
-# EMUPERSO PS1 — Release Candidate 1.6
+# EMUPERSO PS1 — Release Candidate 1.7
 
 
 **Statut** : Candidate pour audits finaux et essais Windows de Karl.
 **Date** : 1er novembre 2026
-**Tests automatisés** : 48/48 JS + 3/3 Python PASS
+**Tests automatisés** : 66/66 JS + 8/8 Python PASS
 **Essais terrain** : À faire par Karl sur Windows (Chrome + manette Xbox 360)
 
 > **Note d'honnêteté** : Les tests automatisés valident la logique, pas l'émulation réelle.
