@@ -1,5 +1,14 @@
 # CHANGELOG — EMUPERSO PS1
 
+## RC-1.15-audit-candidate (contre-audits de RC-1.14)
+
+- R1 reproduit : refus mémoire après fermeture du jeu précédent. Contrôle conservateur déplacé avant capture/fermeture et répété après la confirmation ; aucun pari sur la récupération mémoire future.
+- Dialogue d’archive : conséquences d’un échec après fermeture précisées. Échecs de préparation/démarrage signalant explicitement l’ancienne session fermée et les sauvegardes conservées.
+- R2 : métriques de tas et nombres d’octets avant/après la vraie décompression du jeu, sans annoncer de borne ni de mesure de pic. Fichiers vendor inchangés.
+- Matrice régionale étendue par tests, sans assouplir le parseur ; données 32 bits toujours rejetées. Nouveau harnais Chromium pour refus mémoire, ZIP synthétique et traces des codes composés.
+- Captures ajoutées aux essais de sauvegardes après redémarrage du navigateur. Nouveaux rapports et preuves conservés séparément des sources publiques.
+- Aucune fusion main, publication distante, release ni modification du QG privé.
+
 ## RC-1.14-claude-codex (intégration sur RC-1.13-claude.2)
 
 - Fonctions de chargement, archives et présentation des cheats de Claude conservées ; fond d’écran rétabli.

@@ -1,4 +1,10 @@
-# EMUPERSO PS1 — RC-1.14-claude-codex
+# EMUPERSO PS1 — RC-1.15-audit-candidate
+
+Candidate locale issue des contre-audits de RC-1.14 : voir `docs/CANDIDATE-RC1.15.md`.
+Le refus mémoire d’une archive conserve le jeu en cours. Un échec après fermeture
+explicitement acceptée demeure irrécupérable ; les sauvegardes enregistrées restent conservées.
+Les sections de versions anciennes ci-dessous décrivent l’historique, pas une
+authentification actuelle d’édition : nom, région et série restent des indices.
 
 
 **Statut** : Candidate pour audits finaux et essais Windows de Karl.

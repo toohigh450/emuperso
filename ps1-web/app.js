@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 // Version de l'application — mettre à jour à chaque release
-const APP_VERSION = 'RC-1.14-claude-codex';
+const APP_VERSION = 'RC-1.15-audit-candidate';
 import { prepareDisc } from './disc-file.mjs';
 import { SaveStore, makeStateEnvelope } from './save-store.mjs';
 import { packStateBundle, unpackStateBundle } from './state-bundle.mjs';
@@ -11,7 +11,7 @@ import { findCheatsForGame, catalogMeta, loadCatalog, detectRegion, detectRegion
 import { createCheatController, codeValid, gameKey } from './cheat-controller.mjs';
 const $ = id => document.getElementById(id), vault = new SaveStore('emuperso-real-saves-v1-ps1'), records = [];
 let selected = null, busy = false, meta = null, preparing = null, lastPrep = null;
-// Mesuré dans Chromium 152 (RAR de 428 à 582 Mio) : pic du tas ≈ 3,8 à 4,2 × la taille de l'archive.
+// Heuristique héritée de Claude ; ni borne de décompression, ni garantie mémoire.
 const ARCHIVE_MEMORY_FACTOR = 4.5, isArchiveName = name => /\.(rar|zip|7z)$/i.test(String(name ?? ''));
 const say = (id, text, error = false) => { $(id).textContent = text; $(id).classList.toggle('error', error); };
 function event(type, data = {}) { records.push({ utc: new Date().toISOString(), type, data }); if (records.length > 500) records.shift(); $('log').textContent = JSON.stringify(records.slice(-80), null, 1); }
@@ -149,43 +149,61 @@ function requireCaptureSafe() {
     throw new Error('Capture refusée : moteur incertain. Recréez une session saine ; les sauvegardes existantes sont conservées.');
   }
 }
+function checkArchiveMemory(prepared, stage) {
+  const m = globalThis.performance?.memory, need = ARCHIVE_MEMORY_FACTOR * prepared.metadata.size;
+  const available = !!m && Number.isFinite(m.jsHeapSizeLimit) && m.jsHeapSizeLimit > 0 && Number.isFinite(m.usedJSHeapSize) && m.usedJSHeapSize >= 0;
+  const free = available ? 0.9 * m.jsHeapSizeLimit - m.usedJSHeapSize : null;
+  event('archive.memory.check', { stage, available, estimator_only: true, compressed_bytes: prepared.metadata.size,
+    need_mib: +mib(need), free_mib: available ? +mib(free) : null, session_retained: !!sessions.current, ...memory() });
+  if (available && need > free) {
+    const error = new Error(`Mémoire de l’onglet insuffisante pour décompresser cette archive (estimation indicative ${mib(need)} Mio, disponible ${mib(Math.max(0, free))} Mio). `
+      + (sessions.current ? 'Lancement refusé avant fermeture : le jeu en cours reste ouvert. Enregistrez votre partie avant de fermer ou recharger la page.' : 'Rechargez la page (F5) puis relancez : vos sauvegardes sont conservées.'));
+    error.code = 'E_ARCHIVE_MEMORY'; throw error;
+  }
+}
 async function launch(prepared, { state = null, battery, cheatList = [], input, recover = false } = {}) {
   if (recover && ctl.view().engineSync !== 'unknown') throw new Error('Aucune récupération de moteur incertain à effectuer.');
+  const archive = isArchiveName(prepared.metadata.name);
+  // Refus conservateur AVANT capture, confirmation et fermeture. On ne parie pas
+  // sur la mémoire que le ramasse-miettes pourrait libérer après destruction du jeu.
+  if (archive) checkArchiveMemory(prepared, 'preflight');
   if (sessions.current && !recover) {
     try { await saveBattery(false); }
     catch (error) { event('battery.save.failed', { message: error.message }); throw new Error('Changement de jeu annulé : sauvegarde native impossible. La session reste ouverte. ' + error.message); }
   }
-  // Archives : le moteur les décompresse en mémoire (mesuré : ~4 × la taille de l'archive). Garder
-  // l'ancien jeu ouvert pendant le remplacement a porté l'onglet à 3,8 Gio sur 4,1 : on le ferme
-  // d'abord, avec accord, et on refuse plutôt que de risquer un plantage de l'onglet.
-  if (isArchiveName(prepared.metadata.name)) {
+  // Archives : après précontrôle conservateur, on ferme l'ancien jeu avec accord
+  // pour éviter de maintenir deux moteurs pendant la décompression.
+  let archiveClosed = false;
+  if (archive) {
     if (sessions.current) {
-      if (!recover && !confirm('Ce jeu est une archive : le moteur la décompresse en mémoire (environ 4 fois sa taille). Pour ne pas saturer l’onglet, le jeu en cours sera fermé AVANT le lancement. Sa carte mémoire vient d’être enregistrée ; une partie non sauvegardée sera perdue. Continuer ?'))
+      if (!recover && !confirm('Ce jeu est une archive : sa décompression peut dépasser l’estimation mémoire. Utilisez uniquement une archive de confiance. Le jeu en cours sera fermé AVANT le lancement. Sa carte mémoire vient d’être enregistrée ; la progression non enregistrée sera perdue. En cas d’échec du nouveau jeu, l’ancienne session ne pourra pas être rétablie. Continuer ?'))
         throw new Error('Lancement annulé : le jeu en cours reste ouvert.');
+      checkArchiveMemory(prepared, 'before-close');
       const closing = meta?.name ?? null;
       await sessions.close(); ctl.endSession(); meta = null; $('current').textContent = 'Aucun';
-      event('session.closed.for_archive', { closed: closing, next: prepared.metadata.name });
-    }
-    const m = globalThis.performance?.memory;
-    if (m?.jsHeapSizeLimit) {
-      const need = ARCHIVE_MEMORY_FACTOR * prepared.metadata.size, freeNow = () => 0.9 * m.jsHeapSizeLimit - m.usedJSHeapSize;
-      // La mémoire du jeu fermé n'est récupérée qu'au passage du ramasse-miettes : on lui laisse 3 s.
-      for (let i = 0; i < 12 && need > freeNow(); i++) await new Promise(r => setTimeout(r, 250));
-      const free = freeNow();
-      event('archive.memory.check', { need_mib: +mib(need), free_mib: +mib(free) });
-      if (need > free) throw new Error(`Mémoire de l’onglet insuffisante pour décompresser cette archive (estimation indicative ${mib(need)} Mio, disponible ${mib(Math.max(0, free))} Mio). Rechargez la page (F5) puis relancez : vos sauvegardes sont conservées.`);
+      archiveClosed = true;
+      event('session.closed.for_archive', { closed: closing, next: prepared.metadata.name, ...memory() });
     }
   }
   if (recover) event('session.recovery.requested', { unsafe_capture_skipped: true });
-  const config = input ?? normalizeInput(await inputDB.get(gameKey(prepared.metadata)).catch(() => null)),
-    candidate = await sessions.prepare(prepared, config);
+  let candidate;
   try {
+    const config = input ?? normalizeInput(await inputDB.get(gameKey(prepared.metadata)).catch(() => null));
+    candidate = await sessions.prepare(prepared, config);
     const stored = battery === undefined ? await optionalLoad(candidate.batteryIdentity, 1, 'battery') : null;
     say('status', state ? 'Restauration dans une session neuve…' : 'Démarrage du jeu…');
     // B02 : aucune réinjection de cheats au démarrage. Les cheats restaurés (cheatList) sont confiés
     // au contrôleur, qui ne les applique qu'après validation de l'édition et de la région.
     await sessions.start(candidate, { battery: battery === undefined ? stored?.bytes ?? null : battery, state, cheats: [] });
-  } catch (error) { if (candidate.frame.isConnected && sessions.current !== candidate) await sessions.dispose(candidate); throw error; }
+  } catch (error) {
+    if (candidate?.frame.isConnected && sessions.current !== candidate) await sessions.dispose(candidate);
+    if (archiveClosed) {
+      event('archive.launch.failed.after_close', { message: error.message, ...memory() });
+      const failure = new Error('Échec du lancement de l’archive. Le jeu précédent a déjà été fermé et ne peut pas être rétabli ; ses sauvegardes enregistrées sont conservées. ' + error.message);
+      failure.code = error.code; throw failure;
+    }
+    throw error;
+  }
   meta = prepared.metadata; selected = null; show(meta); $('current').textContent = meta.name; $('d-engine').textContent = 'Moteur lancé — fonctionnement non validé par un test réel';
   await ctl.startSession(meta, cheatList); await refreshSlots();
   const savedProfile = (candidate.input && candidate.input._profile) || DEFAULT_PROFILE_ID;

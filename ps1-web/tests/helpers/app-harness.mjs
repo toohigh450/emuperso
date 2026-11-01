@@ -119,11 +119,12 @@ export async function makeHarness({ appPath = 'app.js', catalogFile = 'data/psx-
   class FakeSessionController {
     constructor() { this.current = null; this.candidate = null; }
     async prepare(prepared) {
+      if (h.nextPrepareError) throw h.nextPrepareError;
       const engine = createFakeEngine(); if (h.nextEngineSetup) h.nextEngineSetup(engine);
       h.engines.push(engine);
       return { id: h.engines.length, frame: { isConnected: true }, api: engine, engine, identity: { game: prepared.metadata.name }, batteryIdentity: { game: prepared.metadata.name }, input: { analog: 'off', stickToDpad: false, deadzone: 0.2, native: false }, prepared };
     }
-    async start(candidate) { this.current = candidate; h.engine = candidate.engine; }
+    async start(candidate) { if (h.nextStartError) throw h.nextStartError; this.current = candidate; h.engine = candidate.engine; }
     async dispose() {}
     async close() { h.closed = (h.closed ?? 0) + 1; this.current = null; h.engine = null; }
     diagnostic() { return {}; }
@@ -152,7 +153,7 @@ export async function makeHarness({ appPath = 'app.js', catalogFile = 'data/psx-
     .replace(/await import\('(\.\/[^']+)'\)/g, "__mods['$1']");
   const fn = new AsyncFunction('document', 'window', 'indexedDB', 'confirm', '__mods', 'location', 'console', source);
   const quietConsole = { ...console, warn: () => {}, log: () => {} };
-  await fn(document, win, idb, msg => { confirms.push(msg); return h.answerConfirm; }, mods, { search: '' }, quietConsole);
+  await fn(document, win, idb, msg => { confirms.push(msg); h.onConfirm?.(); return h.answerConfirm; }, mods, { search: '' }, quietConsole);
 
   h.window = win;
   h.disc = (name, { serial = null, sha = null, size = 1000 } = {}) => {

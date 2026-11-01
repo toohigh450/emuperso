@@ -74,6 +74,7 @@ try:
     return refused&&Array.from(loaded.bytes).join(',')==='1,2,3';
   }""")
   result['slot_before_close']=page.locator('#slot-info').inner_text()
+  page.screenshot(path=str(OUT/'storage-before-close.png'))
   context.close()
   # Same profile + same origin, new Chromium process.
   context,page=open_context(p)
@@ -85,6 +86,7 @@ try:
   result['restart_state_note']=page.locator('#save-note').inner_text()
   result['restart_guest_bytes']=frame(page).evaluate('offset=>Array.from(window.EJS_emulator.gameManager.Module.HEAPU8.slice(offset,offset+2))',restart_offset)
   result['restart_state_marker']=result['fresh_boot_guest_bytes']==[0x68,0x24] and result['restart_guest_bytes']==[0x34,0x12]
+  page.screenshot(path=str(OUT/'storage-after-restart.png'))
   other=bytearray(fixture.read_bytes());other[16*2048+40]=ord('B')
   result['other_game_launch']=launch(page,{'name':'synthetic-other.iso','mimeType':'application/octet-stream','buffer':bytes(other)})
   result['other_game_slot']=page.locator('#slot-info').inner_text()
@@ -97,4 +99,4 @@ finally:
 print(json.dumps({k:v for k,v in result.items() if not k.endswith('_events')},ensure_ascii=False,indent=2))
 
 checks=[result.get('state_marker_restored'),result.get('restart_state_marker'),result.get('storage_abort_preserves_previous'),result.get('invalid_frame_count')==1,result.get('invalid_retained_game')=='synthetic-demo.iso',result.get('other_game_frame_count')==1,'vide' in result.get('other_game_slot',''),result.get('battery_before')==result.get('battery_after_restart')]
-if result.get('failure') or not all(checks):sys.exit(1)
+if result.get('failure') or result['errors'] or not all(checks):sys.exit(1)

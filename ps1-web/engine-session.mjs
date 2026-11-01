@@ -150,6 +150,29 @@ async function start(config, callback) {
   notify = callback; sessionId = config.sessionId;
   window.EJS_DEBUG_XX = true;
   for (const name of ['emulator.js', 'nipplejs.js', 'shaders.js', 'storage.js', 'gamepad.js', 'GameManager.js', 'socket.io.min.js', 'compression.js']) await loadScript(name);
+  // Observer la vraie décompression du JEU, pas celle du cœur. Les fichiers vendor
+  // restent inchangés et vérifiables par le lock. Ces mesures ne bornent pas le pic.
+  const originalCompression = window.EmulatorJS.prototype.checkCompression;
+  window.EmulatorJS.prototype.checkCompression = async function(data, message, fileCallback) {
+    if (!/\.(rar|zip|7z)$/i.test(config.file?.name ?? '') || message !== this.localization('Decompress Game Data', false))
+      return originalCompression.call(this, data, message, fileCallback);
+    const started = performance.now(); let files = 0, expandedBytes = 0;
+    note('engine.archive.decompression.before', { compressed_bytes: data.byteLength, ...heap() });
+    const measuredCallback = (name, bytes) => {
+      files++; expandedBytes += bytes.byteLength;
+      return fileCallback(name, bytes);
+    };
+    try {
+      const result = await originalCompression.call(this, data, message, typeof fileCallback === 'function' ? measuredCallback : fileCallback);
+      if (typeof fileCallback !== 'function') for (const bytes of Object.values(result)) { files++; expandedBytes += bytes.byteLength; }
+      note('engine.archive.decompression.after', { compressed_bytes: data.byteLength, expanded_bytes: expandedBytes, files,
+        ms: Math.round(performance.now() - started), peak_measured: false, ...heap() });
+      return result;
+    } catch (error) {
+      note('engine.archive.decompression.failed', { message: String(error.message ?? error), files, expanded_bytes: expandedBytes, ...heap() });
+      throw error;
+    }
+  };
   const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = 'vendor/data/emulator.css'; document.head.appendChild(css);
   // Own adapter: keep the unmodified vendor files hash-verifiable. The engine's
   // automatic IDBFS writes are replaced by a session-local MEMFS directory.
@@ -228,7 +251,7 @@ async function start(config, callback) {
   const archive = /\.(rar|zip|7z)$/i.test(config.file?.name ?? '');
   const t0 = performance.now(), deadline = t0 + (archive ? 300000 : 45000);
   let lastText = '', lastNote = 0;
-  if (archive) note('engine.archive.start', { name: config.file.name, size: config.file.size });
+  if (archive) note('engine.archive.start', { name: config.file.name, size: config.file.size, ...heap() });
   while (!closed && (!emulator.started || !emulator.gameManager || emulator.gameManager.getFrameNum() < 5)) {
     if (startupFailure) throw new Error(startupFailure);
     if (performance.now() > deadline || emulator.failedToStart) throw new Error(archive
