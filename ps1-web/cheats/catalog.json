@@ -1,0 +1,1 @@
+{ "schema": "emuperso/ps1-cheat-catalog/v1", "note": "Catalogue vide : aucun code fourni. Format : games[SERIE] = [{ name, code }], code GameShark une ligne par instruction.", "games": {} }

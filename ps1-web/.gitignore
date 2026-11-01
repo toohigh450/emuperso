@@ -1,0 +1,20 @@
+# Dependances generees, jamais publiees
+vendor/
+cache/
+.python/
+__pycache__/
+*.pyc
+# Jeux, BIOS et sauvegardes de l utilisateur : prives
+*.iso
+*.bin
+*.img
+*.chd
+*.pbp
+*.cue
+*.zip
+*.sav
+*.srm
+*.mcr
+*.mcd
+*.state
+EMUPERSO-ps1-diagnostic*.json
