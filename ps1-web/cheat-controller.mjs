@@ -56,7 +56,12 @@ export function codeSupport(code, source = null) {
   const unknown = new Set();
   for (let i = 0; i < pairs.length; i++) {
     if (!PCSX_TYPES.has(pairs[i])) unknown.add(pairs[i]);
-    else if (DATA_NEXT.has(pairs[i])) i++;
+    else if (DATA_NEXT.has(pairs[i])) {
+      if (i + 1 >= pairs.length) return { ok: false, format: label, reason: 'Instruction composée incomplète : donnée suivante absente.' };
+      if (pairs[i] === '50' && !['30', '80'].includes(pairs[i + 1])) return {
+        ok: false, format: label, reason: 'Slide 50 incompatible : l’instruction suivante doit être une écriture 30 ou 80 ; le cœur ignorerait ce bloc.' };
+      i++;
+    }
   }
   if (unknown.size) {
     const list = [...unknown].join(', ');
@@ -174,6 +179,8 @@ export function createCheatController({ getEngine, catalog, regions, stores, emi
       } catch (error2) {
         engineSync = 'unknown';
         emit('cheats.resync_failed', { message: String((error2 && error2.message) || error2) });
+        try { await engine.quarantineCheats?.(); }
+        catch (quarantineError) { emit('cheats.quarantine_failed', { message: String(quarantineError?.message || quarantineError) }); }
       }
       emit('cheats.apply_failed', { message: String((error && error.message) || error) });
       throw new CheatEngineError(String((error && error.message) || error), { resynced, cause: error });
@@ -181,7 +188,7 @@ export function createCheatController({ getEngine, catalog, regions, stores, emi
   }
   const engineFailureText = (error, fallback) =>
     error && error.resynced === false
-      ? '⚠️ Le moteur a refusé la mise à jour ET la resynchronisation a échoué : son état est INCERTAIN. Utilisez « Désactiver tous » ou « Resynchroniser ».'
+      ? '⚠️ La mise à jour et la resynchronisation ont échoué : moteur INCERTAIN. Les captures sont bloquées ; recréez une session saine.'
       : fallback;
 
   // --- Évaluation régionale (une seule fonction pour tous les chemins) ---

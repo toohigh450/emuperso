@@ -1,5 +1,15 @@
 # CHANGELOG — EMUPERSO PS1
 
+## RC-1.14-claude-codex (intégration sur RC-1.13-claude.2)
+
+- Fonctions de chargement, archives et présentation des cheats de Claude conservées ; fond d’écran rétabli.
+- Instructions composées de cheats incomplètes ou ignorées refusées.
+- P2 : région des titres en « Us » corrigée par analyse d’une fin de nom structurée.
+- UX : effets RAM enregistrés distingués de la réactivation explicite des cheats.
+- C02 : captures bloquées en état incertain, quarantaine de l’adaptateur après échec de resynchronisation et reprise explicite dans une session neuve sans écraser les sauvegardes existantes.
+- Tests de non-régression et harnais de fautes JS/native sur cœur réel ajoutés.
+- ACK natif silencieux, validation universelle des états et essais terrain restent ouverts.
+- Publication des sources sur branche dédiée autorisée par Karl ; aucune fusion sur main ni mise en ligne de site.
 ## RC-1.13-claude.2 (Claude Code, 1er novembre 2026) — jeux en archive .rar / .zip / .7z
 
 Demande de Karl : 1 515 jeux PS1 en .rar (435 Go), sans tout décompresser. Branche claude/ps1-archives.

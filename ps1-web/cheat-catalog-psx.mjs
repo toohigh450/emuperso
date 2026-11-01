@@ -213,7 +213,7 @@ export function detectMod(title) {
   return { isMod: true, baseTitle: base || null };
 }
 export function stripDiscExtension(filename) {
-  return String(filename ?? '').replace(/\.(chd|pbp|iso|bin|img|cue)$/i, '').trim();
+  return String(filename ?? '').replace(/\.(chd|pbp|iso|bin|img|cue|rar|zip|7z)$/i, '').trim();
 }
 
 /**

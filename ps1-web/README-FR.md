@@ -1,9 +1,9 @@
-# EMUPERSO PS1 — RC-1.13-audit
+# EMUPERSO PS1 — RC-1.14-claude-codex
 
 
 **Statut** : Candidate pour audits finaux et essais Windows de Karl.
 **Date** : 1er novembre 2026
-**Validation candidate** : voir `docs/CANDIDATE-RC1.13.md` et les journaux fournis. Les anciens totaux ci-dessous sont historiques.
+**Validation candidate** : voir `docs/CANDIDATE-RC1.14.md` et les journaux fournis. Les anciens totaux ci-dessous sont historiques.
 **Essais terrain** : À faire par Karl sur Windows (Chrome + manette Xbox 360)
 
 > **Note d'honnêteté** : Les tests automatisés valident la logique, pas l'émulation réelle.

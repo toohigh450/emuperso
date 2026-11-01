@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 // Version de l'application — mettre à jour à chaque release
-const APP_VERSION = 'RC-1.13-claude.2';
+const APP_VERSION = 'RC-1.14-claude-codex';
 import { prepareDisc } from './disc-file.mjs';
 import { SaveStore, makeStateEnvelope } from './save-store.mjs';
 import { packStateBundle, unpackStateBundle } from './state-bundle.mjs';
@@ -43,6 +43,7 @@ function controls() {
   $('choose').disabled = busy; $('launch').disabled = busy || !selected; $('launch').textContent = on ? 'Changer pour ce jeu' : 'Lancer';
   $('prep-cancel').hidden = !preparing; $('prep-cancel').disabled = !preparing;
   for (const id of ['audio', 'state-save', 'state-load', 'state-previous', 'battery-save', 'cheat-add', 'cheat-off', 'in-apply']) $(id).disabled = busy || !on;
+  if (ctl.view().engineSync === 'unknown') for (const id of ['state-save', 'battery-save']) $(id).disabled = true;
   for (const box of $('cheat-list').querySelectorAll('input')) box.disabled = busy || !on || !!box.rejected;
 }
 function show(m) {
@@ -64,10 +65,16 @@ function renderCheats() {
   list.replaceChildren();
   if (v.engineSync === 'unknown') {
     const box = document.createElement('div'); box.style.cssText = 'padding:8px;margin-bottom:8px;border:2px solid #f33;background:#3a0000;border-radius:6px;';
-    box.textContent = '⚠️ L’état du moteur est INCERTAIN (une resynchronisation a échoué). Les nouvelles activations sont bloquées.';
+    box.textContent = '⚠️ Moteur INCERTAIN : activations et captures bloquées. Une session mise en quarantaine doit être recréée sans sauvegarder son état suspect.';
     const btn = document.createElement('button'); btn.textContent = 'Resynchroniser le moteur';
     btn.onclick = () => operation(async () => { await ctl.resync(); });
     box.append(document.createElement('br'), btn); list.append(box);
+    const recover = document.createElement('button'); recover.textContent = 'Nouvelle session saine, sans capturer l’état incertain';
+    recover.onclick = () => operation(async () => {
+      if (!confirm('Recréer une session saine sans capturer l’état incertain ? Les sauvegardes existantes seront conservées. La progression non enregistrée sera abandonnée.')) return;
+      await launch(sessions.current.prepared, { input: sessions.current.input, recover: true });
+    });
+    box.append(document.createElement('br'), recover);
   }
   if (v.region) {
     const warn = document.createElement('div');
@@ -126,6 +133,7 @@ async function optionalLoad(identity, slot, kind, previous = false) {
 }
 async function saveBattery(force) {
   const current = sessions.current; if (!current) return;
+  requireCaptureSafe();
   const bytes = current.api.captureBattery();
   if (!bytes) { if (force) say('save-note', 'Ce jeu n’a pas (encore) produit de carte mémoire ou de sauvegarde native.'); return; }
   await vault.put(current.batteryIdentity, 1, await makeStateEnvelope(bytes, current.batteryIdentity, { kind: 'battery', label: 'Carte mémoire' }));
@@ -136,8 +144,14 @@ async function refreshSlots() {
   const slot = Number($('slot').value), row = (await vault.list(sessions.current.identity, { kind: 'state' })).find(r => r.slot === slot);
   say('slot-info', row ? `Emplacement ${slot} : ${new Date(row.created_utc).toLocaleString('fr-FR')} · révision ${row.revision}${row.cheats.length ? ' · cheats actifs à l’enregistrement' : ''}` : `Emplacement ${slot} : vide pour ce jeu et ce moteur.`);
 }
-async function launch(prepared, { state = null, battery, cheatList = [], input } = {}) {
-  if (sessions.current) {
+function requireCaptureSafe() {
+  if (ctl.view().engineSync === 'unknown' || sessions.current?.api.snapshot?.()?.cheats_quarantined) {
+    throw new Error('Capture refusée : moteur incertain. Recréez une session saine ; les sauvegardes existantes sont conservées.');
+  }
+}
+async function launch(prepared, { state = null, battery, cheatList = [], input, recover = false } = {}) {
+  if (recover && ctl.view().engineSync !== 'unknown') throw new Error('Aucune récupération de moteur incertain à effectuer.');
+  if (sessions.current && !recover) {
     try { await saveBattery(false); }
     catch (error) { event('battery.save.failed', { message: error.message }); throw new Error('Changement de jeu annulé : sauvegarde native impossible. La session reste ouverte. ' + error.message); }
   }
@@ -146,7 +160,7 @@ async function launch(prepared, { state = null, battery, cheatList = [], input }
   // d'abord, avec accord, et on refuse plutôt que de risquer un plantage de l'onglet.
   if (isArchiveName(prepared.metadata.name)) {
     if (sessions.current) {
-      if (!confirm('Ce jeu est une archive : le moteur la décompresse en mémoire (environ 4 fois sa taille). Pour ne pas saturer l’onglet, le jeu en cours sera fermé AVANT le lancement. Sa carte mémoire vient d’être enregistrée ; une partie non sauvegardée sera perdue. Continuer ?'))
+      if (!recover && !confirm('Ce jeu est une archive : le moteur la décompresse en mémoire (environ 4 fois sa taille). Pour ne pas saturer l’onglet, le jeu en cours sera fermé AVANT le lancement. Sa carte mémoire vient d’être enregistrée ; une partie non sauvegardée sera perdue. Continuer ?'))
         throw new Error('Lancement annulé : le jeu en cours reste ouvert.');
       const closing = meta?.name ?? null;
       await sessions.close(); ctl.endSession(); meta = null; $('current').textContent = 'Aucun';
@@ -159,9 +173,10 @@ async function launch(prepared, { state = null, battery, cheatList = [], input }
       for (let i = 0; i < 12 && need > freeNow(); i++) await new Promise(r => setTimeout(r, 250));
       const free = freeNow();
       event('archive.memory.check', { need_mib: +mib(need), free_mib: +mib(free) });
-      if (need > free) throw new Error(`Mémoire de l’onglet insuffisante pour décompresser cette archive (besoin estimé ${mib(need)} Mio, disponible ${mib(Math.max(0, free))} Mio). Rechargez la page (F5) puis relancez : vos sauvegardes sont conservées.`);
+      if (need > free) throw new Error(`Mémoire de l’onglet insuffisante pour décompresser cette archive (estimation indicative ${mib(need)} Mio, disponible ${mib(Math.max(0, free))} Mio). Rechargez la page (F5) puis relancez : vos sauvegardes sont conservées.`);
     }
   }
+  if (recover) event('session.recovery.requested', { unsafe_capture_skipped: true });
   const config = input ?? normalizeInput(await inputDB.get(gameKey(prepared.metadata)).catch(() => null)),
     candidate = await sessions.prepare(prepared, config);
   try {
@@ -180,9 +195,9 @@ async function launch(prepared, { state = null, battery, cheatList = [], input }
 async function loadState(previous) {
   const current = sessions.current, slot = Number($('slot').value), loaded = await vault.load(current.identity, slot, { kind: 'state', previous });
   const bundle = unpackStateBundle(loaded.bytes), list = loaded.envelope.metadata.cheats ?? [];
-  if (list.length && !confirm('Cet état a été enregistré avec des cheats actifs. Le charger rétablira leurs effets. Continuer ?')) return;
+  if (list.length && !confirm('Cet état mémorise des cheats. Ses données RAM peuvent déjà contenir leurs effets. Aucun code ne sera réactivé avant votre confirmation explicite dans la nouvelle session. Continuer ?')) return;
   await launch(current.prepared, { state: bundle.state, battery: bundle.battery, cheatList: list, input: current.input });
-  event('state.loaded', { slot, previous, payload_sha256: loaded.envelope.payload_sha256 }); say('save-note', 'État restauré dans une session neuve. Vérifiez image, son et commandes.');
+  event('state.loaded', { slot, previous, payload_sha256: loaded.envelope.payload_sha256 }); say('save-note', 'État chargé dans une session neuve ; taille et progression contrôlées, contenu natif non authentifié. Vérifiez image, son et commandes.');
 }
 $('choose').onclick = () => $('disc-file').click();
 // P0 chargement (mandat RC-1.13) : chaque étape de préparation est horodatée dans le
@@ -250,6 +265,7 @@ $('audio').onclick = () => operation(async () => { await sessions.current.api.re
 $('battery-save').onclick = () => operation(() => saveBattery(true));
 $('slot').onchange = () => { void refreshSlots().catch(error => say('save-note', error.message, true)); };
 $('state-save').onclick = () => operation(async () => {
+  requireCaptureSafe();
   const current = sessions.current, slot = Number($('slot').value); await current.api.pause();
   try {
     const bundle = packStateBundle(current.api.captureState(), current.api.captureBattery());

@@ -25,7 +25,7 @@ test('type d’instruction inconnu de PCSX rejeté, même au bon gabarit 8+4', (
 });
 
 test('slide (50) et copie (C2) : la ligne de données suivante n’est pas jugée comme instruction', () => {
-  assert.equal(codeSupport('50000A02 0001\nA0010000 0000').ok, true);
+  assert.equal(codeSupport('50000A02 0001\n80010000 0000').ok, true);
   assert.equal(codeSupport('C2010000 0010\nA0020000 0000').ok, true);
   assert.equal(codeSupport('50000A02 0001\nA0010000 0000\nA0030000 0000').ok, false, 'la donnée ne couvre qu’une ligne');
 });
@@ -102,4 +102,8 @@ test('code manuel enregistré devenu non exécutable : conservé et affiché com
   assert.ok(rows.some(t => /Bon code.*État : désactivé/.test(t)));
   await h.ctl().addManual('Nouveau', '80020000 0002');
   assert.deepEqual(store().get('SLUS-99998').map(c => c.name), ['Ancien code', 'Bon code', 'Nouveau'], 'rien n’est perdu');
+});
+
+test('instructions composées incomplètes ou slide ignoré : rejet intégral', () => {
+  for (const code of ['50000204 0001','C2000000 0001','50000204 0001\nA4001000 0001\n80011000 5678']) assert.equal(codeSupport(code).ok,false);
 });

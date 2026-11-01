@@ -6,6 +6,15 @@ import { computeInputs, padType } from './input-profile.mjs';
 const contexts = new Set();
 let emulator = null, romURL = null, closed = false, notify = () => {}, sessionId = null;
 let startupFailure = null;
+let cheatsQuarantined = false;
+function requireTrustedCheats() {
+  if (cheatsQuarantined) throw new Error('Moteur en quarantaine : captures et réactivation refusées. Recréez une session saine.');
+}
+async function quarantineCheats() {
+  cheatsQuarantined = true;
+  note('cheats.quarantined', { captures_blocked: true, recovery: 'new-realm' });
+  await pause();
+}
 const note = (type, data = {}) => { if (!closed) notify(type, data); };
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 const NativeContext = window.AudioContext;
@@ -58,10 +67,11 @@ function gm() {
 function snapshot() {
   return { session_id: sessionId, closed, started: !!emulator?.started, paused: emulator?.paused ?? true,
     frame: emulator?.gameManager?.getFrameNum?.() ?? 0,
-    startup_failure: startupFailure,
+    startup_failure: startupFailure, cheats_quarantined: cheatsQuarantined,
     contexts: [...contexts].map(context => ({ state: context.state, sample_rate: context.sampleRate })) };
 }
 async function resumeAudio() {
+  requireTrustedCheats();
   await Promise.allSettled([...contexts].filter(context => context.state === 'suspended').map(context =>
     Promise.race([context.resume(), wait(1000)])));
   if ([...contexts].some(context => context.state === 'suspended')) note('audio.resume.pending', { action: 'Cliquer Activer / reprendre l’audio.' });
@@ -72,6 +82,7 @@ async function pause() {
   for (const context of contexts) if (context.state === 'running') await context.suspend();
 }
 async function play() {
+  requireTrustedCheats();
   gm().toggleFastForward(0); gm().toggleSlowMotion(0); emulator.play();
   await resumeAudio();
 }
@@ -242,8 +253,9 @@ async function start(config, callback) {
   verifyInput(profile);
   return snapshot();
 }
-function captureState() { return new Uint8Array(gm().getState()); }
+function captureState() { requireTrustedCheats(); return new Uint8Array(gm().getState()); }
 function captureBattery() {
+  requireTrustedCheats();
   const value = gm().getSaveFile();
   return value?.length ? new Uint8Array(value) : null;
 }
@@ -271,6 +283,7 @@ async function loadState(bytes) {
   return { native_status: nativeStatus, frame_before: before, frame_after: after, contexts: snapshot().contexts };
 }
 function setCheats(cheats) {
+  requireTrustedCheats();
   const manager = gm(); manager.resetCheat();
   try {
     cheats.forEach((cheat, index) => manager.setCheat(index, true, cheat.code));
@@ -284,7 +297,7 @@ function setCheats(cheats) {
   note('cheats.applied', { count: cheats.length });
 }
 window.PS1Engine = Object.freeze({ start, close, pause, play, resumeAudio, snapshot, captureState,
-  captureBattery, loadState, setCheats, inputStatus: () => ({ ...inputState }),
+  captureBattery, loadState, setCheats, quarantineCheats, inputStatus: () => ({ ...inputState }),
   capabilities: () => {
     const canvas = document.createElement('canvas'), gl = canvas.getContext('webgl2');
     const supported = !!gl; gl?.getExtension('WEBGL_lose_context')?.loseContext(); return { webgl2: supported };
