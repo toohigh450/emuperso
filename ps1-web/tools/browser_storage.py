@@ -38,6 +38,9 @@ try:
  with sync_playwright() as p:
   context,page=open_context(p)
   result['first_launch']=launch(page,str(fixture));offset=marker(page);result['initial_marker_offset']=offset
+  # Save a value distinct from fresh boot: a broken no-op load must fail this test.
+  frame(page).evaluate('offset=>window.EJS_emulator.gameManager.Module.HEAPU8.set([0x34,0x12],offset)',offset)
+  result['saved_guest_value']=[0x34,0x12]
   page.locator('#state-save').click();page.wait_for_function("!document.getElementById('choose').disabled",timeout=20000)
   result['state_save_note']=page.locator('#save-note').inner_text()
   result['battery_before']=battery(page)
@@ -45,7 +48,8 @@ try:
   frame(page).evaluate('offset=>window.EJS_emulator.gameManager.Module.HEAPU8.fill(0xff,offset,offset+2)',offset)
   page.locator('#state-load').click();page.wait_for_function("!document.getElementById('choose').disabled",timeout=60000)
   result['state_restore_note']=page.locator('#save-note').inner_text()
-  result['state_marker_restored']=marker(page) is not None
+  result['state_guest_bytes']=frame(page).evaluate('offset=>Array.from(window.EJS_emulator.gameManager.Module.HEAPU8.slice(offset,offset+2))',offset)
+  result['state_marker_restored']=result['state_guest_bytes']==[0x34,0x12]
   result['frames_after_state']=page.locator('iframe').count()
   # Exercise a rejected replacement while the working old realm is retained.
   result['invalid_replacement_status']=launch(page,{'name':'invalid-synthetic.iso','mimeType':'application/octet-stream','buffer':bytes(65536)})
@@ -75,9 +79,12 @@ try:
   context,page=open_context(p)
   result['restart_launch']=launch(page,str(fixture));result['slot_after_restart']=page.locator('#slot-info').inner_text()
   result['battery_after_restart']=battery(page)
+  restart_offset=marker(page)
+  result['fresh_boot_guest_bytes']=frame(page).evaluate('offset=>Array.from(window.EJS_emulator.gameManager.Module.HEAPU8.slice(offset,offset+2))',restart_offset)
   page.locator('#state-load').click();page.wait_for_function("!document.getElementById('choose').disabled",timeout=60000)
   result['restart_state_note']=page.locator('#save-note').inner_text()
-  result['restart_state_marker']=marker(page) is not None
+  result['restart_guest_bytes']=frame(page).evaluate('offset=>Array.from(window.EJS_emulator.gameManager.Module.HEAPU8.slice(offset,offset+2))',restart_offset)
+  result['restart_state_marker']=result['fresh_boot_guest_bytes']==[0x68,0x24] and result['restart_guest_bytes']==[0x34,0x12]
   other=bytearray(fixture.read_bytes());other[16*2048+40]=ord('B')
   result['other_game_launch']=launch(page,{'name':'synthetic-other.iso','mimeType':'application/octet-stream','buffer':bytes(other)})
   result['other_game_slot']=page.locator('#slot-info').inner_text()
