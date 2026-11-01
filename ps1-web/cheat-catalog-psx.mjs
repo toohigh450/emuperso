@@ -125,13 +125,21 @@ export function normalizeTitle(title) {
  */
 export function detectRegion(value) {
   const v = String(value || '');
-  const m = v.match(/\b(USA|US|Europe|EUR|EU|Japan|JAP|J|World|PAL|NTSC|FR|France|Germany|Italy|Spain)\b|\(([EUJ])\)/i);
+  // B04 (audit GPT RC-1.0) : NTSC seul est AMBIGU (NTSC-U = Amérique du Nord, NTSC-J = Japon).
+  // Ne jamais déduire Japan de "NTSC" générique.
+  // Vérifier d'abord les formes explicites NTSC-U / NTSC-J.
+  const ntscMatch = v.match(/\bNTSC[\s\-_]?(U|J)\b/i);
+  if (ntscMatch) {
+    return ntscMatch[1].toUpperCase() === 'U' ? 'USA' : 'Japan';
+  }
+  const m = v.match(/\b(USA|US|Europe|EUR|EU|Japan|JAP|World|PAL|FR|France|Germany|Italy|Spain)\b|\(([EUJ])\)/i);
   if (!m) return null;
   const r = (m[1] || m[2]).toUpperCase();
   if (['USA', 'US'].includes(r)) return 'USA';
   if (['EUROPE', 'EUR', 'EU', 'E', 'PAL', 'FR', 'FRANCE', 'GERMANY', 'ITALY', 'SPAIN'].includes(r)) return 'Europe';
-  if (['JAPAN', 'JAP', 'J', 'NTSC'].includes(r)) return 'Japan';
+  if (['JAPAN', 'JAP', 'J'].includes(r)) return 'Japan';
   if (r === 'WORLD') return 'World';
+  // "NTSC" seul sans suffixe U/J : ambigu, ne pas déduire
   return null;
 }
 

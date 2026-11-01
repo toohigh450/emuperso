@@ -31,3 +31,10 @@ test('configuration : valeurs bornées, type de manette = valeurs réelles du c�
   assert.deepEqual([padType(digital), padType(analog), padType(normalizeInput({ analog: 'analog' }))], ['standard', 'dualshock', 'analog']);
   assert.ok(Object.values(computeInputs(null, digital)).every(v => v === 0));
 });
+
+test('normalizeInput préserve _profile quand présent', () => {
+  const cfg = normalizeInput({ analog: 'off', _profile: 'authentique' });
+  assert.equal(cfg._profile, 'authentique');
+  const cfg2 = normalizeInput({ analog: 'off' });
+  assert.equal(cfg2._profile, undefined);
+});

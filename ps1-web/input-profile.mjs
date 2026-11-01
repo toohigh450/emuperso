@@ -6,7 +6,9 @@ export const DEFAULT_INPUT = Object.freeze({ analog: 'off', stickToDpad: true, d
 export function normalizeInput(value) {
   const v = value && typeof value === 'object' ? value : {};
   const deadzone = Number.isFinite(v.deadzone) ? Math.min(0.6, Math.max(0.05, Math.round(v.deadzone * 100) / 100)) : DEFAULT_INPUT.deadzone;
-  return Object.freeze({ analog: ['off', 'analog', 'dualshock'].includes(v.analog) ? v.analog : 'off', stickToDpad: v.stickToDpad !== false, deadzone, native: v.native === true });
+  const out = { analog: ['off', 'analog', 'dualshock'].includes(v.analog) ? v.analog : 'off', stickToDpad: v.stickToDpad !== false, deadzone, native: v.native === true };
+  if (typeof v._profile === 'string' && v._profile) out._profile = v._profile;
+  return Object.freeze(out);
 }
 // Valeurs de l'option réelle du cœur pcsx_rearmed_pad1type : standard | analog | dualshock.
 export const padType = profile => (profile.analog === 'off' ? 'standard' : profile.analog);

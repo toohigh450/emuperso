@@ -1,3 +1,23 @@
+# CHANGELOG — EMUPERSO PS1
+
+## RC-1.1 (Méo, 1er nov. ~02h00) — Correctifs audit GPT RC-1.0
+**Base** : RC-1.0 + 7 correctifs de l'audit GPT `AUDIT_GPT_EMUPERSO_PS1_RC-1.0_MULTI_REGION.html`
+
+### 🔴 BLOQUANT corrigés
+- **B01** : `loadCatalog()` était appelé mais jamais importé dans app.js → la mémoire d'édition et la saisie serial ne fonctionnaient pas. **Corrigé** : import ajouté + test de régression.
+- **B02** : Les cheats restaurés étaient réinjectés dans le moteur avant validation complète de l'édition (seul le cas "ambiguous" était bloqué). **Corrigé** : AUCUNE injection au démarrage (`cheats: []`), liste pending `_pendingCheatRestore` séparée, application via `setCheats()` SEULEMENT si édition sûre (mémoire OU match sans décalage région). Tests de régression ajoutés.
+
+### 🟡 IMPORTANT corrigés
+- **B03** : Badge "édition vérifiée" trompeur (c'était une mémorisation locale, pas une lecture serial). **Corrigé** : libellés honnêtes ("édition mémorisée", "choix précédent sur cet appareil").
+- **B04** : `detectRegion()` confondait "NTSC" générique avec Japan (faux — NTSC-U = USA, NTSC-J = Japan). **Corrigé** : NTSC seul → null (ambigu), NTSC-U → USA, NTSC-J → Japan. Test ajouté.
+- **B05** : `serve.py` sans liste blanche stricte (roms/, bios/, saves/ accessibles si copiés dans le dossier servi). **Corrigé** : `BLOCKED_DIRS` + `ALLOWED_EXTENSIONS`, 12 tests `allowed_path` PASS.
+- **B06** : Tests DOM ne testaient pas vraiment le navigateur. **Partiellement adressé** : 4 nouveaux tests de régression source (B01, B02 x2, B04). Tests navigateur réels (Playwright) restent à faire.
+- **B07** : Formats et licences. **Documenté** : formats supportés/non-supportés explicites dans README, attribution CC BY-SA 4.0 du catalogue, vérification GPL EmulatorJS requise avant publication.
+
+**Tests** : 52/52 JS + 3/3 Python PASS (4 nouveaux tests).
+
+---
+
 # CHANGELOG — EMUPERSO PS1 Release Candidate 1.0
 
 **Date** : 1er novembre 2026

@@ -46,3 +46,22 @@ test('normalizeTitle : chiffres romains convertis', async () => {
   assert.equal(normalizeTitle('Final Fantasy VII'), 'final fantasy 7');
   assert.equal(normalizeTitle('Final Fantasy V'), 'final fantasy 5');
 });
+
+// B04 (audit GPT RC-1.0) : NTSC seul ne doit PAS déduire Japan
+// NTSC est ambigu (NTSC-U = USA, NTSC-J = Japan)
+test('B04 : detectRegion ne confond pas NTSC générique avec Japan', async () => {
+  const { detectRegion } = await import('../cheat-catalog-psx.mjs');
+  // NTSC seul : ambigu, retourner null
+  assert.equal(detectRegion('Game (NTSC)'), null, 'NTSC seul est ambigu');
+  assert.equal(detectRegion('TEST (NTSC)'), null, 'NTSC seul ne donne pas Japan');
+  // NTSC-U explicite : USA
+  assert.equal(detectRegion('Game (NTSC-U)'), 'USA', 'NTSC-U = USA');
+  assert.equal(detectRegion('Game NTSC-U'), 'USA', 'NTSC-U sans parenthèses = USA');
+  // NTSC-J explicite : Japan
+  assert.equal(detectRegion('Game (NTSC-J)'), 'Japan', 'NTSC-J = Japan');
+  assert.equal(detectRegion('Game NTSC-J'), 'Japan', 'NTSC-J sans parenthèses = Japan');
+  // Les autres régions fonctionnent toujours
+  assert.equal(detectRegion('Game (USA)'), 'USA');
+  assert.equal(detectRegion('Game (E)'), 'Europe');
+  assert.equal(detectRegion('Game (J)'), 'Japan');
+});

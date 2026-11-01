@@ -49,3 +49,50 @@ test('simulation DOM : boutons survivent au rendu', async () => {
   assert.ok(children[0].textContent.includes('USA'));
   assert.ok(children[1].textContent.includes('World'));
 });
+
+// B01 (audit GPT RC-1.0) : loadCatalog doit être importé dans app.js
+// Régression : l'import manquant cassait la mémoire d'édition et la saisie serial
+test('B01 : loadCatalog est importé dans app.js', async () => {
+  const src = await readFile(new URL('../app.js', import.meta.url), 'utf8');
+  // L'import doit inclure loadCatalog
+  const importMatch = src.match(/import\s*\{\s*([^}]+)\s*\}\s*from\s*['"]\.\/cheat-catalog-psx\.mjs['"]/);
+  assert.ok(importMatch, 'import de cheat-catalog-psx.mjs trouvé');
+  const imports = importMatch[1];
+  assert.ok(imports.includes('loadCatalog'), 'loadCatalog doit être dans les imports nommés');
+  // Vérifier que loadCatalog est bien exporté par le module
+  const catalogSrc = await readFile(new URL('../cheat-catalog-psx.mjs', import.meta.url), 'utf8');
+  assert.ok(/export\s+(async\s+)?function\s+loadCatalog/.test(catalogSrc), 'loadCatalog exporté par cheat-catalog-psx.mjs');
+  // Vérifier que les appels à loadCatalog existent (mémoire édition + serial)
+  const calls = src.match(/await\s+loadCatalog\(\)/g);
+  assert.ok(calls && calls.length >= 2, 'au moins 2 appels à loadCatalog() (mémoire + serial)');
+});
+
+// B02 (audit GPT RC-1.0) : AUCUNE réinjection de cheats au démarrage de session
+// Régression : les cheats restaurés ne doivent jamais aller directement dans sessions.start()
+test('B02 : launch() ne réinjecte jamais de cheats au démarrage', async () => {
+  const src = await readFile(new URL('../app.js', import.meta.url), 'utf8');
+  // Extraire la fonction launch
+  const launchStart = src.indexOf('async function launch(');
+  assert.ok(launchStart > 0, 'fonction launch trouvée');
+  const launchEnd = src.indexOf('async function loadState(', launchStart);
+  const launchSrc = src.slice(launchStart, launchEnd);
+  // Vérifier que sessions.start est appelé avec cheats: []
+  assert.ok(launchSrc.includes('cheats: []'), 'sessions.start() doit recevoir cheats: [] (vide)');
+  // Vérifier qu'il n'y a PAS de cheatsToInject ou équivalent passé à start
+  assert.ok(!launchSrc.includes('cheats: cheatsToInject'), 'pas de cheatsToInject dans sessions.start()');
+  // Vérifier que les cheats restaurés sont mis en pending
+  assert.ok(launchSrc.includes('_pendingCheatRestore'), 'les cheats restaurés vont dans _pendingCheatRestore');
+  // Vérifier le commentaire B02
+  assert.ok(launchSrc.includes('B02'), 'commentaire B02 présent dans launch()');
+});
+
+// B02 : loadCheats n'applique les pending que si l'édition est sûre
+test('B02 : loadCheats applique pending seulement si édition sûre', async () => {
+  const src = await readFile(new URL('../app.js', import.meta.url), 'utf8');
+  // Vérifier la logique de sécurité : fromMemory OU (match ET pas de regionMismatch)
+  assert.ok(src.includes("const isSafe = fromMemory || (result.status === 'match' && !regionMismatch)"),
+    'condition isSafe doit vérifier fromMemory ou (match sans regionMismatch)');
+  // Vérifier que les cas non sûrs gardent les cheats en attente
+  assert.ok(src.includes("window._pendingCheatRestore = pendingRestore"),
+    'les cheats non sûrs sont remis en attente');
+});
