@@ -6,6 +6,7 @@ import { SessionController } from './session-controller.mjs';
 import { readLegacyBattery } from './legacy-battery.mjs';
 import { packStateBundle, unpackStateBundle } from './state-bundle.mjs';
 import { romCheatIdentity, loadCheatCatalog, lookupCheats, resolveCheatCode, validateManualCheat } from './cheat-catalog.mjs';
+import { N64_PROFILES, normalizeN64Pad } from './n64-input.mjs';
 const $ = id => document.getElementById(id), records = [], vault = new SaveStore();
 let phase = 'idle', busy = false, reading = false, generation = 0, selected = null, activeRom = null, lock = null;
 let zipPending = null, importAbort = null, saveList = [], catalog = null, cheatRows = [], catalogTicket = 0;
@@ -19,6 +20,7 @@ const sessions = new SessionController($('game'), (type, data) => {
     status(labels[data.stage] ?? 'Opération en cours…');
   }
   if (type === 'gamepad.connected') $('gamepads').textContent = data.id;
+  if (type === 'input.pad') $('pad-status').textContent = data.id ? `Manette reconnue : ${data.id}` : 'Aucune manette détectée. Branche-la ou appuie sur un de ses boutons.';
   if (type === 'state.unguarded.blocked') status('Utilisez les boutons de sauvegarde vérifiée de l’application ; le chargement direct du moteur est désactivé.');
   if (type === 'config.change.blocked') status('Les paramètres du moteur restent fixes pour préserver la compatibilité des états.');
 });
@@ -438,4 +440,29 @@ document.addEventListener('visibilitychange', () => { if (document.visibilitySta
 window.addEventListener('pagehide', () => { importAbort?.abort(); void sessions.current?.api.close(); });
 window.addEventListener('error', error => { event('browser.error', { message: error.message }); status(error.message, true); });
 window.addEventListener('unhandledrejection', error => { event('browser.unhandledrejection', { message: String(error.reason) }); status(String(error.reason), true); });
+// --- Manette (mandat Controller V2) : réglage partagé avec la session du moteur par localStorage.
+const PAD_KEY = 'emuperso-n64-pad';
+function padSettings() { try { return normalizeN64Pad(JSON.parse(localStorage.getItem(PAD_KEY) || '{}')); } catch { return normalizeN64Pad({}); } }
+function renderPad() {
+  const cfg = padSettings();
+  for (const input of document.querySelectorAll('input[name=pad-profile]')) input.checked = input.value === cfg.profile;
+  $('pad-deadzone').value = String(cfg.deadzone); $('pad-deadzone-out').textContent = cfg.deadzone.toFixed(2).replace('.', ',');
+  $('pad-sensitivity').value = String(cfg.sensitivity); $('pad-sensitivity-out').textContent = `${Math.round(cfg.sensitivity * 100)} %`;
+  $('pad-hide-touch').checked = cfg.hideTouch;
+}
+function savePad() {
+  const checked = document.querySelector('input[name=pad-profile]:checked');
+  const cfg = normalizeN64Pad({ profile: checked?.value, deadzone: Number($('pad-deadzone').value), sensitivity: Number($('pad-sensitivity').value), hideTouch: $('pad-hide-touch').checked });
+  try { localStorage.setItem(PAD_KEY, JSON.stringify(cfg)); } catch { status('Réglage de manette non enregistré : stockage du navigateur indisponible.', true); }
+  event('input.profile.saved', { profile: cfg.profile }); renderPad();
+}
+for (const p of Object.values(N64_PROFILES)) {
+  const label = document.createElement('label'); const input = document.createElement('input');
+  input.type = 'radio'; input.name = 'pad-profile'; input.value = p.id; input.onchange = savePad;
+  const strong = document.createElement('strong'); strong.textContent = p.label;
+  const small = document.createElement('small'); small.className = 'note'; small.textContent = ' — ' + p.description;
+  label.append(input, ' ', strong, small); $('pad-profiles').append(label, document.createElement('br'));
+}
+for (const id of ['pad-deadzone', 'pad-sensitivity', 'pad-hide-touch']) $(id).onchange = savePad;
+renderPad();
 event('page.open', { engine_started: false }); controls();

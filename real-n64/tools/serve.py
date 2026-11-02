@@ -25,7 +25,7 @@ DEMO_SHA256 = 'f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252'
 APP_FILES = frozenset({
     'index.html', 'app.js', 'style.css', 'alphatest.html', 'alphatest.js', 'engine.html', 'engine.css',
     'engine-session.mjs', 'session-controller.mjs', 'native-state.mjs', 'frame-capture.mjs', 'runtime-integrity.mjs', 'rom-file.mjs',
-    'zip-rom.mjs', 'save-store.mjs', 'state-bundle.mjs', 'legacy-battery.mjs',
+    'zip-rom.mjs', 'save-store.mjs', 'state-bundle.mjs', 'legacy-battery.mjs', 'n64-input.mjs',
     'cheat-catalog.mjs', 'README-FR.md', 'LICENSE',
     'docs/runtime-lock.json', 'docs/cheat-catalog-lock.json', 'docs/CORRECTIFS-ETATS-2026-11-02.md',
     'docs/RC-0.5.0.html', 'docs/RC-0.5.0-RC2.html', 'docs/THIRD-PARTY.md',

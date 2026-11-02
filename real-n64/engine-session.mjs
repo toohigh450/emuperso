@@ -3,6 +3,7 @@
 import { inspectNativeState, makeRestoreWitness, compareRestoreWitness } from './native-state.mjs';
 import { sriValue, verifyRuntimeBytes } from './runtime-integrity.mjs';
 import { createFrameCapture, installRuntimeFrameHook } from './frame-capture.mjs';
+import { computeN64Inputs, normalizeN64Pad, pickPad } from './n64-input.mjs';
 const contexts = new Set();
 let emulator = null, romURL = null, closed = false, notify = () => {}, sessionId = null;
 let cheatFault = null;
@@ -107,7 +108,56 @@ async function play() {
   gm().toggleFastForward(0); gm().toggleSlowMotion(0); emulator.play();
   await resumeAudio();
 }
+// Manette EMUPERSO (mandat Controller V2) : profil lu dans localStorage (clé partagée avec la page),
+// changements appliqués en cours de partie par l'évènement « storage ». Les liaisons manette du moteur
+// sont vidées sauf en profil natif, pour éviter les doubles commandes ; le clavier n'est pas touché.
+export const N64_PAD_KEY = 'emuperso-n64-pad';
+let padRaf = 0;
+function readPadSettings() {
+  try { return normalizeN64Pad(JSON.parse(localStorage.getItem(N64_PAD_KEY) || '{}')); } catch { return normalizeN64Pad({}); }
+}
+function installN64Pad() {
+  let settings = readPadSettings(), saved = null, padId = null;
+  const sent = new Map();
+  const bindings = (native) => {
+    const controls = emulator.controls || {};
+    if (!native) {
+      if (!saved) saved = Object.entries(controls).map(([p, row]) => [p, Object.entries(row || {}).map(([i, c]) => [i, c && c.value2])]);
+      for (const row of Object.values(controls)) for (const c of Object.values(row || {})) if (c && c.value2 !== undefined) c.value2 = '';
+    } else if (saved) {
+      for (const [p, row] of saved) for (const [i, v] of row) if (controls[p]?.[i]) controls[p][i].value2 = v;
+      saved = null;
+    }
+  };
+  const release = () => { for (const [id, v] of sent) if (v) gm().simulateInput(0, Number(id), 0); sent.clear(); };
+  bindings(settings.profile === 'natif');
+  window.addEventListener('storage', (e) => {
+    if (e.key !== N64_PAD_KEY) return;
+    const before = settings.profile; settings = readPadSettings();
+    if (before !== settings.profile) { release(); bindings(settings.profile === 'natif'); }
+    note('input.profile', { profile: settings.profile });
+  });
+  const poll = () => {
+    if (closed) return;
+    padRaf = requestAnimationFrame(poll);
+    try {
+      const pad = pickPad(navigator.getGamepads ? navigator.getGamepads() : []);
+      if ((pad?.id ?? null) !== padId) { padId = pad?.id ?? null; note('input.pad', { id: padId }); }
+      const vg = emulator.virtualGamepad || document.querySelector('.ejs_virtualGamepad_parent');
+      const hide = !!pad && settings.hideTouch;
+      if (vg && (emulator.touch || emulator.hasTouchScreen) && vg.dataset.emupersoHidden !== String(hide)) {
+        vg.dataset.emupersoHidden = String(hide); vg.style.display = hide ? 'none' : '';
+      }
+      const inputs = computeN64Inputs(pad, settings);
+      if (!inputs || !emulator.started) return;
+      for (const [id, value] of Object.entries(inputs)) if ((sent.get(id) || 0) !== value) { sent.set(id, value); gm().simulateInput(0, Number(id), value); }
+    } catch (error) { note('input.error', { message: error.message }); }
+  };
+  padRaf = requestAnimationFrame(poll);
+  note('input.profile', { profile: settings.profile });
+}
 async function close() {
+  cancelAnimationFrame(padRaf);
   if (closed) return snapshot();
   closed = true;
   frameCapture.cancel();
@@ -223,6 +273,7 @@ async function start(config, callback) {
     if (actual !== expected) throw new Error('Chemin de sauvegarde native différent du chemin préparé.');
     note('battery.injected', { bytes: config.battery.length });
   }
+  installN64Pad();
   return snapshot();
 }
 function captureState() { return frameCapture.capture(); }
