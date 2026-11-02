@@ -3,3 +3,6 @@
 /ps1-web/dist/
 /real-n64/dist/
 node_modules/
+# Le banc local conserve ses données hors dépôt ; seule sa configuration d'exemple est publique.
+/tools/local-runner/config.local.json
+/tools/local-runner/*.local.json

@@ -28,7 +28,7 @@ function walk(base, skip = () => false, dir = base, out = []) {
   }
   return out;
 }
-const skipRepo = (name, rel) => SKIP_DIRS.has(name) || rel === join('portables', 'tests');
+const skipRepo = (name, rel) => SKIP_DIRS.has(name) || rel === join('portables', 'tests') || rel === join('tools', 'local-runner');
 
 if (existsSync(OUT)) rmSync(OUT, { recursive: true, force: true });
 mkdirSync(OUT);
