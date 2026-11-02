@@ -1,0 +1,121 @@
+# Recherche locale pour la ROM : Spider-Man 2 (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Spider-Man%202%20(Europe)%20(En%2CFr%2CDe%2CEs%2CIt).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Spider-Man%202%20(Europe).cht
+
+cheats = 28
+
+cheat0_desc = "[Action Replay] Min Time"
+cheat0_code = "221F58CC+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Health"
+cheat1_code = "1215DF6C+000003E8"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Energy"
+cheat2_code = "1215DF78+0000270E"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Slow Mode"
+cheat3_code = "1215DFA4+00000001"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All Abilities"
+cheat4_code = "0215DFAC+01010101+0215DFB0+01010101"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All Cards"
+cheat5_code = "C0000000+0000000D+2217F56C+00000001+DC000000+00000014+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Infinite Time"
+cheat6_code = "221F58CC+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Infinite Health"
+cheat7_code = "1215DF6C+000003E8"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Infinite Web"
+cheat8_code = "1215DF78+0000270E"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Slow Motion Mode"
+cheat9_code = "1215DFA4+00000001"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Hop Back"
+cheat10_code = "2215DFAC+00000001"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Lightning Punch"
+cheat11_code = "2215DFAE+00000001"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Split Kick"
+cheat12_code = "2215DFB0+00000001"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Jumper Jump"
+cheat13_code = "2215DFB1+00000001"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Web Net"
+cheat14_code = "2215DFB2+00000001"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Chapter 2 Unlocked"
+cheat15_code = "22166DA0+00000001"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Chapter 3 Unlocked"
+cheat16_code = "22166DB4+00000001"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Chapter 4 Unlocked"
+cheat17_code = "22166DC8+00000001"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Chapter 5 Unlocked"
+cheat18_code = "22166DDC+00000001"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Chapter 6 Unlocked"
+cheat19_code = "22166DF0+00000001"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Chapter 7 Unlocked"
+cheat20_code = "22166E04+00000001"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Chapter 8 Unlocked"
+cheat21_code = "22166E18+00000001"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Chapter 9 Unlocked"
+cheat22_code = "22166E2C+00000001"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Chapter 10 Unlocked"
+cheat23_code = "22166E40+00000001"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Chapter 11 Unlocked"
+cheat24_code = "22166E54+00000001"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Chapter 12 Unlocked"
+cheat25_code = "22166E68+00000001"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Chapter 13 Unlocked"
+cheat26_code = "22166E7C+00000001"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Chapter 14 Unlocked"
+cheat27_code = "22166E90+00000001"
+cheat27_enable = false

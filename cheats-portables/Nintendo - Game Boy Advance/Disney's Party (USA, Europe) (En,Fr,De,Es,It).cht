@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Disney's Party (USA, Europe) (En,Fr,De,Es,It).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Disney's%20Party%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 4
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00009DC7+000A+1002F170+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Max Stars"
+cheat1_code = "82015BE8+0063"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Always Able To Move"
+cheat2_code = "8201731C+0006"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Infinite Time"
+cheat3_code = "82015BC2+0BA0"
+cheat3_enable = false

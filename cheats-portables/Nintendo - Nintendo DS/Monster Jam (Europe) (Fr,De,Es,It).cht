@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Monster Jam (Europe) (Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Monster%20Jam%20(Europe).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Infinite Turbo"
+cheat0_code = "02017EC8+E3A04000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Trucks Unlocked"
+cheat1_code = "0201F1F8+E3A07001+0201F220+E5867050"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] World Finals Unlocked"
+cheat2_code = "02031768+E3A0A001"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Tracks Open (Press SELECT)"
+cheat3_code = "94000130+FFFB0000+C0000000+0000002C+020BBA40+01010101+DC000000+00000004+D2000000+00000000"
+cheat3_enable = false

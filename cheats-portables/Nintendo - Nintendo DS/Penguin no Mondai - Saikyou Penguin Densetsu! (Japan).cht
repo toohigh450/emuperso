@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Penguin no Mondai - Saikyou Penguin Densetsu! (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Penguin%20no%20Mondai%20-%20Saikyou%20Penguin%20Densetsu!%20(Japan).cht
+
+cheats = 6
+
+cheat0_desc = "[Action Replay] Life Never Decrease"
+cheat0_code = "DA000000+022107D6+D7000000+022107D4+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] PP Never Decrease"
+cheat1_code = "DA000000+022107DA+D7000000+022107D8+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Complete Gallery"
+cheat2_code = "220DD6A0+000000FF+020DD684+FFFFFFFE+E20DD688+00000018+FFFFFFFF+FFFFFFFF+FFFFFFFF+FFFFFFFF+FFFFFFFF+FFFFFFFF"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Complete Information"
+cheat3_code = "220DD6A3+000000FF+120DD6A4+0000FFFF"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max/Infinite Coins"
+cheat4_code = "1220FF7E+0000270F"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Otasuke Voucher x 99"
+cheat5_code = "2220FF7C+00000063"
+cheat5_enable = false

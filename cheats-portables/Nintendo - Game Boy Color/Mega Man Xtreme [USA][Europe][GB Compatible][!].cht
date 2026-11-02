@@ -1,0 +1,434 @@
+# Recherche locale pour la ROM : Mega Man Xtreme [USA][Europe][GB Compatible][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Mega%20Man%20Xtreme%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Mega%20Man%20Xtreme%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Mega%20Man%20Xtreme%20(USA%2C%20Europe)%20(GB%20Compatible).cht
+
+cheats = 106
+
+cheat0_desc = "[Game Genie] Infinite Health"
+cheat0_code = "1CF-76D"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Infinite Health"
+cheat1_code = "019021D5"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Infinite Lives"
+cheat2_code = "010965D3"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] All Body Parts"
+cheat3_code = "01FF83D3"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Infinite Energy For Zero's Attacks"
+cheat4_code = "91307DD3"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Infinite Shotgun Ice"
+cheat5_code = "911C6DD3"
+cheat5_enable = false
+
+cheat6_desc = "[GameShark] Have Shotgun Ice"
+cheat6_code = "917C6ED3"
+cheat6_enable = false
+
+cheat7_desc = "[GameShark] Infinite E.Spark"
+cheat7_code = "911E6FD3"
+cheat7_enable = false
+
+cheat8_desc = "[GameShark] Have E.Spark"
+cheat8_code = "917C70D3"
+cheat8_enable = false
+
+cheat9_desc = "[GameShark] Infinite R.Shield"
+cheat9_code = "911E71D3"
+cheat9_enable = false
+
+cheat10_desc = "[GameShark] Have R.Shield"
+cheat10_code = "917C72D3"
+cheat10_enable = false
+
+cheat11_desc = "[GameShark] Infinite S.Tornado"
+cheat11_code = "911E73D3"
+cheat11_enable = false
+
+cheat12_desc = "[GameShark] Have S.Tornado"
+cheat12_code = "917C74D3"
+cheat12_enable = false
+
+cheat13_desc = "[GameShark] Infinite S.Burner"
+cheat13_code = "911E75D3"
+cheat13_enable = false
+
+cheat14_desc = "[GameShark] Have S.Burner"
+cheat14_code = "917C76D3"
+cheat14_enable = false
+
+cheat15_desc = "[GameShark] Infinite S.Shot"
+cheat15_code = "911E77D3"
+cheat15_enable = false
+
+cheat16_desc = "[GameShark] Have S.Shot"
+cheat16_code = "917C78D3"
+cheat16_enable = false
+
+cheat17_desc = "[GameShark] Infinite M.Mine"
+cheat17_code = "911E79D3"
+cheat17_enable = false
+
+cheat18_desc = "[GameShark] Have M.Mine"
+cheat18_code = "917C7AD3"
+cheat18_enable = false
+
+cheat19_desc = "[GameShark] Infinite S.Wheel"
+cheat19_code = "911E7BD3"
+cheat19_enable = false
+
+cheat20_desc = "[GameShark] Have S.Wheel"
+cheat20_code = "917C7CD3"
+cheat20_enable = false
+
+cheat21_desc = "[GameShark] Extra Low Gravity"
+cheat21_code = "9100D6D5"
+cheat21_enable = false
+
+cheat22_desc = "[GameShark] No Rise/Falls"
+cheat22_code = "9100D3D5"
+cheat22_enable = false
+
+cheat23_desc = "[GameShark] Quick Charge-Up"
+cheat23_code = "91FE70D5"
+cheat23_enable = false
+
+cheat24_desc = "[GameShark] All Zero's Moves"
+cheat24_code = "910FA0D3"
+cheat24_enable = false
+
+cheat25_desc = "[GameShark] Use Hidden Hadoken + Shouryuken Moves When You're Charged Up (Must Have Arm Upgrade)"
+cheat25_code = "9101C7D3"
+cheat25_enable = false
+
+cheat26_desc = "[GameShark] Extreme Mode When Loading File"
+cheat26_code = "9104AFD3"
+cheat26_enable = false
+
+cheat27_desc = "[GameShark] 00:00 Time Played"
+cheat27_code = "91009ED3+91009FD3"
+cheat27_enable = false
+
+cheat28_desc = "[GameShark] Dash Lasts Until You Hit Something"
+cheat28_code = "91116BD5"
+cheat28_enable = false
+
+cheat29_desc = "[GameShark] Invincible To Sprites (And Spikes If Not Triggered)"
+cheat29_code = "910384D5"
+cheat29_enable = false
+
+cheat30_desc = "[GameShark] Lava (Level 4) Doesn't Rise"
+cheat30_code = "91FF+05CB"
+cheat30_enable = false
+
+cheat31_desc = "[GameShark] Level Modifier"
+cheat31_code = "01XX5FD3"
+cheat31_enable = false
+
+cheat32_desc = "[GameShark] Have Sub-Tank 1"
+cheat32_code = "01FF68D3"
+cheat32_enable = false
+
+cheat33_desc = "[GameShark] Have Sub-Tank 2"
+cheat33_code = "01FF69D3"
+cheat33_enable = false
+
+cheat34_desc = "[GameShark] Have Sub-Tank 3"
+cheat34_code = "01FF6AD3"
+cheat34_enable = false
+
+cheat35_desc = "[GameShark] Have Sub-Tank 4"
+cheat35_code = "01FF6BD3"
+cheat35_enable = false
+
+cheat36_desc = "[GameShark] Have Infinite Zero Energy"
+cheat36_code = "011C7DD3"
+cheat36_enable = false
+
+cheat37_desc = "[GameShark] Have Maximum Health"
+cheat37_code = "012084D3"
+cheat37_enable = false
+
+cheat38_desc = "[GameShark] Have All Health Containers Collected"
+cheat38_code = "01FF9BD3"
+cheat38_enable = false
+
+cheat39_desc = "[Format source non précisé] Infinite Lives"
+cheat39_code = "010965D3+010365D3"
+cheat39_enable = false
+
+cheat40_desc = "[Format source non précisé] Have Sub-Tank 1"
+cheat40_code = "01FF68D3"
+cheat40_enable = false
+
+cheat41_desc = "[Format source non précisé] Have Sub-Tank 2"
+cheat41_code = "01FF69D3"
+cheat41_enable = false
+
+cheat42_desc = "[Format source non précisé] Have Sub-Tank 3"
+cheat42_code = "01FF6AD3"
+cheat42_enable = false
+
+cheat43_desc = "[Format source non précisé] Have Sub-Tank 4"
+cheat43_code = "01FF6BD3"
+cheat43_enable = false
+
+cheat44_desc = "[Format source non précisé] Infinite S.Ice Energy"
+cheat44_code = "011C6DD3+011E6DD3"
+cheat44_enable = false
+
+cheat45_desc = "[Format source non précisé] Have S.Ice"
+cheat45_code = "017C6ED3"
+cheat45_enable = false
+
+cheat46_desc = "[Format source non précisé] Infinite E.Spark Energy"
+cheat46_code = "011C6FD3+01146FD3"
+cheat46_enable = false
+
+cheat47_desc = "[Format source non précisé] Have E.Spark"
+cheat47_code = "017C70D3"
+cheat47_enable = false
+
+cheat48_desc = "[Format source non précisé] Infinite R.Shield Energy"
+cheat48_code = "011C71D3+011771D3"
+cheat48_enable = false
+
+cheat49_desc = "[Format source non précisé] Have R.Shield"
+cheat49_code = "017C72D3"
+cheat49_enable = false
+
+cheat50_desc = "[Format source non précisé] Infinite S.Tornado Energy"
+cheat50_code = "011C73D3+011573D3"
+cheat50_enable = false
+
+cheat51_desc = "[Format source non précisé] Have S.Tornado"
+cheat51_code = "017C74D3"
+cheat51_enable = false
+
+cheat52_desc = "[Format source non précisé] Infinite S.Burner Energy"
+cheat52_code = "011C75D3+011675D3"
+cheat52_enable = false
+
+cheat53_desc = "[Format source non précisé] Have S.Burner"
+cheat53_code = "017C76D3"
+cheat53_enable = false
+
+cheat54_desc = "[Format source non précisé] Infinite S.Shot Energy"
+cheat54_code = "011C77D3"
+cheat54_enable = false
+
+cheat55_desc = "[Format source non précisé] Have S.Shot"
+cheat55_code = "017C78D3+011677D3"
+cheat55_enable = false
+
+cheat56_desc = "[Format source non précisé] Infinite M.Mine Energy"
+cheat56_code = "011C79D3+011479D3"
+cheat56_enable = false
+
+cheat57_desc = "[Format source non précisé] Have M.Mine"
+cheat57_code = "017C7AD3"
+cheat57_enable = false
+
+cheat58_desc = "[Format source non précisé] Infinite S.Wheel Energy"
+cheat58_code = "011C7BD3+01167BD3"
+cheat58_enable = false
+
+cheat59_desc = "[Format source non précisé] Have S.Wheel"
+cheat59_code = "017C7CD3"
+cheat59_enable = false
+
+cheat60_desc = "[Format source non précisé] Have Infinite Zero Energy"
+cheat60_code = "011C7DD3"
+cheat60_enable = false
+
+cheat61_desc = "[Format source non précisé] Have All Equipment"
+cheat61_code = "01FF83D3"
+cheat61_enable = false
+
+cheat62_desc = "[Format source non précisé] Have Maximum Health"
+cheat62_code = "012084D3"
+cheat62_enable = false
+
+cheat63_desc = "[Format source non précisé] Have All Health Containers Collected"
+cheat63_code = "01FF9BD3"
+cheat63_enable = false
+
+cheat64_desc = "[Format source non précisé] Have All Zero Abilities"
+cheat64_code = "01FFA0D3"
+cheat64_enable = false
+
+cheat65_desc = "[Format source non précisé] Have Special Abilities"
+cheat65_code = "0101C7D3"
+cheat65_enable = false
+
+cheat66_desc = "[Format source non précisé] Infinite Health"
+cheat66_code = "019021D5"
+cheat66_enable = false
+
+cheat67_desc = "[Format source non précisé] Infinite Lives"
+cheat67_code = "010965D3"
+cheat67_enable = false
+
+cheat68_desc = "[Format source non précisé] Infinite Energy For Zero's Attacks"
+cheat68_code = "91307DD3"
+cheat68_enable = false
+
+cheat69_desc = "[Format source non précisé] Infinite Shotgun Ice"
+cheat69_code = "911C6DD3"
+cheat69_enable = false
+
+cheat70_desc = "[Format source non précisé] Have Shotgun Ice"
+cheat70_code = "917C6ED3"
+cheat70_enable = false
+
+cheat71_desc = "[Format source non précisé] Infinite E.Spark"
+cheat71_code = "911E6FD3"
+cheat71_enable = false
+
+cheat72_desc = "[Format source non précisé] Have E.Spark"
+cheat72_code = "917C70D3"
+cheat72_enable = false
+
+cheat73_desc = "[Format source non précisé] Infinite R.Shield"
+cheat73_code = "911E71D3"
+cheat73_enable = false
+
+cheat74_desc = "[Format source non précisé] Have R.Shield"
+cheat74_code = "917C72D3"
+cheat74_enable = false
+
+cheat75_desc = "[Format source non précisé] Infinite S.Tornado"
+cheat75_code = "911E73D3"
+cheat75_enable = false
+
+cheat76_desc = "[Format source non précisé] Have S.Tornado"
+cheat76_code = "917C74D3"
+cheat76_enable = false
+
+cheat77_desc = "[Format source non précisé] Infinite S.Burner"
+cheat77_code = "911E75D3"
+cheat77_enable = false
+
+cheat78_desc = "[Format source non précisé] Have S.Burner"
+cheat78_code = "917C76D3"
+cheat78_enable = false
+
+cheat79_desc = "[Format source non précisé] Infinite S.Shot"
+cheat79_code = "911E77D3"
+cheat79_enable = false
+
+cheat80_desc = "[Format source non précisé] Have S.Shot"
+cheat80_code = "917C78D3"
+cheat80_enable = false
+
+cheat81_desc = "[Format source non précisé] Infinite M.Mine"
+cheat81_code = "911E79D3"
+cheat81_enable = false
+
+cheat82_desc = "[Format source non précisé] Have M.Mine"
+cheat82_code = "917C7AD3"
+cheat82_enable = false
+
+cheat83_desc = "[Format source non précisé] Infinite S.Wheel"
+cheat83_code = "911E7BD3"
+cheat83_enable = false
+
+cheat84_desc = "[Format source non précisé] Have S.Wheel"
+cheat84_code = "917C7CD3"
+cheat84_enable = false
+
+cheat85_desc = "[Format source non précisé] Extra Low Gravity"
+cheat85_code = "9100D6D5"
+cheat85_enable = false
+
+cheat86_desc = "[Format source non précisé] No Rise/Falls"
+cheat86_code = "9100D3D5"
+cheat86_enable = false
+
+cheat87_desc = "[Format source non précisé] Quick Charge-Up"
+cheat87_code = "91FE70D5"
+cheat87_enable = false
+
+cheat88_desc = "[Format source non précisé] All Zero's Moves"
+cheat88_code = "910FA0D3"
+cheat88_enable = false
+
+cheat89_desc = "[Format source non précisé] Use Hidden Hadoken + Shouryuken Moves When You're Charged Up (Must Have Arm Upgrade)"
+cheat89_code = "9101C7D3"
+cheat89_enable = false
+
+cheat90_desc = "[Format source non précisé] Extreme Mode When Loading File"
+cheat90_code = "9104AFD3"
+cheat90_enable = false
+
+cheat91_desc = "[Format source non précisé] Dash Lasts Until You Hit Something"
+cheat91_code = "91116BD5"
+cheat91_enable = false
+
+cheat92_desc = "[Format source non précisé] Invincible To Sprites (And Spikes If Not Triggered)"
+cheat92_code = "910384D5"
+cheat92_enable = false
+
+cheat93_desc = "[Format source non précisé] Level Modifier"
+cheat93_code = "01005FD3"
+cheat93_enable = false
+
+cheat94_desc = "[Format source non précisé] Hit Anywhere"
+cheat94_code = "2FD-63D-5DE+0BD-62D-3B7"
+cheat94_enable = false
+
+cheat95_desc = "[Format source non précisé] Get Items From Anywhere"
+cheat95_code = "0BB-D48-3B7+2FB-D58-5DE"
+cheat95_enable = false
+
+cheat96_desc = "[Format source non précisé] Invincibility"
+cheat96_code = "18D-0ED-4CA"
+cheat96_enable = false
+
+cheat97_desc = "[Format source non précisé] Infinite Secondary Weapons"
+cheat97_code = "008-449-3BE"
+cheat97_enable = false
+
+cheat98_desc = "[Format source non précisé] Disable Background Music"
+cheat98_code = "9100ADD3"
+cheat98_enable = false
+
+cheat99_desc = "[Format source non précisé] Color Modifier"
+cheat99_code = "91008FD3+910090D3+910091D3+910092D3"
+cheat99_enable = false
+
+cheat100_desc = "[Format source non précisé] Move Faster"
+cheat100_code = "0105CED5"
+cheat100_enable = false
+
+cheat101_desc = "[Format source non précisé] Speed Modifier"
+cheat101_code = "0100CED5"
+cheat101_enable = false
+
+cheat102_desc = "[Format source non précisé] Shoot More Than 3 Bullets"
+cheat102_code = "010032D5"
+cheat102_enable = false
+
+cheat103_desc = "[Format source non précisé] Shoot Charged Shots"
+cheat103_code = "06A-919-E62"
+cheat103_enable = false
+
+cheat104_desc = "[Format source non précisé] Lift Limit On Charged Shots Fired"
+cheat104_code = "00A-069-5D5"
+cheat104_enable = false
+
+cheat105_desc = "[Format source non précisé] Enable Level select"
+cheat105_code = "0101A8D3"
+cheat105_enable = false

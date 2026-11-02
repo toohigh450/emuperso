@@ -1,0 +1,172 @@
+# Recherche locale pour la ROM : Line Rider 2 - Unbound (USA).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Line%20Rider%202%20-%20Unbound%20(USA).cht
+
+cheats = 41
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "5211385C+EE070F90+E20003C4+0000004A+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2E5C5DD+015E0012+0382004D+0009000A+00000000+00000000+0211385C+E92D401E+02113860+FAFBB2D7+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] 0 Tokens Needed to Complete Stage"
+cheat1_code = "22181E2C+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] 1 Stage to Complete Per Act"
+cheat2_code = "D5000000+00000001+C0000000+00000003+D6000000+021820F0+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Press SELECT to Unlock All Acts"
+cheat3_code = "94000130+FFFB0000+2214877C+00000008+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All Tokens and Coins for All Acts and STages"
+cheat4_code = "E2182440+00000050+00000000+00000000+04030000+06040402+06040606+09050804+05030505+08040906+08050906+08050806+07070706+09070806+08070905+07050706+09070706+08080807+09070707+08070907+06060708+09080808+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All Cinematics"
+cheat5_code = "2215BDD4+00000009"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] All Tokens and Coins (Stage 1)"
+cheat6_code = "1218244A+00000403"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] All Tokens and Coins (Stage 2)"
+cheat7_code = "1218244C+00000402"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] All Tokens and Coins (Stage 3)"
+cheat8_code = "1218244E+00000604"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] All Tokens and Coins (Stage 4)"
+cheat9_code = "12182450+00000606"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] All Tokens and Coins (Stage 5)"
+cheat10_code = "12182452+00000604"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] All Tokens and Coins (Stage 1)"
+cheat11_code = "12182454+00000804"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] All Tokens and Coins (Stage 2)"
+cheat12_code = "12182456+00000905"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] All Tokens and Coins (Stage 3)"
+cheat13_code = "12182458+00000505"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] All Tokens and Coins (Stage 4)"
+cheat14_code = "1218245A+00000503"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] All Tokens and Coins (Stage 5)"
+cheat15_code = "1218245C+00000906"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] All Tokens and Coins (Stage 1)"
+cheat16_code = "1218245E+00000804"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] All Tokens and Coins (Stage 2)"
+cheat17_code = "12182460+00000906"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] All Tokens and Coins (Stage 3)"
+cheat18_code = "12182462+00000805"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] All Tokens and Coins (Stage 4)"
+cheat19_code = "12182464+00000806"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] All Tokens and Coins (Stage 5)"
+cheat20_code = "12182466+00000805"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] All Tokens and Coins (Stage 1)"
+cheat21_code = "12182468+00000706"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] All Tokens and Coins (Stage 2)"
+cheat22_code = "1218246A+00000707"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] All Tokens and Coins (Stage 3)"
+cheat23_code = "1218246C+00000806"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] All Tokens and Coins (Stage 4)"
+cheat24_code = "1218246E+00000907"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] All Tokens and Coins (Stage 5)"
+cheat25_code = "12182470+00000905"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] All Tokens and Coins (Stage 1)"
+cheat26_code = "12182472+00000807"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] All Tokens and Coins (Stage 2)"
+cheat27_code = "12182474+00000706"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] All Tokens and Coins (Stage 3)"
+cheat28_code = "12182476+00000705"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] All Tokens and Coins (Stage 4)"
+cheat29_code = "12182478+00000706"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] All Tokens and Coins (Stage 5)"
+cheat30_code = "1218247A+00000907"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] All Tokens and Coins (Stage 1)"
+cheat31_code = "1218247C+00000807"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] All Tokens and Coins (Stage 2)"
+cheat32_code = "1218247E+00000808"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] All Tokens and Coins (Stage 3)"
+cheat33_code = "12182480+00000707"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] All Tokens and Coins (Stage 4)"
+cheat34_code = "12182482+00000907"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] All Tokens and Coins (Stage 5)"
+cheat35_code = "12182484+00000907"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] All Tokens and Coins (Stage 1)"
+cheat36_code = "12182486+00000807"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] All Tokens and Coins (Stage 2)"
+cheat37_code = "12182488+00000708"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] All Tokens and Coins (Stage 3)"
+cheat38_code = "1218248A+00000606"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] All Tokens and Coins (Stage 4)"
+cheat39_code = "1218248C+00000808"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] All Tokens and Coins (Stage 5)"
+cheat40_code = "1218248E+00000908"
+cheat40_enable = false

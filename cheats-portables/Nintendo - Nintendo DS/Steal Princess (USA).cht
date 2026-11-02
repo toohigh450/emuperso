@@ -1,0 +1,56 @@
+# Recherche locale pour la ROM : Steal Princess (USA).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Steal%20Princess%20(USA).cht
+
+cheats = 12
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "520083E8+EE070F90+E20000E4+0000004E+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2E4EAD9+015E0012+0382005B+0009000A+0005000B+00000000+020083E8+E92D401E+020083EC+FAFFDF3C+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Time 0:00"
+cheat1_code = "0219EA60+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Treasures x 99"
+cheat2_code = "2219EA4D+00000063+1219EA4E+00006363+0219EA50+63636363+0219EA54+63636363+2219EA58+00000063"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Modes/Options"
+cheat3_code = "0219F7D4+01010101+0219F7D8+01010101+1219F7DC+00000101"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Enable All Items From Shop"
+cheat4_code = "C0000000+0000002F+2219EB73+00000001+DC000000+00000003+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All Items From Shop Being Purchased"
+cheat5_code = "C0000000+0000002F+2219EB75+00000001+DC000000+00000003+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] All Stages (Select)"
+cheat6_code = "94000130+FFFB0000+C0000000+000000A4+2219E330+00000001+DC000000+00000008+D2000000+00000000+94000130+FFFB0000+D5000000+01010101+C0000000+00000004+D6000000+0219EA34+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] All Stage Complete With Gold Medal (Select)"
+cheat7_code = "94000130+FFFB0000+C0000000+000000A4+1219E332+00000001+DC000000+00000008+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Repayment A Little and Debt Become Fully Paid"
+cheat8_code = "120B4E44+000046C0"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Mission Time Never Increase"
+cheat9_code = "1205C204+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Health Never Decrease"
+cheat10_code = "02039B14+E1A00001"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Invicible After Being Injured"
+cheat11_code = "0203A96C+E3A010FD"
+cheat11_enable = false

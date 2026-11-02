@@ -1,0 +1,254 @@
+# Recherche locale pour la ROM : Kirby's Dream Land [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Kirby's%20Dream%20Land%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Kirby's%20Dream%20Land%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Kirby's%20Dream%20Land%20(USA%2C%20Europe).cht
+
+cheats = 61
+
+cheat0_desc = "[Game Genie] Infinite Lives"
+cheat0_code = "FA6-DBB-4C1"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Infinite Vitality Bars Except Against End-Of-Stage Boss"
+cheat1_code = "FA4-63B-4C1"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Start With 2 Lives"
+cheat2_code = "021-BBF-F7E"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Start With 5 Lives"
+cheat3_code = "051-BBF-F7E"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] Start With 9 Lives"
+cheat4_code = "091-BBF-F7E"
+cheat4_enable = false
+
+cheat5_desc = "[Game Genie] Start With 2 Vitality Bars"
+cheat5_code = "021-C0F-F72"
+cheat5_enable = false
+
+cheat6_desc = "[Game Genie] Start With 5 Vitality Bars"
+cheat6_code = "051-C0F-F72"
+cheat6_enable = false
+
+cheat7_desc = "[Game Genie] Start With 9 Vitality Bars"
+cheat7_code = "091-C0F-F72"
+cheat7_enable = false
+
+cheat8_desc = "[Game Genie] Infinite Lives & Get Points When Hit"
+cheat8_code = "CA1-D0C-FAB+B1F-F1D-649"
+cheat8_enable = false
+
+cheat9_desc = "[GameShark] Invincibility"
+cheat9_code = "0146F5D3"
+cheat9_enable = false
+
+cheat10_desc = "[GameShark] Infinite Lives"
+cheat10_code = "010589D0"
+cheat10_enable = false
+
+cheat11_desc = "[GameShark] Infinite HP"
+cheat11_code = "010A86D0"
+cheat11_enable = false
+
+cheat12_desc = "[GameShark] Max HP"
+cheat12_code = "010A87D0"
+cheat12_enable = false
+
+cheat13_desc = "[GameShark] Destroy Most Enemies Coming Your Way"
+cheat13_code = "010062D1"
+cheat13_enable = false
+
+cheat14_desc = "[GameShark] Cut-Up Kirby"
+cheat14_code = "015004C0"
+cheat14_enable = false
+
+cheat15_desc = "[GameShark] Split-Up Kirby"
+cheat15_code = "013005C0"
+cheat15_enable = false
+
+cheat16_desc = "[GameShark] No Clipping"
+cheat16_code = "01013FD0"
+cheat16_enable = false
+
+cheat17_desc = "[GameShark] Take Off All Invisible Barriers"
+cheat17_code = "01FF42D0"
+cheat17_enable = false
+
+cheat18_desc = "[GameShark] Play the secret 'Extra Game'"
+cheat18_code = "01013AD0"
+cheat18_enable = false
+
+cheat19_desc = "[GameShark] Level Select Modifier"
+cheat19_code = "01??3BD0"
+cheat19_enable = false
+
+cheat20_desc = "[GameShark] Music Select Modifier"
+cheat20_code = "01??3CD0"
+cheat20_enable = false
+
+cheat21_desc = "[GameShark] Hyper Mode"
+cheat21_code = "01F0E530+01F03100+01F020FE+011E53D0"
+cheat21_enable = false
+
+cheat22_desc = "[GameShark] 1 Shot All Bosses"
+cheat22_code = "01019BD3"
+cheat22_enable = false
+
+cheat23_desc = "[GameShark] Instant Kirby Dance"
+cheat23_code = "01FF68D0+01C967D0"
+cheat23_enable = false
+
+cheat24_desc = "[GameShark] No gravity"
+cheat24_code = "010064D0+FFFF+011565D0+FFFF"
+cheat24_enable = false
+
+cheat25_desc = "[GameShark] Super Jumps"
+cheat25_code = "010064D0+FFFF+011665D0+FFFF"
+cheat25_enable = false
+
+cheat26_desc = "[GameShark] Big Jumps"
+cheat26_code = "010064D0+FFFF+011665D0+FFFF"
+cheat26_enable = false
+
+cheat27_desc = "[GameShark] No Gravity"
+cheat27_code = "010064D0+FFFF+011565D0+FFFF"
+cheat27_enable = false
+
+cheat28_desc = "[Format source non précisé] Infinite lives"
+cheat28_code = "FA6-DBB-4C1"
+cheat28_enable = false
+
+cheat29_desc = "[Format source non précisé] Infinite vitality bars except against end-of-stage boss"
+cheat29_code = "FA4-63B-4C1"
+cheat29_enable = false
+
+cheat30_desc = "[Format source non précisé] Start with 2 lives"
+cheat30_code = "021-BBF-F7E"
+cheat30_enable = false
+
+cheat31_desc = "[Format source non précisé] Start with 5 lives"
+cheat31_code = "051-BBF-F7E"
+cheat31_enable = false
+
+cheat32_desc = "[Format source non précisé] Start with 9 lives"
+cheat32_code = "091-BBF-F7E"
+cheat32_enable = false
+
+cheat33_desc = "[Format source non précisé] Start with 2 vitality bars"
+cheat33_code = "021-C0F-F72"
+cheat33_enable = false
+
+cheat34_desc = "[Format source non précisé] Start with 5 vitality bars"
+cheat34_code = "051-C0F-F72"
+cheat34_enable = false
+
+cheat35_desc = "[Format source non précisé] Start with 9 vitality bars"
+cheat35_code = "091-C0F-F72"
+cheat35_enable = false
+
+cheat36_desc = "[Format source non précisé] 1 Shot All Bosses"
+cheat36_code = "01019BD3"
+cheat36_enable = false
+
+cheat37_desc = "[Format source non précisé] No Gravity"
+cheat37_code = "010064D0+011565D0"
+cheat37_enable = false
+
+cheat38_desc = "[Format source non précisé] Big Jumps"
+cheat38_code = "010064D0+011665D0"
+cheat38_enable = false
+
+cheat39_desc = "[Format source non précisé] Instant Kirby Dance"
+cheat39_code = "01FF68D0+01C967D0"
+cheat39_enable = false
+
+cheat40_desc = "[Format source non précisé] Music Select Modifier"
+cheat40_code = "01003CD0"
+cheat40_enable = false
+
+cheat41_desc = "[Format source non précisé] Level Select Modifier"
+cheat41_code = "01003BD0"
+cheat41_enable = false
+
+cheat42_desc = "[Format source non précisé] Play the secret &quot;Extra Game&quot;"
+cheat42_code = "01013AD0"
+cheat42_enable = false
+
+cheat43_desc = "[Format source non précisé] Take Off All Invisible Barriers"
+cheat43_code = "01FF42D0"
+cheat43_enable = false
+
+cheat44_desc = "[Format source non précisé] No Clipping"
+cheat44_code = "01013FD0"
+cheat44_enable = false
+
+cheat45_desc = "[Format source non précisé] Destroy Most Enemies Coming Your Way"
+cheat45_code = "010062D1"
+cheat45_enable = false
+
+cheat46_desc = "[Format source non précisé] Split-Up Kirby"
+cheat46_code = "013005C0"
+cheat46_enable = false
+
+cheat47_desc = "[Format source non précisé] Cut-Up Kirby"
+cheat47_code = "015004C0"
+cheat47_enable = false
+
+cheat48_desc = "[Format source non précisé] Max HP"
+cheat48_code = "010A87D0"
+cheat48_enable = false
+
+cheat49_desc = "[Format source non précisé] Infinite HP"
+cheat49_code = "010A86D0"
+cheat49_enable = false
+
+cheat50_desc = "[Format source non précisé] Infinite Lives"
+cheat50_code = "010589D0"
+cheat50_enable = false
+
+cheat51_desc = "[Format source non précisé] Invincibility"
+cheat51_code = "0146F5D3"
+cheat51_enable = false
+
+cheat52_desc = "[Format source non précisé] Hit Anywhere"
+cheat52_code = "003-E1B-F7E"
+cheat52_enable = false
+
+cheat53_desc = "[Format source non précisé] Inhale From Anywhere"
+cheat53_code = "008-67B-7FE+008-53B-08E"
+cheat53_enable = false
+
+cheat54_desc = "[Format source non précisé] Invulnerability"
+cheat54_code = "184-21B-6EA"
+cheat54_enable = false
+
+cheat55_desc = "[Format source non précisé] Blink Longer After Taking Damage"
+cheat55_code = "FF4-24B-803"
+cheat55_enable = false
+
+cheat56_desc = "[Format source non précisé] Don't Stop Blinking After Taking Damage"
+cheat56_code = "C9F-F4D-19E"
+cheat56_enable = false
+
+cheat57_desc = "[Format source non précisé] Start on Stage"
+cheat57_code = "3BA-FDB-91F+01A-FBB-E6A"
+cheat57_enable = false
+
+cheat58_desc = "[Format source non précisé] Kirby Stops On A Dime"
+cheat58_code = "018-C2F-E6A"
+cheat58_enable = false
+
+cheat59_desc = "[Format source non précisé] Kirby Moves Really Fast"
+cheat59_code = "008-7AF-F7A"
+cheat59_enable = false
+
+cheat60_desc = "[Format source non précisé] Kirby Moves Really Slow"
+cheat60_code = "088-7AF-F7A"
+cheat60_enable = false

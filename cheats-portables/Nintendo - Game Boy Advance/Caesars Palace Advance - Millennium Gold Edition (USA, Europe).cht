@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Caesars Palace Advance - Millennium Gold Edition (USA, Europe).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Caesars%20Palace%20Advance%20-%20Millennium%20Gold%20Edition%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 3
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000C736+000A+10002278+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Money"
+cheat1_code = "83004030+FFFF"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Max Money"
+cheat2_code = "83004030+E0FF+83004032+05F5"
+cheat2_enable = false

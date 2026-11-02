@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Wade Hixton's Counter Punch (USA, Europe).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Wade%20Hixton's%20Counter%20Punch%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 8
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000DC6E+000A+1000A2C8+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Health"
+cheat1_code = "330012D2+005A"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Stamina"
+cheat2_code = "830011BE+0230"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Infinite Time"
+cheat3_code = "33001190+0063"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Press Select For 1-Hit Death On P2"
+cheat4_code = "74000130+03FB+8300131E+0001"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] No Power Bar P2"
+cheat5_code = "83001326+0000"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Full Super Bar"
+cheat6_code = "330012DA+003E"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Infinite Money"
+cheat7_code = "830011D4+FFFF"
+cheat7_enable = false

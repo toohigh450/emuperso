@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Madagascar 3 - Europe's Most Wanted (Europe) (En,Fr,De,Es,It,Nl,Ru).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Madagascar%203%20-%20Europe's%20Most%20Wanted%20(Europe).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] Health Never Decrease"
+cheat0_code = "62111840+00000000+B2111840+00000000+DB000000+00000EA8+D8000000+00000EA4+D2000000+00000000"
+cheat0_enable = false

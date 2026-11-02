@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Yakuman DS (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Yakuman%20DS%20(Japan).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Max/Infinite Player Points"
+cheat0_code = "021252CC+0098967F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Quick End"
+cheat1_code = "22126078+00000001"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Abilities"
+cheat2_code = "D5000000+00000064+C0000000+00000004+D7000000+02124A70+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Modes"
+cheat3_code = "12124CEE+00000101+22124CF0+00000001+02124CF8+01010101+12124D02+00000101+12124D04+00000101+22124D06+00000001"
+cheat3_enable = false

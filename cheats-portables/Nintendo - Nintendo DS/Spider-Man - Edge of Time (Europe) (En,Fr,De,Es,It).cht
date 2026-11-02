@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Spider-Man - Edge of Time (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Spider-Man%20-%20Edge%20of%20Time%20(Europe).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Health Never Decreases"
+cheat0_code = "620FCE8C+00000000+D9000000+020FCE8C+D6000000+0214F640+D6000000+0214FE7C+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Jump To Walk On Air"
+cheat1_code = "52088EF4+E3500000+94000130+FEBF0000+02088EF8+EA00003A+D0000000+00000000+94000130+FE7F0000+02088EF8+DA00003A+D2000000+00000000"
+cheat1_enable = false

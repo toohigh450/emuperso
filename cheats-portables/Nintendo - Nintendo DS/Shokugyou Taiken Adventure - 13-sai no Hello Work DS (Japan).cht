@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Shokugyou Taiken Adventure - 13-sai no Hello Work DS (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Shokugyou%20Taiken%20Adventure%20-%2013-sai%20no%20Hello%20Work%20DS%20(Japan).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Full Unlock (Game and Omake)"
+cheat0_code = "020EF884+EAFC41DD+E2000000+00000010+E3A0C001+E7C0C001+E19000D1+EA03BE1D"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Master"
+cheat1_code = "020EF980+EAFC41A2+E2000010+00000010+E3A0C064+E5C0C024+E1D002D4+EA03BE58"
+cheat1_enable = false

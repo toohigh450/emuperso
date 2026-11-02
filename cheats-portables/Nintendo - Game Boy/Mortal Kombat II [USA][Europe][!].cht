@@ -1,0 +1,466 @@
+# Recherche locale pour la ROM : Mortal Kombat II [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Mortal%20Kombat%20II%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Mortal%20Kombat%20II%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Mortal%20Kombat%20II%20(USA%2C%20Europe).cht
+
+cheats = 114
+
+cheat0_desc = "[Game Genie] No Continues"
+cheat0_code = "001-57F-F72"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] 1 Continue"
+cheat1_code = "011-57F-F72"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] 3 Continues"
+cheat2_code = "031-57F-F72"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] 9 Continues"
+cheat3_code = "091-57F-F72"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] 15 Continues"
+cheat4_code = "0F1-57F-F72"
+cheat4_enable = false
+
+cheat5_desc = "[Game Genie] Infinite Continues"
+cheat5_code = "00D-ABF-3BE"
+cheat5_enable = false
+
+cheat6_desc = "[Game Genie] Much Faster Timer"
+cheat6_code = "02C-55B-E6E"
+cheat6_enable = false
+
+cheat7_desc = "[Game Genie] No Timer"
+cheat7_code = "00C-55B-E6E"
+cheat7_enable = false
+
+cheat8_desc = "[Game Genie] Timer Starts At 30"
+cheat8_code = "2C3-39D-800"
+cheat8_enable = false
+
+cheat9_desc = "[Game Genie] Timer Starts At 40"
+cheat9_code = "3C3-39D-800"
+cheat9_enable = false
+
+cheat10_desc = "[Game Genie] Timer Starts At 50"
+cheat10_code = "4C3-39D-800"
+cheat10_enable = false
+
+cheat11_desc = "[Game Genie] Timer Starts At 60"
+cheat11_code = "5C3-39D-800"
+cheat11_enable = false
+
+cheat12_desc = "[Game Genie] Infinite Energy"
+cheat12_code = "009-48B-91D"
+cheat12_enable = false
+
+cheat13_desc = "[Game Genie] Player Can't Move From Floor"
+cheat13_code = "006-2EB-3B7+000-1FA-3B7"
+cheat13_enable = false
+
+cheat14_desc = "[Game Genie] Complete Round 1 & Go To Round 3"
+cheat14_code = "3E1-79E-4CA+031-7AE-A2A+E01-7BE-2A9"
+cheat14_enable = false
+
+cheat15_desc = "[Game Genie] Complete Round 1 & Go To Round 4"
+cheat15_code = "3E1-79E-4CA+041-7AE-A2A+E01-7BE-2A9"
+cheat15_enable = false
+
+cheat16_desc = "[Game Genie] Computer Can't Move From Floor"
+cheat16_code = "003-279-19E+003-249-19E"
+cheat16_enable = false
+
+cheat17_desc = "[Game Genie] Normal Punches Do More Damage"
+cheat17_code = "F40-E89-2AE"
+cheat17_enable = false
+
+cheat18_desc = "[Game Genie] Uppercuts Do Less Damage"
+cheat18_code = "311-009-3B9"
+cheat18_enable = false
+
+cheat19_desc = "[Game Genie] Back Throws Do Less Damage"
+cheat19_code = "311-3A9-E69"
+cheat19_enable = false
+
+cheat20_desc = "[Game Genie] Special Moves (Projectiles) Do More Damage"
+cheat20_code = "F41-5A9-E60"
+cheat20_enable = false
+
+cheat21_desc = "[Game Genie] 20 Second Clock"
+cheat21_code = "1C3-39D-800"
+cheat21_enable = false
+
+cheat22_desc = "[Game Genie] Punches Do No Damage"
+cheat22_code = "000-E89-2AE"
+cheat22_enable = false
+
+cheat23_desc = "[Game Genie] Fierce Damage"
+cheat23_code = "FF0-E89-2AE"
+cheat23_enable = false
+
+cheat24_desc = "[Game Genie] Uppercuts Do No Damage"
+cheat24_code = "001-009-3B9"
+cheat24_enable = false
+
+cheat25_desc = "[Game Genie] Uppercuts Do Fierce Damage"
+cheat25_code = "FF1-009-3B9"
+cheat25_enable = false
+
+cheat26_desc = "[Game Genie] Back Throws Do No Damage"
+cheat26_code = "001-5A9-E60"
+cheat26_enable = false
+
+cheat27_desc = "[Game Genie] Back Throws Do Fierce Damage"
+cheat27_code = "FF1-5A9-E60"
+cheat27_enable = false
+
+cheat28_desc = "[Game Genie] Special Projectiles Do No Damage"
+cheat28_code = "001-5A9-E60"
+cheat28_enable = false
+
+cheat29_desc = "[Game Genie] Special Projectiles Do Fierce Damage"
+cheat29_code = "FF1-5A9-E60"
+cheat29_enable = false
+
+cheat30_desc = "[Game Genie] Round Modifier"
+cheat30_code = "XXX-7AE-A2A+3E1-79E-4CA+E01-7BE-2A9"
+cheat30_enable = false
+
+cheat31_desc = "[Game Genie] When You Are Scorpion Everybody You Fight Will Have The Effects of Jade"
+cheat31_code = "300-5F9-08C"
+cheat31_enable = false
+
+cheat32_desc = "[Game Genie] Morph"
+cheat32_code = "458-888-ABA"
+cheat32_enable = false
+
+cheat33_desc = "[Game Genie] Jump Really High"
+cheat33_code = "620-02A-34C"
+cheat33_enable = false
+
+cheat34_desc = "[Game Genie] Can't Jump High"
+cheat34_code = "660-02A-34C"
+cheat34_enable = false
+
+cheat35_desc = "[Game Genie] When Scorpion Everybody You Fight Acts Like Jade"
+cheat35_code = "300+5F9+08C"
+cheat35_enable = false
+
+cheat36_desc = "[Game Genie] Switch First Two Digits And You Will Morph (The One Given Is When Lui Kang Is Shao Koun) Must Press Down"
+cheat36_code = "458+888+ABA"
+cheat36_enable = false
+
+cheat37_desc = "[Game Genie] Jump High"
+cheat37_code = "620+02A+34C"
+cheat37_enable = false
+
+cheat38_desc = "[Game Genie] Can't Jump Very High"
+cheat38_code = "660+02A+34C"
+cheat38_enable = false
+
+cheat39_desc = "[Game Genie] Longer Fatality Timer"
+cheat39_code = "100+23C+888"
+cheat39_enable = false
+
+cheat40_desc = "[Game Genie] Changes Music To Sound Cool"
+cheat40_code = "998+888+ABA"
+cheat40_enable = false
+
+cheat41_desc = "[Game Genie] Fighters Are Down, Try It It's Cool"
+cheat41_code = "13B+CEE+6E9"
+cheat41_enable = false
+
+cheat42_desc = "[Game Genie] When You Do A Super Move It Locks Up"
+cheat42_code = "CDE+FBB+1DD"
+cheat42_enable = false
+
+cheat43_desc = "[Game Genie] When You Uppercut Someone They Go Strait Up And Down So It's Easy To Kill Them"
+cheat43_code = "AB9+BAB+080"
+cheat43_enable = false
+
+cheat44_desc = "[Game Genie] Block Fighters"
+cheat44_code = "00B+11B+DCB"
+cheat44_enable = false
+
+cheat45_desc = "[Game Genie] Earthquake Mode"
+cheat45_code = "099+1AB+ECB"
+cheat45_enable = false
+
+cheat46_desc = "[Game Genie] After First Match You Will Fight The Selected Opponent Forever"
+cheat46_code = "XXX+7AE+A2A+3E1+79E+4CA+E01+7BE+2A9"
+cheat46_enable = false
+
+cheat47_desc = "[GameShark] Infinite Energy P1"
+cheat47_code = "014020DD"
+cheat47_enable = false
+
+cheat48_desc = "[GameShark] Player 1 Is Shao Khan"
+cheat48_code = "010901DD"
+cheat48_enable = false
+
+cheat49_desc = "[GameShark] P1 No Energy"
+cheat49_code = "010020DD"
+cheat49_enable = false
+
+cheat50_desc = "[GameShark] Infinite Continues"
+cheat50_code = "010513DE"
+cheat50_enable = false
+
+cheat51_desc = "[GameShark] Player 2 Invincible"
+cheat51_code = "014060DD"
+cheat51_enable = false
+
+cheat52_desc = "[GameShark] Player 2 Modifier"
+cheat52_code = "010*41DD"
+cheat52_enable = false
+
+cheat53_desc = "[GameShark] Player 2 No Health (Instant Death)"
+cheat53_code = "010060DD"
+cheat53_enable = false
+
+cheat54_desc = "[Format source non précisé] No continues"
+cheat54_code = "001-57F-F72"
+cheat54_enable = false
+
+cheat55_desc = "[Format source non précisé] 1 continue"
+cheat55_code = "011-57F-F72"
+cheat55_enable = false
+
+cheat56_desc = "[Format source non précisé] 3 continues"
+cheat56_code = "031-57F-F72"
+cheat56_enable = false
+
+cheat57_desc = "[Format source non précisé] 9 continues"
+cheat57_code = "091-57F-F72"
+cheat57_enable = false
+
+cheat58_desc = "[Format source non précisé] 15 continues"
+cheat58_code = "0F1-57F-F72"
+cheat58_enable = false
+
+cheat59_desc = "[Format source non précisé] Infinite continues"
+cheat59_code = "00D-ABF-3BE"
+cheat59_enable = false
+
+cheat60_desc = "[Format source non précisé] Much faster timer"
+cheat60_code = "02C-55B-E6E"
+cheat60_enable = false
+
+cheat61_desc = "[Format source non précisé] No timer"
+cheat61_code = "00C-55B-E6E"
+cheat61_enable = false
+
+cheat62_desc = "[Format source non précisé] Timer starts at 30"
+cheat62_code = "2C3-39D-800"
+cheat62_enable = false
+
+cheat63_desc = "[Format source non précisé] Timer starts at 40"
+cheat63_code = "3C3-39D-800"
+cheat63_enable = false
+
+cheat64_desc = "[Format source non précisé] Timer starts at 50"
+cheat64_code = "4C3-39D-800"
+cheat64_enable = false
+
+cheat65_desc = "[Format source non précisé] Timer starts at 60"
+cheat65_code = "5C3-39D-800"
+cheat65_enable = false
+
+cheat66_desc = "[Format source non précisé] Infinite energy"
+cheat66_code = "009-48B-91D"
+cheat66_enable = false
+
+cheat67_desc = "[Format source non précisé] Player can't move from floor"
+cheat67_code = "006-2EB-3B7+000-1FA-3B7"
+cheat67_enable = false
+
+cheat68_desc = "[Format source non précisé] Complete round 1 and go to round 3"
+cheat68_code = "3E1-79E-4CA+031-7AE-A2A+E01-7BE-2A9"
+cheat68_enable = false
+
+cheat69_desc = "[Format source non précisé] Complete round 1 and go to round 4"
+cheat69_code = "3E1-79E-4CA+041-7AE-A2A+E01-7BE-2A9"
+cheat69_enable = false
+
+cheat70_desc = "[Format source non précisé] Computer can't move from floor"
+cheat70_code = "003-279-19E+003-249-19E"
+cheat70_enable = false
+
+cheat71_desc = "[Format source non précisé] Normal punches do more damage"
+cheat71_code = "F40-E89-2AE"
+cheat71_enable = false
+
+cheat72_desc = "[Format source non précisé] Uppercuts do less damage"
+cheat72_code = "311-009-3B9"
+cheat72_enable = false
+
+cheat73_desc = "[Format source non précisé] Back throws do less damage"
+cheat73_code = "311-3A9-E69"
+cheat73_enable = false
+
+cheat74_desc = "[Format source non précisé] Special moves [projectiles] do more damage"
+cheat74_code = "F41-5A9-E60"
+cheat74_enable = false
+
+cheat75_desc = "[Format source non précisé] P1 Infinite Energy"
+cheat75_code = "014020DD"
+cheat75_enable = false
+
+cheat76_desc = "[Format source non précisé] P1 Character Modifier"
+cheat76_code = "010901DD"
+cheat76_enable = false
+
+cheat77_desc = "[Format source non précisé] P1 No Energy"
+cheat77_code = "010020DD"
+cheat77_enable = false
+
+cheat78_desc = "[Format source non précisé] Player 2 Invincible"
+cheat78_code = "014060DD"
+cheat78_enable = false
+
+cheat79_desc = "[Format source non précisé] Player 2 Modifier"
+cheat79_code = "010041DD"
+cheat79_enable = false
+
+cheat80_desc = "[Format source non précisé] Player 2 No Health [Instant Death]"
+cheat80_code = "010060DD"
+cheat80_enable = false
+
+cheat81_desc = "[Format source non précisé] Invincibility"
+cheat81_code = "7BB-AEA-80E+FEB-AFA-193+40B-B0A-3B4"
+cheat81_enable = false
+
+cheat82_desc = "[Format source non précisé] 20 Second Clock"
+cheat82_code = "1C3-39D-800"
+cheat82_enable = false
+
+cheat83_desc = "[Format source non précisé] Punches Do No Damage"
+cheat83_code = "000-E89-2AE"
+cheat83_enable = false
+
+cheat84_desc = "[Format source non précisé] Fierce Damage"
+cheat84_code = "FF0-E89-2AE"
+cheat84_enable = false
+
+cheat85_desc = "[Format source non précisé] Uppercuts Do No Damage"
+cheat85_code = "001-009-3B9"
+cheat85_enable = false
+
+cheat86_desc = "[Format source non précisé] Uppercuts Do Fierce Damage"
+cheat86_code = "FF1-009-3B9"
+cheat86_enable = false
+
+cheat87_desc = "[Format source non précisé] Back Throws Do No Damage"
+cheat87_code = "001-5A9-E60"
+cheat87_enable = false
+
+cheat88_desc = "[Format source non précisé] Back Throws Do Fierce Damage"
+cheat88_code = "FF1-5A9-E60"
+cheat88_enable = false
+
+cheat89_desc = "[Format source non précisé] Round Modifier"
+cheat89_code = "7AE-A2A+3E1-79E-4CA+E01-7BE-2A9"
+cheat89_enable = false
+
+cheat90_desc = "[Format source non précisé] When You Are Scorpion Everybody You Fight Will Have The Effects of Jade"
+cheat90_code = "300-5F9"
+cheat90_enable = false
+
+cheat91_desc = "[Format source non précisé] Morph"
+cheat91_code = "458-888-A2A"
+cheat91_enable = false
+
+cheat92_desc = "[Format source non précisé] Jump Really High"
+cheat92_code = "620-02A-3BC"
+cheat92_enable = false
+
+cheat93_desc = "[Format source non précisé] Hit Anywhere Both Players"
+cheat93_code = "00B-EFA-2AA+00C-12A-C49"
+cheat93_enable = false
+
+cheat94_desc = "[Format source non précisé] Skip Intro Screens"
+cheat94_code = "C92-D6F-3B5+C91-77F-E69"
+cheat94_enable = false
+
+cheat95_desc = "[Format source non précisé] Infinite Fatality Time"
+cheat95_code = "180-ACE-6EA+180-8EE-6EA"
+cheat95_enable = false
+
+cheat96_desc = "[Format source non précisé] Jax Stage Fatality [See Note]"
+cheat96_code = "FF8-40A-A2A+FE8-3FA-C48"
+cheat96_enable = false
+
+cheat97_desc = "[Format source non précisé] Jax Fatality [See Note]"
+cheat97_code = "FF8-46A-E68+FF8-45A-A28"
+cheat97_enable = false
+
+cheat98_desc = "[Format source non précisé] Mileena Stage Fatality [See Note]"
+cheat98_code = "FF8-0EA-A2A"
+cheat98_enable = false
+
+cheat99_desc = "[Format source non précisé] Mileena Fatality [See Note]"
+cheat99_code = "FF8-00A-A2A+FF7-FFA-C48"
+cheat99_enable = false
+
+cheat100_desc = "[Format source non précisé] Reptile Stage Fatality [See Note]"
+cheat100_code = "FF7-94A-A2A"
+cheat100_enable = false
+
+cheat101_desc = "[Format source non précisé] Reptile Fatality [See Note]"
+cheat101_code = "FF7-78A-A2A+FF7-77A-C48"
+cheat101_enable = false
+
+cheat102_desc = "[Format source non précisé] Kitana Stage Fatality [See Note]"
+cheat102_code = "FF7-5AA-6EA+FE7-59A-E69"
+cheat102_enable = false
+
+cheat103_desc = "[Format source non précisé] Kitana Fatality [See Note]"
+cheat103_code = "FF7-60A-C4A"
+cheat103_enable = false
+
+cheat104_desc = "[Format source non précisé] Liu Kang Stage Fatality [See Note]"
+cheat104_code = "FF6-F0A-A2A+FE6-EFA-C48"
+cheat104_enable = false
+
+cheat105_desc = "[Format source non précisé] Liu Kang Fatality [See Note]"
+cheat105_code = "FF7-0CA-A2A+FF7-0BA-191"
+cheat105_enable = false
+
+cheat106_desc = "[Format source non précisé] Sub Zero Stage Fatality [See Note]"
+cheat106_code = "FF7-3CA-A2A"
+cheat106_enable = false
+
+cheat107_desc = "[Format source non précisé] Sub Zero Fatality 1st Part[See Note]"
+cheat107_code = "FF7-23A-A28+FF7-24A-6EA"
+cheat107_enable = false
+
+cheat108_desc = "[Format source non précisé] Sub Zero Fatality 2nd Part[See Note]"
+cheat108_code = "FD7-1DA-C48+FF7-1EA-A2A"
+cheat108_enable = false
+
+cheat109_desc = "[Format source non précisé] Shang Tsung Stage Fatality [See Note]"
+cheat109_code = "FE7-C4A-E69+FF7-C5A-A2A"
+cheat109_enable = false
+
+cheat110_desc = "[Format source non précisé] Shang Tsung Fatality [See Note]"
+cheat110_code = "FF7-A3A-C48+FF7-A4A-6EA"
+cheat110_enable = false
+
+cheat111_desc = "[Format source non précisé] Scorpion Stage Fatality [See Note]"
+cheat111_code = "FF8-30A-A2A"
+cheat111_enable = false
+
+cheat112_desc = "[Format source non précisé] Scorpion Fatality [See Note]"
+cheat112_code = "FF8-1DA-C48+FF8-1EA-6EA"
+cheat112_enable = false
+
+cheat113_desc = "[Format source non précisé] Infinite Credits"
+cheat113_code = "019913DE"
+cheat113_enable = false

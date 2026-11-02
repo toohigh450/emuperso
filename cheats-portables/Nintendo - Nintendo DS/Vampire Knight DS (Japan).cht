@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Vampire Knight DS (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Vampire%20Knight%20DS%20(Japan).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Max/Infinite Money"
+cheat0_code = "94000130+FFFB0000+122E8DBC+0000270F+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Never Lose Money When Shopping"
+cheat1_code = "5203A9FC+E18210B0+0203A9FC+E1A00000+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Have All Clothing and Items"
+cheat2_code = "94000130+FCFB0000+022E906C+FFFFFFFF+022E9070+FFFFFFFF+122E9074+00003FFF+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Stats"
+cheat3_code = "122E8DBE+00007FFF+022E8DC0+7FFF7FFF+022E8DC4+7FFF7FFF+122E8DC8+00007FFF+122E8DCA+00007FFF+022E8DCC+7FFF7FFF+022E8DD0+7FFF7FFF+022E8DD4+7FFF7FFF"
+cheat3_enable = false

@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Jigsaw World - Daigekitou! Jig Battle Heroes (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Jigsaw%20World%20-%20Daigekitou!%20Jig%20Battle%20Heroes%20(Japan).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Gage Max"
+cheat0_code = "12018C96+0000E3A0+12018C9A+0000E587"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Gage Always Max"
+cheat1_code = "0201A3E4+EAFF9705+E2000000+00000010+E3A0CEE1+E781C002+E7911002+EA0068F5"
+cheat1_enable = false

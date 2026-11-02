@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Mini 4 Boy II [Japan][SGB Enhanced][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Mini%204%20Boy%20II%20(Japan)%20(SGB%20Enhanced).cht
+
+cheats = 3
+
+cheat0_desc = "[Format source non précisé] Enable New Border"
+cheat0_code = "005-32E-4C2"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Max Stat Points For First Player"
+cheat1_code = "01FF24C9+01FF25C9+01FF26C9+01FF27C9+01FF28C9+01FF29C9"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Max Stat Points For Second Player"
+cheat2_code = "01FF34C9+01FF35C9+01FF36C9+01FF37C9+01FF38C9+01FF39C9"
+cheat2_enable = false

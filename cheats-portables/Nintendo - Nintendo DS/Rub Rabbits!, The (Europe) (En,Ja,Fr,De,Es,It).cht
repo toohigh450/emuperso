@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Rub Rabbits!, The (Europe) (En,Ja,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Rub%20Rabbits!%2C%20The%20(Europe).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] Health Never Decrease"
+cheat0_code = "2207944C+00000004"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Recall Modes"
+cheat1_code = "020795A4+FFFFFFFF+120795A8+0000FFFF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Clothings, Gloves and etc"
+cheat2_code = "020796E0+FFFFFFFF+220796E4+000000FF+020796E8+FFFFFFFF+020796F0+00FFFFFF+220796F8+000000FF"
+cheat2_enable = false

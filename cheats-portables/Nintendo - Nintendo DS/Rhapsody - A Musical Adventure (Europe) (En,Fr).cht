@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Rhapsody - A Musical Adventure (Europe) (En,Fr).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Rhapsody%20-%20A%20Musical%20Adventure%20(Europe).cht
+
+cheats = 7
+
+cheat0_desc = "[Action Replay] Max Inotium"
+cheat0_code = "020F64B8+000F423F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Full HP"
+cheat1_code = "120F6876+000003E7+120F6878+000003E7"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max/Full SP"
+cheat2_code = "020F687C+03E703E7"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Infinite Health"
+cheat3_code = "920F6240+00000001+DA000000+02332A04+D7000000+02332A02+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max/Full HP"
+cheat4_code = "120F68AA+000003E7+120F68AC+000003E7"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Max/Full SP"
+cheat5_code = "020F68B0+03E703E7"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Infinite Health"
+cheat6_code = "920F6240+00000001+DA000000+02332844+D7000000+02332842+D2000000+00000000"
+cheat6_enable = false

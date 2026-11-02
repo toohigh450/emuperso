@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Harvest Moon DS (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Harvest%20Moon%20DS%20(Europe).cht
+
+cheats = 8
+
+cheat0_desc = "[Action Replay] Max/Infinite Money"
+cheat0_code = "023D6AA4+05F5E0FF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Extra Stamina"
+cheat1_code = "223D6AA2+000000FF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Infinite Stamina"
+cheat2_code = "123D6AA2+000000FF+223D6AA1+000000FF"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Rewind Time"
+cheat3_code = "94000130+0000027F+D3000000+023D6A98+D9000000+00000000+D4000000+FFFFFFDF+D6000000+00000000+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Advance Time"
+cheat4_code = "94000130+000002BF+D3000000+023D6A98+D9000000+00000000+D4000000+00000020+D6000000+00000000+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Max Pedometer Steps"
+cheat5_code = "323DDEBC+3B9AC9FF+023DDEBC+3B9AC9FF"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Max/Infinite Casino Medals"
+cheat6_code = "023D6AA8+05F5E0FF"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Most Sprites"
+cheat7_code = "94000130+FFFB0000+023DDD6C+FFFFFFFF+023DDD60+FFFFFFFF+023DDD64+FFFFFFFF+023DDD68+FFFFFFFF+D5000000+00000021+C0000000+00000060+DC000000+0000000B+D8000000+023DC4DD+D2000000+00000000"
+cheat7_enable = false

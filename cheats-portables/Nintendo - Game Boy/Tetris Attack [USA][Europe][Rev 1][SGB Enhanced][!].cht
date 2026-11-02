@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Tetris Attack [USA][Europe][Rev 1][SGB Enhanced][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Tetris%20Attack%20(USA%2C%20Europe)%20(Rev%201)%20(SGB%20Enhanced).cht
+
+cheats = 1
+
+cheat0_desc = "[Format source non précisé] Rows Clear Automatically"
+cheat0_code = "007-32B-80D"
+cheat0_enable = false

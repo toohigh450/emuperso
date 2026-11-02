@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Fairly OddParents!, The - Breakin' da Rules (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Fairly%20OddParents!%2C%20The%20-%20Breakin'%20da%20Rules%20(USA)%20(Code%20Breaker).cht
+
+cheats = 4
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000B5E1+000A+100265F4+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Invincible"
+cheat1_code = "3201D33D+0024"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Allways Have Power Shot"
+cheat2_code = "3201D30E+0006"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Infinite Fairy Form Time"
+cheat3_code = "3201D312+022B"
+cheat3_enable = false

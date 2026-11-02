@@ -1,0 +1,25 @@
+# Recherche locale pour la ROM : European Super League [Europe][En][Fr][De][Es][It][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/European%20Super%20League%20(Europe)%20(En%2CFr%2CDe%2CEs%2CIt).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/European%20Super%20League%20(Europe)%20(GameShark).cht
+
+cheats = 4
+
+cheat0_desc = "[Format source non précisé] Computer Team Point Mod"
+cheat0_code = "0109A6C8"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Your Team Point Mod"
+cheat1_code = "0109A5C8"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Computer Team Point Mod"
+cheat2_code = "01??A6C8"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Your Team Point Mod"
+cheat3_code = "01??A5C8"
+cheat3_enable = false

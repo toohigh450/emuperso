@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Ping Pals (France).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Ping%20Pals%20(France).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Max/Infinite Money"
+cheat0_code = "02122DD8+000F423F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Items"
+cheat1_code = "D5000000+000000FF+C0000000+00000096+D8000000+02122BC8+D2000000+00000000+D5000000+00000000+C0000000+000004B5+D7000000+021339D0+DC000000+0000005A+D4000000+00000001+D2000000+00000000"
+cheat1_enable = false

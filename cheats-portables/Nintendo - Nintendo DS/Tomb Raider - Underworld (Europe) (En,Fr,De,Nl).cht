@@ -1,0 +1,37 @@
+# Recherche locale pour la ROM : Tomb Raider - Underworld (Europe) (En,Fr,De,Nl).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Tomb%20Raider%20-%20Underworld%20(Europe)%20(En%2CEs%2CIt).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Tomb%20Raider%20-%20Underworld%20(Europe)%20(En%2CFr%2CDe%2CNl).cht
+
+cheats = 7
+
+cheat0_desc = "[Action Replay] Infinite health"
+cheat0_code = "6223CDEC+00000000+B223CDEC+00000000+00000044+00064000+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Ammo (All Guns)"
+cheat1_code = "1207018A+00002102+0207018C+607160B1"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Guns"
+cheat2_code = "1203C624+00007100"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Prevent Energy Orbs Charging - Helheim Serpent Level"
+cheat3_code = "12062DD6+000046C0"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Infinite Ammo"
+cheat4_code = "12070196+00002102+02070198+607160B1"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All Guns"
+cheat5_code = "1203C60C+00007100"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Prevent Energy Orbs Charging - Helheim Serpent Level"
+cheat6_code = "12062DCA+000046C0"
+cheat6_enable = false

@@ -1,0 +1,68 @@
+# Recherche locale pour la ROM : Super Duper Sumos (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Super%20Duper%20Sumos%20(USA)%20(Code%20Breaker).cht
+
+cheats = 15
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000D342+000A+100AF854+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Health"
+cheat1_code = "33004340+0014"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Lives"
+cheat2_code = "33004C30+0009"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Infinite Continues"
+cheat3_code = "33004318+0009"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Max Power Bar"
+cheat4_code = "33004E28+000C"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Invinsible"
+cheat5_code = "3300434C+001B"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Quick Score Gain"
+cheat6_code = "83004288+FFFF"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Max Score"
+cheat7_code = "83004288+967F+8300428A+0098"
+cheat7_enable = false
+
+cheat8_desc = "[Code Breaker] Have All Levels Unlocked"
+cheat8_code = "8200022C+0FFF"
+cheat8_enable = false
+
+cheat9_desc = "[Code Breaker] Press Down+L For Lv 1 Attack"
+cheat9_code = "74000130+017F+83004E28+0004"
+cheat9_enable = false
+
+cheat10_desc = "[Code Breaker] Press Up+L For Lv2 Attack"
+cheat10_code = "74000130+01BF+83004E28+000C"
+cheat10_enable = false
+
+cheat11_desc = "[Code Breaker] Weak Enemies/Bosses"
+cheat11_code = "420007C8+0001+00000007+0004"
+cheat11_enable = false
+
+cheat12_desc = "[Code Breaker] Press Select To Refill Bonus Timer"
+cheat12_code = "74000130+03FB+83004C84+0020"
+cheat12_enable = false
+
+cheat13_desc = "[Code Breaker] Move Faster (Good For Bonus Levels)"
+cheat13_code = "43004338+0500+00000002+0004"
+cheat13_enable = false
+
+cheat14_desc = "[Code Breaker] Have All Moves Learned"
+cheat14_code = "32000228+007B"
+cheat14_enable = false

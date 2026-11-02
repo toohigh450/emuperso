@@ -1,0 +1,428 @@
+# Recherche locale pour la ROM : Bouken-ou Beet - Vandel vs. Busters (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Bouken-ou%20Beet%20-%20Vandel%20vs.%20Busters%20(Japan).cht
+
+cheats = 105
+
+cheat0_desc = "[Action Replay] Walk Anywhere"
+cheat0_code = "5204202C+E3510000+02042030+1A00006B+94000130+FEFF0000+02042030+EA000040+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Money (Press Select)"
+cheat1_code = "94000130+FFFB0000+0224A6E0+0098967F+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] No Random Battles"
+cheat2_code = "2225E728+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Away Escape"
+cheat3_code = "0224A874+0098967F"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All Monster in Data Book"
+cheat4_code = "D5000000+FFFFFFFF+C0000000+00000004+D6000000+021C7F40+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All Buster in Data Book"
+cheat5_code = "021C7FE0+FFFFFFFF+121C7FE4+0000FFFF+221C7FE6+000000FF"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] All Vendel in Data Book"
+cheat6_code = "121C7FA0+0000FFFF+221C7FA2+000000FF"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Max EXP Buster (LV 99)"
+cheat7_code = "0224A874+0098967F"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Max EXP Vendel (7 Star)"
+cheat8_code = "2224AA98+00000007"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Max Lv Skill Weapon 99"
+cheat9_code = "0224A88C+63636363+0224A890+63636363+0224A894+63636363"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Max EXP Skill Weapon"
+cheat10_code = "D5000000+0000C350+C0000000+0000000B+D7000000+0224A8B8+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] No Magic Weapon (Weapon Buster)"
+cheat11_code = "1224A920+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Can Equip Weapon High LV"
+cheat12_code = "0224AA54+0C0C0C0C+0224AA58+0C0C0C0C+0224AA5C+0C0C0C0C"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] All Special Skills"
+cheat13_code = "D5000000+00000015+C0000000+00000018+D8000000+0224A934+DC000000+00000003+D4000000+00000001+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Lv 99"
+cheat14_code = "2224A864+00000063"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] HP"
+cheat15_code = "1224A866+0000270F"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] MP"
+cheat16_code = "1224A868+0000270F"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Max HP"
+cheat17_code = "1224A878+0000270F"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Max MP"
+cheat18_code = "1224A87A+0000270F"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] STR"
+cheat19_code = "1224A87C+000003E7"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] MGC"
+cheat20_code = "1224A87E+000003E7"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] SPD"
+cheat21_code = "1224A880+000003E7"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] ATK"
+cheat22_code = "1224A898+000003E7"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] DEF"
+cheat23_code = "1224A89A+000003E7"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] ACC"
+cheat24_code = "1224A89C+000003E7"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] EVA"
+cheat25_code = "1224A89E+000003E7"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Fire 1"
+cheat26_code = "2224A8D0+00000001"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Fire 2"
+cheat27_code = "2224A8D0+00000002"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Fire 3"
+cheat28_code = "2224A8D0+00000003"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Fire 4"
+cheat29_code = "2224A8D0+00000004"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Fire 5"
+cheat30_code = "2224A8D0+00000005"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Fire 6"
+cheat31_code = "2224A8D0+00000006"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Fire 7"
+cheat32_code = "2224A8D0+00000007"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Fire 8"
+cheat33_code = "2224A8D0+00000008"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Fire 9"
+cheat34_code = "2224A8D0+00000009"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Water 1"
+cheat35_code = "2224A8D0+0000000A"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Water 2"
+cheat36_code = "2224A8D0+0000000B"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Water 3"
+cheat37_code = "2224A8D0+0000000C"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Water 4"
+cheat38_code = "2224A8D0+0000000D"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Water 5"
+cheat39_code = "2224A8D0+0000000E"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Water 6"
+cheat40_code = "2224A8D0+0000000F"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Water 7"
+cheat41_code = "2224A8D0+00000010"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Water 8"
+cheat42_code = "2224A8D0+00000011"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Water 9"
+cheat43_code = "2224A8D0+00000012"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Wind 1"
+cheat44_code = "2224A8D0+00000013"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Wind 2"
+cheat45_code = "2224A8D0+00000014"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Wind 3"
+cheat46_code = "2224A8D0+00000015"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Wind 4"
+cheat47_code = "2224A8D0+00000016"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Wind 5"
+cheat48_code = "2224A8D0+00000017"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Wind 6"
+cheat49_code = "2224A8D0+00000018"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Wind 7"
+cheat50_code = "2224A8D0+00000019"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Wind 8"
+cheat51_code = "2224A8D0+0000001A"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Wind 9"
+cheat52_code = "2224A8D0+0000001B"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Wind 10"
+cheat53_code = "2224A8D0+0000001C"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Thunder 1"
+cheat54_code = "2224A8D0+0000001D"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Thunder 2"
+cheat55_code = "2224A8D0+0000001E"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Thunder 3"
+cheat56_code = "2224A8D0+0000001F"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Thunder 4"
+cheat57_code = "2224A8D0+00000020"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Thunder 5"
+cheat58_code = "2224A8D0+00000021"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Thunder 6"
+cheat59_code = "2224A8D0+00000022"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Thunder 7"
+cheat60_code = "2224A8D0+00000023"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Thunder 8"
+cheat61_code = "2224A8D0+00000024"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Thunder 9"
+cheat62_code = "2224A8D0+00000025"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Light (Buster) and Dark (Vandel) 1"
+cheat63_code = "2224A8D0+00000026"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Light (Buster) and Dark (Vandel) 2"
+cheat64_code = "2224A8D0+00000027"
+cheat64_enable = false
+
+cheat65_desc = "[Action Replay] Light (Buster) and Dark (Vandel) 3"
+cheat65_code = "2224A8D0+00000028"
+cheat65_enable = false
+
+cheat66_desc = "[Action Replay] Light (Buster) and Dark (Vandel) 4"
+cheat66_code = "2224A8D0+00000029"
+cheat66_enable = false
+
+cheat67_desc = "[Action Replay] Light (Buster) and Dark (Vandel) 5"
+cheat67_code = "2224A8D0+0000002A"
+cheat67_enable = false
+
+cheat68_desc = "[Action Replay] Light (Buster) and Dark (Vandel) 6"
+cheat68_code = "2224A8D0+0000002B"
+cheat68_enable = false
+
+cheat69_desc = "[Action Replay] Beet MW Lance"
+cheat69_code = "2224A720+00000001"
+cheat69_enable = false
+
+cheat70_desc = "[Action Replay] Beet MW Sword"
+cheat70_code = "2224A720+00000002"
+cheat70_enable = false
+
+cheat71_desc = "[Action Replay] Beet MW AXe"
+cheat71_code = "2224A720+00000003"
+cheat71_enable = false
+
+cheat72_desc = "[Action Replay] Beet MW Gun"
+cheat72_code = "2224A720+00000004"
+cheat72_enable = false
+
+cheat73_desc = "[Action Replay] Beet MW Shield"
+cheat73_code = "2224A720+00000005"
+cheat73_enable = false
+
+cheat74_desc = "[Action Replay] Slalet MW Lance"
+cheat74_code = "2224A720+00000006"
+cheat74_enable = false
+
+cheat75_desc = "[Action Replay] Milfa MW Axe"
+cheat75_code = "2224A720+00000007"
+cheat75_enable = false
+
+cheat76_desc = "[Action Replay] Gres MW Sword"
+cheat76_code = "2224A720+00000008"
+cheat76_enable = false
+
+cheat77_desc = "[Action Replay] Goran MW Hammer"
+cheat77_code = "2224A720+00000009"
+cheat77_enable = false
+
+cheat78_desc = "[Action Replay] Arc MW Boomerang"
+cheat78_code = "2224A720+0000000A"
+cheat78_enable = false
+
+cheat79_desc = "[Action Replay] Jeek MW Sword"
+cheat79_code = "2224A720+0000000B"
+cheat79_enable = false
+
+cheat80_desc = "[Action Replay] Player Weapon Sword (Fire Element)"
+cheat80_code = "2224A720+0000000C"
+cheat80_enable = false
+
+cheat81_desc = "[Action Replay] Player Weapon Sword (Water Element)"
+cheat81_code = "2224A720+0000000D"
+cheat81_enable = false
+
+cheat82_desc = "[Action Replay] Player Weapon Sword (Wind Element)"
+cheat82_code = "2224A720+0000000E"
+cheat82_enable = false
+
+cheat83_desc = "[Action Replay] Player Weapon Sword (Thunder Element)"
+cheat83_code = "2224A720+0000000F"
+cheat83_enable = false
+
+cheat84_desc = "[Action Replay] Player Weapon Sword (Light Element)"
+cheat84_code = "2224A720+00000010"
+cheat84_enable = false
+
+cheat85_desc = "[Action Replay] Player Weapon Lance (Fire Element)"
+cheat85_code = "2224A720+00000011"
+cheat85_enable = false
+
+cheat86_desc = "[Action Replay] Player Weapon Lance (Water Element)"
+cheat86_code = "2224A720+00000012"
+cheat86_enable = false
+
+cheat87_desc = "[Action Replay] Player Weapon Lance (Wind Element)"
+cheat87_code = "2224A720+00000013"
+cheat87_enable = false
+
+cheat88_desc = "[Action Replay] Player Weapon Lance (Thunder Element)"
+cheat88_code = "2224A720+00000014"
+cheat88_enable = false
+
+cheat89_desc = "[Action Replay] Player Weapon Lance (Light Element)"
+cheat89_code = "2224A720+00000015"
+cheat89_enable = false
+
+cheat90_desc = "[Action Replay] Player Weapon Axe (Fire Element)"
+cheat90_code = "2224A720+00000016"
+cheat90_enable = false
+
+cheat91_desc = "[Action Replay] Player Weapon Axe (Water Element)"
+cheat91_code = "2224A720+00000017"
+cheat91_enable = false
+
+cheat92_desc = "[Action Replay] Player Weapon Axe (Wind Element)"
+cheat92_code = "2224A720+00000018"
+cheat92_enable = false
+
+cheat93_desc = "[Action Replay] Player Weapon Axe (Thunder Element)"
+cheat93_code = "2224A720+00000019"
+cheat93_enable = false
+
+cheat94_desc = "[Action Replay] Player Weapon Axe (Light Element)"
+cheat94_code = "2224A720+0000001A"
+cheat94_enable = false
+
+cheat95_desc = "[Action Replay] Player Weapon Gun (Fire Element)"
+cheat95_code = "2224A720+0000001B"
+cheat95_enable = false
+
+cheat96_desc = "[Action Replay] Player Weapon Gun (Water Element)"
+cheat96_code = "2224A720+0000001C"
+cheat96_enable = false
+
+cheat97_desc = "[Action Replay] Player Weapon Gun (Wind Element)"
+cheat97_code = "2224A720+0000001D"
+cheat97_enable = false
+
+cheat98_desc = "[Action Replay] Player Weapon Gun (Thunder Element)"
+cheat98_code = "2224A720+0000001E"
+cheat98_enable = false
+
+cheat99_desc = "[Action Replay] Player Weapon Gun (Light Element)"
+cheat99_code = "2224A720+0000001F"
+cheat99_enable = false
+
+cheat100_desc = "[Action Replay] Player Weapon Knuckle (Fire Element)"
+cheat100_code = "2224A720+00000020"
+cheat100_enable = false
+
+cheat101_desc = "[Action Replay] Player Weapon Knuckle (Water Element)"
+cheat101_code = "2224A720+00000021"
+cheat101_enable = false
+
+cheat102_desc = "[Action Replay] Player Weapon Knuckle (Wind Element)"
+cheat102_code = "2224A720+00000022"
+cheat102_enable = false
+
+cheat103_desc = "[Action Replay] Player Weapon Knuckle (Thunder Element)"
+cheat103_code = "2224A720+00000023"
+cheat103_enable = false
+
+cheat104_desc = "[Action Replay] Player Weapon Knuckle (Light Element)"
+cheat104_code = "2224A720+00000024"
+cheat104_enable = false

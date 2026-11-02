@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Legend of Kage 2, The (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Legend%20of%20Kage%202%2C%20The%20(Europe).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Infinite Health"
+cheat0_code = "420BB1C4+02080000+320BB1C4+023F0000+B20BB1C4+00000000+000000D0+00000064+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Invincible"
+cheat1_code = "420BB1C4+02080000+320BB1C4+023F0000+B20BB1C4+00000000+00000070+00000032+D2000000+00000000"
+cheat1_enable = false

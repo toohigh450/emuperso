@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Simple DS Series Vol. 35 - The Genshijin (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Simple%20DS%20Series%20Vol.%2035%20-%20The%20Genshijin%20(Japan).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] HP player not decrease"
+cheat0_code = "0201FBFC+E1A00001"
+cheat0_enable = false

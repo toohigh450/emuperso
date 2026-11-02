@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Indiana Jones and the Staff of Kings (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Indiana%20Jones%20and%20the%20Staff%20of%20Kings%20(Europe).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Infinite Health"
+cheat0_code = "12115638+0000A000+1211563C+0000A000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Power"
+cheat1_code = "023C7414+00079000+023C7418+00079000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Infinite Ammo"
+cheat2_code = "123C73D8+00006000+123C73DC+00006000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Infinite Time (Artifacts)"
+cheat3_code = "620FA21C+00000000+B20FA21C+00000000+000000A8+00001C20+D2000000+00000000"
+cheat3_enable = false

@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Megalit [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Megalit%20(USA%2C%20Europe).cht
+
+cheats = 4
+
+cheat0_desc = "[Format source non précisé] Automatically Beat Levels"
+cheat0_code = "01011FC0"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Blocks Don't Break"
+cheat1_code = "00F-7FD-3BA"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Infinite Lives"
+cheat2_code = "FA2-6AF-4C1"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Infinite Time"
+cheat3_code = "FAD-31D-4C1"
+cheat3_enable = false

@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Casper [Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Casper%20(USA%2C%20Europe)%20(Xploder).cht
+
+cheats = 4
+
+cheat0_desc = "[Xploder] Habe 6 Messingschluessel"
+cheat0_code = "$0D27C881"
+cheat0_enable = false
+
+cheat1_desc = "[Xploder] Habe 6 Eisenschluessel"
+cheat1_code = "$0D276281"
+cheat1_enable = false
+
+cheat2_desc = "[Xploder] Habe 6 Gewichte"
+cheat2_code = "$0D277781"
+cheat2_enable = false
+
+cheat3_desc = "[Xploder] Unendlich Energie"
+cheat3_code = "$0DC16E81"
+cheat3_enable = false

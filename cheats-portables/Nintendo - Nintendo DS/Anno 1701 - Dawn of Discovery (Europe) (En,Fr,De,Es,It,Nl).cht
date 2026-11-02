@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Anno 1701 - Dawn of Discovery (Europe) (En,Fr,De,Es,It,Nl).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Anno%201701%20-%20Dawn%20of%20Discovery%20(Europe).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] Infinite Cash"
+cheat0_code = "6212E7B4+00000000+B212E7B4+00000000+00000020+000F423F+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Wood"
+cheat1_code = "6212E7B4+00000000+B212E7B4+00000000+000002C4+0000270F+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Infinite Stone"
+cheat2_code = "6212E7B4+00000000+B212E7B4+00000000+000002CC+0000270F+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Infinite Iron"
+cheat3_code = "6212E7B4+00000000+B212E7B4+00000000+000002D4+0000270F+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Infinite Cash and Ressources"
+cheat4_code = "6212E7B4+00000000+B212E7B4+00000000+00000020+000F423F+000002C4+0000270F+000002CC+0000270F+000002D4+0000270F+D2000000+00000000"
+cheat4_enable = false

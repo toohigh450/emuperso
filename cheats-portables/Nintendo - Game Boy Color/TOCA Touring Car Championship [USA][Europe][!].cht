@@ -1,0 +1,25 @@
+# Recherche locale pour la ROM : TOCA Touring Car Championship [USA][Europe][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/TOCA%20Touring%20Car%20Championship%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/TOCA%20Touring%20Car%20Championship%20(USA%2C%20Europe).cht
+
+cheats = 4
+
+cheat0_desc = "[GameShark] Time Always 0:00:00"
+cheat0_code = "0100F7D4+0100F8D4"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Lap Modifier"
+cheat1_code = "01??D6CE"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Time Always 0:00:00"
+cheat2_code = "0100F7D4+0100F8D4"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Lap Modifier"
+cheat3_code = "0100D6CE"
+cheat3_enable = false

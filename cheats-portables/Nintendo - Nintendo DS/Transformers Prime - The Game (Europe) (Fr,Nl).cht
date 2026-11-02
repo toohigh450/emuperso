@@ -1,0 +1,34 @@
+# Recherche locale pour la ROM : Transformers Prime - The Game (Europe) (Fr,Nl).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Transformers%20Prime%20-%20The%20Game%20(Europe)%20(De%2CSv).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Transformers%20Prime%20-%20The%20Game%20(Europe)%20(Fr%2CNl).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Transformers%20Prime%20-%20The%20Game%20(Europe).cht
+
+cheats = 6
+
+cheat0_desc = "[Action Replay] Refill Health"
+cheat0_code = "94000130+FFFB0000+B21CF440+00000000+B0000004+00000000+D9000000+00000390+D6000000+00000434+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Energy"
+cheat1_code = "94000130+FFFB0000+B21CF440+00000000+B0000004+00000000+D9000000+00000494+D6000000+00000490+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Moon Jump"
+cheat2_code = "94000130+FFFD0000+B21CF440+00000000+B0000004+00000000+000004A4+00000400+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Refill Health"
+cheat3_code = "94000130+FFFB0000+B21D1260+00000000+B0000004+00000000+D9000000+00000390+D6000000+00000434+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Energy"
+cheat4_code = "94000130+FFFB0000+B21D1260+00000000+B0000004+00000000+D9000000+00000494+D6000000+00000490+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Moon Jump"
+cheat5_code = "94000130+FFFD0000+B21D1260+00000000+B0000004+00000000+000004A4+00000400+D2000000+00000000"
+cheat5_enable = false

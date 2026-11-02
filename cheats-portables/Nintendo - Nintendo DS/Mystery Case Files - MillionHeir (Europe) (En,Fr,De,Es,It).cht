@@ -1,0 +1,60 @@
+# Recherche locale pour la ROM : Mystery Case Files - MillionHeir (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Mystery%20Case%20Files%20-%20MillionHeir%20(Europe).cht
+
+cheats = 13
+
+cheat0_desc = "[Action Replay] Infinite Hints"
+cheat0_code = "2211BEB8+00000009"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Timer Always Frozen"
+cheat1_code = "12017C88+00002000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] L to Freeze Timer, R to restart"
+cheat2_code = "94000130+FDFF0000+12017C88+00002000+D0000000+00000000+94000130+FEFF0000+12017C88+00006840+D0000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Timer Twice Quicker"
+cheat3_code = "12017D54+00002102+9211BEC4+00000000+7211BEC8+0000001E+12017D54+00002101+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Timer Thrice Quicker"
+cheat4_code = "12017D54+00002103+9211BEC4+00000000+7211BEC8+0000001E+12017D54+00002101+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Timer 4 Times Quicker"
+cheat5_code = "12017D54+00002104+9211BEC4+00000000+7211BEC8+0000001E+12017D54+00002101+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Timer 5 Times Quicker"
+cheat6_code = "12017D54+00002105+9211BEC4+00000000+7211BEC8+0000001E+12017D54+00002101+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Timer 6 Times Quicker"
+cheat7_code = "12017D54+00002106+9211BEC4+00000000+7211BEC8+0000001E+12017D54+00002101+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] QuickPlay: 1 Minute Puzzles"
+cheat8_code = "9211BEF0+F0FF0F00+920C2298+00000001+9211BB90+00000000+9211BEC4+00000000+2211BEC4+00000001+2211BB90+00000001+DB000000+0211BEF1+D4000000+FFFFFFF1+D8000000+0211BEF1+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] QuickPlay: 2 Minutes Puzzles"
+cheat9_code = "9211BEF0+F0FF0F00+920C2298+00000001+9211BB90+00000000+9211BEC4+00000000+2211BEC4+00000002+2211BB90+00000001+DB000000+0211BEF1+D4000000+FFFFFFF1+D8000000+0211BEF1+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] QuickPlay: 3 Minutes Puzzles"
+cheat10_code = "9211BEF0+F0FF0F00+920C2298+00000001+9211BB90+00000000+9211BEC4+00000000+2211BEC4+00000003+2211BB90+00000001+DB000000+0211BEF1+D4000000+FFFFFFF1+D8000000+0211BEF1+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] QuickPlay: 5 Minutes Puzzles"
+cheat11_code = "9211BEF0+F0FF0F00+920C2298+00000001+9211BB90+00000000+9211BEC4+00000000+2211BEC4+00000005+2211BB90+00000001+DB000000+0211BEF1+D4000000+FFFFFFF1+D8000000+0211BEF1+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] QuickPlay: 10 Minutes Puzzles"
+cheat12_code = "9211BEF0+F0FF0F00+920C2298+00000001+9211BB90+00000000+9211BEC4+00000000+2211BEC4+0000000A+2211BB90+00000001+DB000000+0211BEF1+D4000000+FFFFFFF1+D8000000+0211BEF1+D2000000+00000000"
+cheat12_enable = false

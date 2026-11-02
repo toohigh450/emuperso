@@ -1,0 +1,49 @@
+# Recherche locale pour la ROM : Missile Command [Europe][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Missile%20Command%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Missile%20Command%20(USA%2C%20Europe)%20(Xploder).cht
+
+cheats = 10
+
+cheat0_desc = "[Game Genie] Infinite Missiles"
+cheat0_code = "002-9AE-19E+002-4BE-19E+20F-FDE-D56"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Invincible Bases"
+cheat1_code = "FF6-BBD-191"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] New York"
+cheat2_code = "02F-28E-E6A"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] London"
+cheat3_code = "04F-28E-E6A"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] Sydney"
+cheat4_code = "06F-28E-E6A"
+cheat4_enable = false
+
+cheat5_desc = "[Game Genie] Paris"
+cheat5_code = "08F-28E-E6A"
+cheat5_enable = false
+
+cheat6_desc = "[Game Genie] Moscow"
+cheat6_code = "0AF-28E-E6A"
+cheat6_enable = false
+
+cheat7_desc = "[Game Genie] San Francisco"
+cheat7_code = "18F-28E-E6A"
+cheat7_enable = false
+
+cheat8_desc = "[Xploder] Unendlich Raketen linke Seite"
+cheat8_code = "$0D847B6E"
+cheat8_enable = false
+
+cheat9_desc = "[Xploder] Unendlich Raketen rechte Seite"
+cheat9_code = "$0D84856E"
+cheat9_enable = false

@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Madagascar Kartz (Europe) (En,Fr,De,Es,It,Nl,Sv).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Madagascar%20Kartz%20(Europe).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] Unlimited Turbo Once Some is Aquired"
+cheat0_code = "02020464+E1A00000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Air Tricks are worth 50 Mangos"
+cheat1_code = "52044094+E5940028+02044098+E2800032+52044088+E5940018+0204408C+E2800032"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Mangos"
+cheat2_code = "6212AB90+00000000+B21A2B90+00000000+1000002C+000003E7+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Low Laptime"
+cheat3_code = "6212AB90+00000000+B21A2B90+00000000+10000020+000003E7+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] 1st Place"
+cheat4_code = "6212AB90+00000000+B21A2B90+00000000+10000028+000003E7+D2000000+00000000"
+cheat4_enable = false

@@ -1,0 +1,257 @@
+# Recherche locale pour la ROM : Puzzle Quest - Challenge of the Warlords (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Puzzle%20Quest%20-%20Challenge%20of%20the%20Warlords%20(Europe)%20(En%2CFr%2CDe%2CEs%2CIt).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Puzzle%20Quest%20-%20Challenge%20of%20the%20Warlords%20(Europe).cht
+
+cheats = 62
+
+cheat0_desc = "[Action Replay] Max Cash"
+cheat0_code = "62279D04+00000000+B2279D04+00000000+0000008C+0001869F+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Wild Cards"
+cheat1_code = "62279D04+00000000+B2279D04+00000000+00000064+0001869F+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Level"
+cheat2_code = "62279D04+00000000+B2279D04+00000000+20000060+00000032+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Infinite Health"
+cheat3_code = "62279D04+00000000+B2279D04+00000000+1000005C+000003E8+10000068+000003E8+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Instant Win (Press Select)"
+cheat4_code = "94000130+FFFB0000+122979F8+00000000+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Max/Infinite Green Gems"
+cheat5_code = "62279D04+00000000+B2279D04+00000000+2000006C+00000063+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Max/Infinite Red Gems"
+cheat6_code = "62279D04+00000000+B2279D04+00000000+20000070+00000063+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Max/Infinite Yellow Gems"
+cheat7_code = "62279D04+00000000+B2279D04+00000000+20000074+00000063+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Max/Infinite Blue Gems"
+cheat8_code = "62279D04+00000000+B2279D04+00000000+20000078+00000063+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Earth Mastery"
+cheat9_code = "62279D04+00000000+B2279D04+00000000+20000040+00000063+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Fire Mastery"
+cheat10_code = "62279D04+00000000+B2279D04+00000000+20000044+00000063+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Air Mastery"
+cheat11_code = "62279D04+00000000+B2279D04+00000000+20000048+00000063+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Water Mastery"
+cheat12_code = "62279D04+00000000+B2279D04+00000000+2000004C+00000063+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Battle"
+cheat13_code = "62279D04+00000000+B2279D04+00000000+20000050+00000063+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Cunning"
+cheat14_code = "62279D04+00000000+B2279D04+00000000+20000054+00000063+D2000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Morale"
+cheat15_code = "62279D04+00000000+B2279D04+00000000+20000058+00000063+D2000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Earth Mastery"
+cheat16_code = "62279D04+00000000+B2279D04+00000000+20000040+000000FF+D2000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Fire Mastery"
+cheat17_code = "62279D04+00000000+B2279D04+00000000+20000044+000000FF+D2000000+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Air Mastery"
+cheat18_code = "62279D04+00000000+B2279D04+00000000+20000048+000000FF+D2000000+00000000"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Water Mastery"
+cheat19_code = "62279D04+00000000+B2279D04+00000000+2000004C+000000FF+D2000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Battle"
+cheat20_code = "62279D04+00000000+B2279D04+00000000+20000050+000000FF+D2000000+00000000"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Cunning"
+cheat21_code = "62279D04+00000000+B2279D04+00000000+20000054+000000FF+D2000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Morale"
+cheat22_code = "62279D04+00000000+B2279D04+00000000+20000058+000000FF+D2000000+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Max Cash After a Battle"
+cheat23_code = "1209CB00+00002300"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Extra 256 XP Per Battle"
+cheat24_code = "0209CB2C+02002001+0209CB30+66691809"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Extra 512 XP Per Battle"
+cheat25_code = "0209CB2C+02002002+0209CB30+66691809"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Extra 1024 XP Per Battle"
+cheat26_code = "0209CB2C+02002004+0209CB30+66691809"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Extra 2048 XP Per Battle"
+cheat27_code = "0209CB2C+02002008+0209CB30+66691809"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Extra 4096 XP Per Battle"
+cheat28_code = "0209CB2C+02002010+0209CB30+66691809"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Max Cash"
+cheat29_code = "622B1B44+00000000+B22B1B44+00000000+0000008C+0001869F+D2000000+00000000"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Max Wild Cards"
+cheat30_code = "622B1B44+00000000+B22B1B44+00000000+00000064+0001869F+D2000000+00000000"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Max Level"
+cheat31_code = "622B1B44+00000000+B22B1B44+00000000+20000060+00000032+D2000000+00000000"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Infinite Health"
+cheat32_code = "622B1B44+00000000+B22B1B44+00000000+1000005C+000003E8+10000068+000003E8+D2000000+00000000"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Instant Win (Press Select)"
+cheat33_code = "94000130+FFFB0000+122CA498+00000000+D2000000+00000000"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Allow Illegal Moves"
+cheat34_code = "1204C986+00002034"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Never Fail Quests"
+cheat35_code = "1209CA0C+00002601"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Never Fail Capture"
+cheat36_code = "1202D5C8+00002400+1202D7C2+00002400"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] AI Doesn't Cast Spells"
+cheat37_code = "02027C04+20002000"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Max/Infinite Green Gems"
+cheat38_code = "622B1B44+00000000+B22B1B44+00000000+2000006C+00000063+D2000000+00000000"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Max/Infinite Red Gems"
+cheat39_code = "622B1B44+00000000+B22B1B44+00000000+20000070+00000063+D2000000+00000000"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Max/Infinite Yellow Gems"
+cheat40_code = "622B1B44+00000000+B22B1B44+00000000+20000074+00000063+D2000000+00000000"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Max/Infinite Blue Gems"
+cheat41_code = "622B1B44+00000000+B22B1B44+00000000+20000078+00000063+D2000000+00000000"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Earth Mastery"
+cheat42_code = "622B1B44+00000000+B22B1B44+00000000+20000040+00000063+D2000000+00000000"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Fire Mastery"
+cheat43_code = "622B1B44+00000000+B22B1B44+00000000+20000044+00000063+D2000000+00000000"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Air Mastery"
+cheat44_code = "622B1B44+00000000+B22B1B44+00000000+20000048+00000063+D2000000+00000000"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Water Mastery"
+cheat45_code = "622B1B44+00000000+B22B1B44+00000000+2000004C+00000063+D2000000+00000000"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Battle"
+cheat46_code = "622B1B44+00000000+B22B1B44+00000000+20000050+00000063+D2000000+00000000"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Cunning"
+cheat47_code = "622B1B44+00000000+B22B1B44+00000000+20000054+00000063+D2000000+00000000"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Morale"
+cheat48_code = "622B1B44+00000000+B22B1B44+00000000+20000058+00000063+D2000000+00000000"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Earth Mastery"
+cheat49_code = "622B1B44+00000000+B22B1B44+00000000+20000040+000000FF+D2000000+00000000"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Fire Mastery"
+cheat50_code = "622B1B44+00000000+B22B1B44+00000000+20000044+000000FF+D2000000+00000000"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Air Mastery"
+cheat51_code = "622B1B44+00000000+B22B1B44+00000000+20000048+000000FF+D2000000+00000000"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Water Mastery"
+cheat52_code = "622B1B44+00000000+B22B1B44+00000000+2000004C+000000FF+D2000000+00000000"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Battle"
+cheat53_code = "622B1B44+00000000+B22B1B44+00000000+20000050+000000FF+D2000000+00000000"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Cunning"
+cheat54_code = "622B1B44+00000000+B22B1B44+00000000+20000054+000000FF+D2000000+00000000"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Morale"
+cheat55_code = "622B1B44+00000000+B22B1B44+00000000+20000058+000000FF+D2000000+00000000"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Max Cash After a Battle"
+cheat56_code = "1209CBBC+00002300"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Extra 256 XP Per Battle"
+cheat57_code = "0209CBE8+02002001+0209CBEC+66691809"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Extra 512 XP Per Battle"
+cheat58_code = "0209CBE8+02002002+0209CBEC+66691809"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Extra 1024 XP Per Battle"
+cheat59_code = "0209CBE8+02002004+0209CBEC+66691809"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Extra 2048 XP Per Battle"
+cheat60_code = "0209CBE8+02002008+0209CBEC+66691809"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Extra 4096 XP Per Battle"
+cheat61_code = "0209CBE8+02002010+0209CBEC+66691809"
+cheat61_enable = false

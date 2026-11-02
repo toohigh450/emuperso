@@ -1,0 +1,236 @@
+# Recherche locale pour la ROM : Anno - Create a New World (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Anno%20-%20Create%20a%20New%20World%20(Europe).cht
+
+cheats = 57
+
+cheat0_desc = "[Action Replay] Max Gold After Use"
+cheat0_code = "020AFD38+E3A0193D"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Sea Charts Available"
+cheat1_code = "020C3EF4+E3A00003"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Buildings/Techs are Available"
+cheat2_code = "020B00C8+E3A00000+020B00E0+E3A00001"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Freeze Enemy Ai Ships"
+cheat3_code = "020C45FC+E3A00000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Wood Ressources Increase when used"
+cheat4_code = "020AFCDC+E1A00000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Stone Ressources Increase when used"
+cheat5_code = "020AFCFC+E1A00000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Iron Ressources Increase when used"
+cheat6_code = "020AFD1C+E1A00000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Enable Chapters in Story Mode"
+cheat7_code = "2212F84D+00000006"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] No ship Limit"
+cheat8_code = "222D9EBD+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Max/Infinite Money"
+cheat9_code = "022CFC40+000F423F"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] All Items Maxed"
+cheat10_code = "C0000000+0000000E+222CE700+0000008C+DC000000+00000008+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Max Wood"
+cheat11_code = "222CE700+0000008C"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Max Rocks"
+cheat12_code = "222CE708+0000008C"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Max Iron"
+cheat13_code = "222CE710+0000008C"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Max Fish"
+cheat14_code = "222CE718+0000008C"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Max Milk"
+cheat15_code = "222CE720+0000008C"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Max Herbs"
+cheat16_code = "222CE728+0000008C"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] No Ship limit"
+cheat17_code = "222DC1BD+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Pieces d'or ( Gold coins )"
+cheat18_code = "022D1F40+000F423F"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] All goods 140"
+cheat19_code = "C0000000+0000000F+222D0A00+0000008C+DC000000+00000008+D2000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] All goods 255"
+cheat20_code = "C0000000+0000000F+222D0A00+000000FF+DC000000+00000008+D2000000+00000000"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Bois ( Wood )"
+cheat21_code = "222D0A00+0000008C"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Piere ( Stone )"
+cheat22_code = "222D0A08+0000008C"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Fer ( Iron )"
+cheat23_code = "222D0A10+0000008C"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Lait ( Milk )"
+cheat24_code = "222D0A20+0000008C"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Vivres ( Food )"
+cheat25_code = "222D0A18+0000008C"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Porc ( Pork )"
+cheat26_code = "022D0A58+0000008C"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Schiffelimit aufheben ( No Ship limit)"
+cheat27_code = "222DCAFD+00000000"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Goldmunze ( Gold coins )"
+cheat28_code = "022D2880+000F423F"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] All goods 140"
+cheat29_code = "C0000000+0000000F+222D1340+0000008C+DC000000+00000008+D2000000+00000000"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] All goods 255"
+cheat30_code = "C0000000+0000000F+222D1340+000000FF+DC000000+00000008+D2000000+00000000"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Holz ( Wood )"
+cheat31_code = "222D1340+0000008C"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Stein ( Stone )"
+cheat32_code = "222D1348+0000008C"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Eisen ( Iron )"
+cheat33_code = "222D1350+0000008C"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Milch ( Milk )"
+cheat34_code = "222D1360+0000008C"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Nahrung ( Food )"
+cheat35_code = "222D1358+0000008C"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Fleisch ( Pork )"
+cheat36_code = "222D1398+0000008C"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] No Ship limit"
+cheat37_code = "222DB39D+00000000"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Monete d'oro ( Gold coins )"
+cheat38_code = "022D1120+000F423F"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] All goods 140"
+cheat39_code = "C0000000+0000000F+222CFBE0+0000008C+DC000000+00000008+D2000000+00000000"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] All goods 255"
+cheat40_code = "C0000000+0000000F+222CFBE0+000000FF+DC000000+00000008+D2000000+00000000"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Legname ( Wood )"
+cheat41_code = "222CFBE0+0000008C"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Pietra ( Stone )"
+cheat42_code = "222CFBE8+0000008C"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Ferro ( Iron )"
+cheat43_code = "222CFBF0+0000008C"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Latte ( Milk )"
+cheat44_code = "222CFC00+0000008C"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Cibo ( Food )"
+cheat45_code = "222CFBF8+0000008C"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Carne ( Pork )"
+cheat46_code = "222CFC38+0000008C"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] No Ship limit"
+cheat47_code = "222DBD9D+00000000"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Monedas de oro ( Gold coins )"
+cheat48_code = "022D1B20+000F423F"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] All goods 140"
+cheat49_code = "C0000000+0000000F+222D05E0+0000008C+DC000000+00000008+D2000000+00000000"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] All goods 255"
+cheat50_code = "C0000000+0000000F+222D05E0+000000FF+DC000000+00000008+D2000000+00000000"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Madera ( Wood )"
+cheat51_code = "222D05E0+0000008C"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Piedra ( Stone )"
+cheat52_code = "222D05E8+0000008C"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Hierro ( Iron )"
+cheat53_code = "222D05F0+0000008C"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Leche ( Milk )"
+cheat54_code = "222D0600+0000008C"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Alimentos ( Food )"
+cheat55_code = "222D05F8+0000008C"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Cerdo ( Pork )"
+cheat56_code = "222D0638+0000008C"
+cheat56_enable = false

@@ -1,0 +1,76 @@
+# Recherche locale pour la ROM : Yu-Gi-Oh! - Reshef of Destruction (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Yu-Gi-Oh!%20-%20Reshef%20of%20Destruction%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 17
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "000045AA+000A+10008220+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Money"
+cheat1_code = "82021DD0+FFFF"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Max Money"
+cheat2_code = "82021DD0+E0FF+82021DD2+05F5"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Infinite Sacrifices"
+cheat3_code = "32024200+0003"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Infinite Summoning"
+cheat4_code = "42023F64+0000+00000005+0004"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Have All Cards"
+cheat5_code = "42021791+6363+00000190+0002"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Infinite Attack"
+cheat6_code = "42023F14+0000+00000005+0004"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Max Trunk Capacity"
+cheat7_code = "82021C1C+FFFE"
+cheat7_enable = false
+
+cheat8_desc = "[Code Breaker] Infinite Life Points P1"
+cheat8_code = "82024258+FFFE"
+cheat8_enable = false
+
+cheat9_desc = "[Code Breaker] Press Select To Make Enemy Life Points 1"
+cheat9_code = "74000130+03FB+8202425A+0001"
+cheat9_enable = false
+
+cheat10_desc = "[Code Breaker] Max Duelist Level"
+cheat10_code = "82021C20+270F"
+cheat10_enable = false
+
+cheat11_desc = "[Code Breaker] Walk Thru Walls (Hold R+Direction)"
+cheat11_code = "74000130+02EF+E2024284+0001+74000130+02DF+E2024284+FFFF+74000130+027F+E2024286+0001+74000130+02BF+E2024286+FFFF"
+cheat11_enable = false
+
+cheat12_desc = "[Code Breaker] Monsters On Field"
+cheat12_code = "82023F10+????+82023F18+????+82023F20+????+82023F28+????+82023F30+????"
+cheat12_enable = false
+
+cheat13_desc = "[Code Breaker] Spell/Trap On Field"
+cheat13_code = "82023F38+????+82023F40+????+82023F48+????+82023F50+????+82023F58+????"
+cheat13_enable = false
+
+cheat14_desc = "[Code Breaker] Press R+B To Activate Infinite Deck Cards Mode (In-Game)"
+cheat14_code = "74000130+03ED+82020ECC+0050"
+cheat14_enable = false
+
+cheat15_desc = "[Code Breaker] Max Deck Capacity"
+cheat15_code = "82021C1C+423F+82021C1E+000F"
+cheat15_enable = false
+
+cheat16_desc = "[Code Breaker] Hold Select For Infinite Tribute"
+cheat16_code = "74000130+03FB+32024200+0003"
+cheat16_enable = false

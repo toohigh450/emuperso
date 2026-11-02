@@ -1,0 +1,349 @@
+# Recherche locale pour la ROM : Azure Dreams [USA][SGB Enhanced][GB Compatible][!!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Azure%20Dreams%20(USA)%20(SGB%20Enhanced)%20(GB%20Compatible).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Azure%20Dreams%20(USA%2C%20Europe)%20(Game%20Genie).cht
+
+cheats = 85
+
+cheat0_desc = "[Format source non précisé] Infinite HP"
+cheat0_code = "01FFD4C0"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Max HP"
+cheat1_code = "01FFACC0"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Infinite MP"
+cheat2_code = "01FAD6C0"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Max MP"
+cheat3_code = "01FFAEC0"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Max Attack"
+cheat4_code = "01FFB4C0"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Max Defense"
+cheat5_code = "01FFB5C0"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Level 99"
+cheat6_code = "0163AAC0"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Quick Level Up"
+cheat7_code = "01FAB1C0"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Frog Modifier"
+cheat8_code = "0100DBC0"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Poisoned Modifier"
+cheat9_code = "0100DCC0"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Asleep Modifier"
+cheat10_code = "0100DDC0"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Paralyzed Modifier"
+cheat11_code = "0100DEC0"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Brainwashed Modifier"
+cheat12_code = "0100DFC0"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Confused Modifier"
+cheat13_code = "0100E0C0"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Blind Modifier"
+cheat14_code = "0100E1C0"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Anorexic Modifier"
+cheat15_code = "0100E2C0"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Double Speed Modifier"
+cheat16_code = "0100E3C0"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Half Speed Modifier"
+cheat17_code = "0100E4C0"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Angry Modifier"
+cheat18_code = "0100E5C0"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Bell [?] Modifier"
+cheat19_code = "0100E6C0"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Fire Protected Modifier"
+cheat20_code = "0100EAC0"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Water Protected Modifier"
+cheat21_code = "0100EBC0"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Wind Protected Modifier"
+cheat22_code = "0100ECC0"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Miss Modifier"
+cheat23_code = "0100EDC0"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Max Funds"
+cheat24_code = "01FF18D0+01FF19D0"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Quick Level Gain"
+cheat25_code = "01FF14CA+01FF15CA"
+cheat25_enable = false
+
+cheat26_desc = "[Format source non précisé] Infinite HP"
+cheat26_code = "01FFD4C1"
+cheat26_enable = false
+
+cheat27_desc = "[Format source non précisé] Max HP"
+cheat27_code = "01FFACC1"
+cheat27_enable = false
+
+cheat28_desc = "[Format source non précisé] Infinite MP"
+cheat28_code = "01FAD6C1"
+cheat28_enable = false
+
+cheat29_desc = "[Format source non précisé] Max MP"
+cheat29_code = "01FFAEC1"
+cheat29_enable = false
+
+cheat30_desc = "[Format source non précisé] Max Attack"
+cheat30_code = "01FFB4C1"
+cheat30_enable = false
+
+cheat31_desc = "[Format source non précisé] Max Defense"
+cheat31_code = "01FFB5C1"
+cheat31_enable = false
+
+cheat32_desc = "[Format source non précisé] Level 99"
+cheat32_code = "0163AAC1"
+cheat32_enable = false
+
+cheat33_desc = "[Format source non précisé] Quick Level Up"
+cheat33_code = "01FAB1C1"
+cheat33_enable = false
+
+cheat34_desc = "[Format source non précisé] Frog Modifier"
+cheat34_code = "0100DBC1"
+cheat34_enable = false
+
+cheat35_desc = "[Format source non précisé] Poisoned Modifier"
+cheat35_code = "0100DCC1"
+cheat35_enable = false
+
+cheat36_desc = "[Format source non précisé] Asleep Modifier"
+cheat36_code = "0100DDC1"
+cheat36_enable = false
+
+cheat37_desc = "[Format source non précisé] Paralyzed Modifier"
+cheat37_code = "0100DEC1"
+cheat37_enable = false
+
+cheat38_desc = "[Format source non précisé] Brainwashed Modifier"
+cheat38_code = "0100DFC1"
+cheat38_enable = false
+
+cheat39_desc = "[Format source non précisé] Confused Modifier"
+cheat39_code = "0100E0C1"
+cheat39_enable = false
+
+cheat40_desc = "[Format source non précisé] Blind Modifier"
+cheat40_code = "0100E1C1"
+cheat40_enable = false
+
+cheat41_desc = "[Format source non précisé] Anorexic Modifier"
+cheat41_code = "0100E2C1"
+cheat41_enable = false
+
+cheat42_desc = "[Format source non précisé] Double Speed Modifier"
+cheat42_code = "0100E3C1"
+cheat42_enable = false
+
+cheat43_desc = "[Format source non précisé] Half Speed Modifier"
+cheat43_code = "0100E4C1"
+cheat43_enable = false
+
+cheat44_desc = "[Format source non précisé] Angry Modifier"
+cheat44_code = "0100E5C1"
+cheat44_enable = false
+
+cheat45_desc = "[Format source non précisé] Bell [?] Modifier"
+cheat45_code = "0100E6C1"
+cheat45_enable = false
+
+cheat46_desc = "[Format source non précisé] Fire Protected Modifier"
+cheat46_code = "0100EAC1"
+cheat46_enable = false
+
+cheat47_desc = "[Format source non précisé] Water Protected Modifier"
+cheat47_code = "0100EBC1"
+cheat47_enable = false
+
+cheat48_desc = "[Format source non précisé] Wind Protected Modifier"
+cheat48_code = "0100ECC1"
+cheat48_enable = false
+
+cheat49_desc = "[Format source non précisé] Miss Modifier"
+cheat49_code = "0100EDC1"
+cheat49_enable = false
+
+cheat50_desc = "[Format source non précisé] AI Modifier"
+cheat50_code = "0100BCC1"
+cheat50_enable = false
+
+cheat51_desc = "[Format source non précisé] Class Modifier"
+cheat51_code = "0121B2C1"
+cheat51_enable = false
+
+cheat52_desc = "[Format source non précisé] ID Number Modifier"
+cheat52_code = "0100C7C1"
+cheat52_enable = false
+
+cheat53_desc = "[Format source non précisé] Species Modifier"
+cheat53_code = "0100A9C1"
+cheat53_enable = false
+
+cheat54_desc = "[Format source non précisé] Infinite HP"
+cheat54_code = "01FFD4C2"
+cheat54_enable = false
+
+cheat55_desc = "[Format source non précisé] Max HP"
+cheat55_code = "01FFACC2"
+cheat55_enable = false
+
+cheat56_desc = "[Format source non précisé] Infinite MP"
+cheat56_code = "01FAD6C2"
+cheat56_enable = false
+
+cheat57_desc = "[Format source non précisé] Max MP"
+cheat57_code = "01FFAEC2"
+cheat57_enable = false
+
+cheat58_desc = "[Format source non précisé] Max Attack"
+cheat58_code = "01FFB4C2"
+cheat58_enable = false
+
+cheat59_desc = "[Format source non précisé] Max Defense"
+cheat59_code = "01FFB5C2"
+cheat59_enable = false
+
+cheat60_desc = "[Format source non précisé] Level 99"
+cheat60_code = "0163AAC2"
+cheat60_enable = false
+
+cheat61_desc = "[Format source non précisé] Quick Level Up"
+cheat61_code = "01FAB1C2"
+cheat61_enable = false
+
+cheat62_desc = "[Format source non précisé] Frog Modifier"
+cheat62_code = "0100DBC2"
+cheat62_enable = false
+
+cheat63_desc = "[Format source non précisé] Poisoned Modifier"
+cheat63_code = "0100DCC2"
+cheat63_enable = false
+
+cheat64_desc = "[Format source non précisé] Asleep Modifier"
+cheat64_code = "0100DDC2"
+cheat64_enable = false
+
+cheat65_desc = "[Format source non précisé] Paralyzed Modifier"
+cheat65_code = "0100DEC2"
+cheat65_enable = false
+
+cheat66_desc = "[Format source non précisé] Brainwashed Modifier"
+cheat66_code = "0100DFC2"
+cheat66_enable = false
+
+cheat67_desc = "[Format source non précisé] Confused Modifier"
+cheat67_code = "0100E0C2"
+cheat67_enable = false
+
+cheat68_desc = "[Format source non précisé] Blind Modifier"
+cheat68_code = "0100E1C2"
+cheat68_enable = false
+
+cheat69_desc = "[Format source non précisé] Anorexic Modifier"
+cheat69_code = "0100E2C2"
+cheat69_enable = false
+
+cheat70_desc = "[Format source non précisé] Double Speed Modifier"
+cheat70_code = "0100E3C2"
+cheat70_enable = false
+
+cheat71_desc = "[Format source non précisé] Half Speed Modifier"
+cheat71_code = "0100E4C2"
+cheat71_enable = false
+
+cheat72_desc = "[Format source non précisé] Angry Modifier"
+cheat72_code = "0100E5C2"
+cheat72_enable = false
+
+cheat73_desc = "[Format source non précisé] Bell [?] Modifier"
+cheat73_code = "0100E6C2"
+cheat73_enable = false
+
+cheat74_desc = "[Format source non précisé] Fire Protected Modifier"
+cheat74_code = "0100EAC2"
+cheat74_enable = false
+
+cheat75_desc = "[Format source non précisé] Water Protected Modifier"
+cheat75_code = "0100EBC2"
+cheat75_enable = false
+
+cheat76_desc = "[Format source non précisé] Wind Protected Modifier"
+cheat76_code = "0100ECC2"
+cheat76_enable = false
+
+cheat77_desc = "[Format source non précisé] Miss Modifier"
+cheat77_code = "0100EDC2"
+cheat77_enable = false
+
+cheat78_desc = "[Format source non précisé] AI Modifier"
+cheat78_code = "0100BCC2"
+cheat78_enable = false
+
+cheat79_desc = "[Format source non précisé] Class Modifier"
+cheat79_code = "0100B2C2"
+cheat79_enable = false
+
+cheat80_desc = "[Format source non précisé] ID Number Modifier"
+cheat80_code = "0100C7C2"
+cheat80_enable = false
+
+cheat81_desc = "[Format source non précisé] Species Modifier"
+cheat81_code = "0100A9C2"
+cheat81_enable = false
+
+cheat82_desc = "[Format source non précisé] Floor Never Collapse"
+cheat82_code = "1C3-399"
+cheat82_enable = false
+
+cheat83_desc = "[Format source non précisé] Floor Never Collapses"
+cheat83_code = "010023D0"
+cheat83_enable = false
+
+cheat84_desc = "[Game Genie] Floor Never Collapse"
+cheat84_code = "1C3-399"
+cheat84_enable = false

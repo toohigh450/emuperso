@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Sigma Star Saga (USA, Europe).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Sigma%20Star%20Saga%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 5
+
+cheat0_desc = "[Code Breaker] (m) - Must Be On"
+cheat0_code = "0000DB77+000A+10003870+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Joker (Ship)"
+cheat1_code = "730007E8+????"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] All Joker (Human/Ship)"
+cheat2_code = "73000C68+????+730011D4+????+73001638+????+73001F54+????"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Press L&R For Debug Menu"
+cheat3_code = "74000130+00FF+33001630+0002"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Press Select+Start To Finish The Game"
+cheat4_code = "74000130+03F3+33001630+0024"
+cheat4_enable = false

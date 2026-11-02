@@ -1,0 +1,505 @@
+# Recherche locale pour la ROM : Hot Wheels - Beat That! (Europe) (Fr,De,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Hot%20Wheels%20-%20Beat%20That!%20(Europe)%20(Fr%2CDe%2CIt).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Hot%20Wheels%20-%20Beat%20That!%20(Europe).cht
+
+cheats = 124
+
+cheat0_desc = "[Action Replay] Max/Infinite Power Bar"
+cheat0_code = "94000130+FFFB0000+6208764C+00000000+B208764C+00000000+00000310+000803E7+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Score"
+cheat1_code = "94000130+FFF30000+6208764C+00000000+B208764C+00000000+0000030C+000F423F+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Objective Status Modifier Code"
+cheat2_code = "94000130+FFBB0000+220EEAB0+00000001+D2000000+00000000+94000130+FF7B0000+220EEAB4+00000001+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Enable Shadow MKII"
+cheat3_code = "94000136+FC7C0000+220914D4+00000001+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Skip Splash Screens"
+cheat4_code = "5208C454+00000000+0208C454+00000006+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Cycle Through Items (Normal)"
+cheat5_code = "A4000130+FDFB0000+22078DF0+00000000+D2000000+00000000+5208764C+00000000+22078DEC+00000001+D2000000+00000000+82078DEC+00000007+22078DEC+00000001+D2000000+00000000+94000130+FDFB0000+DB000000+02078DF0+D4000000+00000008+D8000000+02078DF0+D2000000+00000000+92078DF0+00000008+DB000000+02078DEC+D4000000+00000001+D8000000+02078DEC+D2000000+00000000+DB000000+02078DEC+D3000000+00000000+6208764C+00000000+B208764C+00000000+200002F1+00000001+D8000000+000002F0+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Cycle Through Items (Supercharged)"
+cheat6_code = "A4000130+FDFB0000+22078DF0+00000000+D2000000+00000000+5208764C+00000000+22078DEC+00000001+D2000000+00000000+82078DEC+00000007+22078DEC+00000001+D2000000+00000000+94000130+FDFB0000+DB000000+02078DF0+D4000000+00000008+D8000000+02078DF0+D2000000+00000000+92078DF0+00000008+DB000000+02078DEC+D4000000+00000001+D8000000+02078DEC+D2000000+00000000+DB000000+02078DEC+D3000000+00000000+6208764C+00000000+B208764C+00000000+200002F1+00000001+200002F4+00000001+D8000000+000002F0+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Cycle Through Items (Toggle)"
+cheat7_code = "A4000130+FDFB0000+22078DF0+00000000+D2000000+00000000+5208764C+00000000+22078DEC+00000001+D2000000+00000000+82078DEC+00000007+22078DEC+00000001+D2000000+00000000+94000130+FDFB0000+DB000000+02078DF0+D4000000+00000008+D8000000+02078DF0+D2000000+00000000+92078DF0+00000008+DB000000+02078DEC+D4000000+00000001+D8000000+02078DEC+D2000000+00000000+DB000000+02078DEC+D3000000+00000000+6208764C+00000000+B208764C+00000000+200002F1+00000001+D8000000+000002F0+D2000000+00000000+94000130+FDBF0000+6208764C+00000000+B208764C+00000000+200002F4+00000001+D2000000+00000000+94000130+FD7F0000+6208764C+00000000+B208764C+00000000+200002F4+00000000+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Obtain 584 Flames (Default)"
+cheat8_code = "94000130+FCFB0000+2208C8AF+0000006D+0208C8D8+000B6DB6+E208C8B0+00000028+DB6DB6DB+B6DB6DB6+6DB6DB6D+DB6DB6DB+B6DB6DB6+6DB6DB6D+DB6DB6DB+B6DB6DB6+6DB6DB2D+DB6DB6DB+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Obtain 585 Flames (Default + Unobtainable)"
+cheat9_code = "94000130+FCFB0000+2208C8AF+0000006D+0208C8D8+000B6DB6+E208C8B0+00000028+DB6DB6DB+B6DB6DB6+6DB6DB6D+DB6DB6DB+B6DB6DB6+6DB6DB6D+DB6DB6DB+B6DB6DB6+6DB6DB6D+DB6DB6DB+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] 16 Angels"
+cheat10_code = "2208216F+00000001"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Drift Kings 24/Seven"
+cheat11_code = "2208216F+00000002"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Drift 24 Seven"
+cheat12_code = "2208216F+00000003"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Battle Spec"
+cheat13_code = "2208216F+00000004"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Bone Shaker"
+cheat14_code = "2208216F+00000005"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Brutalistic"
+cheat15_code = "2208216F+00000006"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Bully Goat"
+cheat16_code = "2208216F+00000007"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Burlesque"
+cheat17_code = "2208216F+00000008"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Carbide"
+cheat18_code = "2208216F+00000009"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Chicane"
+cheat19_code = "2208216F+0000000A"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Cool-One"
+cheat20_code = "2208216F+0000000B"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Covelight"
+cheat21_code = "2208216F+0000000C"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] The Demon"
+cheat22_code = "2208216F+0000000D"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Dieselboy"
+cheat23_code = "2208216F+0000000E"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Fandango"
+cheat24_code = "2208216F+0000000F"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Formul8r"
+cheat25_code = "2208216F+00000010"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Rapid Transit (Red)"
+cheat26_code = "2208216F+00000011"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Hollowback"
+cheat27_code = "2208216F+00000012"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Jack Hammer"
+cheat28_code = "2208216F+00000013"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Muscle Tone"
+cheat29_code = "2208216F+00000014"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Power Bomb"
+cheat30_code = "2208216F+00000015"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Rapid Transit (Blue)"
+cheat31_code = "2208216F+00000016"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Rockster"
+cheat32_code = "2208216F+00000017"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Sooo Fast"
+cheat33_code = "2208216F+00000018"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Spectyte"
+cheat34_code = "2208216F+00000019"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Spin Buster"
+cheat35_code = "2208216F+0000001A"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Super Tsunami"
+cheat36_code = "2208216F+0000001B"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Synkro"
+cheat37_code = "2208216F+0000001C"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Vandetta"
+cheat38_code = "2208216F+0000001D"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Vulture"
+cheat39_code = "2208216F+0000001E"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Shadow MKII"
+cheat40_code = "2208216F+0000001F"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Floorboard Frenzy"
+cheat41_code = "2208216D+00000001"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Bedroom Brawl"
+cheat42_code = "2208216D+00000002"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Desktop Dash"
+cheat43_code = "2208216D+00000003"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Bathroom Break"
+cheat44_code = "2208216D+00000004"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Spooky Sprint"
+cheat45_code = "2208216D+00000005"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Underwater Washout"
+cheat46_code = "2208216D+00000006"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Witch Doctor Way"
+cheat47_code = "2208216D+00000007"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] T-Rex Rush"
+cheat48_code = "2208216D+00000008"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Train Set Twist"
+cheat49_code = "2208216D+00000009"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Science Speedway"
+cheat50_code = "2208216D+0000000A"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Pinball Pursuit"
+cheat51_code = "2208216D+0000000B"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Hairpin Highway"
+cheat52_code = "2208216D+0000000C"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Turbo"
+cheat53_code = "94000130+FFB70000+22082170+00000000+D2000000+00000000"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Nitro"
+cheat54_code = "94000130+FFB70000+22082170+00000001+D2000000+00000000"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Inferno"
+cheat55_code = "94000130+FFB70000+22082170+00000002+D2000000+00000000"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Unused Difficulty #1"
+cheat56_code = "94000130+FFB70000+22082170+00000003+D2000000+00000000"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Unused Difficulty #2"
+cheat57_code = "94000130+FFB70000+22082170+00000004+D2000000+00000000"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Unused Difficulty #3"
+cheat58_code = "94000130+FFB70000+22082170+00000005+D2000000+00000000"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Unused Difficulty #4"
+cheat59_code = "94000130+FFB70000+22082170+00000006+D2000000+00000000"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Widescreen (16:9)"
+cheat60_code = "92032EC0+00001555+12032EC0+00001C72+D2000000+00000000"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Widescreen (16:10)"
+cheat61_code = "92032EC0+00001555+12032EC0+0000199A+D2000000+00000000"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Max/Infinite Power Bar"
+cheat62_code = "94000130+FFFB0000+6208636C+00000000+B208636C+00000000+00000310+000803E7+D2000000+00000000"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Max/Infinite Score"
+cheat63_code = "94000130+FFF30000+6208636C+00000000+B208636C+00000000+0000030C+000F423F+D2000000+00000000"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Objective Status Modifier Code"
+cheat64_code = "94000130+FFBB0000+220ED790+00000001+D2000000+00000000+94000130+FF7B0000+220ED794+00000001+D2000000+00000000"
+cheat64_enable = false
+
+cheat65_desc = "[Action Replay] Enable Shadow MKII"
+cheat65_code = "94000136+FC7C0000+220901B4+00000001+D2000000+00000000"
+cheat65_enable = false
+
+cheat66_desc = "[Action Replay] Skip Splash Screens"
+cheat66_code = "5208B174+00000000+0208B174+00000006+D2000000+00000000"
+cheat66_enable = false
+
+cheat67_desc = "[Action Replay] Cycle Through Items (Normal)"
+cheat67_code = "A4000130+FDFB0000+220779F0+00000000+D2000000+00000000+5208636C+00000000+220779EC+00000001+D2000000+00000000+820779EC+00000007+220779EC+00000001+D2000000+00000000+94000130+FDFB0000+DB000000+020779F0+D4000000+00000008+D8000000+020779F0+D2000000+00000000+920779F0+00000008+DB000000+020779EC+D4000000+00000001+D8000000+020779EC+D2000000+00000000+DB000000+020779EC+D3000000+00000000+6208636C+00000000+B208636C+00000000+200002F1+00000001+D8000000+000002F0+D2000000+00000000"
+cheat67_enable = false
+
+cheat68_desc = "[Action Replay] Cycle Through Items (Supercharged)"
+cheat68_code = "A4000130+FDFB0000+220779F0+00000000+D2000000+00000000+5208636C+00000000+220779EC+00000001+D2000000+00000000+820779EC+00000007+220779EC+00000001+D2000000+00000000+94000130+FDFB0000+DB000000+020779F0+D4000000+00000008+D8000000+020779F0+D2000000+00000000+920779F0+00000008+DB000000+020779EC+D4000000+00000001+D8000000+020779EC+D2000000+00000000+DB000000+020779EC+D3000000+00000000+6208636C+00000000+B208636C+00000000+200002F1+00000001+200002F4+00000001+D8000000+000002F0+D2000000+00000000"
+cheat68_enable = false
+
+cheat69_desc = "[Action Replay] Cycle Through Items (Toggle)"
+cheat69_code = "A4000130+FDFB0000+220779F0+00000000+D2000000+00000000+5208636C+00000000+220779EC+00000001+D2000000+00000000+820779EC+00000007+220779EC+00000001+D2000000+00000000+94000130+FDFB0000+DB000000+020779F0+D4000000+00000008+D8000000+020779F0+D2000000+00000000+920779F0+00000008+DB000000+020779EC+D4000000+00000001+D8000000+020779EC+D2000000+00000000+DB000000+020779EC+D3000000+00000000+6208636C+00000000+B208636C+00000000+200002F1+00000001+D8000000+000002F0+D2000000+00000000+94000130+FDBF0000+6208636C+00000000+B208636C+00000000+200002F4+00000001+D2000000+00000000+94000130+FD7F0000+6208636C+00000000+B208636C+00000000+200002F4+00000000+D2000000+00000000"
+cheat69_enable = false
+
+cheat70_desc = "[Action Replay] Obtain 584 Flames (Default)"
+cheat70_code = "94000130+FCFB0000+2208B5CF+0000006D+0208B5F8+000B6DB6+E208B5D0+00000028+DB6DB6DB+B6DB6DB6+6DB6DB6D+DB6DB6DB+B6DB6DB6+6DB6DB6D+DB6DB6DB+B6DB6DB6+6DB6DB2D+DB6DB6DB+D2000000+00000000"
+cheat70_enable = false
+
+cheat71_desc = "[Action Replay] Obtain 585 Flames (Default + Unobtainable)"
+cheat71_code = "94000130+FCFB0000+2208B5CF+0000006D+0208B5F8+000B6DB6+E208B5D0+00000028+DB6DB6DB+B6DB6DB6+6DB6DB6D+DB6DB6DB+B6DB6DB6+6DB6DB6D+DB6DB6DB+B6DB6DB6+6DB6DB6D+DB6DB6DB+D2000000+00000000"
+cheat71_enable = false
+
+cheat72_desc = "[Action Replay] 16 Angels"
+cheat72_code = "22080EAF+00000001"
+cheat72_enable = false
+
+cheat73_desc = "[Action Replay] Drift Kings 24/Seven"
+cheat73_code = "22080EAF+00000002"
+cheat73_enable = false
+
+cheat74_desc = "[Action Replay] Drift 24 Seven"
+cheat74_code = "22080EAF+00000003"
+cheat74_enable = false
+
+cheat75_desc = "[Action Replay] Battle Spec"
+cheat75_code = "22080EAF+00000004"
+cheat75_enable = false
+
+cheat76_desc = "[Action Replay] Bone Shaker"
+cheat76_code = "22080EAF+00000005"
+cheat76_enable = false
+
+cheat77_desc = "[Action Replay] Brutalistic"
+cheat77_code = "22080EAF+00000006"
+cheat77_enable = false
+
+cheat78_desc = "[Action Replay] Bully Goat"
+cheat78_code = "22080EAF+00000007"
+cheat78_enable = false
+
+cheat79_desc = "[Action Replay] Burlesque"
+cheat79_code = "22080EAF+00000008"
+cheat79_enable = false
+
+cheat80_desc = "[Action Replay] Carbide"
+cheat80_code = "22080EAF+00000009"
+cheat80_enable = false
+
+cheat81_desc = "[Action Replay] Chicane"
+cheat81_code = "22080EAF+0000000A"
+cheat81_enable = false
+
+cheat82_desc = "[Action Replay] Cool-One"
+cheat82_code = "22080EAF+0000000B"
+cheat82_enable = false
+
+cheat83_desc = "[Action Replay] Covelight"
+cheat83_code = "22080EAF+0000000C"
+cheat83_enable = false
+
+cheat84_desc = "[Action Replay] The Demon"
+cheat84_code = "22080EAF+0000000D"
+cheat84_enable = false
+
+cheat85_desc = "[Action Replay] Dieselboy"
+cheat85_code = "22080EAF+0000000E"
+cheat85_enable = false
+
+cheat86_desc = "[Action Replay] Fandango"
+cheat86_code = "22080EAF+0000000F"
+cheat86_enable = false
+
+cheat87_desc = "[Action Replay] Formul8r"
+cheat87_code = "22080EAF+00000010"
+cheat87_enable = false
+
+cheat88_desc = "[Action Replay] Rapid Transit (Red)"
+cheat88_code = "22080EAF+00000011"
+cheat88_enable = false
+
+cheat89_desc = "[Action Replay] Hollowback"
+cheat89_code = "22080EAF+00000012"
+cheat89_enable = false
+
+cheat90_desc = "[Action Replay] Jack Hammer"
+cheat90_code = "22080EAF+00000013"
+cheat90_enable = false
+
+cheat91_desc = "[Action Replay] Muscle Tone"
+cheat91_code = "22080EAF+00000014"
+cheat91_enable = false
+
+cheat92_desc = "[Action Replay] Power Bomb"
+cheat92_code = "22080EAF+00000015"
+cheat92_enable = false
+
+cheat93_desc = "[Action Replay] Rapid Transit (Blue)"
+cheat93_code = "22080EAF+00000016"
+cheat93_enable = false
+
+cheat94_desc = "[Action Replay] Rockster"
+cheat94_code = "22080EAF+00000017"
+cheat94_enable = false
+
+cheat95_desc = "[Action Replay] Sooo Fast"
+cheat95_code = "22080EAF+00000018"
+cheat95_enable = false
+
+cheat96_desc = "[Action Replay] Spectyte"
+cheat96_code = "22080EAF+00000019"
+cheat96_enable = false
+
+cheat97_desc = "[Action Replay] Spin Buster"
+cheat97_code = "22080EAF+0000001A"
+cheat97_enable = false
+
+cheat98_desc = "[Action Replay] Super Tsunami"
+cheat98_code = "22080EAF+0000001B"
+cheat98_enable = false
+
+cheat99_desc = "[Action Replay] Synkro"
+cheat99_code = "22080EAF+0000001C"
+cheat99_enable = false
+
+cheat100_desc = "[Action Replay] Vandetta"
+cheat100_code = "22080EAF+0000001D"
+cheat100_enable = false
+
+cheat101_desc = "[Action Replay] Vulture"
+cheat101_code = "22080EAF+0000001E"
+cheat101_enable = false
+
+cheat102_desc = "[Action Replay] Shadow MKII"
+cheat102_code = "22080EAF+0000001F"
+cheat102_enable = false
+
+cheat103_desc = "[Action Replay] Floorboard Frenzy"
+cheat103_code = "22080EAD+00000001"
+cheat103_enable = false
+
+cheat104_desc = "[Action Replay] Bedroom Brawl"
+cheat104_code = "22080EAD+00000002"
+cheat104_enable = false
+
+cheat105_desc = "[Action Replay] Desktop Dash"
+cheat105_code = "22080EAD+00000003"
+cheat105_enable = false
+
+cheat106_desc = "[Action Replay] Bathroom Break"
+cheat106_code = "22080EAD+00000004"
+cheat106_enable = false
+
+cheat107_desc = "[Action Replay] Spooky Sprint"
+cheat107_code = "22080EAD+00000005"
+cheat107_enable = false
+
+cheat108_desc = "[Action Replay] Underwater Washout"
+cheat108_code = "22080EAD+00000006"
+cheat108_enable = false
+
+cheat109_desc = "[Action Replay] Witch Doctor Way"
+cheat109_code = "22080EAD+00000007"
+cheat109_enable = false
+
+cheat110_desc = "[Action Replay] T-Rex Rush"
+cheat110_code = "22080EAD+00000008"
+cheat110_enable = false
+
+cheat111_desc = "[Action Replay] Train Set Twist"
+cheat111_code = "22080EAD+00000009"
+cheat111_enable = false
+
+cheat112_desc = "[Action Replay] Science Speedway"
+cheat112_code = "22080EAD+0000000A"
+cheat112_enable = false
+
+cheat113_desc = "[Action Replay] Pinball Pursuit"
+cheat113_code = "22080EAD+0000000B"
+cheat113_enable = false
+
+cheat114_desc = "[Action Replay] Hairpin Highway"
+cheat114_code = "22080EAD+0000000C"
+cheat114_enable = false
+
+cheat115_desc = "[Action Replay] Turbo"
+cheat115_code = "94000130+FFB70000+22080EB0+00000000+D2000000+00000000"
+cheat115_enable = false
+
+cheat116_desc = "[Action Replay] Nitro"
+cheat116_code = "94000130+FFB70000+22080EB0+00000001+D2000000+00000000"
+cheat116_enable = false
+
+cheat117_desc = "[Action Replay] Inferno"
+cheat117_code = "94000130+FFB70000+22080EB0+00000002+D2000000+00000000"
+cheat117_enable = false
+
+cheat118_desc = "[Action Replay] Unused Difficulty #1"
+cheat118_code = "94000130+FFB70000+22080EB0+00000003+D2000000+00000000"
+cheat118_enable = false
+
+cheat119_desc = "[Action Replay] Unused Difficulty #2"
+cheat119_code = "94000130+FFB70000+22080EB0+00000004+D2000000+00000000"
+cheat119_enable = false
+
+cheat120_desc = "[Action Replay] Unused Difficulty #3"
+cheat120_code = "94000130+FFB70000+22080EB0+00000005+D2000000+00000000"
+cheat120_enable = false
+
+cheat121_desc = "[Action Replay] Unused Difficulty #4"
+cheat121_code = "94000130+FFB70000+22080EB0+00000006+D2000000+00000000"
+cheat121_enable = false
+
+cheat122_desc = "[Action Replay] Widescreen (16:9)"
+cheat122_code = "92032E1C+00001555+12032E1C+00001C72+D2000000+00000000"
+cheat122_enable = false
+
+cheat123_desc = "[Action Replay] Widescreen (16:10)"
+cheat123_code = "92032E1C+00001555+12032E1C+0000199A+D2000000+00000000"
+cheat123_enable = false

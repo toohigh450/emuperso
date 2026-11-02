@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Yu-Gi-Oh! - Nightmare Troubadour (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Yu-Gi-Oh!%20-%20Nightmare%20Troubadour%20(Europe).cht
+
+cheats = 6
+
+cheat0_desc = "[Action Replay] Instant Win"
+cheat0_code = "12281818+00000000+1228357C+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite KCP"
+cheat1_code = "020975A4+0001869F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Have All Cards"
+cheat2_code = "120976AE+00001313+A2097ACE+00001313+D5000000+13131313+C0000000+00000107+D6000000+020976B0+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Infinite LP"
+cheat3_code = "0227EC6C+0000270F+02281198+0000270F"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Widescreen (16:9)"
+cheat4_code = "92020F1C+00001555+12020F1C+00001C72+D2000000+00000000+921B8C08+00001555+121B8C08+00001C72+D2000000+00000000+9225A704+00001555+1225A704+00001C72+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Widescreen (16:10)"
+cheat5_code = "92020F1C+00001555+12020F1C+0000199A+D2000000+00000000+921B8C08+00001555+121B8C08+0000199A+D2000000+00000000+9225A704+00001555+1225A704+0000199A+D2000000+00000000"
+cheat5_enable = false

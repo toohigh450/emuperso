@@ -1,0 +1,45 @@
+# Recherche locale pour la ROM : Monsters, Inc. [Europe][En][Fr][It][!!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Monsters%2C%20Inc.%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Monsters%2C%20Inc.%20(USA%2C%20Europe).cht
+
+cheats = 9
+
+cheat0_desc = "[GameShark] Infinite Lives"
+cheat0_code = "016400C2"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Infinite Blort Cola"
+cheat1_code = "0163FAC1"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Infinite Chinese Take-Out Boxes"
+cheat2_code = "0109FCC1"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] FAKE Infinite Chinese Take-Out Boxes"
+cheat3_code = "0109FDC1"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Infinite Lives"
+cheat4_code = "016400C2"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Infinite Blort Cola"
+cheat5_code = "0163FAC1"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Infinite Chinese Take-Out Boxes"
+cheat6_code = "0109FCC1"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] FAKE Infinite Chinese Take-Out Boxes"
+cheat7_code = "0109FDC1"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Stage Select"
+cheat8_code = "42C-869-E6F+42C-879-E6F+42C-889-E6F+42C-899-E6F"
+cheat8_enable = false

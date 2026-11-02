@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Jeff Gordon XS Racing [USA][GB Compatible][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Jeff%20Gordon%20XS%20Racing%20(USA)%20(GB%20Compatible).cht
+
+cheats = 3
+
+cheat0_desc = "[Format source non précisé] Points Modifier [00-63]"
+cheat0_code = "0100D4C5"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Start On Last Lap"
+cheat1_code = "0101BBC5"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Fake Always Place 1st"
+cheat2_code = "0101BEC5"
+cheat2_enable = false

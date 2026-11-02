@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Space Invasion [Europe][Unl][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Space%20Invasion%20(Europe)%20(Unl)%20(GameShark).cht
+
+cheats = 4
+
+cheat0_desc = "[GameShark] Infinite Lives"
+cheat0_code = "91067DC7"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Wave Modifier"
+cheat1_code = "91??92c6"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Max Score"
+cheat2_code = "910975C7+910976C7+910977C7+910978C7+910979C7"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Infinite Continues"
+cheat3_code = "916391C6"
+cheat3_enable = false

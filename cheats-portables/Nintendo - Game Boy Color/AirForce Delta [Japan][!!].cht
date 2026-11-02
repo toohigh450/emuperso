@@ -1,0 +1,50 @@
+# Recherche locale pour la ROM : AirForce Delta [Japan][!!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/AirForce%20Delta%20(USA%2C%20Japan)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/AirForce%20Delta%20(USA%2C%20Japan)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/AirForce%20Delta%20(USA%2C%20Japan)%20(Xploder).cht
+
+cheats = 10
+
+cheat0_desc = "[Game Genie] Infinite Missile"
+cheat0_code = "003-EAC"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Infinite Missiles"
+cheat1_code = "019983CD"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Infinite Damage"
+cheat2_code = "016097CD"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Stop Timer"
+cheat3_code = "0199A1CD"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Infinite Fuel"
+cheat4_code = "01609DCD"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Max Score"
+cheat5_code = "019989CD+01998ACD+01998BCD"
+cheat5_enable = false
+
+cheat6_desc = "[Xploder] Unendlich Raketen"
+cheat6_code = "$0D278329"
+cheat6_enable = false
+
+cheat7_desc = "[Xploder] Kein Schaden"
+cheat7_code = "$0D848829"
+cheat7_enable = false
+
+cheat8_desc = "[Xploder] Unendlich Treibstoff"
+cheat8_code = "$0D849D29"
+cheat8_enable = false
+
+cheat9_desc = "[Xploder] Unendlich Zeit"
+cheat9_code = "$0DBAA129"
+cheat9_enable = false

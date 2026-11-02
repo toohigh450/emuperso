@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Urusei Yatsura - Endless Summer (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Urusei%20Yatsura%20-%20Endless%20Summer%20(Japan).cht
+
+cheats = 6
+
+cheat0_desc = "[Action Replay] Character Max Affection On First Encounter"
+cheat0_code = "020281C0+EAFF5F8E+E2000000+00000018+E7C30001+E2434008+E3A00009+E7C40001+EA00A06B+E1A00000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Girls Max Affection"
+cheat1_code = "0207205C+08080808+12072060+00000808"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Costumes"
+cheat2_code = "12196B74+0000FFFF+22196B76+000000FF"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Flashback"
+cheat3_code = "E2196B80+00000020+0003FFFF+00007FFF+0000000F+0000000F+0000000F+00001FFF+0003FFFF+0001FFFF"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All CG,Pictures"
+cheat4_code = "12196B70+0000FFFF+02196B6C+FFFFFFFF+22196B70+000000FF+12196B76+0000FFFF+02196B78+FFFFFFFF"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All Minigames"
+cheat5_code = "22196B7C+000000FF"
+cheat5_enable = false

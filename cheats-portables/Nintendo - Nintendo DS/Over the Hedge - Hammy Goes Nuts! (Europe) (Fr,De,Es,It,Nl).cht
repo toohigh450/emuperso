@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Over the Hedge - Hammy Goes Nuts! (Europe) (Fr,De,Es,It,Nl).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Over%20the%20Hedge%20-%20Hammy%20Goes%20Nuts!%20(Europe).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Unlock All Stages"
+cheat0_code = "02124AFC+FFFFFFFF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Unlock All Episodes"
+cheat1_code = "0218FDF8+FFFFFFFF"
+cheat1_enable = false

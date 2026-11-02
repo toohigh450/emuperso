@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Tweety and the Magic Gems (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Tweety%20and%20the%20Magic%20Gems%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 2
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000693E+000A+10025E10+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Press Select For 10 Moves"
+cheat1_code = "D0000020+0004+33000B04+000A"
+cheat1_enable = false

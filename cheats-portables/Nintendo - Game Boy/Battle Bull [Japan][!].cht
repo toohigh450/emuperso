@@ -1,0 +1,33 @@
+# Recherche locale pour la ROM : Battle Bull [Japan][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Battle%20Bull%20(USA%2C%20Japan)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Battle%20Bull%20(USA%2C%20Japan)%20(GameShark).cht
+
+cheats = 6
+
+cheat0_desc = "[Game Genie] Cannot Lose Money"
+cheat0_code = "08D-4EF"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Infinite Lives"
+cheat1_code = "1C5-39E"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Infinite Time"
+cheat2_code = "1C5-7EF"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Infinite Money"
+cheat3_code = "019934C8"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Infinite Lives"
+cheat4_code = "01092EC8"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Infinite Time"
+cheat5_code = "0143ADC5"
+cheat5_enable = false

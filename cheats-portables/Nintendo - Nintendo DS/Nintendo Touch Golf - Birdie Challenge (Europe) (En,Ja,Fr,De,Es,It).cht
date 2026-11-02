@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Nintendo Touch Golf - Birdie Challenge (Europe) (En,Ja,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Nintendo%20Touch%20Golf%20-%20Birdie%20Challenge%20(Europe).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] Always Hole in One"
+cheat0_code = "02090BF0+00000000+02090BF4+00000000+02090BF8+00000000+02090BFC+00000000+02090C00+00000000+02090C04+00000000+02090C08+00000000+02090C0C+00000000+02090C10+00000000"
+cheat0_enable = false

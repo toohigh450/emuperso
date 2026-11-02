@@ -1,0 +1,45 @@
+# Recherche locale pour la ROM : Banishing Racer [Japan][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Banishing%20Racer%20(Japan)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Banishing%20Racer%20(Japan).cht
+
+cheats = 9
+
+cheat0_desc = "[GameShark] Infinite Time"
+cheat0_code = "016316C2"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Infinite Lives"
+cheat1_code = "01031DC2"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Infinite Time"
+cheat2_code = "016316C2"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Infinite Lives"
+cheat3_code = "01031DC2"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Win Level Now"
+cheat4_code = "010306C2"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Invincibility"
+cheat5_code = "010206C2"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Infinite Lives"
+cheat6_code = "FA8-0AE-4C1"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Invincibility"
+cheat7_code = "FAB-34B-D5D+FAC-ECB-D5D"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Skip Intro Screen"
+cheat8_code = "023-A4E-E6A"
+cheat8_enable = false

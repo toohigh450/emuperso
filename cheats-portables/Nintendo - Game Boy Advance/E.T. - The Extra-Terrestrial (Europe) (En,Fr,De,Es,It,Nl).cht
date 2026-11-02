@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : E.T. - The Extra-Terrestrial (Europe) (En,Fr,De,Es,It,Nl).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/E.T.%20-%20The%20Extra-Terrestrial%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 4
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00009CAE+000A+10003EE4+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Health"
+cheat1_code = "830007E0+2000"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Continues"
+cheat2_code = "33002CEB+0008"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Set Timer Back (Press Select)"
+cheat3_code = "74000130+03FB+3300314A+0000+74000130+03FB+33003174+0000"
+cheat3_enable = false

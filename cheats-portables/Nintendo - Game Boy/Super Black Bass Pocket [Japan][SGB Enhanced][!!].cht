@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Super Black Bass Pocket [Japan][SGB Enhanced][!!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Super%20Black%20Bass%20Pocket%20(Japan)%20(SGB%20Enhanced).cht
+
+cheats = 2
+
+cheat0_desc = "[Format source non précisé] Weight Modifier"
+cheat0_code = "010061D3"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Legnth Modifier"
+cheat1_code = "010062D3"
+cheat1_enable = false

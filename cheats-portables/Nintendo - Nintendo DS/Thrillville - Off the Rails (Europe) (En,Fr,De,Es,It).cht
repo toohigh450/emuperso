@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Thrillville - Off the Rails (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Thrillville%20-%20Off%20the%20Rails%20(Europe).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Max Cash"
+cheat0_code = "02250260+00970000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Thrill Points"
+cheat1_code = "02250278+00970000"
+cheat1_enable = false

@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Kirby's Star Stacker [USA][Europe][SGB Enhanced][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Kirby's%20Star%20Stacker%20(USA%2C%20Europe)%20(SGB%20Enhanced).cht
+
+cheats = 8
+
+cheat0_desc = "[Format source non précisé] Number Of Stars Modifier"
+cheat0_code = "013109BC"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Enable Insane Difficutly"
+cheat1_code = "01012FD2"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Open All Normal Puzzles"
+cheat2_code = "010705BC"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Open All Hard Puzzles"
+cheat3_code = "010F06BC"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Open All Very Hard! Puzzles"
+cheat4_code = "010F07BC"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Open All Super Hard Puzzles"
+cheat5_code = "010F08BC"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Enable King Kirby"
+cheat6_code = "01011DD2"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Star All Puzzle Mode Puzzles, Enable Insane Difficulties + King Kirby"
+cheat7_code = "01FF3EBC"
+cheat7_enable = false

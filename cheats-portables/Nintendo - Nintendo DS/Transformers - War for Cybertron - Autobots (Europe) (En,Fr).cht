@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Transformers - War for Cybertron - Autobots (Europe) (En,Fr).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Transformers%20-%20War%20for%20Cybertron%20-%20Autobots%20(Europe).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] Debug Menu (unlocks, god mode, lvl up, etc)"
+cheat0_code = "02049DAC+E3A00001"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Skip intro"
+cheat1_code = "0203C698+E3A00001"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Invulnerable"
+cheat2_code = "0203C334+E3A00001"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Missions Available"
+cheat3_code = "02040878+E3A00001"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Enable Cheat Menu"
+cheat4_code = "52000800+E3A0C301+02000800+02030000+D2000000+00000000+82000802+00000208+02000800+02030000+D2000000+00000000+94000130+FFFB0000+62000800+00000000+B2000800+00000000+C0000000+00001000+50000000+E59F1B78+00000008+E3A00001+D0000000+00000000+DC000000+00000004+C6000000+02000800+D2000000+00000000"
+cheat4_enable = false

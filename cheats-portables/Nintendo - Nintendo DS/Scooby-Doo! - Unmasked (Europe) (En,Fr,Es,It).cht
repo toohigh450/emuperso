@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Scooby-Doo! - Unmasked (Europe) (En,Fr,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Scooby-Doo!%20-%20Unmasked%20(Europe).cht
+
+cheats = 6
+
+cheat0_desc = "[Action Replay] Max Health"
+cheat0_code = "623791CC+00000000+B23791CC+00000000+2008C864+0000000D+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Current Health"
+cheat1_code = "623791CC+00000000+B23791CC+00000000+2008C868+0000000D+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Level"
+cheat2_code = "22379550+0000000D"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max EXP"
+cheat3_code = "22379560+00000320"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Mask"
+cheat4_code = "22379580+00000064"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All Costumes"
+cheat5_code = "C0000000+00000003+22379650+00000001+DC000000+00000010+D2000000+00000000"
+cheat5_enable = false

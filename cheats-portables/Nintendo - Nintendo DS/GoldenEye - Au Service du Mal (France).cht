@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : GoldenEye - Au Service du Mal (France).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/GoldenEye%20-%20Au%20Service%20du%20Mal%20(France).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] Max Health"
+cheat0_code = "620C3034+00000000+B20C3034+00000000+10000128+00001388+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Shield"
+cheat1_code = "620C3034+00000000+B20C3034+00000000+1000012C+00000200+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Grenades"
+cheat2_code = "620C3034+00000000+B20C3034+00000000+100001C8+000003E7+D2000000+00000000"
+cheat2_enable = false

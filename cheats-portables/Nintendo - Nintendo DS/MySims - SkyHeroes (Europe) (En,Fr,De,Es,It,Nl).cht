@@ -1,0 +1,60 @@
+# Recherche locale pour la ROM : MySims - SkyHeroes (Europe) (En,Fr,De,Es,It,Nl).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/MySims%20-%20SkyHeroes%20(Europe).cht
+
+cheats = 13
+
+cheat0_desc = "[Action Replay] Anti-Piracy Bypass Code"
+cheat0_code = "52093E8C+46C0BDF8+02093E8C+E944F36B+D2000000+00000000+E23FF100+00000048+E59F0000+E12FFF1E+001BD777+E59F0000+E12FFF1E+001BEEC9+E59F001C+E59F101C+E5912000+E1500002+059F0014+05810000+0280000C+05810078+E8BD80F8+020EC1B4+020EB26C+023FF100+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Master Code"
+cheat1_code = "00000000+00000000+00000000+02380010+00000000+00000000+00000000+00000002+00000000+00000000+00000000+02003000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Fix Code (Must Be ON)"
+cheat2_code = "62386D60+EBAF656D+023FFFE8+00000000+023D8038+E8BD4038+02386D60+EBAF656D+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat3_code = "520A4030+EE070F90+E2000340+0000004A+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2E15C35+7CD5D2E6+000A002C+00A70009+00000000+00000000+020A4030+E92D401E+020A4034+FAFD70C1+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Health Never Decrease v1"
+cheat4_code = "620D6D6C+00000000+B20D6D6C+00000000+B000013C+00000000+D9000000+00000608+D6000000+00000600+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Health Never Decrease v2"
+cheat5_code = "620D7C7C+00000000+620D7C80+00000000+B20D7C80+00000000+D9000000+000005F8+D6000000+000005F0+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] F-Energy Never Decrease v1"
+cheat6_code = "620D6D6C+00000000+B20D6D6C+00000000+B000013C+00000000+D9000000+00000614+D6000000+0000060C+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] F-Energy Never Decrease v2"
+cheat7_code = "620D7C7C+00000000+620D7C80+00000000+B20D7C80+00000000+D9000000+00000604+D6000000+000005FC+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Special Weapon Never Decrease"
+cheat8_code = "920F15A4+0000D001+120F15A6+00001E00+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Super Slow Motion (Select+Down)"
+cheat9_code = "94000130+0000037B+020D4FB8+00000004+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Slow Motion (Select+Right)"
+cheat10_code = "94000130+000003EB+020D4FB8+00000003+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Normal Speed (Select+Left)"
+cheat11_code = "94000130+000003DB+020D4FB8+00000002+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Quicker Game (Select+Up)"
+cheat12_code = "94000130+000003BB+020D4FB8+00000001+D2000000+00000000"
+cheat12_enable = false

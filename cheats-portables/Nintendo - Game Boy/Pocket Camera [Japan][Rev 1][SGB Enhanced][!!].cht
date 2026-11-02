@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Pocket Camera [Japan][Rev 1][SGB Enhanced][!!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Pocket%20Camera%20(Japan)%20(Rev%201)%20(SGB%20Enhanced).cht
+
+cheats = 7
+
+cheat0_desc = "[Format source non précisé] Display Unused CoroCoro Comics Copyright Screen"
+cheat0_code = "6B2-7E8-2AF"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Enable Unused CoroCoro Comics Album B Photos"
+cheat1_code = "111-ECB-196"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Enable Unused CoroCoro Comics Compose Photos"
+cheat2_code = "0136F7D7+0136F8D7+0136F9D7+0136FAD7+0136FBD7+0136FCD7"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Enable Unused CoroCoro Comics Wild Frames"
+cheat3_code = "082-DFA-F72"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Enable Unused CoroCoro Comics Stamps"
+cheat4_code = "009-B5A-E6E+009-CCA-E6E"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Enable Unused Hot Spot Effects"
+cheat5_code = "0FD-199-F76"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Access Album B Frame Everywhere"
+cheat6_code = "12F-5CB-A2E+13F-6DB-A22"
+cheat6_enable = false

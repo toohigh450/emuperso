@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Penguin no Mondai - The World (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Penguin%20no%20Mondai%20-%20The%20World%20(Japan).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Anti-Piracy Bypass Code"
+cheat0_code = "520009F8+E12FFF1E+020009F8+EA0FF9C6+D2000000+00000000+023FF100+E59F0000+E23FF104+00000048+E12FFF1E+0030EB87+E59F0000+E12FFF1E+00323E6F+E92D4007+E59F001C+E59F101C+E5912000+E1500002+059F0014+05810000+0280000C+0581003C+E8BD8007+02132728+02131F04+023FF100+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat1_code = "52090AF0+EE070F90+E2000354+00000054+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2DEA865+000A002C+000A0009+00A70009+D2E9004D+00055219+000001EB+00000000+02090AF0+E92D401E+02090AF4+FAFDBE16+D2000000+00000000"
+cheat1_enable = false

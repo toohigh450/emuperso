@@ -1,0 +1,302 @@
+# Recherche locale pour la ROM : Kirby's Pinball Land [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Kirby's%20Pinball%20Land%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Kirby's%20Pinball%20Land%20(USA%2C%20Europe)%20(Xploder).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Kirby's%20Pinball%20Land%20(USA%2C%20Europe).cht
+
+cheats = 73
+
+cheat0_desc = "[Game Genie] 30 Seconds Allowed In Wispy-Woods Bonus Room"
+cheat0_code = "300-B99-6EB"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] 99 Seconds Allowed In Wispy-Woods Bonus Room"
+cheat1_code = "990-B99-6EB"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Infinite Bonus Room Time (Switch Off To Exit)"
+cheat2_code = "FAF-1AA-4C1"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Infinite Balls"
+cheat3_code = "005-34B-E69"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] Start With 5 Balls"
+cheat4_code = "054-7CF-E66"
+cheat4_enable = false
+
+cheat5_desc = "[Game Genie] Start With 1 Ball"
+cheat5_code = "014-7CF-E66"
+cheat5_enable = false
+
+cheat6_desc = "[Game Genie] Start With 9 Balls"
+cheat6_code = "094-7CF-E66"
+cheat6_enable = false
+
+cheat7_desc = "[Game Genie] Go Straight To End-Of-Level Bosses"
+cheat7_code = "3EE-CF9-2A9+01E-D09-A21"
+cheat7_enable = false
+
+cheat8_desc = "[Game Genie] Go Straight To Bonus Games"
+cheat8_code = "3EE-CF9-2A9+02E-D09-A21"
+cheat8_enable = false
+
+cheat9_desc = "[Xploder] Unendlich Baelle"
+cheat9_code = "$0D24056E"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] 30 sec. allowed in Wispy-Woods bonus room"
+cheat10_code = "300-B99-6EB"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] 99 sec. allowed in Wispy-Woods bonus room"
+cheat11_code = "990-B99-6EB"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Infinite balls"
+cheat12_code = "005-34B-E69"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Start with 5 balls"
+cheat13_code = "054-7CF-E66"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Start with 1 ball"
+cheat14_code = "014-7CF-E66"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Start with 9 balls"
+cheat15_code = "094-7CF-E66"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Go straight to end-of-level bosses"
+cheat16_code = "3EE-CF9-2A9+01E-D09-A21"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Go straight to bonus games"
+cheat17_code = "3EE-CF9-2A9+02E-D09-A21"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Drain Stopper [Bottom Stage]"
+cheat18_code = "014924C3"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Left Outlane Stopper [Top Stage]"
+cheat19_code = "01B016C3"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Right Outlane Stopper [Top Stage]"
+cheat20_code = "01CC17C3"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Drain Stopper [Top Stage]"
+cheat21_code = "014825C3"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Left Outlane Stopper [Middle Stage]"
+cheat22_code = "01D118C3"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Right Outlane Stopper [Middle Stage]"
+cheat23_code = "01D819C3"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Drain Stopper [Middle Stage]"
+cheat24_code = "014926C3"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] No Item Comes Out Of Either Cloudy When Kirby Hits Them [Middle Stage]"
+cheat25_code = "0110F6C3"
+cheat25_enable = false
+
+cheat26_desc = "[Format source non précisé] Left Outlane Stopper [Bottom Stage]"
+cheat26_code = "01D41AC3"
+cheat26_enable = false
+
+cheat27_desc = "[Format source non précisé] Right Outlane Stopper [Bottom Stage]"
+cheat27_code = "01D21BC3"
+cheat27_enable = false
+
+cheat28_desc = "[Format source non précisé] Right Outlane Stopper [Bottom Stage]"
+cheat28_code = "01D415C3"
+cheat28_enable = false
+
+cheat29_desc = "[Format source non précisé] Left Outlane Stopper [Bottom Stage]"
+cheat29_code = "01D514C3"
+cheat29_enable = false
+
+cheat30_desc = "[Format source non précisé] Drain Stopper [Top Stage]"
+cheat30_code = "014822C3"
+cheat30_enable = false
+
+cheat31_desc = "[Format source non précisé] Left Outlane Stopper [Middle Stage]"
+cheat31_code = "01D212C3"
+cheat31_enable = false
+
+cheat32_desc = "[Format source non précisé] Right Outlane Stopper [Middle Stage]"
+cheat32_code = "01D213C3"
+cheat32_enable = false
+
+cheat33_desc = "[Format source non précisé] Drain Stopper [Middle Stage]"
+cheat33_code = "014723C3"
+cheat33_enable = false
+
+cheat34_desc = "[Format source non précisé] Right Outlane Stopper [Top Stage]"
+cheat34_code = "01D911C3"
+cheat34_enable = false
+
+cheat35_desc = "[Format source non précisé] Left Outlane Stopper [Top Stage]"
+cheat35_code = "01D710C3"
+cheat35_enable = false
+
+cheat36_desc = "[Format source non précisé] Full Spring Star"
+cheat36_code = "0105D4C0"
+cheat36_enable = false
+
+cheat37_desc = "[Format source non précisé] Infinite Kirby's"
+cheat37_code = "0103B0C0"
+cheat37_enable = false
+
+cheat38_desc = "[Format source non précisé] Infinite Time"
+cheat38_code = "010244C3"
+cheat38_enable = false
+
+cheat39_desc = "[Format source non précisé] Bonus Score Modifier"
+cheat39_code = "0100C1C0"
+cheat39_enable = false
+
+cheat40_desc = "[Format source non précisé] Bonus Multiplier"
+cheat40_code = "0100C2C0"
+cheat40_enable = false
+
+cheat41_desc = "[Format source non précisé] Score Modifier-First Digit"
+cheat41_code = "0100BDC0"
+cheat41_enable = false
+
+cheat42_desc = "[Format source non précisé] Score Modifier-Second &amp; Third Digit"
+cheat42_code = "0100BEC0"
+cheat42_enable = false
+
+cheat43_desc = "[Format source non précisé] Score Modifier-Fourth &amp; Fifth Digit"
+cheat43_code = "0100BFC0"
+cheat43_enable = false
+
+cheat44_desc = "[Format source non précisé] Score Modifier-Sixth &amp; Seventh Digit"
+cheat44_code = "0100C0C0"
+cheat44_enable = false
+
+cheat45_desc = "[Format source non précisé] Score Modifier-Eighth Digit"
+cheat45_code = "0101C1C0"
+cheat45_enable = false
+
+cheat46_desc = "[Format source non précisé] Always Fight Bosses"
+cheat46_code = "0101D1C0"
+cheat46_enable = false
+
+cheat47_desc = "[Format source non précisé] Have Left Stopper [Top Stage]"
+cheat47_code = "01D01CC3"
+cheat47_enable = false
+
+cheat48_desc = "[Format source non précisé] Have Right Stopper [Top Stage]"
+cheat48_code = "01C01DC3"
+cheat48_enable = false
+
+cheat49_desc = "[Format source non précisé] Have Drain Stopper [Top Stage]"
+cheat49_code = "014828C3"
+cheat49_enable = false
+
+cheat50_desc = "[Format source non précisé] Have Left Stopper [Middle Stage]"
+cheat50_code = "01D51EC3"
+cheat50_enable = false
+
+cheat51_desc = "[Format source non précisé] Have Right Stopper [Middle Stage]"
+cheat51_code = "01A61FC3"
+cheat51_enable = false
+
+cheat52_desc = "[Format source non précisé] Have Drain Stopper [Middle Stage]"
+cheat52_code = "011929C3"
+cheat52_enable = false
+
+cheat53_desc = "[Format source non précisé] Have Left Poppy [Middle Stage]"
+cheat53_code = "01B7C1C3"
+cheat53_enable = false
+
+cheat54_desc = "[Format source non précisé] Have Right Poppy [Middle Stage]"
+cheat54_code = "0113C2C3"
+cheat54_enable = false
+
+cheat55_desc = "[Format source non précisé] Have Left Stopper [Bottom Stage]"
+cheat55_code = "01D820C3"
+cheat55_enable = false
+
+cheat56_desc = "[Format source non précisé] Have Right Stopper [Bottom Stage]"
+cheat56_code = "01D721C3"
+cheat56_enable = false
+
+cheat57_desc = "[Format source non précisé] Have Drain Stopper [Bottom Stage]"
+cheat57_code = "014A2AC3"
+cheat57_enable = false
+
+cheat58_desc = "[Format source non précisé] The Left Twister Continuously Turns [Top Stage Codes]"
+cheat58_code = "01DC72C3"
+cheat58_enable = false
+
+cheat59_desc = "[Format source non précisé] The Right Twister Continuously Turns [Top Stage Codes]"
+cheat59_code = "01DE73C3"
+cheat59_enable = false
+
+cheat60_desc = "[Format source non précisé] Start at Boss, instead of normal stage"
+cheat60_code = "12E-E39-806"
+cheat60_enable = false
+
+cheat61_desc = "[Format source non précisé] Exit From Boss Room to Level Select"
+cheat61_code = "182-ABC-6EA"
+cheat61_enable = false
+
+cheat62_desc = "[Format source non précisé] Start at Bonus Round, instead of normal stage"
+cheat62_code = "00E-E39-806"
+cheat62_enable = false
+
+cheat63_desc = "[Format source non précisé] Infinite M-Tomato"
+cheat63_code = "743-F6B-C49"
+cheat63_enable = false
+
+cheat64_desc = "[Format source non précisé] Whispy Takes 1 Hit"
+cheat64_code = "00A-C3B-196"
+cheat64_enable = false
+
+cheat65_desc = "[Format source non précisé] Krako Takes 1 Hit"
+cheat65_code = "AF4-568-19E"
+cheat65_enable = false
+
+cheat66_desc = "[Format source non précisé] Poppy Bros Boss Takes 1 Hit"
+cheat66_code = "AF8-69B-19E"
+cheat66_enable = false
+
+cheat67_desc = "[Format source non précisé] DeDeDe Takes 1 Hit"
+cheat67_code = "01D-1DB-B36"
+cheat67_enable = false
+
+cheat68_desc = "[Format source non précisé] Raise Score A lot Faster"
+cheat68_code = "103-05E-E6A"
+cheat68_enable = false
+
+cheat69_desc = "[Format source non précisé] Raise Score Insanely Fast"
+cheat69_code = "013-0AE-E6A"
+cheat69_enable = false
+
+cheat70_desc = "[Format source non précisé] Final Level Starts As Available"
+cheat70_code = "00B-8CA-912"
+cheat70_enable = false
+
+cheat71_desc = "[Format source non précisé] Beat Whispy To Enable Wands In Boss Rooms"
+cheat71_code = "FFA-E9B-E62"
+cheat71_enable = false
+
+cheat72_desc = "[Format source non précisé] Infinite Bonus Room Time (Switch Off To Exit)"
+cheat72_code = "FAF-1AA-4C1"
+cheat72_enable = false

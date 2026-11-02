@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Pierre le Chef is... Out to Lunch [Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Pierre%20le%20Chef%20is...%20Out%20to%20Lunch%20(Europe).cht
+
+cheats = 3
+
+cheat0_desc = "[Format source non précisé] Infinite Time"
+cheat0_code = "C94-E3B-4C1"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinte Lives"
+cheat1_code = "C9C-E6F-4C1"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Invulnerability"
+cheat2_code = "C93-2AB-E69"
+cheat2_enable = false

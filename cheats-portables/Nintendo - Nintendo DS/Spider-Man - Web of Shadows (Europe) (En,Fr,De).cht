@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Spider-Man - Web of Shadows (Europe) (En,Fr,De).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Spider-Man%20-%20Web%20of%20Shadows%20(Europe).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] Infinite Health"
+cheat0_code = "62145C90+00000000+B2145C90+00000000+D9000000+00000334+D6000000+00000330+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Life Points"
+cheat1_code = "62145C90+00000000+B2145C90+00000000+200002FA+00000002+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Orbs"
+cheat2_code = "62145C90+00000000+B2145C90+00000000+000002F0+05F5E0FF+D2000000+00000000"
+cheat2_enable = false

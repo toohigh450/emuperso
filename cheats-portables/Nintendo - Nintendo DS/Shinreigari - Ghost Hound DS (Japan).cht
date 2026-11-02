@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Shinreigari - Ghost Hound DS (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Shinreigari%20-%20Ghost%20Hound%20DS%20(Japan).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] All Stages"
+cheat0_code = "020ABFCC+01010101+120ABFD0+00000101"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] View All Clips"
+cheat1_code = "D5000000+0000003F+C0000000+0000000E+D8000000+020ABFBD+D2000000+00000000"
+cheat1_enable = false

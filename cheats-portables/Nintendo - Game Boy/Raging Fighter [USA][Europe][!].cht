@@ -1,0 +1,73 @@
+# Recherche locale pour la ROM : Raging Fighter [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Raging%20Fighter%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Raging%20Fighter%20(USA%2C%20Europe).cht
+
+cheats = 16
+
+cheat0_desc = "[Game Genie] Start Each Fight With 10 Seconds"
+cheat0_code = "10A-9AA-89C"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Start With 1/2 Time"
+cheat1_code = "50A-9AA-89C"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Start With 3/4 Time"
+cheat2_code = "75A-9AA-89C"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Infinite Timer"
+cheat3_code = "009-1FB-A22"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] Infinite Energy"
+cheat4_code = "004-E0B-E6D+007-1AE-3B7"
+cheat4_enable = false
+
+cheat5_desc = "[Game Genie] Start On Level 4 (1-Player Tournament Only"
+cheat5_code = "3EE-5BD-4C1+03E-5CD-4CB+00E-5DD-E61"
+cheat5_enable = false
+
+cheat6_desc = "[Game Genie] Start On Final Level (1-Player Tournament Only)"
+cheat6_code = "3EE-5BD-4C1+07E-5CD-4CB+00E-5DD-E61"
+cheat6_enable = false
+
+cheat7_desc = "[Game Genie] Get 4th Level Difficulty"
+cheat7_code = "3E1-F2A-4CA+041-F3A-E62+771-F4A-3BA"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Start each fight with 10 seconds"
+cheat8_code = "10A-9AA-80C"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Start with 1/2 time"
+cheat9_code = "50A-9AA-80C"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Start with 3/4 time"
+cheat10_code = "75A-9AA-80C"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Infinite timer"
+cheat11_code = "009-1FB-A22"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Infinite energy"
+cheat12_code = "004-E0B-E6D+007-1AE-3B7"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Start on level 4 (1-player tournament only)"
+cheat13_code = "3EE-5BD-4C1+03E-5CD-4CB+00E-5DD-E61"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Start on final level (1-player tournament only)"
+cheat14_code = "3EE-5BD-4C1+07E-5CD-4CB+00E-5DD-E61"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Experts only"
+cheat15_code = "3E1-F2A-4CA+041-F3A-E62+771-F4A-3BA"
+cheat15_enable = false

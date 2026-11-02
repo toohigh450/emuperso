@@ -1,0 +1,156 @@
+# Recherche locale pour la ROM : Di-Gata Defenders (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Di-Gata%20Defenders%20(Europe).cht
+
+cheats = 37
+
+cheat0_desc = "[Action Replay] Infinite Health"
+cheat0_code = "621F595C+00000000+B21F595C+00000000+2000000A+000000FF+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite MP"
+cheat1_code = "621F595C+00000000+B21F595C+00000000+20000016+000000FF+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Escape Always Available"
+cheat2_code = "02038D7C+E3A00000+02038D8C+E3A02000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Level After a Fight"
+cheat3_code = "0219469C+000F423F"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] 20 percent more EXP awarded from battle"
+cheat4_code = "521946F8+00000000+221946F8+00000001+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Get new Master Ability (Press R+Up)"
+cheat5_code = "94000130+FEBF0000+521946A0+00000014+221946A0+00000013+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Set all 16 Master Abilities"
+cheat6_code = "94000130+FEEF0000+D3000000+021946A4+C0000000+0000000F+50000000+00000000+20000000+00000001+D0000000+00000000+DC000000+00000004+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Maximum Experience 9,084 and Maximum Level 21"
+cheat7_code = "3219469C+0000237C+221946A0+00000014+1219469C+0000237C+D0000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Step by Step Experience and Level Up"
+cheat8_code = "94000130+FEBF0000+521946A0+00000000+1219469C+0000000F+D0000000+00000000+521946A0+00000001+1219469C+0000002B+D0000000+00000000+521946A0+00000002+1219469C+00000058+D0000000+00000000+521946A0+00000003+1219469C+0000009A+D0000000+00000000+521946A0+00000004+1219469C+000000F5+D0000000+00000000+521946A0+00000005+1219469C+00000175+D0000000+00000000+521946A0+00000006+1219469C+00000220+D0000000+00000000+521946A0+00000007+1219469C+000002F2+D0000000+00000000+521946A0+00000008+1219469C+000003FA+D0000000+00000000+521946A0+00000009+1219469C+0000054A+D0000000+00000000+521946A0+0000000A+1219469C+000006EA+D0000000+00000000+521946A0+0000000B+1219469C+000008E2+D0000000+00000000+521946A0+0000000C+1219469C+00000B3A+D0000000+00000000+521946A0+0000000D+1219469C+00000DCE+D0000000+00000000+521946A0+0000000E+1219469C+000010AD+D0000000+00000000+521946A0+0000000F+1219469C+000013D7+D0000000+00000000+521946A0+00000010+1219469C+0000174C+D0000000+00000000+521946A0+00000011+1219469C+00001B0C+D0000000+00000000+521946A0+00000012+1219469C+00001F17+D0000000+00000000+521946A0+00000013+1219469C+0000237C+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Haunter Witchery"
+cheat9_code = "521946A4+00000000+221946A4+00000001+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Hypnosis Abjuration"
+cheat10_code = "521946A8+00000000+221946A8+00000001+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Fleeing With Ease"
+cheat11_code = "521946AC+00000000+221946AC+00000001+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Final Chant"
+cheat12_code = "521946B0+00000000+221946B0+00000001+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Crafter Guardian"
+cheat13_code = "521946B4+00000000+221946B4+00000001+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Eight Callings"
+cheat14_code = "521946B8+00000000+221946B8+00000001+D2000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Acidic Shield"
+cheat15_code = "521946BC+00000000+221946BC+00000001+D2000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Sigil Force"
+cheat16_code = "521946C0+00000000+221946C0+00000001+D2000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Dragoon Bane"
+cheat17_code = "521946C4+00000000+221946C4+00000001+D2000000+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Copper Negation"
+cheat18_code = "521946C8+00000000+221946C8+00000001+D2000000+00000000"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Unspeakable Whispers"
+cheat19_code = "521946CC+00000000+221946CC+00000001+D2000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Glass Transmutation"
+cheat20_code = "521946D0+00000000+221946D0+00000001+D2000000+00000000"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Performance Curse"
+cheat21_code = "521946D4+00000000+221946D4+00000001+D2000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Envenomed Arrow"
+cheat22_code = "521946D8+00000000+221946D8+00000001+D2000000+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Passage Rite"
+cheat23_code = "521946DC+00000000+221946DC+00000001+D2000000+00000000"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Mystical Hex"
+cheat24_code = "521946E0+00000000+221946E0+00000001+D2000000+00000000"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Deflection Runes"
+cheat25_code = "521946E4+00000000+221946E4+00000001+D2000000+00000000"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Darkened Snares"
+cheat26_code = "521946E8+00000000+221946E8+00000001+D2000000+00000000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] 100 Incantations"
+cheat27_code = "521946EC+00000000+221946EC+00000001+D2000000+00000000"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Spectral Magma"
+cheat28_code = "521946F0+00000000+221946F0+00000001+D2000000+00000000"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Dualitiy Dust Strike"
+cheat29_code = "521946F4+00000000+221946F4+00000001+D2000000+00000000"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Disrupting Hex"
+cheat30_code = "521946F8+00000000+221946F8+00000001+D2000000+00000000"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Dancing Bones"
+cheat31_code = "521946FC+00000000+221946FC+00000001+D2000000+00000000"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Barrage"
+cheat32_code = "52194700+00000000+22194700+00000001+D2000000+00000000"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Dazzle"
+cheat33_code = "52194704+00000000+22194704+00000001+D2000000+00000000"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Pureshot"
+cheat34_code = "52194708+00000000+22194708+00000001+D2000000+00000000"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Judgment Caller"
+cheat35_code = "5219470C+00000000+2219470C+00000001+D2000000+00000000"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Clear Conscience"
+cheat36_code = "52194710+00000000+22194710+00000001+D2000000+00000000"
+cheat36_enable = false

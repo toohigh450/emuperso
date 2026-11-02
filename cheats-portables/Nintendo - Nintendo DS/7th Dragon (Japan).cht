@@ -1,0 +1,192 @@
+# Recherche locale pour la ROM : 7th Dragon (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/7th%20Dragon%20(Japan).cht
+
+cheats = 46
+
+cheat0_desc = "[Action Replay] Game Time 0:00:00"
+cheat0_code = "020D24D4+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Gold (Select)"
+cheat1_code = "94000130+FFFB0000+020D24D0+05F5E0FF+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Hold R No Encounter,Hold L Instant Encounter"
+cheat2_code = "0202AD4C+E0410000+94000130+FEFF0000+0202AD4C+E3A00001+D0000000+00000000+94000130+FDFF0000+0202AD4C+E3A00000+D0000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Weapon and Equipment Restriction Lifted"
+cheat3_code = "120697FA+000046C0"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Enable All Dungeon Map"
+cheat4_code = "1200905C+0000E000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Walkthrough Obstacles (Hold R)"
+cheat5_code = "1200A1BA+0000D100+94000130+FEFF0000+1200A1BA+0000E000+D0000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] x1"
+cheat6_code = "120A5698+00001040"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] x2"
+cheat7_code = "120A5698+00001080"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] x3"
+cheat8_code = "120A5698+000010C0"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Walkx2, Dashx4"
+cheat9_code = "021CCE74+00040006"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Life, Mana and Gauge Never Decrease"
+cheat10_code = "020219E8+EAFF7984+E2000000+00000038+E59FC024+E59CC000+E59F1020+E08CC001+E154000C+32867001+37940107+37840186+3A008675+E3580000+EA00866F+020D6540+000015D4+E1A00000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Always Critical Hit"
+cheat11_code = "E2000100+00000010+E5D46002+E3560001+03A00001+E3500000+02000110+EA01E759+02079E78+EAFE18A0"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Always Double Attack"
+cheat12_code = "E2000120+00000010+E5D40002+E3500001+0A027ADA+E1A00004+02000130+EA027ACF+0209EC70+EAFD852A"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Always Item Drop"
+cheat13_code = "020640D4+E1A00000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] x2"
+cheat14_code = "12063A80+00007080"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] x4"
+cheat15_code = "12063A80+00007100"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] x8"
+cheat16_code = "12063A80+00007180"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] x16"
+cheat17_code = "12063A80+00007200"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] x32"
+cheat18_code = "12063A80+00007280"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] x64"
+cheat19_code = "12063A80+00007300"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] x128"
+cheat20_code = "12063A80+00007380"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] x256"
+cheat21_code = "12063A80+00007400"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] x512"
+cheat22_code = "12063A80+00007480"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] x2"
+cheat23_code = "12063CB0+00009080"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] x4"
+cheat24_code = "12063CB0+00009100"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] x8"
+cheat25_code = "12063CB0+00009180"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] x16"
+cheat26_code = "12063CB0+00009200"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] x32"
+cheat27_code = "12063CB0+00009280"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] x64"
+cheat28_code = "12063CB0+00009300"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] x128"
+cheat29_code = "12063CB0+00009380"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] x256"
+cheat30_code = "12063CB0+00009400"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] x512"
+cheat31_code = "12063CB0+00009480"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] x2"
+cheat32_code = "020141E8+47184B00+020141EC+02000041+E2000040+00000018+7A801808+8BA30040+46C0181B+47104A00+020141F1+46C046C0"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] x4"
+cheat33_code = "020141E8+47184B00+020141EC+02000041+E2000040+00000018+7A801808+8BA30080+46C0181B+47104A00+020141F1+46C046C0"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] x8"
+cheat34_code = "020141E8+47184B00+020141EC+02000041+E2000040+00000018+7A801808+8BA300C0+46C0181B+47104A00+020141F1+46C046C0"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] x16"
+cheat35_code = "020141E8+47184B00+020141EC+02000041+E2000040+00000018+7A801808+8BA30100+46C0181B+47104A00+020141F1+46C046C0"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] x32"
+cheat36_code = "020141E8+47184B00+020141EC+02000041+E2000040+00000018+7A801808+8BA30140+46C0181B+47104A00+020141F1+46C046C0"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] x64"
+cheat37_code = "020141E8+47184B00+020141EC+02000041+E2000040+00000018+7A801808+8BA30180+46C0181B+47104A00+020141F1+46C046C0"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Skill Point Max After Earning Some"
+cheat38_code = "120141F2+0000E003"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Enable All Party Skill"
+cheat39_code = "220D2525+00000007+120D2526+00000707+120D2528+00000707+220D252A+00000007"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Enable EX Skill on Custom Menu"
+cheat40_code = "220CE693+000000FC+120CE694+00003FFF"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Learning Criterias or Conditions for SKill Lifted"
+cheat41_code = "12014B6C+000046C0+12099120+0000E001"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Hero 1 999 Skill Points"
+cheat42_code = "120D17A8+000003E7"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Hero 2 999 Skill Points"
+cheat43_code = "120D186C+000003E7"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Hero 3 999 Skill Points"
+cheat44_code = "120D1930+000003E7"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Hero 4 999 Skill Points"
+cheat45_code = "120D19F4+000003E7"
+cheat45_enable = false

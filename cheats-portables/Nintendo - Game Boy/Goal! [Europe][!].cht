@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Goal! [Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Goal!%20(USA%2C%20Europe)%20(Game%20Genie).cht
+
+cheats = 5
+
+cheat0_desc = "[Game Genie] Select Time Of Up To 99 Minutes Per Half"
+cheat0_code = "633-ECB-5DE"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] No Goals Scored Against You By Computer"
+cheat1_code = "00A-DAB-19A"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Infinite Timer"
+cheat2_code = "009-EFE-E6E"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Some Teammates Have A Mega-Kick"
+cheat3_code = "225-5BA-C46"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] Player 2 Is Fastest On The Pitch"
+cheat4_code = "FF5-5AA-CDE+FF5-5BA-C46+FF5-5CA-CBE"
+cheat4_enable = false

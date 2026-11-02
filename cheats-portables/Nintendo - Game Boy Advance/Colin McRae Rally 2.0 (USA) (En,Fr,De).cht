@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Colin McRae Rally 2.0 (USA) (En,Fr,De).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Colin%20McRae%20Rally%202.0%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 4
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000B71B+000A+10002DD4+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Low Stage Time (Always Place 1st)"
+cheat1_code = "83004C84+0000"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Press Select+L To End Stage"
+cheat2_code = "74000130+01FB+33003E22+000A+74000130+01FB+33004B14+00FF"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Unlock All Cars"
+cheat3_code = "820280DE+62D7+82028248+7990+8202824A+0001+4202824C+7990+00000017+0004+4202824E+0000+00000017+0004+820282D8+070F"
+cheat3_enable = false

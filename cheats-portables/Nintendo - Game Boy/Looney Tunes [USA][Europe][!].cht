@@ -1,0 +1,50 @@
+# Recherche locale pour la ROM : Looney Tunes [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Looney%20Tunes%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Looney%20Tunes%20(USA%2C%20Europe)%20(Xploder).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Looney%20Tunes%20(USA%2C%20Europe).cht
+
+cheats = 10
+
+cheat0_desc = "[GameShark] Infinite Time"
+cheat0_code = "01552DC5"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Infinite Lives"
+cheat1_code = "01092AC5"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Infinite Energy"
+cheat2_code = "010318D9"
+cheat2_enable = false
+
+cheat3_desc = "[Xploder] Unendlich Gesundheit"
+cheat3_code = "$0D245F8E"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Invincibility"
+cheat4_code = "010517D9"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Hit Anywhere"
+cheat5_code = "FA8-458-A21+378-098-19C+377-FF8-198"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Jump in Midair"
+cheat6_code = "FA4-81B-E61"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Infinite Time"
+cheat7_code = "008-90F-19A"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Start with 99 Lives"
+cheat8_code = "991-ECF-E62"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Infinite Lives"
+cheat9_code = "00B-02E-E6E"
+cheat9_enable = false

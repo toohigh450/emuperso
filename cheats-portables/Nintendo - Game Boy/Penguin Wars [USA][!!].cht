@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Penguin Wars [USA][!!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Penguin%20Wars%20(USA).cht
+
+cheats = 4
+
+cheat0_desc = "[Format source non précisé] Pick up balls without having to press A (still have to press A to throw balls)"
+cheat0_code = "00C-1BF-C49"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Freeze timer (can switch on/off)"
+cheat1_code = "A77-5BF-19A"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Get up slower when hit by ball"
+cheat2_code = "00E-B6F-3B7"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Don't get hurt by balls"
+cheat3_code = "019-A3F-D5D"
+cheat3_enable = false

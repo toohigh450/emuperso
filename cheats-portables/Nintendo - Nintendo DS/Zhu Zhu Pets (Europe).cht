@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Zhu Zhu Pets (Europe).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Zhu%20Zhu%20Pets%20(Europe).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] Condition Gauge Max"
+cheat0_code = "5201F834+E59320EC+0201F838+E3A010FF+0201F85C+E3A000FF+0201F090+E3A00C05+D2000000+00000000"
+cheat0_enable = false

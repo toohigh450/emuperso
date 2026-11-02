@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Point Blank DS (Europe) (En,Fr,De,Es).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Point%20Blank%20DS%20(Europe).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] Extra Hearts"
+cheat0_code = "920E871C+00000003+220E871C+00000007+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Hearts"
+cheat1_code = "92187992+00000000+220E871C+00000007+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Hits"
+cheat2_code = "92187992+00000000+2218985E+00000032+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Hit Score"
+cheat3_code = "92187992+00000000+12189872+00000BB8+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Accuracy Score"
+cheat4_code = "92187992+00000000+12189874+00000BB8+D2000000+00000000"
+cheat4_enable = false

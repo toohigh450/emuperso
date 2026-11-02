@@ -1,0 +1,169 @@
+# Recherche locale pour la ROM : Mega Man II [Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Mega%20Man%20II%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Mega%20Man%20II%20(USA%2C%20Europe)%20(GameShark).cht
+
+cheats = 40
+
+cheat0_desc = "[Game Genie] 3/4 Energy"
+cheat0_code = "72C-557-808"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] 1/2 Energy"
+cheat1_code = "4CC-557-808"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] 1/4 Energy"
+cheat2_code = "26C-557-808"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Infinite Energy"
+cheat3_code = "016-024-4C1"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] Start With 1 Life"
+cheat4_code = "00B-F87-E62"
+cheat4_enable = false
+
+cheat5_desc = "[Game Genie] Start With 4 Lives"
+cheat5_code = "03B-F87-E62"
+cheat5_enable = false
+
+cheat6_desc = "[Game Genie] Start With 6 Lives"
+cheat6_code = "05B-F87-E62"
+cheat6_enable = false
+
+cheat7_desc = "[Game Genie] Start With 10 Lives"
+cheat7_code = "09B-F87-E62"
+cheat7_enable = false
+
+cheat8_desc = "[Game Genie] Infinite Lives"
+cheat8_code = "018-C55-4C1"
+cheat8_enable = false
+
+cheat9_desc = "[Game Genie] Infinite Weapon Energy (All Weapons)"
+cheat9_code = "00A-174-4C1"
+cheat9_enable = false
+
+cheat10_desc = "[Game Genie] Infinite ETanks"
+cheat10_code = "018-A04-4C1"
+cheat10_enable = false
+
+cheat11_desc = "[Game Genie] ETanks Worth Nothing"
+cheat11_code = "017-544-4C1"
+cheat11_enable = false
+
+cheat12_desc = "[Game Genie] Energy Capsules Worth Nothing"
+cheat12_code = "01B-265-4C1"
+cheat12_enable = false
+
+cheat13_desc = "[Game Genie] Extra Lives Worth Nothing"
+cheat13_code = "007-184-19A"
+cheat13_enable = false
+
+cheat14_desc = "[Game Genie] Super Jump"
+cheat14_code = "040-026-E66"
+cheat14_enable = false
+
+cheat15_desc = "[Game Genie] Mega Jump"
+cheat15_code = "060-026-E66"
+cheat15_enable = false
+
+cheat16_desc = "[Game Genie] Slide Half As Far"
+cheat16_code = "0FF-C87-912"
+cheat16_enable = false
+
+cheat17_desc = "[Game Genie] Slide 2x As Far"
+cheat17_code = "3CF-C87-912"
+cheat17_enable = false
+
+cheat18_desc = "[Game Genie] Slide 4x As Far"
+cheat18_code = "78F-C87-912"
+cheat18_enable = false
+
+cheat19_desc = "[Game Genie] Slide Forever (Turn Off To Stop Sliding)"
+cheat19_code = "014-E96-4C1"
+cheat19_enable = false
+
+cheat20_desc = "[Game Genie] Get Hit And Become Invincible For Half As Long"
+cheat20_code = "1E5-DF4-19A"
+cheat20_enable = false
+
+cheat21_desc = "[Game Genie] Get Hit And Become Invincible For 2x As Long"
+cheat21_code = "785-DF4-19A"
+cheat21_enable = false
+
+cheat22_desc = "[Game Genie] Get Hit And Become Invincible For 4x As Long"
+cheat22_code = "F05-DF4-19A"
+cheat22_enable = false
+
+cheat23_desc = "[Game Genie] Get Hit And Become Invincible For The Rest Of The Stage"
+cheat23_code = "01E-477-4C1"
+cheat23_enable = false
+
+cheat24_desc = "[GameShark] Infinite Energy"
+cheat24_code = "01A5D0CF"
+cheat24_enable = false
+
+cheat25_desc = "[GameShark] Invincibility"
+cheat25_code = "013C43CF"
+cheat25_enable = false
+
+cheat26_desc = "[GameShark] Infinite Weapon Energy"
+cheat26_code = "0198E0CF"
+cheat26_enable = false
+
+cheat27_desc = "[GameShark] Jump Like You're Underwater"
+cheat27_code = "00021ACF"
+cheat27_enable = false
+
+cheat28_desc = "[GameShark] Infinite Lives"
+cheat28_code = "0102E8CF"
+cheat28_enable = false
+
+cheat29_desc = "[GameShark] Infinite Crash Bombs"
+cheat29_code = "01B5E0CF"
+cheat29_enable = false
+
+cheat30_desc = "[GameShark] Have Weapon Modifier 1"
+cheat30_code = "010?DDCF"
+cheat30_enable = false
+
+cheat31_desc = "[GameShark] Have Weapon Modifier 2"
+cheat31_code = "01??DECF"
+cheat31_enable = false
+
+cheat32_desc = "[GameShark] Infinite M. E."
+cheat32_code = "01B5E1CF"
+cheat32_enable = false
+
+cheat33_desc = "[GameShark] Infinite W. D."
+cheat33_code = "01B5E2CF"
+cheat33_enable = false
+
+cheat34_desc = "[GameShark] Level Completed Modifier"
+cheat34_code = "01??DECF"
+cheat34_enable = false
+
+cheat35_desc = "[GameShark] Automatically Beat Level"
+cheat35_code = "010260CF"
+cheat35_enable = false
+
+cheat36_desc = "[GameShark] E-Tank Modifier"
+cheat36_code = "010?E9CF"
+cheat36_enable = false
+
+cheat37_desc = "[GameShark] Moon Jump"
+cheat37_code = "01031ACF"
+cheat37_enable = false
+
+cheat38_desc = "[GameShark] Infinite Weapon Energy (All Weapons)"
+cheat38_code = "0198E0CF"
+cheat38_enable = false
+
+cheat39_desc = "[GameShark] Slide Forever (Turn Off To Stop Sliding)"
+cheat39_code = "011E2ACF"
+cheat39_enable = false

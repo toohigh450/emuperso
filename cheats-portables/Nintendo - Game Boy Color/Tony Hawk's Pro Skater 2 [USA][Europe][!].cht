@@ -1,0 +1,525 @@
+# Recherche locale pour la ROM : Tony Hawk's Pro Skater 2 [USA][Europe][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Tony%20Hawk's%20Pro%20Skater%202%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Tony%20Hawk's%20Pro%20Skater%202%20(USA%2C%20Europe).cht
+
+cheats = 129
+
+cheat0_desc = "[GameShark] Max Score"
+cheat0_code = "01637FC2+016380C2+016381C2"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Stop Timer"
+cheat1_code = "0163D2C6"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Max Cash"
+cheat2_code = "01FF62C5+01FF63C5"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Tony Hawk - All Courses Complete"
+cheat3_code = "01FF66C5+01FF67C5+01FF68C5+01FF69C5+01FF6AC5+01FF6BC5+01FF6CC5"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Bob Burnquist - All Courses Complete"
+cheat4_code = "01FF71C5+01FF72C5+01FF73C5+01FF74C5+01FF75C5+01FF76C5+01FF77C5"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Steve Caballero - All Courses Complete"
+cheat5_code = "01FF7CC5+01FF7DC5+01FF7EC5+01FF7FC5+01FF80C5+01FF81C5+01FF82C5"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Infinite Points"
+cheat6_code = "01FF7FC2+01FF80C2"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Infinite Time"
+cheat7_code = "013BD2C6"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Max Career Money"
+cheat8_code = "01FF6DC5+01FF6EC5"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] All Boards"
+cheat9_code = "01FF6FC5"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] All Courses Open"
+cheat10_code = "01FF70C5"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Skate Park Complete"
+cheat11_code = "01FF71C5"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] NY City Complete"
+cheat12_code = "01FF72C5"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Hanger Complete"
+cheat13_code = "01FF73C5"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] School Complete"
+cheat14_code = "01FF74C5"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Bullring Complete"
+cheat15_code = "01FF75C5"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Venice Beach Complete"
+cheat16_code = "01FF76C5"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Skate Heaven Complete"
+cheat17_code = "01FF77C5"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Max Career Money"
+cheat18_code = "01FF78C5+01FF79C5"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] All Boards"
+cheat19_code = "01FF7AC5"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] All Courses Open"
+cheat20_code = "01FF7BC5"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Skate Park Complete"
+cheat21_code = "01FF7CC5"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] NY City Complete"
+cheat22_code = "01FF7DC5"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Hanger Complete"
+cheat23_code = "01FF7EC5"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] School Complete"
+cheat24_code = "01FF7FC5"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Bullring Complete"
+cheat25_code = "01FF80C5"
+cheat25_enable = false
+
+cheat26_desc = "[Format source non précisé] Venice Beach Complete"
+cheat26_code = "01FF81C5"
+cheat26_enable = false
+
+cheat27_desc = "[Format source non précisé] Skate Heaven Complete"
+cheat27_code = "01FF82C5"
+cheat27_enable = false
+
+cheat28_desc = "[Format source non précisé] Max Career Money"
+cheat28_code = "01FF83C5+01FF84C5"
+cheat28_enable = false
+
+cheat29_desc = "[Format source non précisé] All Boards"
+cheat29_code = "01FF85C5"
+cheat29_enable = false
+
+cheat30_desc = "[Format source non précisé] All Courses Open"
+cheat30_code = "01FF86C5"
+cheat30_enable = false
+
+cheat31_desc = "[Format source non précisé] Skate Park Complete"
+cheat31_code = "01FF87C5"
+cheat31_enable = false
+
+cheat32_desc = "[Format source non précisé] NY City Complete"
+cheat32_code = "01FF88C5"
+cheat32_enable = false
+
+cheat33_desc = "[Format source non précisé] Hanger Complete"
+cheat33_code = "01FF89C5"
+cheat33_enable = false
+
+cheat34_desc = "[Format source non précisé] School Complete"
+cheat34_code = "01FF8AC5"
+cheat34_enable = false
+
+cheat35_desc = "[Format source non précisé] Bullring Complete"
+cheat35_code = "01FF8BC5"
+cheat35_enable = false
+
+cheat36_desc = "[Format source non précisé] Venice Beach Complete"
+cheat36_code = "01FF8CC5"
+cheat36_enable = false
+
+cheat37_desc = "[Format source non précisé] Skate Heaven Complete"
+cheat37_code = "01FF8DC5"
+cheat37_enable = false
+
+cheat38_desc = "[Format source non précisé] Max Career Money"
+cheat38_code = "01FF8EC5+01FF8FC5"
+cheat38_enable = false
+
+cheat39_desc = "[Format source non précisé] All Boards"
+cheat39_code = "01FF90C5"
+cheat39_enable = false
+
+cheat40_desc = "[Format source non précisé] All Courses Open"
+cheat40_code = "01FF91C5"
+cheat40_enable = false
+
+cheat41_desc = "[Format source non précisé] Skate Park Complete"
+cheat41_code = "01FF92C5"
+cheat41_enable = false
+
+cheat42_desc = "[Format source non précisé] NY City Complete"
+cheat42_code = "01FF93C5"
+cheat42_enable = false
+
+cheat43_desc = "[Format source non précisé] Hanger Complete"
+cheat43_code = "01FF94C5"
+cheat43_enable = false
+
+cheat44_desc = "[Format source non précisé] School Complete"
+cheat44_code = "01FF95C5"
+cheat44_enable = false
+
+cheat45_desc = "[Format source non précisé] Bullring Complete"
+cheat45_code = "01FF96C5"
+cheat45_enable = false
+
+cheat46_desc = "[Format source non précisé] Venice Beach Complete"
+cheat46_code = "01FF97C5"
+cheat46_enable = false
+
+cheat47_desc = "[Format source non précisé] Skate Heaven Complete"
+cheat47_code = "01FF98C5"
+cheat47_enable = false
+
+cheat48_desc = "[Format source non précisé] Max Career Money"
+cheat48_code = "01FF99C5+01FF9AC5"
+cheat48_enable = false
+
+cheat49_desc = "[Format source non précisé] All Boards"
+cheat49_code = "01FF9BC5"
+cheat49_enable = false
+
+cheat50_desc = "[Format source non précisé] All Courses Open"
+cheat50_code = "01DD9CC5"
+cheat50_enable = false
+
+cheat51_desc = "[Format source non précisé] Skate Park Complete"
+cheat51_code = "01FF9DC5"
+cheat51_enable = false
+
+cheat52_desc = "[Format source non précisé] NY City Complete"
+cheat52_code = "01FF9EC5"
+cheat52_enable = false
+
+cheat53_desc = "[Format source non précisé] Hanger Complete"
+cheat53_code = "01FF9FC5"
+cheat53_enable = false
+
+cheat54_desc = "[Format source non précisé] School Complete"
+cheat54_code = "01FFA0C5"
+cheat54_enable = false
+
+cheat55_desc = "[Format source non précisé] Bullring Complete"
+cheat55_code = "01FFA1C5"
+cheat55_enable = false
+
+cheat56_desc = "[Format source non précisé] Venice Beach Complete"
+cheat56_code = "01FFA2C5"
+cheat56_enable = false
+
+cheat57_desc = "[Format source non précisé] Skate Heaven Complete"
+cheat57_code = "01FFA3C5"
+cheat57_enable = false
+
+cheat58_desc = "[Format source non précisé] Max Career Money"
+cheat58_code = "01FFA4C5+01FFA5C5"
+cheat58_enable = false
+
+cheat59_desc = "[Format source non précisé] All Boards"
+cheat59_code = "01FFA6C5"
+cheat59_enable = false
+
+cheat60_desc = "[Format source non précisé] All Courses Open"
+cheat60_code = "01FFA7C5"
+cheat60_enable = false
+
+cheat61_desc = "[Format source non précisé] Skate Park Complete"
+cheat61_code = "01FFA8C5"
+cheat61_enable = false
+
+cheat62_desc = "[Format source non précisé] NY City Complete"
+cheat62_code = "01FFA9C5"
+cheat62_enable = false
+
+cheat63_desc = "[Format source non précisé] Hanger Complete"
+cheat63_code = "01FFAAC5"
+cheat63_enable = false
+
+cheat64_desc = "[Format source non précisé] School Complete"
+cheat64_code = "01FFABC5"
+cheat64_enable = false
+
+cheat65_desc = "[Format source non précisé] Bullring Complete"
+cheat65_code = "01FFACC5"
+cheat65_enable = false
+
+cheat66_desc = "[Format source non précisé] Venice Beach Complete"
+cheat66_code = "01FFADC5"
+cheat66_enable = false
+
+cheat67_desc = "[Format source non précisé] Skate Heaven Complete"
+cheat67_code = "01FFAEC5"
+cheat67_enable = false
+
+cheat68_desc = "[Format source non précisé] Max Career Money"
+cheat68_code = "01FFAFC5+01FFB0C5"
+cheat68_enable = false
+
+cheat69_desc = "[Format source non précisé] All Boards"
+cheat69_code = "01FFB1C5"
+cheat69_enable = false
+
+cheat70_desc = "[Format source non précisé] All Courses Open"
+cheat70_code = "01FFB2C5"
+cheat70_enable = false
+
+cheat71_desc = "[Format source non précisé] Skate Park Complete"
+cheat71_code = "01FFB3C5"
+cheat71_enable = false
+
+cheat72_desc = "[Format source non précisé] NY City Complete"
+cheat72_code = "01FFB4C5"
+cheat72_enable = false
+
+cheat73_desc = "[Format source non précisé] Hanger Complete"
+cheat73_code = "01FFB5C5"
+cheat73_enable = false
+
+cheat74_desc = "[Format source non précisé] School Complete"
+cheat74_code = "01FFB6C5"
+cheat74_enable = false
+
+cheat75_desc = "[Format source non précisé] Bullring Complete"
+cheat75_code = "01FFB7C5"
+cheat75_enable = false
+
+cheat76_desc = "[Format source non précisé] Venice Beach Complete"
+cheat76_code = "01FFB8C5"
+cheat76_enable = false
+
+cheat77_desc = "[Format source non précisé] Skate Heaven Complete"
+cheat77_code = "01FFB9C5"
+cheat77_enable = false
+
+cheat78_desc = "[Format source non précisé] Max Career Money"
+cheat78_code = "01FFBAC5+01FFBBC5"
+cheat78_enable = false
+
+cheat79_desc = "[Format source non précisé] All Boards"
+cheat79_code = "01FFBCC5"
+cheat79_enable = false
+
+cheat80_desc = "[Format source non précisé] All Courses Open"
+cheat80_code = "01FFBDC5"
+cheat80_enable = false
+
+cheat81_desc = "[Format source non précisé] Skate Park Complete"
+cheat81_code = "01FFBEC5"
+cheat81_enable = false
+
+cheat82_desc = "[Format source non précisé] NY City Complete"
+cheat82_code = "01FFBFC5"
+cheat82_enable = false
+
+cheat83_desc = "[Format source non précisé] Hanger Complete"
+cheat83_code = "01FFC0C5"
+cheat83_enable = false
+
+cheat84_desc = "[Format source non précisé] School Complete"
+cheat84_code = "01FFC1C5"
+cheat84_enable = false
+
+cheat85_desc = "[Format source non précisé] Bullring Complete"
+cheat85_code = "01FFC2C5"
+cheat85_enable = false
+
+cheat86_desc = "[Format source non précisé] Venice Beach Complete"
+cheat86_code = "01FFC3C5"
+cheat86_enable = false
+
+cheat87_desc = "[Format source non précisé] Skate Heaven Complete"
+cheat87_code = "01FFC4C5"
+cheat87_enable = false
+
+cheat88_desc = "[Format source non précisé] Max Career Money"
+cheat88_code = "01FFC5C5+01FFC6C5"
+cheat88_enable = false
+
+cheat89_desc = "[Format source non précisé] All Boards"
+cheat89_code = "01FFC7C5"
+cheat89_enable = false
+
+cheat90_desc = "[Format source non précisé] All Courses Open"
+cheat90_code = "01FFC8C5"
+cheat90_enable = false
+
+cheat91_desc = "[Format source non précisé] Skate Park Complete"
+cheat91_code = "01FFC9C5"
+cheat91_enable = false
+
+cheat92_desc = "[Format source non précisé] NY City Complete"
+cheat92_code = "01FFCAC5"
+cheat92_enable = false
+
+cheat93_desc = "[Format source non précisé] Hanger Complete"
+cheat93_code = "01FFCBC5"
+cheat93_enable = false
+
+cheat94_desc = "[Format source non précisé] School Complete"
+cheat94_code = "01FFCCC5"
+cheat94_enable = false
+
+cheat95_desc = "[Format source non précisé] Bullring Complete"
+cheat95_code = "01FFCDC5"
+cheat95_enable = false
+
+cheat96_desc = "[Format source non précisé] Venice Beach Complete"
+cheat96_code = "01FFCEC5"
+cheat96_enable = false
+
+cheat97_desc = "[Format source non précisé] Skate Heaven Complete"
+cheat97_code = "01FFCFC5"
+cheat97_enable = false
+
+cheat98_desc = "[Format source non précisé] Max Career Money"
+cheat98_code = "01FFD0C5+01FFD1C5"
+cheat98_enable = false
+
+cheat99_desc = "[Format source non précisé] All Boards"
+cheat99_code = "01FFD2C5"
+cheat99_enable = false
+
+cheat100_desc = "[Format source non précisé] All Courses Open"
+cheat100_code = "01FFD3C5"
+cheat100_enable = false
+
+cheat101_desc = "[Format source non précisé] Skate Park Complete"
+cheat101_code = "01FFD4C5"
+cheat101_enable = false
+
+cheat102_desc = "[Format source non précisé] NY City Complete"
+cheat102_code = "01FFD5C5"
+cheat102_enable = false
+
+cheat103_desc = "[Format source non précisé] Hanger Complete"
+cheat103_code = "01FFD6C5"
+cheat103_enable = false
+
+cheat104_desc = "[Format source non précisé] School Complete"
+cheat104_code = "01FFD7C5"
+cheat104_enable = false
+
+cheat105_desc = "[Format source non précisé] Bullring Complete"
+cheat105_code = "01FFD8C5"
+cheat105_enable = false
+
+cheat106_desc = "[Format source non précisé] Venice Beach Complete"
+cheat106_code = "01FFD9C5"
+cheat106_enable = false
+
+cheat107_desc = "[Format source non précisé] Skate Heaven Complete"
+cheat107_code = "01FFDAC5"
+cheat107_enable = false
+
+cheat108_desc = "[Format source non précisé] Max Career Money"
+cheat108_code = "01FFDBC5+01FFDCC5"
+cheat108_enable = false
+
+cheat109_desc = "[Format source non précisé] All Boards"
+cheat109_code = "01FFDDC5"
+cheat109_enable = false
+
+cheat110_desc = "[Format source non précisé] All Courses Open"
+cheat110_code = "01FFDEC5"
+cheat110_enable = false
+
+cheat111_desc = "[Format source non précisé] All Courses Complete Skate Park Complete"
+cheat111_code = "01FFDFC5"
+cheat111_enable = false
+
+cheat112_desc = "[Format source non précisé] NY City Complete"
+cheat112_code = "01FFE0C5"
+cheat112_enable = false
+
+cheat113_desc = "[Format source non précisé] Hanger Complete"
+cheat113_code = "01FFE1C5"
+cheat113_enable = false
+
+cheat114_desc = "[Format source non précisé] School Complete"
+cheat114_code = "01FFE2C5"
+cheat114_enable = false
+
+cheat115_desc = "[Format source non précisé] Bullring Complete"
+cheat115_code = "01FFE3C5"
+cheat115_enable = false
+
+cheat116_desc = "[Format source non précisé] Venice Beach Complete"
+cheat116_code = "01FFE4C5"
+cheat116_enable = false
+
+cheat117_desc = "[Format source non précisé] Skate Heaven Complete"
+cheat117_code = "01FFE5C5"
+cheat117_enable = false
+
+cheat118_desc = "[Format source non précisé] Max Career Money"
+cheat118_code = "01FFE6C5+01FFE7C5"
+cheat118_enable = false
+
+cheat119_desc = "[Format source non précisé] All Boards"
+cheat119_code = "01FFE8C5"
+cheat119_enable = false
+
+cheat120_desc = "[Format source non précisé] All Courses Open"
+cheat120_code = "01FFE9C5"
+cheat120_enable = false
+
+cheat121_desc = "[Format source non précisé] Skate Park Complete"
+cheat121_code = "01FFEAC5"
+cheat121_enable = false
+
+cheat122_desc = "[Format source non précisé] NY City Complete"
+cheat122_code = "01FFEBC5"
+cheat122_enable = false
+
+cheat123_desc = "[Format source non précisé] Hanger Complete"
+cheat123_code = "01FFECC5"
+cheat123_enable = false
+
+cheat124_desc = "[Format source non précisé] School Complete"
+cheat124_code = "01FFEDC5"
+cheat124_enable = false
+
+cheat125_desc = "[Format source non précisé] Bullring Complete"
+cheat125_code = "01FFEEC5"
+cheat125_enable = false
+
+cheat126_desc = "[Format source non précisé] Venice Beach Complete"
+cheat126_code = "01FFEFC5"
+cheat126_enable = false
+
+cheat127_desc = "[Format source non précisé] Skate Heaven Complete"
+cheat127_code = "01FFF0C5"
+cheat127_enable = false
+
+cheat128_desc = "[Format source non précisé] Stop Timer"
+cheat128_code = "0163D2C6"
+cheat128_enable = false

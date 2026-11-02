@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Shamu's Deep Sea Adventures (Europe).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Shamu's%20Deep%20Sea%20Adventures%20(Europe).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] Diamond Max"
+cheat0_code = "620B90BC+00000000+B20B90BC+00000000+1000007C+000003E7+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Stages"
+cheat1_code = "2219AD5C+0000000C"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Pictures"
+cheat2_code = "2219B2F8+000000FF"
+cheat2_enable = false

@@ -1,0 +1,106 @@
+# Recherche locale pour la ROM : Toy Story Racer [Europe][En][Fr][De][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Toy%20Story%20Racer%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Toy%20Story%20Racer%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Toy%20Story%20Racer%20(USA%2C%20Europe).cht
+
+cheats = 24
+
+cheat0_desc = "[Game Genie] Infinite Time"
+cheat0_code = "003-40F"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Max Coins"
+cheat1_code = "9163D2C6"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Infinite Time"
+cheat2_code = "9163D4C6"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Start On Last Lap"
+cheat3_code = "910316C2"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Player Character Modifier"
+cheat4_code = "01XX27C6"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Racer 1 Character Modifier"
+cheat5_code = "01XX28C6"
+cheat5_enable = false
+
+cheat6_desc = "[GameShark] Racer 2 Character Modifier"
+cheat6_code = "01XX29C6"
+cheat6_enable = false
+
+cheat7_desc = "[GameShark] Racer 3 Character Modifier"
+cheat7_code = "01XX2AC6"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Infinite Time"
+cheat8_code = "003-40F"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Max Coins"
+cheat9_code = "9163D2C6"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Infinite Time"
+cheat10_code = "9163D4C6"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Start On Last Lap"
+cheat11_code = "910316C2"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Player Character Modifier"
+cheat12_code = "010027C6"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Racer 1 Character Modifier"
+cheat13_code = "010028C6"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Racer 2 Character Modifier"
+cheat14_code = "010029C6"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Racer 3 Character Modifier"
+cheat15_code = "01002AC6"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Stage Skip Enabled"
+cheat16_code = "014-21F-E6A"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Car Setup Menu"
+cheat17_code = "0114C8FF"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Friction Value"
+cheat18_code = "0100C5C6"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Break Value"
+cheat19_code = "0100C6C6"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Steer Value"
+cheat20_code = "0100C7C6"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Traction"
+cheat21_code = "0100C8C6"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Spin Value"
+cheat22_code = "0100C9C6"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Acceleration Value"
+cheat23_code = "0100CAC6"
+cheat23_enable = false

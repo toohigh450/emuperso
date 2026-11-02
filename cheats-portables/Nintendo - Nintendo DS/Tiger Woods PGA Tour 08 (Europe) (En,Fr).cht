@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Tiger Woods PGA Tour 08 (Europe) (En,Fr).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Tiger%20Woods%20PGA%20Tour%2008%20(Europe).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "52095640+EE070F90+E20004D0+00000048+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2E90C65+0009000A+00120087+0000015D+02095640+E92D401E+02095644+FAFDABA1+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Hole in One"
+cheat1_code = "220DB65C+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Earnings"
+cheat2_code = "0220CEAC+05F00000"
+cheat2_enable = false

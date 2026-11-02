@@ -1,0 +1,60 @@
+# Recherche locale pour la ROM : FabStyle (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/FabStyle%20(Japan).cht
+
+cheats = 13
+
+cheat0_desc = "[Action Replay] Clothes in Shop Never Decreases"
+cheat0_code = "5205D454+E1A0000A+0205D458+E1A01002+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Unlock All Events"
+cheat1_code = "5210D400+E2000001+0210D408+E1A00000+0210EA58+E3A00001+0210ECF8+E3A00001+0210EF3C+E3A00001+0210F45C+E1A00000+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Unlock All Make Up"
+cheat2_code = "5210AD28+E1A00980+0210AD2C+E3B00001+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Unlock All Clothings and Accessories"
+cheat3_code = "5206E628+E1A00E80+0206E62C+E3B00001+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max/Infinite Money"
+cheat4_code = "E2000000+00000010+E59F2004+E5802014+EA01B2DE+3B9ACA00+5206CB80+EBFFCD00+0206CB84+E5902014+94000130+FFFB0000+0206CB84+EAFE4D1D+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Reset Shop Closing Time to Max"
+cheat5_code = "5210E2DC+E59F21CC+0210E2E0+E0816007+94000130+FFFB0000+0210E2E0+E3A06000+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] x2"
+cheat6_code = "52060FA4+E1560003+02060FA8+E1A05081+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] x4"
+cheat7_code = "52060FA4+E1560003+02060FA8+E1A05101+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] x8"
+cheat8_code = "52060FA4+E1560003+02060FA8+E1A05181+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] x16"
+cheat9_code = "52060FA4+E1560003+02060FA8+E1A05201+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] x32"
+cheat10_code = "52060FA4+E1560003+02060FA8+E1A05281+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] x64"
+cheat11_code = "52060FA4+E1560003+02060FA8+E1A05301+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] x128"
+cheat12_code = "52060FA4+E1560003+02060FA8+E1A05381+D2000000+00000000"
+cheat12_enable = false

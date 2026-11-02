@@ -1,0 +1,123 @@
+# Recherche locale pour la ROM : QIX [World][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/QIX%20(World)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/QIX%20(World)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/QIX%20(World)%20(Xploder).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/QIX%20(World).cht
+
+cheats = 28
+
+cheat0_desc = "[Game Genie] 99 Lives"
+cheat0_code = "99D+8DC+E66"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Level Modifier"
+cheat1_code = "XXD+7BC+E6A"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Infinite Lives"
+cheat2_code = "010242C6"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Level Modifier"
+cheat3_code = "01??3BC6"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Finish Stages Faster (Buggy)"
+cheat4_code = "010027C6"
+cheat4_enable = false
+
+cheat5_desc = "[Xploder] Unendlich Leben"
+cheat5_code = "$0D23E42A"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Infinite Lives"
+cheat6_code = "010742C6"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Level Modifier"
+cheat7_code = "01BE3BC6"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Finish Stages Faster(buggy)"
+cheat8_code = "010027C6"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Infinite lives"
+cheat9_code = "002-B8B-F71"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Start with 9 lives"
+cheat10_code = "09D-8DC-E66"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Start with 6 lives"
+cheat11_code = "06D-8DC-E66"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Start with 1 life"
+cheat12_code = "01D-8DC-E66"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Sparks don't chase you, but can still hurt"
+cheat13_code = "00B-829-2A7"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Start on level 4"
+cheat14_code = "03D-7BC-E6A"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Start on level 8"
+cheat15_code = "07D-7BC-E6A"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Start on level 13"
+cheat16_code = "0CD-7BC-E6A"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Invincibility"
+cheat17_code = "AFE-DBC-3B4"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Infinite Lives"
+cheat18_code = "010242C6"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Create Any Shape to Clear Level"
+cheat19_code = "000-9AB-F7A"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Infinite Time"
+cheat20_code = "01A0BCC4"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Sparks are Frozen & don't harm you"
+cheat21_code = "0100B4C0+0100B5C0+0100B6C0+0100B7C0"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Select game over cutscene"
+cheat22_code = "0100C2DF"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Select initial game over cutscene"
+cheat23_code = "001-A9B-E6A"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] No Qix (Also applies to the second Qix)"
+cheat24_code = "C9B-6BA-3BE"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Infinite time"
+cheat25_code = "C91-D5B-B30"
+cheat25_enable = false
+
+cheat26_desc = "[Format source non précisé] No sparks"
+cheat26_code = "578-079-3B7"
+cheat26_enable = false
+
+cheat27_desc = "[Format source non précisé] Qix Only Need 1% to clear stages"
+cheat27_code = "012-E0C-803+012-E4C-803"
+cheat27_enable = false

@@ -1,0 +1,52 @@
+# Recherche locale pour la ROM : Sneaky Snakes [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Sneaky%20Snakes%20(USA%2C%20Europe).cht
+
+cheats = 11
+
+cheat0_desc = "[Format source non précisé] Infinite lives and time (must switch off at end of every level)"
+cheat0_code = "C96-CDC-3BE"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Start with 2 lives"
+cheat1_code = "011-498-E66"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Start with 7 lives"
+cheat2_code = "061-498-E66"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Start with 10 lives"
+cheat3_code = "091-498-E66"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] 1 continue"
+cheat4_code = "011-2E8-E66"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] 5 continues"
+cheat5_code = "051-2E8-E66"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] 10 continues"
+cheat6_code = "0A1-2E8-E66"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Jump in Midair"
+cheat7_code = "3E6-65B-6EA+006-6CB-C49+FDC-218-191"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Open Door With Any Tail Length"
+cheat8_code = "3E2-E98-08A"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Invincibility"
+cheat9_code = "C66-F8C-F73"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Infinite Time"
+cheat10_code = "C91-77D-E69"
+cheat10_enable = false

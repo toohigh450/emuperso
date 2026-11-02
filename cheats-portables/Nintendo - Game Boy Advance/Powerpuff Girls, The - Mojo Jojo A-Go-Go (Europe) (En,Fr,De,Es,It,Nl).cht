@@ -1,0 +1,52 @@
+# Recherche locale pour la ROM : Powerpuff Girls, The - Mojo Jojo A-Go-Go (Europe) (En,Fr,De,Es,It,Nl).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Powerpuff%20Girls%2C%20The%20-%20Mojo%20Jojo%20A-Go-Go%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 11
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000D26A+000A+1004B280+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Quick Score Gain"
+cheat1_code = "83003BA0+FFFF"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Max Score"
+cheat2_code = "83003BA0+423F+83003BA2+000F"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Have All Levels"
+cheat3_code = "33003D1F+00FF"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Max Jewels"
+cheat4_code = "83003D24+03E7"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Infinite Health (Blossom)"
+cheat5_code = "33003D18+0064"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Infinite Health (Buttercup)"
+cheat6_code = "33003D1A+0064"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Infinite Health (Bubbles)"
+cheat7_code = "33003D1C+0064"
+cheat7_enable = false
+
+cheat8_desc = "[Code Breaker] All Weapons (Blossom)"
+cheat8_code = "83003BAA+FFFF"
+cheat8_enable = false
+
+cheat9_desc = "[Code Breaker] All Weapons (Buttercup)"
+cheat9_code = "83003BAC+FFFF"
+cheat9_enable = false
+
+cheat10_desc = "[Code Breaker] All Weapons (Bubbles)"
+cheat10_code = "83003BAE+FFFF"
+cheat10_enable = false

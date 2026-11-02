@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Teenage Mutant Ninja Turtles 3 - Mutant Nightmare (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Teenage%20Mutant%20Ninja%20Turtles%203%20-%20Mutant%20Nightmare%20(Europe).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Infinite Health"
+cheat0_code = "220EA6B4+00000048"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Score"
+cheat1_code = "020EC360+000F423F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Invincible"
+cheat2_code = "020EA810+0000005E"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Levels Open"
+cheat3_code = "0216CB54+FFFFFFFF+0216CB58+FFFFFFFF+0216CB5C+FFFFFFFF"
+cheat3_enable = false

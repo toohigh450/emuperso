@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : My French Coach - Level 1 - Learn to Speak French (Europe).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/My%20French%20Coach%20-%20Level%201%20-%20Learn%20to%20Speak%20French%20(Europe).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] Correct Count"
+cheat0_code = "1214718C+000003E7"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Error Count"
+cheat1_code = "12147190+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Courses"
+cheat2_code = "22147368+0000003C"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Unlock All Games"
+cheat3_code = "2214736A+000000FF"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Quick Level Up"
+cheat4_code = "C0000000+0000000F+221471E8+0000000F+DC000000+00000008+D2000000+00000000"
+cheat4_enable = false

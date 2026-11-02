@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Classic NES Series - Donkey Kong (USA, Europe).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Classic%20NES%20Series%20-%20Donkey%20Kong%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 4
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00000000+0002+100014A8+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Lives"
+cheat1_code = "33997255+0009"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Press Select & Jump Into The Air To Get Hammer"
+cheat2_code = "D0000020+0004+330072A0+0001+D0000020+0004+3300723F+0048"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Score Modifier"
+cheat3_code = "83007226+????+33007225+00??"
+cheat3_enable = false

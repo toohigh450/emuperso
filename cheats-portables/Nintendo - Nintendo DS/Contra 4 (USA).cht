@@ -1,0 +1,244 @@
+# Recherche locale pour la ROM : Contra 4 (USA).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Contra%204%20(USA).cht
+
+cheats = 59
+
+cheat0_desc = "[Action Replay] Infinite lives"
+cheat0_code = "52029D90+E2400001+02029D90+E2400000+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Invincible"
+cheat1_code = "5202DCC8+E1D405BC+0202DCCC+E3A00002+0202DCD0+E1C405BC+D2000000+00000000+5203412C+E1D015BC+02034130+E3A01002+02034134+E1C015BC+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Hit Anywhere"
+cheat2_code = "02014614+E1A00000+0200DA40+E1A00000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Moon Jump"
+cheat3_code = "94000130+FEFD0000+621CD7E4+00000000+B21CD7E4+00000000+B0000040+00000000+00000034+FFFFB800+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All Bonus Content"
+cheat4_code = "12269876+0000FFFF"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Unlimited Use of Konami Code for Full PowerUp without dying"
+cheat5_code = "221CD7F2+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Begin at Mid-Stage (2D Stages Only)"
+cheat6_code = "221CD7F9+00000001+221CD7FA+00000001"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] NES Contra Mode"
+cheat7_code = "94000130+000003BB+221CD850+0000002A+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] NES Super C Mode"
+cheat8_code = "94000130+0000037B+221CD850+0000002C+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] 99 Lives"
+cheat9_code = "221CD800+00000063"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] 99 Continues"
+cheat10_code = "221CD802+00000063"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] 99 Lives for Player 2"
+cheat11_code = "221CD800+00000063"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Contra Infinite Lives"
+cheat12_code = "921CD850+0000002A+12205C32+00000404+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Contra Invincible"
+cheat13_code = "921CD850+0000002A+12205CAE+00007070+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Super C Infinite Lives"
+cheat14_code = "921CD850+0000002C+22205C53+00000004+22205C54+00000004+D2000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Super C Invincible"
+cheat15_code = "921CD850+0000002C+22205CC4+00000080+22205CC5+00000080+D2000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Always Bill Rizer"
+cheat16_code = "22269865+00000001"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Always Lance Bean"
+cheat17_code = "22269865+00000002"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Always Mad Dog"
+cheat18_code = "22269865+00000003"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Always Scorpion"
+cheat19_code = "22269865+00000004"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Always Green Silhouette (Glitch)"
+cheat20_code = "22269865+00000005"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] All Challenges Unlocked"
+cheat21_code = "2226986F+000000FF+02269870+FFFFFFFF"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] All Challenges Complete"
+cheat22_code = "02269868+FFFFFFFF+1226986C+0000FFFF"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Infinite Ammo in Challenge Mode's Low Ammo Challenges"
+cheat23_code = "921F1956+000000AE+621C6AE4+00000000+B21C6AE4+00000000+2000076E+00000000+D2000000+00000000"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] 99 Seconds in Challenge Modes' Speed Run Challenges"
+cheat24_code = "94000130+FFFB0000+621CE1B4+00000000+B21CE1B4+00000000+2000000D+0000002E+D2000000+00000000"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] 70 Seconds in Challenge Mode's Speed Run Challenges"
+cheat25_code = "94000130+FFFB0000+621CE1B4+00000000+B21CE1B4+00000000+2000000D+00000020+D2000000+00000000"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] 100% Accuracy in Challenge Mode"
+cheat26_code = "921D5B4A+0000F111+621C6AE4+00000000+B21C6AE4+00000000+2000076C+00000000+D2000000+00000000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Weapon Select"
+cheat27_code = "94000130+FDBF0000+621C6AE4+00000000+B21C6AE4+00000000+B0000080+00000000+20000019+00000001+2000001B+00000001+D2000000+00000000+94000130+FDDF0000+621C6AE4+00000000+B21C6AE4+00000000+B0000080+00000000+20000019+00000002+2000001B+00000001+D2000000+00000000+94000130+FD7F0000+621C6AE4+00000000+B21C6AE4+00000000+B0000080+00000000+20000019+00000003+2000001B+00000001+D2000000+00000000+94000130+FDEF0000+621C6AE4+00000000+B21C6AE4+00000000+B0000080+00000000+20000019+00000004+2000001B+00000001+D2000000+00000000+94000130+FEBF0000+621C6AE4+00000000+B21C6AE4+00000000+B0000080+00000000+20000019+00000005+2000001B+00000001+D2000000+00000000+94000130+FEDF0000+621C6AE4+00000000+B21C6AE4+00000000+B0000080+00000000+20000019+00000006+2000001B+00000001+D2000000+00000000+94000130+FE7F0000+621C6AE4+00000000+B21C6AE4+00000000+B0000080+00000000+20000019+0000000A+2000001B+00000001+D2000000+00000000+94000130+FEEF0000+621C6AE4+00000000+B21C6AE4+00000000+B0000080+00000000+20000019+0000000B+2000001B+00000001+D2000000+00000000"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Cycle Weapons"
+cheat28_code = "520097C4+E5D05019+020097C4+EA06EA55+E21C4120+00000048+E92D003F+E59F2038+E5D23001+E3530002+1A000008+E3A02001+E5D01019+E2811001+E3510007+02811003+E351000C+A241100C+E5C01019+E5C0201B+E8BD003F+E5D05019+EAF91598+04000130+D2000000+00000000"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Never Lose Weapon After Death"
+cheat29_code = "520086DC+E5D01018+020086EC+00000000+D2000000+00000000"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Super Rapid Fire"
+cheat30_code = "921EA330+000056B5+621CD7E4+00000000+B21CD7E4+00000000+2000075D+00000000+2000075E+00000000+D2000000+00000000+921EA330+000056B5+62272A40+00000000+B2272A40+00000000+200002FD+00000000+200002FE+00000000+D2000000+00000000+921EA380+000003E0+621CD7E4+00000000+B21CD7E4+00000000+200002B1+00000000+200002B2+00000000+D2000000+00000000"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Turbo Shot"
+cheat31_code = "52008678+E5D0101E+02008680+E3A01000+02008684+E5C0101E+D2000000+00000000"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Always Full PowerUP"
+cheat32_code = "222EB45B+00000001+222EB45C+00000001"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Machine Gun"
+cheat33_code = "221CD80C+00000001"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Crush"
+cheat34_code = "221CD80C+00000002"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Flame"
+cheat35_code = "221CD80C+00000003"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Hunter (auto aim)"
+cheat36_code = "221CD80C+00000004"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Spread Shot"
+cheat37_code = "221CD80C+00000005"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Laser"
+cheat38_code = "221CD80C+00000006"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Machine Gun"
+cheat39_code = "221CD80D+00000001"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Crush"
+cheat40_code = "221CD80D+00000002"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Flame"
+cheat41_code = "221CD80D+00000003"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Hunter (auto aim)"
+cheat42_code = "221CD80D+00000004"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Spread Shot"
+cheat43_code = "221CD80D+00000005"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Laser"
+cheat44_code = "221CD80D+00000006"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Machine Gun"
+cheat45_code = "222EB459+00000001"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Crush"
+cheat46_code = "222EB459+00000002"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Flame"
+cheat47_code = "222EB459+00000003"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Homing Missile"
+cheat48_code = "222EB459+00000004"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Spread Shot"
+cheat49_code = "222EB459+00000005"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Laser"
+cheat50_code = "222EB459+00000006"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Homing Missile Full Power"
+cheat51_code = "222EB459+0000000B"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Machine Gun"
+cheat52_code = "222EB45A+00000001"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Crush"
+cheat53_code = "222EB45A+00000002"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Flame"
+cheat54_code = "222EB45A+00000003"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Homing Missile"
+cheat55_code = "222EB45A+00000004"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Spread Shot"
+cheat56_code = "222EB45A+00000005"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Laser"
+cheat57_code = "222EB45A+00000006"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Homing Missile Full Power"
+cheat58_code = "222EB45A+0000000B"
+cheat58_enable = false

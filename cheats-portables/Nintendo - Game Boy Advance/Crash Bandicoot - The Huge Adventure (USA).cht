@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Crash Bandicoot - The Huge Adventure (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Crash%20Bandicoot%20-%20The%20Huge%20Adventure%20(USA)%20(Code%20Breaker).cht
+
+cheats = 8
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00008F0E+000A+100007AC+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Lives"
+cheat1_code = "32000098+0063"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Mask"
+cheat2_code = "8200009C+0003"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Infinite Health (Flying Stages)"
+cheat3_code = "83003F44+0064"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Have Special Moves"
+cheat4_code = "32000026+00F0"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Start With 100 Boxes"
+cheat5_code = "72000094+0000+82000094+0064"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Timer Off"
+cheat6_code = "820000BC+0000"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Press A For Moon Jump"
+cheat7_code = "D0000020+0001+32010A78+00CC"
+cheat7_enable = false

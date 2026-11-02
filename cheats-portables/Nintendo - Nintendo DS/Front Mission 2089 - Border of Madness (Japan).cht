@@ -1,0 +1,60 @@
+# Recherche locale pour la ROM : Front Mission 2089 - Border of Madness (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Front%20Mission%202089%20-%20Border%20of%20Madness%20(Japan).cht
+
+cheats = 13
+
+cheat0_desc = "[Action Replay] Max/Infinite Money"
+cheat0_code = "02126814+0098967F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Parts and Items x99"
+cheat1_code = "94000136+FFFE0000+C0000000+000009F3+22125334+000000E3+DC000000+00000001+D2000000+00000000+D0000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Items x99"
+cheat2_code = "12125D12+0000E3E3+02125D14+E3E3E3E3+12125D18+0000E3E3+22125D1A+000000E3"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Open Parts Collection"
+cheat3_code = "94000136+FFFE0000+C0000000+0000013F+22127DC0+000000FF+DC000000+00000001+D2000000+00000000+D0000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Setup full parts and each part (99 in possession)"
+cheat4_code = "0207DC3C+EAFE090F+E2000080+00000010+E3A0C0E3+E7C0C004+E7D00004+EA01F6EB"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Max Level Experience"
+cheat5_code = "521D8438+E1510820+121D843E+0000E1A0+121D846E+0000E1A0+121D849E+0000E1A0+121D84CE+0000E1A0+D0000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Play Time 00:00:00"
+cheat6_code = "02126818+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] x2"
+cheat7_code = "521D8428+E1D307B0+021D842C+E0800082+021D845C+E0800082+021D848C+E0800082+021D84BC+E0800082+D0000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] x4"
+cheat8_code = "521D8428+E1D307B0+021D842C+E0800102+021D845C+E0800102+021D848C+E0800102+021D84BC+E0800102+D0000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] x8"
+cheat9_code = "521D8428+E1D307B0+021D842C+E0800182+021D845C+E0800182+021D848C+E0800182+021D84BC+E0800182+D0000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] x16"
+cheat10_code = "521D8428+E1D307B0+021D842C+E0800202+021D845C+E0800202+021D848C+E0800202+021D84BC+E0800202+D0000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] x32"
+cheat11_code = "521D8428+E1D307B0+021D842C+E0800282+021D845C+E0800282+021D848C+E0800282+021D84BC+E0800282+D0000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] x64"
+cheat12_code = "521D8428+E1D307B0+021D842C+E0800302+021D845C+E0800302+021D848C+E0800302+021D84BC+E0800302+D0000000+00000000"
+cheat12_enable = false

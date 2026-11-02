@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Hamtaro - Ham-Ham Heartbreak (Europe) (En,Fr,De,Es,It).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Hamtaro%20-%20Ham-Ham%20Heartbreak%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 6
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000D435+000A+100E3AA8+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Sunflower Seeds"
+cheat1_code = "8201D0C2+03E7"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Acorns"
+cheat2_code = "8201D0C4+03E7"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Infinite Rocks"
+cheat3_code = "8201D0C6+03E7"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Have All Items"
+cheat4_code = "83002184+FFFF+83002186+FFFF+83002188+07FF"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Press Select During Transitions To Advance Forward!"
+cheat5_code = "D0000020+0004+320039F0+0001"
+cheat5_enable = false

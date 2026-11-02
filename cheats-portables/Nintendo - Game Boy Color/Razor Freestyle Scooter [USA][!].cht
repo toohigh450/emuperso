@@ -1,0 +1,37 @@
+# Recherche locale pour la ROM : Razor Freestyle Scooter [USA][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Razor%20Freestyle%20Scooter%20(USA)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Razor%20Freestyle%20Scooter%20(USA).cht
+
+cheats = 7
+
+cheat0_desc = "[GameShark] Always Bonus"
+cheat0_code = "9109C9C8+9109D1C8"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Always First Place"
+cheat1_code = "9100C7C9+9100D1C9"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Always Turbo"
+cheat2_code = "9109BFC8+9109C7C8"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Infinite Cash"
+cheat3_code = "910961C6+910962C6+910963C6"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Infinite Time"
+cheat4_code = "916349C9"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Max Score"
+cheat5_code = "910970C8+910971C8+910972C8+910973C8"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Infinite Time"
+cheat6_code = "916349C9"
+cheat6_enable = false

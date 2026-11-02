@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Soukoban [Japan][!!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Soukoban%20(Japan).cht
+
+cheats = 1
+
+cheat0_desc = "[Format source non précisé] Walk Through Walls"
+cheat0_code = "FA7-1AF-C41"
+cheat0_enable = false

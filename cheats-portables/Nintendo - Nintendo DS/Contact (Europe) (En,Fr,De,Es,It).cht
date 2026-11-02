@@ -1,0 +1,1208 @@
+# Recherche locale pour la ROM : Contact (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Contact%20(Europe).cht
+
+cheats = 300
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "52009514+EE070F90+E20001C4+00000046+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2EE3AA5+0374014B+0009000A+00000000+02009514+E92D401E+02009518+FAFFDB29+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Money"
+cheat1_code = "02262CA0+0098967F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Infinite Health"
+cheat2_code = "02262378+003E7000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Tech Meter Always Full"
+cheat3_code = "222636E0+00000005"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Have All Costumes"
+cheat4_code = "22262CA4+000000FF"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Have All Weapons and Food"
+cheat5_code = "94000130+FFFB0000+D5000000+00000063+C0000000+000000B3+D6000000+022657A4+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Max Strength Level"
+cheat6_code = "022627F8+00000064+022627FC+00000064"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Max Defense Level"
+cheat7_code = "02262800+00000064+02262804+00000064"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Max Dexterity Level"
+cheat8_code = "02262808+00000064+0226280C+00000064"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Max Agility Level"
+cheat9_code = "02262810+00000064+02262814+00000064"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Max Wisdom Level"
+cheat10_code = "02262818+00000064+0226281C+00000064"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Max Stamina Level"
+cheat11_code = "02262820+00000064+02262824+00000064"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Max Speed Level"
+cheat12_code = "02262828+00000064+0226282C+00000064"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Max Slashing Level"
+cheat13_code = "02262830+00000064+02262834+00000064"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Max Striking Level"
+cheat14_code = "02262838+00000064+0226283C+00000064"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Max Punching Level"
+cheat15_code = "02262840+00000064+02262844+00000064"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Max Anti-Slash Level"
+cheat16_code = "02262848+00000064+0226284C+00000064"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Max Anti-Strike Level"
+cheat17_code = "02262850+00000064+02262854+00000064"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Max Earth Level"
+cheat18_code = "02262858+00000064+0226285C+00000064"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Max Water Level"
+cheat19_code = "02262860+00000064+02262864+00000064"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Max Fire Level"
+cheat20_code = "02262868+00000064+0226286C+00000064"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Max Wind Level"
+cheat21_code = "02262870+00000064+02262874+00000064"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Max Anti-Earth Level"
+cheat22_code = "02262878+00000064+0226287C+00000064"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Max Anti-Water Level"
+cheat23_code = "02262880+00000064+02262884+00000064"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Max Anti-Fire Level"
+cheat24_code = "02262888+00000064+0226288C+00000064"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Max Anti-Wind Level"
+cheat25_code = "02262890+00000064+02262894+00000064"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Max Thievery Level"
+cheat26_code = "02262898+00000064+0226289C+00000064"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Max Fame"
+cheat27_code = "022628A0+00000064+022628A4+00000064"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Max Courage"
+cheat28_code = "022628A8+00000064+022628AC+00000064"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Max Karma Level"
+cheat29_code = "022628B0+00000064+022628B4+00000064"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Rusty Knife"
+cheat30_code = "022657A4+000003E7"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Paper Knife"
+cheat31_code = "022657A8+000003E7"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Knife"
+cheat32_code = "022657AC+000003E7"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Shiv"
+cheat33_code = "022657B0+000003E7"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Steak Knife"
+cheat34_code = "022657B4+000003E7"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Butterfly Knife"
+cheat35_code = "022657B8+000003E7"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Bowie Knife"
+cheat36_code = "022657BC+000003E7"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Saber"
+cheat37_code = "022657C0+000003E7"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Army Knife"
+cheat38_code = "022657C4+000003E7"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Machete"
+cheat39_code = "022657C8+000003E7"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Royal Dagger"
+cheat40_code = "022657CC+000003E7"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Cutlass"
+cheat41_code = "022657D0+000003E7"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Wakizashi"
+cheat42_code = "022657D4+000003E7"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Plasma Blade"
+cheat43_code = "022657D8+000003E7"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Masamune"
+cheat44_code = "022657DC+000003E7"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Muramasa"
+cheat45_code = "022657E0+000003E7"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Short Sword"
+cheat46_code = "022657E4+000003E7"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Long Sword"
+cheat47_code = "022657E8+000003E7"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Falchion"
+cheat48_code = "022657EC+000003E7"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Flamberge"
+cheat49_code = "022657F0+000003E7"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Badelaire"
+cheat50_code = "022657F4+000003E7"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Guard Dagger"
+cheat51_code = "022657F8+000003E7"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Ice Sword"
+cheat52_code = "022657FC+000003E7"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Fruit Knife"
+cheat53_code = "02265800+000003E7"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Cleaver"
+cheat54_code = "02265804+000003E7"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Ginsu"
+cheat55_code = "02265808+000003E7"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Viking Sword"
+cheat56_code = "0226580C+000003E7"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Thief Dagger"
+cheat57_code = "02265810+000003E7"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Element Sword"
+cheat58_code = "02265814+000003E7"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Cloud Sword"
+cheat59_code = "02265818+000003E7"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Royal Sword"
+cheat60_code = "0226581C+000003E7"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Hunting Knife"
+cheat61_code = "02265820+000003E7"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Plague Dagger"
+cheat62_code = "02265824+000003E7"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Valor Sword"
+cheat63_code = "02265828+000003E7"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Cherry Sword"
+cheat64_code = "0226582C+000003E7"
+cheat64_enable = false
+
+cheat65_desc = "[Action Replay] Cestus"
+cheat65_code = "02265830+000003E7"
+cheat65_enable = false
+
+cheat66_desc = "[Action Replay] Knuckle"
+cheat66_code = "02265834+000003E7"
+cheat66_enable = false
+
+cheat67_desc = "[Action Replay] Claw"
+cheat67_code = "02265838+000003E7"
+cheat67_enable = false
+
+cheat68_desc = "[Action Replay] Glove"
+cheat68_code = "0226583C+000003E7"
+cheat68_enable = false
+
+cheat69_desc = "[Action Replay] Boxing Gloves"
+cheat69_code = "02265840+000003E7"
+cheat69_enable = false
+
+cheat70_desc = "[Action Replay] Palm Gloves"
+cheat70_code = "02265844+000003E7"
+cheat70_enable = false
+
+cheat71_desc = "[Action Replay] Brass Knuckle"
+cheat71_code = "02265848+000003E7"
+cheat71_enable = false
+
+cheat72_desc = "[Action Replay] Beat Knuckle"
+cheat72_code = "0226584C+000003E7"
+cheat72_enable = false
+
+cheat73_desc = "[Action Replay] Flame Knuckle"
+cheat73_code = "02265850+000003E7"
+cheat73_enable = false
+
+cheat74_desc = "[Action Replay] Diamond Glove"
+cheat74_code = "02265854+000003E7"
+cheat74_enable = false
+
+cheat75_desc = "[Action Replay] Twig"
+cheat75_code = "02265858+000003E7"
+cheat75_enable = false
+
+cheat76_desc = "[Action Replay] Bat"
+cheat76_code = "0226585C+000003E7"
+cheat76_enable = false
+
+cheat77_desc = "[Action Replay] Club"
+cheat77_code = "02265860+000003E7"
+cheat77_enable = false
+
+cheat78_desc = "[Action Replay] Mallet"
+cheat78_code = "02265864+000003E7"
+cheat78_enable = false
+
+cheat79_desc = "[Action Replay] Metal Bat"
+cheat79_code = "02265868+000003E7"
+cheat79_enable = false
+
+cheat80_desc = "[Action Replay] Tonfa"
+cheat80_code = "0226586C+000003E7"
+cheat80_enable = false
+
+cheat81_desc = "[Action Replay] Ja Dagna"
+cheat81_code = "02265870+000003E7"
+cheat81_enable = false
+
+cheat82_desc = "[Action Replay] Mace"
+cheat82_code = "02265874+000003E7"
+cheat82_enable = false
+
+cheat83_desc = "[Action Replay] Spiked Club"
+cheat83_code = "02265878+000003E7"
+cheat83_enable = false
+
+cheat84_desc = "[Action Replay] Bokuto"
+cheat84_code = "0226587C+000003E7"
+cheat84_enable = false
+
+cheat85_desc = "[Action Replay] Toy Hammer"
+cheat85_code = "02265880+000003E7"
+cheat85_enable = false
+
+cheat86_desc = "[Action Replay] Jitte"
+cheat86_code = "02265884+000003E7"
+cheat86_enable = false
+
+cheat87_desc = "[Action Replay] Wrench"
+cheat87_code = "02265888+000003E7"
+cheat87_enable = false
+
+cheat88_desc = "[Action Replay] War Hammer"
+cheat88_code = "0226588C+000003E7"
+cheat88_enable = false
+
+cheat89_desc = "[Action Replay] Pickaxe"
+cheat89_code = "02265890+000003E7"
+cheat89_enable = false
+
+cheat90_desc = "[Action Replay] Tenderizer"
+cheat90_code = "02265894+000003E7"
+cheat90_enable = false
+
+cheat91_desc = "[Action Replay] Frying Pan"
+cheat91_code = "02265898+000003E7"
+cheat91_enable = false
+
+cheat92_desc = "[Action Replay] Nonstick Pan"
+cheat92_code = "0226589C+000003E7"
+cheat92_enable = false
+
+cheat93_desc = "[Action Replay] Holy Water"
+cheat93_code = "022658A0+000003E7"
+cheat93_enable = false
+
+cheat94_desc = "[Action Replay] Armor Breaker"
+cheat94_code = "022658A4+000003E7"
+cheat94_enable = false
+
+cheat95_desc = "[Action Replay] Gaia Hammer"
+cheat95_code = "022658A8+000003E7"
+cheat95_enable = false
+
+cheat96_desc = "[Action Replay] Maul"
+cheat96_code = "022658AC+000003E7"
+cheat96_enable = false
+
+cheat97_desc = "[Action Replay] Heavy Hammer"
+cheat97_code = "022658B0+000003E7"
+cheat97_enable = false
+
+cheat98_desc = "[Action Replay] Haunted Mace"
+cheat98_code = "022658B4+000003E7"
+cheat98_enable = false
+
+cheat99_desc = "[Action Replay] Hexagon Staff"
+cheat99_code = "022658B8+000003E7"
+cheat99_enable = false
+
+cheat100_desc = "[Action Replay] Golden Mallet"
+cheat100_code = "022658BC+000003E7"
+cheat100_enable = false
+
+cheat101_desc = "[Action Replay] Iron Club"
+cheat101_code = "022658C0+000003E7"
+cheat101_enable = false
+
+cheat102_desc = "[Action Replay] Knockout Club"
+cheat102_code = "022658C4+000003E7"
+cheat102_enable = false
+
+cheat103_desc = "[Action Replay] Tee Ball Bat"
+cheat103_code = "022658C8+000003E7"
+cheat103_enable = false
+
+cheat104_desc = "[Action Replay] 10 Ton Hammer"
+cheat104_code = "022658CC+000003E7"
+cheat104_enable = false
+
+cheat105_desc = "[Action Replay] Bomboo Rod"
+cheat105_code = "022658D0+000003E7"
+cheat105_enable = false
+
+cheat106_desc = "[Action Replay] Glass Rod"
+cheat106_code = "022658D4+000003E7"
+cheat106_enable = false
+
+cheat107_desc = "[Action Replay] Carbon Rod"
+cheat107_code = "022658D8+000003E7"
+cheat107_enable = false
+
+cheat108_desc = "[Action Replay] Famous Rod"
+cheat108_code = "022658DC+000003E7"
+cheat108_enable = false
+
+cheat109_desc = "[Action Replay] Battle Rod"
+cheat109_code = "022658E0+000003E7"
+cheat109_enable = false
+
+cheat110_desc = "[Action Replay] Coral Staff"
+cheat110_code = "022658E4+000003E7"
+cheat110_enable = false
+
+cheat111_desc = "[Action Replay] Spray Wand"
+cheat111_code = "022658E8+000003E7"
+cheat111_enable = false
+
+cheat112_desc = "[Action Replay] Mage's Rod"
+cheat112_code = "022658EC+000003E7"
+cheat112_enable = false
+
+cheat113_desc = "[Action Replay] Elemantal Staff"
+cheat113_code = "022658F0+000003E7"
+cheat113_enable = false
+
+cheat114_desc = "[Action Replay] Bone Stake"
+cheat114_code = "022658F4+000003E7"
+cheat114_enable = false
+
+cheat115_desc = "[Action Replay] Stun Rod"
+cheat115_code = "022658F8+000003E7"
+cheat115_enable = false
+
+cheat116_desc = "[Action Replay] Sun Cane"
+cheat116_code = "022658FC+000003E7"
+cheat116_enable = false
+
+cheat117_desc = "[Action Replay] Moon Cane"
+cheat117_code = "02265900+000003E7"
+cheat117_enable = false
+
+cheat118_desc = "[Action Replay] Storm Wand"
+cheat118_code = "02265904+000003E7"
+cheat118_enable = false
+
+cheat119_desc = "[Action Replay] Evil Staff"
+cheat119_code = "02265908+000003E7"
+cheat119_enable = false
+
+cheat120_desc = "[Action Replay] Chicken"
+cheat120_code = "0226590C+000003E7"
+cheat120_enable = false
+
+cheat121_desc = "[Action Replay] Meat"
+cheat121_code = "02265910+000003E7"
+cheat121_enable = false
+
+cheat122_desc = "[Action Replay] Wild Game"
+cheat122_code = "02265914+000003E7"
+cheat122_enable = false
+
+cheat123_desc = "[Action Replay] Mystery Meat"
+cheat123_code = "02265918+000003E7"
+cheat123_enable = false
+
+cheat124_desc = "[Action Replay] Rotten Meat"
+cheat124_code = "0226591C+000003E7"
+cheat124_enable = false
+
+cheat125_desc = "[Action Replay] Killifish"
+cheat125_code = "02265920+000003E7"
+cheat125_enable = false
+
+cheat126_desc = "[Action Replay] Carp"
+cheat126_code = "02265924+000003E7"
+cheat126_enable = false
+
+cheat127_desc = "[Action Replay] Catfish"
+cheat127_code = "02265928+000003E7"
+cheat127_enable = false
+
+cheat128_desc = "[Action Replay] Salmon"
+cheat128_code = "0226592C+000003E7"
+cheat128_enable = false
+
+cheat129_desc = "[Action Replay] Pirahna"
+cheat129_code = "02265930+000003E7"
+cheat129_enable = false
+
+cheat130_desc = "[Action Replay] Sardines"
+cheat130_code = "02265934+000003E7"
+cheat130_enable = false
+
+cheat131_desc = "[Action Replay] Bass"
+cheat131_code = "02265938+000003E7"
+cheat131_enable = false
+
+cheat132_desc = "[Action Replay] Red Snapper"
+cheat132_code = "0226593C+000003E7"
+cheat132_enable = false
+
+cheat133_desc = "[Action Replay] Tuna"
+cheat133_code = "02265940+000003E7"
+cheat133_enable = false
+
+cheat134_desc = "[Action Replay] Swordfish"
+cheat134_code = "02265944+000003E7"
+cheat134_enable = false
+
+cheat135_desc = "[Action Replay] Lettuce"
+cheat135_code = "02265948+000003E7"
+cheat135_enable = false
+
+cheat136_desc = "[Action Replay] Tomato"
+cheat136_code = "0226594C+000003E7"
+cheat136_enable = false
+
+cheat137_desc = "[Action Replay] Potato"
+cheat137_code = "02265950+000003E7"
+cheat137_enable = false
+
+cheat138_desc = "[Action Replay] Herbs"
+cheat138_code = "02265954+000003E7"
+cheat138_enable = false
+
+cheat139_desc = "[Action Replay] Coconut"
+cheat139_code = "02265958+000003E7"
+cheat139_enable = false
+
+cheat140_desc = "[Action Replay] Apple"
+cheat140_code = "0226595C+000003E7"
+cheat140_enable = false
+
+cheat141_desc = "[Action Replay] Orange"
+cheat141_code = "02265960+000003E7"
+cheat141_enable = false
+
+cheat142_desc = "[Action Replay] Strawberry"
+cheat142_code = "02265964+000003E7"
+cheat142_enable = false
+
+cheat143_desc = "[Action Replay] Melon"
+cheat143_code = "02265968+000003E7"
+cheat143_enable = false
+
+cheat144_desc = "[Action Replay] Grapes"
+cheat144_code = "0226596C+000003E7"
+cheat144_enable = false
+
+cheat145_desc = "[Action Replay] Tropical Fruit"
+cheat145_code = "02265970+000003E7"
+cheat145_enable = false
+
+cheat146_desc = "[Action Replay] Water"
+cheat146_code = "02265974+000003E7"
+cheat146_enable = false
+
+cheat147_desc = "[Action Replay] Milk"
+cheat147_code = "02265978+000003E7"
+cheat147_enable = false
+
+cheat148_desc = "[Action Replay] Flour"
+cheat148_code = "0226597C+000003E7"
+cheat148_enable = false
+
+cheat149_desc = "[Action Replay] Rice"
+cheat149_code = "02265980+000003E7"
+cheat149_enable = false
+
+cheat150_desc = "[Action Replay] Egg"
+cheat150_code = "02265984+000003E7"
+cheat150_enable = false
+
+cheat151_desc = "[Action Replay] Spices"
+cheat151_code = "02265988+000003E7"
+cheat151_enable = false
+
+cheat152_desc = "[Action Replay] Coffee Beans"
+cheat152_code = "0226598C+000003E7"
+cheat152_enable = false
+
+cheat153_desc = "[Action Replay] Juice"
+cheat153_code = "02265990+000003E7"
+cheat153_enable = false
+
+cheat154_desc = "[Action Replay] Cola"
+cheat154_code = "02265994+000003E7"
+cheat154_enable = false
+
+cheat155_desc = "[Action Replay] Canned Coffee"
+cheat155_code = "02265998+000003E7"
+cheat155_enable = false
+
+cheat156_desc = "[Action Replay] Canned Stew"
+cheat156_code = "0226599C+000003E7"
+cheat156_enable = false
+
+cheat157_desc = "[Action Replay] Dough"
+cheat157_code = "022659A0+000003E7"
+cheat157_enable = false
+
+cheat158_desc = "[Action Replay] Butter"
+cheat158_code = "022659A4+000003E7"
+cheat158_enable = false
+
+cheat159_desc = "[Action Replay] Ham"
+cheat159_code = "022659A8+000003E7"
+cheat159_enable = false
+
+cheat160_desc = "[Action Replay] Steamed Rice"
+cheat160_code = "022659AC+000003E7"
+cheat160_enable = false
+
+cheat161_desc = "[Action Replay] Bread"
+cheat161_code = "022659B0+000003E7"
+cheat161_enable = false
+
+cheat162_desc = "[Action Replay] Pie"
+cheat162_code = "022659B4+000003E7"
+cheat162_enable = false
+
+cheat163_desc = "[Action Replay] Hamburger Steak"
+cheat163_code = "022659B8+000003E7"
+cheat163_enable = false
+
+cheat164_desc = "[Action Replay] Coal"
+cheat164_code = "022659BC+000003E7"
+cheat164_enable = false
+
+cheat165_desc = "[Action Replay] BBQ Chicken"
+cheat165_code = "022659C0+000003E7"
+cheat165_enable = false
+
+cheat166_desc = "[Action Replay] BBQ Meat"
+cheat166_code = "022659C4+000003E7"
+cheat166_enable = false
+
+cheat167_desc = "[Action Replay] Savory BBQ"
+cheat167_code = "022659C8+000003E7"
+cheat167_enable = false
+
+cheat168_desc = "[Action Replay] Mystery BBQ"
+cheat168_code = "022659CC+000003E7"
+cheat168_enable = false
+
+cheat169_desc = "[Action Replay] Rotten BBQ"
+cheat169_code = "022659D0+000003E7"
+cheat169_enable = false
+
+cheat170_desc = "[Action Replay] BBQ Killifish"
+cheat170_code = "022659D4+000003E7"
+cheat170_enable = false
+
+cheat171_desc = "[Action Replay] BBQ Carp"
+cheat171_code = "022659D8+000003E7"
+cheat171_enable = false
+
+cheat172_desc = "[Action Replay] Cajun Catfish"
+cheat172_code = "022659DC+000003E7"
+cheat172_enable = false
+
+cheat173_desc = "[Action Replay] BBQ Salmon"
+cheat173_code = "022659E0+000003E7"
+cheat173_enable = false
+
+cheat174_desc = "[Action Replay] BBQ Pirahna"
+cheat174_code = "022659E4+000003E7"
+cheat174_enable = false
+
+cheat175_desc = "[Action Replay] BBQ Sardines"
+cheat175_code = "022659E8+000003E7"
+cheat175_enable = false
+
+cheat176_desc = "[Action Replay] BBQ Bass"
+cheat176_code = "022659EC+000003E7"
+cheat176_enable = false
+
+cheat177_desc = "[Action Replay] BBQ Snapper"
+cheat177_code = "022659F0+000003E7"
+cheat177_enable = false
+
+cheat178_desc = "[Action Replay] BBQ Tuna"
+cheat178_code = "022659F4+000003E7"
+cheat178_enable = false
+
+cheat179_desc = "[Action Replay] BBQ Swordfish"
+cheat179_code = "022659F8+000003E7"
+cheat179_enable = false
+
+cheat180_desc = "[Action Replay] Cheeseburger"
+cheat180_code = "022659FC+000003E7"
+cheat180_enable = false
+
+cheat181_desc = "[Action Replay] Mystery Herbs"
+cheat181_code = "02265A00+000003E7"
+cheat181_enable = false
+
+cheat182_desc = "[Action Replay] Steak"
+cheat182_code = "02265A04+000003E7"
+cheat182_enable = false
+
+cheat183_desc = "[Action Replay] Croquette"
+cheat183_code = "02265A08+000003E7"
+cheat183_enable = false
+
+cheat184_desc = "[Action Replay] Fancy Soup"
+cheat184_code = "02265A0C+000003E7"
+cheat184_enable = false
+
+cheat185_desc = "[Action Replay] Chicken Bites"
+cheat185_code = "02265A10+000003E7"
+cheat185_enable = false
+
+cheat186_desc = "[Action Replay] Coconut Milk"
+cheat186_code = "02265A14+000003E7"
+cheat186_enable = false
+
+cheat187_desc = "[Action Replay] Strawberry Milk"
+cheat187_code = "02265A18+000003E7"
+cheat187_enable = false
+
+cheat188_desc = "[Action Replay] Apple Pie"
+cheat188_code = "02265A1C+000003E7"
+cheat188_enable = false
+
+cheat189_desc = "[Action Replay] Fried Egg"
+cheat189_code = "02265A20+000003E7"
+cheat189_enable = false
+
+cheat190_desc = "[Action Replay] Ham n' Eggs"
+cheat190_code = "02265A24+000003E7"
+cheat190_enable = false
+
+cheat191_desc = "[Action Replay] Rice Pilaf"
+cheat191_code = "02265A28+000003E7"
+cheat191_enable = false
+
+cheat192_desc = "[Action Replay] Bass Stuffing"
+cheat192_code = "02265A2C+000003E7"
+cheat192_enable = false
+
+cheat193_desc = "[Action Replay] Raisin Bread"
+cheat193_code = "02265A30+000003E7"
+cheat193_enable = false
+
+cheat194_desc = "[Action Replay] Melon Bun"
+cheat194_code = "02265A34+000003E7"
+cheat194_enable = false
+
+cheat195_desc = "[Action Replay] Jambalaya"
+cheat195_code = "02265A38+000003E7"
+cheat195_enable = false
+
+cheat196_desc = "[Action Replay] Potion"
+cheat196_code = "02265A3C+000003E7"
+cheat196_enable = false
+
+cheat197_desc = "[Action Replay] Elixer"
+cheat197_code = "02265A40+000003E7"
+cheat197_enable = false
+
+cheat198_desc = "[Action Replay] Plus Potion"
+cheat198_code = "02265A44+000003E7"
+cheat198_enable = false
+
+cheat199_desc = "[Action Replay] Swanky Soup"
+cheat199_code = "02265A48+000003E7"
+cheat199_enable = false
+
+cheat200_desc = "[Action Replay] Loco Moco"
+cheat200_code = "02265A4C+000003E7"
+cheat200_enable = false
+
+cheat201_desc = "[Action Replay] Borscht"
+cheat201_code = "02265A50+000003E7"
+cheat201_enable = false
+
+cheat202_desc = "[Action Replay] Tuna Sushi"
+cheat202_code = "02265A54+000003E7"
+cheat202_enable = false
+
+cheat203_desc = "[Action Replay] Carp Sushi"
+cheat203_code = "02265A58+000003E7"
+cheat203_enable = false
+
+cheat204_desc = "[Action Replay] Salad"
+cheat204_code = "02265A5C+000003E7"
+cheat204_enable = false
+
+cheat205_desc = "[Action Replay] Kebab"
+cheat205_code = "02265A60+000003E7"
+cheat205_enable = false
+
+cheat206_desc = "[Action Replay] Coffee"
+cheat206_code = "02265A64+000003E7"
+cheat206_enable = false
+
+cheat207_desc = "[Action Replay] Thai Curry"
+cheat207_code = "02265A68+000003E7"
+cheat207_enable = false
+
+cheat208_desc = "[Action Replay] Latte"
+cheat208_code = "02265A6C+000003E7"
+cheat208_enable = false
+
+cheat209_desc = "[Action Replay] Fruit Juice"
+cheat209_code = "02265A70+000003E7"
+cheat209_enable = false
+
+cheat210_desc = "[Action Replay] Key"
+cheat210_code = "02265A74+000003E7"
+cheat210_enable = false
+
+cheat211_desc = "[Action Replay] Boots"
+cheat211_code = "02265A78+000003E7"
+cheat211_enable = false
+
+cheat212_desc = "[Action Replay] Empty Can"
+cheat212_code = "02265A7C+000003E7"
+cheat212_enable = false
+
+cheat213_desc = "[Action Replay] Coral"
+cheat213_code = "02265A80+000003E7"
+cheat213_enable = false
+
+cheat214_desc = "[Action Replay] Clam Shell"
+cheat214_code = "02265A84+000003E7"
+cheat214_enable = false
+
+cheat215_desc = "[Action Replay] Spiral Shell"
+cheat215_code = "02265A88+000003E7"
+cheat215_enable = false
+
+cheat216_desc = "[Action Replay] Shiny Shell"
+cheat216_code = "02265A8C+000003E7"
+cheat216_enable = false
+
+cheat217_desc = "[Action Replay] Gold"
+cheat217_code = "02265A90+000003E7"
+cheat217_enable = false
+
+cheat218_desc = "[Action Replay] Bag"
+cheat218_code = "02265A94+000003E7"
+cheat218_enable = false
+
+cheat219_desc = "[Action Replay] Letter"
+cheat219_code = "02265A98+000003E7"
+cheat219_enable = false
+
+cheat220_desc = "[Action Replay] Bottle Letter"
+cheat220_code = "02265A9C+000003E7"
+cheat220_enable = false
+
+cheat221_desc = "[Action Replay] Car Parts"
+cheat221_code = "02265AA0+000003E7"
+cheat221_enable = false
+
+cheat222_desc = "[Action Replay] Cloves"
+cheat222_code = "02265AA4+000003E7"
+cheat222_enable = false
+
+cheat223_desc = "[Action Replay] Thief Letter"
+cheat223_code = "02265AA8+000003E7"
+cheat223_enable = false
+
+cheat224_desc = "[Action Replay] Theif Map"
+cheat224_code = "02265AAC+000003E7"
+cheat224_enable = false
+
+cheat225_desc = "[Action Replay] Caldoaxa Map"
+cheat225_code = "02265AB0+000003E7"
+cheat225_enable = false
+
+cheat226_desc = "[Action Replay] Fishing Charm"
+cheat226_code = "02265AB4+000003E7"
+cheat226_enable = false
+
+cheat227_desc = "[Action Replay] Elixer"
+cheat227_code = "02265AB8+000003E7"
+cheat227_enable = false
+
+cheat228_desc = "[Action Replay] Worm"
+cheat228_code = "02265ABC+000003E7"
+cheat228_enable = false
+
+cheat229_desc = "[Action Replay] Keycard"
+cheat229_code = "02265AC0+000003E7"
+cheat229_enable = false
+
+cheat230_desc = "[Action Replay] The King"
+cheat230_code = "02265AC4+000003E7"
+cheat230_enable = false
+
+cheat231_desc = "[Action Replay] Deed"
+cheat231_code = "02265AC8+000003E7"
+cheat231_enable = false
+
+cheat232_desc = "[Action Replay] Bottle"
+cheat232_code = "02265ACC+000003E7"
+cheat232_enable = false
+
+cheat233_desc = "[Action Replay] Felio's Emblem"
+cheat233_code = "02265AD0+000003E7"
+cheat233_enable = false
+
+cheat234_desc = "[Action Replay] Blue Sky March"
+cheat234_code = "02265AD4+000003E7"
+cheat234_enable = false
+
+cheat235_desc = "[Action Replay] Storm Sonata"
+cheat235_code = "02265AD8+000003E7"
+cheat235_enable = false
+
+cheat236_desc = "[Action Replay] Baking License"
+cheat236_code = "02265ADC+000003E7"
+cheat236_enable = false
+
+cheat237_desc = "[Action Replay] Wild NSide"
+cheat237_code = "02265AE0+000003E7"
+cheat237_enable = false
+
+cheat238_desc = "[Action Replay] Invader Him"
+cheat238_code = "02265AE4+000003E7"
+cheat238_enable = false
+
+cheat239_desc = "[Action Replay] Unlock the Real Me"
+cheat239_code = "02265AE8+000003E7"
+cheat239_enable = false
+
+cheat240_desc = "[Action Replay] Pansy"
+cheat240_code = "02265AEC+000003E7"
+cheat240_enable = false
+
+cheat241_desc = "[Action Replay] Rose"
+cheat241_code = "02265AF0+000003E7"
+cheat241_enable = false
+
+cheat242_desc = "[Action Replay] Cosmos"
+cheat242_code = "02265AF4+000003E7"
+cheat242_enable = false
+
+cheat243_desc = "[Action Replay] Sunflower"
+cheat243_code = "02265AF8+000003E7"
+cheat243_enable = false
+
+cheat244_desc = "[Action Replay] Sweat Pea"
+cheat244_code = "02265AFC+000003E7"
+cheat244_enable = false
+
+cheat245_desc = "[Action Replay] Stone Head"
+cheat245_code = "02265B00+000003E7"
+cheat245_enable = false
+
+cheat246_desc = "[Action Replay] Stone Hand (Right)"
+cheat246_code = "02265B04+000003E7"
+cheat246_enable = false
+
+cheat247_desc = "[Action Replay] Stone Hand (Left)"
+cheat247_code = "02265B08+000003E7"
+cheat247_enable = false
+
+cheat248_desc = "[Action Replay] Stone Foot (Right)"
+cheat248_code = "02265B0C+000003E7"
+cheat248_enable = false
+
+cheat249_desc = "[Action Replay] Stone Foot (Left)"
+cheat249_code = "02265B10+000003E7"
+cheat249_enable = false
+
+cheat250_desc = "[Action Replay] Stone Torso"
+cheat250_code = "02265B14+000003E7"
+cheat250_enable = false
+
+cheat251_desc = "[Action Replay] Map Piece 1"
+cheat251_code = "02265B18+000003E7"
+cheat251_enable = false
+
+cheat252_desc = "[Action Replay] Map Piece 2"
+cheat252_code = "02265B1C+000003E7"
+cheat252_enable = false
+
+cheat253_desc = "[Action Replay] Map Piece 3"
+cheat253_code = "02265B20+000003E7"
+cheat253_enable = false
+
+cheat254_desc = "[Action Replay] Map Piece 4"
+cheat254_code = "02265B24+000003E7"
+cheat254_enable = false
+
+cheat255_desc = "[Action Replay] Topaz"
+cheat255_code = "02265B28+000003E7"
+cheat255_enable = false
+
+cheat256_desc = "[Action Replay] Emerald"
+cheat256_code = "02265B2C+000003E7"
+cheat256_enable = false
+
+cheat257_desc = "[Action Replay] Sapphire"
+cheat257_code = "02265B30+000003E7"
+cheat257_enable = false
+
+cheat258_desc = "[Action Replay] Ruby"
+cheat258_code = "02265B34+000003E7"
+cheat258_enable = false
+
+cheat259_desc = "[Action Replay] Diamond"
+cheat259_code = "02265B38+000003E7"
+cheat259_enable = false
+
+cheat260_desc = "[Action Replay] Beetle"
+cheat260_code = "02265B3C+000003E7"
+cheat260_enable = false
+
+cheat261_desc = "[Action Replay] Stag Beetle"
+cheat261_code = "02265B40+000003E7"
+cheat261_enable = false
+
+cheat262_desc = "[Action Replay] Ladybug"
+cheat262_code = "02265B44+000003E7"
+cheat262_enable = false
+
+cheat263_desc = "[Action Replay] Grasshopper"
+cheat263_code = "02265B48+000003E7"
+cheat263_enable = false
+
+cheat264_desc = "[Action Replay] Dargonfly"
+cheat264_code = "02265B4C+000003E7"
+cheat264_enable = false
+
+cheat265_desc = "[Action Replay] Plumb Sibblings"
+cheat265_code = "02265B50+000003E7"
+cheat265_enable = false
+
+cheat266_desc = "[Action Replay] Jumping Man"
+cheat266_code = "02265B54+000003E7"
+cheat266_enable = false
+
+cheat267_desc = "[Action Replay] Dragon and Dragon"
+cheat267_code = "02265B58+000003E7"
+cheat267_enable = false
+
+cheat268_desc = "[Action Replay] F1 Racer"
+cheat268_code = "02265B5C+000003E7"
+cheat268_enable = false
+
+cheat269_desc = "[Action Replay] Terry the Kid"
+cheat269_code = "02265B60+000003E7"
+cheat269_enable = false
+
+cheat270_desc = "[Action Replay] ~Hamburger~"
+cheat270_code = "02265B64+000003E7"
+cheat270_enable = false
+
+cheat271_desc = "[Action Replay] ~Steak~"
+cheat271_code = "02265B68+000003E7"
+cheat271_enable = false
+
+cheat272_desc = "[Action Replay] ~Croquette~"
+cheat272_code = "02265B6C+000003E7"
+cheat272_enable = false
+
+cheat273_desc = "[Action Replay] ~Fancy Soup~"
+cheat273_code = "02265B70+000003E7"
+cheat273_enable = false
+
+cheat274_desc = "[Action Replay] ~Chicken Bites~"
+cheat274_code = "02265B74+000003E7"
+cheat274_enable = false
+
+cheat275_desc = "[Action Replay] ~Apple Pie~"
+cheat275_code = "02265B78+000003E7"
+cheat275_enable = false
+
+cheat276_desc = "[Action Replay] ~Rice Pilaf~"
+cheat276_code = "02265B7C+000003E7"
+cheat276_enable = false
+
+cheat277_desc = "[Action Replay] ~Jambalaya~"
+cheat277_code = "02265B80+000003E7"
+cheat277_enable = false
+
+cheat278_desc = "[Action Replay] ~Potion~"
+cheat278_code = "02265B84+000003E7"
+cheat278_enable = false
+
+cheat279_desc = "[Action Replay] ~Swanky Soup~"
+cheat279_code = "02265B88+000003E7"
+cheat279_enable = false
+
+cheat280_desc = "[Action Replay] ~Loco Moco~"
+cheat280_code = "02265B8C+000003E7"
+cheat280_enable = false
+
+cheat281_desc = "[Action Replay] ~Borscht~"
+cheat281_code = "02265B90+000003E7"
+cheat281_enable = false
+
+cheat282_desc = "[Action Replay] ~Carp Sushi~"
+cheat282_code = "02265B94+000003E7"
+cheat282_enable = false
+
+cheat283_desc = "[Action Replay] ~Salad~"
+cheat283_code = "02265B98+000003E7"
+cheat283_enable = false
+
+cheat284_desc = "[Action Replay] ~Thai Curry~"
+cheat284_code = "02265B9C+000003E7"
+cheat284_enable = false
+
+cheat285_desc = "[Action Replay] Blue Eyes v.1"
+cheat285_code = "02265BA0+000003E7"
+cheat285_enable = false
+
+cheat286_desc = "[Action Replay] Blue Eyes v.2"
+cheat286_code = "02265BA4+000003E7"
+cheat286_enable = false
+
+cheat287_desc = "[Action Replay] Blue Eyes v.3"
+cheat287_code = "02265BA8+000003E7"
+cheat287_enable = false
+
+cheat288_desc = "[Action Replay] Blue Eyes v.4"
+cheat288_code = "02265BAC+000003E7"
+cheat288_enable = false
+
+cheat289_desc = "[Action Replay] Blue Eyes v.5"
+cheat289_code = "02265BB0+000003E7"
+cheat289_enable = false
+
+cheat290_desc = "[Action Replay] Blue Eyes v.6"
+cheat290_code = "02265BB4+000003E7"
+cheat290_enable = false
+
+cheat291_desc = "[Action Replay] Blue Eyes v.7"
+cheat291_code = "02265BB8+000003E7"
+cheat291_enable = false
+
+cheat292_desc = "[Action Replay] Blue Eyes v.8"
+cheat292_code = "02265BBC+000003E7"
+cheat292_enable = false
+
+cheat293_desc = "[Action Replay] Blue Eyes v.9"
+cheat293_code = "02265BC0+000003E7"
+cheat293_enable = false
+
+cheat294_desc = "[Action Replay] Blue Eyes v.10"
+cheat294_code = "02265BC4+000003E7"
+cheat294_enable = false
+
+cheat295_desc = "[Action Replay] Blue Eyes v.11"
+cheat295_code = "02265BC8+000003E7"
+cheat295_enable = false
+
+cheat296_desc = "[Action Replay] Blue Eyes v.12"
+cheat296_code = "02265BCC+000003E7"
+cheat296_enable = false
+
+cheat297_desc = "[Action Replay] Blue Eyes v.13"
+cheat297_code = "02265BD0+000003E7"
+cheat297_enable = false
+
+cheat298_desc = "[Action Replay] Blue Eyes v.14"
+cheat298_code = "02265BD4+000003E7"
+cheat298_enable = false
+
+cheat299_desc = "[Action Replay] Blue Eyes v.15"
+cheat299_code = "02265BD8+000003E7"
+cheat299_enable = false

@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : LifeSigns - Hospital Affairs (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/LifeSigns%20-%20Hospital%20Affairs%20(Europe).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Infinite Time"
+cheat0_code = "12031080+0000D19B"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Patient Health"
+cheat1_code = "1203107E+00000080"
+cheat1_enable = false

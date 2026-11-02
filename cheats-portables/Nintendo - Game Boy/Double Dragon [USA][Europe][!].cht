@@ -1,0 +1,84 @@
+# Recherche locale pour la ROM : Double Dragon [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Double%20Dragon%20(USA%2C%20Europe).cht
+
+cheats = 19
+
+cheat0_desc = "[Format source non précisé] Start with 1 life"
+cheat0_code = "012-87F-E66+012-B6F-E66"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Start with 5 lives"
+cheat1_code = "052-87F-E66+052-B6F-E66"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Start with 10 lives"
+cheat2_code = "0A2-87F-E66+0A2-B6F-E66"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Start with 20 lives"
+cheat3_code = "142-87F-E66+142-B6F-E66"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Infinite lives"
+cheat4_code = "A73-BBF-19E"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Infinite energy"
+cheat5_code = "007-F0A-B30"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Enemy hits are very weak"
+cheat6_code = "3D7-F0A-B30"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Infinite Energy"
+cheat7_code = "012F98C4"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Infinite Lives"
+cheat8_code = "010499C4"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] One Hit Kills"
+cheat9_code = "00B-629-F7A+00A-DA9-4CA"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Hit Anywhere"
+cheat10_code = "4CE-989-F78+18E-979-6EE"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Super Strength"
+cheat11_code = "0100DAC5"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Always have a weapon"
+cheat12_code = "010230C5"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Enemy 2 Dies on 1st Knockdown"
+cheat13_code = "010013C6"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Enemy 1 Always Has a Weapon"
+cheat14_code = "0102EFC5"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Enemy 2 Always Has a Weapon"
+cheat15_code = "010228C6"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Enemy Modifier (both enemies)"
+cheat16_code = "010037C6"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Stage Modifier"
+cheat17_code = "010050C6"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Weapons disapper when they hit the ground"
+cheat18_code = "01013CC5"
+cheat18_enable = false

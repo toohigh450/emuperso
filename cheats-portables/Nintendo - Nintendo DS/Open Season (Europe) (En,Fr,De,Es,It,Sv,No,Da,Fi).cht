@@ -1,0 +1,29 @@
+# Recherche locale pour la ROM : Open Season (Europe) (En,Fr,De,Es,It,Sv,No,Da,Fi).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Open%20Season%20(Europe)%20(En%2CEs%2CIt%2CNl).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Open%20Season%20(Europe)%20(En%2CFr%2CDe%2CEs%2CIt%2CSv%2CNo%2CDa%2CFi).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "5201EFBC+EE070F90+E2000078+00000046+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2EDA3C9+03B90151+0009000A+00000000+0201EFBC+E92D401E+0201EFC0+FAFF842C+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat1_code = "5201EFBC+EE070F90+E2000378+00000046+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2EDA3D1+03B90151+0009000A+00000000+0201EFBC+E92D401E+0201EFC0+FAFF84EC+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Health"
+cheat2_code = "22348B15+00000005"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Energy"
+cheat3_code = "22348B14+00000005"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Unlock All Modes"
+cheat4_code = "0213BAA8+01060605+0213BAAC+00010108"
+cheat4_enable = false

@@ -1,0 +1,2116 @@
+# Recherche locale pour la ROM : Spectral Force - Genesis (Europe).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Spectral%20Force%20-%20Genesis%20(Europe).cht
+
+cheats = 527
+
+cheat0_desc = "[Action Replay] Max Power"
+cheat0_code = "C0000000+00000013+22152256+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Intelligent"
+cheat1_code = "C0000000+00000013+22152257+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Charismatic"
+cheat2_code = "C0000000+00000013+22152258+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Foreign"
+cheat3_code = "C0000000+00000013+22152259+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Loyalty"
+cheat4_code = "C0000000+00000013+2215225A+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Infinite Movement"
+cheat5_code = "C0000000+00000013+221522CE+00000000+DC000000+0000007F+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Max Troops (R+Up)"
+cheat6_code = "94000130+FEBF0000+1236650E+00000190+12367A12+00000190+12368F16+00000190+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Max Special Gauges (R+Up)"
+cheat7_code = "94000130+FEBF0000+12366512+0000012C+12367A16+0000012C+12368F1A+0000012C+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Min Enemy Troops (R+Down)"
+cheat8_code = "94000130+FE7F0000+1236A41A+00000000+1236B91E+00000000+1236CE22+00000000+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Min Enemy Special Gauges (R+Down)"
+cheat9_code = "94000130+FE7F0000+1236A41E+00000000+1236B922+00000000+1236CE26+00000000+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Cygnus Max Troops"
+cheat10_code = "12150486+00000190"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Fugo Max Troops"
+cheat11_code = "121504A4+00000190"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Raz Raz Max Troops"
+cheat12_code = "121504C2+00000190"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Neu Max Troops"
+cheat13_code = "121504E0+00000190"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Max Gold"
+cheat14_code = "1214ECAC+0000270F"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Max Jewels"
+cheat15_code = "1214ECAE+0000270F"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Max Lvstk Money"
+cheat16_code = "1214ECB0+0000270F"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Max Relics"
+cheat17_code = "1214ECB2+0000270F"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Max Troops"
+cheat18_code = "1214ECA8+0000270F"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Max Nation Status"
+cheat19_code = "1214ECA2+000000C8"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Max Nation DEF"
+cheat20_code = "1214ECA4+00000014"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Min Nation DEF"
+cheat21_code = "1214ECA4+00000001"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Activate Event 24 (recruit Lijia)"
+cheat22_code = "2214E643+00000001+22151C5B+00000001"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Activate Event 29 (Lijia)"
+cheat23_code = "2214E644+00000001+22151C5C+00000001"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Activate Event 34 (Lijia)"
+cheat24_code = "2214E645+00000001+22151C5D+00000001"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Max Gold"
+cheat25_code = "1214ED40+0000270F"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Max Jewels Money"
+cheat26_code = "1214ED42+0000270F"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Max Lvstk"
+cheat27_code = "1214ED44+0000270F"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Max Relics"
+cheat28_code = "1214ED46+0000270F"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Max Troops"
+cheat29_code = "1214ED3C+0000270F"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Max Nation Status"
+cheat30_code = "1214ED36+000000C8"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Max Nation DEF"
+cheat31_code = "1214ED38+00000014"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Min Nation DEF"
+cheat32_code = "1214ED38+00000001"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Max Gold"
+cheat33_code = "1214EDD4+0000270F"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Max Jewels"
+cheat34_code = "1214EDD6+0000270F"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Max Lvstk"
+cheat35_code = "1214EDD8+0000270F"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Max Relics Money"
+cheat36_code = "1214EDDA+0000270F"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Max Troops"
+cheat37_code = "1214EDD0+0000270F"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Max Nation Status"
+cheat38_code = "1214EDCA+000000C8"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Max Nation DEF"
+cheat39_code = "1214EDCC+00000014"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Min Nation DEF"
+cheat40_code = "1214EDCC+00000001"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Activate Event 10 (vs Lilia)"
+cheat41_code = "2214E657+00000001+22151C6F+00000001"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Activate Event 29 (vs recruit Magashi)"
+cheat42_code = "2214E65A+00000001+22151C72+00000001"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Activate Event 34 (fire Fugo)"
+cheat43_code = "2214E65B+00000001+22151C73+00000001"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Max Gold Money"
+cheat44_code = "1214EE68+0000270F"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Max Jewels"
+cheat45_code = "1214EE6A+0000270F"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Max Lvstk"
+cheat46_code = "1214EE6C+0000270F"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Max Relics"
+cheat47_code = "1214EE6E+0000270F"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Max Troops"
+cheat48_code = "1214EE64+0000270F"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Max Nation Status"
+cheat49_code = "1214EE5E+000000C8"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Max Nation DEF"
+cheat50_code = "1214EE60+00000014"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Min Nation DEF"
+cheat51_code = "1214EE60+00000001"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Activate event 4 (alive NL Republic)"
+cheat52_code = "2214E661+00000001+22151C79+00000001"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Activate event 34 (vs DoubleX)"
+cheat53_code = "2214E666+00000001+22151C7E+00000001"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Max Gold"
+cheat54_code = "1214EEFC+0000270F"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Max Jewels Money"
+cheat55_code = "1214EEFE+0000270F"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Max Lvstk"
+cheat56_code = "1214EF00+0000270F"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Max Relics"
+cheat57_code = "1214EF02+0000270F"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Max Troops"
+cheat58_code = "1214EEF8+0000270F"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Max Nation Status"
+cheat59_code = "1214EEF2+000000C8"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Max Nation DEF"
+cheat60_code = "1214EEF4+00000014"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Min Nation DEF"
+cheat61_code = "1214EEF4+00000001"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Max Gold"
+cheat62_code = "1214EF90+0000270F"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Max Jewels"
+cheat63_code = "1214EF92+0000270F"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Max Lvstk Money"
+cheat64_code = "1214EF94+0000270F"
+cheat64_enable = false
+
+cheat65_desc = "[Action Replay] Max Relics"
+cheat65_code = "1214EF96+0000270F"
+cheat65_enable = false
+
+cheat66_desc = "[Action Replay] Max Troops"
+cheat66_code = "1214EF8C+0000270F"
+cheat66_enable = false
+
+cheat67_desc = "[Action Replay] Max Nation Status"
+cheat67_code = "1214EF86+000000C8"
+cheat67_enable = false
+
+cheat68_desc = "[Action Replay] Max Nation DEF"
+cheat68_code = "1214EF88+00000014"
+cheat68_enable = false
+
+cheat69_desc = "[Action Replay] Min Nation DEF"
+cheat69_code = "1214EF88+00000001"
+cheat69_enable = false
+
+cheat70_desc = "[Action Replay] Activate event 29 (escape Sorairo)"
+cheat70_code = "2214E67B+00000001+22151C93+00000001"
+cheat70_enable = false
+
+cheat71_desc = "[Action Replay] Activate event 34 (without Sorairo)"
+cheat71_code = "2214E67C+00000001+22151C94+00000001"
+cheat71_enable = false
+
+cheat72_desc = "[Action Replay] Max Gold"
+cheat72_code = "1214F024+0000270F"
+cheat72_enable = false
+
+cheat73_desc = "[Action Replay] Max Jewels"
+cheat73_code = "1214F026+0000270F"
+cheat73_enable = false
+
+cheat74_desc = "[Action Replay] Max Lvstk"
+cheat74_code = "1214F028+0000270F"
+cheat74_enable = false
+
+cheat75_desc = "[Action Replay] Max Relics Money"
+cheat75_code = "1214F02A+0000270F"
+cheat75_enable = false
+
+cheat76_desc = "[Action Replay] Max Troops"
+cheat76_code = "1214F020+0000270F"
+cheat76_enable = false
+
+cheat77_desc = "[Action Replay] Max Nation Status"
+cheat77_code = "1214F01A+000000C8"
+cheat77_enable = false
+
+cheat78_desc = "[Action Replay] Max Nation DEF"
+cheat78_code = "1214F01C+00000014"
+cheat78_enable = false
+
+cheat79_desc = "[Action Replay] Min Nation DEF"
+cheat79_code = "1214F01C+00000001"
+cheat79_enable = false
+
+cheat80_desc = "[Action Replay] Activate event 14 (alive NL Republic/Raon)"
+cheat80_code = "2214E684+00000001+22151C9C+00000001"
+cheat80_enable = false
+
+cheat81_desc = "[Action Replay] Max Gold"
+cheat81_code = "1214F0B8+0000270F"
+cheat81_enable = false
+
+cheat82_desc = "[Action Replay] Max Jewels"
+cheat82_code = "1214F0BA+0000270F"
+cheat82_enable = false
+
+cheat83_desc = "[Action Replay] Max Lvstk Money"
+cheat83_code = "1214F0BC+0000270F"
+cheat83_enable = false
+
+cheat84_desc = "[Action Replay] Max Relics"
+cheat84_code = "1214F0BE+0000270F"
+cheat84_enable = false
+
+cheat85_desc = "[Action Replay] Max Troops"
+cheat85_code = "1214F0B4+0000270F"
+cheat85_enable = false
+
+cheat86_desc = "[Action Replay] Max Nation Status"
+cheat86_code = "1214F0AE+000000C8"
+cheat86_enable = false
+
+cheat87_desc = "[Action Replay] Max Nation DEF"
+cheat87_code = "1214F0B0+00000014"
+cheat87_enable = false
+
+cheat88_desc = "[Action Replay] Min Nation DEF"
+cheat88_code = "1214F0B0+00000001"
+cheat88_enable = false
+
+cheat89_desc = "[Action Replay] Activate event 24 (alive NL Republic/Muromachi)"
+cheat89_code = "2214E690+00000001+22151CA8+00000001"
+cheat89_enable = false
+
+cheat90_desc = "[Action Replay] Max Gold Money"
+cheat90_code = "1214F14C+0000270F"
+cheat90_enable = false
+
+cheat91_desc = "[Action Replay] Max Jewels"
+cheat91_code = "1214F14E+0000270F"
+cheat91_enable = false
+
+cheat92_desc = "[Action Replay] Max Lvstk"
+cheat92_code = "1214F150+0000270F"
+cheat92_enable = false
+
+cheat93_desc = "[Action Replay] Max Relics"
+cheat93_code = "1214F152+0000270F"
+cheat93_enable = false
+
+cheat94_desc = "[Action Replay] Max Troops"
+cheat94_code = "1214F148+0000270F"
+cheat94_enable = false
+
+cheat95_desc = "[Action Replay] Max Nation Status"
+cheat95_code = "1214F142+000000C8"
+cheat95_enable = false
+
+cheat96_desc = "[Action Replay] Max Nation DEF"
+cheat96_code = "1214F144+00000014"
+cheat96_enable = false
+
+cheat97_desc = "[Action Replay] Min Nation DEF"
+cheat97_code = "1214F144+00000001"
+cheat97_enable = false
+
+cheat98_desc = "[Action Replay] Activate event 34 (fire Grandos)"
+cheat98_code = "2214E69D+00000001+22151CB5+00000001"
+cheat98_enable = false
+
+cheat99_desc = "[Action Replay] Max Gold Money"
+cheat99_code = "1214F1E0+0000270F"
+cheat99_enable = false
+
+cheat100_desc = "[Action Replay] Max Jewels"
+cheat100_code = "1214F1E2+0000270F"
+cheat100_enable = false
+
+cheat101_desc = "[Action Replay] Max Lvstk"
+cheat101_code = "1214F1E4+0000270F"
+cheat101_enable = false
+
+cheat102_desc = "[Action Replay] Max Relics"
+cheat102_code = "1214F1E6+0000270F"
+cheat102_enable = false
+
+cheat103_desc = "[Action Replay] Max Troops"
+cheat103_code = "1214F1DC+0000270F"
+cheat103_enable = false
+
+cheat104_desc = "[Action Replay] Max Nation Status"
+cheat104_code = "1214F1D6+000000C8"
+cheat104_enable = false
+
+cheat105_desc = "[Action Replay] Max Nation DEF"
+cheat105_code = "1214F1D8+00000014"
+cheat105_enable = false
+
+cheat106_desc = "[Action Replay] Min Nation DEF"
+cheat106_code = "1214F1D8+00000001"
+cheat106_enable = false
+
+cheat107_desc = "[Action Replay] Activate event 34 (? Laveh)"
+cheat107_code = "2214E6A8+00000001+22151CC0+00000001"
+cheat107_enable = false
+
+cheat108_desc = "[Action Replay] Max Gold"
+cheat108_code = "1214F274+0000270F"
+cheat108_enable = false
+
+cheat109_desc = "[Action Replay] Max Jewels"
+cheat109_code = "1214F276+0000270F"
+cheat109_enable = false
+
+cheat110_desc = "[Action Replay] Max Lvstk"
+cheat110_code = "1214F278+0000270F"
+cheat110_enable = false
+
+cheat111_desc = "[Action Replay] Max Relics Money"
+cheat111_code = "1214F27A+0000270F"
+cheat111_enable = false
+
+cheat112_desc = "[Action Replay] Max Troops"
+cheat112_code = "1214F270+0000270F"
+cheat112_enable = false
+
+cheat113_desc = "[Action Replay] Max Nation Status"
+cheat113_code = "1214F26A+000000C8"
+cheat113_enable = false
+
+cheat114_desc = "[Action Replay] Max Nation DEF"
+cheat114_code = "1214F26C+00000014"
+cheat114_enable = false
+
+cheat115_desc = "[Action Replay] Min Nation DEF"
+cheat115_code = "1214F26C+00000001"
+cheat115_enable = false
+
+cheat116_desc = "[Action Replay] Max Gold"
+cheat116_code = "1214F308+0000270F"
+cheat116_enable = false
+
+cheat117_desc = "[Action Replay] Max Jewels Money"
+cheat117_code = "1214F30A+0000270F"
+cheat117_enable = false
+
+cheat118_desc = "[Action Replay] Max Lvstk"
+cheat118_code = "1214F30C+0000270F"
+cheat118_enable = false
+
+cheat119_desc = "[Action Replay] Max Relics"
+cheat119_code = "1214F30E+0000270F"
+cheat119_enable = false
+
+cheat120_desc = "[Action Replay] Max Troops"
+cheat120_code = "1214F304+0000270F"
+cheat120_enable = false
+
+cheat121_desc = "[Action Replay] Max Nation Status"
+cheat121_code = "1214F2FE+000000C8"
+cheat121_enable = false
+
+cheat122_desc = "[Action Replay] Max Nation DEF"
+cheat122_code = "1214F300+00000014"
+cheat122_enable = false
+
+cheat123_desc = "[Action Replay] Min Nation DEF"
+cheat123_code = "1214F300+00000001"
+cheat123_enable = false
+
+cheat124_desc = "[Action Replay] Max Gold"
+cheat124_code = "1214F39C+0000270F"
+cheat124_enable = false
+
+cheat125_desc = "[Action Replay] Max Jewels"
+cheat125_code = "1214F39E+0000270F"
+cheat125_enable = false
+
+cheat126_desc = "[Action Replay] Max Lvstk Money"
+cheat126_code = "1214F3A0+0000270F"
+cheat126_enable = false
+
+cheat127_desc = "[Action Replay] Max Relics"
+cheat127_code = "1214F3A2+0000270F"
+cheat127_enable = false
+
+cheat128_desc = "[Action Replay] Max Troops"
+cheat128_code = "1214F398+0000270F"
+cheat128_enable = false
+
+cheat129_desc = "[Action Replay] Max Nation Status"
+cheat129_code = "1214F392+000000C8"
+cheat129_enable = false
+
+cheat130_desc = "[Action Replay] Max Nation DEF"
+cheat130_code = "1214F394+00000014"
+cheat130_enable = false
+
+cheat131_desc = "[Action Replay] Min Nation DEF"
+cheat131_code = "1214F394+00000001"
+cheat131_enable = false
+
+cheat132_desc = "[Action Replay] Activate event 14 (vs Althos)"
+cheat132_code = "2214E6C6+00000001+22151CDE+00000001"
+cheat132_enable = false
+
+cheat133_desc = "[Action Replay] Activate event 29 (vs Akage)"
+cheat133_code = "2214E6C8+00000001+22151CE0+00000001"
+cheat133_enable = false
+
+cheat134_desc = "[Action Replay] Max Gold"
+cheat134_code = "1214F430+0000270F"
+cheat134_enable = false
+
+cheat135_desc = "[Action Replay] Max Jewels"
+cheat135_code = "1214F432+0000270F"
+cheat135_enable = false
+
+cheat136_desc = "[Action Replay] Max Lvstk"
+cheat136_code = "1214F434+0000270F"
+cheat136_enable = false
+
+cheat137_desc = "[Action Replay] Max Relics Money"
+cheat137_code = "1214F436+0000270F"
+cheat137_enable = false
+
+cheat138_desc = "[Action Replay] Max Troops"
+cheat138_code = "1214F42C+0000270F"
+cheat138_enable = false
+
+cheat139_desc = "[Action Replay] Max Nation Status"
+cheat139_code = "1214F426+000000C8"
+cheat139_enable = false
+
+cheat140_desc = "[Action Replay] Max Nation DEF"
+cheat140_code = "1214F428+00000014"
+cheat140_enable = false
+
+cheat141_desc = "[Action Replay] Min Nation DEF"
+cheat141_code = "1214F428+00000001"
+cheat141_enable = false
+
+cheat142_desc = "[Action Replay] Activate event 24 (vs recruit Empire)"
+cheat142_code = "2214E6D2+00000001+22151CEA+00000001"
+cheat142_enable = false
+
+cheat143_desc = "[Action Replay] Activate event 29 (recruit Zeldi)"
+cheat143_code = "2214E6D3+00000001+22151CEB+00000001"
+cheat143_enable = false
+
+cheat144_desc = "[Action Replay] Activate event 34 (Empire/Zeldi)"
+cheat144_code = "2214E6D4+00000001+22151CEC+00000001"
+cheat144_enable = false
+
+cheat145_desc = "[Action Replay] Max Gold"
+cheat145_code = "1214F4C4+0000270F"
+cheat145_enable = false
+
+cheat146_desc = "[Action Replay] Max Jewels"
+cheat146_code = "1214F4C6+0000270F"
+cheat146_enable = false
+
+cheat147_desc = "[Action Replay] Max Lvstk"
+cheat147_code = "1214F4C8+0000270F"
+cheat147_enable = false
+
+cheat148_desc = "[Action Replay] Max Relics Money"
+cheat148_code = "1214F4CA+0000270F"
+cheat148_enable = false
+
+cheat149_desc = "[Action Replay] Max Troops"
+cheat149_code = "1214F4C0+0000270F"
+cheat149_enable = false
+
+cheat150_desc = "[Action Replay] Max Nation Status"
+cheat150_code = "1214F4BA+000000C8"
+cheat150_enable = false
+
+cheat151_desc = "[Action Replay] Max Nation DEF"
+cheat151_code = "1214F4BC+00000014"
+cheat151_enable = false
+
+cheat152_desc = "[Action Replay] Min Nation DEF"
+cheat152_code = "1214F4BC+00000001"
+cheat152_enable = false
+
+cheat153_desc = "[Action Replay] Activate event 4 (vs Pony)"
+cheat153_code = "2214E6DA+00000001+22151CF2+00000001"
+cheat153_enable = false
+
+cheat154_desc = "[Action Replay] Activate event 10 (vs Callimelo)"
+cheat154_code = "2214E6DB+00000001+22151CF3+00000001"
+cheat154_enable = false
+
+cheat155_desc = "[Action Replay] Activate event 24 (vs Danva)"
+cheat155_code = "2214E6DD+00000001+22151CF5+00000001"
+cheat155_enable = false
+
+cheat156_desc = "[Action Replay] Activate event 29 (recruit DoubleX)"
+cheat156_code = "2214E6DE+00000001+22151CF6+00000001"
+cheat156_enable = false
+
+cheat157_desc = "[Action Replay] Activate event 34 (vs Slok)"
+cheat157_code = "2214E6DF+00000001+22151CF7+00000001"
+cheat157_enable = false
+
+cheat158_desc = "[Action Replay] Max Gold"
+cheat158_code = "1214F558+0000270F"
+cheat158_enable = false
+
+cheat159_desc = "[Action Replay] Max Jewels"
+cheat159_code = "1214F55A+0000270F"
+cheat159_enable = false
+
+cheat160_desc = "[Action Replay] Max Lvstk"
+cheat160_code = "1214F55C+0000270F"
+cheat160_enable = false
+
+cheat161_desc = "[Action Replay] Max Relics Money"
+cheat161_code = "1214F55E+0000270F"
+cheat161_enable = false
+
+cheat162_desc = "[Action Replay] Max Troops"
+cheat162_code = "1214F554+0000270F"
+cheat162_enable = false
+
+cheat163_desc = "[Action Replay] Max Nation Status"
+cheat163_code = "1214F54E+000000C8"
+cheat163_enable = false
+
+cheat164_desc = "[Action Replay] Max Nation DEF"
+cheat164_code = "1214F550+00000014"
+cheat164_enable = false
+
+cheat165_desc = "[Action Replay] Min Nation DEF"
+cheat165_code = "1214F550+00000001"
+cheat165_enable = false
+
+cheat166_desc = "[Action Replay] Activate event 10 (recruit Iso)"
+cheat166_code = "2214E6E6+00000001+22151CFE+00000001"
+cheat166_enable = false
+
+cheat167_desc = "[Action Replay] Activate event 14 (recruit Task)"
+cheat167_code = "2214E6E7+00000001+22151CFF+00000001"
+cheat167_enable = false
+
+cheat168_desc = "[Action Replay] Activate event 24 (Task)"
+cheat168_code = "2214E6E8+00000001+22151D00+00000001"
+cheat168_enable = false
+
+cheat169_desc = "[Action Replay] Activate event 29 (Task)"
+cheat169_code = "2214E6E8+00000001+22151D00+00000001"
+cheat169_enable = false
+
+cheat170_desc = "[Action Replay] Activate event 34 (Task)"
+cheat170_code = "2214E6E8+00000001+22151D00+00000001"
+cheat170_enable = false
+
+cheat171_desc = "[Action Replay] Max Gold"
+cheat171_code = "1214F5EC+0000270F"
+cheat171_enable = false
+
+cheat172_desc = "[Action Replay] Max Jewels Money"
+cheat172_code = "1214F5EE+0000270F"
+cheat172_enable = false
+
+cheat173_desc = "[Action Replay] Max Lvstk"
+cheat173_code = "1214F5F0+0000270F"
+cheat173_enable = false
+
+cheat174_desc = "[Action Replay] Max Relics"
+cheat174_code = "1214F5F2+0000270F"
+cheat174_enable = false
+
+cheat175_desc = "[Action Replay] Max Troops"
+cheat175_code = "1214F5E8+0000270F"
+cheat175_enable = false
+
+cheat176_desc = "[Action Replay] Max Nation Status"
+cheat176_code = "1214F5E2+000000C8"
+cheat176_enable = false
+
+cheat177_desc = "[Action Replay] Max Nation DEF"
+cheat177_code = "1214F5E4+00000014"
+cheat177_enable = false
+
+cheat178_desc = "[Action Replay] Min Nation DEF"
+cheat178_code = "1214F5E4+00000001"
+cheat178_enable = false
+
+cheat179_desc = "[Action Replay] Activate event 24 (? RedBolt)"
+cheat179_code = "2214E6F3+00000001+22151D0B+00000001"
+cheat179_enable = false
+
+cheat180_desc = "[Action Replay] Activate event 29 (? RedBolt)"
+cheat180_code = "2214E6F4+00000001+22151D0C+00000001"
+cheat180_enable = false
+
+cheat181_desc = "[Action Replay] Max Gold"
+cheat181_code = "1214F680+0000270F"
+cheat181_enable = false
+
+cheat182_desc = "[Action Replay] Max Jewels Money"
+cheat182_code = "1214F682+0000270F"
+cheat182_enable = false
+
+cheat183_desc = "[Action Replay] Max Lvstk"
+cheat183_code = "1214F684+0000270F"
+cheat183_enable = false
+
+cheat184_desc = "[Action Replay] Max Relics"
+cheat184_code = "1214F686+0000270F"
+cheat184_enable = false
+
+cheat185_desc = "[Action Replay] Max Troops"
+cheat185_code = "1214F67C+0000270F"
+cheat185_enable = false
+
+cheat186_desc = "[Action Replay] Max Nation Status"
+cheat186_code = "1214F676+000000C8"
+cheat186_enable = false
+
+cheat187_desc = "[Action Replay] Max Nation DEF"
+cheat187_code = "1214F678+00000014"
+cheat187_enable = false
+
+cheat188_desc = "[Action Replay] Min Nation DEF"
+cheat188_code = "1214F678+00000001"
+cheat188_enable = false
+
+cheat189_desc = "[Action Replay] Activate event 24 (Te la sun)"
+cheat189_code = "2214E6FE+00000001+22151D16+00000001"
+cheat189_enable = false
+
+cheat190_desc = "[Action Replay] Activate event 29 (vs XSword)"
+cheat190_code = "2214E6FF+00000001+22151D17+00000001"
+cheat190_enable = false
+
+cheat191_desc = "[Action Replay] Activate event 34 (Te la sun)"
+cheat191_code = "2214E700+00000001+22151D18+00000001"
+cheat191_enable = false
+
+cheat192_desc = "[Action Replay] Max Gold Money"
+cheat192_code = "1214F714+0000270F"
+cheat192_enable = false
+
+cheat193_desc = "[Action Replay] Max Jewels"
+cheat193_code = "1214F716+0000270F"
+cheat193_enable = false
+
+cheat194_desc = "[Action Replay] Max Lvstk"
+cheat194_code = "1214F718+0000270F"
+cheat194_enable = false
+
+cheat195_desc = "[Action Replay] Max Relics"
+cheat195_code = "1214F71A+0000270F"
+cheat195_enable = false
+
+cheat196_desc = "[Action Replay] Max Troops"
+cheat196_code = "1214F710+0000270F"
+cheat196_enable = false
+
+cheat197_desc = "[Action Replay] Max Nation Status"
+cheat197_code = "1214F70A+000000C8"
+cheat197_enable = false
+
+cheat198_desc = "[Action Replay] Max Nation DEF"
+cheat198_code = "1214F70C+00000014"
+cheat198_enable = false
+
+cheat199_desc = "[Action Replay] Min Nation DEF"
+cheat199_code = "1214F70C+00000001"
+cheat199_enable = false
+
+cheat200_desc = "[Action Replay] Activate event 14 (alive NL Republic/Postario)"
+cheat200_code = "2214E708+00000001+22151D20+00000001"
+cheat200_enable = false
+
+cheat201_desc = "[Action Replay] Activate event 29 (vs Dorf)"
+cheat201_code = "2214E70A+00000001+22151D22+00000001"
+cheat201_enable = false
+
+cheat202_desc = "[Action Replay] Max Gold Money"
+cheat202_code = "1214F7A8+0000270F"
+cheat202_enable = false
+
+cheat203_desc = "[Action Replay] Max Jewels"
+cheat203_code = "1214F7AA+0000270F"
+cheat203_enable = false
+
+cheat204_desc = "[Action Replay] Max Lvstk"
+cheat204_code = "1214F7AC+0000270F"
+cheat204_enable = false
+
+cheat205_desc = "[Action Replay] Max Relics"
+cheat205_code = "1214F7AE+0000270F"
+cheat205_enable = false
+
+cheat206_desc = "[Action Replay] Max Troops"
+cheat206_code = "1214F7A4+0000270F"
+cheat206_enable = false
+
+cheat207_desc = "[Action Replay] Max Nation Status"
+cheat207_code = "1214F79E+000000C8"
+cheat207_enable = false
+
+cheat208_desc = "[Action Replay] Max Nation DEF"
+cheat208_code = "1214F7A0+00000014"
+cheat208_enable = false
+
+cheat209_desc = "[Action Replay] Min Nation DEF"
+cheat209_code = "1214F7A0+00000001"
+cheat209_enable = false
+
+cheat210_desc = "[Action Replay] Activate event 24 (recruit Nana)"
+cheat210_code = "2214E714+00000001+22151D2C+00000001"
+cheat210_enable = false
+
+cheat211_desc = "[Action Replay] Activate event 29 (Nana)"
+cheat211_code = "2214E715+00000001+22151D2D+00000001"
+cheat211_enable = false
+
+cheat212_desc = "[Action Replay] Activate event 34 (Nana)"
+cheat212_code = "2214E716+00000001+22151D2E+00000001"
+cheat212_enable = false
+
+cheat213_desc = "[Action Replay] Max Gold"
+cheat213_code = "1214F83C+0000270F"
+cheat213_enable = false
+
+cheat214_desc = "[Action Replay] Max Jewels"
+cheat214_code = "1214F83E+0000270F"
+cheat214_enable = false
+
+cheat215_desc = "[Action Replay] Max Lvstk Money"
+cheat215_code = "1214F840+0000270F"
+cheat215_enable = false
+
+cheat216_desc = "[Action Replay] Max Relics"
+cheat216_code = "1214F842+0000270F"
+cheat216_enable = false
+
+cheat217_desc = "[Action Replay] Max Troops"
+cheat217_code = "1214F838+0000270F"
+cheat217_enable = false
+
+cheat218_desc = "[Action Replay] Max Nation Status"
+cheat218_code = "1214F832+000000C8"
+cheat218_enable = false
+
+cheat219_desc = "[Action Replay] Max Nation DEF"
+cheat219_code = "1214F834+00000014"
+cheat219_enable = false
+
+cheat220_desc = "[Action Replay] Min Nation DEF"
+cheat220_code = "1214F834+00000001"
+cheat220_enable = false
+
+cheat221_desc = "[Action Replay] Activate event 14 (recruit Miranda)"
+cheat221_code = "2214E71E+00000001+22151D36+00000001"
+cheat221_enable = false
+
+cheat222_desc = "[Action Replay] Activate event 24 (recruit Miranda)"
+cheat222_code = "2214E71F+00000001+22151D37+00000001"
+cheat222_enable = false
+
+cheat223_desc = "[Action Replay] Activate event 29 (alive NL Republic)"
+cheat223_code = "2214E720+00000001+22151D38+00000001"
+cheat223_enable = false
+
+cheat224_desc = "[Action Replay] Activate event 34 (recruit CA-1024 alive NL Republic)"
+cheat224_code = "2214E721+00000001+22151D39+00000001"
+cheat224_enable = false
+
+cheat225_desc = "[Action Replay] Max Gold Money"
+cheat225_code = "1214F8D0+0000270F"
+cheat225_enable = false
+
+cheat226_desc = "[Action Replay] Max Jewels"
+cheat226_code = "1214F8D2+0000270F"
+cheat226_enable = false
+
+cheat227_desc = "[Action Replay] Max Lvstk"
+cheat227_code = "1214F8D4+0000270F"
+cheat227_enable = false
+
+cheat228_desc = "[Action Replay] Max Relics"
+cheat228_code = "1214F8D6+0000270F"
+cheat228_enable = false
+
+cheat229_desc = "[Action Replay] Max Troops"
+cheat229_code = "1214F8CC+0000270F"
+cheat229_enable = false
+
+cheat230_desc = "[Action Replay] Max Nation Status"
+cheat230_code = "1214F8C6+000000C8"
+cheat230_enable = false
+
+cheat231_desc = "[Action Replay] Max Nation DEF"
+cheat231_code = "1214F8C8+00000014"
+cheat231_enable = false
+
+cheat232_desc = "[Action Replay] Min Nation DEF"
+cheat232_code = "1214F8C8+00000001"
+cheat232_enable = false
+
+cheat233_desc = "[Action Replay] Activate event 10 (alive NL Republic)"
+cheat233_code = "2214E728+00000001+22151D40+00000001"
+cheat233_enable = false
+
+cheat234_desc = "[Action Replay] Activate event 34 (recruit Poroporo)"
+cheat234_code = "2214E72C+00000001+22151D44+00000001"
+cheat234_enable = false
+
+cheat235_desc = "[Action Replay] Max Gold"
+cheat235_code = "1214F964+0000270F"
+cheat235_enable = false
+
+cheat236_desc = "[Action Replay] Max Jewels Money"
+cheat236_code = "1214F966+0000270F"
+cheat236_enable = false
+
+cheat237_desc = "[Action Replay] Max Lvstk"
+cheat237_code = "1214F968+0000270F"
+cheat237_enable = false
+
+cheat238_desc = "[Action Replay] Max Relics"
+cheat238_code = "1214F96A+0000270F"
+cheat238_enable = false
+
+cheat239_desc = "[Action Replay] Max Troops"
+cheat239_code = "1214F960+0000270F"
+cheat239_enable = false
+
+cheat240_desc = "[Action Replay] Max Nation Status"
+cheat240_code = "1214F95A+000000C8"
+cheat240_enable = false
+
+cheat241_desc = "[Action Replay] Max Nation DEF"
+cheat241_code = "1214F95C+00000014"
+cheat241_enable = false
+
+cheat242_desc = "[Action Replay] Min Nation DEF"
+cheat242_code = "1214F95C+00000001"
+cheat242_enable = false
+
+cheat243_desc = "[Action Replay] Activate event 24 (recruit Senne)"
+cheat243_code = "2214E735+00000001+22151D4D+00000001"
+cheat243_enable = false
+
+cheat244_desc = "[Action Replay] Activate event 29 (alive NL Republic)"
+cheat244_code = "2214E736+00000001+22151D4E+00000001"
+cheat244_enable = false
+
+cheat245_desc = "[Action Replay] Activate event 34 (Senne)"
+cheat245_code = "2214E737+00000001+22151D4F+00000001"
+cheat245_enable = false
+
+cheat246_desc = "[Action Replay] Max Gold Money"
+cheat246_code = "1214F9F8+0000270F"
+cheat246_enable = false
+
+cheat247_desc = "[Action Replay] Max Jewels"
+cheat247_code = "1214F9FA+0000270F"
+cheat247_enable = false
+
+cheat248_desc = "[Action Replay] Max Lvstk"
+cheat248_code = "1214F9FC+0000270F"
+cheat248_enable = false
+
+cheat249_desc = "[Action Replay] Max Relics"
+cheat249_code = "1214F9FE+0000270F"
+cheat249_enable = false
+
+cheat250_desc = "[Action Replay] Max Troops"
+cheat250_code = "1214F9F4+0000270F"
+cheat250_enable = false
+
+cheat251_desc = "[Action Replay] Max Nation Status"
+cheat251_code = "1214F9EE+000000C8"
+cheat251_enable = false
+
+cheat252_desc = "[Action Replay] Max Nation DEF"
+cheat252_code = "1214F9F0+00000014"
+cheat252_enable = false
+
+cheat253_desc = "[Action Replay] Min Nation DEF"
+cheat253_code = "1214F9F0+00000001"
+cheat253_enable = false
+
+cheat254_desc = "[Action Replay] Activate event 14 (alive NL Republic)"
+cheat254_code = "2214E73F+00000001+22151D57+00000001"
+cheat254_enable = false
+
+cheat255_desc = "[Action Replay] Activate event 29 (vs Carnage)"
+cheat255_code = "2214E741+00000001+22151D59+00000001"
+cheat255_enable = false
+
+cheat256_desc = "[Action Replay] Activate event 34 (vs Calisto)"
+cheat256_code = "2214E742+00000001+22151D5A+00000001"
+cheat256_enable = false
+
+cheat257_desc = "[Action Replay] Max Gold"
+cheat257_code = "1214FA8C+0000270F"
+cheat257_enable = false
+
+cheat258_desc = "[Action Replay] Max Jewels"
+cheat258_code = "1214FA8E+0000270F"
+cheat258_enable = false
+
+cheat259_desc = "[Action Replay] Max Lvstk"
+cheat259_code = "1214FA90+0000270F"
+cheat259_enable = false
+
+cheat260_desc = "[Action Replay] Max Relics Money"
+cheat260_code = "1214FA92+0000270F"
+cheat260_enable = false
+
+cheat261_desc = "[Action Replay] Max Troops"
+cheat261_code = "1214FA88+0000270F"
+cheat261_enable = false
+
+cheat262_desc = "[Action Replay] Max Nation Status"
+cheat262_code = "1214FA82+000000C8"
+cheat262_enable = false
+
+cheat263_desc = "[Action Replay] Max Nation DEF"
+cheat263_code = "1214FA84+00000014"
+cheat263_enable = false
+
+cheat264_desc = "[Action Replay] Min Nation DEF"
+cheat264_code = "1214FA84+00000001"
+cheat264_enable = false
+
+cheat265_desc = "[Action Replay] Activate event 24 (recruit Teech)"
+cheat265_code = "2214E74B+00000001+22151D63+00000001"
+cheat265_enable = false
+
+cheat266_desc = "[Action Replay] Activate event 29 (Teech)"
+cheat266_code = "2214E74C+00000001+22151D64+00000001"
+cheat266_enable = false
+
+cheat267_desc = "[Action Replay] Activate event 34 (Teech)"
+cheat267_code = "2214E74D+00000001+22151D65+00000001"
+cheat267_enable = false
+
+cheat268_desc = "[Action Replay] Max Gold Money"
+cheat268_code = "1214FB20+0000270F"
+cheat268_enable = false
+
+cheat269_desc = "[Action Replay] Max Jewels"
+cheat269_code = "1214FB22+0000270F"
+cheat269_enable = false
+
+cheat270_desc = "[Action Replay] Max Lvstk"
+cheat270_code = "1214FB24+0000270F"
+cheat270_enable = false
+
+cheat271_desc = "[Action Replay] Max Relics"
+cheat271_code = "1214FB26+0000270F"
+cheat271_enable = false
+
+cheat272_desc = "[Action Replay] Max Troops"
+cheat272_code = "1214FB1C+0000270F"
+cheat272_enable = false
+
+cheat273_desc = "[Action Replay] Max Nation Status"
+cheat273_code = "1214FB16+000000C8"
+cheat273_enable = false
+
+cheat274_desc = "[Action Replay] Max Nation DEF"
+cheat274_code = "1214FB18+00000014"
+cheat274_enable = false
+
+cheat275_desc = "[Action Replay] Min Nation DEF"
+cheat275_code = "1214FB18+00000001"
+cheat275_enable = false
+
+cheat276_desc = "[Action Replay] Activate event 29 (recruit Mado)"
+cheat276_code = "2214E757+00000001+22151D6F+00000001"
+cheat276_enable = false
+
+cheat277_desc = "[Action Replay] Activate event 34 (? Slok)"
+cheat277_code = "2214E758+00000001+22151D70+00000001"
+cheat277_enable = false
+
+cheat278_desc = "[Action Replay] Max Gold"
+cheat278_code = "1214FBB4+0000270F"
+cheat278_enable = false
+
+cheat279_desc = "[Action Replay] Max Jewels"
+cheat279_code = "1214FBB6+0000270F"
+cheat279_enable = false
+
+cheat280_desc = "[Action Replay] Max Lvstk Money"
+cheat280_code = "1214FBB8+0000270F"
+cheat280_enable = false
+
+cheat281_desc = "[Action Replay] Max Relics"
+cheat281_code = "1214FBBA+0000270F"
+cheat281_enable = false
+
+cheat282_desc = "[Action Replay] Max Troops"
+cheat282_code = "1214FBB0+0000270F"
+cheat282_enable = false
+
+cheat283_desc = "[Action Replay] Max Nation Status"
+cheat283_code = "1214FBAA+000000C8"
+cheat283_enable = false
+
+cheat284_desc = "[Action Replay] Max Nation DEF"
+cheat284_code = "1214FBAC+00000014"
+cheat284_enable = false
+
+cheat285_desc = "[Action Replay] Min Nation DEF"
+cheat285_code = "1214FBAC+00000001"
+cheat285_enable = false
+
+cheat286_desc = "[Action Replay] Activate event 34 (fire Leda)"
+cheat286_code = "2214E763+00000001+22151D7B+00000001"
+cheat286_enable = false
+
+cheat287_desc = "[Action Replay] Max Gold Money"
+cheat287_code = "1214FC48+0000270F"
+cheat287_enable = false
+
+cheat288_desc = "[Action Replay] Max Jewels"
+cheat288_code = "1214FC4A+0000270F"
+cheat288_enable = false
+
+cheat289_desc = "[Action Replay] Max Lvstk"
+cheat289_code = "1214FC4C+0000270F"
+cheat289_enable = false
+
+cheat290_desc = "[Action Replay] Max Relics"
+cheat290_code = "1214FC4E+0000270F"
+cheat290_enable = false
+
+cheat291_desc = "[Action Replay] Max Troops"
+cheat291_code = "1214FC44+0000270F"
+cheat291_enable = false
+
+cheat292_desc = "[Action Replay] Max Nation Status"
+cheat292_code = "1214FC3E+000000C8"
+cheat292_enable = false
+
+cheat293_desc = "[Action Replay] Max Nation DEF"
+cheat293_code = "1214FC40+00000014"
+cheat293_enable = false
+
+cheat294_desc = "[Action Replay] Min Nation DEF"
+cheat294_code = "1214FC40+00000001"
+cheat294_enable = false
+
+cheat295_desc = "[Action Replay] Activate event 14 (recruit Lili)"
+cheat295_code = "2214E76B+00000001+22151D83+00000001"
+cheat295_enable = false
+
+cheat296_desc = "[Action Replay] Activate event 24 (Lili)"
+cheat296_code = "2214E76C+00000001+22151D84+00000001"
+cheat296_enable = false
+
+cheat297_desc = "[Action Replay] Activate event 29 (Lili)"
+cheat297_code = "2214E76D+00000001+22151D85+00000001"
+cheat297_enable = false
+
+cheat298_desc = "[Action Replay] Activate event 34 (recruit Madd/Lili)"
+cheat298_code = "2214E76E+00000001+22151D86+00000001"
+cheat298_enable = false
+
+cheat299_desc = "[Action Replay] Max Gold Money"
+cheat299_code = "1214FCDC+0000270F"
+cheat299_enable = false
+
+cheat300_desc = "[Action Replay] Max Jewels"
+cheat300_code = "1214FCDE+0000270F"
+cheat300_enable = false
+
+cheat301_desc = "[Action Replay] Max Lvstk"
+cheat301_code = "1214FCE0+0000270F"
+cheat301_enable = false
+
+cheat302_desc = "[Action Replay] Max Relics"
+cheat302_code = "1214FCE2+0000270F"
+cheat302_enable = false
+
+cheat303_desc = "[Action Replay] Max Troops"
+cheat303_code = "1214FCD8+0000270F"
+cheat303_enable = false
+
+cheat304_desc = "[Action Replay] Max Nation Status"
+cheat304_code = "1214FCD2+000000C8"
+cheat304_enable = false
+
+cheat305_desc = "[Action Replay] Max Nation DEF"
+cheat305_code = "1214FCD4+00000014"
+cheat305_enable = false
+
+cheat306_desc = "[Action Replay] Min Nation DEF"
+cheat306_code = "1214FCD4+00000001"
+cheat306_enable = false
+
+cheat307_desc = "[Action Replay] Activate event 29 (alive NL Republic)"
+cheat307_code = "2214E778+00000001+22151D90+00000001"
+cheat307_enable = false
+
+cheat308_desc = "[Action Replay] Max Gold"
+cheat308_code = "1214FD70+0000270F"
+cheat308_enable = false
+
+cheat309_desc = "[Action Replay] Max Jewels"
+cheat309_code = "1214FD72+0000270F"
+cheat309_enable = false
+
+cheat310_desc = "[Action Replay] Max Lvstk Money"
+cheat310_code = "1214FD74+0000270F"
+cheat310_enable = false
+
+cheat311_desc = "[Action Replay] Max Relics"
+cheat311_code = "1214FD76+0000270F"
+cheat311_enable = false
+
+cheat312_desc = "[Action Replay] Max Troops"
+cheat312_code = "1214FD6C+0000270F"
+cheat312_enable = false
+
+cheat313_desc = "[Action Replay] Max Nation Status"
+cheat313_code = "1214FD66+000000C8"
+cheat313_enable = false
+
+cheat314_desc = "[Action Replay] Max Nation DEF"
+cheat314_code = "1214FD68+00000014"
+cheat314_enable = false
+
+cheat315_desc = "[Action Replay] Min Nation DEF"
+cheat315_code = "1214FD68+00000001"
+cheat315_enable = false
+
+cheat316_desc = "[Action Replay] Activate event 34 (fire Deseiva)"
+cheat316_code = "2214E784+00000001+22151D9C+00000001"
+cheat316_enable = false
+
+cheat317_desc = "[Action Replay] Max Gold Money"
+cheat317_code = "1214FE04+0000270F"
+cheat317_enable = false
+
+cheat318_desc = "[Action Replay] Max Jewels"
+cheat318_code = "1214FE06+0000270F"
+cheat318_enable = false
+
+cheat319_desc = "[Action Replay] Max Lvstk"
+cheat319_code = "1214FE08+0000270F"
+cheat319_enable = false
+
+cheat320_desc = "[Action Replay] Max Relics"
+cheat320_code = "1214FE0A+0000270F"
+cheat320_enable = false
+
+cheat321_desc = "[Action Replay] Max Troops"
+cheat321_code = "1214FE00+0000270F"
+cheat321_enable = false
+
+cheat322_desc = "[Action Replay] Max Nation Status"
+cheat322_code = "1214FDFA+000000C8"
+cheat322_enable = false
+
+cheat323_desc = "[Action Replay] Max Nation DEF"
+cheat323_code = "1214FDFC+00000014"
+cheat323_enable = false
+
+cheat324_desc = "[Action Replay] Min Nation DEF"
+cheat324_code = "1214FDFC+00000001"
+cheat324_enable = false
+
+cheat325_desc = "[Action Replay] Activate event 29 (alive Gulmani)"
+cheat325_code = "2214E78E+00000001+22151DA6+00000001"
+cheat325_enable = false
+
+cheat326_desc = "[Action Replay] Activate event 34 (Gulmani)"
+cheat326_code = "2214E78F+00000001+22151DA7+00000001"
+cheat326_enable = false
+
+cheat327_desc = "[Action Replay] Max Gold Money"
+cheat327_code = "1214FE98+0000270F"
+cheat327_enable = false
+
+cheat328_desc = "[Action Replay] Max Jewels"
+cheat328_code = "1214FE9A+0000270F"
+cheat328_enable = false
+
+cheat329_desc = "[Action Replay] Max Lvstk"
+cheat329_code = "1214FE9C+0000270F"
+cheat329_enable = false
+
+cheat330_desc = "[Action Replay] Max Relics"
+cheat330_code = "1214FE9E+0000270F"
+cheat330_enable = false
+
+cheat331_desc = "[Action Replay] Max Troops"
+cheat331_code = "1214FE94+0000270F"
+cheat331_enable = false
+
+cheat332_desc = "[Action Replay] Max Nation Status"
+cheat332_code = "1214FE8E+000000C8"
+cheat332_enable = false
+
+cheat333_desc = "[Action Replay] Max Nation DEF"
+cheat333_code = "1214FE90+00000014"
+cheat333_enable = false
+
+cheat334_desc = "[Action Replay] Min Nation DEF"
+cheat334_code = "1214FE90+00000001"
+cheat334_enable = false
+
+cheat335_desc = "[Action Replay] Activate event 24 (? Gudon)"
+cheat335_code = "2214E798+00000001+22151DB0+00000001"
+cheat335_enable = false
+
+cheat336_desc = "[Action Replay] Activate event 34 (? Gudon)"
+cheat336_code = "2214E79A+00000001+22151DB2+00000001"
+cheat336_enable = false
+
+cheat337_desc = "[Action Replay] Max Gold Money"
+cheat337_code = "1214FF2C+0000270F"
+cheat337_enable = false
+
+cheat338_desc = "[Action Replay] Max Jewels"
+cheat338_code = "1214FF2E+0000270F"
+cheat338_enable = false
+
+cheat339_desc = "[Action Replay] Max Lvstk"
+cheat339_code = "1214FF30+0000270F"
+cheat339_enable = false
+
+cheat340_desc = "[Action Replay] Max Relics"
+cheat340_code = "1214FF32+0000270F"
+cheat340_enable = false
+
+cheat341_desc = "[Action Replay] Max Troops"
+cheat341_code = "1214FF28+0000270F"
+cheat341_enable = false
+
+cheat342_desc = "[Action Replay] Max Nation Status"
+cheat342_code = "1214FF22+000000C8"
+cheat342_enable = false
+
+cheat343_desc = "[Action Replay] Max Nation DEF"
+cheat343_code = "1214FF24+00000014"
+cheat343_enable = false
+
+cheat344_desc = "[Action Replay] Min Nation DEF"
+cheat344_code = "1214FF24+00000001"
+cheat344_enable = false
+
+cheat345_desc = "[Action Replay] Activate event 34 (? Calisto)"
+cheat345_code = "2214E7A5+00000001+22151DBD+00000001"
+cheat345_enable = false
+
+cheat346_desc = "[Action Replay] Max Gold"
+cheat346_code = "1214FFC0+0000270F"
+cheat346_enable = false
+
+cheat347_desc = "[Action Replay] Max Jewels Money"
+cheat347_code = "1214FFC2+0000270F"
+cheat347_enable = false
+
+cheat348_desc = "[Action Replay] Max Lvstk"
+cheat348_code = "1214FFC4+0000270F"
+cheat348_enable = false
+
+cheat349_desc = "[Action Replay] Max Relics"
+cheat349_code = "1214FFC6+0000270F"
+cheat349_enable = false
+
+cheat350_desc = "[Action Replay] Max Troops"
+cheat350_code = "1214FFBC+0000270F"
+cheat350_enable = false
+
+cheat351_desc = "[Action Replay] Max Nation Status"
+cheat351_code = "1214FFB6+000000C8"
+cheat351_enable = false
+
+cheat352_desc = "[Action Replay] Max Nation DEF"
+cheat352_code = "1214FFB8+00000014"
+cheat352_enable = false
+
+cheat353_desc = "[Action Replay] Min Nation DEF"
+cheat353_code = "1214FFB8+00000001"
+cheat353_enable = false
+
+cheat354_desc = "[Action Replay] Activate event 14 (alive NL Republic)"
+cheat354_code = "2214E7AD+00000001+22151DC5+00000001"
+cheat354_enable = false
+
+cheat355_desc = "[Action Replay] Max Gold"
+cheat355_code = "12150054+0000270F"
+cheat355_enable = false
+
+cheat356_desc = "[Action Replay] Max Jewels"
+cheat356_code = "12150056+0000270F"
+cheat356_enable = false
+
+cheat357_desc = "[Action Replay] Max Lvstk Money"
+cheat357_code = "12150058+0000270F"
+cheat357_enable = false
+
+cheat358_desc = "[Action Replay] Max Relics"
+cheat358_code = "1215005A+0000270F"
+cheat358_enable = false
+
+cheat359_desc = "[Action Replay] Max Troops"
+cheat359_code = "12150050+0000270F"
+cheat359_enable = false
+
+cheat360_desc = "[Action Replay] Max Nation Status"
+cheat360_code = "1215004A+000000C8"
+cheat360_enable = false
+
+cheat361_desc = "[Action Replay] Max Nation DEF"
+cheat361_code = "1215004C+00000014"
+cheat361_enable = false
+
+cheat362_desc = "[Action Replay] Min Nation DEF"
+cheat362_code = "1215004C+00000001"
+cheat362_enable = false
+
+cheat363_desc = "[Action Replay] Activate event 14 (alive NL Republic)"
+cheat363_code = "2214E7B8+00000001+22151DD0+00000001"
+cheat363_enable = false
+
+cheat364_desc = "[Action Replay] Max Gold"
+cheat364_code = "121500E8+0000270F"
+cheat364_enable = false
+
+cheat365_desc = "[Action Replay] Max Jewels Money"
+cheat365_code = "121500EA+0000270F"
+cheat365_enable = false
+
+cheat366_desc = "[Action Replay] Max Lvstk"
+cheat366_code = "121500EC+0000270F"
+cheat366_enable = false
+
+cheat367_desc = "[Action Replay] Max Relics"
+cheat367_code = "121500EE+0000270F"
+cheat367_enable = false
+
+cheat368_desc = "[Action Replay] Max Troops"
+cheat368_code = "121500E4+0000270F"
+cheat368_enable = false
+
+cheat369_desc = "[Action Replay] Max Nation Status"
+cheat369_code = "121500DE+000000C8"
+cheat369_enable = false
+
+cheat370_desc = "[Action Replay] Max Nation DEF"
+cheat370_code = "121500E0+00000014"
+cheat370_enable = false
+
+cheat371_desc = "[Action Replay] Min Nation DEF"
+cheat371_code = "121500E0+00000001"
+cheat371_enable = false
+
+cheat372_desc = "[Action Replay] Activate event 14 (recruit Cressent)"
+cheat372_code = "2214E7C3+00000001+22151DDB+00000001"
+cheat372_enable = false
+
+cheat373_desc = "[Action Replay] Activate event 24 (Cressent)"
+cheat373_code = "2214E7C4+00000001+22151DDC+00000001"
+cheat373_enable = false
+
+cheat374_desc = "[Action Replay] Activate event 29 (Cressent)"
+cheat374_code = "2214E7C5+00000001+22151DDD+00000001"
+cheat374_enable = false
+
+cheat375_desc = "[Action Replay] Activate event 34 (Cressent)"
+cheat375_code = "2214E7C6+00000001+22151DDE+00000001"
+cheat375_enable = false
+
+cheat376_desc = "[Action Replay] Max Gold"
+cheat376_code = "1215017C+0000270F"
+cheat376_enable = false
+
+cheat377_desc = "[Action Replay] Max Jewels Money"
+cheat377_code = "1215017E+0000270F"
+cheat377_enable = false
+
+cheat378_desc = "[Action Replay] Max Lvstk"
+cheat378_code = "12150180+0000270F"
+cheat378_enable = false
+
+cheat379_desc = "[Action Replay] Max Relics"
+cheat379_code = "12150182+0000270F"
+cheat379_enable = false
+
+cheat380_desc = "[Action Replay] Max Troops"
+cheat380_code = "12150178+0000270F"
+cheat380_enable = false
+
+cheat381_desc = "[Action Replay] Max Nation Status"
+cheat381_code = "12150172+000000C8"
+cheat381_enable = false
+
+cheat382_desc = "[Action Replay] Max Nation DEF"
+cheat382_code = "12150174+00000014"
+cheat382_enable = false
+
+cheat383_desc = "[Action Replay] Min Nation DEF"
+cheat383_code = "12150174+00000001"
+cheat383_enable = false
+
+cheat384_desc = "[Action Replay] Activate event 4 (alive Izury)"
+cheat384_code = "2214E7CC+00000001+22151DE4+00000001"
+cheat384_enable = false
+
+cheat385_desc = "[Action Replay] Activate event 14 (vs Espgarude)"
+cheat385_code = "2214E7CE+00000001+22151DE6+00000001"
+cheat385_enable = false
+
+cheat386_desc = "[Action Replay] Activate event 34 (vs Fugo)"
+cheat386_code = "2214E7D1+00000001+22151DE9+00000001"
+cheat386_enable = false
+
+cheat387_desc = "[Action Replay] Max Gold"
+cheat387_code = "12150210+0000270F"
+cheat387_enable = false
+
+cheat388_desc = "[Action Replay] Max Jewels Money"
+cheat388_code = "12150212+0000270F"
+cheat388_enable = false
+
+cheat389_desc = "[Action Replay] Max Lvstk"
+cheat389_code = "12150214+0000270F"
+cheat389_enable = false
+
+cheat390_desc = "[Action Replay] Max Relics"
+cheat390_code = "12150216+0000270F"
+cheat390_enable = false
+
+cheat391_desc = "[Action Replay] Max Troops"
+cheat391_code = "1215020C+0000270F"
+cheat391_enable = false
+
+cheat392_desc = "[Action Replay] Max Nation Status"
+cheat392_code = "12150206+000000C8"
+cheat392_enable = false
+
+cheat393_desc = "[Action Replay] Max Nation DEF"
+cheat393_code = "12150208+00000014"
+cheat393_enable = false
+
+cheat394_desc = "[Action Replay] Min Nation DEF"
+cheat394_code = "12150208+00000001"
+cheat394_enable = false
+
+cheat395_desc = "[Action Replay] Activate event 34 (alive Muromachi)"
+cheat395_code = "2214E7DC+00000001+22151DF4+00000001"
+cheat395_enable = false
+
+cheat396_desc = "[Action Replay] Max Gold Money"
+cheat396_code = "121502A4+0000270F"
+cheat396_enable = false
+
+cheat397_desc = "[Action Replay] Max Jewels"
+cheat397_code = "121502A6+0000270F"
+cheat397_enable = false
+
+cheat398_desc = "[Action Replay] Max Lvstk"
+cheat398_code = "121502A8+0000270F"
+cheat398_enable = false
+
+cheat399_desc = "[Action Replay] Max Relics"
+cheat399_code = "121502AA+0000270F"
+cheat399_enable = false
+
+cheat400_desc = "[Action Replay] Max Troops"
+cheat400_code = "121502A0+0000270F"
+cheat400_enable = false
+
+cheat401_desc = "[Action Replay] Max Nation Status"
+cheat401_code = "1215029A+000000C8"
+cheat401_enable = false
+
+cheat402_desc = "[Action Replay] Max Nation DEF"
+cheat402_code = "1215029C+00000014"
+cheat402_enable = false
+
+cheat403_desc = "[Action Replay] Min Nation DEF"
+cheat403_code = "1215029C+00000001"
+cheat403_enable = false
+
+cheat404_desc = "[Action Replay] Activate event 29 ( 10 Fights w 3 girls)"
+cheat404_code = "2214E7E6+00000001+22151DFE+00000001"
+cheat404_enable = false
+
+cheat405_desc = "[Action Replay] Max Gold"
+cheat405_code = "12150338+0000270F"
+cheat405_enable = false
+
+cheat406_desc = "[Action Replay] Max Jewels Money"
+cheat406_code = "1215033A+0000270F"
+cheat406_enable = false
+
+cheat407_desc = "[Action Replay] Max Lvstk"
+cheat407_code = "1215033C+0000270F"
+cheat407_enable = false
+
+cheat408_desc = "[Action Replay] Max Relics"
+cheat408_code = "1215033E+0000270F"
+cheat408_enable = false
+
+cheat409_desc = "[Action Replay] Max Troops"
+cheat409_code = "12150334+0000270F"
+cheat409_enable = false
+
+cheat410_desc = "[Action Replay] Max Nation Status"
+cheat410_code = "1215032E+000000C8"
+cheat410_enable = false
+
+cheat411_desc = "[Action Replay] Max Nation DEF"
+cheat411_code = "12150330+00000014"
+cheat411_enable = false
+
+cheat412_desc = "[Action Replay] Min Nation DEF"
+cheat412_code = "12150330+00000001"
+cheat412_enable = false
+
+cheat413_desc = "[Action Replay] Activate event 34 (fire Jaldava)"
+cheat413_code = "2214E7F2+00000001+22151E0A+00000001"
+cheat413_enable = false
+
+cheat414_desc = "[Action Replay] Max POW"
+cheat414_code = "C0000000+00000013+22152256+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat414_enable = false
+
+cheat415_desc = "[Action Replay] Max INT"
+cheat415_code = "C0000000+00000013+22152257+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat415_enable = false
+
+cheat416_desc = "[Action Replay] Max CHA"
+cheat416_code = "C0000000+00000013+22152258+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat416_enable = false
+
+cheat417_desc = "[Action Replay] Max FOR"
+cheat417_code = "C0000000+00000013+22152259+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat417_enable = false
+
+cheat418_desc = "[Action Replay] Max LOY"
+cheat418_code = "C0000000+00000013+2215225A+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat418_enable = false
+
+cheat419_desc = "[Action Replay] Max POW"
+cheat419_code = "C0000000+00000013+2215225C+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat419_enable = false
+
+cheat420_desc = "[Action Replay] Max INT"
+cheat420_code = "C0000000+00000013+2215225D+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat420_enable = false
+
+cheat421_desc = "[Action Replay] Max CHA"
+cheat421_code = "C0000000+00000013+2215225E+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat421_enable = false
+
+cheat422_desc = "[Action Replay] Max FOR"
+cheat422_code = "C0000000+00000013+2215225F+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat422_enable = false
+
+cheat423_desc = "[Action Replay] Max LOY"
+cheat423_code = "C0000000+00000013+22152260+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat423_enable = false
+
+cheat424_desc = "[Action Replay] Max POW"
+cheat424_code = "C0000000+00000013+22152262+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat424_enable = false
+
+cheat425_desc = "[Action Replay] Max INT"
+cheat425_code = "C0000000+00000013+22152263+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat425_enable = false
+
+cheat426_desc = "[Action Replay] Max CHA"
+cheat426_code = "C0000000+00000013+22152264+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat426_enable = false
+
+cheat427_desc = "[Action Replay] Max FOR"
+cheat427_code = "C0000000+00000013+22152265+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat427_enable = false
+
+cheat428_desc = "[Action Replay] Max LOY"
+cheat428_code = "C0000000+00000013+22152266+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat428_enable = false
+
+cheat429_desc = "[Action Replay] Max POW"
+cheat429_code = "C0000000+00000013+22152268+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat429_enable = false
+
+cheat430_desc = "[Action Replay] Max INT"
+cheat430_code = "C0000000+00000013+22152269+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat430_enable = false
+
+cheat431_desc = "[Action Replay] Max CHA"
+cheat431_code = "C0000000+00000013+2215226A+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat431_enable = false
+
+cheat432_desc = "[Action Replay] Max FOR"
+cheat432_code = "C0000000+00000013+2215226B+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat432_enable = false
+
+cheat433_desc = "[Action Replay] Max LOY"
+cheat433_code = "C0000000+00000013+2215226C+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat433_enable = false
+
+cheat434_desc = "[Action Replay] Max POW"
+cheat434_code = "C0000000+00000013+2215226E+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat434_enable = false
+
+cheat435_desc = "[Action Replay] Max INT"
+cheat435_code = "C0000000+00000013+2215226F+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat435_enable = false
+
+cheat436_desc = "[Action Replay] Max CHA"
+cheat436_code = "C0000000+00000013+22152270+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat436_enable = false
+
+cheat437_desc = "[Action Replay] Max FOR"
+cheat437_code = "C0000000+00000013+22152271+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat437_enable = false
+
+cheat438_desc = "[Action Replay] Max LOY"
+cheat438_code = "C0000000+00000013+22152272+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat438_enable = false
+
+cheat439_desc = "[Action Replay] Max POW"
+cheat439_code = "C0000000+00000013+22152274+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat439_enable = false
+
+cheat440_desc = "[Action Replay] Max INT"
+cheat440_code = "C0000000+00000013+22152275+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat440_enable = false
+
+cheat441_desc = "[Action Replay] Max CHA"
+cheat441_code = "C0000000+00000013+22152276+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat441_enable = false
+
+cheat442_desc = "[Action Replay] Max FOR"
+cheat442_code = "C0000000+00000013+22152277+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat442_enable = false
+
+cheat443_desc = "[Action Replay] Max LOY"
+cheat443_code = "C0000000+00000013+22152278+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat443_enable = false
+
+cheat444_desc = "[Action Replay] Max POW"
+cheat444_code = "C0000000+00000013+2215227A+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat444_enable = false
+
+cheat445_desc = "[Action Replay] Max INT"
+cheat445_code = "C0000000+00000013+2215227B+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat445_enable = false
+
+cheat446_desc = "[Action Replay] Max CHA"
+cheat446_code = "C0000000+00000013+2215227C+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat446_enable = false
+
+cheat447_desc = "[Action Replay] Max FOR"
+cheat447_code = "C0000000+00000013+2215227D+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat447_enable = false
+
+cheat448_desc = "[Action Replay] Max LOY"
+cheat448_code = "C0000000+00000013+2215227E+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat448_enable = false
+
+cheat449_desc = "[Action Replay] Max POW"
+cheat449_code = "C0000000+00000013+22152280+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat449_enable = false
+
+cheat450_desc = "[Action Replay] Max INT"
+cheat450_code = "C0000000+00000013+22152281+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat450_enable = false
+
+cheat451_desc = "[Action Replay] Max CHA"
+cheat451_code = "C0000000+00000013+22152282+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat451_enable = false
+
+cheat452_desc = "[Action Replay] Max FOR"
+cheat452_code = "C0000000+00000013+22152283+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat452_enable = false
+
+cheat453_desc = "[Action Replay] Max LOY"
+cheat453_code = "C0000000+00000013+22152284+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat453_enable = false
+
+cheat454_desc = "[Action Replay] Max POW"
+cheat454_code = "C0000000+00000013+22152286+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat454_enable = false
+
+cheat455_desc = "[Action Replay] Max INT"
+cheat455_code = "C0000000+00000013+22152287+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat455_enable = false
+
+cheat456_desc = "[Action Replay] Max CHA"
+cheat456_code = "C0000000+00000013+22152288+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat456_enable = false
+
+cheat457_desc = "[Action Replay] Max FOR"
+cheat457_code = "C0000000+00000013+22152289+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat457_enable = false
+
+cheat458_desc = "[Action Replay] Max LOY"
+cheat458_code = "C0000000+00000013+2215228A+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat458_enable = false
+
+cheat459_desc = "[Action Replay] Max POW"
+cheat459_code = "C0000000+00000013+2215228C+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat459_enable = false
+
+cheat460_desc = "[Action Replay] Max INT"
+cheat460_code = "C0000000+00000013+2215228D+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat460_enable = false
+
+cheat461_desc = "[Action Replay] Max CHA"
+cheat461_code = "C0000000+00000013+2215228E+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat461_enable = false
+
+cheat462_desc = "[Action Replay] Max FOR"
+cheat462_code = "C0000000+00000013+2215228F+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat462_enable = false
+
+cheat463_desc = "[Action Replay] Max LOY"
+cheat463_code = "C0000000+00000013+22152290+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat463_enable = false
+
+cheat464_desc = "[Action Replay] Max POW"
+cheat464_code = "C0000000+00000013+22152292+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat464_enable = false
+
+cheat465_desc = "[Action Replay] Max INT"
+cheat465_code = "C0000000+00000013+22152293+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat465_enable = false
+
+cheat466_desc = "[Action Replay] Max CHA"
+cheat466_code = "C0000000+00000013+22152294+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat466_enable = false
+
+cheat467_desc = "[Action Replay] Max FOR"
+cheat467_code = "C0000000+00000013+22152295+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat467_enable = false
+
+cheat468_desc = "[Action Replay] Max LOY"
+cheat468_code = "C0000000+00000013+22152296+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat468_enable = false
+
+cheat469_desc = "[Action Replay] Max POW"
+cheat469_code = "C0000000+00000013+22152298+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat469_enable = false
+
+cheat470_desc = "[Action Replay] Max INT"
+cheat470_code = "C0000000+00000013+22152299+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat470_enable = false
+
+cheat471_desc = "[Action Replay] Max CHA"
+cheat471_code = "C0000000+00000013+2215229A+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat471_enable = false
+
+cheat472_desc = "[Action Replay] Max FOR"
+cheat472_code = "C0000000+00000013+2215229B+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat472_enable = false
+
+cheat473_desc = "[Action Replay] Max LOY"
+cheat473_code = "C0000000+00000013+2215229C+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat473_enable = false
+
+cheat474_desc = "[Action Replay] Max POW"
+cheat474_code = "C0000000+00000013+2215229E+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat474_enable = false
+
+cheat475_desc = "[Action Replay] Max INT"
+cheat475_code = "C0000000+00000013+2215229F+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat475_enable = false
+
+cheat476_desc = "[Action Replay] Max CHA"
+cheat476_code = "C0000000+00000013+221522A0+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat476_enable = false
+
+cheat477_desc = "[Action Replay] Max FOR"
+cheat477_code = "C0000000+00000013+221522A1+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat477_enable = false
+
+cheat478_desc = "[Action Replay] Max LOY"
+cheat478_code = "C0000000+00000013+221522A2+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat478_enable = false
+
+cheat479_desc = "[Action Replay] Max POW"
+cheat479_code = "C0000000+00000013+221522A4+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat479_enable = false
+
+cheat480_desc = "[Action Replay] Max INT"
+cheat480_code = "C0000000+00000013+221522A5+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat480_enable = false
+
+cheat481_desc = "[Action Replay] Max CHA"
+cheat481_code = "C0000000+00000013+221522A6+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat481_enable = false
+
+cheat482_desc = "[Action Replay] Max FOR"
+cheat482_code = "C0000000+00000013+221522A7+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat482_enable = false
+
+cheat483_desc = "[Action Replay] Max LOY"
+cheat483_code = "C0000000+00000013+221522A8+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat483_enable = false
+
+cheat484_desc = "[Action Replay] Max POW"
+cheat484_code = "C0000000+00000013+221522AA+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat484_enable = false
+
+cheat485_desc = "[Action Replay] Max INT"
+cheat485_code = "C0000000+00000013+221522AB+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat485_enable = false
+
+cheat486_desc = "[Action Replay] Max CHA"
+cheat486_code = "C0000000+00000013+221522AC+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat486_enable = false
+
+cheat487_desc = "[Action Replay] Max FOR"
+cheat487_code = "C0000000+00000013+221522AD+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat487_enable = false
+
+cheat488_desc = "[Action Replay] Max LOY"
+cheat488_code = "C0000000+00000013+221522AE+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat488_enable = false
+
+cheat489_desc = "[Action Replay] Max POW"
+cheat489_code = "C0000000+00000013+221522B0+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat489_enable = false
+
+cheat490_desc = "[Action Replay] Max INT"
+cheat490_code = "C0000000+00000013+221522B1+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat490_enable = false
+
+cheat491_desc = "[Action Replay] Max CHA"
+cheat491_code = "C0000000+00000013+221522B2+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat491_enable = false
+
+cheat492_desc = "[Action Replay] Max FOR"
+cheat492_code = "C0000000+00000013+221522B3+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat492_enable = false
+
+cheat493_desc = "[Action Replay] Max LOY"
+cheat493_code = "C0000000+00000013+221522B4+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat493_enable = false
+
+cheat494_desc = "[Action Replay] Max POW"
+cheat494_code = "C0000000+00000013+221522B6+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat494_enable = false
+
+cheat495_desc = "[Action Replay] Max INT"
+cheat495_code = "C0000000+00000013+221522B7+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat495_enable = false
+
+cheat496_desc = "[Action Replay] Max CHA"
+cheat496_code = "C0000000+00000013+221522B8+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat496_enable = false
+
+cheat497_desc = "[Action Replay] Max FOR"
+cheat497_code = "C0000000+00000013+221522B9+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat497_enable = false
+
+cheat498_desc = "[Action Replay] Max LOY"
+cheat498_code = "C0000000+00000013+221522BA+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat498_enable = false
+
+cheat499_desc = "[Action Replay] Max POW"
+cheat499_code = "C0000000+00000013+221522BC+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat499_enable = false
+
+cheat500_desc = "[Action Replay] Max INT"
+cheat500_code = "C0000000+00000013+221522BD+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat500_enable = false
+
+cheat501_desc = "[Action Replay] Max CHA"
+cheat501_code = "C0000000+00000013+221522BE+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat501_enable = false
+
+cheat502_desc = "[Action Replay] Max FOR"
+cheat502_code = "C0000000+00000013+221522BF+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat502_enable = false
+
+cheat503_desc = "[Action Replay] Max LOY"
+cheat503_code = "C0000000+00000013+221522C0+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat503_enable = false
+
+cheat504_desc = "[Action Replay] Max POW"
+cheat504_code = "C0000000+00000013+221522C2+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat504_enable = false
+
+cheat505_desc = "[Action Replay] Max INT"
+cheat505_code = "C0000000+00000013+221522C3+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat505_enable = false
+
+cheat506_desc = "[Action Replay] Max CHA"
+cheat506_code = "C0000000+00000013+221522C4+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat506_enable = false
+
+cheat507_desc = "[Action Replay] Max FOR"
+cheat507_code = "C0000000+00000013+221522C5+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat507_enable = false
+
+cheat508_desc = "[Action Replay] Max LOY"
+cheat508_code = "C0000000+00000013+221522C6+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat508_enable = false
+
+cheat509_desc = "[Action Replay] Max POW"
+cheat509_code = "C0000000+00000013+221522C8+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat509_enable = false
+
+cheat510_desc = "[Action Replay] Max INT"
+cheat510_code = "C0000000+00000013+221522C9+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat510_enable = false
+
+cheat511_desc = "[Action Replay] Max CHA"
+cheat511_code = "C0000000+00000013+221522CA+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat511_enable = false
+
+cheat512_desc = "[Action Replay] Max FOR"
+cheat512_code = "C0000000+00000013+221522CB+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat512_enable = false
+
+cheat513_desc = "[Action Replay] Max LOY"
+cheat513_code = "C0000000+00000013+221522CC+0000000A+DC000000+0000007F+D2000000+00000000"
+cheat513_enable = false
+
+cheat514_desc = "[Action Replay] Giz Raka"
+cheat514_code = "2214E83C+00000001+22151E54+00000001"
+cheat514_enable = false
+
+cheat515_desc = "[Action Replay] Shada Greed"
+cheat515_code = "2214E846+00000001+22151E5E+00000001"
+cheat515_enable = false
+
+cheat516_desc = "[Action Replay] Jaydagger"
+cheat516_code = "2214E8CD+00000001+22151EE5+00000001"
+cheat516_enable = false
+
+cheat517_desc = "[Action Replay] Callman"
+cheat517_code = "2214E8D2+00000001+22151EEA+00000001"
+cheat517_enable = false
+
+cheat518_desc = "[Action Replay] Taro"
+cheat518_code = "2214E8D7+00000001+22151EEF+00000001"
+cheat518_enable = false
+
+cheat519_desc = "[Action Replay] Karma"
+cheat519_code = "2214E93B+00000001+22151F53+00000001"
+cheat519_enable = false
+
+cheat520_desc = "[Action Replay] Nyuf"
+cheat520_code = "2214E986+00000001+22151F9E+00000001"
+cheat520_enable = false
+
+cheat521_desc = "[Action Replay] Hisho"
+cheat521_code = "2214EAE9+00000001+22152101+00000001"
+cheat521_enable = false
+
+cheat522_desc = "[Action Replay] Quotz"
+cheat522_code = "2214EB39+00000001+22152151+00000001"
+cheat522_enable = false
+
+cheat523_desc = "[Action Replay] Mikafutsu"
+cheat523_code = "2214EB57+00000001+2215216F+00000001"
+cheat523_enable = false
+
+cheat524_desc = "[Action Replay] All Normal Ending"
+cheat524_code = "2214E646+00000001+22151C5E+00000001+2214E651+00000001+22151C69+00000001+2214E65C+00000001+22151C74+00000001+2214E667+00000001+22151C7F+00000001+2214E672+00000001+22151C8A+00000001+2214E67D+00000001+22151C95+00000001+2214E688+00000001+22151CA0+00000001+2214E693+00000001+22151CAB+00000001+2214E69E+00000001+22151CB6+00000001+2214E6A9+00000001+22151CC1+00000001+2214E6B4+00000001+22151CCC+00000001+2214E6BF+00000001+22151CD7+00000001+2214E6CA+00000001+22151CE2+00000001+2214E6D5+00000001+22151CED+00000001+2214E6E0+00000001+22151CF8+00000001+2214E6EB+00000001+22151D03+00000001+2214E6F6+00000001+22151D0E+00000001+2214E701+00000001+22151D19+00000001+2214E70C+00000001+22151D24+00000001+2214E717+00000001+22151D2F+00000001+2214E722+00000001+22151D3A+00000001+2214E72D+00000001+22151D45+00000001+2214E738+00000001+22151D50+00000001+2214E743+00000001+22151D5B+00000001+2214E74E+00000001+22151D66+00000001+2214E759+00000001+22151D71+00000001+2214E764+00000001+22151D7C+00000001+2214E76F+00000001+22151D87+00000001+2214E77A+00000001+22151D92+00000001+2214E785+00000001+22151D9D+00000001+2214E790+00000001+22151DA8+00000001+2214E79B+00000001+22151DB3+00000001+2214E7A6+00000001+22151DBE+00000001+2214E7B1+00000001+22151DC9+00000001+2214E7BC+00000001+22151DD4+00000001+2214E7C7+00000001+22151DDF+00000001+2214E7D2+00000001+22151DEA+00000001+2214E7DD+00000001+22151DF5+00000001+2214E7E8+00000001+22151E00+00000001+2214E7F3+00000001+22151E0B+00000001"
+cheat524_enable = false
+
+cheat525_desc = "[Action Replay] All God War"
+cheat525_code = "2214E647+00000001+22151C5F+00000001+2214E652+00000001+22151C6A+00000001+2214E65D+00000001+22151C75+00000001+2214E668+00000001+22151C80+00000001+2214E673+00000001+22151C8B+00000001+2214E67E+00000001+22151C96+00000001+2214E689+00000001+22151CA1+00000001+2214E694+00000001+22151CAC+00000001+2214E69F+00000001+22151CB7+00000001+2214E6AA+00000001+22151CC2+00000001+2214E6B5+00000001+22151CCD+00000001+2214E6C0+00000001+22151CD8+00000001+2214E6CB+00000001+22151CE3+00000001+2214E6D6+00000001+22151CEE+00000001+2214E6E1+00000001+22151CF9+00000001+2214E6EC+00000001+22151D04+00000001+2214E6F7+00000001+22151D0F+00000001+2214E702+00000001+22151D1A+00000001+2214E70D+00000001+22151D25+00000001+2214E718+00000001+22151D30+00000001+2214E723+00000001+22151D3B+00000001+2214E72E+00000001+22151D46+00000001+2214E739+00000001+22151D51+00000001+2214E744+00000001+22151D5C+00000001+2214E74F+00000001+22151D67+00000001+2214E75A+00000001+22151D72+00000001+2214E765+00000001+22151D7D+00000001+2214E770+00000001+22151D88+00000001+2214E77B+00000001+22151D93+00000001+2214E786+00000001+22151D9E+00000001+2214E791+00000001+22151DA9+00000001+2214E79C+00000001+22151DB4+00000001+2214E7A7+00000001+22151DBF+00000001+2214E7B2+00000001+22151DCA+00000001+2214E7BD+00000001+22151DD5+00000001+2214E7C8+00000001+22151DE0+00000001+2214E7D3+00000001+22151DEB+00000001+2214E7DE+00000001+22151DF6+00000001+2214E7E9+00000001+22151E01+00000001+2214E7F4+00000001+22151E0C+00000001"
+cheat525_enable = false
+
+cheat526_desc = "[Action Replay] All True Ending"
+cheat526_code = "2214E648+00000001+22151C60+00000001+2214E653+00000001+22151C6B+00000001+2214E65E+00000001+22151C76+00000001+2214E669+00000001+22151C81+00000001+2214E674+00000001+22151C8C+00000001+2214E67F+00000001+22151C97+00000001+2214E68A+00000001+22151CA2+00000001+2214E695+00000001+22151CAD+00000001+2214E6A0+00000001+22151CB8+00000001+2214E6AB+00000001+22151CC3+00000001+2214E6B6+00000001+22151CCE+00000001+2214E6C1+00000001+22151CD9+00000001+2214E6CC+00000001+22151CE4+00000001+2214E6D7+00000001+22151CEF+00000001+2214E6E2+00000001+22151CFA+00000001+2214E6ED+00000001+22151D05+00000001+2214E6F8+00000001+22151D10+00000001+2214E703+00000001+22151D1B+00000001+2214E70E+00000001+22151D26+00000001+2214E719+00000001+22151D31+00000001+2214E724+00000001+22151D3C+00000001+2214E72F+00000001+22151D47+00000001+2214E73A+00000001+22151D52+00000001+2214E745+00000001+22151D5D+00000001+2214E750+00000001+22151D68+00000001+2214E75B+00000001+22151D73+00000001+2214E766+00000001+22151D7E+00000001+2214E771+00000001+22151D89+00000001+2214E77C+00000001+22151D94+00000001+2214E787+00000001+22151D9F+00000001+2214E792+00000001+22151DAA+00000001+2214E79D+00000001+22151DB5+00000001+2214E7A8+00000001+22151DC0+00000001+2214E7B3+00000001+22151DCB+00000001+2214E7BE+00000001+22151DD6+00000001+2214E7C9+00000001+22151DE1+00000001+2214E7D4+00000001+22151DEC+00000001+2214E7DF+00000001+22151DF7+00000001+2214E7EA+00000001+22151E02+00000001+2214E7F5+00000001+22151E0D+00000001"
+cheat526_enable = false

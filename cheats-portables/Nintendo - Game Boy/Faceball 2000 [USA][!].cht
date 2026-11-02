@@ -1,0 +1,109 @@
+# Recherche locale pour la ROM : Faceball 2000 [USA][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Faceball%202000%20(USA)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Faceball%202000%20(USA).cht
+
+cheats = 25
+
+cheat0_desc = "[GameShark] Infinite Live"
+cheat0_code = "01030CC2"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Infinite Lives"
+cheat1_code = "010970C7"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Infinite Time"
+cheat2_code = "01F4F3D9"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Infinite Shield"
+cheat3_code = "01FF00C7"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Infinite Freeze"
+cheat4_code = "01FF20C7"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Infinite Camo"
+cheat5_code = "01FF30C7"
+cheat5_enable = false
+
+cheat6_desc = "[GameShark] Infinite Enemy Miss"
+cheat6_code = "01FF40C72"
+cheat6_enable = false
+
+cheat7_desc = "[GameShark] Have Auto Mag"
+cheat7_code = "0100160C7"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Infinite lives (Cyberscape mode only)"
+cheat8_code = "000-3FD-3BE"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Start with 1 life (Cyberscape mode only)"
+cheat9_code = "014-DBA-E66"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Start with 5 life (Cyberscape mode only)"
+cheat10_code = "054-DBA-E66"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Start with 10 life (Cyberscape mode only)"
+cheat11_code = "0A4-DBA-E66"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Start with 15 life (Cyberscape mode only)"
+cheat12_code = "0F4-DBA-E66"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Start with 20 life (Cyberscape mode only)"
+cheat13_code = "144-DBA-E66"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Stop timer (Cyberscape mode only)"
+cheat14_code = "FAE-06C-4C1"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Can take 5 hits"
+cheat15_code = "053-A89-E6E+05A-98D-E66"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Can take 10 hits"
+cheat16_code = "0A3-A89-E6E+0AA-98D-E66"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Can take 15 hits"
+cheat17_code = "0F3-A89-E6E+0FA-98D-E66"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Can take 20 hits"
+cheat18_code = "143-A89-E6E+14A-98D-E66"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Infinite Camo"
+cheat19_code = "01FF30C7"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Infinite Freeze"
+cheat20_code = "01FF20C7"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Infinite Live"
+cheat21_code = "01030CC2"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Infinite Lives"
+cheat22_code = "010970C7"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Infinite Shield"
+cheat23_code = "01FF00C7"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Infinite Time"
+cheat24_code = "01F4F3D9"
+cheat24_enable = false

@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Bishoujo Senshi Sailor Moon R [Japan][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Bishoujo%20Senshi%20Sailor%20Moon%20R%20(Japan).cht
+
+cheats = 7
+
+cheat0_desc = "[Format source non précisé] Infinite Lives"
+cheat0_code = "010381DE"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Health"
+cheat1_code = "01C05BC0"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Invincibility"
+cheat2_code = "012B57C0"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Infinite Health in Sailor V Minigame"
+cheat3_code = "010303D6"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Infinite Tries in Card Minigame"
+cheat4_code = "01008AD3"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Infinite Time in Fix The Picture Minigame"
+cheat5_code = "014F1CD6"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Infinite Tries in Trivia Minigame"
+cheat6_code = "010111D6"
+cheat6_enable = false

@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Real Adventures - Pet Vet (Europe) (En,Fr).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Real%20Adventures%20-%20Pet%20Vet%20(Europe).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] Max Level"
+cheat0_code = "1205DBA8+0000270F"
+cheat0_enable = false

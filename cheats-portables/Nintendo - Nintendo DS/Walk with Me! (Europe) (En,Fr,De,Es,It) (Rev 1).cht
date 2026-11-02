@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Walk with Me! (Europe) (En,Fr,De,Es,It) (Rev 1).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Walk%20with%20Me!%20(Europe)%20(Rev%201).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "52074D14+EE070F90+E2000640+0000004A+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2F00EE1+015E0012+000A03A9+00660009+00000000+00000000+02074D14+E92D401E+02074D18+FAFE2E48+D2000000+00000000"
+cheat0_enable = false

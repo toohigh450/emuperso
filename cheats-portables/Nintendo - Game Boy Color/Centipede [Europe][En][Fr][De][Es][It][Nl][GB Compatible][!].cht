@@ -1,0 +1,70 @@
+# Recherche locale pour la ROM : Centipede [Europe][En][Fr][De][Es][It][Nl][GB Compatible][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Centipede%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Centipede%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Centipede%20(USA%2C%20Europe)%20(Xploder).cht
+
+cheats = 15
+
+cheat0_desc = "[Game Genie] Start With 99 Lives"
+cheat0_code = "635-45B-E66"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Infinite Lives"
+cheat1_code = "0103A0C2"
+cheat1_enable = false
+
+cheat2_desc = "[Xploder] Punkte P1"
+cheat2_code = "01??9FC6"
+cheat2_enable = false
+
+cheat3_desc = "[Xploder] Unendlich Sticks P1"
+cheat3_code = "$0D25932A"
+cheat3_enable = false
+
+cheat4_desc = "[Xploder] Immer Level 1 P1"
+cheat4_code = "$0C212C2A"
+cheat4_enable = false
+
+cheat5_desc = "[Xploder] Immer Level 10 P1"
+cheat5_code = "$0C2A2C2A"
+cheat5_enable = false
+
+cheat6_desc = "[Xploder] Immer Level 19 P1"
+cheat6_code = "$0C332C2A"
+cheat6_enable = false
+
+cheat7_desc = "[Xploder] Immer Level 28 P1"
+cheat7_code = "$0C3C2C2A"
+cheat7_enable = false
+
+cheat8_desc = "[Xploder] Keine Spinnen"
+cheat8_code = "$0D21812A"
+cheat8_enable = false
+
+cheat9_desc = "[Xploder] Punkte P2"
+cheat9_code = "01??B3C6"
+cheat9_enable = false
+
+cheat10_desc = "[Xploder] Unendlich Sticks P2"
+cheat10_code = "$0D25D02A"
+cheat10_enable = false
+
+cheat11_desc = "[Xploder] Immer Level 1 P2"
+cheat11_code = "$0C21BE2A"
+cheat11_enable = false
+
+cheat12_desc = "[Xploder] Immer Level 10 P2"
+cheat12_code = "$0C2ABE2A"
+cheat12_enable = false
+
+cheat13_desc = "[Xploder] Immer Level 19 P2"
+cheat13_code = "$0C33BE2A"
+cheat13_enable = false
+
+cheat14_desc = "[Xploder] Immer Level 28 P2"
+cheat14_code = "$0C3BBE2A"
+cheat14_enable = false

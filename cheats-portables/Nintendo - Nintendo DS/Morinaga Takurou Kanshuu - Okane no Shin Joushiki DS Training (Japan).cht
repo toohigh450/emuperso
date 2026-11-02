@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Morinaga Takurou Kanshuu - Okane no Shin Joushiki DS Training (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Morinaga%20Takurou%20Kanshuu%20-%20Okane%20no%20Shin%20Joushiki%20DS%20Training%20(Japan).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] Max Saving"
+cheat0_code = "12055466+0000B280+12055468+00000EE6"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Invest Level Max"
+cheat1_code = "1205546A+0000B280+0205546C+0000CEE6"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Locations"
+cheat2_code = "2205546F+000000FF"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Locations Invested"
+cheat3_code = "02055474+FFFFFFFF+22055478+000000FF"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All Modes"
+cheat4_code = "22055465+0000001F"
+cheat4_enable = false

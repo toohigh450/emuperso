@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Rayman 3 (USA) (En,Fr,Es).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Rayman%203%20(USA)%20(Code%20Breaker).cht
+
+cheats = 6
+
+cheat0_desc = "[Code Breaker] Infinite Lives"
+cheat0_code = "3203FFF6+0063"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Power"
+cheat1_code = "8203FF66+019A"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Have All Abilities"
+cheat2_code = "3203FF61+00FF"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Have All Lums+Cages Collected"
+cheat3_code = "4203FF70+0000+00000042+0002"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Have All Levels Open"
+cheat4_code = "3203FFF5+00FF+3203FFF7+00FF+3203FFF8+00FF"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Mega Jump"
+cheat5_code = "33003D1D+0000"
+cheat5_enable = false

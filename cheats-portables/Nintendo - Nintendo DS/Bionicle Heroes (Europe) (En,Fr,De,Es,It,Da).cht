@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Bionicle Heroes (Europe) (En,Fr,De,Es,It,Da).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Bionicle%20Heroes%20(Europe).cht
+
+cheats = 7
+
+cheat0_desc = "[Action Replay] Infinite Health"
+cheat0_code = "620DF990+00000000+B20DF990+00000000+100003A4+000003E8+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Gears"
+cheat1_code = "020DEEB0+000F423F+020DEEB4+000F423F+020DEEB8+000F423F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Have All Runes"
+cheat2_code = "020DF198+63636363+020DF19C+63636363+020DF1A0+63636363+020DF1A4+63636363"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Levels Unlocked"
+cheat3_code = "220DEE79+00000005+120DEE7A+00000505+020DEE7C+06050505"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All Cheats Unlocked"
+cheat4_code = "120DF194+0000FFFF"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Collect Items Anywhere"
+cheat5_code = "52073FF4+1A000053+02073FF4+E1A00000+02074070+E1A00000+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Invincibility"
+cheat6_code = "520198FC+1A000019+020198FC+EA000019+D2000000+00000000"
+cheat6_enable = false

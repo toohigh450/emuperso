@@ -1,0 +1,52 @@
+# Recherche locale pour la ROM : Boulder Dash - Rocks! (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Boulder%20Dash%20-%20Rocks!%20(Europe).cht
+
+cheats = 11
+
+cheat0_desc = "[Action Replay] Infinite Time"
+cheat0_code = "2212D471+00000083"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Modes  Complete Gallery"
+cheat1_code = "22161CF0+00000019+22161CF4+00000001+22161CF8+00000001+22161CFC+00000007+22161D00+00000007+22161D04+0000000F+22161D08+00000001"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Planets  Stages Open"
+cheat2_code = "22161B0C+00000003+12161B0E+00000F0F+12161B10+00000F0F+22161C68+00000022"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Keys"
+cheat3_code = "2212D4F8+00000007"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Infinite Money"
+cheat4_code = "12161CEC+0000270F"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Infinite Ammo"
+cheat5_code = "2212D4BC+00000001"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Infinite HP"
+cheat6_code = "12131524+000003E8"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Infinite Time"
+cheat7_code = "2212D471+00000080"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Low Stage Quota"
+cheat8_code = "22111ECA+00000001"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Max Score"
+cheat9_code = "0213151C+0001869F"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Max Stage Gems"
+cheat10_code = "22131520+00000063"
+cheat10_enable = false

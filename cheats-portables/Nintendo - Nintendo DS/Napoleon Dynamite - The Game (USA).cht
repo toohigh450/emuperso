@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Napoleon Dynamite - The Game (USA).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Napoleon%20Dynamite%20-%20The%20Game%20(USA).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] Unlock All Hidden"
+cheat0_code = "0215D2F8+FFFFFFFF+0215D2FC+FFFFFFFF+0215D300+FFFFFFFF+1215D304+0000FFFF+12162FA4+0000FFFF"
+cheat0_enable = false

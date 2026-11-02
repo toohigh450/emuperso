@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Kanbayashi Shiki Nouryoku Kaihatsu Hou - Unou Kids DS (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Kanbayashi%20Shiki%20Nouryoku%20Kaihatsu%20Hou%20-%20Unou%20Kids%20DS%20(Japan).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] Max Score for Flip The Card Game"
+cheat0_code = "0210E374+0001869F"
+cheat0_enable = false

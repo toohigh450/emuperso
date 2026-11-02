@@ -1,0 +1,57 @@
+# Recherche locale pour la ROM : Lucky Luke [Europe][En][Fr][De][Es][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Lucky%20Luke%20(Europe)%20(En%2CFr%2CDe%2CEs).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Lucky%20Luke%20(Europe)%20(GameShark).cht
+
+cheats = 12
+
+cheat0_desc = "[Format source non précisé] Infinite Bullets"
+cheat0_code = "008-79E-19E"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Health"
+cheat1_code = "006-C6E-E6E"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Mega Jump"
+cheat2_code = "007-BBE-C46"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Everywhere Music Modifier"
+cheat3_code = "5DB-91F+5EB-C4F"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Infinite Bullets"
+cheat4_code = "01068BCB"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Infinite Health"
+cheat5_code = "01058ACB"
+cheat5_enable = false
+
+cheat6_desc = "[GameShark] Infinite Dynamite"
+cheat6_code = "01638CCB"
+cheat6_enable = false
+
+cheat7_desc = "[GameShark] Max Money"
+cheat7_code = "01638FCB"
+cheat7_enable = false
+
+cheat8_desc = "[GameShark] Infinite Lives"
+cheat8_code = "016386CB"
+cheat8_enable = false
+
+cheat9_desc = "[GameShark] Infinite Gun Ammo Stocks"
+cheat9_code = "016389CB"
+cheat9_enable = false
+
+cheat10_desc = "[GameShark] Have Coin"
+cheat10_code = "010187CB"
+cheat10_enable = false
+
+cheat11_desc = "[GameShark] Max Stars"
+cheat11_code = "016399CB"
+cheat11_enable = false

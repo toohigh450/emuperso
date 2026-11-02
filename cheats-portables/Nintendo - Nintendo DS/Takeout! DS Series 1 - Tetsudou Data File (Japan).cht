@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Takeout! DS Series 1 - Tetsudou Data File (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Takeout!%20DS%20Series%201%20-%20Tetsudou%20Data%20File%20(Japan).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] Examination All Questions Correct"
+cheat0_code = "62250DCC+00000000+B2250DCC+00000000+20000042+0000000A+D2000000+00000000"
+cheat0_enable = false

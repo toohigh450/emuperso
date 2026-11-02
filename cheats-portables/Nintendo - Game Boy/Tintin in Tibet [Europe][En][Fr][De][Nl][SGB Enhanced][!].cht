@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Tintin in Tibet [Europe][En][Fr][De][Nl][SGB Enhanced][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Tintin%20in%20Tibet%20(Europe)%20(En%2CFr%2CDe%2CNl)%20(SGB%20Enhanced).cht
+
+cheats = 3
+
+cheat0_desc = "[Format source non précisé] Invincibility"
+cheat0_code = "B6C-97F-7F4+009-CFF-7F4"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Energy"
+cheat1_code = "FAF-2D8-4C1"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Infinite lives"
+cheat2_code = "FAF-CB8-4C1"
+cheat2_enable = false

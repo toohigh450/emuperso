@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Shaun the Sheep (Europe) (En,Ja,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Shaun%20the%20Sheep%20(Europe).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Mini Games"
+cheat0_code = "220357DE+000000FF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Puzzles"
+cheat1_code = "220357E0+000000FF"
+cheat1_enable = false

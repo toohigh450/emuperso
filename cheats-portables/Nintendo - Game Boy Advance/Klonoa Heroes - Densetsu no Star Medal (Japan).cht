@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Klonoa Heroes - Densetsu no Star Medal (Japan).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Klonoa%20Heroes%20-%20Densetsu%20no%20Star%20Medal%20(Japan)%20(Code%20Breaker).cht
+
+cheats = 4
+
+cheat0_desc = "[Code Breaker] Master Code [SMSH]"
+cheat0_code = "00009BEB+000A+10065664+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Master Code [Pad]"
+cheat1_code = "00009BEB+000A+10054B30+0007"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Max Gold"
+cheat2_code = "83003134+FFFF+830037D0+FFFF"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Max Red Health Items"
+cheat3_code = "33006D62+0064+33006D62+0001"
+cheat3_enable = false

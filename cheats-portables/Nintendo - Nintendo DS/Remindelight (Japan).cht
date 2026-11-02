@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Remindelight (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Remindelight%20(Japan).cht
+
+cheats = 6
+
+cheat0_desc = "[Action Replay] HP Never Decrease"
+cheat0_code = "D3000000+0207C04E+F207C04C+00000001+D3000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] MP Never Decrease"
+cheat1_code = "D3000000+0207C052+F207C050+00000001+D3000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Energy Never Decrease"
+cheat2_code = "D3000000+0207C062+F207C060+00000002+D3000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Stats"
+cheat3_code = "0207C054+00630063+0207C058+00630063"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] No Abnormal Status"
+cheat4_code = "2207C048+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Unlock All Items"
+cheat5_code = "D5000000+00006301+C0000000+0000000A+D7000000+0207C078+D4000000+00000001+D2000000+00000000"
+cheat5_enable = false

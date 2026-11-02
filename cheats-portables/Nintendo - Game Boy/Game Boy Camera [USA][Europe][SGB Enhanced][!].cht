@@ -1,0 +1,64 @@
+# Recherche locale pour la ROM : Game Boy Camera [USA][Europe][SGB Enhanced][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Game%20Boy%20Camera%20(USA%2C%20Europe)%20(SGB%20Enhanced).cht
+
+cheats = 14
+
+cheat0_desc = "[Format source non précisé] Quick Score Gain"
+cheat0_code = "01FF68D8"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Always Double Laser"
+cheat1_code = "01021AD8"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Machine Gun Laser"
+cheat2_code = "010818D8"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Quick Score Gain"
+cheat3_code = "01FFE6D9"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Ball Speed Modifer"
+cheat4_code = "0100E7D9"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] 00 Seconds Total"
+cheat5_code = "010029D0"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Mole Can't Move"
+cheat6_code = "01001DD0"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Bird Can't Move"
+cheat7_code = "01000ED0"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Enable Unused Hot Spot Effects"
+cheat8_code = "0FD-159-F76"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Title Screen Music Modifier"
+cheat9_code = "E28-E6E+668-E6E"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Load Unused Super Game Boy Palette 1"
+cheat10_code = "040-21B-A2A"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Load Unused Super Game Boy Palette 2"
+cheat11_code = "080-21B-A2A"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Load Unused Super Game Boy Palette 3"
+cheat12_code = "0C0-21B-A2A"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Access Album B Frame Everywhere"
+cheat13_code = "13F-B7B-A22+12F-A6B-A2E"
+cheat13_enable = false

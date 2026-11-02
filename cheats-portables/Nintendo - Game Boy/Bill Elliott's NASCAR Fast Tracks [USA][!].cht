@@ -1,0 +1,69 @@
+# Recherche locale pour la ROM : Bill Elliott's NASCAR Fast Tracks [USA][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Bill%20Elliott's%20NASCAR%20Fast%20Tracks%20(USA)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Bill%20Elliott's%20NASCAR%20Fast%20Tracks%20(USA).cht
+
+cheats = 15
+
+cheat0_desc = "[Game Genie] Start With Burst Of Speed"
+cheat0_code = "??1-069-19A"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Infinite Fuel"
+cheat1_code = "004-65A-3BE"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Collisons With Cars Don't Affect Speed"
+cheat2_code = "00D-46B-3BE"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Collisions Barely Affect Speed"
+cheat3_code = "003-C5B-3B7+002-3FA-3B7+000-BDA-19E"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] Start With 1 Lap--Ignore Lap Timer & Counter"
+cheat4_code = "1E7-31B-B37+027-32B-A26"
+cheat4_enable = false
+
+cheat5_desc = "[Game Genie] Start With 3 Laps--Ignore Lap Timer & Counter"
+cheat5_code = "1E7-31B-B37+047-32B-A26"
+cheat5_enable = false
+
+cheat6_desc = "[Game Genie] Start With 9 Laps--Ignore Lap Timer & Counter"
+cheat6_code = "1E7-31B-B37+0A7-32B-A26"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Start with burst of speed"
+cheat7_code = "069-19A"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Infinite fuel"
+cheat8_code = "004-65A-3BE"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Collisons with cars don't affect speed"
+cheat9_code = "00D-46B-3BE"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Collisions barely affect speed"
+cheat10_code = "003-C5B-3B7+002-3FA-3B7+000-BDA-19E"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Start with 1 lap (ignore lap timer and counter)"
+cheat11_code = "1E7-31B-B37+027-32B-A26"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Start with 3 laps (ignore lap timer and counter)"
+cheat12_code = "1E7-31B-B37+047-32B-A26"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Start with 9 laps (ignore lap timer and counter)"
+cheat13_code = "1E7-31B-B37+0A7-32B-A26"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Start With Burst Of Speed"
+cheat14_code = "001-069-19A"
+cheat14_enable = false

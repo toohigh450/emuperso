@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Uwasa no Midori-kun!! - Natsuiro Striker (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Uwasa%20no%20Midori-kun!!%20-%20Natsuiro%20Striker%20(Japan).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] Unlock All CG"
+cheat0_code = "C0000000+00000012+221352A2+00000001+DC000000+00000016+D2000000+00000000"
+cheat0_enable = false

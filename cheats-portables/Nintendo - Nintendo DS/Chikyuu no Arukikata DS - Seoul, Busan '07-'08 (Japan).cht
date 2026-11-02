@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Chikyuu no Arukikata DS - Seoul, Busan '07-'08 (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Chikyuu%20no%20Arukikata%20DS%20-%20Seoul%2C%20Busan%20'07-'08%20(Japan).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] BGM1"
+cheat0_code = "22147A66+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] BGM2"
+cheat1_code = "22147A66+00000001"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] BGM3"
+cheat2_code = "22147A66+00000002"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] BGM4"
+cheat3_code = "22147A66+00000003"
+cheat3_enable = false

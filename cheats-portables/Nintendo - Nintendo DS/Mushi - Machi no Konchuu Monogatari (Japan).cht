@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Mushi - Machi no Konchuu Monogatari (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Mushi%20-%20Machi%20no%20Konchuu%20Monogatari%20(Japan).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] Unlock All Items, Gallery and Locations"
+cheat0_code = "02068B3C+63636363+02068B40+63636363+02068B44+01010101+02068B48+01010101+D5000000+00000002+C0000000+0000004D+D8000000+02068261+D2000000+00000000+D5000000+00000001+C0000000+00000013+D8000000+02068347+D2000000+00000000"
+cheat0_enable = false

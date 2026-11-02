@@ -1,0 +1,25 @@
+# Recherche locale pour la ROM : Cruis'n Exotica [USA][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Cruis'n%20Exotica%20(USA)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Cruis'n%20Exotica%20(USA).cht
+
+cheats = 4
+
+cheat0_desc = "[GameShark] Always First"
+cheat0_code = "0101EDCA+0101EECA+01013CD0"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Infinite Time"
+cheat1_code = "0199EBCA"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Low Lap Time"
+cheat2_code = "0100E9CA+0100EACA"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Infinite Time"
+cheat3_code = "0199EBCA"
+cheat3_enable = false

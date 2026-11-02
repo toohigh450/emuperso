@@ -1,0 +1,96 @@
+# Recherche locale pour la ROM : Dungeon Explorer (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Dungeon%20Explorer%20(Europe).cht
+
+cheats = 22
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "520B4F10+EE070F90+E2000524+00000048+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2DFAEBD+015D0012+000A0357+00000009+020B4F10+E92D401E+020B4F14+FAFD2D82+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Cash"
+cheat1_code = "020F72E8+0098967F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Hyper Mode"
+cheat2_code = "02000CD0+E3A06001"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Infinite Health"
+cheat3_code = "D3000000+020F7140+F20F72D9+00000002+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Infinite AP"
+cheat4_code = "D3000000+020F7142+F20F72E1+00000002+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Infinite Charge"
+cheat5_code = "9219C6B8+00002DBC+0219C6B8+E3A02000+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Infinite Upgrade Points"
+cheat6_code = "220F7304+00000063"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Infinite Art Points"
+cheat7_code = "220F7302+00000063"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Bypass Total Item Limit"
+cheat8_code = "02022FE4+E3A00063+02022FCC+E3A00063+02022FDC+E3A00063+02023008+E8BD8008"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] 100 Exp. per Kill"
+cheat9_code = "0201C264+E3A00064"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] 250 Exp. per Kill"
+cheat10_code = "0201C264+E3A000FA"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] 500 Exp. per Kill"
+cheat11_code = "0201C264+E3A00F7D"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] 1000 Exp. per Kill"
+cheat12_code = "0201C264+E3A00FFA"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] 2000 Exp. per Kill"
+cheat13_code = "0201C264+E3A00E7D"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] 5000 Exp. per Kill"
+cheat14_code = "0201C264+E3A00C27"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] 10000 Exp. per Kill"
+cheat15_code = "0201C264+E3A00D4E"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Oros"
+cheat16_code = "94000130+000003B7+220F730E+00000000+D2000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Emporos"
+cheat17_code = "94000130+000003E7+220F730E+00000001+D2000000+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Taratta"
+cheat18_code = "94000130+000003D7+220F730E+00000002+D2000000+00000000"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Warrior"
+cheat19_code = "94000130+00000377+220F7310+00000000+D2000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Hunter"
+cheat20_code = "94000130+000001F7+220F7310+00000001+D2000000+00000000"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Mage"
+cheat21_code = "94000130+000002F7+220F7310+00000002+D2000000+00000000"
+cheat21_enable = false

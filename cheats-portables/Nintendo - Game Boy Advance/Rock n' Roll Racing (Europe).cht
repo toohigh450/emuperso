@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Rock n' Roll Racing (Europe).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Rock%20n'%20Roll%20Racing%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 7
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000A582+000A+10000B88+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Lots Of Cash"
+cheat1_code = "830012EC+5000"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Max Points"
+cheat2_code = "330001A8+0063+330001AA+0063"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] No Damage"
+cheat3_code = "33000DDF+000C"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Start On Last Lap"
+cheat4_code = "73000E06+0000+33000DF1+0001"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Press Select To Kill Opponents"
+cheat5_code = "D0000020+0004+43000DE0+0000+00000002+0002"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Infinite Ammo"
+cheat6_code = "43000D90+0700+00000008+0004"
+cheat6_enable = false

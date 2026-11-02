@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Zero kara Hajimeru - Otona no 5 Kakokugo Nyuumon - Ei, Futsu, Doku, I, Sei (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Zero%20kara%20Hajimeru%20-%20Otona%20no%205%20Kakokugo%20Nyuumon%20-%20Ei%2C%20Futsu%2C%20Doku%2C%20I%2C%20Sei%20(Japan).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] Completion for English 100%"
+cheat0_code = "D5000000+0000FFFF+C0000000+00000012+D7000000+020D8886+D2000000+00000000+D5000000+000000FF+C0000000+0000002C+D8000000+020D8886+D2000000+00000000+020D88AC+64646464+020D88B0+64646464+220D88F0+000000FF+220D88F4+000000FF+220D88F8+000000FF+D2000000+00000000"
+cheat0_enable = false

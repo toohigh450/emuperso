@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Shrek - Super Slam (Europe) (En,Fr,De,Es,It,Nl).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Shrek%20-%20Super%20Slam%20(Europe).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] Race Time"
+cheat0_code = "22115AE6+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Challengers"
+cheat1_code = "221019D0+000000FF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Pictures"
+cheat2_code = "021019D0+FFFFFFFF"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Character Info"
+cheat3_code = "221019D3+0000FFFF+121019D4+0000FFFF+221019D6+000000FF"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All Clips"
+cheat4_code = "221019DF+000000FF+121019E0+0000FFFF"
+cheat4_enable = false

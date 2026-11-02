@@ -1,0 +1,41 @@
+# Recherche locale pour la ROM : Soccer Mania [USA][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Soccer%20Mania%20(USA)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Soccer%20Mania%20(USA).cht
+
+cheats = 8
+
+cheat0_desc = "[GameShark] You have 99 pts."
+cheat0_code = "01999DC4"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Com Score Is Always 0"
+cheat1_code = "01009EC4"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Your Team Modifier"
+cheat2_code = "010?40C4"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Com's Team Modifier"
+cheat3_code = "010?41C4"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] You have 99 pts."
+cheat4_code = "01999DC4"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Com Score Is Always 0"
+cheat5_code = "01009EC4"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Your Team Modifier"
+cheat6_code = "010040C4"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Com's Team Modifier"
+cheat7_code = "010041C4"
+cheat7_enable = false

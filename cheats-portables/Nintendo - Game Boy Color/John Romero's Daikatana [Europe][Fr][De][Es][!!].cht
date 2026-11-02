@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : John Romero's Daikatana [Europe][Fr][De][Es][!!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/John%20Romero's%20Daikatana%20(Europe)%20(En%2CFr%2CIt).cht
+
+cheats = 6
+
+cheat0_desc = "[Format source non précisé] Hit Anywhere"
+cheat0_code = "182-D5A-801+1E2-D6A-2A3"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Hit Anywhere Sub Weapons"
+cheat1_code = "29F-04B-F7D+18F-03B-801"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Get Items From Anywhere"
+cheat2_code = "18F-189-801+20F-199-2A4"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Jump in Midair"
+cheat3_code = "00B-7C9-A2F"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Infinite Ammo Sub Weapons"
+cheat4_code = "FAA-3B9-4C1"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Invincibility Enemies"
+cheat5_code = "C32-2BA-801"
+cheat5_enable = false

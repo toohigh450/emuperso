@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Atari Greatest Hits - Volume 2 (USA).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Atari%20Greatest%20Hits%20-%20Volume%202%20(USA).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Super Asteroids Inf Lives"
+cheat0_code = "221437FB+00000004"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Major Havoc Inf. Lives"
+cheat1_code = "2214401B+00000003"
+cheat1_enable = false

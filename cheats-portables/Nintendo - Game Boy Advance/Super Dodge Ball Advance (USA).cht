@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Super Dodge Ball Advance (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Super%20Dodge%20Ball%20Advance%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 5
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "000053D8+000A+1000E840+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Team 1-P1 Infinite Health"
+cheat1_code = "820010EE+1818"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Team 1-P2 Infinite Health"
+cheat2_code = "82001216+1818"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Team 1-P3 Infinite Health"
+cheat3_code = "8200133E+1818"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Team 1-P4 Infinite Health"
+cheat4_code = "82001466+1818"
+cheat4_enable = false

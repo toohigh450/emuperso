@@ -1,0 +1,60 @@
+# Recherche locale pour la ROM : MySims - Kingdom (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,Pl,Cs,Hu).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/MySims%20-%20Kingdom%20(Europe).cht
+
+cheats = 13
+
+cheat0_desc = "[Action Replay] Press Select for Max Cash"
+cheat0_code = "94000130+FFFB0000+02212958+0098967F+0227DC24+0098967F+D0000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Ressources"
+cheat1_code = "02212960+5A5A5A5A+02212964+5A5A5A5A+12212968+00005A5A+2221296A+0000005A"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Infinite Extractor Use"
+cheat2_code = "2221295F+00000014"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Press SELECT for All Outfits (Including Patchwork)"
+cheat3_code = "94000130+FFFB0000+C0000000+00000037+02213390+FFFFFFFF+DC000000+00000004+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Press SELECT for All House Furnitures"
+cheat4_code = "94000130+FFFB0000+222131F8+0000005A+C0000000+00000070+02213034+5A5A5A5A+DC000000+00000004+D2000000+00000000+94000130+FFFB0000+C0000000+0000005A+222131F9+000000FF+DC000000+00000001+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Massive"
+cheat5_code = "4226AE38+02100000+3226AE38+023F0000+B226AE38+00000000+00000188+00002000+0000018C+00002000+00000190+00002000+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Small"
+cheat6_code = "4226AE38+02100000+3226AE38+023F0000+B226AE38+00000000+00000188+00000C00+0000018C+00000C00+00000190+00000C00+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] 2D Head"
+cheat7_code = "4226AE38+02100000+3226AE38+023F0000+B226AE38+00000000+00000684+00000300+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Smaller Head"
+cheat8_code = "4226AE38+02100000+3226AE38+023F0000+B226AE38+00000000+0000067C+00000C00+00000680+00000C00+00000684+00000C00+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Much Smaller Head"
+cheat9_code = "4226AE38+02100000+3226AE38+023F0000+B226AE38+00000000+0000067C+00000800+00000680+00000800+00000684+00000800+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Pygmy"
+cheat10_code = "4226AE38+02100000+3226AE38+023F0000+B226AE38+00000000+0000067C+00000400+00000680+00000400+00000684+00000400+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Bigger Head"
+cheat11_code = "4226AE38+02100000+3226AE38+023F0000+B226AE38+00000000+0000067C+00001800+00000680+00001800+00000684+00001800+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Massive Head"
+cheat12_code = "4226AE38+02100000+3226AE38+023F0000+B226AE38+00000000+0000067C+00002000+00000680+00002000+00000684+00002000+D2000000+00000000"
+cheat12_enable = false

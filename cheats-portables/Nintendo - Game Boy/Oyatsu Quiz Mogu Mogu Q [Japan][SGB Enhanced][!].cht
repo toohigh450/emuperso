@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Oyatsu Quiz Mogu Mogu Q [Japan][SGB Enhanced][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Oyatsu%20Quiz%20Mogu%20Mogu%20Q%20(Japan)%20(SGB%20Enhanced).cht
+
+cheats = 2
+
+cheat0_desc = "[Format source non précisé] Infinite Hearts"
+cheat0_code = "0106C2C5"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Time"
+cheat1_code = "0109F4C5"
+cheat1_enable = false

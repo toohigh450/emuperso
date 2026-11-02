@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : ATV Quad Kings (Europe) (En,Fr,De,Es,It,Nl).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/ATV%20Quad%20Kings%20(Europe).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] Turbo Gauge Never Decrease"
+cheat0_code = "5202681C+E1A01005+02026820+E2400000+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Money"
+cheat1_code = "94000130+FFFB0000+020B044C+3B9AC9FF+020B04C8+3B9AC9FF+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Points for World Tour"
+cheat2_code = "94000130+FFFB0000+120B03F8+0000C350+120B0474+0000C350+D2000000+00000000"
+cheat2_enable = false

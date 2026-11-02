@@ -1,0 +1,33 @@
+# Recherche locale pour la ROM : Santa Claus Junior [Europe][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Santa%20Claus%20Junior%20(Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Santa%20Claus%20Junior%20(Europe).cht
+
+cheats = 6
+
+cheat0_desc = "[GameShark] Infinite Lives"
+cheat0_code = "010974CB"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Infinite Health"
+cheat1_code = "010775CB"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Gain 1 Life Per Candycane"
+cheat2_code = "01189ACB"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Infinite Lives + Energy"
+cheat3_code = "878-41B-3B7"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Infinite Lives"
+cheat4_code = "010974CB"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Infinite Health"
+cheat5_code = "010775CB"
+cheat5_enable = false

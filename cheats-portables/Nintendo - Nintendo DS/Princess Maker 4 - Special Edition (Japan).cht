@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Princess Maker 4 - Special Edition (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Princess%20Maker%204%20-%20Special%20Edition%20(Japan).cht
+
+cheats = 6
+
+cheat0_desc = "[Action Replay] Money Max"
+cheat0_code = "0215E67C+000F423F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Item"
+cheat1_code = "D5000000+00000001+C0000000+00000053+D8000000+0215E46D+D4000000+00000001+D2000000+00000000+2215E4D1+00000054+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All courses"
+cheat2_code = "1215E680+0000FFFF+2215E682+000000FF"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Master for all courses"
+cheat3_code = "2215E4F9+00000003+1215E4FA+00000303+1215E4FC+00000303+2215E4FE+00000003"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All modes/options"
+cheat4_code = "2215E40A+00000001+2215E434+00000040"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All CG"
+cheat5_code = "D5000000+000000FF+C0000000+00000022+D8000000+0215E411+D2000000+00000000"
+cheat5_enable = false

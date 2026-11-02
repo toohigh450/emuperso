@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Dino King Battle - Taiko kara no Hyouryuusha (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Dino%20King%20Battle%20-%20Taiko%20kara%20no%20Hyouryuusha%20(Japan).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] HP Never Decreases"
+cheat0_code = "D3000000+020C1890+F20C18A4+00000002+D3000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Opponent HP One"
+cheat1_code = "120C1A50+00000001"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Action Points"
+cheat2_code = "220C17D8+00000063"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Unlock All Characters"
+cheat3_code = "E20C17A0+00000018+01010101+01010101+01010101+01010101+01010101+00000001"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Unlock All Cards"
+cheat4_code = "D5000000+00000063+C0000000+00000060+D6000000+020C05CC+DC000000+00000008+D2000000+00000000+D5000000+00000063+C0000000+00000032+D6000000+020C0A64+DC000000+00000008+D2000000+00000000"
+cheat4_enable = false

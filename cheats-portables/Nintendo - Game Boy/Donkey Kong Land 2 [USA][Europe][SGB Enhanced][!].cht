@@ -1,0 +1,115 @@
+# Recherche locale pour la ROM : Donkey Kong Land 2 [USA][Europe][SGB Enhanced][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Donkey%20Kong%20Land%202%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Donkey%20Kong%20Land%202%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Donkey%20Kong%20Land%202%20(USA%2C%20Europe)%20(SGB%20Enhanced).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Donkey%20Kong%20Land%202%20(USA%2C%20Europe)%20(Xploder).cht
+
+cheats = 26
+
+cheat0_desc = "[Game Genie] Start With 18 Lives"
+cheat0_code = "140-91B-F7E"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Infinite Lives"
+cheat1_code = "003-7CF-3BE"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Less Enemies"
+cheat2_code = "012017C0"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Some Objects Are Missing"
+cheat3_code = "0177D3DD"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] No Enemies In Level"
+cheat4_code = "0104D5DE"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Barrels Appear Through Level Randomly"
+cheat5_code = "0104F4DE"
+cheat5_enable = false
+
+cheat6_desc = "[GameShark] Character Stays In Same Position/Acts Normally"
+cheat6_code = "0104B4DE"
+cheat6_enable = false
+
+cheat7_desc = "[GameShark] Invincible"
+cheat7_code = "012530DF"
+cheat7_enable = false
+
+cheat8_desc = "[GameShark] Infinite Lives"
+cheat8_code = "0106AAFF"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Less Enemies"
+cheat9_code = "012017C0"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] No Enemies In Level"
+cheat10_code = "0104D5DE"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Barrels Appear Through Level Randomly"
+cheat11_code = "0104F4DE"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Character Stays In Same Position/Acts Normally"
+cheat12_code = "0104B4DE"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Invincible"
+cheat13_code = "012530DF"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Infinite Lives"
+cheat14_code = "0106AAFF"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Always Have A Reserve Player"
+cheat15_code = "0101ADFF"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Invincibility Barrel"
+cheat16_code = "007-41A-C49+182-8EA-4CA"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Go To End Of Bonus Round To Get Coin"
+cheat17_code = "007-FCB-2A2"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Start With 18 Lives"
+cheat18_code = "140-91B-F7E"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Infinite Lives"
+cheat19_code = "003-7CF-3BE"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Jump in Midair"
+cheat20_code = "AF8-5BF-917+368-5AF-082+008-3BF-6E2+A58-52F-7F8+18B-33F-6EA"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Glimmer's Galleon Always Lit"
+cheat21_code = "006-ADB-915"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Can Exit Unbeaten Levels"
+cheat22_code = "3EA-26B-4CA"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Invincibility"
+cheat23_code = "C31-17A-E61"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Lava Lagoon's Water Is Always Cool"
+cheat24_code = "006-D2B-915+00E-90B-915"
+cheat24_enable = false
+
+cheat25_desc = "[Xploder] Unendlich Muenzen"
+cheat25_code = "$0DBA51E0"
+cheat25_enable = false

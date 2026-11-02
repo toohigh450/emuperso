@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Zubo (Europe) (En,Fr,De,Es,It,Nl,Sv).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Zubo%20(Europe).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] Max Notes"
+cheat0_code = "121B924C+0000270F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Life for 1st Zubo"
+cheat1_code = "221B8FAC+000000FF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Level for 1st Zubo"
+cheat2_code = "221B8FC8+0000001F"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Always 9 Power Pills"
+cheat3_code = "221F12D3+00000009"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Complete Items for Vending Machine"
+cheat4_code = "021B95A8+01010101+021B95AC+01010101+021B95B0+01010101"
+cheat4_enable = false

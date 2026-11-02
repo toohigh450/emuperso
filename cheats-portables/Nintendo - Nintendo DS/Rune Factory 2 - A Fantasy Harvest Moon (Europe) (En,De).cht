@@ -1,0 +1,128 @@
+# Recherche locale pour la ROM : Rune Factory 2 - A Fantasy Harvest Moon (Europe) (En,De).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Rune%20Factory%202%20-%20A%20Fantasy%20Harvest%20Moon%20(Europe).cht
+
+cheats = 30
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "520CBD40+EE070F90+E2000138+0000006C+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2EA513D+015E0012+000A03A9+6C000009+015E0012+000A03BF+3F700009+015E0012+000A03BF+42B30009+015E0012+000A03BF+00000009+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Money"
+cheat1_code = "021311D8+05F5E0FF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Infinite Water Can"
+cheat2_code = "221311D4+000003E7"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Water Can Never Decrease"
+cheat3_code = "DA000000+021311D0+D7000000+021311D4+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All Items Level 10"
+cheat4_code = "94000130+FFFB0000+C0000000+0000002C+221312BF+00000009+DC000000+00000004+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All Items Quantity x9"
+cheat5_code = "94000130+FFFB0000+C0000000+0000002C+221312BE+00000009+DC000000+00000004+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Max and Inf Health"
+cheat6_code = "12131128+000003E7+1213112C+000003E7"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Health Never Decrease"
+cheat7_code = "DA000000+0213112C+D7000000+02131128+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Max and Inf RP"
+cheat8_code = "12131130+0001869C+12131134+0001869C"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] RP Never Decrease"
+cheat9_code = "DA000000+02131134+D7000000+02131130+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Level 99, Max Exp"
+cheat10_code = "02131120+00FFFFFF"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Strength and Attack +99"
+cheat11_code = "22131138+00000063"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Int and Magic Atack +99"
+cheat12_code = "2213113C+00000063"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Defense and Vitality +99"
+cheat13_code = "22131144+00000063"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] No Status Ailment"
+cheat14_code = "021310E0+00000000+021310E4+00000000+021310E8+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] [START+SEL]All Skills Level 99"
+cheat15_code = "94000130+FFF30000+C0000000+0000000B+121311E4+0000FA00+DC000000+00000008+D2000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] [START+SEL+A]All Skills Level 1"
+cheat16_code = "94000130+FFF20000+C0000000+00000005+121311E4+00000000+121311EC+00000000+DC000000+00000010+D2000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Max Woods"
+cheat17_code = "121311DC+0000FFFF"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Max Feeds"
+cheat18_code = "12131D6A+0000270F"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Waterpot: Instant Max Charge"
+cheat19_code = "921312A4+00000191+12131024+00000258+D2000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Hoe: Instant Max Charge"
+cheat20_code = "921312A4+00000197+12131024+00000258+D2000000+00000000"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] All Crops Maxed"
+cheat21_code = "94000130+FCFB0000+D5000000+0000270F+C0000000+0000003A+D6000000+02131640+D2000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] All Medicine Maxed"
+cheat22_code = "94000130+FCFB0000+D5000000+0000270F+C0000000+00000017+D6000000+0213172C+D2000000+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] All Accessory Maxed"
+cheat23_code = "94000130+FCFB0000+D5000000+0000270F+C0000000+0000004C+D6000000+02131A74+D2000000+00000000"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] All Cooking Maxed"
+cheat24_code = "94000130+FCFB0000+D5000000+0000270F+C0000000+000000BA+D6000000+0213178C+D2000000+00000000"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] All Other Records Maxed"
+cheat25_code = "94000130+FCFB0000+D5000000+0000270F+C0000000+00000048+D6000000+02131BA8+D2000000+00000000"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] All Fish Maxed"
+cheat26_code = "94000130+FCFB0000+D5000000+0000270F+C0000000+0000001D+D6000000+02131CCC+D2000000+00000000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Freeze Time"
+cheat27_code = "A4000130+FFFB0000+0212AE94+00000000+D2000000+00000000"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] [Hold Select]Increase Time"
+cheat28_code = "94000130+FFFB0000+0212AE94+00000001+D2000000+00000000"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Skip 5.00 AM (Never Tired)"
+cheat29_code = "9212AEA4+FF000004+8212AEA0+FF00003A+2212AEA4+00000006+2212AEA0+00000001+D2000000+00000000"
+cheat29_enable = false

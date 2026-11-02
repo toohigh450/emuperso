@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : B.C. Kid 2 [Europe][SGB Enhanced][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/B.C.%20Kid%202%20(Europe)%20(SGB%20Enhanced).cht
+
+cheats = 7
+
+cheat0_desc = "[Format source non précisé] Hit Anywhere"
+cheat0_code = "18D-CEA-4CA+FAC-08A-D5D"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Invincibility"
+cheat1_code = "18F-26B-6EA+00A-ABA-A22"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Infinite Health"
+cheat2_code = "C9B-B8B-A28"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Blink Longer After Taking Damage"
+cheat3_code = "FFA-229-6EB"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Invulnerability (After Being Hit Once)"
+cheat4_code = "C98-42B-3BE"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Infinite Lives"
+cheat5_code = "009-01A-19E"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Skip Intro Screen"
+cheat6_code = "C38-50B-E61"
+cheat6_enable = false

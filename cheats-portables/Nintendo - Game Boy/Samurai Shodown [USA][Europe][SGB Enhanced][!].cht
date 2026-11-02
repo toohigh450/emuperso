@@ -1,0 +1,250 @@
+# Recherche locale pour la ROM : Samurai Shodown [USA][Europe][SGB Enhanced][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Samurai%20Shodown%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Samurai%20Shodown%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Samurai%20Shodown%20(USA%2C%20Europe)%20(SGB%20Enhanced).cht
+
+cheats = 60
+
+cheat0_desc = "[Game Genie] Infinite Time"
+cheat0_code = "FA2-46D-4C1"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Start Timer At 30 Seconds"
+cheat1_code = "3EF-80E-D57+1EF-81E-08F"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Start Timer At 46 Seconds"
+cheat2_code = "3EF-80E-D57+2EF-81E-08F"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Start Timer At 62 Seconds"
+cheat3_code = "3EF-80E-D57+3EF-81E-08F"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] Start Timer At 78 Seconds"
+cheat4_code = "3EF-80E-D57+4EF-81E-08F"
+cheat4_enable = false
+
+cheat5_desc = "[Game Genie] Start Timer At 94 Seconds"
+cheat5_code = "3EF-80E-D57+5EF-81E-08F"
+cheat5_enable = false
+
+cheat6_desc = "[Game Genie] Start Timer At 110 Seconds"
+cheat6_code = "3EF-80E-D57+6EF-81E-08F"
+cheat6_enable = false
+
+cheat7_desc = "[Game Genie] Start Timer At 126 Seconds"
+cheat7_code = "3EF-80E-D57+7EF-81E-08F"
+cheat7_enable = false
+
+cheat8_desc = "[Game Genie] Start Timer At 142 Seconds"
+cheat8_code = "3EF-80E-D57+8EF-81E-08F"
+cheat8_enable = false
+
+cheat9_desc = "[Game Genie] Start Timer At 158 Seconds"
+cheat9_code = "3EF-80E-D57+9EF-81E-08F"
+cheat9_enable = false
+
+cheat10_desc = "[Game Genie] Both Players Start With 1/3 Energy"
+cheat10_code = "11F-86E-3B6"
+cheat10_enable = false
+
+cheat11_desc = "[Game Genie] Both Players Start With 2/3 Energy"
+cheat11_code = "21F-86E-3B6"
+cheat11_enable = false
+
+cheat12_desc = "[Game Genie] Both Players Start With More Energy"
+cheat12_code = "FFF-86E-3B6"
+cheat12_enable = false
+
+cheat13_desc = "[Game Genie] Computer Takes All Damage (Even When You Get Hit)"
+cheat13_code = "3EB-60D-7F1"
+cheat13_enable = false
+
+cheat14_desc = "[Game Genie] Always Fight Genan Shiranui"
+cheat14_code = "3E8-9A9-2AA+008-9B9-D5E+E08-9C9-2A9"
+cheat14_enable = false
+
+cheat15_desc = "[Game Genie] Always Fight Galford"
+cheat15_code = "3E8-9A9-2AA+018-9B9-D5E+E08-9C9-2A9"
+cheat15_enable = false
+
+cheat16_desc = "[Game Genie] Always Fight Haohmaru"
+cheat16_code = "3E8-9A9-2AA+028-9B9-D5E+E08-9C9-2A9"
+cheat16_enable = false
+
+cheat17_desc = "[Game Genie] Always Fight Ukyo Tachibana"
+cheat17_code = "3E8-9A9-2AA+038-9B9-D5E+E08-9C9-2A9"
+cheat17_enable = false
+
+cheat18_desc = "[Game Genie] Always Fight Charlotte"
+cheat18_code = "3E8-9A9-2AA+048-9B9-D5E+E08-9C9-2A9"
+cheat18_enable = false
+
+cheat19_desc = "[Game Genie] Always Fight Tam Tam"
+cheat19_code = "3E8-9A9-2AA+058-9B9-D5E+E08-9C9-2A9"
+cheat19_enable = false
+
+cheat20_desc = "[Game Genie] Always Fight Earthquake"
+cheat20_code = "3E8-9A9-2AA+068-9B9-D5E+E08-9C9-2A9"
+cheat20_enable = false
+
+cheat21_desc = "[Game Genie] Always Fight Nakoruru"
+cheat21_code = "3E8-9A9+2AA+078-9B9-D5E+E08-9C9-2A9"
+cheat21_enable = false
+
+cheat22_desc = "[Game Genie] Always Fight Wan Fan"
+cheat22_code = "3E8-9A9-2AA+088-9B9-D5E+E08-9C9-2A9"
+cheat22_enable = false
+
+cheat23_desc = "[Game Genie] Always Fight Jubei Yagyo"
+cheat23_code = "3E8-9A9-2AA+098-9B9-D5E+E08-9C9-2A9"
+cheat23_enable = false
+
+cheat24_desc = "[Game Genie] Always Fight Hanzo Hattori"
+cheat24_code = "3E8-9A9-2AA+0A8-9B9-D5E+E08-9C9-2A9"
+cheat24_enable = false
+
+cheat25_desc = "[Game Genie] Always Fight Kyoshiro Senryo"
+cheat25_code = "3E8-9A9-2AA+0B8-9B9-D5E+E08-9C9-2A9"
+cheat25_enable = false
+
+cheat26_desc = "[GameShark] Infinite Time"
+cheat26_code = "015887C5"
+cheat26_enable = false
+
+cheat27_desc = "[GameShark] Infinite Health"
+cheat27_code = "012308AC4"
+cheat27_enable = false
+
+cheat28_desc = "[Format source non précisé] Infitnite time"
+cheat28_code = "FA2-46D-4C1"
+cheat28_enable = false
+
+cheat29_desc = "[Format source non précisé] Start timer at 30 secs."
+cheat29_code = "3EF-80E-D57+1EF-81E-08F"
+cheat29_enable = false
+
+cheat30_desc = "[Format source non précisé] Start timer at 46 secs."
+cheat30_code = "3EF-80E-D57+2EF-81E-08F"
+cheat30_enable = false
+
+cheat31_desc = "[Format source non précisé] Start timer at 62 secs."
+cheat31_code = "3EF-80E-D57+3EF-81E-08F"
+cheat31_enable = false
+
+cheat32_desc = "[Format source non précisé] Start timer at 78 secs."
+cheat32_code = "3EF-80E-D57+4EF-81E-08F"
+cheat32_enable = false
+
+cheat33_desc = "[Format source non précisé] Start timer at 94 secs."
+cheat33_code = "3EF-80E-D57+5EF-81E-08F"
+cheat33_enable = false
+
+cheat34_desc = "[Format source non précisé] Start timer at 110 secs."
+cheat34_code = "3EF-80E-D57+6EF-81E-08F"
+cheat34_enable = false
+
+cheat35_desc = "[Format source non précisé] Start timer at 126 secs."
+cheat35_code = "3EF-80E-D57+7EF-81E-08F"
+cheat35_enable = false
+
+cheat36_desc = "[Format source non précisé] Start timer at 142 secs."
+cheat36_code = "3EF-80E-D57+8EF-81E-08F"
+cheat36_enable = false
+
+cheat37_desc = "[Format source non précisé] Start timer at 158 secs."
+cheat37_code = "3EF-80E-D57+9EF-81E-08F"
+cheat37_enable = false
+
+cheat38_desc = "[Format source non précisé] Both players start with 1/3 energy"
+cheat38_code = "11F-86E-3B6"
+cheat38_enable = false
+
+cheat39_desc = "[Format source non précisé] Both players start with 2/3 energy"
+cheat39_code = "21F-86E-3B6"
+cheat39_enable = false
+
+cheat40_desc = "[Format source non précisé] Both players start with more energy"
+cheat40_code = "FFF-86E-3B6"
+cheat40_enable = false
+
+cheat41_desc = "[Format source non précisé] Computer takes all damage--even when you get hit"
+cheat41_code = "3EB-60D-7F1"
+cheat41_enable = false
+
+cheat42_desc = "[Format source non précisé] Always fight Genan Shiranui"
+cheat42_code = "3E8-9A9-2AA+008-9B9-D5E+E08-9C9-2A9"
+cheat42_enable = false
+
+cheat43_desc = "[Format source non précisé] Always fight Galford"
+cheat43_code = "3E8-9A9-2AA+018-9B9-D5E+E08-9C9-2A9"
+cheat43_enable = false
+
+cheat44_desc = "[Format source non précisé] Always fight Haohmaru"
+cheat44_code = "3E8-9A9-2AA+028-9B9-D5E+E08-9C9-2A9"
+cheat44_enable = false
+
+cheat45_desc = "[Format source non précisé] Always fight Ukyo Tachibana"
+cheat45_code = "3E8-9A9-2AA+038-9B9-D5E+E08-9C9-2A9"
+cheat45_enable = false
+
+cheat46_desc = "[Format source non précisé] Always fight Charlotte"
+cheat46_code = "3E8-9A9-2AA+048-9B9-D5E+E08-9C9-2A9"
+cheat46_enable = false
+
+cheat47_desc = "[Format source non précisé] Always fight Tam Tam"
+cheat47_code = "3E8-9A9-2AA+058-9B9-D5E+E08-9C9-2A9"
+cheat47_enable = false
+
+cheat48_desc = "[Format source non précisé] Always fight Earthquake"
+cheat48_code = "3E8-9A9-2AA+068-9B9-D5E+E08-9C9-2A9"
+cheat48_enable = false
+
+cheat49_desc = "[Format source non précisé] Always fight Nakoruru"
+cheat49_code = "3E8-9A9-2AA+078-9B9-D5E+E08-9C9-2A9"
+cheat49_enable = false
+
+cheat50_desc = "[Format source non précisé] Always fight Wan Fan"
+cheat50_code = "3E8-9A9-2AA+088-9B9-D5E+E08-9C9-2A9"
+cheat50_enable = false
+
+cheat51_desc = "[Format source non précisé] Always fight Jubei Yagyo"
+cheat51_code = "3E8-9A9-2AA+098-9B9-D5E+E08-9C9-2A9"
+cheat51_enable = false
+
+cheat52_desc = "[Format source non précisé] Always fight Hanzo Hattori"
+cheat52_code = "3E8-9A9-2AA+0A8-9B9-D5E+E08-9C9-2A9"
+cheat52_enable = false
+
+cheat53_desc = "[Format source non précisé] Always fight Kyoshiro Senryo"
+cheat53_code = "3E8-9A9-2AA+0B8-9B9-D5E+E08-9C9-2A9"
+cheat53_enable = false
+
+cheat54_desc = "[Format source non précisé] Infinite Health"
+cheat54_code = "01238AC4"
+cheat54_enable = false
+
+cheat55_desc = "[Format source non précisé] Infinite Time"
+cheat55_code = "015887C5"
+cheat55_enable = false
+
+cheat56_desc = "[Format source non précisé] Always Fight Nakoruru"
+cheat56_code = "3E8-9A9+078-9B9-D5E+E08-9C9-2A9"
+cheat56_enable = false
+
+cheat57_desc = "[Format source non précisé] Infinite Health"
+cheat57_code = "012308AC"
+cheat57_enable = false
+
+cheat58_desc = "[Format source non précisé] Hit Anywhere Both Players"
+cheat58_code = "186-C3E-6EA"
+cheat58_enable = false
+
+cheat59_desc = "[Format source non précisé] Blocking Disabled Both Players"
+cheat59_code = "FA0-45B-E61"
+cheat59_enable = false

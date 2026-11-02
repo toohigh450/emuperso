@@ -1,0 +1,37 @@
+# Recherche locale pour la ROM : Tetris 2 [USA][Europe][SGB Enhanced][!!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Tetris%202%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Tetris%202%20(USA%2C%20Europe)%20(SGB%20Enhanced).cht
+
+cheats = 7
+
+cheat0_desc = "[Game Genie] No Next Piece Screen"
+cheat0_code = "C98-E9A-081"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Blocks Come Down Fast"
+cheat1_code = "10D-649-F71+00D-629-081+3ED-639-B30"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Blocks Come Down Very Fast"
+cheat2_code = "70D-649-F71+00D-629-081+3ED-639-B30"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Blocks Come Down Super Fast"
+cheat3_code = "20D-649-F71+00D-629-081+3ED-639-B30"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] Can Select Round Above 30 On Options Screen"
+cheat4_code = "00A-4BA-A29"
+cheat4_enable = false
+
+cheat5_desc = "[Game Genie] No Blocks Added To Top Of Screen (In Versus Mode)"
+cheat5_code = "FA8-CB8-4C1"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Drop One Piece To Clear Level"
+cheat6_code = "00F-67A-F72"
+cheat6_enable = false

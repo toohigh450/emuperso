@@ -1,0 +1,65 @@
+# Recherche locale pour la ROM : Grand Theft Auto [USA][GB Compatible][!!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Grand%20Theft%20Auto%20(USA)%20(GB%20Compatible).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Grand%20Theft%20Auto%20(USA%2C%20Europe)%20(Xploder).cht
+
+cheats = 14
+
+cheat0_desc = "[Format source non précisé] Infinite Lives"
+cheat0_code = "01091EDA"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Ammo Machine Gun"
+cheat1_code = "0164A1D2"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Infinite Ammo Pistol"
+cheat2_code = "0164A0D2"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Infinite Ammo Flame Thrower"
+cheat3_code = "0164A3D2"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Weapon Modifier"
+cheat4_code = "0101A4D2"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Infinite Ammo Rocket Launcher"
+cheat5_code = "0164A2D2"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Felony Modifier"
+cheat6_code = "01009CD2"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Always Have 999999 Score"
+cheat7_code = "0199A6D2+0199A8D2+0199AAD2"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Always Have Body Armor"
+cheat8_code = "010169D2"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Infinite Automatic Weapon Ammo"
+cheat9_code = "9111A1D2"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Jesus Mode"
+cheat10_code = "C9B-4DE-4CA"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Infinite Ammo"
+cheat11_code = "006-FBB-3BE"
+cheat11_enable = false
+
+cheat12_desc = "[Xploder] Unendlich Leben"
+cheat12_code = "$0D2ABF35"
+cheat12_enable = false
+
+cheat13_desc = "[Xploder] Habe Pistole"
+cheat13_code = "$0D22491B"
+cheat13_enable = false

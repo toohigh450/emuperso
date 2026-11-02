@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Codename - Kids Next Door - Operation S.O.D.A. (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Codename%20-%20Kids%20Next%20Door%20-%20Operation%20S.O.D.A.%20(USA)%20(Code%20Breaker).cht
+
+cheats = 4
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000212D+000A+10010710+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Health"
+cheat1_code = "320277CC+0063"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Gain 1 Life For Max lives"
+cheat2_code = "820044B4+0063"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Collect 1 Bottle Cap For 1 Life"
+cheat3_code = "820044BC+0032"
+cheat3_enable = false

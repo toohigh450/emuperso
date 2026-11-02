@@ -1,0 +1,1688 @@
+# Recherche locale pour la ROM : Harvest Moon DS - Island of Happiness (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Harvest%20Moon%20DS%20-%20Island%20of%20Happiness%20(Europe).cht
+
+cheats = 420
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "5201C49C+EE070F90+E200069C+0000004A+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2F04749+015E0012+000A03A9+00670009+00000000+00000000+0201C49C+E92D401E+0201C4A0+FAFF907D+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Gold"
+cheat1_code = "020FD178+3B9AC9FF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Fullness"
+cheat2_code = "220FD16E+000000FA"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Infinite Fullness"
+cheat3_code = "220FD170+000000FA"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Stamina"
+cheat4_code = "220FD16A+000000FA"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Infinite Stamina"
+cheat5_code = "220FD16C+000000FA"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Max Rucksack"
+cheat6_code = "2210795B+00000003"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Max Ranch Title"
+cheat7_code = "02107A78+068B6A40"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Max Food"
+cheat8_code = "02107A60+270F270F+12107A64+0000270F"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Complete Recipe List"
+cheat9_code = "D5000000+00000001+C0000000+000000C2+D8000000+02107D80+DC000000+0000000F+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Plow All (Select)"
+cheat10_code = "94000130+FFFB0000+C0000000+000003D1+020FF08C+00000000+020FF090+00000000+DC000000+0000000C+D2000000+00000000+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Max Offering (Select + Start)"
+cheat11_code = "94000130+000003F3+02107A6C+FFFFFFFF+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Full watering can"
+cheat12_code = "220FD3AF+000000FF"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Able to Buy Items regardless of Money on Hand"
+cheat13_code = "22395AC8+00000063"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Clear field (select)"
+cheat14_code = "94000130+FFFB0000+C0000000+000003D1+020FF08C+000000FF+020FF090+000000FF+DC000000+0000000C+D2000000+00000000+D2000000+00000000+220FD12C+00000000+220FD12C+00000001+220FD12C+00000002+220FD12C+00000003+220FD12C+00000004+220FD12C+00000005+220FD12C+00000006+220FD12C+00000007"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Always First Year"
+cheat15_code = "220FD11C+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Freeze Time"
+cheat16_code = "A4000130+FFFB0000+220FD129+00000000+D2000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] HOLD SELECT + Tap UP to Increase Time"
+cheat17_code = "720FD128+FFCD0032+52109B8C+00400044+220FD129+0000003B+D2000000+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Time backward (Up)"
+cheat18_code = "94000130+FFBF0000+74000100+FF00000A+D9000000+020FD128+D4000000+FFFFFFFF+D6000000+020FD128+D2000000+00000000"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Time backward (Select + L)"
+cheat19_code = "94000130+FDFB0000+74000100+FF00000A+D9000000+020FD128+D4000000+FFFFFFFF+D6000000+020FD128+D2000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Time forward (Down)"
+cheat20_code = "94000130+FF7F0000+74000100+FF00000A+D9000000+020FD128+D4000000+00000001+D6000000+020FD128+D2000000+00000000"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Time forward (Select + R)"
+cheat21_code = "94000130+FEFB0000+74000100+FF00000A+D9000000+020FD128+D4000000+00000001+D6000000+020FD128+D2000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Very sunny"
+cheat22_code = "220FD12C+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Sunny"
+cheat23_code = "220FD12C+00000001"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Cloudy"
+cheat24_code = "220FD12C+00000002"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Very rainy"
+cheat25_code = "220FD12C+00000003"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Rainy"
+cheat26_code = "220FD12C+00000004"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Snowing"
+cheat27_code = "220FD12C+00000005"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Vicious storm"
+cheat28_code = "220FD12C+00000006"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Very vicious storm"
+cheat29_code = "220FD12C+00000007"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] B255 / B0 (Empty cave, not legit)"
+cheat30_code = "94000130+FFFB0000+22107964+00000000+221079A6+00000000"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] B1"
+cheat31_code = "94000130+FFFB0000+22107964+00000001+221079A6+00000001"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] B50 (Adamantite starts here, first congratuations)"
+cheat32_code = "94000130+FFFB0000+22107964+00000032+221079A6+00000032"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] B100 (Second congratualations)"
+cheat33_code = "94000130+FFFB0000+22107964+00000064+221079A6+00000064"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] B150 (Third congratualations)"
+cheat34_code = "94000130+FFFB0000+22107964+00000096+221079A6+00000096"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] B200 (Happy hammering)"
+cheat35_code = "94000130+FFFB0000+22107964+000000C8+221079A6+000000C8"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Empty"
+cheat36_code = "020FD25C+00C8C8C8+020FD200+0000FFFF"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Sickle"
+cheat37_code = "020FD25C+00C8C8C8+020FD200+00630000"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Hoe"
+cheat38_code = "020FD25C+00C8C8C8+020FD200+00630001"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Axe"
+cheat39_code = "020FD25C+00C8C8C8+020FD200+00630002"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Hammer"
+cheat40_code = "020FD25C+00C8C8C8+020FD200+00630003"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Watering Can"
+cheat41_code = "020FD25C+00C8C8C8+020FD200+00630004"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Fishing Rod"
+cheat42_code = "020FD25C+00C8C8C8+020FD200+00630005"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Brush"
+cheat43_code = "020FD25C+00C8C8C8+020FD200+00630006"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Milker"
+cheat44_code = "020FD25C+00C8C8C8+020FD200+00630007"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Clipper"
+cheat45_code = "020FD25C+00C8C8C8+020FD200+00630008"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Bell"
+cheat46_code = "020FD25C+00C8C8C8+020FD200+00630009"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Animal Medicine"
+cheat47_code = "020FD25C+00C8C8C8+020FD200+0063000A"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Cow Miracle Potion"
+cheat48_code = "020FD25C+00C8C8C8+020FD200+0063000B"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Sheep Miracle Potion"
+cheat49_code = "020FD25C+00C8C8C8+020FD200+0063000C"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Turnip Seeds (Spring)"
+cheat50_code = "020FD25C+00C8C8C8+020FD200+0063000D"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Potato Seeds (Spring)"
+cheat51_code = "020FD25C+00C8C8C8+020FD200+0063000E"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Cucumber Seeds (Spring)"
+cheat52_code = "020FD25C+00C8C8C8+020FD200+0063000F"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Strawberry Seeds (Spring)"
+cheat53_code = "020FD25C+00C8C8C8+020FD200+00630010"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Cabbage Seeds (Spring)"
+cheat54_code = "020FD25C+00C8C8C8+020FD200+00630011"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Tomato Seeds (Summer)"
+cheat55_code = "020FD25C+00C8C8C8+020FD200+00630012"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Corn Seeds (Summer)"
+cheat56_code = "020FD25C+00C8C8C8+020FD200+00630013"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Onion Seeds (Summer)"
+cheat57_code = "020FD25C+00C8C8C8+020FD200+00630014"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Pumpkin Seeds (Summer)"
+cheat58_code = "020FD25C+00C8C8C8+020FD200+00630015"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Pineapple Seeds (Summer)"
+cheat59_code = "020FD25C+00C8C8C8+020FD200+00630016"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Eggplant Seeds (Fall)"
+cheat60_code = "020FD25C+00C8C8C8+020FD200+00630017"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Carrot Seeds (Fall)"
+cheat61_code = "020FD25C+00C8C8C8+020FD200+00630018"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Yam Seeds (Fall)"
+cheat62_code = "020FD25C+00C8C8C8+020FD200+00630019"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Spinach Seeds (Fall)"
+cheat63_code = "020FD25C+00C8C8C8+020FD200+0063001A"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Bell Pepper Seeds (Fall)"
+cheat64_code = "020FD25C+00C8C8C8+020FD200+0063001B"
+cheat64_enable = false
+
+cheat65_desc = "[Action Replay] Peach Seeds (all seasons)"
+cheat65_code = "020FD25C+00C8C8C8+020FD200+0063001C"
+cheat65_enable = false
+
+cheat66_desc = "[Action Replay] Banana Seeds (all seasons)"
+cheat66_code = "020FD25C+00C8C8C8+020FD200+0063001D"
+cheat66_enable = false
+
+cheat67_desc = "[Action Replay] Orange Seeds (all seasons)"
+cheat67_code = "020FD25C+00C8C8C8+020FD200+0063001E"
+cheat67_enable = false
+
+cheat68_desc = "[Action Replay] Apple Seeds (all seasons)"
+cheat68_code = "020FD25C+00C8C8C8+020FD200+0063001F"
+cheat68_enable = false
+
+cheat69_desc = "[Action Replay] Grape Seeds (all seasons)"
+cheat69_code = "020FD25C+00C8C8C8+020FD200+00630020"
+cheat69_enable = false
+
+cheat70_desc = "[Action Replay] Shiitake Seeds (all seasons)"
+cheat70_code = "020FD25C+00C8C8C8+020FD200+00630021"
+cheat70_enable = false
+
+cheat71_desc = "[Action Replay] Toadstool Seeds (all seasons)"
+cheat71_code = "020FD25C+00C8C8C8+020FD200+00630022"
+cheat71_enable = false
+
+cheat72_desc = "[Action Replay] Matsutake Seeds (all seasons)"
+cheat72_code = "020FD25C+00C8C8C8+020FD200+00630023"
+cheat72_enable = false
+
+cheat73_desc = "[Action Replay] Grass Seeds (all but Winter)"
+cheat73_code = "020FD25C+00C8C8C8+020FD200+00630024"
+cheat73_enable = false
+
+cheat74_desc = "[Action Replay] Rice Seeds (all but Winter)"
+cheat74_code = "020FD25C+00C8C8C8+020FD200+00630025"
+cheat74_enable = false
+
+cheat75_desc = "[Action Replay] Wheat Seeds (all but Winter)"
+cheat75_code = "020FD25C+00C8C8C8+020FD200+00630026"
+cheat75_enable = false
+
+cheat76_desc = "[Action Replay] Soybean Seeds (Summer, Fall)"
+cheat76_code = "020FD25C+00C8C8C8+020FD200+00630027"
+cheat76_enable = false
+
+cheat77_desc = "[Action Replay] Buckwheat Seeds (Summer, Fall)"
+cheat77_code = "020FD25C+00C8C8C8+020FD200+00630028"
+cheat77_enable = false
+
+cheat78_desc = "[Action Replay] Teleport Stone"
+cheat78_code = "020FD25C+00C8C8C8+020FD200+00630029"
+cheat78_enable = false
+
+cheat79_desc = "[Action Replay] Turnip"
+cheat79_code = "020FD25C+00C8C8C8+020FD200+0063002A"
+cheat79_enable = false
+
+cheat80_desc = "[Action Replay] Potato"
+cheat80_code = "020FD25C+00C8C8C8+020FD200+0063002B"
+cheat80_enable = false
+
+cheat81_desc = "[Action Replay] Cucumber"
+cheat81_code = "020FD25C+00C8C8C8+020FD200+0063002C"
+cheat81_enable = false
+
+cheat82_desc = "[Action Replay] Strawberry"
+cheat82_code = "020FD25C+00C8C8C8+020FD200+0063002D"
+cheat82_enable = false
+
+cheat83_desc = "[Action Replay] Cabbage"
+cheat83_code = "020FD25C+00C8C8C8+020FD200+0063002E"
+cheat83_enable = false
+
+cheat84_desc = "[Action Replay] Tomato"
+cheat84_code = "020FD25C+00C8C8C8+020FD200+0063002F"
+cheat84_enable = false
+
+cheat85_desc = "[Action Replay] Corn"
+cheat85_code = "020FD25C+00C8C8C8+020FD200+00630030"
+cheat85_enable = false
+
+cheat86_desc = "[Action Replay] Onion"
+cheat86_code = "020FD25C+00C8C8C8+020FD200+00630031"
+cheat86_enable = false
+
+cheat87_desc = "[Action Replay] Pumpkin"
+cheat87_code = "020FD25C+00C8C8C8+020FD200+00630032"
+cheat87_enable = false
+
+cheat88_desc = "[Action Replay] Pineapple"
+cheat88_code = "020FD25C+00C8C8C8+020FD200+00630033"
+cheat88_enable = false
+
+cheat89_desc = "[Action Replay] Eggplant"
+cheat89_code = "020FD25C+00C8C8C8+020FD200+00630034"
+cheat89_enable = false
+
+cheat90_desc = "[Action Replay] Carrot"
+cheat90_code = "020FD25C+00C8C8C8+020FD200+00630035"
+cheat90_enable = false
+
+cheat91_desc = "[Action Replay] Yam"
+cheat91_code = "020FD25C+00C8C8C8+020FD200+00630036"
+cheat91_enable = false
+
+cheat92_desc = "[Action Replay] Spinach"
+cheat92_code = "020FD25C+00C8C8C8+020FD200+00630037"
+cheat92_enable = false
+
+cheat93_desc = "[Action Replay] Bell Pepper"
+cheat93_code = "020FD25C+00C8C8C8+020FD200+00630038"
+cheat93_enable = false
+
+cheat94_desc = "[Action Replay] Peach"
+cheat94_code = "020FD25C+00C8C8C8+020FD200+00630039"
+cheat94_enable = false
+
+cheat95_desc = "[Action Replay] Banana"
+cheat95_code = "020FD25C+00C8C8C8+020FD200+0063003A"
+cheat95_enable = false
+
+cheat96_desc = "[Action Replay] Orange"
+cheat96_code = "020FD25C+00C8C8C8+020FD200+0063003B"
+cheat96_enable = false
+
+cheat97_desc = "[Action Replay] Apple"
+cheat97_code = "020FD25C+00C8C8C8+020FD200+0063003C"
+cheat97_enable = false
+
+cheat98_desc = "[Action Replay] Grape"
+cheat98_code = "020FD25C+00C8C8C8+020FD200+0063003D"
+cheat98_enable = false
+
+cheat99_desc = "[Action Replay] Shiitake"
+cheat99_code = "020FD25C+00C8C8C8+020FD200+0063003E"
+cheat99_enable = false
+
+cheat100_desc = "[Action Replay] Toadstool (all seasons)"
+cheat100_code = "020FD25C+00C8C8C8+020FD200+0063003F"
+cheat100_enable = false
+
+cheat101_desc = "[Action Replay] Matsutake"
+cheat101_code = "020FD25C+00C8C8C8+020FD200+00630040"
+cheat101_enable = false
+
+cheat102_desc = "[Action Replay] Rice"
+cheat102_code = "020FD25C+00C8C8C8+020FD200+00630041"
+cheat102_enable = false
+
+cheat103_desc = "[Action Replay] Wheat"
+cheat103_code = "020FD25C+00C8C8C8+020FD200+00630042"
+cheat103_enable = false
+
+cheat104_desc = "[Action Replay] Soybean"
+cheat104_code = "020FD25C+00C8C8C8+020FD200+00630043"
+cheat104_enable = false
+
+cheat105_desc = "[Action Replay] Buckwheat"
+cheat105_code = "020FD25C+00C8C8C8+020FD200+00630044"
+cheat105_enable = false
+
+cheat106_desc = "[Action Replay] Edamame"
+cheat106_code = "020FD25C+00C8C8C8+020FD200+00630045"
+cheat106_enable = false
+
+cheat107_desc = "[Action Replay] Seaweed"
+cheat107_code = "020FD25C+00C8C8C8+020FD200+00630046"
+cheat107_enable = false
+
+cheat108_desc = "[Action Replay] Rice Flour"
+cheat108_code = "020FD25C+00C8C8C8+020FD200+00630047"
+cheat108_enable = false
+
+cheat109_desc = "[Action Replay] Wheat Flour"
+cheat109_code = "020FD25C+00C8C8C8+020FD200+00630048"
+cheat109_enable = false
+
+cheat110_desc = "[Action Replay] Soybean Flour"
+cheat110_code = "020FD25C+00C8C8C8+020FD200+00630049"
+cheat110_enable = false
+
+cheat111_desc = "[Action Replay] Buckwheat Flour"
+cheat111_code = "020FD25C+00C8C8C8+020FD200+0063004A"
+cheat111_enable = false
+
+cheat112_desc = "[Action Replay] Bread Crumbs"
+cheat112_code = "020FD25C+00C8C8C8+020FD200+0063004B"
+cheat112_enable = false
+
+cheat113_desc = "[Action Replay] Sweet Rice Flour"
+cheat113_code = "020FD25C+00C8C8C8+020FD200+0063004C"
+cheat113_enable = false
+
+cheat114_desc = "[Action Replay] Egg"
+cheat114_code = "020FD25C+00C8C8C8+020FD200+0063004D"
+cheat114_enable = false
+
+cheat115_desc = "[Action Replay] Mayonnaise"
+cheat115_code = "020FD25C+00C8C8C8+020FD200+0063004E"
+cheat115_enable = false
+
+cheat116_desc = "[Action Replay] Milk"
+cheat116_code = "020FD25C+00C8C8C8+020FD200+0063004F"
+cheat116_enable = false
+
+cheat117_desc = "[Action Replay] Cheese"
+cheat117_code = "020FD25C+00C8C8C8+020FD200+00630050"
+cheat117_enable = false
+
+cheat118_desc = "[Action Replay] Yogurt"
+cheat118_code = "020FD25C+00C8C8C8+020FD200+00630051"
+cheat118_enable = false
+
+cheat119_desc = "[Action Replay] Butter"
+cheat119_code = "020FD25C+00C8C8C8+020FD200+00630052"
+cheat119_enable = false
+
+cheat120_desc = "[Action Replay] Blue Grass"
+cheat120_code = "020FD25C+00C8C8C8+020FD200+00630053"
+cheat120_enable = false
+
+cheat121_desc = "[Action Replay] Green Grass"
+cheat121_code = "020FD25C+00C8C8C8+020FD200+00630054"
+cheat121_enable = false
+
+cheat122_desc = "[Action Replay] Red Grass"
+cheat122_code = "020FD25C+00C8C8C8+020FD200+00630055"
+cheat122_enable = false
+
+cheat123_desc = "[Action Replay] Yellow Grass"
+cheat123_code = "020FD25C+00C8C8C8+020FD200+00630056"
+cheat123_enable = false
+
+cheat124_desc = "[Action Replay] Orange Grass"
+cheat124_code = "020FD25C+00C8C8C8+020FD200+00630057"
+cheat124_enable = false
+
+cheat125_desc = "[Action Replay] Purple Grass"
+cheat125_code = "020FD25C+00C8C8C8+020FD200+00630058"
+cheat125_enable = false
+
+cheat126_desc = "[Action Replay] Indigo Grass"
+cheat126_code = "020FD25C+00C8C8C8+020FD200+00630059"
+cheat126_enable = false
+
+cheat127_desc = "[Action Replay] Black Grass"
+cheat127_code = "020FD25C+00C8C8C8+020FD200+0063005A"
+cheat127_enable = false
+
+cheat128_desc = "[Action Replay] White Grass"
+cheat128_code = "020FD25C+00C8C8C8+020FD200+0063005B"
+cheat128_enable = false
+
+cheat129_desc = "[Action Replay] Fish (S)"
+cheat129_code = "020FD25C+00C8C8C8+020FD200+0063005C"
+cheat129_enable = false
+
+cheat130_desc = "[Action Replay] Fish (M)"
+cheat130_code = "020FD25C+00C8C8C8+020FD200+0063005D"
+cheat130_enable = false
+
+cheat131_desc = "[Action Replay] Fish (L)"
+cheat131_code = "020FD25C+00C8C8C8+020FD200+0063005E"
+cheat131_enable = false
+
+cheat132_desc = "[Action Replay] Rice Cake"
+cheat132_code = "020FD25C+00C8C8C8+020FD200+0063005F"
+cheat132_enable = false
+
+cheat133_desc = "[Action Replay] Oil"
+cheat133_code = "020FD25C+00C8C8C8+020FD200+00630060"
+cheat133_enable = false
+
+cheat134_desc = "[Action Replay] Curry Powder"
+cheat134_code = "020FD25C+00C8C8C8+020FD200+00630061"
+cheat134_enable = false
+
+cheat135_desc = "[Action Replay] Chocolate"
+cheat135_code = "020FD25C+00C8C8C8+020FD200+00630062"
+cheat135_enable = false
+
+cheat136_desc = "[Action Replay] Salad"
+cheat136_code = "020FD25C+00C8C8C8+020FD200+00630063"
+cheat136_enable = false
+
+cheat137_desc = "[Action Replay] Pickled Turnip"
+cheat137_code = "020FD25C+00C8C8C8+020FD200+00630064"
+cheat137_enable = false
+
+cheat138_desc = "[Action Replay] Mashed Potatoes"
+cheat138_code = "020FD25C+00C8C8C8+020FD200+00630065"
+cheat138_enable = false
+
+cheat139_desc = "[Action Replay] Pickled Cucumber"
+cheat139_code = "020FD25C+00C8C8C8+020FD200+00630066"
+cheat139_enable = false
+
+cheat140_desc = "[Action Replay] Onion Salad"
+cheat140_code = "020FD25C+00C8C8C8+020FD200+00630067"
+cheat140_enable = false
+
+cheat141_desc = "[Action Replay] Boiled Spinach"
+cheat141_code = "020FD25C+00C8C8C8+020FD200+00630068"
+cheat141_enable = false
+
+cheat142_desc = "[Action Replay] Tomato Salad"
+cheat142_code = "020FD25C+00C8C8C8+020FD200+00630069"
+cheat142_enable = false
+
+cheat143_desc = "[Action Replay] Insalata di Caprese"
+cheat143_code = "020FD25C+00C8C8C8+020FD200+0063006A"
+cheat143_enable = false
+
+cheat144_desc = "[Action Replay] Herb Salad"
+cheat144_code = "020FD25C+00C8C8C8+020FD200+0063006B"
+cheat144_enable = false
+
+cheat145_desc = "[Action Replay] Spaghetti Salad"
+cheat145_code = "020FD25C+00C8C8C8+020FD200+0063006C"
+cheat145_enable = false
+
+cheat146_desc = "[Action Replay] Gazpacho"
+cheat146_code = "020FD25C+00C8C8C8+020FD200+0063006D"
+cheat146_enable = false
+
+cheat147_desc = "[Action Replay] Corn Soup"
+cheat147_code = "020FD25C+00C8C8C8+020FD200+0063006E"
+cheat147_enable = false
+
+cheat148_desc = "[Action Replay] Onion Soup"
+cheat148_code = "020FD25C+00C8C8C8+020FD200+0063006F"
+cheat148_enable = false
+
+cheat149_desc = "[Action Replay] Pumpkin Soup"
+cheat149_code = "020FD25C+00C8C8C8+020FD200+00630070"
+cheat149_enable = false
+
+cheat150_desc = "[Action Replay] Egg Soup"
+cheat150_code = "020FD25C+00C8C8C8+020FD200+00630071"
+cheat150_enable = false
+
+cheat151_desc = "[Action Replay] Soy Milk"
+cheat151_code = "020FD25C+00C8C8C8+020FD200+00630072"
+cheat151_enable = false
+
+cheat152_desc = "[Action Replay] Miso Soup"
+cheat152_code = "020FD25C+00C8C8C8+020FD200+00630073"
+cheat152_enable = false
+
+cheat153_desc = "[Action Replay] Herb Soup"
+cheat153_code = "020FD25C+00C8C8C8+020FD200+00630074"
+cheat153_enable = false
+
+cheat154_desc = "[Action Replay] Spaghetti Soup"
+cheat154_code = "020FD25C+00C8C8C8+020FD200+00630075"
+cheat154_enable = false
+
+cheat155_desc = "[Action Replay] Tomato Juice"
+cheat155_code = "020FD25C+00C8C8C8+020FD200+00630076"
+cheat155_enable = false
+
+cheat156_desc = "[Action Replay] Pineapple Juice"
+cheat156_code = "020FD25C+00C8C8C8+020FD200+00630077"
+cheat156_enable = false
+
+cheat157_desc = "[Action Replay] Peach Juice"
+cheat157_code = "020FD25C+00C8C8C8+020FD200+00630078"
+cheat157_enable = false
+
+cheat158_desc = "[Action Replay] Banana Juice"
+cheat158_code = "020FD25C+00C8C8C8+020FD200+00630079"
+cheat158_enable = false
+
+cheat159_desc = "[Action Replay] Orange Juice"
+cheat159_code = "020FD25C+00C8C8C8+020FD200+0063007A"
+cheat159_enable = false
+
+cheat160_desc = "[Action Replay] Apple Juice"
+cheat160_code = "020FD25C+00C8C8C8+020FD200+0063007B"
+cheat160_enable = false
+
+cheat161_desc = "[Action Replay] Grape Juice"
+cheat161_code = "020FD25C+00C8C8C8+020FD200+0063007C"
+cheat161_enable = false
+
+cheat162_desc = "[Action Replay] Grape Punch"
+cheat162_code = "020FD25C+00C8C8C8+020FD200+0063007D"
+cheat162_enable = false
+
+cheat163_desc = "[Action Replay] Carrot Juice"
+cheat163_code = "020FD25C+00C8C8C8+020FD200+0063007E"
+cheat163_enable = false
+
+cheat164_desc = "[Action Replay] Lassi"
+cheat164_code = "020FD25C+00C8C8C8+020FD200+0063007F"
+cheat164_enable = false
+
+cheat165_desc = "[Action Replay] Fruit Juice"
+cheat165_code = "020FD25C+00C8C8C8+020FD200+00630080"
+cheat165_enable = false
+
+cheat166_desc = "[Action Replay] Vegetable Juice"
+cheat166_code = "020FD25C+00C8C8C8+020FD200+00630081"
+cheat166_enable = false
+
+cheat167_desc = "[Action Replay] Mixed Juice"
+cheat167_code = "020FD25C+00C8C8C8+020FD200+00630082"
+cheat167_enable = false
+
+cheat168_desc = "[Action Replay] Fruit Smoothie"
+cheat168_code = "020FD25C+00C8C8C8+020FD200+00630083"
+cheat168_enable = false
+
+cheat169_desc = "[Action Replay] Vegetable Smoothie"
+cheat169_code = "020FD25C+00C8C8C8+020FD200+00630084"
+cheat169_enable = false
+
+cheat170_desc = "[Action Replay] Mixed Smoothie"
+cheat170_code = "020FD25C+00C8C8C8+020FD200+00630085"
+cheat170_enable = false
+
+cheat171_desc = "[Action Replay] Strawberry Milk"
+cheat171_code = "020FD25C+00C8C8C8+020FD200+00630086"
+cheat171_enable = false
+
+cheat172_desc = "[Action Replay] Relax Tea"
+cheat172_code = "020FD25C+00C8C8C8+020FD200+00630087"
+cheat172_enable = false
+
+cheat173_desc = "[Action Replay] Hot Milk"
+cheat173_code = "020FD25C+00C8C8C8+020FD200+00630088"
+cheat173_enable = false
+
+cheat174_desc = "[Action Replay] Hot Chocolate"
+cheat174_code = "020FD25C+00C8C8C8+020FD200+00630089"
+cheat174_enable = false
+
+cheat175_desc = "[Action Replay] Steamed Turnip"
+cheat175_code = "020FD25C+00C8C8C8+020FD200+0063008A"
+cheat175_enable = false
+
+cheat176_desc = "[Action Replay] French Fries"
+cheat176_code = "020FD25C+00C8C8C8+020FD200+0063008B"
+cheat176_enable = false
+
+cheat177_desc = "[Action Replay] Braised Potato"
+cheat177_code = "020FD25C+00C8C8C8+020FD200+0063008C"
+cheat177_enable = false
+
+cheat178_desc = "[Action Replay] Stuffed Cabbage"
+cheat178_code = "020FD25C+00C8C8C8+020FD200+0063008D"
+cheat178_enable = false
+
+cheat179_desc = "[Action Replay] Roasted Corn"
+cheat179_code = "020FD25C+00C8C8C8+020FD200+0063008E"
+cheat179_enable = false
+
+cheat180_desc = "[Action Replay] Popcorn"
+cheat180_code = "020FD25C+00C8C8C8+020FD200+0063008F"
+cheat180_enable = false
+
+cheat181_desc = "[Action Replay] Corn Flakes"
+cheat181_code = "020FD25C+00C8C8C8+020FD200+00630090"
+cheat181_enable = false
+
+cheat182_desc = "[Action Replay] Cooked Pumpkin"
+cheat182_code = "020FD25C+00C8C8C8+020FD200+00630091"
+cheat182_enable = false
+
+cheat183_desc = "[Action Replay] Miso Eggplant"
+cheat183_code = "020FD25C+00C8C8C8+020FD200+00630092"
+cheat183_enable = false
+
+cheat184_desc = "[Action Replay] Grilled Eggplant"
+cheat184_code = "020FD25C+00C8C8C8+020FD200+00630093"
+cheat184_enable = false
+
+cheat185_desc = "[Action Replay] Baked Yam"
+cheat185_code = "020FD25C+00C8C8C8+020FD200+00630094"
+cheat185_enable = false
+
+cheat186_desc = "[Action Replay] Boiled Egg"
+cheat186_code = "020FD25C+00C8C8C8+020FD200+00630095"
+cheat186_enable = false
+
+cheat187_desc = "[Action Replay] Spa-Boiled Egg"
+cheat187_code = "020FD25C+00C8C8C8+020FD200+00630096"
+cheat187_enable = false
+
+cheat188_desc = "[Action Replay] Fried Egg"
+cheat188_code = "020FD25C+00C8C8C8+020FD200+00630097"
+cheat188_enable = false
+
+cheat189_desc = "[Action Replay] Steamed Egg Custard"
+cheat189_code = "020FD25C+00C8C8C8+020FD200+00630098"
+cheat189_enable = false
+
+cheat190_desc = "[Action Replay] Sashimi"
+cheat190_code = "020FD25C+00C8C8C8+020FD200+00630099"
+cheat190_enable = false
+
+cheat191_desc = "[Action Replay] Fish Sticks"
+cheat191_code = "020FD25C+00C8C8C8+020FD200+0063009A"
+cheat191_enable = false
+
+cheat192_desc = "[Action Replay] Grilled Mushrooms"
+cheat192_code = "020FD25C+00C8C8C8+020FD200+0063009B"
+cheat192_enable = false
+
+cheat193_desc = "[Action Replay] Foiled Mushroom"
+cheat193_code = "020FD25C+00C8C8C8+020FD200+0063009C"
+cheat193_enable = false
+
+cheat194_desc = "[Action Replay] Mountain Stew"
+cheat194_code = "020FD25C+00C8C8C8+020FD200+0063009D"
+cheat194_enable = false
+
+cheat195_desc = "[Action Replay] Stir-Fried Veggies"
+cheat195_code = "020FD25C+00C8C8C8+020FD200+0063009E"
+cheat195_enable = false
+
+cheat196_desc = "[Action Replay] Chop Suey"
+cheat196_code = "020FD25C+00C8C8C8+020FD200+0063009F"
+cheat196_enable = false
+
+cheat197_desc = "[Action Replay] Sandwich"
+cheat197_code = "020FD25C+00C8C8C8+020FD200+006300A0"
+cheat197_enable = false
+
+cheat198_desc = "[Action Replay] Fruit Sandwich"
+cheat198_code = "020FD25C+00C8C8C8+020FD200+006300A1"
+cheat198_enable = false
+
+cheat199_desc = "[Action Replay] Raisin Bread"
+cheat199_code = "020FD25C+00C8C8C8+020FD200+006300A2"
+cheat199_enable = false
+
+cheat200_desc = "[Action Replay] Jam Bread"
+cheat200_code = "020FD25C+00C8C8C8+020FD200+006300A3"
+cheat200_enable = false
+
+cheat201_desc = "[Action Replay] Curry Bread"
+cheat201_code = "020FD25C+00C8C8C8+020FD200+006300A4"
+cheat201_enable = false
+
+cheat202_desc = "[Action Replay] Toast"
+cheat202_code = "020FD25C+00C8C8C8+020FD200+006300A5"
+cheat202_enable = false
+
+cheat203_desc = "[Action Replay] French Toast"
+cheat203_code = "020FD25C+00C8C8C8+020FD200+006300A6"
+cheat203_enable = false
+
+cheat204_desc = "[Action Replay] Steamed Bread"
+cheat204_code = "020FD25C+00C8C8C8+020FD200+006300A7"
+cheat204_enable = false
+
+cheat205_desc = "[Action Replay] Dinner Roll"
+cheat205_code = "020FD25C+00C8C8C8+020FD200+006300A8"
+cheat205_enable = false
+
+cheat206_desc = "[Action Replay] Croquette"
+cheat206_code = "020FD25C+00C8C8C8+020FD200+006300A9"
+cheat206_enable = false
+
+cheat207_desc = "[Action Replay] Cream Croquette"
+cheat207_code = "020FD25C+00C8C8C8+020FD200+006300AA"
+cheat207_enable = false
+
+cheat208_desc = "[Action Replay] Chinese Dumpling"
+cheat208_code = "020FD25C+00C8C8C8+020FD200+006300AB"
+cheat208_enable = false
+
+cheat209_desc = "[Action Replay] Curry Bun"
+cheat209_code = "020FD25C+00C8C8C8+020FD200+006300AC"
+cheat209_enable = false
+
+cheat210_desc = "[Action Replay] Pot Sticker"
+cheat210_code = "020FD25C+00C8C8C8+020FD200+006300AD"
+cheat210_enable = false
+
+cheat211_desc = "[Action Replay] Stew"
+cheat211_code = "020FD25C+00C8C8C8+020FD200+006300AE"
+cheat211_enable = false
+
+cheat212_desc = "[Action Replay] Tempura"
+cheat212_code = "020FD25C+00C8C8C8+020FD200+006300AF"
+cheat212_enable = false
+
+cheat213_desc = "[Action Replay] Buckwheat Chips"
+cheat213_code = "020FD25C+00C8C8C8+020FD200+006300B0"
+cheat213_enable = false
+
+cheat214_desc = "[Action Replay] Buckwheat Ball"
+cheat214_code = "020FD25C+00C8C8C8+020FD200+006300B1"
+cheat214_enable = false
+
+cheat215_desc = "[Action Replay] Chinese Bun"
+cheat215_code = "020FD25C+00C8C8C8+020FD200+006300B2"
+cheat215_enable = false
+
+cheat216_desc = "[Action Replay] Seaweed Paste"
+cheat216_code = "020FD25C+00C8C8C8+020FD200+006300B3"
+cheat216_enable = false
+
+cheat217_desc = "[Action Replay] Spring Roll"
+cheat217_code = "020FD25C+00C8C8C8+020FD200+006300B4"
+cheat217_enable = false
+
+cheat218_desc = "[Action Replay] Tofu"
+cheat218_code = "020FD25C+00C8C8C8+020FD200+006300B5"
+cheat218_enable = false
+
+cheat219_desc = "[Action Replay] Natto"
+cheat219_code = "020FD25C+00C8C8C8+020FD200+006300B6"
+cheat219_enable = false
+
+cheat220_desc = "[Action Replay] Okara"
+cheat220_code = "020FD25C+00C8C8C8+020FD200+006300B7"
+cheat220_enable = false
+
+cheat221_desc = "[Action Replay] Deep-Fried Tofu"
+cheat221_code = "020FD25C+00C8C8C8+020FD200+006300B8"
+cheat221_enable = false
+
+cheat222_desc = "[Action Replay] Fried Tofu Dumplings"
+cheat222_code = "020FD25C+00C8C8C8+020FD200+006300B9"
+cheat222_enable = false
+
+cheat223_desc = "[Action Replay] Freeze-Dried Tofu"
+cheat223_code = "020FD25C+00C8C8C8+020FD200+006300BA"
+cheat223_enable = false
+
+cheat224_desc = "[Action Replay] Boiled Tofu"
+cheat224_code = "020FD25C+00C8C8C8+020FD200+006300BB"
+cheat224_enable = false
+
+cheat225_desc = "[Action Replay] Cold Tofu"
+cheat225_code = "020FD25C+00C8C8C8+020FD200+006300BC"
+cheat225_enable = false
+
+cheat226_desc = "[Action Replay] Dried Bean Curd"
+cheat226_code = "020FD25C+00C8C8C8+020FD200+006300BD"
+cheat226_enable = false
+
+cheat227_desc = "[Action Replay] Mix Natto"
+cheat227_code = "020FD25C+00C8C8C8+020FD200+006300BE"
+cheat227_enable = false
+
+cheat228_desc = "[Action Replay] Fish Natto"
+cheat228_code = "020FD25C+00C8C8C8+020FD200+006300BF"
+cheat228_enable = false
+
+cheat229_desc = "[Action Replay] Dairy Natto"
+cheat229_code = "020FD25C+00C8C8C8+020FD200+006300C0"
+cheat229_enable = false
+
+cheat230_desc = "[Action Replay] Gem Natto"
+cheat230_code = "020FD25C+00C8C8C8+020FD200+006300C1"
+cheat230_enable = false
+
+cheat231_desc = "[Action Replay] Mochi Mix Natto"
+cheat231_code = "020FD25C+00C8C8C8+020FD200+006300C2"
+cheat231_enable = false
+
+cheat232_desc = "[Action Replay] Red Flower Mix Natto"
+cheat232_code = "020FD25C+00C8C8C8+020FD200+006300C3"
+cheat232_enable = false
+
+cheat233_desc = "[Action Replay] Omelet"
+cheat233_code = "020FD25C+00C8C8C8+020FD200+006300C4"
+cheat233_enable = false
+
+cheat234_desc = "[Action Replay] Omelet Rice"
+cheat234_code = "020FD25C+00C8C8C8+020FD200+006300C5"
+cheat234_enable = false
+
+cheat235_desc = "[Action Replay] Fried Egg Over Rice"
+cheat235_code = "020FD25C+00C8C8C8+020FD200+006300C6"
+cheat235_enable = false
+
+cheat236_desc = "[Action Replay] Egg Over Rice"
+cheat236_code = "020FD25C+00C8C8C8+020FD200+006300C7"
+cheat236_enable = false
+
+cheat237_desc = "[Action Replay] Cheese Fondue"
+cheat237_code = "020FD25C+00C8C8C8+020FD200+006300C8"
+cheat237_enable = false
+
+cheat238_desc = "[Action Replay] Gratin"
+cheat238_code = "020FD25C+00C8C8C8+020FD200+006300C9"
+cheat238_enable = false
+
+cheat239_desc = "[Action Replay] Pizza"
+cheat239_code = "020FD25C+00C8C8C8+020FD200+006300CA"
+cheat239_enable = false
+
+cheat240_desc = "[Action Replay] Sushi"
+cheat240_code = "020FD25C+00C8C8C8+020FD200+006300CB"
+cheat240_enable = false
+
+cheat241_desc = "[Action Replay] Sushi Over Rice"
+cheat241_code = "020FD25C+00C8C8C8+020FD200+006300CC"
+cheat241_enable = false
+
+cheat242_desc = "[Action Replay] Grilled Fish"
+cheat242_code = "020FD25C+00C8C8C8+020FD200+006300CD"
+cheat242_enable = false
+
+cheat243_desc = "[Action Replay] Boiled Fish"
+cheat243_code = "020FD25C+00C8C8C8+020FD200+006300CE"
+cheat243_enable = false
+
+cheat244_desc = "[Action Replay] Fish Meuniere"
+cheat244_code = "020FD25C+00C8C8C8+020FD200+006300CF"
+cheat244_enable = false
+
+cheat245_desc = "[Action Replay] Carpaccio"
+cheat245_code = "020FD25C+00C8C8C8+020FD200+006300D0"
+cheat245_enable = false
+
+cheat246_desc = "[Action Replay] Marinated Fish"
+cheat246_code = "020FD25C+00C8C8C8+020FD200+006300D1"
+cheat246_enable = false
+
+cheat247_desc = "[Action Replay] Rice Ball"
+cheat247_code = "020FD25C+00C8C8C8+020FD200+006300D2"
+cheat247_enable = false
+
+cheat248_desc = "[Action Replay] Bread"
+cheat248_code = "020FD25C+00C8C8C8+020FD200+006300D3"
+cheat248_enable = false
+
+cheat249_desc = "[Action Replay] Toasted Rice Ball"
+cheat249_code = "020FD25C+00C8C8C8+020FD200+006300D4"
+cheat249_enable = false
+
+cheat250_desc = "[Action Replay] Rice Soup"
+cheat250_code = "020FD25C+00C8C8C8+020FD200+006300D5"
+cheat250_enable = false
+
+cheat251_desc = "[Action Replay] Porridge"
+cheat251_code = "020FD25C+00C8C8C8+020FD200+006300D6"
+cheat251_enable = false
+
+cheat252_desc = "[Action Replay] Fried Rice"
+cheat252_code = "020FD25C+00C8C8C8+020FD200+006300D7"
+cheat252_enable = false
+
+cheat253_desc = "[Action Replay] Risotto"
+cheat253_code = "020FD25C+00C8C8C8+020FD200+006300D8"
+cheat253_enable = false
+
+cheat254_desc = "[Action Replay] Doria"
+cheat254_code = "020FD25C+00C8C8C8+020FD200+006300D9"
+cheat254_enable = false
+
+cheat255_desc = "[Action Replay] Rice and Beans"
+cheat255_code = "020FD25C+00C8C8C8+020FD200+006300DA"
+cheat255_enable = false
+
+cheat256_desc = "[Action Replay] Yam Rice"
+cheat256_code = "020FD25C+00C8C8C8+020FD200+006300DB"
+cheat256_enable = false
+
+cheat257_desc = "[Action Replay] Mixed Rice"
+cheat257_code = "020FD25C+00C8C8C8+020FD200+006300DC"
+cheat257_enable = false
+
+cheat258_desc = "[Action Replay] Mushroom Rice"
+cheat258_code = "020FD25C+00C8C8C8+020FD200+006300DD"
+cheat258_enable = false
+
+cheat259_desc = "[Action Replay] Matsutake Rice"
+cheat259_code = "020FD25C+00C8C8C8+020FD200+006300DE"
+cheat259_enable = false
+
+cheat260_desc = "[Action Replay] Tempura Rice"
+cheat260_code = "020FD25C+00C8C8C8+020FD200+006300DF"
+cheat260_enable = false
+
+cheat261_desc = "[Action Replay] Tofu Sushi"
+cheat261_code = "020FD25C+00C8C8C8+020FD200+006300E0"
+cheat261_enable = false
+
+cheat262_desc = "[Action Replay] Dry Curry"
+cheat262_code = "020FD25C+00C8C8C8+020FD200+006300E1"
+cheat262_enable = false
+
+cheat263_desc = "[Action Replay] Curry Rice"
+cheat263_code = "020FD25C+00C8C8C8+020FD200+006300E2"
+cheat263_enable = false
+
+cheat264_desc = "[Action Replay] Blue Curry"
+cheat264_code = "020FD25C+00C8C8C8+020FD200+006300E3"
+cheat264_enable = false
+
+cheat265_desc = "[Action Replay] Green Curry"
+cheat265_code = "020FD25C+00C8C8C8+020FD200+006300E4"
+cheat265_enable = false
+
+cheat266_desc = "[Action Replay] Red Curry"
+cheat266_code = "020FD25C+00C8C8C8+020FD200+006300E5"
+cheat266_enable = false
+
+cheat267_desc = "[Action Replay] Yellow Curry"
+cheat267_code = "020FD25C+00C8C8C8+020FD200+006300E6"
+cheat267_enable = false
+
+cheat268_desc = "[Action Replay] Orange Curry"
+cheat268_code = "020FD25C+00C8C8C8+020FD200+006300E7"
+cheat268_enable = false
+
+cheat269_desc = "[Action Replay] Purple Curry"
+cheat269_code = "020FD25C+00C8C8C8+020FD200+006300E8"
+cheat269_enable = false
+
+cheat270_desc = "[Action Replay] Indigo Curry"
+cheat270_code = "020FD25C+00C8C8C8+020FD200+006300E9"
+cheat270_enable = false
+
+cheat271_desc = "[Action Replay] Black Curry"
+cheat271_code = "020FD25C+00C8C8C8+020FD200+006300EA"
+cheat271_enable = false
+
+cheat272_desc = "[Action Replay] White Curry"
+cheat272_code = "020FD25C+00C8C8C8+020FD200+006300EB"
+cheat272_enable = false
+
+cheat273_desc = "[Action Replay] Rainbow Curry"
+cheat273_code = "020FD25C+00C8C8C8+020FD200+006300EC"
+cheat273_enable = false
+
+cheat274_desc = "[Action Replay] Ultimate Curry"
+cheat274_code = "020FD25C+00C8C8C8+020FD200+006300ED"
+cheat274_enable = false
+
+cheat275_desc = "[Action Replay] Finest Curry"
+cheat275_code = "020FD25C+00C8C8C8+020FD200+006300EE"
+cheat275_enable = false
+
+cheat276_desc = "[Action Replay] Savory Pancake"
+cheat276_code = "020FD25C+00C8C8C8+020FD200+006300EF"
+cheat276_enable = false
+
+cheat277_desc = "[Action Replay] Noodles"
+cheat277_code = "020FD25C+00C8C8C8+020FD200+006300F0"
+cheat277_enable = false
+
+cheat278_desc = "[Action Replay] Curry Noodles"
+cheat278_code = "020FD25C+00C8C8C8+020FD200+006300F1"
+cheat278_enable = false
+
+cheat279_desc = "[Action Replay] Tempura Noodles"
+cheat279_code = "020FD25C+00C8C8C8+020FD200+006300F2"
+cheat279_enable = false
+
+cheat280_desc = "[Action Replay] Fried Thick Noodles"
+cheat280_code = "020FD25C+00C8C8C8+020FD200+006300F3"
+cheat280_enable = false
+
+cheat281_desc = "[Action Replay] Buckwheat Noodles"
+cheat281_code = "020FD25C+00C8C8C8+020FD200+006300F4"
+cheat281_enable = false
+
+cheat282_desc = "[Action Replay] Tempura Soba"
+cheat282_code = "020FD25C+00C8C8C8+020FD200+006300F5"
+cheat282_enable = false
+
+cheat283_desc = "[Action Replay] Fried Noodles"
+cheat283_code = "020FD25C+00C8C8C8+020FD200+006300F6"
+cheat283_enable = false
+
+cheat284_desc = "[Action Replay] Spaghetti"
+cheat284_code = "020FD25C+00C8C8C8+020FD200+006300F7"
+cheat284_enable = false
+
+cheat285_desc = "[Action Replay] Tofu Steak"
+cheat285_code = "020FD25C+00C8C8C8+020FD200+006300F8"
+cheat285_enable = false
+
+cheat286_desc = "[Action Replay] Fried Rice Noodles"
+cheat286_code = "020FD25C+00C8C8C8+020FD200+006300F9"
+cheat286_enable = false
+
+cheat287_desc = "[Action Replay] Yam Pudding"
+cheat287_code = "020FD25C+00C8C8C8+020FD200+006300FA"
+cheat287_enable = false
+
+cheat288_desc = "[Action Replay] Pumpkin Pudding"
+cheat288_code = "020FD25C+00C8C8C8+020FD200+006300FB"
+cheat288_enable = false
+
+cheat289_desc = "[Action Replay] Baked Banana"
+cheat289_code = "020FD25C+00C8C8C8+020FD200+006300FC"
+cheat289_enable = false
+
+cheat290_desc = "[Action Replay] Chocolate Banana"
+cheat290_code = "020FD25C+00C8C8C8+020FD200+006300FD"
+cheat290_enable = false
+
+cheat291_desc = "[Action Replay] Candied Potato"
+cheat291_code = "020FD25C+00C8C8C8+020FD200+006300FE"
+cheat291_enable = false
+
+cheat292_desc = "[Action Replay] Sweet Yam Dumpling"
+cheat292_code = "020FD25C+00C8C8C8+020FD200+006300FF"
+cheat292_enable = false
+
+cheat293_desc = "[Action Replay] Baked Apple"
+cheat293_code = "020FD25C+00C8C8C8+020FD200+00630100"
+cheat293_enable = false
+
+cheat294_desc = "[Action Replay] Apple Pie"
+cheat294_code = "020FD25C+00C8C8C8+020FD200+00630101"
+cheat294_enable = false
+
+cheat295_desc = "[Action Replay] Pineapple Pie"
+cheat295_code = "020FD25C+00C8C8C8+020FD200+00630102"
+cheat295_enable = false
+
+cheat296_desc = "[Action Replay] Strawberry Rice Cake"
+cheat296_code = "020FD25C+00C8C8C8+020FD200+00630103"
+cheat296_enable = false
+
+cheat297_desc = "[Action Replay] Sponge Cake"
+cheat297_code = "020FD25C+00C8C8C8+020FD200+00630104"
+cheat297_enable = false
+
+cheat298_desc = "[Action Replay] Pudding"
+cheat298_code = "020FD25C+00C8C8C8+020FD200+00630105"
+cheat298_enable = false
+
+cheat299_desc = "[Action Replay] Cheesecake"
+cheat299_code = "020FD25C+00C8C8C8+020FD200+00630106"
+cheat299_enable = false
+
+cheat300_desc = "[Action Replay] Pancake"
+cheat300_code = "020FD25C+00C8C8C8+020FD200+00630107"
+cheat300_enable = false
+
+cheat301_desc = "[Action Replay] Donut"
+cheat301_code = "020FD25C+00C8C8C8+020FD200+00630108"
+cheat301_enable = false
+
+cheat302_desc = "[Action Replay] Cookie"
+cheat302_code = "020FD25C+00C8C8C8+020FD200+00630109"
+cheat302_enable = false
+
+cheat303_desc = "[Action Replay] Chocolate Cookie"
+cheat303_code = "020FD25C+00C8C8C8+020FD200+0063010A"
+cheat303_enable = false
+
+cheat304_desc = "[Action Replay] Ice Cream"
+cheat304_code = "020FD25C+00C8C8C8+020FD200+0063010B"
+cheat304_enable = false
+
+cheat305_desc = "[Action Replay] Cake"
+cheat305_code = "020FD25C+00C8C8C8+020FD200+0063010C"
+cheat305_enable = false
+
+cheat306_desc = "[Action Replay] Steamed Cake"
+cheat306_code = "020FD25C+00C8C8C8+020FD200+0063010D"
+cheat306_enable = false
+
+cheat307_desc = "[Action Replay] Chocolate Cake"
+cheat307_code = "020FD25C+00C8C8C8+020FD200+0063010E"
+cheat307_enable = false
+
+cheat308_desc = "[Action Replay] Buckwheat Dumpling"
+cheat308_code = "020FD25C+00C8C8C8+020FD200+0063010F"
+cheat308_enable = false
+
+cheat309_desc = "[Action Replay] Roasted Rice Cake"
+cheat309_code = "020FD25C+00C8C8C8+020FD200+00630110"
+cheat309_enable = false
+
+cheat310_desc = "[Action Replay] Soybean Rice Cake"
+cheat310_code = "020FD25C+00C8C8C8+020FD200+00630111"
+cheat310_enable = false
+
+cheat311_desc = "[Action Replay] Green Dumplings"
+cheat311_code = "020FD25C+00C8C8C8+020FD200+00630112"
+cheat311_enable = false
+
+cheat312_desc = "[Action Replay] Bamboo Dumplings"
+cheat312_code = "020FD25C+00C8C8C8+020FD200+00630113"
+cheat312_enable = false
+
+cheat313_desc = "[Action Replay] Fruit Dumpling"
+cheat313_code = "020FD25C+00C8C8C8+020FD200+00630114"
+cheat313_enable = false
+
+cheat314_desc = "[Action Replay] Chocolate Fondue"
+cheat314_code = "020FD25C+00C8C8C8+020FD200+00630115"
+cheat314_enable = false
+
+cheat315_desc = "[Action Replay] Cookied Rice"
+cheat315_code = "020FD25C+00C8C8C8+020FD200+00630116"
+cheat315_enable = false
+
+cheat316_desc = "[Action Replay] Strawberry Jam"
+cheat316_code = "020FD25C+00C8C8C8+020FD200+00630117"
+cheat316_enable = false
+
+cheat317_desc = "[Action Replay] Apple Jam"
+cheat317_code = "020FD25C+00C8C8C8+020FD200+00630118"
+cheat317_enable = false
+
+cheat318_desc = "[Action Replay] Grape Jam"
+cheat318_code = "020FD25C+00C8C8C8+020FD200+00630119"
+cheat318_enable = false
+
+cheat319_desc = "[Action Replay] Marmalade"
+cheat319_code = "020FD25C+00C8C8C8+020FD200+0063011A"
+cheat319_enable = false
+
+cheat320_desc = "[Action Replay] Ketchup"
+cheat320_code = "020FD25C+00C8C8C8+020FD200+0063011B"
+cheat320_enable = false
+
+cheat321_desc = "[Action Replay] Miso"
+cheat321_code = "020FD25C+00C8C8C8+020FD200+0063011C"
+cheat321_enable = false
+
+cheat322_desc = "[Action Replay] Eli Leaves"
+cheat322_code = "020FD25C+00C8C8C8+020FD200+0063011D"
+cheat322_enable = false
+
+cheat323_desc = "[Action Replay] Relax Tea Leaf"
+cheat323_code = "020FD25C+00C8C8C8+020FD200+0063011E"
+cheat323_enable = false
+
+cheat324_desc = "[Action Replay] Bodigizer"
+cheat324_code = "020FD25C+00C8C8C8+020FD200+0063011F"
+cheat324_enable = false
+
+cheat325_desc = "[Action Replay] Bodigizer XL"
+cheat325_code = "020FD25C+00C8C8C8+020FD200+00630120"
+cheat325_enable = false
+
+cheat326_desc = "[Action Replay] Hungerizer"
+cheat326_code = "020FD25C+00C8C8C8+020FD200+00630121"
+cheat326_enable = false
+
+cheat327_desc = "[Action Replay] Hungerizer XL"
+cheat327_code = "020FD25C+00C8C8C8+020FD200+00630122"
+cheat327_enable = false
+
+cheat328_desc = "[Action Replay] Failed Dish"
+cheat328_code = "020FD25C+00C8C8C8+020FD200+00630123"
+cheat328_enable = false
+
+cheat329_desc = "[Action Replay] Raw Rice"
+cheat329_code = "020FD25C+00C8C8C8+020FD200+00630124"
+cheat329_enable = false
+
+cheat330_desc = "[Action Replay] Raw Wheat"
+cheat330_code = "020FD25C+00C8C8C8+020FD200+00630125"
+cheat330_enable = false
+
+cheat331_desc = "[Action Replay] Raw Buckwheat"
+cheat331_code = "020FD25C+00C8C8C8+020FD200+00630126"
+cheat331_enable = false
+
+cheat332_desc = "[Action Replay] Raw Soybeans"
+cheat332_code = "020FD25C+00C8C8C8+020FD200+00630127"
+cheat332_enable = false
+
+cheat333_desc = "[Action Replay] Moon Drop"
+cheat333_code = "020FD25C+00C8C8C8+020FD200+00630128"
+cheat333_enable = false
+
+cheat334_desc = "[Action Replay] Pinkcat Flower"
+cheat334_code = "020FD25C+00C8C8C8+020FD200+00630129"
+cheat334_enable = false
+
+cheat335_desc = "[Action Replay] Blue Magic Flower"
+cheat335_code = "020FD25C+00C8C8C8+020FD200+0063012A"
+cheat335_enable = false
+
+cheat336_desc = "[Action Replay] Red Magic Flower"
+cheat336_code = "020FD25C+00C8C8C8+020FD200+0063012B"
+cheat336_enable = false
+
+cheat337_desc = "[Action Replay] Toy Flower"
+cheat337_code = "020FD25C+00C8C8C8+020FD200+0063012C"
+cheat337_enable = false
+
+cheat338_desc = "[Action Replay] Wool"
+cheat338_code = "020FD25C+00C8C8C8+020FD200+0063012D"
+cheat338_enable = false
+
+cheat339_desc = "[Action Replay] Yarn"
+cheat339_code = "020FD25C+00C8C8C8+020FD200+0063012E"
+cheat339_enable = false
+
+cheat340_desc = "[Action Replay] Junk Ore"
+cheat340_code = "020FD25C+00C8C8C8+020FD200+0063012F"
+cheat340_enable = false
+
+cheat341_desc = "[Action Replay] Copper"
+cheat341_code = "020FD25C+00C8C8C8+020FD200+00630130"
+cheat341_enable = false
+
+cheat342_desc = "[Action Replay] Silver"
+cheat342_code = "020FD25C+00C8C8C8+020FD200+00630131"
+cheat342_enable = false
+
+cheat343_desc = "[Action Replay] Gold"
+cheat343_code = "020FD25C+00C8C8C8+020FD200+00630132"
+cheat343_enable = false
+
+cheat344_desc = "[Action Replay] Mystrile"
+cheat344_code = "020FD25C+00C8C8C8+020FD200+00630133"
+cheat344_enable = false
+
+cheat345_desc = "[Action Replay] Orichalc"
+cheat345_code = "020FD25C+00C8C8C8+020FD200+00630134"
+cheat345_enable = false
+
+cheat346_desc = "[Action Replay] Adamantite"
+cheat346_code = "020FD25C+00C8C8C8+020FD200+00630135"
+cheat346_enable = false
+
+cheat347_desc = "[Action Replay] Moon Stone"
+cheat347_code = "020FD25C+00C8C8C8+020FD200+00630136"
+cheat347_enable = false
+
+cheat348_desc = "[Action Replay] Sand Rose"
+cheat348_code = "020FD25C+00C8C8C8+020FD200+00630137"
+cheat348_enable = false
+
+cheat349_desc = "[Action Replay] Pink Diamond"
+cheat349_code = "020FD25C+00C8C8C8+020FD200+00630138"
+cheat349_enable = false
+
+cheat350_desc = "[Action Replay] Alexandrite"
+cheat350_code = "020FD25C+00C8C8C8+020FD200+00630139"
+cheat350_enable = false
+
+cheat351_desc = "[Action Replay] Alexandrite"
+cheat351_code = "020FD25C+00C8C8C8+020FD200+0063013A"
+cheat351_enable = false
+
+cheat352_desc = "[Action Replay] Mythic Stone"
+cheat352_code = "020FD25C+00C8C8C8+020FD200+0063013B"
+cheat352_enable = false
+
+cheat353_desc = "[Action Replay] Diamond"
+cheat353_code = "020FD25C+00C8C8C8+020FD200+0063013C"
+cheat353_enable = false
+
+cheat354_desc = "[Action Replay] Emerald"
+cheat354_code = "020FD25C+00C8C8C8+020FD200+0063013D"
+cheat354_enable = false
+
+cheat355_desc = "[Action Replay] Ruby"
+cheat355_code = "020FD25C+00C8C8C8+020FD200+0063013E"
+cheat355_enable = false
+
+cheat356_desc = "[Action Replay] Topaz"
+cheat356_code = "020FD25C+00C8C8C8+020FD200+0063013F"
+cheat356_enable = false
+
+cheat357_desc = "[Action Replay] Peridot"
+cheat357_code = "020FD25C+00C8C8C8+020FD200+00630140"
+cheat357_enable = false
+
+cheat358_desc = "[Action Replay] Flourite"
+cheat358_code = "020FD25C+00C8C8C8+020FD200+00630141"
+cheat358_enable = false
+
+cheat359_desc = "[Action Replay] Agate"
+cheat359_code = "020FD25C+00C8C8C8+020FD200+00630142"
+cheat359_enable = false
+
+cheat360_desc = "[Action Replay] Amethyst"
+cheat360_code = "020FD25C+00C8C8C8+020FD200+00630143"
+cheat360_enable = false
+
+cheat361_desc = "[Action Replay] The Spring Sun"
+cheat361_code = "020FD25C+00C8C8C8+020FD200+00630144"
+cheat361_enable = false
+
+cheat362_desc = "[Action Replay] The Summer Sun"
+cheat362_code = "020FD25C+00C8C8C8+020FD200+00630145"
+cheat362_enable = false
+
+cheat363_desc = "[Action Replay] The Fall Sun"
+cheat363_code = "020FD25C+00C8C8C8+020FD200+00630146"
+cheat363_enable = false
+
+cheat364_desc = "[Action Replay] The Winter Sun"
+cheat364_code = "020FD25C+00C8C8C8+020FD200+00630147"
+cheat364_enable = false
+
+cheat365_desc = "[Action Replay] Weeds (traditional weed-look)"
+cheat365_code = "020FD25C+00C8C8C8+020FD200+00630148"
+cheat365_enable = false
+
+cheat366_desc = "[Action Replay] Weeds (dandelion look)"
+cheat366_code = "020FD25C+00C8C8C8+020FD200+00630149"
+cheat366_enable = false
+
+cheat367_desc = "[Action Replay] Stone"
+cheat367_code = "020FD25C+00C8C8C8+020FD200+0063014A"
+cheat367_enable = false
+
+cheat368_desc = "[Action Replay] Branch"
+cheat368_code = "020FD25C+00C8C8C8+020FD200+0063014B"
+cheat368_enable = false
+
+cheat369_desc = "[Action Replay] Lumber"
+cheat369_code = "020FD25C+00C8C8C8+020FD200+0063014C"
+cheat369_enable = false
+
+cheat370_desc = "[Action Replay] Material Stone"
+cheat370_code = "020FD25C+00C8C8C8+020FD200+0063014D"
+cheat370_enable = false
+
+cheat371_desc = "[Action Replay] Gold Lumber"
+cheat371_code = "020FD25C+00C8C8C8+020FD200+0063014E"
+cheat371_enable = false
+
+cheat372_desc = "[Action Replay] Lithograph"
+cheat372_code = "020FD25C+00C8C8C8+020FD200+0063014F"
+cheat372_enable = false
+
+cheat373_desc = "[Action Replay] Bottle"
+cheat373_code = "020FD25C+00C8C8C8+020FD200+00630150"
+cheat373_enable = false
+
+cheat374_desc = "[Action Replay] Pirate Treasure"
+cheat374_code = "020FD25C+00C8C8C8+020FD200+00630151"
+cheat374_enable = false
+
+cheat375_desc = "[Action Replay] Fossil of Fish"
+cheat375_code = "020FD25C+00C8C8C8+020FD200+00630152"
+cheat375_enable = false
+
+cheat376_desc = "[Action Replay] Empty Can"
+cheat376_code = "020FD25C+00C8C8C8+020FD200+00630153"
+cheat376_enable = false
+
+cheat377_desc = "[Action Replay] Boot"
+cheat377_code = "020FD25C+00C8C8C8+020FD200+00630154"
+cheat377_enable = false
+
+cheat378_desc = "[Action Replay] Fish Bones"
+cheat378_code = "020FD25C+00C8C8C8+020FD200+00630155"
+cheat378_enable = false
+
+cheat379_desc = "[Action Replay] Fodder"
+cheat379_code = "020FD25C+00C8C8C8+020FD200+00630156"
+cheat379_enable = false
+
+cheat380_desc = "[Action Replay] Bird Feed (bag image)"
+cheat380_code = "020FD25C+00C8C8C8+020FD200+00630157"
+cheat380_enable = false
+
+cheat381_desc = "[Action Replay] Bird Feed (bird feed image)"
+cheat381_code = "020FD25C+00C8C8C8+020FD200+00630158"
+cheat381_enable = false
+
+cheat382_desc = "[Action Replay] Pet Food (bag image)"
+cheat382_code = "020FD25C+00C8C8C8+020FD200+00630159"
+cheat382_enable = false
+
+cheat383_desc = "[Action Replay] Pet Food (pet food image)"
+cheat383_code = "020FD25C+00C8C8C8+020FD200+0063015A"
+cheat383_enable = false
+
+cheat384_desc = "[Action Replay] 10,000G Ticket"
+cheat384_code = "020FD25C+00C8C8C8+020FD200+0063015B"
+cheat384_enable = false
+
+cheat385_desc = "[Action Replay] 1,000,000G Ticket"
+cheat385_code = "020FD25C+00C8C8C8+020FD200+0063015C"
+cheat385_enable = false
+
+cheat386_desc = "[Action Replay] Blue Feather"
+cheat386_code = "020FD25C+00C8C8C8+020FD200+0063015D"
+cheat386_enable = false
+
+cheat387_desc = "[Action Replay] Blue Wonderful"
+cheat387_code = "020FD25C+00C8C8C8+020FD200+0063015E"
+cheat387_enable = false
+
+cheat388_desc = "[Action Replay] Green Wonderful"
+cheat388_code = "020FD25C+00C8C8C8+020FD200+0063015F"
+cheat388_enable = false
+
+cheat389_desc = "[Action Replay] Red Wonderful"
+cheat389_code = "020FD25C+00C8C8C8+020FD200+00630160"
+cheat389_enable = false
+
+cheat390_desc = "[Action Replay] Yellow Wonderful"
+cheat390_code = "020FD25C+00C8C8C8+020FD200+00630161"
+cheat390_enable = false
+
+cheat391_desc = "[Action Replay] Orange Wonderful"
+cheat391_code = "020FD25C+00C8C8C8+020FD200+00630162"
+cheat391_enable = false
+
+cheat392_desc = "[Action Replay] Purple Wonderful"
+cheat392_code = "020FD25C+00C8C8C8+020FD200+00630163"
+cheat392_enable = false
+
+cheat393_desc = "[Action Replay] Indigo Wonderful"
+cheat393_code = "020FD25C+00C8C8C8+020FD200+00630164"
+cheat393_enable = false
+
+cheat394_desc = "[Action Replay] smurfmeter"
+cheat394_code = "020FD25C+00C8C8C8+020FD200+00630165"
+cheat394_enable = false
+
+cheat395_desc = "[Action Replay] Godhand"
+cheat395_code = "020FD25C+00C8C8C8+020FD200+00630166"
+cheat395_enable = false
+
+cheat396_desc = "[Action Replay] H. Goddess Earrings (S)"
+cheat396_code = "020FD25C+00C8C8C8+020FD200+00630167"
+cheat396_enable = false
+
+cheat397_desc = "[Action Replay] H. Goddess Earrings (M)"
+cheat397_code = "020FD25C+00C8C8C8+020FD200+00630168"
+cheat397_enable = false
+
+cheat398_desc = "[Action Replay] H. Goddess Earrings (L)"
+cheat398_code = "020FD25C+00C8C8C8+020FD200+00630169"
+cheat398_enable = false
+
+cheat399_desc = "[Action Replay] Kappa Earrings (S)"
+cheat399_code = "020FD25C+00C8C8C8+020FD200+0063016A"
+cheat399_enable = false
+
+cheat400_desc = "[Action Replay] Kappa Earrings (M)"
+cheat400_code = "020FD25C+00C8C8C8+020FD200+0063016B"
+cheat400_enable = false
+
+cheat401_desc = "[Action Replay] Kappa Earrings (L)"
+cheat401_code = "020FD25C+00C8C8C8+020FD200+0063016C"
+cheat401_enable = false
+
+cheat402_desc = "[Action Replay] Witch P. Earrings (S)"
+cheat402_code = "020FD25C+00C8C8C8+020FD200+0063016D"
+cheat402_enable = false
+
+cheat403_desc = "[Action Replay] Witch P. Earrings (M)"
+cheat403_code = "020FD25C+00C8C8C8+020FD200+0063016E"
+cheat403_enable = false
+
+cheat404_desc = "[Action Replay] Witch P. Earrings (L)"
+cheat404_code = "020FD25C+00C8C8C8+020FD200+0063016F"
+cheat404_enable = false
+
+cheat405_desc = "[Action Replay] Friendship Pendant (S)"
+cheat405_code = "020FD25C+00C8C8C8+020FD200+00630170"
+cheat405_enable = false
+
+cheat406_desc = "[Action Replay] Friendship Pendant (M)"
+cheat406_code = "020FD25C+00C8C8C8+020FD200+00630171"
+cheat406_enable = false
+
+cheat407_desc = "[Action Replay] Friendship Pendant (B)"
+cheat407_code = "020FD25C+00C8C8C8+020FD200+00630172"
+cheat407_enable = false
+
+cheat408_desc = "[Action Replay] Turbo Shoes"
+cheat408_code = "020FD25C+00C8C8C8+020FD200+00630173"
+cheat408_enable = false
+
+cheat409_desc = "[Action Replay] Time Slowing Ring"
+cheat409_code = "020FD25C+00C8C8C8+020FD200+00630174"
+cheat409_enable = false
+
+cheat410_desc = "[Action Replay] Time Quickening Ring"
+cheat410_code = "020FD25C+00C8C8C8+020FD200+00630175"
+cheat410_enable = false
+
+cheat411_desc = "[Action Replay] H. Goddess Pendant (S)"
+cheat411_code = "020FD25C+00C8C8C8+020FD200+00630176"
+cheat411_enable = false
+
+cheat412_desc = "[Action Replay] H. Goddess Pendant (M)"
+cheat412_code = "020FD25C+00C8C8C8+020FD200+00630177"
+cheat412_enable = false
+
+cheat413_desc = "[Action Replay] H. Goddess Pendant (B)"
+cheat413_code = "020FD25C+00C8C8C8+020FD200+00630178"
+cheat413_enable = false
+
+cheat414_desc = "[Action Replay] Kappa Pendant (S)"
+cheat414_code = "020FD25C+00C8C8C8+020FD200+00630179"
+cheat414_enable = false
+
+cheat415_desc = "[Action Replay] Kappa Pendant (M)"
+cheat415_code = "020FD25C+00C8C8C8+020FD200+0063017A"
+cheat415_enable = false
+
+cheat416_desc = "[Action Replay] Kappa Pendant (B)"
+cheat416_code = "020FD25C+00C8C8C8+020FD200+0063017B"
+cheat416_enable = false
+
+cheat417_desc = "[Action Replay] Witch P. Pendant (S)"
+cheat417_code = "020FD25C+00C8C8C8+020FD200+0063017C"
+cheat417_enable = false
+
+cheat418_desc = "[Action Replay] Witch P. Pendant (M)"
+cheat418_code = "020FD25C+00C8C8C8+020FD200+0063017D"
+cheat418_enable = false
+
+cheat419_desc = "[Action Replay] Witch P. Pendant (B)"
+cheat419_code = "020FD25C+00C8C8C8+020FD200+0063017E"
+cheat419_enable = false

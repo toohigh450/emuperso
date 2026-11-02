@@ -1,0 +1,56 @@
+# Recherche locale pour la ROM : Super Battletank [Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Super%20Battletank%20(Europe)%20(Game%20Genie).cht
+
+cheats = 12
+
+cheat0_desc = "[Game Genie] Start With 5 Shells"
+cheat0_code = "05E-42D-2A2"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Start With 99 Shells"
+cheat1_code = "63E-42D-2A2"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Start With 5 Laser Shots"
+cheat2_code = "05E-4DD-E6E"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Start With 99 Laser Shots"
+cheat3_code = "63E-4DD-E6E"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] Start With 5 Smoke Shots"
+cheat4_code = "05E-58D-E6E"
+cheat4_enable = false
+
+cheat5_desc = "[Game Genie] Start With 99 Smoke Shots"
+cheat5_code = "63E-58D-E6E"
+cheat5_enable = false
+
+cheat6_desc = "[Game Genie] Start With 5 Bullets"
+cheat6_code = "05E-63D-B30"
+cheat6_enable = false
+
+cheat7_desc = "[Game Genie] Start With 99 Bullets"
+cheat7_code = "63E-63D-B30"
+cheat7_enable = false
+
+cheat8_desc = "[Game Genie] Start With Very Little Fuel"
+cheat8_code = "15E-72D-195"
+cheat8_enable = false
+
+cheat9_desc = "[Game Genie] Infinite Damage"
+cheat9_code = "E0B-00C-2A9"
+cheat9_enable = false
+
+cheat10_desc = "[Game Genie] Infinite Ammo"
+cheat10_code = "005-95C-3BE"
+cheat10_enable = false
+
+cheat11_desc = "[Game Genie] Infinite Fuel"
+cheat11_code = "C9D-E1D-2A9"
+cheat11_enable = false

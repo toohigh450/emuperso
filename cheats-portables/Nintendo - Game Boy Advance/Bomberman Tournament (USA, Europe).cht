@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Bomberman Tournament (USA, Europe).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Bomberman%20Tournament%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 6
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00008701+000A+100004F8+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Health"
+cheat1_code = "32035194+0014"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Max Health"
+cheat2_code = "32035195+0014"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Max Bombs"
+cheat3_code = "32035196+0009"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Max Explosion"
+cheat4_code = "32035197+0009"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Max Coins"
+cheat5_code = "82035198+03E7"
+cheat5_enable = false

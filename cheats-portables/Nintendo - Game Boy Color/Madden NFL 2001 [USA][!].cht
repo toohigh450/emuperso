@@ -1,0 +1,41 @@
+# Recherche locale pour la ROM : Madden NFL 2001 [USA][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Madden%20NFL%202001%20(USA)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Madden%20NFL%202001%20(USA).cht
+
+cheats = 8
+
+cheat0_desc = "[GameShark] Home Team Score Modifier"
+cheat0_code = "01??46D1"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Away Team Score Modifier"
+cheat1_code = "01??45D1"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Always 1st Down"
+cheat2_code = "010134CE"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] P1 Infinite Time Outs"
+cheat3_code = "01032FD1"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Home Team Score Modifier"
+cheat4_code = "010046D1"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Away Team Score Modifier"
+cheat5_code = "010045D1"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Always 1st Down"
+cheat6_code = "010134CE"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] P1 Infinite Time Outs"
+cheat7_code = "01032FD1"
+cheat7_enable = false

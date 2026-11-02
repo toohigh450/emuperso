@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Agro Soar [Australia][!!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Agro%20Soar%20(Australia).cht
+
+cheats = 5
+
+cheat0_desc = "[Format source non précisé] Infinite Lives"
+cheat0_code = "003-D9D-3BE"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Always Have Pebbles"
+cheat1_code = "00C-72A-C49"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Invincibility"
+cheat2_code = "77B-FEA-3BE+3CB-FDA-E69+00B-E1A-C49"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Moon Jump"
+cheat3_code = "009-CDA-3B2"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Infinite Time"
+cheat4_code = "FAB-46E-4C1"
+cheat4_enable = false

@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Teenage Mutant Ninja Turtles 2 [Japan][!!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Teenage%20Mutant%20Ninja%20Turtles%202%20(Japan)%20(Xploder).cht
+
+cheats = 1
+
+cheat0_desc = "[Xploder] Unendlich Energie"
+cheat0_code = "$0D2A63AE"
+cheat0_enable = false

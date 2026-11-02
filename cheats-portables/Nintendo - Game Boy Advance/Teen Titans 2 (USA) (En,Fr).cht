@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Teen Titans 2 (USA) (En,Fr).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Teen%20Titans%202%20(USA)%20(Code%20Breaker).cht
+
+cheats = 3
+
+cheat0_desc = "[Code Breaker] Infinite Life"
+cheat0_code = "820070B0+00FF+820070B2+00FF"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Support"
+cheat1_code = "320070B4+0001"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Special"
+cheat2_code = "820070D0+03FF"
+cheat2_enable = false

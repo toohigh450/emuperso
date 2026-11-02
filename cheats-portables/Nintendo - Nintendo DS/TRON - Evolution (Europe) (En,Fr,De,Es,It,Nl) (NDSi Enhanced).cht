@@ -1,0 +1,21 @@
+# Recherche locale pour la ROM : TRON - Evolution (Europe) (En,Fr,De,Es,It,Nl) (NDSi Enhanced).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/TRON%20-%20Evolution%20(Europe)%20(En%2CFr%2CDe%2CEs%2CIt%2CNl)%20(NDSi%20Enhanced).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/TRON%20-%20Evolution%20(Europe)%20(En%2CSv%2CNo%2CDa)%20(NDSi%20Enhanced).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] Anti-Piracy Bypass Code"
+cheat0_code = "52004EA4+E12FFF1E+02004EA4+EA0FE89B+D2000000+00000000+023FF100+E59F0000+E23FF104+00000048+E12FFF1E+0030EB87+E59F0000+E12FFF1E+00323E6F+E92D4007+E59F001C+E59F101C+E5912000+E1500002+059F0014+05810000+0280000C+0581003C+E8BD8007+021F3328+021F2B04+023FF100+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Health Never Decreases"
+cheat1_code = "02004000+E1D02ABA+02004004+E1C02AB8+02004008+EA05CB1F+52176C84+12810C02+02176C88+1AFA34DC+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Anti-Piracy Bypass Code"
+cheat2_code = "52004EA4+E12FFF1E+02004EA4+EA0FE89B+D2000000+00000000+023FF100+E59F0000+E23FF104+00000048+E12FFF1E+0030EB87+E59F0000+E12FFF1E+00323E6F+E92D4007+E59F001C+E59F101C+E5912000+E1500002+059F0014+05810000+0280000C+0581003C+E8BD8007+021F3268+021F2A44+023FF100+D2000000+00000000"
+cheat2_enable = false

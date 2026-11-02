@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Lode Runner (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Lode%20Runner%20(Japan).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Lock Timer"
+cheat0_code = "52002730+E5802064+02002730+E1A00000+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Lives"
+cheat1_code = "52002910+E5840020+02002910+E1A00000+D2000000+00000000+52028B3C+15C10098+02028B3C+E1A00000+D2000000+00000000"
+cheat1_enable = false

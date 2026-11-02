@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Sillybandz DS (USA) (En,Fr,Es).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Sillybandz%20DS%20(USA).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Have All Silly Bandz"
+cheat0_code = "D5000000+000000FF+C0000000+00000019+D8000000+0214CEA4+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Unlock All Stages  2P Mode"
+cheat1_code = "D5000000+FFFFFFFF+C0000000+00000014+D6000000+0214CE54+D2000000+00000000"
+cheat1_enable = false

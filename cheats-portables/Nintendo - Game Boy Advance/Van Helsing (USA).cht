@@ -1,0 +1,52 @@
+# Recherche locale pour la ROM : Van Helsing (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Van%20Helsing%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 11
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000EBFE+000A+10000A4C+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Max Health"
+cheat1_code = "33004A78+0050"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Health"
+cheat2_code = "33004B1C+0050"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Infinite Lives"
+cheat3_code = "33004A94+0009"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] All Red Life Glyphs"
+cheat4_code = "33004B2C+0004"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Press L+Up For Extra Life"
+cheat5_code = "74000130+01BF+33004A70+0032"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Max Gold Reward Glyphs"
+cheat6_code = "83004B68+03E7"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Press Up+R For Cross Bow"
+cheat7_code = "74000130+02BF+33001140+0003"
+cheat7_enable = false
+
+cheat8_desc = "[Code Breaker] Press Down+R For Lightning Gun"
+cheat8_code = "74000130+027F+33001140+0004"
+cheat8_enable = false
+
+cheat9_desc = "[Code Breaker] No Reloading Regular Gun"
+cheat9_code = "73004A6C+0006+83004A6C+0001"
+cheat9_enable = false
+
+cheat10_desc = "[Code Breaker] Quick Charge Lightning Gun"
+cheat10_code = "73004B64+0001+83004B64+0100"
+cheat10_enable = false

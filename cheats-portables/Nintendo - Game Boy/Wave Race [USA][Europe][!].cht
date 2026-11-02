@@ -1,0 +1,49 @@
+# Recherche locale pour la ROM : Wave Race [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Wave%20Race%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Wave%20Race%20(USA%2C%20Europe).cht
+
+cheats = 10
+
+cheat0_desc = "[Game Genie] No Turbo Boost"
+cheat0_code = "002-40E-19A"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Infinite Turbo Boost"
+cheat1_code = "002-CAE-19E"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Start With 800cc Bike"
+cheat2_code = "3E9-65B-6EA+029-66B-E66+009-67B-5D4"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Start With 650cc Bike"
+cheat3_code = "3E9-65B-6EA+019-66B-E66+009-67B-5D4"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] No Lap Timer"
+cheat4_code = "003-B7A-6E2"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] No turbo boost"
+cheat5_code = "002-40E-19A"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Infinite turbo boost"
+cheat6_code = "002-CAE-19E"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Start with 800cc bike"
+cheat7_code = "3E9-65B-6EA+029-66B-E66+009-67B-5D4"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Start with 650cc bike"
+cheat8_code = "3E9-65B-6EA+019-66B-E66+009-67B-5D4"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] No lap timer"
+cheat9_code = "003-B7A-6E2"
+cheat9_enable = false

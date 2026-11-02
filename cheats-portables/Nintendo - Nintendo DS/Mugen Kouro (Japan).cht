@@ -1,0 +1,172 @@
+# Recherche locale pour la ROM : Mugen Kouro (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Mugen%20Kouro%20(Japan).cht
+
+cheats = 41
+
+cheat0_desc = "[Action Replay] Speed Up Message"
+cheat0_code = "02037A00+E35B0010"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Money (Hold Select When Loading Save or Exit Shop)"
+cheat1_code = "020EF894+E5821000+94000130+FFFB0000+520EF890+E0214190+E2000000+00000010+E59F1004+E5821000+EA03BE22+05F5E0FF+5200000C+05F5E0FF+020EF894+EAFC41D9+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max/Infinite Money"
+cheat2_code = "520EF890+E0214190+E2000000+00000010+E59F1004+E5821000+EA03BE22+05F5E0FF+5200000C+05F5E0FF+020EF894+EAFC41D9+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Attack Gauge"
+cheat3_code = "9228A7B0+00000010+1228A7B2+00002328+1228A7B6+00002328+1228A7BA+00002328+D0000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Attack Gauge (Select)"
+cheat4_code = "94000130+FFFD0000+9228A7B0+00000010+1228A7B2+00002328+1228A7B6+00002328+1228A7BA+00002328+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] 0 Tiredness"
+cheat5_code = "1228AADA+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Fame 31000 (Select)"
+cheat6_code = "94000130+FFFB0000+1228A45E+00007918+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Multiple Placement of Pilot"
+cheat7_code = "520F1088+0A000158+020F1088+E1A00000+020F1098+EA000009+D0000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Spaceship"
+cheat8_code = "94000130+FFFB0000+C0000000+000000C1+221BFB10+00000001+DC000000+00000058+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Character"
+cheat9_code = "94000130+FFFB0000+C0000000+00000092+221C50BA+00000002+DC000000+0000005C+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Special Objects"
+cheat10_code = "94000130+FFFB0000+C0000000+0000000F+021D4904+01010101+DC000000+00000004+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Max Stat for All Pilots"
+cheat11_code = "94000130+FFFB0000+C0000000+00000092+221C5074+00000063+221C507A+00000063+221C5080+00000063+221C5086+00000063+221C508C+00000063+221C5092+00000063+221C5098+00000063+221C509E+00000063+221C50A4+00000063+221C50AA+00000063+DC000000+0000005C+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] All Party Join"
+cheat12_code = "94000130+FFFB0000+C0000000+00000092+221C50B0+00000001+DC000000+0000005C+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] All Ships Modules"
+cheat13_code = "94000130+FFFB0000+C0000000+0000008D+221C0D8C+00000002+DC000000+00000058+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] All Ships Cost 0"
+cheat14_code = "94000130+FFFB0000+C0000000+0000008D+121C0D8A+00000000+DC000000+00000058+D2000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Interior Parts Cost Only 2 Blocks"
+cheat15_code = "94000130+FFFB0000+C0000000+000000EB+221C858A+00000009+DC000000+0000001C+D2000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] All Interior Parts"
+cheat16_code = "94000130+FFFB0000+C0000000+000000EA+221C85B0+00000002+DC000000+0000001C+D2000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Weapons"
+cheat17_code = "94000130+FFFB0000+C0000000+00000075+221C4274+00000001+DC000000+0000001A+D2000000+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Our Troops 9999"
+cheat18_code = "1228A3CA+0000270F"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Refill Troops to 9999(R+Left)"
+cheat19_code = "94000130+FEDF0000+1228A3CA+0000270F+D2000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Player Attack Gauge Max (L+Left)"
+cheat20_code = "94000130+FDDF0000+1228A416+00004000+D2000000+00000000"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Player Attack Gauge Min (L+Right)"
+cheat21_code = "94000130+FDEF0000+1228A416+00000000+D2000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Enemy Troops 0"
+cheat22_code = "1228A3F2+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Enemy Troops Become 0 (R+Up)"
+cheat23_code = "94000130+FEBF0000+1228A3F2+00000000+D2000000+00000000"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Enemy Attack Gauge Max (L+Up)"
+cheat24_code = "94000130+FDBF0000+1228B1AE+00004000+D2000000+00000000"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Enemy Attack Gauge Min (L+Down)"
+cheat25_code = "94000130+FD7F0000+1228B1AE+00000000+D2000000+00000000"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] HP Never Decrease"
+cheat26_code = "DA000000+021BCEB8+D7000000+021BCEBA+D2000000+00000000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Press R to Refill HP"
+cheat27_code = "94000130+FEFF0000+DA000000+021BCEB8+D7000000+021BCEBA+D2000000+00000000"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Troops Never Decrease"
+cheat28_code = "DA000000+021BCEBC+D7000000+021BCEBE+D2000000+00000000"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] HP Never Decrease"
+cheat29_code = "DA000000+021BD0E6+D7000000+021BD0E8+D2000000+00000000"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Press R to Refill HP"
+cheat30_code = "94000130+FEFF0000+DA000000+021BD0E6+D7000000+021BD0E8+D2000000+00000000"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Troops Never Decrease"
+cheat31_code = "DA000000+021BD0EA+D7000000+021BD0EC+D2000000+00000000"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] HP Never Decrease"
+cheat32_code = "DA000000+021BD314+D7000000+021BD316+D2000000+00000000"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Press R to Refill HP"
+cheat33_code = "94000130+FEFF0000+DA000000+021BD314+D7000000+021BD316+D2000000+00000000"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Troops Never Decrease"
+cheat34_code = "DA000000+021BD318+D7000000+021BD31A+D2000000+00000000"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] HP Never Decrease"
+cheat35_code = "DA000000+021BD542+D7000000+021BD544+D2000000+00000000"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Press R to Refill HP"
+cheat36_code = "94000130+FEFF0000+DA000000+021BD542+D7000000+021BD544+D2000000+00000000"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Troops Never Decrease"
+cheat37_code = "DA000000+021BD546+D7000000+021BD548+D2000000+00000000"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] HP Never Decrease"
+cheat38_code = "DA000000+021BD770+D7000000+021BD772+D2000000+00000000"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Press R to Refill HP"
+cheat39_code = "94000130+FEFF0000+DA000000+021BD770+D7000000+021BD772+D2000000+00000000"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Troops Never Decrease"
+cheat40_code = "DA000000+021BD774+D7000000+021BD776+D2000000+00000000"
+cheat40_enable = false

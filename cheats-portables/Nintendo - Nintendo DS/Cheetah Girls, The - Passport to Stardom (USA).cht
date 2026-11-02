@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Cheetah Girls, The - Passport to Stardom (USA).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Cheetah%20Girls%2C%20The%20-%20Passport%20to%20Stardom%20(USA).cht
+
+cheats = 6
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "5201E038+EE070F90+E2000710+0000004A+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2D76A85+015E0012+0382004D+0009000A+00000000+00000000+0201E038+E92D401E+0201E03C+FAFF89B3+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Scrapbooks"
+cheat1_code = "021AE240+FFFFFFFF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Songs"
+cheat2_code = "121AEA6C+0000FFFF"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max/Infinite Money"
+cheat3_code = "021B0BE8+05F5E0FF"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max/Infinite Combo Meter"
+cheat4_code = "221AF430+00000064"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Max/Infinite Score"
+cheat5_code = "021AF428+0098967F"
+cheat5_enable = false

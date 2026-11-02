@@ -1,0 +1,44 @@
+# Recherche locale pour la ROM : Pucca - Power Up (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Pucca%20-%20Power%20Up%20(Europe).cht
+
+cheats = 9
+
+cheat0_desc = "[Action Replay] Anti-Piracy Bypass Code"
+cheat0_code = "520009F8+E12FFF1E+020009F8+EA0FF9C6+D2000000+00000000+023FF100+E59F0000+E23FF104+00000048+E12FFF1E+0030EB87+E59F0000+E12FFF1E+00323E6F+E92D4007+E59F001C+E59F101C+E5912000+E1500002+059F0014+05810000+0280000C+0581003C+E8BD8007+0211B7A0+0211A8B8+023FF100+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Lives"
+cheat1_code = "94000130+FFFB0000+22117B1B+00000063+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Hearts"
+cheat2_code = "94000130+FFFB0000+22117B1C+00000063+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Health Never Decrease"
+cheat3_code = "DB000000+02117B19+D8000000+02117B00+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Tension"
+cheat4_code = "94000130+FFFB0000+22117B04+00000063+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Max Puppet"
+cheat5_code = "94000130+FFFB0000+22117B1D+00000063+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Arrows Never Decrease"
+cheat6_code = "DB000000+02117B1A+D8000000+02117B1E+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Moon Jump"
+cheat7_code = "94000130+FFFD0000+62118CC0+00000000+B2118CC0+00000000+00000030+00005000+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Quick Movement to Left/Right Screen"
+cheat8_code = "94000130+FEDF0000+62118CC0+00000000+B2118CC0+00000000+0000002C+FFFF0000+D2000000+00000000+94000130+FEEF0000+62118CC0+00000000+B2118CC0+00000000+0000002C+0000FFFF+D2000000+00000000"
+cheat8_enable = false

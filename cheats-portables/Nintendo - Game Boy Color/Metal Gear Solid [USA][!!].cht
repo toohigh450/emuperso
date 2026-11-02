@@ -1,0 +1,302 @@
+# Recherche locale pour la ROM : Metal Gear Solid [USA][!!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Metal%20Gear%20Solid%20(USA).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Metal%20Gear%20Solid%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Metal%20Gear%20Solid%20(USA%2C%20Europe)%20(Xploder).cht
+
+cheats = 73
+
+cheat0_desc = "[Format source non précisé] Infinite Health"
+cheat0_code = "0118E3C5"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Air"
+cheat1_code = "012BE4C5"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] 1-Hit Death [All Bosses]"
+cheat2_code = "010002C7"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Rations Used [00-FF]"
+cheat3_code = "0100ECC4+0100EDC4"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Being Found [00-FF]"
+cheat4_code = "0100EEC4+0100EFC4"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Enemies Killed [00-FF]"
+cheat5_code = "0100F0C4+0100F1C4"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Hour Modifier"
+cheat6_code = "0100F4C4"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Minute Modifier"
+cheat7_code = "0100F5C4"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Second Modifier"
+cheat8_code = "0100F6C4"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Infinite Rations"
+cheat9_code = "01FF09C6"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Item Modifier"
+cheat10_code = "010108C6"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Have Mine Detector"
+cheat11_code = "01060EC6"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Have Level Key"
+cheat12_code = "01040CC6"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Weapon Modifier [Slot 1]"
+cheat13_code = "0101EEC5"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Infinite Ammo [Slot 1]"
+cheat14_code = "01FFEFC5"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Weapon Modifier [Slot 2]"
+cheat15_code = "0100F0C5"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Infinite Ammo [Slot 2]"
+cheat16_code = "01FFF1C5"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Weapon Modifier [Slot 3]"
+cheat17_code = "0100F2C5"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Infinite Ammo [Slot 3]"
+cheat18_code = "01FFF3C5"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Weapon Modifier [Slot 4]"
+cheat19_code = "0100F4C5"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Infinite Ammo [Slot 4]"
+cheat20_code = "01FFF5C5"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Weapon Modifier [Slot 5]"
+cheat21_code = "0100F6C5"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Infinite Ammo [Slot 5]"
+cheat22_code = "01FFF7C5"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Weapon Modifier [Slot 6]"
+cheat23_code = "0100F8C5"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Infinite Ammo [Slot 6]"
+cheat24_code = "01FFF9C5"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Weapon Modifier [Slot 7]"
+cheat25_code = "0100FAC5"
+cheat25_enable = false
+
+cheat26_desc = "[Format source non précisé] Infinite Ammo [Slot 7]"
+cheat26_code = "01FFFBC5"
+cheat26_enable = false
+
+cheat27_desc = "[Format source non précisé] Weapon Modifier [Slot 8]"
+cheat27_code = "0100FCC5"
+cheat27_enable = false
+
+cheat28_desc = "[Format source non précisé] Infinite Ammo [Slot 8]"
+cheat28_code = "01FFFDC5"
+cheat28_enable = false
+
+cheat29_desc = "[Format source non précisé] Level Modifier Of Level Key"
+cheat29_code = "01000DC6"
+cheat29_enable = false
+
+cheat30_desc = "[Format source non précisé] Infinite Ammo All Weapons"
+cheat30_code = "003-189-19E"
+cheat30_enable = false
+
+cheat31_desc = "[Format source non précisé] Enemies Don't See You"
+cheat31_code = "C94-E89-081+C94-A88-3B4"
+cheat31_enable = false
+
+cheat32_desc = "[Format source non précisé] Infinite Health"
+cheat32_code = "7EA-6A9"
+cheat32_enable = false
+
+cheat33_desc = "[Format source non précisé] Cameras Don't See You"
+cheat33_code = "C93-698-C49"
+cheat33_enable = false
+
+cheat34_desc = "[Game Genie] Infinite Health"
+cheat34_code = "7EA-6A9"
+cheat34_enable = false
+
+cheat35_desc = "[Xploder] Unendlich Gesundheit"
+cheat35_code = "$0D399AA2"
+cheat35_enable = false
+
+cheat36_desc = "[Xploder] Unendlich O2"
+cheat36_code = "$0D4CFCA2"
+cheat36_enable = false
+
+cheat37_desc = "[Xploder] Kein Alarm Modus"
+cheat37_code = "$0D219A04"
+cheat37_enable = false
+
+cheat38_desc = "[Xploder] Spielzeit 00:00:00"
+cheat38_code = "$0D21B004+$0D21F904"
+cheat38_enable = false
+
+cheat39_desc = "[Xploder] Nie entdeckt"
+cheat39_code = "$0D21AB04"
+cheat39_enable = false
+
+cheat40_desc = "[Xploder] Keine Feinde getoetet"
+cheat40_code = "$0D21FE04"
+cheat40_enable = false
+
+cheat41_desc = "[Xploder] Habe 5-7 Pistole"
+cheat41_code = "$0D22ABA2"
+cheat41_enable = false
+
+cheat42_desc = "[Xploder] Unendlich 5-7 Munition"
+cheat42_code = "$0D2080A2"
+cheat42_enable = false
+
+cheat43_desc = "[Xploder] Habe R-5 Assault Rifle"
+cheat43_code = "$0D23FEA2"
+cheat43_enable = false
+
+cheat44_desc = "[Xploder] Unendlich R-5 Munition"
+cheat44_code = "$0D9038A2"
+cheat44_enable = false
+
+cheat45_desc = "[Xploder] Habe Nikita Rocket Launcher"
+cheat45_code = "$0D2466A2"
+cheat45_enable = false
+
+cheat46_desc = "[Xploder] Unendlich Nikita Munition"
+cheat46_code = "$0D9025A2"
+cheat46_enable = false
+
+cheat47_desc = "[Xploder] Habe Handgrenade"
+cheat47_code = "$0D25DAA2"
+cheat47_enable = false
+
+cheat48_desc = "[Xploder] Unendlich Handgrenades"
+cheat48_code = "$0D90C0A2"
+cheat48_enable = false
+
+cheat49_desc = "[Xploder] Habe Stungrenade"
+cheat49_code = "$0D268FA2"
+cheat49_enable = false
+
+cheat50_desc = "[Xploder] Unendlich Stungrenades"
+cheat50_code = "$0D90F7A2"
+cheat50_enable = false
+
+cheat51_desc = "[Xploder] Habe Chaff Grenade"
+cheat51_code = "$0D27B0A2"
+cheat51_enable = false
+
+cheat52_desc = "[Xploder] Unendlich Chaff Grenades"
+cheat52_code = "$0D90F9A2"
+cheat52_enable = false
+
+cheat53_desc = "[Xploder] Habe Landminen"
+cheat53_code = "$0D2856A2"
+cheat53_enable = false
+
+cheat54_desc = "[Xploder] Unendlich Landminen"
+cheat54_code = "$0D9068A2"
+cheat54_enable = false
+
+cheat55_desc = "[Xploder] Habe C4"
+cheat55_code = "$0D2953A2"
+cheat55_enable = false
+
+cheat56_desc = "[Xploder] Inf C4"
+cheat56_code = "$0D90F1A2"
+cheat56_enable = false
+
+cheat57_desc = "[Xploder] Habe Banana"
+cheat57_code = "$0D2B53A2"
+cheat57_enable = false
+
+cheat58_desc = "[Xploder] Unendlich Bananas"
+cheat58_code = "$0D90F1A2"
+cheat58_enable = false
+
+cheat59_desc = "[Xploder] Unendlich Rations"
+cheat59_code = "$0D909B2A"
+cheat59_enable = false
+
+cheat60_desc = "[Xploder] Habe Thermal Goggles"
+cheat60_code = "$0D245C2A"
+cheat60_enable = false
+
+cheat61_desc = "[Xploder] Habe ID Card"
+cheat61_code = "$0D25BB2A"
+cheat61_enable = false
+
+cheat62_desc = "[Xploder] ID Level 99"
+cheat62_code = "$0DBA972A"
+cheat62_enable = false
+
+cheat63_desc = "[Xploder] Habe Mine Detector"
+cheat63_code = "$0D27822A"
+cheat63_enable = false
+
+cheat64_desc = "[Xploder] Habe Nachtsichtgeraet"
+cheat64_code = "$0D28922A"
+cheat64_enable = false
+
+cheat65_desc = "[Xploder] Habe Gasmaske"
+cheat65_code = "$0D29122A"
+cheat65_enable = false
+
+cheat66_desc = "[Xploder] Habe Cardboard Box R"
+cheat66_code = "$0D2B942A"
+cheat66_enable = false
+
+cheat67_desc = "[Xploder] Habe Cardboard Box Y"
+cheat67_code = "$0D2CB62A"
+cheat67_enable = false
+
+cheat68_desc = "[Xploder] Habe Cardboard Box B"
+cheat68_code = "$0D2D5F2A"
+cheat68_enable = false
+
+cheat69_desc = "[Xploder] Habe Body Armor"
+cheat69_code = "$0D2EF62A"
+cheat69_enable = false
+
+cheat70_desc = "[Xploder] Habe Fox Hound"
+cheat70_code = "$0D2F392A"
+cheat70_enable = false
+
+cheat71_desc = "[Xploder] Unendlich Fox Hound"
+cheat71_code = "$0D90E82A"
+cheat71_enable = false
+
+cheat72_desc = "[Xploder] Habe Bomb"
+cheat72_code = "$0D30BF2A"
+cheat72_enable = false

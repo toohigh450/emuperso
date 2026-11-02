@@ -1,0 +1,44 @@
+# Recherche locale pour la ROM : Phineas and Ferb (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Phineas%20and%20Ferb%20(Europe).cht
+
+cheats = 9
+
+cheat0_desc = "[Action Replay] All Medallions"
+cheat0_code = "94000130+FFFB0000+2206AD98+0000003F+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] ASM Character Size Code"
+cheat1_code = "023FE074+012FFF11+E0000000+00000064+E28F0001+E12FFF10+68004812+D0202800+A1134C11+68404A11+19400C15+884B8824+429C804C+8809D015+42142308+D106D001+58C5E00F+50C5186D+D5FA3B04+3240E009+D0014214+E004D105+1A6D58C5+3B0450C5+4770D5FA+021CC9C8+04000130+05080044+00000100+00000000+023FE074+E3520003"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Batteries"
+cheat2_code = "94000130+FFFB0000+0206AF00+0001869F+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Hi-Score"
+cheat3_code = "94000130+FFFB0000+0206AF04+0001869F+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Moon Jump"
+cheat4_code = "94000130+FFFD0000+B21CC9C8+00000000+B0000004+00000000+0000001C+00000100+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Refill First Aid Boxes"
+cheat5_code = "94000130+FFFB0000+221BCE75+00000003+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Health Never Decrease"
+cheat6_code = "621CC9C8+00000000+B21CC9C8+00000000+B0000004+00000000+DA000000+000008D0+D7000000+000008D4+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Invincibility"
+cheat7_code = "621CC9C8+00000000+B21CC9C8+00000000+B0000004+00000000+20000844+00000001+20000848+000000FF+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Refill Health"
+cheat8_code = "94000130+FFFB0000+B21CC9C8+00000000+B0000004+00000000+DA000000+000008D0+D7000000+000008D4+D2000000+00000000"
+cheat8_enable = false

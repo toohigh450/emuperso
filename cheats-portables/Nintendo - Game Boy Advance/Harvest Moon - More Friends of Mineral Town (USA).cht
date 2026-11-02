@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Harvest Moon - More Friends of Mineral Town (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Harvest%20Moon%20-%20More%20Friends%20of%20Mineral%20Town%20(USA)%20(Code%20Breaker).cht
+
+cheats = 7
+
+cheat0_desc = "[Code Breaker] Enabler Code"
+cheat0_code = "0000AB64+000A+1000026E+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Money"
+cheat1_code = "82004090+FFFF"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Max Money"
+cheat2_code = "82004090+E0FF+82004092+5F5E"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Never Negative On Balance Sheet"
+cheat3_code = "82004194+0000+82004196+0000"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] OTHER: 1D Earned Highest Amount"
+cheat4_code = "820040A4+FFFF+820040A6+FFFF"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] OTHER: 1D Used Highest Amount 0"
+cheat5_code = "820040A8+0000+820040AA+0000"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Tomorrow's Weather Modifier"
+cheat6_code = "32004E18+000?"
+cheat6_enable = false

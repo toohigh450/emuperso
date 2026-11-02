@@ -1,0 +1,122 @@
+# Recherche locale pour la ROM : Avenging Spirit [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Avenging%20Spirit%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Avenging%20Spirit%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Avenging%20Spirit%20(USA%2C%20Europe).cht
+
+cheats = 28
+
+cheat0_desc = "[Game Genie] Infinite Energy Except If Weapon Is Used Against You"
+cheat0_code = "FA5-AFC-4C1+FAE-C2D-4C1"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Infinite 'L' Energy Except Against Spikes"
+cheat1_code = "FAE-B5D-4C1"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Start With 1/2 Energy"
+cheat2_code = "0A3-2BC-B3A"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Start With 1/4 Energy"
+cheat3_code = "053-2BC-B3A"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] Start With 3/4 Energy"
+cheat4_code = "0F3-2BC-B3A"
+cheat4_enable = false
+
+cheat5_desc = "[Game Genie] Start On Level 2"
+cheat5_code = "029-B9C-E6E"
+cheat5_enable = false
+
+cheat6_desc = "[Game Genie] Start On Level 4"
+cheat6_code = "049-B9C-E6E"
+cheat6_enable = false
+
+cheat7_desc = "[Game Genie] Start On Level 6"
+cheat7_code = "069-B9C-E6E"
+cheat7_enable = false
+
+cheat8_desc = "[GameShark] Infinite Ghost Energy"
+cheat8_code = "01145CC4"
+cheat8_enable = false
+
+cheat9_desc = "[GameShark] Infinite Health On Possessed Enemy"
+cheat9_code = "010A9BC4"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Infinite energy except if weapon is used against you"
+cheat10_code = "FA5-AFC-4C1+FAE-C2D-4C1"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Infinite &quot;L&quot; energy (except against spikes)"
+cheat11_code = "FAE-B5D-4C1"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Start with 1/2 energy"
+cheat12_code = "0A3-2BC-B3A"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Start with 1/4 energy"
+cheat13_code = "053-2BC-B3A"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Start with 3/4 energy"
+cheat14_code = "0F3-2BC-B3A"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Start on level 2"
+cheat15_code = "029-B9C-E6E"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Start on level 4"
+cheat16_code = "049-B9C-E6E"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Start on level 6"
+cheat17_code = "069-B9C-E6E"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Invincibility"
+cheat18_code = "0102A0C4"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Infinite Energy"
+cheat19_code = "010A9BC4+01145CC4"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Infinite Energy Character"
+cheat20_code = "CD5-05C-D59+B35-06C-2AA+605-07C-19A"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Infinite Ghost Energy"
+cheat21_code = "01145CC4"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Infinite Health On Possessed Enemy"
+cheat22_code = "010A9BC4"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Hit Anywhere"
+cheat23_code = "FAD-4DD-4C1+00D-30D-2A6"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Jump in Midair"
+cheat24_code = "00F-A6B-809"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Get Items From Anywhere"
+cheat25_code = "FA5-509-C41"
+cheat25_enable = false
+
+cheat26_desc = "[Format source non précisé] Invincibility"
+cheat26_code = "C95-92C-081+C9E-82D-E69"
+cheat26_enable = false
+
+cheat27_desc = "[Format source non précisé] Invincibility Spikes"
+cheat27_code = "C95-4DA-E69"
+cheat27_enable = false

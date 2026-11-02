@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : High School Musical 2 - Work This Out! (Europe) (En,Fr,De,Es,It,Nl).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/High%20School%20Musical%202%20-%20Work%20This%20Out!%20(Europe).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] 200 Discs"
+cheat0_code = "7214E684+FF0000C8+2214E684+000000C8+D0000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Disable Vsync"
+cheat1_code = "020A7540+E3A00000"
+cheat1_enable = false

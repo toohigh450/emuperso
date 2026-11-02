@@ -1,0 +1,344 @@
+# Recherche locale pour la ROM : Dragon Warrior Monsters [USA][Europe][SGB Enhanced][GB Compatible][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Dragon%20Warrior%20Monsters%20(USA%2C%20Europe)%20(SGB%20Enhanced)%20(GB%20Compatible).cht
+
+cheats = 84
+
+cheat0_desc = "[Format source non précisé] 1st Slot Infinite HP [In Battle]"
+cheat0_code = "01FFA3DB"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] 1st Slot Infinite MP [In Battle]"
+cheat1_code = "01FFC3DB"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] 1st Slot Max Attack [In Battle]"
+cheat2_code = "01FFE3DB"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] 2nd Slot Infinite HP [In Battle]"
+cheat3_code = "01FFA5DB"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] 2nd Slot Infinite MP [In Battle]"
+cheat4_code = "01FFC5DB"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] 2nd Slot Max Attack [In Battle]"
+cheat5_code = "01FFE5DB"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] 3rd Slot Infinite HP [In Battle]"
+cheat6_code = "01FFA7DB"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] 3rd Slot Infinite MP [In Battle]"
+cheat7_code = "01FFC7DB"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] 3rd Slot Max Attack [In Battle]"
+cheat8_code = "01FFE7DB"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Infinite Money"
+cheat9_code = "01FF4BCA+01FF4CCA"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Max Attack"
+cheat10_code = "01FF43CC"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Max Defense"
+cheat11_code = "01FF45CC"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Max Agility"
+cheat12_code = "01FF47CC"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Max Intelligence"
+cheat13_code = "01FF49CC"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] No Wildness"
+cheat14_code = "01004BCC"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Max Attack"
+cheat15_code = "01FF19CB"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Max Defense"
+cheat16_code = "01FF1BCB"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Max Agility"
+cheat17_code = "01FF1DCB"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Max Intelligence"
+cheat18_code = "01FF1FCB"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] No Wildness"
+cheat19_code = "010021CB"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Max Attack"
+cheat20_code = "01FFD8CC"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Max Defense"
+cheat21_code = "01FFDACC"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Max Agility"
+cheat22_code = "01FFDCCC"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Max Intelligence"
+cheat23_code = "01FFDECC"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] No Wildness"
+cheat24_code = "0100E0CC"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Max Attack"
+cheat25_code = "01FF97CE"
+cheat25_enable = false
+
+cheat26_desc = "[Format source non précisé] Max Defense"
+cheat26_code = "01FF99CE"
+cheat26_enable = false
+
+cheat27_desc = "[Format source non précisé] Max Agility"
+cheat27_code = "01FF9BCE"
+cheat27_enable = false
+
+cheat28_desc = "[Format source non précisé] Max Intelligence"
+cheat28_code = "01FF9DCE"
+cheat28_enable = false
+
+cheat29_desc = "[Format source non précisé] No Wildness"
+cheat29_code = "01009FCE"
+cheat29_enable = false
+
+cheat30_desc = "[Format source non précisé] Max Attack"
+cheat30_code = "01FF02CE"
+cheat30_enable = false
+
+cheat31_desc = "[Format source non précisé] Max Defense"
+cheat31_code = "01FF04CE"
+cheat31_enable = false
+
+cheat32_desc = "[Format source non précisé] Max Agility"
+cheat32_code = "01FF06CE"
+cheat32_enable = false
+
+cheat33_desc = "[Format source non précisé] Max Intelligence"
+cheat33_code = "01FF08CE"
+cheat33_enable = false
+
+cheat34_desc = "[Format source non précisé] No Wildness"
+cheat34_code = "01000ACE"
+cheat34_enable = false
+
+cheat35_desc = "[Format source non précisé] Max Attack"
+cheat35_code = "01FF6DCD"
+cheat35_enable = false
+
+cheat36_desc = "[Format source non précisé] Max Defense"
+cheat36_code = "01FF6FCD"
+cheat36_enable = false
+
+cheat37_desc = "[Format source non précisé] Max Agility"
+cheat37_code = "01FF71CD"
+cheat37_enable = false
+
+cheat38_desc = "[Format source non précisé] Max Intelligence"
+cheat38_code = "01FF73CD"
+cheat38_enable = false
+
+cheat39_desc = "[Format source non précisé] No Wildness"
+cheat39_code = "010075CD"
+cheat39_enable = false
+
+cheat40_desc = "[Format source non précisé] Max Attack"
+cheat40_code = "01FF56D0"
+cheat40_enable = false
+
+cheat41_desc = "[Format source non précisé] Max Defense"
+cheat41_code = "01FF58D0"
+cheat41_enable = false
+
+cheat42_desc = "[Format source non précisé] Max Agility"
+cheat42_code = "01FF5AD0"
+cheat42_enable = false
+
+cheat43_desc = "[Format source non précisé] No Wildness"
+cheat43_code = "01005ED0"
+cheat43_enable = false
+
+cheat44_desc = "[Format source non précisé] Max Attack"
+cheat44_code = "01FF80D1"
+cheat44_enable = false
+
+cheat45_desc = "[Format source non précisé] Max Defense"
+cheat45_code = "01FF82D1"
+cheat45_enable = false
+
+cheat46_desc = "[Format source non précisé] Max Agility"
+cheat46_code = "01FF84D1"
+cheat46_enable = false
+
+cheat47_desc = "[Format source non précisé] Max Intelligence"
+cheat47_code = "01FF86D1"
+cheat47_enable = false
+
+cheat48_desc = "[Format source non précisé] No Wildness"
+cheat48_code = "010088D1"
+cheat48_enable = false
+
+cheat49_desc = "[Format source non précisé] Max Attack"
+cheat49_code = "01FF15D2"
+cheat49_enable = false
+
+cheat50_desc = "[Format source non précisé] Max Defense"
+cheat50_code = "01FF17D2"
+cheat50_enable = false
+
+cheat51_desc = "[Format source non précisé] Max Agility"
+cheat51_code = "01FF19D2"
+cheat51_enable = false
+
+cheat52_desc = "[Format source non précisé] Max Intelligence"
+cheat52_code = "01FF1BD2"
+cheat52_enable = false
+
+cheat53_desc = "[Format source non précisé] No Wildness"
+cheat53_code = "01001DD2"
+cheat53_enable = false
+
+cheat54_desc = "[Format source non précisé] Monster Points On Treasure Bags"
+cheat54_code = "010187C2"
+cheat54_enable = false
+
+cheat55_desc = "[Format source non précisé] Slot 1"
+cheat55_code = "010151CA"
+cheat55_enable = false
+
+cheat56_desc = "[Format source non précisé] Slot 2"
+cheat56_code = "010052CA"
+cheat56_enable = false
+
+cheat57_desc = "[Format source non précisé] Slot 3"
+cheat57_code = "010053CA"
+cheat57_enable = false
+
+cheat58_desc = "[Format source non précisé] Slot 4"
+cheat58_code = "010054CA"
+cheat58_enable = false
+
+cheat59_desc = "[Format source non précisé] Slot 5"
+cheat59_code = "010055CA"
+cheat59_enable = false
+
+cheat60_desc = "[Format source non précisé] Slot 6"
+cheat60_code = "010056CA"
+cheat60_enable = false
+
+cheat61_desc = "[Format source non précisé] Slot 7"
+cheat61_code = "010057CA"
+cheat61_enable = false
+
+cheat62_desc = "[Format source non précisé] Slot 8"
+cheat62_code = "010058CA"
+cheat62_enable = false
+
+cheat63_desc = "[Format source non précisé] Slot 9"
+cheat63_code = "010059CA"
+cheat63_enable = false
+
+cheat64_desc = "[Format source non précisé] Slot 10"
+cheat64_code = "01005ACA"
+cheat64_enable = false
+
+cheat65_desc = "[Format source non précisé] Slot 11"
+cheat65_code = "01015BCA"
+cheat65_enable = false
+
+cheat66_desc = "[Format source non précisé] Slot 12"
+cheat66_code = "01005CCA"
+cheat66_enable = false
+
+cheat67_desc = "[Format source non précisé] Slot 13"
+cheat67_code = "01005DCA"
+cheat67_enable = false
+
+cheat68_desc = "[Format source non précisé] Slot 14"
+cheat68_code = "01005ECA"
+cheat68_enable = false
+
+cheat69_desc = "[Format source non précisé] Slot 15"
+cheat69_code = "01005FCA"
+cheat69_enable = false
+
+cheat70_desc = "[Format source non précisé] Slot 16"
+cheat70_code = "010060CA"
+cheat70_enable = false
+
+cheat71_desc = "[Format source non précisé] Slot 17"
+cheat71_code = "010061CA"
+cheat71_enable = false
+
+cheat72_desc = "[Format source non précisé] Slot 18"
+cheat72_code = "010062CA"
+cheat72_enable = false
+
+cheat73_desc = "[Format source non précisé] Slot 19"
+cheat73_code = "010063CA"
+cheat73_enable = false
+
+cheat74_desc = "[Format source non précisé] Slot 20"
+cheat74_code = "010064CA"
+cheat74_enable = false
+
+cheat75_desc = "[Format source non précisé] Max Exp [Slib]"
+cheat75_code = "01FF0ECB+01FF0FCB"
+cheat75_enable = false
+
+cheat76_desc = "[Format source non précisé] Teach Slib Blazemore"
+cheat76_code = "0101EACA"
+cheat76_enable = false
+
+cheat77_desc = "[Format source non précisé] Monster Farm Modifier [Slot 1]"
+cheat77_code = "0100CACA"
+cheat77_enable = false
+
+cheat78_desc = "[Format source non précisé] Enemy Slot 1 Modifier"
+cheat78_code = "010103DA"
+cheat78_enable = false
+
+cheat79_desc = "[Format source non précisé] Enemy Slot 2 Modifier"
+cheat79_code = "010105DA"
+cheat79_enable = false
+
+cheat80_desc = "[Format source non précisé] Enemy Slot 3 Modifier"
+cheat80_code = "01C907DA"
+cheat80_enable = false
+
+cheat81_desc = "[Format source non précisé] Turn 1st Monster Into A Female"
+cheat81_code = "0101CCCA"
+cheat81_enable = false
+
+cheat82_desc = "[Format source non précisé] Turn 1st Monster Into A Male"
+cheat82_code = "0102CCCA"
+cheat82_enable = false
+
+cheat83_desc = "[Format source non précisé] Max Intelligence"
+cheat83_code = "01FF5CD0"
+cheat83_enable = false

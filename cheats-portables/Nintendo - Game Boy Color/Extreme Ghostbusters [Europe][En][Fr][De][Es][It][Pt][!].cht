@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Extreme Ghostbusters [Europe][En][Fr][De][Es][It][Pt][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Extreme%20Ghostbusters%20(Europe)%20(En%2CFr%2CDe%2CEs%2CIt%2CPt).cht
+
+cheats = 2
+
+cheat0_desc = "[Format source non précisé] Infinite Energy"
+cheat0_code = "FA5-E6F-4C1"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Proton Power"
+cheat1_code = "FAD-5EA-4C1+FAD-F5A-4C1"
+cheat1_enable = false

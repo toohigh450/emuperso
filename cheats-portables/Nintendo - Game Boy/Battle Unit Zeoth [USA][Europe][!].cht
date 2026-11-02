@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Battle Unit Zeoth [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Battle%20Unit%20Zeoth%20(USA%2C%20Europe).cht
+
+cheats = 7
+
+cheat0_desc = "[Format source non précisé] Infinite energy"
+cheat0_code = "3E6-3AF-2A9+3EF-B2E-2A9"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Collect 1 power-up to get more power"
+cheat1_code = "3E1-F4E-2AA+021-F5E-F76"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Finish game at end of level 1"
+cheat2_code = "012-CCD-F7E"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Invincibility"
+cheat3_code = "01FF99FF"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Infinite Energy"
+cheat4_code = "010898FF"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Infinite Energy"
+cheat5_code = "F02-33E-6E9"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Invulnerability"
+cheat6_code = "3C2-7AF-3B4"
+cheat6_enable = false

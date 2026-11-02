@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Gekitou Power Modeller [Japan][SGB Enhanced][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Gekitou%20Power%20Modeller%20(Japan)%20(SGB%20Enhanced).cht
+
+cheats = 2
+
+cheat0_desc = "[Format source non précisé] Hit Anywhere P1"
+cheat0_code = "0B8-788-193+848-748-5D0"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Invincibility P1"
+cheat1_code = "189-0E8-4CA"
+cheat1_enable = false

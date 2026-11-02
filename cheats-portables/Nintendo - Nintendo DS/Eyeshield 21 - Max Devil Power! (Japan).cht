@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Eyeshield 21 - Max Devil Power! (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Eyeshield%2021%20-%20Max%20Devil%20Power!%20(Japan).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] Money Max"
+cheat0_code = "021C563C+0000270F+022EC5CC+000F423F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Items"
+cheat1_code = "D5000000+00000001+C0000000+00000035+D6000000+022EC414+D4000000+00000001+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All CG"
+cheat2_code = "D5000000+00000101+C0000000+00000018+D7000000+020FE5BC+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Complete Character Album"
+cheat3_code = "D5000000+00000001+C0000000+00000030+D8000000+020FE588+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All Special Atk Info"
+cheat4_code = "D5000000+00000101+C0000000+00000018+D7000000+020FE678+D2000000+00000000"
+cheat4_enable = false

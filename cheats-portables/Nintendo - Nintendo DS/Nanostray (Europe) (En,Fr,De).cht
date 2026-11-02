@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Nanostray (Europe) (En,Fr,De).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Nanostray%20(Europe).cht
+
+cheats = 6
+
+cheat0_desc = "[Action Replay] Start With 999 Lives"
+cheat0_code = "1207D064+000003E7+1209304C+000003E7"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Energy"
+cheat1_code = "9209284C+00000001+62092290+00000000+B2092290+00000000+100003E0+00003000+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Infinite Bombs"
+cheat2_code = "9209284C+00000001+62092290+00000000+B2092290+00000000+20000280+00000003+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Invincible"
+cheat3_code = "9209284C+00000001+62092290+00000000+B2092290+00000000+200002F0+00000073+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Infinite Laser"
+cheat4_code = "9209284C+00000001+62092290+00000000+B2092290+00000000+10000278+00001000+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Start With 9 Bombs"
+cheat5_code = "2207D060+00000009"
+cheat5_enable = false

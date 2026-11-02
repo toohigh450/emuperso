@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Table Game Spirits (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Table%20Game%20Spirits%20(Japan).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] Max Points"
+cheat0_code = "122362C8+0000270F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Hiddens Unlocked"
+cheat1_code = "D5000000+01010101+C0000000+00000033+D6000000+022362CC+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Ammo For Brick Breaking"
+cheat2_code = "2223DFC0+00000008+C0000000+00000007+2223DFC4+00000004+DC000000+00000004+D2000000+00000000"
+cheat2_enable = false

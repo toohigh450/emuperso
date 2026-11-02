@@ -1,0 +1,52 @@
+# Recherche locale pour la ROM : Dynasty Warriors DS - Fighter's Battle (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Dynasty%20Warriors%20DS%20-%20Fighter's%20Battle%20(Europe).cht
+
+cheats = 11
+
+cheat0_desc = "[Action Replay] Max/Infinite Health"
+cheat0_code = "020CE3A4+03840384+120CDD40+00000384+120E26A0+00000384"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Musou"
+cheat1_code = "020CE3AC+03840384"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Infinite Coin Meter"
+cheat2_code = "220CE39D+00000009"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Quota Filled"
+cheat3_code = "120CE3A8+000003E7"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Total Ko's"
+cheat4_code = "120CDD5C+0000270F"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Max Total Combos"
+cheat5_code = "120CDD58+0000270F"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Low clear Time"
+cheat6_code = "020CDD38+00000050"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Max Def."
+cheat7_code = "220E276B+00000005"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Max Atk. (One Hit Kill)"
+cheat8_code = "220E276F+00000005"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Speed Up"
+cheat9_code = "120E2774+000003D5"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Max Speed"
+cheat10_code = "120E2774+000005D5"
+cheat10_enable = false

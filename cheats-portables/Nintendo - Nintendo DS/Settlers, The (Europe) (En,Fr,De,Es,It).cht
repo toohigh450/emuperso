@@ -1,0 +1,504 @@
+# Recherche locale pour la ROM : Settlers, The (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Settlers%2C%20The%20(Europe).cht
+
+cheats = 124
+
+cheat0_desc = "[Action Replay] Max and Infinite Inventory (All)"
+cheat0_code = "D5000000+03E703E7+C0000000+0000001E+D6000000+020C0124+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Headquarter Items (All)"
+cheat1_code = "620D3B48+00000000+B20D3B48+00000000+D5000000+000003E7+C0000000+0000003C+D7000000+00000000+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max and Infinite Wood"
+cheat2_code = "120C0124+000003E7"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max and Infinite Planks"
+cheat3_code = "120C0126+000003E7"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max and Infinite Stones"
+cheat4_code = "120C0128+000003E7"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Max and Infinite Pigs"
+cheat5_code = "120C012A+000003E7"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Max and Infinite Grain"
+cheat6_code = "120C012C+000003E7"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Max and Infinite Flour"
+cheat7_code = "120C012E+000003E7"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Max and Infinite Fish"
+cheat8_code = "120C0130+000003E7"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Max and Infinite Ham"
+cheat9_code = "120C0132+000003E7"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Max and Infinite Bread"
+cheat10_code = "120C0134+000003E7"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Max and Infinite Water"
+cheat11_code = "120C0136+000003E7"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Max and Infinite Beer"
+cheat12_code = "120C0138+000003E7"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Max and Infinite Coal"
+cheat13_code = "120C013A+000003E7"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Max and Infinite Iron Ore"
+cheat14_code = "120C013C+000003E7"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Max and Infinite Gold"
+cheat15_code = "120C013E+000003E7"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Max and Infinite Iron"
+cheat16_code = "120C0140+000003E7"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Max and Infinite Coins"
+cheat17_code = "120C0142+000003E7"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Max and Infinite Tongs"
+cheat18_code = "120C0144+000003E7"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Max and Infinite Axes"
+cheat19_code = "120C0146+000003E7"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Max and Infinite Saws"
+cheat20_code = "120C0148+000003E7"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Max and Infinite Pickaxes"
+cheat21_code = "120C014A+000003E7"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Max and Infinite Hammers"
+cheat22_code = "120C014C+000003E7"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Max and Infinite Shovels"
+cheat23_code = "120C014E+000003E7"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Max and Infinite Crucible"
+cheat24_code = "120C0150+000003E7"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Max and Infinite Rods and Lines"
+cheat25_code = "120C0152+000003E7"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Max and Infinite Scythes"
+cheat26_code = "120C0154+000003E7"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Max and Infinite Cleavers"
+cheat27_code = "120C0156+000003E7"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Max and Infinite Rolling Pins"
+cheat28_code = "120C0158+000003E7"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Max and Infinite Bows"
+cheat29_code = "120C015A+000003E7"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Max and Infinite Swords"
+cheat30_code = "120C015C+000003E7"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Max and Infinite Shields"
+cheat31_code = "120C015E+000003E7"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Max and Infinite Boats"
+cheat32_code = "120C0160+000003E7"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Max and Infinite Helpers"
+cheat33_code = "120C0164+000003E7"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Max and Infinite Woodcutters"
+cheat34_code = "120C0166+000003E7"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Max and Infinite Fishers"
+cheat35_code = "120C0168+000003E7"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Max and Infinite Foresters"
+cheat36_code = "120C016A+000003E7"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Max and Infinite Carpenters"
+cheat37_code = "120C016C+000003E7"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Max and Infinite Stonemasons"
+cheat38_code = "120C016E+000003E7"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Max and Infinite Hunters"
+cheat39_code = "120C0170+000003E7"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Max and Infinite Farmers"
+cheat40_code = "120C0172+000003E7"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Max and Infinite Millers"
+cheat41_code = "120C0174+000003E7"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Max and Infinite Bakers"
+cheat42_code = "120C0176+000003E7"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Max and Infinite Butchers"
+cheat43_code = "120C0178+000003E7"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Max and Infinite Miners"
+cheat44_code = "120C017A+000003E7"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Max and Infinite Brewers"
+cheat45_code = "120C017C+000003E7"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Max and Infinite Pig Breeders"
+cheat46_code = "120C017E+000003E7"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Max and Infinite Donkey Breeders"
+cheat47_code = "120C0180+000003E7"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Max and Infinite Iron Founders"
+cheat48_code = "120C0182+000003E7"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Max and Infinite Minters"
+cheat49_code = "120C0184+000003E7"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Max and Infinite Toolsmiths"
+cheat50_code = "120C0186+000003E7"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Max and Infinite Weaponsmiths"
+cheat51_code = "120C0188+000003E7"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Max and Infinite Builders"
+cheat52_code = "120C018A+000003E7"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Max and Infinite Planers"
+cheat53_code = "120C018C+000003E7"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Max and Infinite Geologists"
+cheat54_code = "120C018E+000003E7"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Max and Infinite Privates"
+cheat55_code = "120C0190+000003E7"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Max and Infinite Corporals"
+cheat56_code = "120C0192+000003E7"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Max and Infinite Sergeants"
+cheat57_code = "120C0194+000003E7"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Max and Infinite Officers"
+cheat58_code = "120C0196+000003E7"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Max and Infinite Generals"
+cheat59_code = "120C0198+000003E7"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Max and Infinite Scouts"
+cheat60_code = "120C019A+000003E7"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Max and Infinite Shipwrights"
+cheat61_code = "120C019C+000003E7"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Max and Infinite Pack Donkeys"
+cheat62_code = "120C019E+000003E7"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Infinite Wood"
+cheat63_code = "620D3B48+00000000+B20D3B48+00000000+10000000+000003E7+D2000000+00000000"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Infinite Planks"
+cheat64_code = "620D3B48+00000000+B20D3B48+00000000+10000002+000003E7+D2000000+00000000"
+cheat64_enable = false
+
+cheat65_desc = "[Action Replay] Infinite Stones"
+cheat65_code = "620D3B48+00000000+B20D3B48+00000000+10000004+000003E7+D2000000+00000000"
+cheat65_enable = false
+
+cheat66_desc = "[Action Replay] Infinite Pigs"
+cheat66_code = "620D3B48+00000000+B20D3B48+00000000+10000006+000003E7+D2000000+00000000"
+cheat66_enable = false
+
+cheat67_desc = "[Action Replay] Infinite Grain"
+cheat67_code = "620D3B48+00000000+B20D3B48+00000000+10000008+000003E7+D2000000+00000000"
+cheat67_enable = false
+
+cheat68_desc = "[Action Replay] Infinite Flour"
+cheat68_code = "620D3B48+00000000+B20D3B48+00000000+1000000A+000003E7+D2000000+00000000"
+cheat68_enable = false
+
+cheat69_desc = "[Action Replay] Infinite Fish"
+cheat69_code = "620D3B48+00000000+B20D3B48+00000000+1000000C+000003E7+D2000000+00000000"
+cheat69_enable = false
+
+cheat70_desc = "[Action Replay] Infinite Ham"
+cheat70_code = "620D3B48+00000000+B20D3B48+00000000+1000000E+000003E7+D2000000+00000000"
+cheat70_enable = false
+
+cheat71_desc = "[Action Replay] Infinite Bread"
+cheat71_code = "620D3B48+00000000+B20D3B48+00000000+10000010+000003E7+D2000000+00000000"
+cheat71_enable = false
+
+cheat72_desc = "[Action Replay] Infinite Water"
+cheat72_code = "620D3B48+00000000+B20D3B48+00000000+10000012+000003E7+D2000000+00000000"
+cheat72_enable = false
+
+cheat73_desc = "[Action Replay] Infinite Beer"
+cheat73_code = "620D3B48+00000000+B20D3B48+00000000+10000014+000003E7+D2000000+00000000"
+cheat73_enable = false
+
+cheat74_desc = "[Action Replay] Infinite Coal"
+cheat74_code = "620D3B48+00000000+B20D3B48+00000000+10000016+000003E7+D2000000+00000000"
+cheat74_enable = false
+
+cheat75_desc = "[Action Replay] Infinite Iron Ore"
+cheat75_code = "620D3B48+00000000+B20D3B48+00000000+10000018+000003E7+D2000000+00000000"
+cheat75_enable = false
+
+cheat76_desc = "[Action Replay] Infinite Gold"
+cheat76_code = "620D3B48+00000000+B20D3B48+00000000+1000001A+000003E7+D2000000+00000000"
+cheat76_enable = false
+
+cheat77_desc = "[Action Replay] Infinite Iron"
+cheat77_code = "620D3B48+00000000+B20D3B48+00000000+1000001C+000003E7+D2000000+00000000"
+cheat77_enable = false
+
+cheat78_desc = "[Action Replay] Infinite Coins"
+cheat78_code = "620D3B48+00000000+B20D3B48+00000000+1000001E+000003E7+D2000000+00000000"
+cheat78_enable = false
+
+cheat79_desc = "[Action Replay] Infinite Tongs"
+cheat79_code = "620D3B48+00000000+B20D3B48+00000000+10000020+000003E7+D2000000+00000000"
+cheat79_enable = false
+
+cheat80_desc = "[Action Replay] Infinite Axes"
+cheat80_code = "620D3B48+00000000+B20D3B48+00000000+10000022+000003E7+D2000000+00000000"
+cheat80_enable = false
+
+cheat81_desc = "[Action Replay] Infinite Saws"
+cheat81_code = "620D3B48+00000000+B20D3B48+00000000+10000024+000003E7+D2000000+00000000"
+cheat81_enable = false
+
+cheat82_desc = "[Action Replay] Infinite Pickaxes"
+cheat82_code = "620D3B48+00000000+B20D3B48+00000000+10000026+000003E7+D2000000+00000000"
+cheat82_enable = false
+
+cheat83_desc = "[Action Replay] Infinite Hammers"
+cheat83_code = "620D3B48+00000000+B20D3B48+00000000+10000028+000003E7+D2000000+00000000"
+cheat83_enable = false
+
+cheat84_desc = "[Action Replay] Infinite Shovels"
+cheat84_code = "620D3B48+00000000+B20D3B48+00000000+1000002A+000003E7+D2000000+00000000"
+cheat84_enable = false
+
+cheat85_desc = "[Action Replay] Infinite Crucible"
+cheat85_code = "620D3B48+00000000+B20D3B48+00000000+1000002C+000003E7+D2000000+00000000"
+cheat85_enable = false
+
+cheat86_desc = "[Action Replay] Infinite Rods and Lines"
+cheat86_code = "620D3B48+00000000+B20D3B48+00000000+1000002E+000003E7+D2000000+00000000"
+cheat86_enable = false
+
+cheat87_desc = "[Action Replay] Infinite Scythes"
+cheat87_code = "620D3B48+00000000+B20D3B48+00000000+10000030+000003E7+D2000000+00000000"
+cheat87_enable = false
+
+cheat88_desc = "[Action Replay] Infinite Cleavers"
+cheat88_code = "620D3B48+00000000+B20D3B48+00000000+10000032+000003E7+D2000000+00000000"
+cheat88_enable = false
+
+cheat89_desc = "[Action Replay] Infinite Rolling Pins"
+cheat89_code = "620D3B48+00000000+B20D3B48+00000000+10000034+000003E7+D2000000+00000000"
+cheat89_enable = false
+
+cheat90_desc = "[Action Replay] Infinite Bows"
+cheat90_code = "620D3B48+00000000+B20D3B48+00000000+10000036+000003E7+D2000000+00000000"
+cheat90_enable = false
+
+cheat91_desc = "[Action Replay] Infinite Swords"
+cheat91_code = "620D3B48+00000000+B20D3B48+00000000+10000038+000003E7+D2000000+00000000"
+cheat91_enable = false
+
+cheat92_desc = "[Action Replay] Infinite Shields"
+cheat92_code = "620D3B48+00000000+B20D3B48+00000000+1000003A+000003E7+D2000000+00000000"
+cheat92_enable = false
+
+cheat93_desc = "[Action Replay] Infinite Boats"
+cheat93_code = "620D3B48+00000000+B20D3B48+00000000+1000003C+000003E7+D2000000+00000000"
+cheat93_enable = false
+
+cheat94_desc = "[Action Replay] Infinite Helpers"
+cheat94_code = "620D3B48+00000000+B20D3B48+00000000+1000003E+000003E7+D2000000+00000000"
+cheat94_enable = false
+
+cheat95_desc = "[Action Replay] Infinite Woodcutters"
+cheat95_code = "620D3B48+00000000+B20D3B48+00000000+10000040+000003E7+D2000000+00000000"
+cheat95_enable = false
+
+cheat96_desc = "[Action Replay] Infinite Fishers"
+cheat96_code = "620D3B48+00000000+B20D3B48+00000000+10000042+000003E7+D2000000+00000000"
+cheat96_enable = false
+
+cheat97_desc = "[Action Replay] Infinite Foresters"
+cheat97_code = "620D3B48+00000000+B20D3B48+00000000+10000044+000003E7+D2000000+00000000"
+cheat97_enable = false
+
+cheat98_desc = "[Action Replay] Infinite Carpenters"
+cheat98_code = "620D3B48+00000000+B20D3B48+00000000+10000046+000003E7+D2000000+00000000"
+cheat98_enable = false
+
+cheat99_desc = "[Action Replay] Infinite Stonemasons"
+cheat99_code = "620D3B48+00000000+B20D3B48+00000000+10000048+000003E7+D2000000+00000000"
+cheat99_enable = false
+
+cheat100_desc = "[Action Replay] Infinite Hunters"
+cheat100_code = "620D3B48+00000000+B20D3B48+00000000+1000004A+000003E7+D2000000+00000000"
+cheat100_enable = false
+
+cheat101_desc = "[Action Replay] Infinite Farmers"
+cheat101_code = "620D3B48+00000000+B20D3B48+00000000+1000004C+000003E7+D2000000+00000000"
+cheat101_enable = false
+
+cheat102_desc = "[Action Replay] Infinite Millers"
+cheat102_code = "620D3B48+00000000+B20D3B48+00000000+1000004E+000003E7+D2000000+00000000"
+cheat102_enable = false
+
+cheat103_desc = "[Action Replay] Infinite Bakers"
+cheat103_code = "620D3B48+00000000+B20D3B48+00000000+10000050+000003E7+D2000000+00000000"
+cheat103_enable = false
+
+cheat104_desc = "[Action Replay] Infinite Butchers"
+cheat104_code = "620D3B48+00000000+B20D3B48+00000000+10000052+000003E7+D2000000+00000000"
+cheat104_enable = false
+
+cheat105_desc = "[Action Replay] Infinite Miners"
+cheat105_code = "620D3B48+00000000+B20D3B48+00000000+10000054+000003E7+D2000000+00000000"
+cheat105_enable = false
+
+cheat106_desc = "[Action Replay] Infinite Brewers"
+cheat106_code = "620D3B48+00000000+B20D3B48+00000000+10000056+000003E7+D2000000+00000000"
+cheat106_enable = false
+
+cheat107_desc = "[Action Replay] Infinite Pig Breeders"
+cheat107_code = "620D3B48+00000000+B20D3B48+00000000+10000058+000003E7+D2000000+00000000"
+cheat107_enable = false
+
+cheat108_desc = "[Action Replay] Infinite Donkey Breeders"
+cheat108_code = "620D3B48+00000000+B20D3B48+00000000+1000005A+000003E7+D2000000+00000000"
+cheat108_enable = false
+
+cheat109_desc = "[Action Replay] Infinite Iron Founders"
+cheat109_code = "620D3B48+00000000+B20D3B48+00000000+1000005C+000003E7+D2000000+00000000"
+cheat109_enable = false
+
+cheat110_desc = "[Action Replay] Infinite Minters"
+cheat110_code = "620D3B48+00000000+B20D3B48+00000000+1000005E+000003E7+D2000000+00000000"
+cheat110_enable = false
+
+cheat111_desc = "[Action Replay] Infinite Toolsmiths"
+cheat111_code = "620D3B48+00000000+B20D3B48+00000000+10000060+000003E7+D2000000+00000000"
+cheat111_enable = false
+
+cheat112_desc = "[Action Replay] Infinite Weaponsmiths"
+cheat112_code = "620D3B48+00000000+B20D3B48+00000000+10000062+000003E7+D2000000+00000000"
+cheat112_enable = false
+
+cheat113_desc = "[Action Replay] Infinite Builders"
+cheat113_code = "620D3B48+00000000+B20D3B48+00000000+10000064+000003E7+D2000000+00000000"
+cheat113_enable = false
+
+cheat114_desc = "[Action Replay] Infinite Planers"
+cheat114_code = "620D3B48+00000000+B20D3B48+00000000+10000066+000003E7+D2000000+00000000"
+cheat114_enable = false
+
+cheat115_desc = "[Action Replay] Infinite Geologists"
+cheat115_code = "620D3B48+00000000+B20D3B48+00000000+10000068+000003E7+D2000000+00000000"
+cheat115_enable = false
+
+cheat116_desc = "[Action Replay] Infinite Privates"
+cheat116_code = "620D3B48+00000000+B20D3B48+00000000+1000006A+000003E7+D2000000+00000000"
+cheat116_enable = false
+
+cheat117_desc = "[Action Replay] Infinite Corporals"
+cheat117_code = "620D3B48+00000000+B20D3B48+00000000+1000006C+000003E7+D2000000+00000000"
+cheat117_enable = false
+
+cheat118_desc = "[Action Replay] Infinite Sergeants"
+cheat118_code = "620D3B48+00000000+B20D3B48+00000000+1000006E+000003E7+D2000000+00000000"
+cheat118_enable = false
+
+cheat119_desc = "[Action Replay] Infinite Officers"
+cheat119_code = "620D3B48+00000000+B20D3B48+00000000+10000070+000003E7+D2000000+00000000"
+cheat119_enable = false
+
+cheat120_desc = "[Action Replay] Infinite Generals"
+cheat120_code = "620D3B48+00000000+B20D3B48+00000000+10000072+000003E7+D2000000+00000000"
+cheat120_enable = false
+
+cheat121_desc = "[Action Replay] Infinite Scouts"
+cheat121_code = "620D3B48+00000000+B20D3B48+00000000+10000074+000003E7+D2000000+00000000"
+cheat121_enable = false
+
+cheat122_desc = "[Action Replay] Infinite Shipwrights"
+cheat122_code = "620D3B48+00000000+B20D3B48+00000000+10000076+000003E7+D2000000+00000000"
+cheat122_enable = false
+
+cheat123_desc = "[Action Replay] Infinite Pack Donkeys"
+cheat123_code = "620D3B48+00000000+B20D3B48+00000000+10000078+000003E7+D2000000+00000000"
+cheat123_enable = false

@@ -1,0 +1,17 @@
+# Recherche locale pour la ROM : Head On [Japan][!!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Head%20On%20(Japan)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Head%20On%20(Japan).cht
+
+cheats = 2
+
+cheat0_desc = "[GameShark] Infinite Lives"
+cheat0_code = "01030FC1"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Lives"
+cheat1_code = "01030FC1"
+cheat1_enable = false

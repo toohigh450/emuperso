@@ -1,0 +1,152 @@
+# Recherche locale pour la ROM : Sprung - The Dating Game (Europe).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Sprung%20-%20The%20Dating%20Game%20(Europe).cht
+
+cheats = 36
+
+cheat0_desc = "[Action Replay] Museum Complete"
+cheat0_code = "021E14C0+FFFFFFFF+021E14C4+FFFFFFFF+021E14C8+FFFFFFFF+021E14CC+FFFFFFFF+021E14D0+FFFFFFFF+121E14D4+0000FFFF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Have All Artwork"
+cheat1_code = "021DAFE0+FFFFFFFF+021DAFE4+FFFFFFFF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Locker Room"
+cheat2_code = "021E2388+00000002"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Ski Brat"
+cheat3_code = "021E2388+00000003"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Big Babe Hunting"
+cheat4_code = "021E2388+00000004"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] 3's A Crowd"
+cheat5_code = "021E2388+00000005"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] 3's A Crowd II"
+cheat6_code = "021E2388+00000006"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] The Crush"
+cheat7_code = "021E2388+00000007"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] 3's A Crowd... Thrice"
+cheat8_code = "021E2388+00000008"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Indecent Proposal"
+cheat9_code = "021E2388+00000009"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Playing Doubles"
+cheat10_code = "021E2388+0000000A"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Playing Doubles(2)"
+cheat11_code = "021E2388+0000000B"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Cupid Behind the Scenes"
+cheat12_code = "021E2388+0000000C"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Cupid Behind the Scenes(2)"
+cheat13_code = "021E2388+0000000D"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Cupid Behind the Scenes(3)"
+cheat14_code = "021E2388+0000000E"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Scavenger Hunt"
+cheat15_code = "021E2388+0000000F"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Nightskiing"
+cheat16_code = "021E2388+00000010"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Forlorn Friend"
+cheat17_code = "021E2388+00000011"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Stand-In"
+cheat18_code = "021E2388+00000012"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] The Sting"
+cheat19_code = "021E2388+00000013"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] The Hot Tub Rub"
+cheat20_code = "021E2388+00000014"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] The Hot Tub Rub(2)"
+cheat21_code = "021E2388+00000015"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Reunite the Lovers"
+cheat22_code = "021E2388+00000016"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] The Ex File"
+cheat23_code = "021E2388+00000017"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Hormone Havoc"
+cheat24_code = "021E2388+00000018"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Sprung!"
+cheat25_code = "021E2388+00000019"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Sprung: The Final Chapter"
+cheat26_code = "021E2388+0000001A"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Bonus: Ski Noir"
+cheat27_code = "021E2388+0000001B"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Bonus: Conor Sez!"
+cheat28_code = "021E2388+0000001C"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Bonus: Truth or Dare!"
+cheat29_code = "021E2388+0000001D"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Bonus: Dumped!"
+cheat30_code = "021E2388+0000001E"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Bonus: 2 Fast 2 Flirtatious"
+cheat31_code = "021E2388+0000001F"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Bonus: Big Spender"
+cheat32_code = "021E2388+00000020"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Bonus: Club Mare"
+cheat33_code = "021E2388+00000021"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Bonus: Club Mare(2)"
+cheat34_code = "021E2388+00000022"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Golden Bonus: Dan'd Up Stand-up!"
+cheat35_code = "021E2388+00000023"
+cheat35_enable = false

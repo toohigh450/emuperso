@@ -1,0 +1,35 @@
+# Recherche locale pour la ROM : Golf [World][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Golf%20(World)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Golf%20(World)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Golf%20(World)%20(Xploder).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Golf%20(World).cht
+
+cheats = 6
+
+cheat0_desc = "[Game Genie] Wind Power Is 10 MPH"
+cheat0_code = "3ED-87E-08A+5ED-88E-C4E"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Always On 1st Shot"
+cheat1_code = "010187C4"
+cheat1_enable = false
+
+cheat2_desc = "[Xploder] Immer Birdie"
+cheat2_code = "$0D22A304"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Wind power is 10 mph"
+cheat3_code = "3ED-87E-08A+5ED-88E-C4E"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Always on 1st Shot"
+cheat4_code = "010187C4"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Immer Birdie"
+cheat5_code = "0122A384"
+cheat5_enable = false

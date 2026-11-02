@@ -1,0 +1,74 @@
+# Recherche locale pour la ROM : Resident Evil Gaiden [USA][!!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Resident%20Evil%20Gaiden%20(USA).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Resident%20Evil%20Gaiden%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Resident%20Evil%20Gaiden%20(USA%2C%20Europe)%20(GameShark).cht
+
+cheats = 16
+
+cheat0_desc = "[Format source non précisé] Infinite Ammo On Pickup"
+cheat0_code = "004-26B-E65"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Herbs"
+cheat1_code = "004-E88-3BE"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] All Herbs Cure Poison"
+cheat2_code = "004-908-C49"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Infinite Health"
+cheat3_code = "923091D4"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Infinite Handgun Bullets"
+cheat4_code = "910AC1C3"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Infinite Shotgun Bullets"
+cheat5_code = "9104C2C3"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Invincibility"
+cheat6_code = "00B-18B-F7A+00B-12B-7F2"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Rapid Fire"
+cheat7_code = "005-6BB-E62+CB1-D0B-D59"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Skip Door Transition"
+cheat8_code = "185-B6E-4CA"
+cheat8_enable = false
+
+cheat9_desc = "[Game Genie] Note"
+cheat9_code = "N/A"
+cheat9_enable = false
+
+cheat10_desc = "[Game Genie] Infinite Ammo"
+cheat10_code = "004-26B-E65"
+cheat10_enable = false
+
+cheat11_desc = "[Game Genie] Infinite Herbs"
+cheat11_code = "004-E88-3BE"
+cheat11_enable = false
+
+cheat12_desc = "[Game Genie] All Herbs Cure Poison"
+cheat12_code = "004-908-C49"
+cheat12_enable = false
+
+cheat13_desc = "[GameShark] Infinite Health"
+cheat13_code = "923091D4"
+cheat13_enable = false
+
+cheat14_desc = "[GameShark] Infinite Handgun Bullets"
+cheat14_code = "910AC1C3"
+cheat14_enable = false
+
+cheat15_desc = "[GameShark] Infinite Shotgun Bullets"
+cheat15_code = "9104C2C3"
+cheat15_enable = false

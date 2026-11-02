@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Britney's Dance Beat (Europe) (En,De).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Britney's%20Dance%20Beat%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 3
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000BAB2+000A+10001050+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Have All Photos+Video+Puzzles"
+cheat1_code = "83002C28+FFFF+83002C2A+FFFF"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Have All Practice+Concert Modes Complete"
+cheat2_code = "83002BE8+FFFF+83002BEA+FFFF"
+cheat2_enable = false

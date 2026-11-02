@@ -1,0 +1,33 @@
+# Recherche locale pour la ROM : Rolan's Curse [USA][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Rolan's%20Curse%20(USA)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Rolan's%20Curse%20(USA).cht
+
+cheats = 6
+
+cheat0_desc = "[Game Genie] Start With 2 Energy Points"
+cheat0_code = "025-F5E-F7A"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Start With 6 Energy Points"
+cheat1_code = "065-F5E-F7A"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Infinite Energy"
+cheat2_code = "F0C-96C-6E9"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Start with 2 energy pts."
+cheat3_code = "025-F5E-F7A"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Start with 6 energy pts."
+cheat4_code = "065-F5E-F7A"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Infinite energy"
+cheat5_code = "F0C-96C-6E9"
+cheat5_enable = false

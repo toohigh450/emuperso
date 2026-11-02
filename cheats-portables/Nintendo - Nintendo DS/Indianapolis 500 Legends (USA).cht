@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Indianapolis 500 Legends (USA).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Indianapolis%20500%20Legends%20(USA).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] Complete ClassicMode-StartCustom"
+cheat0_code = "12341946+000000FF+02341948+FFFFFFFF+0234194C+FFFFFFFF+22341950+000000FF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Complete Museum"
+cheat1_code = "12341F7A+0000FFFF+C0000000+00000004+02341F64+FFFFFFFF+DC000000+00000002+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Complete Mission Mode and Unlock ClassicMode-StartCustom"
+cheat2_code = "D5000000+000000FF+C0000000+00000018+D8000000+0234192C+D2000000+00000000"
+cheat2_enable = false

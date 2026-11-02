@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Tale of Despereaux, The (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Tale%20of%20Despereaux%2C%20The%20(Europe).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Buttons x999"
+cheat0_code = "1223FC64+000003E7"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Min Time"
+cheat1_code = "12119D38+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Health"
+cheat2_code = "6225E570+00000000+B225E570+00000000+10000258+00008000+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Current Health"
+cheat3_code = "6225E570+00000000+B225E570+00000000+1000025C+00008000+D2000000+00000000"
+cheat3_enable = false

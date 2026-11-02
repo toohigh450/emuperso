@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Call of Duty - Modern Warfare - Mobilized (France).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Call%20of%20Duty%20-%20Modern%20Warfare%20-%20Mobilized%20(France).cht
+
+cheats = 6
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "520D3164+EE070F90+E20005B4+0000004C+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2EEB6D1+0009000A+0012006C+D2F2015E+0000A16D+00000000+020D3164+E92D401E+020D3168+FAFCB511+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Debug Mode Model Viewer"
+cheat1_code = "021A7790+021AD534"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Levels/Difficulties Open"
+cheat2_code = "021F4A8C+FFFFFFFF"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Challenges/Extras Open"
+cheat3_code = "121F4AA2+00000FFF+221F4A9F+000000FF"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Widescreen (16:9)"
+cheat4_code = "920216D0+00001555+120216D0+00001C72+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Widescreen (16:10)"
+cheat5_code = "920216D0+00001555+120216D0+0000199A+D2000000+00000000"
+cheat5_enable = false

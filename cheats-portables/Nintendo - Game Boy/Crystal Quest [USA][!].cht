@@ -1,0 +1,73 @@
+# Recherche locale pour la ROM : Crystal Quest [USA][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Crystal%20Quest%20(USA)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Crystal%20Quest%20(USA).cht
+
+cheats = 16
+
+cheat0_desc = "[GameShark] Infinite Lives"
+cheat0_code = "0103EFC6"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Infinite Smart Bombs"
+cheat1_code = "0104F0C6"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Start with 10 lives"
+cheat2_code = "0A5-4EF-F7A"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Start with 20 lives"
+cheat3_code = "145-4EF-F7A"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Infinite lives"
+cheat4_code = "B62-D3E-3BE"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Start with 10 smart bombs"
+cheat5_code = "0A4-6FF-F7A"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Start with 20 smart bombs"
+cheat6_code = "144-6FF-F7A"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Infinite smart bombs"
+cheat7_code = "B6C-00F-3BE"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Only need 1 crystal to finish each level"
+cheat8_code = "AFF-54F-3BE+77F-55F-E69"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Skip to wave 10 after completing your current wave"
+cheat9_code = "3E8-0CE-2AA+098-0DE-E66"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Skip to wave 20 after completing your current wave"
+cheat10_code = "3E8-0CE-2AA+138-0DE-E66"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Skip to wave 40 after completing your current wave"
+cheat11_code = "3E8-0CE-2AA+278-0DE-E66"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Skip to wave 80 after completing your current wave"
+cheat12_code = "3E8-0CE-2AA+4F8-0DE-E66"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Infinite Lives"
+cheat13_code = "0103EFC6"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Infinite Smart Bombs"
+cheat14_code = "0104F0C6"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Invincibility"
+cheat15_code = "010081C8+010084C8"
+cheat15_enable = false

@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Las Vegas Cool Hand [USA][GB Compatible][!!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Las%20Vegas%20Cool%20Hand%20(USA)%20(GB%20Compatible).cht
+
+cheats = 1
+
+cheat0_desc = "[Format source non précisé] Max Money"
+cheat0_code = "019976D6+019977D6+019978D6"
+cheat0_enable = false

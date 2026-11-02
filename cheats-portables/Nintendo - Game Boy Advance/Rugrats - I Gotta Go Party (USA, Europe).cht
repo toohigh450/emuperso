@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Rugrats - I Gotta Go Party (USA, Europe).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Rugrats%20-%20I%20Gotta%20Go%20Party%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 6
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00001795+000A+100006C4+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Unlock All Games"
+cheat1_code = "32001780+0007"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Have 99 Points"
+cheat2_code = "32002662+0063"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Infinite Chances"
+cheat3_code = "3200171C+0006"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Press Select+Up To Stop Timer On 10sec's"
+cheat4_code = "74000130+03BB+83004000+0001+73004000+0001+32002608+000A"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Press Select+Down To Resume Timer"
+cheat5_code = "74000130+037B+83004000+0000"
+cheat5_enable = false

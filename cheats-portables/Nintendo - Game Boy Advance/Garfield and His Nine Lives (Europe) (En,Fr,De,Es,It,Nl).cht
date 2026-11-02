@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Garfield and His Nine Lives (Europe) (En,Fr,De,Es,It,Nl).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Garfield%20and%20His%20Nine%20Lives%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 3
+
+cheat0_desc = "[Code Breaker] Master Code [Pad]"
+cheat0_code = "00000000+0002+10003DB2+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Max Lives"
+cheat1_code = "320083AC+0009"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Max Lasagna"
+cheat2_code = "32000551+0005"
+cheat2_enable = false

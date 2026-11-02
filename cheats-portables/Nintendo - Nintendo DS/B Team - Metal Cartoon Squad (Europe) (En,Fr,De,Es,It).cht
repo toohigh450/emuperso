@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : B Team - Metal Cartoon Squad (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/B%20Team%20-%20Metal%20Cartoon%20Squad%20(Europe).cht
+
+cheats = 8
+
+cheat0_desc = "[Action Replay] Max Score"
+cheat0_code = "02048638+05F5E0FF+02200E00+05F5E0FF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Unlock Hiddens"
+cheat1_code = "D5000000+03030303+C0000000+0000000A+D6000000+02053C9C+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Player #1 - Max Health"
+cheat2_code = "62053500+00000000+B2053500+00000000+2000013C+00000096+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Player #2 - Max Health"
+cheat3_code = "62053504+00000000+B2053504+00000000+2000013C+00000096+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Player #3 - Max Health"
+cheat4_code = "62053508+00000000+B2053508+00000000+2000013C+00000096+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Player #1 - Max Ammo"
+cheat5_code = "62053500+00000000+B2053500+00000000+1000019E+000003E7+100001B2+000003E7+100001C6+000003E7+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Player #2 - Max Ammo"
+cheat6_code = "62053504+00000000+B2053504+00000000+1000019E+000003E7+100001B2+000003E7+100001C6+000003E7+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Player #3 - Max Ammo"
+cheat7_code = "62053508+00000000+B2053508+00000000+1000019E+000003E7+100001B2+000003E7+100001C6+000003E7+D2000000+00000000"
+cheat7_enable = false

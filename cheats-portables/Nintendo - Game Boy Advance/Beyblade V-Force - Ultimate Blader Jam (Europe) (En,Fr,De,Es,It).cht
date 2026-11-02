@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Beyblade V-Force - Ultimate Blader Jam (Europe) (En,Fr,De,Es,It).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Beyblade%20V-Force%20-%20Ultimate%20Blader%20Jam%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 7
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "000016FE+000A+10051EFC+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Full SP Bar"
+cheat1_code = "8200E2EC+0B30"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite BB"
+cheat2_code = "8200F160+0005+8200F71C+0005"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Low Timer"
+cheat3_code = "8200E318+0000"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Always Get Items After Level Completion"
+cheat4_code = "7200F3D8+0002+8200F4DC+0003+7200F3D8+0001+8200F4DC+0001"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Complete Bey Collection"
+cheat5_code = "4200FCBC+FFFF+00000007+0002"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Have All Levels Open"
+cheat6_code = "4200F744+0007+00000037+0018"
+cheat6_enable = false

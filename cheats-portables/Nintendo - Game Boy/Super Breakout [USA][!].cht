@@ -1,0 +1,21 @@
+# Recherche locale pour la ROM : Super Breakout [USA][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Super%20Breakout%20(USA)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Super%20Breakout%20(USA).cht
+
+cheats = 3
+
+cheat0_desc = "[Game Genie] Infinite Balls"
+cheat0_code = "FAA-EAF"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Balls"
+cheat1_code = "FAA-EAF"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Paddle Hits Ball From Anywhere"
+cheat2_code = "1E7-1CF-084+227-20F-084"
+cheat2_enable = false

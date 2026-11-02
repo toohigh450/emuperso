@@ -1,0 +1,48 @@
+# Recherche locale pour la ROM : Chou Gekijouban Keroro Gunsou - Gekishin Dragon Warriors de Arimasu! (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Chou%20Gekijouban%20Keroro%20Gunsou%20-%20Gekishin%20Dragon%20Warriors%20de%20Arimasu!%20(Japan).cht
+
+cheats = 10
+
+cheat0_desc = "[Action Replay] Enable Hidden Mode and Character"
+cheat0_code = "12101D22+00003F3F+22101D24+0000001F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Complete Models, Cut Scenes, and Others"
+cheat1_code = "120CCCA2+0000FFFF+020CCCA4+FFFFFFFF+020CCCA8+FFFFFFFF+020CCCAC+FFFFFFFF+020CCCB0+FFFFFFFF+120CCCB4+00003FFF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Enable Special Games"
+cheat2_code = "220CCCD5+00000038"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Invasion 100%"
+cheat3_code = "220CCCC9+00000080+120CCCCA+0000FFFF+020CCCCC+FFFFFFFF+020CCCD0+FFFFFFFF+120CCCD4+0000FFFF+220CCCD6+00000007+120CCCDA+00000FFF"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Lifes"
+cheat4_code = "22101D0A+00000063"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Star x99"
+cheat5_code = "22101D0B+00000063"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Max Crystal"
+cheat6_code = "22101D0C+00000064"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] HP never Decrease"
+cheat7_code = "22101D08+00000005"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Infinite Special Attack"
+cheat8_code = "22101D0D+00000001"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Invicible"
+cheat9_code = "220F9FCE+000000FE"
+cheat9_enable = false

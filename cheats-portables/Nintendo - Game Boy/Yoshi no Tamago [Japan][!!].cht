@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Yoshi no Tamago [Japan][!!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Yoshi%20no%20Tamago%20(Japan).cht
+
+cheats = 4
+
+cheat0_desc = "[Format source non précisé] Enable Partially Unfinished Bullet Bill Enemy"
+cheat0_code = "058-FCE-E6A"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Title Screen Music Modifier"
+cheat1_code = "302-B3F-2AA"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Keep Objects Displayed While Paused"
+cheat2_code = "FA3-E0F-4C1+EA3-EDF-D5D"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Keep Objects Displayed While Paused (Short Version)"
+cheat3_code = "D93-DFF-5D4"
+cheat3_enable = false

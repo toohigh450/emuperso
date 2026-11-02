@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Personal Trainer DS for Men (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Personal%20Trainer%20DS%20for%20Men%20(Europe).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Food Consumption 0"
+cheat0_code = "120911C0+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Training"
+cheat1_code = "120911C2+0000FFFF"
+cheat1_enable = false

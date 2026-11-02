@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Kirby no Block Ball [Japan][SGB Enhanced][!!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Kirby%20no%20Block%20Ball%20(Japan)%20(SGB%20Enhanced).cht
+
+cheats = 2
+
+cheat0_desc = "[Format source non précisé] Infinite Lives"
+cheat0_code = "0109C9C1"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Always Play In Thru Block Mode With Timer Stuck At 97"
+cheat1_code = "010FD6C2+010FD7C2"
+cheat1_enable = false

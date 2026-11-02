@@ -1,0 +1,64 @@
+# Recherche locale pour la ROM : Grand Theft Auto Advance (Europe) (En,Fr,De,Es,It).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Grand%20Theft%20Auto%20Advance%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 14
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00000000+0002+1006534A+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Health"
+cheat1_code = "32000F22+0064+3202582A+0064"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] 6-Star 'Wanted' Rating - True"
+cheat2_code = "32030340+0006"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] 6-Star 'Wanted' Rating - On-Screen"
+cheat3_code = "3202581A+0006"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Infinite Time"
+cheat4_code = "82025818+0000"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Infinite Ammo"
+cheat5_code = "4200108E+00FF+0000000B+0008"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Car Weapon"
+cheat6_code = "820010E4+010C+320010E6+00FF"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Have All Weapons"
+cheat7_code = "4200108C+0101+0001000B+0008"
+cheat7_enable = false
+
+cheat8_desc = "[Code Breaker] Zero Wanted Level"
+cheat8_code = "32030340+0000+3202581A+0000"
+cheat8_enable = false
+
+cheat9_desc = "[Code Breaker] Infinite Armor"
+cheat9_code = "320079A0+0064+32025828+0064"
+cheat9_enable = false
+
+cheat10_desc = "[Code Breaker] Infinite Money"
+cheat10_code = "8202581C+FFFF+82025824+FFFF"
+cheat10_enable = false
+
+cheat11_desc = "[Code Breaker] Max Money"
+cheat11_code = "8202581C+E0FF+8202581E+05F5+82025824+E0FF+82025826+05F5"
+cheat11_enable = false
+
+cheat12_desc = "[Code Breaker] Have All Weapons/Infinite Ammo"
+cheat12_code = "4200108C+0101+0001000F+0008+4200108E+00FF+0000000F+0008"
+cheat12_enable = false
+
+cheat13_desc = "[Code Breaker] Max Amount Of Arrests In Vigilante"
+cheat13_code = "320360F2+0063+320360F5+0063"
+cheat13_enable = false

@@ -1,0 +1,29 @@
+# Recherche locale pour la ROM : Power Quest [USA][En][Fr][De][Es][It][SGB Enhanced][GB Compatible][!!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Power%20Quest%20(USA)%20(En%2CFr%2CDe%2CEs%2CIt)%20(SGB%20Enhanced)%20(GB%20Compatible).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Power%20Quest%20(USA%2C%20Europe)%20(GameShark).cht
+
+cheats = 5
+
+cheat0_desc = "[Format source non précisé] Infinite Credits"
+cheat0_code = "01990ECF+01990FCF+019910CF+019911CF"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Energy"
+cheat1_code = "906D92C2"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Timer Modifier"
+cheat2_code = "010048C2"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Infinite Credits"
+cheat3_code = "01990ECF+01990FCF+019910CF+019911CF"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Infinite Energy"
+cheat4_code = "906D92C2"
+cheat4_enable = false

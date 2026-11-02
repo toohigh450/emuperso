@@ -1,0 +1,136 @@
+# Recherche locale pour la ROM : Urbz, The - Sims in the City (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Urbz%2C%20The%20-%20Sims%20in%20the%20City%20(Europe).cht
+
+cheats = 32
+
+cheat0_desc = "[Action Replay] Full Hunger Meter"
+cheat0_code = "02142A30+63D6DB78"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Full Cleanliness Meter"
+cheat1_code = "02142A34+63D6DB78"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Full Sleep Meter"
+cheat2_code = "02142A38+63D6DB78"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Full Social Meter"
+cheat3_code = "02142A3C+63D6DB78"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Full Comfort Meter"
+cheat4_code = "02142A40+63D6DB78"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Full Toilet Meter"
+cheat5_code = "02142A44+63D6DB78"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Full Entertainment Meter"
+cheat6_code = "02142A48+63D6DB78"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Full House-Decor Meter"
+cheat7_code = "02142A4C+63D6DB78"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Infinite Simoleons"
+cheat8_code = "02142950+000F423F"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Max Cooking Skill"
+cheat9_code = "22142A1B+0000000A"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Max Mechanical Skill"
+cheat10_code = "22142A1F+0000000A"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Max Creativity Skill"
+cheat11_code = "22142A23+0000000A"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Max Body Skill"
+cheat12_code = "22142A27+0000000A"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Max logic Skill"
+cheat13_code = "22142A2B+0000000A"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Max Charisma Skill"
+cheat14_code = "22142A2F+0000000A"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Have Max Beads"
+cheat15_code = "02142A68+00000063"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Max Rep With All Groups"
+cheat16_code = "02142A6C+0A0A0A0A"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Have 99 Piles of Trash"
+cheat17_code = "22142A88+00000063"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Have 99 Aluminum Cans"
+cheat18_code = "22142A89+00000063"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Have 99 License Plates"
+cheat19_code = "22142A8A+00000063"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Have 99 Nuclear Fuel Rods"
+cheat20_code = "22142A8B+00000063"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Have 99 Three-eyed Bog Frogs"
+cheat21_code = "22142A8C+00000063"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Have 99 Apples"
+cheat22_code = "22142A8D+00000063"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Have 99 Chocolate"
+cheat23_code = "22142A8E+00000063"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Have 99 Flour"
+cheat24_code = "22142A8F+00000063"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Have 99 Lemons"
+cheat25_code = "22142A90+00000063"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Have 99 Nuts"
+cheat26_code = "22142A91+00000063"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Have 99 Strawberries"
+cheat27_code = "22142A92+00000063"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Have 99 Sugar"
+cheat28_code = "22142A93+00000063"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Have 99 Vanilla"
+cheat29_code = "22142A94+00000063"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Have 99 Nuggets of Amber"
+cheat30_code = "22142A95+00000063"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Freeze Time - Sleep To Advance Time"
+cheat31_code = "0214295C+00000000"
+cheat31_enable = false

@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Pirates of the Caribbean - Dead Man's Chest (USA, Europe) (En,Fr,De,Es,It).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Pirates%20of%20the%20Caribbean%20-%20Dead%20Man's%20Chest%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 4
+
+cheat0_desc = "[Code Breaker] Master Code [Pad]"
+cheat0_code = "000035B9+000A+1002141E+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Health"
+cheat1_code = "830049DF+270F"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Have All Rumors"
+cheat2_code = "330049A3+00FF"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Max Money"
+cheat3_code = "83006E50+C350"
+cheat3_enable = false

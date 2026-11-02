@@ -1,0 +1,204 @@
+# Recherche locale pour la ROM : Cartoon Network Racing (Europe) (En,Fr,De,Es,It,Sv,No,Da).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Cartoon%20Network%20Racing%20(Europe).cht
+
+cheats = 49
+
+cheat0_desc = "[Action Replay] Max/Infinite Toon Coins"
+cheat0_code = "94000130+FFFB0000+021DEDA0+000F4240+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Unlock Kart Speed and Championships"
+cheat1_code = "94000130+FFFB0000+221DEDAC+000000FF+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Unlock All Characters"
+cheat2_code = "94000130+FFFB0000+C0000000+00000013+221DE79C+00000007+DC000000+00000010+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Increase Star Power"
+cheat3_code = "1206E4D0+00001000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Cycle Items"
+cheat4_code = "A4000130+FFFB0000+22000BAC+00000000+D2000000+00000000+82000BB0+00000011+22000BB0+00000000+D2000000+00000000+94000130+FFFB0000+DB000000+02000BAC+D4000000+00000008+D8000000+02000BAC+D2000000+00000000+92000BAC+00000008+DB000000+02000BB0+D4000000+00000001+D8000000+02000BB0+D2000000+00000000+DB000000+02000BB0+D3000000+00000000+621AEC78+00000000+621C2BBC+00000000+B21C2BBC+00000000+D8000000+0000050C+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Bubbles"
+cheat5_code = "221DE79C+00000007"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Buttercup"
+cheat6_code = "221DE7AC+00000007"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Blossom"
+cheat7_code = "221DE7BC+00000007"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Courage"
+cheat8_code = "221DE7CC+00000007"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Professor Utonium"
+cheat9_code = "221DE7DC+00000007"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Mandark"
+cheat10_code = "221DE7EC+00000007"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Mojo Jojo"
+cheat11_code = "221DE7FC+00000007"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Cow"
+cheat12_code = "221DE80C+00000007"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Chicken"
+cheat13_code = "221DE81C+00000007"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Dee Dee"
+cheat14_code = "221DE82C+00000007"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Suzy"
+cheat15_code = "221DE83C+00000007"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Dexter"
+cheat16_code = "221DE84C+00000007"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] I.R. Baboon"
+cheat17_code = "221DE85C+00000007"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Bunny Bravo"
+cheat18_code = "221DE86C+00000007"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] The Red Guy"
+cheat19_code = "221DE87C+00000007"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Muriel"
+cheat20_code = "221DE88C+00000007"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Johnny Bravo"
+cheat21_code = "221DE89C+00000007"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] I.M. Weasel"
+cheat22_code = "221DE8AC+00000007"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Him"
+cheat23_code = "221DE8BC+00000007"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Eustace"
+cheat24_code = "221DE8CC+00000007"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Sketchbook"
+cheat25_code = "221DEDB2+00000001"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Kart Kurling"
+cheat26_code = "221DEDB3+00000001"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Dexter's Rival"
+cheat27_code = "221DEDB4+00000001"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Telephonies"
+cheat28_code = "221DEDB5+00000001"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Black Sheep"
+cheat29_code = "221DEDB6+00000001"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Pepper"
+cheat30_code = "621C2BBC+00000000+B21C2BBC+00000000+2000050C+00000001+D2000000+00000000"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Peppers x2"
+cheat31_code = "621C2BBC+00000000+B21C2BBC+00000000+2000050C+00000002+D2000000+00000000"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Peppers x3"
+cheat32_code = "621C2BBC+00000000+B21C2BBC+00000000+2000050C+00000003+D2000000+00000000"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Red Rocket"
+cheat33_code = "621C2BBC+00000000+B21C2BBC+00000000+2000050C+00000004+D2000000+00000000"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Yellow Rocket"
+cheat34_code = "621C2BBC+00000000+B21C2BBC+00000000+2000050C+00000005+D2000000+00000000"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Yellow Rockets x2"
+cheat35_code = "621C2BBC+00000000+B21C2BBC+00000000+2000050C+00000006+D2000000+00000000"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Yellow Rockets x3"
+cheat36_code = "621C2BBC+00000000+B21C2BBC+00000000+2000050C+00000007+D2000000+00000000"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Red Mine"
+cheat37_code = "621C2BBC+00000000+B21C2BBC+00000000+2000050C+00000008+D2000000+00000000"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Green Mine"
+cheat38_code = "621C2BBC+00000000+B21C2BBC+00000000+2000050C+00000009+D2000000+00000000"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Oil"
+cheat39_code = "621C2BBC+00000000+B21C2BBC+00000000+2000050C+0000000A+D2000000+00000000"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Flying Bomb"
+cheat40_code = "621C2BBC+00000000+B21C2BBC+00000000+2000050C+0000000B+D2000000+00000000"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Shield"
+cheat41_code = "621C2BBC+00000000+B21C2BBC+00000000+2000050C+0000000C+D2000000+00000000"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Smoke"
+cheat42_code = "621C2BBC+00000000+B21C2BBC+00000000+2000050C+0000000D+D2000000+00000000"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Magnet"
+cheat43_code = "621C2BBC+00000000+B21C2BBC+00000000+2000050C+0000000E+D2000000+00000000"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Tire Thorns"
+cheat44_code = "621C2BBC+00000000+B21C2BBC+00000000+2000050C+0000000F+D2000000+00000000"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Star Power"
+cheat45_code = "621C2BBC+00000000+B21C2BBC+00000000+2000050C+00000010+D2000000+00000000"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Max/Infinite Toon Coins Collected"
+cheat46_code = "021DEDBC+000F4240"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Widescreen (16:9)"
+cheat47_code = "921D7894+00001555+121D7894+00001C72+D2000000+00000000"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Widescreen (16:10)"
+cheat48_code = "921D7894+00001555+121D7894+0000199A+D2000000+00000000"
+cheat48_enable = false

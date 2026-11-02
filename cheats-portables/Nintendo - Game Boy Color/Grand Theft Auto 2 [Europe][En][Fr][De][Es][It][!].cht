@@ -1,0 +1,52 @@
+# Recherche locale pour la ROM : Grand Theft Auto 2 [Europe][En][Fr][De][Es][It][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Grand%20Theft%20Auto%202%20(USA%2C%20Europe)%20(GameShark).cht
+
+cheats = 11
+
+cheat0_desc = "[GameShark] Infinite Health"
+cheat0_code = "010577D6"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Have All Weapons"
+cheat1_code = "01FFA0D6"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Infinte Pistol Ammo"
+cheat2_code = "015088D6"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Infinte S.Gun Ammo"
+cheat3_code = "01508CD6"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Infinite Uzi Ammo"
+cheat4_code = "01508ED6"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Infinite Cocktails"
+cheat5_code = "015090D6"
+cheat5_enable = false
+
+cheat6_desc = "[GameShark] Infinite F.Thrower Ammo"
+cheat6_code = "015094D6"
+cheat6_enable = false
+
+cheat7_desc = "[GameShark] Infinite M.Gun Ammo"
+cheat7_code = "015096D6"
+cheat7_enable = false
+
+cheat8_desc = "[GameShark] Infinite Grenades Ammo"
+cheat8_code = "01508AD6"
+cheat8_enable = false
+
+cheat9_desc = "[GameShark] Max Cash"
+cheat9_code = "9199A3D6+9199A5D6+9199A7D6"
+cheat9_enable = false
+
+cheat10_desc = "[GameShark] Car Takes No Damage"
+cheat10_code = "0112B1C5"
+cheat10_enable = false

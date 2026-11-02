@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : SBK - Snowboard Kids (Europe) (En,Fr,De).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/SBK%20-%20Snowboard%20Kids%20(Europe).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Infinite Points/Cash"
+cheat0_code = "02125660+05F5E0FF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Always Full SBK Meter"
+cheat1_code = "02125410+00002710"
+cheat1_enable = false

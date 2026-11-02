@@ -1,0 +1,33 @@
+# Recherche locale pour la ROM : NHL Blades of Steel 2000 [USA][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/NHL%20Blades%20of%20Steel%202000%20(USA)%20(Xploder).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/NHL%20Blades%20of%20Steel%202000%20(USA).cht
+
+cheats = 6
+
+cheat0_desc = "[Xploder] Heim-Team hat 99 Tore"
+cheat0_code = "$0DBAFF55"
+cheat0_enable = false
+
+cheat1_desc = "[Xploder] Heim-Team macht kein Tor"
+cheat1_code = "$0D21FF55"
+cheat1_enable = false
+
+cheat2_desc = "[Xploder] Auswaerts-Team hat 99 Tore"
+cheat2_code = "$0DBAB755"
+cheat2_enable = false
+
+cheat3_desc = "[Xploder] Auswaerts-Team macht kein Tor"
+cheat3_code = "$0D21B755"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Home Team Score Modifier"
+cheat4_code = "010052CA"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Away Team Score Modifier"
+cheat5_code = "010050CA"
+cheat5_enable = false

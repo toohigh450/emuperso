@@ -1,0 +1,25 @@
+# Recherche locale pour la ROM : Pinball Fantasies [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Pinball%20Fantasies%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Pinball%20Fantasies%20(USA%2C%20Europe).cht
+
+cheats = 4
+
+cheat0_desc = "[GameShark] Infinite Balls"
+cheat0_code = "0101F1D4"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Balls"
+cheat1_code = "0100F1D4"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Infinite Balls"
+cheat2_code = "00A-5CF-3BA"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Start with ?? Balls, instead of 3"
+cheat3_code = "04A-5FF-E66"
+cheat3_enable = false

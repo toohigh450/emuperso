@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Ys DS (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Ys%20DS%20(Japan).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Max HP"
+cheat0_code = "22283ACC+000000FF+22283ACE+000000FF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Gold"
+cheat1_code = "02283AD4+0001869F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Attack"
+cheat2_code = "22283AD0+000000FF"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Defense"
+cheat3_code = "22283AD2+000000FF"
+cheat3_enable = false

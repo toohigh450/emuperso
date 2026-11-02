@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Momotarou Dengeki [Japan][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Momotarou%20Dengeki%20(Japan).cht
+
+cheats = 2
+
+cheat0_desc = "[Format source non précisé] Hit Anywhere"
+cheat0_code = "FA1-84A-E61+FA1-D8A-E61+FA1-B1A-E61+FA1-57A-E61"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Jump in Midair"
+cheat1_code = "291-12D-6E6+FA0-A1D-E61"
+cheat1_enable = false

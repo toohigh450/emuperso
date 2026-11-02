@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Nippon Futsal League Kounin - Minna no DS Futsal (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Nippon%20Futsal%20League%20Kounin%20-%20Minna%20no%20DS%20Futsal%20(Japan).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] 99 Points for F-League"
+cheat0_code = "1209E526+00000063"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] 0 Points for F-League (AI)"
+cheat1_code = "1209E528+00000000"
+cheat1_enable = false

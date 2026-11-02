@@ -1,0 +1,564 @@
+# Recherche locale pour la ROM : World Ends with You, The (Europe).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/World%20Ends%20with%20You%2C%20The%20(Europe).cht
+
+cheats = 139
+
+cheat0_desc = "[Action Replay] Debug Menu"
+cheat0_code = "920AE5F0+00000AB1+020AE5F4+E5910630+D2000000+00000000+94000130+FFFB0000+920AE5F0+00000AB1+020AE5F4+E3A00008+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Difficulties Available"
+cheat1_code = "920848AE+000013A0+020848A4+E3A00003+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Push Select, Foods only require 1 byte"
+cheat2_code = "94000130+FFFB0000+22395CA6+00000001+22395D6E+00000001+22395E36+00000001+22395EFE+00000001+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Push Down+Select for full noise report"
+cheat3_code = "94000130+FF7B0000+C0000000+0000005F+22073CDB+0000000F+22073CDC+00000001+DC000000+00000004+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Earn Exp. from Extra Pin Slots"
+cheat4_code = "92085562+000083A0+02085560+E3A00006+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] 1 Fight to Digest Food"
+cheat5_code = "9208599E+0000E047+0208599C+E3A00000+02085A34+E3A03000+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Digestion Doesn't Decrease Food Slots"
+cheat6_code = "920A374C+00002AB0+020A376C+E3A01018+020A37D0+E3A04018+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Foods only require 1 byte"
+cheat7_code = "92393850+000035F8+22395CA6+00000001+22395D6E+00000001+22395E36+00000001+22395EFE+00000001+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Food Always Full 24bytes"
+cheat8_code = "92393850+000035F8+223A357B+00000018+223A358F+00000018+223A35A3+00000018+223A35B7+00000018+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Max ESP Points"
+cheat9_code = "120737B8+0000FFFF"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Press R to Access Any Map on Any Day"
+cheat10_code = "94000130+FEFF0000+920B8408+000004F8+020B8548+E3A02004+020B8408+E3A00004+D0000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Infinite Health"
+cheat11_code = "520BB570+E59FC004+023918B0+75307530+023918B4+00000000+723918B0+00000400+023918B0+75306530+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] 0'00'00 Time"
+cheat12_code = "520BB570+E59FC004+12074E98+00000000+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Auto Win Battle"
+cheat13_code = "520BB570+E59FC004+22074E52+00000002+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Quick Exp Gain"
+cheat14_code = "42071D18+00000001+02071D18+00000001+D2000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Display Stylus Box Collisions"
+cheat15_code = "2207516C+00000002"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Push L+R for 1-hit kill on Enemy Bosses"
+cheat16_code = "94000130+FCFF0000+123918B8+00000000+D2000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] 100% Item Drop Rate"
+cheat17_code = "520BB570+E59FC004+12074E76+000003E7+D2000000+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Items drop 4x each"
+cheat18_code = "520BB570+E59FC004+023A2B40+00040004+023A2B44+00040004+D2000000+00000000"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Items drop 9x each"
+cheat19_code = "520BB570+E59FC004+023A2B40+00090009+023A2B44+00090009+D2000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] No Damage Bonus"
+cheat20_code = "520BB570+E59FC004+22074E9F+00000000+D2000000+00000000"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] 100 Pass Puck Rally Bonus"
+cheat21_code = "520BB570+E59FC004+22074E8C+00000064+D2000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] 100 Hits Bonus"
+cheat22_code = "520BB570+E59FC004+22074E9C+00000064+D2000000+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Low Time Bonus"
+cheat23_code = "520BB570+E59FC004+12074E98+00000000+D0000000+00000000"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Push L for Invincible, R = Off"
+cheat24_code = "94000130+FDFF0000+22074E40+00000001+D2000000+00000000+94000130+FEFF0000+22074E40+00000000+D2000000+00000000"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Get 1000 Total PP from shutdown, mingle and after battles"
+cheat25_code = "92066A30+0000002C+123A2BD8+000003E8+D2000000+00000000"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] 1000 Base PP after battle"
+cheat26_code = "520BB570+E59FC004+12074E92+000003E8+D2000000+00000000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] 1000 Total PP from shutdown"
+cheat27_code = "9227ABFA+0000FFFF+123A2BD8+000003E8+D2000000+00000000"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Can Equip Any Clothing"
+cheat28_code = "92393850+000035F8+123A3570+000003E7+123A3584+000003E7+123A3598+000003E7+123A35AC+000003E7+D2000000+00000000"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] All items ability unlocked"
+cheat29_code = "92393850+000035F8+D5000000+01010101+C0000000+00000046+D6000000+02073BC0+D2000000+00000000"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] UP+Select for all Items 4x each"
+cheat30_code = "94000130+FFBB0000+D5000000+00040130+C0000000+000001D7+D6000000+02072C80+D4000000+00000001+D2000000+00000000"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] UP+Select for all Items 9x each"
+cheat31_code = "94000130+FFBB0000+D5000000+00090130+C0000000+000001D7+D6000000+02072C80+D4000000+00000001+D2000000+00000000"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Press Select for all pins x3 and mastered"
+cheat32_code = "94000130+FFFB0000+D5000000+80030000+C0000000+0000012F+D6000000+020727C0+D4000000+00000001+D2000000+00000000"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Press Select for all pins x10 and mastered"
+cheat33_code = "94000130+FFFB0000+D5000000+800A0000+C0000000+0000012F+D6000000+020727C0+D4000000+00000001+D2000000+00000000"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Press Select for all pins x50 and mastered"
+cheat34_code = "94000130+FFFB0000+D5000000+80320000+C0000000+0000012F+D6000000+020727C0+D4000000+00000001+D2000000+00000000"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Press Select for all pins x99 and mastered"
+cheat35_code = "94000130+FFFB0000+D5000000+80630000+C0000000+0000012F+D6000000+020727C0+D4000000+00000001+D2000000+00000000"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Infinite Pin Use"
+cheat36_code = "920A79EC+000004F4+020A79EC+E1C414B4+020A79F4+EA000009+D2000000+00000000"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Max Pin Use"
+cheat37_code = "920A49A8+00004640+020A49AC+E3A00C27+D2000000+00000000"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] 6 Pin Slots Available"
+cheat38_code = "9209018E+000083A0+0209018C+E3A00006+D2000000+00000000"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Super Pin Modifier Code"
+cheat39_code = "A4000136+FFBF0000+02000100+00000000+D0000000+00000000+9207DC28+00000002+94000136+FFBF0000+A2000100+00000001+A2398BE4+0000FFFF+DA000000+02398BE4+94000130+FDFF0000+D4000000+00000001+D0000000+00000000+94000130+FEFF0000+D4000000+FFFFFFFF+D0000000+00000000+D7000000+02398BE4+82398BE4+0000012F+02398BE4+00000000+D0000000+00000000+02000100+00000001+D2000000+00000000"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Quick Level Up Pins"
+cheat40_code = "92085D08+000037B6+02085D08+E3A03C27+D2000000+00000000"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Unlock All Pins (Press L+R)"
+cheat41_code = "94000130+000000FF+120727C0+00000000+220727C2+00000009+D3000000+020727C0+C0000000+0000012E+DA000000+00000000+D4000000+00000001+D7000000+00000004+20000004+00000009+DC000000+00000002+D2000000+00000000"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Fill the Stockpile bottom Screen with Scarletites"
+cheat42_code = "94000130+FDFB0000+C0000000+00000067+120723B0+000000FE+DC000000+0000000A+D2000000+00000000"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Push Select for x99 Scarletite at the last line of the Mastered Menu"
+cheat43_code = "94000130+FFFB0000+02072C60+006300FE+D2000000+00000000"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Pins Always Evolve"
+cheat44_code = "92085484+00001034+020854C4+E3A00000+020854D8+E3A00000+020854EC+E3A00000+02085500+E3A00000+02085514+E3A00000+D2000000+00000000"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Equip any same kind of pins"
+cheat45_code = "52066A48+0208F8C0+0208FF10+EA000094+D2000000+00000000"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Pins instant charge"
+cheat46_code = "520BB570+E59FC004+020A8588+E1A00000+D2000000+00000000"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Infinite Pin Use [ON]"
+cheat47_code = "22075188+00000001"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Empty Stockpile"
+cheat48_code = "94000130+FCBB0000+C0000000+000000EF+12071E60+0000FFFF+DC000000+0000000A+D2000000+00000000"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Unlock All Pins (Press L+R Outside Menus)"
+cheat49_code = "94000130+000000FF+120727C0+00000000+220727C2+00000063+D3000000+020727C0+C0000000+0000012E+DA000000+00000000+D4000000+00000001+D7000000+00000004+20000004+00000063+DC000000+00000002+D2000000+00000000"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Bypass Pin Class Check"
+cheat50_code = "9208FF0C+00001021+0208FF14+E3A00000+D2000000+00000000"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Pin Slot 1 (255 ATK)"
+cheat51_code = "52372D80+02373024+22372DA2+000000FF+22372DA6+00000000+D2000000+00000000"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Pin Slot 1 (999 ATK)"
+cheat52_code = "52372D80+02373024+22372DA2+000003E7+22372DA6+00000000+D2000000+00000000"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Pin Slot 2 (255 ATK)"
+cheat53_code = "52372960+02372C04+22372982+000000FF+22372986+00000000+D2000000+00000000"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Pin Slot 2 (999 ATK)"
+cheat54_code = "52372960+02372C04+22372982+000003E7+22372986+00000000+D2000000+00000000"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Pin Slot 3 (255 ATK)"
+cheat55_code = "52372540+023727E4+22372562+000000FF+22372566+00000000+D2000000+00000000"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Pin Slot 3 (999 ATK)"
+cheat56_code = "52372540+023727E4+22372562+000003E7+22372566+00000000+D2000000+00000000"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Pin Slot 4 (255 ATK)"
+cheat57_code = "52372120+023723C4+22372142+000000FF+22372146+00000000+D2000000+00000000"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Pin Slot 4 (999 ATK)"
+cheat58_code = "52372120+023723C4+22372142+000003E7+22372146+00000000+D2000000+00000000"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Pin Slot 5 (255 ATK)"
+cheat59_code = "52371D00+02371FA4+22371D22+000000FF+22371D26+00000000+D2000000+00000000"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Pin Slot 5 (999 ATK)"
+cheat60_code = "52371D00+02371FA4+22371D22+000003E7+22371D26+00000000+D2000000+00000000"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Pin Slot 6 (255 ATK)"
+cheat61_code = "52371840+02371AE4+22371862+000000FF+22371866+00000000+D2000000+00000000"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Pin Slot 6 (999 ATK)"
+cheat62_code = "52371840+02371AE4+22371862+000003E7+22371866+00000000+D2000000+00000000"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Instant DUO Combo"
+cheat63_code = "520BB570+E59FC004+22074E8A+00000063+D2000000+00000000"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Instant and Infinite Level 1 Duo Attacks"
+cheat64_code = "520BB570+E59FC004+623918C8+00000000+B23918C8+00000000+20000001+00000001+D2000000+00000000"
+cheat64_enable = false
+
+cheat65_desc = "[Action Replay] Instant and Infinite Level 2 Duo Attacks"
+cheat65_code = "520BB570+E59FC004+623918C8+00000000+B23918C8+00000000+20000001+00000002+D2000000+00000000"
+cheat65_enable = false
+
+cheat66_desc = "[Action Replay] Instant and Infinite Level 3 Duo Attacks"
+cheat66_code = "520BB570+E59FC004+623918C8+00000000+B23918C8+00000000+20000001+00000003+D2000000+00000000"
+cheat66_enable = false
+
+cheat67_desc = "[Action Replay] Instant Duo Combo (L.1-3 With Activators)"
+cheat67_code = "94000130+FFDB0000+623918C8+00000000+B23918C8+00000000+20000001+00000001+D2000000+00000000+94000130+FFEB0000+623918C8+00000000+B23918C8+00000000+20000001+00000002+D2000000+00000000+94000130+FFBB0000+623918C8+00000000+B23918C8+00000000+20000001+00000003+D2000000+00000000"
+cheat67_enable = false
+
+cheat68_desc = "[Action Replay] 999 ATK+"
+cheat68_code = "12071D20+000003E7"
+cheat68_enable = false
+
+cheat69_desc = "[Action Replay] 200 ATK+"
+cheat69_code = "12071D20+000000C8"
+cheat69_enable = false
+
+cheat70_desc = "[Action Replay] 100 ATK+"
+cheat70_code = "12071D20+00000064"
+cheat70_enable = false
+
+cheat71_desc = "[Action Replay] 50 ATK+"
+cheat71_code = "12071D20+00000032"
+cheat71_enable = false
+
+cheat72_desc = "[Action Replay] 999 DEF+"
+cheat72_code = "12071D22+000003E7"
+cheat72_enable = false
+
+cheat73_desc = "[Action Replay] 200 DEF+"
+cheat73_code = "12071D22+000000C8"
+cheat73_enable = false
+
+cheat74_desc = "[Action Replay] 100 DEF+"
+cheat74_code = "12071D22+00000064"
+cheat74_enable = false
+
+cheat75_desc = "[Action Replay] 50 DEF+"
+cheat75_code = "12071D22+00000032"
+cheat75_enable = false
+
+cheat76_desc = "[Action Replay] Brave 999"
+cheat76_code = "12071D26+000003E7"
+cheat76_enable = false
+
+cheat77_desc = "[Action Replay] Brave 500"
+cheat77_code = "12071D26+000001F4"
+cheat77_enable = false
+
+cheat78_desc = "[Action Replay] Brave 300"
+cheat78_code = "12071D26+0000012C"
+cheat78_enable = false
+
+cheat79_desc = "[Action Replay] Brave 200"
+cheat79_code = "12071D26+000000C8"
+cheat79_enable = false
+
+cheat80_desc = "[Action Replay] 999 ATK+"
+cheat80_code = "12071D3C+000003E7"
+cheat80_enable = false
+
+cheat81_desc = "[Action Replay] 200 ATK+"
+cheat81_code = "12071D3C+000000C8"
+cheat81_enable = false
+
+cheat82_desc = "[Action Replay] 100 ATK+"
+cheat82_code = "12071D3C+00000064"
+cheat82_enable = false
+
+cheat83_desc = "[Action Replay] 50 ATK+"
+cheat83_code = "12071D3C+00000032"
+cheat83_enable = false
+
+cheat84_desc = "[Action Replay] 999 DEF+"
+cheat84_code = "12071D3E+000003E7"
+cheat84_enable = false
+
+cheat85_desc = "[Action Replay] 200 DEF+"
+cheat85_code = "12071D3E+000000C8"
+cheat85_enable = false
+
+cheat86_desc = "[Action Replay] 100 DEF+"
+cheat86_code = "12071D3E+00000064"
+cheat86_enable = false
+
+cheat87_desc = "[Action Replay] 50 DEF+"
+cheat87_code = "12071D3E+00000032"
+cheat87_enable = false
+
+cheat88_desc = "[Action Replay] Brave 500"
+cheat88_code = "12071D42+000001F4"
+cheat88_enable = false
+
+cheat89_desc = "[Action Replay] Brave 999"
+cheat89_code = "12071D42+000003E7"
+cheat89_enable = false
+
+cheat90_desc = "[Action Replay] Brave 300"
+cheat90_code = "12071D42+0000012C"
+cheat90_enable = false
+
+cheat91_desc = "[Action Replay] Brave 200"
+cheat91_code = "12071D42+000000C8"
+cheat91_enable = false
+
+cheat92_desc = "[Action Replay] Sync 100%"
+cheat92_code = "12071D40+000003E8"
+cheat92_enable = false
+
+cheat93_desc = "[Action Replay] 999 ATK+"
+cheat93_code = "12071D54+000003E7"
+cheat93_enable = false
+
+cheat94_desc = "[Action Replay] 200 ATK+"
+cheat94_code = "12071D54+000000C8"
+cheat94_enable = false
+
+cheat95_desc = "[Action Replay] 100 ATK+"
+cheat95_code = "12071D54+00000064"
+cheat95_enable = false
+
+cheat96_desc = "[Action Replay] 50 ATK+"
+cheat96_code = "12071D54+00000032"
+cheat96_enable = false
+
+cheat97_desc = "[Action Replay] 999 DEF+"
+cheat97_code = "12071D56+000003E7"
+cheat97_enable = false
+
+cheat98_desc = "[Action Replay] 200 DEF+"
+cheat98_code = "12071D56+000000C8"
+cheat98_enable = false
+
+cheat99_desc = "[Action Replay] 100 DEF+"
+cheat99_code = "12071D56+00000064"
+cheat99_enable = false
+
+cheat100_desc = "[Action Replay] 50 DEF+"
+cheat100_code = "12071D56+00000032"
+cheat100_enable = false
+
+cheat101_desc = "[Action Replay] Brave 999"
+cheat101_code = "12071D5A+000003E7"
+cheat101_enable = false
+
+cheat102_desc = "[Action Replay] Brave 500"
+cheat102_code = "12071D5A+000001F4"
+cheat102_enable = false
+
+cheat103_desc = "[Action Replay] Brave 300"
+cheat103_code = "12071D5A+0000012C"
+cheat103_enable = false
+
+cheat104_desc = "[Action Replay] Brave 200"
+cheat104_code = "12071D5A+000000C8"
+cheat104_enable = false
+
+cheat105_desc = "[Action Replay] Sync 100%"
+cheat105_code = "12071D58+000003E8"
+cheat105_enable = false
+
+cheat106_desc = "[Action Replay] 999 ATK+"
+cheat106_code = "12071D6C+000003E7"
+cheat106_enable = false
+
+cheat107_desc = "[Action Replay] 200 ATK+"
+cheat107_code = "12071D6C+000000C8"
+cheat107_enable = false
+
+cheat108_desc = "[Action Replay] 100 ATK+"
+cheat108_code = "12071D6C+00000064"
+cheat108_enable = false
+
+cheat109_desc = "[Action Replay] 50 ATK+"
+cheat109_code = "12071D6C+00000032"
+cheat109_enable = false
+
+cheat110_desc = "[Action Replay] 999 DEF+"
+cheat110_code = "12071D6E+000003E7"
+cheat110_enable = false
+
+cheat111_desc = "[Action Replay] 200 DEF+"
+cheat111_code = "12071D6E+000000C8"
+cheat111_enable = false
+
+cheat112_desc = "[Action Replay] 100 DEF+"
+cheat112_code = "12071D6E+00000064"
+cheat112_enable = false
+
+cheat113_desc = "[Action Replay] 50 DEF+"
+cheat113_code = "12071D6E+00000032"
+cheat113_enable = false
+
+cheat114_desc = "[Action Replay] Brave 999"
+cheat114_code = "12071D72+000003E7"
+cheat114_enable = false
+
+cheat115_desc = "[Action Replay] Brave 500"
+cheat115_code = "12071D72+000001F4"
+cheat115_enable = false
+
+cheat116_desc = "[Action Replay] Brave 300"
+cheat116_code = "12071D72+0000012C"
+cheat116_enable = false
+
+cheat117_desc = "[Action Replay] Brave 200"
+cheat117_code = "12071D72+000000C8"
+cheat117_enable = false
+
+cheat118_desc = "[Action Replay] Sync 100%"
+cheat118_code = "12071D70+000003E8"
+cheat118_enable = false
+
+cheat119_desc = "[Action Replay] Drop Rate 999"
+cheat119_code = "12071D24+000003E7"
+cheat119_enable = false
+
+cheat120_desc = "[Action Replay] Drop Rate 900"
+cheat120_code = "12071D24+00000384"
+cheat120_enable = false
+
+cheat121_desc = "[Action Replay] Drop Rate 800"
+cheat121_code = "12071D24+00000320"
+cheat121_enable = false
+
+cheat122_desc = "[Action Replay] Drop Rate 700"
+cheat122_code = "12071D24+000002BC"
+cheat122_enable = false
+
+cheat123_desc = "[Action Replay] Drop Rate 600"
+cheat123_code = "12071D24+00000258"
+cheat123_enable = false
+
+cheat124_desc = "[Action Replay] Drop Rate 500"
+cheat124_code = "12071D24+000001F4"
+cheat124_enable = false
+
+cheat125_desc = "[Action Replay] Drop Rate 400"
+cheat125_code = "12071D24+00000190"
+cheat125_enable = false
+
+cheat126_desc = "[Action Replay] Drop Rate 300"
+cheat126_code = "12071D24+0000012C"
+cheat126_enable = false
+
+cheat127_desc = "[Action Replay] Drop Rate 200"
+cheat127_code = "12071D24+000000C8"
+cheat127_enable = false
+
+cheat128_desc = "[Action Replay] Drop Rate 150"
+cheat128_code = "12071D24+00000096"
+cheat128_enable = false
+
+cheat129_desc = "[Action Replay] Drop Rate 100"
+cheat129_code = "12071D24+00000064"
+cheat129_enable = false
+
+cheat130_desc = "[Action Replay] Hold 9,999,999 Yen in any Wallet"
+cheat130_code = "920848EC+0000FF82+020848EC+E3A00003+0208FEC8+E3A00003+D2000000+00000000"
+cheat130_enable = false
+
+cheat131_desc = "[Action Replay] Infinite Cash (99,999)"
+cheat131_code = "5206ACF0+00000001+02071D1C+0001869F+D2000000+00000000"
+cheat131_enable = false
+
+cheat132_desc = "[Action Replay] Infinite Cash (9,999,999)"
+cheat132_code = "5206ACF0+00000001+02071D1C+0098967F+D2000000+00000000"
+cheat132_enable = false
+
+cheat133_desc = "[Action Replay] Press SELECT for Max/Infinite Money"
+cheat133_code = "94000130+FFFB0000+02071D1C+0098967F+D2000000+00000000"
+cheat133_enable = false
+
+cheat134_desc = "[Action Replay] Max Level 99"
+cheat134_code = "12071D16+00000063"
+cheat134_enable = false
+
+cheat135_desc = "[Action Replay] Max Level 255"
+cheat135_code = "12071D16+000000FF"
+cheat135_enable = false
+
+cheat136_desc = "[Action Replay] Shiki"
+cheat136_code = "22071D28+00000000"
+cheat136_enable = false
+
+cheat137_desc = "[Action Replay] Joshua"
+cheat137_code = "22071D28+00000001"
+cheat137_enable = false
+
+cheat138_desc = "[Action Replay] Beat"
+cheat138_code = "22071D28+00000002"
+cheat138_enable = false

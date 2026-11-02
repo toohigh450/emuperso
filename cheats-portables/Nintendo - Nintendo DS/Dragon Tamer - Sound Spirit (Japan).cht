@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Dragon Tamer - Sound Spirit (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Dragon%20Tamer%20-%20Sound%20Spirit%20(Japan).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] Max/Infinite Money"
+cheat0_code = "0216041C+0001869F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Medals"
+cheat1_code = "02160420+0001869F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Dragon Force"
+cheat2_code = "2212D9F8+00000063"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Have 99 of All Eggs"
+cheat3_code = "02160424+63636363+22160428+00000063"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max/Infinite Battle Experience"
+cheat4_code = "52109E62+00000002+0214A4A4+000F423F+D2000000+00000000"
+cheat4_enable = false

@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Fresh PreCure! - Asobi Collection (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Fresh%20PreCure!%20-%20Asobi%20Collection%20(Japan).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] Anti-Piracy Bypass Code"
+cheat0_code = "52032B94+19806868+02032B94+47804800+02032B98+023FF100+D2000000+00000000+E23FF100+00000080+E5950004+E0800006+E28FE004+E51FF004+02000970+E92D003C+E5950004+E28F2040+E8920030+E59F2044+E0801002+E891000C+E1520004+01530005+1A000006+E59F3028+E5813000+E59F2028+E7803002+E59F2028+E59F3020+E7803002+E8BD003C+E51FF004+02032B9D+EA00000C+E28D0024+EA000036+00000680+00000788+13A1E011+00000914+D2000000+00000000"
+cheat0_enable = false

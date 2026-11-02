@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Pipe Dream [Japan][!!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Pipe%20Dream%20(USA%2C%20Japan)%20(GameShark).cht
+
+cheats = 1
+
+cheat0_desc = "[GameShark] Infinite Distance"
+cheat0_code = "010602C1"
+cheat0_enable = false

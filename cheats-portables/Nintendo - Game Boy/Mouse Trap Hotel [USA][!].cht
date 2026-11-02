@@ -1,0 +1,58 @@
+# Recherche locale pour la ROM : Mouse Trap Hotel [USA][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Mouse%20Trap%20Hotel%20(USA)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Mouse%20Trap%20Hotel%20(USA)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Mouse%20Trap%20Hotel%20(USA).cht
+
+cheats = 12
+
+cheat0_desc = "[Game Genie] Start With 4 Lives"
+cheat0_code = "043-38F-E62"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Start With 6 Lives"
+cheat1_code = "063-38F-E62"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Start With 8 Lives"
+cheat2_code = "083-38F-E62"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Infinite Lives"
+cheat3_code = "FA2-0CD-4C1"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] Collect Cookie For Invincibility Against Balls, Etc."
+cheat4_code = "FA6-E9F-4C1+FA6-DAF-4C1"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Infinite Lives"
+cheat5_code = "0103EEC8"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Start with 4 lives"
+cheat6_code = "043-38F-E62"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Start with 6 lives"
+cheat7_code = "063-38F-E62"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Start with 8 lives"
+cheat8_code = "083-38F-E62"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Infinite lives"
+cheat9_code = "FA2-0CD-4C1"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Collect cookie for invincibility against balls, etc."
+cheat10_code = "FA6-E9F-4C1+FA6-DAF-4C1"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Infinite Lives"
+cheat11_code = "0103EEC8"
+cheat11_enable = false

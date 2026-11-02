@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Ben 10 - Galactic Racing (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Ben%2010%20-%20Galactic%20Racing%20(Europe).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] Cycle Through Power-ups"
+cheat0_code = "A4000130+FEFB0000+023FF904+00000000+D2000000+00000000+523FF900+00000000+023FF900+0000000C+D2000000+00000000+523FF900+00000016+023FF900+0000000C+D2000000+00000000+94000130+FEFB0000+D9000000+023FF904+D4000000+00000008+D6000000+023FF904+D2000000+00000000+523FF904+00000008+D9000000+023FF900+D4000000+00000001+D6000000+023FF900+D2000000+00000000+D9000000+023FF900+D3000000+00000000+623CF34C+00000000+B23CF34C+00000000+B0000CB4+00000000+D6000000+00001BD0+D2000000+00000000"
+cheat0_enable = false

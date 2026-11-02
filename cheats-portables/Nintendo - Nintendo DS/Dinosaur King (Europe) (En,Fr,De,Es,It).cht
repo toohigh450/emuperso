@@ -1,0 +1,136 @@
+# Recherche locale pour la ROM : Dinosaur King (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Dinosaur%20King%20(Europe).cht
+
+cheats = 32
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "52055174+EE070F90+E20000FC+0000004E+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2E47775+015D0012+0330005B+0009000A+0005000B+00000000+02055174+E92D401E+02055178+FAFEABDF+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Change Title"
+cheat1_code = "94000130+FFFB0000+2228DF7C+0000000D+D0000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Game Time 0:0"
+cheat2_code = "94000130+FFFB0000+022932F4+00000000+022932F8+00000000+D0000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max/Infinite Gold"
+cheat3_code = "94000130+FFFB0000+022929F8+000F423F+D0000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Recharge of Radar Battery"
+cheat4_code = "94000130+FEFF0000+222925CB+0000000A+D0000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All Types of Battery"
+cheat5_code = "94000130+FFFB0000+2229264B+00000063+0229264C+63006300+D0000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] All Valuable Item"
+cheat6_code = "94000130+FFFB0000+12292656+000021FE+02292658+FFFFFFFC+0229265C+3C03FFFF+02292660+003FFF0C+D0000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] All Useable Item"
+cheat7_code = "94000130+FFFB0000+C0000000+0000002A+22292395+00000063+DC000000+00000002+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] All Skill Cards"
+cheat8_code = "94000130+FFFB0000+D5000000+09090909+C0000000+0000003C+D6000000+02292274+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Complete Gallery"
+cheat9_code = "94000130+FFFB0000+D5000000+00000007+C0000000+0000008C+D8000000+0228DFF1+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Complete Cleaning of Fossil After Digging"
+cheat10_code = "92308ED2+00000000+DA000000+022FFC50+D7000000+022FFC48+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Always No Encounter"
+cheat11_code = "1213DE94+00000001"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] No Encounters"
+cheat12_code = "94000136+FFFD0000+1213DE94+00000001+D0000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Gauge For Digging Never Decrease"
+cheat13_code = "92308ED2+00000000+DA000000+022FFCC4+D7000000+022FFCC0+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Continuous of Effect on Books and Rain"
+cheat14_code = "12080704+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Max/Infinite HP"
+cheat15_code = "922C79D0+00000000+122C798C+0000270F+122C79D2+0000270F+D0000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Infinite HP"
+cheat16_code = "922C79D0+00000000+DA000000+022C798C+D7000000+022C79D2+D2000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Infinite MP"
+cheat17_code = "922C79D0+00000000+222C79A2+0000000A+222C79AC+0000000A+222C79B6+0000000A+D0000000+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Attack 9999"
+cheat18_code = "922C79D0+00000000+1228E118+0000270F+D0000000+00000000"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] HP 9999"
+cheat19_code = "922C79D0+00000000+1228E114+0000270F+D0000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Max Exp"
+cheat20_code = "922C79D0+00000000+1228E120+0000A205+D0000000+00000000"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Skill 9999"
+cheat21_code = "922C79D0+00000000+1228E112+0000270F+D0000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Level 99"
+cheat22_code = "922C79D0+00000000+2228E11C+00000063+D0000000+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Max/Infinite HP"
+cheat23_code = "922C7AA0+00000000+122C7A5C+0000270F+122C7AA2+0000270F+D0000000+00000000"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Infinite HP"
+cheat24_code = "922C7AA0+00000000+DA000000+022C7A5C+D7000000+022C7AA2+D2000000+00000000"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Infinite MP"
+cheat25_code = "922C7AA0+00000000+222C7A72+0000000A+222C7A7C+0000000A+222C7A86+0000000A+D0000000+00000000"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Max/Infinite HP"
+cheat26_code = "922C7B70+00000000+122C7B2C+0000270F+122C7B72+0000270F+D0000000+00000000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Infinite HP"
+cheat27_code = "922C7B70+00000000+DA000000+022C7B2C+D7000000+022C7B72+D2000000+00000000"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Infinite MP"
+cheat28_code = "922C7B70+00000000+222C7B42+0000000A+222C7B4C+0000000A+222C7B56+0000000A+D0000000+00000000"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Enemy Dino 1 HP 0"
+cheat29_code = "94000130+FD7F0000+122C7C5E+00000000+D0000000+00000000"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Enemy Dino 2 HP 0"
+cheat30_code = "94000130+FDEF0000+122C7D2E+00000000+D0000000+00000000"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Enemy Dino 3 HP 0"
+cheat31_code = "94000130+FDDF0000+122C7DFE+00000000+D0000000+00000000"
+cheat31_enable = false

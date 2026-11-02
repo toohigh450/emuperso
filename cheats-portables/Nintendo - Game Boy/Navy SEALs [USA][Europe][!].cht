@@ -1,0 +1,177 @@
+# Recherche locale pour la ROM : Navy SEALs [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Navy%20SEALs%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Navy%20SEALs%20(USA%2C%20Europe).cht
+
+cheats = 42
+
+cheat0_desc = "[GameShark] Infinite Lives"
+cheat0_code = "0109C2C3"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Infinite Snipers"
+cheat1_code = "0103C3C3"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Amount of Hits It Takes To Kill Enemies"
+cheat2_code = "01??CCC7"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Score Modifier"
+cheat3_code = "01??BEC3+01??BFC3+01??C0C3+01??C1C3"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Enemies Cannot Come Through Doors And Some Enemies Are Froxen In Place"
+cheat4_code = "011CC2C7"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Infinite Ammo Pistol"
+cheat5_code = "0190ACFF"
+cheat5_enable = false
+
+cheat6_desc = "[GameShark] Infinite Ammo Machine Gun"
+cheat6_code = "0130ADFF"
+cheat6_enable = false
+
+cheat7_desc = "[GameShark] Infinite Time"
+cheat7_code = "0149AAFF"
+cheat7_enable = false
+
+cheat8_desc = "[GameShark] Glitchy Graphics"
+cheat8_code = "01AA96FF"
+cheat8_enable = false
+
+cheat9_desc = "[GameShark] Glitchy Music"
+cheat9_code = "01801EC1"
+cheat9_enable = false
+
+cheat10_desc = "[GameShark] Freeze Character"
+cheat10_code = "0150CDC4"
+cheat10_enable = false
+
+cheat11_desc = "[GameShark] Invincibility"
+cheat11_code = "0166A7FF"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Infinite lives"
+cheat12_code = "00A-FDF-E6E"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Start with 1 life"
+cheat13_code = "019-009-F7A"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Start with 6 lives"
+cheat14_code = "069-009-F7A"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Start with 9 lives"
+cheat15_code = "099-009-F7A"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] 5 snipers for each life after first life"
+cheat16_code = "058-0BF-E6E"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] 10 snipers after first life"
+cheat17_code = "0A8-0BF-E6E"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] 20 snipers after first life"
+cheat18_code = "148-0BF-E6E"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Infinite snipers"
+cheat19_code = "00B-4BF-19E"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Start with 30 bullets"
+cheat20_code = "305-29F-A28"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Start with 60 bullets"
+cheat21_code = "605-29F-A28"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Infinite bullets for handgun"
+cheat22_code = "002-CEE-E6E"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Infinite bullets for machine gun"
+cheat23_code = "002-A4E-E6E"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Start with and keep machine gun and infinite ammo"
+cheat24_code = "182-9AE-6EA+002-A4E-E6E"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Invincibility"
+cheat25_code = "0132A7FF"
+cheat25_enable = false
+
+cheat26_desc = "[Format source non précisé] Infinite Bullets"
+cheat26_code = "0187ACFF"
+cheat26_enable = false
+
+cheat27_desc = "[Format source non précisé] Infinite Time"
+cheat27_code = "0136AAFF"
+cheat27_enable = false
+
+cheat28_desc = "[Format source non précisé] Infinite Lives"
+cheat28_code = "0109C2C3"
+cheat28_enable = false
+
+cheat29_desc = "[Format source non précisé] Infinite Snipers"
+cheat29_code = "0103C3C3"
+cheat29_enable = false
+
+cheat30_desc = "[Format source non précisé] Amount of Hits It Takes To Kill Enemies"
+cheat30_code = "0100CCC7"
+cheat30_enable = false
+
+cheat31_desc = "[Format source non précisé] Enemies Cannot Come Through Doors And Some Enemies Are Froxen In Place"
+cheat31_code = "011CC2C7"
+cheat31_enable = false
+
+cheat32_desc = "[Format source non précisé] Infinite Ammo Pistol"
+cheat32_code = "0190ACFF"
+cheat32_enable = false
+
+cheat33_desc = "[Format source non précisé] Infinite Ammo Machine Gun"
+cheat33_code = "0130ADFF"
+cheat33_enable = false
+
+cheat34_desc = "[Format source non précisé] Infinite Time"
+cheat34_code = "0149AAFF"
+cheat34_enable = false
+
+cheat35_desc = "[Format source non précisé] Glitchy Graphics"
+cheat35_code = "01AA96FF"
+cheat35_enable = false
+
+cheat36_desc = "[Format source non précisé] Glitchy Music"
+cheat36_code = "01801EC1"
+cheat36_enable = false
+
+cheat37_desc = "[Format source non précisé] Freeze Character"
+cheat37_code = "0150CDC4"
+cheat37_enable = false
+
+cheat38_desc = "[Format source non précisé] Invincibility"
+cheat38_code = "0166A7FF"
+cheat38_enable = false
+
+cheat39_desc = "[Format source non précisé] Blink Longer After Loosing A Life"
+cheat39_code = "FF8-42F-B30"
+cheat39_enable = false
+
+cheat40_desc = "[Format source non précisé] Don't Stop Blinking After Loosing A Life"
+cheat40_code = "006-09F-19E"
+cheat40_enable = false
+
+cheat41_desc = "[Format source non précisé] Invulnerability"
+cheat41_code = "18B-3CE-6EA"
+cheat41_enable = false

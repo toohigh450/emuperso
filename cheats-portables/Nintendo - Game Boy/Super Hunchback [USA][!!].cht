@@ -1,0 +1,44 @@
+# Recherche locale pour la ROM : Super Hunchback [USA][!!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Super%20Hunchback%20(USA).cht
+
+cheats = 9
+
+cheat0_desc = "[Format source non précisé] No timer"
+cheat0_code = "003-A39-3BE"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite lives"
+cheat1_code = "006-CC9-A2C"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Start with 6 lives"
+cheat2_code = "057-1E9-E62"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Start with 2 lives"
+cheat3_code = "017-1E9-E62"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] No bell bonuses"
+cheat4_code = "004-789-3BA"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] No loss of bells when Quasi dies"
+cheat5_code = "004-899-E6E"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Infinite Lives"
+cheat6_code = "006-CF9"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Start With 5 Lives"
+cheat7_code = "057-1E9"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Infinite Lives"
+cheat8_code = "0105E0C3"
+cheat8_enable = false

@@ -1,0 +1,558 @@
+# Recherche locale pour la ROM : Super Mario Land [World][!!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Super%20Mario%20Land%20(World)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Super%20Mario%20Land%20(World)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Super%20Mario%20Land%20(World).cht
+
+cheats = 137
+
+cheat0_desc = "[Game Genie] Always Have Power Ball"
+cheat0_code = "00A-17B-C49"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Infinite Time (Switch Off At End Of Stage To Go On)"
+cheat1_code = "008-60A-E6E"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Time Goes Twice As Fast"
+cheat2_code = "208+60A+E6E"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Infinite Time, Turn Off Code At The End Of The Level"
+cheat3_code = "FF8+60A+E6E"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] 99 Lives"
+cheat4_code = "99D+49C+E62"
+cheat4_enable = false
+
+cheat5_desc = "[Game Genie] Lots More Lives, Probably 255"
+cheat5_code = "FFD+49C+E62"
+cheat5_enable = false
+
+cheat6_desc = "[Game Genie] Invincible"
+cheat6_code = "03B+8EB+E69"
+cheat6_enable = false
+
+cheat7_desc = "[Game Genie] Fall Much Slower"
+cheat7_code = "189+B3B+4CA"
+cheat7_enable = false
+
+cheat8_desc = "[Game Genie] Stay As Large Mario"
+cheat8_code = "00B+8EB+E69"
+cheat8_enable = false
+
+cheat9_desc = "[Game Genie] Run Through All Objects (Switch Off When Trapped)"
+cheat9_code = "18A+B1E+2AA"
+cheat9_enable = false
+
+cheat10_desc = "[Game Genie] Walk Slower"
+cheat10_code = "620+02A+34C"
+cheat10_enable = false
+
+cheat11_desc = "[Game Genie] Messes Up Levels. (Change First 2 Digits To Your Liking)"
+cheat11_code = "300+01B"
+cheat11_enable = false
+
+cheat12_desc = "[Game Genie] Powerball Doesn't Kill Enemies (Try And Win It With Out It)"
+cheat12_code = "320+43D+03F"
+cheat12_enable = false
+
+cheat13_desc = "[Game Genie] When Code Is On It Locks Up Turn It Of To Go Back To Normal"
+cheat13_code = "200+CCF+885"
+cheat13_enable = false
+
+cheat14_desc = "[Game Genie] Always Small"
+cheat14_code = "D9B+8EB+E69"
+cheat14_enable = false
+
+cheat15_desc = "[Game Genie] Always Big"
+cheat15_code = "99B+8EB+E69"
+cheat15_enable = false
+
+cheat16_desc = "[GameShark] Infinite Continues"
+cheat16_code = "010902C0"
+cheat16_enable = false
+
+cheat17_desc = "[GameShark] Unlimited Time"
+cheat17_code = "019961DA"
+cheat17_enable = false
+
+cheat18_desc = "[GameShark] No Enemies"
+cheat18_code = "01FF00D1"
+cheat18_enable = false
+
+cheat19_desc = "[GameShark] Game Skips Some Music"
+cheat19_code = "01F92DF"
+cheat19_enable = false
+
+cheat20_desc = "[GameShark] Music Modifier"
+cheat20_code = "01??E8DF"
+cheat20_enable = false
+
+cheat21_desc = "[GameShark] Enemies Fall From The Sky And Run Away"
+cheat21_code = "016313D1"
+cheat21_enable = false
+
+cheat22_desc = "[GameShark] High Points Modifier (00-99)"
+cheat22_code = "01??A1C0"
+cheat22_enable = false
+
+cheat23_desc = "[GameShark] Unlimited Lives"
+cheat23_code = "010315DA"
+cheat23_enable = false
+
+cheat24_desc = "[GameShark] Score Modifier For Digits 1 & 2 (00-99)"
+cheat24_code = "01??A2C0"
+cheat24_enable = false
+
+cheat25_desc = "[GameShark] Score Modifier For Digits 3 & 4 (00-99)"
+cheat25_code = "01??A1C0"
+cheat25_enable = false
+
+cheat26_desc = "[GameShark] Score Modifier For Digits 5 & 6 (00-99)"
+cheat26_code = "01??A0C0"
+cheat26_enable = false
+
+cheat27_desc = "[GameShark] Invincibility"
+cheat27_code = "01F5D3C0"
+cheat27_enable = false
+
+cheat28_desc = "[GameShark] Part Of Head Floating"
+cheat28_code = "01670CC0"
+cheat28_enable = false
+
+cheat29_desc = "[GameShark] Mario Slides"
+cheat29_code = "011003C2"
+cheat29_enable = false
+
+cheat30_desc = "[GameShark] Always Have Star"
+cheat30_code = "01ECD3C0"
+cheat30_enable = false
+
+cheat31_desc = "[GameShark] First Item Modifier"
+cheat31_code = "01??1FC9"
+cheat31_enable = false
+
+cheat32_desc = "[GameShark] Rest Of The Item Modifier"
+cheat32_code = "01??76C9"
+cheat32_enable = false
+
+cheat33_desc = "[GameShark] Automaticly At End Of Level"
+cheat33_code = "01ECD2C0"
+cheat33_enable = false
+
+cheat34_desc = "[GameShark] Baddies & Some Objects Can Be Moved (Use On/Off)"
+cheat34_code = "019613D1"
+cheat34_enable = false
+
+cheat35_desc = "[GameShark] Baddies & Some Objects Can Be Moved 2 (Use On/Off)"
+cheat35_code = "014523D1"
+cheat35_enable = false
+
+cheat36_desc = "[GameShark] Hold A Or B For Repeated Jumps And Shots"
+cheat36_code = "010080FF"
+cheat36_enable = false
+
+cheat37_desc = "[GameShark] Disable 'A' Button"
+cheat37_code = "010180FF"
+cheat37_enable = false
+
+cheat38_desc = "[GameShark] Character Modifier"
+cheat38_code = "01??03C2"
+cheat38_enable = false
+
+cheat39_desc = "[GameShark] Mid Jump"
+cheat39_code = "01070AC2"
+cheat39_enable = false
+
+cheat40_desc = "[GameShark] Walk On Air"
+cheat40_code = "010107C2"
+cheat40_enable = false
+
+cheat41_desc = "[GameShark] Walk Backwards"
+cheat41_code = "012105C2"
+cheat41_enable = false
+
+cheat42_desc = "[GameShark] X Position Modifier"
+cheat42_code = "01??02C2"
+cheat42_enable = false
+
+cheat43_desc = "[GameShark] Y Position Modifier"
+cheat43_code = "01??01C2"
+cheat43_enable = false
+
+cheat44_desc = "[GameShark] Play As Daisy (Don't Collect Power-Ups!)"
+cheat44_code = "012203C2"
+cheat44_enable = false
+
+cheat45_desc = "[GameShark] Walk Upside Down"
+cheat45_code = "014105C2"
+cheat45_enable = false
+
+cheat46_desc = "[GameShark] Play Behide the Scenery"
+cheat46_code = "018F04C2"
+cheat46_enable = false
+
+cheat47_desc = "[GameShark] Mario Doesn't Slide"
+cheat47_code = "01030DC2"
+cheat47_enable = false
+
+cheat48_desc = "[GameShark] Better Rising Code"
+cheat48_code = "010609C2"
+cheat48_enable = false
+
+cheat49_desc = "[GameShark] Can't Run"
+cheat49_code = "01010FC2"
+cheat49_enable = false
+
+cheat50_desc = "[GameShark] Walk Really Fast"
+cheat50_code = "01020FC2"
+cheat50_enable = false
+
+cheat51_desc = "[GameShark] White Mario"
+cheat51_code = "011004c2"
+cheat51_enable = false
+
+cheat52_desc = "[GameShark] Wacky Speed Modifier"
+cheat52_code = "01??0EC2"
+cheat52_enable = false
+
+cheat53_desc = "[GameShark] Helium Mario"
+cheat53_code = "010107C2"
+cheat53_enable = false
+
+cheat54_desc = "[GameShark] Mario Action"
+cheat54_code = "01??B3FF"
+cheat54_enable = false
+
+cheat55_desc = "[GameShark] Level You Get Credit For Beating"
+cheat55_code = "01XYB4FF"
+cheat55_enable = false
+
+cheat56_desc = "[GameShark] Pause Modifier"
+cheat56_code = "010?B2FF"
+cheat56_enable = false
+
+cheat57_desc = "[GameShark] Some Sprites Move Reallly Fast"
+cheat57_code = "010511D1"
+cheat57_enable = false
+
+cheat58_desc = "[GameShark] Some Sprites' X/y Movement Are Reversed"
+cheat58_code = "010515D1"
+cheat58_enable = false
+
+cheat59_desc = "[GameShark] Partial Level Modifier"
+cheat59_code = "010?E4FF"
+cheat59_enable = false
+
+cheat60_desc = "[GameShark] Game Beaten Modifier"
+cheat60_code = "01??E1C0"
+cheat60_enable = false
+
+cheat61_desc = "[Format source non précisé] Unlimited Time"
+cheat61_code = "019961DA"
+cheat61_enable = false
+
+cheat62_desc = "[Format source non précisé] No Enemies"
+cheat62_code = "01FF00D1"
+cheat62_enable = false
+
+cheat63_desc = "[Format source non précisé] Enemies Fall From The Sky And Run Away"
+cheat63_code = "016313D1"
+cheat63_enable = false
+
+cheat64_desc = "[Format source non précisé] Infinite Continues"
+cheat64_code = "010902C0"
+cheat64_enable = false
+
+cheat65_desc = "[Format source non précisé] Unlimited Lives"
+cheat65_code = "010315DA"
+cheat65_enable = false
+
+cheat66_desc = "[Format source non précisé] Music Modifier"
+cheat66_code = "0100E8DF"
+cheat66_enable = false
+
+cheat67_desc = "[Format source non précisé] Score Modifier For Digits 1 &amp; 2 [00-99]"
+cheat67_code = "0100A2C0"
+cheat67_enable = false
+
+cheat68_desc = "[Format source non précisé] Score Modifier For Digits 3 &amp; 4 [00-99]"
+cheat68_code = "0100A1C0"
+cheat68_enable = false
+
+cheat69_desc = "[Format source non précisé] Score Modifier For Digits 5 &amp; 6 [00-99]"
+cheat69_code = "0100A0C0"
+cheat69_enable = false
+
+cheat70_desc = "[Format source non précisé] Invincibility"
+cheat70_code = "01F5D3C0"
+cheat70_enable = false
+
+cheat71_desc = "[Format source non précisé] Mario Slides"
+cheat71_code = "011003C2"
+cheat71_enable = false
+
+cheat72_desc = "[Format source non précisé] Always Have Star"
+cheat72_code = "01ECD3C0"
+cheat72_enable = false
+
+cheat73_desc = "[Format source non précisé] First Item Modifier"
+cheat73_code = "01281FC9"
+cheat73_enable = false
+
+cheat74_desc = "[Format source non précisé] Rest Of The Item Modifier"
+cheat74_code = "010076C9"
+cheat74_enable = false
+
+cheat75_desc = "[Format source non précisé] Automatically At End Of Level"
+cheat75_code = "01ECD2C0"
+cheat75_enable = false
+
+cheat76_desc = "[Format source non précisé] Hold A Or B For Repeated Jumps And Shots"
+cheat76_code = "010080FF"
+cheat76_enable = false
+
+cheat77_desc = "[Format source non précisé] Mid Jump"
+cheat77_code = "01070AC2"
+cheat77_enable = false
+
+cheat78_desc = "[Format source non précisé] Walk On Air/Helium Mario"
+cheat78_code = "010107C2"
+cheat78_enable = false
+
+cheat79_desc = "[Format source non précisé] Walk Backwards"
+cheat79_code = "012105C2"
+cheat79_enable = false
+
+cheat80_desc = "[Format source non précisé] X Position Modifier"
+cheat80_code = "010002C2"
+cheat80_enable = false
+
+cheat81_desc = "[Format source non précisé] Y Position Modifier"
+cheat81_code = "010001C2"
+cheat81_enable = false
+
+cheat82_desc = "[Format source non précisé] Play As Daisy [Don't Collect Power-Ups!]"
+cheat82_code = "012203C2"
+cheat82_enable = false
+
+cheat83_desc = "[Format source non précisé] Walk Upside Down"
+cheat83_code = "014105C2"
+cheat83_enable = false
+
+cheat84_desc = "[Format source non précisé] Play Behide the Scenery"
+cheat84_code = "018F04C2"
+cheat84_enable = false
+
+cheat85_desc = "[Format source non précisé] Mario Doesn't Slide"
+cheat85_code = "01030DC2"
+cheat85_enable = false
+
+cheat86_desc = "[Format source non précisé] Better Rising Code"
+cheat86_code = "010609C2"
+cheat86_enable = false
+
+cheat87_desc = "[Format source non précisé] Can't Run"
+cheat87_code = "01010FC2"
+cheat87_enable = false
+
+cheat88_desc = "[Format source non précisé] Walk Really Fast (Don't Run with B!!)"
+cheat88_code = "01020FC2"
+cheat88_enable = false
+
+cheat89_desc = "[Format source non précisé] White Mario"
+cheat89_code = "011004C2"
+cheat89_enable = false
+
+cheat90_desc = "[Format source non précisé] Wacky Speed Modifier"
+cheat90_code = "01040EC2"
+cheat90_enable = false
+
+cheat91_desc = "[Format source non précisé] Mario Action"
+cheat91_code = "0100B3FF"
+cheat91_enable = false
+
+cheat92_desc = "[Format source non précisé] Pause Modifier"
+cheat92_code = "0100B2FF"
+cheat92_enable = false
+
+cheat93_desc = "[Format source non précisé] Some Sprites Move Reallly Fast"
+cheat93_code = "010511D1"
+cheat93_enable = false
+
+cheat94_desc = "[Format source non précisé] Some Sprites' X/Y Movement Are Reversed"
+cheat94_code = "010515D1"
+cheat94_enable = false
+
+cheat95_desc = "[Format source non précisé] Partial Level Modifier"
+cheat95_code = "010AE4FF"
+cheat95_enable = false
+
+cheat96_desc = "[Format source non précisé] Game Beaten Modifier"
+cheat96_code = "0100E1C0"
+cheat96_enable = false
+
+cheat97_desc = "[Format source non précisé] Disable Music"
+cheat97_code = "C9D-BD9-C49"
+cheat97_enable = false
+
+cheat98_desc = "[Format source non précisé] Always Speed 1 Music"
+cheat98_code = "008-73A-E69+008-89A-E69"
+cheat98_enable = false
+
+cheat99_desc = "[Format source non précisé] Always Speed 2 Music"
+cheat99_code = "188-70A-4CA+008-7DA-E69"
+cheat99_enable = false
+
+cheat100_desc = "[Format source non précisé] Enable Level Select"
+cheat100_code = "C34-AAF-A21+004-D3F-F7F"
+cheat100_enable = false
+
+cheat101_desc = "[Format source non précisé] Infinite lives"
+cheat101_code = "21C-53E-4C1"
+cheat101_enable = false
+
+cheat102_desc = "[Format source non précisé] Start with 2 lives"
+cheat102_code = "01D-49C-E62"
+cheat102_enable = false
+
+cheat103_desc = "[Format source non précisé] Start with 6 lives"
+cheat103_code = "05D-49C-E62"
+cheat103_enable = false
+
+cheat104_desc = "[Format source non précisé] Start with 10 lives"
+cheat104_code = "09D-49C-E62"
+cheat104_enable = false
+
+cheat105_desc = "[Format source non précisé] Infinite time (switch off at end of stage to go on)"
+cheat105_code = "008-60A-E6E"
+cheat105_enable = false
+
+cheat106_desc = "[Format source non précisé] Always have power ball"
+cheat106_code = "00A-17B-C49"
+cheat106_enable = false
+
+cheat107_desc = "[Format source non précisé] Fall much slower"
+cheat107_code = "189-B3B-4CA"
+cheat107_enable = false
+
+cheat108_desc = "[Format source non précisé] Stay as large Mario"
+cheat108_code = "00B-8EB-E69"
+cheat108_enable = false
+
+cheat109_desc = "[Format source non précisé] Run thru all objects"
+cheat109_code = "18A-B1E-2AA"
+cheat109_enable = false
+
+cheat110_desc = "[Format source non précisé] Part Of Head Floating"
+cheat110_code = "01670CC0"
+cheat110_enable = false
+
+cheat111_desc = "[Format source non précisé] Game Skips Some Music"
+cheat111_code = "01FF92DF"
+cheat111_enable = false
+
+cheat112_desc = "[Format source non précisé] Power-ups Trapped"
+cheat112_code = "010298D1"
+cheat112_enable = false
+
+cheat113_desc = "[Format source non précisé] Can't Get Powerups"
+cheat113_code = "010197D1"
+cheat113_enable = false
+
+cheat114_desc = "[Format source non précisé] Baddies &amp; Some Objects Can Be Moved [Use On/Off]"
+cheat114_code = "019613D1"
+cheat114_enable = false
+
+cheat115_desc = "[Format source non précisé] Disable 'A' Button"
+cheat115_code = "010180FF"
+cheat115_enable = false
+
+cheat116_desc = "[Format source non précisé] Jump In Midair"
+cheat116_code = "189-AEB-6EA+009-C2B-2A1+009-C9B-4C5+009-D8B-80E+009-E4B-C4A+FA9-E7B-4C1+C9B-75B-809"
+cheat116_enable = false
+
+cheat117_desc = "[Format source non précisé] Power Ball Hits Anywhere"
+cheat117_code = "000-48D-A21+E10-49D-5DE+E50-4AD-5DE+000-4BD-5DE"
+cheat117_enable = false
+
+cheat118_desc = "[Format source non précisé] High Points Modifier (00-99)"
+cheat118_code = "0100A1C0"
+cheat118_enable = false
+
+cheat119_desc = "[Format source non précisé] Score Modifier For Digits 1 & 2 (00-99)"
+cheat119_code = "0100A2C0"
+cheat119_enable = false
+
+cheat120_desc = "[Format source non précisé] Score Modifier For Digits 3 & 4 (00-99)"
+cheat120_code = "0100A1C0"
+cheat120_enable = false
+
+cheat121_desc = "[Format source non précisé] Score Modifier For Digits 5 & 6 (00-99)"
+cheat121_code = "0100A0C0"
+cheat121_enable = false
+
+cheat122_desc = "[Format source non précisé] Character Modifier"
+cheat122_code = "012A03C2"
+cheat122_enable = false
+
+cheat123_desc = "[Format source non précisé] Walk Really Fast"
+cheat123_code = "01020FC2"
+cheat123_enable = false
+
+cheat124_desc = "[Format source non précisé] Enemies Die When They Touch You"
+cheat124_code = "189-3FF-6EA"
+cheat124_enable = false
+
+cheat125_desc = "[Format source non précisé] Invulnerability"
+cheat125_code = "189-45F-2AA"
+cheat125_enable = false
+
+cheat126_desc = "[Format source non précisé] Enable Hard Mode"
+cheat126_code = "012-16F-E6A"
+cheat126_enable = false
+
+cheat127_desc = "[Format source non précisé] Enable Stage Select With Hard Mode"
+cheat127_code = "022-16F-E6A"
+cheat127_enable = false
+
+cheat128_desc = "[Format source non précisé] Jump Maximum Running Height While Standing"
+cheat128_code = "009-E6B-E62"
+cheat128_enable = false
+
+cheat129_desc = "[Format source non précisé] Jump As High As You Want; Press A to Descend"
+cheat129_code = "179-67B-802"
+cheat129_enable = false
+
+cheat130_desc = "[Format source non précisé] Freeze Enemies/Powerups"
+cheat130_code = "14C-FAD-6E2"
+cheat130_enable = false
+
+cheat131_desc = "[Format source non précisé] Bonus Game Speed Is Slower Than Usual"
+cheat131_code = "10A-D0A-E66"
+cheat131_enable = false
+
+cheat132_desc = "[Format source non précisé] Bonus Game Speed Is Even Slower Than Usual"
+cheat132_code = "25A-D0A-E66"
+cheat132_enable = false
+
+cheat133_desc = "[Format source non précisé] Bonus Game Speed Is Much Slower Than Usual"
+cheat133_code = "63A-D0A-E66"
+cheat133_enable = false
+
+cheat134_desc = "[Format source non précisé] Bonus Game Speed Is Faster Than Usual"
+cheat134_code = "02A-D0A-E66"
+cheat134_enable = false
+
+cheat135_desc = "[Format source non précisé] Bonus Game Speed Is Maximum Speed"
+cheat135_code = "01A-D0A-E66"
+cheat135_enable = false
+
+cheat136_desc = "[Format source non précisé] Bonus Game Speed Is Stopped"
+cheat136_code = "00A-D0A-E66"
+cheat136_enable = false

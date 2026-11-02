@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Top Gear GT Championship (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Top%20Gear%20GT%20Championship%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 2
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00002250+000A+1004000C+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Always Low Timer"
+cheat1_code = "83003A04+0000"
+cheat1_enable = false

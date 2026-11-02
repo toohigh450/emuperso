@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Yu-Gi-Oh! - 7 Trials to Glory - World Championship Tournament 2005 (USA) (En,Ja,Fr,De,Es,It).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Yu-Gi-Oh!%20-%207%20Trials%20to%20Glory%20-%20World%20Championship%20Tournament%202005%20(USA)%20(Code%20Breaker).cht
+
+cheats = 6
+
+cheat0_desc = "[Code Breaker] Enable Code"
+cheat0_code = "000001CF+000A+1011AA02+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite HP"
+cheat1_code = "82020AB0+FFFF"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] 9999 DPS"
+cheat2_code = "82001808+270F"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Max DPS"
+cheat3_code = "82001808+007F+8200180A+9896"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] All Cards"
+cheat4_code = "42000008+0782+000003E8+0004"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] 65,535 LP"
+cheat5_code = "82020AA0+FFFF"
+cheat5_enable = false

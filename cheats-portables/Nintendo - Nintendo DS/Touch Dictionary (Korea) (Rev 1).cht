@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Touch Dictionary (Korea) (Rev 1).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Touch%20Dictionary%20(Korea)%20(Rev%201).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] English, China"
+cheat0_code = "12368DF8+0000538B+22368E00+000000C8"
+cheat0_enable = false

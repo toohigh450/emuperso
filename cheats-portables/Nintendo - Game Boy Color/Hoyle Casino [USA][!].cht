@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Hoyle Casino [USA][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Hoyle%20Casino%20(USA)%20(GameShark).cht
+
+cheats = 1
+
+cheat0_desc = "[GameShark] Lots of Cash"
+cheat0_code = "01FF29D6+015F2AD6"
+cheat0_enable = false

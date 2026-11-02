@@ -1,0 +1,62 @@
+# Recherche locale pour la ROM : Ninja Boy 2 [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Ninja%20Boy%202%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Ninja%20Boy%202%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Ninja%20Boy%202%20(USA%2C%20Europe).cht
+
+cheats = 13
+
+cheat0_desc = "[Game Genie] Infinite Health For P1"
+cheat0_code = "1C6-D5D"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Infinite Health"
+cheat1_code = "010303C8"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Infinite Might Ball Attacks"
+cheat2_code = "010BBDC0"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Infinite Hp"
+cheat3_code = "01FF03C8"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Max Cash"
+cheat4_code = "010986C0"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Quick Level Up"
+cheat5_code = "010789C0"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Automatically Win Battles"
+cheat6_code = "0100D5C0"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Max Attack"
+cheat7_code = "01638DC0"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Max Defense"
+cheat8_code = "01638EC0"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Max Energy"
+cheat9_code = "01648FC0"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Infinite Health For P1"
+cheat10_code = "1C6-D5D"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Infinite Health"
+cheat11_code = "010303C8"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Infinite Might Ball Attacks"
+cheat12_code = "010BBDC0"
+cheat12_enable = false

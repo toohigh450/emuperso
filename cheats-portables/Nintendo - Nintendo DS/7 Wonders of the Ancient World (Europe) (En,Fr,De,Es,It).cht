@@ -1,0 +1,52 @@
+# Recherche locale pour la ROM : 7 Wonders of the Ancient World (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/7%20Wonders%20of%20the%20Ancient%20World%20(Europe).cht
+
+cheats = 11
+
+cheat0_desc = "[Action Replay] Infinite Time"
+cheat0_code = "0202E098+E3A01839"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] X2"
+cheat1_code = "5202F4F8+E0811002+0202F4F8+E0811082+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] X4"
+cheat2_code = "5202F4F8+E0811002+0202F4F8+E0811102+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] X8"
+cheat3_code = "5202F4F8+E0811002+0202F4F8+E0811182+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] X16"
+cheat4_code = "5202F4F8+E0811002+0202F4F8+E0811202+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] X32"
+cheat5_code = "5202F4F8+E0811002+0202F4F8+E0811282+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] X64"
+cheat6_code = "5202F4F8+E0811002+0202F4F8+E0811302+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] X128"
+cheat7_code = "5202F4F8+E0811002+0202F4F8+E0811382+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] X256"
+cheat8_code = "5202F4F8+E0811002+0202F4F8+E0811402+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] X512"
+cheat9_code = "5202F4F8+E0811002+0202F4F8+E0811482+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] X1024"
+cheat10_code = "5202F4F8+E0811002+0202F4F8+E0811502+D2000000+00000000"
+cheat10_enable = false

@@ -1,0 +1,163 @@
+# Recherche locale pour la ROM : Adventure Island [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Adventure%20Island%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Adventure%20Island%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Adventure%20Island%20(USA%2C%20Europe)%20(Xploder).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Adventure%20Island%20(USA%2C%20Europe).cht
+
+cheats = 38
+
+cheat0_desc = "[Game Genie] Infinite Lives"
+cheat0_code = "00A-C88-3BE"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Start With 9 Lives"
+cheat1_code = "098-5FF-E66"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Infinite Energy"
+cheat2_code = "006-90E-3BE"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Infinite Throwing Axe"
+cheat3_code = "00A-67F-3BE"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] Infinite Dino"
+cheat4_code = "00A-B5F-3BE"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Infinite Energy"
+cheat5_code = "010F23C4"
+cheat5_enable = false
+
+cheat6_desc = "[GameShark] Infinite Lives"
+cheat6_code = "010919C4"
+cheat6_enable = false
+
+cheat7_desc = "[GameShark] Infinite Firebreathing Dino"
+cheat7_code = "01081AC4"
+cheat7_enable = false
+
+cheat8_desc = "[GameShark] Infinite Tailswinging Dino"
+cheat8_code = "01081BC4"
+cheat8_enable = false
+
+cheat9_desc = "[GameShark] Infinite Water Dino"
+cheat9_code = "01081CC4"
+cheat9_enable = false
+
+cheat10_desc = "[GameShark] Infinite Bird Dino"
+cheat10_code = "01081DC4"
+cheat10_enable = false
+
+cheat11_desc = "[GameShark] Infinite Throwing Axe"
+cheat11_code = "01081EC4"
+cheat11_enable = false
+
+cheat12_desc = "[Xploder] Unendlich Energie"
+cheat12_code = "$0D303D04"
+cheat12_enable = false
+
+cheat13_desc = "[Xploder] Unendlich Leben"
+cheat13_code = "$0D2A4E04"
+cheat13_enable = false
+
+cheat14_desc = "[Xploder] Starte mit Hammer"
+cheat14_code = "$0D22B404"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Infinite Energy"
+cheat15_code = "010F23C4"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Infinite Lives"
+cheat16_code = "010919C4"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Infinite Firebreathing Dino"
+cheat17_code = "01081AC4"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Infinite Tailswinging Dino"
+cheat18_code = "01081BC4"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Infinite Water Dino"
+cheat19_code = "01081CC4"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Infinite Bird Dino"
+cheat20_code = "01081DC4"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Infinite Throwing Axe"
+cheat21_code = "01081EC4"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Start with 2 lives"
+cheat22_code = "018-5FF-E66"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Start with 7 lives"
+cheat23_code = "068-5FF-E66"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Start with 10 lives"
+cheat24_code = "098-5FF-E66"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Infinite lives"
+cheat25_code = "00A-C88-3BE"
+cheat25_enable = false
+
+cheat26_desc = "[Format source non précisé] Don't lose energy with time (you will lose energy when you hit a rock)"
+cheat26_code = "006-90E-3BE"
+cheat26_enable = false
+
+cheat27_desc = "[Format source non précisé] Go straight to Lake Island"
+cheat27_code = "058-64F-E6E"
+cheat27_enable = false
+
+cheat28_desc = "[Format source non précisé] Complete choose-an-egg bonus screen before starting game"
+cheat28_code = "048-64F-E6E"
+cheat28_enable = false
+
+cheat29_desc = "[Format source non précisé] Skip whole game and view romantic end sequence"
+cheat29_code = "078-64F-E6E"
+cheat29_enable = false
+
+cheat30_desc = "[Format source non précisé] Select An Item or Egg For 9 Of Everything"
+cheat30_code = "00C-1D8-E66"
+cheat30_enable = false
+
+cheat31_desc = "[Format source non précisé] Invincibility"
+cheat31_code = "010021C4"
+cheat31_enable = false
+
+cheat32_desc = "[Format source non précisé] Infinite Time"
+cheat32_code = "BE6-90E-3BE"
+cheat32_enable = false
+
+cheat33_desc = "[Format source non précisé] Infinite Lives"
+cheat33_code = "BEA-C88-3BE"
+cheat33_enable = false
+
+cheat34_desc = "[Format source non précisé] Invincibility"
+cheat34_code = "BE6-53E-4C1"
+cheat34_enable = false
+
+cheat35_desc = "[Format source non précisé] Hit Anywhere"
+cheat35_code = "181-02D-4CA+000-E1D-3B1"
+cheat35_enable = false
+
+cheat36_desc = "[Format source non précisé] Infinite Throwing Axe"
+cheat36_code = "00A-67F-3BE"
+cheat36_enable = false
+
+cheat37_desc = "[Format source non précisé] Infinite Dino"
+cheat37_code = "00A-B5F-3BE"
+cheat37_enable = false

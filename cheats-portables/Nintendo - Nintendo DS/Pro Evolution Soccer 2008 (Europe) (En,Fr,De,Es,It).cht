@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Pro Evolution Soccer 2008 (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Pro%20Evolution%20Soccer%202008%20(Europe).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "52179CE8+EE070F90+E20001AC+00000048+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2EC9749+0009000A+0035007A+00000120+02179CE8+E92D401E+02179CEC+FAFA192E+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Score in Your Own Goal For Extra Goals"
+cheat1_code = "02079EAC+E3A01000+02079ED8+E3A03000+02079EFC+E3A03000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Gold Coins"
+cheat2_code = "12209EDC+00000063"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Silver Coins"
+cheat3_code = "12209EE0+00000063"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Bronze Coins"
+cheat4_code = "12209EE4+00000063"
+cheat4_enable = false

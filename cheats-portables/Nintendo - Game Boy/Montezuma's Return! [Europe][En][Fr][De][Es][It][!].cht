@@ -1,0 +1,33 @@
+# Recherche locale pour la ROM : Montezuma's Return! [Europe][En][Fr][De][Es][It][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Montezuma's%20Return!%20(Europe)%20(En%2CFr%2CDe%2CEs%2CIt).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Montezuma's%20Return!%20(Europe)%20(Xploder).cht
+
+cheats = 6
+
+cheat0_desc = "[Format source non précisé] Infinite Lives"
+cheat0_code = "01093BC0"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Never gets dark"
+cheat1_code = "011B6FF9"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Infinite use of item in inventory"
+cheat2_code = "010257D9"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Invincibility"
+cheat3_code = "189-CDB-4CA+188-FAB-2AA+18A-0CB-6EA"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Invincibility Against Bat"
+cheat4_code = "C95-17A-E69"
+cheat4_enable = false
+
+cheat5_desc = "[Xploder] Unendlich Leben"
+cheat5_code = "$0D25426E"
+cheat5_enable = false

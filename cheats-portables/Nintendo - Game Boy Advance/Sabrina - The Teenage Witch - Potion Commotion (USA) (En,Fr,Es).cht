@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Sabrina - The Teenage Witch - Potion Commotion (USA) (En,Fr,Es).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Sabrina%20-%20The%20Teenage%20Witch%20-%20Potion%20Commotion%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 2
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000C347+000A+10048520+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Health"
+cheat1_code = "83003E92+0003"
+cheat1_enable = false

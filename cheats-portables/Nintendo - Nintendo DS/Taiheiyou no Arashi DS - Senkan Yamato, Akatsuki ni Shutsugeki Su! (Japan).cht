@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Taiheiyou no Arashi DS - Senkan Yamato, Akatsuki ni Shutsugeki Su! (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Taiheiyou%20no%20Arashi%20DS%20-%20Senkan%20Yamato%2C%20Akatsuki%20ni%20Shutsugeki%20Su!%20(Japan).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Ship"
+cheat0_code = "C0000000+0000000D+02174188+00000000+DC000000+00000004+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Fighters"
+cheat1_code = "C0000000+0000000C+021741C0+00000000+DC000000+00000004+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Boarding Members"
+cheat2_code = "E21741F4+00000010+00000000+00000000+00000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Ground Troops"
+cheat3_code = "02174204+00000000+02174208+00000000+0217420C+00000000"
+cheat3_enable = false

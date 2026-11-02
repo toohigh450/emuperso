@@ -1,0 +1,69 @@
+# Recherche locale pour la ROM : Madden NFL 2002 [USA][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Madden%20NFL%202002%20(USA)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Madden%20NFL%202002%20(USA).cht
+
+cheats = 15
+
+cheat0_desc = "[GameShark] Home Team Time Out Modifier"
+cheat0_code = "91??2FD1"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Home Team Score Modifier"
+cheat1_code = "01??C6C2"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Away Team Time Out Modifier"
+cheat2_code = "91032ED1"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Away Team Score Modifier"
+cheat3_code = "0100C7C2"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Down Modifier"
+cheat4_code = "01??F1DA"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Quarter Modifier"
+cheat5_code = "91??35CE"
+cheat5_enable = false
+
+cheat6_desc = "[GameShark] Infinite Play Clock"
+cheat6_code = "91193ECE"
+cheat6_enable = false
+
+cheat7_desc = "[GameShark] Turn the Cheat Device's Switch On For More Game Time"
+cheat7_code = "91043ACE+91633BCE"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Home Team Time Out Modifier"
+cheat8_code = "91002FD1"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Home Team Score Modifier"
+cheat9_code = "0100C6C2"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Away Team Time Out Modifier"
+cheat10_code = "91032ED1"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Away Team Score Modifier"
+cheat11_code = "0100C7C2"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Down Modifier"
+cheat12_code = "0100F1DA"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Quarter Modifier"
+cheat13_code = "910035CE"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Infinite Play Clock"
+cheat14_code = "91193ECE"
+cheat14_enable = false

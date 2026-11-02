@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Dragon Tales - Dragon Adventures (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Dragon%20Tales%20-%20Dragon%20Adventures%20(USA)%20(Code%20Breaker).cht
+
+cheats = 5
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000976D+000A+1006324A+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Max Cup Cakes"
+cheat1_code = "830044C8+0063"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Max Blue Jewels"
+cheat2_code = "830044CC+00E7"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Max Music Notes"
+cheat3_code = "830044D4+0063"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Max Dragon Berries"
+cheat4_code = "83004470+0063"
+cheat4_enable = false

@@ -1,0 +1,544 @@
+# Recherche locale pour la ROM : Tamagotchi Connexion - Corner Shop (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Tamagotchi%20Connexion%20-%20Corner%20Shop%20(Europe).cht
+
+cheats = 134
+
+cheat0_desc = "[Action Replay] Infinite Gotchi"
+cheat0_code = "0236E864+3B9AC9FF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Dentist Game: Max Clients"
+cheat1_code = "1236E86E+0000E803"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Dentist Game: Max Smiles"
+cheat2_code = "1236E870+0000E803"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Cleaners Game: Max Clients"
+cheat3_code = "1236E898+0000E803"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Cleaners Game: Max Smiles"
+cheat4_code = "1236E89A+0000E803"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Press SELECT to Unlock Kimono"
+cheat5_code = "94000130+FFFB0000+222740D0+00000001+D0000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Press SELECT to Unlock Polo Shirt"
+cheat6_code = "94000130+FFFB0000+222740D8+00000001+D0000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Press SELECT to Unlock Hawaii"
+cheat7_code = "94000130+FFFB0000+222740E0+00000001+D0000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Press SELECT to Unlock Tennis-Wear"
+cheat8_code = "94000130+FFFB0000+222740E8+00000001+D0000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Press SELECT to Unlock Parisienne"
+cheat9_code = "94000130+FFFB0000+222740F0+00000001+D0000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Press SELECT to Unlock Waitress"
+cheat10_code = "94000130+FFFB0000+222740F8+00000001+D0000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Press SELECT to Unlock Suit"
+cheat11_code = "94000130+FFFB0000+22274100+00000001+D0000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Press SELECT to Unlock Lab-Coat"
+cheat12_code = "94000130+FFFB0000+22274108+00000001+D0000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Press SELECT to Unlock Chef"
+cheat13_code = "94000130+FFFB0000+22274110+00000001+D0000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Press SELECT to Unlock Eyeglasses"
+cheat14_code = "94000130+FFFB0000+22274118+00000001+D0000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Press SELECT to Unlock Kung-Fu Clothes"
+cheat15_code = "94000130+FFFB0000+22274120+00000001+D0000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Press SELECT to Unlock Overalls"
+cheat16_code = "94000130+FFFB0000+22274128+00000001+D0000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Press SELECT to Unlock Apron"
+cheat17_code = "94000130+FFFB0000+22274138+00000001+D0000000+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Press SELECT to Unlock Stripe Shirt"
+cheat18_code = "94000130+FFFB0000+22274140+00000001+D0000000+00000000"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Press SELECT to Unlock Party Ware"
+cheat19_code = "94000130+FFFB0000+22274148+00000001+D0000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Press SELECT to Unlock Kimono"
+cheat20_code = "94000130+FFFB0000+22274150+00000001+D0000000+00000000"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Press SELECT to Unlock T-Shirt"
+cheat21_code = "94000130+FFFB0000+22274158+00000001+D0000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Press SELECT to Unlock X'mas Cake"
+cheat22_code = "94000130+FFFB0000+22273F80+00000001+D0000000+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Press SELECT to Unlock Mont Blanc"
+cheat23_code = "94000130+FFFB0000+22273F88+00000001+D0000000+00000000"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Press SELECT to Unlock Frappe"
+cheat24_code = "94000130+FFFB0000+22273F90+00000001+D0000000+00000000"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Press SELECT to Unlock Cookie"
+cheat25_code = "94000130+FFFB0000+22273F98+00000001+D0000000+00000000"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Press SELECT to Unlock Chocolate"
+cheat26_code = "94000130+FFFB0000+22273FA0+00000001+D0000000+00000000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Press SELECT to Unlock Pancake"
+cheat27_code = "94000130+FFFB0000+22273FA8+00000001+D0000000+00000000"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Press SELECT to Unlock Cherry"
+cheat28_code = "94000130+FFFB0000+22273FB0+00000001+D0000000+00000000"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Press SELECT to Unlock Melon"
+cheat29_code = "94000130+FFFB0000+22273FB8+00000001+D0000000+00000000"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Press SELECT to Unlock Cream Puff"
+cheat30_code = "94000130+FFFB0000+22273FC0+00000001+D0000000+00000000"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Press SELECT to Unlock Roll Cake"
+cheat31_code = "94000130+FFFB0000+22273FC8+00000001+D0000000+00000000"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Press SELECT to Unlock Bananas"
+cheat32_code = "94000130+FFFB0000+22273FD0+00000001+D0000000+00000000"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Press SELECT to Unlock Guru Guru Cake"
+cheat33_code = "94000130+FFFB0000+22273FD8+00000001+D0000000+00000000"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Press SELECT to Unlock Guru Guru Ramen"
+cheat34_code = "94000130+FFFB0000+22273FE0+00000001+D0000000+00000000"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Press SELECT to Unlock BBQ"
+cheat35_code = "94000130+FFFB0000+22273FE8+00000001+D0000000+00000000"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Press SELECT to Unlock Bread"
+cheat36_code = "94000130+FFFB0000+22273FF0+00000001+D0000000+00000000"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Press SELECT to Unlock Escargot"
+cheat37_code = "94000130+FFFB0000+22273FF8+00000001+D0000000+00000000"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Press SELECT to Unlock Sausage"
+cheat38_code = "94000130+FFFB0000+22274000+00000001+D0000000+00000000"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Press SELECT to Unlock Sea Lion Curry"
+cheat39_code = "94000130+FFFB0000+22274008+00000001+D0000000+00000000"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Press SELECT to Unlock Miso Soup"
+cheat40_code = "94000130+FFFB0000+22274010+00000001+D0000000+00000000"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Press SELECT to Unlock Fish Bone"
+cheat41_code = "94000130+FFFB0000+22274018+00000001+D0000000+00000000"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Press SELECT to Unlock Fried Chicken"
+cheat42_code = "94000130+FFFB0000+22274020+00000001+D0000000+00000000"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Press SELECT to Unlock Sushi"
+cheat43_code = "94000130+FFFB0000+22274028+00000001+D0000000+00000000"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Press SELECT to Unlock Croquette"
+cheat44_code = "94000130+FFFB0000+22274030+00000001+D0000000+00000000"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Press SELECT to Unlock Lobster"
+cheat45_code = "94000130+FFFB0000+22274038+00000001+D0000000+00000000"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Press SELECT to Unlock Milk"
+cheat46_code = "94000130+FFFB0000+22274040+00000001+D0000000+00000000"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Press SELECT to Unlock Guru Guru Drink"
+cheat47_code = "94000130+FFFB0000+22274048+00000001+D0000000+00000000"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Press SELECT to Unlock Mame Drink"
+cheat48_code = "94000130+FFFB0000+22274050+00000001+D0000000+00000000"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Press SELECT to Unlock Nectar"
+cheat49_code = "94000130+FFFB0000+22274058+00000001+D0000000+00000000"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Press SELECT to Unlock Green Tea"
+cheat50_code = "94000130+FFFB0000+22274060+00000001+D0000000+00000000"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Press SELECT to Unlock Spa Drink"
+cheat51_code = "94000130+FFFB0000+22274068+00000001+D0000000+00000000"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Press SELECT to Unlock Hamburger"
+cheat52_code = "94000130+FFFB0000+22274070+00000001+D0000000+00000000"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Press SELECT to Unlock Fries"
+cheat53_code = "94000130+FFFB0000+22274078+00000001+D0000000+00000000"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Press SELECT to Unlock Apple Pie"
+cheat54_code = "94000130+FFFB0000+22274080+00000001+D0000000+00000000"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Press SELECT to Unlock Pizza"
+cheat55_code = "94000130+FFFB0000+22274088+00000001+D0000000+00000000"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Press SELECT to Unlock Donut"
+cheat56_code = "94000130+FFFB0000+22274090+00000001+D0000000+00000000"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Press SELECT to Unlock Beef Steak"
+cheat57_code = "94000130+FFFB0000+22274098+00000001+D0000000+00000000"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Press SELECT to Unlock Taco"
+cheat58_code = "94000130+FFFB0000+222740A0+00000001+D0000000+00000000"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Press SELECT to Unlock Hotdog"
+cheat59_code = "94000130+FFFB0000+222740A8+00000001+D0000000+00000000"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Press SELECT to Unlock Popcorn"
+cheat60_code = "94000130+FFFB0000+222740B0+00000001+D0000000+00000000"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Press SELECT to Unlock Turkey"
+cheat61_code = "94000130+FFFB0000+222740B8+00000001+D0000000+00000000"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Press SELECT to Unlock Green Wallpaper"
+cheat62_code = "94000130+FFFB0000+22274160+00000001+D0000000+00000000"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Press SELECT to Unlock Pink Wallpaper"
+cheat63_code = "94000130+FFFB0000+22274168+00000001+D0000000+00000000"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Press SELECT to Unlock Blue Wallpaper"
+cheat64_code = "94000130+FFFB0000+22274170+00000001+D0000000+00000000"
+cheat64_enable = false
+
+cheat65_desc = "[Action Replay] Press SELECT to Unlock Cherry Wallpaper"
+cheat65_code = "94000130+FFFB0000+22274178+00000001+D0000000+00000000"
+cheat65_enable = false
+
+cheat66_desc = "[Action Replay] Press SELECT to Unlock Beige Wallpaper"
+cheat66_code = "94000130+FFFB0000+22274180+00000001+D0000000+00000000"
+cheat66_enable = false
+
+cheat67_desc = "[Action Replay] Press SELECT to Unlock Olive Wallpaper"
+cheat67_code = "94000130+FFFB0000+22274188+00000001+D0000000+00000000"
+cheat67_enable = false
+
+cheat68_desc = "[Action Replay] Press SELECT to Unlock Pink Carpet"
+cheat68_code = "94000130+FFFB0000+22274190+00000001+D0000000+00000000"
+cheat68_enable = false
+
+cheat69_desc = "[Action Replay] Press SELECT to Unlock Apple Carpet"
+cheat69_code = "94000130+FFFB0000+22274198+00000001+D0000000+00000000"
+cheat69_enable = false
+
+cheat70_desc = "[Action Replay] Press SELECT to Unlock Polka Dot Carpet"
+cheat70_code = "94000130+FFFB0000+222741A0+00000001+D0000000+00000000"
+cheat70_enable = false
+
+cheat71_desc = "[Action Replay] Press SELECT to Unlock Blue Carpet"
+cheat71_code = "94000130+FFFB0000+222741A8+00000001+D0000000+00000000"
+cheat71_enable = false
+
+cheat72_desc = "[Action Replay] Press SELECT to Unlock L.Green Carpet"
+cheat72_code = "94000130+FFFB0000+222741B0+00000001+D0000000+00000000"
+cheat72_enable = false
+
+cheat73_desc = "[Action Replay] Press SELECT to Unlock Flower Carpet"
+cheat73_code = "94000130+FFFB0000+222741B8+00000001+D0000000+00000000"
+cheat73_enable = false
+
+cheat74_desc = "[Action Replay] Press SELECT to Unlock Yellow Floor"
+cheat74_code = "94000130+FFFB0000+222741C0+00000001+D0000000+00000000"
+cheat74_enable = false
+
+cheat75_desc = "[Action Replay] Press SELECT to Unlock Orange Floor"
+cheat75_code = "94000130+FFFB0000+222741C8+00000001+D0000000+00000000"
+cheat75_enable = false
+
+cheat76_desc = "[Action Replay] Press SELECT to Unlock Green Floor"
+cheat76_code = "94000130+FFFB0000+222741D0+00000001+D0000000+00000000"
+cheat76_enable = false
+
+cheat77_desc = "[Action Replay] Press SELECT to Unlock Peach Floor"
+cheat77_code = "94000130+FFFB0000+222741D8+00000001+D0000000+00000000"
+cheat77_enable = false
+
+cheat78_desc = "[Action Replay] Press SELECT to Unlock L.Green Floor"
+cheat78_code = "94000130+FFFB0000+222741E0+00000001+D0000000+00000000"
+cheat78_enable = false
+
+cheat79_desc = "[Action Replay] Press SELECT to Unlock Pink Floor"
+cheat79_code = "94000130+FFFB0000+222741E8+00000001+D0000000+00000000"
+cheat79_enable = false
+
+cheat80_desc = "[Action Replay] Press SELECT to Unlock Green Window"
+cheat80_code = "94000130+FFFB0000+222741F0+00000001+D0000000+00000000"
+cheat80_enable = false
+
+cheat81_desc = "[Action Replay] Press SELECT to Unlock L.Green Window"
+cheat81_code = "94000130+FFFB0000+222741F8+00000001+D0000000+00000000"
+cheat81_enable = false
+
+cheat82_desc = "[Action Replay] Press SELECT to Unlock Curtained Window"
+cheat82_code = "94000130+FFFB0000+22274200+00000001+D0000000+00000000"
+cheat82_enable = false
+
+cheat83_desc = "[Action Replay] Press SELECT to Unlock Blue Window"
+cheat83_code = "94000130+FFFB0000+22274208+00000001+D0000000+00000000"
+cheat83_enable = false
+
+cheat84_desc = "[Action Replay] Press SELECT to Unlock Square Window"
+cheat84_code = "94000130+FFFB0000+22274210+00000001+D0000000+00000000"
+cheat84_enable = false
+
+cheat85_desc = "[Action Replay] Press SELECT to Unlock Pink Window"
+cheat85_code = "94000130+FFFB0000+22274218+00000001+D0000000+00000000"
+cheat85_enable = false
+
+cheat86_desc = "[Action Replay] Press SELECT to Unlock Patchi's Bird"
+cheat86_code = "94000130+FFFB0000+22274220+00000001+D0000000+00000000"
+cheat86_enable = false
+
+cheat87_desc = "[Action Replay] Press SELECT to Unlock Hoop"
+cheat87_code = "94000130+FFFB0000+22274228+00000001+D0000000+00000000"
+cheat87_enable = false
+
+cheat88_desc = "[Action Replay] Press SELECT to Unlock Mirror"
+cheat88_code = "94000130+FFFB0000+22274230+00000001+D0000000+00000000"
+cheat88_enable = false
+
+cheat89_desc = "[Action Replay] Press SELECT to Unlock Tamago Pochette"
+cheat89_code = "94000130+FFFB0000+22274238+00000001+D0000000+00000000"
+cheat89_enable = false
+
+cheat90_desc = "[Action Replay] Press SELECT to Unlock Flower Picture"
+cheat90_code = "94000130+FFFB0000+22274240+00000001+D0000000+00000000"
+cheat90_enable = false
+
+cheat91_desc = "[Action Replay] Press SELECT to Unlock Flower Clock"
+cheat91_code = "94000130+FFFB0000+22274248+00000001+D0000000+00000000"
+cheat91_enable = false
+
+cheat92_desc = "[Action Replay] Press SELECT to Unlock Calendar"
+cheat92_code = "94000130+FFFB0000+22274250+00000001+D0000000+00000000"
+cheat92_enable = false
+
+cheat93_desc = "[Action Replay] Press SELECT to Unlock Flag"
+cheat93_code = "94000130+FFFB0000+22274258+00000001+D0000000+00000000"
+cheat93_enable = false
+
+cheat94_desc = "[Action Replay] Press SELECT to Unlock Gotchi's Picture"
+cheat94_code = "94000130+FFFB0000+22274260+00000001+D0000000+00000000"
+cheat94_enable = false
+
+cheat95_desc = "[Action Replay] Press SELECT to Unlock Patchi's Green"
+cheat95_code = "94000130+FFFB0000+22274268+00000001+D0000000+00000000"
+cheat95_enable = false
+
+cheat96_desc = "[Action Replay] Press SELECT to Unlock Picture of Note"
+cheat96_code = "94000130+FFFB0000+22274270+00000001+D0000000+00000000"
+cheat96_enable = false
+
+cheat97_desc = "[Action Replay] Press SELECT to Unlock Picture of Star"
+cheat97_code = "94000130+FFFB0000+22274278+00000001+D0000000+00000000"
+cheat97_enable = false
+
+cheat98_desc = "[Action Replay] Press SELECT to Unlock Stuffed Rabbit"
+cheat98_code = "94000130+FFFB0000+22274280+00000001+D0000000+00000000"
+cheat98_enable = false
+
+cheat99_desc = "[Action Replay] Press SELECT to Unlock Pet from Spa"
+cheat99_code = "94000130+FFFB0000+22274288+00000001+D0000000+00000000"
+cheat99_enable = false
+
+cheat100_desc = "[Action Replay] Press SELECT to Unlock Roller Skate"
+cheat100_code = "94000130+FFFB0000+22274290+00000001+D0000000+00000000"
+cheat100_enable = false
+
+cheat101_desc = "[Action Replay] Press SELECT to Unlock Forrest Doll"
+cheat101_code = "94000130+FFFB0000+22274298+00000001+D0000000+00000000"
+cheat101_enable = false
+
+cheat102_desc = "[Action Replay] Press SELECT to Unlock Guru Guru Doll"
+cheat102_code = "94000130+FFFB0000+222742A0+00000001+D0000000+00000000"
+cheat102_enable = false
+
+cheat103_desc = "[Action Replay] Press SELECT to Unlock Gotchi Coin"
+cheat103_code = "94000130+FFFB0000+222742A8+00000001+D0000000+00000000"
+cheat103_enable = false
+
+cheat104_desc = "[Action Replay] Press SELECT to Unlock Green Flower"
+cheat104_code = "94000130+FFFB0000+222742B0+00000001+D0000000+00000000"
+cheat104_enable = false
+
+cheat105_desc = "[Action Replay] Press SELECT to Unlock Yellow Flower"
+cheat105_code = "94000130+FFFB0000+222742B8+00000001+D0000000+00000000"
+cheat105_enable = false
+
+cheat106_desc = "[Action Replay] Press SELECT to Unlock Blue Flower"
+cheat106_code = "94000130+FFFB0000+222742C0+00000001+D0000000+00000000"
+cheat106_enable = false
+
+cheat107_desc = "[Action Replay] Press SELECT to Unlock Red Flower"
+cheat107_code = "94000130+FFFB0000+222742C8+00000001+D0000000+00000000"
+cheat107_enable = false
+
+cheat108_desc = "[Action Replay] Press SELECT to Unlock Pink Flower"
+cheat108_code = "94000130+FFFB0000+222742D0+00000001+D0000000+00000000"
+cheat108_enable = false
+
+cheat109_desc = "[Action Replay] Press SELECT to Unlock White Flower"
+cheat109_code = "94000130+FFFB0000+222742D8+00000001+D0000000+00000000"
+cheat109_enable = false
+
+cheat110_desc = "[Action Replay] Press SELECT to Unlock Light"
+cheat110_code = "94000130+FFFB0000+222742E0+00000001+D0000000+00000000"
+cheat110_enable = false
+
+cheat111_desc = "[Action Replay] Press SELECT to Unlock Orange Light"
+cheat111_code = "94000130+FFFB0000+222742E8+00000001+D0000000+00000000"
+cheat111_enable = false
+
+cheat112_desc = "[Action Replay] Press SELECT to Unlock Chandelier"
+cheat112_code = "94000130+FFFB0000+222742F0+00000001+D0000000+00000000"
+cheat112_enable = false
+
+cheat113_desc = "[Action Replay] Press SELECT to Unlock Light Bulb"
+cheat113_code = "94000130+FFFB0000+222742F8+00000001+D0000000+00000000"
+cheat113_enable = false
+
+cheat114_desc = "[Action Replay] Press SELECT to Unlock Bulb Light"
+cheat114_code = "94000130+FFFB0000+22274300+00000001+D0000000+00000000"
+cheat114_enable = false
+
+cheat115_desc = "[Action Replay] Press SELECT to Unlock Petit Chandelier"
+cheat115_code = "94000130+FFFB0000+22274308+00000001+D0000000+00000000"
+cheat115_enable = false
+
+cheat116_desc = "[Action Replay] Press SELECT to Unlock Mame Desk"
+cheat116_code = "94000130+FFFB0000+22274310+00000001+D0000000+00000000"
+cheat116_enable = false
+
+cheat117_desc = "[Action Replay] Press SELECT to Unlock Pink Desk"
+cheat117_code = "94000130+FFFB0000+22274318+00000001+D0000000+00000000"
+cheat117_enable = false
+
+cheat118_desc = "[Action Replay] Press SELECT to Unlock Blue Sofa / Desk"
+cheat118_code = "94000130+FFFB0000+22274320+00000001+D0000000+00000000"
+cheat118_enable = false
+
+cheat119_desc = "[Action Replay] Press SELECT to Unlock Coffee Table"
+cheat119_code = "94000130+FFFB0000+22274328+00000001+D0000000+00000000"
+cheat119_enable = false
+
+cheat120_desc = "[Action Replay] Press SELECT to Unlock Red Table / Chair"
+cheat120_code = "94000130+FFFB0000+22274330+00000001+D0000000+00000000"
+cheat120_enable = false
+
+cheat121_desc = "[Action Replay] Press SELECT to Unlock Desk / Chair"
+cheat121_code = "94000130+FFFB0000+22274338+00000001+D0000000+00000000"
+cheat121_enable = false
+
+cheat122_desc = "[Action Replay] Press SELECT to Unlock Yellow Shelf"
+cheat122_code = "94000130+FFFB0000+22274340+00000001+D0000000+00000000"
+cheat122_enable = false
+
+cheat123_desc = "[Action Replay] Press SELECT to Unlock Shelf with Star"
+cheat123_code = "94000130+FFFB0000+22274348+00000001+D0000000+00000000"
+cheat123_enable = false
+
+cheat124_desc = "[Action Replay] Press SELECT to Unlock Yellow Bookshelf"
+cheat124_code = "94000130+FFFB0000+22274350+00000001+D0000000+00000000"
+cheat124_enable = false
+
+cheat125_desc = "[Action Replay] Press SELECT to Unlock Guru Guru Shelf"
+cheat125_code = "94000130+FFFB0000+22274358+00000001+D0000000+00000000"
+cheat125_enable = false
+
+cheat126_desc = "[Action Replay] Press SELECT to Unlock Stump Chair"
+cheat126_code = "94000130+FFFB0000+22274360+00000001+D0000000+00000000"
+cheat126_enable = false
+
+cheat127_desc = "[Action Replay] Press SELECT to Unlock Blue Shelf"
+cheat127_code = "94000130+FFFB0000+22274368+00000001+D0000000+00000000"
+cheat127_enable = false
+
+cheat128_desc = "[Action Replay] Press SELECT to Unlock Kuchipatchi Easel"
+cheat128_code = "94000130+FFFB0000+22274370+00000001+D0000000+00000000"
+cheat128_enable = false
+
+cheat129_desc = "[Action Replay] Press SELECT to Unlock Guru Guru TV"
+cheat129_code = "94000130+FFFB0000+22274378+00000001+D0000000+00000000"
+cheat129_enable = false
+
+cheat130_desc = "[Action Replay] Press SELECT to Unlock Statue of Spirits"
+cheat130_code = "94000130+FFFB0000+22274380+00000001+D0000000+00000000"
+cheat130_enable = false
+
+cheat131_desc = "[Action Replay] Press SELECT to Unlock Flask and Box"
+cheat131_code = "94000130+FFFB0000+22274388+00000001+D0000000+00000000"
+cheat131_enable = false
+
+cheat132_desc = "[Action Replay] Press SELECT to Unlock Mame Shelf"
+cheat132_code = "94000130+FFFB0000+22274390+00000001+D0000000+00000000"
+cheat132_enable = false
+
+cheat133_desc = "[Action Replay] Press SELECT to Unlock Lamp"
+cheat133_code = "94000130+FFFB0000+22274398+00000001+D0000000+00000000"
+cheat133_enable = false

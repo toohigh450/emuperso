@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Bibi Blocksberg - Das Gestohlene Hexbuch (Germany).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Bibi%20Blocksberg%20-%20Das%20Gestohlene%20Hexbuch%20(Germany).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Max/Infinite Health"
+cheat0_code = "92065F82+0000E240+22065F80+00000000+D0000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Charge Magic Quickly"
+cheat1_code = "52065C74+E59A001C+02065C78+E3500B19+02065C7C+B2800B19+02065C80+B58A001C+D0000000+00000000+94000130+FDFF0000+52065C74+E59A001C+02065C78+E1A00000+02065C7C+E2800B19+02065C80+E58A001C+D0000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Collect One Star to Get Max Stars"
+cheat2_code = "5202E2C4+E59F2040+0202E2D0+E1A01002+2202E2CC+000000E1+D0000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Collect One Bark Beetle to Get 10 Bark Beetles"
+cheat3_code = "9202E05E+0000E282+2202E05C+00000001+D2000000+00000000+94000130+FEFF0000+9202E05E+0000E282+2202E05C+0000000A+D2000000+00000000"
+cheat3_enable = false

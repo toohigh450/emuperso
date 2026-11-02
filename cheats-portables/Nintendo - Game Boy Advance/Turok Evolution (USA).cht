@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Turok Evolution (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Turok%20Evolution%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 7
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00004748+000A+1000B844+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Health"
+cheat1_code = "33005025+0064"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Armor"
+cheat2_code = "33005024+0064"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Infinite Stars"
+cheat3_code = "33005031+0009"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Invincible"
+cheat4_code = "330050A2+0002"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Rapid Fire"
+cheat5_code = "3300518C+0000"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Press A For Moon Jump"
+cheat6_code = "D0000020+0001+830050B2+FDC8"
+cheat6_enable = false

@@ -1,0 +1,137 @@
+# Recherche locale pour la ROM : Monster House (Europe) (En,Fr,De,Es,It,Sv,Da).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Monster%20House%20(Europe)%20(En%2CFr%2CDe%2CEs%2CIt%2CSv%2CDa).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Monster%20House%20(Europe).cht
+
+cheats = 32
+
+cheat0_desc = "[Action Replay] Max/Infinite Health"
+cheat0_code = "620E7F0C+00000000+B20E7F0C+00000000+20000DAB+00000005+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Water Guns"
+cheat1_code = "620E7F0C+00000000+B20E7F0C+00000000+100011F4+00000384+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Invincible"
+cheat2_code = "620E7F0C+00000000+B20E7F0C+00000000+20000DA4+00000080+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Sneaker Speed"
+cheat3_code = "620E7F0C+00000000+B20E7F0C+00000000+20000D95+00000004+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Quicker Character"
+cheat4_code = "620E7F0C+00000000+B20E7F0C+00000000+20000D95+00000007+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Very Fast Character"
+cheat5_code = "620E7F0C+00000000+B20E7F0C+00000000+20000D95+0000000C+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Weapon Upgrades"
+cheat6_code = "620E7F0C+00000000+B20E7F0C+00000000+20000DBC+00000001+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Spectral Water-Gun (DJ)"
+cheat7_code = "620E7F0C+00000000+B20E7F0C+00000000+2000120C+00000001+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Spectral Water-Gun (Chowder)"
+cheat8_code = "620E7F0C+00000000+B20E7F0C+00000000+20001210+00000001+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Spectral Water-Gun (Jenny)"
+cheat9_code = "620E7F0C+00000000+B20E7F0C+00000000+20001228+00000001+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Max/Infinite Weapon Upgrades"
+cheat10_code = "620E7F0C+00000000+B20E7F0C+00000000+200003F0+00000032+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Mini Character"
+cheat11_code = "620E7F0C+00000000+B20E7F0C+00000000+00000098+00000700+0000009C+00000700+000000A0+00000700+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Big Character"
+cheat12_code = "620E7F0C+00000000+B20E7F0C+00000000+00000098+00002700+0000009C+00002700+000000A0+00002700+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Massive Character"
+cheat13_code = "620E7F0C+00000000+B20E7F0C+00000000+00000098+00004700+0000009C+00004700+000000A0+00004700+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] 2D Character"
+cheat14_code = "620E7F0C+00000000+B20E7F0C+00000000+000000A0+00000200+D2000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Massive 2D Character"
+cheat15_code = "620E7F0C+00000000+B20E7F0C+00000000+00000098+00004700+0000009C+00004700+000000A0+00000200+D2000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Max/Infinite Health"
+cheat16_code = "620E875C+00000000+B20E875C+00000000+20000DAB+00000005+D2000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Max/Infinite Water Guns"
+cheat17_code = "620E875C+00000000+B20E875C+00000000+100011F4+00000384+D2000000+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Invincible"
+cheat18_code = "620E875C+00000000+B20E875C+00000000+20000DA4+00000080+D2000000+00000000"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Sneaker Speed"
+cheat19_code = "620E875C+00000000+B20E875C+00000000+20000D95+00000004+D2000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Quicker Character"
+cheat20_code = "620E875C+00000000+B20E875C+00000000+20000D95+00000007+D2000000+00000000"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Very Fast Character"
+cheat21_code = "620E875C+00000000+B20E875C+00000000+20000D95+0000000C+D2000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Weapon Upgrades"
+cheat22_code = "620E875C+00000000+B20E875C+00000000+20000DBC+00000001+D2000000+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Spectral Water-Gun (DJ)"
+cheat23_code = "620E875C+00000000+B20E875C+00000000+2000120C+00000001+D2000000+00000000"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Spectral Water-Gun (Chowder)"
+cheat24_code = "620E875C+00000000+B20E875C+00000000+20001210+00000001+D2000000+00000000"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Spectral Water-Gun (Jenny)"
+cheat25_code = "620E875C+00000000+B20E875C+00000000+20001228+00000001+D2000000+00000000"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Max/Infinite Weapon Upgrades"
+cheat26_code = "620E875C+00000000+B20E875C+00000000+200003F0+00000032+D2000000+00000000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Mini Character"
+cheat27_code = "620E875C+00000000+B20E875C+00000000+00000098+00000700+0000009C+00000700+000000A0+00000700+D2000000+00000000"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Big Character"
+cheat28_code = "620E875C+00000000+B20E875C+00000000+00000098+00002700+0000009C+00002700+000000A0+00002700+D2000000+00000000"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Massive Character"
+cheat29_code = "620E875C+00000000+B20E875C+00000000+00000098+00004700+0000009C+00004700+000000A0+00004700+D2000000+00000000"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] 2D Character"
+cheat30_code = "620E875C+00000000+B20E875C+00000000+000000A0+00000200+D2000000+00000000"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Massive 2D Character"
+cheat31_code = "620E875C+00000000+B20E875C+00000000+00000098+00004700+0000009C+00004700+000000A0+00000200+D2000000+00000000"
+cheat31_enable = false

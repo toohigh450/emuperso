@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Koma Neko DS (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Koma%20Neko%20DS%20(Japan).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] All Items"
+cheat0_code = "02123A00+FFFFFFFF+02123A04+07FFFFFF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Lil Bear's Impression Max"
+cheat1_code = "12123A3C+000000FA"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Old Bear's Impression Max"
+cheat2_code = "12123A94+000000FA"
+cheat2_enable = false
