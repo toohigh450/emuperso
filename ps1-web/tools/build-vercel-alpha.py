@@ -7,6 +7,8 @@ import hashlib
 import json
 from pathlib import Path
 import shutil
+import subprocess
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
@@ -18,7 +20,8 @@ FILES = (
     'input-presets.mjs', 'input-profile.mjs', 'region-evidence.mjs',
     'save-store.mjs', 'session-controller.mjs', 'startup-error.mjs',
     'state-bundle.mjs', 'LICENSE', 'docs/runtime-lock.json',
-    'docs/CANDIDATE-RC1.15.md'
+    'docs/CANDIDATE-RC1.15.md', 'homebrew/demo-ps1.py',
+    'homebrew/README.md', 'homebrew/LICENSE'
 )
 DIRECTORIES = ('assets', 'data', 'cheats')
 BANNED_SUFFIXES = {'.iso', '.bin', '.img', '.chd', '.pbp', '.cue',
@@ -52,6 +55,9 @@ def main():
                 copy_file(relative.as_posix())
     for name, expected in LOCK['files'].items():
         copy_file('vendor/' + name, expected)
+    subprocess.run([sys.executable, str(ROOT / 'homebrew/demo-ps1.py'), str(OUT / 'homebrew/demo-emuperso-ps1.iso')], check=True)
+    if (OUT / 'homebrew/demo-emuperso-ps1.iso').stat().st_size != 131072:
+        raise RuntimeError('La demo PS1 est incomplete.')
     license_file = ROOT / 'vendor/LICENSE.EmulatorJS.txt'
     if license_file.exists(): copy_file('vendor/LICENSE.EmulatorJS.txt')
     manifest = {}
