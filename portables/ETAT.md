@@ -7,6 +7,7 @@
 - Catalogue de dossiers (noms seulement, liste virtuelle), filtres console / région / français / hacks / doublons, favoris.
 - Codes : saisie, validation NES/SNES, activation et suppression par jeu ; codes .cht associés jamais actifs par défaut.
 - Sauvegardes : export et import immédiats, 4 états par jeu avec copie du précédent, écriture immédiate avant changement de jeu.
+- 0.3.0-alpha.2 : sauvegardes GB/GBC/GBA/DS liées à l'empreinte de la ROM (ROM renommée = même sauvegarde) ; l'ancienne sauvegarde est copiée au premier lancement, jamais déplacée ni supprimée.
 - Tests réels dans Chrome Windows : voir TESTS-NES-SNES.md.
 
 ## Encore à vérifier

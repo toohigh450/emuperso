@@ -12,3 +12,4 @@ import './zip.test.mjs';
 import './nes-snes.test.mjs';
 import './catalog-store.test.mjs';
 import './demos.test.mjs';
+import './save-migration.test.mjs';
