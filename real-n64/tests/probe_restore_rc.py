@@ -47,7 +47,7 @@ try:
   def marker(value=None):
    return page.evaluate('''value=>{const p=window.__proofRAM,heap=EJS_emulator.Module.HEAPU8,a=0x10000;const idx=x=>p.base+(p.wordSwapped?x^3:x);if(value!==null){heap[idx(a)]=value>>>8;heap[idx(a+1)]=value&255;}return(heap[idx(a)]<<8)|heap[idx(a+1)]}''',value)
   marker(0x1357)
-  saved=page.evaluate('()=>{window.__proofState=RealN64.engineWindow.N64Engine.captureState();return {length:__proofState.length,header:Array.from(__proofState.slice(0,64))}}')
+  saved=page.evaluate('async()=>{window.__proofState=await RealN64.engineWindow.N64Engine.captureState();return {length:__proofState.length,header:Array.from(__proofState.slice(0,64))}}')
   marker(0x2468)
   normal=page.evaluate('()=>RealN64.engineWindow.N64Engine.loadState(__proofState)')
   restored=marker()

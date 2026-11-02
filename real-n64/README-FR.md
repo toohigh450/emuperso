@@ -112,3 +112,13 @@ contenir des effets de cheats antérieurs : cette relance ne prétend pas les an
 Les commandes natives ne fournissent pas de lecture certifiée de la liste de codes.
 La RC2 n’annonce donc aucun rollback natif vérifié après une erreur partielle.
 La RC1 et ses archives restent conservées pour comparaison.
+
+## Correctif des états — 2 novembre 2026
+
+La capture attend maintenant une nouvelle trame du moteur au lieu de sérialiser depuis un minuteur du navigateur. Cela corrige les états incohérents observés avec Super Mario 64 PAL. Les commandes de sauvegarde et les contrôles de restauration attendent la capture complète ; un délai dépassé annule l’opération sans remplacer une sauvegarde.
+
+Les sauvegardes natives restent isolées dans un montage MEMFS propre à chaque session. Le moteur peut ainsi démonter ce stockage normalement à la fermeture ; le rechargement de la page ne provoque plus l’erreur de fichier observée dans le code précédent. Le coffre IndexedDB du lanceur reste le stockage durable.
+
+Le binaire du cœur, son empreinte et le format des états sont inchangés. Les anciennes copies sont conservées. Un état déjà incohérent n’est pas reconstruit par ce correctif ; sa restauration peut toujours être refusée et la session précédente est conservée.
+
+Détails et reproduction : [Correctifs des états](docs/CORRECTIFS-ETATS-2026-11-02.md).

@@ -134,6 +134,19 @@ def events(page, kind):
     return page.evaluate('kind=>RealN64.diagnostic().records.filter(row=>row.type===kind)', kind)
 
 
+
+# The product retains at most 600 diagnostic rows. Counts can fall when old
+# rows expire; sequence cursors identify events from this operation instead.
+_event_cursors = {}
+def event_cursor(page, kind):
+    snapshot=page.evaluate('()=>({epoch:performance.timeOrigin,rows:RealN64.diagnostic().records})')
+    entry=_event_cursors.get(page)
+    if entry is None or entry['epoch']!=snapshot['epoch']:
+        entry={'epoch':snapshot['epoch'],'types':{}};_event_cursors[page]=entry
+    for row in snapshot['rows']:
+        entry['types'][row['type']]=max(entry['types'].get(row['type'],0),row['seq'])
+    return entry['types'].get(kind,0)
+
 def idle(page):
     page.wait_for_function('''()=>{
       const d=RealN64.diagnostic();return d.phase==='started'&&d.session.frame_count===1&&
@@ -174,12 +187,12 @@ def launch(page, data=ROM, sha=SHA):
 
 def action(page, selector, kind, generation=False):
     old_generation=diagnostic(page)['session']['active_generation'] or 0
-    count=len(events(page,kind));failures=len(events(page,'operation.failed'))
+    count=event_cursor(page,kind);failures=event_cursor(page,'operation.failed')
     page.locator(selector).click()
     page.wait_for_function('''({kind,count,failures})=>{
-      const rows=RealN64.diagnostic().records;return rows.filter(row=>row.type===kind).length>count||rows.filter(row=>row.type==='operation.failed').length>failures;
+      const rows=RealN64.diagnostic().records;return rows.some(row=>row.type===kind&&row.seq>count)||rows.some(row=>row.type==='operation.failed'&&row.seq>failures);
     }''',arg={'kind':kind,'count':count,'failures':failures},timeout=70000)
-    assert len(events(page,'operation.failed'))==failures,events(page,'operation.failed')[-1:]
+    assert event_cursor(page,'operation.failed')==failures,events(page,'operation.failed')[-1:]
     if generation:started(page,old_generation)
     else:idle(page)
     return events(page,kind)[-1]['data']
@@ -234,7 +247,7 @@ def seed_checkpoint(page):
       const {SaveStore,makeStateEnvelope}=await import('./save-store.mjs');
       const {packStateBundle}=await import('./state-bundle.mjs');
       const identity=RealN64.diagnostic().identity,api=RealN64.engineWindow.N64Engine,v=new SaveStore();
-      const battery=api.captureBattery(),bundle=packStateBundle(api.captureState(),battery);
+      const state=await api.captureState(),battery=api.captureBattery(),bundle=packStateBundle(state,battery);
       await v.put(identity,2,await makeStateEnvelope(bundle,identity,{kind:'checkpoint',label:'Controlled RC test checkpoint'}));
       if(battery)await v.put(identity,2,await makeStateEnvelope(battery,identity,{kind:'battery',label:'Controlled RC test native backup'}));
       await v.close();return true;
@@ -255,13 +268,13 @@ def install_bad_header(page):
 def failed_load(page, label, selector='#state-load', native_change=True, route_failure=False, noop=False):
     idle(page);set_marker(page,MARKER_LIVE)
     before_diag=diagnostic(page);before_vault=vault(page);before_native=native(page)
-    before_visual=visual(page);before_errors=len(events(page,'operation.failed'))
+    before_visual=visual(page);before_errors=event_cursor(page,'operation.failed')
     if route_failure:page.route('**/engine.html',lambda route:route.abort('failed'))
     if noop:page.evaluate('()=>{window.__rcNoopLoad=true;window.__rcNoopCalls=0;}')
     try:
         if native_change:change_native(page,17,0x33,click=selector)
         else:page.locator(selector).click()
-        page.wait_for_function('n=>RealN64.diagnostic().records.filter(row=>row.type==="operation.failed").length>n',arg=before_errors,timeout=70000)
+        page.wait_for_function('n=>RealN64.diagnostic().records.some(row=>row.type==="operation.failed"&&row.seq>n)',arg=before_errors,timeout=70000)
         idle(page)
         after_vault=vault(page);after_diag=diagnostic(page)
         assert after_vault==before_vault,{'label':label,'before':before_vault,'after':after_vault}
@@ -346,8 +359,8 @@ def main():
             # entire vault (including every prior copy) must still compare equal.
             native_priming=action(page,'#battery-save','battery.saved')
             baseline_sequence=diagnostic(page)['records'][-1]['seq']
-            no_other_game=vault(page);count=len(events(page,'operation.failed'));page.locator('#state-load').click()
-            page.wait_for_function('n=>RealN64.diagnostic().records.filter(row=>row.type==="operation.failed").length>n',arg=count);idle(page)
+            no_other_game=vault(page);count=event_cursor(page,'operation.failed');page.locator('#state-load').click()
+            page.wait_for_function('n=>RealN64.diagnostic().records.some(row=>row.type==="operation.failed"&&row.seq>n)',arg=count);idle(page)
             after_wrong_game=vault(page)
             wrong_game_events=[row for row in diagnostic(page)['records']if row['seq']>baseline_sequence]
             assert after_wrong_game==no_other_game,{'before':no_other_game,'after':after_wrong_game,'native_priming':native_priming,'events':wrong_game_events}
@@ -374,15 +387,15 @@ def main():
             # Only the OLD realm receives this stalled promise. A new real engine
             # can still restore; if the product chooses rollback, it must explain
             # the error, re-enable controls and preserve all vault bytes.
-            before=vault(page);generation=diagnostic(page)['session']['active_generation'];failures=len(events(page,'operation.failed'));loads=len(events(page,'state.loaded'))
+            before=vault(page);generation=diagnostic(page)['session']['active_generation'];failures=event_cursor(page,'operation.failed');loads=event_cursor(page,'state.loaded')
             page.evaluate('''()=>{const w=RealN64.engineWindow;w.AudioContext.prototype.suspend=function(){return new Promise(()=>{});};}''')
             page.locator('#state-load').click()
             page.wait_for_function('''({failures,loads})=>{
               const rows=RealN64.diagnostic().records;return !document.getElementById('state-load').disabled&&
-                (rows.filter(r=>r.type==='operation.failed').length>failures||rows.filter(r=>r.type==='state.loaded').length>loads);
+                (rows.some(r=>r.type==='operation.failed'&&r.seq>failures)||rows.some(r=>r.type==='state.loaded'&&r.seq>loads));
             }''',arg={'failures':failures,'loads':loads},timeout=30000)
             idle(page)
-            if len(events(page,'state.loaded'))>loads:
+            if event_cursor(page,'state.loaded')>loads:
                 probe(page);assert marker(page)==MARKER_B
                 outcome='restored'
             else:

@@ -232,7 +232,7 @@ $('state-save').onclick = () => operation(async () => {
   const current = sessions.current, slot = Number($('save-slot').value);
   try {
     await current.api.pause();
-    const stateBytes = current.api.captureState(), nativeBytes = current.api.captureBattery();
+    const stateBytes = await current.api.captureState(), nativeBytes = current.api.captureBattery();
     const bundle = packStateBundle(stateBytes, nativeBytes);
     const envelope = await makeStateEnvelope(bundle, current.identity, { kind: 'state', label: current.prepared.metadata.name.slice(0, 120), cheats: stateCheats(current) });
     const native = await prepareNativeWrite(current, { bytes: nativeBytes });
@@ -262,8 +262,8 @@ async function preCheatCheckpoint() {
   const token = 'avant-cheats-' + crypto.randomUUID();
   try {
     await current.api.pause();
-    const nativeBytes = current.api.captureBattery();
-    const bundle = packStateBundle(current.api.captureState(), nativeBytes);
+    const stateBytes = await current.api.captureState(), nativeBytes = current.api.captureBattery();
+    const bundle = packStateBundle(stateBytes, nativeBytes);
     const state = await makeStateEnvelope(bundle, current.identity, { kind: 'checkpoint', label: token });
     const native = nativeBytes ? await makeStateEnvelope(nativeBytes, current.identity, { kind: 'battery', label: token }) : null;
     await vault.putBatch(current.identity, [{ slot: 2, envelope: state }, ...(native ? [{ slot: 2, envelope: native }] : [])]);
@@ -432,7 +432,7 @@ function diagnostic() {
     rom_build: lock, contexts: (sessions.current?.api.snapshot().contexts ?? []).map(c => ({ state: c.state, sample_rate: c.sample_rate })), records: structuredClone(records) };
 }
 $('export').onclick = () => downloadJSON(diagnostic(), 'EMUPERSO-moteur-reel-diagnostic.json');
-window.RealN64 = Object.freeze({ diagnostic, version: '0.5.0-rc2-cheat-guards', get engineWindow() { return (sessions.candidate ?? sessions.current)?.frame.contentWindow ?? null; } });
+window.RealN64 = Object.freeze({ diagnostic, version: '0.5.0-rc2-safe-frame-capture', get engineWindow() { return (sessions.candidate ?? sessions.current)?.frame.contentWindow ?? null; } });
 setInterval(() => { audioStatus(); if (!busy && !reading && !zipPending && sessions.current) void operation(() => saveNative()); }, 15000);
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden' && !busy && !reading && !zipPending && sessions.current) void operation(() => saveNative()); });
 window.addEventListener('pagehide', () => { importAbort?.abort(); void sessions.current?.api.close(); });
