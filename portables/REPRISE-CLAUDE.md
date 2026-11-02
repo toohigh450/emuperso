@@ -38,3 +38,18 @@ Les jeux sans source sont listés dans `cheats-portables/RECHERCHES-RESTANTES.js
 - Tester dans Portables un code DS Action Replay et un code GBA, et noter leur effet en jeu.
 - Une fois le téléchargement fini, tester 2 ou 3 ZIP DS plus lourds (128 Mio et plus) et noter la mémoire utilisée.
 - Importer le dossier DS en deux sélections, car l'application accepte au maximum 1 000 fichiers par import.
+
+## 5. Affichage téléphone (Android)
+
+Avant : sur téléphone, l'écran du jeu (360 × 240) était placé sous les réglages, et la manette tactile recouvrait toute l'image.
+Correction (CSS seulement, `css/app.css`) : dès qu'un jeu est ouvert sur un écran de moins de 860 px, le jeu passe au-dessus des réglages. Sur un écran tactile tenu en portrait, la zone de jeu passe au format 3:4, pour que la manette s'affiche sous l'image.
+
+Le format 3:4 a été retenu après mesure. Avec une zone plus haute (78 % de l'écran), le toucher sur « Démarrer » n'était plus pris en compte par le moteur (test Pixel 7 émulé). Avec les formats 1:1 et 3:4, il fonctionne.
+
+| Essai (Chrome 152) | Résultat |
+|---|---|
+| Android émulé (Pixel 7, tactile) + Pokémon Rouge Feu (GBA) | démarre au toucher ; image en haut, croix/A/B/Start/Select dessous ; L/R mordent un peu sur le bas de l'image |
+| Android émulé + The Amazing Spider-Man (DS) | démarre ; l'écran du bas de la DS reste sous la manette (c'est l'écran tactile) |
+| Chrome Windows 1440 × 900 + Pokémon Rouge Feu | inchangé : écran 888 × 592, démarre au clic |
+
+Non vérifié : un vrai téléphone Android. À confirmer par Karl sur l'aperçu Vercel.
