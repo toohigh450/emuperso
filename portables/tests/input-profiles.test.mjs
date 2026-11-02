@@ -76,3 +76,18 @@ test('Commandes tactiles PSP : ✕ ○ □ △, stick analogique, croix, L/R, St
   assert.ok(layout.some((b) => b.type === 'zone' && !b.joystickInput && b.inputValues.join() === '4,5,6,7'));
   assert.equal(touchLayout('snes'), null);
 });
+
+// --- Codes chargés automatiquement --------------------------------------------------
+test('Codes automatiques : même disque (PSP), même titre entre noms No-Intro et GoodTools', async () => {
+  const { findCheatCandidates, titleKey } = await import('../js/cheat-autoload.mjs');
+  const { baseTitle } = await import('../js/cheats.mjs');
+  assert.equal(titleKey('Sonic The Hedgehog [USA][Europe][!].md'), titleKey('Sonic The Hedgehog (USA, Europe).cht'));
+  assert.equal(titleKey('Legend of Zelda, The - A Link to the Past (USA).sfc'), titleKey('The Legend of Zelda - A Link to the Past (USA).cht'));
+  assert.equal(baseTitle('Sonic The Hedgehog [USA][Europe][!].md'), baseTitle('Sonic The Hedgehog (USA, Europe).cht'));
+  const names = ['Sonic The Hedgehog (Japan, Korea).cht', 'Sonic The Hedgehog (USA, Europe).cht', 'Sonic The Hedgehog (World) (Action Replay).cht', 'Sonic The Hedgehog 2 (World).cht', 'Sonic Spinball (USA).cht'];
+  const found = findCheatCandidates('genesis', 'Sonic The Hedgehog [USA][Europe][!].md', null, names);
+  assert.equal(found[0], 'Sonic The Hedgehog (USA, Europe).cht');
+  assert.ok(!found.includes('Sonic The Hedgehog 2 (World).cht'));
+  assert.deepEqual(findCheatCandidates('psp', 'Bust A Move Ghost.cso', 'ULES-00233', ['Bust A Move Ghost [ULES-00233].cht', 'Autre [ULUS-10041].cht']), ['Bust A Move Ghost [ULES-00233].cht']);
+  assert.deepEqual(findCheatCandidates('psp', 'x.cso', null, ['Bust A Move Ghost [ULES-00233].cht']), []);
+});

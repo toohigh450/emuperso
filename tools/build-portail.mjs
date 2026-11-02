@@ -1,4 +1,4 @@
-// Assemble le site unique EMUPERSO dans dist/ : portail à 9 consoles + applications existantes.
+// Assemble le site unique EMUPERSO dans dist/ : portail à 10 consoles + applications existantes.
 // Précondition (voir vercel.json) : ps1-web/dist et real-n64/dist construits par leurs propres outils,
 // qui téléchargent les moteurs verrouillés par SHA-256. Aucune ROM personnelle ni sauvegarde n'est copiée.
 //   node tools/build-portail.mjs
@@ -44,7 +44,7 @@ const add = (rel, from = join(ROOT, rel)) => {
 // aussi une extension binaire Mega Drive : bloquer ceux qui ressemblent à des ROMs
 // (octets NUL dans l'en-tête) au lieu d'interdire toute la documentation .md.
 function isBinaryMegaDriveMd(rel) {
-  if (!/\\.md$/i.test(rel)) return false;
+  if (!/\.md$/i.test(rel)) return false;
   const start = readFileSync(join(ROOT, rel)).subarray(0, 512);
   return start.includes(0) || (start.length > 0x104 && start.toString('ascii', 0x100, 0x104) === 'SEGA');
 }
@@ -61,12 +61,25 @@ for (const app of ['ps1-web', 'real-n64']) {
   if (!existsSync(join(built, 'index.html'))) throw new Error(`${app}/dist absent : lancer d'abord sa construction (voir vercel.json).`);
   for (const rel of walk(built)) add(join(app, rel), join(built, rel));
 }
+// Catalogue des fichiers de codes (noms seulement) : le lanceur y cherche les codes du jeu ouvert,
+// puis ne télécharge que les fichiers correspondants (voir portables/js/cheat-autoload.mjs).
+const CHEAT_DIR = join(ROOT, 'cheats-portables');
+if (existsSync(CHEAT_DIR)) {
+  const catalogue = {};
+  for (const folder of readdirSync(CHEAT_DIR, { withFileTypes: true })) {
+    if (!folder.isDirectory()) continue;
+    catalogue[folder.name] = readdirSync(join(CHEAT_DIR, folder.name)).filter((n) => n.toLowerCase().endsWith('.cht')).sort();
+  }
+  const rel = join('cheats-portables', 'catalogue.json');
+  writeFileSync(join(OUT, rel), JSON.stringify(catalogue));
+  manifest[rel.split(sep).join('/')] = createHash('sha256').update(readFileSync(join(OUT, rel))).digest('hex');
+}
 // Accueil du site : portail/index.html. Le index.html du dépôt (copie protégée du laboratoire N64,
 // vérifiée par real-n64/tests/test_real_tools.py) n'est jamais modifié ; le laboratoire reste publié
 // sous son nom d'origine, N64-Web-Lab-Phase1A.html.
 add('index.html', join(ROOT, 'portail', 'index.html'));
 writeFileSync(join(OUT, 'PORTAIL-MANIFEST.json'), JSON.stringify({
-  projet: 'EMUPERSO — portail unique 9 consoles',
+  projet: 'EMUPERSO — portail unique 10 consoles',
   fichiers: Object.keys(manifest).length,
   ignores: skipped,
   sha256: manifest,

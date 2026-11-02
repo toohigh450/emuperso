@@ -92,9 +92,9 @@ export function normalizeName(name) {
   return s.replace(/\s+/g, ' ').toLowerCase();
 }
 
-/** Titre sans aucune parenthèse (région, version, appareil). */
+/** Titre sans parenthèses ni crochets (région, version, appareil ; noms No-Intro et GoodTools). */
 export function baseTitle(name) {
-  return normalizeName(name).replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim();
+  return normalizeName(name).replace(/\s*\([^)]*\)/g, '').replace(/\s*\[[^\]]*\]/g, '').replace(/\s+/g, ' ').trim();
 }
 
 /**

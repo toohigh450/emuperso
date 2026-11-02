@@ -8,6 +8,7 @@ import { fingerprint, fingerprintBlob, saveSpaceId, gameKey, ejsGameName, legacy
 import { Store, IdbAdapter, MemoryAdapter, CHEAT_LIMITS, STATE_SLOTS } from './store.mjs';
 import { parseCht, classifyCheatFiles, linkedCheatValid, normalizeName, deviceLabel, inferSystemFromPath } from './cheats.mjs';
 import { buildPspControls } from './controls.mjs';
+import { autoloadCheats } from './cheat-autoload.mjs';
 import { PAD_PROFILES, normalizePad, touchLayout } from './input-profiles.mjs';
 import { Session } from './session.mjs';
 import { createBrowserHost } from './player-host.mjs';
@@ -432,6 +433,13 @@ async function openGame(file) {
     engineNamingVersion: legacyNaming ? 1 : 2,
   });
   await session.start(game, boot); // Le rendu déclenche les panneaux sans bloquer le prochain changement.
+  // Codes du jeu cherchés sur le site et importés désactivés, sans attendre (voir cheat-autoload.mjs).
+  autoloadCheats({ store, system: game.system, romName: game.fileName, discId: game.discId }).then(async (r) => {
+    if (game !== currentGame || !r.found.length) return;
+    await refreshCheatPanel();
+    await refreshCodePanel();
+    if (r.imported.length) setStatus(`${r.imported.length} fichier(s) de codes trouvé(s) pour ce jeu et chargé(s) automatiquement. Confirme l’association dans l’onglet Codes ; aucun code n’est activé.`, 'ok');
+  }).catch((err) => console.error('Codes automatiques indisponibles', err));
 }
 
 function renderWarnings(game) {
@@ -631,7 +639,7 @@ async function refreshCheatPanel() {
       h('span', {}, f.name),
       h('button', { class: 'btn small', onclick: () => associateCheat(f) }, 'Associer à cette ROM')
     ))));
-  } else if (!identified.length && !sameDisc.length && !link) {
+  } else if (!identified.length && !sameDisc.length && !sameTitle.length && !link) {
     list.append(h('p', { class: 'muted' }, 'Aucune correspondance. Importe tes codes ou recherche un fichier ci-dessous.'));
   }
   if (sameTitle.length) {
