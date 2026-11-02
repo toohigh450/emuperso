@@ -9,7 +9,7 @@
 </head>
 <body data-state="idle">
 <header class="top">
-  <h1>Portables <small>0.2.1 alpha</small></h1>
+  <h1>Portables <small>0.2.1 alpha.2</small></h1>
   <p>Game Boy, Game Boy Color, Game Boy Advance et DS dans Chrome. Un seul jeu à la fois.</p>
 </header>
 
@@ -66,6 +66,7 @@
       <input type="file" id="cheatFolder" webkitdirectory multiple class="visually-hidden" tabindex="-1">
       <input type="file" id="cheatFiles" accept=".cht" multiple class="visually-hidden" tabindex="-1">
       <div id="cheatInfo"></div>
+      <p class="muted small-text">Limites des codes : 2 Mio par fichier, 1000 fichiers / 32 Mio par lot, 5000 fichiers / 64 Mio au total. Une confirmation après modification vaut seulement pour cette ROM et ce contenu.</p>
       <div id="cheatMatches"></div>
       <label class="field" for="cheatSearch">Chercher un fichier de codes pour ce jeu</label>
       <input type="search" id="cheatSearch" placeholder="Nom du jeu" autocomplete="off">
@@ -80,10 +81,12 @@
 
     <section class="panel" id="panelEngine" role="tabpanel" aria-labelledby="tabEngine" hidden>
       <p id="engineInfo" class="muted"></p>
+      <p class="muted small-text">ROM : plafond théorique 512 Mio, soumis au budget mémoire. Une ROM de 512 Mio est refusée si la mémoire déclarée est inconnue, 2 ou 4 Gio ; elle peut passer à 8 Gio sans jeu actif. Le budget ne mesure pas la RAM libre.</p>
       <h2>Cœur DS</h2>
       <p class="muted">Changer de cœur crée un autre espace de sauvegarde pour le même jeu.</p>
       <div id="dsCores" class="choices"></div>
       <p id="biosState" class="muted small-text"></p>
+      <p class="muted small-text">BIOS : vérification de structure et CRC seulement, sans preuve d’authenticité. Les entrées supplémentaires sont ignorées ; seuls bios7.bin, bios9.bin et firmware.bin à la racine sont contrôlés.</p>
       <div class="actions">
         <button class="btn" id="biosBtn" type="button">Importer le BIOS DS (ZIP)</button>
         <button class="btn danger" id="biosClear" type="button">Retirer le BIOS</button>

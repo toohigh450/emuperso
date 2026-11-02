@@ -1,5 +1,7 @@
 # Réponse aux audits Portables 0.2.0 — 0.2.1-alpha.1
 
+Suite : `REPONSE-NOUVEL-AUDIT-ALPHA.2.md` décrit les correctifs du nouvel audit et les essais locaux Windows, GB/GBC/GBA et restauration GBA. Le présent rapport conserve les résultats de la livraison alpha.1.
+
 Date : 2 novembre 2026. Branche : `emulateur-portable`, PR #1 en brouillon. Référence auditée : `8f611553ee42bfad0abbeb20ba01d472b6a6ca51`.
 
 ## Résultat et portée

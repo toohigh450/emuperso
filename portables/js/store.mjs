@@ -10,6 +10,19 @@ import { SYSTEMS, DS_CORES } from './systems.mjs';
 
 export const BUCKETS = ['games', 'saves', 'cheatfiles', 'links', 'settings', 'bios'];
 export const SAVE_GENERATIONS = 3;
+export const CHEAT_LIMITS = { fileBytes: 2 * 1024 * 1024, batchBytes: 32 * 1024 * 1024, batchFiles: 1000, totalBytes: 64 * 1024 * 1024, totalFiles: 5000 };
+
+function checkedCheatMap(existing, entries, limits) {
+  const next = new Map(existing);
+  for (const entry of entries) {
+    const key = `${entry.system}|${entry.path}`;
+    const previous = next.get(key);
+    next.set(key, { ...entry, reviewRequired: !!(entry.reviewRequired || previous && (previous.reviewRequired || previous.text !== entry.text)) });
+  }
+  const bytes = [...next.values()].reduce((sum, f) => sum + (f.byteSize ?? new TextEncoder().encode(f.text).length), 0);
+  if (next.size > limits.totalFiles || bytes > limits.totalBytes) throw new Error('Budget total des codes dépassé (5000 fichiers / 64 Mio).');
+  return next;
+}
 
 export class MemoryAdapter {
   constructor() {
@@ -26,6 +39,9 @@ export class MemoryAdapter {
   }
   async keys(bucket) {
     return [...this.data.get(bucket).keys()];
+  }
+  async commitCheats(entries, limits) {
+    this.data.set('cheatfiles', checkedCheatMap(this.data.get('cheatfiles'), entries, limits));
   }
   async rotateMirror(spaceId, entry) {
     const saves = this.data.get('saves');
@@ -96,6 +112,29 @@ export class IdbAdapter {
   keys(bucket) {
     return this.tx(bucket, 'readonly', (s) => s.getAllKeys());
   }
+  async commitCheats(entries, limits) {
+    const db = await this.open();
+    return new Promise((resolve, reject) => {
+      const tx = db.transaction('cheatfiles', 'readwrite');
+      const bucket = tx.objectStore('cheatfiles');
+      let failure;
+      tx.oncomplete = () => resolve();
+      tx.onerror = tx.onabort = () => reject(failure || tx.error || new Error('Import des codes annulé.'));
+      const req = bucket.openCursor();
+      const existing = new Map();
+      req.onsuccess = () => {
+        const cursor = req.result;
+        if (cursor) { existing.set(cursor.key, cursor.value); cursor.continue(); return; }
+        try {
+          const next = checkedCheatMap(existing, entries, limits);
+          for (const entry of entries) {
+            const key = `${entry.system}|${entry.path}`;
+            bucket.put(next.get(key), key);
+          }
+        } catch (err) { failure = err; tx.abort(); }
+      };
+    });
+  }
   async rotateMirror(spaceId, entry) {
     const db = await this.open();
     return new Promise((resolve, reject) => {
@@ -157,23 +196,44 @@ export class Store {
   constructor(adapter) {
     this.a = adapter;
     this.saveQueues = new Map();
+    this.historyQueue = Promise.resolve();
   }
 
   // --- Historique des jeux ------------------------------------------------------
   async getGame(key) {
     return (await this.a.get('games', key)) || null;
   }
-  async recordGame(meta, now = Date.now()) {
+  recordGame(meta, now = Date.now()) {
+    const task = this.historyQueue.catch(() => {}).then(() => this._recordGame(meta, now));
+    this.historyQueue = task;
+    return task;
+  }
+  async _recordGame(meta, now) {
     const prev = (await this.a.get('games', meta.gameKey)) || {};
-    const entry = { ...prev, ...meta, lastPlayed: now, plays: (prev.plays || 0) + 1 };
+    const entry = { ...prev, ...meta, historyVersion: 2, lastOpened: now, opens: (prev.opens || 0) + 1,
+      legacyOpens: prev.legacyOpens ?? (prev.historyVersion === 2 ? 0 : prev.plays || 0),
+      plays: prev.historyVersion === 2 ? prev.plays || 0 : 0, status: 'opened' };
     await this.a.put('games', meta.gameKey, entry);
     return entry;
+  }
+  recordLifecycle(key, event, now = Date.now()) {
+    if (!['ready', 'started'].includes(event)) return Promise.reject(new Error('Événement historique inconnu.'));
+    const task = this.historyQueue.catch(() => {}).then(async () => {
+      const entry = await this.getGame(key);
+      if (!entry) return;
+      if (event === 'ready') { entry.readyCount = (entry.readyCount || 0) + 1; entry.lastReady = now; }
+      else { entry.plays = (entry.plays || 0) + 1; entry.lastPlayed = now; }
+      entry.status = event;
+      await this.a.put('games', key, entry);
+    });
+    this.historyQueue = task;
+    return task;
   }
   async listGames() {
     const keys = await this.a.keys('games');
     const all = [];
     for (const k of keys) all.push(await this.a.get('games', k));
-    return all.filter(Boolean).sort((x, y) => (y.lastPlayed || 0) - (x.lastPlayed || 0));
+    return all.filter(Boolean).sort((x, y) => (y.lastOpened || y.lastPlayed || 0) - (x.lastOpened || x.lastPlayed || 0));
   }
   async forgetGame(gameKey) {
     await this.a.del('games', gameKey);
@@ -226,15 +286,27 @@ export class Store {
   }
 
   // --- Fichiers de codes importés ----------------------------------------------
-  async importCheatFile({ system, path, name, text }) {
+  async prepareCheatFile({ system, path, name, text }) {
     const key = `${system}|${path}`;
+    const encoded = new TextEncoder().encode(text);
+    const byteSize = encoded.length;
+    if (byteSize > CHEAT_LIMITS.fileBytes) throw new Error('Fichier de codes trop gros (maximum 2 Mio).');
     const identity = cheatIdentity(text);
-    const contentSha256 = (await fingerprint(new TextEncoder().encode(text))).hex;
+    const contentSha256 = (await fingerprint(encoded)).hex;
     const previous = await this.a.get('cheatfiles', key);
     const previousHash = previous && (previous.contentSha256 || (await fingerprint(new TextEncoder().encode(previous.text))).hex);
     const reviewRequired = !!previous && (previous.reviewRequired || previousHash !== contentSha256);
-    await this.a.put('cheatfiles', key, { system, path, name, text, romSha256: identity.sha256, identityDeclared: identity.declared, contentSha256, reviewRequired });
+    return { system, path, name, text, byteSize, romSha256: identity.sha256, identityDeclared: identity.declared, contentSha256, reviewRequired };
+  }
+  async importCheatFile(file) {
+    const entry = await this.prepareCheatFile(file);
+    await this.commitCheatFiles([entry]);
+    const key = `${entry.system}|${entry.path}`;
     return key;
+  }
+  async commitCheatFiles(entries) {
+    if (entries.length > CHEAT_LIMITS.batchFiles || entries.reduce((sum, f) => sum + f.byteSize, 0) > CHEAT_LIMITS.batchBytes) throw new Error('Lot de codes trop gros (1000 fichiers / 32 Mio).');
+    await this.a.commitCheats(entries, CHEAT_LIMITS);
   }
   async listCheatFiles(system) {
     const keys = await this.a.keys('cheatfiles');

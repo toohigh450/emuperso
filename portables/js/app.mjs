@@ -2,7 +2,7 @@
 import { SYSTEMS, DS_CORES, ROM_EXTENSIONS, LOOSE_EXTENSIONS, analyzeRom, extensionOf, stemOf } from './systems.mjs';
 import { isZip, extractFirst, listCandidates } from './zip.mjs';
 import { fingerprint, saveSpaceId, gameKey, ejsGameName, legacyEjsGameName, slug, toHex } from './hash.mjs';
-import { Store, IdbAdapter, MemoryAdapter } from './store.mjs';
+import { Store, IdbAdapter, MemoryAdapter, CHEAT_LIMITS } from './store.mjs';
 import { parseCht, classifyCheatFiles, linkedCheatValid, normalizeName, deviceLabel, inferSystemFromPath, toEjsCheats } from './cheats.mjs';
 import { CONTROL_PROFILES, buildDefaultControls } from './controls.mjs';
 import { Session } from './session.mjs';
@@ -29,6 +29,8 @@ let enginePaths = [];
 let engineLocal = false;
 let currentGame = null; // détails du jeu affiché dans la fente
 let opening = false;
+let importingCheats = false;
+const panelTickets = { saves: 0, history: 0, cheats: 0 };
 let settings = { controlProfile: 'defaut', dsCore: 'desmume2015' };
 
 // --- Utilitaires d'affichage -------------------------------------------------------
@@ -71,7 +73,16 @@ function download(name, bytes) {
 
 // --- Rendu de la fente ------------------------------------------------------------
 function render(snap) {
+  const previousGame = currentGame;
   currentGame = snap.game || null;
+  if (previousGame !== currentGame) {
+    const renderedGame = currentGame;
+    for (const panel of Object.keys(panelTickets)) panelTickets[panel]++;
+    for (const id of ['saveMirror', 'history', 'cheatInfo', 'cheatMatches', 'cheatSearchResults']) clear($(id));
+    Promise.all([refreshSavePanel(), refreshCheatPanel()]).catch(err => {
+      if (currentGame === renderedGame) setStatus(`Panneau indisponible : ${err.message}`, 'error');
+    });
+  }
   const active = snap.state !== 'idle' && snap.game;
   $('slotEmpty').hidden = !!active;
   $('slotGame').hidden = !active;
@@ -101,13 +112,15 @@ function render(snap) {
 
 // --- Ouverture d'un jeu -----------------------------------------------------------
 async function readGameFile(file) {
+  if (extensionOf(file.name) === '7z') throw new Error('Archive .7z non prise en charge : extrais une ROM avec 7-Zip dans un dossier séparé, puis ouvre-la ici.');
+  if (extensionOf(file.name) === 'torrent') throw new Error('Un .torrent n’est pas une ROM. Ouvre un fichier de jeu complet (.gb, .gbc, .gba, .nds ou .zip).');
   if (file.size > MAX_INPUT_BYTES) throw new Error('Fichier trop gros pour cette application (maximum 512 Mio + 16 Mio).');
   const options = { deviceMemory: navigator.deviceMemory, activeBytes: currentGame?.romBytes || 0 };
   let warned = false;
   const checkMemory = (size, archiveBytes = 0) => {
     const plan = memoryPlan(size, { ...options, archiveBytes });
     if (plan.warn && !warned) {
-      if (!confirm(`Grosse ROM : environ ${Math.ceil(plan.estimated / MiB)} Mio de mémoire estimée, sans garantie de RAM disponible. Enregistre et exporte tes progrès avant de continuer. Continuer ?`)) throw new Error('Ouverture annulée.');
+      if (!confirm(`Plafond ROM : 512 Mio. Estimation : ${Math.ceil(plan.estimated / MiB)} Mio ; budget prudent : ${Math.floor(plan.budget / MiB)} Mio, sans garantie de RAM disponible. Enregistre et exporte tes progrès avant de continuer. Continuer ?`)) throw new Error('Ouverture annulée.');
       warned = true;
     }
   };
@@ -270,6 +283,11 @@ async function openGame(file) {
       ...(defaultControls ? { EJS_defaultControls: defaultControls } : {}),
     },
     onSaveUpdate: (e) => mirrorSave(spaceId, e),
+    onLifecycle: (event) => {
+      store.recordLifecycle(key, event).then(() => refreshHistory()).catch(err => {
+        if (currentGame === game) setStatus(`Historique non enregistré : ${err.message}`, 'warn');
+      });
+    },
   };
 
   await store.recordGame({
@@ -283,11 +301,7 @@ async function openGame(file) {
     engineTitle,
     engineNamingVersion: legacyNaming ? 1 : 2,
   });
-  const started = await session.start(game, boot);
-  if (started) {
-    await refreshCheatPanel();
-    await refreshSavePanel();
-  }
+  await session.start(game, boot); // Le rendu déclenche les panneaux sans bloquer le prochain changement.
 }
 
 function renderWarnings(game) {
@@ -306,17 +320,19 @@ async function mirrorSave(spaceId, e) {
     if (r.changed && currentGame && currentGame.spaceId === spaceId) await refreshSavePanel();
   } catch (err) {
     console.error('Copie miroir impossible', err);
-    setStatus("La copie de sécurité de la sauvegarde a échoué : la sauvegarde du moteur n'est pas touchée.", 'error');
+    if (currentGame?.spaceId === spaceId) setStatus("La copie de sécurité de la sauvegarde a échoué : la sauvegarde du moteur n'est pas touchée.", 'error');
   }
 }
 
 async function refreshSavePanel() {
+  const ticket = ++panelTickets.saves;
   const game = currentGame;
-  const box = clear($('saveMirror'));
+  const box = document.createDocumentFragment();
   if (!game) {
     box.append(h('p', { class: 'muted' }, 'Ouvre un jeu pour voir ses sauvegardes.'));
   } else {
     const info = await store.mirrorInfo(game.spaceId);
+    if (ticket !== panelTickets.saves || game !== currentGame) return;
     box.append(h('p', {}, `Espace de sauvegarde : ${game.title} (${game.systemLabel}, ${game.coreLabel}).`));
     if (info.length === 0) {
       box.append(h('p', { class: 'muted' }, "Aucune copie de sécurité pour l'instant. Elle apparaît dès que le moteur détecte un changement de sauvegarde dans le jeu."));
@@ -344,41 +360,60 @@ async function refreshSavePanel() {
       );
     }
   }
+  if (ticket !== panelTickets.saves || game !== currentGame) return;
+  $('saveMirror').replaceChildren(box);
   await refreshHistory();
 }
 
 async function refreshHistory() {
-  const box = clear($('history'));
+  const ticket = ++panelTickets.history;
+  const game = currentGame;
+  const box = document.createDocumentFragment();
   const games = (await store.listGames()).slice(0, 12);
+  if (ticket !== panelTickets.history || game !== currentGame) return;
   if (games.length === 0) {
     box.append(h('p', { class: 'muted' }, 'Aucun jeu ouvert pour le moment.'));
+    $('history').replaceChildren(box);
     return;
   }
   const list = h('ul', { class: 'rows' });
   for (const g of games) {
-    list.append(h('li', {}, h('span', {}, `${g.title} (${SYSTEMS[g.system] ? SYSTEMS[g.system].label : g.system}), ${fmtDate(g.lastPlayed)}`)));
+    const stats = `${g.opens || 0} ouverture(s), ${g.readyCount || 0} moteur(s) prêt(s), ${g.historyVersion === 2 ? g.plays || 0 : 0} partie(s) démarrée(s)`;
+    const legacy = g.legacyOpens ?? (g.historyVersion === 2 ? 0 : g.plays || 0);
+    const state = { opened: 'ROM ouverte', ready: 'moteur prêt', started: 'jeu démarré' }[g.status] || 'ancien historique';
+    list.append(h('li', {}, h('span', {}, `${g.title} (${SYSTEMS[g.system] ? SYSTEMS[g.system].label : g.system}), ${fmtDate(g.lastOpened || g.lastPlayed)} — ${state} ; ${stats}${legacy ? ` ; ${legacy} ancienne(s) ouverture(s), démarrage non vérifié` : ''}`)));
   }
   box.append(list);
+  $('history').replaceChildren(box);
 }
 
 // --- Codes ------------------------------------------------------------------------
 async function refreshCheatPanel() {
+  const ticket = ++panelTickets.cheats;
   const game = currentGame;
-  const info = clear($('cheatInfo'));
+  const valid = () => ticket === panelTickets.cheats && game === currentGame;
+  const info = document.createDocumentFragment();
   const total = await store.countCheatFiles();
   info.append(h('p', {}, total === 0 ? 'Aucun fichier de codes importé.' : `${total} fichier(s) de codes importé(s).`));
-  const list = clear($('cheatMatches'));
-  clear($('cheatSearchResults'));
-  if (!game || total === 0) return;
+  const list = document.createDocumentFragment();
+  const out = document.createDocumentFragment();
+  const publish = () => {
+    if (!valid()) return;
+    $('cheatInfo').replaceChildren(info);
+    $('cheatMatches').replaceChildren(list);
+    $('cheatSearchResults').replaceChildren(out);
+  };
+  if (!valid()) return;
+  if (!game || total === 0) { publish(); return; }
   const files = await store.listCheatFiles(game.system);
   const { identified, exact, sameTitle } = classifyCheatFiles(game.fileName, game.hex, files);
   const link = await store.getCheatLink(game.key);
 
-  if (game !== currentGame) return;
+  if (!valid()) return;
   if (link) {
-    list.append(h('p', {}, `Association enregistrée pour cette ROM : ${link.name}. S'applique au prochain lancement.`));
+    list.append(h('p', {}, `Association enregistrée pour cette ROM : ${link.name}. Confirmation limitée à cette ROM et à ce contenu ; s'applique au prochain lancement.`));
     const linked = await store.getCheatFile(game.system, link.path);
-    if (game !== currentGame) return;
+    if (!valid()) return;
     if (!linkedCheatValid(link, linked, game.hex)) {
       list.append(h('p', { class: 'warn' }, 'Fichier de codes modifié, absent ou ancienne association : codes bloqués jusqu’à nouvelle confirmation.'));
       if (linked) list.append(h('button', { class: 'btn small', onclick: () => associateCheat(linked) }, 'Confirmer les nouveaux codes'));
@@ -386,7 +421,7 @@ async function refreshCheatPanel() {
     if (!link.romSha256) list.append(h('p', { class: 'warn' }, 'Ancienne association : confirme-la à nouveau pour identifier cette ROM par son empreinte complète.'));
     list.append(h('button', { class: 'btn small', onclick: async () => { await store.setCheatLink(game.key, null); await refreshCheatPanel(); } }, 'Retirer ce choix'));
   }
-  const changed = files.filter(f => f.reviewRequired && f.romSha256 === game.hex);
+  const changed = files.filter(f => f.reviewRequired && f.romSha256 === game.hex && !(link?.path === f.path && linkedCheatValid(link, f, game.hex)));
   for (const f of changed) list.append(h('button', { class: 'btn small', onclick: () => associateCheat(f) }, `Vérifier le fichier modifié : ${f.name}`));
   if (identified.length) {
     list.append(h('p', {}, `${identified.length} fichier(s) identifié(s) par SHA-256 complet. Cela vérifie l'association déclarée, pas l'efficacité des codes.`));
@@ -410,7 +445,6 @@ async function refreshCheatPanel() {
   }
   // Recherche manuelle
   const q = $('cheatSearch').value.trim().toLowerCase();
-  const out = clear($('cheatSearchResults'));
   if (q.length >= 2) {
     const hits = files.filter((f) => normalizeName(f.name).includes(q)).slice(0, 20);
     if (hits.length === 0) out.append(h('p', { class: 'muted' }, 'Aucun résultat.'));
@@ -419,7 +453,8 @@ async function refreshCheatPanel() {
         await associateCheat(f);
       } }, 'Associer')));
     }
-  } else out.replaceChildren();
+  }
+  publish();
 }
 
 async function associateCheat(file) {
@@ -432,14 +467,22 @@ async function associateCheat(file) {
   if (!confirm(`Associer « ${file.name} » à « ${game.fileName} » ?\nVérifie la région, la révision et les hacks : le nom ne suffit pas à garantir des codes compatibles.\nCe choix sera retenu pour les octets de cette ROM et prendra effet au prochain lancement.`)) return;
   const selected = await store.getCheatFile(game.system, file.path);
   if (!selected) throw new Error('Fichier de codes introuvable.');
+  if (game !== currentGame) return;
+  if ((selected.identityDeclared && selected.romSha256 !== game.hex) || (file.contentSha256 && selected.contentSha256 !== file.contentSha256)) {
+    setStatus('Le fichier a changé pendant la confirmation : vérifie à nouveau son contenu.', 'warn');
+    await refreshCheatPanel();
+    return;
+  }
   const contentSha256 = selected.contentSha256 || (await fingerprint(new TextEncoder().encode(selected.text))).hex;
   if (!selected.contentSha256) await store.importCheatFile(selected);
   await store.setCheatLink(game.key, { path: file.path, name: file.name, romSha256: game.hex, contentSha256 });
+  if (game !== currentGame) return;
   $('cheatSearch').value = '';
   await refreshCheatPanel();
 }
 
 async function importCheatFiles(fileList) {
+  if (importingCheats) return;
   const files = [...fileList].filter((f) => /\.cht$/i.test(f.name));
   if (files.length === 0) {
     setStatus('Aucun fichier .cht dans la sélection.', 'error');
@@ -447,19 +490,47 @@ async function importCheatFiles(fileList) {
   }
   let imported = 0;
   let skipped = 0;
-  for (const f of files) {
-    const path = f.webkitRelativePath || f.name;
-    const system = inferSystemFromPath(path) || (currentGame ? currentGame.system : null);
-    if (!system) { skipped++; continue; }
-    const text = await f.text();
-    if (!parseCht(text).length) { skipped++; continue; }
-    await store.importCheatFile({ system, path, name: f.name, text });
-    imported++;
+  const refused = [];
+  const entries = [];
+  let batchBytes = 0;
+  const systemAtImport = currentGame?.system;
+  importingCheats = true;
+  for (const id of ['cheatFolderBtn', 'cheatFilesBtn', 'cheatClear']) $(id).disabled = true;
+  try {
+    for (const f of files) {
+      const path = f.webkitRelativePath || f.name;
+      const system = inferSystemFromPath(path) || systemAtImport;
+      if (!system) { skipped++; refused.push(`${f.name} : console inconnue`); continue; }
+      if (f.size > CHEAT_LIMITS.fileBytes || entries.length >= CHEAT_LIMITS.batchFiles || batchBytes + f.size > CHEAT_LIMITS.batchBytes) {
+        skipped++; refused.push(`${f.name} : plafond fichier ou lot dépassé`); continue;
+      }
+      try {
+        const text = await f.text();
+        if (!parseCht(text).length) throw new Error('aucun code lisible');
+        const entry = await store.prepareCheatFile({ system, path, name: f.name, text });
+        if (batchBytes + entry.byteSize > CHEAT_LIMITS.batchBytes) throw new Error('plafond du lot dépassé');
+        entries.push(entry);
+        batchBytes += entry.byteSize;
+      } catch (err) { skipped++; refused.push(`${f.name} : ${err.message}`); }
+      if ((entries.length + skipped) % 20 === 0) {
+        setStatus(`Préparation des codes : ${entries.length + skipped}/${files.length} ; ${skipped} refusé(s)…`);
+        await new Promise(resolve => setTimeout(resolve, 0));
+      }
+    }
+    await store.commitCheatFiles(entries);
+    imported = entries.length;
+  } catch (err) {
+    setStatus(`Import annulé : ${err.name === 'QuotaExceededError' ? 'quota du navigateur atteint' : err.message}. Les imports existants sont conservés.`, 'error');
+    return;
+  } finally {
+    importingCheats = false;
+    for (const id of ['cheatFolderBtn', 'cheatFilesBtn', 'cheatClear']) $(id).disabled = false;
   }
   setStatus(
-    `${imported} fichier(s) de codes importé(s)` + (skipped ? `, ${skipped} ignoré(s) (console inconnue ou aucun code lisible).` : '.'),
+    `${imported} fichier(s) de codes importé(s)` + (skipped ? `, ${skipped} refusé(s). ${refused.slice(0, 5).join(' ; ')}${refused.length > 5 ? ' ; autres refus dans le rapport.' : ''}` : '.'),
     skipped ? 'warn' : 'ok'
   );
+  if (refused.length) download('rapport-import-codes.txt', `${imported} importé(s), ${skipped} refusé(s)\n${refused.join('\n')}`);
   await refreshCheatPanel();
 }
 

@@ -131,6 +131,65 @@ try {
   await page.getByRole('button', { name: 'Fermer le jeu', exact: true }).click();
   await page.locator('#slotEmpty').waitFor({ state: 'visible' });
   assert.equal(await page.locator('iframe').count(), 0);
+  // B04 : lectures A lentes, B rapide, puis résolution de A ; aucune publication périmée.
+  await page.evaluate(async () => {
+    const { Store } = await import('./js/store.mjs');
+    const methods = ['mirrorInfo', 'listGames', 'countCheatFiles'];
+    window.holdPanels = true;
+    window.panelGates = [];
+    const originals = new Map(methods.map(name => [name, Store.prototype[name]]));
+    for (const name of methods) Store.prototype[name] = async function(...args) {
+      const hold = window.holdPanels;
+      const result = await originals.get(name).apply(this, args);
+      if (hold) await new Promise(resolve => window.panelGates.push(resolve));
+      return result;
+    };
+    window.releasePanels = () => {
+      window.holdPanels = false;
+      for (const resolve of window.panelGates.splice(0)) resolve();
+      for (const [name, fn] of originals) Store.prototype[name] = fn;
+    };
+  });
+  await upload('SlowA.gba', makeGba({title:'SLOWA'}));
+  await page.waitForFunction(() => window.panelGates.length >= 3);
+  await page.evaluate(() => { window.holdPanels = false; });
+  await upload('FastB.gba', makeGba({title:'FASTB'}));
+  await page.waitForFunction(() => document.querySelector('#saveMirror').textContent.includes('FASTB'));
+  await page.waitForFunction(() => document.querySelector('#history').textContent.includes('FASTB'));
+  const historyB = await page.locator('#history').textContent();
+  const codesB = await page.locator('#cheatMatches').textContent();
+  await page.evaluate(() => window.releasePanels());
+  await page.waitForTimeout(100);
+  assert.match(await page.locator('#saveMirror').textContent(), /FASTB/);
+  assert.doesNotMatch(await page.locator('#saveMirror').textContent(), /SLOWA/);
+  assert.match(await page.locator('#history').textContent(), /FASTB/);
+  assert.equal(await page.locator('#history').textContent(), historyB);
+  assert.equal(await page.locator('#cheatMatches').textContent(), codesB);
+  assert.match(codesB, /Aucune correspondance/);
+  assert.doesNotMatch(await page.locator('#cheatMatches').textContent(), /SLOWA|Identity/);
+  // Même test avec fermeture pendant une lecture de sauvegarde.
+  await page.evaluate(async () => {
+    const { Store } = await import('./js/store.mjs');
+    const original = Store.prototype.mirrorInfo;
+    Store.prototype.mirrorInfo = async function(...args) {
+      const result = await original.apply(this,args);
+      await new Promise(resolve => { window.lateSave = resolve; });
+      return result;
+    };
+    window.restoreSaveRead = () => { Store.prototype.mirrorInfo = original; window.lateSave(); };
+  });
+  await upload('CloseA.gba', makeGba({title:'CLOSEA'}));
+  await page.waitForFunction(() => !!window.lateSave);
+  await page.getByRole('button', { name:'Fermer le jeu', exact:true }).click();
+  await page.evaluate(() => window.restoreSaveRead());
+  await page.waitForTimeout(100);
+  assert.match(await page.locator('#saveMirror').textContent(), /Ouvre un jeu/);
+  assert.equal(await page.locator('#cheatMatches').textContent(), '');
+  await upload('Failure.gba', makeGba({title:'FAILURE'}));
+  await page.evaluate(() => Object.values(window.__portablesBoots)[0].events.onError('panne moteur simulée'));
+  await page.waitForFunction(() => document.body.dataset.state === 'idle');
+  assert.match(await page.locator('#saveMirror').textContent(), /Ouvre un jeu/);
+  assert.equal(await page.locator('#cheatMatches').textContent(), '');
   assert.deepEqual(errors, []);
   console.log('PASS Chromium : import GB/GBC/GBA/DS, suggestions, association SHA-256, renommage, ROM modifiée, persistance IndexedDB, miroir de sauvegarde, fermeture. Moteur simulé ; aucune émulation réelle validée.');
   // P04 : interruption après chacune des trois écritures d'une vraie transaction IDB.
@@ -162,6 +221,27 @@ try {
     return {results,recovered};
   });
   assert.deepEqual(atomic,{results:[true,true,true],recovered:true});
+  // B09 : échec au milieu du lot IDB = aucun remplacement ni ajout conservé.
+  const importRollback = await page.evaluate(async () => {
+    const { Store, IdbAdapter } = await import('./js/store.mjs');
+    const adapter = new IdbAdapter('audit-cheat-import');
+    const store = new Store(adapter);
+    await store.importCheatFile({system:'gb',path:'a',name:'a',text:'ancien'});
+    const entries = await Promise.all(['a','b'].map(path => store.prepareCheatFile({system:'gb',path,name:path,text:'nouveau'})));
+    const put = IDBObjectStore.prototype.put;
+    let writes = 0, rejected = false;
+    IDBObjectStore.prototype.put = function(...args) {
+      const req = put.apply(this,args);
+      if (this.transaction.db.name === 'audit-cheat-import' && ++writes === 2) req.addEventListener('success', () => this.transaction.abort());
+      return req;
+    };
+    try { await store.commitCheatFiles(entries); } catch { rejected = true; }
+    finally { IDBObjectStore.prototype.put = put; }
+    const result = { rejected, old: (await store.getCheatFile('gb','a')).text, added: await store.getCheatFile('gb','b') };
+    (await adapter.open()).close();
+    return result;
+  });
+  assert.deepEqual(importRollback, {rejected:true, old:'ancien', added:null});
   const ids = await page.evaluate(async () => {
     const {Store,IdbAdapter}=await import('./js/store.mjs');
     const a=new IdbAdapter('audit-numeric-collisions'), b=new IdbAdapter('audit-numeric-collisions');

@@ -1,30 +1,21 @@
-# Portables 0.2.1-alpha.1 — état du 2 novembre 2026
+# Portables 0.2.1-alpha.2 — 1er novembre 2026 (Toronto)
 
 ## Fait
 
-- Réponse aux audits GPT et Méo, rapports originaux et empreintes conservés dans `audits/recus/`.
-- Cohérence de session après erreur d'historique ; rotation des trois miroirs dans une transaction IndexedDB ; identifiants numériques persistants avec résolution des collisions.
-- Contrôle du contenu des .cht associés ; nouvelle confirmation après réimport modifié.
-- Repli du moteur dans une iframe neuve après erreur ou délai ; budget mémoire et contrôle structurel/CRC des BIOS DS.
-- Source EmulatorJS 4.2.3 versionnée, intégrité du chargeur, manifeste frontend, notices de provenance.
-- Relais de `saveSaveFiles` et `exit` manquants dans le chargeur stable 4.2.3.
-- 74 tests de logique, parcours Chromium simulé et test du vrai frontend 4.2.3 réussis. Détails dans `preuves/`.
-- Workflow de tests de logique Linux/Windows, Node 22/24 ajouté. Il ne valide ni le lanceur ni la manette.
+- Nouvel audit : panneaux asynchrones B04, confirmation locale des codes B03, historique B06 et plafonds/transaction d'import B09 traités. Mémoire et contrôle BIOS précisés.
+- 78 tests de logique, syntaxe, parcours Chrome simulé et serveur Windows réussis. Preuves alpha.2 dans preuves/.
+- Serveur PowerShell réparé avec TcpListener ; port occupé et routes HTTP testés, sans ouvrir le profil habituel.
+- Vrais cœurs GB/GBC/GBA démarrés dans Chrome, puis retour au premier GB et fermeture.
+- Sauvegarde GBA de 128 Kio : chargement, miroir, export, rechargement de page, réouverture et restauration identiques octet par octet, via le vrai serveur PowerShell. Les deux sauvegardes originales sont inchangées.
+- Autorisation spécifique Vercel reçue : lien temporaire créé et route /portables/ de l'aperçu de reprise confirmée HTTP 200. Protection inchangée.
 
-## En cours
+## Encore à vérifier
 
-- Revue de la 0.2.1 alpha dans la PR #1 de `emulateur-portable`.
-- La validation avec de vrais jeux, sauvegardes, cheats et BIOS reste à faire sur les machines de Karl.
+- DS : ZIP choisi encore illisible pendant les téléchargements ; attendre un fichier complet.
+- Nouvelle progression sauvegardée depuis le menu du jeu ; restauration GB/GBC/DS, son, clavier et manette physiques, cheats réellement actifs, gros jeux DS.
+- Double-clic Windows et ouverture du navigateur dans le profil habituel. Les tests utilisent -SansNavigateur et des profils Chrome isolés.
+- Licences et intégrité de toutes les sous-ressources du moteur ; mode entièrement hors ligne. L'accès HTTP Vercel ne certifie pas l'émulation distante.
 
-## Bloqué
+## Livraison
 
-- Vérification authentifiée de l'aperçu Vercel : la revue automatique a refusé l'action qui créerait/réutiliserait un lien temporaire de partage. La protection SSO n'a pas été modifiée.
-- Pas de session Windows ni manette physique dans cet environnement ; pas de vraies ROMs ou sauvegardes fournies pour les essais.
-- Intégrité de toutes les sous-ressources du moteur et licences des cœurs non finalisées. La version ne devient pas stable ou publiable par ces seuls tests.
-
-## Prochain pas
-
-1. Relire `REPONSE-AUX-AUDITS-0.2.1.md` et les résultats de CI rattachés au commit.
-2. Exporter les sauvegardes existantes et suivre `TESTS-KARL.md` avec le vrai moteur.
-3. Vérifier la route `/portables/` de l'aperçu avec un accès autorisé ; ne pas utiliser le laboratoire N64 à la racine comme preuve Portables.
-4. Corriger tout défaut reproduit, puis laisser Karl décider de la suite. Pas de fusion ni de promotion de production effectuée.
+Voir REPONSE-NOUVEL-AUDIT-ALPHA.2.md pour les résultats et limites. PR #1 en brouillon ; pas de fusion ni de promotion de production. Aucune ROM, aucun BIOS, aucune sauvegarde ou capture privée dans le dépôt ou l'archive de distribution. Les aperçus de branche Vercel sont automatiques.

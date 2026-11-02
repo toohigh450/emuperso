@@ -55,6 +55,12 @@ Si IndexedDB est bloqué, un avertissement indique que le stockage de la page es
 
 ## Tests
 
+La reprise locale alpha.2 et ses limites sont détaillées dans `REPONSE-NOUVEL-AUDIT-ALPHA.2.md`. Les codes modifiés se confirment uniquement pour la ROM et le contenu choisis ; cette confirmation ne réactive aucune autre association. Limites : 2 Mio/fichier, 1000 fichiers ou 32 Mio/lot, 5000 fichiers ou 64 Mio au total. Un échec de transaction conserve les imports précédents.
+
+L'historique distingue ouverture, moteur prêt et partie démarrée. Les anciens compteurs restent des ouvertures non vérifiées.
+
+Sur Windows, `npm run test:windows` teste le vrai serveur PowerShell et le passage à un port libre. `powershell -NoProfile -ExecutionPolicy Bypass -File serveur.ps1 -SansNavigateur` permet de le démarrer sans ouvrir Chrome ; le batch habituel ouvre toujours le navigateur.
+
 Logique pure : Node 22.17 ou plus récent, puis `npm test` (aucune dépendance).
 
 Parcours navigateur avec moteur simulé : installe Playwright séparément avec `npm install --no-save playwright`, installe son Chromium avec `npx playwright install chromium`, puis `npm run test:browser`. Un Chromium déjà installé peut être indiqué via `CHROMIUM_PATH`. Ces tests utilisent des en-têtes synthétiques et ne valident pas l'émulation réelle.

@@ -1,0 +1,5 @@
+
+> emuperso-portables@0.2.1-alpha.2 test:windows
+> node tests/windows-server.mjs
+
+PASS Windows PowerShell : port occupé contourné, GET, HEAD, MIME modules, 404, 405 et traversées refusées.

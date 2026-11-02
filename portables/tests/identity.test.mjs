@@ -6,6 +6,24 @@ import { analyzeRom } from '../js/systems.mjs';
 import { makeGb, makeGba, makeNds } from './helpers.mjs';
 const hash = 'ab'.repeat(32);
 
+test('confirmation d’un contenu modifié : accord local à la ROM, aucune réactivation globale', async () => {
+  const s = new Store(new MemoryAdapter());
+  const meta = {system:'gba',path:'x.cht',name:'x.cht'};
+  await s.importCheatFile({...meta,text:`rom_sha256 = "${hash}"\ncheat0_code = "1234"`});
+  const old = await s.getCheatFile('gba','x.cht');
+  const oldLink = {path:'x.cht',romSha256:hash,contentSha256:old.contentSha256};
+  await s.importCheatFile({...meta,text:`rom_sha256 = "${hash}"\ncheat0_code = "5678"`});
+  const changed = await s.getCheatFile('gba','x.cht');
+  const local = {...oldLink,contentSha256:changed.contentSha256};
+  await s.setCheatLink(`gba:${hash}`,local);
+  assert.equal(linkedCheatValid(local,changed,hash),true);
+  assert.equal(linkedCheatValid(oldLink,changed,hash),false);
+  assert.equal(linkedCheatValid(local,changed,'cd'.repeat(32)),false);
+  assert.equal(classifyCheatFiles('x.gba',hash,[changed]).identified.length,0);
+  await s.setCheatLink(`gba:${hash}`,null);
+  assert.equal((await s.getCheatFile('gba','x.cht')).reviewRequired,true);
+});
+
 test('identité .cht : empreinte complète, casse, commentaire et métadonnée absente', () => {
   assert.deepEqual(cheatIdentity(`# rom_sha256 = "${hash.toUpperCase()}"`), { declared: true, sha256: hash });
   assert.deepEqual(cheatIdentity('cheats = 1'), { declared: false, sha256: null });

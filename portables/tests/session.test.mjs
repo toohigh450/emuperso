@@ -27,6 +27,19 @@ function fakeHost() {
 }
 const game = (id) => ({ title: id });
 
+test('historique : une seule notification prêt/démarré et aucun événement ancien après A → B', async () => {
+  const host = fakeHost();
+  const s = new Session(host);
+  const events = [];
+  await s.start(game('A'), { id: 'A', onLifecycle: e => events.push(`A:${e}`) });
+  host.events.A.onReady(); host.events.A.onReady();
+  host.events.A.onStart(); host.events.A.onStart();
+  await s.start(game('B'), { id: 'B', onLifecycle: e => events.push(`B:${e}`) });
+  host.events.A.onReady(); host.events.A.onStart();
+  host.events.B.onReady();
+  assert.deepEqual(events, ['A:ready', 'A:started', 'B:ready']);
+});
+
 test('un seul jeu actif : démarrer B détruit A avant de créer B', async () => {
   const host = fakeHost();
   const s = new Session(host);

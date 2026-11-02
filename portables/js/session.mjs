@@ -32,15 +32,23 @@ export class Session {
     if (this.handle || this.state !== 'idle') await this.stop();
     const token = ++this.token;
     this.current = game;
+    let ready = false;
+    let started = false;
     this._set('starting', { error: null, detail: 'Chargement du moteur…' });
     let handle;
     try {
       handle = await this.host.create(boot, {
         onReady: () => {
-          if (token === this.token && this.state === 'starting') this._set('starting', { detail: 'Moteur prêt. Appuie sur Démarrer dans la fenêtre du jeu.' });
+          if (token !== this.token || ready) return;
+          ready = true;
+          boot.onLifecycle?.('ready');
+          if (this.state === 'starting') this._set('starting', { detail: 'Moteur prêt. Appuie sur Démarrer dans la fenêtre du jeu.' });
         },
         onStart: () => {
-          if (token === this.token) this._set('running', { detail: 'Jeu lancé.' });
+          if (token !== this.token || started) return;
+          started = true;
+          boot.onLifecycle?.('started');
+          this._set('running', { detail: 'Jeu lancé.' });
         },
         onExit: () => {
           if (token === this.token) this.stop();
@@ -65,20 +73,22 @@ export class Session {
   async _fail(message) {
     const h = this.handle;
     this.handle = null;
-    this.token++;
+    const token = ++this.token;
     if (h) await h.destroy();
+    if (token !== this.token) return;
     this.current = null;
     this._set('idle', { error: message, detail: '' });
   }
 
   async stop() {
-    this.token++;
+    const token = ++this.token;
     const h = this.handle;
     this.handle = null;
     if (h) {
       this._set('stopping', { detail: 'Fermeture du jeu…' });
       await h.destroy();
     }
+    if (token !== this.token) return;
     this.current = null;
     this._set('idle', { detail: '' });
   }

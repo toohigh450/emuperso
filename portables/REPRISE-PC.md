@@ -1,5 +1,7 @@
 # Reprise locale sur le PC de Karl
 
+**Reprise effectuée le 1er novembre 2026, heure de Toronto :** correctifs et essais alpha.2 dans `REPONSE-NOUVEL-AUDIT-ALPHA.2.md`. Les sections suivantes conservent le point de transmission original ; les mentions « reste à implémenter » décrivent cet état antérieur.
+
 Point préparé le **1er novembre 2026, heure de Toronto**, à la demande de Karl de poursuivre depuis son ordinateur pour accéder à ses ROMs.
 
 ## Dépôt et état courant

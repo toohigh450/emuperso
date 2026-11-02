@@ -1,5 +1,7 @@
 # Résultats exécutés — 2 novembre 2026
 
+Mise à jour locale alpha.2 (1er novembre, heure de Toronto) : `alpha2-logique.txt`, `alpha2-chrome.txt`, `alpha2-windows.txt` et `alpha2-syntaxe.txt`. Le rapport `../REPONSE-NOUVEL-AUDIT-ALPHA.2.md` décrit les essais de vrais fichiers, dont les données et captures restent privées hors dépôt. Les paragraphes suivants concernent l'environnement alpha.1.
+
 Node 24.19.0 et Chromium préinstallé dans l’environnement de travail.
 
 - `syntaxe.txt` : npm run check.

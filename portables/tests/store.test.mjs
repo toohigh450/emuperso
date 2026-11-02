@@ -54,9 +54,38 @@ test('historique des jeux : compteur et tri par dernière partie', async () => {
   await s.recordGame({ gameKey: 'a', title: 'A' }, 300);
   const list = await s.listGames();
   assert.deepEqual(list.map((g) => g.gameKey), ['a', 'b']);
-  assert.equal(list[0].plays, 2);
+  assert.equal(list[0].opens, 2);
+  assert.equal(list[0].plays, 0);
   await s.forgetGame('a');
   assert.equal((await s.listGames()).length, 1);
+});
+
+test('historique : anciennes ouvertures préservées, prêt distinct de démarré', async () => {
+  const s = newStore();
+  await s.a.put('games', 'a', { gameKey: 'a', plays: 8, lastPlayed: 50 });
+  await s.recordGame({ gameKey: 'a', title: 'A' }, 100);
+  await s.recordLifecycle('a', 'ready', 110);
+  let g = await s.getGame('a');
+  assert.equal(g.legacyOpens, 8);
+  assert.equal(g.plays, 0);
+  assert.equal(g.readyCount, 1);
+  await s.recordLifecycle('a', 'started', 120);
+  g = await s.getGame('a');
+  assert.equal(g.plays, 1);
+  assert.equal(g.lastPlayed, 120);
+  assert.equal(g.status, 'started');
+});
+
+test('codes : dépassement total refuse aussi les remplacements sans altérer les anciens imports', async () => {
+  const s = newStore();
+  const old = await s.prepareCheatFile({ system: 'gb', path: 'a', name: 'a', text: 'ancien' });
+  await s.commitCheatFiles([old]);
+  const next = await s.prepareCheatFile({ system: 'gb', path: 'a', name: 'a', text: 'nouveau' });
+  const extra = { ...next, path: 'b' };
+  await assert.rejects(s.a.commitCheats([next, extra], { totalFiles: 1, totalBytes: 100 }), /Budget total/);
+  assert.equal((await s.getCheatFile('gb', 'a')).text, 'ancien');
+  assert.equal(await s.getCheatFile('gb', 'b'), null);
+  await assert.rejects(s.prepareCheatFile({ system: 'gb', path: 'big', name: 'big', text: 'x'.repeat(2 * 1024 * 1024 + 1) }), /trop gros/);
 });
 
 test('fichiers de codes par console + association explicite', async () => {
