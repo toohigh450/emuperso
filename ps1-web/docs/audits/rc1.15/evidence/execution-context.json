@@ -1,0 +1,13 @@
+{
+  "commit": "a2ff191ccb8b52356c37ef5fb81761da94f187d3",
+  "utc": "2026-11-01T22:22:40.032536+00:00",
+  "platform": "Linux 6.18.57 x86_64 GNU/Linux",
+  "chromium": "Chromium 154.0.8037.57 built on Debian GNU/Linux 13 (trixie)",
+  "node": "v24.19.0",
+  "python": "Python 3.12.14",
+  "source_manifest_sha256": "40f41e4f14fd0fd3c5b2c05bf6407b90a5bc0c19f912b5de07d4a7908738fb24",
+  "runtime_lock_sha256": "9dd570266eda97b87083ce82bd108d6258d4f1189b92971fe7066a5f0642da9e",
+  "runtime_files_verified": 41,
+  "windows_candidate_ci_executed": false,
+  "public_branch_unchanged": "70df42eed84434efabe84f4d4a94a70f44bc8f73"
+}

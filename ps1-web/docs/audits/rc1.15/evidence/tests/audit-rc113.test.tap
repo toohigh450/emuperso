@@ -1,0 +1,142 @@
+TAP version 13
+# Subtest: GPT P2: natural title remains unknown: The Last of US.bin
+ok 1 - GPT P2: natural title remains unknown: The Last of US.bin
+  ---
+  duration_ms: 3.078639
+  type: 'test'
+  ...
+# Subtest: GPT P2: natural title remains unknown: Among Us.bin
+ok 2 - GPT P2: natural title remains unknown: Among Us.bin
+  ---
+  duration_ms: 0.481775
+  type: 'test'
+  ...
+# Subtest: GPT P2: natural title remains unknown: The-Last-of-US.bin
+ok 3 - GPT P2: natural title remains unknown: The-Last-of-US.bin
+  ---
+  duration_ms: 0.421371
+  type: 'test'
+  ...
+# Subtest: GPT P2: natural title remains unknown: Among-Us.bin
+ok 4 - GPT P2: natural title remains unknown: Among-Us.bin
+  ---
+  duration_ms: 0.711202
+  type: 'test'
+  ...
+# Subtest: GPT P2: natural title remains unknown: Made-in-Japan.bin
+ok 5 - GPT P2: natural title remains unknown: Made-in-Japan.bin
+  ---
+  duration_ms: 0.244022
+  type: 'test'
+  ...
+# Subtest: GPT P2: natural title remains unknown: Europe Racing.bin
+ok 6 - GPT P2: natural title remains unknown: Europe Racing.bin
+  ---
+  duration_ms: 0.248673
+  type: 'test'
+  ...
+# Subtest: GPT P2: natural title remains unknown: Japan Pro Wrestling.bin
+ok 7 - GPT P2: natural title remains unknown: Japan Pro Wrestling.bin
+  ---
+  duration_ms: 0.287263
+  type: 'test'
+  ...
+# Subtest: GPT P2: natural title remains unknown: World Championship.bin
+ok 8 - GPT P2: natural title remains unknown: World Championship.bin
+  ---
+  duration_ms: 0.156944
+  type: 'test'
+  ...
+# Subtest: GPT positive structured metadata: Game (USA).bin
+ok 9 - GPT positive structured metadata: Game (USA).bin
+  ---
+  duration_ms: 0.507074
+  type: 'test'
+  ...
+# Subtest: GPT positive structured metadata: Game (US).bin
+ok 10 - GPT positive structured metadata: Game (US).bin
+  ---
+  duration_ms: 0.417888
+  type: 'test'
+  ...
+# Subtest: GPT positive structured metadata: Game-PAL.bin
+ok 11 - GPT positive structured metadata: Game-PAL.bin
+  ---
+  duration_ms: 0.192718
+  type: 'test'
+  ...
+# Subtest: GPT positive structured metadata: Game-NTSC-U.bin
+ok 12 - GPT positive structured metadata: Game-NTSC-U.bin
+  ---
+  duration_ms: 0.220783
+  type: 'test'
+  ...
+# Subtest: GPT positive structured metadata: Game-NTSC-J.bin
+ok 13 - GPT positive structured metadata: Game-NTSC-J.bin
+  ---
+  duration_ms: 0.089619
+  type: 'test'
+  ...
+# Subtest: GPT positive structured metadata: Game NTSC-U.bin
+ok 14 - GPT positive structured metadata: Game NTSC-U.bin
+  ---
+  duration_ms: 0.090603
+  type: 'test'
+  ...
+# Subtest: GPT positive structured metadata: Game NTSC-J.bin
+ok 15 - GPT positive structured metadata: Game NTSC-J.bin
+  ---
+  duration_ms: 0.139732
+  type: 'test'
+  ...
+# Subtest: GPT positive structured metadata: Gran Turismo 2-PSX-PAL-CD1.chd
+ok 16 - GPT positive structured metadata: Gran Turismo 2-PSX-PAL-CD1.chd
+  ---
+  duration_ms: 0.128065
+  type: 'test'
+  ...
+# Subtest: GPT positive structured metadata: Gran Turismo 2-PSX-NTSC-U-CD2.chd
+ok 17 - GPT positive structured metadata: Gran Turismo 2-PSX-NTSC-U-CD2.chd
+  ---
+  duration_ms: 0.087633
+  type: 'test'
+  ...
+# Subtest: GPT positive structured metadata: Demo-PSX-US-CD1.bin
+ok 18 - GPT positive structured metadata: Demo-PSX-US-CD1.bin
+  ---
+  duration_ms: 0.114956
+  type: 'test'
+  ...
+# Subtest: GPT positive structured metadata: Demo-PS1-JP-Rev1.bin
+ok 19 - GPT positive structured metadata: Demo-PS1-JP-Rev1.bin
+  ---
+  duration_ms: 0.073276
+  type: 'test'
+  ...
+# Subtest: C02: suspect native/state captures are refused even if handlers are called directly
+ok 20 - C02: suspect native/state captures are refused even if handlers are called directly
+  ---
+  duration_ms: 141.481822
+  type: 'test'
+  ...
+# Subtest: C02: explicit fresh-realm recovery skips unsafe capture, with cancellation supported
+ok 21 - C02: explicit fresh-realm recovery skips unsafe capture, with cancellation supported
+  ---
+  duration_ms: 84.134589
+  type: 'test'
+  ...
+# Subtest: noms archivés : titre et région reconnus sans authentifier une édition
+ok 22 - noms archivés : titre et région reconnus sans authentifier une édition
+  ---
+  duration_ms: 0.275254
+  type: 'test'
+  ...
+1..22
+# tests 22
+# suites 0
+# pass 22
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 318.432928

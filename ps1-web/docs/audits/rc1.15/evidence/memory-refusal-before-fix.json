@@ -1,0 +1,138 @@
+{
+  "status": "Mémoire de l’onglet insuffisante pour décompresser cette archive (estimation indicative 2984 Mio, disponible 1686 Mio). Rechargez la page (F5) puis relancez : vos sauvegardes sont conservées.",
+  "previous_closed": 1,
+  "previous_engine_retained": false,
+  "current": "Aucun",
+  "events": [
+    {
+      "utc": "2026-11-01T22:15:39.325Z",
+      "type": "disc.selected",
+      "data": {
+        "name": "Synthetic previous.bin",
+        "last_modified": null,
+        "replacing": false,
+        "device_memory_gib": null,
+        "js_heap_used_mib": null,
+        "js_heap_limit_mib": null
+      }
+    },
+    {
+      "utc": "2026-11-01T22:15:39.341Z",
+      "type": "disc.ready",
+      "data": {
+        "ms": 17,
+        "hash_ms": null,
+        "device_memory_gib": null,
+        "js_heap_used_mib": null,
+        "js_heap_limit_mib": null
+      }
+    },
+    {
+      "utc": "2026-11-01T22:15:39.342Z",
+      "type": "launch.start",
+      "data": {
+        "name": "Synthetic previous.bin",
+        "replacing": false,
+        "device_memory_gib": null,
+        "js_heap_used_mib": null,
+        "js_heap_limit_mib": null
+      }
+    },
+    {
+      "utc": "2026-11-01T22:15:39.399Z",
+      "type": "input.status",
+      "data": {
+        "mode": "native",
+        "profile": {
+          "analog": "off",
+          "stickToDpad": false,
+          "deadzone": 0.2,
+          "native": false
+        }
+      }
+    },
+    {
+      "utc": "2026-11-01T22:15:39.400Z",
+      "type": "launch.done",
+      "data": {
+        "name": "Synthetic previous.bin",
+        "ms": 58,
+        "device_memory_gib": null,
+        "js_heap_used_mib": null,
+        "js_heap_limit_mib": null
+      }
+    },
+    {
+      "utc": "2026-11-01T22:15:39.400Z",
+      "type": "disc.selected",
+      "data": {
+        "name": "Synthetic large.zip",
+        "last_modified": null,
+        "replacing": true,
+        "device_memory_gib": null,
+        "js_heap_used_mib": 2000,
+        "js_heap_limit_mib": 4096
+      }
+    },
+    {
+      "utc": "2026-11-01T22:15:39.400Z",
+      "type": "disc.ready",
+      "data": {
+        "ms": 0,
+        "hash_ms": null,
+        "device_memory_gib": null,
+        "js_heap_used_mib": 2000,
+        "js_heap_limit_mib": 4096
+      }
+    },
+    {
+      "utc": "2026-11-01T22:15:39.400Z",
+      "type": "launch.start",
+      "data": {
+        "name": "Synthetic large.zip",
+        "replacing": true,
+        "device_memory_gib": null,
+        "js_heap_used_mib": 2000,
+        "js_heap_limit_mib": 4096
+      }
+    },
+    {
+      "utc": "2026-11-01T22:15:39.400Z",
+      "type": "session.closed.for_archive",
+      "data": {
+        "closed": "Synthetic previous.bin",
+        "next": "Synthetic large.zip"
+      }
+    },
+    {
+      "utc": "2026-11-01T22:15:42.436Z",
+      "type": "archive.memory.check",
+      "data": {
+        "need_mib": 2984,
+        "free_mib": 1686
+      }
+    },
+    {
+      "utc": "2026-11-01T22:15:42.439Z",
+      "type": "launch.failed",
+      "data": {
+        "name": "Synthetic large.zip",
+        "replacing": true,
+        "ms": 3039,
+        "code": null,
+        "device_memory_gib": null,
+        "js_heap_used_mib": 2000,
+        "js_heap_limit_mib": 4096
+      }
+    },
+    {
+      "utc": "2026-11-01T22:15:42.440Z",
+      "type": "operation.error",
+      "data": {
+        "code": null,
+        "message": "Mémoire de l’onglet insuffisante pour décompresser cette archive (estimation indicative 2984 Mio, disponible 1686 Mio). Rechargez la page (F5) puis relancez : vos sauvegardes sont conservées.",
+        "stack": "Error: Mémoire de l’onglet insuffisante pour décompresser cette archive (estimation indicative 2984 Mio, disponible 1686 Mio). Rechargez la page (F5) puis relancez : vos sauvegardes sont conservées.\n    at launch (eval at makeHarness (file:///workspace/ps1-publish-claude/ps1-web/tests/helpers/app-harness.mjs:153:14), <anonymous>:178:30)\n    at async eval (eval at makeHarness (file:///workspace/ps1-publish-claude/ps1-web/tests/helpers/app-harness.mjs:153:14), <anonymous>:262:9)\n    at async operation (eval at makeHarness (file:///workspace/ps1-publish-claude/ps1-web/tests/helpers/app-harness.mjs:153:14), <anonymous>:59:9)\n    at async h.launch (file:///workspace/ps1-publish-claude/ps1-web/tests/helpers/app-harness.mjs:167:29)\n    at async file:///workspace/ps1-publish-claude/[eval1]:4:50"
+      }
+    }
+  ]
+}
