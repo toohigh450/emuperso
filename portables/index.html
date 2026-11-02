@@ -42,6 +42,19 @@
       <input type="file" id="romInput" accept=".gb,.gbc,.gba,.nds,.sgb,.srl,.bin,.rom,.dsi,.zip" class="visually-hidden" tabindex="-1">
     </div>
 
+    <section class="demo-panel" aria-labelledby="demoHeading">
+      <h2 id="demoHeading">4 jeux de démonstration libres</h2>
+      <p class="muted small-text">Clique pour essayer un homebrew open source. La ROM est téléchargée uniquement au clic, puis vérifiée avant de passer au même moteur que tes fichiers personnels.</p>
+      <div class="actions">
+        <button type="button" class="btn" data-portable-demo="gb">GB · Libbet</button>
+        <button type="button" class="btn" data-portable-demo="gbc">GBC · Geometrix</button>
+        <button type="button" class="btn" data-portable-demo="gba">GBA · @rkanoid</button>
+        <button type="button" class="btn" data-portable-demo="nds">DS · Pong</button>
+      </div>
+      <p id="demoStatus" role="status" aria-live="polite" class="muted small-text">Aucun compte Vercel nécessaire. Connexion Internet requise pour les démos et le moteur.</p>
+      <p class="muted small-text"><a href="DEMOS-LIBRES.md">Crédits, licences et sources des démos</a>. Aucune ROM commerciale, aucun BIOS et aucune sauvegarde ne sont fournis.</p>
+    </section>
+
     <div class="tabs" role="tablist" aria-label="Réglages">
       <button role="tab" id="tabSaves" aria-controls="panelSaves" type="button">Sauvegardes</button>
       <button role="tab" id="tabCheats" aria-controls="panelCheats" type="button">Codes</button>
@@ -110,5 +123,6 @@
 
 <div class="drop-hint" aria-hidden="true">Relâche le fichier pour ouvrir le jeu</div>
 <script type="module" src="js/app.mjs"></script>
+<script type="module" src="js/demos.mjs"></script>
 </body>
 </html>

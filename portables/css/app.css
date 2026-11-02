@@ -181,3 +181,10 @@ input[type=search] {
   background: rgba(27, 25, 64, 0.88); color: #fff; font: 600 1.4rem var(--font-head); z-index: 10;
 }
 body.dragging .drop-hint { display: grid; }
+
+/* Démonstrations libres, sous la fente de chargement. */
+.demo-panel { margin-top: 14px; padding: 12px 16px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); }
+.demo-panel h2 { margin-top: 2px; }
+.demo-panel .actions { margin-bottom: 8px; }
+.demo-panel button[disabled] { opacity: .6; cursor: wait; }
+.demo-panel #demoStatus[data-error="true"] { color: var(--err); }
