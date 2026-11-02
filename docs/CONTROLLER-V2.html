@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EMUPERSO Controller V2 — rapport</title>
+<style>
+  :root { color-scheme: light dark; --bg: #f6f7fb; --fg: #1b1d28; --muted: #5b6075; --card: #ffffff; --line: #d9dce8; --ok: #1d7a46; --warn: #9a5a00; --accent: #3554d1; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #11131b; --fg: #e8eaf3; --muted: #a1a6bd; --card: #1a1d29; --line: #30344a; --ok: #5fd08f; --warn: #f0b45a; --accent: #8ea2ff; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 980px; margin: auto; padding: 24px 16px 60px; }
+  h1 { font-size: 1.8rem; margin: 0 0 4px; } h2 { margin-top: 32px; font-size: 1.25rem; }
+  .muted { color: var(--muted); } .ok { color: var(--ok); font-weight: 600; } .warn { color: var(--warn); font-weight: 600; }
+  section, .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; margin: 14px 0; }
+  .wrap { overflow-x: auto; } table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14px; }
+  th, td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; } th { background: color-mix(in srgb, var(--accent) 10%, transparent); }
+  code { font-size: 13px; } a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+<h1>EMUPERSO Controller V2</h1>
+<p class="muted">Rapport d’étape, 2 novembre 2026 · branche <code>feature/unified-controller-profiles</code> · aperçu Vercel, pas de production.</p>
+
+<section>
+  <h2 style="margin-top:0">En bref</h2>
+  <ul>
+    <li><span class="ok">Fait</span> : deux profils (Authentique, Confort moderne) et un mode Natif pour les 8 consoles du lanceur et la N64 ; manette lue par EMUPERSO, sans double commande ; commandes tactiles PSP ✕ ○ □ △ avec stick ; commandes tactiles cachées quand une manette est branchée ; réglages par console ou par jeu ; codes chargés automatiquement à l’ouverture d’un jeu.</li>
+    <li><span class="warn">Pas encore fait</span> : déplacement des boutons tactiles au doigt ; PS1 laissée telle quelle (déjà deux profils) ; essais sur vraie manette Xbox et sur le OnePlus 10T (Karl).</li>
+  </ul>
+</section>
+
+<h2>Correspondances (manette Xbox, disposition « standard » de Chrome)</h2>
+<div class="wrap"><table>
+  <thead><tr><th>Console</th><th>Authentique</th><th>Confort moderne (en plus)</th><th>Stick gauche</th></tr></thead>
+  <tbody>
+    <tr><td>NES, Game Boy, Game Boy Color</td><td>A Xbox = B, B Xbox = A, Back = Select, Menu = Start, croix</td><td>X = B, Y = A</td><td>croix en Confort</td></tr>
+    <tr><td>Game Boy Advance</td><td>+ LB = L, RB = R</td><td>LT = L, RT = R</td><td>croix en Confort</td></tr>
+    <tr><td>Super Nintendo, DS</td><td>losange identique (bas B, droite A, gauche Y, haut X), LB/RB = L/R</td><td>LT = L, RT = R</td><td>croix en Confort</td></tr>
+    <tr><td>Genesis / Mega Drive</td><td>rangée A-B-C = X, A, B ; rangée X-Y-Z = LB, Y, RB ; Back = Mode</td><td>LT = X, RT = Z</td><td>croix en Confort</td></tr>
+    <tr><td>PSP</td><td>✕ = A, ○ = B, □ = X, △ = Y, LB/RB = L/R</td><td>LT = L, RT = R</td><td>analogique (zone morte réglable)</td></tr>
+    <tr><td>Nintendo 64</td><td>A = A, B = X, C = stick droit, Z = LT, L/R = LB/RB, Start = Menu</td><td>Z aussi sur RT, C bas = B, C gauche = Y</td><td>analogique, zone morte et sensibilité</td></tr>
+    <tr><td>PlayStation</td><td colspan="3">Profils existants « PS1 authentique » et « Confort moderne » conservés sans modification (<code>ps1-web/input-presets.mjs</code>).</td></tr>
+  </tbody>
+</table></div>
+<p class="muted">Natif : les commandes d’EmulatorJS, sans disposition EMUPERSO. Le clavier garde partout les touches du moteur. La correspondance N64 est la proposition du mandat, à valider avec la vraie manette.</p>
+
+<h2>Essais réellement faits (Chrome Windows, carte graphique RTX 2060)</h2>
+<div class="wrap"><table>
+  <thead><tr><th>Essai</th><th>Résultat</th></tr></thead>
+  <tbody>
+    <tr><td>SNES (démo libre), Genesis (Sonic), PSP (Bust-A-Move), manette simulée dans le navigateur</td><td class="ok">boutons attendus reçus par le moteur ; Start/Select ; stick → croix en Confort, pas en Authentique après changement en partie ; 0 liaison manette du moteur restante</td></tr>
+    <tr><td>N64 (démo homebrew libre), manette simulée</td><td class="ok">A, B, Z, L/R, Start, les quatre C, stick + C + A simultanés ; RT = Z seulement en Confort</td></tr>
+    <tr><td>PSP en Android simulé (Pixel 7)</td><td class="ok">boutons tactiles △ □ ○ ✕ L R Select Start ; cachés avec une manette, revenus après débranchement</td></tr>
+    <tr><td>Codes automatiques sur le site construit</td><td class="ok">Sonic [USA][Europe][!] : 5 fichiers trouvés, 16 codes après association, 0 actif ; Ace Armstrong (PSP) : 1 fichier, 11 codes, 0 actif</td></tr>
+    <tr><td>Genesis avec 4 jeux de la collection (extraits des .7z, originaux intacts)</td><td class="ok">60 images/s, son actif, touches prises en compte ; traduction française .bin reconnue</td></tr>
+    <tr><td>Tests automatiques</td><td class="ok">Portables 147/147 ; N64 : n64-input 4/4 et autres tests JS inchangés</td></tr>
+  </tbody>
+</table></div>
+
+<h2>Non vérifié — à faire par Karl</h2>
+<ul>
+  <li>Vraie manette Xbox sur Chrome Windows, puis en Bluetooth sur le OnePlus 10T (Chrome Android n’expose pas toujours tous les boutons, dont le bouton Xbox).</li>
+  <li>Confort tactile sur le vrai téléphone, portrait et paysage, plusieurs doigts ; écran tactile DS ; boutons C tactiles N64 ; stick tactile PSP.</li>
+  <li>Effet réel des codes en jeu.</li>
+</ul>
+
+<h2>Limites connues</h2>
+<ul>
+  <li>Boutons tactiles : taille et opacité réglables, mais pas encore déplaçables au doigt.</li>
+  <li>PSP sur le moteur nightly : charger un état et redémarrer figent le jeu ; ces actions sont bloquées par le lanceur.</li>
+  <li>Genesis : la collection est en .7z, que le navigateur n’ouvre pas ; extraire la version voulue avant de l’ouvrir.</li>
+  <li>Codes automatiques : proposés par identifiant de disque (PSP) ou par titre ; l’association reste à confirmer d’un clic, aucun code n’est activé.</li>
+</ul>
+<p class="muted">Aucune ROM, aucun BIOS ni aucune sauvegarde dans le dépôt ou sur Vercel. Aucune fusion dans <code>main</code> sans l’accord de Karl.</p>
+</main>
+</body>
+</html>

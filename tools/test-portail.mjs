@@ -75,7 +75,7 @@ try {
       const status = await p.evaluate(async (u) => (await fetch(u, { cache: 'no-store' })).status, href);
       record('accueil', `lien ${name}`, status === 200, `${href} → HTTP ${status}`);
     }
-    for (const href of ['N64-Web-Lab-Phase1A.html', 'portables/DEMOS-LIBRES.md', 'docs/PORTAIL-8-CONSOLES.md']) {
+    for (const href of ['N64-Web-Lab-Phase1A.html', 'portables/DEMOS-LIBRES.md', 'docs/PORTAIL-8-CONSOLES.md', 'docs/CONTROLLER-V2.html']) {
       const status = await p.evaluate(async (u) => (await fetch(u, { cache: 'no-store' })).status, href);
       record('accueil', `lien de pied de page ${href}`, status === 200, `HTTP ${status}`);
     }
