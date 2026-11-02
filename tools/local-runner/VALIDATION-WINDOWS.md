@@ -39,3 +39,13 @@ Le banc s'inspire du testeur PSP autonome local de Claude, examiné en lecture s
 La campagne a révélé des arrêts automatiques après fermeture de Chrome non confirmée. Il ne s'agissait pas de la fin de la file. Les diagnostics conservés montrent notamment des retours `taskkill` en erreur sur des processus en terminaison. Les erreurs de fermeture ne sont plus masquées : revalidation d'identité, repli direct sur le seul PID concerné, attente et nouvelles tentatives sont consignés. Un watchdog indépendant reprend la campagne après crash ou récupération de cette pause technique, sans ignorer les demandes de pause/arrêt.
 
 Validations complémentaires réelles avec les démos libres NES/SNES : crash volontaire du testeur pendant le premier jeu, relance automatique par le watchdog, conservation de la tentative interrompue ; pause de nettoyage injectée une fois puis récupération automatique et passage au second jeu, sans doublon ; pause utilisateur respectée avec un jeu restant ; renderer NES bloqué volontairement puis timeout et démarrage du jeu SNES suivant sans intervention. Le nettoyage des processus du cas bloqué est vérifié. Cinq tests Node passent, dont la protection contre un PID réutilisé. Ces essais ne valident toujours ni gameplay ni sauvegardes.
+
+## Passage du rapport à dix consoles — version 0.2.0
+
+Application figée au commit `502e5489783bf57cdf399f3e29d769721446eeb6` de la branche d'intégration à dix consoles ; fichiers en cours de modification exclus. Les outils normaux du projet ont construit les distributions N64/PS1 avec leurs empreintes verrouillées. Aucun moteur modifié par le banc.
+
+Inventaire étendu à 81 142 entrées : les 71 509 précédentes, 9 090 variantes Genesis et 543 fichiers PSP. Les anciennes identités sont toutes conservées et les 34 résultats préexistants sont identiques octet pour octet. Ce nombre d'entrées n'est pas un nombre de jeux validés.
+
+Essais réels sur la nouvelle application : Genesis Plus GX démarre une ROM locale extraite d'un 7z et produit une image native ; SHA-256 de l'archive identique avant/après. NES, N64 et PS1 produisent également une image dans leurs essais de vérification. Ni gameplay, ni sauvegarde validés.
+
+PSP reste déléguée à Claude. Vérification réelle : sélection explicite `run --system psp` sur un inventaire contenant une ROM PSP, sans création de tentative ou de navigateur de jeu. Aucun verdict de son banc importé comme validation locale. Le support de route/capture PSP ne constitue pas un nouveau test de son moteur nightly. Six tests Node passent, dont une actualisation d'inventaire ciblée préservant les identités/résultats et la séparation des entrées externes dans le rapport.

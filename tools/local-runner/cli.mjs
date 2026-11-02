@@ -140,7 +140,7 @@ async function one(item,number) {
   if(++finishedJobs%(c.reportEveryJobs||20)===0)report(c);
 }
 try {
-  if(command==='inventory'){await inventory(c);report(c);}
+  if(command==='inventory'){await inventory(c,{systems:arg('system')?arg('system').split(','):null});report(c);}
   else {
     await recover();
     if(command==='resume')for(const m of ['pause','stop'])if(fs.existsSync(marker(m)))fs.unlinkSync(marker(m));
@@ -149,11 +149,16 @@ try {
     const inv=readJSON(path.join(c.stateDir,'inventory.json'));
     if(!inv.complete)throw Error('Inventaire partiel : reprendre inventory avant run.');
     if(!fs.existsSync(path.join(c.appDir,'PORTAIL-MANIFEST.json')))throw Error('Site assemblé absent : voir README.');
+    for(const s of ['genesis','psp'])if(c.includeSystems.includes(s)&&!c.externalSystems.includes(s)){
+      const systemsSource=fs.readFileSync(path.join(c.appDir,'portables/js/systems.mjs'),'utf8');
+      if(!new RegExp('^\\s*'+s+':','m').test(systemsSource))throw Error('Application sans '+s+' : fournir une copie assemblee de la version dix consoles.');
+    }
+    if(c.externalSystems.length)console.log('CAMPAGNES EXTERNES : '+c.externalSystems.join(', ')+' ; aucun test local sur ces consoles.');
     campaign.sessions++;saveCampaign();
     const history=attempts(c),seen=new Map();for(const a of history){const list=seen.get(a.item.id)||[];list.push(a);seen.set(a.item.id,list);}
     let queue=inv.items.filter(item=>{
       const h=seen.get(item.id)||[],last=h.at(-1);
-      return (!last||last.result?.interrupted||(args.includes('--retry-failed')&&[STATUS.fail,STATUS.timeout].includes(last.result?.status)))&&h.length<c.maxAttempts&&(!arg('system')||item.system===arg('system'))&&(!arg('id')||item.id===arg('id'))&&(!arg('match')||(item.path+' '+item.name).toLowerCase().includes(arg('match').toLowerCase()));
+      return !c.externalSystems.includes(item.system)&&(!last||last.result?.interrupted||(args.includes('--retry-failed')&&[STATUS.fail,STATUS.timeout].includes(last.result?.status)))&&h.length<c.maxAttempts&&(!arg('system')||item.system===arg('system'))&&(!arg('id')||item.id===arg('id'))&&(!arg('match')||(item.path+' '+item.name).toLowerCase().includes(arg('match').toLowerCase()));
     });
     // Comme le testeur PSP de Claude : petits fichiers d'abord, mais alterner les consoles
     // pour ne pas retarder PS1/N64 jusqu'après des dizaines de milliers de variantes NES.

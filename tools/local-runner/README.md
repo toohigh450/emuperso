@@ -2,7 +2,7 @@
 
 Ce programme Node.js pilote **les applications existantes** d'EMUPERSO dans Chrome, sur un serveur strictement local `127.0.0.1`. Il n'appelle aucune IA, ne crée pas un second portail et ne modifie aucun moteur. Fermer Codex n'arrête pas un lancement indépendant avec `START-BACKGROUND.ps1`.
 
-PSP est volontairement exclue : la campagne de Claude reste indépendante. Un seul jeu à la fois par défaut, au plus 6 Gio pour son arbre de processus. Le banc attend avant de lancer un jeu si la RAM libre est inférieure à 8 Gio ou si la charge CPU globale atteint 90 %. Ces plafonds sont configurables. La mesure de RAM est périodique, pas une réservation matérielle stricte ; un pic entre deux sondages reste possible.
+Le rapport couvre **dix consoles** : NES, SNES, GB, GBC, GBA, DS, N64, PS1, Genesis et PSP. La configuration fournie délègue PSP à la campagne de Claude via `externalSystems: ["psp"]` : elle est inventoriée et visible, mais aucun test PSP local n'est lancé, même avec `--system psp`. Un seul jeu à la fois sur les neuf consoles locales, au plus 6 Gio pour son arbre de processus. Le banc attend avant de lancer un jeu si la RAM libre est inférieure à 8 Gio ou si la charge CPU globale atteint 90 %. Ces plafonds sont configurables. La mesure de RAM est périodique, pas une réservation matérielle stricte ; un pic entre deux sondages reste possible.
 
 ## Installation dans une copie isolée du dépôt
 
@@ -32,11 +32,13 @@ node tools/build-portail.mjs
 
 Ces outils récupèrent uniquement les distributions des moteurs et données du projet déjà verrouillées ; aucun BIOS ou jeu commercial. Si les distributions sont déjà préparées, leur récupération n'est pas nécessaire. Le serveur vérifie chaque fichier servi contre `PORTAIL-MANIFEST.json`. Ne pas reconstruire `dist/` pendant une campagne : finir/arrêter celle-ci d'abord. Les empreintes du manifeste et des ROMs sont consignées par essai.
 
+Pour Genesis/PSP, fournir une construction du projet qui les intègre réellement ; le banc ne modifie pas les moteurs pour les ajouter. La livraison locale utilise une copie figée de la branche à dix consoles au commit `502e5489783bf57cdf399f3e29d769721446eeb6`, sans inclure les modifications en cours de Claude. Le manifeste et l'archive source sont identifiés par SHA-256. Les anciens résultats gardent l'empreinte de leur ancienne application : les conserver n'est pas valider une nouvelle version.
+
 ## Configuration locale
 
 Adapter `config.local.json`, créé à partir de `config.example.json`. Il est ignoré par Git. `roots` accepte des dossiers **ou des fichiers** par console, utiles pour une petite validation. Les chemins relatifs sont résolus depuis le fichier de configuration. `%LOCALAPPDATA%` est développé. Chaque campagne possède son propre `stateDir`, hors collections et hors site servi. Garder ce dossier privé, hors dépôt et hors synchronisation publique.
 
-La configuration fournie vise `E:\roms` et `D:\roms`, avec PS1 sous `D:\roms\roms ps1`. PSP n'est jamais parcourue par cette configuration. Les deux emplacements GBA sont conservés : la déduplication se fait par chemin de fichier et entrée d'archive, pas par nom. Deux versions, régions ou hacks distincts restent des entrées distinctes. Aucune fusion automatique par titre. L'inventaire identifie le chemin, la taille et la date de modification ; le SHA-256 complet est calculé lors de chaque test.
+La configuration fournie vise `E:\roms` et `D:\roms`, avec PS1 sous `D:\roms\roms ps1`, Genesis sous `E:\roms\roms genesis\Hackset-Genesis-YGG\Genesis Roms` et PSP sous `D:\roms\roms psp\Pack PSP RecalBox`. PSP est seulement recensée, sans moteur lancé et sans import des verdicts de Claude comme résultats de ce banc. Les deux emplacements GBA sont conservés : la déduplication se fait par chemin de fichier et entrée d'archive, pas par nom. Deux versions, régions ou hacks distincts restent des entrées distinctes. Aucune fusion automatique par titre. L'inventaire identifie le chemin, la taille et la date de modification ; le SHA-256 complet est calculé lors de chaque test.
 
 Formats configurés d'après les chargeurs existants :
 
@@ -48,6 +50,8 @@ Formats configurés d'après les chargeurs existants :
 | GBA | `.gba` |
 | DS | `.nds`, `.dsi`, `.srl` ; DeSmuME 2015 par défaut, aucun BIOS téléchargé |
 | N64 | `.z64`, `.n64`, `.v64` |
+| Genesis / Mega Drive | `.md`, `.smd`, `.gen`, `.bin` ; en-tête validé par le lanceur, pas de 32X ni Sega CD |
+| PSP | `.iso`, `.cso`, `.pbp` ; campagne externe de Claude dans la configuration livrée |
 | Archives Nintendo | `.zip`, `.7z`, `.rar` listées avec 7-Zip ; chaque ROM compatible extraite seule dans un espace temporaire du banc, sans changer l'archive |
 | PS1 | `.iso`, `.bin`, `.img`, `.chd`, `.pbp` ; `.zip`, `.rar`, `.7z` transmises intactes au chargeur existant pour préserver les pistes liées |
 
@@ -76,6 +80,8 @@ Pour une autre configuration, ajouter `--config "C:\chemin\campagne.json"` à **
 `pause` laisse le jeu en cours finir puis arrête la session. `stop` interrompt les processus appartenant à cette campagne ; le jeu interrompu sera repris par `resume`. `resume` retire les marqueurs de pause/arrêt puis recharge l'inventaire et l'historique. Les tests terminés ne sont pas rejoués. Une interruption répétée au-delà de `maxAttempts` nécessite d'augmenter cette valeur après examen du journal, afin d'éviter une boucle infinie.
 
 L'inventaire peut être relancé après une interruption ; son cache de listes d'archives est écrit après chaque archive. Une nouvelle lecture reconstruit les entrées sans les dupliquer. Un fichier changé depuis l'inventaire est refusé au test ; refaire l'inventaire pour créer sa nouvelle identité. Un processus possède un verrou exclusif par campagne ; ne pas utiliser deux superviseurs sur le même `stateDir`.
+
+Pour ajouter ou actualiser seulement des consoles après un inventaire complet : `LAB.bat inventory --system genesis,psp`. Les autres entrées, leurs identifiants et toutes les tentatives existantes sont conservés. Les fichiers dont le nom commence par `[BIOS]` sont signalés et exclus des tests. `externalSystems` est persistant et respecté par les filtres de la file ; le retirer pour PSP demande une coordination explicite avec la campagne externe, pas une détection opportuniste de son PID.
 
 ## Exécution sans Codex et après redémarrage
 

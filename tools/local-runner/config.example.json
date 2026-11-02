@@ -17,7 +17,8 @@
   "maxTempMiB": 4096,
   "maxEvidenceMiB": 16384,
   "maxAttempts": 2,
-  "includeSystems": ["nes", "snes", "gb", "gbc", "gba", "nds", "n64", "ps1"],
+  "includeSystems": ["nes", "snes", "gb", "gbc", "gba", "nds", "n64", "ps1", "genesis", "psp"],
+  "externalSystems": ["psp"],
   "roots": {
     "nes": ["E:/roms/roms nes et snes/nes", "E:/roms/roms nes et snes/Hackset-NES-YGG"],
     "snes": ["E:/roms/roms nes et snes/FULL Super Nintendo -- Famicom (GoodSNES 2.04)[GoodMerged]"],
@@ -26,6 +27,8 @@
     "gba": ["E:/roms/GBA", "E:/roms/roms portable/GBA"],
     "nds": ["E:/roms/roms portable/nds"],
     "n64": ["E:/roms/n64"],
-    "ps1": ["D:/roms/roms ps1"]
+    "ps1": ["D:/roms/roms ps1"],
+    "genesis": ["E:/roms/roms genesis/Hackset-Genesis-YGG/Genesis Roms"],
+    "psp": ["D:/roms/roms psp/Pack PSP RecalBox"]
   }
 }

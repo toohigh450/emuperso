@@ -1,8 +1,9 @@
 @echo off
 chcp 65001 >nul
-title EMUPERSO - Analyse surveillee - Reprise automatique
+title EMUPERSO - 10 consoles - PSP chez Claude
 cd /d "%~dp0"
 echo EMUPERSO - Analyse locale, un jeu a la fois, sans IA.
+echo Dix consoles au rapport. PSP deleguee a Claude : aucun test PSP ici.
 echo Cette fenetre affiche les jeux et leur resultat au fil de l'analyse.
 echo Supervision active : recuperation automatique apres incident du testeur.
 echo Tu peux la reduire et fermer Codex. Garde cette fenetre ouverte.

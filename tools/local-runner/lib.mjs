@@ -7,7 +7,7 @@ import { spawn, execFileSync } from 'node:child_process';
 
 export const HERE = path.dirname(fileURLToPath(import.meta.url));
 export const STATUS = Object.freeze({ untested:'NON TESTÉ', boot:'DÉMARRAGE', image:'IMAGE DÉTECTÉE', suspect:'SUSPECT', fail:'ÉCHEC', timeout:'BLOQUÉ / TIMEOUT', gameplay:'GAMEPLAY VALIDÉ', save:'SAUVEGARDE VALIDÉE' });
-export const EXT = { nes:['nes','unf','unif'], snes:['sfc','smc','swc','fig'], gb:['gb','sgb'], gbc:['gbc'], gba:['gba'], nds:['nds','dsi','srl'], n64:['z64','n64','v64'], ps1:['iso','bin','img','chd','pbp'] };
+export const EXT = { nes:['nes','unf','unif'], snes:['sfc','smc','swc','fig'], gb:['gb','sgb'], gbc:['gbc'], gba:['gba'], nds:['nds','dsi','srl'], n64:['z64','n64','v64'], ps1:['iso','bin','img','chd','pbp'], genesis:['md','smd','gen','bin'], psp:['iso','cso','pbp'] };
 export const ext = p => path.extname(p).slice(1).toLowerCase();
 export const hash = s => createHash('sha256').update(s).digest('hex');
 export const readJSON = (p, fallback) => { try { return JSON.parse(fs.readFileSync(p,'utf8').replace(/^\uFEFF/,'')); } catch(e) { if(e.code==='ENOENT') return fallback; throw e; } };
@@ -31,7 +31,9 @@ export function config(file) {
   if(c.concurrency>1 && !c.parallelTrialAccepted) throw Error('Effectuez une petite campagne parallèle isolée et documentée avant de définir parallelTrialAccepted=true.');
   for(const k of ['timeoutMs','observationMs','deepObservationMs','maxTreeMemoryMiB','minFreeMemoryMiB','resourcePollMs','maxExtractMiB','maxTempMiB','maxEvidenceMiB','maxAttempts']) if(!Number.isFinite(c[k])||c[k]<=0) throw Error('Configuration invalide : '+k);
   if(!['short','deep'].includes(c.mode)) throw Error('mode attendu : short ou deep');
-  if(!Array.isArray(c.includeSystems)||c.includeSystems.some(s=>!EXT[s])) throw Error('Console inconnue ou PSP hors périmètre.');
+  if(!Array.isArray(c.includeSystems)||c.includeSystems.some(s=>!EXT[s])) throw Error('Console inconnue.');
+  c.externalSystems=c.externalSystems||[];
+  if(!Array.isArray(c.externalSystems)||c.externalSystems.some(s=>!c.includeSystems.includes(s)))throw Error('externalSystems doit contenir uniquement des consoles de includeSystems.');
   // Tout stockage du banc est séparé des collections, même si la config est mal saisie.
   for(const roots of Object.values(c.roots)) for(const r of roots) if(inside(r,c.stateDir)||inside(c.stateDir,r)) throw Error('stateDir et les collections ne doivent pas se chevaucher.');
   if(inside(c.appDir,c.stateDir)||inside(c.stateDir,c.appDir)) throw Error('stateDir doit être séparé du site servi.');

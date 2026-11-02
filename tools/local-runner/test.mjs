@@ -5,6 +5,8 @@ import os from 'node:os';
 import path from 'node:path';
 import {parse7z,safeEntry,classify,STATUS,atomic,readJSON,inside,config,sameOwnedProcess} from './lib.mjs';
 import {report} from './report.mjs';
+import {inventory} from './inventory.mjs';
+import {EXT} from './lib.mjs';
 
 test('un compteur qui avance ne valide ni gameplay ni sauvegarde',()=>{
   assert.equal(classify({engineStarted:true,after:{colors:20},frameRate:60}),STATUS.image);
@@ -42,4 +44,19 @@ test('nettoyage : identité conservée pendant la terminaison, PID réutilisé r
   assert.equal(sameOwnedProcess(owner,{...owner,created:'2026-11-02T22:01:00Z',command:null}),false);
   assert.equal(sameOwnedProcess(owner,{...owner,command:'chrome personnel'}),false);
   assert.equal(sameOwnedProcess({...owner,command:'autre programme'},owner),false);
+});
+test('dix consoles : mise a jour ciblee preserve les anciennes identites et le resultat',async()=>{
+  const root=fs.mkdtempSync(path.join(os.tmpdir(),'emuperso-ten-'));
+  try{
+    const rom=path.join(root,'collection');fs.mkdirSync(rom);
+    fs.writeFileSync(path.join(rom,'one.nes'),Buffer.alloc(1024));fs.writeFileSync(path.join(rom,'two.md'),Buffer.alloc(2048));fs.writeFileSync(path.join(rom,'three.cso'),Buffer.alloc(4096));
+    const c={stateDir:path.join(root,'state'),includeSystems:['nes'],roots:{nes:[rom]}};
+    await inventory(c);const before=readJSON(path.join(c.stateDir,'inventory.json')).items[0];
+    atomic(path.join(c.stateDir,'attempts','old','job.json'),{item:before,attempt:1});atomic(path.join(c.stateDir,'attempts','old','result.json'),{status:STATUS.image});
+    c.includeSystems=['nes','genesis','psp'];c.externalSystems=['psp'];c.roots.genesis=[rom];c.roots.psp=[rom];
+    await inventory(c,{systems:['genesis','psp']});
+    const inv=readJSON(path.join(c.stateDir,'inventory.json'));assert.equal(inv.items.length,3);assert.deepEqual(inv.items.find(x=>x.system==='nes'),before);
+    const r=report(c);assert.equal(r.tested,1);assert.equal(r.externalCount,1);assert.equal(r.localRemaining,1);assert.equal(r.rows.find(x=>x.item.system==='psp').external,true);
+    assert.ok(EXT.genesis.includes('bin'));assert.ok(EXT.psp.includes('cso'));assert.equal(Object.keys(EXT).length,10);assert.ok(!EXT.genesis.includes('32x'));
+  }finally{fs.rmSync(root,{recursive:true,force:true});}
 });

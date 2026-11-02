@@ -13,6 +13,7 @@ fs.mkdirSync(temporary,{recursive:true});
 process.env.TEMP=temporary;process.env.TMP=temporary;
 const r={version:1,id:job.item.id,attempt:job.attempt,token,system:job.item.system,name:job.item.name,entry:job.item.entry,mode:c.mode,start:new Date().toISOString(),errors:[],consoleErrors:[],blockedRequests:[],phase:'prepare',engineStarted:false,validation:{gameplay:false,nativeSave:false,saveState:false}};
 r.runnerWorkerSha256=hash(fs.readFileSync(new URL('./worker.mjs',import.meta.url)));
+r.applicationRevision=c.applicationRevision||null;
 // Si le superviseur meurt, ce worker ne doit pas poursuivre seul à l'infini.
 let completed=false;
 process.on('disconnect',()=>{if(completed)return;setTimeout(()=>process.exit(3),1000);browserServer?.close().catch(()=>{});});
@@ -69,7 +70,7 @@ async function engine(page) {
 async function capture(page,label) {
   const f=await engine(page);
   // PNG fourni par le moteur pour les Nintendo 2D ; canvas seul, hors menu DOM, pour N64/PS1.
-  const gpu=['n64','ps1'].includes(job.item.system);
+  const gpu=['n64','ps1','psp'].includes(job.item.system);
   const png=gpu?await f.locator('canvas').first().screenshot():Buffer.from(await f.evaluate(async()=>Array.from(await window.EJS_emulator.gameManager.screenshot())));
   const facts=await page.evaluate(async b64=>{
     const bytes=Uint8Array.from(atob(b64),x=>x.charCodeAt(0));const bmp=await createImageBitmap(new Blob([bytes],{type:'image/png'}));
@@ -105,7 +106,7 @@ try {
   await context.route('**/*',route=>{
     const q=route.request(),u=new URL(q.url());
     // Seuls des fichiers de distribution connus peuvent quitter localhost en lecture GET.
-    const cdn=u.origin==='https://cdn.emulatorjs.org'&&!u.search&&(/^\/4\.2\.3\/data\/(?:loader\.js|emulator(?:\.min)?\.(?:js|css)|src\/[A-Za-z0-9_.-]+\.(?:js|css)|compression\/[A-Za-z0-9_.-]+\.(?:js|wasm)|cores\/(?:reports\/)?[A-Za-z0-9_.-]+\.(?:json|js|wasm|data|zip)|localization\/[A-Za-z0-9_.-]+\.json)$/.test(u.pathname)||u.pathname==='/stable/data/version.json');
+    const cdn=u.origin==='https://cdn.emulatorjs.org'&&!u.search&&(/^\/(?:4\.2\.3|nightly)\/data\/(?:loader\.js|version\.json|emulator(?:\.min)?\.(?:js|css)|src\/[A-Za-z0-9_.-]+\.(?:js|css)|compression\/[A-Za-z0-9_.-]+\.(?:js|wasm)|cores\/(?:reports\/)?[A-Za-z0-9_.-]+\.(?:json|js|wasm|data|zip)|localization\/[A-Za-z0-9_.-]+\.json)$/.test(u.pathname)||u.pathname==='/stable/data/version.json');
     if(['GET','HEAD'].includes(q.method())&&(q.url().startsWith(server.url)||['blob:','data:'].includes(u.protocol)||cdn))return route.continue();
     if(r.blockedRequests.length<50)r.blockedRequests.push({method:q.method(),url:u.origin+u.pathname.slice(0,180)});
     progress();
