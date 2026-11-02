@@ -1,17 +1,18 @@
 // Interface : une fente, un seul jeu actif, saveurs de sauvegarde et de codes visibles et honnêtes.
 import { SYSTEMS, DS_CORES, ROM_EXTENSIONS, LOOSE_EXTENSIONS, analyzeRom, extensionOf, stemOf } from './systems.mjs';
 import { isZip, extractFirst, listCandidates } from './zip.mjs';
-import { fingerprint, saveSpaceId, gameKey, numericId, ejsGameName, legacyEjsGameName, slug, toHex } from './hash.mjs';
+import { fingerprint, saveSpaceId, gameKey, ejsGameName, legacyEjsGameName, slug, toHex } from './hash.mjs';
 import { Store, IdbAdapter, MemoryAdapter } from './store.mjs';
-import { parseCht, classifyCheatFiles, normalizeName, deviceLabel, inferSystemFromPath, toEjsCheats } from './cheats.mjs';
+import { parseCht, classifyCheatFiles, linkedCheatValid, normalizeName, deviceLabel, inferSystemFromPath, toEjsCheats } from './cheats.mjs';
 import { CONTROL_PROFILES, buildDefaultControls } from './controls.mjs';
 import { Session } from './session.mjs';
 import { createBrowserHost } from './player-host.mjs';
 
+import { memoryPlan, MAX_INPUT_BYTES, MAX_ROM_BYTES, MiB } from './resources.mjs';
+import { validateDsBios, MAX_BIOS_ZIP } from './bios.mjs';
+import { REMOTE_ENGINE, LOADER_INTEGRITY, ENGINE_VERSION } from './engine.mjs';
+
 const $ = (id) => document.getElementById(id);
-const CDN_PATHS = [
-  'https://cdn.emulatorjs.org/stable/data/',
-];
 
 let store;
 let storageNote = '';
@@ -78,6 +79,7 @@ function render(snap) {
   document.body.dataset.state = snap.state;
   if (snap.game) {
     const g = snap.game;
+    renderWarnings(g);
     $('gameTitle').textContent = g.title;
     $('gameSystem').textContent = g.systemLabel;
     $('gameRegion').textContent = g.regionText;
@@ -99,7 +101,18 @@ function render(snap) {
 
 // --- Ouverture d'un jeu -----------------------------------------------------------
 async function readGameFile(file) {
-  if (file.size > 1024 * 1024 * 1024 + 16 * 1024 * 1024) throw new Error('Fichier trop gros pour le chargement en mémoire (maximum 1 Gio + 16 Mio).');
+  if (file.size > MAX_INPUT_BYTES) throw new Error('Fichier trop gros pour cette application (maximum 512 Mio + 16 Mio).');
+  const options = { deviceMemory: navigator.deviceMemory, activeBytes: currentGame?.romBytes || 0 };
+  let warned = false;
+  const checkMemory = (size, archiveBytes = 0) => {
+    const plan = memoryPlan(size, { ...options, archiveBytes });
+    if (plan.warn && !warned) {
+      if (!confirm(`Grosse ROM : environ ${Math.ceil(plan.estimated / MiB)} Mio de mémoire estimée, sans garantie de RAM disponible. Enregistre et exporte tes progrès avant de continuer. Continuer ?`)) throw new Error('Ouverture annulée.');
+      warned = true;
+    }
+  };
+  // Pour un ZIP, son contenu sera contrôlé avant décompression.
+  if (extensionOf(file.name) !== 'zip') checkMemory(file.size);
   let name = file.name;
   let bytes = new Uint8Array(await file.arrayBuffer());
   let note = '';
@@ -114,7 +127,9 @@ async function readGameFile(file) {
       if (!Number.isInteger(index) || !candidates[index]) throw new Error('Numéro de jeu invalide.');
       selected = candidates[index].name;
     }
-    const r = await extractFirst(bytes, accept, { name: selected });
+    const candidate = selected ? candidates.find(c => c.name === selected) : candidates[0];
+    if (candidate) checkMemory(candidate.size, bytes.length);
+    const r = await extractFirst(bytes, accept, { name: selected, maxBytes: MAX_ROM_BYTES });
     name = r.name;
     bytes = r.bytes;
     if (r.otherCandidates > 0) note = `Jeu choisi dans le ZIP : ${name}.`;
@@ -129,6 +144,7 @@ async function resolveCore(system) {
   if (spec.needsBios) {
     const stored = await store.getBios('nds-bios');
     if (!stored) throw new Error("melonDS demande un ZIP contenant bios7.bin, bios9.bin et firmware.bin. Importe-le dans l'onglet Moteur, ou choisis DeSmuME.");
+    await validateDsBios(stored.bytes);
     bios = { name: 'nds-bios.zip', bytes: stored.bytes };
   }
   return { ejsCore: spec.ejsCore, coreId: settings.dsCore, label: spec.label, bios };
@@ -143,7 +159,7 @@ async function cheatsForGame(analysis, key, romName, hex) {
   const chosen = [];
   if (link && link.romSha256 === hex) {
     const f = await store.getCheatFile(analysis.system, link.path);
-    if (f && (!f.identityDeclared || f.romSha256 === hex)) chosen.push(f);
+    if (linkedCheatValid(link, f, hex)) chosen.push(f);
   } else {
     for (const m of classifyCheatFiles(romName, hex, files).identified) {
       const f = await store.getCheatFile(analysis.system, m.path);
@@ -187,7 +203,7 @@ async function openGame(file) {
   if (session.hasActiveGame) {
     const ok = confirm(
       `Fermer « ${session.current ? session.current.title : 'le jeu en cours'} » et ouvrir « ${analysis.title} » ?\n\n` +
-      'Un seul jeu est actif à la fois. Les sauvegardes du jeu en cours restent conservées. Si tu as des progrès non enregistrés dans le jeu, annule et enregistre-les d\'abord.'
+      'Un seul jeu est actif à la fois. Le jeu précédent sera fermé avant le démarrage du nouveau moteur ; il ne pourra pas être repris automatiquement si ce démarrage échoue. Les sauvegardes déjà enregistrées restent conservées. Si tu as des progrès non enregistrés dans le jeu, annule et enregistre-les d\'abord.'
     );
     if (!ok) {
       setStatus('Changement annulé.');
@@ -226,13 +242,13 @@ async function openGame(file) {
     romStem: stemOf(rom.name),
     hex: fp.hex,
     hashAlgo: fp.algo,
+    romBytes: rom.bytes.length,
     headerOk: analysis.headerOk,
     coreId: core.coreId,
     coreLabel: core.label,
     regionText: [analysis.region !== 'inconnue' ? analysis.region : null, analysis.code || null, `version ${analysis.version}`].filter(Boolean).join(', '),
     warnings: analysis.warnings.concat(rom.note ? [rom.note] : []),
   };
-  currentGame = game;
 
   const defaultControls = buildDefaultControls(settings.controlProfile);
   const boot = {
@@ -244,7 +260,7 @@ async function openGame(file) {
     ejs: {
       EJS_core: core.ejsCore,
       EJS_gameName: engineName,
-      EJS_gameID: numericId(spaceId),
+      EJS_gameID: await store.engineNumericId(spaceId),
       EJS_cheats: toEjsCheats(cheats),
       EJS_color: '#E0457B',
       EJS_backgroundColor: '#1b1940',
@@ -267,7 +283,6 @@ async function openGame(file) {
     engineTitle,
     engineNamingVersion: legacyNaming ? 1 : 2,
   });
-  renderWarnings(game);
   const started = await session.start(game, boot);
   if (started) {
     await refreshCheatPanel();
@@ -348,21 +363,31 @@ async function refreshHistory() {
 
 // --- Codes ------------------------------------------------------------------------
 async function refreshCheatPanel() {
+  const game = currentGame;
   const info = clear($('cheatInfo'));
   const total = await store.countCheatFiles();
   info.append(h('p', {}, total === 0 ? 'Aucun fichier de codes importé.' : `${total} fichier(s) de codes importé(s).`));
   const list = clear($('cheatMatches'));
   clear($('cheatSearchResults'));
-  if (!currentGame || total === 0) return;
-  const files = await store.listCheatFiles(currentGame.system);
-  const { identified, exact, sameTitle } = classifyCheatFiles(currentGame.fileName, currentGame.hex, files);
-  const link = await store.getCheatLink(currentGame.key);
+  if (!game || total === 0) return;
+  const files = await store.listCheatFiles(game.system);
+  const { identified, exact, sameTitle } = classifyCheatFiles(game.fileName, game.hex, files);
+  const link = await store.getCheatLink(game.key);
 
+  if (game !== currentGame) return;
   if (link) {
     list.append(h('p', {}, `Association enregistrée pour cette ROM : ${link.name}. S'applique au prochain lancement.`));
+    const linked = await store.getCheatFile(game.system, link.path);
+    if (game !== currentGame) return;
+    if (!linkedCheatValid(link, linked, game.hex)) {
+      list.append(h('p', { class: 'warn' }, 'Fichier de codes modifié, absent ou ancienne association : codes bloqués jusqu’à nouvelle confirmation.'));
+      if (linked) list.append(h('button', { class: 'btn small', onclick: () => associateCheat(linked) }, 'Confirmer les nouveaux codes'));
+    }
     if (!link.romSha256) list.append(h('p', { class: 'warn' }, 'Ancienne association : confirme-la à nouveau pour identifier cette ROM par son empreinte complète.'));
-    list.append(h('button', { class: 'btn small', onclick: async () => { await store.setCheatLink(currentGame.key, null); await refreshCheatPanel(); } }, 'Retirer ce choix'));
+    list.append(h('button', { class: 'btn small', onclick: async () => { await store.setCheatLink(game.key, null); await refreshCheatPanel(); } }, 'Retirer ce choix'));
   }
+  const changed = files.filter(f => f.reviewRequired && f.romSha256 === game.hex);
+  for (const f of changed) list.append(h('button', { class: 'btn small', onclick: () => associateCheat(f) }, `Vérifier le fichier modifié : ${f.name}`));
   if (identified.length) {
     list.append(h('p', {}, `${identified.length} fichier(s) identifié(s) par SHA-256 complet. Cela vérifie l'association déclarée, pas l'efficacité des codes.`));
     list.append(h('ul', { class: 'rows' }, identified.map((f) => h('li', {}, f.name))));
@@ -405,7 +430,11 @@ async function associateCheat(file) {
     return;
   }
   if (!confirm(`Associer « ${file.name} » à « ${game.fileName} » ?\nVérifie la région, la révision et les hacks : le nom ne suffit pas à garantir des codes compatibles.\nCe choix sera retenu pour les octets de cette ROM et prendra effet au prochain lancement.`)) return;
-  await store.setCheatLink(game.key, { path: file.path, name: file.name, romSha256: game.hex });
+  const selected = await store.getCheatFile(game.system, file.path);
+  if (!selected) throw new Error('Fichier de codes introuvable.');
+  const contentSha256 = selected.contentSha256 || (await fingerprint(new TextEncoder().encode(selected.text))).hex;
+  if (!selected.contentSha256) await store.importCheatFile(selected);
+  await store.setCheatLink(game.key, { path: file.path, name: file.name, romSha256: game.hex, contentSha256 });
   $('cheatSearch').value = '';
   await refreshCheatPanel();
 }
@@ -461,8 +490,8 @@ function buildSettingsUi() {
 
 async function refreshEngineInfo() {
   $('engineInfo').textContent = engineLocal
-    ? 'Moteur local trouvé dans le dossier emulatorjs (fonctionne hors ligne). Sources de secours : Internet.'
-    : "Moteur chargé depuis Internet (cdn.emulatorjs.org). Pour jouer hors ligne, voir LISEZMOI.md.";
+    ? `Moteur local présent, chargeur attendu : EmulatorJS ${ENGINE_VERSION}. Hors ligne seulement si tous les fichiers requis sont installés. Secours : CDN versionné.`
+    : `Moteur distant EmulatorJS ${ENGINE_VERSION} (CDN). Ce code tiers accède à la ROM et au stockage du navigateur. Voir LISEZMOI.md pour le mode local.`;
   const bios = await store.getBios('nds-bios');
   $('biosState').textContent = bios ? `BIOS DS importé (${fmtSize(bios.bytes.length)}).` : 'Aucun BIOS DS importé (inutile avec DeSmuME).';
 }
@@ -471,9 +500,9 @@ async function detectEngine() {
   enginePaths = [];
   try {
     const r = await fetch('emulatorjs/data/loader.js', { method: 'HEAD', cache: 'no-store' });
-    if (r.ok) { engineLocal = true; enginePaths.push('emulatorjs/data/'); }
+    if (r.ok) { engineLocal = true; enginePaths.push({ path: 'emulatorjs/data/', integrity: LOADER_INTEGRITY }); }
   } catch { /* pas de moteur local */ }
-  enginePaths.push(...CDN_PATHS);
+  enginePaths.push(REMOTE_ENGINE);
 }
 
 // --- Onglets et événements --------------------------------------------------------
@@ -519,6 +548,7 @@ function initEvents() {
   for (const ev of ['dragenter', 'dragover']) window.addEventListener(ev, (e) => { e.preventDefault(); document.body.classList.add('dragging'); });
   for (const ev of ['dragleave', 'drop']) window.addEventListener(ev, (e) => { e.preventDefault(); document.body.classList.remove('dragging'); });
   window.addEventListener('drop', (e) => { const f = e.dataTransfer && e.dataTransfer.files[0]; if (f) openFile(f); });
+  window.addEventListener('unhandledrejection', (event) => { event.preventDefault(); console.error(event.reason); setStatus(`Opération interrompue : ${event.reason?.message || event.reason}`, 'error'); });
   window.addEventListener('beforeunload', (e) => { if (session.hasActiveGame) { e.preventDefault(); e.returnValue = ''; } });
 
   $('cheatFolder').addEventListener('change', (e) => { importCheatFiles(e.target.files); e.target.value = ''; });
@@ -532,11 +562,17 @@ function initEvents() {
   $('cheatSearch').addEventListener('input', () => refreshCheatPanel());
   $('biosInput').addEventListener('change', async (e) => {
     const f = e.target.files[0];
-    if (f) {
-      await store.setBios('nds-bios', new Uint8Array(await f.arrayBuffer()));
-      await refreshEngineInfo();
-    }
-    e.target.value = '';
+    try {
+      if (f) {
+        if (f.size > MAX_BIOS_ZIP) throw new Error('ZIP BIOS trop gros (maximum 2 Mio).');
+        const bytes = new Uint8Array(await f.arrayBuffer());
+        await validateDsBios(bytes);
+        await store.setBios('nds-bios', bytes);
+        await refreshEngineInfo();
+        setStatus('Structure et CRC du BIOS DS vérifiés ; authenticité non attestée.', 'ok');
+      }
+    } catch (err) { setStatus(`Import BIOS refusé : ${err.message || err}`, 'error'); }
+    finally { e.target.value = ''; }
   });
   $('biosClear').addEventListener('click', async () => { await store.deleteBios('nds-bios'); await refreshEngineInfo(); });
 }
@@ -548,6 +584,7 @@ async function main() {
     storageNote = "Stockage local indisponible : historique, codes et copies de sécurité temporaires pour cette session. Exporte tes sauvegardes.";
   }
   await loadSettings();
+  await store.reserveHistoricalEngineIds();
   await detectEngine();
   initTabs();
   buildSettingsUi();

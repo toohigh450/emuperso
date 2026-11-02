@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Audit de Portables 0.2.0, pull request n°1</title>
+<style>
+  :root {
+    --shell: #2b2a5c;
+    --shell-deep: #1b1940;
+    --paper: #f1f0f8;
+    --card: #ffffff;
+    --ink: #1d1b3b;
+    --ink-soft: #565480;
+    --line: #d8d6ea;
+    --accent: #c42f69;
+    --fix: #b3261e;
+    --check: #8a5a00;
+    --idea: #3a4fa3;
+    --ok: #1f7a54;
+    --read: #2b2a5c;
+    --font: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, sans-serif;
+    --font-head: "Bahnschrift", "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #14132c;
+      --card: #1f1d42;
+      --ink: #ecebfa;
+      --ink-soft: #b0aed4;
+      --line: #38366a;
+      --accent: #ee5b92;
+      --fix: #ff8f86;
+      --check: #f0b84f;
+      --idea: #9fb0ff;
+      --ok: #62d09c;
+      --read: #c9c7f5;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 16px/1.55 var(--font);
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 28px); }
+
+  header.top { background: var(--shell-deep); color: #ecebfa; padding: 22px 0 26px; }
+  header.top h1 { margin: 0; font: 700 clamp(1.6rem, 6vw, 2.2rem)/1.12 var(--font-head); }
+  header.top p { margin: 8px 0 0; color: #bdbbe3; font-size: 0.95rem; overflow-wrap: anywhere; }
+
+  .verdict { margin: 22px 0 0; padding: 18px; background: var(--card); border: 1px solid var(--line); border-left: 6px solid var(--accent); border-radius: 8px; }
+  .verdict h2 { margin: 0 0 6px; font: 700 1.4rem/1.2 var(--font-head); }
+  .verdict p { margin: 6px 0 0; }
+
+  h2.sec { font: 700 1.25rem/1.25 var(--font-head); margin: 34px 0 6px; }
+  h3 { font: 700 1.05rem/1.3 var(--font-head); margin: 0 0 6px; }
+  p { margin: 8px 0; }
+  .soft { color: var(--ink-soft); }
+
+  /* Couverture : 35 fichiers dans la pull request, 6 lus */
+  .meter { display: grid; grid-template-columns: repeat(35, 1fr); gap: 2px; margin: 12px 0 8px; }
+  .meter span { height: 18px; border-radius: 2px; background: var(--line); }
+  .meter span.read { background: var(--read); }
+  .cols { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 12px; }
+  @media (min-width: 640px) { .cols { grid-template-columns: 1fr 1fr; } }
+  .box { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; }
+  .box h3 { margin-bottom: 4px; }
+  ul.plain { margin: 6px 0 0; padding-left: 20px; }
+  ul.plain li { margin: 3px 0; }
+
+  /* Constats */
+  article.finding { background: var(--card); border: 1px solid var(--line); border-left-width: 6px; border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
+  article.finding.fix { border-left-color: var(--fix); }
+  article.finding.check { border-left-color: var(--check); }
+  article.finding.idea { border-left-color: var(--idea); }
+  .tag { display: inline-block; font: 700 0.8rem/1 var(--font); padding: 4px 8px; border-radius: 4px; margin-bottom: 8px; border: 1px solid currentColor; }
+  .fix .tag { color: var(--fix); }
+  .check .tag { color: var(--check); }
+  .idea .tag { color: var(--idea); }
+  dl.f { margin: 8px 0 0; display: grid; gap: 6px; }
+  dl.f dt { font-weight: 700; }
+  dl.f dd { margin: 0 0 4px; }
+  code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 0.88em; background: rgba(120, 118, 190, 0.16); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+
+  /* Tableau de corrections */
+  .scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--card); }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 0.94rem; }
+  th, td { text-align: left; vertical-align: top; padding: 9px 12px; border-bottom: 1px solid var(--line); }
+  th { font-weight: 700; background: rgba(120, 118, 190, 0.12); }
+  tr:last-child td { border-bottom: 0; }
+
+  ol.steps { padding-left: 22px; }
+  ol.steps li { margin: 8px 0; }
+  .good li::marker { color: var(--ok); }
+  footer { margin: 38px 0 28px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 0.9rem; }
+  @media print { header.top { background: none; color: #000; } body { background: #fff; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <h1>Audit de Portables 0.2.0</h1>
+    <p>Pull request n°1 (brouillon), branche <code style="background:rgba(255,255,255,.14)">emulateur-portable</code>, commit <code style="background:rgba(255,255,255,.14)">8f61155</code>. Audit du 1er novembre 2026.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="verdict" aria-labelledby="v">
+    <h2 id="v">Prête pour la revue, pas prête à fusionner.</h2>
+    <p>La description est honnête et cohérente : elle sépare ce qui a été testé (67 tests de logique, parcours Chromium avec moteur simulé) de ce qui ne l'a pas été (jeux réels, codes en jeu, sauvegardes natives, lanceur Windows). La pull request n'ajoute que des fichiers sous <code>portables/</code> et n'en supprime aucun.</p>
+    <p><strong>Limite majeure de cet audit : je n'ai pas pu lire le code.</strong> GitHub bloque l'accès automatisé aux arborescences, aux branches et au chargement des diffs de code. Je n'ai lu que 6 fichiers sur 35, tous de la documentation sauf le lanceur. Je ne confirme donc ni les 67 tests, ni les corrections elles-mêmes.</p>
+  </section>
+
+  <h2 class="sec">Ce que j'ai pu lire</h2>
+  <div class="meter" role="img" aria-label="6 fichiers lus sur 35">
+    <span class="read"></span><span class="read"></span><span class="read"></span><span class="read"></span><span class="read"></span><span class="read"></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <p class="soft">6 fichiers lus sur 35 dans la pull request (+3 042 lignes, 0 suppression).</p>
+  <div class="cols">
+    <div class="box">
+      <h3>Lu</h3>
+      <ul class="plain">
+        <li>La description de la pull request</li>
+        <li><code>ANALYSE-ET-CORRECTIONS.md</code></li>
+        <li><code>LISEZMOI.md</code>, <code>ETAT.md</code></li>
+        <li><code>LIVRAISON-GITHUB.md</code></li>
+        <li><code>MANDAT-CLAUDE-CODE.md</code></li>
+        <li><code>DEMARRER-PORTABLES.bat</code></li>
+        <li>Le commentaire du bot Vercel</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Non lu (29 fichiers)</h3>
+      <ul class="plain">
+        <li>Les 9 modules de <code>js/</code> et <code>player.html</code></li>
+        <li><code>index.html</code>, <code>css/app.css</code>, <code>package.json</code></li>
+        <li><code>serveur.ps1</code></li>
+        <li>Les 10 fichiers de <code>tests/</code> et les 3 ZIP de test</li>
+        <li><code>TESTS-KARL.md</code>, <code>emulatorjs/LISEZMOI.txt</code></li>
+      </ul>
+    </div>
+  </div>
+  <p class="soft">Je n'ai rien exécuté : ni tests, ni lanceur, ni page.</p>
+
+  <h2 class="sec">À corriger</h2>
+
+  <article class="finding fix">
+    <span class="tag">À corriger</span>
+    <h3>Le mandat livré dans la pull request est périmé</h3>
+    <dl class="f">
+      <dt>Constat</dt>
+      <dd><code>MANDAT-CLAUDE-CODE.md</code> demande « 56 tests attendus » et propose la branche <code>emulateur-portables</code>. La pull request annonce 67 tests, et la branche réelle s'appelle <code>emulateur-portable</code>.</dd>
+      <dt>Pourquoi</dt>
+      <dd>Un lecteur qui suit ce fichier conclut à un échec des tests ou crée une seconde branche.</dd>
+      <dt>Action</dt>
+      <dd>Mettre les chiffres et le nom de branche à jour, ou retirer le fichier maintenant que le mandat est exécuté.</dd>
+    </dl>
+  </article>
+
+  <article class="finding fix">
+    <span class="tag">À corriger</span>
+    <h3>L'état d'avancement n'a plus de « prochain pas »</h3>
+    <dl class="f">
+      <dt>Constat</dt>
+      <dd><code>ETAT.md</code> liste ce qui est fait et ce qui reste non validé, mais n'a plus de sections « en cours », « bloqué » et « prochain pas ». La version 0.1 les avait.</dd>
+      <dt>Action</dt>
+      <dd>Rétablir ces quatre sections, en gardant la liste des points non validés.</dd>
+    </dl>
+  </article>
+
+  <h2 class="sec">À vérifier</h2>
+
+  <article class="finding check">
+    <span class="tag">À vérifier</span>
+    <h3>Un aperçu Vercel semble exister pour cette branche</h3>
+    <dl class="f">
+      <dt>Constat</dt>
+      <dd>Le bot Vercel indique un déploiement d'aperçu « Ready » pour la branche, avec une adresse de prévisualisation. La description de la pull request dit « sans déploiement ». Le même bot affiche aussi « This branch has not been deployed », ce qui se rapporte probablement aux environnements GitHub et non à l'aperçu. Je n'ai pas ouvert l'aperçu.</dd>
+      <dt>Pourquoi</dt>
+      <dd>Si l'aperçu est public, une page non approuvée est en ligne. Elle ne contient ni jeu ni BIOS, mais ce n'est pas ce que le texte annonce.</dd>
+      <dt>Action</dt>
+      <dd>Dans Vercel, vérifier la protection des déploiements d'aperçu, ouvrir l'aperçu pour confirmer qu'il se charge sans erreur, et corriger la phrase de la pull request si besoin.</dd>
+    </dl>
+  </article>
+
+  <article class="finding check">
+    <span class="tag">À vérifier</span>
+    <h3>Les activations de codes que le moteur peut restaurer</h3>
+    <dl class="f">
+      <dt>Constat</dt>
+      <dd>La documentation précise que les nouveaux codes sont proposés désactivés, mais que le moteur peut restaurer une activation mémorisée. L'analyse indique avoir vérifié cela dans le code source d'EmulatorJS, sans dire comment la mémorisation est indexée.</dd>
+      <dt>Pourquoi</dt>
+      <dd>C'est le risque du « cheat fantôme » : un code activé dans un jeu qui se retrouve actif dans un autre, ou après un redémarrage, sans que l'interface le montre.</dd>
+      <dt>Action</dt>
+      <dd>Test réel : activer un code dans le jeu A, ouvrir le jeu B de la même console, puis relancer A. Dans chaque cas, comparer l'état du gestionnaire de codes à celui du jeu. Vérifier que <code>TESTS-KARL.md</code> couvre ce scénario (je ne l'ai pas lu).</dd>
+    </dl>
+  </article>
+
+  <article class="finding check">
+    <span class="tag">À vérifier</span>
+    <h3>La mémoire avec les grosses ROM DS</h3>
+    <dl class="f">
+      <dt>Constat</dt>
+      <dd>L'empreinte SHA-256 porte désormais sur tous les octets, même au-delà de 256 Mio. Le fichier est lu en entier, haché en entier, puis copié vers le moteur. La documentation reconnaît que ces copies peuvent s'additionner. L'API de hachage du navigateur n'offre pas de calcul progressif.</dd>
+      <dt>Pourquoi</dt>
+      <dd>Sur une ROM DS de 512 Mio, l'onglet peut planter sans message clair.</dd>
+      <dt>Action</dt>
+      <dd>Tester avec ta plus grosse ROM DS. Si l'onglet plante, soit un calcul progressif par morceaux, soit un message explicite au-dessus d'un seuil, plutôt qu'un plantage.</dd>
+    </dl>
+  </article>
+
+  <article class="finding check">
+    <span class="tag">À vérifier</span>
+    <h3>Le passage de 0.1 à 0.2 peut donner l'impression de perdre des sauvegardes</h3>
+    <dl class="f">
+      <dt>Constat</dt>
+      <dd>Pour les ROM DS de plus de 256 Mio, l'identifiant change entre les deux versions. La documentation demande d'exporter avant la mise à jour. Les jeux déjà connus gardent leur ancien nom interne, ce qui est la bonne approche pour les autres.</dd>
+      <dt>Action</dt>
+      <dd>Tester la mise à jour sur un profil Chrome qui contient des sauvegardes 0.1. Idéalement, afficher une bannière quand l'historique contient un jeu hors de la règle des noms conservés.</dd>
+    </dl>
+  </article>
+
+  <article class="finding check">
+    <span class="tag">À vérifier</span>
+    <h3>Le lanceur est identique à celui de la 0.1</h3>
+    <dl class="f">
+      <dt>Constat</dt>
+      <dd>Le fichier <code>.bat</code> n'a pas changé. Trois points : l'alias « python » du Microsoft Store peut être trouvé par <code>where</code> sans exécuter Python ; si le serveur de secours est arrêté avec Ctrl+C, le message « aucune solution de secours » peut s'afficher à tort ; et un fichier <code>.bat</code> aux fins de ligne LF (téléchargement du ZIP GitHub) est plus fragile qu'en CRLF.</dd>
+      <dt>Action</dt>
+      <dd>Tester le double-clic sur ton PC, en ZIP téléchargé et en clone. Envisager un <code>.gitattributes</code> qui impose CRLF aux <code>.bat</code> (décision à prendre, il sort de <code>portables/</code>).</dd>
+    </dl>
+  </article>
+
+  <h2 class="sec">Améliorations possibles</h2>
+
+  <article class="finding idea">
+    <span class="tag">Amélioration</span>
+    <h3>Aucun contrôle automatique n'exécute les tests</h3>
+    <dl class="f">
+      <dt>Constat</dt>
+      <dd>Le seul contrôle visible sur la pull request est Vercel. Rien n'exécute <code>npm test</code> à chaque commit.</dd>
+      <dt>Action</dt>
+      <dd>Optionnel : une tâche GitHub Actions qui lance les 67 tests. Elle ajouterait un fichier hors de <code>portables/</code> : seulement avec ton accord.</dd>
+    </dl>
+  </article>
+
+  <article class="finding idea">
+    <span class="tag">Amélioration</span>
+    <h3>Changer de jeu détruit l'ancien avant de savoir si le nouveau se charge</h3>
+    <dl class="f">
+      <dt>Constat</dt>
+      <dd>La description dit que l'échec de lecture d'une nouvelle ROM laisse le jeu précédent intact. Mais si le moteur ne se charge pas après la fermeture de l'ancien (Internet coupé en cours de session), la progression non enregistrée est perdue.</dd>
+      <dt>Action</dt>
+      <dd>Vérifier que le moteur est joignable avant de fermer l'ancien jeu, ou l'indiquer dans la boîte de confirmation.</dd>
+    </dl>
+  </article>
+
+  <article class="finding idea">
+    <span class="tag">Limite documentée</span>
+    <h3>Une seule association manuelle de codes par ROM</h3>
+    <dl class="f">
+      <dt>Constat</dt>
+      <dd>Impossible de garder à la fois un fichier Code Breaker et un fichier GameShark pour une même ROM, sauf par la déclaration <code>rom_sha256</code> dans les fichiers. Un fichier modifié au même chemin après l'association n'est pas détecté. Les deux limites sont écrites dans la documentation.</dd>
+      <dt>Action</dt>
+      <dd>Acceptable en l'état. À revoir si tu veux plusieurs formats par jeu.</dd>
+    </dl>
+  </article>
+
+  <h2 class="sec">Ce qui est solide</h2>
+  <ul class="plain good">
+    <li><strong>Périmètre respecté.</strong> La pull request affiche 35 fichiers, +3 042 lignes et 0 suppression, tous sous <code>portables/</code>. Elle est en brouillon, non fusionnée, et le texte dit que les branches N64 et PS1 ne sont pas touchées.</li>
+    <li><strong>Aucune affirmation excessive.</strong> Le texte, <code>ETAT.md</code> et <code>LISEZMOI.md</code> répètent ce qui n'est pas validé. Aucune compatibilité universelle n'est revendiquée. Aucune ROM, aucun BIOS, aucune base de codes n'est ajouté.</li>
+    <li><strong>Les codes ne sont plus liés au nom du fichier.</strong> Le nom devient une suggestion, l'association confirmée est liée à l'empreinte complète de la ROM, et une déclaration <code>rom_sha256</code> dans un <code>.cht</code> permet une correspondance automatique. La documentation précise qu'une empreinte ne prouve pas l'efficacité d'un code.</li>
+    <li><strong>Traçabilité.</strong> Les empreintes SHA-256 des archives 0.1.0 et 0.2.0 sont notées, et les deux archives d'origine sont conservées.</li>
+  </ul>
+
+  <h2 class="sec">Corrections annoncées par rapport à la 0.1</h2>
+  <p>Ces défauts étaient réels dans la version 0.1 que j'ai construite. La description les traite tous ; je ne peux pas confirmer les corrections dans le code.</p>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Défaut de la 0.1</th><th>Correction annoncée</th><th>Lu dans le code</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Le serveur Windows comparait le début du chemin sans séparateur final : un dossier voisin au nom commençant pareil passait</td><td>Contrôle de chemin avec séparateur final</td><td>Non</td></tr>
+        <tr><td>Source de secours <code>@latest</code> mélangeant développement et stable</td><td>Retirée : source locale puis CDN stable</td><td>Non</td></tr>
+        <tr><td>Empreinte par échantillon au-delà de 256 Mio</td><td>SHA-256 sur tous les octets</td><td>Non</td></tr>
+        <tr><td>Codes proposés d'après le nom du fichier de ROM</td><td>Suggestion par nom, association liée à l'empreinte</td><td>Non</td></tr>
+        <tr><td>Boutons d'export utilisant le jeu courant au moment du clic : risque de télécharger la sauvegarde d'un autre jeu</td><td>Chaque liste capture son jeu</td><td>Non</td></tr>
+        <tr><td>Ouvertures de jeux simultanées possibles</td><td>Parcours d'ouverture sérialisé, boutons désactivés pendant l'ouverture</td><td>Non</td></tr>
+        <tr><td>Copies miroir mises à jour en parallèle pouvaient se chevaucher</td><td>Sérialisées par jeu (sans garantie d'atomicité en cas de panne)</td><td>Non</td></tr>
+        <tr><td>ZIP : premier jeu pris sans demander ; limites de décompression absentes</td><td>Choix explicite, refus des tailles excessives, volumes multiples et métadonnées macOS ; CRC32 toujours contrôlé</td><td>Non</td></tr>
+        <tr><td>Échec d'IndexedDB peu visible</td><td>Ouverture vérifiée, repli temporaire avec avertissement</td><td>Non</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="sec">Pour terminer l'audit</h2>
+  <p>Il me faut le code. Deux façons de me le donner :</p>
+  <ul class="plain">
+    <li>Envoyer ici l'archive 0.2.0 (SHA-256 annoncé : <code>1f896ebfc2b1ce5261f0fb8f158060a1b9d1de032f3ccd3aed7fcf9651febefb</code>), ou les fichiers du dossier <code>portables/</code> de la branche.</li>
+    <li>Demander à l'app de ton ordinateur de lancer <code>cd portables</code> puis <code>npm test</code> et de coller le résultat réel.</li>
+  </ul>
+  <p>Je contrôlerais alors, dans cet ordre :</p>
+  <ol class="steps">
+    <li><code>serveur.ps1</code> : contrôle de chemin, ports, arrêt propre.</li>
+    <li><code>app.mjs</code> : sérialisation des ouvertures, reprise après échec, messages d'erreur.</li>
+    <li><code>cheats.mjs</code> et <code>identity.test.mjs</code> : lecture de <code>rom_sha256</code>, exclusion des empreintes mal formées ou contradictoires.</li>
+    <li><code>store.mjs</code> : rotation des copies miroir, sérialisation, comportement si IndexedDB échoue.</li>
+    <li><code>hash.mjs</code> et <code>zip.mjs</code> : mémoire, limites, taille annoncée contre taille réelle.</li>
+    <li><code>player.html</code> : création du fichier dans l'iframe, extension transmise au moteur.</li>
+    <li><code>tests/</code> : ce que les tests vérifient vraiment, et ce que le moteur simulé masque.</li>
+  </ol>
+
+  <h2 class="sec">Ordre conseillé</h2>
+  <ol class="steps">
+    <li>Corriger <code>MANDAT-CLAUDE-CODE.md</code> et <code>ETAT.md</code> (rapide, sans risque).</li>
+    <li>Trancher la question de l'aperçu Vercel.</li>
+    <li>Faire les essais réels de <code>TESTS-KARL.md</code> sur ton PC, en ajoutant : codes activés d'un jeu à l'autre, grosse ROM DS, mise à jour depuis la 0.1.</li>
+    <li>Corriger d'après les résultats, avec un test de régression par défaut trouvé.</li>
+    <li>Seulement ensuite, décider de la fusion. Elle reste ta décision.</li>
+  </ol>
+
+  <footer>
+    <p>Sources consultées le 1er novembre 2026 : la page du dépôt <code>toohigh450/emuperso</code>, la liste des pull requests, la pull request n°1 et sa page « Files changed » (seuls 6 fichiers se sont chargés). Les pages d'arborescence et de branches refusent l'accès automatisé.</p>
+    <p>Cet audit porte sur ce que la description et la documentation affirment. Il ne remplace pas un essai réel dans Chrome sur Windows.</p>
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,25 @@
+# Provenance et droits — 0.2.1 alpha
+
+Aucun moteur, cœur binaire, BIOS matériel, ROM commerciale ou catalogue de codes n'est embarqué par ce correctif. Les petites archives de tests proviennent du projet initial et contiennent des données synthétiques.
+
+## EmulatorJS
+
+- Distribution ciblée : 4.2.3, https://cdn.emulatorjs.org/4.2.3/data/.
+- Tag amont : `v4.2.3`, commit `e150dc0491ae747028919fb82d6598954976ede6`.
+- Source : https://github.com/EmulatorJS/EmulatorJS/tree/e150dc0491ae747028919fb82d6598954976ede6.
+- Le fichier LICENSE de cette révision a été consulté : GNU General Public License, version 3. Voir https://github.com/EmulatorJS/EmulatorJS/blob/e150dc0491ae747028919fb82d6598954976ede6/LICENSE.
+- `emulatorjs/engine-lock.json` contient les SHA-256 observés de trois fichiers frontend et l'empreinte attendue de l'archive de release rapportée par GitHub. Cette liste n'est pas un inventaire exhaustif de distribution.
+
+Le code chargé dans l'iframe a accès aux fichiers qu'on lui transmet et, avec l'origine commune, potentiellement au parent et au stockage du navigateur. La page lit les ROMs localement et ne programme pas de téléversement de ROM ; elle ne peut pas garantir le comportement futur d'un fournisseur distant. Le CDN et les autres sous-ressources restent une dépendance de confiance. Le mode local complet est préférable pour réduire cette dépendance, après vérification et essai hors ligne.
+
+## Cœurs
+
+Gambatte, mGBA, DeSmuME, DeSmuME 2015 et melonDS ont chacun des sources et des obligations distinctes. La licence du frontend ne suffit pas à conclure sur les droits de redistribution de leurs binaires. Les révisions exactes de tous les cœurs et leurs notices doivent encore être inventoriées depuis une distribution complète vérifiée avant toute redistribution publique du moteur. Aucun droit universel de redistribution n'est affirmé ici.
+
+## Code du projet
+
+Aucune licence générale du code original n'est choisie à la place de Karl. Une décision de licence reste à prendre avant une diffusion publique plus large.
+
+## Outils de test et CI
+
+L'application n'a aucune dépendance npm. Le lockfile fixe cette configuration ; Playwright et Chromium sont utilisés séparément pour les vérifications locales. Le workflow exécute uniquement la syntaxe et les tests de logique ; il ne valide pas l'émulation. Les actions checkout et setup-node sont référencées par commits résolus depuis leurs tags v4 au moment de la correction.

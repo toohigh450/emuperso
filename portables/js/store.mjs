@@ -1,3 +1,8 @@
+import { cheatIdentity } from './cheats.mjs';
+import { fingerprint, numericId } from './hash.mjs';
+import { saveSpaceId } from './hash.mjs';
+import { SYSTEMS, DS_CORES } from './systems.mjs';
+
 // Stockage local (IndexedDB) : historique des jeux, copies miroir des sauvegardes,
 // fichiers de codes importés et associations choisies par l'utilisateur.
 // Les sauvegardes « vivantes » appartiennent au moteur ; ici on garde une copie de sécurité
@@ -22,6 +27,31 @@ export class MemoryAdapter {
   async keys(bucket) {
     return [...this.data.get(bucket).keys()];
   }
+  async rotateMirror(spaceId, entry) {
+    const saves = this.data.get('saves');
+    const head = saves.get(`${spaceId}#0`);
+    if (head?.hash === entry.hash) return { changed: false, at: head.at };
+    const next = new Map(saves);
+    for (let g = SAVE_GENERATIONS - 1; g >= 1; g--) {
+      const old = saves.get(`${spaceId}#${g - 1}`);
+      if (old) next.set(`${spaceId}#${g}`, structuredClone(old));
+      else next.delete(`${spaceId}#${g}`);
+    }
+    next.set(`${spaceId}#0`, structuredClone(entry));
+    this.data.set('saves', next);
+    return { changed: true, at: entry.at };
+  }
+  async claimNumericId(spaceId, preferred) {
+    const settings = this.data.get('settings');
+    const key = `engine-id:${spaceId}`;
+    if (settings.has(key)) return settings.get(key);
+    let id = preferred;
+    while (settings.has(`engine-owner:${id}`) && settings.get(`engine-owner:${id}`) !== spaceId) id = id === 0x7fffffff ? 2 : id + 1;
+    settings.set(`engine-owner:${id}`, spaceId);
+    settings.set(key, id);
+    return id;
+  }
+
 }
 
 export class IdbAdapter {
@@ -66,6 +96,61 @@ export class IdbAdapter {
   keys(bucket) {
     return this.tx(bucket, 'readonly', (s) => s.getAllKeys());
   }
+  async rotateMirror(spaceId, entry) {
+    const db = await this.open();
+    return new Promise((resolve, reject) => {
+      const tx = db.transaction('saves', 'readwrite');
+      const bucket = tx.objectStore('saves');
+      let result;
+      const old = [];
+      let pending = SAVE_GENERATIONS;
+      tx.oncomplete = () => resolve(result);
+      tx.onerror = tx.onabort = () => reject(tx.error || new Error('Rotation de sauvegarde annulée.'));
+      for (let g = 0; g < SAVE_GENERATIONS; g++) {
+        const req = bucket.get(`${spaceId}#${g}`);
+        req.onsuccess = () => {
+          old[g] = req.result;
+          if (--pending) return;
+          if (old[0]?.hash === entry.hash) { result = { changed: false, at: old[0].at }; return; }
+          for (let n = SAVE_GENERATIONS - 1; n >= 1; n--) {
+            if (old[n - 1]) bucket.put(old[n - 1], `${spaceId}#${n}`);
+            else bucket.delete(`${spaceId}#${n}`);
+          }
+          bucket.put(entry, `${spaceId}#0`);
+          result = { changed: true, at: entry.at };
+        };
+      }
+    });
+  }
+  async claimNumericId(spaceId, preferred) {
+    const db = await this.open();
+    return new Promise((resolve, reject) => {
+      const tx = db.transaction('settings', 'readwrite');
+      const bucket = tx.objectStore('settings');
+      let id;
+      tx.oncomplete = () => resolve(id);
+      tx.onerror = tx.onabort = () => reject(tx.error || new Error('Identifiant moteur non enregistré.'));
+      const key = `engine-id:${spaceId}`;
+      const existing = bucket.get(key);
+      existing.onsuccess = () => {
+        if (existing.result !== undefined) { id = existing.result; return; }
+        const probe = (candidate) => {
+          const ownerKey = `engine-owner:${candidate}`;
+          const owner = bucket.get(ownerKey);
+          owner.onsuccess = () => {
+            if (owner.result !== undefined && owner.result !== spaceId) {
+              probe(candidate === 0x7fffffff ? 2 : candidate + 1); return;
+            }
+            id = candidate;
+            bucket.put(spaceId, ownerKey);
+            bucket.put(id, key);
+          };
+        };
+        probe(preferred);
+      };
+    });
+  }
+
 }
 
 export class Store {
@@ -108,16 +193,22 @@ export class Store {
     finally { if (this.saveQueues.get(spaceId) === task) this.saveQueues.delete(spaceId); }
   }
   async _mirrorSave(spaceId, bytes, hash, now) {
-    const head = await this.a.get('saves', `${spaceId}#0`);
-    if (head && head.hash === hash) return { changed: false, at: head.at };
-    for (let g = SAVE_GENERATIONS - 1; g >= 1; g--) {
-      const older = await this.a.get('saves', `${spaceId}#${g - 1}`);
-      if (older) await this.a.put('saves', `${spaceId}#${g}`, older);
-    }
     const entry = { bytes: new Uint8Array(bytes), hash, at: now, size: bytes.length };
-    await this.a.put('saves', `${spaceId}#0`, entry);
-    return { changed: true, at: now };
+    return this.a.rotateMirror(spaceId, entry);
   }
+  async engineNumericId(spaceId, preferred = numericId(spaceId)) {
+    if (!Number.isInteger(preferred) || preferred < 2 || preferred > 0x7fffffff) throw new Error('Identifiant moteur invalide.');
+    return this.a.claimNumericId(spaceId, preferred);
+  }
+  async reserveHistoricalEngineIds() {
+    const games = (await this.listGames()).sort((a, b) => a.gameKey.localeCompare(b.gameKey));
+    for (const game of games) {
+      if (!SYSTEMS[game.system] || !game.hash) continue;
+      const cores = game.system === 'nds' ? Object.keys(DS_CORES) : [SYSTEMS[game.system].coreId];
+      for (const core of cores) await this.engineNumericId(saveSpaceId(game.system, core, game.hash));
+    }
+  }
+
   async getMirrorSave(spaceId, generation = 0) {
     return (await this.a.get('saves', `${spaceId}#${generation}`)) || null;
   }
@@ -138,7 +229,11 @@ export class Store {
   async importCheatFile({ system, path, name, text }) {
     const key = `${system}|${path}`;
     const identity = cheatIdentity(text);
-    await this.a.put('cheatfiles', key, { system, path, name, text, romSha256: identity.sha256, identityDeclared: identity.declared });
+    const contentSha256 = (await fingerprint(new TextEncoder().encode(text))).hex;
+    const previous = await this.a.get('cheatfiles', key);
+    const previousHash = previous && (previous.contentSha256 || (await fingerprint(new TextEncoder().encode(previous.text))).hex);
+    const reviewRequired = !!previous && (previous.reviewRequired || previousHash !== contentSha256);
+    await this.a.put('cheatfiles', key, { system, path, name, text, romSha256: identity.sha256, identityDeclared: identity.declared, contentSha256, reviewRequired });
     return key;
   }
   async listCheatFiles(system) {
@@ -147,7 +242,7 @@ export class Store {
     for (const k of keys) {
       if (!k.startsWith(`${system}|`)) continue;
       const v = await this.a.get('cheatfiles', k);
-      if (v) out.push({ system: v.system, path: v.path, name: v.name, romSha256: v.romSha256, identityDeclared: v.identityDeclared });
+      if (v) out.push({ system: v.system, path: v.path, name: v.name, romSha256: v.romSha256, identityDeclared: v.identityDeclared, contentSha256: v.contentSha256, reviewRequired: v.reviewRequired });
     }
     return out;
   }
@@ -189,5 +284,3 @@ export class Store {
     await this.a.del('bios', name);
   }
 }
-import { cheatIdentity } from './cheats.mjs';
-

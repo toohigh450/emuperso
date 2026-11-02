@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contre-audit Méo — Portables 0.2.0</title>
+<style>
+:root{--bg:#0b1120;--paper:#131e31;--border:#30415b;--text:#edf3ff;--muted:#b5c4d6;--cyan:#66d9ff;--gold:#ffcd70;--red:#ff8888;--green:#8ff0c4}
+*{box-sizing:border-box}body{font:15px/1.6 "Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);margin:0}
+main{max-width:920px;margin:32px auto 60px;padding:0 16px}
+h1{font-size:28px;line-height:1.25;margin:8px 0}h2{font-size:20px;color:var(--cyan);margin:30px 0 10px;border-bottom:1px solid var(--border);padding-bottom:8px}
+h3{font-size:16px;color:var(--gold);margin:20px 0 8px}
+.eyebrow{color:var(--cyan);font-weight:700;letter-spacing:.14em;font-size:11px}.muted{color:var(--muted)}
+.box{background:var(--paper);border:1px solid var(--border);border-left:4px solid var(--cyan);padding:14px 16px;border-radius:8px;margin:14px 0}
+.box.warn{border-left-color:var(--gold}}.box.ok{border-left-color:var(--green)}.box.bad{border-left-color:var(--red)}
+code{font-family:Consolas,monospace;background:#26364b;padding:1px 5px;border-radius:4px;font-size:13px;overflow-wrap:anywhere}
+table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:8px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}th{color:var(--cyan)}
+.verdict{font-size:22px;font-weight:700}
+ul{margin:8px 0}li{margin:4px 0}
+</style></head><body><main>
+<div class="eyebrow">MÉO → KARL · GPT · CLAUDE · CODEX — CONTRE-AUDIT INDÉPENDANT</div>
+<h1>Émulateur Portables 0.2.0<br><span class="muted" style="font-size:18px">GB · GBC · GBA · DS — version corrigée</span></h1>
+<p class="muted">Date : 1er novembre 2026, ~18h45 · Auditeur : Méo · Mandat : Karl<br>
+Branche : <code>emulateur-portable</code> (commit <code>8f61155</code>)<br>
+Message : « Ajoute Portables 0.2.0 : identité des ROMs et associations de cheats »</p>
+
+<div class="box ok">
+<div class="verdict">✅ ACCEPTÉ pour tests terrain Karl et ses amis</div>
+<p><strong>Non accepté pour publication publique.</strong> Mêmes réserves que les autres projets : licences des cœurs à vérifier, aucun test réel exécuté par Méo.</p>
+</div>
+
+<h2>1. Résultats des tests</h2>
+<table>
+<tr><th>Suite</th><th>Tests</th><th>Pass</th><th>Fail</th></tr>
+<tr><td>Portables 0.2.0 (<code>node --test</code>)</td><td>67</td><td>67</td><td>0</td></tr>
+</table>
+<p>Progression : 56 tests (0.1) → <strong>67 tests</strong> (0.2.0, +11 nouveaux). Zéro échec.</p>
+<p>Suites couvertes : <code>identity</code>, <code>cheats</code>, <code>zip</code>, <code>hash</code>, <code>session</code>, <code>store</code>, <code>systems</code>, <code>controls</code>.</p>
+
+<h2>2. Corrections apportées (0.1 → 0.2.0)</h2>
+
+<h3>🔑 Identité des ROMs (correction majeure)</h3>
+<div class="box ok">
+<p><strong>Problème 0.1 :</strong> la sélection automatique des cheats reposait sur le <em>nom de fichier</em>, pas sur l'identité réelle du jeu. Critique pour les régions, révisions, traductions et hacks.</p>
+<p><strong>Correction 0.2.0 :</strong></p>
+<ul>
+<li>SHA-256 calculé sur <strong>tous les octets</strong>, même au-delà de 256 Mio</li>
+<li>Le nom de fichier devient une <strong>suggestion à confirmer</strong>, pas une preuve</li>
+<li>L'association manuelle conserve le SHA-256 complet, indépendamment du nom</li>
+<li>Métadonnée facultative <code>rom_sha256</code> pour correspondance automatique déclarée</li>
+<li>Empreintes différentes ou mal formées → exclues</li>
+</ul>
+</div>
+
+<h3>🎮 Cheats</h3>
+<ul>
+<li>Les codes nouvellement importés sont <strong>désactivés par défaut</strong></li>
+<li>Distinction claire entre import et activations que le moteur peut restaurer</li>
+<li>Une empreinte ne prouve pas l'efficacité d'un code (honnêteté préservée)</li>
+<li>Anciennes associations : confirmation à renouveler</li>
+</ul>
+
+<h3>📦 ZIP</h3>
+<ul>
+<li><strong>Choix explicite</strong> du jeu dans les archives multi-jeux</li>
+<li>Exclusion des métadonnées macOS (<code>__MACOSX</code>)</li>
+<li>Refus : volumes multiples, offsets, répertoires tronqués, taille annoncée excessive</li>
+<li>CRC32 <strong>toujours</strong> contrôlé</li>
+<li>ZIP64, chiffrés, RAR, 7z → exclus (documenté)</li>
+</ul>
+
+<h3>💾 Chargement et stockage</h3>
+<ul>
+<li>Parcours de chargement <strong>sérialisé</strong>, boutons désactivés pendant l'ouverture</li>
+<li>Échec de chargement → le jeu précédent reste <strong>intact</strong></li>
+<li>Vérification effective de l'ouverture IndexedDB, avec repli averti</li>
+<li>Mises à jour des miroirs sérialisées par jeu</li>
+<li>Les nouveaux jeux utilisent le SHA-256 complet comme nom interne</li>
+<li>Anciens noms conservés pour retrouver les sauvegardes (sans migration destructive)</li>
+</ul>
+
+<h3>🔧 Moteur</h3>
+<ul>
+<li><strong>Retrait du secours <code>@latest</code></strong> — pouvait mélanger une branche de développement avec une distribution stable</li>
+<li>Source locale puis CDN stable</li>
+<li>Cœurs confirmés : Gambatte, mGBA, DeSmuME, DeSmuME 2015, melonDS</li>
+</ul>
+
+<h2>3. Vérifications effectuées par l'équipe</h2>
+<div class="box">
+<p>D'après <code>ANALYSE-ET-CORRECTIONS.md</code> :</p>
+<ul>
+<li>Chromium : parcours d'import GB/GBC/GBA/DS avec moteur simulé</li>
+<li>Un seul iframe, suggestions sans chargement automatique par nom</li>
+<li>Association confirmée, renommage, ROM modifiée, identification par SHA-256</li>
+<li>Rechargement navigateur + persistance IndexedDB</li>
+<li>Aucune erreur JavaScript non interceptée dans le parcours principal</li>
+</ul>
+</div>
+
+<h2>4. Limites honnêtes (déclarées)</h2>
+<div class="box warn">
+<ul>
+<li>Les mises à jour simultanées ne constituent <strong>pas</strong> une garantie d'atomicité en cas de panne ou de quota</li>
+<li>Le serveur Windows n'a pas été exécuté dans cet environnement</li>
+<li>Les binaires des cœurs ne sont ni embarqués ni verrouillés à une version précise</li>
+<li>Aucune base de cheats embarquée, aucune ROM commerciale</li>
+<li>Limites de mémoire, de compatibilité et de mise à jour explicites dans la doc</li>
+</ul>
+</div>
+
+<h2>5. Verdict</h2>
+<table>
+<tr><th>Critère</th><th>Statut</th></tr>
+<tr><td>Tests (67)</td><td>✅ Tous passent</td></tr>
+<tr><td>Correction du défaut majeur (identité vs nom)</td><td>✅ Corrigé proprement</td></tr>
+<tr><td>Protections (cheats désactivés, échec non-destructif)</td><td>✅ En place</td></tr>
+<tr><td>Honnêteté des limites</td><td>✅ Déclarées explicitement</td></tr>
+<tr><td>Prêt pour tests amis de Karl</td><td>✅ Oui</td></tr>
+<tr><td>Publication publique</td><td>❌ NON (licences à vérifier)</td></tr>
+</table>
+
+<div class="box ok">
+<div class="verdict">ACCEPTÉ pour bêta privée</div>
+<p>La 0.2.0 corrige le défaut le plus grave de la 0.1 (confusion nom vs identité) de manière propre et testée. Le travail est sérieux, les limites sont déclarées, et les 67 tests passent. C'est prêt pour que Karl et ses amis le fassent souffrir! 🎮</p>
+</div>
+
+<p class="muted">Méo — 1er novembre 2026, ~18h50 · Vérification indépendante, sans exécution navigateur.</p>
+</main></body></html>

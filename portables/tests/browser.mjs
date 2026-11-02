@@ -30,14 +30,18 @@ try {
     if (!EJS_gameUrl.name.endsWith('.' + (EJS_core === 'gb' ? (EJS_gameUrl.name.endsWith('.gbc') ? 'gbc' : 'gb') : EJS_core === 'gba' ? 'gba' : 'nds'))) throw Error('wrong ROM extension');
     window.testCheats = EJS_cheats;
     window.testGameName = EJS_gameName;
+    const listeners = new Map();
+    window.EJS_emulator = { on(name, fn) { listeners.set(name, fn); }, emit(name, value) { listeners.get(name)?.(value); } };
     document.getElementById('game').innerHTML = '<button id="start">Démarrer test</button>';
     document.getElementById('start').onclick = () => {
       EJS_onGameStart();
-      EJS_onSaveUpdate({save: new Uint8Array([1,2,3])});
+      EJS_emulator.emit('saveSaveFiles', new Uint8Array([1,2,3]));
     };
     EJS_ready();
   `;
-  await context.route('https://cdn.emulatorjs.org/**', route => route.fulfill({ contentType: 'text/javascript', body: mockEngine }));
+  const mockIntegrity = 'sha256-' + createHash('sha256').update(mockEngine).digest('base64');
+  await context.route('**/js/engine.mjs', route => route.fulfill({ contentType: 'text/javascript', body: `export const ENGINE_VERSION='test'; export const LOADER_INTEGRITY='${mockIntegrity}'; export const REMOTE_ENGINE={path:'https://cdn.emulatorjs.org/4.2.3/data/',integrity:LOADER_INTEGRITY};` }));
+  await context.route('https://cdn.emulatorjs.org/**', route => route.fulfill({ contentType: 'text/javascript', headers: {'access-control-allow-origin':'*'}, body: mockEngine }));
   await page.goto(`http://127.0.0.1:${server.address().port}/`);
   await page.getByRole('button', { name: 'Choisir un jeu', exact: true }).waitFor();
   page.on('dialog', dialog => dialog.accept());
@@ -61,6 +65,24 @@ try {
   await page.frameLocator('iframe').locator('#start').click();
   await page.getByRole('tab', { name: 'Sauvegardes', exact: true }).click();
   await page.getByRole('button', { name: 'Exporter', exact: true }).waitFor();
+  // P03 : une erreur avant session.start ne doit déplacer ni la session ni ses outils.
+  await page.evaluate(async () => {
+    const {IdbAdapter} = await import('./js/store.mjs');
+    const original = IdbAdapter.prototype.put;
+    window.restoreHistory = () => { IdbAdapter.prototype.put = original; };
+    IdbAdapter.prototype.put = function(bucket,key,value) {
+      if (bucket === 'games' && value.title === 'BLOCKED') throw new Error('quota historique simulé');
+      return original.call(this,bucket,key,value);
+    };
+  });
+  await page.locator('#romInput').setInputFiles({ name:'Blocked.gba', mimeType:'application/octet-stream', buffer:Buffer.from(makeGba({title:'BLOCKED'})) });
+  await page.getByText('Ouverture impossible : quota historique simulé').waitFor();
+  assert.equal(await page.locator('#gameFile').textContent(),'Renamed.gba');
+  assert.deepEqual(await cheats(), [['Test', '12345678+1234']]);
+  await page.getByRole('tab',{name:'Codes',exact:true}).click();
+  await page.locator('#cheatSearch').fill('identity');
+  await page.getByText('Association enregistrée pour cette ROM :').waitFor();
+  await page.evaluate(() => window.restoreHistory());
   const changed = rom.slice(); changed[1000] ^= 1;
   await upload('Identity (USA).gba', changed);
   assert.deepEqual(await cheats(), []);
@@ -75,6 +97,15 @@ try {
   await page.reload();
   await upload('Persistent.gba', rom);
   assert.deepEqual(await cheats(), [['Test', '12345678+1234']]);
+  // P06 : un fichier réimporté au même chemin doit être confirmé à nouveau.
+  await page.getByRole('tab',{name:'Codes',exact:true}).click();
+  await page.locator('#cheatFiles').setInputFiles({ name:'Identity (USA).cht', mimeType:'text/plain', buffer:Buffer.from('cheat0_desc = "Changed"\ncheat0_code = "00000000+3333"') });
+  await page.getByRole('button',{name:'Confirmer les nouveaux codes',exact:true}).waitFor();
+  await upload('Persistent.gba',rom);
+  assert.deepEqual(await cheats(), []);
+  await page.getByRole('button',{name:'Confirmer les nouveaux codes',exact:true}).click();
+  await upload('Persistent.gba',rom);
+  assert.deepEqual(await cheats(), [['Changed','00000000+3333']]);
   const legacyRom = rom.slice(); legacyRom[999] = 7;
   const legacyHash = createHash('sha256').update(legacyRom).digest('hex');
   await page.evaluate(async ({hash}) => {
@@ -102,6 +133,63 @@ try {
   assert.equal(await page.locator('iframe').count(), 0);
   assert.deepEqual(errors, []);
   console.log('PASS Chromium : import GB/GBC/GBA/DS, suggestions, association SHA-256, renommage, ROM modifiée, persistance IndexedDB, miroir de sauvegarde, fermeture. Moteur simulé ; aucune émulation réelle validée.');
+  // P04 : interruption après chacune des trois écritures d'une vraie transaction IDB.
+  const atomic = await page.evaluate(async () => {
+    const {Store,IdbAdapter} = await import('./js/store.mjs');
+    const adapter = new IdbAdapter('audit-atomic-mirrors');
+    const store = new Store(adapter);
+    for (const n of [1,2,3]) await store.mirrorSave('A',new Uint8Array([n]),String(n));
+    const before = await store.mirrorInfo('A');
+    const results = [];
+    for (const failAt of [1,2,3]) {
+      const original = IDBObjectStore.prototype.put;
+      let writes=0, rejected=false;
+      IDBObjectStore.prototype.put = function(...args) {
+        const request = original.apply(this,args);
+        if (this.name==='saves' && this.transaction.db.name==='audit-atomic-mirrors' && ++writes===failAt) {
+          const tx=this.transaction;request.addEventListener('success',()=>tx.abort());
+        }
+        return request;
+      };
+      try { await store.mirrorSave('A',new Uint8Array([4]),'4'); }
+      catch { rejected=true; }
+      finally { IDBObjectStore.prototype.put=original; }
+      results.push(rejected && JSON.stringify(await store.mirrorInfo('A'))===JSON.stringify(before));
+    }
+    await store.mirrorSave('A',new Uint8Array([5]),'5');
+    const recovered=(await store.getMirrorSave('A')).hash==='5';
+    (await adapter.open()).close();
+    return {results,recovered};
+  });
+  assert.deepEqual(atomic,{results:[true,true,true],recovered:true});
+  const ids = await page.evaluate(async () => {
+    const {Store,IdbAdapter}=await import('./js/store.mjs');
+    const a=new IdbAdapter('audit-numeric-collisions'), b=new IdbAdapter('audit-numeric-collisions');
+    const results=await Promise.all([new Store(a).engineNumericId('A',9),new Store(b).engineNumericId('B',9)]);
+    const again=await new Store(b).engineNumericId('A',500);
+    (await a.open()).close();(await b.open()).close();
+    return {results,again};
+  });
+  assert.deepEqual(ids,{results:[9,10],again:9});
+  // P07 : HTTP 200 sans ready, puis source saine dans une iframe neuve.
+  await context.route('**/stuck/loader.js',route=>route.fulfill({contentType:'text/javascript',body:'window.stuckEngine=true;'}));
+  const retry=await page.evaluate(async ({integrity,rom})=>{
+    const {createBrowserHost}=await import('./js/player-host.mjs');
+    const mount=document.createElement('div');document.body.append(mount);
+    const host=createBrowserHost(mount,{timeoutMs:500});
+    const boot={enginePaths:[{path:'stuck/'},{path:'https://cdn.emulatorjs.org/4.2.3/data/',integrity}],rom:{name:'test.gba',bytes:new Uint8Array(rom)},ejs:{EJS_core:'gba',EJS_cheats:[],EJS_gameName:'retry',EJS_gameID:9}};
+    let readyResolve;const ready=new Promise(r=>readyResolve=r);
+    const handle=await host.create(boot,{onReady:()=>readyResolve(),onStart(){},onExit(){},onError:e=>readyResolve(e)});
+    const error=await ready;
+    const child=mount.querySelector('iframe').contentWindow;
+    const result={error:error||null,stale:!!child.stuckEngine,bytes:await child.EJS_gameUrl.arrayBuffer().then(b=>b.byteLength),frames:mount.querySelectorAll('iframe').length};
+    handle.destroy();mount.remove();
+    result.boots=Object.keys(window.__portablesBoots).length;
+    return result;
+  },{integrity:mockIntegrity,rom:[...rom]});
+  assert.deepEqual(retry,{error:null,stale:false,bytes:rom.length,frames:1,boots:0});
+  assert.deepEqual(errors,[]);
+  console.log('PASS Chromium audits : quota historique A→B, .cht réimporté, rollback IndexedDB après écritures 1/2/3, reprise après abort, collisions multi-connexions et source 200 sans ready.');
   await context.close();
   const blocked = await browser.newContext();
   await blocked.addInitScript(() => Object.defineProperty(window, 'indexedDB', { value: { open() { throw new Error('blocked'); } } }));

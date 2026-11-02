@@ -17,46 +17,48 @@
   var entry = window.parent && window.parent.__portablesBoots && window.parent.__portablesBoots[id];
   if (!entry) { document.body.textContent = 'Session introuvable.'; return; }
   var boot = entry.boot, events = entry.events;
+  var source = entry.source;
+  var preparing = true;
 
   // Variables globales lues par EmulatorJS.
   Object.keys(boot.ejs).forEach(function (k) { window[k] = boot.ejs[k]; });
   // Le fichier est créé dans CE document (et non dans la page parente) pour éviter les
   // problèmes d'instanceof entre fenêtres, puis la page parente libère sa copie en mémoire.
-  window.EJS_gameUrl = new File([boot.rom.bytes], boot.rom.name);
+  window.EJS_gameUrl = new File([boot.rom.file || boot.rom.bytes], boot.rom.name);
+  boot.rom.file = window.EJS_gameUrl;
   boot.rom.bytes = null;
   if (boot.bios) {
-    window.EJS_biosUrl = new File([boot.bios.bytes], boot.bios.name);
+    window.EJS_biosUrl = new File([boot.bios.file || boot.bios.bytes], boot.bios.name);
+    boot.bios.file = window.EJS_biosUrl;
     boot.bios.bytes = null;
   }
   window.EJS_player = '#game';
-  window.EJS_ready = function () { events.onReady(); };
+  window.EJS_ready = function () {
+    preparing = false;
+    var emulator = window.EJS_emulator;
+    if (emulator && typeof emulator.on === 'function') {
+      // 4.2.3 émet saveSaveFiles, mais son loader ne branche pas EJS_onSaveUpdate.
+      if (typeof emulator.enableSaveUpdateEvent !== 'function') {
+        emulator.on('saveSaveFiles', function (save) { if (save) window.EJS_onSaveUpdate({ save: save }); });
+      }
+      emulator.on('exit', function () { events.onExit(); });
+    }
+    events.onReady();
+  };
   window.EJS_onGameStart = function () { events.onStart(); };
   window.EJS_onExit = function () { events.onExit(); };
   window.EJS_onSaveUpdate = function (e) {
     try { if (boot.onSaveUpdate) boot.onSaveUpdate(e); } catch (err) { console.error(err); }
   };
 
-  var candidates = boot.enginePaths.slice();
-  var timer = setTimeout(function () {
-    events.onError("Le moteur ne répond pas après 60 secondes. Vérifie ta connexion Internet ou installe le moteur en local (voir LISEZMOI.md).");
-  }, 60000);
-  var origReady = window.EJS_ready;
-  window.EJS_ready = function () { clearTimeout(timer); origReady(); };
-
-  function tryNext() {
-    if (!candidates.length) {
-      clearTimeout(timer);
-      events.onError("Impossible de charger le moteur EmulatorJS (aucune source disponible).");
-      return;
-    }
-    var base = candidates.shift();
-    window.EJS_pathtodata = base;
-    var s = document.createElement('script');
-    s.src = base + 'loader.js';
-    s.onerror = function () { s.remove(); tryNext(); };
-    document.body.appendChild(s);
-  }
-  tryNext();
+  window.addEventListener('error', function () { if (preparing) events.onError('Erreur pendant la préparation du moteur.'); });
+  window.addEventListener('unhandledrejection', function () { if (preparing) events.onError('Initialisation du moteur interrompue.'); });
+  window.EJS_pathtodata = source.path;
+  var script = document.createElement('script');
+  script.src = source.path + 'loader.js';
+  if (source.integrity) { script.integrity = source.integrity; script.crossOrigin = 'anonymous'; }
+  script.onerror = function () { events.onError('Chargeur absent ou contrôle d’intégrité refusé.'); };
+  document.body.appendChild(script);
 })();
 </script>
 </body>

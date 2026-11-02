@@ -1,5 +1,7 @@
 # Analyse et corrections — Portables 0.2.0
 
+**Document historique.** Pour la version corrigée après audits, voir `REPONSE-AUX-AUDITS-0.2.1.md` et `ETAT.md`. Les affirmations de ce document décrivent la 0.2.0, pas la validation actuelle.
+
 ## Conclusion
 
 La 0.1 contenait une base structurée et 56 tests de logique réussis. Elle ne constituait pas une preuve de compatibilité avec tous les jeux. La sélection automatique des cheats reposait sur le nom de fichier, pas sur l'identité réelle du jeu. Cette différence est cruciale pour les régions, révisions, traductions et hacks.

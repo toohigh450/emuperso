@@ -54,9 +54,14 @@ export function cheatIdentity(text) {
 
 /** Le nom est une suggestion. Seule une empreinte déclarée peut identifier les octets. */
 export function classifyCheatFiles(romName, hex, files) {
-  const identified = files.filter((f) => f.romSha256 === hex);
+  const identified = files.filter((f) => f.romSha256 === hex && !f.reviewRequired);
   const candidates = files.filter((f) => !f.identityDeclared && !f.romSha256);
   return { identified, ...matchCheatFiles(romName, candidates) };
+}
+
+export function linkedCheatValid(link, file, hex) {
+  return !!(link && file && link.romSha256 === hex && link.contentSha256 &&
+    link.contentSha256 === file.contentSha256 && (!file.identityDeclared || file.romSha256 === hex));
 }
 
 const DEVICE = '(?:pro\\s+)?(?:code\\s*breaker|game\\s*shark|action\\s*replay|game\\s*genie|xploder|datel)[^)]*';

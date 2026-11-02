@@ -1,6 +1,6 @@
 # À valider par Karl dans Chrome sur Windows
 
-L'application a été testée dans Chromium avec un moteur simulé et des données synthétiques ; 67 tests de logique passent. Les essais ci-dessous avec le vrai moteur, tes jeux et Windows restent à faire. Note pour chaque ligne : réussi / échoué / non testé.
+L'application a été testée dans Chromium avec un moteur simulé et des données synthétiques ; 74 tests de logique passent, et le vrai frontend 4.2.3 a été préparé sans démarrer de cœur ni de jeu. Les essais ci-dessous avec le vrai moteur, tes jeux et Windows restent à faire. Note pour chaque ligne : réussi / échoué / non testé.
 
 Avant toute mise à jour, exporte tes sauvegardes depuis l'ancien dossier. Garde-le jusqu'à validation de leur restauration.
 
@@ -50,3 +50,14 @@ Avant toute mise à jour, exporte tes sauvegardes depuis l'ancien dossier. Garde
 - [ ] Fichier .cht avec rom_sha256 : association automatique seulement pour l’empreinte correspondante.
 - [ ] Jeu déjà ouvert en 0.1 : sauvegarde réelle retrouvée avec le même navigateur et la même adresse.
 - [ ] Ancienne ROM DS > 256 Mio : exporter depuis 0.1 puis restaurer dans 0.2 (nouvelle empreinte).
+
+## Audits : scénarios terrain prioritaires 0.2.1 alpha
+- [ ] Codes fantômes : activer un code dans A, ouvrir B de la même console, puis rouvrir A. Comparer le gestionnaire et les effets réels ; B ne doit pas récupérer les codes de A.
+- [ ] Réimporter un .cht changé au même chemin : avertissement, codes bloqués, puis nouvelle confirmation et réouverture.
+- [ ] Changer A → B en coupant Internet : distinguer erreur avant remplacement (A reste actif) et panne du nouveau moteur après fermeture de A.
+- [ ] Avec des exports de sécurité : miroir créé par une vraie sauvegarde en jeu, fermeture, réouverture, export puis restauration pour chaque cœur.
+- [ ] Gros jeux DS autorisés 256/512 Mio : estimation, éventuel refus, temps de calcul et mémoire. Ne pas désactiver la protection pour passer le test ; noter un refus comme tel.
+- [ ] BIOS DS mal formé : noms, tailles, doublons, CRC ; ancien BIOS stocké invalide refusé avant melonDS. Vrai BIOS autorisé : démarrage à valider.
+- [ ] Windows 10/11 et Chrome/Edge : port 8765 libre puis occupé, alias Python Microsoft Store, fenêtre serveur fermée, Ctrl+C du secours. Vérifier le port réel avant de conclure à une perte de sauvegarde.
+- [ ] Avec un accès autorisé : aperçu Vercel `/portables/`, version « 0.2.1 alpha », modules chargés puis jeu réellement démarré. Une page de connexion Vercel n'est pas un échec du moteur ; ne pas désactiver la protection.
+- [ ] Moteur local complet 4.2.3 : empreintes, licences, puis essai sans Internet. Un loader seul n'est pas une installation hors ligne complète.

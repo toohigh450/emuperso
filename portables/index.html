@@ -9,16 +9,17 @@
 </head>
 <body data-state="idle">
 <header class="top">
-  <h1>Portables</h1>
+  <h1>Portables <small>0.2.1 alpha</small></h1>
   <p>Game Boy, Game Boy Color, Game Boy Advance et DS dans Chrome. Un seul jeu à la fois.</p>
 </header>
 
+<p class="alpha-note">Version alpha : exporte tes sauvegardes avant les essais. Jeux réels et lanceur Windows restent à valider.</p>
 <main class="layout">
   <section class="rail" aria-label="Jeu et réglages">
     <div class="slot" id="slot">
       <div class="slot-empty" id="slotEmpty">
         <p class="slot-title">La fente est vide</p>
-        <p class="muted">Choisis un fichier .gb, .gbc, .gba, .nds ou un .zip qui en contient un. Rien n'est envoyé sur Internet.</p>
+        <p class="muted">Choisis un fichier .gb, .gbc, .gba, .nds ou un .zip qui en contient un. Tes fichiers sont lus localement. Le moteur tiers chargé depuis Internet peut y accéder.</p>
         <button class="btn primary" id="pickGame" type="button">Choisir un jeu</button>
         <p class="muted small-text">Tu peux aussi glisser le fichier sur la page.</p>
       </div>

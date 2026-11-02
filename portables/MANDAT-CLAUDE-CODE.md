@@ -1,20 +1,25 @@
-# Mandat pour Claude Code : intégrer « Portables » (GB / GBC / GBA / DS)
+# Mandat Portables — suivi après audits
 
-Contexte : projet indépendant, même principe que les émulateurs N64 et PS1, construit dans une conversation mobile.
-Dossier fourni : `emuperso-portables` (ZIP livré avec SHA-256).
+Le mandat initial de la 0.1 a été exécuté puis étendu par les demandes de Karl : analyser/améliorer, créer `emulateur-portable`, y déposer le travail, puis traiter les audits GPT et Méo.
 
-## À faire
-1. Vérifier le SHA-256 du ZIP, puis extraire une copie de travail (garder l'original intact).
-2. Lancer `npm test` : 56 tests attendus, tous réussis. Rapporter le résultat réel.
-3. Créer une branche dédiée, par exemple `emulateur-portables` (nom à confirmer par Karl), qui ajoute seulement un
-   dossier `portables/` avec le contenu du projet. Ouvrir une pull request, **sans la fusionner**.
-4. Relire le code (surtout `js/app.mjs`, `player.html`, `serveur.ps1`) et signaler tout bogue probable, sans rien déclarer testé.
+## Références
 
-## Interdits
-- Ne pas toucher à `main`, à la branche N64 (`emulateur-reel`), à la branche PS1 (`emulateur-ps1`) ni à Conker Web.
-- Aucune ROM, aucun BIOS, aucune base de codes dans le dépôt. Aucune publication, aucun déploiement, aucune fusion sans le GO explicite de Karl.
-- Ne jamais déclarer un test réel réussi s'il n'a pas été exécuté. Décision d'architecture ou risque de perte de données : demander à Karl.
+- Dépôt : `toohigh450/emuperso` ; branche réelle : **`emulateur-portable`** (singulier).
+- PR #1 : brouillon, aucune fusion autorisée.
+- Version fournie 0.1 : 56 tests de logique ; version auditée 0.2.0 : 67 ; correctif actuel 0.2.1-alpha.1 : **74 tests réussis**.
+- Les parcours Chromium, simulés ou limités au vrai frontend, ne prouvent pas l'exécution de jeux réels.
 
-## Livrables
-Commit exact, SHA-256 du ZIP, journal des modifications, tests exécutés (réussis/échoués), problèmes ouverts,
-points à vérifier par Karl dans Chrome sur Windows (voir `TESTS-KARL.md`).
+## Périmètre des corrections
+
+Application, outils, tests, audits et preuves sous `portables/`. Exception nécessaire pour l'automatisation demandée par l'audit : `.github/workflows/portables-tests.yml`. Aucun fichier existant N64, PS1 ou Conker n'est modifié. Pas de ROM commerciale, de BIOS matériel ni de base de codes ajouté.
+
+## Règles de livraison
+
+- Original 0.1 et livraisons précédentes conservés ; rapports reçus archivés sans modification.
+- Résultats exécutés séparés des vérifications statiques et des essais terrain encore ouverts.
+- Pas de fusion, de version stable ni de promotion en production sans décision de Karl.
+- Le dépôt est relié à Vercel : une mise à jour de branche peut déclencher un aperçu automatiquement. Aucun déploiement manuel n'est lancé ici.
+
+## À suivre
+
+Voir `ETAT.md`, `REPONSE-AUX-AUDITS-0.2.1.md` et `TESTS-KARL.md`. Les essais réels et l'accès protégé à l'aperçu restent nécessaires avant d'annoncer une version fiable.

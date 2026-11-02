@@ -1,0 +1,28 @@
+{
+  "version": "4.2.3",
+  "sourceCommit": "e150dc0491ae747028919fb82d6598954976ede6",
+  "dataUrl": "https://cdn.emulatorjs.org/4.2.3/data/",
+  "releaseArchive": {
+    "url": "https://github.com/EmulatorJS/EmulatorJS/releases/download/v4.2.3/4.2.3.7z",
+    "sha256": "07d451bc06fa3ad04ab30d9b94eb63ac34ad0babee52d60357b002bde8f3850b",
+    "verification": "Expected digest reported by GitHub release metadata; archive not downloaded in this audit."
+  },
+  "files": [
+    {
+      "path": "loader.js",
+      "bytes": 7594,
+      "sha256": "69e0903bf1e2f62ced78895e7e511fa26e11316f7eb734925c35e919ba1287b2"
+    },
+    {
+      "path": "emulator.min.js",
+      "bytes": 426343,
+      "sha256": "6aec3fd7bb2721255801b0a6af02e47e78b05e28a1822b1f213aacbd348abaee"
+    },
+    {
+      "path": "emulator.min.css",
+      "bytes": 25630,
+      "sha256": "16406c60b2dc3b04ae9b115e308613e6f567a0cc7068e21d9d0c1e5030fb395e"
+    }
+  ],
+  "coverage": "Frontend files only. Core binaries, fonts, translations, shaders and other subresources are not covered by this manifest."
+}
