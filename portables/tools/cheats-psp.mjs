@@ -91,5 +91,9 @@ for (const path of games) {
 
 const summary = { source: `https://github.com/${SOURCE}`, sourceCommit: COMMIT, games: games.length, files: files.length,
   codes: files.reduce((n, f) => n + f.codes, 0), missing: missing.length, unreadable: unreadable.length };
-writeFileSync(join(repo, 'cheats-portables', 'INDEX-PSP.json'), `${JSON.stringify({ summary, files, missing, unreadable }, null, 2)}\n`);
+writeFileSync(join(repo, 'cheats-portables', 'INDEX-PSP.json'), `${JSON.stringify({ summary, files }, null, 2)}\n`);
+// Jeux sans source et illisibles : liste de la collection, gardée hors du dépôt (seuls les totaux sont publiés).
+const privateDir = join(process.env.LOCALAPPDATA || '.', 'emuperso', 'cheats-psp');
+mkdirSync(privateDir, { recursive: true });
+writeFileSync(join(privateDir, 'sans-source.json'), `${JSON.stringify({ missing, unreadable }, null, 2)}\n`);
 console.log(`${summary.games} jeux PSP lus, ${summary.files} fichiers .cht (${summary.codes} codes), ${summary.missing} sans source, ${summary.unreadable} illisibles (téléchargement inachevé ?).`);
