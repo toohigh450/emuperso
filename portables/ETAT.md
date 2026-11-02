@@ -1,3 +1,18 @@
+# Consoles Nintendo 0.3.0 alpha.1 — NES et SNES (branche feature/nes-snes-unified)
+
+## Fait
+
+- NES (FCEUmm) et SNES (Snes9x) dans le même lanceur que GB/GBC/GBA/DS, accessibles depuis l'accueil commun à 8 consoles.
+- Démos libres hébergées avec le site : Snake (NES, zlib), Neon Breaker et Shmup (SNES, MIT), démos Super FX / SA-1 / DSP-1.
+- Catalogue de dossiers (noms seulement, liste virtuelle), filtres console / région / français / hacks / doublons, favoris.
+- Codes : saisie, validation NES/SNES, activation et suppression par jeu ; codes .cht associés jamais actifs par défaut.
+- Sauvegardes : export et import immédiats, 4 états par jeu avec copie du précédent, écriture immédiate avant changement de jeu.
+- Tests réels dans Chrome Windows : voir TESTS-NES-SNES.md.
+
+## Encore à vérifier
+
+- Vrai téléphone Android (tactile, son, arrière-plan, mémoire), manettes physiques, jeux PAL, cartes NES autres que NROM.
+
 # Portables 0.2.1-alpha.2 — 1er novembre 2026 (Toronto)
 
 ## Fait

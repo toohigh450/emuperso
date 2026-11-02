@@ -4,7 +4,8 @@ Branche : `feature/nes-snes-unified`. Aucun changement sur `main` tant que la PR
 
 ## Une seule page d'accueil
 
-`index.html` (racine) est l'accueil commun. Il mène à :
+L'accueil commun est `portail/index.html`, publié comme page d'accueil du site (`dist/index.html`) par
+`tools/build-portail.mjs`. Il mène à :
 
 | Console | Application | Moteur |
 |---|---|---|
@@ -17,8 +18,11 @@ Branche : `feature/nes-snes-unified`. Aucun changement sur `main` tant que la PR
 | Nintendo 64 | `real-n64/` | EmulatorJS 4.2.3 + Mupen64Plus-Next (moteur verrouillé) |
 | PlayStation | `ps1-web/` | EmulatorJS 4.2.3 + PCSX ReARMed (moteur verrouillé) |
 
-L'ancien contenu de l'accueil, le laboratoire N64 Phase 1A, reste intact à `N64-Web-Lab-Phase1A.html`
-(l'ancien `index.html` en était une copie octet pour octet).
+Le `index.html` du dépôt **n'est pas modifié** : c'est une copie octet pour octet du laboratoire N64 Phase 1A,
+protégée par `real-n64/tests/test_real_tools.py` (`test_originals_preserved`, avec `README.md`). Sur le site
+construit, l'accueil devient le portail et le laboratoire reste publié à `N64-Web-Lab-Phase1A.html`
+(lien en pied de page). **C'est un changement visible en production après fusion : il demande l'accord
+de Karl.**
 
 NES et SNES rejoignent l'application `portables/` déjà utilisée pour GB/GBC/GBA/DS : même fente, mêmes
 sauvegardes, même catalogue, même panneau de codes. Aucun second portail.
@@ -40,7 +44,18 @@ sauvegarde, sauf les homebrews libres de `portables/demos/` (licences jointes). 
 En-têtes : `/real-n64/*` et `/ps1-web/*` gardent leurs en-têtes d'isolation (COOP/COEP/CORP, `no-store`)
 identiques à leurs `vercel.json` d'origine.
 
-Essai local : `node tools/build-portail.mjs` (après les étapes 1 et 2), puis `node tools/serve-portail.mjs`.
+Essai local (Python 3.10+, Node 22+) :
+
+```
+python ps1-web/tools/fetch_runtime.py && python ps1-web/tools/build-vercel-alpha.py
+python real-n64/tools/fetch_runtime.py && python real-n64/tools/fetch_cheats.py && python real-n64/tools/build-vercel-alpha.py
+node tools/build-portail.mjs
+node tools/serve-portail.mjs 8080
+```
+
+Puis http://127.0.0.1:8080/. Tests réels (Chrome requis, Playwright installé à part) :
+`node tools/test-portail.mjs`, `node tools/test-mobile.mjs`, et dans `portables/` : `npm test`,
+`npm run test:browser`, `npm run test:real`.
 
 ## Sauvegardes sans conflit sur une même origine
 

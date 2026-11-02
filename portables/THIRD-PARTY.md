@@ -23,3 +23,20 @@ Aucune licence générale du code original n'est choisie à la place de Karl. Un
 ## Outils de test et CI
 
 L'application n'a aucune dépendance npm. Le lockfile fixe cette configuration ; Playwright et Chromium sont utilisés séparément pour les vérifications locales. Le workflow exécute uniquement la syntaxe et les tests de logique ; il ne valide pas l'émulation. Les actions checkout et setup-node sont référencées par commits résolus depuis leurs tags v4 au moment de la correction.
+
+## NES et SNES (0.3.0)
+
+### Cœurs chargés depuis le CDN EmulatorJS 4.2.3 (non redistribués par ce dépôt)
+
+- **FCEUmm** (NES) : `cores/fceumm-wasm.data`, construit le 2025-06-14 (rapport `cores/reports/fceumm.json`). Sources : https://github.com/libretro/libretro-fceumm. Licence : **GPL-2.0**.
+- **Snes9x** (SNES) : `cores/snes9x-wasm.data`, construit le 2025-06-14 (rapport `cores/reports/snes9x.json`). Sources : https://github.com/libretro/snes9x. Licence : **licence Snes9x, usage non commercial** (ce n'est pas une licence libre au sens OSI). Toute exploitation commerciale du site est incompatible avec ce cœur.
+- Comportement vérifié dans les sources des cœurs (`retro_cheat_set`) : FCEUmm, mGBA et DeSmuME 2015 ignorent l'état « désactivé » d'un code. Le lanceur n'envoie donc au moteur que les codes cochés, après remise à zéro (voir COMPATIBILITE-NES-SNES.md).
+
+### Homebrews de démonstration hébergés dans `demos/`
+
+- openNES Snake 1.0.9 — Sebastian Dine — licence zlib — texte complet : `demos/LICENSE-openNES-Snake-zlib.txt`.
+- Exemples OpenSNES v0.54.0 (breakout, shmup, sa1_starfield, dsp1_ground) — OpenSNES Contributors, Alekmaul (PVSnesLib) — licence MIT — texte complet : `demos/LICENSE-opensnes-MIT.txt`.
+
+### ROM d'essai
+
+`tests/test-roms.mjs` fabrique deux petites ROM (NES et SNES) écrites pour ce projet : fond de couleur unie et compteur de démarrages. Elles servent uniquement aux tests et ne sont pas publiées.

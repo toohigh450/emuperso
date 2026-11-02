@@ -10,7 +10,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const OUT = join(ROOT, 'dist');
 // Dossiers jamais publiés tels quels : dépôt, dépendances, sorties, sources remplacées par leur dist.
-const SKIP_DIRS = new Set(['.git', '.github', 'node_modules', 'dist', '.vercel', 'ps1-web', 'real-n64', 'cache', 'vendor', '__pycache__', '.python']);
+const SKIP_DIRS = new Set(['.git', '.github', 'node_modules', 'dist', '.vercel', 'ps1-web', 'real-n64', 'portail', 'cache', 'vendor', '__pycache__', '.python']);
 // Fichiers personnels possibles : refusés même s'ils traînent dans le dossier de construction.
 const PRIVATE = /\.(iso|bin|img|chd|pbp|cue|zip|rar|7z|sav|srm|state|mcr|mcd|z64|n64|v64|smc|gba|gbc|gb|nds)$/i;
 // Seules exceptions : les homebrews libres publiés exprès (licences dans portables/demos).
@@ -52,6 +52,10 @@ for (const app of ['ps1-web', 'real-n64']) {
   if (!existsSync(join(built, 'index.html'))) throw new Error(`${app}/dist absent : lancer d'abord sa construction (voir vercel.json).`);
   for (const rel of walk(built)) add(join(app, rel), join(built, rel));
 }
+// Accueil du site : portail/index.html. Le index.html du dépôt (copie protégée du laboratoire N64,
+// vérifiée par real-n64/tests/test_real_tools.py) n'est jamais modifié ; le laboratoire reste publié
+// sous son nom d'origine, N64-Web-Lab-Phase1A.html.
+add('index.html', join(ROOT, 'portail', 'index.html'));
 writeFileSync(join(OUT, 'PORTAIL-MANIFEST.json'), JSON.stringify({
   projet: 'EMUPERSO — portail unique 8 consoles',
   fichiers: Object.keys(manifest).length,

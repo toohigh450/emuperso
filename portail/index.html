@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="EMUPERSO : un seul portail pour jouer dans Chrome à la NES, la Super Nintendo, la Game Boy, la Game Boy Color, la Game Boy Advance, la DS, la Nintendo 64 et la PlayStation, sur ordinateur et téléphone.">
+<title>EMUPERSO — 8 consoles</title>
+<style>
+:root {
+  --bg: #0b111a; --panel: #131e2c; --panel-2: #172536; --line: #33445a;
+  --text: #edf4fc; --muted: #aabbcf; --mint: #8ce8c4; --amber: #f8d18a; --rose: #f2a3c0;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, 'Segoe UI', sans-serif; min-height: 100vh; }
+a { color: var(--mint); }
+a:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
+header { padding: 34px 0 14px; }
+.brand { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+.brand b { font-size: clamp(30px, 6vw, 44px); letter-spacing: -1px; color: var(--mint); font-weight: 900; }
+.brand span { color: var(--muted); font-size: 0.95rem; letter-spacing: 1.5px; text-transform: uppercase; }
+header p { max-width: 62ch; color: var(--muted); margin: 10px 0 0; }
+h2 { font-size: 1.05rem; letter-spacing: 0.5px; margin: 34px 0 12px; color: var(--amber); text-transform: uppercase; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
+.card { position: relative; display: flex; flex-direction: column; gap: 6px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px 18px 16px; text-decoration: none; color: var(--text); transition: border-color .15s, background .15s; min-height: 170px; }
+.card:hover { border-color: var(--mint); background: var(--panel-2); }
+.card .tag { font-size: 0.72rem; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); }
+.card h3 { margin: 0; font-size: 1.3rem; line-height: 1.2; }
+.card p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+.card .go { margin-top: auto; padding-top: 10px; color: var(--mint); font-weight: 700; font-size: 0.95rem; }
+.card .badge { position: absolute; top: 14px; right: 14px; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: #2a3f36; color: var(--mint); border: 1px solid #416956; }
+.card .badge.new { background: #47283a; color: var(--rose); border-color: #7a4560; }
+.notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.note { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+.note h3 { margin: 0 0 6px; font-size: 1rem; }
+.note p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+footer { margin: 40px 0 30px; color: var(--muted); font-size: 0.85rem; }
+footer a { margin-right: 14px; }
+@media (max-width: 520px) { .card { min-height: 0; } .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><b>EMUPERSO</b><span>Portail rétro · 8 consoles</span></div>
+    <p>Joue dans Chrome sur ordinateur ou téléphone, sans application à installer et sans compte. Chaque console propose une démo libre pour essayer tout de suite ; tes propres jeux restent sur ton appareil.</p>
+  </header>
+
+  <main>
+    <h2>Choisis une console</h2>
+    <nav class="grid" aria-label="Consoles">
+      <a class="card" href="portables/?console=nes">
+        <span class="badge new">Nouveau</span>
+        <span class="tag">Nintendo · 1983</span>
+        <h3>NES / Famicom</h3>
+        <p>Moteur FCEUmm. Démo libre : Snake. Codes Game Genie, sauvegardes et états.</p>
+        <span class="go">Jouer →</span>
+      </a>
+      <a class="card" href="portables/?console=snes">
+        <span class="badge new">Nouveau</span>
+        <span class="tag">Nintendo · 1990</span>
+        <h3>Super Nintendo / Super Famicom</h3>
+        <p>Moteur Snes9x. Démos libres : Neon Breaker, Shmup, puces SA-1 et DSP-1. Game Genie et Action Replay.</p>
+        <span class="go">Jouer →</span>
+      </a>
+      <a class="card" href="portables/?console=gb">
+        <span class="tag">Nintendo · 1989</span>
+        <h3>Game Boy</h3>
+        <p>Moteur Gambatte. Démo libre : Libbet.</p>
+        <span class="go">Jouer →</span>
+      </a>
+      <a class="card" href="portables/?console=gbc">
+        <span class="tag">Nintendo · 1998</span>
+        <h3>Game Boy Color</h3>
+        <p>Moteur Gambatte. Démo libre : Geometrix.</p>
+        <span class="go">Jouer →</span>
+      </a>
+      <a class="card" href="portables/?console=gba">
+        <span class="tag">Nintendo · 2001</span>
+        <h3>Game Boy Advance</h3>
+        <p>Moteur mGBA. Démo libre : @rkanoid.</p>
+        <span class="go">Jouer →</span>
+      </a>
+      <a class="card" href="portables/?console=nds">
+        <span class="tag">Nintendo · 2004</span>
+        <h3>Nintendo DS</h3>
+        <p>Moteur DeSmuME (ou melonDS avec ton BIOS). Démo libre : Pong.</p>
+        <span class="go">Jouer →</span>
+      </a>
+      <a class="card" href="real-n64/">
+        <span class="badge">Alpha</span>
+        <span class="tag">Nintendo · 1996</span>
+        <h3>Nintendo 64</h3>
+        <p>Moteur Mupen64Plus-Next. Démo libre EMUPERSO. Jeux réels en cours de validation.</p>
+        <span class="go">Jouer →</span>
+      </a>
+      <a class="card" href="ps1-web/">
+        <span class="badge">Alpha</span>
+        <span class="tag">Sony · 1994</span>
+        <h3>PlayStation</h3>
+        <p>Moteur PCSX ReARMed. Démo libre EMUPERSO. Jeux réels en cours de validation.</p>
+        <span class="go">Jouer →</span>
+      </a>
+    </nav>
+
+    <h2>Bon à savoir</h2>
+    <section class="notes">
+      <div class="note">
+        <h3>Tes jeux restent chez toi</h3>
+        <p>Le site ne peut pas lire ton disque : tu choisis toi-même un fichier ou un dossier. Rien n’est envoyé à un serveur ; le jeu tourne dans ton navigateur. Aucun jeu commercial ni BIOS n’est fourni.</p>
+      </div>
+      <div class="note">
+        <h3>Sauvegardes séparées</h3>
+        <p>Chaque jeu a son propre espace, identifié par l’empreinte de son fichier. Le navigateur peut effacer ces données (nettoyage, manque de place) : exporte régulièrement tes sauvegardes.</p>
+      </div>
+      <div class="note">
+        <h3>Téléphone Android</h3>
+        <p>Les boutons tactiles apparaissent sous l’image. Le son démarre après un premier toucher. Une manette Bluetooth reconnue par Chrome fonctionne aussi.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="N64-Web-Lab-Phase1A.html">Laboratoire N64 (fondation Phase 1A)</a>
+    <a href="portables/DEMOS-LIBRES.md">Démos libres et licences</a>
+    <a href="docs/PORTAIL-8-CONSOLES.md">Architecture du portail</a>
+  </footer>
+</div>
+</body>
+</html>
