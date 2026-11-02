@@ -162,7 +162,14 @@
     }
     events.onReady();
   };
+  // Options du cœur imposées au démarrage (performance PSP), même si le moteur en avait mémorisé d'autres.
+  function applyCoreOptions() {
+    if (!boot.coreOptions) return;
+    var gm = manager();
+    Object.keys(boot.coreOptions).forEach(function (k) { try { gm.setVariable(k, boot.coreOptions[k]); } catch (err) { console.error(err); } });
+  }
   window.EJS_onGameStart = function () {
+    try { applyCoreOptions(); } catch (err) { console.error(err); }
     // PSP : les codes de départ sont déjà dans le fichier du jeu ; ici ppsspp ne connaît pas encore
     // l'identifiant du disque et les écrirait ailleurs.
     if (!boot.pspCheats) { try { applyCodes(); } catch (err) { console.error(err); } }

@@ -263,3 +263,20 @@ export function pspCheatFile(discId, codes) {
   });
   return { path: `${PSP_CHEAT_DIR}/${id}.ini`, text: `${lines.join('\n')}\n` };
 }
+
+// Réglages de performance PSP (cœur ppsspp). Qualité = réglages d'origine du cœur ; les deux autres
+// sautent des images quand le jeu ralentit, et Fluidité allège aussi le rendu (petits défauts graphiques
+// possibles). Appliqués au lancement du jeu (options du cœur).
+export const PSP_PERFORMANCE = Object.freeze({
+  qualite: Object.freeze({ id: 'qualite', label: 'Qualité', description: 'Toutes les images, rendu complet (réglage d’origine).' }),
+  equilibre: Object.freeze({ id: 'equilibre', label: 'Équilibré', description: 'Saute jusqu’à 2 images seulement quand le jeu ralentit.' }),
+  fluidite: Object.freeze({ id: 'fluidite', label: 'Fluidité', description: 'Saute jusqu’à 3 images quand le jeu ralentit et allège le travail de la carte graphique : petits défauts graphiques possibles.' }),
+});
+export function pspPerformanceOptions(preset) {
+  const base = { ppsspp_frameskip: 'disabled', ppsspp_frameskiptype: 'Number of frames', ppsspp_auto_frameskip: 'disabled',
+    ppsspp_skip_buffer_effects: 'disabled', ppsspp_lazy_texture_caching: 'disabled', ppsspp_skip_gpu_readbacks: 'disabled' };
+  if (preset === 'equilibre') return { ...base, ppsspp_frameskip: '2', ppsspp_auto_frameskip: 'enabled' };
+  // Sans « skip buffer effects » : avec lui, Bust-A-Move sautait des images en continu (15 affichées/s au lieu de 60).
+  if (preset === 'fluidite') return { ...base, ppsspp_frameskip: '3', ppsspp_auto_frameskip: 'enabled', ppsspp_lazy_texture_caching: 'enabled', ppsspp_skip_gpu_readbacks: 'enabled' };
+  return base;
+}

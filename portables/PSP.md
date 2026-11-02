@@ -34,6 +34,14 @@ d'intégrité possible : une mise à jour peut modifier son comportement. Foncti
 fichier de codes écrit avant le démarrage, codes changés en partie, carte mémoire (écriture, lecture, persistance),
 enregistrement d'état (40 Mio), image et 57-60 images/s.
 
+## Performance (onglet Moteur)
+
+Trois réglages, par console ou pour un seul jeu, appliqués au lancement (options du cœur imposées au démarrage) :
+Qualité (réglage d'origine), Équilibré (saut automatique jusqu'à 2 images), Fluidité (jusqu'à 3 images, cache de
+textures paresseux, sans relecture GPU). Mesure sur Bust-A-Move, qui ne ralentit pas (images affichées par seconde) :
+60 / 48 / 52 — les réglages ne sautent des images que s'il le faut. Une première version de Fluidité avec
+« skip buffer effects » sautait en continu (15 images/s) : retirée. Effet sur Gran Turismo en course : à essayer par Karl.
+
 ## Formats
 
 | Format | Résultat |
