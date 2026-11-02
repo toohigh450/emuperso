@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Moteur</title>
+<link rel="stylesheet" href="player-layout.css">
 <style>
   html, body { margin: 0; height: 100%; background: #1b1940; overflow: hidden; }
   #game { width: 100%; height: 100%; }
@@ -18,6 +19,10 @@
   if (!entry) { document.body.textContent = 'Session introuvable.'; return; }
   var boot = entry.boot, events = entry.events;
   var source = entry.source;
+  var layout = import('./js/player-layout.mjs');
+  function updateLayout() {
+    layout.then(function (m) { m.installPlayerLayout(window.EJS_emulator); }).catch(function (err) { events.onError('Disposition des commandes indisponible : ' + err.message); });
+  }
   var phase = 'préparation du moteur';
   function starting() {
     if (phase === 'exécution du jeu') return;
@@ -119,10 +124,12 @@
       emulator.on('exit', function () { events.onExit(); });
     }
     events.onReady();
+    updateLayout();
     if (window.EJS_startOnLoaded) starting();
   };
   window.EJS_onGameStart = function () {
     phase = 'exécution du jeu';
+    updateLayout();
     try { applyCodes(); } catch (err) { console.error(err); }
     events.onStart();
   };

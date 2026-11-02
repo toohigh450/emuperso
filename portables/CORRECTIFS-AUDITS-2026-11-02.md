@@ -29,7 +29,7 @@ Validation nouvelle sur Windows, Node 24.22.1 et Chrome installé, profils de te
 
 | Vérification | Résultat |
 |---|---|
-| Logique `npm test` | 105/105 |
+| Logique `npm test` | 113/113 |
 | Syntaxe `npm run check` | Réussie |
 | `npm run test:browser` | 3 groupes existants et 3 groupes de régression réussis |
 | Quota à l'import | Aucun remplacement ; ancienne sauvegarde `[1,2,3]` conservée ; export possible |
@@ -62,3 +62,15 @@ npm run test:nds
 
 `tests/real-nds.mjs` accepte aussi le chemin d'une ROM locale en argument et `DS_CORES` pour sélectionner
 les cœurs séparés par des virgules. Les démos restent épinglées et leurs empreintes sont vérifiées.
+
+## Plein écran et migration — 0.3.0-alpha.3
+
+La migration des sauvegardes de Claude (9f49847) est intégrée. Son essai réel repasse 16/16 avec les correctifs réunis. NES/SNES : 43/43.
+
+Start, Select, Fast et Slow disposent maintenant d’une bande opaque séparée de l’image native. Les cibles tactiles mesurent au moins 44 pixels et restent accessibles avant, pendant et après le plein écran. La barre native est déplacée au-dessus de cette bande pour ne pas intercepter les pressions. La disposition se désactive lorsque la manette tactile est masquée.
+
+`npm run test:fullscreen` vérifie le vrai moteur GBA, la vraie API Fullscreen et les pressions/relâchements des quatre commandes sur trois profils Android simulés : paysage 844×390, portrait 390×844 et tablette 1024×768. Essais avec la démo libre et une ROM GBA locale. Aucun téléphone physique revendiqué.
+
+### Limite N64 encore ouverte
+
+Super Mario 64 (Europe) démarre et progresse, mais restaurer certains états avec le cœur Mupen64Plus-Next verrouillé provoque une erreur WebAssembly dans le chemin audio. Le chargement reste refusé et la session précédente est conservée. Ce défaut ne fait pas partie des corrections validées de cette version. Les contrôles d’identité et de mémoire ne sont pas affaiblis et aucun état sauvegardé n’est modifié.
