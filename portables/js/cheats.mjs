@@ -7,6 +7,9 @@ export const CHEAT_FOLDER_ALIASES = {
   gbc: 'game boy color',
   gba: 'game boy advance',
   nds: 'nintendo ds',
+  // Dossiers de la base libretro : « Nintendo - Nintendo Entertainment System », « Nintendo - Super Nintendo… ».
+  nes: 'nintendo entertainment system',
+  snes: 'super nintendo entertainment system',
 };
 
 /** Déduit la console d'après les dossiers du chemin (ex. « Nintendo - Game Boy Advance/… »). */

@@ -9,3 +9,4 @@ import './session.test.mjs';
 import './store.test.mjs';
 import './systems.test.mjs';
 import './zip.test.mjs';
+import './nes-snes.test.mjs';
