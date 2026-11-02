@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 import { prepareLocalRom, prepareRomBytes } from './rom-file.mjs';
 import { readZipFile, prepareZipRom } from './zip-rom.mjs';
+import { read7zFile, prepare7zRom } from './rom-7z.mjs';
 import { SaveStore, makeStateEnvelope, verifyEnvelope, MAX_SAVE_BYTES, sha256 } from './save-store.mjs';
 import { SessionController } from './session-controller.mjs';
 import { readLegacyBattery } from './legacy-battery.mjs';
@@ -194,7 +195,18 @@ $('rom-file').onchange = async eventObject => {
   selected = null; reading = true; identity(null); controls(); status('Lecture du fichier local…');
   try {
     let prepared;
-    if (/\.zip$/i.test(file.name)) {
+    if (/\.7z$/i.test(file.name)) {
+      // Archive 7z : même choix de version que pour un ZIP, puis seule la ROM choisie est gardée.
+      status('Lecture du contenu de l’archive 7z…');
+      const { archive, entries } = await read7zFile(file, { signal: controller.signal }); if (ticket !== generation) return;
+      event('rom.7z.inspected', { name: file.name, rom_count: entries.length });
+      if (entries.length > 1) {
+        zipPending = { archive, ticket, controller, entries, kind: '7z' };
+        for (const entry of entries) { const option = document.createElement('option'); option.value = String(entry.id); option.textContent = `${entry.name} — ${entry.size.toLocaleString('fr-FR')} octets`; $('zip-entry').appendChild(option); }
+        $('zip-choice-panel').hidden = false; status('Choisissez la ROM à préparer dans cette archive 7z.'); return;
+      }
+      prepared = await prepare7zRom(archive, entries[0].id, { signal: controller.signal }, entries);
+    } else if (/\.zip$/i.test(file.name)) {
       const archive = await readZipFile(file, { signal: controller.signal }); if (ticket !== generation) return;
       event('rom.zip.inspected', { ...archive.archive, rom_count: archive.entries.length });
       if (archive.entries.length > 1) {
@@ -211,7 +223,7 @@ $('rom-file').onchange = async eventObject => {
 $('zip-use').onclick = async () => {
   if (busy || reading || !zipPending) return;
   const pending = zipPending, id = Number($('zip-entry').value); clearZipChoice(); reading = true; controls();
-  try { const prepared = await prepareZipRom(pending.archive, id, { signal: pending.controller.signal }); if (pending.ticket === generation) acceptPrepared(prepared); }
+  try { const prepared = pending.kind === '7z' ? await prepare7zRom(pending.archive, id, { signal: pending.controller.signal }, pending.entries) : await prepareZipRom(pending.archive, id, { signal: pending.controller.signal }); if (pending.ticket === generation) acceptPrepared(prepared); }
   catch (error) { if (pending.ticket === generation) { event('rom.local.rejected', { code: error.code, message: error.message }); status(error.message, true); } }
   finally { if (pending.ticket === generation) { reading = false; controls(); } }
 };

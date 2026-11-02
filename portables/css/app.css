@@ -222,3 +222,18 @@ body.dragging .drop-hint { display: grid; }
 .keys th, .keys td { border-bottom: 1px solid var(--line); padding: 6px 4px; text-align: left; }
 /* Pas de défilement ni de zoom du navigateur pendant les gestes sur l'écran de jeu. */
 body:not([data-state=idle]) .screen { touch-action: none; overscroll-behavior: contain; }
+
+/* Choix de la version dans une archive (js/version-picker.mjs) : utilisable au doigt comme au clavier. */
+.version-picker { width: min(640px, calc(100vw - 24px)); max-height: calc(100svh - 24px); padding: 0; border: 1px solid var(--line, #c9cbe0); border-radius: 14px; display: flex; flex-direction: column; overflow: hidden; }
+.version-picker:not([open]) { display: none; }
+.version-picker::backdrop { background: rgba(10, 10, 30, 0.6); }
+.version-picker .vp-head { padding: 14px 16px 6px; }
+.version-picker h2 { margin: 0 0 4px; font-size: 1.15rem; }
+.version-picker .vp-search { margin: 0 16px 8px; padding: 10px 12px; font: inherit; border-radius: 8px; border: 1px solid #b9bbd3; }
+.version-picker .vp-list { list-style: none; margin: 0; padding: 0 8px; overflow-y: auto; flex: 1; }
+.version-picker .vp-list label { display: flex; gap: 12px; align-items: flex-start; padding: 10px 8px; min-height: 48px; border-radius: 10px; cursor: pointer; }
+.version-picker .vp-list label:has(input:checked) { background: rgba(224, 69, 123, 0.14); outline: 2px solid #e0457b; }
+.version-picker .vp-list input { margin-top: 4px; width: 20px; height: 20px; flex: none; }
+.version-picker .vp-file { opacity: 0.7; overflow-wrap: anywhere; }
+.version-picker .vp-actions { display: flex; gap: 10px; justify-content: flex-end; padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--line, #c9cbe0); }
+.version-picker .vp-actions .btn { min-height: 44px; }

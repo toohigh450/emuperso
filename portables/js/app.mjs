@@ -9,6 +9,8 @@ import { Store, IdbAdapter, MemoryAdapter, CHEAT_LIMITS, STATE_SLOTS } from './s
 import { parseCht, classifyCheatFiles, linkedCheatValid, normalizeName, deviceLabel, inferSystemFromPath } from './cheats.mjs';
 import { buildPspControls } from './controls.mjs';
 import { autoloadCheats } from './cheat-autoload.mjs';
+import { is7z, list7z, extract7z, MAX_7Z_BYTES, LARGE_7Z_BYTES } from './archive7z.mjs';
+import { pickVersion, versionLabels } from './version-picker.mjs';
 import { PAD_PROFILES, normalizePad, touchLayout } from './input-profiles.mjs';
 import { Session } from './session.mjs';
 import { createBrowserHost } from './player-host.mjs';
@@ -124,41 +126,81 @@ function render(snap) {
 
 // --- Ouverture d'un jeu -----------------------------------------------------------
 async function readGameFile(file) {
-  if (extensionOf(file.name) === '7z') throw new Error('Archive .7z non prise en charge dans le navigateur : extrais la ROM voulue avec 7-Zip dans un dossier séparé (sans toucher à l’original), puis ouvre-la ici. Les .zip sont acceptés.');
-  if (extensionOf(file.name) === 'rar') throw new Error('Archive .rar non prise en charge : extrais la ROM avec 7-Zip, puis ouvre-la ici. Les .zip sont acceptés.');
-  if (extensionOf(file.name) === 'torrent') throw new Error('Un .torrent n’est pas une ROM. Ouvre un fichier de jeu complet (.nes, .sfc, .smc, .md, .smd, .gen, .gb, .gbc, .gba, .nds ou .zip).');
-  if (file.size > MAX_INPUT_BYTES) throw new Error('Fichier trop gros pour cette application (maximum 512 Mio + 16 Mio).');
+  const ext = extensionOf(file.name);
+  if (ext === 'rar') throw new Error('Archive .rar non prise en charge : extrais la ROM avec 7-Zip, puis ouvre-la ici. Les .zip et .7z sont acceptés.');
+  if (ext === 'torrent') throw new Error('Un .torrent n’est pas une ROM. Ouvre un fichier de jeu complet (.nes, .sfc, .smc, .md, .smd, .gen, .gb, .gbc, .gba, .nds, .zip ou .7z).');
+  if (ext === '7z' && file.size > MAX_7Z_BYTES) throw new Error(`Archive .7z de ${Math.round(file.size / MiB)} Mio : trop grosse pour le décompresseur du navigateur (256 Mio au plus). Extrais la version voulue avec 7-Zip dans un dossier séparé, puis ouvre-la ici.`);
+  if (ext === '7z' && file.size > LARGE_7Z_BYTES && !confirm(`Grosse archive (${Math.round(file.size / MiB)} Mio) : la lecture peut prendre jusqu’à une minute et demande beaucoup de mémoire. Ferme les autres onglets lourds. Continuer ?`)) throw new Error('Ouverture annulée.');
+  if (ext !== '7z' && file.size > MAX_INPUT_BYTES) throw new Error('Fichier trop gros pour cette application (maximum 512 Mio + 16 Mio).');
   const options = { deviceMemory: navigator.deviceMemory, activeBytes: currentGame?.romBytes || 0 };
   let warned = false;
-  const checkMemory = (size, archiveBytes = 0) => {
-    const plan = memoryPlan(size, { ...options, archiveBytes });
+  const checkMemory = async (size, archiveBytes = 0) => {
+    let plan;
+    try { plan = memoryPlan(size, { ...options, archiveBytes }); }
+    catch (err) {
+      // Le jeu en cours compte dans l'estimation, mais il est fermé avant le démarrage du nouveau :
+      // si sa mémoire seule fait dépasser le budget, on propose de le fermer d'abord.
+      let alone = null;
+      try { alone = options.activeBytes ? memoryPlan(size, { ...options, archiveBytes, activeBytes: 0 }) : null; } catch { /* trop gros même seul */ }
+      if (!alone || !session.hasActiveGame) throw err;
+      if (!confirm(`Pour libérer la mémoire, « ${currentGame?.title || 'le jeu en cours'} » doit être fermé avant d’ouvrir ce fichier. Les sauvegardes déjà enregistrées restent conservées ; les progrès non enregistrés seront perdus. Fermer et continuer ?`)) throw new Error('Ouverture annulée.');
+      await session.stop();
+      currentGame = null;
+      options.activeBytes = 0;
+      plan = alone;
+    }
     if (plan.warn && !warned) {
       if (!confirm(`Plafond ROM : 512 Mio. Estimation : ${Math.ceil(plan.estimated / MiB)} Mio ; budget prudent : ${Math.floor(plan.budget / MiB)} Mio, sans garantie de RAM disponible. Enregistre et exporte tes progrès avant de continuer. Continuer ?`)) throw new Error('Ouverture annulée.');
       warned = true;
     }
   };
-  // Pour un ZIP, son contenu sera contrôlé avant décompression.
-  if (extensionOf(file.name) !== 'zip') checkMemory(file.size);
+  // Pour une archive, c'est la taille de la version choisie qui compte.
+  if (ext !== 'zip' && ext !== '7z') await checkMemory(file.size);
   let name = file.name;
   let bytes = new Uint8Array(await file.arrayBuffer());
   let note = '';
-  if (extensionOf(name) === 'zip' || isZip(bytes)) {
-    const accept = new Set([...ROM_EXTENSIONS, ...LOOSE_EXTENSIONS]);
+  const accept = new Set([...ROM_EXTENSIONS, ...LOOSE_EXTENSIONS]);
+  const isRom = (n) => accept.has(extensionOf(n)) && !/(^|\/)__MACOSX\//.test(n);
+  // Plusieurs versions : fenêtre de choix (conseillée en premier) avant toute extraction du jeu.
+  const choose = async (entries, kind) => {
+    if (entries.length === 0) throw new Error(`Aucun jeu reconnu dans cette archive ${kind} (formats : .nes, .sfc, .smc, .md, .smd, .gen, .gb, .gbc, .gba, .nds).`);
+    if (entries.length === 1) return entries[0];
+    setStatus(`${entries.length} versions dans l’archive : choisis celle à lancer.`);
+    const picked = await pickVersion(entries, file.name);
+    if (!picked) throw new Error('Ouverture annulée.');
+    return entries.find((e) => e.name === picked);
+  };
+  if (ext === '7z' || is7z(bytes)) {
+    setStatus('Lecture du contenu de l’archive 7z…');
+    const engineBases = [...enginePaths.map((p) => p.path)];
+    // Pendant la lecture, les versions probables (d'origine ou traduites, sans hack ni mauvais dump) sont
+    // gardées jusqu'à 64 Mio : le choix conseillé démarre alors sans relire toute l'archive.
+    let keptBytes = 0;
+    const probable = (n, size) => {
+      if (!isRom(n) || size > MAX_ROM_BYTES || keptBytes + size > 64 * MiB) return false;
+      const { info: i } = versionLabels(n);
+      if (i.hack || i.bad || i.overdump || i.pirate || i.trainer || i.proto || i.beta) return false;
+      keptBytes += size;
+      return true;
+    };
+    const scan = await list7z(bytes, engineBases, (pc) => setStatus(`Lecture du contenu de l’archive 7z… ${pc} %`), probable);
+    const entries = scan.entries.filter((e) => isRom(e.name));
+    const entry = await choose(entries, '7z');
+    await checkMemory(entry.size, bytes.length);
+    setStatus(`Extraction de « ${entry.name.replace(/^.*[\\/]/, '')} »…`);
+    const data = scan.kept[entry.name] || await extract7z(bytes, engineBases, entry.name, { maxBytes: MAX_ROM_BYTES, onProgress: (pc) => setStatus(`Extraction… ${pc} %`) });
+    scan.kept = null;
+    name = entry.name.replace(/^.*[\\/]/, '');
+    bytes = data;
+    note = entries.length > 1 ? `Version choisie dans l’archive 7z : ${name}.` : '';
+  } else if (ext === 'zip' || isZip(bytes)) {
     const candidates = listCandidates(bytes, accept);
-    let selected;
-    if (candidates.length > 1) {
-      const answer = prompt('Ce ZIP contient plusieurs jeux. Indique le numéro à ouvrir :\n' + candidates.map((c, i) => `${i + 1}. ${c.name}`).join('\n'), '1');
-      if (answer === null) throw new Error('Ouverture annulée.');
-      const index = Number(answer) - 1;
-      if (!Number.isInteger(index) || !candidates[index]) throw new Error('Numéro de jeu invalide.');
-      selected = candidates[index].name;
-    }
-    const candidate = selected ? candidates.find(c => c.name === selected) : candidates[0];
-    if (candidate) checkMemory(candidate.size, bytes.length);
-    const r = await extractFirst(bytes, accept, { name: selected, maxBytes: MAX_ROM_BYTES });
+    const entry = await choose(candidates, 'ZIP');
+    await checkMemory(entry.size, bytes.length);
+    const r = await extractFirst(bytes, accept, { name: entry.name, maxBytes: MAX_ROM_BYTES });
     name = r.name;
     bytes = r.bytes;
-    if (r.otherCandidates > 0) note = `Jeu choisi dans le ZIP : ${name}.`;
+    if (candidates.length > 1) note = `Version choisie dans le ZIP : ${name}.`;
   }
   return { name, bytes, note };
 }
@@ -1019,7 +1061,7 @@ function renderCatalogRows() {
           fmtSize(e.size),
           e.variants > 1 ? `${e.variants} variantes` : '',
           e.duplicateOf !== null ? 'doublon' : '',
-          e.ext === '7z' ? '7z : à extraire' : '',
+          e.ext === '7z' ? 'archive 7z' : '',
         ].filter(Boolean).join(' · '))));
   }));
 }

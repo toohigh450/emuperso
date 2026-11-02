@@ -93,3 +93,24 @@ test('Codes automatiques : même disque (PSP), même titre entre noms No-Intro e
   assert.deepEqual(findCheatCandidates('psp', 'Bust A Move Ghost.cso', 'ULES-00233', ['Bust A Move Ghost [ULES-00233].cht', 'Autre [ULUS-10041].cht']), ['Bust A Move Ghost [ULES-00233].cht']);
   assert.deepEqual(findCheatCandidates('psp', 'x.cso', null, ['Bust A Move Ghost [ULES-00233].cht']), []);
 });
+
+// --- Choix de version dans une archive ------------------------------------------------
+test('Versions d’une archive : vérifiée et Europe/USA d’abord, hacks et mauvais dumps à la fin', async () => {
+  const { rankVersions, versionLabels } = await import('../js/version-picker.mjs');
+  const names = ['Gunstar Heroes [Japan][Sample][April][1993][!!].md', 'Gunstar Heroes [USA][GoodSet][T+Fre_Terminus].bin', 'zz_Gunstar Heroes [Europe][GoodSet][o1].bin',
+    'Gunstar Heroes [USA][!!].md', 'Gunstar Heroes [Europe][!].md', 'Gunstar Heroes [Japan][!!].md', 'Gunstar Heroes [USA][T.Spa-Ful-Wave-3344].md'];
+  const ranked = rankVersions(names.map((name) => ({ name, size: 1048576 }))).map((e) => e.name);
+  assert.equal(ranked[0], 'Gunstar Heroes [Europe][!].md');
+  assert.ok(ranked.indexOf('Gunstar Heroes [USA][GoodSet][T+Fre_Terminus].bin') < ranked.indexOf('Gunstar Heroes [USA][T.Spa-Ful-Wave-3344].md'));
+  assert.equal(ranked.at(-1), 'zz_Gunstar Heroes [Europe][GoodSet][o1].bin');
+  assert.deepEqual(versionLabels('Gunstar Heroes [USA][GoodSet][T+Fre_Terminus].bin').tags.slice(0, 2), ['USA', 'traduction française']);
+});
+
+test('Notation des HackSets : [H.…] hack, [T.Por-…] traduction, [!!] vérifiée', async () => {
+  const { versionLabels, rankVersions } = await import('../js/version-picker.mjs');
+  assert.ok(versionLabels('Sonic The Hedgehog [Japan][Europe][Korea][H.dr_robotnik_in_sonic_the_hedgehog-4995].md').tags.includes('hack'));
+  assert.ok(versionLabels('Sonic The Hedgehog [Japan][Europe][Korea][T.Por-Ful-Green-5968].md').tags.includes('traduction Por'));
+  assert.ok(versionLabels('Sonic The Hedgehog [Japan][Europe][Korea][!!].md').tags.includes('version vérifiée'));
+  const ranked = rankVersions(['Sonic The Hedgehog [Japan][Europe][Korea][H.sonic_1_character_pak-5619].md', 'Sonic The Hedgehog [Japan][Europe][Korea][!!].md'].map((name) => ({ name, size: 1 })));
+  assert.equal(ranked[0].name, 'Sonic The Hedgehog [Japan][Europe][Korea][!!].md');
+});

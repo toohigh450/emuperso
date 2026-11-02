@@ -58,6 +58,15 @@
   </tbody>
 </table></div>
 
+<h2>Archives .zip et .7z, choix de la version</h2>
+<ul>
+  <li><strong>Lanceur (NES, SNES, Genesis, GB, GBC, GBA, DS)</strong> : .zip et .7z ; s’il y a plusieurs versions, une fenêtre propose de choisir (la version conseillée en premier : vérifiée, d’origine, Europe/USA ; hacks, prototypes et mauvais dumps à la fin ; filtre au-delà de 8 versions). Notation des HackSets reconnue ([!], [!!], [H.…], [T.Fre…]). Seule la version choisie est confiée au moteur ; les versions probables sont gardées pendant la lecture (64 Mio au plus) pour démarrer sans relire l’archive. 7z jusqu’à 256 Mio (250 Mio vérifiés ; à 479 Mio le décompresseur du navigateur manque de mémoire), avec avertissement au-delà de 128 Mio. Au-delà : extraire la version avec 7-Zip (5 archives de la collection).</li>
+  <li><strong>N64</strong> : .zip et .7z avec le même panneau de choix ; décompresseur du moteur verrouillé (SHA-256 vérifié).</li>
+  <li><strong>PS1</strong> : .zip, .7z et .rar déjà lus par son moteur (choix du .cue), inchangé.</li>
+  <li>Décompresseur 7z : celui d’EmulatorJS 4.2.3, vérifié par son SHA-256 avant exécution.</li>
+</ul>
+<p class="muted">Essais réels : Gunstar Heroes.7z (11 versions, Europe [!] conseillée, 50 images/s, normal en PAL) ; Sonic The Hedgehog.7z (488 versions, lecture 12 à 15 s, version conseillée prête en 1 s, 60 images/s, aussi en Android simulé) ; N64 : archive 7z de test faite avec la démo libre (2 versions), version choisie lancée.</p>
+
 <h2>Non vérifié — à faire par Karl</h2>
 <ul>
   <li>Vraie manette Xbox sur Chrome Windows, puis en Bluetooth sur le OnePlus 10T (Chrome Android n’expose pas toujours tous les boutons, dont le bouton Xbox).</li>
