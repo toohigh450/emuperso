@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Zelda - Shen Qi De Mao Zi (Ch)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Zelda%20-%20Shen%20Qi%20De%20Mao%20Zi%20%28Ch%29.cht
+
+cheats = 7
+
+cheat0_desc = "Quick Level Gain"
+cheat0_code = "60CB:FF"
+cheat0_enable = false
+
+cheat1_desc = "No Random Battles"
+cheat1_code = "6020:1A"
+cheat1_enable = false
+
+cheat2_desc = "Max Mp"
+cheat2_code = "60E2:0F+60E3:27"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Rupies"
+cheat3_code = "6022:FF+6023:FF"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Hp"
+cheat4_code = "60D4:0F+60D5:27"
+cheat4_enable = false
+
+cheat5_desc = "Max Hp"
+cheat5_code = "60D6:0F+60D7:27"
+cheat5_enable = false
+
+cheat6_desc = "Infinite Mp"
+cheat6_code = "60E0:0F+60E1:27"
+cheat6_enable = false

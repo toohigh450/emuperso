@@ -1,0 +1,52 @@
+# Recherche locale pour la ROM : Sneak 'n Peek
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Sneak%20'n%20Peek.cht
+
+cheats = 11
+
+cheat0_desc = "Start With 60 Seconds"
+cheat0_code = "SGSTXYNK"
+cheat0_enable = false
+
+cheat1_desc = "Start With 90 Seconds"
+cheat1_code = "UISTXYNG"
+cheat1_enable = false
+
+cheat2_desc = "Quick Timer"
+cheat2_code = "AUEYZTAT"
+cheat2_enable = false
+
+cheat3_desc = "Slow Timer"
+cheat3_code = "EUEYZTAT"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Time"
+cheat4_code = "ANEYLTEY"
+cheat4_enable = false
+
+cheat5_desc = "Quick Timer"
+cheat5_code = "ALUNLTAT"
+cheat5_enable = false
+
+cheat6_desc = "Slow Timer"
+cheat6_code = "ELUNLTAT"
+cheat6_enable = false
+
+cheat7_desc = "Darkness Lasts Half The Time"
+cheat7_code = "YYKVOXNN"
+cheat7_enable = false
+
+cheat8_desc = "Controller Scramble Lasts Half The Time"
+cheat8_code = "YNNTSONN"
+cheat8_enable = false
+
+cheat9_desc = "Infinite Speed Up"
+cheat9_code = "SAUVOXVV"
+cheat9_enable = false
+
+cheat10_desc = "Infinite Timer Power Up"
+cheat10_code = "SEUAUOVV"
+cheat10_enable = false

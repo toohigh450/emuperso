@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Yie Ar Kung-Fu (Japan) (Rev 1.2)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Yie%20Ar%20Kung-Fu%20%28Japan%29%20%28Rev%201.2%29.cht
+
+cheats = 5
+
+cheat0_desc = "Invincibility Againts Punches And Kicks"
+cheat0_code = "SZUIXISA"
+cheat0_enable = false
+
+cheat1_desc = "Tao Doesn't Throw Fireballs"
+cheat1_code = "SXNVLTSA"
+cheat1_enable = false
+
+cheat2_desc = "Chen Doesn't Hit You With His Chain"
+cheat2_code = "SXNTSASA"
+cheat2_enable = false
+
+cheat3_desc = "Lang Doesn't Throw Shurikens"
+cheat3_code = "OZVVATEK"
+cheat3_enable = false
+
+cheat4_desc = "Bonus Doesn't End When You're Hit With A Sword Or Fan"
+cheat4_code = "AVOSOVOZ"
+cheat4_enable = false

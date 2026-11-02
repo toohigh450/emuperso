@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Ufouria - The Saga (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Ufouria%20-%20The%20Saga%20%28Europe%29.cht
+
+cheats = 8
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "04E5:10"
+cheat0_enable = false
+
+cheat1_desc = "Invincibility"
+cheat1_code = "051C:02"
+cheat1_enable = false
+
+cheat2_desc = "Alternate Invincibility"
+cheat2_code = "051A:00+0511:00"
+cheat2_enable = false
+
+cheat3_desc = "Invincibility"
+cheat3_code = "EIVETAEY+EIKELYEY"
+cheat3_enable = false
+
+cheat4_desc = "Start with all characters"
+cheat4_code = "PESVYNYP+YEVTPYAA"
+cheat4_enable = false
+
+cheat5_desc = "Infinite Health"
+cheat5_code = "04E5:99"
+cheat5_enable = false
+
+cheat6_desc = "Walk Through Walls"
+cheat6_code = "AEUVSLLA"
+cheat6_enable = false
+
+cheat7_desc = "Jump Higher"
+cheat7_code = "ZASYTGGA"
+cheat7_enable = false

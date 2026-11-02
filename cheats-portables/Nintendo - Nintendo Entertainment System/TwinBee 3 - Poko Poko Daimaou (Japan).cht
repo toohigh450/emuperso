@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : TwinBee 3 - Poko Poko Daimaou (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/TwinBee%203%20-%20Poko%20Poko%20Daimaou%20%28Japan%29.cht
+
+cheats = 6
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "014C:03"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "0056:03"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Lives P1"
+cheat2_code = "0056:63"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Hits P1"
+cheat3_code = "014C:03"
+cheat3_enable = false
+
+cheat4_desc = "Music Test"
+cheat4_code = "ESKEIAEY"
+cheat4_enable = false
+
+cheat5_desc = "Infinite Lives - Both Players"
+cheat5_code = "SZUOIZVS"
+cheat5_enable = false

@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Snoopy's Silly Sports Spectacular! (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Snoopy's%20Silly%20Sports%20Spectacular!%20%28USA%29.cht
+
+cheats = 3
+
+cheat0_desc = "Infinite Time"
+cheat0_code = "0448:FF"
+cheat0_enable = false
+
+cheat1_desc = "P1 Playing Modifier"
+cheat1_code = "0465:00"
+cheat1_enable = false
+
+cheat2_desc = "Loss Time"
+cheat2_code = "0062:00"
+cheat2_enable = false

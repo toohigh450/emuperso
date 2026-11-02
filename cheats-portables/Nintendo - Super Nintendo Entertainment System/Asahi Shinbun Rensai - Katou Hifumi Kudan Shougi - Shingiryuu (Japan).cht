@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Asahi Shinbun Rensai - Katou Hifumi Kudan Shougi - Shingiryuu (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Asahi%20Shinbun%20Rensai%20-%20Katou%20Hifumi%20Kudan%20Shougi%20-%20Shingiryuu%20%28Japan%29.cht
+
+cheats = 2
+
+cheat0_desc = "Timer Modifier Bottom Player"
+cheat0_code = "7E04D000"
+cheat0_enable = false
+
+cheat1_desc = "Timer Modifier Top Player"
+cheat1_code = "7E04D500"
+cheat1_enable = false

@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Square no Tom Sawyer (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Square%20no%20Tom%20Sawyer%20%28Japan%29.cht
+
+cheats = 7
+
+cheat0_desc = "Tom Max Stats"
+cheat0_code = "0501:26+0503:26+0505:26+0507:26"
+cheat0_enable = false
+
+cheat1_desc = "Huck Max Stats"
+cheat1_code = "0509:26+050B:26+050D:26+050F:26"
+cheat1_enable = false
+
+cheat2_desc = "Max Jim Stats"
+cheat2_code = "0519:26+051B:26+051D:26+051F:26"
+cheat2_enable = false
+
+cheat3_desc = "Max Amy Stats"
+cheat3_code = "0539:26+053B:26+053D:26+053F:26"
+cheat3_enable = false
+
+cheat4_desc = "One Hit Kills"
+cheat4_code = "7A25:00+7A35:00+7A45:00"
+cheat4_enable = false
+
+cheat5_desc = "Have Final Key To Rescue Becky"
+cheat5_code = "6318:26"
+cheat5_enable = false
+
+cheat6_desc = "Cross River In Final Cave Without Huck"
+cheat6_code = "03F4:55"
+cheat6_enable = false

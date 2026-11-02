@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Andre Agassi Tennis (USA, Japan) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Andre%20Agassi%20Tennis%20%28USA,%20Japan%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "P1&P2 Highlighter Modifier"
+cheat0_code = "7E0361XX"
+cheat0_enable = false 
+
+cheat1_desc = "Character Modifier P1"
+cheat1_code = "7E05A7XX"
+cheat1_enable = false 
+
+cheat2_desc = "Character Modifier P2"
+cheat2_code = "7E05ABXX"
+cheat2_enable = false 
+
+cheat3_desc = "P1 Score Modifier"
+cheat3_code = "7E0485XX"
+cheat3_enable = false 
+
+cheat4_desc = "P2 Never Scores"
+cheat4_code = "7E048700"
+cheat4_enable = false

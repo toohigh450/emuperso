@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Zoids - Chuuou Tairiku no Tatakai (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Zoids%20-%20Chuuou%20Tairiku%20no%20Tatakai%20%28Japan%29.cht
+
+cheats = 3
+
+cheat0_desc = "Infinite Health"
+cheat0_code = "00E6:FF"
+cheat0_enable = false
+
+cheat1_desc = "One Hit Kills"
+cheat1_code = "0650:00+0651:00+0652:00+0653:00+0654:00"
+cheat1_enable = false
+
+cheat2_desc = "Freeze Overworld Enemies"
+cheat2_code = "05F0:FF+05F1:FF+05F2:FF+05F3:FF+05F4:FF+05F5:FF+05F6:FF"
+cheat2_enable = false

@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Ultimate Air Combat (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Ultimate%20Air%20Combat%20%28USA%29.cht
+
+cheats = 6
+
+cheat0_desc = "Easier To Engage In Auto-Pilot"
+cheat0_code = "AKAGIS"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Fuel"
+cheat1_code = "0242:CB"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Chaff"
+cheat2_code = "SZOXIEVK"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Missiles"
+cheat3_code = "SXVZZSVK+SZEXGVVK"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Bombs"
+cheat4_code = "SXEUIXVS"
+cheat4_enable = false
+
+cheat5_desc = "Ultimate Cheat Screen"
+cheat5_code = "AESXOPTP"
+cheat5_enable = false

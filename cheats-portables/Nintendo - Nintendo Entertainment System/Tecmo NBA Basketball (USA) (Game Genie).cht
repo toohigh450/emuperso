@@ -1,0 +1,52 @@
+# Recherche locale pour la ROM : Tecmo NBA Basketball (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Tecmo%20NBA%20Basketball%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 11 
+
+cheat0_desc = "Infinite Timeouts"
+cheat0_code = "SLVUPUVS"
+cheat0_enable = false 
+
+cheat1_desc = "2-Point Shots Worth 1, 3-Point Shots Worth 2"
+cheat1_code = "AEOLVPPA"
+cheat1_enable = false 
+
+cheat2_desc = "2-Point Shots Worth 3, 3-Point Shots Worth 4"
+cheat2_code = "ZEOLVPPA"
+cheat2_enable = false 
+
+cheat3_desc = "2-Point Shots Worth 4, 3-Point Shots Worth 5"
+cheat3_code = "LEOLVPPA"
+cheat3_enable = false 
+
+cheat4_desc = "2-Point Shots Worth 5, 3-Point Shots Worth 6"
+cheat4_code = "GEOLVPPA"
+cheat4_enable = false 
+
+cheat5_desc = "2-Point Shots Worth 6, 3-Point Shots Worth 7"
+cheat5_code = "IEOLVPPA"
+cheat5_enable = false 
+
+cheat6_desc = "3-Point Shots Worth 2 Points"
+cheat6_code = "AVNUVOVT"
+cheat6_enable = false 
+
+cheat7_desc = "5-Second Violations Become 10-Second Violations"
+cheat7_code = "NYSENZYE"
+cheat7_enable = false 
+
+cheat8_desc = "No 10-Second Violations"
+cheat8_code = "NYOPTNZE"
+cheat8_enable = false 
+
+cheat9_desc = "Longer Shot Clock After Getting Ball On Rebound"
+cheat9_code = "ASOLSEAO"
+cheat9_enable = false 
+
+cheat10_desc = "Shorter Shot Clock After Getting Ball On Rebound"
+cheat10_code = "AEOLSEAO"
+cheat10_enable = false

@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Uncanny X-Men, The (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Uncanny%20X-Men,%20The%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "SXEEXIST"
+cheat0_enable = false 
+
+cheat1_desc = "Half Energy For Wolverine"
+cheat1_code = "GVUZPOEG"
+cheat1_enable = false 
+
+cheat2_desc = "Half Energy For Cyclops"
+cheat2_code = "GVUZYOEG"
+cheat2_enable = false 
+
+cheat3_desc = "Half Energy For Nightcrawler"
+cheat3_code = "PKUXIPXA"
+cheat3_enable = false 
+
+cheat4_desc = "Half Energy For Iceman"
+cheat4_code = "YSKZLOVU"
+cheat4_enable = false 
+
+cheat5_desc = "Half Energy For Colossus"
+cheat5_code = "YNKXPONN"
+cheat5_enable = false 
+
+cheat6_desc = "Half Energy For Storm"
+cheat6_code = "ASKXYPEZ"
+cheat6_enable = false

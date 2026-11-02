@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Solomon's Key 2 (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Solomon's%20Key%202%20%28Europe%29.cht
+
+cheats = 2
+
+cheat0_desc = "Infinite Time"
+cheat0_code = "0425:00"
+cheat0_enable = false
+
+cheat1_desc = "Finish Level Now"
+cheat1_code = "00AB:00"
+cheat1_enable = false

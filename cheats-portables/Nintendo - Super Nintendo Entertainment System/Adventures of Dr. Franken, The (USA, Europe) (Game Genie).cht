@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Adventures of Dr. Franken, The (USA, Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Adventures%20of%20Dr.%20Franken,%20The%20%28USA,%20Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Infinite Time"
+cheat0_code = "C220-C7A4"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "C2B9-C4AD"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Health"
+cheat2_code = "C2BB-4F0F+C2BB-44DF"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Power Balls"
+cheat3_code = "3CB5-14AF"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Freeze Weapon"
+cheat4_code = "3CBB-1F0F"
+cheat4_enable = false 
+
+cheat5_desc = "Health Power-Ups Give You A Full Health Bar"
+cheat5_code = "D3A0-1404+62A5-1464"
+cheat5_enable = false

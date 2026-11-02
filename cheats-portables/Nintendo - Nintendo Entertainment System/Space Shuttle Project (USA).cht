@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Space Shuttle Project (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Space%20Shuttle%20Project%20%28USA%29.cht
+
+cheats = 6
+
+cheat0_desc = "Infinite Invisible Pieces in Space Walk"
+cheat0_code = "SKKZVNGK"
+cheat0_enable = false
+
+cheat1_desc = "Start missions with 127 tries"
+cheat1_code = "YYOEAPTE"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Time In Space Station Construction missions"
+cheat2_code = "0031:3B"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Security Attempts"
+cheat3_code = "001F:09"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Time In Countdown (Seconds)"
+cheat4_code = "0031:63"
+cheat4_enable = false
+
+cheat5_desc = "Infinite Time In Countdown (Minutes)"
+cheat5_code = "0030:01"
+cheat5_enable = false

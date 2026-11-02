@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : BS Super Mario Collection 3 (J)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/BS%20Super%20Mario%20Collection%203%20%28J%29.cht
+
+cheats = 4
+
+cheat0_desc = "Infinite Play Time"
+cheat0_code = "7E10653B"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Time"
+cheat1_code = "7E05F009"
+cheat1_enable = false
+
+cheat2_desc = "Collect 1 coin for 1-up"
+cheat2_code = "7E1DA263"
+cheat2_enable = false
+
+cheat3_desc = "Jump in Midair"
+cheat3_code = "DDB5-C7AA"
+cheat3_enable = false

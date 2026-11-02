@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Wheel of Fortune - Family Edition (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Wheel%20of%20Fortune%20-%20Family%20Edition%20%28USA%29.cht
+
+cheats = 6
+
+cheat0_desc = "Less time to solve"
+cheat0_code = "GPUUISAZ"
+cheat0_enable = false
+
+cheat1_desc = "More time to solve"
+cheat1_code = "GLUUISAX"
+cheat1_enable = false
+
+cheat2_desc = "Less time for choosing"
+cheat2_code = "YENOIAYA+GEKPOAYA"
+cheat2_enable = false
+
+cheat3_desc = "More time for choosing"
+cheat3_code = "YENOIAYE+YEKPOAYE"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Time To Decide Your Actions P1"
+cheat4_code = "0058:63"
+cheat4_enable = false
+
+cheat5_desc = "Infinite Timers"
+cheat5_code = "SZUZAPVG"
+cheat5_enable = false

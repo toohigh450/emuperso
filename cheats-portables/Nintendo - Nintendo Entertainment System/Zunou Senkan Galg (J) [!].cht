@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Zunou Senkan Galg (J) [!]
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Zunou%20Senkan%20Galg%20%28J%29%20[!].cht
+
+cheats = 4
+
+cheat0_desc = "Infinite Parts"
+cheat0_code = "0075:00"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "0072:03"
+cheat1_enable = false
+
+cheat2_desc = "Invincible"
+cheat2_code = "004D:00+0064:D0+0065:00"
+cheat2_enable = false
+
+cheat3_desc = "Level Modifier"
+cheat3_code = "0070:00"
+cheat3_enable = false

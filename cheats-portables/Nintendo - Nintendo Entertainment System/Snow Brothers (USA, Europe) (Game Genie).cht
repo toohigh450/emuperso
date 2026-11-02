@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Snow Brothers (USA, Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Snow%20Brothers%20%28USA,%20Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Infinite Number Of Chances"
+cheat0_code = "SXNEUYVI"
+cheat0_enable = false 
+
+cheat1_desc = "Start Game With 10 Chances Instead Of 3 (Count Starts At 9 Instead Of 2)"
+cheat1_code = "PAXXPLZE"
+cheat1_enable = false 
+
+cheat2_desc = "Start Game With 1 Chance (Count Starts At 0)"
+cheat2_code = "AAXXPLZA"
+cheat2_enable = false 
+
+cheat3_desc = "Always Get 10 Chances After A Continue (Count Restarts At 9)"
+cheat3_code = "PAOAYLZE"
+cheat3_enable = false 
+
+cheat4_desc = "Always Get 1 Chance After A Continue (Count Restarts At 0)"
+cheat4_code = "AAOAYLZA"
+cheat4_enable = false 
+
+cheat5_desc = "Don't Lose Super Ability After You Lose A Chance"
+cheat5_code = "OUOOGEOO"
+cheat5_enable = false 
+
+cheat6_desc = "Start With Speed Skates, Power Shots And Super Snow-Throwing"
+cheat6_code = "YAEEYAAE"
+cheat6_enable = false

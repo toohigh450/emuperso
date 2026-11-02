@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Atlas, The - Renaissance Voyager (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Atlas,%20The%20-%20Renaissance%20Voyager%20%28Japan%29.cht
+
+cheats = 5
+
+cheat0_desc = "Year Modifier"
+cheat0_code = "7E109000"
+cheat0_enable = false
+
+cheat1_desc = "Month Modifier"
+cheat1_code = "7E109100"
+cheat1_enable = false
+
+cheat2_desc = "Day Modifier"
+cheat2_code = "7E109200"
+cheat2_enable = false
+
+cheat3_desc = "Time of Day Modifier"
+cheat3_code = "7E109300"
+cheat3_enable = false
+
+cheat4_desc = "Tons of Funds"
+cheat4_code = "7E108D50"
+cheat4_enable = false

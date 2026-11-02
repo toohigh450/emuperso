@@ -1,0 +1,68 @@
+# Recherche locale pour la ROM : Star Trek - The Next Generation (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Star%20Trek%20-%20The%20Next%20Generation%20%28USA%29.cht
+
+cheats = 15
+
+cheat0_desc = "All systems are immune to damage (shields down)"
+cheat0_code = "OUXTPYOP"
+cheat0_enable = false
+
+cheat1_desc = "Shields are immune to damage (shields up)"
+cheat1_code = "SXUVTNSE"
+cheat1_enable = false
+
+cheat2_desc = "Quicker damage repair"
+cheat2_code = "AGKVTTEP"
+cheat2_enable = false
+
+cheat3_desc = "Very quick damage repair"
+cheat3_code = "APKVTTEP"
+cheat3_enable = false
+
+cheat4_desc = "Slower damage repair"
+cheat4_code = "EGKVTTEP"
+cheat4_enable = false
+
+cheat5_desc = "Enemy does less damage"
+cheat5_code = "ZKNVLEZE"
+cheat5_enable = false
+
+cheat6_desc = "Stop game time ticking over"
+cheat6_code = "ATETISVT"
+cheat6_enable = false
+
+cheat7_desc = "Photon Torpedoes always work"
+cheat7_code = "AAUZPAGY"
+cheat7_enable = false
+
+cheat8_desc = "Phasers always work"
+cheat8_code = "AAEXTPNY"
+cheat8_enable = false
+
+cheat9_desc = "Phasers fire for longer"
+cheat9_code = "AAOXPOKT"
+cheat9_enable = false
+
+cheat10_desc = "Damage is repaired immediately"
+cheat10_code = "AAVTZVIL"
+cheat10_enable = false
+
+cheat11_desc = "Transporter power does not decrease most of the time"
+cheat11_code = "SXVUSTVG"
+cheat11_enable = false
+
+cheat12_desc = "Less transporter power required most of the time"
+cheat12_code = "IANUXTAZ"
+cheat12_enable = false
+
+cheat13_desc = "Stardate does not advance"
+cheat13_code = "GVNZOZIT"
+cheat13_enable = false
+
+cheat14_desc = "Infinite Energy"
+cheat14_code = ""
+cheat14_enable = false

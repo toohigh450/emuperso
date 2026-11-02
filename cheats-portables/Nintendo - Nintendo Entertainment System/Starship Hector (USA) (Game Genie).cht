@@ -1,0 +1,48 @@
+# Recherche locale pour la ROM : Starship Hector (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Starship%20Hector%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 10 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "SZKIOGVG"
+cheat0_enable = false 
+
+cheat1_desc = "Start With 1 Life"
+cheat1_code = "AANSOGZA"
+cheat1_enable = false 
+
+cheat2_desc = "Start With 6 Lives"
+cheat2_code = "IANSOGZA"
+cheat2_enable = false 
+
+cheat3_desc = "Start With 9 Lives"
+cheat3_code = "AANSOGZE"
+cheat3_enable = false 
+
+cheat4_desc = "Extra Energy From Capsules"
+cheat4_code = "GEVVGIPA"
+cheat4_enable = false 
+
+cheat5_desc = "Start At Stage 2"
+cheat5_code = "PENYGIAA"
+cheat5_enable = false 
+
+cheat6_desc = "Start At Stage 3"
+cheat6_code = "ZENYGIAA"
+cheat6_enable = false 
+
+cheat7_desc = "Start At Stage 4"
+cheat7_code = "LENYGIAA"
+cheat7_enable = false 
+
+cheat8_desc = "Start At Stage 5"
+cheat8_code = "GENYGIAA"
+cheat8_enable = false 
+
+cheat9_desc = "Take Minimum Damage"
+cheat9_code = "OVUYEGSV+PEUYOGTA"
+cheat9_enable = false

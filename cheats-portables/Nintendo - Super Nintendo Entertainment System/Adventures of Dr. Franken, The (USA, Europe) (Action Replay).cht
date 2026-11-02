@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Adventures of Dr. Franken, The (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Adventures%20of%20Dr.%20Franken,%20The%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Infinite Health"
+cheat0_code = "7E0C030E"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "7E0B3363"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Fire"
+cheat2_code = "7E0C2C04"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Lightning"
+cheat3_code = "7E0B3203"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Time"
+cheat4_code = "7E0C0C00+7E0C0D05"
+cheat4_enable = false

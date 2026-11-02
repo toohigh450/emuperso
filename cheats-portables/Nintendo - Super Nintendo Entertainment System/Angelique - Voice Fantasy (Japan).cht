@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Angelique - Voice Fantasy (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Angelique%20-%20Voice%20Fantasy%20%28Japan%29.cht
+
+cheats = 5
+
+cheat0_desc = "Day Modifier"
+cheat0_code = "7E211D00"
+cheat0_enable = false
+
+cheat1_desc = "Hero Girl Heart "
+cheat1_code = "7E212600+7E212700"
+cheat1_enable = false
+
+cheat2_desc = "Enemy Girl Heart "
+cheat2_code = "7E213100+7E213200"
+cheat2_enable = false
+
+cheat3_desc = "All Characters Hero Love Modifier"
+cheat3_code = "7E2345C8+7E2352C8+7E235FC8+7E236CC8+7E2379C8+7E2386C8+7E2393C8+7E23A0C8+7E23ADC8"
+cheat3_enable = false
+
+cheat4_desc = "All Characters : Love Enemy Girl Modifier"
+cheat4_code = "7E234600+7E235300+7E236000+7E236D00+7E237A00+7E238700+7E239400+7E23A100+7E23AE00"
+cheat4_enable = false

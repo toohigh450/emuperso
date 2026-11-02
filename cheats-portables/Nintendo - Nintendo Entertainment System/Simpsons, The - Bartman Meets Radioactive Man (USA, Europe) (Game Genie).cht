@@ -1,0 +1,60 @@
+# Recherche locale pour la ROM : Simpsons, The - Bartman Meets Radioactive Man (USA, Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Simpsons,%20The%20-%20Bartman%20Meets%20Radioactive%20Man%20%28USA,%20Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 13 
+
+cheat0_desc = "Start With 2 Lives And 2 Credits"
+cheat0_code = "PAVAYYLA"
+cheat0_enable = false 
+
+cheat1_desc = "Start With 6 Lives And 6 Credits"
+cheat1_code = "IAVAYYLA"
+cheat1_enable = false 
+
+cheat2_desc = "Start With 8 Lives And 8 Credits"
+cheat2_code = "YAVAYYLA"
+cheat2_enable = false 
+
+cheat3_desc = "Start With 10 Lives And 10 Credits"
+cheat3_code = "PAVAYYLE"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Lives"
+cheat4_code = "OLVYAZOP"
+cheat4_enable = false 
+
+cheat5_desc = "Infinite Credits"
+cheat5_code = "SZENNEVK"
+cheat5_enable = false 
+
+cheat6_desc = "Laser Bolts Worth More On Pick Up"
+cheat6_code = "ASVTOZAZ"
+cheat6_enable = false 
+
+cheat7_desc = "Infinite Laser Bolts"
+cheat7_code = "SXNNVEVK"
+cheat7_enable = false 
+
+cheat8_desc = "Infinite Energy"
+cheat8_code = "AAUY-PYGA"
+cheat8_enable = false 
+
+cheat9_desc = "Cold Breath Worth More On Pick Up"
+cheat9_code = "AXUVSZIA"
+cheat9_enable = false 
+
+cheat10_desc = "Infinite Cold Breaths"
+cheat10_code = "AAKYKPPA"
+cheat10_enable = false 
+
+cheat11_desc = "Start In Chapter 1 Level 2"
+cheat11_code = "ZAUZAYAA"
+cheat11_enable = false 
+
+cheat12_desc = "Start In Chapter 1 Level 3"
+cheat12_code = "IAUZAYAA"
+cheat12_enable = false

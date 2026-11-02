@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Stealth ATF (USA, Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Stealth%20ATF%20%28USA,%20Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Infinite Missiles"
+cheat0_code = "SZVZSSVK"
+cheat0_enable = false 
+
+cheat1_desc = "Start With Double Missiles"
+cheat1_code = "AOUXXEAA"
+cheat1_enable = false 
+
+cheat2_desc = "No Damage Taken From Enemy's Bullets"
+cheat2_code = "SZVPXNVV"
+cheat2_enable = false 
+
+cheat3_desc = "Start With Less Fuel"
+cheat3_code = "AVUXNAVP"
+cheat3_enable = false 
+
+cheat4_desc = "More Enemy Planes On The Screen"
+cheat4_code = "AEKZZLZE"
+cheat4_enable = false

@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Tenchi o Kurau II - Shokatsu Koumei Den (Japan) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Tenchi%20o%20Kurau%20II%20-%20Shokatsu%20Koumei%20Den%20%28Japan%29%20%28Game%20Genie%29.cht
+
+cheats = 8 
+
+cheat0_desc = "Money Code!"
+cheat0_code = "NYKEGIAE"
+cheat0_enable = false 
+
+cheat1_desc = "Short Sword Is Free (Instead of $100)"
+cheat1_code = "AAEAYZGT"
+cheat1_enable = false 
+
+cheat2_desc = "Leather Armor Costs $44 (Instead $300)"
+cheat2_code = "AAOAILPA"
+cheat2_enable = false 
+
+cheat3_desc = "Leather Armor Is Free (Instead of $300)"
+cheat3_code = "AAOAILPA+AAOAGUGZ"
+cheat3_enable = false 
+
+cheat4_desc = "Leather Helmet Is Free (Instead of $100)"
+cheat4_code = "AAVAPLGT"
+cheat4_enable = false 
+
+cheat5_desc = "Leather Shield Is Free (Instead of $100)"
+cheat5_code = "AEOAPLGT"
+cheat5_enable = false 
+
+cheat6_desc = "Revive Is Free (Instead of $100)"
+cheat6_code = "AAKELIGT"
+cheat6_enable = false 
+
+cheat7_desc = "ULTIMATE Code!!"
+cheat7_code = "AESYUTPA"
+cheat7_enable = false

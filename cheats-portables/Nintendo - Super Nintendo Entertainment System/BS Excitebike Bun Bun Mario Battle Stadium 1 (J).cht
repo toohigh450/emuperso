@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : BS Excitebike Bun Bun Mario Battle Stadium 1 (J)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/BS%20Excitebike%20Bun%20Bun%20Mario%20Battle%20Stadium%201%20%28J%29.cht
+
+cheats = 3
+
+cheat0_desc = "Never overheat"
+cheat0_code = "7E099008"
+cheat0_enable = false
+
+cheat1_desc = "Low time"
+cheat1_code = "7E008100+7E03B200"
+cheat1_enable = false
+
+cheat2_desc = "Always have 5 coins"
+cheat2_code = "7E0CDF05+7E154005"
+cheat2_enable = false

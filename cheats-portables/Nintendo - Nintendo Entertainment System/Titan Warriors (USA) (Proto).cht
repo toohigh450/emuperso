@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Titan Warriors (USA) (Proto)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Titan%20Warriors%20%28USA%29%20%28Proto%29.cht
+
+cheats = 5
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "0488:09"
+cheat0_enable = false
+
+cheat1_desc = "Invincibility"
+cheat1_code = "0070:08"
+cheat1_enable = false
+
+cheat2_desc = "Have Triple Shot"
+cheat2_code = "0580:80+0598:80"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Lives"
+cheat3_code = "SZSPLKVK"
+cheat3_enable = false
+
+cheat4_desc = "Invincibility"
+cheat4_code = "SZSNSGSA"
+cheat4_enable = false

@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Animaniacs (World) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Animaniacs%20%28World%29%20%28Action%20Replay%29.cht
+
+cheats = 2 
+
+cheat0_desc = "Coin Modifier"
+cheat0_code = "7F0016??"
+cheat0_enable = false 
+
+cheat1_desc = "Moon Jump"
+cheat1_code = "7E0415FF"
+cheat1_enable = false

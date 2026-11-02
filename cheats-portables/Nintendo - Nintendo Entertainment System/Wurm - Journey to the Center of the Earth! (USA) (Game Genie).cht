@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Wurm - Journey to the Center of the Earth! (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Wurm%20-%20Journey%20to%20the%20Center%20of%20the%20Earth!%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Infinite Fuel"
+cheat0_code = "SZSGYNSE"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Shields And Life"
+cheat1_code = "SXNGZTSA"
+cheat1_enable = false 
+
+cheat2_desc = "Start On Act 2, Dyna Crystal"
+cheat2_code = "ZEXITGPA"
+cheat2_enable = false 
+
+cheat3_desc = "Start On Act 3, Magma Falls"
+cheat3_code = "LEXITGPA"
+cheat3_enable = false 
+
+cheat4_desc = "Start On Act 4, Ziggy"
+cheat4_code = "GEXITGPA"
+cheat4_enable = false 
+
+cheat5_desc = "Start On Act 5, Dual Duel"
+cheat5_code = "IEXITGPA"
+cheat5_enable = false

@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Super Turrican (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Super%20Turrican%20%28Europe%29.cht
+
+cheats = 7
+
+cheat0_desc = "Infinite Health"
+cheat0_code = "038A:06"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "7051:09"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Health"
+cheat2_code = "SXEGVSVK"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Lives"
+cheat3_code = "SXEGLVVK"
+cheat3_enable = false
+
+cheat4_desc = "Shields are always active"
+cheat4_code = "OXVKEZEN+PNEGVSVK"
+cheat4_enable = false
+
+cheat5_desc = "Die in one hit"
+cheat5_code = "SEEGVSVK"
+cheat5_enable = false
+
+cheat6_desc = "Skip level intro"
+cheat6_code = "APNZYTSA"
+cheat6_enable = false

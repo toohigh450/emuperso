@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Taito Chase H.Q. (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Taito%20Chase%20H.Q.%20%28Japan%29.cht
+
+cheats = 6
+
+cheat0_desc = "Infinite Time"
+cheat0_code = "SZUXYSVK"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Turbo"
+cheat1_code = "SXUXESVK"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Time"
+cheat2_code = "03A0:3C"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Turbos"
+cheat3_code = "03AB:03"
+cheat3_enable = false
+
+cheat4_desc = "Max Speed"
+cheat4_code = "0018:FF"
+cheat4_enable = false
+
+cheat5_desc = "Stage Skip"
+cheat5_code = "AZOZIGPZ+APOZYGKI"
+cheat5_enable = false

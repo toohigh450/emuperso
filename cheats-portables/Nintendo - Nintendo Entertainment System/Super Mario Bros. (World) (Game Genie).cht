@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Super Mario Bros. (World) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Super%20Mario%20Bros.%20%28World%29%20%28Game%20Genie%29.cht
+
+cheats = 7
+
+cheat0_desc = "Slower Running"
+cheat0_code = "AZSLPIAK"
+cheat0_enable = false 
+
+cheat1_desc = "Faster Jumps"
+cheat1_code = "AUSUPLAZ"
+cheat1_enable = false 
+
+cheat2_desc = "Don't Lose Power-Ups When Hit"
+cheat2_code = "SXULKNSE"
+cheat2_enable = false 
+
+cheat3_desc = "Every Power-Up Acts As A Star"
+cheat3_code = "ALASKA"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Lives"
+cheat4_code = "SXIOPO"
+cheat4_enable = false
+
+cheat5_desc = "Higher Jumping From Turbo Running Only"
+cheat5_code = "GPZUAG"
+cheat5_enable = false
+
+cheat6_desc = "Extra High Jumping From Turbo Running Only"
+cheat6_code = "GAZUAG"
+cheat6_enable = false

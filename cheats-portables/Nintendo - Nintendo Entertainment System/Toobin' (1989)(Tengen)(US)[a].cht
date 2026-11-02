@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Toobin' (1989)(Tengen)(US)[a]
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Toobin'%20%281989%29%28Tengen%29%28US%29[a].cht
+
+cheats = 3
+
+cheat0_desc = "Infinite Health All Levels"
+cheat0_code = "AEEVSIPA"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Ammo / Cans"
+cheat1_code = "AIEZZIVG"
+cheat1_enable = false
+
+cheat2_desc = "Instantly Complete Level"
+cheat2_code = "SUXVLSSX"
+cheat2_enable = false

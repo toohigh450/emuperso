@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Ultima - Warriors of Destiny (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Ultima%20-%20Warriors%20of%20Destiny%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 2 
+
+cheat0_desc = "Infinite Consumable Items Such As Food And Torches (May Not Be Able To Discard Some Items)"
+cheat0_code = "SUSTXSVS"
+cheat0_enable = false 
+
+cheat1_desc = "A Night At The Wayfarer Inn Is Free"
+cheat1_code = "AAEZIPZL"
+cheat1_enable = false

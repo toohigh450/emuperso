@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Utsurun Desu - Kawauso Hawaii e Iku (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Utsurun%20Desu%20-%20Kawauso%20Hawaii%20e%20Iku%20%28Japan%29.cht
+
+cheats = 7
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "0418:10"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "0417:09"
+cheat1_enable = false
+
+cheat2_desc = "Invincibility"
+cheat2_code = "0420:00"
+cheat2_enable = false
+
+cheat3_desc = "Invincibility"
+cheat3_code = "0094:03"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Lives"
+cheat4_code = "SXNTUSVK"
+cheat4_enable = false
+
+cheat5_desc = "Infinite Energy"
+cheat5_code = "SXEVVVSE"
+cheat5_enable = false
+
+cheat6_desc = "Invincibility"
+cheat6_code = "ATVVKVOG"
+cheat6_enable = false

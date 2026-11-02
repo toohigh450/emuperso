@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Alcahest (Japan) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Alcahest%20%28Japan%29%20%28Action%20Replay%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Infinite Health"
+cheat0_code = "7E18582F"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "7E197309"
+cheat1_enable = false 
+
+cheat2_desc = "Quick Level Gain"
+cheat2_code = "7E196D00+7E196E00+7E196F00"
+cheat2_enable = false 
+
+cheat3_desc = "Exp. Modifier"
+cheat3_code = "7E1969??+7E196A??"
+cheat3_enable = false

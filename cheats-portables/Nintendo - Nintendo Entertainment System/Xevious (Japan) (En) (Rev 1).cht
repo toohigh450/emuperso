@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Xevious (Japan) (En) (Rev 1)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Xevious%20%28Japan%29%20%28En%29%20%28Rev%201%29.cht
+
+cheats = 6
+
+cheat0_desc = "Debug Mode"
+cheat0_code = "ESNNSGEY"
+cheat0_enable = false
+
+cheat1_desc = "Invulnerability"
+cheat1_code = "AAONUGEA"
+cheat1_enable = false
+
+cheat2_desc = "Start With 8 Lives"
+cheat2_code = "EVGZGV"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Lives"
+cheat3_code = "SXAYPY"
+cheat3_enable = false
+
+cheat4_desc = "Invulnerable To Planes"
+cheat4_code = "SZZTNG"
+cheat4_enable = false
+
+cheat5_desc = "View The Map Mode"
+cheat5_code = "ASANAT"
+cheat5_enable = false

@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Super Bat Puncher
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Super%20Bat%20Puncher.cht
+
+cheats = 6
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "SXNAEGSA"
+cheat0_enable = false
+
+cheat1_desc = "Start with 9 lives"
+cheat1_code = "PAUYKGLE"
+cheat1_enable = false
+
+cheat2_desc = "Longer Invincibility after getting hit"
+cheat2_code = "NNNAUKYV"
+cheat2_enable = false
+
+cheat3_desc = "Invincibility"
+cheat3_code = "ESSEVYEY"
+cheat3_enable = false
+
+cheat4_desc = "Start a new game with Wall boost and Bowling ball and Sir Loin"
+cheat4_code = "PAUNUGAA"
+cheat4_enable = false
+
+cheat5_desc = "Always have Programers Jetpack"
+cheat5_code = "APSKPLEI"
+cheat5_enable = false

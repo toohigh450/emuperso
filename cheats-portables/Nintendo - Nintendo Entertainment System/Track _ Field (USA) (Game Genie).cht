@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Track _ Field (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Track%20_%20Field%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 2 
+
+cheat0_desc = "Almost Always Qualify In Skeet Shooting And Archery (You Score Lots of Extra Points)"
+cheat0_code = "NTXKTNKT"
+cheat0_enable = false 
+
+cheat1_desc = "You Don't Have To Score Any Points To Qualify For Skeet Shooting, Triple Jump, And Archery"
+cheat1_code = "UKUKIGKG"
+cheat1_enable = false

@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Wall Street Kid (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Wall%20Street%20Kid%20%28USA%29.cht
+
+cheats = 4
+
+cheat0_desc = "Infinite Money"
+cheat0_code = "03E1:FF"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Money"
+cheat1_code = "OUSNVLOP"
+cheat1_enable = false
+
+cheat2_desc = "Sart A New Game With $16,777,215"
+cheat2_code = "NYEELPYE+NYEEZPOX+NYEEPPAX"
+cheat2_enable = false
+
+cheat3_desc = "Have Tons of Money"
+cheat3_code = "03E1:FF"
+cheat3_enable = false

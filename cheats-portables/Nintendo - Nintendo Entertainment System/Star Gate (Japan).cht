@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Star Gate (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Star%20Gate%20%28Japan%29.cht
+
+cheats = 3
+
+cheat0_desc = "Start With 8 Lives"
+cheat0_code = "AAZSYS"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "SLISAI"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Bombs"
+cheat2_code = "SLYSSL"
+cheat2_enable = false

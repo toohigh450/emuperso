@@ -1,0 +1,48 @@
+# Recherche locale pour la ROM : Street Cop (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Street%20Cop%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 10 
+
+cheat0_desc = "Less Time On The Timer"
+cheat0_code = "TAOVTXPA"
+cheat0_enable = false 
+
+cheat1_desc = "More Time On The Timer"
+cheat1_code = "ZPOVTXPA"
+cheat1_enable = false 
+
+cheat2_desc = "Stop Timer"
+cheat2_code = "SZSNTAVG"
+cheat2_enable = false 
+
+cheat3_desc = "Immune To Damage"
+cheat3_code = "GXESTZST"
+cheat3_enable = false 
+
+cheat4_desc = "Start With Less Energy"
+cheat4_code = "AONGNAAU"
+cheat4_enable = false 
+
+cheat5_desc = "Start With More Energy"
+cheat5_code = "AVNGNAAL"
+cheat5_enable = false 
+
+cheat6_desc = "Start At Level 2"
+cheat6_code = "PAXTPPAA"
+cheat6_enable = false 
+
+cheat7_desc = "Start At Level 3"
+cheat7_code = "ZAXTPPAA"
+cheat7_enable = false 
+
+cheat8_desc = "Start At Level 4"
+cheat8_code = "LAXTPPAA"
+cheat8_enable = false 
+
+cheat9_desc = "Take Minimum Damage"
+cheat9_code = "OVESTZSV+PEESYZAP"
+cheat9_enable = false
