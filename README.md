@@ -1,41 +1,58 @@
-# N64 Web Lab — Phase 1A
+# EMUPERSO 🎮
 
-Banc d'essai **synthétique** pour le projet N64 Web de Karl.
-**Ce n'est PAS un émulateur** : aucun moteur N64 réel, aucune ROM, aucun jeu.
-Il simule le contrat technique (sauvegarde/chargement d'état, journal, audio)
-pour valider l'instrumentation avant tout vrai moteur.
+**Un portail expérimental d'émulation rétro dans le navigateur, développé et testé console par console.**
 
-Démo en ligne : `index.html` (même contenu que `N64-Web-Lab-Phase1A.html`).
+EMUPERSO réunit plusieurs chantiers d'émulation Web dans **un même dépôt GitHub**, avec un objectif : proposer, après validation, **une seule adresse Web et une seule interface** pour les consoles prises en charge. Le projet vise les ordinateurs et les téléphones, avec des contrôles adaptés aux appareils.
 
-## Statut
+> **Statut au 2 novembre 2026 : développement actif.** Les démonstrations et les branches alpha ne constituent pas une certification de compatibilité complète. La branche `main` conserve encore le **laboratoire N64 synthétique historique**; elle n'est **pas** la version unifiée à huit consoles.
 
-- **Version dans ce dépôt : 1.0.2-candidate** (construite par Codex le 2026-10-28).
-- Contre-audit Méo (2026-10-30) : **ACCEPTÉE comme banc synthétique, avec réserves**.
-  **REJETÉE comme preuve d'émulateur / de compatibilité Conker PAL / de correctif Sonic.**
-- **La 1.0.1 reste la référence.** STOP à toute promotion / remplacement sans le GO explicite de Karl.
-- Tests navigateur non rejoués de façon indépendante, Windows non validé : c'est à Karl de valider sur son PC.
+## Consoles et branches
 
-## Règles d'or (décidées par Karl, seul admin)
+| Consoles | État du chantier | Où regarder |
+| --- | --- | --- |
+| NES / Famicom et SNES / Super Famicom | Intégration alpha au portail commun, essais de compatibilité en cours | [`feature/nes-snes-unified`](../../tree/feature/nes-snes-unified) |
+| Game Boy, Game Boy Color, Game Boy Advance, Nintendo DS | Lanceurs alpha, sauvegardes et compatibilité en cours de vérification | [`emulateur-portable`](../../tree/emulateur-portable), [`feature/nes-snes-unified`](../../tree/feature/nes-snes-unified) |
+| Nintendo 64 | Émulateur réel expérimental distinct du laboratoire synthétique | [`alpha/n64-vercel-playable`](../../tree/alpha/n64-vercel-playable) |
+| PlayStation 1 | Émulateur Web expérimental | [`alpha/ps1-vercel-playable`](../../tree/alpha/ps1-vercel-playable) |
+| PlayStation Portable (PSP) | **Chantier en préparation / développement**, non validé ici | Pas encore de livraison PSP déclarée stable |
+| GameCube | Faisabilité à l'étude ; **pas de moteur navigateur validé** | Aucun port GameCube annoncé comme fonctionnel |
 
-- Aucun correctif pour le plaisir de corriger. On protège ce qui marche, on documente ce qui casse, les tests décident.
-- Rien n'est déclaré réparé avant le test réel de Karl.
-- Aucun écrasement de la 1.0.1, aucune promotion sans son GO, aucune modification hors mandat.
-- Les originaux restent intacts ; on travaille sur copies / branches.
+Les huit premières consoles représentent la cible du **portail unifié en développement**, pas une promesse de compatibilité totale ni l'état du site principal.
 
-## Collaboration (trio)
+## Essais et aperçu
 
-- **Méo (Muse)** : développe et propose ses corrections.
-- **Codex** : travaille sur le code et les tests.
-- **GPT** : audite, vérifie les régressions.
-- **Karl** : teste, approuve, décide des versions officielles.
+- [Projet GitHub](https://github.com/toohigh450/emuperso)
+- [Site principal Vercel](https://emuperso.vercel.app) — peut encore présenter une version antérieure pendant la consolidation.
+- [N64 alpha](https://emuperso-n64-alpha.vercel.app)
+- [PS1 alpha](https://emuperso-ps1-alpha.vercel.app)
+- [Branche du portail NES / SNES et portables](../../tree/feature/nes-snes-unified)
 
-On travaille par **branches + pull requests**, pas par ZIP.
-Chaque IA utilise son propre accès autorisé au dépôt.
+**Important :** certains liens sont des aperçus expérimentaux. Une page accessible ou un écran de démarrage ne démontre pas que tous les jeux, manettes, sons et sauvegardes fonctionnent.
 
-## Provenance
+## ROMs, BIOS et données personnelles
 
-- `CHANGELOG.md` : ce qui a changé en 1.0.2.
-- `MANIFEST-SHA256.txt` : manifeste d'intégrité (101/101 vérifiés).
-- `docs/` : rapports d'audit (Codex, GPT, contre-audit Méo).
-- `references/` : pièces de transmission (fichiers binaires de référence exclus du dépôt — disponibles sur demande, traçabilité par SHA-256 dans le manifeste).
-- `evidence*/` : exports de validation (captures PNG exclues du dépôt).
+**Aucune ROM commerciale ni aucun BIOS propriétaire n'est fourni avec ce projet.** Les jeux sont sélectionnés par l'utilisateur à partir de ses propres fichiers locaux, lorsqu'un lanceur le permet. Les dossiers personnels, les sauvegardes et les preuves privées ne doivent pas être envoyés sur GitHub ni déployés sur Vercel.
+
+Les tests sont conduits sur des copies ou dans des environnements isolés. La protection des sauvegardes, les imports/exports, les identités de ROMs et les risques de régression font partie des points de contrôle prioritaires. Avant d'utiliser une version alpha avec une progression importante, conserver une sauvegarde indépendante.
+
+## Méthode de développement
+
+- Branches dédiées et **pull requests** pour les changements ; pas de fusion sur `main` sans autorisation de Karl.
+- Tests réels avec des jeux autorisés à être utilisés, comparés à des essais synthétiques et à des vérifications automatisées.
+- Rapports qui distinguent **observé**, **reproduit**, **annoncé** et **non testé**.
+- Audits et corrections indépendants par **Claude, Codex, GPT et Méo (Muse)**, selon les chantiers ; **Karl** décide des validations, versions et publications.
+- Aucun correctif déclaré résolu uniquement parce qu'un test unitaire ou un déploiement est vert.
+
+### Audits en cours
+
+La migration des sauvegardes des portables est travaillée sur `feature/nes-snes-unified`. Les corrections proposées par Codex pour plusieurs risques identifiés sont suivies dans la [PR #2](../../pull/2), **sans présumer de leur fusion**. Les résultats d'audit dépendent de la version et de l'environnement testés.
+
+## Le laboratoire N64 historique sur `main`
+
+Le présent `main` comprend toujours **N64 Web Lab — Phase 1A**, un **banc synthétique sans moteur N64 réel, sans ROM ni jeu jouable**. Sa candidate `1.0.2` ne remplace pas automatiquement la référence `1.0.1`.
+
+Pour l'historique détaillé et ses limites, consulter [README-FR.md](README-FR.md), [CHANGELOG.md](CHANGELOG.md) et [docs/](docs/). Le laboratoire synthétique ne prouve ni la compatibilité de Conker PAL ni une correction du moteur N64 réel.
+
+---
+
+*EMUPERSO : un seul portail visé, des vérifications reproductibles et les originaux toujours protégés.*
