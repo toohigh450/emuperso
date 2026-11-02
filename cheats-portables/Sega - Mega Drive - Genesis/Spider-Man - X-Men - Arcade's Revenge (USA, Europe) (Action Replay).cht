@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Spider-Man - X-Men - Arcade's Revenge (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Spider-Man%20-%20X-Men%20-%20Arcade's%20Revenge%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 8 
+
+cheat0_desc = "Infinite Health (Everyone)"
+cheat0_code = "FF0225:5C"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives (Spider-Man)"
+cheat1_code = "FF0F75:09"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Lives (Cyclops, Storm, Gambit)"
+cheat2_code = "FF0089:09"
+cheat2_enable = false 
+
+cheat3_desc = "Have Blue/Red Alarm Modifier"
+cheat3_code = "FF0553:XX"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Energy/Breath (Storm)"
+cheat4_code = "FF1828:7F"
+cheat4_enable = false 
+
+cheat5_desc = "Have Lots of Yellow Stars (Gambit)"
+cheat5_code = "FF3F99:63"
+cheat5_enable = false 
+
+cheat6_desc = "Infinite Health (Gambit)"
+cheat6_code = "FF3F95:6E"
+cheat6_enable = false 
+
+cheat7_desc = "Infinite Card Attack (Gambit)"
+cheat7_code = "FF3F77:63"
+cheat7_enable = false

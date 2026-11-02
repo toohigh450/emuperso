@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Uzu Keobukseon (Korea)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Uzu%20Keobukseon%20%28Korea%29.cht
+
+cheats = 5
+
+cheat0_desc = "Master Code"
+cheat0_code = "ATBT-AA7A"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "AKRT-AA44"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Energy"
+cheat2_code = "RZJA-A6ZY"
+cheat2_enable = false
+
+cheat3_desc = "Invincibility (Disable Hit Detection)"
+cheat3_code = "RZCT-A6WJ+RZCA-A61J"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Bomb"
+cheat4_code = "AK8T-AA8L"
+cheat4_enable = false

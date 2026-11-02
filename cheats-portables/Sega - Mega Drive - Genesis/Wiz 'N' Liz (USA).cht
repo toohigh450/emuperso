@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Wiz 'N' Liz (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Wiz%20'N'%20Liz%20%28USA%29.cht
+
+cheats = 5
+
+cheat0_desc = "Unlimited Time"
+cheat0_code = ""
+cheat0_enable = false
+
+cheat1_desc = "Infinite Energy For Bosses"
+cheat1_code = "AMGT-EA80"
+cheat1_enable = false
+
+cheat2_desc = "Invincibility For Bosses"
+cheat2_code = "R1GT-E6ZL"
+cheat2_enable = false
+
+cheat3_desc = "Unlimited Time"
+cheat3_code = "AMET-AA3A"
+cheat3_enable = false
+
+cheat4_desc = "Unlimited Lives"
+cheat4_code = "ALSA-AA7A"
+cheat4_enable = false

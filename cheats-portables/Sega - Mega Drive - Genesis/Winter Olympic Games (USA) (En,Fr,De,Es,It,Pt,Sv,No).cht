@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Winter Olympic Games (USA) (En,Fr,De,Es,It,Pt,Sv,No)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Winter%20Olympic%20Games%20%28USA%29%20%28En,Fr,De,Es,It,Pt,Sv,No%29.cht
+
+cheats = 4
+
+cheat0_desc = "Stops The Timer For Player 1 In The Mogul Event"
+cheat0_code = "AMPA-EA50"
+cheat0_enable = false
+
+cheat1_desc = "Timer Runs At Half Speed On Downhill, Super G, Giant Slalom, And Slalom Events"
+cheat1_code = "SHCT-FE16"
+cheat1_enable = false
+
+cheat2_desc = "Stops The Timer On Downhill, Super G, Giant Slalom, And Slalom Events"
+cheat2_code = "AXCT-EA96"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Ammo (Biathlon)"
+cheat3_code = "FFE65E:0009"
+cheat3_enable = false

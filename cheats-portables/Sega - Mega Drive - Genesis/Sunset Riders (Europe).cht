@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Sunset Riders (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Sunset%20Riders%20%28Europe%29.cht
+
+cheats = 4
+
+cheat0_desc = "1 Shot Kill Bosses"
+cheat0_code = "A4NA-CA42+A4WA-CA6E+A42T-CA3G+CXBA-CA3N"
+cheat0_enable = false
+
+cheat1_desc = "Invincibility"
+cheat1_code = "R11T-A6WT"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Credit"
+cheat2_code = "AJGA-CA3Y"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Lives "
+cheat3_code = "AJFA-CA3R"
+cheat3_enable = false

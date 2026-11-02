@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Super King Kong 99
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Super%20King%20Kong%2099.cht
+
+cheats = 3
+
+cheat0_desc = "Kill Boss In One Hit"
+cheat0_code = "FF00D0:0001"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "FF00BE:0099"
+cheat1_enable = false
+
+cheat2_desc = "Banana Modifier"
+cheat2_code = "FF00B2:0063"
+cheat2_enable = false

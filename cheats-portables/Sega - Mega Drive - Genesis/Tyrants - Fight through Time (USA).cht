@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Tyrants - Fight through Time (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Tyrants%20-%20Fight%20through%20Time%20%28USA%29.cht
+
+cheats = 5
+
+cheat0_desc = "Start A New Game With 250 Men (Instead Of Only 100)"
+cheat0_code = "9KRA-CAC8"
+cheat0_enable = false
+
+cheat1_desc = "Start A New Game With 500 Men (Instead Of Only 100)"
+cheat1_code = "8VRA-CCC8"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Men"
+cheat2_code = "ATWA-CA6N"
+cheat2_enable = false
+
+cheat3_desc = "Number of Men Playing Island Modifier"
+cheat3_code = "FFB602:0000"
+cheat3_enable = false
+
+cheat4_desc = "Fake Number of Men Playing Island Modifier"
+cheat4_code = "FF1256:0000"
+cheat4_enable = false

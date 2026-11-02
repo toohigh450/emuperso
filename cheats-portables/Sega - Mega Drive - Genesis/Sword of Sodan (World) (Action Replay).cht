@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Sword of Sodan (World) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Sword%20of%20Sodan%20%28World%29%20%28Action%20Replay%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "004742:6002"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives (Alternate Code)"
+cheat1_code = "FF13AF:0005"
+cheat1_enable = false 
+
+cheat2_desc = "Invincible"
+cheat2_code = "FF13B100FF"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Energy"
+cheat3_code = "FF01C000E6"
+cheat3_enable = false

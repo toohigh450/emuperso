@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Tecmo World Cup '92 (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Tecmo%20World%20Cup%20'92%20%28Japan%29.cht
+
+cheats = 6
+
+cheat0_desc = "Infinite Hp"
+cheat0_code = "BDRT-AA52+BAPT-CA46"
+cheat0_enable = false
+
+cheat1_desc = "Cpu Never Scores"
+cheat1_code = "HBTA-CEVY"
+cheat1_enable = false
+
+cheat2_desc = "Cpu Never Scores"
+cheat2_code = "SAWA-AET4"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Guts"
+cheat3_code = "AMRT-AA54+AJPT-CA46"
+cheat3_enable = false
+
+cheat4_desc = "Team 1 Score Modifier (P1)"
+cheat4_code = "FFF124:0000"
+cheat4_enable = false
+
+cheat5_desc = "Team 2 Score Modifier (P2/CPU)"
+cheat5_code = "FFF126:0000"
+cheat5_enable = false

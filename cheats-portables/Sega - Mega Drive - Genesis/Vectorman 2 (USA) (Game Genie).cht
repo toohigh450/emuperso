@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Vectorman 2 (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Vectorman%202%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Infinite Energy (Invincible)"
+cheat0_code = "AMNA-AA6T"
+cheat0_enable = false 
+
+cheat1_desc = "Start With 7 Energy Balls"
+cheat1_code = "A8XT-AAG6"
+cheat1_enable = false 
+
+cheat2_desc = "Start With 10 Energy Balls"
+cheat2_code = "BLXT-AAG6"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Time"
+cheat3_code = "F4ZT-AA4T"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Lives"
+cheat4_code = "C5NT-AA5L"
+cheat4_enable = false 
+
+cheat5_desc = "Multi-Jump"
+cheat5_code = "AX1T-AA6N"
+cheat5_enable = false

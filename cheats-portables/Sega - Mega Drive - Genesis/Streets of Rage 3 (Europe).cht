@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Streets of Rage 3 (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Streets%20of%20Rage%203%20%28Europe%29.cht
+
+cheats = 2
+
+cheat0_desc = "Invincibility (Disable Hit Detection)"
+cheat0_code = "RZCT-E60G+R03T-E6TT+RZJA-E6WC+RZCA-E6TJ"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Energy Power Attack All Characters"
+cheat1_code = "AMHT-AA38+AMHT-AA7R+AMKT-AA6R+AMKA-AA34+AMJT-AA24+AMLT-AA2J+AMRT-AA6E+AMMA-AA8A+AMMT-AA6Y"
+cheat1_enable = false

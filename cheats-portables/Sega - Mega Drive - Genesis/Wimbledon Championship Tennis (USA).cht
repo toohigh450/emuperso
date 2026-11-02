@@ -1,0 +1,44 @@
+# Recherche locale pour la ROM : Wimbledon Championship Tennis (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Wimbledon%20Championship%20Tennis%20%28USA%29.cht
+
+cheats = 9
+
+cheat0_desc = "Debug Option Modifier"
+cheat0_code = "FF00FC:0000"
+cheat0_enable = false
+
+cheat1_desc = "Ntsc Modifier"
+cheat1_code = "FF0036:0000"
+cheat1_enable = false
+
+cheat2_desc = "Enable Test Mode"
+cheat2_code = "FF00FD:0001"
+cheat2_enable = false
+
+cheat3_desc = "Enable Test Mode"
+cheat3_code = "A52A-AR2W+CM1T-AN72"
+cheat3_enable = false
+
+cheat4_desc = "Region Lockout Bypass"
+cheat4_code = "RECA-A6W0"
+cheat4_enable = false
+
+cheat5_desc = "P1 Easy Win"
+cheat5_code = "FF0C60:0003"
+cheat5_enable = false
+
+cheat6_desc = "P2 Or Computer Easy Win"
+cheat6_code = "FF0C60:0003"
+cheat6_enable = false
+
+cheat7_desc = "P1 Can't Win"
+cheat7_code = "FF0C60:0000"
+cheat7_enable = false
+
+cheat8_desc = "Master Code"
+cheat8_code = "JABT-AJBT"
+cheat8_enable = false
