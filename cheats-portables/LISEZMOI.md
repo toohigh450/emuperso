@@ -14,3 +14,7 @@ Inventaire : 12082 entrées de ROM lues dans les noms/archives, 12062 noms disti
 
 Les 2 319 ZIP DS que Codex n'avait pas pu lire (téléchargement qBittorrent en cours) sont maintenant rattachés par leur nom de fichier, qui est le nom No-Intro du jeu. 991 fichiers .cht DS viennent de ce rattachement par nom : leur contenu n'a pas été lu, et l'association reste à confirmer dans Portables comme pour les autres.
 Le dossier DS contient plus de 1 000 fichiers : l'importer en deux sélections.
+
+## PSP — 2 novembre 2026
+
+Dossier `Sony - PlayStation Portable/` : un fichier par jeu de la collection locale, nommé `<jeu> [<identifiant du disque>].cht`. L'identifiant est lu dans le jeu (UMD_DATA.BIN ou PARAM.SFO) ; Portables propose le fichier pour ce disque, à confirmer une fois (la révision n'est pas garantie). Même source et même commit que ci-dessus, CC BY-SA 4.0. Inventaire et jeux sans source : `INDEX-PSP.json`. À relancer quand le téléchargement est fini : `node portables/tools/cheats-psp.mjs "<dossier PSP>"`.

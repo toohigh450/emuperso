@@ -10,13 +10,15 @@ export const CHEAT_FOLDER_ALIASES = {
   // Dossiers de la base libretro : « Nintendo - Nintendo Entertainment System », « Nintendo - Super Nintendo… ».
   nes: 'nintendo entertainment system',
   snes: 'super nintendo entertainment system',
+  // « Sony - PlayStation Portable » ; les noms de fichiers y finissent par « [US] [ULUS-10080] ».
+  psp: 'playstation portable',
 };
 
 /** Déduit la console d'après les dossiers du chemin (ex. « Nintendo - Game Boy Advance/… »). */
 export function inferSystemFromPath(path) {
   const parts = String(path || '').split(/[\\/]/).slice(0, -1);
   for (let i = parts.length - 1; i >= 0; i--) {
-    const norm = parts[i].toLowerCase().replace(/^nintendo\s*-\s*/, '').replace(/\s+/g, ' ').trim();
+    const norm = parts[i].toLowerCase().replace(/^(?:nintendo|sony)\s*-\s*/, '').replace(/\s+/g, ' ').trim();
     for (const [sys, alias] of Object.entries(CHEAT_FOLDER_ALIASES)) {
       if (norm === alias || norm === sys) return sys;
     }
@@ -55,11 +57,23 @@ export function cheatIdentity(text) {
   return { declared: lines.length > 0, sha256: hashes.every(Boolean) && unique.size === 1 ? [...unique][0] : null };
 }
 
-/** Le nom est une suggestion. Seule une empreinte déclarée peut identifier les octets. */
-export function classifyCheatFiles(romName, hex, files) {
+/** Identifiant de disque PSP à la fin d'un nom de fichier libretro (« … [US] [ULUS-10080].cht »), ou null. */
+export function discIdOfCheatName(name) {
+  const m = /\[([A-Z]{4}-\d{5})\]\s*(?:\.[^.]+)?$/i.exec(String(name || '').replace(/^.*[\\/]/, ''));
+  return m ? m[1].toUpperCase() : null;
+}
+
+/**
+ * Le nom est une suggestion. Seule une empreinte déclarée peut identifier les octets.
+ * PSP : discId (lu dans UMD_DATA.BIN ou PARAM.SFO) désigne le disque bien plus sûrement qu'un nom,
+ * mais pas sa révision : la correspondance reste une suggestion à confirmer (sameDisc).
+ */
+export function classifyCheatFiles(romName, hex, files, { discId = null } = {}) {
   const identified = files.filter((f) => f.romSha256 === hex && !f.reviewRequired);
-  const candidates = files.filter((f) => !f.identityDeclared && !f.romSha256);
-  return { identified, ...matchCheatFiles(romName, candidates) };
+  let candidates = files.filter((f) => !f.identityDeclared && !f.romSha256);
+  const sameDisc = discId ? candidates.filter((f) => discIdOfCheatName(f.name) === discId) : [];
+  if (sameDisc.length) candidates = candidates.filter((f) => !sameDisc.includes(f));
+  return { identified, sameDisc, ...matchCheatFiles(romName, candidates) };
 }
 
 export function linkedCheatValid(link, file, hex) {

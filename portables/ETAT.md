@@ -1,3 +1,17 @@
+# PSP 0.4.0-alpha.1 (branche feature/psp)
+
+## Fait
+
+- PSP dans le même lanceur : .iso, .cso, .pbp ; identifiant du disque lu sans charger le jeu ; .chd/.zso refusés avec la conversion à faire.
+- Codes CWCheat par jeu, garde-fous (titres de section non activables, conflits signalés, fichier écrit avant le démarrage).
+- Sauvegardes de carte mémoire : export/import ZIP contrôlé, copie de sécurité chaque minute ; états.
+- COOP/COEP sur /portables/ (Vercel, serveur Windows, serveur de test) ; portail à 9 consoles.
+- Détails, essais réels et limites : PSP.md.
+
+## Encore à vérifier
+
+- Effet des codes en jeu, son, manette, gros jeux, téléphone ; tests Playwright à relancer sur le PC de Karl.
+
 # Consoles Nintendo 0.3.0 alpha.1 — NES et SNES (branche feature/nes-snes-unified)
 
 ## Fait

@@ -1,0 +1,1914 @@
+{
+  "summary": {
+    "source": "https://github.com/libretro/libretro-database",
+    "sourceCommit": "2fdd069d45883449cecf97deddd493492e77ff29",
+    "games": 407,
+    "files": 29,
+    "codes": 1470,
+    "missing": 8,
+    "unreadable": 370
+  },
+  "files": [
+    {
+      "system": "psp",
+      "name": "Ace Armstrong vs. the Alien Scumbags! (USA).cso",
+      "discId": "NPUZ-00109",
+      "output": "Sony - PlayStation Portable\\Ace Armstrong vs. the Alien Scumbags! (USA) [NPUZ-00109].cht",
+      "codes": 11,
+      "bytes": 3130,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Ace%20Armstrong%20Vs.%20The%20Alien%20Scumbags%20(Mini)%20%5BUS%5D%20%5BNPUZ-00109%5D.cht"
+      ],
+      "sha256": "4324cc25056429829d390304ab4c673712d6df0acf9777475e8fffa90fde1af8",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Ace Combat Skies Of Deception (USA).iso",
+      "discId": "ULUS-10176",
+      "output": "Sony - PlayStation Portable\\Ace Combat Skies Of Deception (USA) [ULUS-10176].cht",
+      "codes": 67,
+      "bytes": 10145,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Ace%20Combat%20X%20-%20Skies%20Of%20Deception%20%5BUS%5D%20%5BULUS-10176%5D.cht"
+      ],
+      "sha256": "31170428815fecf74e8e0c60992a07162a20e2b9288810353e84b78e832a4220",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Atari Hits Remixed (USA).cso",
+      "discId": "ULUS-10325",
+      "output": "Sony - PlayStation Portable\\Atari Hits Remixed (USA) [ULUS-10325].cht",
+      "codes": 3,
+      "bytes": 945,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Atari%20Classics%20Evolved%20%5BUS%5D%20%5BULUS-10325%5D.cht"
+      ],
+      "sha256": "f00b2f437ce92ffac1783e9f00def594ed347de82e55133458bc2b6639271cd0",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Bleach - Heat the Soul (Japan).ISO",
+      "discId": "UCJS-10008",
+      "output": "Sony - PlayStation Portable\\Bleach - Heat the Soul (Japan) [UCJS-10008].cht",
+      "codes": 5,
+      "bytes": 1186,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Bleach%20-%20Heat%20The%20Soul%20%5BJP%5D%20%5BUCJS-10008%5D.cht"
+      ],
+      "sha256": "0e719b9cdd72b63482a85157804d8195c433ae51f1b746c858770b57c29b1e09",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Bleach - Heat the Soul 2 (Japan).iso",
+      "discId": "UCJS-10017",
+      "output": "Sony - PlayStation Portable\\Bleach - Heat the Soul 2 (Japan) [UCJS-10017].cht",
+      "codes": 3,
+      "bytes": 965,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Bleach%20-%20Heat%20The%20Soul%202%20%5BJP%5D%20%5BUCJS-10017%5D.cht"
+      ],
+      "sha256": "27f972bfa2dcd9279433953a3547769b504f5d6d3fff16c1697183699f15e050",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Blimp - The Flying Adventures (USA).cso",
+      "discId": "NPUZ-00120",
+      "output": "Sony - PlayStation Portable\\Blimp - The Flying Adventures (USA) [NPUZ-00120].cht",
+      "codes": 2,
+      "bytes": 874,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Blimp%20-%20The%20Flying%20Adventures%20(Mini)%20%5BUS%5D%20%5BNPUZ-00120%5D.cht"
+      ],
+      "sha256": "7cb21d9ad8a3c7fb350abe923152fa66a22b88f868eae7af86b99bb69032ba2e",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Burnout Legends (USA).cso",
+      "discId": "ULUS-10025",
+      "output": "Sony - PlayStation Portable\\Burnout Legends (USA) [ULUS-10025].cht",
+      "codes": 42,
+      "bytes": 5405,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Burnout%20Legends%20%5BUS%5D%20%5BULUS-10025%5D.cht"
+      ],
+      "sha256": "425d626a3cbcd449e2093525b4f2c6940f58ced2de5577601f99b4d5ac578ea9",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Bust A Move Ghost.cso",
+      "discId": "ULES-00233",
+      "output": "Sony - PlayStation Portable\\Bust A Move Ghost [ULES-00233].cht",
+      "codes": 4,
+      "bytes": 1031,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Bust-A-Move%20Ghost%20%5BEU%5D%20%5BULES-00233%5D.cht"
+      ],
+      "sha256": "d343daa8219185aec26cd5bca1a6d3adb08968fbcc32f80fe9c10f2a7df5e77e",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Carnivores - Ice Age (USA).cso",
+      "discId": "NPUZ-00236",
+      "output": "Sony - PlayStation Portable\\Carnivores - Ice Age (USA) [NPUZ-00236].cht",
+      "codes": 5,
+      "bytes": 1229,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Carnivores%20-%20Ice%20Age%20(Mini)%20%5BUS%5D%20%5BNPUZ-00236%5D.cht"
+      ],
+      "sha256": "a3697b78acf9c6f22715c61906461cc6d37e907058c9106973fa834150e5e6a3",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Castlevania - The Dracula X Chronicles (USA).cso",
+      "discId": "ULES-00841",
+      "output": "Sony - PlayStation Portable\\Castlevania - The Dracula X Chronicles (USA) [ULES-00841].cht",
+      "codes": 161,
+      "bytes": 24623,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Castlevania%20-%20The%20Dracula%20X%20Chronicles%20%5BEU%5D%20%5BULES-00841%5D.cht"
+      ],
+      "sha256": "aecc2c432db0afef34433221507d1456fd5a58e4ef1a543718c8ea16b8076ecd",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Cubixx (USA).cso",
+      "discId": "NPUZ-00080",
+      "output": "Sony - PlayStation Portable\\Cubixx (USA) [NPUZ-00080].cht",
+      "codes": 6,
+      "bytes": 1454,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Cubixx%20(Mini)%20%5BUS%5D%20%5BNPUZ-00080%5D.cht"
+      ],
+      "sha256": "bc8ffd3b8d59436e9ba74966f87c421c1481bd7a95be330262c9152a498377c4",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Dave Mirra BMX Challenge (USA).iso",
+      "discId": "ULUS-10204",
+      "output": "Sony - PlayStation Portable\\Dave Mirra BMX Challenge (USA) [ULUS-10204].cht",
+      "codes": 9,
+      "bytes": 1655,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Dave%20Mirra%20BMX%20Challenge%20%5BUS%5D%20%5BULUS-10204%5D.cht"
+      ],
+      "sha256": "e12cbfb07caa4b7ba2db28fa3e54456bc6c0504b15556eb4ce163a217c27ce1b",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Earthshield (USA).cso",
+      "discId": "NPUX-80405",
+      "output": "Sony - PlayStation Portable\\Earthshield (USA) [NPUX-80405].cht",
+      "codes": 10,
+      "bytes": 1791,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Earth%20Shield%20(Mini)%20%5BUS%5D%20%5BNPUX-80405%5D.cht"
+      ],
+      "sha256": "8417b67a5641b2f1ac9ffac54824850c597d203c9c27719d39a81043dc9718fa",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Final Fantasy Crisis Core.cso",
+      "discId": "ULUS-10336",
+      "output": "Sony - PlayStation Portable\\Final Fantasy Crisis Core [ULUS-10336].cht",
+      "codes": 189,
+      "bytes": 35093,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Crisis%20Core%20-%20Final%20Fantasy%20VII%20%5BUS%5D%20%5BULUS-10336%5D.cht"
+      ],
+      "sha256": "5ad9c15cb59c46e848ffb39da98874f4c466a9baa4cb91ebc6bd064d7a25b3b9",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Freekscape - Escape From Hell (USA).cso",
+      "discId": "NPUZ-00013",
+      "output": "Sony - PlayStation Portable\\Freekscape - Escape From Hell (USA) [NPUZ-00013].cht",
+      "codes": 1,
+      "bytes": 926,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Freekscape%20-%20Escape%20From%20Hell%20(Mini)%20%5BUS%5D%20%5BNPUZ-00013%5D.cht"
+      ],
+      "sha256": "30fdf9bdad688b8676802c2132bf6bf3f6b2f1fc7b799507e003e86c4a99edcf",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Micro MachinesV4.iso",
+      "discId": "ULES-00368",
+      "output": "Sony - PlayStation Portable\\Micro MachinesV4 [ULES-00368].cht",
+      "codes": 1,
+      "bytes": 754,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Micro%20Machines%20V4%20%5BEU%5D%20%5BULES-00368%5D.cht"
+      ],
+      "sha256": "274e9ad0435e84a624a7f28cd68659f9a3e6e5cb91310f97e5f03f232b4c2459",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Mortal Kombat Unchained.cso",
+      "discId": "ULUS-10102",
+      "output": "Sony - PlayStation Portable\\Mortal Kombat Unchained [ULUS-10102].cht",
+      "codes": 47,
+      "bytes": 5381,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Mortal%20Kombat%20-%20Unchained%20%5BUS%5D%20%5BULUS-10102%5D.cht"
+      ],
+      "sha256": "b86be7f6935be50674ec62f8e1be3e0d5a18b71d0b44115a1143b7c34ba6c25e",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Music Quiz (USA).cso",
+      "discId": "NPUX-80438",
+      "output": "Sony - PlayStation Portable\\Music Quiz (USA) [NPUX-80438].cht",
+      "codes": 1,
+      "bytes": 760,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Music%20Quiz%20(PSN)%20%5BUS%5D%20%5BNPUX-80438%5D.cht"
+      ],
+      "sha256": "2117bc01b762ba5610513dbf1f31dc9062550786150adcbfd688718a7ae83ed4",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Nascar 07.cso",
+      "discId": "ULUS-10122",
+      "output": "Sony - PlayStation Portable\\Nascar 07 [ULUS-10122].cht",
+      "codes": 4,
+      "bytes": 990,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Nascar%2007%20%5BUS%5D%20%5BULUS-10122%5D.cht"
+      ],
+      "sha256": "d39504fca3df4545d77472fbd7611e9b73f25cd84c6adfe4b26f8eb79f736b00",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Phantasy Star Portable 2.cso",
+      "discId": "ULUS-10529",
+      "output": "Sony - PlayStation Portable\\Phantasy Star Portable 2 [ULUS-10529].cht",
+      "codes": 420,
+      "bytes": 39217,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Phantasy%20Star%20Portable%202%20%5BUS%5D%20%5BULUS-10529%5D.cht"
+      ],
+      "sha256": "c4971135f180a0af90000f7627a27dc73db1394406052adbb9479347d11bebbd",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "R-Type Command.cso",
+      "discId": "ULUS-10343",
+      "output": "Sony - PlayStation Portable\\R-Type Command [ULUS-10343].cht",
+      "codes": 5,
+      "bytes": 1147,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/R-Type%20Command%20%5BUS%5D%20%5BULUS-10343%5D.cht"
+      ],
+      "sha256": "40dd1194036db323018d2c1bc50fa3695bdd9fea4b4ad1d23f0bd4a8abbb559b",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Ridge Racer 2.iso",
+      "discId": "UCES-00422",
+      "output": "Sony - PlayStation Portable\\Ridge Racer 2 [UCES-00422].cht",
+      "codes": 28,
+      "bytes": 3719,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Ridge%20Racer%202%20%5BEU%5D%20%5BUCES-00422%5D.cht"
+      ],
+      "sha256": "aeb6e8ee451df867387328711de8276357793ae77200afb9131f345b1bd42427",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Street Fighter Alpha 3 MAX.iso",
+      "discId": "ULUS-10062",
+      "output": "Sony - PlayStation Portable\\Street Fighter Alpha 3 MAX [ULUS-10062].cht",
+      "codes": 32,
+      "bytes": 3911,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Street%20Fighter%20Alpha%203%20Max%20%5BUS%5D%20%5BULUS-10062%5D.cht"
+      ],
+      "sha256": "d3e1ef44aa0d38104cebd70c2cd7b195196a9d3d1bb3956db20b45389a95b203",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Tokobot.iso",
+      "discId": "ULUS-10061",
+      "output": "Sony - PlayStation Portable\\Tokobot [ULUS-10061].cht",
+      "codes": 4,
+      "bytes": 1114,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Tokobot%20%5BUS%5D%20%5BULUS-10061%5D.cht"
+      ],
+      "sha256": "8f6f3a3b2bbc5cfb185252a75e97a35b1c37882b5eab7aca018b2c7f6a0ab1f9",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Treasures of Montezuma, The (USA).cso",
+      "discId": "NPUZ-00269",
+      "output": "Sony - PlayStation Portable\\Treasures of Montezuma, The (USA) [NPUZ-00269].cht",
+      "codes": 2,
+      "bytes": 895,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Treasures%20Of%20Montezuma%2C%20The%20(Mini)%20%5BUS%5D%20%5BNPUZ-00269%5D.cht"
+      ],
+      "sha256": "a4f47cc4db3636140eff7051233f6ee38d0359ab7eb286e3bbdb522cdec9625c",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Valkyria Chronicles 2.cso",
+      "discId": "ULUS-10515",
+      "output": "Sony - PlayStation Portable\\Valkyria Chronicles 2 [ULUS-10515].cht",
+      "codes": 64,
+      "bytes": 7886,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Valkyria%20Chronicles%20II%20%5BUS%5D%20%5BULUS-10515%5D.cht"
+      ],
+      "sha256": "563c39ed801f0a6c1a34f4626a62f5da8ccedabb055957357e9b7428489d2c15",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Valkyrie Profile Lenneth.cso",
+      "discId": "ULUS-10107",
+      "output": "Sony - PlayStation Portable\\Valkyrie Profile Lenneth [ULUS-10107].cht",
+      "codes": 228,
+      "bytes": 20125,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Valkyrie%20Profile%20-%20Lenneth%20%5BUS%5D%20%5BULUS-10107%5D.cht"
+      ],
+      "sha256": "b199aa94259c99cbc57024ffa2863ab229ecccc0eddd5b309b251215761cf01e",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Wipeout Pulse.cso",
+      "discId": "UCES-00465",
+      "output": "Sony - PlayStation Portable\\Wipeout Pulse [UCES-00465].cht",
+      "codes": 44,
+      "bytes": 4842,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Wipeout%20Pulse%20%5BEU%5D%20%5BUCES-00465%5D.cht"
+      ],
+      "sha256": "58c5754c6e2ca93b87e10160529287bae1ed4f843c4caa98c24be1cc783d07e0",
+      "status": "source_recherchee_non_testee"
+    },
+    {
+      "system": "psp",
+      "name": "Wipeout Pure.cso",
+      "discId": "UCES-00001",
+      "output": "Sony - PlayStation Portable\\Wipeout Pure [UCES-00001].cht",
+      "codes": 72,
+      "bytes": 12863,
+      "sources": [
+        "https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Wipeout%20Pure%20%5BEU%5D%20%5BUCES-00001%5D.cht"
+      ],
+      "sha256": "d0ffb6df62d112aaed8d7706e9c1f18a4030b784853b92390698cd1e236febbb",
+      "status": "source_recherchee_non_testee"
+    }
+  ],
+  "missing": [
+    {
+      "name": "Full Auto 2 Battlelines.cso",
+      "discId": "ULES-00754",
+      "title": "FULL AUTO 2 BATTLELINES"
+    },
+    {
+      "name": "HAL 21 (USA).cso",
+      "discId": "NPUZ-00136",
+      "title": "HAL 21"
+    },
+    {
+      "name": "Pilot Acadamy.iso",
+      "discId": "ULES-00374",
+      "title": "Pilot Academy"
+    },
+    {
+      "name": "Scrabble.cso",
+      "discId": "ULUS-10412",
+      "title": "SCRABBLE"
+    },
+    {
+      "name": "Street Smart (USA).cso",
+      "discId": "NPUZ-00172",
+      "title": "STREET SMART"
+    },
+    {
+      "name": "Top Gun (USA).cso",
+      "discId": "NPUZ-00184",
+      "title": "TOP GUN"
+    },
+    {
+      "name": "Vanguard (USA).cso",
+      "discId": "NPUZ-00148",
+      "title": "Vanguard"
+    },
+    {
+      "name": "Vanguard II (USA).cso",
+      "discId": "NPUZ-00149",
+      "title": "VANGUARD II"
+    }
+  ],
+  "unreadable": [
+    {
+      "name": "1000 Tiny Claws (USA).cso",
+      "reason": "identifiant du disque introuvable"
+    },
+    {
+      "name": "2D Adventures of Rotating Octopus Character, The (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "3 2 1 - Supercrash! (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "300 - March to Glory (USA).iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "3D Twist & Match (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "4x4 Jam (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "50 Cent - Bulletproof - G-Unit Edition (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "7 Wonders of the Ancient World (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Activision Hits Remixed (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Actual Crimes - Jack the Ripper (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "After Burner - Black Falcon (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Alien Syndrome (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Alien Zombie Death (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Ambassador Kane (Europe).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Angry Birds (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Apache Overkill (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Ape Academy 1 (USA).iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Ape Academy 2 (USA).iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Arcade Darts (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Arcade Essentials (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Arcade Pool (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Archibald's Adventures (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Armored Core - Silent Line (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Armored Core 3 Portable (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Armored Core Formula Front Extreme Battles (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Army of Two - The 40th Day (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Asphalt - Urban GT 2 (Europe).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Assassins Creed Brotherhood.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Athena (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "ATV Off Road Fury (USA).iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "B-Boy (USA).iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Bashi Blocks (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "BattleZone (USA).iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Beats (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Bee Wars (Europe).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Blade Dancer Lineage of Light (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Blast Off (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "BlazBlue - Calamity Trigger Portable (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Blazblue - Continuum Shift II.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Block Cascade Fusion (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Blood Bowl (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Bloons (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Bomberman (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Boom Beats (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Bowling 3D (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "BreakQuest - Extra Evolution (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Breath of Fire III (Europe).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Brothers in Arms - D-Day (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Bunny Dodge (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Burnout Dominator (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Bust-A-Move - Deluxe (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Busy Sweets Factory (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Call of Duty - Roads to Victory (USA).cso",
+      "reason": "identifiant du disque introuvable"
+    },
+    {
+      "name": "Canabalt (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Capcom Classics Collection Remixed (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Carnivores - Dinosaur Hunter (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Caterpillar (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Championship Manager 2010 Express (Europe).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Charge! Tank Squad (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Chopper I (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Cladun - This is an RPG! (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Cladun x2 (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Class of Heroes (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Code Lyoko - Quest for Infinity (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Coded Arms - Contagion (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Cohort Chess (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Core Blaster (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Corpse Party (USA).iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Crash Tag Team Racing.ISO",
+      "reason": "Image disque d’une autre console (« HJH VCDROM Extension ») : seuls les UMD PSP sont acceptés ici."
+    },
+    {
+      "name": "Crazy Taxi - Fare Wars (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Crazy Taxi Double Punch.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Creature Defense.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Crime Spree (Europe).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Crimson Gem Saga.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Crimson Room Reverse (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "D-Cube Planet (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Darius Burst.iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Darkstalkers Chronicle - The Chaos Tower (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Daxter.iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Dead or Alive - Paradise (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Dead to Rights - Reckoning (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Death Jr II.iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Death Jr. (USA).ISO",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Def Jam - Fight for NY - The Takeover (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Digi-Tiles (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Disgaea 2 - Dark Hero Days (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Disgaea Afternoon Of Darkness.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Disgaea Infinite (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "DJ Max Fever (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Doodle Fit (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Doodle Pool (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Dr. Maybee and the Adventures of Scarygirl (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Dr. Mini Games (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Dracula - Undead Awakening (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Dragon Ball Evolution (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Dragoneer's Aria (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Driver 76 (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Drums Challenge (USA).cso",
+      "reason": "identifiant du disque introuvable"
+    },
+    {
+      "name": "DT Carnage (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Ducati Challenge (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Dungeon Siege - Throne of Agony (World).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Dungeons & Dragons Tactics (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Dynasty Warriors (USA).ISO",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Dynasty Warriors Strikeforce.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Dynasty Warriors Vol. 2 (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Dynogems (USA).cso",
+      "reason": "identifiant du disque introuvable"
+    },
+    {
+      "name": "Echochrome.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Echoes (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Enchanted Cavern (Europe).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Epyx's Impossible Mission (Europe).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Everyday Shooter.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Exit 2.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Exit.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "F1 Grand Prix.ISO",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Fading Shadows.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Family Games (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Farm Frenzy 2 (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Farm Frenzy 3 (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Fate Extra.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Fate Unlimited Codes.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Feisty Feet (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Fieldrunners (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Fighting Fantasy - Talisman of Death (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Fighting Fantasy - The Warlock of Firetop Mountain (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Final Fantasy 2.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Final Fantasy 4.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Final Fantasy Crystal Defenders.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Final Fantasy Dissidia.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Final Fantasy Tactics.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Final Fantasy.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Fired Up.ISO",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Fish Tank (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Flick Fishing (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Floating Cloud God Saves the Pilgrims (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Flow.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Fly Fu (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Ford Bold Moves Street.ISO",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Fort Commander - King's Gambit (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Fort Commander II - Counterattack (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Free Runing.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Free Shot Frenzy (Europe).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Funky Punch (USA).cso",
+      "reason": "identifiant du disque introuvable"
+    },
+    {
+      "name": "Future Fight (Europe).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Generation Of Chaos.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Ghost In The Shell Stand Alone Complex.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Ghost Recon Warfighter 2.iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "God Eater Burst.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "God Of War Chains Of Olympus.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "God Of War Ghost Of Sparta.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Gold Medalist (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Golf Mania (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Gradius Collection.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Gran Turismo.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Grand Theft Auto Chinatown Wars.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Grand Theft Auto Liberty City Stories.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Grand Theft Auto Vice City Stories.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Grip Shift.iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Guerrilla War (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Guilty Gear Judgement.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Guilty Gear XX Accent Core Plus.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Gun Showdown.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Gungnir.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Gunpey.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Hakuoki Demon Of The Fleeting Blossom.cso",
+      "reason": "identifiant du disque introuvable"
+    },
+    {
+      "name": "Hammerin Hero.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Heracles Chariot Racing (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Hero of Sparta (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Hexyz Force.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "HISTORY - Egypt - Engineering an Empire (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "HISTORY - Ice Road Truckers (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Holy Invasion Of Privacy Badman.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Homerun Hitters (USA).cso",
+      "reason": "identifiant du disque introuvable"
+    },
+    {
+      "name": "Hotel Mogul (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Hysteria Project (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Hysteria Project 2 (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Idiot Squad (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Infected.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Influence (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Jak And Daxter The Lost Frontier.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Jeanne d'Arc.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Jelly Pops (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "JellyCar 2 (USA).cso",
+      "reason": "identifiant du disque introuvable"
+    },
+    {
+      "name": "Jetpack Joyride (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Jewel Keepers - Easter Island (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Kahoots (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Kaleidoscope - Interactive Synaesthesia Project (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Kao Challengers.iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Kenka Bancho Badass Rumble.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Key Of Heaven.iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Killzone Liberation.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Kingdom Hearts Birth By Sleep.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Knight Fortix 2 (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "L.A. Gridlock (Europe).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "LEGO Batman.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "LEGO Indiana Jones 2.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "LEGO Pirates Of The Caribbean.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "LEGO Star Wars II The Original Trilogy.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Lemmings .cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Little Big Planet.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Loco Roco 2.ISO",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Loco Roco.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Lord Of Arcana.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Lost Regnum.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Luxor Pharaohs Challenge.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "M.O.Z.O.X. Space Salvager (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Mad Blocker Alpha (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Mahjong Solitaire (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Mana Khemia Student Alliance.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Manhunt 2 Uncut.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Marbians, The (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Marvel Ultimate Alliance 2.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "MediEvil Resurrection.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Mega Man Maverick Hunter X.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Mega Man Powered Up.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Mercury.iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Metal Gear Acid 2.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Metal Gear Acid.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Metal Gear Solid Peace Walker.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Metal Gear Solid Portable Ops Plus.cso",
+      "reason": "identifiant du disque introuvable"
+    },
+    {
+      "name": "Metal Slug Anthology.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Metal Slug XX.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Miami Vice.iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Midnight Club Los Angeles Remix.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Mighty Flip Champs! DX (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "MiniSquadron (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Modnation Racers.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Monopoly (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Monster Hunter Freedom Unite.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Monster Jam Urban Assault.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Monsters (Probably) Stole My Princess (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Moto GP.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Motorstorm.iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Mr. Hat and the Magic Cube (Europe).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Mystery of the Crystal Portal, The (USA).cso",
+      "reason": "identifiant du disque introuvable"
+    },
+    {
+      "name": "Need For Speed Carbon Own The City.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Need For Speed Most Wanted.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Need For Speed ProStreet.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Need For Speed Shift.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Need For Speed Undercover.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Need For Speed Underground Rivals.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Next Space, The (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Nocturnal (Europe).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Nova (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Orbit (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "OutRun 2006 Coast 2 Coast.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Pangya Fantasy Golf.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Parasite Eve 3 Third Birthday.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Parodius Collection.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Patapon 3.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Phantasy Star Portable.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Phantom Brave The Hermuda Triangle.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Phase Shift - Threats Beyond the Network (Asia).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Pile Up! Bakery (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Pinball Hall Of Fame.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "PixelJunk Monsters.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Powerstone Collection.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Prinny 2 Dawn Of Operation Panties Dood.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Prinny Can I Really Be The Hero.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Pursuit Force Extreme Justice.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Pursuit Force.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Puzzle Quest Challenge Of The Warlords.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Puzzle Scape (Europe).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Quiz Animania (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Rainbow Six Vegas.iso",
+      "reason": "identifiant du disque introuvable"
+    },
+    {
+      "name": "Rasmus Klump in Pingonesien (Denmark).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Rasmus Klump is Saving the Chickens (Denmark).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Ratchet and Clank - Size Matters.iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Rengoku Tower Of Purgatory.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Resistance Retribution.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Retro Cave Flyer (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Revoltin' Youth (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Ridge Racer.cso",
+      "reason": "Image disque d’une autre console (« HJH VCDROM Extension ») : seuls les UMD PSP sont acceptés ici."
+    },
+    {
+      "name": "Robin Hood - The Return of Richard (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Rock Band Unplugged.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Rumble Trucks (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Rush.iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Samurai Showdown Anthology.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "SAR - Search and Rescue (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Sasuke Vs. Commander (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Sega Rally Revo.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Shin Megami Tensei Persona.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Silent Hill Origins.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Silent Hill Shattered Memories.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Skate Park City.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Sky Force (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Snake Warriors - Training (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Sneezies (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Solitaire (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Sonic Rivals 2.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Sonic Rivals.iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Soul Calibur Broken Destiny.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Space Invaders Evolution.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Space Shooter for Two Bucks!, A (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Spaceball Revolution (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Speedball 2 - Evolution (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Spider Man Friend Or Foe.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Split Second - Velocity.iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Spot the Differences! (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "SSX On Tour.iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Stand O'Food (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Star Ocean First Departure.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Star Ocean Second Evolution.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Star Soldier.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Star Wars Battlefront Elite Squadron.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Star Wars Lethal Alliance.iso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Star Wars The Force Unleashed.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Steambot Chronicles Battle Tournament.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Stick Man Rescue (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Street Supremacy.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Sudoku (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Super Fruitfall Deluxe (Europe).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Super Monkey Ball Adventure.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Supermarket Mania (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Syphon Filter Dark Mirror.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Syphon Filter Logans Shadow.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Syphon Filter.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Tactics Ogre Let Us Cling Together.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Tehra - Dark Warrior (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Tekken 6.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Tekken Dark Resurrection.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Telegraph Crosswords (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Telegraph Sudoku & Kakuro (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Tenchu Shadow Assassins 4.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Test Drive Unlimited.ISO",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "The Bigs 2.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "The Legend Of Heroes A Tear Of Vermillion.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "The Sims 2.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "This is Football Management (Europe).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Thrillville.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Tiger Trouble (Europe).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "TNK III (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Toca Race Driver 2.iso",
+      "reason": "Image disque d’une autre console (« VcdromX By HJH98 ») : seuls les UMD PSP sont acceptés ici."
+    },
+    {
+      "name": "Tomb Raider Anniversary.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Tony Hawks Underground 2 Remix.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Tonzurakko (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Top Trumps - NBA All Stars (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Touchdown Fever (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Trailblazer (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Twin Blades (USA).cso",
+      "reason": "identifiant du disque introuvable"
+    },
+    {
+      "name": "Twisted Metal Head On.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Ultimate Ghosts N Goblins.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Unbound Saga.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Unchained Blades.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Undead Knights.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Urbanix (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Vahalla Knights 2.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Vector TD (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Velocity (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Vibes (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "VT Tennis (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Wackylands Boss (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Warhammer.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Where is my Heart (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Who's That Flying (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Widget's Odyssey (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Widget's Odyssey 2 (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Wild Arms XF.cso",
+      "reason": "identifiant du disque introuvable"
+    },
+    {
+      "name": "Wizorb (USA).cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "X Men Legends 2.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Yeti Sports Pengu Throw (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Yggdra Union.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Young Thor (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Ys One And Two.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Ys Seven.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Ys The Ark Of Napishtim.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Ys The Oath Of Felghana.cso",
+      "reason": "CSO incomplet (téléchargement inachevé ou fichier tronqué) : attends la fin du téléchargement ou vérifie le fichier."
+    },
+    {
+      "name": "Yu-Gi-Oh Tag Force.cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Yummy Yummy Cooking Jam (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Zombie Racers (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    },
+    {
+      "name": "Zombie Tycoon (USA).cso",
+      "reason": "Ce fichier n’est pas un jeu PSP reconnu (ni image ISO, ni CSO, ni EBOOT.PBP)."
+    }
+  ]
+}

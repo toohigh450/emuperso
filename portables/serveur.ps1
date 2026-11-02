@@ -73,7 +73,7 @@ try {
           }
         } catch { $code = 400; $raison = 'Bad Request' }
       }
-      $reponse = "HTTP/1.1 $code $raison`r`nContent-Type: $type`r`nContent-Length: $($corps.Length)`r`nCache-Control: no-cache`r`nX-Content-Type-Options: nosniff`r`nConnection: close`r`n`r`n"
+      $reponse = "HTTP/1.1 $code $raison`r`nContent-Type: $type`r`nContent-Length: $($corps.Length)`r`nCache-Control: no-cache`r`nX-Content-Type-Options: nosniff`r`nCross-Origin-Opener-Policy: same-origin`r`nCross-Origin-Embedder-Policy: require-corp`r`nConnection: close`r`n`r`n"
       $octets = [System.Text.Encoding]::ASCII.GetBytes($reponse)
       $flux.Write($octets, 0, $octets.Length)
       if ($methode -ne 'HEAD' -and $corps.Length) { $flux.Write($corps, 0, $corps.Length) }

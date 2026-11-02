@@ -37,6 +37,8 @@
   // car plusieurs cœurs (fceumm, mGBA, DeSmuME) ignorent l'état « désactivé » d'un code.
   window.EJS_Buttons = Object.assign({}, window.EJS_Buttons, { cheat: false });
   var activeCodes = (boot.codes || []).slice(); // codes activés choisis avant le lancement
+  // Carte mémoire PSP de ppsspp (dossier de sauvegarde du moteur, vérifié avec un vrai jeu).
+  var SAVEDATA = '/data/saves/PPSSPP/PSP/SAVEDATA';
   function manager() {
     var emulator = window.EJS_emulator;
     if (!emulator || !emulator.gameManager) throw new Error('Moteur pas encore prêt.');
@@ -77,6 +79,39 @@
       gm.loadSaveFiles();
       restartNextFrame();
     },
+    // PSP : la sauvegarde n'est pas un fichier unique mais des dossiers de la carte mémoire virtuelle
+    // (PSP/SAVEDATA/<identifiant du jeu>…). Lecture des dossiers dont le nom commence par prefix.
+    listSaveData: function (prefix) {
+      var gm = manager(), out = [];
+      if (!gm.FS.analyzePath(SAVEDATA).exists) return out;
+      function walk(dir, rel) {
+        gm.FS.readdir(dir).forEach(function (name) {
+          if (name === '.' || name === '..') return;
+          var path = dir + '/' + name, st = gm.FS.stat(path);
+          if (gm.FS.isDir(st.mode)) walk(path, rel + name + '/');
+          else out.push({ name: rel + name, bytes: gm.FS.readFile(path) });
+        });
+      }
+      gm.FS.readdir(SAVEDATA).forEach(function (name) {
+        if (name === '.' || name === '..' || name.indexOf(prefix) !== 0) return;
+        if (gm.FS.isDir(gm.FS.stat(SAVEDATA + '/' + name).mode)) walk(SAVEDATA + '/' + name, name + '/');
+      });
+      return out;
+    },
+    // Écrit des fichiers sous PSP/SAVEDATA (chemins déjà contrôlés par le lanceur), puis redémarre le jeu.
+    writeSaveData: function (files) {
+      var gm = manager();
+      files.forEach(function (f) {
+        var parts = (SAVEDATA + '/' + f.name).split('/'), dir = '';
+        for (var i = 0; i < parts.length - 1; i++) {
+          if (!parts[i]) continue;
+          dir += '/' + parts[i];
+          if (!gm.FS.analyzePath(dir).exists) gm.FS.mkdir(dir);
+        }
+        gm.FS.writeFile(SAVEDATA + '/' + f.name, new Uint8Array(f.bytes));
+      });
+      return entry.control.flush().then(function () { restartNextFrame(); });
+    },
     restart: function () { manager(); restartNextFrame(); },
     screenshot: function () { return manager().screenshot(); },
     // Écrit la sauvegarde de la cartouche dans IndexedDB tout de suite (le moteur ne le fait
@@ -108,11 +143,27 @@
         emulator.on('saveSaveFiles', function (save) { if (save) window.EJS_onSaveUpdate({ save: save }); });
       }
       emulator.on('exit', function () { events.onExit(); });
+      // PSP : fichier CWCheat écrit une fois la carte mémoire montée, avant que ppsspp lise le jeu.
+      if (boot.pspCheats) {
+        emulator.on('saveDatabaseLoaded', function (FS) {
+          try {
+            var parts = boot.pspCheats.path.split('/'), dir = '';
+            for (var i = 0; i < parts.length - 1; i++) {
+              if (!parts[i]) continue;
+              dir += '/' + parts[i];
+              if (!FS.analyzePath(dir).exists) FS.mkdir(dir);
+            }
+            FS.writeFile(boot.pspCheats.path, boot.pspCheats.text);
+          } catch (err) { console.error('Fichier de codes PSP non écrit', err); }
+        });
+      }
     }
     events.onReady();
   };
   window.EJS_onGameStart = function () {
-    try { applyCodes(); } catch (err) { console.error(err); }
+    // PSP : les codes de départ sont déjà dans le fichier du jeu ; ici ppsspp ne connaît pas encore
+    // l'identifiant du disque et les écrirait ailleurs.
+    if (!boot.pspCheats) { try { applyCodes(); } catch (err) { console.error(err); } }
     events.onStart();
   };
   window.EJS_onExit = function () { events.onExit(); };

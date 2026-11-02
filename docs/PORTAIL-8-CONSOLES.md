@@ -17,6 +17,7 @@ L'accueil commun est `portail/index.html`, publié comme page d'accueil du site 
 | Nintendo DS | `portables/?console=nds` | EmulatorJS 4.2.3 + DeSmuME / melonDS |
 | Nintendo 64 | `real-n64/` | EmulatorJS 4.2.3 + Mupen64Plus-Next (moteur verrouillé) |
 | PlayStation | `ps1-web/` | EmulatorJS 4.2.3 + PCSX ReARMed (moteur verrouillé) |
+| PlayStation Portable | `portables/?console=psp` | EmulatorJS 4.2.3 + PPSSPP (à fils, page isolée) — voir `portables/PSP.md` |
 
 Le `index.html` du dépôt **n'est pas modifié** : c'est une copie octet pour octet du laboratoire N64 Phase 1A,
 protégée par `real-n64/tests/test_real_tools.py` (`test_originals_preserved`, avec `README.md`). Sur le site
@@ -43,6 +44,8 @@ sauvegarde, sauf les homebrews libres de `portables/demos/` (licences jointes). 
 
 En-têtes : `/real-n64/*` et `/ps1-web/*` gardent leurs en-têtes d'isolation (COOP/COEP/CORP, `no-store`)
 identiques à leurs `vercel.json` d'origine.
+`/portables/*` reçoit aussi COOP/COEP depuis l'arrivée de la PSP (cœur ppsspp à fils d'exécution) ;
+les démos NES, SNES, GB, GBA et DS démarrent toujours avec ces en-têtes.
 
 Essai local (Python 3.10+, Node 22+) :
 

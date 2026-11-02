@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>Consoles Nintendo : NES, SNES, Game Boy, Color, Advance et DS</title>
+<title>Consoles portables et Nintendo : NES, SNES, Game Boy, Color, Advance, DS et PSP</title>
 <link rel="stylesheet" href="css/app.css">
 </head>
 <body data-state="idle">
 <header class="top">
-  <p class="crumb"><a href="../">← Accueil EMUPERSO (8 consoles)</a></p>
+  <p class="crumb"><a href="../">← Accueil EMUPERSO (9 consoles)</a></p>
   <h1>Consoles Nintendo <small>0.3.0 alpha.2</small></h1>
-  <p>NES, Super Nintendo, Game Boy, Game Boy Color, Game Boy Advance et DS dans Chrome. Un seul jeu à la fois.</p>
+  <p>NES, Super Nintendo, Game Boy, Game Boy Color, Game Boy Advance, DS et PSP dans Chrome. Un seul jeu à la fois.</p>
 </header>
 
 <p class="alpha-note">Version alpha : exporte tes sauvegardes avant les essais. Les tests réels et leurs limites sont dans TESTS-NES-SNES.md.</p>
@@ -21,7 +21,7 @@
     <div class="slot" id="slot">
       <div class="slot-empty" id="slotEmpty">
         <p class="slot-title">La fente est vide</p>
-        <p class="muted">Choisis un fichier .nes, .sfc, .smc, .gb, .gbc, .gba, .nds ou un .zip qui en contient un. Tes fichiers sont lus localement et ne sont envoyés à aucun serveur. Le moteur tiers chargé depuis Internet peut y accéder.</p>
+        <p class="muted">Choisis un fichier .nes, .sfc, .smc, .gb, .gbc, .gba, .nds ou un .zip qui en contient un, ou un jeu PSP .iso, .cso ou .pbp. Tes fichiers sont lus localement et ne sont envoyés à aucun serveur. Le moteur tiers chargé depuis Internet peut y accéder.</p>
         <button class="btn primary" id="pickGame" type="button">Choisir un jeu</button>
         <p class="muted small-text">Tu peux aussi glisser le fichier sur la page, ou ouvrir tout un dossier dans l’onglet Catalogue.</p>
       </div>
@@ -42,7 +42,7 @@
           <button class="btn danger" id="closeGame" type="button">Fermer le jeu</button>
         </div>
       </div>
-      <input type="file" id="romInput" accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.gb,.gbc,.gba,.nds,.sgb,.srl,.bin,.rom,.dsi,.zip,.7z,.fds" class="visually-hidden" tabindex="-1">
+      <input type="file" id="romInput" accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.gb,.gbc,.gba,.nds,.sgb,.srl,.bin,.rom,.dsi,.zip,.7z,.fds,.iso,.cso,.pbp,.chd" class="visually-hidden" tabindex="-1">
     </div>
 
     <section class="demo-panel" aria-labelledby="demoHeading">
@@ -83,7 +83,7 @@
         <button class="btn" id="catFilesBtn" type="button">Choisir des fichiers</button>
       </div>
       <input type="file" id="catFolder" webkitdirectory multiple class="visually-hidden" tabindex="-1">
-      <input type="file" id="catFiles" multiple accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.gb,.gbc,.gba,.nds,.zip,.7z" class="visually-hidden" tabindex="-1">
+      <input type="file" id="catFiles" multiple accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.gb,.gbc,.gba,.nds,.zip,.7z,.iso,.cso,.pbp" class="visually-hidden" tabindex="-1">
       <div id="catalogTools" hidden>
         <label class="field" for="catSearch">Rechercher</label>
         <input type="search" id="catSearch" placeholder="Titre du jeu" autocomplete="off">
@@ -97,6 +97,7 @@
               <option value="gbc">Game Boy Color</option>
               <option value="gba">Game Boy Advance</option>
               <option value="nds">Nintendo DS</option>
+              <option value="psp">PlayStation Portable</option>
             </select>
           </label>
           <label>Région
@@ -139,7 +140,7 @@
         <button class="btn small" id="saveExport" type="button">Exporter maintenant</button>
         <button class="btn small" id="saveImportBtn" type="button">Importer une sauvegarde</button>
       </div>
-      <input type="file" id="saveImport" accept=".sav,.srm,.sa1,.dsv,.bin" class="visually-hidden" tabindex="-1">
+      <input type="file" id="saveImport" accept=".sav,.srm,.sa1,.dsv,.bin,.zip" class="visually-hidden" tabindex="-1">
       <div id="saveMirror"></div>
       <h2>États de jeu</h2>
       <p class="muted small-text">Instantané complet de la partie, 4 emplacements par jeu. Remplacer un emplacement garde l’état précédent. Un état n’est lisible qu’avec la même ROM et le même cœur.</p>
