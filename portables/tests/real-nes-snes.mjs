@@ -111,6 +111,7 @@ const errors = [];
 const watch = (p) => { p.on('pageerror', (e) => errors.push(e.message)); p.on('dialog', (d) => d.accept()); };
 watch(page);
 await page.goto(server.url);
+await page.waitForFunction(() => document.body.dataset.ready === 'true', null, { timeout: 60000 });
 
 const counters = {};
 for (const [sys, S] of Object.entries(SYSTEMS)) {

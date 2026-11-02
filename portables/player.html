@@ -49,6 +49,11 @@
     gm.resetCheat();
     for (var i = 0; i < activeCodes.length; i++) gm.setCheat(i, 1, activeCodes[i]);
   }
+  // Snes9x ignore parfois un redémarrage demandé dans la même image qu'une capture d'état :
+  // on le reporte à l'image suivante (10 essais sur 10 réussis, contre des échecs sinon).
+  function restartNextFrame() {
+    requestAnimationFrame(function () { try { manager().restart(); } catch (err) { console.error(err); } });
+  }
   entry.control = {
     setCodes: function (codes) {
       activeCodes = codes.slice();
@@ -70,9 +75,9 @@
       if (gm.FS.analyzePath(path).exists) gm.FS.unlink(path);
       gm.FS.writeFile(path, new Uint8Array(bytes));
       gm.loadSaveFiles();
-      gm.restart();
+      restartNextFrame();
     },
-    restart: function () { manager().restart(); },
+    restart: function () { manager(); restartNextFrame(); },
     screenshot: function () { return manager().screenshot(); },
     // Écrit la sauvegarde de la cartouche dans IndexedDB tout de suite (le moteur ne le fait
     // sinon qu'à intervalles), avant une fermeture, un changement de jeu ou une mise en arrière-plan.

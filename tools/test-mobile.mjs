@@ -36,6 +36,7 @@ try {
     await page.goto(server.url);
     await page.locator(`a.card[href="portables/?console=${sys}"]`).tap();
     await page.waitForURL(`**/portables/?console=${sys}`);
+    await page.waitForFunction(() => document.body.dataset.ready === 'true', null, { timeout: 60000 });
     record(sys, 'accueil → console au toucher', true);
     record(sys, 'sélecteur de ROM sans filtre « accept » sur écran tactile', (await page.locator('#romInput').getAttribute('accept')) === null);
     await page.locator(`[data-portable-demo="${demo}"]`).tap();

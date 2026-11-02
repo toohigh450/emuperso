@@ -1042,5 +1042,6 @@ async function main() {
   await refreshCodePanel();
   await refreshStatePanel();
   await refreshStorageInfo().catch(() => {});
+  document.body.dataset.ready = 'true'; // lanceur initialisé (utile aux tests sur un réseau lent)
 }
 main().catch((err) => { console.error(err); setStatus(`Erreur au démarrage : ${err.message || err}`, 'error'); });

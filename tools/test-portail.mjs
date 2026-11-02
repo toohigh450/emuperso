@@ -89,6 +89,7 @@ try {
   // Consoles du lanceur Nintendo : démo libre réelle de chaque console.
   for (const [sys, demo] of [['gb', 'gb'], ['gbc', 'gbc'], ['gba', 'gba'], ['nds', 'nds'], ['nes', 'nes'], ['snes', 'snes']]) {
     const { p, context, errors } = await page(`portables/?console=${sys}`, sys);
+    await p.waitForFunction(() => document.body.dataset.ready === 'true', null, { timeout: 60000 });
     record(sys, 'console présélectionnée depuis l’accueil', (await p.locator('#catSystem').inputValue()) === sys);
     await p.locator(`[data-portable-demo="${demo}"]`).click();
     await pressStart(p);
