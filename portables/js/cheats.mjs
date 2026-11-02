@@ -10,6 +10,7 @@ export const CHEAT_FOLDER_ALIASES = {
   // Dossiers de la base libretro : « Nintendo - Nintendo Entertainment System », « Nintendo - Super Nintendo… ».
   nes: 'nintendo entertainment system',
   snes: 'super nintendo entertainment system',
+  genesis: 'sega - mega drive - genesis',
 };
 
 /** Déduit la console d'après les dossiers du chemin (ex. « Nintendo - Game Boy Advance/… »). */

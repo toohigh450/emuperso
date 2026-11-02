@@ -7,6 +7,7 @@ import { extensionOf } from './systems.mjs';
 const EXT_SYSTEM = {
   nes: 'nes', unf: 'nes', unif: 'nes', sfc: 'snes', smc: 'snes', swc: 'snes', fig: 'snes',
   gb: 'gb', gbc: 'gbc', gba: 'gba', nds: 'nds',
+  md: 'genesis', smd: 'genesis', gen: 'genesis',
 };
 const ARCHIVES = new Set(['zip', '7z']);
 // Mots du chemin qui désignent une console, pour les archives dont le nom ne le dit pas.
@@ -17,6 +18,7 @@ const PATH_HINTS = [
   [/nintendo ?ds|\bnds\b/i, 'nds'],
   [/game ?boy|\bgb\b/i, 'gb'],
   [/\bnes\b|famicom|nintendo entertainment/i, 'nes'],
+  [/\bgenesis\b|mega ?drive|sega ?md/i, 'genesis'],
 ];
 export const CATALOG_LIMIT = 200000;
 

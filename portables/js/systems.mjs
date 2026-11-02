@@ -23,6 +23,15 @@ export const SYSTEMS = {
     maxBytes: 8 * MiB + 512, // ExHiROM 64 Mbit + en-tête de copieur
     aspect: '4 / 3',
   },
+  genesis: {
+    id: 'genesis',
+    label: 'Sega Genesis / Mega Drive',
+    exts: ['md', 'smd', 'gen'],
+    ejsCore: 'segaMD', // cœur genesis_plus_gx par défaut dans EmulatorJS ; pas de BIOS requis
+    coreId: 'genesis_plus_gx',
+    maxBytes: 4 * MiB, // cartouches Genesis max ~4 Mo
+    aspect: '4 / 3',
+  },
   gb: {
     id: 'gb',
     label: 'Game Boy',
@@ -68,10 +77,10 @@ export const DS_CORES = {
   melonds: { ejsCore: 'melonds', label: 'melonDS (BIOS requis)', needsBios: true },
 };
 
-export const ROM_EXTENSIONS = new Set(['gb', 'gbc', 'gba', 'nds', 'nes', 'unf', 'unif', 'sfc', 'smc', 'swc', 'fig']);
+export const ROM_EXTENSIONS = new Set(['gb', 'gbc', 'gba', 'nds', 'nes', 'unf', 'unif', 'sfc', 'smc', 'swc', 'fig', 'md', 'smd', 'gen']);
 // Extensions d'origine douteuse acceptées seulement si l'en-tête est reconnu.
 export const LOOSE_EXTENSIONS = new Set(['bin', 'rom', 'sgb', 'dsi', 'srl']);
-const EXT_SYSTEM = { nes: 'nes', unf: 'nes', unif: 'nes', sfc: 'snes', smc: 'snes', swc: 'snes', fig: 'snes' };
+const EXT_SYSTEM = { nes: 'nes', unf: 'nes', unif: 'nes', sfc: 'snes', smc: 'snes', swc: 'snes', fig: 'snes', md: 'genesis', smd: 'genesis', gen: 'genesis' };
 // Formats connus mais refusés, avec une explication claire.
 export const UNSUPPORTED_FORMATS = {
   fds: 'Famicom Disk System (.fds) : demande le BIOS commercial disksys.rom, qui n’est ni fourni ni accepté ici.',
