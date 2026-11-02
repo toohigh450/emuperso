@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : QuackShot Starring Donald Duck - QuackShot - I Love Donald Duck - Guruzia Ou no Hihou (World) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/QuackShot%20Starring%20Donald%20Duck%20-%20QuackShot%20-%20I%20Love%20Donald%20Duck%20-%20Guruzia%20Ou%20no%20Hihou%20%28World%29%20%28Action%20Replay%29.cht
+
+cheats = 3 
+
+cheat0_desc = "Infinite Hits"
+cheat0_code = "FF8F97:08"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "FF8F99:09"
+cheat1_enable = false 
+
+cheat2_desc = "Level Modifier"
+cheat2_code = "FF8F35:XX"
+cheat2_enable = false

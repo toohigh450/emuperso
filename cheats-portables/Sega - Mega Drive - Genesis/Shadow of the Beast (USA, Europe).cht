@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Shadow of the Beast (USA, Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Shadow%20of%20the%20Beast%20%28USA,%20Europe%29.cht
+
+cheats = 4
+
+cheat0_desc = "Master Code"
+cheat0_code = "R19T-86Z8"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Energy"
+cheat1_code = "ABHA-CAFA"
+cheat1_enable = false
+
+cheat2_desc = "Invincibility"
+cheat2_code = "GJLA-AN8W+ATLT-AN2Y"
+cheat2_enable = false
+
+cheat3_desc = "Unlimited Energy"
+cheat3_code = "FF1A17:000C"
+cheat3_enable = false

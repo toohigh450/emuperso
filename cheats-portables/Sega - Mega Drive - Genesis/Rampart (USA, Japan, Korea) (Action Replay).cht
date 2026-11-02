@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Rampart (USA, Japan, Korea) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Rampart%20%28USA,%20Japan,%20Korea%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Freeze Countdown When Choosing A Building (At Beginning of Game) (First Timer)"
+cheat0_code = "FF0753:35"
+cheat0_enable = false 
+
+cheat1_desc = "Freeze Countdown When Placing A Building (At Beginning of Game) (Second Timer)"
+cheat1_code = "FF05C3:95"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Time To Join In For Both Players (HUD Is Blanked Out)"
+cheat2_code = "FF07A3:09"
+cheat2_enable = false 
+
+cheat3_desc = "Number of Buildings Left To Place P1 (Modifies HUD Only)"
+cheat3_code = "FF026B:XX"
+cheat3_enable = false 
+
+cheat4_desc = "Number of Buildings Left To Place P2 (Modifies HUD Only)"
+cheat4_code = "FF04C5:XX"
+cheat4_enable = false

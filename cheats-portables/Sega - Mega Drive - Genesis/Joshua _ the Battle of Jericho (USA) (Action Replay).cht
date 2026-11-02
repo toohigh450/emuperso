@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Joshua _ the Battle of Jericho (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Joshua%20_%20the%20Battle%20of%20Jericho%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 2 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "FF04F7:09"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Time"
+cheat1_code = "FF0527:FA"
+cheat1_enable = false

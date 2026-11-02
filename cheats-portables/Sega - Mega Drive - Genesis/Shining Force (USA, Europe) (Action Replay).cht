@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Shining Force (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Shining%20Force%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Lots Of And Infinite Money"
+cheat0_code = "FF9C8F:00FF"
+cheat0_enable = false 
+
+cheat1_desc = "Max Has Various Items"
+cheat1_code = "FF9CAD:00??"
+cheat1_enable = false 
+
+cheat2_desc = "Fake Damage Modifier"
+cheat2_code = "FFBCBD:XX"
+cheat2_enable = false 
+
+cheat3_desc = "Fake Attack/Damage/Reward Stats Modifier"
+cheat3_code = "FFF903:XX"
+cheat3_enable = false 
+
+cheat4_desc = "Some Enemies Have No Health"
+cheat4_code = "FFC755:00+FFC705:00+FFC665:00+FFC72D:00+FFC6B5:00+FFC68D:00+FFC6DD:00+FFC63D:00+FFC7A5:00+FFC7CD:00+FFC77D:00"
+cheat4_enable = false

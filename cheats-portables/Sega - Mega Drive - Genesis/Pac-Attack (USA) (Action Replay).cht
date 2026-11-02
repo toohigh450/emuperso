@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Pac-Attack (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Pac-Attack%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Score Modifiers P1"
+cheat0_code = "FF4161:XX+FF4162:XX+FF4163:XX"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Rests P1 (Puzzle Mode)"
+cheat1_code = "FF41E7:09"
+cheat1_enable = false 
+
+cheat2_desc = "P1 Block Speed Modifier"
+cheat2_code = "FF4167:XX"
+cheat2_enable = false 
+
+cheat3_desc = "P1 Yellow Bar Modifier (Puzzle Mode)"
+cheat3_code = "FF41DF:XX"
+cheat3_enable = false 
+
+cheat4_desc = "P2 Block Scroll Speed Modifier"
+cheat4_code = "FF4285:XX"
+cheat4_enable = false

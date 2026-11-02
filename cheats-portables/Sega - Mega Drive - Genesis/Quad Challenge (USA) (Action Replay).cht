@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Quad Challenge (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Quad%20Challenge%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Vehicle Modifier P1"
+cheat0_code = "FF0302:XX"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Timer P1"
+cheat1_code = "FF0316:63"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Timer P2"
+cheat2_code = "FF0317:63"
+cheat2_enable = false 
+
+cheat3_desc = "Always Have Great Acceleration P1"
+cheat3_code = "FF0304:9C"
+cheat3_enable = false 
+
+cheat4_desc = "Always Have Great Acceleration P2"
+cheat4_code = "FF0306:9C"
+cheat4_enable = false 
+
+cheat5_desc = "Lap Modifier P1"
+cheat5_code = "FF0271:XX"
+cheat5_enable = false 
+
+cheat6_desc = "Lap Modifier P2"
+cheat6_code = "FF0272:XX"
+cheat6_enable = false

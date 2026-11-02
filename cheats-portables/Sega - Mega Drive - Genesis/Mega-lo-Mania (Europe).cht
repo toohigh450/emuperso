@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Mega-lo-Mania (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Mega-lo-Mania%20%28Europe%29.cht
+
+cheats = 2
+
+cheat0_desc = "Number of Men Playing Island Modifier"
+cheat0_code = "FFB602:0000"
+cheat0_enable = false
+
+cheat1_desc = "Fake Number of Men Playing Island Modifier"
+cheat1_code = "FF1256:0000"
+cheat1_enable = false

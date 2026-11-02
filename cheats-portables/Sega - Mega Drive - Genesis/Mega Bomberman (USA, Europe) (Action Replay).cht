@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Mega Bomberman (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Mega%20Bomberman%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "FF9543:09"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Time (Alternate Code)"
+cheat1_code = "FFA428:3B"
+cheat1_enable = false 
+
+cheat2_desc = "Bombs Have Longer Reach"
+cheat2_code = "FF8289:09"
+cheat2_enable = false 
+
+cheat3_desc = "Can Place More Bombs"
+cheat3_code = "FF8289:09"
+cheat3_enable = false 
+
+cheat4_desc = "Can Kick Bombs"
+cheat4_code = "FFA442:10"
+cheat4_enable = false 
+
+cheat5_desc = "The Exit Is Always Open (You Still Need To Get On Your Kangaroo)"
+cheat5_code = "FFA959:00"
+cheat5_enable = false 
+
+cheat6_desc = "Invincible"
+cheat6_code = "FFA444:1E"
+cheat6_enable = false

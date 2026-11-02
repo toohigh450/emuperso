@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Jurassic Park (World) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Jurassic%20Park%20%28World%29%20%28Action%20Replay%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Infinite Lives (Grant & Raptor)"
+cheat0_code = "FF0053:03"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Health (Grant & Raptor)"
+cheat1_code = "FF0055:55"
+cheat1_enable = false 
+
+cheat2_desc = "Force Game To Show Specific Player Cutscenes"
+cheat2_code = "FFC028:XX"
+cheat2_enable = false 
+
+cheat3_desc = "Level Modifier (Read Note!)"
+cheat3_code = "FF0AE6:XX"
+cheat3_enable = false

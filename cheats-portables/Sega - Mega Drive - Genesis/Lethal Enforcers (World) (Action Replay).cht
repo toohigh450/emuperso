@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Lethal Enforcers (World) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Lethal%20Enforcers%20%28World%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Infinite Health P1"
+cheat0_code = "FFA09F:05"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Bullets P1"
+cheat1_code = "FFA0AF:06"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Health P2"
+cheat2_code = "FFA0A1:05"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Bullets P2"
+cheat3_code = "FFA0B1:06"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Credits"
+cheat4_code = "FFA095:99"
+cheat4_enable = false

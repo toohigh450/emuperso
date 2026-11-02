@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Jordan vs Bird - One on One (Japan) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Jordan%20vs%20Bird%20-%20One%20on%20One%20%28Japan%29%20%28Action%20Replay%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Infinite Time"
+cheat0_code = "FF5973:59"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Ball Possession Time"
+cheat1_code = "FF5975:99"
+cheat1_enable = false 
+
+cheat2_desc = "Score Modifier P1"
+cheat2_code = "FF56DB:XX"
+cheat2_enable = false 
+
+cheat3_desc = "Score Modifier P2"
+cheat3_code = "FF577B:XX"
+cheat3_enable = false

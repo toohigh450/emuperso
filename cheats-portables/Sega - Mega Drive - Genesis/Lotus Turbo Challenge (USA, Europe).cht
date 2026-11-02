@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Lotus Turbo Challenge (USA, Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Lotus%20Turbo%20Challenge%20%28USA,%20Europe%29.cht
+
+cheats = 6
+
+cheat0_desc = "Freeze Time"
+cheat0_code = "AKVT-AA5N"
+cheat0_enable = false
+
+cheat1_desc = "Freeze Time"
+cheat1_code = "FF7CB4:0046"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Time"
+cheat2_code = "FF7CB4:0099"
+cheat2_enable = false
+
+cheat3_desc = "Decent Acceleration"
+cheat3_code = "FF7CA2:0019"
+cheat3_enable = false
+
+cheat4_desc = "Great Acceleration"
+cheat4_code = "FF7CA2:0028"
+cheat4_enable = false
+
+cheat5_desc = "Master Code"
+cheat5_code = "RZ7T-8614"
+cheat5_enable = false

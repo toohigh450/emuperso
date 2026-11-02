@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Justice League Task Force (World) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Justice%20League%20Task%20Force%20%28World%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Infinite Time"
+cheat0_code = "FF1959:63"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Energy P1"
+cheat1_code = "FF119D:80+FF11A1:80"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Energy P2"
+cheat2_code = "FF13FB:80+FF13FF:80"
+cheat2_enable = false 
+
+cheat3_desc = "No Energy P1"
+cheat3_code = "FF119D:00+FF11A1:00"
+cheat3_enable = false 
+
+cheat4_desc = "No Energy P2"
+cheat4_code = "FF13FB:00+FF13FF:00"
+cheat4_enable = false

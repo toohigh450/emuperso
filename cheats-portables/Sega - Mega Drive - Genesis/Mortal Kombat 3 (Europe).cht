@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Mortal Kombat 3 (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Mortal%20Kombat%203%20%28Europe%29.cht
+
+cheats = 6
+
+cheat0_desc = "Regional lockout bypass code."
+cheat0_code = "ANBT-BA2J"
+cheat0_enable = false
+
+cheat1_desc = "Regional Lockout Bypass"
+cheat1_code = "EAAT-BL1T"
+cheat1_enable = false
+
+cheat2_desc = "Regional Lockout Bypass"
+cheat2_code = "EAAT-AY1T"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Energy P1"
+cheat3_code = "AMZT-GA38"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Energy P2"
+cheat4_code = "AMZT-GA42"
+cheat4_enable = false
+
+cheat5_desc = "Enable Smoke In Table"
+cheat5_code = "AC9T-JA8E+AMPT-JA56+AMPA-JA2Y+AMPA-JA5L+AMPT-JA3N"
+cheat5_enable = false

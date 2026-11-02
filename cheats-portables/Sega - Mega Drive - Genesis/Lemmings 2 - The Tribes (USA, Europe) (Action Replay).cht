@@ -1,0 +1,48 @@
+# Recherche locale pour la ROM : Lemmings 2 - The Tribes (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Lemmings%202%20-%20The%20Tribes%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 10 
+
+cheat0_desc = "Infinite Time"
+cheat0_code = "FF3FE7:003B"
+cheat0_enable = false 
+
+cheat1_desc = "Always Save 100% Lemmings"
+cheat1_code = "FF3DBD:0064"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Item (Box 1)"
+cheat2_code = "FF42C7:0063"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Item (Box 2)"
+cheat3_code = "FF42C9:0063"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Item (Box 3)"
+cheat4_code = "FF42CB:0063"
+cheat4_enable = false 
+
+cheat5_desc = "Infinite Item (Box 4)"
+cheat5_code = "FF42CD:0063"
+cheat5_enable = false 
+
+cheat6_desc = "Infinite Item (Box 5)"
+cheat6_code = "FF42CF:0063"
+cheat6_enable = false 
+
+cheat7_desc = "Infinite Item (Box 6)"
+cheat7_code = "FF42D1:0063"
+cheat7_enable = false 
+
+cheat8_desc = "Infinite Item (Box 7)"
+cheat8_code = "FF42D3:0063"
+cheat8_enable = false 
+
+cheat9_desc = "Infinite Item (Box 8)"
+cheat9_code = "FF42D5:0063"
+cheat9_enable = false

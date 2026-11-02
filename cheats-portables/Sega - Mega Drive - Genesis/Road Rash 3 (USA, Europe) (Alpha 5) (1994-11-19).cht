@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Road Rash 3 (USA, Europe) (Alpha 5) (1994-11-19)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Road%20Rash%203%20%28USA,%20Europe%29%20%28Alpha%205%29%20%281994-11-19%29.cht
+
+cheats = 3
+
+cheat0_desc = "Enable Start with Wild Thing 2000 Cheat"
+cheat0_code = "AJ0T-AA6A"
+cheat0_enable = false
+
+cheat1_desc = "Master Code"
+cheat1_code = "BDBB-8A4N"
+cheat1_enable = false
+
+cheat2_desc = "Enable the ABR (ABRACADABRA in the Final Version) Cheat (Press any button on Controller 2 at the Title Screen to activate)"
+cheat2_code = "CJ1A-AA2A"
+cheat2_enable = false

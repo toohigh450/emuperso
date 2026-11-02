@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : McDonald's Treasure Land Adventure (Japan) (Beta)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/McDonald's%20Treasure%20Land%20Adventure%20%28Japan%29%20%28Beta%29.cht
+
+cheats = 8
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "AJKA-CA4W"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Hamburger (Health)"
+cheat1_code = "ALNT-AA4N+ALPA-AA7A"
+cheat1_enable = false
+
+cheat2_desc = "Invincibility"
+cheat2_code = "R0NT-A6VT"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Golds"
+cheat3_code = "AJTA-CA86"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Balloons"
+cheat4_code = "AM7A-AA78"
+cheat4_enable = false
+
+cheat5_desc = "Infinite Magic Power-Up After The Death"
+cheat5_code = "AJKA-CA36"
+cheat5_enable = false
+
+cheat6_desc = "Keep Potato After The Death"
+cheat6_code = "AKJT-AA78"
+cheat6_enable = false
+
+cheat7_desc = "Freeze Time Continue"
+cheat7_code = "AJRA-CA24+AJRA-CA3T"
+cheat7_enable = false

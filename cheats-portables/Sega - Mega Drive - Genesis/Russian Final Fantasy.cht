@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Russian Final Fantasy
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Russian%20Final%20Fantasy.cht
+
+cheats = 2
+
+cheat0_desc = "Infinite GP"
+cheat0_code = "FFE254:FDE8"
+cheat0_enable = false
+
+cheat1_desc = "Infinite HP Character 1"
+cheat1_code = "FFE10C:03E7"
+cheat1_enable = false

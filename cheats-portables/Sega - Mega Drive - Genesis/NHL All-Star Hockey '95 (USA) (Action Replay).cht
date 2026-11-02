@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : NHL All-Star Hockey '95 (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/NHL%20All-Star%20Hockey%20'95%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Infinite Time (Minutes)"
+cheat0_code = "FF57C4:63"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Time (Seconds)"
+cheat1_code = "FF57C5:63"
+cheat1_enable = false 
+
+cheat2_desc = "Team 1 Score Modifier"
+cheat2_code = "FF50B1:XX"
+cheat2_enable = false 
+
+cheat3_desc = "Team 1 Shot Modifier"
+cheat3_code = "FF50D5:XX"
+cheat3_enable = false 
+
+cheat4_desc = "Team 2 Score Modifier"
+cheat4_code = "FF5B02:XX"
+cheat4_enable = false 
+
+cheat5_desc = "Team 2 Shot Modifier"
+cheat5_code = "FF50BB:XX"
+cheat5_enable = false
