@@ -1,0 +1,72 @@
+# Recherche locale pour la ROM : Kidou Gekidan Haro Ichiza - Gundam Mahjong DS - Oyaji ni mo Agarareta Koto nai no ni! (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Kidou%20Gekidan%20Haro%20Ichiza%20-%20Gundam%20Mahjong%20DS%20-%20Oyaji%20ni%20mo%20Agarareta%20Koto%20nai%20no%20ni!%20(Japan).cht
+
+cheats = 16
+
+cheat0_desc = "[Action Replay] Game Time 999:59"
+cheat0_code = "1222689C+0000EA5F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Game Time 000:00"
+cheat1_code = "1222689C+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Clips + Sound"
+cheat2_code = "022268CC+FFFFFFFE+022268D0+0007FFFF"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Characters Unlocked"
+cheat3_code = "22223BD0+000000FF"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All Flashback"
+cheat4_code = "22226726+000000FF"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All Words,Speech,Sentences"
+cheat5_code = "022268C8+1FFFFFFE+022268C4+1FFFFFFE"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Rank-General"
+cheat6_code = "12226724+00001450"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Player Max Points"
+cheat7_code = "021C01F0+000F423F"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Player Max Energy"
+cheat8_code = "221C01E7+000000FF"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] CPU Max Points"
+cheat9_code = "021C0318+FFF0BDC1+021C0440+FFF0BDC1+021C0568+FFF0BDC1"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] CPU Max Energy"
+cheat10_code = "221C030F+00000000+221C0437+00000000+221C055F+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Quick Game"
+cheat11_code = "221C00EC+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Level S"
+cheat12_code = "22226727+00000064+02226728+64646464+0222672C+64646464+02226730+64646464+02226734+64646464+22226738+00000064"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Level A1-A2"
+cheat13_code = "22226739+00000064+1222673A+00006464+0222673C+64646464+02226740+64646464+02226744+64646464+02226748+64646464+0222674C+64646464+02226750+64646464+02226754+64646464+02226758+64646464+1222675A+00006464+2222675C+00000064"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Level B1-B3"
+cheat14_code = "2222675D+00000064+1222675E+00006464+02226760+64646464+02226764+64646464+02226768+64646464+0222676C+64646464+02226770+64646464+02226774+64646464+02226778+64646464+0222677C+64646464+02226780+64646464+02226784+64646464+02226788+64646464+0222678C+64646464+12226790+00006464+22226792+00000064"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Level C1-C4"
+cheat15_code = "22226793+00000064+02226794+64646464+02226798+64646464+0222679C+64646464+022267A0+64646464+022267A4+64646464+022267A8+64646464+022267AC+64646464+022267B0+64646464+022267B4+64646464+022267B8+64646464+022267BC+64646464+022267C0+64646464+022267C4+64646464+022267C8+64646464+022267CC+64646464+022267D0+64646464+022267D4+64646464+122267D8+00006464+222267DA+00000064"
+cheat15_enable = false

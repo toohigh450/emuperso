@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Sports Illustrated for Kids - Football (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Sports%20Illustrated%20for%20Kids%20-%20Football%20(USA)%20(Code%20Breaker).cht
+
+cheats = 7
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00002A9A+000A+10000490+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Home Team Scores 150"
+cheat1_code = "33004BE9+0096"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Home Team Scores 0"
+cheat2_code = "33004BE9+0000"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Away Team Scores 150"
+cheat3_code = "33004D39+0096"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Away Team Scores 0"
+cheat4_code = "33004D39+0000"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Always 1st Down"
+cheat5_code = "33004D63+0000"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Always 4th Down"
+cheat6_code = "33004D63+0003"
+cheat6_enable = false

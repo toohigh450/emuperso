@@ -1,0 +1,33 @@
+# Recherche locale pour la ROM : Bubsy II [Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Bubsy%20II%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Bubsy%20II%20(USA%2C%20Europe)%20(GameShark).cht
+
+cheats = 6
+
+cheat0_desc = "[Game Genie] Bubsy Cannot Get Hit"
+cheat0_code = "1C7-3CD"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Infinite Time"
+cheat1_code = "1C5-E9C"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Infinite Lives"
+cheat2_code = "1C2-2CF"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Infinite Health"
+cheat3_code = "0103C3DE"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Infinite Time"
+cheat4_code = "0130A4DE"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Infinite Lives"
+cheat5_code = "010363DC"
+cheat5_enable = false

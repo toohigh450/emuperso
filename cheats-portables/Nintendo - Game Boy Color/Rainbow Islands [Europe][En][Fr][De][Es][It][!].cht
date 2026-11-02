@@ -1,0 +1,37 @@
+# Recherche locale pour la ROM : Rainbow Islands [Europe][En][Fr][De][Es][It][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Rainbow%20Islands%20(Europe)%20(En%2CFr%2CDe%2CEs%2CIt).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Rainbow%20Islands%20(Europe)%20(GameShark).cht
+
+cheats = 7
+
+cheat0_desc = "[Format source non précisé] Invincibility"
+cheat0_code = "010ACBC1"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Special Modifier"
+cheat1_code = "010F76C1"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Ability Modifier"
+cheat2_code = "0101B7C1"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Pick Up One Diamond To Complete The Set"
+cheat3_code = "017F71C1"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Infinite Lives"
+cheat4_code = "01096AC1"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Double Rainbows"
+cheat5_code = "0102B7C1"
+cheat5_enable = false
+
+cheat6_desc = "[GameShark] Have All Diamonds"
+cheat6_code = "01FF71C1"
+cheat6_enable = false

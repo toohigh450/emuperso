@@ -1,0 +1,115 @@
+# Recherche locale pour la ROM : Gauntlet II [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Gauntlet%20II%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Gauntlet%20II%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Gauntlet%20II%20(USA%2C%20Europe)%20(Xploder).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Gauntlet%20II%20(USA%2C%20Europe).cht
+
+cheats = 26
+
+cheat0_desc = "[Game Genie] P1 Doesn't Lose Energy From Enemy"
+cheat0_code = "1CF-6FA"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] P1 Doesn't Lose Energy Over Time"
+cheat1_code = "1C2-ED9"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] P1 Has Infinite Keys For Locked Gates"
+cheat2_code = "1CA-66A"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] P1 Has Infinite Keys For Treasure Chests"
+cheat3_code = "1CC-01A"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Infinite Health For P1"
+cheat4_code = "0101B8D6"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Infinite Keys For P1"
+cheat5_code = "0104BED6"
+cheat5_enable = false
+
+cheat6_desc = "[GameShark] Infinite Potions P1"
+cheat6_code = "0101C1D6"
+cheat6_enable = false
+
+cheat7_desc = "[Xploder] Unendlich Zeit"
+cheat7_code = "$0DDDB8F3"
+cheat7_enable = false
+
+cheat8_desc = "[Xploder] Unendlich SchlÃÂ¼ssel"
+cheat8_code = "$0D23D7F3"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Don't lose energy with time (still lose it from enemies, poisons, magic, etc.)"
+cheat9_code = "002-EC9-C4E"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Never lose keys"
+cheat10_code = "C3A-5FA-D5D"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Never lose potions"
+cheat11_code = "008-76A-3BE"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Start with 3 keys and potions"
+cheat12_code = "030-979-E6A"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Infinite Keys"
+cheat13_code = "0101BED6"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Infinite Energy"
+cheat14_code = "01D0B8D6"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] P1 Doesn't Lose Energy From Enemy"
+cheat15_code = "1CF-6FA"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] P1 Doesn't Lose Energy Over Time"
+cheat16_code = "1C2-ED9"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] P1 Has Infinite Keys For Locked Gates"
+cheat17_code = "1CA-66A"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] P1 Has Infinite Keys For Treasure Chests"
+cheat18_code = "1CC-01A"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Unendlich Zeit"
+cheat19_code = "01DDB8F3"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Unendlich Schlüssel"
+cheat20_code = "0123D7F3"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Infinite Health For P1"
+cheat21_code = "0101B8D6"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Infinite Keys For P1"
+cheat22_code = "0104BED6"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Infinite Potions P1"
+cheat23_code = "0101C1D6"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Invincibility Against Enemies"
+cheat24_code = "C33-2DB-A21"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Speed up game"
+cheat25_code = "181-C5F-6EA"
+cheat25_enable = false

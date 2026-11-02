@@ -1,0 +1,29 @@
+{
+  "version": "RC-1.15-audit-candidate",
+  "tested_commit": "a2ff191ccb8b52356c37ef5fb81761da94f187d3",
+  "base_commit": "70df42eed84434efabe84f4d4a94a70f44bc8f73",
+  "claude_base_commit": "d4d06eaa779d25f2fd049f2d2d4d743c077d5c41",
+  "delivery_delta": "documentation and public synthetic-test evidence only",
+  "branch": "codex/ps1-rc1.15-audits",
+  "local_tests": {
+    "node": 185,
+    "python": 10,
+    "native_regional_cases": 7,
+    "native_fault_checks": 13,
+    "archive_compound_checks": 11
+  },
+  "scope": "Chromium Linux, pinned PCSX core, synthetic ISO/ZIP; memory metric forced for refusal case; Gamepad API synthetic; exceptions at JS/native boundary",
+  "runtime_files_sha256_verified": 41,
+  "browser_ci_executed": false,
+  "ci_node_python": "Consult the branch GitHub Actions result for the exact delivery commit; local evidence is not CI evidence.",
+  "main_merged": false,
+  "site_deployed": false,
+  "remaining_open": [
+    "expanded archive allocation bound",
+    "native ACK and exhaustive state authentication",
+    "RAR/7z real files",
+    "physical Xbox controller and real-game audio",
+    "CHD/PBP/multidisc and 900 MiB field tests",
+    "third-party license/source distribution review"
+  ]
+}

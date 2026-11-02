@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Kayou Generation, The (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Kayou%20Generation%2C%20The%20(Japan).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] Max Gauge"
+cheat0_code = "22127934+00000064"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Songs"
+cheat1_code = "02127F1C+FFFFFFFF+22127F25+000000FF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] 80's Song"
+cheat2_code = "12127F72+0000FFFF+02127F74+FFFFFFFF"
+cheat2_enable = false

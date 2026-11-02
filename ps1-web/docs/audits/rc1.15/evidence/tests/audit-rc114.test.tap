@@ -1,0 +1,136 @@
+TAP version 13
+# Subtest: R1: refus mémoire avant toute capture/fermeture ; état et progression du jeu préservés
+ok 1 - R1: refus mémoire avant toute capture/fermeture ; état et progression du jeu préservés
+  ---
+  duration_ms: 121.398371
+  type: 'test'
+  ...
+# Subtest: R1: mémoire devenue insuffisante pendant la confirmation => ancienne session conservée
+ok 2 - R1: mémoire devenue insuffisante pendant la confirmation => ancienne session conservée
+  ---
+  duration_ms: 32.594209
+  type: 'test'
+  ...
+# Subtest: R1: échec prepare après fermeture accepté => conséquences explicites
+ok 3 - R1: échec prepare après fermeture accepté => conséquences explicites
+  ---
+  duration_ms: 23.846709
+  type: 'test'
+  ...
+# Subtest: R1: échec start après fermeture accepté => conséquences explicites
+ok 4 - R1: échec start après fermeture accepté => conséquences explicites
+  ---
+  duration_ms: 31.350866
+  type: 'test'
+  ...
+# Subtest: R1: échec sauvegarde native => refus de fermeture avant archive
+ok 5 - R1: échec sauvegarde native => refus de fermeture avant archive
+  ---
+  duration_ms: 27.487664
+  type: 'test'
+  ...
+# Subtest: R2: métrique navigateur indisponible explicitement tracée ; aucune promesse de borne
+ok 6 - R2: métrique navigateur indisponible explicitement tracée ; aucune promesse de borne
+  ---
+  duration_ms: 51.625765
+  type: 'test'
+  ...
+# Subtest: P2: conventions et ambiguïtés régionales : Spider-Man-PSX-PAL-CD1-Rev 2.zip
+ok 7 - P2: conventions et ambiguïtés régionales : Spider-Man-PSX-PAL-CD1-Rev 2.zip
+  ---
+  duration_ms: 1.120933
+  type: 'test'
+  ...
+# Subtest: P2: conventions et ambiguïtés régionales : X-Men-PS1-NTSC_U-Disc 2-v1.1.chd
+ok 8 - P2: conventions et ambiguïtés régionales : X-Men-PS1-NTSC_U-Disc 2-v1.1.chd
+  ---
+  duration_ms: 0.588463
+  type: 'test'
+  ...
+# Subtest: P2: conventions et ambiguïtés régionales : Demo-PSX-NTSC_J-Disk2.7z
+ok 9 - P2: conventions et ambiguïtés régionales : Demo-PSX-NTSC_J-Disk2.7z
+  ---
+  duration_ms: 0.252617
+  type: 'test'
+  ...
+# Subtest: P2: conventions et ambiguïtés régionales : Demo (Europe) (En,Fr,Es,Pt-BR) (Disc 2 of 3) (Rev 1).chd
+ok 10 - P2: conventions et ambiguïtés régionales : Demo (Europe) (En,Fr,Es,Pt-BR) (Disc 2 of 3) (Rev 1).chd
+  ---
+  duration_ms: 0.568375
+  type: 'test'
+  ...
+# Subtest: P2: conventions et ambiguïtés régionales : Demo (Japan) [v1.1] [Disc 2].pbp
+ok 11 - P2: conventions et ambiguïtés régionales : Demo (Japan) [v1.1] [Disc 2].pbp
+  ---
+  duration_ms: 0.28951
+  type: 'test'
+  ...
+# Subtest: P2: conventions et ambiguïtés régionales : Demo (USA) (Europe)-PSX-NTSC-J-CD1.zip
+ok 12 - P2: conventions et ambiguïtés régionales : Demo (USA) (Europe)-PSX-NTSC-J-CD1.zip
+  ---
+  duration_ms: 0.161177
+  type: 'test'
+  ...
+# Subtest: P2: conventions et ambiguïtés régionales : Demo-PSX-PAL-NTSC-U-CD1.zip
+ok 13 - P2: conventions et ambiguïtés régionales : Demo-PSX-PAL-NTSC-U-CD1.zip
+  ---
+  duration_ms: 0.183162
+  type: 'test'
+  ...
+# Subtest: P2: conventions et ambiguïtés régionales : Demo_PSX_PAL_CD1.chd
+ok 14 - P2: conventions et ambiguïtés régionales : Demo_PSX_PAL_CD1.chd
+  ---
+  duration_ms: 0.055623
+  type: 'test'
+  ...
+# Subtest: P2: conventions et ambiguïtés régionales : Demo PAL.bin
+ok 15 - P2: conventions et ambiguïtés régionales : Demo PAL.bin
+  ---
+  duration_ms: 0.104062
+  type: 'test'
+  ...
+# Subtest: P2: conventions et ambiguïtés régionales : Demo (En-US,pt-BR,zh-Hant-TW).zip
+ok 16 - P2: conventions et ambiguïtés régionales : Demo (En-US,pt-BR,zh-Hant-TW).zip
+  ---
+  duration_ms: 0.098554
+  type: 'test'
+  ...
+# Subtest: P2: conventions et ambiguïtés régionales : Demo (USA,En,Fr).chd
+ok 17 - P2: conventions et ambiguïtés régionales : Demo (USA,En,Fr).chd
+  ---
+  duration_ms: 0.128631
+  type: 'test'
+  ...
+# Subtest: P2: conventions et ambiguïtés régionales : Final Fantasy 5 FR.pbp
+ok 18 - P2: conventions et ambiguïtés régionales : Final Fantasy 5 FR.pbp
+  ---
+  duration_ms: 0.04078
+  type: 'test'
+  ...
+# Subtest: P2: conventions et ambiguïtés régionales : Made-in-Japan-PSX.bin
+ok 19 - P2: conventions et ambiguïtés régionales : Made-in-Japan-PSX.bin
+  ---
+  duration_ms: 0.111176
+  type: 'test'
+  ...
+# Subtest: P2: conventions et ambiguïtés régionales : The-Last-of-US-CD1.bin
+ok 20 - P2: conventions et ambiguïtés régionales : The-Last-of-US-CD1.bin
+  ---
+  duration_ms: 0.083516
+  type: 'test'
+  ...
+# Subtest: P2: composés multiples, données 32 bits et instruction inconnue après donnée
+ok 21 - P2: composés multiples, données 32 bits et instruction inconnue après donnée
+  ---
+  duration_ms: 0.914647
+  type: 'test'
+  ...
+1..21
+# tests 21
+# suites 0
+# pass 21
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 371.359842

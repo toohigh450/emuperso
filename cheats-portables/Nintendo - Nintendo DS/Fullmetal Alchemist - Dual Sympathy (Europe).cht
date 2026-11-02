@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Fullmetal Alchemist - Dual Sympathy (Europe).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Fullmetal%20Alchemist%20-%20Dual%20Sympathy%20(Europe).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] Debug Menu"
+cheat0_code = "02002668+E3A00004"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Player 1 Has Infinite Health"
+cheat1_code = "0223A354+270F270F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Player 2 Has Infinite Health"
+cheat2_code = "0223A424+270F270F"
+cheat2_enable = false

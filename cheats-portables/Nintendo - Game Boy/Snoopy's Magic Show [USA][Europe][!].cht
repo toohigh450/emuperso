@@ -1,0 +1,104 @@
+# Recherche locale pour la ROM : Snoopy's Magic Show [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Snoopy's%20Magic%20Show%20(USA%2C%20Europe).cht
+
+cheats = 24
+
+cheat0_desc = "[Format source non précisé] Start with 22 sec."
+cheat0_code = "108-49A-E6B"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Start with 63 sec."
+cheat1_code = "3F8-49A-E6B"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Start with 100 sec."
+cheat2_code = "648-49A-E6B"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Start with 1 life"
+cheat3_code = "010-47B-F7E"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Start with 9 lives"
+cheat4_code = "090-47B-F7E"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Infinite time (switch off in bonus round)"
+cheat5_code = "008-97A-3BA"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] From level 2 on, only need 1 Woodstock to complete screen"
+cheat6_code = "01E-6EC-F7A"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Go to level 10 after level 1"
+cheat7_code = "3EE-76C-191+09E-77C-F7A+32E-7CC-3BA"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Go to level 20 after level 1"
+cheat8_code = "3EE-76C-191+13E-77C-F7A+32E-7CC-3BA"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Go to level 40 after level 1"
+cheat9_code = "3EE-76C-191+27E-77C-F7A+32E-7CC-3BA"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Go to level 80 after level 1"
+cheat10_code = "3EE-76C-191+4FE-77C-F7A+32E-7CC-3BA"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Start on level 2"
+cheat11_code = "3E7-3FD-4C1+027-40D-087+007-41D-E65"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Start on level 5"
+cheat12_code = "3E7-3FD-4C1+057-40D-087+007-41D-E65"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Start on level 9"
+cheat13_code = "3E7-3FD-4C1+097-40D-087+007-41D-E65"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Infinite Time"
+cheat14_code = "010092C3"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Automatically Beat Levels"
+cheat15_code = "C44-35F"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Infinite Lives"
+cheat16_code = "1CF-E1C"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Infinite Time"
+cheat17_code = "1C8-97A"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] FAKE Infinite Lives"
+cheat18_code = "0105E8C4"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] REAL Infinite Lives"
+cheat19_code = "01096FC3"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Invincibility"
+cheat20_code = "183-D6B-6EA"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Enemies Stay Frozen in Place (Powerup)"
+cheat21_code = "01012DC4"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Walk Faster Horizontally"
+cheat22_code = "010421C4"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Walk Faster Vertically"
+cheat23_code = "010423C4"
+cheat23_enable = false

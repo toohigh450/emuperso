@@ -1,0 +1,5 @@
+# Sorties de construction (portail unifié, PS1, N64) : jamais versionnées.
+/dist/
+/ps1-web/dist/
+/real-n64/dist/
+node_modules/

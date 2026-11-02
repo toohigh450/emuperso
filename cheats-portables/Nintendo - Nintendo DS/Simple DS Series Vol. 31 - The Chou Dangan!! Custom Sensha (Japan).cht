@@ -1,0 +1,240 @@
+# Recherche locale pour la ROM : Simple DS Series Vol. 31 - The Chou Dangan!! Custom Sensha (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Simple%20DS%20Series%20Vol.%2031%20-%20The%20Chou%20Dangan!!%20Custom%20Sensha%20(Japan).cht
+
+cheats = 58
+
+cheat0_desc = "[Action Replay] Residual x99 Machine"
+cheat0_code = "22098E94+00000063"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Aircraft Never Decrease"
+cheat1_code = "02037B3C+E3A00064"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Bomb x3"
+cheat2_code = "22098E98+00000003"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Bombs Never Decrease"
+cheat3_code = "02036CD0+E3A00004"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max HP"
+cheat4_code = "12098E68+000003E7+12098E88+000003E7"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] HP Never Decrease"
+cheat5_code = "DA000000+02098E68+D7000000+02098E88+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] HP Never Decrease (Version 2)"
+cheat6_code = "02037FB8+E1A01002+02038194+E1A00001"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Invincible Once Attacked"
+cheat7_code = "62099160+00000000+B20991DC+00000000+000001BC+FFFFFFFF+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Once attacked and Death (program code)"
+cheat8_code = "1203698C+00001000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Main 8 Never Decreases"
+cheat9_code = "62099160+00000000+B20991DC+00000000+B0000068+00000000+20000028+00000008+20000034+00000008+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Main Never Decreases"
+cheat10_code = "62099160+00000000+B20991DC+00000000+B0000068+00000000+DA000000+00000028+D7000000+00000034+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Sub-15 Never Decreases"
+cheat11_code = "62099160+00000000+B20991DC+00000000+B0000068+00000000+20000058+0000000F+20000064+0000000F+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Sub Never Decreases"
+cheat12_code = "62099160+00000000+B20991DC+00000000+B0000068+00000000+DA000000+00000058+D7000000+00000064+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Main sub-HERANAI (program code version 1) (*3)"
+cheat13_code = "020498F4+E1A03003"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Main sub-HERANAI (program code version 2) (*4)"
+cheat14_code = "02025E54+E12FFF1E+62099160+00000000+02025E54+EA0CE869+02360000+E59F2018+E2360004+00000020+E5922000+E5922068+E5920028+E5921058+E5820034+E5821064+E12FFF1E+020991DC+D0000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] (SELECT) a big jump button (*5)"
+cheat15_code = "92098AD0+00000004+62099160+00000000+B20991DC+00000000+000000C4+FFFF8000+D2000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Time Always 999"
+cheat16_code = "12098FA8+000003E7"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Infinite Time"
+cheat17_code = "0203FDA4+E1A00000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] From the first type - B1B2 selectable"
+cheat18_code = "02098EA8+4A5E3A0E+02098EAC+4F5F630F"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] All Parts Open"
+cheat19_code = "02098EB0+FFFFFFFF+02098EB4+FFFFFFFF+02098EB8+FFFFFFFF+12098EBC+0000640F"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Type - A1 Lv8"
+cheat20_code = "22098E74+00000008"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Type - A1 HP999"
+cheat21_code = "12098E64+000003E7+12098E84+000003E7"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Type - A2 Lv8"
+cheat22_code = "22098E78+00000008"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Type - A2 HP999"
+cheat23_code = "12098E68+000003E7+12098E88+000003E7"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Type - B1 Lv8"
+cheat24_code = "22098E7C+00000008"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Type - B1 HP999"
+cheat25_code = "12098E6C+000003E7+12098E8C+000003E7"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Type - B2 Lv8"
+cheat26_code = "22098E80+00000008"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Type - B2 HP999"
+cheat27_code = "12098E70+000003E7+12098E90+000003E7"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] All Tanks Lv8 HP999"
+cheat28_code = "C0000000+00000003+22098E74+00000008+12098E64+000003E7+12098E84+000003E7+DC000000+00000004+D2000000+00000000"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Score 9,999,999"
+cheat29_code = "02098E40+0098967F"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Score 9,999,999 Change in"
+cheat30_code = "12027DA6+0000E583"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] 2x"
+cheat31_code = "12027D98+00001081"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] 4x"
+cheat32_code = "12027D98+00001101"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] 8x"
+cheat33_code = "12027D98+00001181"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] 16x"
+cheat34_code = "12027D98+00001201"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] 32x"
+cheat35_code = "12027D98+00001281"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] 64x"
+cheat36_code = "12027D98+00001301"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] 128x"
+cheat37_code = "12027D98+00001381"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] 256x"
+cheat38_code = "12027D98+00001401"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] EXP 9,999,999"
+cheat39_code = "02098E48+0098967F"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Fluctuations in EXP 9,999,999"
+cheat40_code = "12027B86+0000E587"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] 2x"
+cheat41_code = "12027B68+00005081"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] 4x"
+cheat42_code = "12027B68+00005101"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] 8x"
+cheat43_code = "12027B68+00005181"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] 16x"
+cheat44_code = "12027B68+00005201"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] 32x"
+cheat45_code = "12027B68+00005281"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] 64x"
+cheat46_code = "12027B68+00005301"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] 128x"
+cheat47_code = "12027B68+00005381"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] 256x"
+cheat48_code = "12027B68+00005401"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Expert and Hell Difficulties Selectable"
+cheat49_code = "22098DFF+00000001"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Easy"
+cheat50_code = "22098DF0+00000000"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Normal"
+cheat51_code = "22098DF0+00000001"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Hard"
+cheat52_code = "22098DF0+00000002"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Expert"
+cheat53_code = "22098DF0+00000003"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Hell"
+cheat54_code = "22098DF0+00000004"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Before 3-3"
+cheat55_code = "22098DF1+0000000B"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] 3-4 up"
+cheat56_code = "22098DF1+0000000C"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] All Clear"
+cheat57_code = "22098DF1+0000000D"
+cheat57_enable = false

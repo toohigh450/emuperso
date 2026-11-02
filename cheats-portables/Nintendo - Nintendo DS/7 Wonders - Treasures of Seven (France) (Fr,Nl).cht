@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : 7 Wonders - Treasures of Seven (France) (Fr,Nl).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/7%20Wonders%20-%20Treasures%20of%20Seven%20(France).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] Max Score"
+cheat0_code = "94000130+FFFB0000+620DA75C+00000000+B20DA75C+00000000+B00000A8+00000000+0000006C+05F5E0FF+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Go to Last Level of Each World"
+cheat1_code = "94000136+FFFD0000+620DA75C+00000000+B20DA75C+00000000+B00000A8+00000000+20000068+0000000F+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Reset Timer"
+cheat2_code = "94000136+FFFE0000+620DA75C+00000000+B20DA75C+00000000+B00000A8+00000000+0000004C+005A9F38+D2000000+00000000"
+cheat2_enable = false

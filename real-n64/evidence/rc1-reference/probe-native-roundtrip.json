@@ -1,0 +1,820 @@
+{
+  "schema": "emuperso/native-roundtrip-probe/v1",
+  "results": [
+    {
+      "test": "Le vrai cœur reproduit un octet EEPROM modifié",
+      "status": "RÉUSSI",
+      "proof": {
+        "before": {
+          "bytes": 296960,
+          "byte17": 255,
+          "sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795"
+        },
+        "changed": {
+          "bytes": 296960,
+          "byte17": 165,
+          "sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c"
+        },
+        "refresh_api": "gameManager.functions.loadSaveFiles",
+        "path": "/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm"
+      }
+    },
+    {
+      "test": "Sauvegarde native distinctive réinjectée après reset propre",
+      "status": "RÉUSSI",
+      "proof": {
+        "native": {
+          "bytes": 296960,
+          "byte17": 165,
+          "sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c"
+        },
+        "previous_generation": 1,
+        "active_generation": 2,
+        "injection_event": {
+          "bytes": 296960,
+          "session_generation": 2
+        }
+      }
+    },
+    {
+      "test": "Persistance native distinctive après fermeture complète du navigateur",
+      "status": "RÉUSSI",
+      "proof": {
+        "native": {
+          "bytes": 296960,
+          "byte17": 165,
+          "sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c"
+        },
+        "different_from_fresh_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+        "new_process_profile_reopened": true,
+        "injection_event": {
+          "bytes": 296960,
+          "session_generation": 1
+        }
+      }
+    },
+    {
+      "test": "Bouton natif : copie courante relue sans écraser la cible avec le natif non enregistré",
+      "status": "RÉUSSI",
+      "proof": {
+        "saved": {
+          "bytes": 296960,
+          "byte17": 150,
+          "sha256": "f0edd0e2281f570ef8f1eccc01ba7afca3bf43ecbcaa0575faf5f75229b49235"
+        },
+        "unsaved_discarded": {
+          "bytes": 296960,
+          "byte17": 129,
+          "sha256": "24cbd07ddfee3d2a987048fb0e214bebe275696c526240b01f7e76b43190c756"
+        },
+        "reloaded": {
+          "bytes": 296960,
+          "byte17": 150,
+          "sha256": "f0edd0e2281f570ef8f1eccc01ba7afca3bf43ecbcaa0575faf5f75229b49235"
+        },
+        "verification": {
+          "previous": false,
+          "payload_sha256": "f0edd0e2281f570ef8f1eccc01ba7afca3bf43ecbcaa0575faf5f75229b49235",
+          "verification": {
+            "payload_sha256": "f0edd0e2281f570ef8f1eccc01ba7afca3bf43ecbcaa0575faf5f75229b49235",
+            "bytes": 296960,
+            "verified": true
+          }
+        }
+      }
+    },
+    {
+      "test": "Bouton natif précédent : ancienne copie réellement relue par le cœur",
+      "status": "RÉUSSI",
+      "proof": {
+        "expected_previous": {
+          "bytes": 296960,
+          "byte17": 165,
+          "sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c"
+        },
+        "reloaded": {
+          "bytes": 296960,
+          "byte17": 165,
+          "sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c"
+        },
+        "verification": {
+          "previous": true,
+          "payload_sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c",
+          "verification": {
+            "payload_sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c",
+            "bytes": 296960,
+            "verified": true
+          }
+        }
+      }
+    }
+  ],
+  "page_errors": [],
+  "http": [
+    {
+      "url": "http://127.0.0.1:8778/",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/style.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/assets/emuperso-banner.png",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/app.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/rom-file.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/zip-rom.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/save-store.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/session-controller.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/legacy-battery.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/state-bundle.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/cheat-catalog.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/homebrew/fallback-open/build-info.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/homebrew/fallback-open/demo-emuperso-open.z64",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/docs/runtime-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8778/5ba58273-3513-4804-acfc-60062cce7331",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8778/76f6c46f-7426-48e6-82fc-247d930251f2",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8778/4e73e4f8-ca30-4b5f-ad5b-cc01ded82e10",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8778/20a52b73-e347-4340-a4b2-8be3e7e71734",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/docs/cheat-catalog-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/cheats/mupencheat.txt",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8778/007201c9-aa31-4ba0-b2e6-8d1b172addbe",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8778/6b8fc364-8d5b-40c4-bdec-5f987e5a9916",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8778/f1f62654-aec9-48a0-9667-3af5bc563458",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8778/fb255b6f-dcbe-4b07-afdb-6ce74e0e4bce",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/style.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/assets/emuperso-banner.png",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/app.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/rom-file.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/zip-rom.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/save-store.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/session-controller.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/legacy-battery.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/state-bundle.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/cheat-catalog.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/homebrew/fallback-open/build-info.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/homebrew/fallback-open/demo-emuperso-open.z64",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/docs/runtime-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8778/9ab13bdb-c028-429c-802a-77676bbd306b",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8778/f84353ff-7034-4044-864c-5a6333d39fb5",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8778/c4e91fb2-5ad6-4b4a-8016-cf8a17b1b3bb",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8778/29387912-5be6-473d-85de-a56e4c191626",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/docs/cheat-catalog-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/cheats/mupencheat.txt",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8778/f5ce23dd-c5c0-43ad-85a5-7239284c9fea",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8778/dc5d66aa-9d3b-4829-a0b2-3e182b0078ad",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8778/8f964c6e-e8cd-4022-9de7-8ecec82980df",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8778/f9066d06-d216-4b0b-ab9d-af738cd9b502",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8778/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8778/3ca8d024-c8f9-472a-9a8c-bd584101caa1",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8778/c4eccec6-9aec-408e-8392-2472cdb5aea9",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8778/8a017442-2a40-40c3-b4f4-f4746b0de938",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8778/26a7e2fe-6631-4dc2-a426-84c40a293008",
+      "method": "GET",
+      "body_bytes": 0
+    }
+  ],
+  "dialogs": [
+    {
+      "type": "confirm",
+      "message": "Redémarrer le jeu sans cheats ? La partie en mémoire recommencera ; les sauvegardes conservées ne seront pas effacées."
+    },
+    {
+      "type": "confirm",
+      "message": "Redémarrer depuis cette sauvegarde native ? La progression non enregistrée en mémoire sera abandonnée. Les trois emplacements d’état restent intacts."
+    },
+    {
+      "type": "confirm",
+      "message": "Redémarrer depuis cette sauvegarde native ? La progression non enregistrée en mémoire sera abandonnée. Les trois emplacements d’état restent intacts."
+    }
+  ],
+  "scope": "Actual pinned N64 core, own MIT homebrew, newly generated battery bytes and a temporary Chromium profile. A controlled EEPROM byte is changed through actual FS/refresh APIs. No original or commercial save was used.",
+  "not_tested": [
+    "Gameplay EEPROM writes by a commercial game",
+    "Physical Chrome on Karl PC",
+    "All N64 save types and games"
+  ]
+}

@@ -1,0 +1,212 @@
+# Recherche locale pour la ROM : Chibi-Robo! - Park Patrol (USA).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Chibi-Robo!%20-%20Park%20Patrol%20(USA).cht
+
+cheats = 51
+
+cheat0_desc = "[Action Replay] Infinite Battery Power"
+cheat0_code = "023840D4+4479F99A+023840DC+4479F99A+223840E4+00000001"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Watts"
+cheat1_code = "023840D8+47C34F80"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max/Infinite Heart Points"
+cheat2_code = "023840D0+0000270F"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Donation - Have All Flowers With 10 Pieces Each"
+cheat3_code = "94000130+FFFB0000+C0000000+00000009+223840F0+0000000A+DC000000+00000004+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All Cars and Bikes"
+cheat4_code = "C0000000+00000003+22382A78+00000001+DC000000+00000004+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Knows All Dances"
+cheat5_code = "C0000000+00000006+22382A8C+00000001+DC000000+00000004+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] All Chips"
+cheat6_code = "2238419C+00000004+223841A0+00000004+223841A4+00000004+223841A8+00000004"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Stop Clock"
+cheat7_code = "94000130+FEFB0000+520A08EC+48065060+220A08ED+00000058+D2000000+00000000+94000130+FDFB0000+520A08EC+48065860+220A08ED+00000050+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] 999 Flower Combo"
+cheat8_code = "94000130+FDFF0000+02387E00+000003E7+12387E0C+000003E7+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Reset Trick Bench"
+cheat9_code = "94000130+FFFB0000+22384740+00000000+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Tampa"
+cheat10_code = "94000130+FFFB0000+223825A0+00000001+223825A4+00000001+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Bull"
+cheat11_code = "94000130+FFFB0000+223825A0+00000002+223825A4+00000001+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Francois"
+cheat12_code = "94000130+FFFB0000+223825A0+00000003+223825A4+00000001+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Molly Mapleleaf"
+cheat13_code = "94000130+FFFB0000+223825A0+00000004+223825A4+00000001+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Chassy"
+cheat14_code = "94000130+FFFB0000+223825A0+00000005+223825A4+00000001+D2000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Pop Fizz"
+cheat15_code = "94000130+FFFB0000+223825A0+00000006+223825A4+00000001+D2000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Tampa"
+cheat16_code = "94000130+FFFB0000+22382648+00000001+2238264C+00000001+D2000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Bull"
+cheat17_code = "94000130+FFFB0000+22382648+00000002+2238264C+00000001+D2000000+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Francrois"
+cheat18_code = "94000130+FFFB0000+22382648+00000003+2238264C+00000001+D2000000+00000000"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Molly Mapleleaf"
+cheat19_code = "94000130+FFFB0000+22382648+00000004+2238264C+00000001+D2000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Chassy"
+cheat20_code = "94000130+FFFB0000+22382648+00000005+2238264C+00000001+D2000000+00000000"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Pop Fizz"
+cheat21_code = "94000130+FFFB0000+22382648+00000006+2238264C+00000001+D2000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Tampa"
+cheat22_code = "94000130+FFFB0000+223826F0+00000001+223826F4+00000001+D2000000+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Bull"
+cheat23_code = "94000130+FFFB0000+223826F0+00000002+223826F4+00000001+D2000000+00000000"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Francois"
+cheat24_code = "94000130+FFFB0000+223826F0+00000003+223826F4+00000001+D2000000+00000000"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Molly Mapleleaf"
+cheat25_code = "94000130+FFFB0000+223826F0+00000004+223826F4+00000001+D2000000+00000000"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Chassy"
+cheat26_code = "94000130+FFFB0000+223826F0+00000005+223826F4+00000001+D2000000+00000000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Pop Fizz"
+cheat27_code = "94000130+FFFB0000+223826F0+00000006+223826F4+00000001+D2000000+00000000"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Squiter"
+cheat28_code = "94000130+FCFF0000+1238412C+00000001+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] BoomBox"
+cheat29_code = "94000130+FCFF0000+1238412C+00000002+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Clipper"
+cheat30_code = "94000130+FCFF0000+1238412C+00000003+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Spoon"
+cheat31_code = "94000130+FCFF0000+1238412C+00000004+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Bike"
+cheat32_code = "94000130+FCFF0000+1238412C+00000005+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Cart"
+cheat33_code = "94000130+FCFF0000+1238412C+00000006+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Canoe"
+cheat34_code = "94000130+FCFF0000+1238412C+00000007+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Chassy GT"
+cheat35_code = "94000130+FCFF0000+1238412C+00000008+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Leaf"
+cheat36_code = "94000130+FCFF0000+1238412C+00000014+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Bubble Gum"
+cheat37_code = "94000130+FCFF0000+1238412C+00000015+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Monkey Burger"
+cheat38_code = "94000130+FCFF0000+1238412C+00000016+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] PopFizz Soda"
+cheat39_code = "94000130+FCFF0000+1238412C+00000017+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Empty PopFizz Can"
+cheat40_code = "94000130+FCFF0000+1238412C+00000018+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Chocolate"
+cheat41_code = "94000130+FCFF0000+1238412C+00000019+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Candy"
+cheat42_code = "94000130+FCFF0000+1238412C+0000001A+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Healthy Snack"
+cheat43_code = "94000130+FCFF0000+1238412C+0000001B+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Plastic Bottle"
+cheat44_code = "94000130+FCFF0000+1238412C+0000001C+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Bottle"
+cheat45_code = "94000130+FCFF0000+1238412C+0000001D+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Plastic Bag"
+cheat46_code = "94000130+FCFF0000+1238412C+0000001E+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Control Panel"
+cheat47_code = "94000130+FCFF0000+1238412C+0000001F+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Paper Plane"
+cheat48_code = "94000130+FCFF0000+1238412C+00000020+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Ball"
+cheat49_code = "94000130+FCFF0000+1238412C+00000021+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Empty Slot"
+cheat50_code = "94000130+FCFF0000+1238412C+00000052+3238413C+00000001+0238413C+00000001+D2000000+00000000"
+cheat50_enable = false

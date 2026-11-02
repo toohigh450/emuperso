@@ -1,0 +1,120 @@
+# Recherche locale pour la ROM : SaGa 3 - Jikuu no Hasha - Shadow or Light (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/SaGa%203%20-%20Jikuu%20no%20Hasha%20-%20Shadow%20or%20Light%20(Japan).cht
+
+cheats = 28
+
+cheat0_desc = "[Action Replay] Anti-Piracy Bypass Code"
+cheat0_code = "9201B8A4+0000BDF8+0201B8A4+EC3EF3E3+D2000000+00000000+023FF100+E59F0000+E23FF104+00000078+E12FFF1E+0000B3CF+E59F0000+E12FFF1E+0000B177+E59F0000+E12FFF1E+0000A2DD+E59F003C+E59F103C+E5912000+E1500002+059F003C+05810000+0280000C+0581003C+E59F0024+E59F1024+E5912000+E1500002+059F001C+05810000+02800018+0581003C+E8BD8FF8+02178530+021777E8+02168E48+02167CE4+02400800+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Money"
+cheat1_code = "94000130+FFFB0000+0214BA14+0098967F+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Time Gauge"
+cheat2_code = "94000130+FFFB0000+1214E4C2+000001F4+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Walk Through Walls"
+cheat3_code = "52161520+227BFF53+12161500+0000D023+D0000000+00000000+52161520+227BFF53+94000130+FFFD0000+12161500+0000E023+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Movement Speed x2"
+cheat4_code = "521601FC+2001E7FF+02160124+022D2540+121601F6+00002020+121601F8+00000200+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] One Hit Kills"
+cheat5_code = "520976C0+FFC6F7FF+A4000130+FEFF0000+120976D2+00006821+D2000000+00000000+520976C0+FFC6F7FF+94000130+FEFF0000+120976D2+00002100+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] HP Auto Recover During Battle"
+cheat6_code = "E2000100+00000010+46C00080+50256865+46C01C28+F9B4F0A2+520A2470+2046E009+020A2474+FE44F75D+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Normally No Encounter"
+cheat7_code = "5215F8D4+01896BA9+1215F8CA+00002102+D0000000+00000000+5215F8D4+01896BA9+94000130+FFFE0000+1215F8CA+00005E41+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Always Pre-emptive Strike"
+cheat8_code = "52155F0C+3532D000+12155F0C+0000E00D+D0000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Easy"
+cheat9_code = "94000130+FFFB0000+2214E4C8+00000000+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Normal"
+cheat10_code = "94000130+FFFB0000+2214E4C8+00000001+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Hard"
+cheat11_code = "94000130+FFFB0000+2214E4C8+00000002+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] x2"
+cheat12_code = "02000118+5AE0004B+0200011C+47700052+520A2F40+BD1052E0+020A2F50+F8E2F75D+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] x4"
+cheat13_code = "02000118+5AE0004B+0200011C+47700092+520A2F40+BD1052E0+020A2F50+F8E2F75D+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] x8"
+cheat14_code = "02000118+5AE0004B+0200011C+477000D2+520A2F40+BD1052E0+020A2F50+F8E2F75D+D2000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] x16"
+cheat15_code = "02000118+5AE0004B+0200011C+47700112+520A2F40+BD1052E0+020A2F50+F8E2F75D+D2000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] x32"
+cheat16_code = "02000118+5AE0004B+0200011C+47700152+520A2F40+BD1052E0+020A2F50+F8E2F75D+D2000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] x64"
+cheat17_code = "02000118+5AE0004B+0200011C+47700192+520A2F40+BD1052E0+020A2F50+F8E2F75D+D2000000+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] x128"
+cheat18_code = "02000118+5AE0004B+0200011C+477001D2+520A2F40+BD1052E0+020A2F50+F8E2F75D+D2000000+00000000"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Max"
+cheat19_code = "120A2F5E+000046C0"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] x2"
+cheat20_code = "02000120+00765961+02000124+47701989+520BF1A0+596100AD+120BF1A2+0000F740+120BF1A4+0000FFBD+D2000000+00000000"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] x4"
+cheat21_code = "02000120+00B65961+02000124+47701989+520BF1A0+596100AD+120BF1A2+0000F740+120BF1A4+0000FFBD+D2000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] x8"
+cheat22_code = "02000120+00F65961+02000124+47701989+520BF1A0+596100AD+120BF1A2+0000F740+120BF1A4+0000FFBD+D2000000+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] x16"
+cheat23_code = "02000120+01365961+02000124+47701989+520BF1A0+596100AD+120BF1A2+0000F740+120BF1A4+0000FFBD+D2000000+00000000"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] x32"
+cheat24_code = "02000120+01765961+02000124+47701989+520BF1A0+596100AD+120BF1A2+0000F740+120BF1A4+0000FFBD+D2000000+00000000"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] x64"
+cheat25_code = "02000120+01B65961+02000124+47701989+520BF1A0+596100AD+120BF1A2+0000F740+120BF1A4+0000FFBD+D2000000+00000000"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] x128"
+cheat26_code = "02000120+01F65961+02000124+47701989+520BF1A0+596100AD+120BF1A2+0000F740+120BF1A4+0000FFBD+D2000000+00000000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Max"
+cheat27_code = "520BF1A0+596100AD+120BF1A4+00004913+D2000000+00000000"
+cheat27_enable = false

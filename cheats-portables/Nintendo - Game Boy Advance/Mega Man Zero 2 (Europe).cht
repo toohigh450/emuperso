@@ -1,0 +1,104 @@
+# Recherche locale pour la ROM : Mega Man Zero 2 (Europe).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Mega%20Man%20Zero%202%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 24
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000468A+000A+10002028+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Invincible"
+cheat1_code = "32037D84+0002"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Lives"
+cheat2_code = "82036BB4+0009"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Infinite Health"
+cheat3_code = "82037D94+0024"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Maximum Health"
+cheat4_code = "32037EED+0024"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Have All Weapon Levels Maxed"
+cheat5_code = "82037F12+0408+82037F14+0202"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Have All Weapons+Elements"
+cheat6_code = "82037F00+0F0F"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Infinite Dash"
+cheat7_code = "32037E74+00FE"
+cheat7_enable = false
+
+cheat8_desc = "[Code Breaker] Rapid Fire"
+cheat8_code = "32037FAA+0000"
+cheat8_enable = false
+
+cheat9_desc = "[Code Breaker] Quick Weapon Charge"
+cheat9_code = "32037E78+00FF"
+cheat9_enable = false
+
+cheat10_desc = "[Code Breaker] Weak Bosses"
+cheat10_code = "8203BBF4+0001+8203BB10+0001"
+cheat10_enable = false
+
+cheat11_desc = "[Code Breaker] Rank S"
+cheat11_code = "32036BB5+0006"
+cheat11_enable = false
+
+cheat12_desc = "[Code Breaker] Multi Jump"
+cheat12_code = "74000130+03FE+82037D50+FD40+74000130+03FE+82037D52+FFFF"
+cheat12_enable = false
+
+cheat13_desc = "[Code Breaker] 9999 Crystals"
+cheat13_code = "82037EEE+270F"
+cheat13_enable = false
+
+cheat14_desc = "[Code Breaker] Have All Forms"
+cheat14_code = "82037EF0+FFFF"
+cheat14_enable = false
+
+cheat15_desc = "[Code Breaker] Have All EX Techs"
+cheat15_code = "82037F06+FFFF"
+cheat15_enable = false
+
+cheat16_desc = "[Code Breaker] Have Sub Tanks"
+cheat16_code = "32037EF4+0004"
+cheat16_enable = false
+
+cheat17_desc = "[Code Breaker] Sub Tanks Full"
+cheat17_code = "82037EF6+1E1E+82037EF8+1E1E"
+cheat17_enable = false
+
+cheat18_desc = "[Code Breaker] Have All Cyber Elves"
+cheat18_code = "42037F18+FFFF+0000000B+0002"
+cheat18_enable = false
+
+cheat19_desc = "[Code Breaker] Have All Elves Fully Grown"
+cheat19_code = "42037F60+0101+0000000A+0002+32037F60+0002+32037F69+0002+32037F6E+0002"
+cheat19_enable = false
+
+cheat20_desc = "[Code Breaker] Infinite Elf Usage"
+cheat20_code = "42037F2E+0000+00000006+0002"
+cheat20_enable = false
+
+cheat21_desc = "[Code Breaker] Press Select+R To Access Elf Setup Menu"
+cheat21_code = "74000130+02FB+8202F8E2+3E03+7202F8E2+0203+8202F8E2+0303"
+cheat21_enable = false
+
+cheat22_desc = "[Code Breaker] Have All Elements Equipped"
+cheat22_code = "72037F04+0000+82037F04+0600"
+cheat22_enable = false
+
+cheat23_desc = "[Code Breaker] Ciel's Timer Hits 0 Fast"
+cheat23_code = "7202EDB4+1500+8202EDB4+0005"
+cheat23_enable = false

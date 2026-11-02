@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Treasure World (USA).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Treasure%20World%20(USA).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "52006CAC+EE070F90+E2000334+0000004C+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2E36E0D+00120426+004D015E+000A03AB+00000009+00000000+02006CAC+E92D401E+02006CB0+FAFFE59F+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Stardust (Version 1)"
+cheat1_code = "02253B90+0000270F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Stardust (Version 2)"
+cheat2_code = "02253B90+0001869F"
+cheat2_enable = false

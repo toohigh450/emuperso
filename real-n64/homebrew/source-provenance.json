@@ -1,0 +1,36 @@
+{
+  "main.c": {
+    "sha256": "625e34fe7490e72d8df1e8b1c05da58a5b92d5c180d0c4668488c2877dc8a233",
+    "identical_to_original": true
+  },
+  "Makefile": {
+    "sha256": "001b54bee28aa06e1b9e6ad92ae2d3c4ead5208bb42e1f0f3b84170c763c2faa",
+    "identical_to_original": true
+  },
+  "LICENSE": {
+    "sha256": "3504ff9738471418a6ba806a0e70b470aa1158767d703122a206572166ee0917",
+    "identical_to_original": true
+  },
+  "libdragon/LICENSE.md": {
+    "sha256": "88d9b4eb60579c191ec391ca04c16130572d7eedc4a86daa58bf28c6e14c9bcd",
+    "source_commit": "e356bf3f56f7afbf7e5246329562f145965cfdfc"
+  },
+  "libdragon/boot/README.md": {
+    "sha256": "de20debf088aa279d73d738bf7a9e7137c83e4175f151cea435ac0df4dcafb92",
+    "source_commit": "e356bf3f56f7afbf7e5246329562f145965cfdfc"
+  },
+  "libdragon/boot/ipl3.c": {
+    "sha256": "3e3222951a096130c2628fa80110612c1ae5e4ee3b612c5b59e83aa37537f4dc",
+    "source_commit": "e356bf3f56f7afbf7e5246329562f145965cfdfc"
+  },
+  "libdragon/tools/build-toolchain.sh": {
+    "sha256": "5e1a604d44acd5bf6d92fd0bb5eba0bfaf1b2a8446378227200cf1a9bf2f55de",
+    "source_commit": "e356bf3f56f7afbf7e5246329562f145965cfdfc"
+  },
+  "license_notices": {
+    "GCC-RUNTIME-EXCEPTION.txt": "e9e847889787f1c0a2f735a0d7571163e4ca2ea64cf0a1a519d26c2afdac96bc",
+    "LIBDRAGON-UNLICENSE.txt": "60d2c28d19d2bdf7bbaa59829e7a595234265e8111a01ccb74d25d6c4d2d013a",
+    "NEWLIB-4.4.0-COPYING.txt": "2b0a55e1e0fa77dc6e2a80b76edf92db6796d40d5f75f77ee1e7d08f1773825f",
+    "GCC-GPLv3.txt": "0ae0485a5bd37a63e63603596417e4eb0e653334fa6c7f932ca3a0e85d4af227"
+  }
+}

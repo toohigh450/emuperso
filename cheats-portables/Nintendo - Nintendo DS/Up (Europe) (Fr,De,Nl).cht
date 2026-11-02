@@ -1,0 +1,574 @@
+# Recherche locale pour la ROM : Up (Europe) (Fr,De,Nl).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Up%20(Europe)%20(Fr%2CDe%2CNl).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Up%20(Europe)%20(Sv%2CNo%2CDa).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Up%20(Europe).cht
+
+cheats = 141
+
+cheat0_desc = "[Action Replay] Play Time 00:00:00"
+cheat0_code = "94000130+FFFB0000+0204A0BC+00000000+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Total Points in Results screen"
+cheat1_code = "94000130+FFFB0000+0204A328+0001869F+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Freeze Timer = Select + B + Up, Resume Timer = Select + B + Down"
+cheat2_code = "94000130+FFB90000+2204A0C0+00000001+D2000000+00000000+94000130+FF790000+2204A0C0+00000000+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Infinite Health"
+cheat3_code = "0204BEC8+000FF000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Infinite Energy"
+cheat4_code = "0204BEE4+000FF000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Unlimited Bugs Collected"
+cheat5_code = "120498B8+000003E7"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Unlimited Balloons Collected"
+cheat6_code = "120498BA+000003E7"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Have all gadgets"
+cheat7_code = "94000130+FFFB0000+020498BC+FFFFFFFF+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Invincible"
+cheat8_code = "2204A804+00000001+2204A82B+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Used Chocolate for freeze health and energy bar"
+cheat9_code = "2204A810+00000001+1204A848+00008000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Encounter Mode"
+cheat10_code = "94000130+FFFD0000+0204BD0C+000B0000+D2000000+00000000+94000130+FFFB0000+0204BD0C+00000000+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Used scent stick for freeze dog meter"
+cheat11_code = "2204A814+00000001+1204A84A+00008000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Max Cash"
+cheat12_code = "94000130+FFFB0000+020498B0+0001869F+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Max Health"
+cheat13_code = "94000130+FFFB0000+220498B4+000000FF+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Max Energy"
+cheat14_code = "94000130+FFFB0000+220498B6+000000FF+D2000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Carl Infinite Double Jump"
+cheat15_code = "2204A50C+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Carl Moon Jump"
+cheat16_code = "94000130+FFFE0000+1204A4F4+00000100+D2000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Russell Infinite Double Jump"
+cheat17_code = "2204A62C+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Russell Moon Jump"
+cheat18_code = "94000130+FFFE0000+1204A614+00000100+D2000000+00000000"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] X2"
+cheat19_code = "1204A4E8+00000100"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] X4"
+cheat20_code = "1204A4E8+00000180"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] X8"
+cheat21_code = "1204A4E8+00000200"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] X2"
+cheat22_code = "1204A608+00000100"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] X4"
+cheat23_code = "1204A608+00000180"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] X8"
+cheat24_code = "1204A608+00000200"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Infinite Health"
+cheat25_code = "0204C10C+000FF000"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Infinite Energy"
+cheat26_code = "0204C128+000FF000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] 1 hit kill all enemies"
+cheat27_code = "94000130+FF7B0000+0204B96C+00001000+0204BAA4+00001000+0204BBDC+00001000+D2000000+00000000"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Infinite Health"
+cheat28_code = "0204ABB4+000FF000"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Infinite Rockets"
+cheat29_code = "1204A224+000003E7"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] 1 hit kill all planes"
+cheat30_code = "94000130+FF7B0000+0204A71C+00001000+D2000000+00000000"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Press Select"
+cheat31_code = "94000130+FFFB0000+0204AC84+0098967F+D2000000+00000000"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Tepui Ball: Play Time 16:00:00"
+cheat32_code = "94000130+FFFE0000+0204C24C+00000010+D2000000+00000000"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Tepui Ball: Timer Running Control"
+cheat33_code = "94000130+FDFB0000+2204C250+00000001+D2000000+00000000+94000130+FEFB0000+2204C250+00000000+D2000000+00000000"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Insect Panic: Max Score"
+cheat34_code = "94000130+FFFB0000+0204A374+0098967F+D2000000+00000000"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Insect Panic: Reset Timer"
+cheat35_code = "94000130+FFFE0000+0204E5E0+00000010+D2000000+00000000"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Cave Collapse: Max Score"
+cheat36_code = "94000130+FFFB0000+0204B1B0+0098967F+D2000000+00000000"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Cave Collapse: Play Time 16:00:00"
+cheat37_code = "94000130+FFFE0000+0204C650+00000010+D2000000+00000000"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Cave Collapse: Timer Running Control"
+cheat38_code = "94000130+FDFB0000+2204C654+00000001+D2000000+00000000+94000130+FDFB0000+2204C654+00000000+D2000000+00000000"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Air Lift: Max Score"
+cheat39_code = "94000130+FFFB0000+0204AB74+0098967F+D2000000+00000000"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Air Lift: Play Time 16:00:00"
+cheat40_code = "94000130+FFFE0000+0204B6A0+00000010+D2000000+00000000"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Air Lift: Timer Running Control"
+cheat41_code = "94000130+FDFB0000+2204B6A4+00000001+D2000000+00000000+94000130+FEFB0000+2204B6A4+00000000+D2000000+00000000"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Air Lift: Balloons Never Pop Out"
+cheat42_code = "94000130+FFFD0000+2204AB68+000000FF+D2000000+00000000"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Balloon Toss: Max score for player"
+cheat43_code = "94000130+FFBB0000+1204D344+0000270F+D2000000+00000000"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Balloon Toss: No score for enemy"
+cheat44_code = "94000130+FF7B0000+1204D348+00000000+D2000000+00000000"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Press A"
+cheat45_code = "94000130+FFFE0000+0204A2E4+00000010+D2000000+00000000"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Balloon Toss: Timer Running Control"
+cheat46_code = "94000130+FDFB0000+2204A2E8+00000001+D2000000+00000000+94000130+FEFB0000+2204A2E8+00000000+D2000000+00000000"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Play Time 00:00:00"
+cheat47_code = "94000130+FFFB0000+0204A13C+00000000+D2000000+00000000"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Total Points in Results screen"
+cheat48_code = "94000130+FFFB0000+0204A3A8+0001869F+D2000000+00000000"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Freeze Timer = Select + B + Up, Resume Timer = Select + B + Down"
+cheat49_code = "94000130+FFB90000+2204A140+00000001+D2000000+00000000+94000130+FF790000+2204A140+00000000+D2000000+00000000"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Infinite Health"
+cheat50_code = "0204BF48+000FF000"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Infinite Energy"
+cheat51_code = "0204BF64+000FF000"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Unlimited Bugs Collected"
+cheat52_code = "12049938+000003E7"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Unlimited Balloons Collected"
+cheat53_code = "1204993A+000003E7"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Have all gadgets"
+cheat54_code = "94000130+FFFB0000+0204993C+FFFFFFFF+D2000000+00000000"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Invincible"
+cheat55_code = "2204A884+00000001+2204A8AB+00000000"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Used Chocolate for freeze health and energy bar"
+cheat56_code = "2204A890+00000001+1204A8C8+00008000"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Encounter Mode"
+cheat57_code = "94000130+FFFD0000+0204BD8C+000B0000+D2000000+00000000+94000130+FFFB0000+0204BD8C+00000000+D2000000+00000000"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Used scent stick for freeze dog meter"
+cheat58_code = "2204A894+00000001+1204A8CA+00008000"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Max Cash"
+cheat59_code = "94000130+FFFB0000+02049930+0001869F+D2000000+00000000"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Max Health"
+cheat60_code = "94000130+FFFB0000+22049934+000000FF+D2000000+00000000"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Max Energy"
+cheat61_code = "94000130+FFFB0000+22049936+000000FF+D2000000+00000000"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Carl Infinite Double Jump"
+cheat62_code = "2204A58C+00000000"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Carl Moon Jump"
+cheat63_code = "94000130+FFFE0000+1204A574+00000100+D2000000+00000000"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Russell Infinite Double Jump"
+cheat64_code = "2204A6AC+00000000"
+cheat64_enable = false
+
+cheat65_desc = "[Action Replay] Russell Moon Jump"
+cheat65_code = "94000130+FFFE0000+1204A694+00000100+D2000000+00000000"
+cheat65_enable = false
+
+cheat66_desc = "[Action Replay] X2"
+cheat66_code = "1204A568+00000100"
+cheat66_enable = false
+
+cheat67_desc = "[Action Replay] X4"
+cheat67_code = "1204A568+00000180"
+cheat67_enable = false
+
+cheat68_desc = "[Action Replay] X8"
+cheat68_code = "1204A568+00000200"
+cheat68_enable = false
+
+cheat69_desc = "[Action Replay] X2"
+cheat69_code = "1204A688+00000100"
+cheat69_enable = false
+
+cheat70_desc = "[Action Replay] X4"
+cheat70_code = "1204A688+00000180"
+cheat70_enable = false
+
+cheat71_desc = "[Action Replay] X8"
+cheat71_code = "1204A688+00000200"
+cheat71_enable = false
+
+cheat72_desc = "[Action Replay] Infinite Health"
+cheat72_code = "0204C18C+000FF000"
+cheat72_enable = false
+
+cheat73_desc = "[Action Replay] Infinite Energy"
+cheat73_code = "0204C1A8+000FF000"
+cheat73_enable = false
+
+cheat74_desc = "[Action Replay] 1 hit kill all enemies"
+cheat74_code = "94000130+FF7B0000+0204B9EC+00001000+0204BB24+00001000+0204BC5C+00001000+D2000000+00000000"
+cheat74_enable = false
+
+cheat75_desc = "[Action Replay] Infinite Health"
+cheat75_code = "0204AC34+000FF000"
+cheat75_enable = false
+
+cheat76_desc = "[Action Replay] Infinite Rockets"
+cheat76_code = "1204A2A4+000003E7"
+cheat76_enable = false
+
+cheat77_desc = "[Action Replay] 1 hit kill all planes"
+cheat77_code = "94000130+FF7B0000+0204A79C+00001000+D2000000+00000000"
+cheat77_enable = false
+
+cheat78_desc = "[Action Replay] Press Select"
+cheat78_code = "94000130+FFFB0000+0204AD04+0098967F+D2000000+00000000"
+cheat78_enable = false
+
+cheat79_desc = "[Action Replay] Tepui Ball: Play Time 16:00:00"
+cheat79_code = "94000130+FFFE0000+0204C2CC+00000010+D2000000+00000000"
+cheat79_enable = false
+
+cheat80_desc = "[Action Replay] Tepui Ball: Timer Running Control"
+cheat80_code = "94000130+FDFB0000+2204C2D0+00000001+D2000000+00000000+94000130+FEFB0000+2204C2D0+00000000+D2000000+00000000"
+cheat80_enable = false
+
+cheat81_desc = "[Action Replay] Insect Panic: Max Score"
+cheat81_code = "94000130+FFFB0000+0204A3F4+0098967F+D2000000+00000000"
+cheat81_enable = false
+
+cheat82_desc = "[Action Replay] Insect Panic: Reset Timer"
+cheat82_code = "94000130+FFFE0000+0204E660+00000010+D2000000+00000000"
+cheat82_enable = false
+
+cheat83_desc = "[Action Replay] Cave Collapse: Max Score"
+cheat83_code = "94000130+FFFB0000+0204B230+0098967F+D2000000+00000000"
+cheat83_enable = false
+
+cheat84_desc = "[Action Replay] Cave Collapse: Play Time 16:00:00"
+cheat84_code = "94000130+FFFE0000+0204C6D0+00000010+D2000000+00000000"
+cheat84_enable = false
+
+cheat85_desc = "[Action Replay] Cave Collapse: Timer Running Control"
+cheat85_code = "94000130+FDFB0000+2204C6D4+00000001+D2000000+00000000+94000130+FDFB0000+2204C6D4+00000000+D2000000+00000000"
+cheat85_enable = false
+
+cheat86_desc = "[Action Replay] Air Lift: Max Score"
+cheat86_code = "94000130+FFFB0000+0204ABF4+0098967F+D2000000+00000000"
+cheat86_enable = false
+
+cheat87_desc = "[Action Replay] Air Lift: Play Time 16:00:00"
+cheat87_code = "94000130+FFFE0000+0204B720+00000010+D2000000+00000000"
+cheat87_enable = false
+
+cheat88_desc = "[Action Replay] Air Lift: Timer Running Control"
+cheat88_code = "94000130+FDFB0000+2204B724+00000001+D2000000+00000000+94000130+FEFB0000+2204B724+00000000+D2000000+00000000"
+cheat88_enable = false
+
+cheat89_desc = "[Action Replay] Air Lift: Balloons Never Pop Out"
+cheat89_code = "94000130+FFFD0000+2204ABE8+000000FF+D2000000+00000000"
+cheat89_enable = false
+
+cheat90_desc = "[Action Replay] Balloon Toss: Max score for player"
+cheat90_code = "94000130+FFBB0000+1204D3C4+0000270F+D2000000+00000000"
+cheat90_enable = false
+
+cheat91_desc = "[Action Replay] Balloon Toss: No score for enemy"
+cheat91_code = "94000130+FF7B0000+1204D3C8+00000000+D2000000+00000000"
+cheat91_enable = false
+
+cheat92_desc = "[Action Replay] Press A"
+cheat92_code = "94000130+FFFE0000+0204A364+00000010+D2000000+00000000"
+cheat92_enable = false
+
+cheat93_desc = "[Action Replay] Balloon Toss: Timer Running Control"
+cheat93_code = "94000130+FDFB0000+2204A368+00000001+D2000000+00000000+94000130+FEFB0000+2204A368+00000000+D2000000+00000000"
+cheat93_enable = false
+
+cheat94_desc = "[Action Replay] Play Time 00:00:00"
+cheat94_code = "94000130+FFFB0000+0204A0FC+00000000+D2000000+00000000"
+cheat94_enable = false
+
+cheat95_desc = "[Action Replay] Total Points in Results screen"
+cheat95_code = "94000130+FFFB0000+0204A368+0001869F+D2000000+00000000"
+cheat95_enable = false
+
+cheat96_desc = "[Action Replay] Freeze Timer = Select + B + Up, Resume Timer = Select + B + Down"
+cheat96_code = "94000130+FFB90000+2204A100+00000001+D2000000+00000000+94000130+FF790000+2204A100+00000000+D2000000+00000000"
+cheat96_enable = false
+
+cheat97_desc = "[Action Replay] Infinite Health"
+cheat97_code = "0204BF08+000FF000"
+cheat97_enable = false
+
+cheat98_desc = "[Action Replay] Infinite Energy"
+cheat98_code = "0204BF24+000FF000"
+cheat98_enable = false
+
+cheat99_desc = "[Action Replay] Unlimited Bugs Collected"
+cheat99_code = "120498F8+000003E7"
+cheat99_enable = false
+
+cheat100_desc = "[Action Replay] Unlimited Balloons Collected"
+cheat100_code = "120498FA+000003E7"
+cheat100_enable = false
+
+cheat101_desc = "[Action Replay] Have all gadgets"
+cheat101_code = "94000130+FFFB0000+020498FC+FFFFFFFF+D2000000+00000000"
+cheat101_enable = false
+
+cheat102_desc = "[Action Replay] Invincible"
+cheat102_code = "2204A844+00000001+2204A86B+00000000"
+cheat102_enable = false
+
+cheat103_desc = "[Action Replay] Used Chocolate for freeze health and energy bar"
+cheat103_code = "2204A850+00000001+1204A888+00008000"
+cheat103_enable = false
+
+cheat104_desc = "[Action Replay] Encounter Mode"
+cheat104_code = "94000130+FFFD0000+0204BD4C+000B0000+D2000000+00000000+94000130+FFFB0000+0204BD4C+00000000+D2000000+00000000"
+cheat104_enable = false
+
+cheat105_desc = "[Action Replay] Used scent stick for freeze dog meter"
+cheat105_code = "2204A854+00000001+1204A88A+00008000"
+cheat105_enable = false
+
+cheat106_desc = "[Action Replay] Max Cash or Points"
+cheat106_code = "94000130+FFFB0000+020498F0+0001869F+D2000000+00000000"
+cheat106_enable = false
+
+cheat107_desc = "[Action Replay] Max Health"
+cheat107_code = "94000130+FFFB0000+220498F4+000000FF+D2000000+00000000"
+cheat107_enable = false
+
+cheat108_desc = "[Action Replay] Max Energy"
+cheat108_code = "94000130+FFFB0000+220498F6+000000FF+D2000000+00000000"
+cheat108_enable = false
+
+cheat109_desc = "[Action Replay] Carl Infinite Double Jump"
+cheat109_code = "2204A54C+00000000"
+cheat109_enable = false
+
+cheat110_desc = "[Action Replay] Carl Moon Jump"
+cheat110_code = "94000130+FFFE0000+1204A534+00000100+D2000000+00000000"
+cheat110_enable = false
+
+cheat111_desc = "[Action Replay] Russell Infinite Double Jump"
+cheat111_code = "2204A66C+00000000"
+cheat111_enable = false
+
+cheat112_desc = "[Action Replay] Russell Moon Jump"
+cheat112_code = "94000130+FFFE0000+1204A654+00000100+D2000000+00000000"
+cheat112_enable = false
+
+cheat113_desc = "[Action Replay] X2"
+cheat113_code = "1204A528+00000100"
+cheat113_enable = false
+
+cheat114_desc = "[Action Replay] X4"
+cheat114_code = "1204A528+00000180"
+cheat114_enable = false
+
+cheat115_desc = "[Action Replay] X8"
+cheat115_code = "1204A528+00000200"
+cheat115_enable = false
+
+cheat116_desc = "[Action Replay] X2"
+cheat116_code = "1204A648+00000100"
+cheat116_enable = false
+
+cheat117_desc = "[Action Replay] X4"
+cheat117_code = "1204A648+00000180"
+cheat117_enable = false
+
+cheat118_desc = "[Action Replay] X8"
+cheat118_code = "1204A648+00000200"
+cheat118_enable = false
+
+cheat119_desc = "[Action Replay] Infinite Health"
+cheat119_code = "0204C14C+000FF000"
+cheat119_enable = false
+
+cheat120_desc = "[Action Replay] Infinite Energy"
+cheat120_code = "0204C168+000FF000"
+cheat120_enable = false
+
+cheat121_desc = "[Action Replay] 1 hit kill all enemies"
+cheat121_code = "94000130+FF7B0000+0204B9AC+00001000+0204BAE4+00001000+0204BC1C+00001000+D2000000+00000000"
+cheat121_enable = false
+
+cheat122_desc = "[Action Replay] Infinite Health"
+cheat122_code = "0204ABF4+000FF000"
+cheat122_enable = false
+
+cheat123_desc = "[Action Replay] Infinite Rockets"
+cheat123_code = "1204A264+000003E7"
+cheat123_enable = false
+
+cheat124_desc = "[Action Replay] 1 hit kill all planes"
+cheat124_code = "94000130+FF7B0000+0204A75C+00001000+D2000000+00000000"
+cheat124_enable = false
+
+cheat125_desc = "[Action Replay] Press Select"
+cheat125_code = "94000130+FFFB0000+0204ACC4+0098967F+D2000000+00000000"
+cheat125_enable = false
+
+cheat126_desc = "[Action Replay] Tepui Ball: Play Time 16:00:00"
+cheat126_code = "94000130+FFFE0000+0204C28C+00000010+D2000000+00000000"
+cheat126_enable = false
+
+cheat127_desc = "[Action Replay] Tepui Ball: Timer Running Control"
+cheat127_code = "94000130+FDFB0000+2204C290+00000001+D2000000+00000000+94000130+FEFB0000+2204C290+00000000+D2000000+00000000"
+cheat127_enable = false
+
+cheat128_desc = "[Action Replay] Insect Panic: Max Score"
+cheat128_code = "94000130+FFFB0000+0204A3B4+0098967F+D2000000+00000000"
+cheat128_enable = false
+
+cheat129_desc = "[Action Replay] Insect Panic: Reset Timer"
+cheat129_code = "94000130+FFFE0000+0204E620+00000010+D2000000+00000000"
+cheat129_enable = false
+
+cheat130_desc = "[Action Replay] Cave Collapse: Max Score"
+cheat130_code = "94000130+FFFB0000+0204B1F0+0098967F+D2000000+00000000"
+cheat130_enable = false
+
+cheat131_desc = "[Action Replay] Cave Collapse: Play Time 16:00:00"
+cheat131_code = "94000130+FFFE0000+0204C690+00000010+D2000000+00000000"
+cheat131_enable = false
+
+cheat132_desc = "[Action Replay] Cave Collapse: Timer Running Control"
+cheat132_code = "94000130+FDFB0000+2204C694+00000001+D2000000+00000000+94000130+FDFB0000+2204C694+00000000+D2000000+00000000"
+cheat132_enable = false
+
+cheat133_desc = "[Action Replay] Air Lift: Max Score"
+cheat133_code = "94000130+FFFB0000+0204ABB4+0098967F+D2000000+00000000"
+cheat133_enable = false
+
+cheat134_desc = "[Action Replay] Air Lift: Play Time 16:00:00"
+cheat134_code = "94000130+FFFE0000+0204B6E0+00000010+D2000000+00000000"
+cheat134_enable = false
+
+cheat135_desc = "[Action Replay] Air Lift: Timer Running Control"
+cheat135_code = "94000130+FDFB0000+2204B6E4+00000001+D2000000+00000000+94000130+FEFB0000+2204B6E4+00000000+D2000000+00000000"
+cheat135_enable = false
+
+cheat136_desc = "[Action Replay] Air Lift: Balloons Never Pop Out"
+cheat136_code = "94000130+FFFD0000+2204ABA8+000000FF+D2000000+00000000"
+cheat136_enable = false
+
+cheat137_desc = "[Action Replay] Balloon Toss: Max score for player"
+cheat137_code = "94000130+FFBB0000+1204D384+0000270F+D2000000+00000000"
+cheat137_enable = false
+
+cheat138_desc = "[Action Replay] Balloon Toss: No score for enemy"
+cheat138_code = "94000130+FF7B0000+1204D388+00000000+D2000000+00000000"
+cheat138_enable = false
+
+cheat139_desc = "[Action Replay] Press A"
+cheat139_code = "94000130+FFFE0000+0204A324+00000010+D2000000+00000000"
+cheat139_enable = false
+
+cheat140_desc = "[Action Replay] Balloon Toss: Timer Running Control"
+cheat140_code = "94000130+FDFB0000+2204A328+00000001+D2000000+00000000+94000130+FEFB0000+2204A328+00000000+D2000000+00000000"
+cheat140_enable = false

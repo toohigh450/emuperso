@@ -1,0 +1,33 @@
+# Recherche locale pour la ROM : TaleSpin [Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/TaleSpin%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/TaleSpin%20(USA%2C%20Europe)%20(GameShark).cht
+
+cheats = 6
+
+cheat0_desc = "[Game Genie] Infinite Lives"
+cheat0_code = "1C3-AEE"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Infinite Health"
+cheat1_code = "1C0-6EA"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Buy Anything From Upgrade Shop Free"
+cheat2_code = "FA1-E7A+FA1-E0A"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Infinite Energy"
+cheat3_code = "0110ADC1"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Infinite Time"
+cheat4_code = "0109BAC1"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Infinite Lives"
+cheat5_code = "0105ACC1"
+cheat5_enable = false

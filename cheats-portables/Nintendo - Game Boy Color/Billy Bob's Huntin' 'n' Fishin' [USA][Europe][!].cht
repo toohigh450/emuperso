@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Billy Bob's Huntin' 'n' Fishin' [USA][Europe][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Billy%20Bob's%20Huntin'%20'n'%20Fishin'%20(USA%2C%20Europe).cht
+
+cheats = 5
+
+cheat0_desc = "[Format source non précisé] Infinite Gearts"
+cheat0_code = "0109A6C0"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Bullets"
+cheat1_code = "01630CC1"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Infinite Worms"
+cheat2_code = "010AE5C0"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Infinite Minners"
+cheat3_code = "010AE3C0"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Infinite Crawdads"
+cheat4_code = "010AE4C0"
+cheat4_enable = false

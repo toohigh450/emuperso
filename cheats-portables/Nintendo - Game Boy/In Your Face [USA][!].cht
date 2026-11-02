@@ -1,0 +1,49 @@
+# Recherche locale pour la ROM : In Your Face [USA][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/In%20Your%20Face%20(USA)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/In%20Your%20Face%20(USA).cht
+
+cheats = 10
+
+cheat0_desc = "[Game Genie] Computer Can't Score (When It Scores, You Get The Points)"
+cheat0_code = "004-E9E-6E6"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Opponents Are Frozen (2-On-2 Game)"
+cheat1_code = "C38-AAF-E61"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] 5-Second Game"
+cheat2_code = "05A-08E-80F"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] 10-Second Game"
+cheat3_code = "0AA-08E-80F"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] 20-Second Game"
+cheat4_code = "20A-08E-80F"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Computer can't score (when it scores, you get the points)"
+cheat5_code = "004-E9E-6E6"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Opponents are frozen--2-on-2 game"
+cheat6_code = "C38-AAF-E61"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] 5-second game"
+cheat7_code = "05A-08E-80F"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] 10-second game"
+cheat8_code = "0AA-08E-80F"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] 20-second game"
+cheat9_code = "20A-08E-80F"
+cheat9_enable = false

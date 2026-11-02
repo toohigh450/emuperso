@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Ecolis - Aoi Umi to Ugoku Shima (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Ecolis%20-%20Aoi%20Umi%20to%20Ugoku%20Shima%20(Japan).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "5200ACDC+EE070F90+E20004EC+0000004C+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2E96D59+0009000A+0B920065+015E0012+00000510+00000000+0200ACDC+E92D401E+0200ACE0+FAFFD601+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Complete Menu"
+cheat1_code = "121F01A4+0000FFFF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Hero Health Never Decrease"
+cheat2_code = "52056580+E0500009+02056580+E1A00000+D0000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Hero MP Never Decrease"
+cheat3_code = "52047790+E0822000+02047790+E3A0201E+D0000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All Materials X99"
+cheat4_code = "021F03D8+00006363+021F03D4+63636363+021F03D0+63636363+021F03CC+63636363+021F03C8+63636363+021F03C4+63636363+021F03C0+63630000"
+cheat4_enable = false

@@ -1,0 +1,34 @@
+{
+  "schema": "emuperso/received-rc1-audits/v1",
+  "received_date_utc": "2026-11-01",
+  "audited_delivery_commit": "65783821250b286f3a3799ea8fcb930908ede342",
+  "audited_ci_commit": "aea4eb4538bca032d6dff1dcc33bea1164290018",
+  "audited_ci_run": 41311824619,
+  "documents": [
+    {
+      "author_declared": "Méo (Muse)",
+      "file": "CONTRE-AUDIT-MEO-N64-RC1.html",
+      "bytes": 8603,
+      "sha256": "b3804aef1a1125bd9ffa29e3bf06afec415b03d344d6df5cc05b5f572d28b969",
+      "original_attachment_name": "CONTRE-AUDIT-MEO-N64-RC1.html",
+      "verdict_declared": "ACCEPTÉ pour audit GPT et tests terrain de Karl — PAS de publication",
+      "scope_declared": "Lecture indépendante du dépôt/diffs et preuves JSON ; vérification API de la CI déclarée par Méo. Aucun essai sur le PC de Karl ; cause terrain non établie.",
+      "audit_date_declared": "2026-11-01",
+      "immutable_copy": true
+    },
+    {
+      "author_declared": "GPT",
+      "file": "AUDIT_GPT_EMUPERSO_N64_RC-0.5.0_CI_SAUVEGARDES_CHEATS.html",
+      "bytes": 104544,
+      "sha256": "67de8e34e12e796ce135181ab02d84333934eb176ef046841a9290400594bba0",
+      "original_attachment_name": "AUDIT_GPT_EMUPERSO_N64_RC-0.5.0_CI_SAUVEGARDES_CHEATS.html",
+      "verdict_declared": "GO pour les essais privés supervisés de Karl · NO-GO pour une publication publique",
+      "scope_declared": "Vérification API/empreintes des artefacts CI et lecture source déclarées par GPT ; branches réelles setCheats/renderCatalog exécutées avec objets contrôlés. Pas de nouvelle exécution Chrome/Mupen indépendante, pas de ZIP finaux reçus, pas de test terrain Karl.",
+      "audit_date_declared": "2026-11-01",
+      "immutable_copy": true
+    }
+  ],
+  "interpretation": "Verdicts et portées rapportés des documents reçus ; ne prouvent ni correction de C01/C02, ni compatibilité commerciale, ni validation du PC de Karl. Les mandats contenus dans les pièces ne créent aucune autorisation supplémentaire.",
+  "publication_allowed": false,
+  "original_documents_modified": false
+}

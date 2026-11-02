@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Zettai Zetsumei Dangerous Jiisan DS - Dangerous Sensation (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Zettai%20Zetsumei%20Dangerous%20Jiisan%20DS%20-%20Dangerous%20Sensation%20(Japan).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] All Locations Unlocked"
+cheat0_code = "D5000000+0000FFFF+C0000000+00000022+D7000000+0222C8B4+D2000000+00000000"
+cheat0_enable = false

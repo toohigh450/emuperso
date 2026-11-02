@@ -1,0 +1,37 @@
+# Recherche locale pour la ROM : Trip World [Japan][!!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Trip%20World%20(Europe%2C%20Japan)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Trip%20World%20(Japan).cht
+
+cheats = 7
+
+cheat0_desc = "[GameShark] Infinite Lives"
+cheat0_code = "0103E1C0"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Lives"
+cheat1_code = "0103E1C0"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Invicibility Spikes"
+cheat2_code = "C32-05E-E61"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Infinite Lives"
+cheat3_code = "03F-FFE-19E"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Infinite Health"
+cheat4_code = "042-10E-6E9+041-DEC-6E9"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Invincibility"
+cheat5_code = "015-66E-4C1"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Jump in mid-air"
+cheat6_code = "F06-40F-6E9"
+cheat6_enable = false

@@ -1,0 +1,18 @@
+--- libdragon-e356bf3f/boot/ipl3.c
++++ emulator-boot/ipl3.c
+@@ -275,7 +275,14 @@
+     bool bbplayer = (*MI_VERSION & 0xF0) == 0xB0;
+ 
+     if (!bbplayer && *RI_SELECT == 0) {
+-        memsize = rdram_init(mem_bank_init);
++        /* EMUPERSO TEST-ONLY BOOTSTRAP, 2026-10-31.
++         * The target emulator has already allocated exactly 8 MiB RDRAM.
++         * Skip physical RDRAM training, which this old core models inaccurately.
++         * Not a general-purpose boot for physical N64 hardware.
++         */
++        memsize = 8 * 1024 * 1024;
++        rsp_bzero_init(false);
++        rsp_bzero_async(0, memsize - TOTAL_RESERVED_SIZE);
+     } else {
+         if (bbplayer) {
+             // iQue doesn't have a IPL2 and the OS provides boot flags already in lowmem.

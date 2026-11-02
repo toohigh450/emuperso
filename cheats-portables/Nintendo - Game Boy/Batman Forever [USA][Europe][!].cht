@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Batman Forever [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Batman%20Forever%20(USA%2C%20Europe).cht
+
+cheats = 7
+
+cheat0_desc = "[Format source non précisé] Infinite Lives"
+cheat0_code = "2A4-52B"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Energy"
+cheat1_code = "01406BDA"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Infinite Lives"
+cheat2_code = "0109DFD8"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Don't Take Damage From Some Attacks"
+cheat3_code = "C93-B98-A2C"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Infinite Lives"
+cheat4_code = "3C4-4EB-3B4"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Blink Longer After Loosing A Life"
+cheat5_code = "FF4-64B-E6B"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Don't Blink When Taking Damage"
+cheat6_code = "C93-0AE-E69"
+cheat6_enable = false

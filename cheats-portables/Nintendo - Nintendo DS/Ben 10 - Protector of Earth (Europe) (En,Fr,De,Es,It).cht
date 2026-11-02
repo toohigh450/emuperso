@@ -1,0 +1,721 @@
+# Recherche locale pour la ROM : Ben 10 - Protector of Earth (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Ben%2010%20-%20Protector%20of%20Earth%20(Europe)%20(En%2CFr%2CDe%2CEs%2CIt).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Ben%2010%20-%20Protector%20of%20Earth%20(Europe).cht
+
+cheats = 178
+
+cheat0_desc = "[Action Replay] Access Debug Menu"
+cheat0_code = "94000130+FCF70000+921D6206+00000004+221D6206+0000000C+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Lives"
+cheat1_code = "221D1FBB+00000005"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Never Lose Lives"
+cheat2_code = "920B4248+0000622C+120B4248+000046C0+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max/Infinite Stamina"
+cheat3_code = "521DFE88+00000000+123FF900+00000000+D2000000+00000000+923FF900+00000000+621DFE88+00000000+B21DFE88+00000000+DB000000+000000F4+D3000000+00000000+D8000000+023FF900+D2000000+00000000+A23FF900+00000000+DB000000+023FF900+D3000000+00000000+621DFE88+00000000+B21DFE88+00000000+D8000000+000000F4+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Never Lose Stamina"
+cheat4_code = "920BF638+00001B89+120BF638+000046C0+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Max/Infinite Omnitrix Transform Time"
+cheat5_code = "521DFE88+00000000+123FF902+00000000+D2000000+00000000+923FF902+00000000+A23FF904+00000007+621DFE88+00000000+B21DFE88+00000000+DA000000+000000F8+D3000000+00000000+D7000000+023FF902+D2000000+00000000+A23FF902+00000000+A23FF904+00000007+DA000000+023FF902+D3000000+00000000+621DFE88+00000000+B21DFE88+00000000+D7000000+000000F8+D2000000+00000000+621DFE88+00000000+B21DFE88+00000000+DB000000+000000F0+D3000000+00000000+D8000000+023FF904+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Never Lose Omnitrix Transform Time"
+cheat6_code = "920BF0F8+00006001+120BF0F8+000046C0+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Disable Omnitrix Recharge Timer"
+cheat7_code = "621DFE88+00000000+B21DFE88+00000000+100000FC+00000000+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Disable Omnitrix Recharge Timer (ASM)"
+cheat8_code = "920C009A+00006008+120C009A+000046C0+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Max/Infinite Omnitrix Points (Level)"
+cheat9_code = "621DFE88+00000000+B21DFE88+00000000+10000104+000001F4+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Max/Infinite Combo Power"
+cheat10_code = "621DFE88+00000000+B21DFE88+00000000+10000118+00000780+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Never Lose Combo Power"
+cheat11_code = "920BF9DC+00001B09+120BF9DC+000046C0+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Max/Infinite Attack Combo"
+cheat12_code = "621DFE88+00000000+B21DFE88+00000000+00000CB8+00000008+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Never Lose Attack Combo"
+cheat13_code = "920D4280+00006001+120D4280+000046C0+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Max/Infinite Score"
+cheat14_code = "021E032C+000F423F"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Invincible"
+cheat15_code = "621DFE88+00000000+B21DFE88+00000000+20000108+0000001E+D2000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Invincible (ASM)"
+cheat16_code = "920BF0A0+0000D005+120BF0A0+000046C0+D2000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Moon Jump"
+cheat17_code = "94000130+FFFD0000+621DFE88+00000000+B21DFE88+00000000+B0000004+00000000+00000084+FFFFC000+D2000000+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Infinite Double Jumps"
+cheat18_code = "920C2308+00002101+220C2308+00000000+220C2474+00000000+D2000000+00000000"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Set Boss Health to One"
+cheat19_code = "94000130+FFFB0000+621DFE88+00000000+B21DFE88+00000000+B0000994+00000000+10000130+00000001+10000134+00000001+10000138+00000001+D2000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Ben Tennyson"
+cheat20_code = "94000130+FCFF0000+621DFE88+00000000+B21DFE88+00000000+20001714+00000000+D2000000+00000000"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Four Arms"
+cheat21_code = "94000130+FCFF0000+621DFE88+00000000+B21DFE88+00000000+20001714+00000001+D2000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Heatblast"
+cheat22_code = "94000130+FCFF0000+621DFE88+00000000+B21DFE88+00000000+20001714+00000002+D2000000+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] XLR8"
+cheat23_code = "94000130+FCFF0000+621DFE88+00000000+B21DFE88+00000000+20001714+00000003+D2000000+00000000"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Cannonbolt"
+cheat24_code = "94000130+FCFF0000+621DFE88+00000000+B21DFE88+00000000+20001714+00000004+D2000000+00000000"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Wildvine"
+cheat25_code = "94000130+FCFF0000+621DFE88+00000000+B21DFE88+00000000+20001714+00000006+D2000000+00000000"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Upchuck"
+cheat26_code = "94000130+FCFF0000+621DFE88+00000000+B21DFE88+00000000+20001714+00000007+D2000000+00000000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Atomic Power"
+cheat27_code = "621DFE88+00000000+B21DFE88+00000000+1000010C+00000384+D2000000+00000000"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Invincible Ice"
+cheat28_code = "621DFE88+00000000+B21DFE88+00000000+10000110+00000384+D2000000+00000000"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Hero Score"
+cheat29_code = "621DFE88+00000000+B21DFE88+00000000+10000114+00000384+D2000000+00000000"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Normal"
+cheat30_code = "94000130+FCFF0000+221D6234+00000000+D2000000+00000000"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Hard"
+cheat31_code = "94000130+FCFF0000+221D6234+00000001+D2000000+00000000"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Insane"
+cheat32_code = "94000130+FCFF0000+221D6234+00000002+D2000000+00000000"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Max/Infinite Omnitrix Points"
+cheat33_code = "94000130+FCFB0000+921D6236+FF000000+121EAE64+000001F4+D2000000+00000000"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Have All Sumo Slammer Cards"
+cheat34_code = "94000130+FCFB0000+921D6236+FF000000+021EAE68+3FFFFFFF+D2000000+00000000"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Unlock All Upgrades"
+cheat35_code = "94000130+FCFB0000+921D6236+FF000000+D5000000+00000000+C0000000+00000018+D8000000+021EAD40+DC000000+0000000B+D2000000+00000000"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] XLR8"
+cheat36_code = "221DDD60+00000000"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Diamondhead"
+cheat37_code = "221DDD60+00000001"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Four Arms"
+cheat38_code = "221DDD60+00000002"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Cannonbolt"
+cheat39_code = "221DDD60+00000003"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Grey Matter"
+cheat40_code = "221DDD60+00000004"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Heatblast"
+cheat41_code = "221DDD60+00000005"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Ghostfreak"
+cheat42_code = "221DDD60+00000006"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Stinkfly"
+cheat43_code = "221DDD60+00000007"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Upgrade"
+cheat44_code = "221DDD60+00000008"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Wildmutt"
+cheat45_code = "221DDD60+00000009"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Galactic Enforcer"
+cheat46_code = "94000130+FCBF0000+921D6236+FF000000+221D623D+00000001+221EAD04+00000000+D2000000+00000000"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Dark Heroes"
+cheat47_code = "94000130+FCDF0000+921D6236+FF000000+221D623D+00000002+221EAD10+00000000+D2000000+00000000"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Gwen Tennyson"
+cheat48_code = "94000130+FCEF0000+921D6236+FF000000+221D623D+00000003+221EAD1C+00000000+D2000000+00000000"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Bonus Challenge"
+cheat49_code = "921D6236+FF000000+221EACB0+00000000+221EAD28+00000000+D2000000+00000000"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Upchuck"
+cheat50_code = "921D6236+FF000000+221EAD34+00000000+221EAF14+00000000+D2000000+00000000"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Max/Infinite Omnitrix Points"
+cheat51_code = "94000130+FCFB0000+921D6236+FF000001+121EB38C+000001F4+D2000000+00000000"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Have All Sumo Slammer Cards"
+cheat52_code = "94000130+FCFB0000+921D6236+FF000001+021EB390+3FFFFFFF+D2000000+00000000"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Unlock All Upgrades"
+cheat53_code = "94000130+FCFB0000+921D6236+FF000001+D5000000+00000000+C0000000+00000018+D8000000+021EB268+DC000000+0000000B+D2000000+00000000"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] XLR8"
+cheat54_code = "221DDD61+00000000"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Diamondhead"
+cheat55_code = "221DDD61+00000001"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Four Arms"
+cheat56_code = "221DDD61+00000002"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Cannonbolt"
+cheat57_code = "221DDD61+00000003"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Grey Matter"
+cheat58_code = "221DDD61+00000004"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Heatblast"
+cheat59_code = "221DDD61+00000005"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Ghostfreak"
+cheat60_code = "221DDD61+00000006"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Stinkfly"
+cheat61_code = "221DDD61+00000007"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Upgrade"
+cheat62_code = "221DDD61+00000008"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Wildmutt"
+cheat63_code = "221DDD61+00000009"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Galactic Enforcer"
+cheat64_code = "94000130+FCBF0000+921D6236+FF000001+221D623D+00000001+221EB22C+00000000+D2000000+00000000"
+cheat64_enable = false
+
+cheat65_desc = "[Action Replay] Dark Heroes"
+cheat65_code = "94000130+FCDF0000+921D6236+FF000001+221D623D+00000002+221EB238+00000000+D2000000+00000000"
+cheat65_enable = false
+
+cheat66_desc = "[Action Replay] Gwen Tennyson"
+cheat66_code = "94000130+FCEF0000+921D6236+FF000001+221D623D+00000003+221EB244+00000000+D2000000+00000000"
+cheat66_enable = false
+
+cheat67_desc = "[Action Replay] Bonus Challenge"
+cheat67_code = "921D6236+FF000001+221EB1D8+00000000+221EB250+00000000+D2000000+00000000"
+cheat67_enable = false
+
+cheat68_desc = "[Action Replay] Upchuck"
+cheat68_code = "921D6236+FF000001+221EB25C+00000000+221EB43C+00000000+D2000000+00000000"
+cheat68_enable = false
+
+cheat69_desc = "[Action Replay] Max/Infinite Omnitrix Points"
+cheat69_code = "94000130+FCFB0000+921D6236+FF000002+121EB8B4+000001F4+D2000000+00000000"
+cheat69_enable = false
+
+cheat70_desc = "[Action Replay] Have All Sumo Slammer Cards"
+cheat70_code = "94000130+FCFB0000+921D6236+FF000002+021EB8B8+3FFFFFFF+D2000000+00000000"
+cheat70_enable = false
+
+cheat71_desc = "[Action Replay] Unlock All Upgrades"
+cheat71_code = "94000130+FCFB0000+921D6236+FF000002+D5000000+00000000+C0000000+00000018+D8000000+021EB790+DC000000+0000000B+D2000000+00000000"
+cheat71_enable = false
+
+cheat72_desc = "[Action Replay] XLR8"
+cheat72_code = "221DDD62+00000000"
+cheat72_enable = false
+
+cheat73_desc = "[Action Replay] Diamondhead"
+cheat73_code = "221DDD62+00000001"
+cheat73_enable = false
+
+cheat74_desc = "[Action Replay] Four Arms"
+cheat74_code = "221DDD62+00000002"
+cheat74_enable = false
+
+cheat75_desc = "[Action Replay] Cannonbolt"
+cheat75_code = "221DDD62+00000003"
+cheat75_enable = false
+
+cheat76_desc = "[Action Replay] Grey Matter"
+cheat76_code = "221DDD62+00000004"
+cheat76_enable = false
+
+cheat77_desc = "[Action Replay] Heatblast"
+cheat77_code = "221DDD62+00000005"
+cheat77_enable = false
+
+cheat78_desc = "[Action Replay] Ghostfreak"
+cheat78_code = "221DDD62+00000006"
+cheat78_enable = false
+
+cheat79_desc = "[Action Replay] Stinkfly"
+cheat79_code = "221DDD62+00000007"
+cheat79_enable = false
+
+cheat80_desc = "[Action Replay] Upgrade"
+cheat80_code = "221DDD62+00000008"
+cheat80_enable = false
+
+cheat81_desc = "[Action Replay] Wildmutt"
+cheat81_code = "221DDD62+00000009"
+cheat81_enable = false
+
+cheat82_desc = "[Action Replay] Galactic Enforcer"
+cheat82_code = "94000130+FCBF0000+921D6236+FF000002+221D623D+00000001+221EB754+00000000+D2000000+00000000"
+cheat82_enable = false
+
+cheat83_desc = "[Action Replay] Dark Heroes"
+cheat83_code = "94000130+FCDF0000+921D6236+FF000002+221D623D+00000002+221EB760+00000000+D2000000+00000000"
+cheat83_enable = false
+
+cheat84_desc = "[Action Replay] Gwen Tennyson"
+cheat84_code = "94000130+FCEF0000+921D6236+FF000002+221D623D+00000003+221EB76C+00000000+D2000000+00000000"
+cheat84_enable = false
+
+cheat85_desc = "[Action Replay] Bonus Challenge"
+cheat85_code = "921D6236+FF000002+221EB700+00000000+221EB778+00000000+D2000000+00000000"
+cheat85_enable = false
+
+cheat86_desc = "[Action Replay] Upchuck"
+cheat86_code = "921D6236+FF000002+221EB784+00000000+221EB964+00000000+D2000000+00000000"
+cheat86_enable = false
+
+cheat87_desc = "[Action Replay] English"
+cheat87_code = "221DD5B8+00000001"
+cheat87_enable = false
+
+cheat88_desc = "[Action Replay] French"
+cheat88_code = "221DD5B8+00000002"
+cheat88_enable = false
+
+cheat89_desc = "[Action Replay] German"
+cheat89_code = "221DD5B8+00000003"
+cheat89_enable = false
+
+cheat90_desc = "[Action Replay] Italian"
+cheat90_code = "221DD5B8+00000004"
+cheat90_enable = false
+
+cheat91_desc = "[Action Replay] Spanish"
+cheat91_code = "221DD5B8+00000005"
+cheat91_enable = false
+
+cheat92_desc = "[Action Replay] Access Debug Menu"
+cheat92_code = "94000130+FCF70000+921D1F86+00000004+221D1F86+0000000C+D2000000+00000000"
+cheat92_enable = false
+
+cheat93_desc = "[Action Replay] Never Lose Lives"
+cheat93_code = "920B3664+00001FAC+120B3664+000046C0+D2000000+00000000"
+cheat93_enable = false
+
+cheat94_desc = "[Action Replay] Max/Infinite Stamina"
+cheat94_code = "52230754+00000000+123FF900+00000000+D2000000+00000000+923FF900+00000000+62230754+00000000+B2230754+00000000+DB000000+000000F4+D3000000+00000000+D8000000+023FF900+D2000000+00000000+A23FF900+00000000+DB000000+023FF900+D3000000+00000000+62230754+00000000+B2230754+00000000+D8000000+000000F4+D2000000+00000000"
+cheat94_enable = false
+
+cheat95_desc = "[Action Replay] Never Lose Stamina"
+cheat95_code = "920BEA24+00001B89+120BEA24+000046C0+D2000000+00000000"
+cheat95_enable = false
+
+cheat96_desc = "[Action Replay] Max/Infinite Omnitrix Transform Time"
+cheat96_code = "52230754+00000000+123FF902+00000000+D2000000+00000000+923FF902+00000000+A23FF904+00000007+62230754+00000000+B2230754+00000000+DA000000+000000F8+D3000000+00000000+D7000000+023FF902+D2000000+00000000+A23FF902+00000000+A23FF904+00000007+DA000000+023FF902+D3000000+00000000+62230754+00000000+B2230754+00000000+D7000000+000000F8+D2000000+00000000+62230754+00000000+B2230754+00000000+DB000000+000000F0+D3000000+00000000+D8000000+023FF904+D2000000+00000000"
+cheat96_enable = false
+
+cheat97_desc = "[Action Replay] Never Lose Omnitrix Transform Time"
+cheat97_code = "920BE4E4+00006001+120BE4E4+000046C0+D2000000+00000000"
+cheat97_enable = false
+
+cheat98_desc = "[Action Replay] Disable Omnitrix Recharge Timer"
+cheat98_code = "62230754+00000000+B2230754+00000000+100000FC+00000000+D2000000+00000000"
+cheat98_enable = false
+
+cheat99_desc = "[Action Replay] Disable Omnitrix Recharge Timer (ASM)"
+cheat99_code = "920BF486+00006008+120BF486+000046C0+D2000000+00000000"
+cheat99_enable = false
+
+cheat100_desc = "[Action Replay] Max/Infinite Omnitrix Points (Level)"
+cheat100_code = "62230754+00000000+B2230754+00000000+10000104+000001F4+D2000000+00000000"
+cheat100_enable = false
+
+cheat101_desc = "[Action Replay] Max/Infinite Combo Power"
+cheat101_code = "62230754+00000000+B2230754+00000000+10000118+00000780+D2000000+00000000"
+cheat101_enable = false
+
+cheat102_desc = "[Action Replay] Never Lose Combo Power"
+cheat102_code = "920BEDC8+00001B09+120BEDC8+000046C0+D2000000+00000000"
+cheat102_enable = false
+
+cheat103_desc = "[Action Replay] Max/Infinite Attack Combo"
+cheat103_code = "62230754+00000000+B2230754+00000000+00000CB8+00000008+D2000000+00000000"
+cheat103_enable = false
+
+cheat104_desc = "[Action Replay] Never Lose Attack Combo"
+cheat104_code = "920D3424+00006001+120D3424+000046C0+D2000000+00000000"
+cheat104_enable = false
+
+cheat105_desc = "[Action Replay] Max/Infinite Score"
+cheat105_code = "0223A758+000F423F"
+cheat105_enable = false
+
+cheat106_desc = "[Action Replay] Invincible"
+cheat106_code = "62230754+00000000+B2230754+00000000+20000108+0000001E+D2000000+00000000"
+cheat106_enable = false
+
+cheat107_desc = "[Action Replay] Invincible (ASM)"
+cheat107_code = "920BE48C+0000D005+120BE48C+000046C0+D2000000+00000000"
+cheat107_enable = false
+
+cheat108_desc = "[Action Replay] Moon Jump"
+cheat108_code = "94000130+FFFD0000+62230754+00000000+B2230754+00000000+B0000004+00000000+00000084+FFFFC000+D2000000+00000000"
+cheat108_enable = false
+
+cheat109_desc = "[Action Replay] Infinite Double Jumps"
+cheat109_code = "920C16F4+00002101+220C16F4+00000000+220C1860+00000000+D2000000+00000000"
+cheat109_enable = false
+
+cheat110_desc = "[Action Replay] Set Boss Health to One"
+cheat110_code = "94000130+FFFB0000+62230754+00000000+B2230754+00000000+B0000994+00000000+10000130+00000001+10000134+00000001+10000138+00000001+D2000000+00000000"
+cheat110_enable = false
+
+cheat111_desc = "[Action Replay] Ben Tennyson"
+cheat111_code = "94000130+FCFF0000+62230754+00000000+B2230754+00000000+20001714+00000000+D2000000+00000000"
+cheat111_enable = false
+
+cheat112_desc = "[Action Replay] Four Arms"
+cheat112_code = "94000130+FCFF0000+62230754+00000000+B2230754+00000000+20001714+00000001+D2000000+00000000"
+cheat112_enable = false
+
+cheat113_desc = "[Action Replay] Heatblast"
+cheat113_code = "94000130+FCFF0000+62230754+00000000+B2230754+00000000+20001714+00000002+D2000000+00000000"
+cheat113_enable = false
+
+cheat114_desc = "[Action Replay] XLR8"
+cheat114_code = "94000130+FCFF0000+62230754+00000000+B2230754+00000000+20001714+00000003+D2000000+00000000"
+cheat114_enable = false
+
+cheat115_desc = "[Action Replay] Cannonbolt"
+cheat115_code = "94000130+FCFF0000+62230754+00000000+B2230754+00000000+20001714+00000004+D2000000+00000000"
+cheat115_enable = false
+
+cheat116_desc = "[Action Replay] Wildvine"
+cheat116_code = "94000130+FCFF0000+62230754+00000000+B2230754+00000000+20001714+00000006+D2000000+00000000"
+cheat116_enable = false
+
+cheat117_desc = "[Action Replay] Upchuck"
+cheat117_code = "94000130+FCFF0000+62230754+00000000+B2230754+00000000+20001714+00000007+D2000000+00000000"
+cheat117_enable = false
+
+cheat118_desc = "[Action Replay] Atomic Power"
+cheat118_code = "62230754+00000000+B2230754+00000000+1000010C+00000384+D2000000+00000000"
+cheat118_enable = false
+
+cheat119_desc = "[Action Replay] Invincible Ice"
+cheat119_code = "62230754+00000000+B2230754+00000000+10000110+00000384+D2000000+00000000"
+cheat119_enable = false
+
+cheat120_desc = "[Action Replay] Hero Score"
+cheat120_code = "62230754+00000000+B2230754+00000000+10000114+00000384+D2000000+00000000"
+cheat120_enable = false
+
+cheat121_desc = "[Action Replay] Normal"
+cheat121_code = "94000130+FCFF0000+221D1FB4+00000000+D2000000+00000000"
+cheat121_enable = false
+
+cheat122_desc = "[Action Replay] Hard"
+cheat122_code = "94000130+FCFF0000+221D1FB4+00000001+D2000000+00000000"
+cheat122_enable = false
+
+cheat123_desc = "[Action Replay] Insane"
+cheat123_code = "94000130+FCFF0000+221D1FB4+00000002+D2000000+00000000"
+cheat123_enable = false
+
+cheat124_desc = "[Action Replay] Max/Infinite Omnitrix Points"
+cheat124_code = "94000130+FCFB0000+921D1FB6+FF000000+12245B44+000001F4+D2000000+00000000"
+cheat124_enable = false
+
+cheat125_desc = "[Action Replay] Have All Sumo Slammer Cards"
+cheat125_code = "94000130+FCFB0000+921D1FB6+FF000000+02245B48+3FFFFFFF+D2000000+00000000"
+cheat125_enable = false
+
+cheat126_desc = "[Action Replay] Unlock All Upgrades"
+cheat126_code = "94000130+FCFB0000+921D1FB6+FF000000+D5000000+00000000+C0000000+00000018+D8000000+02245A20+DC000000+0000000B+D2000000+00000000"
+cheat126_enable = false
+
+cheat127_desc = "[Action Replay] XLR8"
+cheat127_code = "221E07E4+00000000"
+cheat127_enable = false
+
+cheat128_desc = "[Action Replay] Diamondhead"
+cheat128_code = "221E07E4+00000001"
+cheat128_enable = false
+
+cheat129_desc = "[Action Replay] Four Arms"
+cheat129_code = "221E07E4+00000002"
+cheat129_enable = false
+
+cheat130_desc = "[Action Replay] Cannonbolt"
+cheat130_code = "221E07E4+00000003"
+cheat130_enable = false
+
+cheat131_desc = "[Action Replay] Grey Matter"
+cheat131_code = "221E07E4+00000004"
+cheat131_enable = false
+
+cheat132_desc = "[Action Replay] Heatblast"
+cheat132_code = "221E07E4+00000005"
+cheat132_enable = false
+
+cheat133_desc = "[Action Replay] Ghostfreak"
+cheat133_code = "221E07E4+00000006"
+cheat133_enable = false
+
+cheat134_desc = "[Action Replay] Stinkfly"
+cheat134_code = "221E07E4+00000007"
+cheat134_enable = false
+
+cheat135_desc = "[Action Replay] Upgrade"
+cheat135_code = "221E07E4+00000008"
+cheat135_enable = false
+
+cheat136_desc = "[Action Replay] Wildmutt"
+cheat136_code = "221E07E4+00000009"
+cheat136_enable = false
+
+cheat137_desc = "[Action Replay] Galactic Enforcer"
+cheat137_code = "94000130+FCBF0000+921D1FB6+FF000000+221D1FBD+00000001+222459E4+00000000+D2000000+00000000"
+cheat137_enable = false
+
+cheat138_desc = "[Action Replay] Dark Heroes"
+cheat138_code = "94000130+FCDF0000+921D1FB6+FF000000+221D1FBD+00000002+222459F0+00000000+D2000000+00000000"
+cheat138_enable = false
+
+cheat139_desc = "[Action Replay] Gwen Tennyson"
+cheat139_code = "94000130+FCEF0000+921D1FB6+FF000000+221D1FBD+00000003+222459FC+00000000+D2000000+00000000"
+cheat139_enable = false
+
+cheat140_desc = "[Action Replay] Bonus Challenge"
+cheat140_code = "921D1FB6+FF000000+22245990+00000000+22245A08+00000000+D2000000+00000000"
+cheat140_enable = false
+
+cheat141_desc = "[Action Replay] Upchuck"
+cheat141_code = "921D1FB6+FF000000+22245A14+00000000+22245BF4+00000000+D2000000+00000000"
+cheat141_enable = false
+
+cheat142_desc = "[Action Replay] Max/Infinite Omnitrix Points"
+cheat142_code = "94000130+FCFB0000+921D1FB6+FF000001+1224606C+000001F4+D2000000+00000000"
+cheat142_enable = false
+
+cheat143_desc = "[Action Replay] Have All Sumo Slammer Cards"
+cheat143_code = "94000130+FCFB0000+921D1FB6+FF000001+02246070+3FFFFFFF+D2000000+00000000"
+cheat143_enable = false
+
+cheat144_desc = "[Action Replay] Unlock All Upgrades"
+cheat144_code = "94000130+FCFB0000+921D1FB6+FF000001+D5000000+00000000+C0000000+00000018+D8000000+02245F48+DC000000+0000000B+D2000000+00000000"
+cheat144_enable = false
+
+cheat145_desc = "[Action Replay] XLR8"
+cheat145_code = "221E07E5+00000000"
+cheat145_enable = false
+
+cheat146_desc = "[Action Replay] Diamondhead"
+cheat146_code = "221E07E5+00000001"
+cheat146_enable = false
+
+cheat147_desc = "[Action Replay] Four Arms"
+cheat147_code = "221E07E5+00000002"
+cheat147_enable = false
+
+cheat148_desc = "[Action Replay] Cannonbolt"
+cheat148_code = "221E07E5+00000003"
+cheat148_enable = false
+
+cheat149_desc = "[Action Replay] Grey Matter"
+cheat149_code = "221E07E5+00000004"
+cheat149_enable = false
+
+cheat150_desc = "[Action Replay] Heatblast"
+cheat150_code = "221E07E5+00000005"
+cheat150_enable = false
+
+cheat151_desc = "[Action Replay] Ghostfreak"
+cheat151_code = "221E07E5+00000006"
+cheat151_enable = false
+
+cheat152_desc = "[Action Replay] Stinkfly"
+cheat152_code = "221E07E5+00000007"
+cheat152_enable = false
+
+cheat153_desc = "[Action Replay] Upgrade"
+cheat153_code = "221E07E5+00000008"
+cheat153_enable = false
+
+cheat154_desc = "[Action Replay] Wildmutt"
+cheat154_code = "221E07E5+00000009"
+cheat154_enable = false
+
+cheat155_desc = "[Action Replay] Galactic Enforcer"
+cheat155_code = "94000130+FCBF0000+921D1FB6+FF000001+221D1FBD+00000001+22245F0C+00000000+D2000000+00000000"
+cheat155_enable = false
+
+cheat156_desc = "[Action Replay] Dark Heroes"
+cheat156_code = "94000130+FCDF0000+921D1FB6+FF000001+221D1FBD+00000002+22245F18+00000000+D2000000+00000000"
+cheat156_enable = false
+
+cheat157_desc = "[Action Replay] Gwen Tennyson"
+cheat157_code = "94000130+FCEF0000+921D1FB6+FF000001+221D1FBD+00000003+22245F24+00000000+D2000000+00000000"
+cheat157_enable = false
+
+cheat158_desc = "[Action Replay] Bonus Challenge"
+cheat158_code = "921D1FB6+FF000001+22245EB8+00000000+22245F30+00000000+D2000000+00000000"
+cheat158_enable = false
+
+cheat159_desc = "[Action Replay] Upchuck"
+cheat159_code = "921D1FB6+FF000001+22245F3C+00000000+2224611C+00000000+D2000000+00000000"
+cheat159_enable = false
+
+cheat160_desc = "[Action Replay] Max/Infinite Omnitrix Points"
+cheat160_code = "94000130+FCFB0000+921D1FB6+FF000002+12246594+000001F4+D2000000+00000000"
+cheat160_enable = false
+
+cheat161_desc = "[Action Replay] Have All Sumo Slammer Cards"
+cheat161_code = "94000130+FCFB0000+921D1FB6+FF000002+02246598+3FFFFFFF+D2000000+00000000"
+cheat161_enable = false
+
+cheat162_desc = "[Action Replay] Unlock All Upgrades"
+cheat162_code = "94000130+FCFB0000+921D1FB6+FF000002+D5000000+00000000+C0000000+00000018+D8000000+02246470+DC000000+0000000B+D2000000+00000000"
+cheat162_enable = false
+
+cheat163_desc = "[Action Replay] XLR8"
+cheat163_code = "221E07E6+00000000"
+cheat163_enable = false
+
+cheat164_desc = "[Action Replay] Diamondhead"
+cheat164_code = "221E07E6+00000001"
+cheat164_enable = false
+
+cheat165_desc = "[Action Replay] Four Arms"
+cheat165_code = "221E07E6+00000002"
+cheat165_enable = false
+
+cheat166_desc = "[Action Replay] Cannonbolt"
+cheat166_code = "221E07E6+00000003"
+cheat166_enable = false
+
+cheat167_desc = "[Action Replay] Grey Matter"
+cheat167_code = "221E07E6+00000004"
+cheat167_enable = false
+
+cheat168_desc = "[Action Replay] Heatblast"
+cheat168_code = "221E07E6+00000005"
+cheat168_enable = false
+
+cheat169_desc = "[Action Replay] Ghostfreak"
+cheat169_code = "221E07E6+00000006"
+cheat169_enable = false
+
+cheat170_desc = "[Action Replay] Stinkfly"
+cheat170_code = "221E07E6+00000007"
+cheat170_enable = false
+
+cheat171_desc = "[Action Replay] Upgrade"
+cheat171_code = "221E07E6+00000008"
+cheat171_enable = false
+
+cheat172_desc = "[Action Replay] Wildmutt"
+cheat172_code = "221E07E6+00000009"
+cheat172_enable = false
+
+cheat173_desc = "[Action Replay] Galactic Enforcer"
+cheat173_code = "94000130+FCBF0000+921D1FB6+FF000002+221D1FBD+00000001+22246434+00000000+D2000000+00000000"
+cheat173_enable = false
+
+cheat174_desc = "[Action Replay] Dark Heroes"
+cheat174_code = "94000130+FCDF0000+921D1FB6+FF000002+221D1FBD+00000002+22246440+00000000+D2000000+00000000"
+cheat174_enable = false
+
+cheat175_desc = "[Action Replay] Gwen Tennyson"
+cheat175_code = "94000130+FCEF0000+921D1FB6+FF000002+221D1FBD+00000003+2224644C+00000000+D2000000+00000000"
+cheat175_enable = false
+
+cheat176_desc = "[Action Replay] Bonus Challenge"
+cheat176_code = "921D1FB6+FF000002+222463E0+00000000+22246458+00000000+D2000000+00000000"
+cheat176_enable = false
+
+cheat177_desc = "[Action Replay] Upchuck"
+cheat177_code = "921D1FB6+FF000002+22246464+00000000+22246644+00000000+D2000000+00000000"
+cheat177_enable = false

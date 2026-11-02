@@ -1,0 +1,45 @@
+# Recherche locale pour la ROM : Frogger 2 [USA][!!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Frogger%202%20(USA)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Frogger%202%20(USA)%20(Xploder).cht
+
+cheats = 9
+
+cheat0_desc = "[GameShark] Score Modifier"
+cheat0_code = "01??E0C2+01??E1C3+01??E2C2+01??E3C2"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Max Score"
+cheat1_code = "0199E0C2+0199E1C3+0199E2C2+0199E3C2"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Infinite Lives"
+cheat2_code = "0105DFC2"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] No Gems"
+cheat3_code = "0100B4C2"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Infinite Time"
+cheat4_code = "0100A2C1"
+cheat4_enable = false
+
+cheat5_desc = "[Xploder] Unendlich Leben"
+cheat5_code = "$0D26E0EF"
+cheat5_enable = false
+
+cheat6_desc = "[Xploder] 22 Edelsteine gesammelt"
+cheat6_code = "$0D37BEEF"
+cheat6_enable = false
+
+cheat7_desc = "[Xploder] Zaehler auf Null"
+cheat7_code = "$0D21D0EF"
+cheat7_enable = false
+
+cheat8_desc = "[Xploder] Unendlich Zeitanzeige"
+cheat8_code = "$0D812C81"
+cheat8_enable = false

@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Doki Doki Majo Shinpan Duo (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Doki%20Doki%20Majo%20Shinpan%20Duo%20(Japan).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] All Mode Unlocks"
+cheat0_code = "C0000000+0000000A+1212C88C+00000101+DC000000+00000002+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Pictures in Gallery Unlocked"
+cheat1_code = "C0000000+00000016+1212C8AE+00000101+DC000000+00000002+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Infinite HP"
+cheat2_code = "02058E48+EAFE9C6C+E2000000+00000010+E35C0001+01A00000+10400004+EA01638E"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] MP Recovery"
+cheat3_code = "02073BAC+E1A01002"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Game Over Until Witch Mark Appear (Witch Check)"
+cheat4_code = "12050762+0000E1C7+12050766+0000EA00"
+cheat4_enable = false

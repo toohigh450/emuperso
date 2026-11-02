@@ -1,0 +1,53 @@
+# Recherche locale pour la ROM : Superman [USA][Europe][SGB Enhanced][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Superman%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Superman%20(USA%2C%20Europe)%20(SGB%20Enhanced).cht
+
+cheats = 11
+
+cheat0_desc = "[GameShark] Infinite Health"
+cheat0_code = "01282DC1"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] All Keys"
+cheat1_code = "0106BEC4"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Infinite Health"
+cheat2_code = "01282DC1"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] All Keys"
+cheat3_code = "0106BEC4"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Title screen music modifier"
+cheat4_code = "0BA-1AF-D52"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Infinite Health"
+cheat5_code = "005-97C-F72+C91-4BA-3BE+C93-B1A-3BE"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] All Enemies And Bosses Die In 1 Hit"
+cheat6_code = "221-E6A-3BE"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] No Enemies Obstacles Or Keys"
+cheat7_code = "C8D-B4E-5D4"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] No Need To Collect Keys (end of level transition or death will take a little time to proceed)"
+cheat8_code = "576-57E-5D4"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Enemies Are Blind"
+cheat9_code = "288-4D9-3B2"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Enemies And Obstacles Do Not Interact With Superman"
+cheat10_code = "C90-16A-191"
+cheat10_enable = false

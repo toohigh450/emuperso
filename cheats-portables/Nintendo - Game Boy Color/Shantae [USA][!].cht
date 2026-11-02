@@ -1,0 +1,114 @@
+# Recherche locale pour la ROM : Shantae [USA][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Shantae%20(USA)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Shantae%20(USA)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Shantae%20(USA).cht
+
+cheats = 26
+
+cheat0_desc = "[Game Genie] Infinite Lives"
+cheat0_code = "1C6-34A"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Infinite Health"
+cheat1_code = "FA2-90A"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Infinite Lives"
+cheat2_code = "01097FCA"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Infinite Health"
+cheat3_code = "010B80CA"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Infinite Full Lives (Alternate)"
+cheat4_code = "01637FCA"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Infinite Full Health (Alternate)"
+cheat5_code = "012880CA"
+cheat5_enable = false
+
+cheat6_desc = "[GameShark] 999 Coins"
+cheat6_code = "01E77DCA+01037ECA"
+cheat6_enable = false
+
+cheat7_desc = "[GameShark] All Items"
+cheat7_code = "016370CA+016371CA+016372CA+016373CA+016374CA+016375CA+016376CA+016377CA+016378CA+016379CA+01637ACA+01637BCA+01638ACA+01638BCA"
+cheat7_enable = false
+
+cheat8_desc = "[GameShark] All Key Items"
+cheat8_code = "01FF38CB+01F039CB"
+cheat8_enable = false
+
+cheat9_desc = "[GameShark] All Dances"
+cheat9_code = "01FF3ACB+010F3BCB"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Infinite Lives"
+cheat10_code = "01047FCA"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Infinite Energy"
+cheat11_code = "010C80CA"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Infinite Money"
+cheat12_code = "01FF7DCA+01027ECA"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Have The Squids"
+cheat13_code = "01048ACA"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Infinite Lives"
+cheat14_code = "01097FCA"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Infinite Health"
+cheat15_code = "010B80CA"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Infinite Full Lives  (Alternate)"
+cheat16_code = "01637FCA"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Infinite Full Health (Alternate)"
+cheat17_code = "012880CA"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] 999 Coins"
+cheat18_code = "01037DCA"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] All Items"
+cheat19_code = "016370CA+016372CA+016374CA+016376CA+016378CA+01637ACA+01638ACA"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] All Key Items"
+cheat20_code = "01F038CB"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] All Dances"
+cheat21_code = "010F3ACB"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Infinite Heath (9 character)"
+cheat22_code = "FA2-90A-4C1"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Infinite Lives (9 character)"
+cheat23_code = "1C6-34A-3BE"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Max Money (999)"
+cheat24_code = "A70-5FB-C46+520-60B-E67"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Infinite Health"
+cheat25_code = "182-88A-4CA"
+cheat25_enable = false

@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Tokutei! Metabo Juku (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Tokutei!%20Metabo%20Juku%20(Japan).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Test Point 100"
+cheat0_code = "22191F8C+00000064"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Test 100%"
+cheat1_code = "22191F90+00000064"
+cheat1_enable = false

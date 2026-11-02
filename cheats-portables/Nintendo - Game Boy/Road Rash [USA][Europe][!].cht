@@ -1,0 +1,17 @@
+# Recherche locale pour la ROM : Road Rash [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Road%20Rash%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Road%20Rash%20(USA%2C%20Europe).cht
+
+cheats = 2
+
+cheat0_desc = "[GameShark] Max Cash"
+cheat0_code = "0199A8C0+0199A9C0+0199AAC0"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Speed Does Not Decrease From Releasing Gas"
+cheat1_code = "001-1DA-E66"
+cheat1_enable = false

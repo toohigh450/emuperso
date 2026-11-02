@@ -1,0 +1,60 @@
+# Recherche locale pour la ROM : Tsubasa Chronicle Vol. 2 (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Tsubasa%20Chronicle%20Vol.%202%20(Japan).cht
+
+cheats = 13
+
+cheat0_desc = "[Action Replay] Max/Infinite Money"
+cheat0_code = "12101C3C+0000270F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Player Max Health"
+cheat1_code = "122CE11C+000003E7"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Opponent Health 0"
+cheat2_code = "122CE11E+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Items x99"
+cheat3_code = "D5000000+00006300+C0000000+00000019+D7000000+02101C40+D4000000+00000001+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Complete Player Gallery"
+cheat4_code = "D5000000+00000001+C0000000+000000CA+D8000000+02101C74+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Complete BGM"
+cheat5_code = "D5000000+00000001+C0000000+0000000D+D8000000+02101D3F+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Complete Cut Scene"
+cheat6_code = "D5000000+00000001+C0000000+00000014+D8000000+02101D3F+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Max Level"
+cheat7_code = "C0000000+00000002+22101C18+00000063+DC000000+0000000C+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Max Health"
+cheat8_code = "C0000000+00000002+12101C1A+0000270F+12101C1C+0000270F+DC000000+0000000C+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Max Level"
+cheat9_code = "C0000000+0000000F+22317D67+00000063+DC000000+00000018+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Max Atk"
+cheat10_code = "C0000000+0000000F+12317D68+000003E7+DC000000+00000018+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Max Def"
+cheat11_code = "C0000000+0000000F+12317D6A+000003E7+DC000000+00000018+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Max EXP"
+cheat12_code = "C0000000+0000000F+12317D72+0000270F+DC000000+00000018+D2000000+00000000"
+cheat12_enable = false

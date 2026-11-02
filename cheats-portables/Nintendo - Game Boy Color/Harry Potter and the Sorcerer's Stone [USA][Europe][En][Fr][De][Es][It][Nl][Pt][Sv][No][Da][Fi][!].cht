@@ -1,0 +1,337 @@
+# Recherche locale pour la ROM : Harry Potter and the Sorcerer's Stone [USA][Europe][En][Fr][De][Es][It][Nl][Pt][Sv][No][Da][Fi][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Harry%20Potter%20and%20the%20Sorcerer's%20Stone%20(USA%2C%20Europe)%20(En%2CFr%2CDe%2CEs%2CIt%2CNl%2CPt%2CSv%2CNo%2CDa%2CFi).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Harry%20Potter%20and%20the%20Sorcerer's%20Stone%20(USA%2C%20Europe)%20(GameShark).cht
+
+cheats = 82
+
+cheat0_desc = "[Format source non précisé] Level 99"
+cheat0_code = "9163FBCD"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] School Supply List"
+cheat1_code = "960923D0"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Class List"
+cheat2_code = "960924D0"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Herb List"
+cheat3_code = "960925D0"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Broomstick Care Kit"
+cheat4_code = "960926D0"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Pack Of Name Tags"
+cheat5_code = "960927D0"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Star Chart"
+cheat6_code = "960928D0"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Parchment"
+cheat7_code = "960929D0"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Antidote"
+cheat8_code = "96092AD0"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Wiggenweld Potion"
+cheat9_code = "96092BD0"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Grand Wiggenweld Potion"
+cheat10_code = "96092CD0"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Herbicide Potion"
+cheat11_code = "96092DD0"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Vitamix Potion"
+cheat12_code = "96092ED0"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Pepper Up Potion"
+cheat13_code = "96092FD0"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Grand Pepper Up Potion"
+cheat14_code = "960930D0"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Potion Kit Bag"
+cheat15_code = "960931D0"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Collapsible Cauldron"
+cheat16_code = "960932D0"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Copper Cauldron"
+cheat17_code = "960933D0"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Brass Cauldron"
+cheat18_code = "960934D0"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Silver Cauldron"
+cheat19_code = "960935D0"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Self-stirring Cauldron"
+cheat20_code = "960936D0"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Spellbook"
+cheat21_code = "960937D0"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] School Books"
+cheat22_code = "960938D0"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Folio Triplicus"
+cheat23_code = "960939D0"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Folio Magi"
+cheat24_code = "96093AD0"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Notebook"
+cheat25_code = "96093BD0"
+cheat25_enable = false
+
+cheat26_desc = "[Format source non précisé] Curse Book"
+cheat26_code = "96093CD0"
+cheat26_enable = false
+
+cheat27_desc = "[Format source non précisé] Harry's Wand"
+cheat27_code = "96093DD0"
+cheat27_enable = false
+
+cheat28_desc = "[Format source non précisé] Ordinary Broom"
+cheat28_code = "96093ED0"
+cheat28_enable = false
+
+cheat29_desc = "[Format source non précisé] Comet 260"
+cheat29_code = "96093FD0"
+cheat29_enable = false
+
+cheat30_desc = "[Format source non précisé] Shooting Star"
+cheat30_code = "960940D0"
+cheat30_enable = false
+
+cheat31_desc = "[Format source non précisé] Nimbus 2000"
+cheat31_code = "960941D0"
+cheat31_enable = false
+
+cheat32_desc = "[Format source non précisé] Asphodel Root"
+cheat32_code = "960942D0"
+cheat32_enable = false
+
+cheat33_desc = "[Format source non précisé] Monkshood"
+cheat33_code = "960943D0"
+cheat33_enable = false
+
+cheat34_desc = "[Format source non précisé] Dried Nettles"
+cheat34_code = "960944D0"
+cheat34_enable = false
+
+cheat35_desc = "[Format source non précisé] Dittany"
+cheat35_code = "960945D0"
+cheat35_enable = false
+
+cheat36_desc = "[Format source non précisé] Wormwood"
+cheat36_code = "960946D0"
+cheat36_enable = false
+
+cheat37_desc = "[Format source non précisé] Mandrake Root"
+cheat37_code = "960947D0"
+cheat37_enable = false
+
+cheat38_desc = "[Format source non précisé] Boomslang Skin"
+cheat38_code = "960948D0"
+cheat38_enable = false
+
+cheat39_desc = "[Format source non précisé] Porcupine Quills"
+cheat39_code = "960949D0"
+cheat39_enable = false
+
+cheat40_desc = "[Format source non précisé] Octopus Powder"
+cheat40_code = "96094AD0"
+cheat40_enable = false
+
+cheat41_desc = "[Format source non précisé] Beetles' Eyes"
+cheat41_code = "96094BD0"
+cheat41_enable = false
+
+cheat42_desc = "[Format source non précisé] Bicorn Horn"
+cheat42_code = "96094CD0"
+cheat42_enable = false
+
+cheat43_desc = "[Format source non précisé] Snake Fangs"
+cheat43_code = "96094DD0"
+cheat43_enable = false
+
+cheat44_desc = "[Format source non précisé] Bezoar Stone"
+cheat44_code = "96094ED0"
+cheat44_enable = false
+
+cheat45_desc = "[Format source non précisé] Silver Unicorn Horn"
+cheat45_code = "96094FD0"
+cheat45_enable = false
+
+cheat46_desc = "[Format source non précisé] Wolfsbane"
+cheat46_code = "960950D0"
+cheat46_enable = false
+
+cheat47_desc = "[Format source non précisé] Aconite"
+cheat47_code = "960951D0"
+cheat47_enable = false
+
+cheat48_desc = "[Format source non précisé] Every Flavor Beans"
+cheat48_code = "960952D0"
+cheat48_enable = false
+
+cheat49_desc = "[Format source non précisé] Chocolate Frogs"
+cheat49_code = "960953D0"
+cheat49_enable = false
+
+cheat50_desc = "[Format source non précisé] Best Blowing Gun"
+cheat50_code = "960954D0"
+cheat50_enable = false
+
+cheat51_desc = "[Format source non précisé] Pumpkin Pasties"
+cheat51_code = "960955D0"
+cheat51_enable = false
+
+cheat52_desc = "[Format source non précisé] Cauldron Cakes"
+cheat52_code = "960956D0"
+cheat52_enable = false
+
+cheat53_desc = "[Format source non précisé] Licorice Wands"
+cheat53_code = "960957D0"
+cheat53_enable = false
+
+cheat54_desc = "[Format source non précisé] Hedwig The Owl"
+cheat54_code = "960958D0"
+cheat54_enable = false
+
+cheat55_desc = "[Format source non précisé] Diagon Alley Pass"
+cheat55_code = "960959D0"
+cheat55_enable = false
+
+cheat56_desc = "[Format source non précisé] Purple Rabbit"
+cheat56_code = "96095AD0"
+cheat56_enable = false
+
+cheat57_desc = "[Format source non précisé] Dustpan"
+cheat57_code = "96095BD0"
+cheat57_enable = false
+
+cheat58_desc = "[Format source non précisé] Coal"
+cheat58_code = "96095CD0"
+cheat58_enable = false
+
+cheat59_desc = "[Format source non précisé] A Chicken"
+cheat59_code = "96095DD0"
+cheat59_enable = false
+
+cheat60_desc = "[Format source non précisé] Ostrich Feather"
+cheat60_code = "96095ED0"
+cheat60_enable = false
+
+cheat61_desc = "[Format source non précisé] Holiday Popper"
+cheat61_code = "96095FD0"
+cheat61_enable = false
+
+cheat62_desc = "[Format source non précisé] Daily Prophet"
+cheat62_code = "960960D0"
+cheat62_enable = false
+
+cheat63_desc = "[Format source non précisé] Old School Tie"
+cheat63_code = "960961D0"
+cheat63_enable = false
+
+cheat64_desc = "[Format source non précisé] Grow Your Own Warts Kit"
+cheat64_code = "960962D0"
+cheat64_enable = false
+
+cheat65_desc = "[Format source non précisé] 50-Pence Piece"
+cheat65_code = "960963D0"
+cheat65_enable = false
+
+cheat66_desc = "[Format source non précisé] Luminous Balloons"
+cheat66_code = "960964D0"
+cheat66_enable = false
+
+cheat67_desc = "[Format source non précisé] Christmas Package"
+cheat67_code = "960965D0"
+cheat67_enable = false
+
+cheat68_desc = "[Format source non précisé] Hagid's Umbrella"
+cheat68_code = "960966D0"
+cheat68_enable = false
+
+cheat69_desc = "[Format source non précisé] Sorcerer's Stone"
+cheat69_code = "960967D0"
+cheat69_enable = false
+
+cheat70_desc = "[Format source non précisé] Remember All"
+cheat70_code = "960968D0"
+cheat70_enable = false
+
+cheat71_desc = "[Format source non précisé] Ingredient Encyclopedia"
+cheat71_code = "960969D0"
+cheat71_enable = false
+
+cheat72_desc = "[Format source non précisé] Flute"
+cheat72_code = "96096AD0"
+cheat72_enable = false
+
+cheat73_desc = "[Format source non précisé] Flying Key"
+cheat73_code = "96096BD0"
+cheat73_enable = false
+
+cheat74_desc = "[Format source non précisé] Sickles"
+cheat74_code = "96096CD0"
+cheat74_enable = false
+
+cheat75_desc = "[Format source non précisé] Healing Sparkle"
+cheat75_code = "96096DD0"
+cheat75_enable = false
+
+cheat76_desc = "[Format source non précisé] Cloak Of Invisibility"
+cheat76_code = "96096ED0"
+cheat76_enable = false
+
+cheat77_desc = "[GameShark] Infinite Magic Points"
+cheat77_code = "95E703D4+950304D4+95E707D4+950308D4"
+cheat77_enable = false
+
+cheat78_desc = "[GameShark] Infinite Sickles"
+cheat78_code = "91FFFCCD+91FFFDCD"
+cheat78_enable = false
+
+cheat79_desc = "[GameShark] Infinite Stamina Points"
+cheat79_code = "95E701D4+950302D4+95E705D4+950306D4"
+cheat79_enable = false
+
+cheat80_desc = "[GameShark] Level 99"
+cheat80_code = "9163fbcd"
+cheat80_enable = false
+
+cheat81_desc = "[GameShark] Max Experience"
+cheat81_code = "91FEF9CD+91FFFACD"
+cheat81_enable = false

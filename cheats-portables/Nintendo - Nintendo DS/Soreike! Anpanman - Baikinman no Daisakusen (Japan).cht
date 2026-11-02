@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Soreike! Anpanman - Baikinman no Daisakusen (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Soreike!%20Anpanman%20-%20Baikinman%20no%20Daisakusen%20(Japan).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] All Cards"
+cheat0_code = "D5000000+0000FFFF+C0000000+00000012+D7000000+023BC03C+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Mini Games"
+cheat1_code = "123BC010+0000FFFF"
+cheat1_enable = false

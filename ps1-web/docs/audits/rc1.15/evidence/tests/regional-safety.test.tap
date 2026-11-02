@@ -1,0 +1,112 @@
+TAP version 13
+# Subtest: P0 restore/toggle/serial + positive control: En,Fr,Es
+ok 1 - P0 restore/toggle/serial + positive control: En,Fr,Es
+  ---
+  duration_ms: 54.294075
+  type: 'test'
+  ...
+# Subtest: P0 edition choice remains pending: En,Fr,Es
+ok 2 - P0 edition choice remains pending: En,Fr,Es
+  ---
+  duration_ms: 5.802793
+  type: 'test'
+  ...
+# Subtest: P0 restore/toggle/serial + positive control: En,Fr,Es,Pt-BR
+ok 3 - P0 restore/toggle/serial + positive control: En,Fr,Es,Pt-BR
+  ---
+  duration_ms: 4.604319
+  type: 'test'
+  ...
+# Subtest: P0 edition choice remains pending: En,Fr,Es,Pt-BR
+ok 4 - P0 edition choice remains pending: En,Fr,Es,Pt-BR
+  ---
+  duration_ms: 5.079138
+  type: 'test'
+  ...
+# Subtest: P0 restore/toggle/serial + positive control: En,Fr,Es,zh-Hans-CN
+ok 5 - P0 restore/toggle/serial + positive control: En,Fr,Es,zh-Hans-CN
+  ---
+  duration_ms: 1.046637
+  type: 'test'
+  ...
+# Subtest: P0 edition choice remains pending: En,Fr,Es,zh-Hans-CN
+ok 6 - P0 edition choice remains pending: En,Fr,Es,zh-Hans-CN
+  ---
+  duration_ms: 0.46525
+  type: 'test'
+  ...
+# Subtest: P0 restore/toggle/serial + positive control: En,Fr,Es,Pt-419
+ok 7 - P0 restore/toggle/serial + positive control: En,Fr,Es,Pt-419
+  ---
+  duration_ms: 4.8124
+  type: 'test'
+  ...
+# Subtest: P0 edition choice remains pending: En,Fr,Es,Pt-419
+ok 8 - P0 edition choice remains pending: En,Fr,Es,Pt-419
+  ---
+  duration_ms: 0.507012
+  type: 'test'
+  ...
+# Subtest: P0 restore/toggle/serial + positive control: En,Fr,Es,fil-PH
+ok 9 - P0 restore/toggle/serial + positive control: En,Fr,Es,fil-PH
+  ---
+  duration_ms: 5.552057
+  type: 'test'
+  ...
+# Subtest: P0 edition choice remains pending: En,Fr,Es,fil-PH
+ok 10 - P0 edition choice remains pending: En,Fr,Es,fil-PH
+  ---
+  duration_ms: 0.572909
+  type: 'test'
+  ...
+# Subtest: P0 restore/toggle/serial + positive control: En,Fr,Es,yue-Hant-HK
+ok 11 - P0 restore/toggle/serial + positive control: En,Fr,Es,yue-Hant-HK
+  ---
+  duration_ms: 1.120657
+  type: 'test'
+  ...
+# Subtest: P0 edition choice remains pending: En,Fr,Es,yue-Hant-HK
+ok 12 - P0 edition choice remains pending: En,Fr,Es,yue-Hant-HK
+  ---
+  duration_ms: 0.365796
+  type: 'test'
+  ...
+# Subtest: P0 restore/toggle/serial + positive control: En,Fr,Es,cmn-Hans-CN
+ok 13 - P0 restore/toggle/serial + positive control: En,Fr,Es,cmn-Hans-CN
+  ---
+  duration_ms: 5.199561
+  type: 'test'
+  ...
+# Subtest: P0 edition choice remains pending: En,Fr,Es,cmn-Hans-CN
+ok 14 - P0 edition choice remains pending: En,Fr,Es,cmn-Hans-CN
+  ---
+  duration_ms: 0.467428
+  type: 'test'
+  ...
+# Subtest: metadata evidence: languages, mixed groups, conflicting regions, title words
+ok 15 - metadata evidence: languages, mixed groups, conflicting regions, title words
+  ---
+  duration_ms: 3.421248
+  type: 'test'
+  ...
+# Subtest: unknown catalogue region also requires explicit acknowledgement
+ok 16 - unknown catalogue region also requires explicit acknowledgement
+  ---
+  duration_ms: 0.396029
+  type: 'test'
+  ...
+# Subtest: name recognition preserves disc/revision separation from edition evidence
+ok 17 - name recognition preserves disc/revision separation from edition evidence
+  ---
+  duration_ms: 1.997746
+  type: 'test'
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 17
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 158.890014

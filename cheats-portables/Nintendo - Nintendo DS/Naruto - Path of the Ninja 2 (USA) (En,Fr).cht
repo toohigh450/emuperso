@@ -1,0 +1,208 @@
+# Recherche locale pour la ROM : Naruto - Path of the Ninja 2 (USA) (En,Fr).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Naruto%20-%20Path%20of%20the%20Ninja%202%20(USA).cht
+
+cheats = 50
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "52007210+EE070F90+E2000578+00000048+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2D7EC59+015E0012+000A03A9+00000009+02007210+E92D401E+02007214+FAFFE4D7+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Money"
+cheat1_code = "020D4448+0098967F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Exp After Battle"
+cheat2_code = "020D6008+0040EC9B"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] 0 Losses, 999 Wins For Battle Results"
+cheat3_code = "020D44D8+03E70000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] 9999 Wi-Fi Points"
+cheat4_code = "120D44DC+0000270F"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] 00:00:00"
+cheat5_code = "020D44E0+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] 99:59:99"
+cheat6_code = "020D44E0+00057E3F"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] All ninja cards/tags"
+cheat7_code = "D5000000+00006363+C0000000+00000064+D7000000+020D436C+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] All ninja in party"
+cheat8_code = "D5000000+00000100+C0000000+0000000E+D7000000+020D4200+D4000000+00000202+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] All Items"
+cheat9_code = "220D42E2+00000063+D5000000+00006363+C0000000+0000005F+D7000000+020D4222+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] All Weapons"
+cheat10_code = "220D42E3+00000063+220D432E+00000063+D5000000+00006363+C0000000+00000025+D7000000+020D42E4+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] All Shoes"
+cheat11_code = "220D436A+00000063+D5000000+00006363+C0000000+00000009+D7000000+020D4356+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] All Armours"
+cheat12_code = "220D433D+00000063+220D4354+00000063+D5000000+00006363+C0000000+0000000A+D7000000+020D433E+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Walk Through Anything"
+cheat13_code = "520DCA58+E585200C+020DCA58+EA000000+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Walk Through Anything"
+cheat14_code = "520DCA4C+E59B20AC+020DCA58+E585200C+94000130+FFFD0000+020DCA58+EA000000+D2000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Walk Through Walls"
+cheat15_code = "520D9B54+E92D4070+020D9B58+E1A05000+94000130+FDFF0000+020D9B58+E3A05001+D2000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Naruto"
+cheat16_code = "020D3EB8+03E703E7"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Sasuke"
+cheat17_code = "020D3ED4+03E703E7"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Sakura"
+cheat18_code = "020D3EF0+03E703E7"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Shikamaru"
+cheat19_code = "020D3F0C+03E703E7"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Chouji"
+cheat20_code = "020D3F28+03E703E7"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Ino"
+cheat21_code = "020D3F44+03E703E7"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Kiba"
+cheat22_code = "020D3F60+03E703E7"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Shino"
+cheat23_code = "020D3F7C+03E703E7"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Hinata"
+cheat24_code = "020D3F98+03E703E7"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Neji"
+cheat25_code = "020D3FB4+03E703E7"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Lee"
+cheat26_code = "020D3FD0+03E703E7"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Tenten"
+cheat27_code = "020D3FEC+03E703E7"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Gaara"
+cheat28_code = "020D4008+03E703E7"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Temari"
+cheat29_code = "020D4024+03E703E7"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Kankurou"
+cheat30_code = "020D4040+03E703E7+020D405C+03E703E7"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Tsunade"
+cheat31_code = "020D4078+03E703E7"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Orochimaru"
+cheat32_code = "020D4094+03E703E7"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Anbu"
+cheat33_code = "020D40B0+03E703E7"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Anbu"
+cheat34_code = "020D40CC+03E703E7"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] 9 Tails Naruto"
+cheat35_code = "020D40E8+03E703E7"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] CS2 Sasuke"
+cheat36_code = "020D4114+03E703E7"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Kakashi"
+cheat37_code = "020D4130+03E703E7"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Guy"
+cheat38_code = "020D414C+03E703E7"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Iruka"
+cheat39_code = "020D4168+03E703E7"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Itachi"
+cheat40_code = "020D4184+03E703E7"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Sarutobi"
+cheat41_code = "020D41A0+03E703E7"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Zabuza"
+cheat42_code = "020D41BC+03E703E7"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Haku"
+cheat43_code = "020D41D8+03E703E7"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] All Ninja's HP Max"
+cheat44_code = "C0000000+0000001D+120D3EB8+000003E7+DC000000+0000001C+D2000000+00000000"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] All Ninja's Chakra Max"
+cheat45_code = "C0000000+0000001D+120D3EBA+000003E7+DC000000+0000001C+D2000000+00000000"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Highest Morale on all characters *Press L+R+Up)"
+cheat46_code = "94000130+FCBF0000+C0000000+0000001D+220D3EC8+0000000F+DC000000+0000001C+D2000000+00000000"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] All pills taken by ALL characters (Press L+R+Right)"
+cheat47_code = "94000130+FCEF0000+C0000000+0000001D+020D3EC4+00888888+DC000000+0000001C+D2000000+00000000"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] x2"
+cheat48_code = "520DB914+E1A06001+020DB918+E1A08082+020DB91C+E1A05083+D2000000+00000000"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] x4"
+cheat49_code = "520DB914+E1A06001+020DB918+E1A08102+020DB91C+E1A05103+D2000000+00000000"
+cheat49_enable = false

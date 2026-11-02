@@ -1,0 +1,124 @@
+# Recherche locale pour la ROM : Nora to Toki no Koubou - Kiri no Mori no Majo (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Nora%20to%20Toki%20no%20Koubou%20-%20Kiri%20no%20Mori%20no%20Majo%20(Japan).cht
+
+cheats = 29
+
+cheat0_desc = "[Action Replay] Anti-Piracy Bypass Code"
+cheat0_code = "520009F8+E12FFF1E+020009F8+EA0FF9C6+D2000000+00000000+023FF100+E59F0000+E23FF104+00000048+E12FFF1E+0000B3CF+E59F0000+E12FFF1E+0000AF81+E92D4007+E59F001C+E59F101C+E5912000+E1500002+059F0014+05810000+0280000C+05810088+E8BD8007+6A0EE6E8+020EF4D8+6A3FF100+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Money"
+cheat1_code = "94000130+FFFB0000+021FD860+000F423F+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Items x99"
+cheat2_code = "52028858+E92D4008+E2000180+00000048+E92D403F+E1A04000+EB00A7D6+E1A05000+E1A00004+EB00A12F+E1A01000+E1A00004+EB00A828+E3500001+82400001+E5C50000+E59F0010+E5850004+E1C500B6+E8BD403F+E92D4008+EA00A1A4+020001C8+01010101+02028858+EAFF5E48+D0000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Items Can Gain x99"
+cheat3_code = "5202A268+A3A01063+2202A26B+000000E3+D0000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Alchemist Time Never Pass"
+cheat4_code = "5202BCB4+EBFFFB9F+0202BCB4+E3A00000+D0000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Quest Time Become Infinite"
+cheat5_code = "52018A9C+E1D701B4+E2000140+00000018+E3A00001+E5C7001B+E3A000FF+E3800CFF+E1C701B4+EA006251+02018A9C+EAFF9DA7+D0000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Remove Equipment Restriction"
+cheat6_code = "520F2660+E3A0601C+520F3660+E1D9A0BE+020F3660+E3E0A000+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Harvesting Never Encounter Enemy"
+cheat7_code = "E2000100+00000010+E3500001+03A00000+E0872182+EA00D3C4+94000130+FDFB0000+02035020+EAFF2C36+02034ED8+EA00000C+D0000000+00000000+94000130+FEFB0000+02035020+E0872182+02034ED8+BA00000C+D0000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] 2"
+cheat8_code = "52044D54+E0810000+12044D54+00000080+D0000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] 4"
+cheat9_code = "52044D54+E0810000+12044D54+00000100+D0000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] 8"
+cheat10_code = "52044D54+E0810000+12044D54+00000180+D0000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] 16"
+cheat11_code = "52044D54+E0810000+12044D54+00000200+D0000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] 32"
+cheat12_code = "52044D54+E0810000+12044D54+00000280+D0000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] 64"
+cheat13_code = "52044D54+E0810000+12044D54+00000300+D0000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] 128"
+cheat14_code = "52044D54+E0810000+12044D54+00000380+D0000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] 2"
+cheat15_code = "52038818+E1A05001+02038818+E1A05081+D0000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] 4"
+cheat16_code = "52038818+E1A05001+02038818+E1A05101+D0000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] 8"
+cheat17_code = "52038818+E1A05001+02038818+E1A05181+D0000000+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] 16"
+cheat18_code = "52038818+E1A05001+02038818+E1A05201+D0000000+00000000"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] 32"
+cheat19_code = "52038818+E1A05001+02038818+E1A05281+D0000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] 64"
+cheat20_code = "52038818+E1A05001+02038818+E1A05301+D0000000+00000000"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] 128"
+cheat21_code = "52038818+E1A05001+02038818+E1A05381+D0000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] 2"
+cheat22_code = "52039C70+E1D010FE+E2039C64+00000010+E3110102+01A01081+E0821001+E1C010BE+D0000000+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] 4"
+cheat23_code = "52039C70+E1D010FE+E2039C64+00000010+E3110102+01A01101+E0821001+E1C010BE+D0000000+00000000"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] 8"
+cheat24_code = "52039C70+E1D010FE+E2039C64+00000010+E3110102+01A01181+E0821001+E1C010BE+D0000000+00000000"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] 16"
+cheat25_code = "52039C70+E1D010FE+E2039C64+00000010+E3110102+01A01201+E0821001+E1C010BE+D0000000+00000000"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] 32"
+cheat26_code = "52039C70+E1D010FE+E2039C64+00000010+E3110102+01A01281+E0821001+E1C010BE+D0000000+00000000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] 64"
+cheat27_code = "52039C70+E1D010FE+E2039C64+00000010+E3110102+01A01301+E0821001+E1C010BE+D0000000+00000000"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] 128"
+cheat28_code = "52039C70+E1D010FE+E2039C64+00000010+E3110102+01A01381+E0821001+E1C010BE+D0000000+00000000"
+cheat28_enable = false

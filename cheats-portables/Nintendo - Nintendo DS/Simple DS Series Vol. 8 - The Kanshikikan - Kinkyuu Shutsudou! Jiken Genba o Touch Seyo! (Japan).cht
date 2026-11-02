@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Simple DS Series Vol. 8 - The Kanshikikan - Kinkyuu Shutsudou! Jiken Genba o Touch Seyo! (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Simple%20DS%20Series%20Vol.%208%20-%20The%20Kanshikikan%20-%20Kinkyuu%20Shutsudou!%20Jiken%20Genba%20o%20Touch%20Seyo!%20(Japan).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Points Never Decrease"
+cheat0_code = "222BDE90+00000064"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Time 00:00"
+cheat1_code = "22235948+00000000+2223596C+00000000+22235960+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Missions Gold Medal"
+cheat2_code = "C0000000+00000007+0220F238+00000003+0220F258+00000063+DC000000+00000004+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Unlock All Stages"
+cheat3_code = "C0000000+00000007+2220D844+00000003+DC000000+00000004+D2000000+00000000"
+cheat3_enable = false

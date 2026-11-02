@@ -1,0 +1,30 @@
+name: PS1 candidate audit
+on:
+  push:
+    branches: ['codex/ps1-*']
+    paths: ['ps1-web/**', '.github/workflows/ps1-audit.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  tests:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: PS1 unit, integration and delivery tests (no emulation claim)
+        run: python ps1-web/tools/run_tests.py --output ps1-test-results
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ps1-tests-${{ matrix.os }}
+          path: ps1-test-results

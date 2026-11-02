@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Reign of Fire (USA) (En,Fr,De,Es,It).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Reign%20of%20Fire%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 5
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000C8FF+000A+100035F0+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Health"
+cheat1_code = "820218CA+0016"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Quick Score Gain"
+cheat2_code = "82003060+FFFF"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Max Score"
+cheat3_code = "82003060+E0FF+82003062+05F5"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Infinite Time"
+cheat4_code = "82003050+0000+82003052+0000+82003054+0000+82003056+0002"
+cheat4_enable = false

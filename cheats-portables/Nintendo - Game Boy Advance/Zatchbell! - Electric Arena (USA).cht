@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Zatchbell! - Electric Arena (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Zatchbell!%20-%20Electric%20Arena%20(USA)%20(Code%20Breaker).cht
+
+cheats = 7
+
+cheat0_desc = "[Code Breaker] Enabler Code"
+cheat0_code = "000067CF+000A+10028CA0+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Enabler Code (Alternate)"
+cheat1_code = "000067CF+000A+1000464A+0007"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] D Type Joker Command"
+cheat2_code = "D2009770+????"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Unlock Everything"
+cheat3_code = "420245F4+FFFF+00000005+0002"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Instant Win Player 1"
+cheat4_code = "3200A02A+0000"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Infinite Magic Player 1"
+cheat5_code = "32009E5A+0030+32009E5C+0030"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Glitchy Infinite Health"
+cheat6_code = "32009E4C+0040+82009E4E+4040"
+cheat6_enable = false

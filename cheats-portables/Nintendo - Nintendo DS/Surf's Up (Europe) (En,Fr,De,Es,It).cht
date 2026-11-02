@@ -1,0 +1,17 @@
+# Recherche locale pour la ROM : Surf's Up (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Surf's%20Up%20(Europe)%20(En%2CFr%2CDe%2CEs%2CIt).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Surf's%20Up%20(Europe)%20(En%2CFr%2CEs).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "5206A844+EE070F90+E2000198+0000004A+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2E6F575+01200035+000A0371+006E0009+00000000+00000000+0206A844+E92D401E+0206A848+FAFE5652+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat1_code = "5206A804+EE070F90+E2000464+0000004A+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2E6F521+01200035+000A0371+006E0009+00000000+00000000+0206A804+E92D401E+0206A808+FAFE5715+D2000000+00000000"
+cheat1_enable = false

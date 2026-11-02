@@ -1,0 +1,20 @@
+test_css_local_assets_exist (test_delivery.Delivery.test_css_local_assets_exist) ... ok
+test_relative_module_imports_exist (test_delivery.Delivery.test_relative_module_imports_exist) ... ok
+test_generation_et_lecture_liste_blanche (test_make_lock.MakeLock.test_generation_et_lecture_liste_blanche) ... ok
+test_integrity_mismatch (test_make_lock.MakeLock.test_integrity_mismatch) ... ok
+test_offline_refuse (test_make_lock.MakeLock.test_offline_refuse) ... ok
+test_normal_files_200 (test_serve.TestServeHTTP.test_normal_files_200)
+Fichiers normaux → 200 ... ok
+test_private_dir_403 (test_serve.TestServeHTTP.test_private_dir_403)
+B05-RC-1.3: /private/ même avec .json → 403 ... ok
+test_sensitive_dirs_403 (test_serve.TestServeHTTP.test_sensitive_dirs_403)
+B05: dossiers sensibles → 403 en GET et HEAD ... ok
+test_vendor_lock_200 (test_serve.TestServeHTTP.test_vendor_lock_200)
+P0: fichiers vendor du lock → 200 ... ok
+test_vendor_not_in_lock_403 (test_serve.TestServeHTTP.test_vendor_not_in_lock_403)
+P0: fichier vendor hors lock → 403 ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.531s
+
+OK

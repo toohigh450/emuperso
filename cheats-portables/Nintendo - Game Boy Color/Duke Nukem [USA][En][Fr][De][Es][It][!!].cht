@@ -1,0 +1,66 @@
+# Recherche locale pour la ROM : Duke Nukem [USA][En][Fr][De][Es][It][!!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Duke%20Nukem%20(USA)%20(En%2CFr%2CDe%2CEs%2CIt).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Duke%20Nukem%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Duke%20Nukem%20(USA%2C%20Europe)%20(Xploder).cht
+
+cheats = 14
+
+cheat0_desc = "[Format source non précisé] Infinite Health"
+cheat0_code = "91FF2ACB"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Lives"
+cheat1_code = "910FC1CE"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Infinite Ammo"
+cheat2_code = "910E38CB"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Infinite 2X Damage"
+cheat3_code = "9160C9CB"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Infinite Armor"
+cheat4_code = "9160C8CB"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Infinite Health"
+cheat5_code = "91FF2ACB"
+cheat5_enable = false
+
+cheat6_desc = "[GameShark] Infinite Lives"
+cheat6_code = "910FC1CE"
+cheat6_enable = false
+
+cheat7_desc = "[GameShark] Infinite Ammo"
+cheat7_code = "910E38CB"
+cheat7_enable = false
+
+cheat8_desc = "[GameShark] Infinite 2X Damage"
+cheat8_code = "9160C9CB"
+cheat8_enable = false
+
+cheat9_desc = "[GameShark] Infinite Armor"
+cheat9_code = "9160C8CB"
+cheat9_enable = false
+
+cheat10_desc = "[Xploder] Unendlich Gesundheit"
+cheat10_code = "$0DA0B1E9"
+cheat10_enable = false
+
+cheat11_desc = "[Xploder] Unendlich Leben"
+cheat11_code = "$0D2A81E2"
+cheat11_enable = false
+
+cheat12_desc = "[Xploder] Unendlich Munition"
+cheat12_code = "$0D8542E9"
+cheat12_enable = false
+
+cheat13_desc = "[Xploder] HighScore"
+cheat13_code = "$0DBAF8E2+$0DBA3BE2+$0DBA47E2"
+cheat13_enable = false

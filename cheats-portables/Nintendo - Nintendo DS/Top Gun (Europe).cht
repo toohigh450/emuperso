@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Top Gun (Europe).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Top%20Gun%20(Europe).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Inifinite Health"
+cheat0_code = "62136C4C+00000000+B212E180+00000000+100001BC+00000064+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Bomb"
+cheat1_code = "62136C4C+00000000+B212E180+00000000+10000004+00000063+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Infinite Missle"
+cheat2_code = "62136C4C+00000000+B212E180+00000000+10000006+00000063+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Unlock All Stages"
+cheat3_code = "920E22E8+00000000+120E22E4+0000000B+D2000000+00000000+920E22E8+00000001+120E22E4+00000007+D2000000+00000000"
+cheat3_enable = false

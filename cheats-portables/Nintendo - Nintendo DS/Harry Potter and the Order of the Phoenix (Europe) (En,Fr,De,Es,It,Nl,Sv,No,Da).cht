@@ -1,0 +1,64 @@
+# Recherche locale pour la ROM : Harry Potter and the Order of the Phoenix (Europe) (En,Fr,De,Es,It,Nl,Sv,No,Da).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Harry%20Potter%20and%20the%20Order%20of%20the%20Phoenix%20(Europe).cht
+
+cheats = 14
+
+cheat0_desc = "[Action Replay] Infinite Spell Cast Time"
+cheat0_code = "0213E358+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Exploding Snap: Quick Win"
+cheat1_code = "9213D5A8+FF000000+2213D5A8+00000006+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Gobstone: Start on Second Round"
+cheat2_code = "9213E008+FF000000+2213E008+00000001+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Gobstone: AI Never Score"
+cheat3_code = "2213E00C+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Chocolate Frogs: Quick Win"
+cheat4_code = "9213D4C0+FF000000+2213D4C0+00000007+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Quiditch: Max Score"
+cheat5_code = "221478AD+00000063"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Quiditch: AI Never Score"
+cheat6_code = "221478AE+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Potion Creation: Easy"
+cheat7_code = "9213DAAC+FF000000+2213DAAC+00000009+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] History of Magic: Easy"
+cheat8_code = "92147C64+FF000000+22147C64+00000004+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Astronomy: Easy"
+cheat9_code = "9213E1FC+00FF0000+2213E1FD+00000004+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Herbology: Easy"
+cheat10_code = "92147CB4+FF000000+22147CB4+00000004+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Duel: Infinite Health"
+cheat11_code = "1213E7BE+000006E8+1213E81E+000006E8+1213E87E+000006E8"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Duel: Infinite Magic"
+cheat12_code = "1213E7C0+000004E8+1213E820+000004E8+1213E880+000004E8"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Duel: One Hit Kills"
+cheat13_code = "94000130+FFFB0000+1213E99E+00000001+1213E9FE+00000001+1213EA5E+00000001+D2000000+00000000"
+cheat13_enable = false

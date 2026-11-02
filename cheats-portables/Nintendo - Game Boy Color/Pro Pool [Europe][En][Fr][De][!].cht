@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Pro Pool [Europe][En][Fr][De][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Pro%20Pool%20(USA%2C%20Europe)%20(GameShark).cht
+
+cheats = 1
+
+cheat0_desc = "[GameShark] Infinite Cash"
+cheat0_code = "91FF46C2+91FF47C2"
+cheat0_enable = false

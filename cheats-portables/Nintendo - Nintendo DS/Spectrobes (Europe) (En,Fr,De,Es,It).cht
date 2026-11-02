@@ -1,0 +1,436 @@
+# Recherche locale pour la ROM : Spectrobes (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Spectrobes%20(Europe).cht
+
+cheats = 107
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "52041C88+EE070F90+E20004AC+00000050+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2DFCC2D+00351395+00700120+000A0327+000D0009+00000005+02041C88+E92D401E+02041C8C+FAFEFA06+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Gura"
+cheat1_code = "0212BD04+05F0E0FF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Have All Gloves, Swords, Blasters and Armor"
+cheat2_code = "0212BF6C+FFFFFFFF+1212BF70+00003FFF"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max/Infinite Minerals (All)"
+cheat3_code = "D5000000+63636363+C0000000+0000000F+D6000000+0212BF24+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max/Infinite Items (All)"
+cheat4_code = "D5000000+63636363+C0000000+00000007+D6000000+0212BF74+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Infinite Health"
+cheat5_code = "520ACEE0+E0400003+020ACEE0+E2400000+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] One-Hit Kills"
+cheat6_code = "520A1AF4+E0400003+220A1AF4+00000000+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Hit Anywhere"
+cheat7_code = "520A1A78+AA000057+020A1A78+E1A00000+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Auto-Win Battles"
+cheat8_code = "52096204+E0910000+02096208+1A00000F+92084540+FDFD0202+02096208+E1A00000+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Max Excavation Level"
+cheat9_code = "1212BB0E+0000EA60"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Music Modifier (Modify Value for Extra Song)"
+cheat10_code = "020D8DE0+00000001"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Walk Anywhere"
+cheat11_code = "5209E4D4+E3500000+0209E4D8+E1A00000+0209E5C4+EA000011+0209E7C0+EA000017+0209F274+EA00002C+0209F35C+EA00000F+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Walk Anywhere"
+cheat12_code = "5209E4D4+E3500000+92084540+FDFE0201+0209E4D8+1A00004F+0209E5C4+B5850064+0209E7C0+0A000017+0209F274+0A000015+0209F35C+0A000007+D0000000+00000000+92084540+FEFE0101+0209E4D8+E1A00000+0209E5C4+EA000011+0209E7C0+EA000017+0209F274+EA00002C+0209F35C+EA00000F+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Power C Mineral"
+cheat13_code = "2212BF24+00000001"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Power B Mineral"
+cheat14_code = "2212BF25+00000001"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Power A Mineral"
+cheat15_code = "2212BF26+00000001"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Power A+ Mineral"
+cheat16_code = "2212BF27+00000001"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Def C Mineral"
+cheat17_code = "2212BF28+00000001"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Def B Mineral"
+cheat18_code = "2212BF29+00000001"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Def A Mineral"
+cheat19_code = "2212BF2A+00000001"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Def A+ Mineral"
+cheat20_code = "2212BF2B+00000001"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Health C Mineral"
+cheat21_code = "2212BF2C+00000001"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Health B Mineral"
+cheat22_code = "2212BF2D+00000001"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Health A Mineral"
+cheat23_code = "2212BF2E+00000001"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Health A+ Mineral"
+cheat24_code = "2212BF2F+00000001"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Agate Mineral"
+cheat25_code = "2212BF30+00000001"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Lazuli Mineral"
+cheat26_code = "2212BF31+00000001"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Graphite Mineral"
+cheat27_code = "2212BF32+00000001"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Garnet Mineral"
+cheat28_code = "2212BF33+00000001"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Onyx Mineral"
+cheat29_code = "2212BF34+00000001"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Topaz Mineral"
+cheat30_code = "2212BF35+00000001"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Jade Mineral"
+cheat31_code = "2212BF36+00000001"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Amber Mineral"
+cheat32_code = "2212BF37+00000001"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Zircon Mineral"
+cheat33_code = "2212BF38+00000001"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Opal Mineral"
+cheat34_code = "2212BF39+00000001"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Cobalt Mineral"
+cheat35_code = "2212BF3A+00000001"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Citrine Mineral"
+cheat36_code = "2212BF3B+00000001"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Fluorite Mineral"
+cheat37_code = "2212BF3C+00000001"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Coral Mineral"
+cheat38_code = "2212BF3D+00000001"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Sylvite Mineral"
+cheat39_code = "2212BF3E+00000001"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Spinal Mineral"
+cheat40_code = "2212BF3F+00000001"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Azurite Mineral"
+cheat41_code = "2212BF40+00000001"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Quartz Mineral"
+cheat42_code = "2212BF41+00000001"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Uranium Mineral"
+cheat43_code = "2212BF42+00000001"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Titanium Mineral"
+cheat44_code = "2212BF43+00000001"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Chrome Mineral"
+cheat45_code = "2212BF44+00000001"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Platinum Mineral"
+cheat46_code = "2212BF45+00000001"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Pearl Mineral"
+cheat47_code = "2212BF46+00000001"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Sapphire Mineral"
+cheat48_code = "2212BF47+00000001"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Emerald Mineral"
+cheat49_code = "2212BF48+00000001"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Ruby Mineral"
+cheat50_code = "2212BF49+00000001"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Diamond Mineral"
+cheat51_code = "2212BF4A+00000001"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Gold Mineral"
+cheat52_code = "2212BF4B+00000001"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Alpha Cube"
+cheat53_code = "2212BF4C+00000001"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Beta Cube"
+cheat54_code = "2212BF4D+00000001"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Gamma Cube"
+cheat55_code = "2212BF4E+00000001"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Delta Cube"
+cheat56_code = "2212BF4F+00000001"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Epsilon Cube"
+cheat57_code = "2212BF50+00000001"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Zeta Cube"
+cheat58_code = "2212BF51+00000001"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Eta Cube"
+cheat59_code = "2212BF52+00000001"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Theta Cube"
+cheat60_code = "2212BF53+00000001"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Iota Cube"
+cheat61_code = "2212BF54+00000001"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Kappa Cube"
+cheat62_code = "2212BF55+00000001"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Lambda Cube"
+cheat63_code = "2212BF56+00000001"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Mu Cube"
+cheat64_code = "2212BF57+00000001"
+cheat64_enable = false
+
+cheat65_desc = "[Action Replay] Nu Cube"
+cheat65_code = "2212BF58+00000001"
+cheat65_enable = false
+
+cheat66_desc = "[Action Replay] Xi Cube"
+cheat66_code = "2212BF59+00000001"
+cheat66_enable = false
+
+cheat67_desc = "[Action Replay] Omicron Cube"
+cheat67_code = "2212BF5A+00000001"
+cheat67_enable = false
+
+cheat68_desc = "[Action Replay] Pi Cube"
+cheat68_code = "2212BF5B+00000001"
+cheat68_enable = false
+
+cheat69_desc = "[Action Replay] Rho Cube"
+cheat69_code = "2212BF5C+00000001"
+cheat69_enable = false
+
+cheat70_desc = "[Action Replay] Sigma Cube"
+cheat70_code = "2212BF5D+00000001"
+cheat70_enable = false
+
+cheat71_desc = "[Action Replay] Tau Cube"
+cheat71_code = "2212BF5E+00000001"
+cheat71_enable = false
+
+cheat72_desc = "[Action Replay] Upsilon Cube"
+cheat72_code = "2212BF5F+00000001"
+cheat72_enable = false
+
+cheat73_desc = "[Action Replay] Evolve Mineral"
+cheat73_code = "2212BF60+00000001"
+cheat73_enable = false
+
+cheat74_desc = "[Action Replay] Chroma 1 Mineral"
+cheat74_code = "2212BF61+00000001"
+cheat74_enable = false
+
+cheat75_desc = "[Action Replay] Chroma 2 Mineral"
+cheat75_code = "2212BF62+00000001"
+cheat75_enable = false
+
+cheat76_desc = "[Action Replay] Chroma 3 Mineral"
+cheat76_code = "2212BF63+00000001"
+cheat76_enable = false
+
+cheat77_desc = "[Action Replay] Jet Pack"
+cheat77_code = "2212BF74+00000001"
+cheat77_enable = false
+
+cheat78_desc = "[Action Replay] Red Keystone"
+cheat78_code = "2212BF75+00000001"
+cheat78_enable = false
+
+cheat79_desc = "[Action Replay] Green Keystone"
+cheat79_code = "2212BF76+00000001"
+cheat79_enable = false
+
+cheat80_desc = "[Action Replay] Blue Keystone"
+cheat80_code = "2212BF77+00000001"
+cheat80_enable = false
+
+cheat81_desc = "[Action Replay] Demag Unit"
+cheat81_code = "2212BF78+00000001"
+cheat81_enable = false
+
+cheat82_desc = "[Action Replay] Kate's Letter"
+cheat82_code = "2212BF79+00000001"
+cheat82_enable = false
+
+cheat83_desc = "[Action Replay] Relic Crystal"
+cheat83_code = "2212BF7A+00000001"
+cheat83_enable = false
+
+cheat84_desc = "[Action Replay] Neo Crystal"
+cheat84_code = "2212BF7B+00000001"
+cheat84_enable = false
+
+cheat85_desc = "[Action Replay] Flame Geo"
+cheat85_code = "2212BF7C+00000001"
+cheat85_enable = false
+
+cheat86_desc = "[Action Replay] Cyclone Geo"
+cheat86_code = "2212BF7D+00000001"
+cheat86_enable = false
+
+cheat87_desc = "[Action Replay] Thunder Geo"
+cheat87_code = "2212BF7E+00000001"
+cheat87_enable = false
+
+cheat88_desc = "[Action Replay] Hammer Geo"
+cheat88_code = "2212BF7F+00000001"
+cheat88_enable = false
+
+cheat89_desc = "[Action Replay] Plasma Geo"
+cheat89_code = "2212BF80+00000001"
+cheat89_enable = false
+
+cheat90_desc = "[Action Replay] Ice Geo"
+cheat90_code = "2212BF81+00000001"
+cheat90_enable = false
+
+cheat91_desc = "[Action Replay] Wing Geo"
+cheat91_code = "2212BF82+00000001"
+cheat91_enable = false
+
+cheat92_desc = "[Action Replay] Recovery Tool"
+cheat92_code = "2212BF83+00000001"
+cheat92_enable = false
+
+cheat93_desc = "[Action Replay] Sonic Tool"
+cheat93_code = "2212BF84+00000001"
+cheat93_enable = false
+
+cheat94_desc = "[Action Replay] Blast Tool"
+cheat94_code = "2212BF85+00000001"
+cheat94_enable = false
+
+cheat95_desc = "[Action Replay] Solvent Liquid"
+cheat95_code = "2212BF86+00000001"
+cheat95_enable = false
+
+cheat96_desc = "[Action Replay] Giga Tool"
+cheat96_code = "2212BF87+00000001"
+cheat96_enable = false
+
+cheat97_desc = "[Action Replay] Basic Serum"
+cheat97_code = "2212BF88+00000001"
+cheat97_enable = false
+
+cheat98_desc = "[Action Replay] Deluxe Serum"
+cheat98_code = "2212BF89+00000001"
+cheat98_enable = false
+
+cheat99_desc = "[Action Replay] Super Serum"
+cheat99_code = "2212BF8A+00000001"
+cheat99_enable = false
+
+cheat100_desc = "[Action Replay] Total Serum"
+cheat100_code = "2212BF8B+00000001"
+cheat100_enable = false
+
+cheat101_desc = "[Action Replay] Basic Antidote"
+cheat101_code = "2212BF8C+00000001"
+cheat101_enable = false
+
+cheat102_desc = "[Action Replay] Deluxe Antidote"
+cheat102_code = "2212BF8D+00000001"
+cheat102_enable = false
+
+cheat103_desc = "[Action Replay] Super Antidote"
+cheat103_code = "2212BF8E+00000001"
+cheat103_enable = false
+
+cheat104_desc = "[Action Replay] Total Antidote"
+cheat104_code = "2212BF8F+00000001"
+cheat104_enable = false
+
+cheat105_desc = "[Action Replay] Rescue Antidote"
+cheat105_code = "2212BF90+00000001"
+cheat105_enable = false
+
+cheat106_desc = "[Action Replay] Rescue Serum"
+cheat106_code = "2212BF91+00000001"
+cheat106_enable = false

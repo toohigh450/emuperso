@@ -1,0 +1,218 @@
+# Recherche locale pour la ROM : Operation C [USA][!!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Operation%20C%20(USA)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Operation%20C%20(USA)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Operation%20C%20(USA).cht
+
+cheats = 52
+
+cheat0_desc = "[Game Genie] Infinite Lives"
+cheat0_code = "006-CBA"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Infinite Lives"
+cheat1_code = "010288C8"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Infinite Lives (Alternate Code)"
+cheat2_code = "010388C8"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Ice Skate Shooting"
+cheat3_code = "01020CC0"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Running In Place While Shooting (Switch Off To Continue)"
+cheat4_code = "013A16C0"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] No Enemies Except For Boats (Switch Off To Get Weaponry & At The End Of Each Stage To Continue)"
+cheat5_code = "010000C1"
+cheat5_enable = false
+
+cheat6_desc = "[GameShark] Makes Some Soldiers Hard To Kill"
+cheat6_code = "01FF07C5"
+cheat6_enable = false
+
+cheat7_desc = "[GameShark] This Code Keeps You From Going The Opposite Direction (Switch Off To Go Opposite Direction)"
+cheat7_code = "01B015C0"
+cheat7_enable = false
+
+cheat8_desc = "[GameShark] Stuck In The Middle & Can't Go Anywhere (Switch Off To Go Either Way)"
+cheat8_code = "014D16C0"
+cheat8_enable = false
+
+cheat9_desc = "[GameShark] Allow More Bullets On Screen"
+cheat9_code = "01FF81C8"
+cheat9_enable = false
+
+cheat10_desc = "[GameShark] Modify Firing Rate"
+cheat10_code = "01XX84C8"
+cheat10_enable = false
+
+cheat11_desc = "[GameShark] Shot Modifier"
+cheat11_code = "010000XX"
+cheat11_enable = false
+
+cheat12_desc = "[GameShark] Jungle Sounds (Boulder's Dropping)"
+cheat12_code = "010200C1"
+cheat12_enable = false
+
+cheat13_desc = "[GameShark] You Will Start Floating Up When You Start Game"
+cheat13_code = "019009C0"
+cheat13_enable = false
+
+cheat14_desc = "[GameShark] Gun Modifier"
+cheat14_code = "01??82C8"
+cheat14_enable = false
+
+cheat15_desc = "[GameShark] Invincible"
+cheat15_code = "010129C0"
+cheat15_enable = false
+
+cheat16_desc = "[GameShark] Sound Menu"
+cheat16_code = "0101C9DE"
+cheat16_enable = false
+
+cheat17_desc = "[GameShark] Have Rapid Fire"
+cheat17_code = "010023C0"
+cheat17_enable = false
+
+cheat18_desc = "[GameShark] Always Play Level"
+cheat18_code = "010?86C8"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Ice Skate Shooting"
+cheat19_code = "01020CC0"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] No Enemies Except For Boats (Switch Off To Get Weaponry"
+cheat20_code = "010000C1"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Makes Some Soldiers Hard To Kill"
+cheat21_code = "01FF07C5"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Gun Modifier"
+cheat22_code = "010182C8"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Invincible"
+cheat23_code = "010129C0"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Sound Menu"
+cheat24_code = "0101C9DE"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Have Rapid Fire"
+cheat25_code = "010023C0"
+cheat25_enable = false
+
+cheat26_desc = "[Format source non précisé] Always Play Level"
+cheat26_code = "010186C8"
+cheat26_enable = false
+
+cheat27_desc = "[Format source non précisé] Start with 2 lives"
+cheat27_code = "011-82F-E62"
+cheat27_enable = false
+
+cheat28_desc = "[Format source non précisé] Start with 6 lives"
+cheat28_code = "051-82F-E62"
+cheat28_enable = false
+
+cheat29_desc = "[Format source non précisé] Start with 10 lives"
+cheat29_code = "091-82F-E62"
+cheat29_enable = false
+
+cheat30_desc = "[Format source non précisé] Infinite lives"
+cheat30_code = "216-CDA-4C1"
+cheat30_enable = false
+
+cheat31_desc = "[Format source non précisé] Start on any level from 1 to 4"
+cheat31_code = "051-87F-E6A"
+cheat31_enable = false
+
+cheat32_desc = "[Format source non précisé] Start on level 5"
+cheat32_code = "051-8CF-E6E"
+cheat32_enable = false
+
+cheat33_desc = "[Format source non précisé] 1 Shot"
+cheat33_code = "010000CF"
+cheat33_enable = false
+
+cheat34_desc = "[Format source non précisé] 2 Shot's"
+cheat34_code = "010000D0"
+cheat34_enable = false
+
+cheat35_desc = "[Format source non précisé] 3 Shot's"
+cheat35_code = "010000D1"
+cheat35_enable = false
+
+cheat36_desc = "[Format source non précisé] 4 Shot's"
+cheat36_code = "010000D2"
+cheat36_enable = false
+
+cheat37_desc = "[Format source non précisé] Invincibility"
+cheat37_code = "AFA-BFA-C45+77A-C0A-D53"
+cheat37_enable = false
+
+cheat38_desc = "[Format source non précisé] Hit Anywhere"
+cheat38_code = "C3A-E4C-919+00A-CAC-91A+C6A-F5C-191"
+cheat38_enable = false
+
+cheat39_desc = "[Format source non précisé] Jump in Midair"
+cheat39_code = "E55-BFA-083+005-C0A-B3F+CD0-E5F-195+5A0-E6F-195+520-E7F-195+CD0-E8F-195+7A0-E9F-195+550-EAF-195+C90-EBF-195"
+cheat39_enable = false
+
+cheat40_desc = "[Format source non précisé] Infinite Lives"
+cheat40_code = "006-CBA"
+cheat40_enable = false
+
+cheat41_desc = "[Format source non précisé] Infinite Lives (Alternate Code)"
+cheat41_code = "010388C8"
+cheat41_enable = false
+
+cheat42_desc = "[Format source non précisé] Allow More Bullets On Screen"
+cheat42_code = "01FF81C8"
+cheat42_enable = false
+
+cheat43_desc = "[Format source non précisé] Modify Firing Rate"
+cheat43_code = "010084C8"
+cheat43_enable = false
+
+cheat44_desc = "[Format source non précisé] Invulnerability"
+cheat44_code = "00A-C7A-C49+18A-CDA-6EA"
+cheat44_enable = false
+
+cheat45_desc = "[Format source non précisé] Enable Stage Select (Press Start on Title Screen)"
+cheat45_code = "C30-41B-E61"
+cheat45_enable = false
+
+cheat46_desc = "[Format source non précisé] Enable Stage Select (Press Start on Title Screen)"
+cheat46_code = "0101DADE"
+cheat46_enable = false
+
+cheat47_desc = "[Format source non précisé] Infinite Lives"
+cheat47_code = "019988C8"
+cheat47_enable = false
+
+cheat48_desc = "[Format source non précisé] Infinite Lives"
+cheat48_code = "006-CBA-E6E"
+cheat48_enable = false
+
+cheat49_desc = "[Format source non précisé] Start With ?? Lives, Instead of 3"
+cheat49_code = "051-82F-E62"
+cheat49_enable = false
+
+cheat50_desc = "[Format source non précisé] Invincibility"
+cheat50_code = "BEB-34C-191+BEA-9DC-191+BEA-09E-191"
+cheat50_enable = false
+
+cheat51_desc = "[Format source non précisé] Start every life with the ?? Weapon"
+cheat51_code = "02F-9AB-E6E"
+cheat51_enable = false

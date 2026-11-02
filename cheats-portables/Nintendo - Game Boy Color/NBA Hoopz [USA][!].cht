@@ -1,0 +1,53 @@
+# Recherche locale pour la ROM : NBA Hoopz [USA][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/NBA%20Hoopz%20(USA)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/NBA%20Hoopz%20(USA).cht
+
+cheats = 11
+
+cheat0_desc = "[GameShark] Team 1 Score Modifier"
+cheat0_code = "01??2FCE"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Team 2 Score Modifier"
+cheat1_code = "01??30CE"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Infinite Energy"
+cheat2_code = "01FF83CD"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] P1 Score Modifier"
+cheat3_code = "91642FCE"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Team 1 Score Modifier"
+cheat4_code = "01002FCE"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Team 2 Score Modifier"
+cheat5_code = "010030CE"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Infinite Energy"
+cheat6_code = "01FF83CD"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Stop Code Timer"
+cheat7_code = "910916CD"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Start On Fourth Quarter"
+cheat8_code = "910394CE"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] P2 Score Modifier"
+cheat9_code = "910030CE"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] P1 Score Modifier"
+cheat10_code = "91642FCE"
+cheat10_enable = false

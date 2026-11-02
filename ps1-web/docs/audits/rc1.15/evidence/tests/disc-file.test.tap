@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: 900 Mio boundary is unchanged; oversize rejected before reading any bytes
+ok 1 - 900 Mio boundary is unchanged; oversize rejected before reading any bytes
+  ---
+  duration_ms: 7.678953
+  type: 'test'
+  ...
+# Subtest: numéro de série et signature détectés, clé = SHA-256
+ok 2 - numéro de série et signature détectés, clé = SHA-256
+  ---
+  duration_ms: 12.808252
+  type: 'test'
+  ...
+# Subtest: deux disques différents : deux empreintes
+ok 3 - deux disques différents : deux empreintes
+  ---
+  duration_ms: 5.064084
+  type: 'test'
+  ...
+# Subtest: refus : .cue, extension, taille, signature CHD/PBP
+ok 4 - refus : .cue, extension, taille, signature CHD/PBP
+  ---
+  duration_ms: 1.767149
+  type: 'test'
+  ...
+# Subtest: disque sans série ni marque PlayStation : remarques honnêtes, pas de refus
+ok 5 - disque sans série ni marque PlayStation : remarques honnêtes, pas de refus
+  ---
+  duration_ms: 0.412703
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 70.789215

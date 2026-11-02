@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Hottarake no Shima - Kanata to Nijiiro no Kagami (Japan) (Rev 1).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Hottarake%20no%20Shima%20-%20Kanata%20to%20Nijiiro%20no%20Kagami%20(Japan)%20(Rev%201).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Max/Infinite Money"
+cheat0_code = "021A80E4+05F5E0FF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] HP Never Decrease"
+cheat1_code = "621AECDC+00000000+B21AECDC+00000000+D9000000+000004F2+D7000000+000004F0+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] TP Never Decrease"
+cheat2_code = "621AECDC+00000000+B21AECDC+00000000+D9000000+000004F6+D7000000+000004F4+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Level Max"
+cheat3_code = "021A81B4+000D0000"
+cheat3_enable = false

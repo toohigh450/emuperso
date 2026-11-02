@@ -1,0 +1,148 @@
+# Recherche locale pour la ROM : Lufia - Curse of the Sinistrals (USA).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Lufia%20-%20Curse%20of%20the%20Sinistrals%20(USA).cht
+
+cheats = 35
+
+cheat0_desc = "[Action Replay] Anti-Piracy Bypass Code"
+cheat0_code = "520009F8+E12FFF1E+020009F8+EA0FF9C6+D2000000+00000000+023FF100+E59F0000+E23FF104+00000048+E12FFF1E+0030EB87+E59F0000+E12FFF1E+00323E6F+E92D4007+E59F001C+E59F101C+E5912000+E1500002+059F0014+05810000+0280000C+0581003C+E8BD8007+02175F28+02175704+023FF100+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] [SELECT]Max/Infinite Money"
+cheat1_code = "94000130+FFFB0000+02158F00+000F423F+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] 0:00:00"
+cheat2_code = "02154A64+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] 99:59:59"
+cheat3_code = "02151A64+00A4CB7F"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Level"
+cheat4_code = "2215579C+00000063"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Base and Full HP"
+cheat5_code = "121557B0+000003E7+121557B4+000003E7"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Base and Full IP"
+cheat6_code = "021557B8+00064000+021557BC+00064000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Str 999"
+cheat7_code = "121557C0+000003E7"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Int 999"
+cheat8_code = "121557C4+000003E7"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Gut 999"
+cheat9_code = "121557C8+000003E7"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Crt 999"
+cheat10_code = "121557CC+000003E7"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Atk 999"
+cheat11_code = "121557F4+000003E7"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Def 999"
+cheat12_code = "121557F8+000003E7"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Mag 999"
+cheat13_code = "121557FC+000003E7"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Mdf 999"
+cheat14_code = "12155800+000003E7"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] [L+R]Max Stats"
+cheat15_code = "94000130+FCFF0000+C0000000+00000002+121557C0+000003E7+DC000000+00000004+D2000000+00000000+94000130+FCFF0000+C0000000+00000002+121557F4+000003E7+DC000000+00000004+D2000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] [SELECT]All Elemental 800"
+cheat16_code = "94000130+FFFB0000+1215580E+00007FFF+02155810+7FFF7FFF+02155814+7FFF7FFF+02155818+7FFF7FFF+0215581C+7FFF7FFF+12155820+00007FFF+D2000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Maxim"
+cheat17_code = "DA000000+021557B4+D7000000+021557B0+D2000000+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Selan"
+cheat18_code = "DA000000+0215585C+D7000000+02155858+D2000000+00000000"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Guy"
+cheat19_code = "DA000000+02155904+D7000000+02155900+D2000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Atrea"
+cheat20_code = "DA000000+021559AC+D7000000+021559A8+D2000000+00000000"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Tia"
+cheat21_code = "DA000000+02155A54+D7000000+02155A50+D2000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Dekar"
+cheat22_code = "DA000000+02155AFC+D7000000+02155AF8+D2000000+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Maxim"
+cheat23_code = "D9000000+021557BC+D6000000+021557B8+D2000000+00000000"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Selan"
+cheat24_code = "D9000000+02155864+D6000000+02155860+D2000000+00000000"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Guy"
+cheat25_code = "D9000000+0215590C+D6000000+02155908+D2000000+00000000"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Atrea"
+cheat26_code = "D9000000+021559B4+D6000000+021559B0+D2000000+00000000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Tia"
+cheat27_code = "D9000000+02155A5C+D6000000+02155A58+D2000000+00000000"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Dekar"
+cheat28_code = "D9000000+02155B04+D6000000+02155B00+D2000000+00000000"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] HP 999/999"
+cheat29_code = "94000130+FFFB0000+C0000000+00000005+121557B0+000003E7+121557B4+000003E7+DC000000+000000A8+D2000000+00000000"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] IP 999/999"
+cheat30_code = "94000130+FFFB0000+C0000000+00000005+021557B8+270F0000+021557BC+270F0000+DC000000+000000A8+D2000000+00000000"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] STR,INT,GUT,CTR Max"
+cheat31_code = "94000130+FFFB0000+C0000000+00000005+121557C0+000003E7+121557C4+000003E7+121557C8+000003E7+121557CC+000003E7+DC000000+000000A8+D2000000+00000000"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] ATK, DEF, MAG, MGR Max"
+cheat32_code = "94000130+FFFB0000+C0000000+00000005+121557F4+000003E7+121557F8+000003E7+121557FC+000003E7+12155800+000003E7+DC000000+000000A8+D2000000+00000000"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] All Elemental 800"
+cheat33_code = "94000130+FFFB0000+C0000000+00000005+1215580E+00007FFF+02155810+7FFF7FFF+02155814+7FFF7FFF+02155818+7FFF7FFF+0215581C+7FFF7FFF+12155820+00007FFF+DC000000+000000A8+D2000000+00000000"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] [SELECT]Consumable Item Slots x99"
+cheat34_code = "94000130+FFFB0000+C0000000+00000012+2225FAD1+00000063+DC000000+00000002+D2000000+00000000"
+cheat34_enable = false

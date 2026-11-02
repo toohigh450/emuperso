@@ -1,0 +1,70 @@
+TAP version 13
+# Subtest: GameShark standard (types PCSX) accepté, y compris plusieurs instructions par ligne
+ok 1 - GameShark standard (types PCSX) accepté, y compris plusieurs instructions par ligne
+  ---
+  duration_ms: 2.403545
+  type: 'test'
+  ...
+# Subtest: valeur 32 bits (DuckStation étendu) rejetée avec la raison
+ok 2 - valeur 32 bits (DuckStation étendu) rejetée avec la raison
+  ---
+  duration_ms: 0.489955
+  type: 'test'
+  ...
+# Subtest: type d’instruction inconnu de PCSX rejeté, même au bon gabarit 8+4
+ok 3 - type d’instruction inconnu de PCSX rejeté, même au bon gabarit 8+4
+  ---
+  duration_ms: 0.309337
+  type: 'test'
+  ...
+# Subtest: slide (50) et copie (C2) : la ligne de données suivante n’est pas jugée comme instruction
+ok 4 - slide (50) et copie (C2) : la ligne de données suivante n’est pas jugée comme instruction
+  ---
+  duration_ms: 0.190793
+  type: 'test'
+  ...
+# Subtest: Xploder et lignes non conformes rejetés avec raison
+ok 5 - Xploder et lignes non conformes rejetés avec raison
+  ---
+  duration_ms: 0.814706
+  type: 'test'
+  ...
+# Subtest: catalogue réel : les 3 éditions de Gran Turismo 2 n’ont AUCUN code exécutable, chacun a sa raison
+ok 6 - catalogue réel : les 3 éditions de Gran Turismo 2 n’ont AUCUN code exécutable, chacun a sa raison
+  ---
+  duration_ms: 4.85429
+  type: 'test'
+  ...
+# Subtest: catalogue réel : aucun code accepté ne contient de valeur 32 bits ni de type inconnu de PCSX
+ok 7 - catalogue réel : aucun code accepté ne contient de valeur 32 bits ni de type inconnu de PCSX
+  ---
+  duration_ms: 131.002558
+  type: 'test'
+  ...
+# Subtest: interface GT2 Europe : une ligne par code, provenance/format/état/raison, case non activable
+ok 8 - interface GT2 Europe : une ligne par code, provenance/format/état/raison, case non activable
+  ---
+  duration_ms: 102.752238
+  type: 'test'
+  ...
+# Subtest: code manuel enregistré devenu non exécutable : conservé et affiché comme rejeté, jamais supprimé
+ok 9 - code manuel enregistré devenu non exécutable : conservé et affiché comme rejeté, jamais supprimé
+  ---
+  duration_ms: 63.952583
+  type: 'test'
+  ...
+# Subtest: instructions composées incomplètes ou slide ignoré : rejet intégral
+ok 10 - instructions composées incomplètes ou slide ignoré : rejet intégral
+  ---
+  duration_ms: 0.670274
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 413.243096

@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Mary-Kate and Ashley Sweet 16 - Licensed to Drive (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Mary-Kate%20and%20Ashley%20Sweet%2016%20-%20Licensed%20to%20Drive%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 5
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00006A17+000A+10001500+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Max Score"
+cheat1_code = "8300578A+FFFF"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Gas"
+cheat2_code = "83005776+FFFF"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Able To Get Infinite Tickets"
+cheat3_code = "8300578C+0000"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Max Car Health"
+cheat4_code = "83005774+FFFF"
+cheat4_enable = false

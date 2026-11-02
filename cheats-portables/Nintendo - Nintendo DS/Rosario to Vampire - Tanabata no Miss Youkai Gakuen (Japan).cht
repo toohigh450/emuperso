@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Rosario to Vampire - Tanabata no Miss Youkai Gakuen (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Rosario%20to%20Vampire%20-%20Tanabata%20no%20Miss%20Youkai%20Gakuen%20(Japan).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] All CG Opens"
+cheat0_code = "22096D58+000000FF+22096D59+000000FF+22096D5A+000000FF+22096D5B+000000FF+12096D5C+000001FF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Story Opens"
+cheat1_code = "22096D64+000000FF+22096D65+00000001+22096D52+000000FF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Freeze Action Timer"
+cheat2_code = "92023D22+00008800+12023D2A+000046C0+120228B6+000046C0+12022122+000046C0+D2000000+00000000"
+cheat2_enable = false

@@ -1,0 +1,45 @@
+# Recherche locale pour la ROM : Duke Nukem [Europe][En][Fr][De][Es][It][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Duke%20Nukem%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Duke%20Nukem%20(USA%2C%20Europe)%20(Xploder).cht
+
+cheats = 9
+
+cheat0_desc = "[GameShark] Infinite Health"
+cheat0_code = "91FF2ACB"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Infinite Lives"
+cheat1_code = "910FC1CE"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Infinite Ammo"
+cheat2_code = "910E38CB"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Infinite 2X Damage"
+cheat3_code = "9160C9CB"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Infinite Armor"
+cheat4_code = "9160C8CB"
+cheat4_enable = false
+
+cheat5_desc = "[Xploder] Unendlich Gesundheit"
+cheat5_code = "$0DA0B1E9"
+cheat5_enable = false
+
+cheat6_desc = "[Xploder] Unendlich Leben"
+cheat6_code = "$0D2A81E2"
+cheat6_enable = false
+
+cheat7_desc = "[Xploder] Unendlich Munition"
+cheat7_code = "$0D8542E9"
+cheat7_enable = false
+
+cheat8_desc = "[Xploder] HighScore"
+cheat8_code = "$0DBAF8E2+$0DBA3BE2+$0DBA47E2"
+cheat8_enable = false

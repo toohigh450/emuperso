@@ -1,0 +1,84 @@
+# Recherche locale pour la ROM : Star Fox Command (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Star%20Fox%20Command%20(Europe).cht
+
+cheats = 19
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "52030480+EE070F90+E20004FC+00000046+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2F54B45+03D9014B+0009000A+00000000+02030480+E92D401E+02030484+FAFF401C+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Health"
+cheat1_code = "52339F58+65766974+02339F98+000F0000+D0000000+00000000+5233A258+65766974+0233A298+000F0000+D0000000+00000000+5233A558+65766974+0233A598+000F0000+D0000000+00000000+5233A858+65766974+0233A898+000F0000+D0000000+00000000+5233AB58+65766974+0233AB98+000F0000+D0000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Infinite Boost"
+cheat2_code = "52339F58+65766974+02339F9C+00000000+D0000000+00000000+5233A258+65766974+0233A29C+00000000+D0000000+00000000+5233A558+65766974+0233A59C+00000000+D0000000+00000000+5233A858+65766974+0233A89C+00000000+D0000000+00000000+5233AB58+65766974+0233AB9C+00000000+D0000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Infinite Time"
+cheat3_code = "021D8DC0+00097000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Infinite Lives"
+cheat4_code = "221D973B+00000063"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Always First Turn"
+cheat5_code = "920B83F0+00000002+120B83F0+00000001+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] All Stages Unlocked (Press Select+L+R)"
+cheat6_code = "94000130+000000FB+221D97FD+00000001+121D97FE+00000101+D5000000+01010101+C0000000+00000013+D6000000+021D9800+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] All Pilots"
+cheat7_code = "121D97F8+0000FFFF+221D97FA+00000001"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Unlock Prologue"
+cheat8_code = "221D97E8+00000001"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Unlock Ending: Fox and Krystal"
+cheat9_code = "221D97EC+00000001"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Unlock Ending: Good-Bye, Fox"
+cheat10_code = "221D97EB+00000001"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Unlock Ending: The Anglar Emperor"
+cheat11_code = "221D97EA+00000001"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Unlock Ending: Star Wolf Returns!"
+cheat12_code = "221D97EF+00000001"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Unlock Ending: Lucy and Krystal"
+cheat13_code = "221D97EE+00000001"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Unlock Ending: Dash Makes a Choice"
+cheat14_code = "221D97ED+00000001"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Unlock Ending: Slippy's Resolve"
+cheat15_code = "221D97F0+00000001"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Unlock Ending: Pigma's Revenge"
+cheat16_code = "221D97F1+00000001"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Unlock Ending: Curse of Pigma"
+cheat17_code = "221D97F2+00000001"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Unlock Credits"
+cheat18_code = "221D97F3+00000001"
+cheat18_enable = false

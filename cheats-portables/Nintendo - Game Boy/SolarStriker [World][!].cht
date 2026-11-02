@@ -1,0 +1,235 @@
+# Recherche locale pour la ROM : SolarStriker [World][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/SolarStriker%20(World)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/SolarStriker%20(World)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/SolarStriker%20(World)%20(Xploder).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/SolarStriker%20(World).cht
+
+cheats = 56
+
+cheat0_desc = "[Game Genie] Infinite Lives"
+cheat0_code = "00C-D6F-3BE"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Start With 2 Lives"
+cheat1_code = "015-D0F-E62"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Start With 6 Lives"
+cheat2_code = "055-D0F-E62"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Start With 10 Lives"
+cheat3_code = "095-D0F-E62"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] Start On Stage 2"
+cheat4_code = "025-0AF-E6E"
+cheat4_enable = false
+
+cheat5_desc = "[Game Genie] Start On Stage 3"
+cheat5_code = "035-0AF-E6E"
+cheat5_enable = false
+
+cheat6_desc = "[Game Genie] Start On Stage 4"
+cheat6_code = "045-0AF-E6E"
+cheat6_enable = false
+
+cheat7_desc = "[Game Genie] Start On Stage 5"
+cheat7_code = "055-0AF-E6E"
+cheat7_enable = false
+
+cheat8_desc = "[Game Genie] Start On Stage 6"
+cheat8_code = "065-0AF-E6E"
+cheat8_enable = false
+
+cheat9_desc = "[Game Genie] When You Pick Up A Power-Up, Go Straight To Max Power"
+cheat9_code = "3EF-65E-191+04F-66E-F7E"
+cheat9_enable = false
+
+cheat10_desc = "[Game Genie] Bullets Are Mega-Powerful"
+cheat10_code = "3EF-65E-191+0BF-66E-F7E"
+cheat10_enable = false
+
+cheat11_desc = "[Game Genie] No Loss Of Power-Ups On Dying"
+cheat11_code = "006-45E-C41"
+cheat11_enable = false
+
+cheat12_desc = "[Game Genie] Stay On Same Level"
+cheat12_code = "00D-EEF-3BA"
+cheat12_enable = false
+
+cheat13_desc = "[Game Genie] 255 Lives"
+cheat13_code = "FF5-D0F-E62"
+cheat13_enable = false
+
+cheat14_desc = "[GameShark] Infinite Lives"
+cheat14_code = "010295CF"
+cheat14_enable = false
+
+cheat15_desc = "[GameShark] Upgraded Gun"
+cheat15_code = "010121CA"
+cheat15_enable = false
+
+cheat16_desc = "[GameShark] Invincible"
+cheat16_code = "010568CA"
+cheat16_enable = false
+
+cheat17_desc = "[GameShark] Max Weapon Power"
+cheat17_code = "010521CA"
+cheat17_enable = false
+
+cheat18_desc = "[GameShark] Very High Score"
+cheat18_code = "010988CF+010989CF+01098ACF+01098BCF+01098CCF"
+cheat18_enable = false
+
+cheat19_desc = "[GameShark] Text Stays Onscreen, Slow Auto-Fire"
+cheat19_code = "010151CA"
+cheat19_enable = false
+
+cheat20_desc = "[Xploder] Unendlich Leben"
+cheat20_code = "$0D2485B5"
+cheat20_enable = false
+
+cheat21_desc = "[Xploder] Verbessertes Gewehr"
+cheat21_code = "$0D236155"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Infinite lives"
+cheat22_code = "00C-D6F-3BE"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Start with 2 lives"
+cheat23_code = "015-D0F-E62"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Start with 6 lives"
+cheat24_code = "055-D0F-E62"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Start with 10 lives"
+cheat25_code = "095-D0F-E62"
+cheat25_enable = false
+
+cheat26_desc = "[Format source non précisé] When you pick up a power-up, go straight to max power"
+cheat26_code = "3EF-65E-191+04F-66E-F7E"
+cheat26_enable = false
+
+cheat27_desc = "[Format source non précisé] Bullets are mega-powerful, almost invisible, when you pick up a power-up"
+cheat27_code = "3EF-65E-191+0BF-66E-F7E"
+cheat27_enable = false
+
+cheat28_desc = "[Format source non précisé] No loss of power-ups on dying"
+cheat28_code = "006-45E-C41"
+cheat28_enable = false
+
+cheat29_desc = "[Format source non précisé] Stay on same level"
+cheat29_code = "00D-EEF-3BA"
+cheat29_enable = false
+
+cheat30_desc = "[Format source non précisé] Start on stage 2"
+cheat30_code = "025-0AF-E6E"
+cheat30_enable = false
+
+cheat31_desc = "[Format source non précisé] Start on stage 3"
+cheat31_code = "035-0AF-E6E"
+cheat31_enable = false
+
+cheat32_desc = "[Format source non précisé] Start on stage 4"
+cheat32_code = "045-0AF-E6E"
+cheat32_enable = false
+
+cheat33_desc = "[Format source non précisé] Start on stage 5"
+cheat33_code = "055-0AF-E6E"
+cheat33_enable = false
+
+cheat34_desc = "[Format source non précisé] Start on stage 6"
+cheat34_code = "065-0AF-E6E"
+cheat34_enable = false
+
+cheat35_desc = "[Format source non précisé] Infinite Lives"
+cheat35_code = "010295CF"
+cheat35_enable = false
+
+cheat36_desc = "[Format source non précisé] Upgraded Gun"
+cheat36_code = "010121CA"
+cheat36_enable = false
+
+cheat37_desc = "[Format source non précisé] No sound or music during gameplay (alternate)"
+cheat37_code = "513-08A"
+cheat37_enable = false
+
+cheat38_desc = "[Format source non précisé] No sound or music during gameplay"
+cheat38_code = "04C-ABB"
+cheat38_enable = false
+
+cheat39_desc = "[Format source non précisé] Strange Music / Some Sound Missing"
+cheat39_code = "BCD-ABB"
+cheat39_enable = false
+
+cheat40_desc = "[Format source non précisé] Messed up background"
+cheat40_code = "AB4-3AE"
+cheat40_enable = false
+
+cheat41_desc = "[Format source non précisé] 255 Lives"
+cheat41_code = "FF5-D0F-E62"
+cheat41_enable = false
+
+cheat42_desc = "[Format source non précisé] Invincible"
+cheat42_code = "010568CA"
+cheat42_enable = false
+
+cheat43_desc = "[Format source non précisé] Max Weapon Power"
+cheat43_code = "010521CA"
+cheat43_enable = false
+
+cheat44_desc = "[Format source non précisé] Text Stays Onscreen, Slow Auto-Fire"
+cheat44_code = "010151CA"
+cheat44_enable = false
+
+cheat45_desc = "[Format source non précisé] Invulnerability"
+cheat45_code = "009-E7F-E6E"
+cheat45_enable = false
+
+cheat46_desc = "[Format source non précisé] Title Screen Music Modifier"
+cheat46_code = "011B80AF"
+cheat46_enable = false
+
+cheat47_desc = "[Format source non précisé] Hit Anywhere"
+cheat47_code = "3E8-B1E-4CA"
+cheat47_enable = false
+
+cheat48_desc = "[Format source non précisé] Start On Second Quest"
+cheat48_code = "FC1-6BF-2A5"
+cheat48_enable = false
+
+cheat49_desc = "[Format source non précisé] Start On Second Quest Stage 2"
+cheat49_code = "025-39F-E6E"
+cheat49_enable = false
+
+cheat50_desc = "[Format source non précisé] Start On Second Quest Stage 3"
+cheat50_code = "035-39F-E6E"
+cheat50_enable = false
+
+cheat51_desc = "[Format source non précisé] Start On Second Quest Stage 4"
+cheat51_code = "045-39F-E6E"
+cheat51_enable = false
+
+cheat52_desc = "[Format source non précisé] Start On Second Quest Stage 5"
+cheat52_code = "055-39F-E6E"
+cheat52_enable = false
+
+cheat53_desc = "[Format source non précisé] Start On Second Quest Stage 6"
+cheat53_code = "065-39F-E6E"
+cheat53_enable = false
+
+cheat54_desc = "[Format source non précisé] Set Initial High Score To 00000000"
+cheat54_code = "001-69F-E62"
+cheat54_enable = false
+
+cheat55_desc = "[Format source non précisé] Set Initial High Score To 00900000"
+cheat55_code = "091-69F-E62"
+cheat55_enable = false

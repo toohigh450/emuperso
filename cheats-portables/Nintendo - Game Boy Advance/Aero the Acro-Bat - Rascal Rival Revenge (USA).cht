@@ -1,0 +1,48 @@
+# Recherche locale pour la ROM : Aero the Acro-Bat - Rascal Rival Revenge (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Aero%20the%20Acro-Bat%20-%20Rascal%20Rival%20Revenge%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 10
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "000009B4+000A+1002C588+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Invincible"
+cheat1_code = "83002BE0+0255"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Health"
+cheat2_code = "830026EC+0005"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Infinite Lives"
+cheat3_code = "330024D2+000A"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Infinite Ammo"
+cheat4_code = "830034AC+0063"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Press 'A' For Moon Jump"
+cheat5_code = "D0000020+0001+8300247E+FCA0"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Press 'R' For Slow Fall"
+cheat6_code = "D0000020+0100+8300247E+0000"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Infinite Air Drive"
+cheat7_code = "830024BC+4200"
+cheat7_enable = false
+
+cheat8_desc = "[Code Breaker] Stop The Timer"
+cheat8_code = "8300348C+0009"
+cheat8_enable = false
+
+cheat9_desc = "[Code Breaker] Press 'L+Select' To Skip The Current Level"
+cheat9_code = "74000130+01FB+830026DC+0003"
+cheat9_enable = false

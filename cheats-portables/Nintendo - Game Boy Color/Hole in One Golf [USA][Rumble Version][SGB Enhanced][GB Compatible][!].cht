@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Hole in One Golf [USA][Rumble Version][SGB Enhanced][GB Compatible][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Hole%20in%20One%20Golf%20(USA)%20(Rumble%20Version)%20(SGB%20Enhanced)%20(GB%20Compatible).cht
+
+cheats = 2
+
+cheat0_desc = "[Format source non précisé] Enable Unused Medarot Kabuto Version Super Game Boy Functions"
+cheat0_code = "1A1-CBF-91E"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Enable And Set Unused Medarot Kabuto Version PAL_SET"
+cheat1_code = "11B-E6A+100-7FB-4C7+410-80B-E63"
+cheat1_enable = false

@@ -1,0 +1,270 @@
+# Recherche locale pour la ROM : Kirby's Dream Land 2 [USA][Europe][SGB Enhanced][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Kirby's%20Dream%20Land%202%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Kirby's%20Dream%20Land%202%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Kirby's%20Dream%20Land%202%20(USA%2C%20Europe)%20(SGB%20Enhanced).cht
+
+cheats = 65
+
+cheat0_desc = "[Game Genie] One Hit & You're Invincible"
+cheat0_code = "003-838-19E"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Don't Flash At All After Getting Hit"
+cheat1_code = "012-BFA-6EB"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Don't Flash As Long After Getting Hit"
+cheat2_code = "202-BFA-6EB"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Infinite Energy"
+cheat3_code = "FA7-CBD-4C1"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] One Hit & You Die"
+cheat4_code = "AFA-9EC-A28"
+cheat4_enable = false
+
+cheat5_desc = "[Game Genie] Start With 1 Life"
+cheat5_code = "00D-589-E62"
+cheat5_enable = false
+
+cheat6_desc = "[Game Genie] Start With 5 Lives"
+cheat6_code = "04D-589-E62"
+cheat6_enable = false
+
+cheat7_desc = "[Game Genie] Start With 7 Lives"
+cheat7_code = "06D-589-E62"
+cheat7_enable = false
+
+cheat8_desc = "[Game Genie] Start With 10 Lives"
+cheat8_code = "09D-589-E62"
+cheat8_enable = false
+
+cheat9_desc = "[Game Genie] Infinite Lives"
+cheat9_code = "FA1-C4B-4C1"
+cheat9_enable = false
+
+cheat10_desc = "[Game Genie] Each Star Worth An Extra Life"
+cheat10_code = "01C-DE8-F76"
+cheat10_enable = false
+
+cheat11_desc = "[Game Genie] Can't Get Extra Lives From Stars"
+cheat11_code = "00C-DC8-19A"
+cheat11_enable = false
+
+cheat12_desc = "[Game Genie] Each Star Takes Away A Life"
+cheat12_code = "01C-DE8-F76+3DC-878-19A"
+cheat12_enable = false
+
+cheat13_desc = "[Game Genie] Cannot See Anything To The Left of Kirby"
+cheat13_code = "090-208"
+cheat13_enable = false
+
+cheat14_desc = "[Game Genie] Cannot See Anything To The Left of Kirby (Different)"
+cheat14_code = "060-208"
+cheat14_enable = false
+
+cheat15_desc = "[Game Genie] Cannot See Anything To The Left of Kirby (Different To Above)"
+cheat15_code = "0D0-208"
+cheat15_enable = false
+
+cheat16_desc = "[Game Genie] Kirby Turns Gray And Is Invincible To Most Things"
+cheat16_code = "003+7E8+B3A"
+cheat16_enable = false
+
+cheat17_desc = "[Game Genie] Most Regular Enemy's And Block's Turn You Into Fire Kirby When Eaten"
+cheat17_code = "7F2+D38+19E"
+cheat17_enable = false
+
+cheat18_desc = "[GameShark] Infinite Energy (Kirby)"
+cheat18_code = "800C4CA0"
+cheat18_enable = false
+
+cheat19_desc = "[GameShark] Infinite Energy (Rick, Kine And Coo)"
+cheat19_code = "800672A0"
+cheat19_enable = false
+
+cheat20_desc = "[GameShark] Infinite Lives"
+cheat20_code = "800284A0"
+cheat20_enable = false
+
+cheat21_desc = "[GameShark] 1-Hit Most Sub-Bosses"
+cheat21_code = "80014CA8"
+cheat21_enable = false
+
+cheat22_desc = "[GameShark] All Bosses Invincible"
+cheat22_code = "803C4CA8"
+cheat22_enable = false
+
+cheat23_desc = "[GameShark] Get Back Friend"
+cheat23_code = "80??51A0+800Y71A0"
+cheat23_enable = false
+
+cheat24_desc = "[GameShark] Max Stars (1 Star = Extra Life)"
+cheat24_code = "0106E1DE"
+cheat24_enable = false
+
+cheat25_desc = "[GameShark] World Modifier"
+cheat25_code = "01??60DB"
+cheat25_enable = false
+
+cheat26_desc = "[Format source non précisé] Kirby Turns Gray And Is Invincible To Most Things"
+cheat26_code = "003-7E8-B3A"
+cheat26_enable = false
+
+cheat27_desc = "[Format source non précisé] One hit and you're invincible"
+cheat27_code = "003-838-19E"
+cheat27_enable = false
+
+cheat28_desc = "[Format source non précisé] Don't flash at all after getting hit"
+cheat28_code = "012-BFA-6EB"
+cheat28_enable = false
+
+cheat29_desc = "[Format source non précisé] Don't flash as long after getting hit"
+cheat29_code = "202-BFA-6EB"
+cheat29_enable = false
+
+cheat30_desc = "[Format source non précisé] Infinite energy"
+cheat30_code = "FA7-CBD-4C1"
+cheat30_enable = false
+
+cheat31_desc = "[Format source non précisé] One hit and you die"
+cheat31_code = "AFA-9EC-A28"
+cheat31_enable = false
+
+cheat32_desc = "[Format source non précisé] Start with 1 life"
+cheat32_code = "00D-589-E62"
+cheat32_enable = false
+
+cheat33_desc = "[Format source non précisé] Start with 5 lives"
+cheat33_code = "04D-589-E62"
+cheat33_enable = false
+
+cheat34_desc = "[Format source non précisé] Start with 7 lives"
+cheat34_code = "06D-589-E62"
+cheat34_enable = false
+
+cheat35_desc = "[Format source non précisé] Start with 10 lives"
+cheat35_code = "09D-589-E62"
+cheat35_enable = false
+
+cheat36_desc = "[Format source non précisé] Infinite lives"
+cheat36_code = "FA1-C4B-4C1"
+cheat36_enable = false
+
+cheat37_desc = "[Format source non précisé] Each Star Worth An Extra Life"
+cheat37_code = "01C-DE8-F76"
+cheat37_enable = false
+
+cheat38_desc = "[Format source non précisé] Can't get extra lives from stars"
+cheat38_code = "00C-DC8-19A"
+cheat38_enable = false
+
+cheat39_desc = "[Format source non précisé] Each star takes away a life"
+cheat39_code = "01C-DE8-F76+3DC-878-19A"
+cheat39_enable = false
+
+cheat40_desc = "[Format source non précisé] Max Stars [1 Star=Extra Life]"
+cheat40_code = "0106E1DE"
+cheat40_enable = false
+
+cheat41_desc = "[Format source non précisé] World Modifier"
+cheat41_code = "010060DB"
+cheat41_enable = false
+
+cheat42_desc = "[Format source non précisé] Always Get Girl Chu"
+cheat42_code = "004-1BB-F76"
+cheat42_enable = false
+
+cheat43_desc = "[Format source non précisé] Infinite Lives"
+cheat43_code = "001-C3B-7F6"
+cheat43_enable = false
+
+cheat44_desc = "[Format source non précisé] Infinite Energy"
+cheat44_code = "FA7-D4D-D5D"
+cheat44_enable = false
+
+cheat45_desc = "[Format source non précisé] Invincibility"
+cheat45_code = "FA5-81D-D5D"
+cheat45_enable = false
+
+cheat46_desc = "[Format source non précisé] Hit Anywhere"
+cheat46_code = "187-04D-2AA+006-E5D-6EA"
+cheat46_enable = false
+
+cheat47_desc = "[Format source non précisé] Inhale From Anywhere"
+cheat47_code = "005-DFD-91A+005-BED-19E"
+cheat47_enable = false
+
+cheat48_desc = "[Format source non précisé] Get Items From Anywhere"
+cheat48_code = "18B-898-08A"
+cheat48_enable = false
+
+cheat49_desc = "[Format source non précisé] Always Fly"
+cheat49_code = "206-23C-4CA"
+cheat49_enable = false
+
+cheat50_desc = "[Format source non précisé] Select File To Access Sound Test"
+cheat50_code = "000-9DB-E66"
+cheat50_enable = false
+
+cheat51_desc = "[Format source non précisé] Select File to Access Bonus Boss Game"
+cheat51_code = "000-9DB-E66+000-A1B-F7A"
+cheat51_enable = false
+
+cheat52_desc = "[Format source non précisé] Select File To Access Bonus Boss Game (Short version)"
+cheat52_code = "080-9FB-C46"
+cheat52_enable = false
+
+cheat53_desc = "[Format source non précisé] Companion select"
+cheat53_code = "010171A0"
+cheat53_enable = false
+
+cheat54_desc = "[Format source non précisé] Super Game Boy SOUND Continues To Play Through All Levels And Areas"
+cheat54_code = "00A-DF8-E6F"
+cheat54_enable = false
+
+cheat55_desc = "[Format source non précisé] Disable PAL_PRI Palette Swapping To The software Changes"
+cheat55_code = "000-989-E6E"
+cheat55_enable = false
+
+cheat56_desc = "[Format source non précisé] Break Blocks With Breath"
+cheat56_code = "00B-CCC-7FE"
+cheat56_enable = false
+
+cheat57_desc = "[Format source non précisé] Disable Autoscroll"
+cheat57_code = "FAE-589-E61"
+cheat57_enable = false
+
+cheat58_desc = "[Format source non précisé] Don't Get Moved By Water Currents"
+cheat58_code = "C92-458-191"
+cheat58_enable = false
+
+cheat59_desc = "[Format source non précisé] Invincibility Alternate"
+cheat59_code = "C97-A8D-D5D"
+cheat59_enable = false
+
+cheat60_desc = "[Format source non précisé] Light All Dark Rooms"
+cheat60_code = "01E400CD+01D001CD+01E402CD"
+cheat60_enable = false
+
+cheat61_desc = "[Format source non précisé] Lighting Conditions Remain Throughout The Game "
+cheat61_code = "186-A6F-6EA"
+cheat61_enable = false
+
+cheat62_desc = "[Format source non précisé] Enter Doors Quickly"
+cheat62_code = "012-6CE-F7A"
+cheat62_enable = false
+
+cheat63_desc = "[Format source non précisé] Game Is Faster"
+cheat63_code = "013-51F-E6A"
+cheat63_enable = false
+
+cheat64_desc = "[Format source non précisé] Pause Attacks And Animations"
+cheat64_code = "FA8-76F-4C1"
+cheat64_enable = false

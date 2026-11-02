@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Need for Speed - Underground 2 (USA, Europe) (En,Fr,De,It).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Need%20for%20Speed%20-%20Underground%202%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 4
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00004458+000A+10142D3E+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Max Points"
+cheat1_code = "82000904+00FF"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] 9999 x5 For Drifting"
+cheat2_code = "83006378+270F"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Unlock All Cars/Upgrades"
+cheat3_code = "82000A7C+FFFF+82000A7E+FFFF+82000F66+FFFF"
+cheat3_enable = false

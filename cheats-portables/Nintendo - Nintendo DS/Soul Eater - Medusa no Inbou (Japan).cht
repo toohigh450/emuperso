@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Soul Eater - Medusa no Inbou (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Soul%20Eater%20-%20Medusa%20no%20Inbou%20(Japan).cht
+
+cheats = 6
+
+cheat0_desc = "[Action Replay] Infinite HP"
+cheat0_code = "622700D4+00000000+B22700D4+00000000+D9000000+0000008C+D6000000+00000088+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite WP"
+cheat1_code = "622700D4+00000000+B22700D4+00000000+D9000000+00000A20+D6000000+00000A1C+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Shinigami Sticker 99"
+cheat2_code = "2213EE2C+00000063"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Soul Badge 99"
+cheat3_code = "2213EE24+00000063"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Level After Level Up"
+cheat4_code = "0208B9BC+E1A00000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Time Never Decrease for Classes"
+cheat5_code = "020C12F0+E1A00000"
+cheat5_enable = false

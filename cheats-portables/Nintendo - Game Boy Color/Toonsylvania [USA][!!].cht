@@ -1,0 +1,58 @@
+# Recherche locale pour la ROM : Toonsylvania [USA][!!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Toonsylvania%20(USA).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Toonsylvania%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Toonsylvania%20(USA%2C%20Europe)%20(Xploder).cht
+
+cheats = 12
+
+cheat0_desc = "[Format source non précisé] Infinite Lives"
+cheat0_code = "0109E7CA"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Life Points"
+cheat1_code = "0103E6CA"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Infinite Ammo"
+cheat2_code = "0109FACA"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Infinite Quest Objects"
+cheat3_code = "0109EECA"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Infinite Lives"
+cheat4_code = "0109E7CA"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Infinite Life Points"
+cheat5_code = "0103E6CA"
+cheat5_enable = false
+
+cheat6_desc = "[GameShark] Infinite Ammo"
+cheat6_code = "0109FACA"
+cheat6_enable = false
+
+cheat7_desc = "[GameShark] Infinite Quest Objects"
+cheat7_code = "0109EECA"
+cheat7_enable = false
+
+cheat8_desc = "[Xploder] Unendlich Gesundheit"
+cheat8_code = "$0D29E655"
+cheat8_enable = false
+
+cheat9_desc = "[Xploder] Unendlich Leben"
+cheat9_code = "$0D2BA655"
+cheat9_enable = false
+
+cheat10_desc = "[Xploder] Unendlich Totenkopf-Munition"
+cheat10_code = "$0D845655"
+cheat10_enable = false
+
+cheat11_desc = "[Xploder] Habe 8 Gegenstaende"
+cheat11_code = "$0D29AB55"
+cheat11_enable = false

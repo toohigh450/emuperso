@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Brain Bender [USA][!!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Brain%20Bender%20(USA).cht
+
+cheats = 4
+
+cheat0_desc = "[Format source non précisé] Infinite time (timer still counts down)"
+cheat0_code = "00B-EEE-19E"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Don't need passwords for levels you can select"
+cheat1_code = "AF6-16F-3B4"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Infinite continues"
+cheat2_code = "003-BDF-801"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Infinite Time"
+cheat3_code = "011949DF"
+cheat3_enable = false

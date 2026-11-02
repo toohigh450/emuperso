@@ -1,0 +1,70 @@
+# Recherche locale pour la ROM : Balloon Kid [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Balloon%20Kid%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Balloon%20Kid%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Balloon%20Kid%20(USA%2C%20Europe).cht
+
+cheats = 15
+
+cheat0_desc = "[Game Genie] Infinite Lives"
+cheat0_code = "00E-18D"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Infinite Lives"
+cheat1_code = "010921DE"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Infinite lives"
+cheat2_code = "00E-17D-E6E+A7A-7CF-19E"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Start with 2 lives"
+cheat3_code = "013-86F-F7A"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Balloons worth 2 after 1st pick-up"
+cheat4_code = "01F-41F-B3A+00F-5BF-B3A"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Start on Stage 2"
+cheat5_code = "013-C49-E6A"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Start on Stage 4"
+cheat6_code = "033-C49-E6A"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Start on Stage 6"
+cheat7_code = "053-C49-E6A"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Start on Stage 8"
+cheat8_code = "073-C49-E6A"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Infinite Lives"
+cheat9_code = "010921DE"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Invincibility"
+cheat10_code = "010117D1"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Never Lose Balloons"
+cheat11_code = "010211D1"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Invincibility P-Balloon"
+cheat12_code = "010501D1"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Invincible Against Fire"
+cheat13_code = "006-04A-C4E"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Infinite Lives"
+cheat14_code = "00E-18D"
+cheat14_enable = false

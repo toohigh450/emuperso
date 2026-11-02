@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : GT Advance 2 - Rally Racing (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/GT%20Advance%202%20-%20Rally%20Racing%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 7
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00009D16+000A+10000980+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Always Rank 1st"
+cheat1_code = "33000843+0001"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Press Select For Quick Finish"
+cheat2_code = "D0000020+0004+83006C50+47D0+D0000020+0004+83006C52+0300"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Press R For Turbo Boost"
+cheat3_code = "D0000020+0100+83004978+2800"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Have All Licenses"
+cheat4_code = "83000D44+FFFF+83000D46+003F"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Unlock All Tracks"
+cheat5_code = "83000D3E+FFFF+83000D40+FFFF+83000D42+00FF"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Unlock All Cars"
+cheat6_code = "83000D38+6F17+83000D3A+003B"
+cheat6_enable = false

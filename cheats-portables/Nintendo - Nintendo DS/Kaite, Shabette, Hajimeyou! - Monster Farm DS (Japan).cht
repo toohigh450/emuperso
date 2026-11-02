@@ -1,0 +1,128 @@
+# Recherche locale pour la ROM : Kaite, Shabette, Hajimeyou! - Monster Farm DS (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Kaite%2C%20Shabette%2C%20Hajimeyou!%20-%20Monster%20Farm%20DS%20(Japan).cht
+
+cheats = 30
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "5205BA44+EE070F90+E2000780+00000048+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2DD6519+01200035+000A0371+00000009+0205BA44+E92D401E+0205BA48+FAFE934C+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Money"
+cheat1_code = "02115D30+05F5E0FF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Complete Monster Book"
+cheat2_code = "D5000000+000000FF+C0000000+00000016+D8000000+020F93F8+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] 100% Monster Loyalty"
+cheat3_code = "220F94B3+00000064"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Sensitivity Max"
+cheat4_code = "220F94B8+00000064"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Give 99 turns in Training Tourney (Press R+UP)"
+cheat5_code = "94000130+FEBF0000+22256654+00000064+D0000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Reduce to 0 turns in Training Tourney (Press R+Down)"
+cheat6_code = "94000130+FE7F0000+22256654+00000001+D0000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Inf Movement (Hold L)"
+cheat7_code = "94000130+FDFF0000+22256653+00000002+D0000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Refill Guts (Press L+Up)"
+cheat8_code = "94000130+FDBF0000+2226CBCA+00000063+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Max HP"
+cheat9_code = "1226D870+000003E7"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Max Stats"
+cheat10_code = "02115DC0+03E703E7+02115DC4+03E703E7+02115DC8+03E703E7"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Max Reputation"
+cheat11_code = "22115DB0+00000064"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Max Wins/KOs"
+cheat12_code = "02115E98+FFFFFFFF"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Max Earnings"
+cheat13_code = "02115ED8+05F5E0FF"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Rank E"
+cheat14_code = "22115DAE+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Rank D"
+cheat15_code = "22115DAE+00000001"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Rank C"
+cheat16_code = "22115DAE+00000002"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Rank B"
+cheat17_code = "22115DAE+00000003"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Rank A"
+cheat18_code = "22115DAE+00000004"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Rank S"
+cheat19_code = "22115DAE+00000005"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Rank SS"
+cheat20_code = "22115DAE+00000006"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Rank SSS"
+cheat21_code = "22115DAE+00000007"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Rank E"
+cheat22_code = "22115C14+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Rank D"
+cheat23_code = "22115C14+00000001"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Rank C"
+cheat24_code = "22115C14+00000002"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Rank B"
+cheat25_code = "22115C14+00000003"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Rank A"
+cheat26_code = "22115C14+00000004"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Rank S"
+cheat27_code = "22115C14+00000005"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Rank SS"
+cheat28_code = "22115C14+00000006"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Rank SSS"
+cheat29_code = "22115C14+00000007"
+cheat29_enable = false

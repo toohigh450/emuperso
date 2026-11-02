@@ -1,0 +1,71 @@
+﻿{
+    "schema":  "emuperso/windows-launcher-tests/v1",
+    "started_utc":  "2026-10-31T22:51:57.1376341Z",
+    "finished_utc":  "2026-10-31T22:52:08.0768874Z",
+    "platform":  "Microsoft Windows NT 10.0.20348.0",
+    "powershell":  "5.1.20348.5756",
+    "expected_groups":  11,
+    "tests":  [
+                  {
+                      "name":  "Preparation automatique sans commande py/python du PATH",
+                      "result":  "REUSSI",
+                      "proof":  "Code 0; runtime portable execute; dossier initialement vierge=True."
+                  },
+                  {
+                      "name":  "Relance hors ligne",
+                      "result":  "REUSSI",
+                      "proof":  "PrepareOnly -Offline termine avec code 0 apres la preparation."
+                  },
+                  {
+                      "name":  "Integrite du Python portable",
+                      "result":  "REUSSI",
+                      "proof":  "Bibliotheque alteree refusee (code 1), aucun remplacement automatique; octets originaux restaures par le test."
+                  },
+                  {
+                      "name":  "Integrite de l archive avant extraction",
+                      "result":  "REUSSI",
+                      "proof":  "Archive de cache alteree refusee (code 1); aucun python.exe installe; archive et runtime originaux restaures."
+                  },
+                  {
+                      "name":  "Erreur de configuration visible",
+                      "result":  "REUSSI",
+                      "proof":  "Port 0 refuse (code 1); message conserve dans invalid-port.*.txt."
+                  },
+                  {
+                      "name":  "Port occupe",
+                      "result":  "REUSSI",
+                      "proof":  "Code 1; le listener etranger du test reste lie; aucun navigateur ouvert."
+                  },
+                  {
+                      "name":  "Serveur reel prepare et demarre hors ligne",
+                      "result":  "REUSSI",
+                      "proof":  "HTTP 200, identite et instance health, bouton Choisir une ROM, COOP/COEP et MIME .mjs verifies."
+                  },
+                  {
+                      "name":  "Double lancement sur un meme port",
+                      "result":  "REUSSI",
+                      "proof":  "Second lanceur refuse (code 1); premiere instance toujours vivante et identique."
+                  },
+                  {
+                      "name":  "Separation et absence de reception de ROM",
+                      "result":  "REUSSI",
+                      "proof":  "GET/HEAD cache, .python, .git refuses 403; POST refuse 501. Aucun fichier ROM prive utilise."
+                  },
+                  {
+                      "name":  "Fermeture du processus de test",
+                      "result":  "REUSSI",
+                      "proof":  "Connexion TCP au port 18871 refusee apres arret du seul arbre de processus lance par le test."
+                  },
+                  {
+                      "name":  "Contrat du double clic (inspection du batch)",
+                      "result":  "REUSSI",
+                      "proof":  "Delegation PowerShell, pause sur erreur et absence de commande py obligatoire. Interaction visuelle manuelle NON TESTEE."
+                  }
+              ],
+    "non_testes":  [
+                       "Chrome sur le PC de Karl",
+                       "Double clic visuel dans Explorer",
+                       "Jeux commerciaux",
+                       "Manette physique et haut-parleurs"
+                   ]
+}

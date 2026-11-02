@@ -1,0 +1,105 @@
+# Recherche locale pour la ROM : Fishdom (Europe) (Fr,De).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Fishdom%20(Europe)%20(Fr%2CDe).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Fishdom%20(Europe)%20(Fr%2CNl).cht
+
+cheats = 24
+
+cheat0_desc = "[Action Replay] Max Score"
+cheat0_code = "94000130+FFFB0000+622B65C4+00000000+B22B65C4+00000000+00000154+0001869F+000001F8+0001869F+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Money"
+cheat1_code = "94000130+FFFB0000+622B65C4+00000000+B22B65C4+00000000+000001F0+0001869F+000001F4+0001869F+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Stop/Resume Timer"
+cheat2_code = "94000130+FFFB0000+620B923C+00000000+02018420+D2422000+02006224+E2922000+D2000000+00000000+94000130+FFF70000+02006224+E2922001+02018420+D2422010+D0000000+00000000+94000130+FFBF0000+02006224+E2922001+02018420+D2422010+D0000000+00000000+520B923C+00000000+02006224+E2922001+02018420+D2422010+D0000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Infinite Timer and Helper"
+cheat3_code = "94000130+FDFF0000+020160DC+D2422000+0207B070+E2922000+D2000000+00000000+94000130+FEFF0000+020160DC+D2422010+0207B070+E2922001+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max/Infinite Money"
+cheat4_code = "94000130+FFFB0000+020D8ADC+0001869F+220D911D+0000009F+120D911E+00000186+D0000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All Tanks Unlocked"
+cheat5_code = "94000130+FFFB0000+220D8AD8+00000009+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Max/Infinite Money"
+cheat6_code = "94000130+FFFB0000+020D8B7C+0001869F+220D9165+0000009F+120D9166+00000186+D0000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] All Tanks Unlocked"
+cheat7_code = "94000130+FFFB0000+220D8B78+00000009+D0000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Max/Infinite Money"
+cheat8_code = "94000130+FFFB0000+020D8C1C+0001869F+220D91AD+0000009F+120D91AE+00000186+D0000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] All Tanks Unlocked"
+cheat9_code = "94000130+FFFB0000+220D8C18+00000009+D0000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Max/Infinite Money"
+cheat10_code = "94000130+FFFB0000+020D8C7C+0001869F+220D91F5+0000009F+120D91F6+00000186+D0000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] All Tanks Unlocked"
+cheat11_code = "94000130+FFFB0000+220D8C78+00000009+D0000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Max/Infinite Money After Obtain"
+cheat12_code = "9202FF82+0000B281+1202FF80+00000781+D0000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Max Score"
+cheat13_code = "622CB8A4+00000000+B22CB8A4+00000000+00000154+0098967F+000001F8+0098967F+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Max/Infinite Money"
+cheat14_code = "622CB8A4+00000000+B22CB8A4+00000000+000001F0+0001869F+000001F4+0001869F+D2000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Refill Timer"
+cheat15_code = "5209971C+00000007+12099504+00000000+D2000000+00000000+94000130+FEFF0000+12099504+00000030+D2000000+00000000+82099504+00000600+12099504+00000030+D2000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Max/Infinite Money"
+cheat16_code = "94000130+FFFB0000+020DA01C+0001869F+020DA65C+01869F00+D2000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Unlock All Tanks"
+cheat17_code = "94000130+FFFB0000+220DA018+00000009+D2000000+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Max/Infinite Money"
+cheat18_code = "94000130+FFFB0000+020DA0BC+0001869F+020DA6A4+01869F00+D2000000+00000000"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Unlock All Tanks"
+cheat19_code = "94000130+FFFB0000+220DA0B8+00000009+D2000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Max/Infinite Money"
+cheat20_code = "94000130+FFFB0000+020DA15C+0001869F+020DA6EC+01869F00+D2000000+00000000"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Unlock All Tanks"
+cheat21_code = "94000130+FFFB0000+220DA158+00000009+D2000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Max/Infinite Money"
+cheat22_code = "94000130+FFFB0000+020DA1FC+0001869F+020DA734+01869F00+D2000000+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Unlock All Tanks"
+cheat23_code = "94000130+FFFB0000+220DA1F8+00000009+D2000000+00000000"
+cheat23_enable = false

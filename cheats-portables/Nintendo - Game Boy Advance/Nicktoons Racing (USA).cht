@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Nicktoons Racing (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Nicktoons%20Racing%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 4
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "000030CD+000A+100056A4+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Turbo Boost"
+cheat1_code = "D0000020+0001+83006440+0010"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Unlock Everything"
+cheat2_code = "8201DF5A+0F00"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Infinite Shield Time"
+cheat3_code = "83004810+0000"
+cheat3_enable = false

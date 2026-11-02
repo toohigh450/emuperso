@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Ridge Racer DS (USA, Europe).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Ridge%20Racer%20DS%20(USA%2C%20Europe).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] All Tracks Open and Complete"
+cheat0_code = "02091798+FFFFFFFF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Cars Open"
+cheat1_code = "020A7904+FFFFFFFF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Widescreen"
+cheat2_code = "02027738+00001C72"
+cheat2_enable = false

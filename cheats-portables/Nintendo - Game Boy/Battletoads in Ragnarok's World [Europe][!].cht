@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Battletoads in Ragnarok's World [Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Battletoads%20in%20Ragnarok's%20World%20(USA%2C%20Europe)%20(GameShark).cht
+
+cheats = 3
+
+cheat0_desc = "[GameShark] Infinite Lives"
+cheat0_code = "01050EC6"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Infinite Energy"
+cheat1_code = "013F0DC6"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Invincible"
+cheat2_code = "014031C6"
+cheat2_enable = false

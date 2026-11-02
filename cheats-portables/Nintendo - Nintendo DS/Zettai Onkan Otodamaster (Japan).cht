@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Zettai Onkan Otodamaster (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Zettai%20Onkan%20Otodamaster%20(Japan).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] 1st Monster"
+cheat0_code = "920BA850+00000000+DA000000+020BAEC8+D7000000+020BAEC4+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] 2nd Monster"
+cheat1_code = "920BA850+00000000+DA000000+020BAFC4+D7000000+020BAFC0+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] 3rd Monster"
+cheat2_code = "920BA850+00000000+DA000000+020BB0C0+D7000000+020BB0BC+D2000000+00000000"
+cheat2_enable = false

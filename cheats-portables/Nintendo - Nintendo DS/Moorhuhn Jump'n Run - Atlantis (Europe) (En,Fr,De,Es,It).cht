@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Moorhuhn Jump'n Run - Atlantis (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Moorhuhn%20Jump'n%20Run%20-%20Atlantis%20(Europe).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] Max Ammo"
+cheat0_code = "0204B9F8+000003E7"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Grenades"
+cheat1_code = "0204BA00+000003E7"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Lives"
+cheat2_code = "0204B9E8+000003E7"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Score"
+cheat3_code = "0204B9EC+05F5E0FF"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Time"
+cheat4_code = "0204BA08+000F423F"
+cheat4_enable = false

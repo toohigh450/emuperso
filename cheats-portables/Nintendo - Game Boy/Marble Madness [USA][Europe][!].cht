@@ -1,0 +1,45 @@
+# Recherche locale pour la ROM : Marble Madness [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Marble%20Madness%20(USA%2C%20Europe)%20(Xploder).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Marble%20Madness%20(USA%2C%20Europe).cht
+
+cheats = 9
+
+cheat0_desc = "[Xploder] Unendlich Zeit"
+cheat0_code = "$0D27E835+$0D21BF35"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite time"
+cheat1_code = "00A-A8C-3BE"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] 99 seconds for level 1"
+cheat2_code = "638-5EC-19A"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] 99 seconds for level 2"
+cheat3_code = "638-5FC-E6F"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] 99 seconds for level 3"
+cheat4_code = "638-60C-4CA"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] 99 seconds for level 4"
+cheat5_code = "638-61C-6EE"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Continue from last level reached"
+cheat6_code = "FA0-65C-4C1"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Infinite Time"
+cheat7_code = "01051DDA"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Unendlich Zeit"
+cheat8_code = "0127E8B5+0121BFB5"
+cheat8_enable = false

@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Phoenix Wright - Ace Attorney - Justice for All (Europe) (En,Fr,De).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Phoenix%20Wright%20-%20Ace%20Attorney%20-%20Justice%20for%20All%20(Europe).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Infinite Life"
+cheat0_code = "120AD552+00000050+120AD554+00000050"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Unlock Chapters"
+cheat1_code = "220AD572+0000007F"
+cheat1_enable = false

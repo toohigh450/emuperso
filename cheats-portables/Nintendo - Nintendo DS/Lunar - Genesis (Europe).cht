@@ -1,0 +1,332 @@
+# Recherche locale pour la ROM : Lunar - Genesis (Europe).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Lunar%20-%20Genesis%20(Europe).cht
+
+cheats = 81
+
+cheat0_desc = "[Action Replay] Max Cash"
+cheat0_code = "020B135C+000F423F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Level After 1 Battle (Press Select)"
+cheat1_code = "94000130+FFFB0000+020B11CC+00000000+020B1228+00000000+020B1284+00000000+020B12E0+00000000+020B133C+00000000+D5000000+00000001+C0000000+00000061+D6000000+02090364+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Walk Through Walls"
+cheat2_code = "C0000000+00000041+D6000000+0227FB80+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Have All Weapons"
+cheat3_code = "02137E38+0A0A0A0A+02137E3C+0A0A0A0A+02137E40+0A0A0A0A+02137E44+0A0A0A0A+02137E48+0A0A0A0A+02137E4C+0A0A0A0A+02137E50+0A0A0A0A+02137E54+0A0A0A0A+02137E58+0A0A0A0A+02137E5C+0A0A0A0A+02137E60+0A0A0A0A"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Have All Armors"
+cheat4_code = "02137E64+0A0A0A0A+02137E68+0A0A0A0A+02137E6C+0A0A0A0A+02137E70+0A0A0A0A+02137E74+0A0A0A0A+02137E78+0A0A0A0A+02137E7C+0A0A0A0A+02137E80+0A0A0A0A+02137E84+0A0A0A0A+02137E88+0A0A0A0A+02137E8C+0A0A0A0A+12137E90+00000A0A"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Have All Arms"
+cheat5_code = "12137E92+00000A0A+02137E94+0A0A0A0A+02137E98+0A0A0A0A+02137E9C+0A0A0A0A+02137EA0+0A0A0A0A+02137EA4+0A0A0A0A+02137EA8+0A0A0A0A+02137EAC+0A0A0A0A+02137EB0+0A0A0A0A+02137EB4+0A0A0A0A+02137EB8+0A0A0A0A"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Have All Headgears"
+cheat6_code = "02137EBC+0A0A0A0A+02137EC0+0A0A0A0A+02137EC4+0A0A0A0A+02137EC8+0A0A0A0A+02137ECC+0A0A0A0A+02137ED0+0A0A0A0A+02137ED4+0A0A0A0A+02137ED8+0A0A0A0A+02137EDC+0A0A0A0A+02137EE0+0A0A0A0A+02137EE4+0000000A"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Have All Accessories"
+cheat7_code = "22137EE5+0000000A+12137EE6+00000A0A+02137EE8+0A0A0A0A+02137EEC+0A0A0A0A+02137EF0+0A0A0A0A+02137EF4+0A0A0A0A+02137EF8+0A0A0A0A+02137EFC+0A0A0A0A+02137F00+0A0A0A0A+02137F04+0A0A0A0A+02137F08+0A0A0A0A+02137F0C+00000A0A+22137F0E+0000000A"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Have All Cards"
+cheat8_code = "22137F0F+00000063+02137F10+63636363+02137F14+63636363+02137F18+63636363+02137F1C+63636363+02137F20+63636363+02137F24+63636363+02137F28+63636363+02137F2C+63636363+02137F30+63636363+02137F34+63636363+02137F38+63636363+02137F3C+63636363+02137F40+63636363+02137F44+63636363+12137F48+00006363+22137F4A+00000063"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Have All Tools"
+cheat9_code = "22137F4B+00000009+02137F4C+09090909+02137F50+09090909"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Have All Sundries"
+cheat10_code = "12137F56+00000909+02137F58+09090909+02137F5C+09090909+02137F60+09090909+02137F64+09090909+02137F68+09090909+02137F6C+09090909+02137F70+09090909+02137F74+09090909+02137F78+09090909+02137F7C+09090909+02137F80+09090909+02137F84+09090909+02137F88+09090909+02137F8C+09090909+02137F90+09090909+02137F94+09090909+02137F98+09090909+02137F9C+09090909+02137FA0+09090909+02137FA4+09090909+02137FA8+09090909+02137FAC+09090909+02137FB0+09090909+02137FB4+09090909+12137FB8+00000909"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Have All Key Items"
+cheat11_code = "12137FBA+00000101+02137FBC+01010101+02137FC0+01010101+02137FC4+01010101"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Access Debug Room (Removed, Press Select on minimap while entering a house)"
+cheat12_code = "94000130+FFFB0000+120B22F4+00000103+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] P1 Infinite Health and MP"
+cheat13_code = "620AC46C+00000000+B20AC46C+00000000+10000014+000003E7+10000018+000003E7+1000001C+000003E7+10000020+000003E7+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] P2 Infinite Health and MP"
+cheat14_code = "620AC46C+00000000+B20AC46C+00000000+10000080+000003E7+10000088+000003E7+10000084+000003E7+1000008C+000003E7+D2000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] P3 Infinite Health and MP"
+cheat15_code = "620AC46C+00000000+B20AC46C+00000000+100000EC+000003E7+100000F0+000003E7+100000F4+000003E7+100000F8+000003E7+D2000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Full Health"
+cheat16_code = "120B11A0+000003E7"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Max Health"
+cheat17_code = "120B11A4+000003E7"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Full Mp"
+cheat18_code = "120B11A8+000003E7"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Max Mp"
+cheat19_code = "120B11AC+000003E7"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Max Atk"
+cheat20_code = "220B11B0+000000FF"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Max Def"
+cheat21_code = "220B11B4+000000FF"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Max Agi"
+cheat22_code = "220B11BC+000000FF"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Max Int"
+cheat23_code = "220B11C0+000000FF"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Max Dex"
+cheat24_code = "220B11C4+000000FF"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Max Luck"
+cheat25_code = "220B11C8+000000FF"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Full Health"
+cheat26_code = "120B11FC+000003E7"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Max Health"
+cheat27_code = "120B1200+000003E7"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Full Mp"
+cheat28_code = "120B1204+000003E7"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Max Mp"
+cheat29_code = "120B1208+000003E7"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Max Atk"
+cheat30_code = "220B120C+000000FF"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Max Def"
+cheat31_code = "220B1210+000000FF"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Max Agi"
+cheat32_code = "220B1218+000000FF"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Max Int"
+cheat33_code = "220B121C+000000FF"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Max Dex"
+cheat34_code = "220B1220+000000FF"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Max Luck"
+cheat35_code = "220B1224+000000FF"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Full Health"
+cheat36_code = "120B1258+000003E7"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Max Health"
+cheat37_code = "120B125C+000003E7"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Full Mp"
+cheat38_code = "120B1260+000003E7"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Max Mp"
+cheat39_code = "120B1264+000003E7"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Max Atk"
+cheat40_code = "220B1268+000000FF"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Max Def"
+cheat41_code = "220B126C+000000FF"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Max Agi"
+cheat42_code = "220B1274+000000FF"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Max Int"
+cheat43_code = "220B1278+000000FF"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Max Dex"
+cheat44_code = "220B127C+000000FF"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Max Luck"
+cheat45_code = "220B1280+000000FF"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Full Health"
+cheat46_code = "120B12B4+000003E7"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Max Health"
+cheat47_code = "120B12B8+000003E7"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Full Mp"
+cheat48_code = "120B12BC+000003E7"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Max Mp"
+cheat49_code = "120B12C0+000003E7"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Max Atk"
+cheat50_code = "220B12C4+000000FF"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Max Def"
+cheat51_code = "220B12C8+000000FF"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Max Agi"
+cheat52_code = "220B12D0+000000FF"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Max Int"
+cheat53_code = "220B12D4+000000FF"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Max Dex"
+cheat54_code = "220B12D8+000000FF"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Max Luck"
+cheat55_code = "220B12DC+000000FF"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Full Health"
+cheat56_code = "120B1310+000003E7"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Max Health"
+cheat57_code = "120B1314+000003E7"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Full Mp"
+cheat58_code = "120B1318+000003E7"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Max Mp"
+cheat59_code = "120B131C+000003E7"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Max Atk"
+cheat60_code = "220B1320+000000FF"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Max Def"
+cheat61_code = "220B1324+000000FF"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Max Agi"
+cheat62_code = "220B132C+000000FF"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Max Int"
+cheat63_code = "220B1330+000000FF"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Max Dex"
+cheat64_code = "220B1334+000000FF"
+cheat64_enable = false
+
+cheat65_desc = "[Action Replay] Max Luck"
+cheat65_code = "220B1338+000000FF"
+cheat65_enable = false
+
+cheat66_desc = "[Action Replay] Jian"
+cheat66_code = "120B1184+00000000"
+cheat66_enable = false
+
+cheat67_desc = "[Action Replay] Lucia"
+cheat67_code = "120B1184+00000001"
+cheat67_enable = false
+
+cheat68_desc = "[Action Replay] Gabryel"
+cheat68_code = "120B1184+00000002"
+cheat68_enable = false
+
+cheat69_desc = "[Action Replay] Flora"
+cheat69_code = "120B1184+00000003"
+cheat69_enable = false
+
+cheat70_desc = "[Action Replay] Rufus"
+cheat70_code = "120B1184+00000004"
+cheat70_enable = false
+
+cheat71_desc = "[Action Replay] Jian"
+cheat71_code = "120B1188+00000000"
+cheat71_enable = false
+
+cheat72_desc = "[Action Replay] Lucia"
+cheat72_code = "120B1188+00000001"
+cheat72_enable = false
+
+cheat73_desc = "[Action Replay] Gabryel"
+cheat73_code = "120B1188+00000002"
+cheat73_enable = false
+
+cheat74_desc = "[Action Replay] Flora"
+cheat74_code = "120B1188+00000003"
+cheat74_enable = false
+
+cheat75_desc = "[Action Replay] Rufus"
+cheat75_code = "120B1188+00000004"
+cheat75_enable = false
+
+cheat76_desc = "[Action Replay] Jian"
+cheat76_code = "120B118C+00000000"
+cheat76_enable = false
+
+cheat77_desc = "[Action Replay] Lucia"
+cheat77_code = "120B118C+00000001"
+cheat77_enable = false
+
+cheat78_desc = "[Action Replay] Gabryel"
+cheat78_code = "120B118C+00000002"
+cheat78_enable = false
+
+cheat79_desc = "[Action Replay] Flora"
+cheat79_code = "120B118C+00000003"
+cheat79_enable = false
+
+cheat80_desc = "[Action Replay] Rufus"
+cheat80_code = "120B118C+00000004"
+cheat80_enable = false

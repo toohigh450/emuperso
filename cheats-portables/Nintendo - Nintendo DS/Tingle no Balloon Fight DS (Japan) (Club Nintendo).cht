@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Tingle no Balloon Fight DS (Japan) (Club Nintendo).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Tingle%20no%20Balloon%20Fight%20DS%20(Japan)%20(Club%20Nintendo).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Balloons Don't Burst"
+cheat0_code = "52021EF4+E7812103+02021EF4+E1A00000+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Lives"
+cheat1_code = "5202673C+E7C31002+0202673C+E1A00000+D2000000+00000000"
+cheat1_enable = false

@@ -1,0 +1,33 @@
+    [CC] build/ipl3.o
+[01m[Kipl3.c:229:13:[m[K [01;35m[Kwarning: [m[K'[01m[Kmem_bank_init[m[K' defined but not used [[01;35m[K-Wunused-function[m[K]
+  229 | static void [01;35m[Kmem_bank_init[m[K(int chip_id, bool last)
+      |             [01;35m[K^~~~~~~~~~~~~[m[K
+    [CC] build/minidragon.o
+    [CC] build/rdram.o
+build/rdram.o.s: Assembler messages:
+build/rdram.o.s:452: Warning: float register should be even, was 21
+build/rdram.o.s:458: Warning: float register should be even, was 21
+build/rdram.o.s:458: Warning: float register should be even, was 21
+build/rdram.o.s:458: Warning: float register should be even, was 25
+build/rdram.o.s:463: Warning: float register should be even, was 21
+build/rdram.o.s:467: Warning: float register should be even, was 21
+build/rdram.o.s:475: Warning: float register should be even, was 21
+build/rdram.o.s:527: Warning: float register should be even, was 21
+build/rdram.o.s:527: Warning: float register should be even, was 21
+build/rdram.o.s:527: Warning: float register should be even, was 23
+    [AS] build/ique_trampoline.o
+    [CC] build/entropy.o
+    [CC] build/loader.o
+    [CC] build/debug.o
+    [AS] build/boot_trampoline.o
+    [LD] build/ipl3.elf
+/workspace/emuperso-real/real-n64/cache/toolchain/opt/libdragon/bin/../lib/gcc/mips64-elf/16.2.0/../../../../mips64-elf/bin/ld: warning: cannot find entry symbol _start; not setting start address
+  [ 1] .text.prologue    PROGBITS        b0000000 001000 001040 00  AX  0   0  8
+  [ 2] .text.dmem        PROGBITS        a4000040 002040 0004a0 00 WAX  0   0  4
+  [ 3] .text.rom         PROGBITS        b00014e0 0024e0 000fef 00 WAX  0   0  4
+    [Z64] bin/ipl3_dev.z64
+    [CC] main.c
+    [LD] build-emulator/demo-emuperso-emulator.elf
+      text       data        bss      total filename
+    112536      21732       2900     137168 build-emulator/demo-emuperso-emulator.elf
+    [Z64] demo-emuperso-emulator.z64

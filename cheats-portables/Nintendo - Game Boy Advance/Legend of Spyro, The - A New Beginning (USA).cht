@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Legend of Spyro, The - A New Beginning (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Legend%20of%20Spyro%2C%20The%20-%20A%20New%20Beginning%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 2
+
+cheat0_desc = "[Code Breaker] Enabler Code"
+cheat0_code = "00006FCC+000A+100690FA+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Instant Win Whack A Bulb Spider"
+cheat1_code = "320030B8+000C"
+cheat1_enable = false

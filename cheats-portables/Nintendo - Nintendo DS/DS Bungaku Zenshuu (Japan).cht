@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : DS Bungaku Zenshuu (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/DS%20Bungaku%20Zenshuu%20(Japan).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "520D38E8+EE070F90+E20004A0+00000050+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2E2BE3D+01200035+03270070+0009000A+0005000D+00000070+020D38E8+E92D401E+020D38EC+FAFCB2EB+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Books Read"
+cheat1_code = "021730AC+FFFFFFFF+021730B0+FFFFFFFF+021730B4+FFFFFFFF+221730B8+000000FF"
+cheat1_enable = false

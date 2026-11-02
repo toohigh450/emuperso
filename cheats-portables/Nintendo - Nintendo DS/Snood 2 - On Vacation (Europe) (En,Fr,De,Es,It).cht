@@ -1,0 +1,76 @@
+# Recherche locale pour la ROM : Snood 2 - On Vacation (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Snood%202%20-%20On%20Vacation%20(Europe).cht
+
+cheats = 17
+
+cheat0_desc = "[Action Replay] Time"
+cheat0_code = "220A8C84+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Score"
+cheat1_code = "020817BC+000F423F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Ceiling Drop Meter Never Fills"
+cheat2_code = "020818E4+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Ceiling Drops Each Move"
+cheat3_code = "320818E4+0000001E+020818E4+0000001E+D0000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Infinite Continues"
+cheat4_code = "22081854+00000004"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Blue"
+cheat5_code = "220A8430+00000001"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Red"
+cheat6_code = "220A8430+00000002"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Green"
+cheat7_code = "220A8430+00000003"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Sea Cucumber"
+cheat8_code = "220A8430+00000004"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Yellow"
+cheat9_code = "220A8430+00000005"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Grey"
+cheat10_code = "220A8430+00000006"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Purple"
+cheat11_code = "220A8430+00000007"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Pink"
+cheat12_code = "220A8430+00000008"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Bull Head"
+cheat13_code = "220A8430+00000009"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Rocket"
+cheat14_code = "220A8430+0000000A"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Rock"
+cheat15_code = "220A8430+0000000B"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Skull"
+cheat16_code = "220A8430+0000000C"
+cheat16_enable = false

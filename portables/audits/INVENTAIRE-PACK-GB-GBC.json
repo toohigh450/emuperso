@@ -1,0 +1,13 @@
+{
+  "source": "Métadonnées du torrent fourni par Karl, examinées sans réseau BitTorrent.",
+  "torrentSha256": "a09d32ac4f467ad3e1e38735356e33ddd3fa9af6a9415e89c596f01d70e9ae88",
+  "files": 2100,
+  "totalBytes": 840358142,
+  "extensions": {
+    ".7z": 2096,
+    ".zip": 2,
+    ".exe": 1,
+    ".txt": 1
+  },
+  "limits": "Les fichiers internes des archives 7z ne sont pas visibles. Le nombre annoncé de ROMs et leur jouabilité ne sont pas vérifiés. Aucun téléchargement, aucune connexion aux trackers ; le torrent et ses adresses ne sont pas ajoutés au dépôt."
+}

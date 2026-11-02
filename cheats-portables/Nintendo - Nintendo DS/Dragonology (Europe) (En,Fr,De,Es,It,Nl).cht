@@ -1,0 +1,44 @@
+# Recherche locale pour la ROM : Dragonology (Europe) (En,Fr,De,Es,It,Nl).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Dragonology%20(Europe).cht
+
+cheats = 9
+
+cheat0_desc = "[Action Replay] GEM Increases When Buying From Store"
+cheat0_code = "0203999C+E0811000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Health"
+cheat1_code = "02044D10+E1A00000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Always 10 Minutes for Missions"
+cheat2_code = "92257274+0000003C+02257270+00008CCC+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Dragon Sneak Time 10 Minutes"
+cheat3_code = "921C5744+0000003C+121C5740+00008CCC+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Feeding Time Game 10 Minutes"
+cheat4_code = "921C541C+0000003C+021C5418+00008CCC+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Trust Game Time 10 Minutes"
+cheat5_code = "921C532C+0000003C+021C5328+00008CCC+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Max Stats for Dragon in Cave"
+cheat6_code = "C0000000+00000002+22160AE0+0000000A+DC000000+00000004+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] All Items"
+cheat7_code = "02160AC4+AAAAAA00+02160ACA+AAAAAAAA"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Ingredients of Potion x9,999"
+cheat8_code = "94000130+FFFB0000+02160970+270F270F+02160974+270F270F+12160978+0000270F+D2000000+00000000"
+cheat8_enable = false

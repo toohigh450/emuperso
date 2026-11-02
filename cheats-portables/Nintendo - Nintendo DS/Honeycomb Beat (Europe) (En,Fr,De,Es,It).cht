@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Honeycomb Beat (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Honeycomb%20Beat%20(Europe).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] Always 9 tries left"
+cheat0_code = "221A45BC+0000000A"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Vector labels always avalible"
+cheat1_code = "221C784C+00000022+221C7874+0000002A+221C789C+0000001A+221C78C4+00000012"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] X9999 combo if +x1"
+cheat2_code = "121A4BC4+0000270E"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] L+R for row 1 left"
+cheat3_code = "94000130+FCFF0000+221A4058+00000001+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Vector labels always avalible"
+cheat4_code = "221C7D9C+0000001A+221C7DC4+00000022+221C7DEC+0000002A+221C7E14+00000012"
+cheat4_enable = false

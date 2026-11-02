@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Winter Sports 2009 - The Next Challenge (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Winter%20Sports%202009%20-%20The%20Next%20Challenge%20(Europe).cht
+
+cheats = 6
+
+cheat0_desc = "[Action Replay] All Events in Championship Open"
+cheat0_code = "74000100+FF000001+C0000000+0000001B+220A45A0+00000001+DC000000+00000004+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Events in Championship Completed"
+cheat1_code = "74000100+FF000001+C0000000+0000001B+220A45A0+00000002+DC000000+00000004+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Events in Championship Open"
+cheat2_code = "74000100+FF000001+C0000000+0000001B+220A4628+00000001+DC000000+00000004+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Events in Championship Completed"
+cheat3_code = "74000100+FF000001+C0000000+0000001B+220A4628+00000002+DC000000+00000004+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All Events in Championship Open"
+cheat4_code = "74000100+FF000001+C0000000+0000001B+220A46B0+00000001+DC000000+00000004+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All Events in Championship Completed"
+cheat5_code = "74000100+FF000001+C0000000+0000001B+220A46B0+00000002+DC000000+00000004+D2000000+00000000"
+cheat5_enable = false

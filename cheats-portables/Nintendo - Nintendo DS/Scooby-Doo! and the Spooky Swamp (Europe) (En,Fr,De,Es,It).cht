@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Scooby-Doo! and the Spooky Swamp (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Scooby-Doo!%20and%20the%20Spooky%20Swamp%20(Europe).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] HP Never Decreases"
+cheat0_code = "020840F0+EAFDEFC2+02000000+E3A01064+02000004+E1A02000+02000008+EA021039"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Masks"
+cheat1_code = "121D3888+000003E7"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Scooby Snack"
+cheat2_code = "021D38C4+0001869F"
+cheat2_enable = false

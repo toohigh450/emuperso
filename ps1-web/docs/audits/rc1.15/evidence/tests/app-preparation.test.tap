@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: préparation bloquée : « Annuler la lecture » libère l’interface, le jeu en cours reste intact
+ok 1 - préparation bloquée : « Annuler la lecture » libère l’interface, le jeu en cours reste intact
+  ---
+  duration_ms: 103.291001
+  type: 'test'
+  ...
+# Subtest: échec de préparation pendant un jeu : erreur explicite, aucun remplacement, sélection vide
+ok 2 - échec de préparation pendant un jeu : erreur explicite, aucun remplacement, sélection vide
+  ---
+  duration_ms: 40.267395
+  type: 'test'
+  ...
+# Subtest: chien de garde : sans progression, l’état est signalé et journalisé (10 s, 30 s)
+ok 3 - chien de garde : sans progression, l’état est signalé et journalisé (10 s, 30 s)
+  ---
+  duration_ms: 9.257967
+  type: 'test'
+  ...
+# Subtest: diagnostic exportable sans jeu lancé : préparation en cours et dernière préparation incluses
+ok 4 - diagnostic exportable sans jeu lancé : préparation en cours et dernière préparation incluses
+  ---
+  duration_ms: 2.553911
+  type: 'test'
+  ...
+# Subtest: lancement instrumenté : début et fin journalisés avec la durée
+ok 5 - lancement instrumenté : début et fin journalisés avec la durée
+  ---
+  duration_ms: 17.969567
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5183.995213

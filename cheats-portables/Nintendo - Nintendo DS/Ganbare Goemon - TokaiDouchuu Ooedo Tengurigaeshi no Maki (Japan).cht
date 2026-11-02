@@ -1,0 +1,68 @@
+# Recherche locale pour la ROM : Ganbare Goemon - TokaiDouchuu Ooedo Tengurigaeshi no Maki (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Ganbare%20Goemon%20-%20TokaiDouchuu%20Ooedo%20Tengurigaeshi%20no%20Maki%20(Japan).cht
+
+cheats = 15
+
+cheat0_desc = "[Action Replay] Max/Infinite Money"
+cheat0_code = "12110ABE+000003E7"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Lives"
+cheat1_code = "22110AF8+00000009"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Infinite HP"
+cheat2_code = "22110AF6+0000000A"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Infinite MP"
+cheat3_code = "22110AF7+0000001E"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Maxed-Out Weapon"
+cheat4_code = "22110AF9+00000003"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All Characters"
+cheat5_code = "12110B94+00000101"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] All Items (Sub-Screen Inventory)"
+cheat6_code = "22110B17+00000001+22110B54+00000001+D5000000+00000001+C0000000+0000000E+D8000000+02110BA1+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] All Jutsu Skills"
+cheat7_code = "12110BFC+00000101+22110BFF+00000001+22110C01+00000001"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] All Nostra-kun Elephants Found"
+cheat8_code = "D5000000+00000001+C0000000+0000001E+D8000000+02110C25+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Have All Accessories (R-Button Items)"
+cheat9_code = "12110B0E+00000101+12110B10+00000001+22110B12+00000078+02110B1C+01010101+02110B20+00010101"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Have All Weapons (L-Button Items)"
+cheat10_code = "D5000000+00000001+C0000000+00000010+D8000000+02110AFE+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Impact Stages - Infinite Money"
+cheat11_code = "1220EB48+000003E7"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Impact Stages - Infinite HP"
+cheat12_code = "1220EB38+00001388"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Total Time 00:00"
+cheat13_code = "0210F20C+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Unlock Extra Outfits"
+cheat14_code = "22110C43+00000000"
+cheat14_enable = false

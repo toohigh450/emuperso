@@ -1,0 +1,262 @@
+# Recherche locale pour la ROM : Mega Man IV [USA][!!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Mega%20Man%20IV%20(USA).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Mega%20Man%20IV%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Mega%20Man%20IV%20(USA%2C%20Europe)%20(GameShark).cht
+
+cheats = 63
+
+cheat0_desc = "[Format source non précisé] Infinite energy"
+cheat0_code = "001-CE9-3B7"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Start with 1/4 energy"
+cheat1_code = "269-F6F-808"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Start with 1/2 energy"
+cheat2_code = "4B9-F6F-808"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Start with 3/4 energy"
+cheat3_code = "709-F6F-808"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Infinite lives"
+cheat4_code = "01C-45F-915"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Start with 1 lives"
+cheat5_code = "01C-AEF-E66"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Start with 5 lives"
+cheat6_code = "05C-AEF-E66"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Start with 9 lives"
+cheat7_code = "09C-AEF-E66"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Invincible"
+cheat8_code = "21F-EAA-E61"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Shoot more than 3 shots at a time"
+cheat9_code = "005-67B-A29"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Infinite Energy"
+cheat10_code = "0198AEDE"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Infinite Lives"
+cheat11_code = "010034DF"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Jump In Midair"
+cheat12_code = "FA4-159-6EE+414-169-A27+E64-189-193+014-199-3B4+004-1C9-3BE+1C5-F99-3BA+185-FA9-4CA"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] One Hit Kill"
+cheat13_code = "00A-64D-E6E"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Invincibility"
+cheat14_code = "001-469-F72"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Infinite Weapon Energy"
+cheat15_code = "006-26B-A22+FA2-629-4C1+FAA-B0B-4C1+FAD-5AB-4C1"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Hit Anywhere"
+cheat16_code = "111-CCE-D5A+181-CBE-08A"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Infinite Weapon Energy (Except For RC / RJ / PH / BR / BE)"
+cheat17_code = "006-26B-A22"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Infinite RC Energy"
+cheat18_code = "FA2-629-4C1"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Infinite RJ Energy"
+cheat19_code = "FA6-529-4C1"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Infinite PH Energy"
+cheat20_code = "FAD-5AB-4C1"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Infinite BR Energy"
+cheat21_code = "FAA-B0B-4C1"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Infinite BE Energy"
+cheat22_code = "FA0-719-4C1"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Debug Menu"
+cheat23_code = "1A7-8A8-E6E"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Infinite Weapon Modifier"
+cheat24_code = "0198AFDE"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Have Weapon Modifier 1"
+cheat25_code = "0102ACDE"
+cheat25_enable = false
+
+cheat26_desc = "[Format source non précisé] Have Weapon Modifier 2"
+cheat26_code = "0101ADDE"
+cheat26_enable = false
+
+cheat27_desc = "[Format source non précisé] Fire A Constant Stream of Fully Charged Mega Buster Shots!"
+cheat27_code = "01FF5ED7"
+cheat27_enable = false
+
+cheat28_desc = "[Format source non précisé] Infinite Weapon Power"
+cheat28_code = "01002EC2"
+cheat28_enable = false
+
+cheat29_desc = "[Format source non précisé] Debug Menu!"
+cheat29_code = "011A0ADF"
+cheat29_enable = false
+
+cheat30_desc = "[Format source non précisé] Skip Intro Screen"
+cheat30_code = "FA0-94B-D59"
+cheat30_enable = false
+
+cheat31_desc = "[Format source non précisé] Start with ?? Lives, instead of 3 - New Game"
+cheat31_code = "04C-AEF-E66"
+cheat31_enable = false
+
+cheat32_desc = "[Format source non précisé] Start with ?? Lives, instead of 3 - Password Game"
+cheat32_code = "042-0FB-E66"
+cheat32_enable = false
+
+cheat33_desc = "[Format source non précisé] Start With All Weapons"
+cheat33_code = "FFC-0FF-E6E+57C-13F-5D4"
+cheat33_enable = false
+
+cheat34_desc = "[Format source non précisé] Always Drop Item Modifier"
+cheat34_code = "186-0BB-2AA+185-B0B-08A+015-ADB-E6E+005-ABB-809"
+cheat34_enable = false
+
+cheat35_desc = "[Format source non précisé] Disable Charge Shot Recoil"
+cheat35_code = "18B-57A-4CA+27B-58A-F7E"
+cheat35_enable = false
+
+cheat36_desc = "[Game Genie] Infinite Lives"
+cheat36_code = "01C-45F-915"
+cheat36_enable = false
+
+cheat37_desc = "[Game Genie] Start With 1/4 Energy"
+cheat37_code = "269-F6F-808"
+cheat37_enable = false
+
+cheat38_desc = "[Game Genie] Start With 1/2 Energy"
+cheat38_code = "4B9-F6F-808"
+cheat38_enable = false
+
+cheat39_desc = "[Game Genie] Start With 3/4 Energy"
+cheat39_code = "709-F6F-808"
+cheat39_enable = false
+
+cheat40_desc = "[Game Genie] Infinite Energy"
+cheat40_code = "001-CE9-3B7"
+cheat40_enable = false
+
+cheat41_desc = "[Game Genie] Start With 1 Lives"
+cheat41_code = "01C-AEF-E66"
+cheat41_enable = false
+
+cheat42_desc = "[Game Genie] Start With 5 Lives"
+cheat42_code = "05C-AEF-E66"
+cheat42_enable = false
+
+cheat43_desc = "[Game Genie] Start With 9 Lives"
+cheat43_code = "09C-AEF-E66"
+cheat43_enable = false
+
+cheat44_desc = "[Game Genie] Invincible"
+cheat44_code = "21F-EAA-E61"
+cheat44_enable = false
+
+cheat45_desc = "[Game Genie] Shoot More Than 3 Shots At A Time"
+cheat45_code = "005-67B-A29"
+cheat45_enable = false
+
+cheat46_desc = "[Game Genie] Get Anything From Dr. Light Free"
+cheat46_code = "00C-8F9"
+cheat46_enable = false
+
+cheat47_desc = "[Game Genie] Infinite Weapon Energy (Except For RC / RJ / PH / BR / BE)"
+cheat47_code = "006-26B-A22"
+cheat47_enable = false
+
+cheat48_desc = "[Game Genie] Infinite RC Energy"
+cheat48_code = "FA2-629-4C1"
+cheat48_enable = false
+
+cheat49_desc = "[Game Genie] Infinite RJ Energy"
+cheat49_code = "FA6-529-4C1"
+cheat49_enable = false
+
+cheat50_desc = "[Game Genie] Infinite PH Energy"
+cheat50_code = "FAD-5AB-4C1"
+cheat50_enable = false
+
+cheat51_desc = "[Game Genie] Infinite BR Energy"
+cheat51_code = "FAA-B0B-4C1"
+cheat51_enable = false
+
+cheat52_desc = "[Game Genie] Infinite BE Energy"
+cheat52_code = "FA0-719-4C1"
+cheat52_enable = false
+
+cheat53_desc = "[Game Genie] Debug Menu"
+cheat53_code = "1A7-8A8-E6E"
+cheat53_enable = false
+
+cheat54_desc = "[GameShark] Infinite Energy"
+cheat54_code = "0198AEDE"
+cheat54_enable = false
+
+cheat55_desc = "[GameShark] Infinite Weapon Modifier"
+cheat55_code = "0198??DE"
+cheat55_enable = false
+
+cheat56_desc = "[GameShark] Have Weapon Modifier 1"
+cheat56_code = "01??ACDE"
+cheat56_enable = false
+
+cheat57_desc = "[GameShark] Have Weapon Modifier 2"
+cheat57_code = "01??ADDE"
+cheat57_enable = false
+
+cheat58_desc = "[GameShark] Infinite Lives"
+cheat58_code = "010034DF"
+cheat58_enable = false
+
+cheat59_desc = "[GameShark] Fire A Constant Stream of Fully Charged Mega Buster Shots!"
+cheat59_code = "01FF5ED7"
+cheat59_enable = false
+
+cheat60_desc = "[GameShark] Infinite Weapon Power"
+cheat60_code = "01002EC2"
+cheat60_enable = false
+
+cheat61_desc = "[GameShark] Infinite P-Chips"
+cheat61_code = "01033EDF+01E73DDF"
+cheat61_enable = false
+
+cheat62_desc = "[GameShark] Debug Menu!"
+cheat62_code = "011A0ADF"
+cheat62_enable = false

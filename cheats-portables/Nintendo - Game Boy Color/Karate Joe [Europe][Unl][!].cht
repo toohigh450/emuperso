@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Karate Joe [Europe][Unl][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Karate%20Joe%20(Europe)%20(Unl)%20(GameShark).cht
+
+cheats = 4
+
+cheat0_desc = "[GameShark] Infinite Health"
+cheat0_code = "910526D0"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Infinite Lives"
+cheat1_code = "910914C3"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Max Score"
+cheat2_code = "910924C3+910925C3+910926C3+910927C3+910928C3+910929C3+91092AC3"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Max Level"
+cheat3_code = "91094BC3"
+cheat3_enable = false

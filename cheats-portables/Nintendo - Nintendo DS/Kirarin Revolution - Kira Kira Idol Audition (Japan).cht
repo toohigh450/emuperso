@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Kirarin Revolution - Kira Kira Idol Audition (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Kirarin%20Revolution%20-%20Kira%20Kira%20Idol%20Audition%20(Japan).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] Max Score"
+cheat0_code = "020E9594+0001869F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Complete Gallery"
+cheat1_code = "D5000000+00000001+C0000000+00000021+D8000000+020C9DC5+D2000000+00000000+120C9E08+00000101"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Unlock All Clothings and Accessories"
+cheat2_code = "D5000000+00000001+C0000000+00000013+D8000000+020C9C61+D2000000+00000000+D5000000+00000101+C0000000+00000009+D7000000+020C9C96+D2000000+00000000+D5000000+00000001+C0000000+00000013+D8000000+020C9C81+D2000000+00000000+D5000000+00000001+C0000000+00000013+D8000000+020C9CC1+D2000000+00000000+D5000000+00000001+C0000000+00000013+D8000000+020C9CE1+D2000000+00000000+D5000000+00000001+C0000000+00000005+D8000000+020C9D01+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Unlock All Mini Games"
+cheat3_code = "D5000000+00000001+C0000000+00000014+D8000000+020C9DA5+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Unlock All BGM/Music for Sound Test"
+cheat4_code = "220C9DE8+00000004"
+cheat4_enable = false

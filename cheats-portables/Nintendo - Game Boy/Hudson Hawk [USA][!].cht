@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Hudson Hawk [USA][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Hudson%20Hawk%20(USA).cht
+
+cheats = 6
+
+cheat0_desc = "[Format source non précisé] Infinite Energy"
+cheat0_code = "01FF46DE"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Lives"
+cheat1_code = "010562DE"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Infinite Health"
+cheat2_code = "001-53C-19E"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Invulnerability"
+cheat3_code = "181-44C-4CA"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Start With 9 Lives"
+cheat4_code = "09E-67D-F7E"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Infinite Lives"
+cheat5_code = "3C4-5FF-19E"
+cheat5_enable = false

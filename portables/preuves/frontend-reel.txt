@@ -1,0 +1,1 @@
+PASS : vrai frontend EmulatorJS 4.2.3 + SRI + ready + relais saveSaveFiles (données synthétiques) + exit. Aucun cœur ni jeu exécuté.

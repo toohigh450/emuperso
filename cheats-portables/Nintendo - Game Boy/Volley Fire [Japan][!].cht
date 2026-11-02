@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Volley Fire [Japan][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Volley%20Fire%20(Japan).cht
+
+cheats = 4
+
+cheat0_desc = "[Format source non précisé] Infinite Lives"
+cheat0_code = "0103C4FF"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Invincibility"
+cheat1_code = "0108C5FF"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Zero Lives"
+cheat2_code = "0100CCFF"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Computer Has Zero Energy"
+cheat3_code = "0100CDFF"
+cheat3_enable = false

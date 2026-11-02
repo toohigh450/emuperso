@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Code Lyoko - Fall of X.A.N.A. (Europe) (En,Fr).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Code%20Lyoko%20-%20Fall%20of%20X.A.N.A.%20(Europe).cht
+
+cheats = 6
+
+cheat0_desc = "[Action Replay] Max Experience"
+cheat0_code = "021D378C+36B036B0+021D3790+36B036B0"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max HP"
+cheat1_code = "121D3794+000000C8+121D379A+000000C8+121D37A0+000000C8+121D37A6+000000C8"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max DP"
+cheat2_code = "121D3796+00000032+121D379C+00000032+121D37A2+00000046+121D37A8+00000032"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Functions"
+cheat3_code = "221D3720+00000001+D5000000+00000001+C0000000+00000004+D6000000+021D3730+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All Items"
+cheat4_code = "D5000000+00000063+C0000000+00000024+D8000000+021D3744+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All Plug-Ins"
+cheat5_code = "D5000000+00000004+C0000000+00000020+D8000000+021D3769+D2000000+00000000"
+cheat5_enable = false

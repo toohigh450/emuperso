@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Grand Trucker Aniki - Shigoto to Kenka to Koi Moyou (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Grand%20Trucker%20Aniki%20-%20Shigoto%20to%20Kenka%20to%20Koi%20Moyou%20(Japan).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Max/Infinite Money"
+cheat0_code = "02147DFC+0098961C"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Fame Max"
+cheat1_code = "02147DF8+0098967F"
+cheat1_enable = false

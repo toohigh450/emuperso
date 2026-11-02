@@ -1,0 +1,85 @@
+# Recherche locale pour la ROM : Chase H.Q. [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Chase%20H.Q.%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Chase%20H.Q.%20(USA%2C%20Europe).cht
+
+cheats = 19
+
+cheat0_desc = "[GameShark] Infinite Time"
+cheat0_code = "0128A3C7"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Infinite Nitros"
+cheat1_code = "0102CFC7"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Time Is Always 99"
+cheat2_code = "0109A3C7+0109A4C7"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Infinite turbos"
+cheat3_code = "FAB-DDE-4C1"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Infinite time"
+cheat4_code = "A7A-C2F-19E"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Turbo lasts 1/2x as long"
+cheat5_code = "0BB-E1E-B32"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Turbo lasts 2x as long"
+cheat6_code = "2CB-E1E-B32"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Turbo lasts 3x as long"
+cheat7_code = "42B-E1E-B32"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Timer runs 2x faster"
+cheat8_code = "64A-AEF-C49"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Timer runs 1-1/2x slower"
+cheat9_code = "FFA-AEF-C49"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Start on stage 2"
+cheat10_code = "014-BFF-E6A+013-3EE-4C1"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Start on stage 3"
+cheat11_code = "024-BFF-E6A+013-3EE-4C1"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Start on stage 4"
+cheat12_code = "034-BFF-E6A+013-3EE-4C1"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Start on stage 5"
+cheat13_code = "044-BFF-E6A+013-3EE-4C1"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Infinite Time"
+cheat14_code = "0128A3C7"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Infinite Time"
+cheat15_code = "0109A3C7"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Infinite Nitro"
+cheat16_code = "0103CFC7"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Quickly Reach The Boss"
+cheat17_code = "0100DEC8"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] No Slowdowns From Obstacles"
+cheat18_code = "182-E2C-2AA+FA6-CCC-4C1+C97-2DD-5D4"
+cheat18_enable = false

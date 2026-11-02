@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : QuickSpot (USA).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/QuickSpot%20(USA).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Infinite Time in a Puzzle"
+cheat0_code = "920F7880+00000003+221A0B2C+00000000+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Player 1"
+cheat1_code = "020FD3FC+FFFFFFFF+020FD400+FFFFFFFF+020FD404+FFFFFFFF+020FD408+FFFFFFFF+020FD40C+FFFFFFFF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Player 2"
+cheat2_code = "020FD770+FFFFFFFF+020FD774+FFFFFFFF+020FD778+FFFFFFFF+020FD77C+FFFFFFFF+020FD780+FFFFFFFF"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Player 3"
+cheat3_code = "020FDAE4+FFFFFFFF+020FDAE8+FFFFFFFF+020FDAEC+FFFFFFFF+020FDAF0+FFFFFFFF+020FDAF4+FFFFFFFF"
+cheat3_enable = false

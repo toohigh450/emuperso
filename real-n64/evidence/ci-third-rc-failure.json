@@ -1,0 +1,25 @@
+{
+  "schema": "emuperso/rc-ci-attempt/v1",
+  "commit": "98820c59b4a83ade5919ea9c0c5f22329c6398b4",
+  "run_id": 41310383179,
+  "status": "ÉCHOUÉ",
+  "windows_status": "RÉUSSI",
+  "windows_groups": {
+    "launcher": 11,
+    "browser": 36
+  },
+  "linux_failed_bench": "web-https-review nested restore",
+  "failure": "Whole-vault comparison mismatch after missing-state load on a newly switched variant; before/after rows were not logged by the old assertion.",
+  "cause_on_this_run_demonstrated": false,
+  "plausible_interference": "Real15s native autosave may create the first native row before the click, outside the operation. Busy protects during operation, not prior independent RPCs.",
+  "correction": "Prime the new variant native fixture with completed explicit save before baseline; retain exact full-vault comparison and log differing rows/events if it fails. No timer disabled.",
+  "product_runtime_changed": false,
+  "artifact_sha256": {
+    "windows": "47832d08dcf74a0174e55697af88c68be71c6e2caa494c6f2c5e9989933d849c",
+    "linux": "5c7d5f560f89256745e03bd09f7c6c9f36cd7dd48da9fcf79c7120c0b906ec57"
+  },
+  "not_a_diagnosis_on_karl_pc": true,
+  "linux_full_passed_bench_groups": 92,
+  "linux_web_partial_passed_groups": 7,
+  "periodic_writer_mechanism_proven_locally": "probe-autosave-readonly-rc.json:3PASS"
+}

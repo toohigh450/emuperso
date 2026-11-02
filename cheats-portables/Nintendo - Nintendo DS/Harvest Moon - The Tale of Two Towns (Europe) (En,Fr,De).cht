@@ -1,0 +1,264 @@
+# Recherche locale pour la ROM : Harvest Moon - The Tale of Two Towns (Europe) (En,Fr,De).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Harvest%20Moon%20-%20The%20Tale%20of%20Two%20Towns%20(Europe).cht
+
+cheats = 64
+
+cheat0_desc = "[Action Replay] Anti-Piracy Bypass Code"
+cheat0_code = "520009F8+E12FFF1E+020009F8+EA0FF9C6+D2000000+00000000+023FF100+E59F0000+E23FF104+00000048+E12FFF1E+0000B3CF+E59F0000+E12FFF1E+0000AF81+E92D4007+E59F001C+E59F101C+E5912000+E1500002+059F0014+05810000+0280000C+05810088+E8BD8007+6A2B7148+022B7F38+6A3FF100+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat1_code = "5202A320+EE070F90+E20005E8+0000004A+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2D9878D+A0B1D2FB+000A002C+00A60009+00000000+00000000+0202A320+E92D401E+0202A324+FAFF58AF+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max/Infinite Money"
+cheat2_code = "94000130+FFFB0000+020506F8+3B9AC9FF+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Stamina Never Decreases"
+cheat3_code = "DA000000+0203DECC+D7000000+0203DECA+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Infinite Water Can"
+cheat4_code = "2203DE86+00000014"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] x1.5 Movement Speed"
+cheat5_code = "5207E7C4+E3500001+1207E7C8+00000D12+1207E7D0+00000C03+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Moon Jump"
+cheat6_code = "94000130+FFFD0000+020530E0+00000100+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] 1"
+cheat7_code = "2204262A+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] 2"
+cheat8_code = "2204262A+00000001"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] 3"
+cheat9_code = "2204262A+00000002"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] 4"
+cheat10_code = "2204262A+00000003"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] 5"
+cheat11_code = "2204262A+00000004"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] 6"
+cheat12_code = "2204262A+00000005"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] 7"
+cheat13_code = "2204262A+00000006"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] 8"
+cheat14_code = "2204262A+00000007"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] 9"
+cheat15_code = "2204262A+00000008"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] 10"
+cheat16_code = "2204262A+00000009"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Spring"
+cheat17_code = "22042624+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Summer"
+cheat18_code = "22042624+00000001"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Autumn"
+cheat19_code = "22042624+00000002"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Winter/Fall"
+cheat20_code = "22042624+00000003"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] 1"
+cheat21_code = "22042625+00000001"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] 2"
+cheat22_code = "22042625+00000002"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] 3"
+cheat23_code = "22042625+00000003"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] 4"
+cheat24_code = "22042625+00000004"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] 5"
+cheat25_code = "22042625+00000005"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] 6"
+cheat26_code = "22042625+00000006"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] 7"
+cheat27_code = "22042625+00000007"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] 8"
+cheat28_code = "22042625+00000008"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] 9"
+cheat29_code = "22042625+00000009"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] 10"
+cheat30_code = "22042625+0000000A"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] 11"
+cheat31_code = "22042625+0000000B"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] 12"
+cheat32_code = "22042625+0000000C"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] 13"
+cheat33_code = "22042625+0000000D"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] 14"
+cheat34_code = "22042625+0000000E"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] 15"
+cheat35_code = "22042625+0000000F"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] 16"
+cheat36_code = "22042625+00000010"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] 17"
+cheat37_code = "22042625+00000011"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] 18"
+cheat38_code = "22042625+00000012"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] 19"
+cheat39_code = "22042625+00000013"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] 20"
+cheat40_code = "22042625+00000014"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] 21"
+cheat41_code = "22042625+00000015"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] 22"
+cheat42_code = "22042625+00000016"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] 23"
+cheat43_code = "22042625+00000017"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] 24"
+cheat44_code = "22042625+00000018"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] 25"
+cheat45_code = "22042625+00000019"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] 26"
+cheat46_code = "22042625+0000001A"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] 27"
+cheat47_code = "22042625+0000001B"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] 28"
+cheat48_code = "22042625+0000001C"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] 29"
+cheat49_code = "22042625+0000001D"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] 30"
+cheat50_code = "22042625+0000001E"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] 31"
+cheat51_code = "22042625+0000001F"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Sunday"
+cheat52_code = "22042626+00000006"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Monday"
+cheat53_code = "22042626+00000000"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Tuesday"
+cheat54_code = "22042626+00000001"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Wednesday"
+cheat55_code = "22042626+00000002"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Thursday"
+cheat56_code = "22042626+00000003"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Friday"
+cheat57_code = "22042626+00000004"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Saturday"
+cheat58_code = "22042626+00000005"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Sunny"
+cheat59_code = "220506A5+00000000"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Rain"
+cheat60_code = "220506A5+00000001"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Heavy Rain"
+cheat61_code = "220506A5+00000002"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Snow"
+cheat62_code = "220506A5+00000003"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Blizzard"
+cheat63_code = "220506A5+00000004"
+cheat63_enable = false

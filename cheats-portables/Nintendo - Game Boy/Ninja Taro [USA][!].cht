@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Ninja Taro [USA][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Ninja%20Taro%20(USA).cht
+
+cheats = 7
+
+cheat0_desc = "[Format source non précisé] Infinite energy"
+cheat0_code = "F0A-E0C-6E9"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Set sword and power values to 5 (New game only)"
+cheat1_code = "054-7AE-E6E"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Set sword and power values to 9 (New game only)"
+cheat2_code = "094-7AE-E6E"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Start with more energy (New game only)"
+cheat3_code = "034-72E-E6E"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Infinite Energy"
+cheat4_code = "010997FF"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Blink Longer After Taking Damage"
+cheat5_code = "FFA-E3C-2AA"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Don't Stop Blinking After Taking Damage"
+cheat6_code = "C99-F2C-19E"
+cheat6_enable = false

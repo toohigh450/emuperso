@@ -1,0 +1,460 @@
+# Recherche locale pour la ROM : Izuna 2 - The Unemployed Ninja Returns (USA).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Izuna%202%20-%20The%20Unemployed%20Ninja%20Returns%20(USA).cht
+
+cheats = 113
+
+cheat0_desc = "[Action Replay] Max/Infinite Money"
+cheat0_code = "021F314C+3B9AC9FF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Switching"
+cheat1_code = "221F3B34+00000004"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Infinite Tag Team"
+cheat2_code = "221F3B38+00000064"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Items Max Quality"
+cheat3_code = "94000130+000003BB+C0000000+00000014+221F3D2E+00000063+DC000000+000001FC+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All Items Min Quality"
+cheat4_code = "94000130+0000037B+C0000000+00000014+221F3D2E+00000001+DC000000+000001FC+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All Items Quantity"
+cheat5_code = "94000130+000003DB+C0000000+00000014+221F3CD4+00000063+DC000000+000001FC+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] All Items Max Attack"
+cheat6_code = "94000130+000003BB+C0000000+00000014+121F3D08+000003E7+DC000000+000001FC+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] All Items Max Luv"
+cheat7_code = "94000130+0000037B+C0000000+00000014+121F3D0E+00002710+DC000000+000001FC+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Infinite HP and SP"
+cheat8_code = "C0000000+0000000A+DA000000+021DDF4C+D7000000+021DDF48+DC000000+00001696+D2000000+00000000+C0000000+0000000A+DA000000+021DDF54+D7000000+021DDF50+DC000000+00001696+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Max HP and SP"
+cheat9_code = "C0000000+0000000E+121DDF48+0000270F+121DDF4C+0000270F+121DDF50+000003E7+121DDF54+000003E7+DC000000+00001698+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Maximum Experience (Press Select)"
+cheat10_code = "94000130+FFFB0000+C0000000+0000000E+021DDF64+3B9AC9FF+DC000000+00001698+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Refill HP (Press L+R)"
+cheat11_code = "94000130+FCFF0000+C0000000+0000000A+DA000000+021DDF4C+D7000000+021DDF48+DC000000+00001696+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Infinite HP"
+cheat12_code = "C0000000+0000000A+DA000000+021DDF4C+D7000000+021DDF48+DC000000+00001696+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Freeze 300HP"
+cheat13_code = "C0000000+0000000A+121DDF48+0000012C+DC000000+00001698+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Freeze 900HP"
+cheat14_code = "C0000000+0000000A+121DDF48+00000384+DC000000+00001698+D2000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Freeze 1500HP"
+cheat15_code = "C0000000+0000000A+121DDF48+000005DC+DC000000+00001698+D2000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Freeze 3000HP"
+cheat16_code = "C0000000+0000000A+121DDF48+00000BB8+DC000000+00001698+D2000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Freeze 5000HP"
+cheat17_code = "C0000000+0000000A+121DDF48+00001388+DC000000+00001698+D2000000+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Freeze 9999HP"
+cheat18_code = "C0000000+0000000A+121DDF48+0000270F+DC000000+00001698+D2000000+00000000"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Maximum HP"
+cheat19_code = "C0000000+0000000A+121DDF4C+0000270F+DC000000+00001698+D2000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Refill SP (Press L+R)"
+cheat20_code = "94000130+FCFF0000+C0000000+0000000A+DA000000+021DDF54+D7000000+021DDF50+DC000000+00001696+D2000000+00000000"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Infinite SP"
+cheat21_code = "C0000000+0000000A+DA000000+021DDF54+D7000000+021DDF50+DC000000+00001696+D2000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Freeze 15SP"
+cheat22_code = "C0000000+0000000A+121DDF50+0000000F+DC000000+00001698+D2000000+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Freeze 30SP"
+cheat23_code = "C0000000+0000000A+121DDF50+0000001E+DC000000+00001698+D2000000+00000000"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Freeze 60SP"
+cheat24_code = "C0000000+0000000A+121DDF50+0000003C+DC000000+00001698+D2000000+00000000"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Freeze 90SP"
+cheat25_code = "C0000000+0000000A+121DDF50+0000005A+DC000000+00001698+D2000000+00000000"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Freeze 150SP"
+cheat26_code = "C0000000+0000000A+121DDF50+00000096+DC000000+00001698+D2000000+00000000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Freeze 300SP"
+cheat27_code = "C0000000+0000000A+121DDF50+0000012C+DC000000+00001698+D2000000+00000000"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Freeze 500SP"
+cheat28_code = "C0000000+0000000A+121DDF50+000001F4+DC000000+00001698+D2000000+00000000"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Freeze 999SP"
+cheat29_code = "C0000000+0000000A+121DDF50+000003E7+DC000000+00001698+D2000000+00000000"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Maximum SP"
+cheat30_code = "C0000000+0000000A+121DDF54+000003E7+DC000000+00001698+D2000000+00000000"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Infinite HP"
+cheat31_code = "D3000000+021DDF4C+F21DDF48+00000002+D2000000+00000000"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Max HP"
+cheat32_code = "121DDF48+0000270F+121DDF4C+0000270F"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Infinite SP"
+cheat33_code = "D3000000+021DDF54+F21DDF50+00000002+D2000000+00000000"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Max SP"
+cheat34_code = "121DDF50+000003E7+121DDF54+000003E7"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Max Experience"
+cheat35_code = "94000130+FFFB0000+021DDF64+3B9AC9FF+D2000000+00000000"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Infinite HP"
+cheat36_code = "D3000000+021DF5E4+F21DF5E0+00000002+D2000000+00000000"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Max HP"
+cheat37_code = "121DF5E0+0000270F+121DF5E4+0000270F"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Infinite SP"
+cheat38_code = "D3000000+021DF5EC+F21DF5E8+00000002+D2000000+00000000"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Max SP"
+cheat39_code = "121DF5E8+000003E7+121DF5EC+000003E7"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Max Experience"
+cheat40_code = "94000130+FFFB0000+021DF5FC+3B9AC9FF+D2000000+00000000"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Infinite HP"
+cheat41_code = "D3000000+021E0C7C+F21E0C78+00000002+D2000000+00000000"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Max HP"
+cheat42_code = "121E0C78+0000270F+121E0C7C+0000270F"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Infinite SP"
+cheat43_code = "D3000000+021E0C84+F21E0C80+00000002+D2000000+00000000"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Max SP"
+cheat44_code = "121E0C80+000003E7+121E0C84+000003E7"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Max Experience"
+cheat45_code = "94000130+FFFB0000+021E0C94+3B9AC9FF+D2000000+00000000"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Infinite HP"
+cheat46_code = "D3000000+021E2314+F21E2310+00000002+D2000000+00000000"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Max HP"
+cheat47_code = "121E2310+0000270F+121E2314+0000270F"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Infinite SP"
+cheat48_code = "D3000000+021E231C+F21E2318+00000002+D2000000+00000000"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Max SP"
+cheat49_code = "121E2318+000003E7+121E231C+000003E7"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Max Experience"
+cheat50_code = "94000130+FFFB0000+021E232C+3B9AC9FF+D2000000+00000000"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Infinite HP"
+cheat51_code = "D3000000+021E39AC+F21E39A8+00000002+D2000000+00000000"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Max HP"
+cheat52_code = "121E39A8+0000270F+121E39AC+0000270F"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Infinite SP"
+cheat53_code = "D3000000+021E39B4+F21E39B0+00000002+D2000000+00000000"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Max SP"
+cheat54_code = "121E39B0+000003E7+121E39B4+000003E7"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Max Experience"
+cheat55_code = "94000130+FFFB0000+021E39C4+3B9AC9FF+D2000000+00000000"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Infinite HP"
+cheat56_code = "D3000000+021E5044+F21E5040+00000002+D2000000+00000000"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Max HP"
+cheat57_code = "121E5040+0000270F+121E5044+0000270F"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Infinite SP"
+cheat58_code = "D3000000+021E504C+F21E5048+00000002+D2000000+00000000"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Max SP"
+cheat59_code = "121E5048+000003E7+121E504C+000003E7"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Max Experience"
+cheat60_code = "94000130+FFFB0000+021E505C+3B9AC9FF+D2000000+00000000"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Infinite HP"
+cheat61_code = "D3000000+021E66DC+F21E66D8+00000002+D2000000+00000000"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Max HP"
+cheat62_code = "121E66D8+0000270F+121E66DC+0000270F"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Infinite SP"
+cheat63_code = "D3000000+021E66E4+F21E66E0+00000002+D2000000+00000000"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Max SP"
+cheat64_code = "121E66E0+000003E7+121E66E4+000003E7"
+cheat64_enable = false
+
+cheat65_desc = "[Action Replay] Max Experience"
+cheat65_code = "94000130+FFFB0000+021E66F4+3B9AC9FF+D2000000+00000000"
+cheat65_enable = false
+
+cheat66_desc = "[Action Replay] Infinite HP"
+cheat66_code = "D3000000+021E7D74+F21E7D70+00000002+D2000000+00000000"
+cheat66_enable = false
+
+cheat67_desc = "[Action Replay] Max HP"
+cheat67_code = "121E7D70+0000270F+121E7D74+0000270F"
+cheat67_enable = false
+
+cheat68_desc = "[Action Replay] Infinite SP"
+cheat68_code = "D3000000+021E7D7C+F21E7D78+00000002+D2000000+00000000"
+cheat68_enable = false
+
+cheat69_desc = "[Action Replay] Max SP"
+cheat69_code = "121E7D78+000003E7+121E7D7C+000003E7"
+cheat69_enable = false
+
+cheat70_desc = "[Action Replay] Max Experience"
+cheat70_code = "94000130+FFFB0000+021E7D8C+3B9AC9FF+D2000000+00000000"
+cheat70_enable = false
+
+cheat71_desc = "[Action Replay] Infinite HP"
+cheat71_code = "D3000000+021E940C+F21E9408+00000002+D2000000+00000000"
+cheat71_enable = false
+
+cheat72_desc = "[Action Replay] Max HP"
+cheat72_code = "121E9408+0000270F+121E940C+0000270F"
+cheat72_enable = false
+
+cheat73_desc = "[Action Replay] Infinite SP"
+cheat73_code = "D3000000+021E9414+F21E9410+00000002+D2000000+00000000"
+cheat73_enable = false
+
+cheat74_desc = "[Action Replay] Max SP"
+cheat74_code = "121E9410+000003E7+121E9414+000003E7"
+cheat74_enable = false
+
+cheat75_desc = "[Action Replay] Max Experience"
+cheat75_code = "94000130+FFFB0000+021E9424+3B9AC9FF+D2000000+00000000"
+cheat75_enable = false
+
+cheat76_desc = "[Action Replay] Infinite HP"
+cheat76_code = "D3000000+021EAAA4+F21EAAA0+00000002+D2000000+00000000"
+cheat76_enable = false
+
+cheat77_desc = "[Action Replay] Max HP"
+cheat77_code = "121EAAA0+0000270F+121EAAA4+0000270F"
+cheat77_enable = false
+
+cheat78_desc = "[Action Replay] Infinite SP"
+cheat78_code = "D3000000+021EAAAC+F21EAAA8+00000002+D2000000+00000000"
+cheat78_enable = false
+
+cheat79_desc = "[Action Replay] Max SP"
+cheat79_code = "121EAAA8+000003E7+121EAAAC+000003E7"
+cheat79_enable = false
+
+cheat80_desc = "[Action Replay] Max Experience"
+cheat80_code = "94000130+FFFB0000+021EAABC+3B9AC9FF+D2000000+00000000"
+cheat80_enable = false
+
+cheat81_desc = "[Action Replay] Infinite HP"
+cheat81_code = "D3000000+021EEE6C+F21EEE68+00000002+D2000000+00000000"
+cheat81_enable = false
+
+cheat82_desc = "[Action Replay] Max HP"
+cheat82_code = "121EEE68+0000270F+121EEE6C+0000270F"
+cheat82_enable = false
+
+cheat83_desc = "[Action Replay] Infinite SP"
+cheat83_code = "D3000000+021EEE74+F21EEE70+00000002+D2000000+00000000"
+cheat83_enable = false
+
+cheat84_desc = "[Action Replay] Max SP"
+cheat84_code = "121EEE70+000003E7+121EEE74+000003E7"
+cheat84_enable = false
+
+cheat85_desc = "[Action Replay] Max Experience"
+cheat85_code = "94000130+FFFB0000+021EEE84+3B9AC9FF+D2000000+00000000"
+cheat85_enable = false
+
+cheat86_desc = "[Action Replay] Infinite HP"
+cheat86_code = "D3000000+021EC13C+F21EC138+00000002+D2000000+00000000"
+cheat86_enable = false
+
+cheat87_desc = "[Action Replay] Max HP"
+cheat87_code = "121EC138+0000270F+121EC13C+0000270F"
+cheat87_enable = false
+
+cheat88_desc = "[Action Replay] Infinite SP"
+cheat88_code = "D3000000+021EC144+F21EC140+00000002+D2000000+00000000"
+cheat88_enable = false
+
+cheat89_desc = "[Action Replay] Max SP"
+cheat89_code = "121EC140+000003E7+121EC144+000003E7"
+cheat89_enable = false
+
+cheat90_desc = "[Action Replay] Max Experience"
+cheat90_code = "94000130+FFFB0000+021EC154+3B9AC9FF+D2000000+00000000"
+cheat90_enable = false
+
+cheat91_desc = "[Action Replay] Infinite HP"
+cheat91_code = "D3000000+021ED7D4+F21ED7D0+00000002+D2000000+00000000"
+cheat91_enable = false
+
+cheat92_desc = "[Action Replay] Max HP"
+cheat92_code = "121ED7D0+0000270F+121ED7D4+0000270F"
+cheat92_enable = false
+
+cheat93_desc = "[Action Replay] Infinite SP"
+cheat93_code = "D3000000+021ED7DC+F21ED7D8+00000002+D2000000+00000000"
+cheat93_enable = false
+
+cheat94_desc = "[Action Replay] Max SP"
+cheat94_code = "121ED7D8+000003E7+121ED7DC+000003E7"
+cheat94_enable = false
+
+cheat95_desc = "[Action Replay] Max Experience"
+cheat95_code = "94000130+FFFB0000+021ED7EC+3B9AC9FF+D2000000+00000000"
+cheat95_enable = false
+
+cheat96_desc = "[Action Replay] Infinite HP"
+cheat96_code = "D3000000+021F0504+F21F0500+00000002+D2000000+00000000"
+cheat96_enable = false
+
+cheat97_desc = "[Action Replay] Max HP"
+cheat97_code = "121F0500+0000270B+121F0504+0000270B"
+cheat97_enable = false
+
+cheat98_desc = "[Action Replay] Infinite SP"
+cheat98_code = "D3000000+021F050C+F21F0508+00000002+D2000000+00000000"
+cheat98_enable = false
+
+cheat99_desc = "[Action Replay] Max SP"
+cheat99_code = "121F0508+000003E7+121F050C+000003E7"
+cheat99_enable = false
+
+cheat100_desc = "[Action Replay] Max Experience"
+cheat100_code = "94000130+FFFB0000+021F051C+3B9AC9FF+D2000000+00000000"
+cheat100_enable = false
+
+cheat101_desc = "[Action Replay] Infinite HP"
+cheat101_code = "D3000000+021F1B9C+F21F1B98+00000002+D2000000+00000000"
+cheat101_enable = false
+
+cheat102_desc = "[Action Replay] Max HP"
+cheat102_code = "121F1B98+0000270A+121F1B9C+0000270A"
+cheat102_enable = false
+
+cheat103_desc = "[Action Replay] Infinite SP"
+cheat103_code = "D3000000+021F1BA4+F21F1BA0+00000002+D2000000+00000000"
+cheat103_enable = false
+
+cheat104_desc = "[Action Replay] Max SP"
+cheat104_code = "121F1BA0+000003E7+121F1BA4+000003E7"
+cheat104_enable = false
+
+cheat105_desc = "[Action Replay] Max Experience"
+cheat105_code = "94000130+FFFB0000+021F1BB4+3B9AC9FF+D2000000+00000000"
+cheat105_enable = false
+
+cheat106_desc = "[Action Replay] Mugen Chasm: Infinite HP"
+cheat106_code = "C0000000+0000000E+DA000000+021DDF4C+D7000000+021DDF48+DC000000+00001696+D2000000+00000000"
+cheat106_enable = false
+
+cheat107_desc = "[Action Replay] Mugen Chasm: Infinite SP"
+cheat107_code = "C0000000+0000000E+DA000000+021DDF54+D7000000+021DDF50+DC000000+00001696+D2000000+00000000"
+cheat107_enable = false
+
+cheat108_desc = "[Action Replay] Mugen Chasm: Max HP/SP"
+cheat108_code = "C0000000+0000000E+021DDF48+0000270F+021DDF4C+0000270F+021DDF50+000003E7+021DDF54+000003E7+DC000000+00001698+D2000000+00000000"
+cheat108_enable = false
+
+cheat109_desc = "[Action Replay] Gankutsu Shrine/Girls-Only Dungeon: Infinite HP"
+cheat109_code = "C0000000+0000000E+DA000000+021DEA98+D7000000+021DEA94+DC000000+00001696+D2000000+00000000"
+cheat109_enable = false
+
+cheat110_desc = "[Action Replay] Gankutsu Shrine/Girls-Only Dungeon: Infinite SP"
+cheat110_code = "C0000000+0000000E+DA000000+021DEAA0+D7000000+021DEA9C+DC000000+00001696+D2000000+00000000"
+cheat110_enable = false
+
+cheat111_desc = "[Action Replay] Gankutsu Shrine/Girls-Only Dungeon: Max HP/SP"
+cheat111_code = "C0000000+0000000E+021DEA94+0000270F+021DEA98+0000270F+021DEA9C+000003E7+021DEAA0+000003E7+DC000000+00001698+D2000000+00000000"
+cheat111_enable = false
+
+cheat112_desc = "[Action Replay] Gankutsu Shrine/Girls-Only Dungeon: Max EXP"
+cheat112_code = "94000130+FFFB0000+C0000000+0000000E+021DEAB0+3B9AC9FF+DC000000+00001698+D2000000+00000000"
+cheat112_enable = false

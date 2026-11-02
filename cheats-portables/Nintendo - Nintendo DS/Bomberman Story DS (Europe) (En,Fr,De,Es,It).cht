@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Bomberman Story DS (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Bomberman%20Story%20DS%20(Europe).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "5200F198+EE070F90+E2000228+0000004A+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2E0E07D+015D0012+000A0365+00730009+00000000+00000000+0200F198+E92D401E+0200F19C+FAFFC421+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite health"
+cheat1_code = "22282729+00000014+2228292E+00000014+22424391+00000014"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Walk Anywhere"
+cheat2_code = "5204B8D0+E3560001+0204B8D4+1A00000D+0204BA88+1A00000E+94000130+FFFD0000+0204B8D4+EA00000D+0204BA88+EA00000E+D2000000+00000000"
+cheat2_enable = false

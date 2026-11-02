@@ -1,0 +1,77 @@
+# Recherche locale pour la ROM : Pinball Dreams [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Pinball%20Dreams%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Pinball%20Dreams%20(USA%2C%20Europe).cht
+
+cheats = 17
+
+cheat0_desc = "[Game Genie] Start With 5X Bonus (Lose It If You Collect Any Other Bonus)"
+cheat0_code = "3EB-EDF-4C1+04B-EEF-4C7+00B-EFF-A2D"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] No Tilt (Shake The Table As Nuch As You Want!)"
+cheat1_code = "004-BAC-4CA+004-BBC-B32"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Collect 2X Bonus & Get 6x Bonus"
+cheat2_code = "054-C7D-E62"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Start With 1 Ball"
+cheat3_code = "018-1BF-E66"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] Start With 4 Balls"
+cheat4_code = "048-1BF-E66"
+cheat4_enable = false
+
+cheat5_desc = "[Game Genie] Start With 7 Balls"
+cheat5_code = "078-1BF-E66"
+cheat5_enable = false
+
+cheat6_desc = "[Game Genie] Start With 9 Balls"
+cheat6_code = "098-1BF-E66"
+cheat6_enable = false
+
+cheat7_desc = "[Game Genie] Infinite Balls"
+cheat7_code = "008-18F-3BA"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Start with 5x bonus, lose it if you collect any other bonus"
+cheat8_code = "3EB-EDF-4C1+04B-EEF-4C7+00B-EFF-A2D"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] No tilt--shake the table as much as you want"
+cheat9_code = "004-BAC-4CA+004-BBC-B32"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Collect 2x bonus and get 6x bonus"
+cheat10_code = "054-C7D-E62"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Start with 1 ball"
+cheat11_code = "018-1BF-E66"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Start with 4 balls"
+cheat12_code = "048-1BF-E66"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Start with 7 balls"
+cheat13_code = "078-1BF-E66"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Start with 9 balls"
+cheat14_code = "098-1BF-E66"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Infinite balls"
+cheat15_code = "008-18F-3BA"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Infinite Balls"
+cheat16_code = "010061D1"
+cheat16_enable = false

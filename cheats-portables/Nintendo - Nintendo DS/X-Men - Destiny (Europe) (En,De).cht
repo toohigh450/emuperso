@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : X-Men - Destiny (Europe) (En,De).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/X-Men%20-%20Destiny%20(Europe).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] Health Never Decrease"
+cheat0_code = "5204A3BC+E59600D0+0204A3C0+E1A01000+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Energy"
+cheat1_code = "5204CBAC+E5900000+0204CBB0+E2800A05+0204CBB4+E5901434+0204CBBC+EA000000+0204CBD0+E5900434+0204D0B8+E2800A05+0204D0BC+E5901434+0204D0C8+E1A00000+0204D820+E2800A05+0204D824+E5901434+0204D830+E1A00000+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Enemy One Hit Kills"
+cheat2_code = "52034634+E59A00A4+02034638+E3A01000+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Points x99 After Use"
+cheat3_code = "5205D608+E5910000+0205D60C+E3A03063+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Walk Through Walls"
+cheat4_code = "5203F8B0+E3520000+94000130+FEFD0000+0203F8B4+028DD010+0203F8B8+012FFF1E+0203F900+E5832000+0203F904+E5820008+D0000000+00000000+94000130+FEFE0000+0203F8B4+128DD010+0203F8B8+112FFF1E+0203F900+E1A00000+0203F904+E1A00000+D2000000+00000000"
+cheat4_enable = false

@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Petz - My Puppy Family (Europe) (En,Fr,De,Es,It,Nl,Sv,No,Da).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Petz%20-%20My%20Puppy%20Family%20(Europe).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] All Toys"
+cheat0_code = "021FEFE4+FFFFFFFF+121FEFE8+0000FFFF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Costumes"
+cheat1_code = "221FEFE9+000000FF+121FEFEA+0000FFFF+021FEFEC+FFFFFFFF+021FEFF0+FFFFFFFF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Decorations"
+cheat2_code = "221FEFF3+000000FF"
+cheat2_enable = false

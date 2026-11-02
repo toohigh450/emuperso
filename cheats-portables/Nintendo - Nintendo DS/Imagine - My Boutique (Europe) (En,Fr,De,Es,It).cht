@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Imagine - My Boutique (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Imagine%20-%20My%20Boutique%20(Europe).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] All Stages"
+cheat0_code = "22137CCC+0000000A"
+cheat0_enable = false

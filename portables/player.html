@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moteur</title>
+<link rel="stylesheet" href="player-layout.css">
+<style>
+  html, body { margin: 0; height: 100%; background: #1b1940; overflow: hidden; }
+  #game { width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<div id="game"></div>
+<script>
+(function () {
+  var id = new URLSearchParams(location.search).get('id');
+  var entry = window.parent && window.parent.__portablesBoots && window.parent.__portablesBoots[id];
+  if (!entry) { document.body.textContent = 'Session introuvable.'; return; }
+  var boot = entry.boot, events = entry.events;
+  var source = entry.source;
+  var layout = import('./js/player-layout.mjs');
+  function updateLayout() {
+    layout.then(function (m) { m.installPlayerLayout(window.EJS_emulator); }).catch(function (err) { events.onError('Disposition des commandes indisponible : ' + err.message); });
+  }
+  var phase = 'préparation du moteur';
+  function starting() {
+    if (phase === 'exécution du jeu') return;
+    phase = 'démarrage du cœur';
+    if (events.onStarting) events.onStarting();
+  }
+  // Le délai de démarrage commence au clic, pas pendant l'attente de l'utilisateur.
+  document.addEventListener('click', function (e) {
+    if (e.target.closest && e.target.closest('.ejs_start_button')) starting();
+  }, true);
+
+  // Variables globales lues par EmulatorJS.
+  Object.keys(boot.ejs).forEach(function (k) { window[k] = boot.ejs[k]; });
+  // Le fichier est créé dans CE document (et non dans la page parente) pour éviter les
+  // problèmes d'instanceof entre fenêtres, puis la page parente libère sa copie en mémoire.
+  window.EJS_gameUrl = new File([boot.rom.file || boot.rom.bytes], boot.rom.name);
+  boot.rom.file = window.EJS_gameUrl;
+  boot.rom.bytes = null;
+  if (boot.bios) {
+    window.EJS_biosUrl = new File([boot.bios.file || boot.bios.bytes], boot.bios.name);
+    boot.bios.file = window.EJS_biosUrl;
+    boot.bios.bytes = null;
+  }
+  window.EJS_player = '#game';
+  // Les codes passent uniquement par le panneau du lanceur : le menu du moteur est masqué,
+  // car plusieurs cœurs (fceumm, mGBA, DeSmuME) ignorent l'état « désactivé » d'un code.
+  window.EJS_Buttons = Object.assign({}, window.EJS_Buttons, { cheat: false });
+  var activeCodes = (boot.codes || []).slice(); // codes activés choisis avant le lancement
+  function manager() {
+    var emulator = window.EJS_emulator;
+    if (!emulator || !emulator.gameManager) throw new Error('Moteur pas encore prêt.');
+    return emulator.gameManager;
+  }
+  function applyCodes() {
+    var gm = manager();
+    // Le moteur peut avoir mémorisé d'anciens codes (localStorage) : on les écarte.
+    window.EJS_emulator.cheats = [];
+    gm.resetCheat();
+    for (var i = 0; i < activeCodes.length; i++) gm.setCheat(i, 1, activeCodes[i]);
+  }
+  // Snes9x ignore parfois un redémarrage demandé dans la même image qu'une capture d'état :
+  // on le reporte à l'image suivante (10 essais sur 10 réussis, contre des échecs sinon).
+  function restartNextFrame() {
+    requestAnimationFrame(function () { try { manager().restart(); } catch (err) { console.error(err); } });
+  }
+  entry.control = {
+    setCodes: function (codes) {
+      activeCodes = codes.slice();
+      if (window.EJS_emulator && window.EJS_emulator.started) applyCodes();
+    },
+    supportsStates: function () { return manager().supportsStates(); },
+    getState: function () { return manager().getState(); },
+    loadState: function (bytes) { manager().loadState(new Uint8Array(bytes)); },
+    getSave: function () { return manager().getSaveFile(); },
+    importSave: function (bytes) {
+      var gm = manager();
+      var path = gm.getSaveFilePath();
+      var parts = path.split('/'), dir = '';
+      for (var i = 0; i < parts.length - 1; i++) {
+        if (!parts[i]) continue;
+        dir += '/' + parts[i];
+        if (!gm.FS.analyzePath(dir).exists) gm.FS.mkdir(dir);
+      }
+      if (gm.FS.analyzePath(path).exists) gm.FS.unlink(path);
+      gm.FS.writeFile(path, new Uint8Array(bytes));
+      gm.loadSaveFiles();
+      restartNextFrame();
+    },
+    restart: function () { manager(); restartNextFrame(); },
+    screenshot: function () { return manager().screenshot(); },
+    // Écrit la sauvegarde de la cartouche dans IndexedDB tout de suite (le moteur ne le fait
+    // sinon qu'à intervalles), avant une fermeture, un changement de jeu ou une mise en arrière-plan.
+    flush: function () {
+      return new Promise(function (resolve) {
+        try {
+          var emulator = window.EJS_emulator;
+          if (!emulator || !emulator.started) { resolve(false); return; }
+          var gm = manager();
+          gm.saveSaveFiles();
+          setTimeout(function () { resolve(false); }, 2000);
+          gm.FS.syncfs(false, function () { resolve(true); });
+        } catch (err) { console.error(err); resolve(false); }
+      });
+    },
+  };
+  // Android peut tuer un onglet en arrière-plan : on écrit la sauvegarde dès que la page est cachée.
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'hidden') entry.control.flush();
+  });
+  window.addEventListener('pagehide', function () { entry.control.flush(); });
+  window.EJS_ready = function () {
+    phase = 'attente du démarrage';
+    var emulator = window.EJS_emulator;
+    if (emulator && typeof emulator.on === 'function') {
+      // 4.2.3 émet saveSaveFiles, mais son loader ne branche pas EJS_onSaveUpdate.
+      if (typeof emulator.enableSaveUpdateEvent !== 'function') {
+        emulator.on('saveSaveFiles', function (save) { if (save) window.EJS_onSaveUpdate({ save: save }); });
+      }
+      emulator.on('exit', function () { events.onExit(); });
+    }
+    events.onReady();
+    updateLayout();
+    if (window.EJS_startOnLoaded) starting();
+  };
+  window.EJS_onGameStart = function () {
+    phase = 'exécution du jeu';
+    updateLayout();
+    try { applyCodes(); } catch (err) { console.error(err); }
+    events.onStart();
+  };
+  window.EJS_onExit = function () { events.onExit(); };
+  window.EJS_onSaveUpdate = function (e) {
+    try { if (boot.onSaveUpdate) boot.onSaveUpdate(e); } catch (err) { console.error(err); }
+  };
+
+  window.addEventListener('error', function (e) {
+    events.onError('Erreur pendant ' + phase + (e.message ? ' : ' + e.message : '.'));
+  });
+  window.addEventListener('unhandledrejection', function (e) {
+    var reason = e.reason && (e.reason.message || String(e.reason));
+    events.onError('Moteur interrompu pendant ' + phase + (reason ? ' : ' + reason : '.'));
+  });
+  window.EJS_pathtodata = source.path;
+  function loadEngine() {
+    var script = document.createElement('script');
+    script.src = source.path + 'loader.js';
+    if (source.integrity) { script.integrity = source.integrity; script.crossOrigin = 'anonymous'; }
+    script.onerror = function () { events.onError('Chargeur absent ou contrôle d’intégrité refusé.'); };
+    document.body.appendChild(script);
+  }
+  // Reprise d'une sauvegarde à l'ancien nom (GB/GBC/GBA/DS), avant que le moteur ne lise sa base :
+  // l'ancien moteur est déjà fermé à ce stade. Un échec n'empêche pas le démarrage.
+  var prepare;
+  try { prepare = boot.prepareSaves ? boot.prepareSaves() : null; } catch (err) { console.error(err); }
+  Promise.resolve(prepare).catch(function (err) { console.error(err); }).then(loadEngine);
+})();
+</script>
+</body>
+</html>

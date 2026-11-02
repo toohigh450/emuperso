@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Famicom Mini 21 - Super Mario Bros. 2 (Japan).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Famicom%20Mini%2021%20-%20Super%20Mario%20Bros.%202%20(Japan)%20(Code%20Breaker).cht
+
+cheats = 7
+
+cheat0_desc = "[Code Breaker] Infinite Time"
+cheat0_code = "330079EE+0009"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Super Jump (Press Up +A)"
+cheat1_code = "D0000020+0041+3300729F+00FE"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Level Modifier"
+cheat2_code = "33007960+00??"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Always Have Starman"
+cheat3_code = "3300799F+001D"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Can Always Throw Fireballs"
+cheat4_code = "33007956+0002"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Infinite Lives"
+cheat5_code = "3300795A+0008"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Every Coin Gives A 1-Up"
+cheat6_code = "3300795E+0063"
+cheat6_enable = false

@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : WarioWare, Inc. - Mega Microgame$! (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/WarioWare%2C%20Inc.%20-%20Mega%20Microgame%24!%20(USA)%20(Code%20Breaker).cht
+
+cheats = 7
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00000E97+000A+10000F80+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Lives"
+cheat1_code = "330039D5+0004"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Slow Timer"
+cheat2_code = "83000EC4+00CC+830048A4+00CC"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Real Slow Timer"
+cheat3_code = "83000EC4+0088+830048A4+0088"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Complete Grid"
+cheat4_code = "42000100+0101+00000078+0002"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Have All Levels Cleared"
+cheat5_code = "42000028+0003+0000000A+0008+42000BF0+0100+0000000A+0038"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Unlock All Extras"
+cheat6_code = "42000078+0003+00000011+0008"
+cheat6_enable = false

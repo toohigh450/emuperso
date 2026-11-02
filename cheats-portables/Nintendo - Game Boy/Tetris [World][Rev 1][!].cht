@@ -1,0 +1,156 @@
+# Recherche locale pour la ROM : Tetris [World][Rev 1][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Tetris%20(World)%20(Rev%201).cht
+
+cheats = 37
+
+cheat0_desc = "[Format source non précisé] Keep stack displayed while paused"
+cheat0_code = "CEC-30E-C45"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Keep current and next pieces displayed while paused"
+cheat1_code = "D9C-53E-D5D"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Only piece 1 will appear"
+cheat2_code = "000-63D-6E9+3E0-64D-5D0+000-65D-087"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Only piece 2 will appear"
+cheat3_code = "000-63D-6E9+3E0-64D-5D0+040-65D-087"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Only piece 3 will appear"
+cheat4_code = "000-63D-6E9+3E0-64D-5D0+080-65D-087"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Only piece 4 will appear"
+cheat5_code = "000-63D-6E9+3E0-64D-5D0+0C0-65D-087"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Only piece 5 will appear"
+cheat6_code = "000-63D-6E9+3E0-64D-5D0+100-65D-087"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Only piece 6 will appear"
+cheat7_code = "000-63D-6E9+3E0-64D-5D0+140-65D-087"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Only piece 7 will appear"
+cheat8_code = "000-63D-6E9+3E0-64D-5D0+180-65D-087"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Need 1 line to finish game B"
+cheat9_code = "01A-8BE-7FE"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Need 10 lines to finish game B"
+cheat10_code = "10A-8BE-7FE"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Immunity from other player's Tetrises (2 Player)"
+cheat11_code = "00C-83F-197"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] When the other player gets a double or better, player with Game Genie gets 4 lines added to his screen (makes game more difficult for that player)  (2 Player)"
+cheat12_code = "3EC-86F-2AA+04C-87F-7F0"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Piece Modifier"
+cheat13_code = "010103C2"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Pieces Rotate Very Fast"
+cheat14_code = "010080FF"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Music B sounds different"
+cheat15_code = "30B-ED9"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Place blocks off the screen"
+cheat16_code = "A45-41D"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Always Get Straight Pieces"
+cheat17_code = "010903C2"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Always Get Square Pieces"
+cheat18_code = "010C03C2"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Get 10 000 Extra Points Each Time You Get Any Points"
+cheat19_code = "01FFA1C0"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] No Piece Display Box Forever"
+cheat20_code = "01FF11C2"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Infinite Time Choosing Placements"
+cheat21_code = "011201C2"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Altered Music"
+cheat22_code = "01FFA3DF+01FFB3DF"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Drop Pieces To Clear Line"
+cheat23_code = "001-5ED-3B5"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Skip Intro Screen"
+cheat24_code = "003-96F-E69+013-98F-081+FA3-72F-D5D"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Replace OFF Music with any song"
+cheat25_code = "005-20E-195"
+cheat25_enable = false
+
+cheat26_desc = "[Format source non précisé] Game Over Music is crazy after the normal song ends"
+cheat26_code = "03C-199-E6A"
+cheat26_enable = false
+
+cheat27_desc = "[Format source non précisé] Skip Copyright Screen"
+cheat27_code = "063-8FF-7FE"
+cheat27_enable = false
+
+cheat28_desc = "[Format source non précisé] Start at VS Game Select"
+cheat28_code = "163-8FF-7FE"
+cheat28_enable = false
+
+cheat29_desc = "[Format source non précisé] Start at Rocket Shootoff Cutscene"
+cheat29_code = "263-8FF-7FE"
+cheat29_enable = false
+
+cheat30_desc = "[Format source non précisé] Almost Any Value Messes Up The Music"
+cheat30_code = "22B-0F9-91A"
+cheat30_enable = false
+
+cheat31_desc = "[Format source non précisé] Glitched Graphics"
+cheat31_code = "044-0BF-F76"
+cheat31_enable = false
+
+cheat32_desc = "[Format source non précisé] Press down To descend Tetriminos"
+cheat32_code = "000-AED-19E"
+cheat32_enable = false
+
+cheat33_desc = "[Format source non précisé] Always Get The Same Piece"
+cheat33_code = "FA0-66D-4C1"
+cheat33_enable = false
+
+cheat34_desc = "[Format source non précisé] Keep current and next pieces and stack displayed while paused"
+cheat34_code = "18C-2EE-4CA"
+cheat34_enable = false
+
+cheat35_desc = "[Format source non précisé] Music Modifier"
+cheat35_code = "012391A9"
+cheat35_enable = false
+
+cheat36_desc = "[Format source non précisé] Replaces A-TYPE with High Score Theme, B-TYPE with Game B Clear, C-TYPE with Title Music, and OFF with Game Over Music"
+cheat36_code = "1B5-1AE-B36"
+cheat36_enable = false

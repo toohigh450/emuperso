@@ -1,0 +1,60 @@
+# Recherche locale pour la ROM : Disney Sports - Soccer (Japan).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Disney%20Sports%20-%20Soccer%20(USA%2C%20Japan)%20(Code%20Breaker).cht
+
+cheats = 13
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00001B73+000A+10000CE0+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Home Team Scores 100"
+cheat1_code = "32009FF8+0064"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Home Team Scores 50"
+cheat2_code = "32009FF8+0032"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Home Team Scores 20"
+cheat3_code = "32009FF8+0014"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Home Team Scores 10"
+cheat4_code = "32009FF8+000A"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Home Team Scores 5"
+cheat5_code = "32009FF8+0005"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Home Team Scores 0"
+cheat6_code = "32009FF8+0000"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Away Team Scores 100"
+cheat7_code = "32009FF9+0064"
+cheat7_enable = false
+
+cheat8_desc = "[Code Breaker] Away Team Scores 50"
+cheat8_code = "32009FF9+0032"
+cheat8_enable = false
+
+cheat9_desc = "[Code Breaker] Away Team Scores 20"
+cheat9_code = "32009FF9+0014"
+cheat9_enable = false
+
+cheat10_desc = "[Code Breaker] Away Team Scores 10"
+cheat10_code = "32009FF9+000A"
+cheat10_enable = false
+
+cheat11_desc = "[Code Breaker] Away Team Scores 5"
+cheat11_code = "32009FF9+0005"
+cheat11_enable = false
+
+cheat12_desc = "[Code Breaker] Away Team Scores 0"
+cheat12_code = "32009FF9+0000"
+cheat12_enable = false

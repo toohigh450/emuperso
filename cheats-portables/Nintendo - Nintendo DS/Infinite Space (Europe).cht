@@ -1,0 +1,268 @@
+# Recherche locale pour la ROM : Infinite Space (Europe).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Infinite%20Space%20(Europe).cht
+
+cheats = 65
+
+cheat0_desc = "[Action Replay] ARDS Fix Code"
+cheat0_code = "03807394+EBAFDB1A"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Skip Space (Select)"
+cheat1_code = "94000130+FFFB0000+1228AA1A+00000000+D0000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Attack Gauge"
+cheat2_code = "9228A810+00000010+1228A812+00002328+1228A816+00002328+1228A81A+00002328+D0000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] 30048 Fame  Rank 1 (L + R )"
+cheat3_code = "94000130+FCFF0000+1228A4BE+00007560+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max/Infinite Money"
+cheat4_code = "620DDBEC+00000000+B20DDBEC+00000000+00000D22+0000270F+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Max/Infinite Money v2"
+cheat5_code = "920EF8A4+000024C7+020EF8A4+E3A00A02+D0000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] L + R for 5000 Money"
+cheat6_code = "94000130+FCFF0000+1228A4C6+00001388+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] L + R for 9999 Money"
+cheat7_code = "94000130+FCFF0000+1228A4C6+0000270F+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] L + R for 30000 Money"
+cheat8_code = "94000130+FCFF0000+1228A4C6+00007530+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] L + R for 99999 Money"
+cheat9_code = "94000130+FCFF0000+1228A4C6+0000270F+1228A4C2+00000009+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] L + R for 99999999 Money"
+cheat10_code = "94000130+FCFF0000+1228A4C6+0000270F+1228A4C2+0000270F+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Press Select + Up For Max Bar"
+cheat11_code = "94000130+FFBB0000+2228A813+00000024+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] no miss"
+cheat12_code = "2228AD16+00000064"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] always crit"
+cheat13_code = "2228AD0E+00000064"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] 100% evade"
+cheat14_code = "2228A406+00000064"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] reduced damage"
+cheat15_code = "2228AD1E+00000028"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] fast bar in melee in melee"
+cheat16_code = "2228B356+000003E7"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] 9,999 crew in melee"
+cheat17_code = "1228A42A+0000270F"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Full Fleet [press select]"
+cheat18_code = "94000130+FFFB0000+221BCF6C+00000005+221C5114+00000005+2228A15E+00000005+2228ABDE+00000005+2228B212+00000005+2232DED7+00000005+22403660+00000005+D2000000+00000000"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] All guns in range [hold d-pad Down]"
+cheat19_code = "94000130+FF7F0000+121BD02A+00000001+121BD052+00000001+121BD07A+00000001+121BD0A2+00000001+C0000000+00000003+121BD258+00000001+121BD280+00000001+121BD2A8+00000001+121BD2D0+00000001+121BD2F8+00000001+DC000000+0000022E+D2000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Improved fighter buff code"
+cheat20_code = "2228AC97+00000001+2228A3FA+00000012+2228A316+00000031+221BD1AE+0000001E+221BD3DC+0000001E+221BD60A+0000001E+221BD838+0000001E"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] All Ship Blueprints"
+cheat21_code = "94000130+FFFB0000+C0000000+000000C3+221BFB5C+00000002+DC000000+00000058+D2000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] All Weapons"
+cheat22_code = "94000130+FFFB0000+C0000000+00000075+221C42D4+00000001+DC000000+0000001A+D2000000+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] All Module parts"
+cheat23_code = "94000130+FFFB0000+C0000000+000000EA+221C8610+00000002+DC000000+0000001C+D2000000+00000000"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] All fighters Unlocked"
+cheat24_code = "94000130+FFFB0000+C0000000+0000001B+221C3EE2+00000002+221C3EE6+00000002+DC000000+00000022+D2000000+00000000"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] All Module Parts Cost Only 2 Blocks"
+cheat25_code = "94000130+FFFB0000+C0000000+000000EB+221C85EA+00000009+DC000000+0000001C+D2000000+00000000"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] All Ships Cost $0 To Buy"
+cheat26_code = "94000130+FFFB0000+C0000000+0000008D+121C0DEA+00000000+DC000000+00000058+D2000000+00000000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Max Leadership"
+cheat27_code = "221C50D4+00000063"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Max Control"
+cheat28_code = "221C50DA+00000063"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Max Combat"
+cheat29_code = "221C510A+00000063"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Max Navigation"
+cheat30_code = "221C50E0+00000063"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Max Artillery"
+cheat31_code = "221C50E6+00000063"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Max Science"
+cheat32_code = "221C50F2+00000063"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Max Piloting"
+cheat33_code = "221C50F8+00000063"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Max Medicine"
+cheat34_code = "221C50FE+00000063"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Max Management"
+cheat35_code = "221C5104+00000063"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Max Maintenance"
+cheat36_code = "221C50EC+00000063"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] 50"
+cheat37_code = "520F4000+EBFCD644+1228AFEE+00000032+D2000000+00000000"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] 100"
+cheat38_code = "520F4000+EBFCD644+1228AFEE+00000064+D2000000+00000000"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] 200"
+cheat39_code = "520F4000+EBFCD644+1228AFEE+000000C8+D2000000+00000000"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] 500"
+cheat40_code = "520F4000+EBFCD644+1228AFEE+000001F4+D2000000+00000000"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] 1000"
+cheat41_code = "520F4000+EBFCD644+1228AFEE+000003E8+D2000000+00000000"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] 5000"
+cheat42_code = "520F4000+EBFCD644+1228AFEE+00001388+D2000000+00000000"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] 500"
+cheat43_code = "520F4000+EBFCD644+1228AFE6+00000032+D2000000+00000000"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] 1000"
+cheat44_code = "520F4000+EBFCD644+1228AFE6+00000064+D2000000+00000000"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] 2000"
+cheat45_code = "520F4000+EBFCD644+1228AFE6+000000C8+D2000000+00000000"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] 5000"
+cheat46_code = "520F4000+EBFCD644+1228AFE6+000001F4+D2000000+00000000"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] 10000"
+cheat47_code = "520F4000+EBFCD644+1228AFE6+000003E8+D2000000+00000000"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] 50000"
+cheat48_code = "520F4000+EBFCD644+1228AFE6+00001388+D2000000+00000000"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] 50"
+cheat49_code = "520F4000+EBFCD644+1228AFEA+00000032+D2000000+00000000"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] 100"
+cheat50_code = "520F4000+EBFCD644+1228AFEA+00000064+D2000000+00000000"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] 200"
+cheat51_code = "520F4000+EBFCD644+1228AFEA+000000C8+D2000000+00000000"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] 500"
+cheat52_code = "520F4000+EBFCD644+1228AFEA+000001F4+D2000000+00000000"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] 1000"
+cheat53_code = "520F4000+EBFCD644+1228AFEA+000003E8+D2000000+00000000"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] 5000"
+cheat54_code = "520F4000+EBFCD644+1228AFEA+00001388+D2000000+00000000"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Infinite Health"
+cheat55_code = "DA000000+021BCF18+D7000000+021BCF1A+D2000000+00000000"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Infinite Recharge"
+cheat56_code = "DA000000+021BCF1C+D7000000+021BCF1E+D2000000+00000000"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Infinite Health"
+cheat57_code = "DA000000+021BD146+D7000000+021BD148+D2000000+00000000"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Infinite Recharge"
+cheat58_code = "DA000000+021BD14A+D7000000+021BD14C+D2000000+00000000"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Infinite Health"
+cheat59_code = "DA000000+021BD374+D7000000+021BD376+D2000000+00000000"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Infinite Recharge"
+cheat60_code = "DA000000+021BD378+D7000000+021BD37A+D2000000+00000000"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Infinite Health"
+cheat61_code = "DA000000+021BD5A2+D7000000+021BD5A4+D2000000+00000000"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Infinite Recharge"
+cheat62_code = "DA000000+021BD5A6+D7000000+021BD5A8+D2000000+00000000"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Infinite Health"
+cheat63_code = "DA000000+021BD7D0+D7000000+021BD7D2+D2000000+00000000"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Infinite Recharge"
+cheat64_code = "DA000000+021BD7D4+D7000000+021BD7D6+D2000000+00000000"
+cheat64_enable = false

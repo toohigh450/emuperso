@@ -1,0 +1,408 @@
+# Recherche locale pour la ROM : LostMagic (Europe) (En,Fr,De,Es).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/LostMagic%20(Europe).cht
+
+cheats = 100
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "520CF240+EE070F90+E20005CC+00000046+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2DF1619+039B00F8+0009000A+00000000+020CF240+E92D401E+020CF244+FAFCC4E0+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Health"
+cheat1_code = "9210346C+00000001+B22F12F8+00000000+1000008C+0000270F+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Infinite MP"
+cheat2_code = "9210346C+00000001+B232700C+00000000+10000000+0000270F+10000002+0000270F+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Magic Attack"
+cheat3_code = "9210346C+00000001+B22F12F8+00000000+1000007C+000003E8+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Defense"
+cheat4_code = "9210346C+00000001+B22F12F8+00000000+10000080+000003E8+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Max Magic Defense"
+cheat5_code = "9210346C+00000001+B22F12F8+00000000+10000082+000003E8+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Max Attack"
+cheat6_code = "9210346C+00000001+B22F12F8+00000000+10000084+000003E8+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Max Movement (Speed)"
+cheat7_code = "9210346C+00000001+B22F12F8+00000000+10000086+00000200+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Infinite Time"
+cheat8_code = "12326C1C+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Debug Test Event"
+cheat9_code = "A4000130+FFFB0000+0209487C+E1A05000+D2000000+00000000+94000130+FFFB0000+0209487C+E3A05017+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Life Bracelet"
+cheat10_code = "22102D04+00000001"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Gale Shoes"
+cheat11_code = "22102D04+00000002"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Demon Horn"
+cheat12_code = "22102D04+00000003"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Wind Shield"
+cheat13_code = "22102D04+00000004"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Hunter Eye"
+cheat14_code = "22102D04+00000005"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Angel Coat"
+cheat15_code = "22102D04+00000006"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Iron Shield"
+cheat16_code = "22102D04+00000007"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Dragon Scale"
+cheat17_code = "22102D04+00000008"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Level 50"
+cheat18_code = "22102D05+00000032"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Life Bracelet"
+cheat19_code = "22102D07+00000001"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Gale Shoes"
+cheat20_code = "22102D07+00000002"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Demon Horn"
+cheat21_code = "22102D07+00000003"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Wind Shield"
+cheat22_code = "22102D07+00000004"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Hunter Eye"
+cheat23_code = "22102D07+00000005"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Angel Coat"
+cheat24_code = "22102D07+00000006"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Iron Shield"
+cheat25_code = "22102D07+00000007"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Dragon Scale"
+cheat26_code = "22102D07+00000008"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Level 50"
+cheat27_code = "22102D08+00000032"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Life Bracelet"
+cheat28_code = "22102D0A+00000001"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Gale Shoes"
+cheat29_code = "22102D0A+00000002"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Demon Horn"
+cheat30_code = "22102D0A+00000003"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Wind Shield"
+cheat31_code = "22102D0A+00000004"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Hunter Eye"
+cheat32_code = "22102D0A+00000005"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Angel Coat"
+cheat33_code = "22102D0A+00000006"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Iron Shield"
+cheat34_code = "22102D0A+00000007"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Dragon Scale"
+cheat35_code = "22102D0A+00000008"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Level 50"
+cheat36_code = "22102D0B+00000032"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Life Bracelet"
+cheat37_code = "22102D0D+00000001"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Gale Shoes"
+cheat38_code = "22102D0D+00000002"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Demon Horn"
+cheat39_code = "22102D0D+00000003"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Wind Shield"
+cheat40_code = "22102D0D+00000004"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Hunter Eye"
+cheat41_code = "22102D0D+00000005"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Angel Coat"
+cheat42_code = "22102D0D+00000006"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Iron Shield"
+cheat43_code = "22102D0D+00000007"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Dragon Scale"
+cheat44_code = "22102D0D+00000008"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Level 50"
+cheat45_code = "22102D0E+00000032"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Life Bracelet"
+cheat46_code = "22102D10+00000001"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Gale Shoes"
+cheat47_code = "22102D10+00000002"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Demon Horn"
+cheat48_code = "22102D10+00000003"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Wind Shield"
+cheat49_code = "22102D10+00000004"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Hunter Eye"
+cheat50_code = "22102D10+00000005"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Angel Coat"
+cheat51_code = "22102D10+00000006"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Iron Shield"
+cheat52_code = "22102D10+00000007"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Dragon Scale"
+cheat53_code = "22102D10+00000008"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Level 50"
+cheat54_code = "22102D11+00000032"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Life Bracelet"
+cheat55_code = "22102D13+00000001"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Gale Shoes"
+cheat56_code = "22102D13+00000002"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Demon Horn"
+cheat57_code = "22102D13+00000003"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Wind Shield"
+cheat58_code = "22102D13+00000004"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Hunter Eye"
+cheat59_code = "22102D13+00000005"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Angel Coat"
+cheat60_code = "22102D13+00000006"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Iron Shield"
+cheat61_code = "22102D13+00000007"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Dragon Scale"
+cheat62_code = "22102D13+00000008"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Level 50"
+cheat63_code = "22102D14+00000032"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Life Bracelet"
+cheat64_code = "22102D16+00000001"
+cheat64_enable = false
+
+cheat65_desc = "[Action Replay] Gale Shoes"
+cheat65_code = "22102D16+00000002"
+cheat65_enable = false
+
+cheat66_desc = "[Action Replay] Demon Horn"
+cheat66_code = "22102D16+00000003"
+cheat66_enable = false
+
+cheat67_desc = "[Action Replay] Wind Shield"
+cheat67_code = "22102D16+00000004"
+cheat67_enable = false
+
+cheat68_desc = "[Action Replay] Hunter Eye"
+cheat68_code = "22102D16+00000005"
+cheat68_enable = false
+
+cheat69_desc = "[Action Replay] Angel Coat"
+cheat69_code = "22102D16+00000006"
+cheat69_enable = false
+
+cheat70_desc = "[Action Replay] Iron Shield"
+cheat70_code = "22102D16+00000007"
+cheat70_enable = false
+
+cheat71_desc = "[Action Replay] Dragon Scale"
+cheat71_code = "22102D16+00000008"
+cheat71_enable = false
+
+cheat72_desc = "[Action Replay] Level 50"
+cheat72_code = "22102D17+00000032"
+cheat72_enable = false
+
+cheat73_desc = "[Action Replay] Life Bracelet"
+cheat73_code = "22102D19+00000001"
+cheat73_enable = false
+
+cheat74_desc = "[Action Replay] Gale Shoes"
+cheat74_code = "22102D19+00000002"
+cheat74_enable = false
+
+cheat75_desc = "[Action Replay] Demon Horn"
+cheat75_code = "22102D19+00000003"
+cheat75_enable = false
+
+cheat76_desc = "[Action Replay] Wind Shield"
+cheat76_code = "22102D19+00000004"
+cheat76_enable = false
+
+cheat77_desc = "[Action Replay] Hunter Eye"
+cheat77_code = "22102D19+00000005"
+cheat77_enable = false
+
+cheat78_desc = "[Action Replay] Angel Coat"
+cheat78_code = "22102D19+00000006"
+cheat78_enable = false
+
+cheat79_desc = "[Action Replay] Iron Shield"
+cheat79_code = "22102D19+00000007"
+cheat79_enable = false
+
+cheat80_desc = "[Action Replay] Dragon Scale"
+cheat80_code = "22102D19+00000008"
+cheat80_enable = false
+
+cheat81_desc = "[Action Replay] Level 50"
+cheat81_code = "22102D1A+00000032"
+cheat81_enable = false
+
+cheat82_desc = "[Action Replay] Life Bracelet"
+cheat82_code = "22102D1C+00000001"
+cheat82_enable = false
+
+cheat83_desc = "[Action Replay] Gale Shoes"
+cheat83_code = "22102D1C+00000002"
+cheat83_enable = false
+
+cheat84_desc = "[Action Replay] Demon Horn"
+cheat84_code = "22102D1C+00000003"
+cheat84_enable = false
+
+cheat85_desc = "[Action Replay] Wind Shield"
+cheat85_code = "22102D1C+00000004"
+cheat85_enable = false
+
+cheat86_desc = "[Action Replay] Hunter Eye"
+cheat86_code = "22102D1C+00000005"
+cheat86_enable = false
+
+cheat87_desc = "[Action Replay] Angel Coat"
+cheat87_code = "22102D1C+00000006"
+cheat87_enable = false
+
+cheat88_desc = "[Action Replay] Iron Shield"
+cheat88_code = "22102D1C+00000007"
+cheat88_enable = false
+
+cheat89_desc = "[Action Replay] Dragon Scale"
+cheat89_code = "22102D1C+00000008"
+cheat89_enable = false
+
+cheat90_desc = "[Action Replay] Level 50"
+cheat90_code = "22102D1D+00000032"
+cheat90_enable = false
+
+cheat91_desc = "[Action Replay] Life Bracelet"
+cheat91_code = "22102D1F+00000001"
+cheat91_enable = false
+
+cheat92_desc = "[Action Replay] Gale Shoes"
+cheat92_code = "22102D1F+00000002"
+cheat92_enable = false
+
+cheat93_desc = "[Action Replay] Demon Horn"
+cheat93_code = "22102D1F+00000003"
+cheat93_enable = false
+
+cheat94_desc = "[Action Replay] Wind Shield"
+cheat94_code = "22102D1F+00000004"
+cheat94_enable = false
+
+cheat95_desc = "[Action Replay] Hunter Eye"
+cheat95_code = "22102D1F+00000005"
+cheat95_enable = false
+
+cheat96_desc = "[Action Replay] Angel Coat"
+cheat96_code = "22102D1F+00000006"
+cheat96_enable = false
+
+cheat97_desc = "[Action Replay] Iron Shield"
+cheat97_code = "22102D1F+00000007"
+cheat97_enable = false
+
+cheat98_desc = "[Action Replay] Dragon Scale"
+cheat98_code = "22102D1F+00000008"
+cheat98_enable = false
+
+cheat99_desc = "[Action Replay] Level 50"
+cheat99_code = "22102D20+00000032"
+cheat99_enable = false

@@ -1,0 +1,5 @@
+
+> emuperso-portables@0.2.1-alpha.2 check
+> node tools/check-syntax.mjs
+
+PASS : syntaxe des modules et du script player.html.

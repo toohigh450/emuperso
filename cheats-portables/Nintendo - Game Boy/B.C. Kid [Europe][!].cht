@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : B.C. Kid [Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/B.C.%20Kid%20(Europe).cht
+
+cheats = 5
+
+cheat0_desc = "[Format source non précisé] Blink Longer After Taking Damage"
+cheat0_code = "FF4-FFB-7F8"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Invulnerability (After Being Hit Once)"
+cheat1_code = "C94-8AB-2A4"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Infinite Lives"
+cheat2_code = "C97-9AD-3BE"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Invincibility"
+cheat3_code = "C95-46B-A24"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Jump Higher"
+cheat4_code = "F80-509-199"
+cheat4_enable = false

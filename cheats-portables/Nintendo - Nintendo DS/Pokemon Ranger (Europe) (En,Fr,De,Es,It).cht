@@ -1,0 +1,196 @@
+# Recherche locale pour la ROM : Pokemon Ranger (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Pokemon%20Ranger%20(Europe).cht
+
+cheats = 47
+
+cheat0_desc = "[Action Replay] Max/Infinite Styler Energy"
+cheat0_code = "D3000000+0224B0B4+F224B0B0+00000001+D2000000+00000000+D3000000+0224B0B4+F224B100+00000001+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Styler Energy"
+cheat1_code = "2224B0B0+0000003C+2224B0B4+0000003C+2224B100+0000003C"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max/Infinite Partner Energy"
+cheat2_code = "D3000000+0224B0BC+F224B0BA+00000002+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Partner Energy"
+cheat3_code = "1224B0BA+00000505+1224B0BC+00000505"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max/Infinite Experience"
+cheat4_code = "0213A8E0+7FFFFFFF"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Capture Pokemon Easily"
+cheat5_code = "92044336+0000D005+12044336+000025FF+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Walk Through Walls"
+cheat6_code = "94000130+FEFD0000+02009274+E1A00000+D2000000+00000000+94000130+FDFD0000+02009274+0A000005+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] 212 Pokemon in Fiore Browser"
+cheat7_code = "94000130+FCFB0000+2213A59A+00000001+221344BC+00000001+D5000000+00000001+C0000000+00000057+D6000000+0213435C+D2000000+00000000+94000130+FCFB0000+D5000000+00000001+C0000000+0000007B+D6000000+021344C0+D2000000+00000000+94000130+FCFB0000+C0000000+00000057+2213A542+00000002+DC000000+00000001+D2000000+00000000+94000130+FCFB0000+C0000000+0000007B+2213A59B+00000002+DC000000+00000001+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Complete Fiore Browser"
+cheat8_code = "94000130+FCFB0000+D5000000+00000001+C0000000+000000D4+D6000000+0213435C+D2000000+00000000+94000130+FCFB0000+C0000000+000000D4+2213A542+00000002+DC000000+00000001+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] 00:00:00"
+cheat9_code = "021342DC+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] 99:59:59"
+cheat10_code = "021342DC+00057E3F"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Max/Infinite Time"
+cheat11_code = "12273E48+00002A30"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Max/Infinite Score"
+cheat12_code = "02273E54+3B9AC9FF"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Max/Infinite Captures"
+cheat13_code = "02273E58+3B9AC9FF"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Max/Infinite Time"
+cheat14_code = "122CA8F8+00001C20"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Max/Infinite Score"
+cheat15_code = "022C81EC+3B9AC9FF"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Max/Infinite Captures"
+cheat16_code = "022C81E0+3B9AC9FF"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Rank 1"
+cheat17_code = "2213A8E4+00000001"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Rank 2"
+cheat18_code = "2213A8E4+00000002"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Rank 3"
+cheat19_code = "2213A8E4+00000003"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Rank 4"
+cheat20_code = "2213A8E4+00000004"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Rank 5"
+cheat21_code = "2213A8E4+00000005"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Rank 6"
+cheat22_code = "2213A8E4+00000006"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Rank 7"
+cheat23_code = "2213A8E4+00000007"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Rank 8"
+cheat24_code = "2213A8E4+00000008"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Rank 9"
+cheat25_code = "2213A8E4+00000009"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Rank 10"
+cheat26_code = "2213A8E4+0000000A"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Max/Infinite Conversations"
+cheat27_code = "02134294+3B9AC9FF"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Max/Infinite Targets Checked"
+cheat28_code = "021342A0+3B9AC9FF"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Max/Infinite Capture Attempts"
+cheat29_code = "02134268+3B9AC9FF"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Max/Infinite Pokemon Captured"
+cheat30_code = "02134270+3B9AC9FF"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Zero Abandoned Attempts"
+cheat31_code = "02134278+00000000"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Max/Infinite Number of Loops"
+cheat32_code = "02134280+3B9AC9FF"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Max/Infinite Poke Assists Used"
+cheat33_code = "02134290+3B9AC9FF"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Max/Infinite Time Minun/Plusle Helped"
+cheat34_code = "02134354+3B9AC9FF"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Zero Times Styler Broke"
+cheat35_code = "02134284+00000000"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Max/Infinite Number of Saves"
+cheat36_code = "021342B4+3B9AC9FF"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Max/Infinite Marine Challenge High Score"
+cheat37_code = "021342C0+3B9AC9FF"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Max/Infinite Captures in Marine Challenge"
+cheat38_code = "021342C4+3B9AC9FF"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Max/Infinite Grassland Challenge High Score"
+cheat39_code = "0213A25C+3B9AC9FF"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Max/Infinite Captures in Grassland Challenge"
+cheat40_code = "0213A260+3B9AC9FF"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Max/Infinite Capture Arena High Score"
+cheat41_code = "021342B8+3B9AC9FF"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Max/Infinite Captures in Capture Arena"
+cheat42_code = "021342BC+3B9AC9FF"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Enable Ranger Net"
+cheat43_code = "22134829+00000001"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Enable Ranger Net+Password System"
+cheat44_code = "22134829+00000003"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Restart Mission"
+cheat45_code = "94000130+FCFB0000+22134828+00000003+D2000000+00000000"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Complete Mission for Egg"
+cheat46_code = "94000130+FCFB0000+22134828+00000001+D2000000+00000000"
+cheat46_enable = false

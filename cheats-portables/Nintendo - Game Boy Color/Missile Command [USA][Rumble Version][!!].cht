@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Missile Command [USA][Rumble Version][!!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Missile%20Command%20(USA)%20(Rumble%20Version).cht
+
+cheats = 4
+
+cheat0_desc = "[Format source non précisé] Infinite Missiles Left Side"
+cheat0_code = "010F94C0"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Missiles Right Side"
+cheat1_code = "010F95C0"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Hit Anywhere"
+cheat2_code = "C3F-4DE-801+37F-A8E-5D4"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Infinite Missiles"
+cheat3_code = "FA2-4CE-4C1+FA2-9BE-4C1"
+cheat3_enable = false

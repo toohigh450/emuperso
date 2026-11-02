@@ -1,0 +1,7 @@
+CI run 41229027390, commit 26d849191f9383a325fc585ff5ca34b70f152c14.
+Statut : ÉCHOUÉ, avant les tests moteur.
+2026-10-31T18:21:51.9175581Z + git clone --no-checkout https://github.com/DragonMinded/libdragon.git /home/runner/work/emuperso/emuperso/real-n64/cache/libdragon
+2026-10-31T18:21:57.2329140Z Source SDK suivie modifiée ; refus de l’écraser.
+2026-10-31T18:21:57.2425561Z ##[error]Process completed with exit code 1.
+Correction : init Git vide, fetch du commit exact puis checkout ; garde dirty conservée pour les caches préexistants.
+Non-régression locale : checkout SDK neuf réussi, cache modifié refusé et préservé.

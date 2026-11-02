@@ -1,0 +1,84 @@
+# Recherche locale pour la ROM : Buffy the Vampire Slayer - Wrath of the Darkhul King (USA, Europe).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Buffy%20the%20Vampire%20Slayer%20-%20Wrath%20of%20the%20Darkhul%20King%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 19
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00000000+0002+10004740+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Health"
+cheat1_code = "83001D72+005F"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Lives"
+cheat2_code = "33001268+0009"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Infinite Stakes"
+cheat3_code = "33001290+0009"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Infinite Daggers"
+cheat4_code = "33001294+0009"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Infinite Axes"
+cheat5_code = "33001298+0009"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Infinite Mops"
+cheat6_code = "3300129C+0009"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Infinite Bats"
+cheat7_code = "330012A0+0009"
+cheat7_enable = false
+
+cheat8_desc = "[Code Breaker] Infinite Crossbow"
+cheat8_code = "330012A4+0009"
+cheat8_enable = false
+
+cheat9_desc = "[Code Breaker] Infinite Laser Rifle"
+cheat9_code = "330012A8+0009"
+cheat9_enable = false
+
+cheat10_desc = "[Code Breaker] Infinite Flamethrower"
+cheat10_code = "330012AC+0009"
+cheat10_enable = false
+
+cheat11_desc = "[Code Breaker] Infinite Glove Of Myhnegon"
+cheat11_code = "330012B0+0009"
+cheat11_enable = false
+
+cheat12_desc = "[Code Breaker] Infinite Holy Water S"
+cheat12_code = "330012B4+0009"
+cheat12_enable = false
+
+cheat13_desc = "[Code Breaker] Infinite Holy Water L"
+cheat13_code = "330012B8+0009"
+cheat13_enable = false
+
+cheat14_desc = "[Code Breaker] Infinite Torches"
+cheat14_code = "330012BC+0009"
+cheat14_enable = false
+
+cheat15_desc = "[Code Breaker] Infinite Battery L"
+cheat15_code = "330012C0+0009"
+cheat15_enable = false
+
+cheat16_desc = "[Code Breaker] Infinite Battery S"
+cheat16_code = "330012C4+0009"
+cheat16_enable = false
+
+cheat17_desc = "[Code Breaker] Infinite Crosses"
+cheat17_code = "330012C8+0009"
+cheat17_enable = false
+
+cheat18_desc = "[Code Breaker] Invincible"
+cheat18_code = "33001DD6+0063"
+cheat18_enable = false

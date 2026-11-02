@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Justice League - Injustice for All (Europe) (En,Fr,De,Es,It).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Justice%20League%20-%20Injustice%20for%20All%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 3
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "000060E8+000A+100058A0+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Max Blue Coins"
+cheat1_code = "8300190C+0063"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Lives"
+cheat2_code = "83001D60+0063"
+cheat2_enable = false

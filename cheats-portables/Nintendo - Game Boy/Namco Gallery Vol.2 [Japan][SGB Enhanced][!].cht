@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Namco Gallery Vol.2 [Japan][SGB Enhanced][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Namco%20Gallery%20Vol.2%20(Japan)%20(SGB%20Enhanced).cht
+
+cheats = 6
+
+cheat0_desc = "[Format source non précisé] Invincibility"
+cheat0_code = "C96-59B-809+C95-ACB-809"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Hit Anywhere"
+cheat1_code = "00C-DE9-F7E+3EC-D29-2AA"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Invincibility"
+cheat2_code = "C9B-2D9-081+18E-409-6EA"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Hit Anywhere"
+cheat3_code = "002-26D-809+FD2-39D-3B1+00A-62A-6E2"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Invincibility"
+cheat4_code = "181-E3D-2AA"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Balls Are Strikes"
+cheat5_code = "180-72B-6EA"
+cheat5_enable = false

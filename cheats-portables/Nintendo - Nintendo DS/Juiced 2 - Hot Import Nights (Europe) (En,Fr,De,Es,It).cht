@@ -1,0 +1,64 @@
+# Recherche locale pour la ROM : Juiced 2 - Hot Import Nights (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Juiced%202%20-%20Hot%20Import%20Nights%20(Europe).cht
+
+cheats = 14
+
+cheat0_desc = "[Action Replay] Max/Infinite Money in Garage"
+cheat0_code = "920A4F00+00000100+020F5984+05F5E0FF+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Low Time"
+cheat1_code = "920A334C+00000001+620BD75C+00000000+B20BD75C+00000000+000000C4+00000000+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Infinite Nitro"
+cheat2_code = "920A334C+00000001+620BD75C+00000000+B20BD75C+00000000+000000D0+00064000+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Drift Points"
+cheat3_code = "920A334C+00000001+620BD75C+00000000+B20BD75C+00000000+000000DC+0098967F+000000E0+0098967F+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Points Drifting"
+cheat4_code = "920A334C+00000001+620BD75C+00000000+B20BD75C+00000000+000000E8+0098967F+000000EC+0098967F+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Instant Max Speed"
+cheat5_code = "920A334C+00000001+94000130+FFFE0000+620BD75C+00000000+B20BD75C+00000000+00000250+000F0000+0000025C+000F0000+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Easy Drift"
+cheat6_code = "920A334C+00000001+620BD75C+00000000+B20BD75C+00000000+20000158+00000000+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Drift x10000"
+cheat7_code = "920A334C+00000001+620BD75C+00000000+B20BD75C+00000000+0000015C+0000270F+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Must Be On"
+cheat8_code = "03806E74+EBAFDC62"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] No AI"
+cheat9_code = "220BDA54+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Max Cash"
+cheat10_code = "120F5984+0000270F"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Unlock Everything"
+cheat11_code = "220D0C64+00000015+020D0C08+FFF1FFFF+020D0C0C+FF3FFFFF+020CE310+01F71FFF"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Drive Through Walls"
+cheat12_code = "020172BC+E3A00000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Drive Through Cars"
+cheat13_code = "020177C4+E3A01001"
+cheat13_enable = false

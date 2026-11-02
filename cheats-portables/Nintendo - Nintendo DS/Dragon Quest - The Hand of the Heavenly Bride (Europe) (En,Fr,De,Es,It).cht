@@ -1,0 +1,4320 @@
+# Recherche locale pour la ROM : Dragon Quest - The Hand of the Heavenly Bride (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Dragon%20Quest%20-%20The%20Hand%20of%20the%20Heavenly%20Bride%20(Europe).cht
+
+cheats = 1078
+
+cheat0_desc = "[Action Replay] Anti-Piracy Bypass Code"
+cheat0_code = "0200819C+E3A00000+020081A0+E12FFF1E+52086E44+000028E7+02086E44+000000CC+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Backup Enabler/Game Fix Code (Version 1 + 2)"
+cheat1_code = "0200819C+E3A00000+020081A0+E12FFF1E+2209C798+000000CC"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Backup Enabler/Game Fix Code (Version 1)"
+cheat2_code = "0200819C+E3A00000+020081A0+E12FFF1E"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Backup Enabler/Game Fix Code (Version 2)"
+cheat3_code = "2209C798+000000CC"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Enable Debug Room"
+cheat4_code = "94000130+FDFF0000+1204191E+000046C0+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Max/Infinite Gold"
+cheat5_code = "94000130+FCFF0000+0209D7FC+000F423F+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Max Gold Banked"
+cheat6_code = "94000130+FCFF0000+0209D800+0098967F+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Max Casino Tokens"
+cheat7_code = "94000130+FCFF0000+0209D804+0098967F+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Max Mini Medals"
+cheat8_code = "94000130+FCFF0000+0209D808+0098967F+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Equipment Restriction Lifted"
+cheat9_code = "02022B64+D00029A1"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Complete Map"
+cheat10_code = "94000130+FCFF0000+C0000000+00000007+020D4488+00000000+DC000000+00000004+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Complete Big Book of Beast"
+cheat11_code = "94000130+FCFF0000+120D424C+000003FF+C0000000+00000005+020D4234+FFFFFFFF+DC000000+00000004+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] All Monsters Defeated For Big Book of Beast"
+cheat12_code = "94000130+FCFF0000+C0000000+000000C9+120D3D78+000003E7+DC000000+00000006+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] All Item Count For Big Book of Beast"
+cheat13_code = "94000130+FCFF0000+C0000000+000000C9+120D3D7A+000003E7+DC000000+00000006+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Have All Human Characters"
+cheat14_code = "94000130+FFFB0000+120DF6D6+00000202+020DF6D8+02020202+020DF6DC+02020200+020DF6E0+00020202+D2000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Walkthrough Walls/Objects"
+cheat15_code = "1206A42C+00002001+94000130+FFFB0000+1206A42C+00002000+D0000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] No Encounter"
+cheat16_code = "94000130+FEBF0000+12023C70+00002100+D0000000+00000000+94000130+FEDF0000+12023C70+00002110+D0000000+00000000+94000130+FE7F0000+12023C70+00001C49+D0000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Always 000:00"
+cheat17_code = "020D443C+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Always 999:59"
+cheat18_code = "020D443C+0CDFD7F0"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] No Random Encounters, Always On"
+cheat19_code = "12023C70+00002100"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Always Critical Hit"
+cheat20_code = "0203A918+200146C0"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Critical Hit"
+cheat21_code = "0203A918+2002D010+94000130+FDFF0000+0203A918+200146C0+D0000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Enemy HP 1/1 / One Hit Kills"
+cheat22_code = "94000130+FFFB0000+1200CF6C+00002101+1200CF70+00002101+D0000000+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Enemy MP Always 0"
+cheat23_code = "1200CF74+00002100+1200CF78+00002100"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Empty Enemy MP"
+cheat24_code = "94000130+FFFB0000+1200CF74+00002100+1200CF78+00002100+D0000000+00000000"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Enemy Never Attack"
+cheat25_code = "94000130+FDBF0000+12011EC8+000089C0+12011ED2+000089C0+12011EDC+000089C0+12011EE6+000089C0+12011EF0+000089C0+12011EFA+000089C0+D0000000+00000000+94000130+FD7F0000+12011EC8+00002000+12011ED2+00002000+12011EDC+00002000+12011EE6+00002000+12011EF0+00002000+12011EFA+00002000+D0000000+00000000"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Have All Items x1, No Plot"
+cheat26_code = "94000130+FCFF0000+0209DAE8+00010101+0209DAEC+00010106+D5000000+00010001+C0000000+000000B2+D6000000+0209D81C+D4000000+00000001+D2000000+00000000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Have All Items x10, No Plot"
+cheat27_code = "94000130+FCFF0000+0209DAE8+000A0101+0209DAEC+000A0106+D5000000+000A0001+C0000000+000000B2+D6000000+0209D81C+D4000000+00000001+D2000000+00000000"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Have All Items x50, No Plot"
+cheat28_code = "94000130+FCFF0000+0209DAE8+00320101+0209DAEC+00320106+D5000000+00320001+C0000000+000000B2+D6000000+0209D81C+D4000000+00000001+D2000000+00000000"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Have All Items x99, No Plot"
+cheat29_code = "94000130+FCFF0000+0209DAE8+00630101+0209DAEC+00630106+D5000000+00630001+C0000000+000000B2+D6000000+0209D81C+D4000000+00000001+D2000000+00000000"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Have All Items x1"
+cheat30_code = "94000130+FCFF0000+D5000000+00010001+C0000000+000000FE+D6000000+0209D81C+D4000000+00000001+D2000000+00000000+94000130+FCFF0000+D5000000+00010101+C0000000+00000006+D6000000+0209DC18+D4000000+00000001+D2000000+00000000"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Have All Items x10"
+cheat31_code = "94000130+FCFF0000+D5000000+000A0001+C0000000+000000FE+D6000000+0209D81C+D4000000+00000001+D2000000+00000000+94000130+FCFF0000+D5000000+000A0101+C0000000+00000006+D6000000+0209DC18+D4000000+00000001+D2000000+00000000"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Have All Items x50"
+cheat32_code = "94000130+FCFF0000+D5000000+00320001+C0000000+000000FE+D6000000+0209D81C+D4000000+00000001+D2000000+00000000+94000130+FCFF0000+D5000000+00320101+C0000000+00000006+D6000000+0209DC18+D4000000+00000001+D2000000+00000000"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Have All Items x99"
+cheat33_code = "94000130+FCFF0000+D5000000+00630001+C0000000+000000FE+D6000000+0209D81C+D4000000+00000001+D2000000+00000000+94000130+FCFF0000+D5000000+00630101+C0000000+00000006+D6000000+0209DC18+D4000000+00000001+D2000000+00000000"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Cypress Stick"
+cheat34_code = "0209D81C+00630001"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Oaken Club"
+cheat35_code = "0209D81C+00630002"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Stone Axe"
+cheat36_code = "0209D81C+00630003"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Battle-axe"
+cheat37_code = "0209D81C+00630004"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Chain Sickle"
+cheat38_code = "0209D81C+00630005"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Stone Fangs"
+cheat39_code = "0209D81C+00630006"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Steel Fangs"
+cheat40_code = "0209D81C+00630007"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Orichalcum Fangs"
+cheat41_code = "0209D81C+00630008"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Bone Stake"
+cheat42_code = "0209D81C+00630009"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Copper Sword"
+cheat43_code = "0209D81C+0063000A"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Saw Blade"
+cheat44_code = "0209D81C+0063000B"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Steel Broadsword"
+cheat45_code = "0209D81C+0063000C"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Pankraz's Sword"
+cheat46_code = "0209D81C+0063000D"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Serpent Sword"
+cheat47_code = "0209D81C+0063000E"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Cautery Sword"
+cheat48_code = "0209D81C+0063000F"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Dream Blade"
+cheat49_code = "0209D81C+00630010"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Falcon Blade"
+cheat50_code = "0209D81C+00630011"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Siren Sword"
+cheat51_code = "0209D81C+00630012"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Icicle Dirk"
+cheat52_code = "0209D81C+00630013"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Zombiesbane"
+cheat53_code = "0209D81C+00630014"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Faerie Foil"
+cheat54_code = "0209D81C+00630015"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Dragonsbane"
+cheat55_code = "0209D81C+00630016"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Massacre Sword"
+cheat56_code = "0209D81C+00630017"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Double-edged Sword"
+cheat57_code = "0209D81C+00630018"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Miracle Sword"
+cheat58_code = "0209D81C+00630019"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Blizzard Blade"
+cheat59_code = "0209D81C+0063001A"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Zenithian Sword"
+cheat60_code = "0209D81C+0063001B"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Hell Sabre"
+cheat61_code = "0209D81C+0063001C"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Metal King Sword"
+cheat62_code = "0209D81C+0063001D"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Staff of Salvation"
+cheat63_code = "0209D81C+0063001E"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Oaken Staff"
+cheat64_code = "0209D81C+0063001F"
+cheat64_enable = false
+
+cheat65_desc = "[Action Replay] Iron Staff"
+cheat65_code = "0209D81C+00630020"
+cheat65_enable = false
+
+cheat66_desc = "[Action Replay] Lightning Staff"
+cheat66_code = "0209D81C+00630021"
+cheat66_enable = false
+
+cheat67_desc = "[Action Replay] Staff of Divine Wrath"
+cheat67_code = "0209D81C+00630022"
+cheat67_enable = false
+
+cheat68_desc = "[Action Replay] Staff of Antimagic"
+cheat68_code = "0209D81C+00630023"
+cheat68_enable = false
+
+cheat69_desc = "[Action Replay] Somatic Staff"
+cheat69_code = "0209D81C+00630024"
+cheat69_enable = false
+
+cheat70_desc = "[Action Replay] Stolos' Staff"
+cheat70_code = "0209D81C+00630025"
+cheat70_enable = false
+
+cheat71_desc = "[Action Replay] Magma Staff"
+cheat71_code = "0209D81C+00630026"
+cheat71_enable = false
+
+cheat72_desc = "[Action Replay] Staff of Resurrection"
+cheat72_code = "0209D81C+00630027"
+cheat72_enable = false
+
+cheat73_desc = "[Action Replay] Dragon Staff"
+cheat73_code = "0209D81C+00630028"
+cheat73_enable = false
+
+cheat74_desc = "[Action Replay] Giant Mallet"
+cheat74_code = "0209D81C+00630029"
+cheat74_enable = false
+
+cheat75_desc = "[Action Replay] Sledgehammer"
+cheat75_code = "0209D81C+0063002A"
+cheat75_enable = false
+
+cheat76_desc = "[Action Replay] War Hammer"
+cheat76_code = "0209D81C+0063002B"
+cheat76_enable = false
+
+cheat77_desc = "[Action Replay] Hela Hammer"
+cheat77_code = "0209D81C+0063002C"
+cheat77_enable = false
+
+cheat78_desc = "[Action Replay] Iron Claw"
+cheat78_code = "0209D81C+0063002D"
+cheat78_enable = false
+
+cheat79_desc = "[Action Replay] Fire Claw"
+cheat79_code = "0209D81C+0063002E"
+cheat79_enable = false
+
+cheat80_desc = "[Action Replay] Cobra Claw"
+cheat80_code = "0209D81C+0063002F"
+cheat80_enable = false
+
+cheat81_desc = "[Action Replay] Paring Knife"
+cheat81_code = "0209D81C+00630030"
+cheat81_enable = false
+
+cheat82_desc = "[Action Replay] Bronze Knife"
+cheat82_code = "0209D81C+00630031"
+cheat82_enable = false
+
+cheat83_desc = "[Action Replay] Poison Moth Knife"
+cheat83_code = "0209D81C+00630032"
+cheat83_enable = false
+
+cheat84_desc = "[Action Replay] Poison Needle"
+cheat84_code = "0209D81C+00630033"
+cheat84_enable = false
+
+cheat85_desc = "[Action Replay] Falcon Knife Earrings"
+cheat85_code = "0209D81C+00630034"
+cheat85_enable = false
+
+cheat86_desc = "[Action Replay] Boomerang"
+cheat86_code = "0209D81C+00630035"
+cheat86_enable = false
+
+cheat87_desc = "[Action Replay] Edged Boomerang"
+cheat87_code = "0209D81C+00630036"
+cheat87_enable = false
+
+cheat88_desc = "[Action Replay] Flametang Boomerang"
+cheat88_code = "0209D81C+00630037"
+cheat88_enable = false
+
+cheat89_desc = "[Action Replay] Thorn Whip"
+cheat89_code = "0209D81C+00630038"
+cheat89_enable = false
+
+cheat90_desc = "[Action Replay] Chain Whip"
+cheat90_code = "0209D81C+00630039"
+cheat90_enable = false
+
+cheat91_desc = "[Action Replay] Morning Star"
+cheat91_code = "0209D81C+0063003A"
+cheat91_enable = false
+
+cheat92_desc = "[Action Replay] Spiked Steel Whip"
+cheat92_code = "0209D81C+0063003B"
+cheat92_enable = false
+
+cheat93_desc = "[Action Replay] Gringham Whip"
+cheat93_code = "0209D81C+0063003C"
+cheat93_enable = false
+
+cheat94_desc = "[Action Replay] Flail of Destruction"
+cheat94_code = "0209D81C+0063003D"
+cheat94_enable = false
+
+cheat95_desc = "[Action Replay] Bamboo Spear"
+cheat95_code = "0209D81C+0063003E"
+cheat95_enable = false
+
+cheat96_desc = "[Action Replay] Ionospear"
+cheat96_code = "0209D81C+0063003F"
+cheat96_enable = false
+
+cheat97_desc = "[Action Replay] Demon Spear"
+cheat97_code = "0209D81C+00630040"
+cheat97_enable = false
+
+cheat98_desc = "[Action Replay] Great Bow"
+cheat98_code = "0209D81C+00630041"
+cheat98_enable = false
+
+cheat99_desc = "[Action Replay] Restless Armour"
+cheat99_code = "0209D81C+00630042"
+cheat99_enable = false
+
+cheat100_desc = "[Action Replay] Rags"
+cheat100_code = "0209D81C+00630043"
+cheat100_enable = false
+
+cheat101_desc = "[Action Replay] Plain Clothes"
+cheat101_code = "0209D81C+00630044"
+cheat101_enable = false
+
+cheat102_desc = "[Action Replay] Serf Wear"
+cheat102_code = "0209D81C+00630045"
+cheat102_enable = false
+
+cheat103_desc = "[Action Replay] Handwoven Cape"
+cheat103_code = "0209D81C+00630046"
+cheat103_enable = false
+
+cheat104_desc = "[Action Replay] Wayfarer's Clothes"
+cheat104_code = "0209D81C+00630047"
+cheat104_enable = false
+
+cheat105_desc = "[Action Replay] Silk Apron"
+cheat105_code = "0209D81C+00630048"
+cheat105_enable = false
+
+cheat106_desc = "[Action Replay] Leather Armour"
+cheat106_code = "0209D81C+00630049"
+cheat106_enable = false
+
+cheat107_desc = "[Action Replay] Leather Kilt"
+cheat107_code = "0209D81C+0063004A"
+cheat107_enable = false
+
+cheat108_desc = "[Action Replay] Silk Robe"
+cheat108_code = "0209D81C+0063004B"
+cheat108_enable = false
+
+cheat109_desc = "[Action Replay] Scale Armour"
+cheat109_code = "0209D81C+0063004C"
+cheat109_enable = false
+
+cheat110_desc = "[Action Replay] Boxer Shorts"
+cheat110_code = "0209D81C+0063004D"
+cheat110_enable = false
+
+cheat111_desc = "[Action Replay] Leather Dress"
+cheat111_code = "0209D81C+0063004E"
+cheat111_enable = false
+
+cheat112_desc = "[Action Replay] Fur Cape"
+cheat112_code = "0209D81C+0063004F"
+cheat112_enable = false
+
+cheat113_desc = "[Action Replay] Chain Mail"
+cheat113_code = "0209D81C+00630050"
+cheat113_enable = false
+
+cheat114_desc = "[Action Replay] Dancer's Costume"
+cheat114_code = "0209D81C+00630051"
+cheat114_enable = false
+
+cheat115_desc = "[Action Replay] Slime Gooniform"
+cheat115_code = "0209D81C+00630052"
+cheat115_enable = false
+
+cheat116_desc = "[Action Replay] Bronze Armour"
+cheat116_code = "0209D81C+00630053"
+cheat116_enable = false
+
+cheat117_desc = "[Action Replay] Iron Cuirass"
+cheat117_code = "0209D81C+00630054"
+cheat117_enable = false
+
+cheat118_desc = "[Action Replay] Robust Lingerie"
+cheat118_code = "0209D81C+00630055"
+cheat118_enable = false
+
+cheat119_desc = "[Action Replay] Iron Armour"
+cheat119_code = "0209D81C+00630056"
+cheat119_enable = false
+
+cheat120_desc = "[Action Replay] Cloak of Evasion"
+cheat120_code = "0209D81C+00630057"
+cheat120_enable = false
+
+cheat121_desc = "[Action Replay] Full Plate Armour"
+cheat121_code = "0209D81C+00630058"
+cheat121_enable = false
+
+cheat122_desc = "[Action Replay] Tortoise Shell"
+cheat122_code = "0209D81C+00630059"
+cheat122_enable = false
+
+cheat123_desc = "[Action Replay] Robe of Serenity"
+cheat123_code = "0209D81C+0063005A"
+cheat123_enable = false
+
+cheat124_desc = "[Action Replay] Lacy Bustier"
+cheat124_code = "0209D81C+0063005B"
+cheat124_enable = false
+
+cheat125_desc = "[Action Replay] Glombolero"
+cheat125_code = "0209D81C+0063005C"
+cheat125_enable = false
+
+cheat126_desc = "[Action Replay] Legerdemantle"
+cheat126_code = "0209D81C+0063005D"
+cheat126_enable = false
+
+cheat127_desc = "[Action Replay] Zombie Mail"
+cheat127_code = "0209D81C+0063005E"
+cheat127_enable = false
+
+cheat128_desc = "[Action Replay] Silver Cuirass"
+cheat128_code = "0209D81C+0063005F"
+cheat128_enable = false
+
+cheat129_desc = "[Action Replay] Silver Mail"
+cheat129_code = "0209D81C+00630060"
+cheat129_enable = false
+
+cheat130_desc = "[Action Replay] Powjamas"
+cheat130_code = "0209D81C+00630061"
+cheat130_enable = false
+
+cheat131_desc = "[Action Replay] Blood Mail"
+cheat131_code = "0209D81C+00630062"
+cheat131_enable = false
+
+cheat132_desc = "[Action Replay] Shimmering Dress"
+cheat132_code = "0209D81C+00630063"
+cheat132_enable = false
+
+cheat133_desc = "[Action Replay] Dragon Mail"
+cheat133_code = "0209D81C+00630064"
+cheat133_enable = false
+
+cheat134_desc = "[Action Replay] Sage's Robe"
+cheat134_code = "0209D81C+00630065"
+cheat134_enable = false
+
+cheat135_desc = "[Action Replay] Spiked Armour"
+cheat135_code = "0209D81C+00630066"
+cheat135_enable = false
+
+cheat136_desc = "[Action Replay] Flowing Dress"
+cheat136_code = "0209D81C+00630067"
+cheat136_enable = false
+
+cheat137_desc = "[Action Replay] Dark Robe"
+cheat137_code = "0209D81C+00630068"
+cheat137_enable = false
+
+cheat138_desc = "[Action Replay] Magic Armour"
+cheat138_code = "0209D81C+00630069"
+cheat138_enable = false
+
+cheat139_desc = "[Action Replay] Silk Bustier"
+cheat139_code = "0209D81C+0063006A"
+cheat139_enable = false
+
+cheat140_desc = "[Action Replay] Devil Armour"
+cheat140_code = "0209D81C+0063006B"
+cheat140_enable = false
+
+cheat141_desc = "[Action Replay] Flame Armour"
+cheat141_code = "0209D81C+0063006C"
+cheat141_enable = false
+
+cheat142_desc = "[Action Replay] Angel Leotard"
+cheat142_code = "0209D81C+0063006D"
+cheat142_enable = false
+
+cheat143_desc = "[Action Replay] Sacred Armour"
+cheat143_code = "0209D81C+0063006E"
+cheat143_enable = false
+
+cheat144_desc = "[Action Replay] Mirror Armour"
+cheat144_code = "0209D81C+0063006F"
+cheat144_enable = false
+
+cheat145_desc = "[Action Replay] Princess's Robe"
+cheat145_code = "0209D81C+00630070"
+cheat145_enable = false
+
+cheat146_desc = "[Action Replay] Hela's Armour"
+cheat146_code = "0209D81C+00630071"
+cheat146_enable = false
+
+cheat147_desc = "[Action Replay] Zenithian Armour"
+cheat147_code = "0209D81C+00630072"
+cheat147_enable = false
+
+cheat148_desc = "[Action Replay] Pallium Regale"
+cheat148_code = "0209D81C+00630073"
+cheat148_enable = false
+
+cheat149_desc = "[Action Replay] Metal King Armour"
+cheat149_code = "0209D81C+00630074"
+cheat149_enable = false
+
+cheat150_desc = "[Action Replay] Ruinous Shield"
+cheat150_code = "0209D81C+00630075"
+cheat150_enable = false
+
+cheat151_desc = "[Action Replay] Pot Lid"
+cheat151_code = "0209D81C+00630076"
+cheat151_enable = false
+
+cheat152_desc = "[Action Replay] Leather Shield"
+cheat152_code = "0209D81C+00630077"
+cheat152_enable = false
+
+cheat153_desc = "[Action Replay] Scale Shield"
+cheat153_code = "0209D81C+00630078"
+cheat153_enable = false
+
+cheat154_desc = "[Action Replay] Bronze Shield"
+cheat154_code = "0209D81C+00630079"
+cheat154_enable = false
+
+cheat155_desc = "[Action Replay] Iron Shield"
+cheat155_code = "0209D81C+0063007A"
+cheat155_enable = false
+
+cheat156_desc = "[Action Replay] Magic Shield"
+cheat156_code = "0209D81C+0063007B"
+cheat156_enable = false
+
+cheat157_desc = "[Action Replay] Dragon Shield"
+cheat157_code = "0209D81C+0063007C"
+cheat157_enable = false
+
+cheat158_desc = "[Action Replay] Tempest Shield"
+cheat158_code = "0209D81C+0063007D"
+cheat158_enable = false
+
+cheat159_desc = "[Action Replay] Dark Shield"
+cheat159_code = "0209D81C+0063007E"
+cheat159_enable = false
+
+cheat160_desc = "[Action Replay] Flame Shield"
+cheat160_code = "0209D81C+0063007F"
+cheat160_enable = false
+
+cheat161_desc = "[Action Replay] Power Shield"
+cheat161_code = "0209D81C+00630080"
+cheat161_enable = false
+
+cheat162_desc = "[Action Replay] Ogre Shield"
+cheat162_code = "0209D81C+00630081"
+cheat162_enable = false
+
+cheat163_desc = "[Action Replay] Silver Shield"
+cheat163_code = "0209D81C+00630082"
+cheat163_enable = false
+
+cheat164_desc = "[Action Replay] Zenithian Shield"
+cheat164_code = "0209D81C+00630083"
+cheat164_enable = false
+
+cheat165_desc = "[Action Replay] Shimmering Shield"
+cheat165_code = "0209D81C+00630084"
+cheat165_enable = false
+
+cheat166_desc = "[Action Replay] Metal King Shield"
+cheat166_code = "0209D81C+00630085"
+cheat166_enable = false
+
+cheat167_desc = "[Action Replay] Leather Hat"
+cheat167_code = "0209D81C+00630086"
+cheat167_enable = false
+
+cheat168_desc = "[Action Replay] Pointy Hat"
+cheat168_code = "0209D81C+00630087"
+cheat168_enable = false
+
+cheat169_desc = "[Action Replay] Hardwood Headwear"
+cheat169_code = "0209D81C+00630088"
+cheat169_enable = false
+
+cheat170_desc = "[Action Replay] Shellmet"
+cheat170_code = "0209D81C+00630089"
+cheat170_enable = false
+
+cheat171_desc = "[Action Replay] Hairband"
+cheat171_code = "0209D81C+0063008A"
+cheat171_enable = false
+
+cheat172_desc = "[Action Replay] Fur Hood"
+cheat172_code = "0209D81C+0063008B"
+cheat172_enable = false
+
+cheat173_desc = "[Action Replay] Silver Tiara"
+cheat173_code = "0209D81C+0063008C"
+cheat173_enable = false
+
+cheat174_desc = "[Action Replay] Iron Helmet"
+cheat174_code = "0209D81C+0063008D"
+cheat174_enable = false
+
+cheat175_desc = "[Action Replay] Top Hat"
+cheat175_code = "0209D81C+0063008E"
+cheat175_enable = false
+
+cheat176_desc = "[Action Replay] Iron Mask"
+cheat176_code = "0209D81C+0063008F"
+cheat176_enable = false
+
+cheat177_desc = "[Action Replay] Hermes' Hat"
+cheat177_code = "0209D81C+00630090"
+cheat177_enable = false
+
+cheat178_desc = "[Action Replay] Hades' Helm"
+cheat178_code = "0209D81C+00630091"
+cheat178_enable = false
+
+cheat179_desc = "[Action Replay] Wedding Veil"
+cheat179_code = "0209D81C+00630092"
+cheat179_enable = false
+
+cheat180_desc = "[Action Replay] Happy Hat"
+cheat180_code = "0209D81C+00630093"
+cheat180_enable = false
+
+cheat181_desc = "[Action Replay] Thinking Cap"
+cheat181_code = "0209D81C+00630094"
+cheat181_enable = false
+
+cheat182_desc = "[Action Replay] Golden Tiara"
+cheat182_code = "0209D81C+00630095"
+cheat182_enable = false
+
+cheat183_desc = "[Action Replay] Great Helm"
+cheat183_code = "0209D81C+00630096"
+cheat183_enable = false
+
+cheat184_desc = "[Action Replay] Zenithian Helm"
+cheat184_code = "0209D81C+00630097"
+cheat184_enable = false
+
+cheat185_desc = "[Action Replay] Sun Crown"
+cheat185_code = "0209D81C+00630098"
+cheat185_enable = false
+
+cheat186_desc = "[Action Replay] Metal King Helm"
+cheat186_code = "0209D81C+00630099"
+cheat186_enable = false
+
+cheat187_desc = "[Action Replay] Bianca's Ribbon"
+cheat187_code = "0209D81C+0063009A"
+cheat187_enable = false
+
+cheat188_desc = "[Action Replay] Meteorite Bracer"
+cheat188_code = "0209D81C+0063009B"
+cheat188_enable = false
+
+cheat189_desc = "[Action Replay] Kamikazee Bracer"
+cheat189_code = "0209D81C+0063009C"
+cheat189_enable = false
+
+cheat190_desc = "[Action Replay] Elfin Charm"
+cheat190_code = "0209D81C+0063009D"
+cheat190_enable = false
+
+cheat191_desc = "[Action Replay] Circle of Fire"
+cheat191_code = "0209D81C+0063009E"
+cheat191_enable = false
+
+cheat192_desc = "[Action Replay] Circle of Water"
+cheat192_code = "0209D81C+0063009F"
+cheat192_enable = false
+
+cheat193_desc = "[Action Replay] Circle of Life"
+cheat193_code = "0209D81C+006300A0"
+cheat193_enable = false
+
+cheat194_desc = "[Action Replay] Medicinal Herb"
+cheat194_code = "0209D81C+006300A1"
+cheat194_enable = false
+
+cheat195_desc = "[Action Replay] Antidotal Herb"
+cheat195_code = "0209D81C+006300A2"
+cheat195_enable = false
+
+cheat196_desc = "[Action Replay] Holy Water"
+cheat196_code = "0209D81C+006300A3"
+cheat196_enable = false
+
+cheat197_desc = "[Action Replay] Chimaera Wing"
+cheat197_code = "0209D81C+006300A4"
+cheat197_enable = false
+
+cheat198_desc = "[Action Replay] Yggdrasil Leaf"
+cheat198_code = "0209D81C+006300A5"
+cheat198_enable = false
+
+cheat199_desc = "[Action Replay] Yggdrasil Dew"
+cheat199_code = "0209D81C+006300A6"
+cheat199_enable = false
+
+cheat200_desc = "[Action Replay] Moonwort Bulb"
+cheat200_code = "0209D81C+006300A7"
+cheat200_enable = false
+
+cheat201_desc = "[Action Replay] Prayer Ring"
+cheat201_code = "0209D81C+006300A8"
+cheat201_enable = false
+
+cheat202_desc = "[Action Replay] Magic Water"
+cheat202_code = "0209D81C+006300A9"
+cheat202_enable = false
+
+cheat203_desc = "[Action Replay] Musk"
+cheat203_code = "0209D81C+006300AA"
+cheat203_enable = false
+
+cheat204_desc = "[Action Replay] Sage's Stone"
+cheat204_code = "0209D81C+006300AB"
+cheat204_enable = false
+
+cheat205_desc = "[Action Replay] Seed of Strength"
+cheat205_code = "0209D81C+006300AC"
+cheat205_enable = false
+
+cheat206_desc = "[Action Replay] Seed of Resilience"
+cheat206_code = "0209D81C+006300AD"
+cheat206_enable = false
+
+cheat207_desc = "[Action Replay] Seed of Agility"
+cheat207_code = "0209D81C+006300AE"
+cheat207_enable = false
+
+cheat208_desc = "[Action Replay] Seed of Wisdom"
+cheat208_code = "0209D81C+006300AF"
+cheat208_enable = false
+
+cheat209_desc = "[Action Replay] Seed of Life"
+cheat209_code = "0209D81C+006300B0"
+cheat209_enable = false
+
+cheat210_desc = "[Action Replay] Seed of Magic"
+cheat210_code = "0209D81C+006300B1"
+cheat210_enable = false
+
+cheat211_desc = "[Action Replay] T 'n' T Ticket"
+cheat211_code = "0209D81C+006300B2"
+cheat211_enable = false
+
+cheat212_desc = "[Action Replay] Tombola Ticket"
+cheat212_code = "0209D81C+006300B3"
+cheat212_enable = false
+
+cheat213_desc = "[Action Replay] Night Light"
+cheat213_code = "0209D81C+006300B4"
+cheat213_enable = false
+
+cheat214_desc = "[Action Replay] Monster Munchies"
+cheat214_code = "0209D81C+006300B5"
+cheat214_enable = false
+
+cheat215_desc = "[Action Replay] Rockbomb Shard"
+cheat215_code = "0209D81C+006300B6"
+cheat215_enable = false
+
+cheat216_desc = "[Action Replay] Paxa Punch"
+cheat216_code = "0209D81C+006300B7"
+cheat216_enable = false
+
+cheat217_desc = "[Action Replay] Rebirth Stone"
+cheat217_code = "0209D81C+006300B8"
+cheat217_enable = false
+
+cheat218_desc = "[Action Replay] Elfin Elixir"
+cheat218_code = "0209D81C+006300B9"
+cheat218_enable = false
+
+cheat219_desc = "[Action Replay] Cherub Chime"
+cheat219_code = "0209D81C+006300BA"
+cheat219_enable = false
+
+cheat220_desc = "[Action Replay] Dieamend"
+cheat220_code = "0209D81C+006300BB"
+cheat220_enable = false
+
+cheat221_desc = "[Action Replay] War Drum"
+cheat221_code = "0209D81C+006300BC"
+cheat221_enable = false
+
+cheat222_desc = "[Action Replay] King Korol's Catechism"
+cheat222_code = "0209D81C+006300BD"
+cheat222_enable = false
+
+cheat223_desc = "[Action Replay] Flying Carpet"
+cheat223_code = "0209D81C+006300BE"
+cheat223_enable = false
+
+cheat224_desc = "[Action Replay] Zenithian Tintinnabulum"
+cheat224_code = "0209D81C+006300BF"
+cheat224_enable = false
+
+cheat225_desc = "[Action Replay] Talaria"
+cheat225_code = "0209D81C+006300C0"
+cheat225_enable = false
+
+cheat226_desc = "[Action Replay] Ra's Mirror"
+cheat226_code = "0209D81C+006300C1"
+cheat226_enable = false
+
+cheat227_desc = "[Action Replay] Torch"
+cheat227_code = "0209D81C+006300C2"
+cheat227_enable = false
+
+cheat228_desc = "[Action Replay] Herald of Spring"
+cheat228_code = "0209D81C+006300C3"
+cheat228_enable = false
+
+cheat229_desc = "[Action Replay] Lunar Zoombloom"
+cheat229_code = "0209D81C+006300C4"
+cheat229_enable = false
+
+cheat230_desc = "[Action Replay] Royal Insignia"
+cheat230_code = "0209D81C+006300C5"
+cheat230_enable = false
+
+cheat231_desc = "[Action Replay] Faerie Horn"
+cheat231_code = "0209D81C+006300C6"
+cheat231_enable = false
+
+cheat232_desc = "[Action Replay] Grappling Hook"
+cheat232_code = "0209D81C+006300C7"
+cheat232_enable = false
+
+cheat233_desc = "[Action Replay] Aspersorium"
+cheat233_code = "0209D81C+006300C8"
+cheat233_enable = false
+
+cheat234_desc = "[Action Replay] Dragon's Right Eye"
+cheat234_code = "0209D81C+006300C9"
+cheat234_enable = false
+
+cheat235_desc = "[Action Replay] Dragon's Left Eye"
+cheat235_code = "0209D81C+006300CA"
+cheat235_enable = false
+
+cheat236_desc = "[Action Replay] Gold Orb"
+cheat236_code = "0209D81C+006300CB"
+cheat236_enable = false
+
+cheat237_desc = "[Action Replay] Gold Bauble"
+cheat237_code = "0209D81C+006300CC"
+cheat237_enable = false
+
+cheat238_desc = "[Action Replay] Dragon Orb"
+cheat238_code = "0209D81C+006300CD"
+cheat238_enable = false
+
+cheat239_desc = "[Action Replay] Key To Coburg"
+cheat239_code = "0209D81C+006300CE"
+cheat239_enable = false
+
+cheat240_desc = "[Action Replay] Magic Key"
+cheat240_code = "0209D81C+006300CF"
+cheat240_enable = false
+
+cheat241_desc = "[Action Replay] Ultimate Key"
+cheat241_code = "0209D81C+006300D0"
+cheat241_enable = false
+
+cheat242_desc = "[Action Replay] Mini Medal"
+cheat242_code = "0209D81C+006300D1"
+cheat242_enable = false
+
+cheat243_desc = "[Action Replay] Adventurer's Map"
+cheat243_code = "0209D81C+006300D2"
+cheat243_enable = false
+
+cheat244_desc = "[Action Replay] Pankraz's Letter"
+cheat244_code = "0209D81C+006300D3"
+cheat244_enable = false
+
+cheat245_desc = "[Action Replay] Stone From Whealbrook"
+cheat245_code = "0209D81C+006300D4"
+cheat245_enable = false
+
+cheat246_desc = "[Action Replay] Whealbrook Bluestone"
+cheat246_code = "0209D81C+006300D5"
+cheat246_enable = false
+
+cheat247_desc = "[Action Replay] Whealbrook Sapphire"
+cheat247_code = "0209D81C+006300D6"
+cheat247_enable = false
+
+cheat248_desc = "[Action Replay] Zizzwizz Pillow"
+cheat248_code = "0209D81C+006300D7"
+cheat248_enable = false
+
+cheat249_desc = "[Action Replay] Silver Teapot"
+cheat249_code = "0209D81C+006300D8"
+cheat249_enable = false
+
+cheat250_desc = "[Action Replay] Silver Teacup"
+cheat250_code = "0209D81C+006300D9"
+cheat250_enable = false
+
+cheat251_desc = "[Action Replay] Silver Tea Tray"
+cheat251_code = "0209D81C+006300DA"
+cheat251_enable = false
+
+cheat252_desc = "[Action Replay] Toff's Tea Set"
+cheat252_code = "0209D81C+006300DB"
+cheat252_enable = false
+
+cheat253_desc = "[Action Replay] Toff's Tea Set"
+cheat253_code = "0209D81C+006300DC"
+cheat253_enable = false
+
+cheat254_desc = "[Action Replay] Crown of Uptaten"
+cheat254_code = "0209D81C+006300DD"
+cheat254_enable = false
+
+cheat255_desc = "[Action Replay] Blooming Branch"
+cheat255_code = "0209D81C+006300DE"
+cheat255_enable = false
+
+cheat256_desc = "[Action Replay] Marital Organ"
+cheat256_code = "0209D81C+006300DF"
+cheat256_enable = false
+
+cheat257_desc = "[Action Replay] Marital Organ"
+cheat257_code = "0209D81C+006300E0"
+cheat257_enable = false
+
+cheat258_desc = "[Action Replay] Crude Image"
+cheat258_code = "0209D81C+006300E1"
+cheat258_enable = false
+
+cheat259_desc = "[Action Replay] Slime Curio"
+cheat259_code = "0209D81C+006300E2"
+cheat259_enable = false
+
+cheat260_desc = "[Action Replay] Ship in A Bottle"
+cheat260_code = "0209D81C+006300E3"
+cheat260_enable = false
+
+cheat261_desc = "[Action Replay] Terrorcrow"
+cheat261_code = "0209D81C+006300E4"
+cheat261_enable = false
+
+cheat262_desc = "[Action Replay] Zoomshine"
+cheat262_code = "0209D81C+006300E5"
+cheat262_enable = false
+
+cheat263_desc = "[Action Replay] Honey Buns"
+cheat263_code = "0209D81C+006300E6"
+cheat263_enable = false
+
+cheat264_desc = "[Action Replay] Honey Buns"
+cheat264_code = "0209D81C+006300E7"
+cheat264_enable = false
+
+cheat265_desc = "[Action Replay] Honey Buns"
+cheat265_code = "0209D81C+006300E8"
+cheat265_enable = false
+
+cheat266_desc = "[Action Replay] Scintillating Sinter"
+cheat266_code = "0209D81C+006300E9"
+cheat266_enable = false
+
+cheat267_desc = "[Action Replay] Desert Rose"
+cheat267_code = "0209D81C+006300EA"
+cheat267_enable = false
+
+cheat268_desc = "[Action Replay] Chocolate Medalliyum"
+cheat268_code = "0209D81C+006300EB"
+cheat268_enable = false
+
+cheat269_desc = "[Action Replay] Maxi Medal"
+cheat269_code = "0209D81C+006300EC"
+cheat269_enable = false
+
+cheat270_desc = "[Action Replay] Batten Binnacle"
+cheat270_code = "0209D81C+006300ED"
+cheat270_enable = false
+
+cheat271_desc = "[Action Replay] Monster Chess Set"
+cheat271_code = "0209D81C+006300EE"
+cheat271_enable = false
+
+cheat272_desc = "[Action Replay] 'Lofty Lilts'"
+cheat272_code = "0209D81C+006300EF"
+cheat272_enable = false
+
+cheat273_desc = "[Action Replay] Yggdrasil Sapling"
+cheat273_code = "0209D81C+006300F0"
+cheat273_enable = false
+
+cheat274_desc = "[Action Replay] Yggdrasil Sapling"
+cheat274_code = "0209D81C+006300F1"
+cheat274_enable = false
+
+cheat275_desc = "[Action Replay] Faerie Quill"
+cheat275_code = "0209D81C+006300F2"
+cheat275_enable = false
+
+cheat276_desc = "[Action Replay] Annalum Retentium"
+cheat276_code = "0209D81C+006300F3"
+cheat276_enable = false
+
+cheat277_desc = "[Action Replay] Scuttlebutt Alledger"
+cheat277_code = "0209D81C+006300F4"
+cheat277_enable = false
+
+cheat278_desc = "[Action Replay] Forget-me-Knot Flag"
+cheat278_code = "0209D81C+006300F5"
+cheat278_enable = false
+
+cheat279_desc = "[Action Replay] Tusk-tusk Tusk Inkwell"
+cheat279_code = "0209D81C+006300F6"
+cheat279_enable = false
+
+cheat280_desc = "[Action Replay] Ghoulroarer"
+cheat280_code = "0209D81C+006300F7"
+cheat280_enable = false
+
+cheat281_desc = "[Action Replay] Madalena's Locket"
+cheat281_code = "0209D81C+006300F8"
+cheat281_enable = false
+
+cheat282_desc = "[Action Replay] Madalena's Locket"
+cheat282_code = "0209D81C+006300F9"
+cheat282_enable = false
+
+cheat283_desc = "[Action Replay] Catas Trophy"
+cheat283_code = "0209D81C+006300FA"
+cheat283_enable = false
+
+cheat284_desc = "[Action Replay] Chamois"
+cheat284_code = "0209D81C+006300FB"
+cheat284_enable = false
+
+cheat285_desc = "[Action Replay] T 'n' T Free Pass"
+cheat285_code = "0209D81C+006300FC"
+cheat285_enable = false
+
+cheat286_desc = "[Action Replay] Loyalty Card"
+cheat286_code = "0209D81C+006300FD"
+cheat286_enable = false
+
+cheat287_desc = "[Action Replay] Big Book of Beasts"
+cheat287_code = "0209D81C+006300FE"
+cheat287_enable = false
+
+cheat288_desc = "[Action Replay] Prince's Outfit"
+cheat288_code = "0209D81C+0063FF00"
+cheat288_enable = false
+
+cheat289_desc = "[Action Replay] Duplic Hat"
+cheat289_code = "0209D81C+00630100"
+cheat289_enable = false
+
+cheat290_desc = "[Action Replay] Sands of Time"
+cheat290_code = "0209D81C+00630101"
+cheat290_enable = false
+
+cheat291_desc = "[Action Replay] Akillics"
+cheat291_code = "0209D81C+00630102"
+cheat291_enable = false
+
+cheat292_desc = "[Action Replay] Diamond Akillics"
+cheat292_code = "0209D81C+00630103"
+cheat292_enable = false
+
+cheat293_desc = "[Action Replay] Silk Dress"
+cheat293_code = "0209D81C+00630104"
+cheat293_enable = false
+
+cheat294_desc = "[Action Replay] Floral Parasol"
+cheat294_code = "0209D81C+00630105"
+cheat294_enable = false
+
+cheat295_desc = "[Action Replay] Mimic Stone"
+cheat295_code = "0209D81C+00630106"
+cheat295_enable = false
+
+cheat296_desc = "[Action Replay] Blarney Stone"
+cheat296_code = "0209D81C+00630107"
+cheat296_enable = false
+
+cheat297_desc = "[Action Replay] Cypress Stick"
+cheat297_code = "0209D820+00630001"
+cheat297_enable = false
+
+cheat298_desc = "[Action Replay] Oaken Club"
+cheat298_code = "0209D820+00630002"
+cheat298_enable = false
+
+cheat299_desc = "[Action Replay] Stone Axe"
+cheat299_code = "0209D820+00630003"
+cheat299_enable = false
+
+cheat300_desc = "[Action Replay] Battle-axe"
+cheat300_code = "0209D820+00630004"
+cheat300_enable = false
+
+cheat301_desc = "[Action Replay] Chain Sickle"
+cheat301_code = "0209D820+00630005"
+cheat301_enable = false
+
+cheat302_desc = "[Action Replay] Stone Fangs"
+cheat302_code = "0209D820+00630006"
+cheat302_enable = false
+
+cheat303_desc = "[Action Replay] Steel Fangs"
+cheat303_code = "0209D820+00630007"
+cheat303_enable = false
+
+cheat304_desc = "[Action Replay] Orichalcum Fangs"
+cheat304_code = "0209D820+00630008"
+cheat304_enable = false
+
+cheat305_desc = "[Action Replay] Bone Stake"
+cheat305_code = "0209D820+00630009"
+cheat305_enable = false
+
+cheat306_desc = "[Action Replay] Copper Sword"
+cheat306_code = "0209D820+0063000A"
+cheat306_enable = false
+
+cheat307_desc = "[Action Replay] Saw Blade"
+cheat307_code = "0209D820+0063000B"
+cheat307_enable = false
+
+cheat308_desc = "[Action Replay] Steel Broadsword"
+cheat308_code = "0209D820+0063000C"
+cheat308_enable = false
+
+cheat309_desc = "[Action Replay] Pankraz's Sword"
+cheat309_code = "0209D820+0063000D"
+cheat309_enable = false
+
+cheat310_desc = "[Action Replay] Serpent Sword"
+cheat310_code = "0209D820+0063000E"
+cheat310_enable = false
+
+cheat311_desc = "[Action Replay] Cautery Sword"
+cheat311_code = "0209D820+0063000F"
+cheat311_enable = false
+
+cheat312_desc = "[Action Replay] Dream Blade"
+cheat312_code = "0209D820+00630010"
+cheat312_enable = false
+
+cheat313_desc = "[Action Replay] Falcon Blade"
+cheat313_code = "0209D820+00630011"
+cheat313_enable = false
+
+cheat314_desc = "[Action Replay] Siren Sword"
+cheat314_code = "0209D820+00630012"
+cheat314_enable = false
+
+cheat315_desc = "[Action Replay] Icicle Dirk"
+cheat315_code = "0209D820+00630013"
+cheat315_enable = false
+
+cheat316_desc = "[Action Replay] Zombiesbane"
+cheat316_code = "0209D820+00630014"
+cheat316_enable = false
+
+cheat317_desc = "[Action Replay] Faerie Foil"
+cheat317_code = "0209D820+00630015"
+cheat317_enable = false
+
+cheat318_desc = "[Action Replay] Dragonsbane"
+cheat318_code = "0209D820+00630016"
+cheat318_enable = false
+
+cheat319_desc = "[Action Replay] Massacre Sword"
+cheat319_code = "0209D820+00630017"
+cheat319_enable = false
+
+cheat320_desc = "[Action Replay] Double-edged Sword"
+cheat320_code = "0209D820+00630018"
+cheat320_enable = false
+
+cheat321_desc = "[Action Replay] Miracle Sword"
+cheat321_code = "0209D820+00630019"
+cheat321_enable = false
+
+cheat322_desc = "[Action Replay] Blizzard Blade"
+cheat322_code = "0209D820+0063001A"
+cheat322_enable = false
+
+cheat323_desc = "[Action Replay] Zenithian Sword"
+cheat323_code = "0209D820+0063001B"
+cheat323_enable = false
+
+cheat324_desc = "[Action Replay] Hell Sabre"
+cheat324_code = "0209D820+0063001C"
+cheat324_enable = false
+
+cheat325_desc = "[Action Replay] Metal King Sword"
+cheat325_code = "0209D820+0063001D"
+cheat325_enable = false
+
+cheat326_desc = "[Action Replay] Staff of Salvation"
+cheat326_code = "0209D820+0063001E"
+cheat326_enable = false
+
+cheat327_desc = "[Action Replay] Oaken Staff"
+cheat327_code = "0209D820+0063001F"
+cheat327_enable = false
+
+cheat328_desc = "[Action Replay] Iron Staff"
+cheat328_code = "0209D820+00630020"
+cheat328_enable = false
+
+cheat329_desc = "[Action Replay] Lightning Staff"
+cheat329_code = "0209D820+00630021"
+cheat329_enable = false
+
+cheat330_desc = "[Action Replay] Staff of Divine Wrath"
+cheat330_code = "0209D820+00630022"
+cheat330_enable = false
+
+cheat331_desc = "[Action Replay] Staff of Antimagic"
+cheat331_code = "0209D820+00630023"
+cheat331_enable = false
+
+cheat332_desc = "[Action Replay] Somatic Staff"
+cheat332_code = "0209D820+00630024"
+cheat332_enable = false
+
+cheat333_desc = "[Action Replay] Stolos' Staff"
+cheat333_code = "0209D820+00630025"
+cheat333_enable = false
+
+cheat334_desc = "[Action Replay] Magma Staff"
+cheat334_code = "0209D820+00630026"
+cheat334_enable = false
+
+cheat335_desc = "[Action Replay] Staff of Resurrection"
+cheat335_code = "0209D820+00630027"
+cheat335_enable = false
+
+cheat336_desc = "[Action Replay] Dragon Staff"
+cheat336_code = "0209D820+00630028"
+cheat336_enable = false
+
+cheat337_desc = "[Action Replay] Giant Mallet"
+cheat337_code = "0209D820+00630029"
+cheat337_enable = false
+
+cheat338_desc = "[Action Replay] Sledgehammer"
+cheat338_code = "0209D820+0063002A"
+cheat338_enable = false
+
+cheat339_desc = "[Action Replay] War Hammer"
+cheat339_code = "0209D820+0063002B"
+cheat339_enable = false
+
+cheat340_desc = "[Action Replay] Hela Hammer"
+cheat340_code = "0209D820+0063002C"
+cheat340_enable = false
+
+cheat341_desc = "[Action Replay] Iron Claw"
+cheat341_code = "0209D820+0063002D"
+cheat341_enable = false
+
+cheat342_desc = "[Action Replay] Fire Claw"
+cheat342_code = "0209D820+0063002E"
+cheat342_enable = false
+
+cheat343_desc = "[Action Replay] Cobra Claw"
+cheat343_code = "0209D820+0063002F"
+cheat343_enable = false
+
+cheat344_desc = "[Action Replay] Paring Knife"
+cheat344_code = "0209D820+00630030"
+cheat344_enable = false
+
+cheat345_desc = "[Action Replay] Bronze Knife"
+cheat345_code = "0209D820+00630031"
+cheat345_enable = false
+
+cheat346_desc = "[Action Replay] Poison Moth Knife"
+cheat346_code = "0209D820+00630032"
+cheat346_enable = false
+
+cheat347_desc = "[Action Replay] Poison Needle"
+cheat347_code = "0209D820+00630033"
+cheat347_enable = false
+
+cheat348_desc = "[Action Replay] Falcon Knife Earrings"
+cheat348_code = "0209D820+00630034"
+cheat348_enable = false
+
+cheat349_desc = "[Action Replay] Boomerang"
+cheat349_code = "0209D820+00630035"
+cheat349_enable = false
+
+cheat350_desc = "[Action Replay] Edged Boomerang"
+cheat350_code = "0209D820+00630036"
+cheat350_enable = false
+
+cheat351_desc = "[Action Replay] Flametang Boomerang"
+cheat351_code = "0209D820+00630037"
+cheat351_enable = false
+
+cheat352_desc = "[Action Replay] Thorn Whip"
+cheat352_code = "0209D820+00630038"
+cheat352_enable = false
+
+cheat353_desc = "[Action Replay] Chain Whip"
+cheat353_code = "0209D820+00630039"
+cheat353_enable = false
+
+cheat354_desc = "[Action Replay] Morning Star"
+cheat354_code = "0209D820+0063003A"
+cheat354_enable = false
+
+cheat355_desc = "[Action Replay] Spiked Steel Whip"
+cheat355_code = "0209D820+0063003B"
+cheat355_enable = false
+
+cheat356_desc = "[Action Replay] Gringham Whip"
+cheat356_code = "0209D820+0063003C"
+cheat356_enable = false
+
+cheat357_desc = "[Action Replay] Flail of Destruction"
+cheat357_code = "0209D820+0063003D"
+cheat357_enable = false
+
+cheat358_desc = "[Action Replay] Bamboo Spear"
+cheat358_code = "0209D820+0063003E"
+cheat358_enable = false
+
+cheat359_desc = "[Action Replay] Ionospear"
+cheat359_code = "0209D820+0063003F"
+cheat359_enable = false
+
+cheat360_desc = "[Action Replay] Demon Spear"
+cheat360_code = "0209D820+00630040"
+cheat360_enable = false
+
+cheat361_desc = "[Action Replay] Great Bow"
+cheat361_code = "0209D820+00630041"
+cheat361_enable = false
+
+cheat362_desc = "[Action Replay] Restless Armour"
+cheat362_code = "0209D820+00630042"
+cheat362_enable = false
+
+cheat363_desc = "[Action Replay] Rags"
+cheat363_code = "0209D820+00630043"
+cheat363_enable = false
+
+cheat364_desc = "[Action Replay] Plain Clothes"
+cheat364_code = "0209D820+00630044"
+cheat364_enable = false
+
+cheat365_desc = "[Action Replay] Serf Wear"
+cheat365_code = "0209D820+00630045"
+cheat365_enable = false
+
+cheat366_desc = "[Action Replay] Handwoven Cape"
+cheat366_code = "0209D820+00630046"
+cheat366_enable = false
+
+cheat367_desc = "[Action Replay] Wayfarer's Clothes"
+cheat367_code = "0209D820+00630047"
+cheat367_enable = false
+
+cheat368_desc = "[Action Replay] Silk Apron"
+cheat368_code = "0209D820+00630048"
+cheat368_enable = false
+
+cheat369_desc = "[Action Replay] Leather Armour"
+cheat369_code = "0209D820+00630049"
+cheat369_enable = false
+
+cheat370_desc = "[Action Replay] Leather Kilt"
+cheat370_code = "0209D820+0063004A"
+cheat370_enable = false
+
+cheat371_desc = "[Action Replay] Silk Robe"
+cheat371_code = "0209D820+0063004B"
+cheat371_enable = false
+
+cheat372_desc = "[Action Replay] Scale Armour"
+cheat372_code = "0209D820+0063004C"
+cheat372_enable = false
+
+cheat373_desc = "[Action Replay] Boxer Shorts"
+cheat373_code = "0209D820+0063004D"
+cheat373_enable = false
+
+cheat374_desc = "[Action Replay] Leather Dress"
+cheat374_code = "0209D820+0063004E"
+cheat374_enable = false
+
+cheat375_desc = "[Action Replay] Fur Cape"
+cheat375_code = "0209D820+0063004F"
+cheat375_enable = false
+
+cheat376_desc = "[Action Replay] Chain Mail"
+cheat376_code = "0209D820+00630050"
+cheat376_enable = false
+
+cheat377_desc = "[Action Replay] Dancer's Costume"
+cheat377_code = "0209D820+00630051"
+cheat377_enable = false
+
+cheat378_desc = "[Action Replay] Slime Gooniform"
+cheat378_code = "0209D820+00630052"
+cheat378_enable = false
+
+cheat379_desc = "[Action Replay] Bronze Armour"
+cheat379_code = "0209D820+00630053"
+cheat379_enable = false
+
+cheat380_desc = "[Action Replay] Iron Cuirass"
+cheat380_code = "0209D820+00630054"
+cheat380_enable = false
+
+cheat381_desc = "[Action Replay] Robust Lingerie"
+cheat381_code = "0209D820+00630055"
+cheat381_enable = false
+
+cheat382_desc = "[Action Replay] Iron Armour"
+cheat382_code = "0209D820+00630056"
+cheat382_enable = false
+
+cheat383_desc = "[Action Replay] Cloak of Evasion"
+cheat383_code = "0209D820+00630057"
+cheat383_enable = false
+
+cheat384_desc = "[Action Replay] Full Plate Armour"
+cheat384_code = "0209D820+00630058"
+cheat384_enable = false
+
+cheat385_desc = "[Action Replay] Tortoise Shell"
+cheat385_code = "0209D820+00630059"
+cheat385_enable = false
+
+cheat386_desc = "[Action Replay] Robe of Serenity"
+cheat386_code = "0209D820+0063005A"
+cheat386_enable = false
+
+cheat387_desc = "[Action Replay] Lacy Bustier"
+cheat387_code = "0209D820+0063005B"
+cheat387_enable = false
+
+cheat388_desc = "[Action Replay] Glombolero"
+cheat388_code = "0209D820+0063005C"
+cheat388_enable = false
+
+cheat389_desc = "[Action Replay] Legerdemantle"
+cheat389_code = "0209D820+0063005D"
+cheat389_enable = false
+
+cheat390_desc = "[Action Replay] Zombie Mail"
+cheat390_code = "0209D820+0063005E"
+cheat390_enable = false
+
+cheat391_desc = "[Action Replay] Silver Cuirass"
+cheat391_code = "0209D820+0063005F"
+cheat391_enable = false
+
+cheat392_desc = "[Action Replay] Silver Mail"
+cheat392_code = "0209D820+00630060"
+cheat392_enable = false
+
+cheat393_desc = "[Action Replay] Powjamas"
+cheat393_code = "0209D820+00630061"
+cheat393_enable = false
+
+cheat394_desc = "[Action Replay] Blood Mail"
+cheat394_code = "0209D820+00630062"
+cheat394_enable = false
+
+cheat395_desc = "[Action Replay] Shimmering Dress"
+cheat395_code = "0209D820+00630063"
+cheat395_enable = false
+
+cheat396_desc = "[Action Replay] Dragon Mail"
+cheat396_code = "0209D820+00630064"
+cheat396_enable = false
+
+cheat397_desc = "[Action Replay] Sage's Robe"
+cheat397_code = "0209D820+00630065"
+cheat397_enable = false
+
+cheat398_desc = "[Action Replay] Spiked Armour"
+cheat398_code = "0209D820+00630066"
+cheat398_enable = false
+
+cheat399_desc = "[Action Replay] Flowing Dress"
+cheat399_code = "0209D820+00630067"
+cheat399_enable = false
+
+cheat400_desc = "[Action Replay] Dark Robe"
+cheat400_code = "0209D820+00630068"
+cheat400_enable = false
+
+cheat401_desc = "[Action Replay] Magic Armour"
+cheat401_code = "0209D820+00630069"
+cheat401_enable = false
+
+cheat402_desc = "[Action Replay] Silk Bustier"
+cheat402_code = "0209D820+0063006A"
+cheat402_enable = false
+
+cheat403_desc = "[Action Replay] Devil Armour"
+cheat403_code = "0209D820+0063006B"
+cheat403_enable = false
+
+cheat404_desc = "[Action Replay] Flame Armour"
+cheat404_code = "0209D820+0063006C"
+cheat404_enable = false
+
+cheat405_desc = "[Action Replay] Angel Leotard"
+cheat405_code = "0209D820+0063006D"
+cheat405_enable = false
+
+cheat406_desc = "[Action Replay] Sacred Armour"
+cheat406_code = "0209D820+0063006E"
+cheat406_enable = false
+
+cheat407_desc = "[Action Replay] Mirror Armour"
+cheat407_code = "0209D820+0063006F"
+cheat407_enable = false
+
+cheat408_desc = "[Action Replay] Princess's Robe"
+cheat408_code = "0209D820+00630070"
+cheat408_enable = false
+
+cheat409_desc = "[Action Replay] Hela's Armour"
+cheat409_code = "0209D820+00630071"
+cheat409_enable = false
+
+cheat410_desc = "[Action Replay] Zenithian Armour"
+cheat410_code = "0209D820+00630072"
+cheat410_enable = false
+
+cheat411_desc = "[Action Replay] Pallium Regale"
+cheat411_code = "0209D820+00630073"
+cheat411_enable = false
+
+cheat412_desc = "[Action Replay] Metal King Armour"
+cheat412_code = "0209D820+00630074"
+cheat412_enable = false
+
+cheat413_desc = "[Action Replay] Ruinous Shield"
+cheat413_code = "0209D820+00630075"
+cheat413_enable = false
+
+cheat414_desc = "[Action Replay] Pot Lid"
+cheat414_code = "0209D820+00630076"
+cheat414_enable = false
+
+cheat415_desc = "[Action Replay] Leather Shield"
+cheat415_code = "0209D820+00630077"
+cheat415_enable = false
+
+cheat416_desc = "[Action Replay] Scale Shield"
+cheat416_code = "0209D820+00630078"
+cheat416_enable = false
+
+cheat417_desc = "[Action Replay] Bronze Shield"
+cheat417_code = "0209D820+00630079"
+cheat417_enable = false
+
+cheat418_desc = "[Action Replay] Iron Shield"
+cheat418_code = "0209D820+0063007A"
+cheat418_enable = false
+
+cheat419_desc = "[Action Replay] Magic Shield"
+cheat419_code = "0209D820+0063007B"
+cheat419_enable = false
+
+cheat420_desc = "[Action Replay] Dragon Shield"
+cheat420_code = "0209D820+0063007C"
+cheat420_enable = false
+
+cheat421_desc = "[Action Replay] Tempest Shield"
+cheat421_code = "0209D820+0063007D"
+cheat421_enable = false
+
+cheat422_desc = "[Action Replay] Dark Shield"
+cheat422_code = "0209D820+0063007E"
+cheat422_enable = false
+
+cheat423_desc = "[Action Replay] Flame Shield"
+cheat423_code = "0209D820+0063007F"
+cheat423_enable = false
+
+cheat424_desc = "[Action Replay] Power Shield"
+cheat424_code = "0209D820+00630080"
+cheat424_enable = false
+
+cheat425_desc = "[Action Replay] Ogre Shield"
+cheat425_code = "0209D820+00630081"
+cheat425_enable = false
+
+cheat426_desc = "[Action Replay] Silver Shield"
+cheat426_code = "0209D820+00630082"
+cheat426_enable = false
+
+cheat427_desc = "[Action Replay] Zenithian Shield"
+cheat427_code = "0209D820+00630083"
+cheat427_enable = false
+
+cheat428_desc = "[Action Replay] Shimmering Shield"
+cheat428_code = "0209D820+00630084"
+cheat428_enable = false
+
+cheat429_desc = "[Action Replay] Metal King Shield"
+cheat429_code = "0209D820+00630085"
+cheat429_enable = false
+
+cheat430_desc = "[Action Replay] Leather Hat"
+cheat430_code = "0209D820+00630086"
+cheat430_enable = false
+
+cheat431_desc = "[Action Replay] Pointy Hat"
+cheat431_code = "0209D820+00630087"
+cheat431_enable = false
+
+cheat432_desc = "[Action Replay] Hardwood Headwear"
+cheat432_code = "0209D820+00630088"
+cheat432_enable = false
+
+cheat433_desc = "[Action Replay] Shellmet"
+cheat433_code = "0209D820+00630089"
+cheat433_enable = false
+
+cheat434_desc = "[Action Replay] Hairband"
+cheat434_code = "0209D820+0063008A"
+cheat434_enable = false
+
+cheat435_desc = "[Action Replay] Fur Hood"
+cheat435_code = "0209D820+0063008B"
+cheat435_enable = false
+
+cheat436_desc = "[Action Replay] Silver Tiara"
+cheat436_code = "0209D820+0063008C"
+cheat436_enable = false
+
+cheat437_desc = "[Action Replay] Iron Helmet"
+cheat437_code = "0209D820+0063008D"
+cheat437_enable = false
+
+cheat438_desc = "[Action Replay] Top Hat"
+cheat438_code = "0209D820+0063008E"
+cheat438_enable = false
+
+cheat439_desc = "[Action Replay] Iron Mask"
+cheat439_code = "0209D820+0063008F"
+cheat439_enable = false
+
+cheat440_desc = "[Action Replay] Hermes' Hat"
+cheat440_code = "0209D820+00630090"
+cheat440_enable = false
+
+cheat441_desc = "[Action Replay] Hades' Helm"
+cheat441_code = "0209D820+00630091"
+cheat441_enable = false
+
+cheat442_desc = "[Action Replay] Wedding Veil"
+cheat442_code = "0209D820+00630092"
+cheat442_enable = false
+
+cheat443_desc = "[Action Replay] Happy Hat"
+cheat443_code = "0209D820+00630093"
+cheat443_enable = false
+
+cheat444_desc = "[Action Replay] Thinking Cap"
+cheat444_code = "0209D820+00630094"
+cheat444_enable = false
+
+cheat445_desc = "[Action Replay] Golden Tiara"
+cheat445_code = "0209D820+00630095"
+cheat445_enable = false
+
+cheat446_desc = "[Action Replay] Great Helm"
+cheat446_code = "0209D820+00630096"
+cheat446_enable = false
+
+cheat447_desc = "[Action Replay] Zenithian Helm"
+cheat447_code = "0209D820+00630097"
+cheat447_enable = false
+
+cheat448_desc = "[Action Replay] Sun Crown"
+cheat448_code = "0209D820+00630098"
+cheat448_enable = false
+
+cheat449_desc = "[Action Replay] Metal King Helm"
+cheat449_code = "0209D820+00630099"
+cheat449_enable = false
+
+cheat450_desc = "[Action Replay] Bianca's Ribbon"
+cheat450_code = "0209D820+0063009A"
+cheat450_enable = false
+
+cheat451_desc = "[Action Replay] Meteorite Bracer"
+cheat451_code = "0209D820+0063009B"
+cheat451_enable = false
+
+cheat452_desc = "[Action Replay] Kamikazee Bracer"
+cheat452_code = "0209D820+0063009C"
+cheat452_enable = false
+
+cheat453_desc = "[Action Replay] Elfin Charm"
+cheat453_code = "0209D820+0063009D"
+cheat453_enable = false
+
+cheat454_desc = "[Action Replay] Circle of Fire"
+cheat454_code = "0209D820+0063009E"
+cheat454_enable = false
+
+cheat455_desc = "[Action Replay] Circle of Water"
+cheat455_code = "0209D820+0063009F"
+cheat455_enable = false
+
+cheat456_desc = "[Action Replay] Circle of Life"
+cheat456_code = "0209D820+006300A0"
+cheat456_enable = false
+
+cheat457_desc = "[Action Replay] Medicinal Herb"
+cheat457_code = "0209D820+006300A1"
+cheat457_enable = false
+
+cheat458_desc = "[Action Replay] Antidotal Herb"
+cheat458_code = "0209D820+006300A2"
+cheat458_enable = false
+
+cheat459_desc = "[Action Replay] Holy Water"
+cheat459_code = "0209D820+006300A3"
+cheat459_enable = false
+
+cheat460_desc = "[Action Replay] Chimaera Wing"
+cheat460_code = "0209D820+006300A4"
+cheat460_enable = false
+
+cheat461_desc = "[Action Replay] Yggdrasil Leaf"
+cheat461_code = "0209D820+006300A5"
+cheat461_enable = false
+
+cheat462_desc = "[Action Replay] Yggdrasil Dew"
+cheat462_code = "0209D820+006300A6"
+cheat462_enable = false
+
+cheat463_desc = "[Action Replay] Moonwort Bulb"
+cheat463_code = "0209D820+006300A7"
+cheat463_enable = false
+
+cheat464_desc = "[Action Replay] Prayer Ring"
+cheat464_code = "0209D820+006300A8"
+cheat464_enable = false
+
+cheat465_desc = "[Action Replay] Magic Water"
+cheat465_code = "0209D820+006300A9"
+cheat465_enable = false
+
+cheat466_desc = "[Action Replay] Musk"
+cheat466_code = "0209D820+006300AA"
+cheat466_enable = false
+
+cheat467_desc = "[Action Replay] Sage's Stone"
+cheat467_code = "0209D820+006300AB"
+cheat467_enable = false
+
+cheat468_desc = "[Action Replay] Seed of Strength"
+cheat468_code = "0209D820+006300AC"
+cheat468_enable = false
+
+cheat469_desc = "[Action Replay] Seed of Resilience"
+cheat469_code = "0209D820+006300AD"
+cheat469_enable = false
+
+cheat470_desc = "[Action Replay] Seed of Agility"
+cheat470_code = "0209D820+006300AE"
+cheat470_enable = false
+
+cheat471_desc = "[Action Replay] Seed of Wisdom"
+cheat471_code = "0209D820+006300AF"
+cheat471_enable = false
+
+cheat472_desc = "[Action Replay] Seed of Life"
+cheat472_code = "0209D820+006300B0"
+cheat472_enable = false
+
+cheat473_desc = "[Action Replay] Seed of Magic"
+cheat473_code = "0209D820+006300B1"
+cheat473_enable = false
+
+cheat474_desc = "[Action Replay] T 'n' T Ticket"
+cheat474_code = "0209D820+006300B2"
+cheat474_enable = false
+
+cheat475_desc = "[Action Replay] Tombola Ticket"
+cheat475_code = "0209D820+006300B3"
+cheat475_enable = false
+
+cheat476_desc = "[Action Replay] Night Light"
+cheat476_code = "0209D820+006300B4"
+cheat476_enable = false
+
+cheat477_desc = "[Action Replay] Monster Munchies"
+cheat477_code = "0209D820+006300B5"
+cheat477_enable = false
+
+cheat478_desc = "[Action Replay] Rockbomb Shard"
+cheat478_code = "0209D820+006300B6"
+cheat478_enable = false
+
+cheat479_desc = "[Action Replay] Paxa Punch"
+cheat479_code = "0209D820+006300B7"
+cheat479_enable = false
+
+cheat480_desc = "[Action Replay] Rebirth Stone"
+cheat480_code = "0209D820+006300B8"
+cheat480_enable = false
+
+cheat481_desc = "[Action Replay] Elfin Elixir"
+cheat481_code = "0209D820+006300B9"
+cheat481_enable = false
+
+cheat482_desc = "[Action Replay] Cherub Chime"
+cheat482_code = "0209D820+006300BA"
+cheat482_enable = false
+
+cheat483_desc = "[Action Replay] Dieamend"
+cheat483_code = "0209D820+006300BB"
+cheat483_enable = false
+
+cheat484_desc = "[Action Replay] War Drum"
+cheat484_code = "0209D820+006300BC"
+cheat484_enable = false
+
+cheat485_desc = "[Action Replay] King Korol's Catechism"
+cheat485_code = "0209D820+006300BD"
+cheat485_enable = false
+
+cheat486_desc = "[Action Replay] Flying Carpet"
+cheat486_code = "0209D820+006300BE"
+cheat486_enable = false
+
+cheat487_desc = "[Action Replay] Zenithian Tintinnabulum"
+cheat487_code = "0209D820+006300BF"
+cheat487_enable = false
+
+cheat488_desc = "[Action Replay] Talaria"
+cheat488_code = "0209D820+006300C0"
+cheat488_enable = false
+
+cheat489_desc = "[Action Replay] Ra's Mirror"
+cheat489_code = "0209D820+006300C1"
+cheat489_enable = false
+
+cheat490_desc = "[Action Replay] Torch"
+cheat490_code = "0209D820+006300C2"
+cheat490_enable = false
+
+cheat491_desc = "[Action Replay] Herald of Spring"
+cheat491_code = "0209D820+006300C3"
+cheat491_enable = false
+
+cheat492_desc = "[Action Replay] Lunar Zoombloom"
+cheat492_code = "0209D820+006300C4"
+cheat492_enable = false
+
+cheat493_desc = "[Action Replay] Royal Insignia"
+cheat493_code = "0209D820+006300C5"
+cheat493_enable = false
+
+cheat494_desc = "[Action Replay] Faerie Horn"
+cheat494_code = "0209D820+006300C6"
+cheat494_enable = false
+
+cheat495_desc = "[Action Replay] Grappling Hook"
+cheat495_code = "0209D820+006300C7"
+cheat495_enable = false
+
+cheat496_desc = "[Action Replay] Aspersorium"
+cheat496_code = "0209D820+006300C8"
+cheat496_enable = false
+
+cheat497_desc = "[Action Replay] Dragon's Right Eye"
+cheat497_code = "0209D820+006300C9"
+cheat497_enable = false
+
+cheat498_desc = "[Action Replay] Dragon's Left Eye"
+cheat498_code = "0209D820+006300CA"
+cheat498_enable = false
+
+cheat499_desc = "[Action Replay] Gold Orb"
+cheat499_code = "0209D820+006300CB"
+cheat499_enable = false
+
+cheat500_desc = "[Action Replay] Gold Bauble"
+cheat500_code = "0209D820+006300CC"
+cheat500_enable = false
+
+cheat501_desc = "[Action Replay] Dragon Orb"
+cheat501_code = "0209D820+006300CD"
+cheat501_enable = false
+
+cheat502_desc = "[Action Replay] Key To Coburg"
+cheat502_code = "0209D820+006300CE"
+cheat502_enable = false
+
+cheat503_desc = "[Action Replay] Magic Key"
+cheat503_code = "0209D820+006300CF"
+cheat503_enable = false
+
+cheat504_desc = "[Action Replay] Ultimate Key"
+cheat504_code = "0209D820+006300D0"
+cheat504_enable = false
+
+cheat505_desc = "[Action Replay] Mini Medal"
+cheat505_code = "0209D820+006300D1"
+cheat505_enable = false
+
+cheat506_desc = "[Action Replay] Adventurer's Map"
+cheat506_code = "0209D820+006300D2"
+cheat506_enable = false
+
+cheat507_desc = "[Action Replay] Pankraz's Letter"
+cheat507_code = "0209D820+006300D3"
+cheat507_enable = false
+
+cheat508_desc = "[Action Replay] Stone From Whealbrook"
+cheat508_code = "0209D820+006300D4"
+cheat508_enable = false
+
+cheat509_desc = "[Action Replay] Whealbrook Bluestone"
+cheat509_code = "0209D820+006300D5"
+cheat509_enable = false
+
+cheat510_desc = "[Action Replay] Whealbrook Sapphire"
+cheat510_code = "0209D820+006300D6"
+cheat510_enable = false
+
+cheat511_desc = "[Action Replay] Zizzwizz Pillow"
+cheat511_code = "0209D820+006300D7"
+cheat511_enable = false
+
+cheat512_desc = "[Action Replay] Silver Teapot"
+cheat512_code = "0209D820+006300D8"
+cheat512_enable = false
+
+cheat513_desc = "[Action Replay] Silver Teacup"
+cheat513_code = "0209D820+006300D9"
+cheat513_enable = false
+
+cheat514_desc = "[Action Replay] Silver Tea Tray"
+cheat514_code = "0209D820+006300DA"
+cheat514_enable = false
+
+cheat515_desc = "[Action Replay] Toff's Tea Set"
+cheat515_code = "0209D820+006300DB"
+cheat515_enable = false
+
+cheat516_desc = "[Action Replay] Toff's Tea Set"
+cheat516_code = "0209D820+006300DC"
+cheat516_enable = false
+
+cheat517_desc = "[Action Replay] Crown of Uptaten"
+cheat517_code = "0209D820+006300DD"
+cheat517_enable = false
+
+cheat518_desc = "[Action Replay] Blooming Branch"
+cheat518_code = "0209D820+006300DE"
+cheat518_enable = false
+
+cheat519_desc = "[Action Replay] Marital Organ"
+cheat519_code = "0209D820+006300DF"
+cheat519_enable = false
+
+cheat520_desc = "[Action Replay] Marital Organ"
+cheat520_code = "0209D820+006300E0"
+cheat520_enable = false
+
+cheat521_desc = "[Action Replay] Crude Image"
+cheat521_code = "0209D820+006300E1"
+cheat521_enable = false
+
+cheat522_desc = "[Action Replay] Slime Curio"
+cheat522_code = "0209D820+006300E2"
+cheat522_enable = false
+
+cheat523_desc = "[Action Replay] Ship in A Bottle"
+cheat523_code = "0209D820+006300E3"
+cheat523_enable = false
+
+cheat524_desc = "[Action Replay] Terrorcrow"
+cheat524_code = "0209D820+006300E4"
+cheat524_enable = false
+
+cheat525_desc = "[Action Replay] Zoomshine"
+cheat525_code = "0209D820+006300E5"
+cheat525_enable = false
+
+cheat526_desc = "[Action Replay] Honey Buns"
+cheat526_code = "0209D820+006300E6"
+cheat526_enable = false
+
+cheat527_desc = "[Action Replay] Honey Buns"
+cheat527_code = "0209D820+006300E7"
+cheat527_enable = false
+
+cheat528_desc = "[Action Replay] Honey Buns"
+cheat528_code = "0209D820+006300E8"
+cheat528_enable = false
+
+cheat529_desc = "[Action Replay] Scintillating Sinter"
+cheat529_code = "0209D820+006300E9"
+cheat529_enable = false
+
+cheat530_desc = "[Action Replay] Desert Rose"
+cheat530_code = "0209D820+006300EA"
+cheat530_enable = false
+
+cheat531_desc = "[Action Replay] Chocolate Medalliyum"
+cheat531_code = "0209D820+006300EB"
+cheat531_enable = false
+
+cheat532_desc = "[Action Replay] Maxi Medal"
+cheat532_code = "0209D820+006300EC"
+cheat532_enable = false
+
+cheat533_desc = "[Action Replay] Batten Binnacle"
+cheat533_code = "0209D820+006300ED"
+cheat533_enable = false
+
+cheat534_desc = "[Action Replay] Monster Chess Set"
+cheat534_code = "0209D820+006300EE"
+cheat534_enable = false
+
+cheat535_desc = "[Action Replay] 'Lofty Lilts'"
+cheat535_code = "0209D820+006300EF"
+cheat535_enable = false
+
+cheat536_desc = "[Action Replay] Yggdrasil Sapling"
+cheat536_code = "0209D820+006300F0"
+cheat536_enable = false
+
+cheat537_desc = "[Action Replay] Yggdrasil Sapling"
+cheat537_code = "0209D820+006300F1"
+cheat537_enable = false
+
+cheat538_desc = "[Action Replay] Faerie Quill"
+cheat538_code = "0209D820+006300F2"
+cheat538_enable = false
+
+cheat539_desc = "[Action Replay] Annalum Retentium"
+cheat539_code = "0209D820+006300F3"
+cheat539_enable = false
+
+cheat540_desc = "[Action Replay] Scuttlebutt Alledger"
+cheat540_code = "0209D820+006300F4"
+cheat540_enable = false
+
+cheat541_desc = "[Action Replay] Forget-me-Knot Flag"
+cheat541_code = "0209D820+006300F5"
+cheat541_enable = false
+
+cheat542_desc = "[Action Replay] Tusk-tusk Tusk Inkwell"
+cheat542_code = "0209D820+006300F6"
+cheat542_enable = false
+
+cheat543_desc = "[Action Replay] Ghoulroarer"
+cheat543_code = "0209D820+006300F7"
+cheat543_enable = false
+
+cheat544_desc = "[Action Replay] Madalena's Locket"
+cheat544_code = "0209D820+006300F8"
+cheat544_enable = false
+
+cheat545_desc = "[Action Replay] Madalena's Locket"
+cheat545_code = "0209D820+006300F9"
+cheat545_enable = false
+
+cheat546_desc = "[Action Replay] Catas Trophy"
+cheat546_code = "0209D820+006300FA"
+cheat546_enable = false
+
+cheat547_desc = "[Action Replay] Chamois"
+cheat547_code = "0209D820+006300FB"
+cheat547_enable = false
+
+cheat548_desc = "[Action Replay] T 'n' T Free Pass"
+cheat548_code = "0209D820+006300FC"
+cheat548_enable = false
+
+cheat549_desc = "[Action Replay] Loyalty Card"
+cheat549_code = "0209D820+006300FD"
+cheat549_enable = false
+
+cheat550_desc = "[Action Replay] Big Book of Beasts"
+cheat550_code = "0209D820+006300FE"
+cheat550_enable = false
+
+cheat551_desc = "[Action Replay] Prince's Outfit"
+cheat551_code = "0209D820+0063FF00"
+cheat551_enable = false
+
+cheat552_desc = "[Action Replay] Duplic Hat"
+cheat552_code = "0209D820+00630100"
+cheat552_enable = false
+
+cheat553_desc = "[Action Replay] Sands of Time"
+cheat553_code = "0209D820+00630101"
+cheat553_enable = false
+
+cheat554_desc = "[Action Replay] Akillics"
+cheat554_code = "0209D820+00630102"
+cheat554_enable = false
+
+cheat555_desc = "[Action Replay] Diamond Akillics"
+cheat555_code = "0209D820+00630103"
+cheat555_enable = false
+
+cheat556_desc = "[Action Replay] Silk Dress"
+cheat556_code = "0209D820+00630104"
+cheat556_enable = false
+
+cheat557_desc = "[Action Replay] Floral Parasol"
+cheat557_code = "0209D820+00630105"
+cheat557_enable = false
+
+cheat558_desc = "[Action Replay] Mimic Stone"
+cheat558_code = "0209D820+00630106"
+cheat558_enable = false
+
+cheat559_desc = "[Action Replay] Blarney Stone"
+cheat559_code = "0209D820+00630107"
+cheat559_enable = false
+
+cheat560_desc = "[Action Replay] Cypress Stick"
+cheat560_code = "0209D824+00630001"
+cheat560_enable = false
+
+cheat561_desc = "[Action Replay] Oaken Club"
+cheat561_code = "0209D824+00630002"
+cheat561_enable = false
+
+cheat562_desc = "[Action Replay] Stone Axe"
+cheat562_code = "0209D824+00630003"
+cheat562_enable = false
+
+cheat563_desc = "[Action Replay] Battle-axe"
+cheat563_code = "0209D824+00630004"
+cheat563_enable = false
+
+cheat564_desc = "[Action Replay] Chain Sickle"
+cheat564_code = "0209D824+00630005"
+cheat564_enable = false
+
+cheat565_desc = "[Action Replay] Stone Fangs"
+cheat565_code = "0209D824+00630006"
+cheat565_enable = false
+
+cheat566_desc = "[Action Replay] Steel Fangs"
+cheat566_code = "0209D824+00630007"
+cheat566_enable = false
+
+cheat567_desc = "[Action Replay] Orichalcum Fangs"
+cheat567_code = "0209D824+00630008"
+cheat567_enable = false
+
+cheat568_desc = "[Action Replay] Bone Stake"
+cheat568_code = "0209D824+00630009"
+cheat568_enable = false
+
+cheat569_desc = "[Action Replay] Copper Sword"
+cheat569_code = "0209D824+0063000A"
+cheat569_enable = false
+
+cheat570_desc = "[Action Replay] Saw Blade"
+cheat570_code = "0209D824+0063000B"
+cheat570_enable = false
+
+cheat571_desc = "[Action Replay] Steel Broadsword"
+cheat571_code = "0209D824+0063000C"
+cheat571_enable = false
+
+cheat572_desc = "[Action Replay] Pankraz's Sword"
+cheat572_code = "0209D824+0063000D"
+cheat572_enable = false
+
+cheat573_desc = "[Action Replay] Serpent Sword"
+cheat573_code = "0209D824+0063000E"
+cheat573_enable = false
+
+cheat574_desc = "[Action Replay] Cautery Sword"
+cheat574_code = "0209D824+0063000F"
+cheat574_enable = false
+
+cheat575_desc = "[Action Replay] Dream Blade"
+cheat575_code = "0209D824+00630010"
+cheat575_enable = false
+
+cheat576_desc = "[Action Replay] Falcon Blade"
+cheat576_code = "0209D824+00630011"
+cheat576_enable = false
+
+cheat577_desc = "[Action Replay] Siren Sword"
+cheat577_code = "0209D824+00630012"
+cheat577_enable = false
+
+cheat578_desc = "[Action Replay] Icicle Dirk"
+cheat578_code = "0209D824+00630013"
+cheat578_enable = false
+
+cheat579_desc = "[Action Replay] Zombiesbane"
+cheat579_code = "0209D824+00630014"
+cheat579_enable = false
+
+cheat580_desc = "[Action Replay] Faerie Foil"
+cheat580_code = "0209D824+00630015"
+cheat580_enable = false
+
+cheat581_desc = "[Action Replay] Dragonsbane"
+cheat581_code = "0209D824+00630016"
+cheat581_enable = false
+
+cheat582_desc = "[Action Replay] Massacre Sword"
+cheat582_code = "0209D824+00630017"
+cheat582_enable = false
+
+cheat583_desc = "[Action Replay] Double-edged Sword"
+cheat583_code = "0209D824+00630018"
+cheat583_enable = false
+
+cheat584_desc = "[Action Replay] Miracle Sword"
+cheat584_code = "0209D824+00630019"
+cheat584_enable = false
+
+cheat585_desc = "[Action Replay] Blizzard Blade"
+cheat585_code = "0209D824+0063001A"
+cheat585_enable = false
+
+cheat586_desc = "[Action Replay] Zenithian Sword"
+cheat586_code = "0209D824+0063001B"
+cheat586_enable = false
+
+cheat587_desc = "[Action Replay] Hell Sabre"
+cheat587_code = "0209D824+0063001C"
+cheat587_enable = false
+
+cheat588_desc = "[Action Replay] Metal King Sword"
+cheat588_code = "0209D824+0063001D"
+cheat588_enable = false
+
+cheat589_desc = "[Action Replay] Staff of Salvation"
+cheat589_code = "0209D824+0063001E"
+cheat589_enable = false
+
+cheat590_desc = "[Action Replay] Oaken Staff"
+cheat590_code = "0209D824+0063001F"
+cheat590_enable = false
+
+cheat591_desc = "[Action Replay] Iron Staff"
+cheat591_code = "0209D824+00630020"
+cheat591_enable = false
+
+cheat592_desc = "[Action Replay] Lightning Staff"
+cheat592_code = "0209D824+00630021"
+cheat592_enable = false
+
+cheat593_desc = "[Action Replay] Staff of Divine Wrath"
+cheat593_code = "0209D824+00630022"
+cheat593_enable = false
+
+cheat594_desc = "[Action Replay] Staff of Antimagic"
+cheat594_code = "0209D824+00630023"
+cheat594_enable = false
+
+cheat595_desc = "[Action Replay] Somatic Staff"
+cheat595_code = "0209D824+00630024"
+cheat595_enable = false
+
+cheat596_desc = "[Action Replay] Stolos' Staff"
+cheat596_code = "0209D824+00630025"
+cheat596_enable = false
+
+cheat597_desc = "[Action Replay] Magma Staff"
+cheat597_code = "0209D824+00630026"
+cheat597_enable = false
+
+cheat598_desc = "[Action Replay] Staff of Resurrection"
+cheat598_code = "0209D824+00630027"
+cheat598_enable = false
+
+cheat599_desc = "[Action Replay] Dragon Staff"
+cheat599_code = "0209D824+00630028"
+cheat599_enable = false
+
+cheat600_desc = "[Action Replay] Giant Mallet"
+cheat600_code = "0209D824+00630029"
+cheat600_enable = false
+
+cheat601_desc = "[Action Replay] Sledgehammer"
+cheat601_code = "0209D824+0063002A"
+cheat601_enable = false
+
+cheat602_desc = "[Action Replay] War Hammer"
+cheat602_code = "0209D824+0063002B"
+cheat602_enable = false
+
+cheat603_desc = "[Action Replay] Hela Hammer"
+cheat603_code = "0209D824+0063002C"
+cheat603_enable = false
+
+cheat604_desc = "[Action Replay] Iron Claw"
+cheat604_code = "0209D824+0063002D"
+cheat604_enable = false
+
+cheat605_desc = "[Action Replay] Fire Claw"
+cheat605_code = "0209D824+0063002E"
+cheat605_enable = false
+
+cheat606_desc = "[Action Replay] Cobra Claw"
+cheat606_code = "0209D824+0063002F"
+cheat606_enable = false
+
+cheat607_desc = "[Action Replay] Paring Knife"
+cheat607_code = "0209D824+00630030"
+cheat607_enable = false
+
+cheat608_desc = "[Action Replay] Bronze Knife"
+cheat608_code = "0209D824+00630031"
+cheat608_enable = false
+
+cheat609_desc = "[Action Replay] Poison Moth Knife"
+cheat609_code = "0209D824+00630032"
+cheat609_enable = false
+
+cheat610_desc = "[Action Replay] Poison Needle"
+cheat610_code = "0209D824+00630033"
+cheat610_enable = false
+
+cheat611_desc = "[Action Replay] Falcon Knife Earrings"
+cheat611_code = "0209D824+00630034"
+cheat611_enable = false
+
+cheat612_desc = "[Action Replay] Boomerang"
+cheat612_code = "0209D824+00630035"
+cheat612_enable = false
+
+cheat613_desc = "[Action Replay] Edged Boomerang"
+cheat613_code = "0209D824+00630036"
+cheat613_enable = false
+
+cheat614_desc = "[Action Replay] Flametang Boomerang"
+cheat614_code = "0209D824+00630037"
+cheat614_enable = false
+
+cheat615_desc = "[Action Replay] Thorn Whip"
+cheat615_code = "0209D824+00630038"
+cheat615_enable = false
+
+cheat616_desc = "[Action Replay] Chain Whip"
+cheat616_code = "0209D824+00630039"
+cheat616_enable = false
+
+cheat617_desc = "[Action Replay] Morning Star"
+cheat617_code = "0209D824+0063003A"
+cheat617_enable = false
+
+cheat618_desc = "[Action Replay] Spiked Steel Whip"
+cheat618_code = "0209D824+0063003B"
+cheat618_enable = false
+
+cheat619_desc = "[Action Replay] Gringham Whip"
+cheat619_code = "0209D824+0063003C"
+cheat619_enable = false
+
+cheat620_desc = "[Action Replay] Flail of Destruction"
+cheat620_code = "0209D824+0063003D"
+cheat620_enable = false
+
+cheat621_desc = "[Action Replay] Bamboo Spear"
+cheat621_code = "0209D824+0063003E"
+cheat621_enable = false
+
+cheat622_desc = "[Action Replay] Ionospear"
+cheat622_code = "0209D824+0063003F"
+cheat622_enable = false
+
+cheat623_desc = "[Action Replay] Demon Spear"
+cheat623_code = "0209D824+00630040"
+cheat623_enable = false
+
+cheat624_desc = "[Action Replay] Great Bow"
+cheat624_code = "0209D824+00630041"
+cheat624_enable = false
+
+cheat625_desc = "[Action Replay] Restless Armour"
+cheat625_code = "0209D824+00630042"
+cheat625_enable = false
+
+cheat626_desc = "[Action Replay] Rags"
+cheat626_code = "0209D824+00630043"
+cheat626_enable = false
+
+cheat627_desc = "[Action Replay] Plain Clothes"
+cheat627_code = "0209D824+00630044"
+cheat627_enable = false
+
+cheat628_desc = "[Action Replay] Serf Wear"
+cheat628_code = "0209D824+00630045"
+cheat628_enable = false
+
+cheat629_desc = "[Action Replay] Handwoven Cape"
+cheat629_code = "0209D824+00630046"
+cheat629_enable = false
+
+cheat630_desc = "[Action Replay] Wayfarer's Clothes"
+cheat630_code = "0209D824+00630047"
+cheat630_enable = false
+
+cheat631_desc = "[Action Replay] Silk Apron"
+cheat631_code = "0209D824+00630048"
+cheat631_enable = false
+
+cheat632_desc = "[Action Replay] Leather Armour"
+cheat632_code = "0209D824+00630049"
+cheat632_enable = false
+
+cheat633_desc = "[Action Replay] Leather Kilt"
+cheat633_code = "0209D824+0063004A"
+cheat633_enable = false
+
+cheat634_desc = "[Action Replay] Silk Robe"
+cheat634_code = "0209D824+0063004B"
+cheat634_enable = false
+
+cheat635_desc = "[Action Replay] Scale Armour"
+cheat635_code = "0209D824+0063004C"
+cheat635_enable = false
+
+cheat636_desc = "[Action Replay] Boxer Shorts"
+cheat636_code = "0209D824+0063004D"
+cheat636_enable = false
+
+cheat637_desc = "[Action Replay] Leather Dress"
+cheat637_code = "0209D824+0063004E"
+cheat637_enable = false
+
+cheat638_desc = "[Action Replay] Fur Cape"
+cheat638_code = "0209D824+0063004F"
+cheat638_enable = false
+
+cheat639_desc = "[Action Replay] Chain Mail"
+cheat639_code = "0209D824+00630050"
+cheat639_enable = false
+
+cheat640_desc = "[Action Replay] Dancer's Costume"
+cheat640_code = "0209D824+00630051"
+cheat640_enable = false
+
+cheat641_desc = "[Action Replay] Slime Gooniform"
+cheat641_code = "0209D824+00630052"
+cheat641_enable = false
+
+cheat642_desc = "[Action Replay] Bronze Armour"
+cheat642_code = "0209D824+00630053"
+cheat642_enable = false
+
+cheat643_desc = "[Action Replay] Iron Cuirass"
+cheat643_code = "0209D824+00630054"
+cheat643_enable = false
+
+cheat644_desc = "[Action Replay] Robust Lingerie"
+cheat644_code = "0209D824+00630055"
+cheat644_enable = false
+
+cheat645_desc = "[Action Replay] Iron Armour"
+cheat645_code = "0209D824+00630056"
+cheat645_enable = false
+
+cheat646_desc = "[Action Replay] Cloak of Evasion"
+cheat646_code = "0209D824+00630057"
+cheat646_enable = false
+
+cheat647_desc = "[Action Replay] Full Plate Armour"
+cheat647_code = "0209D824+00630058"
+cheat647_enable = false
+
+cheat648_desc = "[Action Replay] Tortoise Shell"
+cheat648_code = "0209D824+00630059"
+cheat648_enable = false
+
+cheat649_desc = "[Action Replay] Robe of Serenity"
+cheat649_code = "0209D824+0063005A"
+cheat649_enable = false
+
+cheat650_desc = "[Action Replay] Lacy Bustier"
+cheat650_code = "0209D824+0063005B"
+cheat650_enable = false
+
+cheat651_desc = "[Action Replay] Glombolero"
+cheat651_code = "0209D824+0063005C"
+cheat651_enable = false
+
+cheat652_desc = "[Action Replay] Legerdemantle"
+cheat652_code = "0209D824+0063005D"
+cheat652_enable = false
+
+cheat653_desc = "[Action Replay] Zombie Mail"
+cheat653_code = "0209D824+0063005E"
+cheat653_enable = false
+
+cheat654_desc = "[Action Replay] Silver Cuirass"
+cheat654_code = "0209D824+0063005F"
+cheat654_enable = false
+
+cheat655_desc = "[Action Replay] Silver Mail"
+cheat655_code = "0209D824+00630060"
+cheat655_enable = false
+
+cheat656_desc = "[Action Replay] Powjamas"
+cheat656_code = "0209D824+00630061"
+cheat656_enable = false
+
+cheat657_desc = "[Action Replay] Blood Mail"
+cheat657_code = "0209D824+00630062"
+cheat657_enable = false
+
+cheat658_desc = "[Action Replay] Shimmering Dress"
+cheat658_code = "0209D824+00630063"
+cheat658_enable = false
+
+cheat659_desc = "[Action Replay] Dragon Mail"
+cheat659_code = "0209D824+00630064"
+cheat659_enable = false
+
+cheat660_desc = "[Action Replay] Sage's Robe"
+cheat660_code = "0209D824+00630065"
+cheat660_enable = false
+
+cheat661_desc = "[Action Replay] Spiked Armour"
+cheat661_code = "0209D824+00630066"
+cheat661_enable = false
+
+cheat662_desc = "[Action Replay] Flowing Dress"
+cheat662_code = "0209D824+00630067"
+cheat662_enable = false
+
+cheat663_desc = "[Action Replay] Dark Robe"
+cheat663_code = "0209D824+00630068"
+cheat663_enable = false
+
+cheat664_desc = "[Action Replay] Magic Armour"
+cheat664_code = "0209D824+00630069"
+cheat664_enable = false
+
+cheat665_desc = "[Action Replay] Silk Bustier"
+cheat665_code = "0209D824+0063006A"
+cheat665_enable = false
+
+cheat666_desc = "[Action Replay] Devil Armour"
+cheat666_code = "0209D824+0063006B"
+cheat666_enable = false
+
+cheat667_desc = "[Action Replay] Flame Armour"
+cheat667_code = "0209D824+0063006C"
+cheat667_enable = false
+
+cheat668_desc = "[Action Replay] Angel Leotard"
+cheat668_code = "0209D824+0063006D"
+cheat668_enable = false
+
+cheat669_desc = "[Action Replay] Sacred Armour"
+cheat669_code = "0209D824+0063006E"
+cheat669_enable = false
+
+cheat670_desc = "[Action Replay] Mirror Armour"
+cheat670_code = "0209D824+0063006F"
+cheat670_enable = false
+
+cheat671_desc = "[Action Replay] Princess's Robe"
+cheat671_code = "0209D824+00630070"
+cheat671_enable = false
+
+cheat672_desc = "[Action Replay] Hela's Armour"
+cheat672_code = "0209D824+00630071"
+cheat672_enable = false
+
+cheat673_desc = "[Action Replay] Zenithian Armour"
+cheat673_code = "0209D824+00630072"
+cheat673_enable = false
+
+cheat674_desc = "[Action Replay] Pallium Regale"
+cheat674_code = "0209D824+00630073"
+cheat674_enable = false
+
+cheat675_desc = "[Action Replay] Metal King Armour"
+cheat675_code = "0209D824+00630074"
+cheat675_enable = false
+
+cheat676_desc = "[Action Replay] Ruinous Shield"
+cheat676_code = "0209D824+00630075"
+cheat676_enable = false
+
+cheat677_desc = "[Action Replay] Pot Lid"
+cheat677_code = "0209D824+00630076"
+cheat677_enable = false
+
+cheat678_desc = "[Action Replay] Leather Shield"
+cheat678_code = "0209D824+00630077"
+cheat678_enable = false
+
+cheat679_desc = "[Action Replay] Scale Shield"
+cheat679_code = "0209D824+00630078"
+cheat679_enable = false
+
+cheat680_desc = "[Action Replay] Bronze Shield"
+cheat680_code = "0209D824+00630079"
+cheat680_enable = false
+
+cheat681_desc = "[Action Replay] Iron Shield"
+cheat681_code = "0209D824+0063007A"
+cheat681_enable = false
+
+cheat682_desc = "[Action Replay] Magic Shield"
+cheat682_code = "0209D824+0063007B"
+cheat682_enable = false
+
+cheat683_desc = "[Action Replay] Dragon Shield"
+cheat683_code = "0209D824+0063007C"
+cheat683_enable = false
+
+cheat684_desc = "[Action Replay] Tempest Shield"
+cheat684_code = "0209D824+0063007D"
+cheat684_enable = false
+
+cheat685_desc = "[Action Replay] Dark Shield"
+cheat685_code = "0209D824+0063007E"
+cheat685_enable = false
+
+cheat686_desc = "[Action Replay] Flame Shield"
+cheat686_code = "0209D824+0063007F"
+cheat686_enable = false
+
+cheat687_desc = "[Action Replay] Power Shield"
+cheat687_code = "0209D824+00630080"
+cheat687_enable = false
+
+cheat688_desc = "[Action Replay] Ogre Shield"
+cheat688_code = "0209D824+00630081"
+cheat688_enable = false
+
+cheat689_desc = "[Action Replay] Silver Shield"
+cheat689_code = "0209D824+00630082"
+cheat689_enable = false
+
+cheat690_desc = "[Action Replay] Zenithian Shield"
+cheat690_code = "0209D824+00630083"
+cheat690_enable = false
+
+cheat691_desc = "[Action Replay] Shimmering Shield"
+cheat691_code = "0209D824+00630084"
+cheat691_enable = false
+
+cheat692_desc = "[Action Replay] Metal King Shield"
+cheat692_code = "0209D824+00630085"
+cheat692_enable = false
+
+cheat693_desc = "[Action Replay] Leather Hat"
+cheat693_code = "0209D824+00630086"
+cheat693_enable = false
+
+cheat694_desc = "[Action Replay] Pointy Hat"
+cheat694_code = "0209D824+00630087"
+cheat694_enable = false
+
+cheat695_desc = "[Action Replay] Hardwood Headwear"
+cheat695_code = "0209D824+00630088"
+cheat695_enable = false
+
+cheat696_desc = "[Action Replay] Shellmet"
+cheat696_code = "0209D824+00630089"
+cheat696_enable = false
+
+cheat697_desc = "[Action Replay] Hairband"
+cheat697_code = "0209D824+0063008A"
+cheat697_enable = false
+
+cheat698_desc = "[Action Replay] Fur Hood"
+cheat698_code = "0209D824+0063008B"
+cheat698_enable = false
+
+cheat699_desc = "[Action Replay] Silver Tiara"
+cheat699_code = "0209D824+0063008C"
+cheat699_enable = false
+
+cheat700_desc = "[Action Replay] Iron Helmet"
+cheat700_code = "0209D824+0063008D"
+cheat700_enable = false
+
+cheat701_desc = "[Action Replay] Top Hat"
+cheat701_code = "0209D824+0063008E"
+cheat701_enable = false
+
+cheat702_desc = "[Action Replay] Iron Mask"
+cheat702_code = "0209D824+0063008F"
+cheat702_enable = false
+
+cheat703_desc = "[Action Replay] Hermes' Hat"
+cheat703_code = "0209D824+00630090"
+cheat703_enable = false
+
+cheat704_desc = "[Action Replay] Hades' Helm"
+cheat704_code = "0209D824+00630091"
+cheat704_enable = false
+
+cheat705_desc = "[Action Replay] Wedding Veil"
+cheat705_code = "0209D824+00630092"
+cheat705_enable = false
+
+cheat706_desc = "[Action Replay] Happy Hat"
+cheat706_code = "0209D824+00630093"
+cheat706_enable = false
+
+cheat707_desc = "[Action Replay] Thinking Cap"
+cheat707_code = "0209D824+00630094"
+cheat707_enable = false
+
+cheat708_desc = "[Action Replay] Golden Tiara"
+cheat708_code = "0209D824+00630095"
+cheat708_enable = false
+
+cheat709_desc = "[Action Replay] Great Helm"
+cheat709_code = "0209D824+00630096"
+cheat709_enable = false
+
+cheat710_desc = "[Action Replay] Zenithian Helm"
+cheat710_code = "0209D824+00630097"
+cheat710_enable = false
+
+cheat711_desc = "[Action Replay] Sun Crown"
+cheat711_code = "0209D824+00630098"
+cheat711_enable = false
+
+cheat712_desc = "[Action Replay] Metal King Helm"
+cheat712_code = "0209D824+00630099"
+cheat712_enable = false
+
+cheat713_desc = "[Action Replay] Bianca's Ribbon"
+cheat713_code = "0209D824+0063009A"
+cheat713_enable = false
+
+cheat714_desc = "[Action Replay] Meteorite Bracer"
+cheat714_code = "0209D824+0063009B"
+cheat714_enable = false
+
+cheat715_desc = "[Action Replay] Kamikazee Bracer"
+cheat715_code = "0209D824+0063009C"
+cheat715_enable = false
+
+cheat716_desc = "[Action Replay] Elfin Charm"
+cheat716_code = "0209D824+0063009D"
+cheat716_enable = false
+
+cheat717_desc = "[Action Replay] Circle of Fire"
+cheat717_code = "0209D824+0063009E"
+cheat717_enable = false
+
+cheat718_desc = "[Action Replay] Circle of Water"
+cheat718_code = "0209D824+0063009F"
+cheat718_enable = false
+
+cheat719_desc = "[Action Replay] Circle of Life"
+cheat719_code = "0209D824+006300A0"
+cheat719_enable = false
+
+cheat720_desc = "[Action Replay] Medicinal Herb"
+cheat720_code = "0209D824+006300A1"
+cheat720_enable = false
+
+cheat721_desc = "[Action Replay] Antidotal Herb"
+cheat721_code = "0209D824+006300A2"
+cheat721_enable = false
+
+cheat722_desc = "[Action Replay] Holy Water"
+cheat722_code = "0209D824+006300A3"
+cheat722_enable = false
+
+cheat723_desc = "[Action Replay] Chimaera Wing"
+cheat723_code = "0209D824+006300A4"
+cheat723_enable = false
+
+cheat724_desc = "[Action Replay] Yggdrasil Leaf"
+cheat724_code = "0209D824+006300A5"
+cheat724_enable = false
+
+cheat725_desc = "[Action Replay] Yggdrasil Dew"
+cheat725_code = "0209D824+006300A6"
+cheat725_enable = false
+
+cheat726_desc = "[Action Replay] Moonwort Bulb"
+cheat726_code = "0209D824+006300A7"
+cheat726_enable = false
+
+cheat727_desc = "[Action Replay] Prayer Ring"
+cheat727_code = "0209D824+006300A8"
+cheat727_enable = false
+
+cheat728_desc = "[Action Replay] Magic Water"
+cheat728_code = "0209D824+006300A9"
+cheat728_enable = false
+
+cheat729_desc = "[Action Replay] Musk"
+cheat729_code = "0209D824+006300AA"
+cheat729_enable = false
+
+cheat730_desc = "[Action Replay] Sage's Stone"
+cheat730_code = "0209D824+006300AB"
+cheat730_enable = false
+
+cheat731_desc = "[Action Replay] Seed of Strength"
+cheat731_code = "0209D824+006300AC"
+cheat731_enable = false
+
+cheat732_desc = "[Action Replay] Seed of Resilience"
+cheat732_code = "0209D824+006300AD"
+cheat732_enable = false
+
+cheat733_desc = "[Action Replay] Seed of Agility"
+cheat733_code = "0209D824+006300AE"
+cheat733_enable = false
+
+cheat734_desc = "[Action Replay] Seed of Wisdom"
+cheat734_code = "0209D824+006300AF"
+cheat734_enable = false
+
+cheat735_desc = "[Action Replay] Seed of Life"
+cheat735_code = "0209D824+006300B0"
+cheat735_enable = false
+
+cheat736_desc = "[Action Replay] Seed of Magic"
+cheat736_code = "0209D824+006300B1"
+cheat736_enable = false
+
+cheat737_desc = "[Action Replay] T 'n' T Ticket"
+cheat737_code = "0209D824+006300B2"
+cheat737_enable = false
+
+cheat738_desc = "[Action Replay] Tombola Ticket"
+cheat738_code = "0209D824+006300B3"
+cheat738_enable = false
+
+cheat739_desc = "[Action Replay] Night Light"
+cheat739_code = "0209D824+006300B4"
+cheat739_enable = false
+
+cheat740_desc = "[Action Replay] Monster Munchies"
+cheat740_code = "0209D824+006300B5"
+cheat740_enable = false
+
+cheat741_desc = "[Action Replay] Rockbomb Shard"
+cheat741_code = "0209D824+006300B6"
+cheat741_enable = false
+
+cheat742_desc = "[Action Replay] Paxa Punch"
+cheat742_code = "0209D824+006300B7"
+cheat742_enable = false
+
+cheat743_desc = "[Action Replay] Rebirth Stone"
+cheat743_code = "0209D824+006300B8"
+cheat743_enable = false
+
+cheat744_desc = "[Action Replay] Elfin Elixir"
+cheat744_code = "0209D824+006300B9"
+cheat744_enable = false
+
+cheat745_desc = "[Action Replay] Cherub Chime"
+cheat745_code = "0209D824+006300BA"
+cheat745_enable = false
+
+cheat746_desc = "[Action Replay] Dieamend"
+cheat746_code = "0209D824+006300BB"
+cheat746_enable = false
+
+cheat747_desc = "[Action Replay] War Drum"
+cheat747_code = "0209D824+006300BC"
+cheat747_enable = false
+
+cheat748_desc = "[Action Replay] King Korol's Catechism"
+cheat748_code = "0209D824+006300BD"
+cheat748_enable = false
+
+cheat749_desc = "[Action Replay] Flying Carpet"
+cheat749_code = "0209D824+006300BE"
+cheat749_enable = false
+
+cheat750_desc = "[Action Replay] Zenithian Tintinnabulum"
+cheat750_code = "0209D824+006300BF"
+cheat750_enable = false
+
+cheat751_desc = "[Action Replay] Talaria"
+cheat751_code = "0209D824+006300C0"
+cheat751_enable = false
+
+cheat752_desc = "[Action Replay] Ra's Mirror"
+cheat752_code = "0209D824+006300C1"
+cheat752_enable = false
+
+cheat753_desc = "[Action Replay] Torch"
+cheat753_code = "0209D824+006300C2"
+cheat753_enable = false
+
+cheat754_desc = "[Action Replay] Herald of Spring"
+cheat754_code = "0209D824+006300C3"
+cheat754_enable = false
+
+cheat755_desc = "[Action Replay] Lunar Zoombloom"
+cheat755_code = "0209D824+006300C4"
+cheat755_enable = false
+
+cheat756_desc = "[Action Replay] Royal Insignia"
+cheat756_code = "0209D824+006300C5"
+cheat756_enable = false
+
+cheat757_desc = "[Action Replay] Faerie Horn"
+cheat757_code = "0209D824+006300C6"
+cheat757_enable = false
+
+cheat758_desc = "[Action Replay] Grappling Hook"
+cheat758_code = "0209D824+006300C7"
+cheat758_enable = false
+
+cheat759_desc = "[Action Replay] Aspersorium"
+cheat759_code = "0209D824+006300C8"
+cheat759_enable = false
+
+cheat760_desc = "[Action Replay] Dragon's Right Eye"
+cheat760_code = "0209D824+006300C9"
+cheat760_enable = false
+
+cheat761_desc = "[Action Replay] Dragon's Left Eye"
+cheat761_code = "0209D824+006300CA"
+cheat761_enable = false
+
+cheat762_desc = "[Action Replay] Gold Orb"
+cheat762_code = "0209D824+006300CB"
+cheat762_enable = false
+
+cheat763_desc = "[Action Replay] Gold Bauble"
+cheat763_code = "0209D824+006300CC"
+cheat763_enable = false
+
+cheat764_desc = "[Action Replay] Dragon Orb"
+cheat764_code = "0209D824+006300CD"
+cheat764_enable = false
+
+cheat765_desc = "[Action Replay] Key To Coburg"
+cheat765_code = "0209D824+006300CE"
+cheat765_enable = false
+
+cheat766_desc = "[Action Replay] Magic Key"
+cheat766_code = "0209D824+006300CF"
+cheat766_enable = false
+
+cheat767_desc = "[Action Replay] Ultimate Key"
+cheat767_code = "0209D824+006300D0"
+cheat767_enable = false
+
+cheat768_desc = "[Action Replay] Mini Medal"
+cheat768_code = "0209D824+006300D1"
+cheat768_enable = false
+
+cheat769_desc = "[Action Replay] Adventurer's Map"
+cheat769_code = "0209D824+006300D2"
+cheat769_enable = false
+
+cheat770_desc = "[Action Replay] Pankraz's Letter"
+cheat770_code = "0209D824+006300D3"
+cheat770_enable = false
+
+cheat771_desc = "[Action Replay] Stone From Whealbrook"
+cheat771_code = "0209D824+006300D4"
+cheat771_enable = false
+
+cheat772_desc = "[Action Replay] Whealbrook Bluestone"
+cheat772_code = "0209D824+006300D5"
+cheat772_enable = false
+
+cheat773_desc = "[Action Replay] Whealbrook Sapphire"
+cheat773_code = "0209D824+006300D6"
+cheat773_enable = false
+
+cheat774_desc = "[Action Replay] Zizzwizz Pillow"
+cheat774_code = "0209D824+006300D7"
+cheat774_enable = false
+
+cheat775_desc = "[Action Replay] Silver Teapot"
+cheat775_code = "0209D824+006300D8"
+cheat775_enable = false
+
+cheat776_desc = "[Action Replay] Silver Teacup"
+cheat776_code = "0209D824+006300D9"
+cheat776_enable = false
+
+cheat777_desc = "[Action Replay] Silver Tea Tray"
+cheat777_code = "0209D824+006300DA"
+cheat777_enable = false
+
+cheat778_desc = "[Action Replay] Toff's Tea Set"
+cheat778_code = "0209D824+006300DB"
+cheat778_enable = false
+
+cheat779_desc = "[Action Replay] Toff's Tea Set"
+cheat779_code = "0209D824+006300DC"
+cheat779_enable = false
+
+cheat780_desc = "[Action Replay] Crown of Uptaten"
+cheat780_code = "0209D824+006300DD"
+cheat780_enable = false
+
+cheat781_desc = "[Action Replay] Blooming Branch"
+cheat781_code = "0209D824+006300DE"
+cheat781_enable = false
+
+cheat782_desc = "[Action Replay] Marital Organ"
+cheat782_code = "0209D824+006300DF"
+cheat782_enable = false
+
+cheat783_desc = "[Action Replay] Marital Organ"
+cheat783_code = "0209D824+006300E0"
+cheat783_enable = false
+
+cheat784_desc = "[Action Replay] Crude Image"
+cheat784_code = "0209D824+006300E1"
+cheat784_enable = false
+
+cheat785_desc = "[Action Replay] Slime Curio"
+cheat785_code = "0209D824+006300E2"
+cheat785_enable = false
+
+cheat786_desc = "[Action Replay] Ship in A Bottle"
+cheat786_code = "0209D824+006300E3"
+cheat786_enable = false
+
+cheat787_desc = "[Action Replay] Terrorcrow"
+cheat787_code = "0209D824+006300E4"
+cheat787_enable = false
+
+cheat788_desc = "[Action Replay] Zoomshine"
+cheat788_code = "0209D824+006300E5"
+cheat788_enable = false
+
+cheat789_desc = "[Action Replay] Honey Buns"
+cheat789_code = "0209D824+006300E6"
+cheat789_enable = false
+
+cheat790_desc = "[Action Replay] Honey Buns"
+cheat790_code = "0209D824+006300E7"
+cheat790_enable = false
+
+cheat791_desc = "[Action Replay] Honey Buns"
+cheat791_code = "0209D824+006300E8"
+cheat791_enable = false
+
+cheat792_desc = "[Action Replay] Scintillating Sinter"
+cheat792_code = "0209D824+006300E9"
+cheat792_enable = false
+
+cheat793_desc = "[Action Replay] Desert Rose"
+cheat793_code = "0209D824+006300EA"
+cheat793_enable = false
+
+cheat794_desc = "[Action Replay] Chocolate Medalliyum"
+cheat794_code = "0209D824+006300EB"
+cheat794_enable = false
+
+cheat795_desc = "[Action Replay] Maxi Medal"
+cheat795_code = "0209D824+006300EC"
+cheat795_enable = false
+
+cheat796_desc = "[Action Replay] Batten Binnacle"
+cheat796_code = "0209D824+006300ED"
+cheat796_enable = false
+
+cheat797_desc = "[Action Replay] Monster Chess Set"
+cheat797_code = "0209D824+006300EE"
+cheat797_enable = false
+
+cheat798_desc = "[Action Replay] 'Lofty Lilts'"
+cheat798_code = "0209D824+006300EF"
+cheat798_enable = false
+
+cheat799_desc = "[Action Replay] Yggdrasil Sapling"
+cheat799_code = "0209D824+006300F0"
+cheat799_enable = false
+
+cheat800_desc = "[Action Replay] Yggdrasil Sapling"
+cheat800_code = "0209D824+006300F1"
+cheat800_enable = false
+
+cheat801_desc = "[Action Replay] Faerie Quill"
+cheat801_code = "0209D824+006300F2"
+cheat801_enable = false
+
+cheat802_desc = "[Action Replay] Annalum Retentium"
+cheat802_code = "0209D824+006300F3"
+cheat802_enable = false
+
+cheat803_desc = "[Action Replay] Scuttlebutt Alledger"
+cheat803_code = "0209D824+006300F4"
+cheat803_enable = false
+
+cheat804_desc = "[Action Replay] Forget-me-Knot Flag"
+cheat804_code = "0209D824+006300F5"
+cheat804_enable = false
+
+cheat805_desc = "[Action Replay] Tusk-tusk Tusk Inkwell"
+cheat805_code = "0209D824+006300F6"
+cheat805_enable = false
+
+cheat806_desc = "[Action Replay] Ghoulroarer"
+cheat806_code = "0209D824+006300F7"
+cheat806_enable = false
+
+cheat807_desc = "[Action Replay] Madalena's Locket"
+cheat807_code = "0209D824+006300F8"
+cheat807_enable = false
+
+cheat808_desc = "[Action Replay] Madalena's Locket"
+cheat808_code = "0209D824+006300F9"
+cheat808_enable = false
+
+cheat809_desc = "[Action Replay] Catas Trophy"
+cheat809_code = "0209D824+006300FA"
+cheat809_enable = false
+
+cheat810_desc = "[Action Replay] Chamois"
+cheat810_code = "0209D824+006300FB"
+cheat810_enable = false
+
+cheat811_desc = "[Action Replay] T 'n' T Free Pass"
+cheat811_code = "0209D824+006300FC"
+cheat811_enable = false
+
+cheat812_desc = "[Action Replay] Loyalty Card"
+cheat812_code = "0209D824+006300FD"
+cheat812_enable = false
+
+cheat813_desc = "[Action Replay] Big Book of Beasts"
+cheat813_code = "0209D824+006300FE"
+cheat813_enable = false
+
+cheat814_desc = "[Action Replay] Prince's Outfit"
+cheat814_code = "0209D824+0063FF00"
+cheat814_enable = false
+
+cheat815_desc = "[Action Replay] Duplic Hat"
+cheat815_code = "0209D824+00630100"
+cheat815_enable = false
+
+cheat816_desc = "[Action Replay] Sands of Time"
+cheat816_code = "0209D824+00630101"
+cheat816_enable = false
+
+cheat817_desc = "[Action Replay] Akillics"
+cheat817_code = "0209D824+00630102"
+cheat817_enable = false
+
+cheat818_desc = "[Action Replay] Diamond Akillics"
+cheat818_code = "0209D824+00630103"
+cheat818_enable = false
+
+cheat819_desc = "[Action Replay] Silk Dress"
+cheat819_code = "0209D824+00630104"
+cheat819_enable = false
+
+cheat820_desc = "[Action Replay] Floral Parasol"
+cheat820_code = "0209D824+00630105"
+cheat820_enable = false
+
+cheat821_desc = "[Action Replay] Mimic Stone"
+cheat821_code = "0209D824+00630106"
+cheat821_enable = false
+
+cheat822_desc = "[Action Replay] Blarney Stone"
+cheat822_code = "0209D824+00630107"
+cheat822_enable = false
+
+cheat823_desc = "[Action Replay] Item Slot 1 x99"
+cheat823_code = "7209D81E+00000000+2209D81E+00000063+D2000000+00000000"
+cheat823_enable = false
+
+cheat824_desc = "[Action Replay] Item Slot 2 x99"
+cheat824_code = "7209D822+00000000+2209D822+00000063+D2000000+00000000"
+cheat824_enable = false
+
+cheat825_desc = "[Action Replay] Item Slot 3 x99"
+cheat825_code = "7209D826+00000000+2209D826+00000063+D2000000+00000000"
+cheat825_enable = false
+
+cheat826_desc = "[Action Replay] Item Slot 4 x99"
+cheat826_code = "7209D82A+00000000+2209D82A+00000063+D2000000+00000000"
+cheat826_enable = false
+
+cheat827_desc = "[Action Replay] Item Slot 5 x99"
+cheat827_code = "7209D82E+00000000+2209D82E+00000063+D2000000+00000000"
+cheat827_enable = false
+
+cheat828_desc = "[Action Replay] Item Slot 6 x99"
+cheat828_code = "7209D832+00000000+2209D832+00000063+D2000000+00000000"
+cheat828_enable = false
+
+cheat829_desc = "[Action Replay] Item Slot 7 x99"
+cheat829_code = "7209D836+00000000+2209D836+00000063+D2000000+00000000"
+cheat829_enable = false
+
+cheat830_desc = "[Action Replay] Item Slot 8 x99"
+cheat830_code = "7209D83A+00000000+2209D83A+00000063+D2000000+00000000"
+cheat830_enable = false
+
+cheat831_desc = "[Action Replay] Item Slot 9 x99"
+cheat831_code = "7209D83E+00000000+2209D83E+00000063+D2000000+00000000"
+cheat831_enable = false
+
+cheat832_desc = "[Action Replay] Item Slot 10 x99"
+cheat832_code = "7209D842+00000000+2209D842+00000063+D2000000+00000000"
+cheat832_enable = false
+
+cheat833_desc = "[Action Replay] Day Time"
+cheat833_code = "94000130+FFBB0000+120D4648+00000000+D2000000+00000000"
+cheat833_enable = false
+
+cheat834_desc = "[Action Replay] Night Time"
+cheat834_code = "94000130+FF7B0000+120D4648+00000520+D2000000+00000000"
+cheat834_enable = false
+
+cheat835_desc = "[Action Replay] Refill HP"
+cheat835_code = "94000130+FCFF0000+C0000000+00000008+DA000000+0209DD7E+D7000000+0209DD7C+DC000000+0000051A+D2000000+00000000"
+cheat835_enable = false
+
+cheat836_desc = "[Action Replay] Infinite HP"
+cheat836_code = "C0000000+00000008+DA000000+0209DD7E+D7000000+0209DD7C+DC000000+0000051A+D2000000+00000000"
+cheat836_enable = false
+
+cheat837_desc = "[Action Replay] Max HP"
+cheat837_code = "74000100+FF00000C+C0000000+00000008+0209DD7C+03E703E7+DC000000+0000051C+D2000000+00000000"
+cheat837_enable = false
+
+cheat838_desc = "[Action Replay] Refill MP"
+cheat838_code = "94000130+FCFF0000+C0000000+00000008+DA000000+0209DD82+D7000000+0209DD80+DC000000+0000051A+D2000000+00000000"
+cheat838_enable = false
+
+cheat839_desc = "[Action Replay] Infinite MP"
+cheat839_code = "C0000000+00000008+DA000000+0209DD82+D7000000+0209DD80+DC000000+0000051A+D2000000+00000000"
+cheat839_enable = false
+
+cheat840_desc = "[Action Replay] Max MP"
+cheat840_code = "74000100+FF00000C+C0000000+00000008+0209DD80+03E703E7+DC000000+0000051C+D2000000+00000000"
+cheat840_enable = false
+
+cheat841_desc = "[Action Replay] Max All Stats"
+cheat841_code = "74000100+FF00000C+C0000000+00000008+2209DD78+000000FF+2209DD7A+000000FF+1209DD84+0000FFFF+2209DD86+000000FF+DC000000+0000051C+D2000000+00000000"
+cheat841_enable = false
+
+cheat842_desc = "[Action Replay] Max Strength"
+cheat842_code = "74000100+FF00000C+C0000000+00000008+2209DD78+000000FF+DC000000+0000051C+D2000000+00000000"
+cheat842_enable = false
+
+cheat843_desc = "[Action Replay] Max Resilience"
+cheat843_code = "74000100+FF00000C+C0000000+00000008+2209DD7A+000000FF+DC000000+0000051C+D2000000+00000000"
+cheat843_enable = false
+
+cheat844_desc = "[Action Replay] Max Agility"
+cheat844_code = "74000100+FF00000C+C0000000+00000008+2209DD84+000000FF+DC000000+0000051C+D2000000+00000000"
+cheat844_enable = false
+
+cheat845_desc = "[Action Replay] Max Wisdom"
+cheat845_code = "74000100+FF00000C+C0000000+00000008+2209DD85+000000FF+DC000000+0000051C+D2000000+00000000"
+cheat845_enable = false
+
+cheat846_desc = "[Action Replay] Max Luck"
+cheat846_code = "74000100+FF00000C+C0000000+00000008+2209DD86+000000FF+DC000000+0000051C+D2000000+00000000"
+cheat846_enable = false
+
+cheat847_desc = "[Action Replay] Max EXP"
+cheat847_code = "74000100+FF00000C+C0000000+00000008+0209DD58+05F5E0FF+DC000000+0000051C+D2000000+00000000"
+cheat847_enable = false
+
+cheat848_desc = "[Action Replay] Refill HP"
+cheat848_code = "94000130+FCFF0000+D3000000+0209DD7E+F209DD7C+00000002+D2000000+00000000"
+cheat848_enable = false
+
+cheat849_desc = "[Action Replay] Infinite HP"
+cheat849_code = "D3000000+0209DD7E+F209DD7C+00000002+D2000000+00000000"
+cheat849_enable = false
+
+cheat850_desc = "[Action Replay] Max HP"
+cheat850_code = "0209DD7C+03E703E7"
+cheat850_enable = false
+
+cheat851_desc = "[Action Replay] Refill MP"
+cheat851_code = "94000130+FCFF0000+D3000000+0209DD82+F209DD80+00000002+D2000000+00000000"
+cheat851_enable = false
+
+cheat852_desc = "[Action Replay] Infinite MP"
+cheat852_code = "D3000000+0209DD82+F209DD80+00000002+D2000000+00000000"
+cheat852_enable = false
+
+cheat853_desc = "[Action Replay] Max MP"
+cheat853_code = "0209DD80+03E703E7"
+cheat853_enable = false
+
+cheat854_desc = "[Action Replay] Max All Stats"
+cheat854_code = "2209DD78+000000FF+2209DD7A+000000FF+1209DD84+0000FFFF+2209DD86+000000FF"
+cheat854_enable = false
+
+cheat855_desc = "[Action Replay] Max Strength"
+cheat855_code = "2209DD78+000000FF"
+cheat855_enable = false
+
+cheat856_desc = "[Action Replay] Max Resilience"
+cheat856_code = "2209DD7A+000000FF"
+cheat856_enable = false
+
+cheat857_desc = "[Action Replay] Max Agility"
+cheat857_code = "2209DD84+000000FF"
+cheat857_enable = false
+
+cheat858_desc = "[Action Replay] Max Wisdom"
+cheat858_code = "2209DD85+000000FF"
+cheat858_enable = false
+
+cheat859_desc = "[Action Replay] Max Luck"
+cheat859_code = "2209DD86+000000FF"
+cheat859_enable = false
+
+cheat860_desc = "[Action Replay] Max EXP"
+cheat860_code = "0209DD58+05F5E0FF"
+cheat860_enable = false
+
+cheat861_desc = "[Action Replay] Refill HP"
+cheat861_code = "94000130+FCFF0000+D3000000+0209E29A+F209E298+00000002+D2000000+00000000"
+cheat861_enable = false
+
+cheat862_desc = "[Action Replay] Infinite HP"
+cheat862_code = "D3000000+0209E29A+F209E298+00000002+D2000000+00000000"
+cheat862_enable = false
+
+cheat863_desc = "[Action Replay] Max HP"
+cheat863_code = "0209E298+03E703E7"
+cheat863_enable = false
+
+cheat864_desc = "[Action Replay] Refill MP"
+cheat864_code = "94000130+FCFF0000+D3000000+0209E29E+F209E29C+00000002+D2000000+00000000"
+cheat864_enable = false
+
+cheat865_desc = "[Action Replay] Infinite MP"
+cheat865_code = "D3000000+0209E29E+F209E29C+00000002+D2000000+00000000"
+cheat865_enable = false
+
+cheat866_desc = "[Action Replay] Max MP"
+cheat866_code = "0209E29C+03E703E7"
+cheat866_enable = false
+
+cheat867_desc = "[Action Replay] Max All Stats"
+cheat867_code = "2209E294+000000FF+2209E296+000000FF+1209E2A0+0000FFFF+2209E2A2+000000FF"
+cheat867_enable = false
+
+cheat868_desc = "[Action Replay] Max Strength"
+cheat868_code = "2209E294+000000FF"
+cheat868_enable = false
+
+cheat869_desc = "[Action Replay] Max Resilience"
+cheat869_code = "2209E296+000000FF"
+cheat869_enable = false
+
+cheat870_desc = "[Action Replay] Max Agility"
+cheat870_code = "2209E2A0+000000FF"
+cheat870_enable = false
+
+cheat871_desc = "[Action Replay] Max Wisdom"
+cheat871_code = "2209E2A1+000000FF"
+cheat871_enable = false
+
+cheat872_desc = "[Action Replay] Max Luck"
+cheat872_code = "2209E2A2+000000FF"
+cheat872_enable = false
+
+cheat873_desc = "[Action Replay] Max EXP"
+cheat873_code = "0209E274+05F5E0FF"
+cheat873_enable = false
+
+cheat874_desc = "[Action Replay] Refill HP"
+cheat874_code = "94000130+FCFF0000+D3000000+0209E7B6+F209E7B4+00000002+D2000000+00000000"
+cheat874_enable = false
+
+cheat875_desc = "[Action Replay] Infinite HP"
+cheat875_code = "D3000000+0209E7B6+F209E7B4+00000002+D2000000+00000000"
+cheat875_enable = false
+
+cheat876_desc = "[Action Replay] Max HP"
+cheat876_code = "0209E7B4+03E703E7"
+cheat876_enable = false
+
+cheat877_desc = "[Action Replay] Refill MP"
+cheat877_code = "94000130+FCFF0000+D3000000+0209E7BA+F209E7B8+00000002+D2000000+00000000"
+cheat877_enable = false
+
+cheat878_desc = "[Action Replay] Infinite MP"
+cheat878_code = "D3000000+0209E7BA+F209E7B8+00000002+D2000000+00000000"
+cheat878_enable = false
+
+cheat879_desc = "[Action Replay] Max MP"
+cheat879_code = "0209E7B8+03E703E7"
+cheat879_enable = false
+
+cheat880_desc = "[Action Replay] Max All Stats"
+cheat880_code = "2209E7B0+000000FF+2209E7B2+000000FF+1209E7BC+0000FFFF+2209E7BE+000000FF"
+cheat880_enable = false
+
+cheat881_desc = "[Action Replay] Max Strength"
+cheat881_code = "2209E7B0+000000FF"
+cheat881_enable = false
+
+cheat882_desc = "[Action Replay] Max Resilience"
+cheat882_code = "2209E7B2+000000FF"
+cheat882_enable = false
+
+cheat883_desc = "[Action Replay] Max Agility"
+cheat883_code = "2209E7BC+000000FF"
+cheat883_enable = false
+
+cheat884_desc = "[Action Replay] Max Wisdom"
+cheat884_code = "2209E7BD+000000FF"
+cheat884_enable = false
+
+cheat885_desc = "[Action Replay] Max Luck"
+cheat885_code = "2209E7BE+000000FF"
+cheat885_enable = false
+
+cheat886_desc = "[Action Replay] Max EXP"
+cheat886_code = "0209E790+05F5E0FF"
+cheat886_enable = false
+
+cheat887_desc = "[Action Replay] Refill HP"
+cheat887_code = "94000130+FCFF0000+D3000000+0209ECD2+F209ECD0+00000002+D2000000+00000000"
+cheat887_enable = false
+
+cheat888_desc = "[Action Replay] Infinite HP"
+cheat888_code = "D3000000+0209ECD2+F209ECD0+00000002+D2000000+00000000"
+cheat888_enable = false
+
+cheat889_desc = "[Action Replay] Max HP"
+cheat889_code = "0209ECD0+03E703E7"
+cheat889_enable = false
+
+cheat890_desc = "[Action Replay] Refill MP"
+cheat890_code = "94000130+FCFF0000+D3000000+0209ECD6+F209ECD4+00000002+D2000000+00000000"
+cheat890_enable = false
+
+cheat891_desc = "[Action Replay] Infinite MP"
+cheat891_code = "D3000000+0209ECD6+F209ECD4+00000002+D2000000+00000000"
+cheat891_enable = false
+
+cheat892_desc = "[Action Replay] Max MP"
+cheat892_code = "0209ECD4+03E703E7"
+cheat892_enable = false
+
+cheat893_desc = "[Action Replay] Max All Stats"
+cheat893_code = "2209ECCC+000000FF+2209ECCE+000000FF+1209ECD8+0000FFFF+2209ECDA+000000FF"
+cheat893_enable = false
+
+cheat894_desc = "[Action Replay] Max Strength"
+cheat894_code = "2209ECCC+000000FF"
+cheat894_enable = false
+
+cheat895_desc = "[Action Replay] Max Resilience"
+cheat895_code = "2209ECCE+000000FF"
+cheat895_enable = false
+
+cheat896_desc = "[Action Replay] Max Agility"
+cheat896_code = "2209ECD8+000000FF"
+cheat896_enable = false
+
+cheat897_desc = "[Action Replay] Max Wisdom"
+cheat897_code = "2209ECD9+000000FF"
+cheat897_enable = false
+
+cheat898_desc = "[Action Replay] Max Luck"
+cheat898_code = "2209ECDA+000000FF"
+cheat898_enable = false
+
+cheat899_desc = "[Action Replay] Max EXP"
+cheat899_code = "0209ECAC+05F5E0FF"
+cheat899_enable = false
+
+cheat900_desc = "[Action Replay] Refill HP"
+cheat900_code = "94000130+FCFF0000+D3000000+0209F1EE+F209F1EC+00000002+D2000000+00000000"
+cheat900_enable = false
+
+cheat901_desc = "[Action Replay] Infinite HP"
+cheat901_code = "D3000000+0209F1EE+F209F1EC+00000002+D2000000+00000000"
+cheat901_enable = false
+
+cheat902_desc = "[Action Replay] Max HP"
+cheat902_code = "0209F1EC+03E703E7"
+cheat902_enable = false
+
+cheat903_desc = "[Action Replay] Refill MP"
+cheat903_code = "94000130+FCFF0000+D3000000+0209F1F2+F209F1F0+00000002+D2000000+00000000"
+cheat903_enable = false
+
+cheat904_desc = "[Action Replay] Infinite MP"
+cheat904_code = "D3000000+0209F1F2+F209F1F0+00000002+D2000000+00000000"
+cheat904_enable = false
+
+cheat905_desc = "[Action Replay] Max MP"
+cheat905_code = "0209F1F0+03E703E7"
+cheat905_enable = false
+
+cheat906_desc = "[Action Replay] Max All Stats"
+cheat906_code = "2209F1E8+000000FF+2209F1EA+000000FF+1209F1F4+0000FFFF+2209F1F6+000000FF"
+cheat906_enable = false
+
+cheat907_desc = "[Action Replay] Max Strength"
+cheat907_code = "2209F1E8+000000FF"
+cheat907_enable = false
+
+cheat908_desc = "[Action Replay] Max Resilience"
+cheat908_code = "2209F1EA+000000FF"
+cheat908_enable = false
+
+cheat909_desc = "[Action Replay] Max Agility"
+cheat909_code = "2209F1F4+000000FF"
+cheat909_enable = false
+
+cheat910_desc = "[Action Replay] Max Wisdom"
+cheat910_code = "2209F1F5+000000FF"
+cheat910_enable = false
+
+cheat911_desc = "[Action Replay] Max Luck"
+cheat911_code = "2209F1F6+000000FF"
+cheat911_enable = false
+
+cheat912_desc = "[Action Replay] Max EXP"
+cheat912_code = "0209F1C8+05F5E0FF"
+cheat912_enable = false
+
+cheat913_desc = "[Action Replay] Refill HP"
+cheat913_code = "94000130+FCFF0000+D3000000+0209F70A+F209F708+00000002+D2000000+00000000"
+cheat913_enable = false
+
+cheat914_desc = "[Action Replay] Infinite HP"
+cheat914_code = "D3000000+0209F70A+F209F708+00000002+D2000000+00000000"
+cheat914_enable = false
+
+cheat915_desc = "[Action Replay] Max HP"
+cheat915_code = "0209F708+03E703E7"
+cheat915_enable = false
+
+cheat916_desc = "[Action Replay] Refill MP"
+cheat916_code = "94000130+FCFF0000+D3000000+0209F70E+F209F70C+00000002+D2000000+00000000"
+cheat916_enable = false
+
+cheat917_desc = "[Action Replay] Infinite MP"
+cheat917_code = "D3000000+0209F70E+F209F70C+00000002+D2000000+00000000"
+cheat917_enable = false
+
+cheat918_desc = "[Action Replay] Max MP"
+cheat918_code = "0209F70C+03E703E7"
+cheat918_enable = false
+
+cheat919_desc = "[Action Replay] Max All Stats"
+cheat919_code = "2209F704+000000FF+2209F706+000000FF+1209F710+0000FFFF+2209F712+000000FF"
+cheat919_enable = false
+
+cheat920_desc = "[Action Replay] Max Strength"
+cheat920_code = "2209F704+000000FF"
+cheat920_enable = false
+
+cheat921_desc = "[Action Replay] Max Resilience"
+cheat921_code = "2209F706+000000FF"
+cheat921_enable = false
+
+cheat922_desc = "[Action Replay] Max Agility"
+cheat922_code = "2209F710+000000FF"
+cheat922_enable = false
+
+cheat923_desc = "[Action Replay] Max Wisdom"
+cheat923_code = "2209F711+000000FF"
+cheat923_enable = false
+
+cheat924_desc = "[Action Replay] Max Luck"
+cheat924_code = "2209F712+000000FF"
+cheat924_enable = false
+
+cheat925_desc = "[Action Replay] Max EXP"
+cheat925_code = "0209F6E4+05F5E0FF"
+cheat925_enable = false
+
+cheat926_desc = "[Action Replay] Refill HP"
+cheat926_code = "94000130+FCFF0000+D3000000+0209FC26+F209FC24+00000002+D2000000+00000000"
+cheat926_enable = false
+
+cheat927_desc = "[Action Replay] Infinite HP"
+cheat927_code = "D3000000+0209FC26+F209FC24+00000002+D2000000+00000000"
+cheat927_enable = false
+
+cheat928_desc = "[Action Replay] Max HP"
+cheat928_code = "0209FC24+03E703E7"
+cheat928_enable = false
+
+cheat929_desc = "[Action Replay] Refill MP"
+cheat929_code = "94000130+FCFF0000+D3000000+0209FC2A+F209FC28+00000002+D2000000+00000000"
+cheat929_enable = false
+
+cheat930_desc = "[Action Replay] Infinite MP"
+cheat930_code = "D3000000+0209FC2A+F209FC28+00000002+D2000000+00000000"
+cheat930_enable = false
+
+cheat931_desc = "[Action Replay] Max MP"
+cheat931_code = "0209FC28+03E703E7"
+cheat931_enable = false
+
+cheat932_desc = "[Action Replay] Max All Stats"
+cheat932_code = "2209FC20+000000FF+2209FC22+000000FF+1209FC2C+0000FFFF+2209FC2E+000000FF"
+cheat932_enable = false
+
+cheat933_desc = "[Action Replay] Max Strength"
+cheat933_code = "2209FC20+000000FF"
+cheat933_enable = false
+
+cheat934_desc = "[Action Replay] Max Resilience"
+cheat934_code = "2209FC22+000000FF"
+cheat934_enable = false
+
+cheat935_desc = "[Action Replay] Max Agility"
+cheat935_code = "2209FC2C+000000FF"
+cheat935_enable = false
+
+cheat936_desc = "[Action Replay] Max Wisdom"
+cheat936_code = "2209FC2D+000000FF"
+cheat936_enable = false
+
+cheat937_desc = "[Action Replay] Max Luck"
+cheat937_code = "2209FC2E+000000FF"
+cheat937_enable = false
+
+cheat938_desc = "[Action Replay] Max EXP"
+cheat938_code = "0209FC00+05F5E0FF"
+cheat938_enable = false
+
+cheat939_desc = "[Action Replay] Refill HP"
+cheat939_code = "94000130+FCFF0000+D3000000+020A0142+F20A0140+00000002+D2000000+00000000"
+cheat939_enable = false
+
+cheat940_desc = "[Action Replay] Infinite HP"
+cheat940_code = "D3000000+020A0142+F20A0140+00000002+D2000000+00000000"
+cheat940_enable = false
+
+cheat941_desc = "[Action Replay] Max HP"
+cheat941_code = "020A0140+03E703E7"
+cheat941_enable = false
+
+cheat942_desc = "[Action Replay] Refill MP"
+cheat942_code = "94000130+FCFF0000+D3000000+020A0146+F20A0144+00000002+D2000000+00000000"
+cheat942_enable = false
+
+cheat943_desc = "[Action Replay] Infinite MP"
+cheat943_code = "D3000000+020A0146+F20A0144+00000002+D2000000+00000000"
+cheat943_enable = false
+
+cheat944_desc = "[Action Replay] Max MP"
+cheat944_code = "020A0144+03E703E7"
+cheat944_enable = false
+
+cheat945_desc = "[Action Replay] Max All Stats"
+cheat945_code = "220A013C+000000FF+220A013E+000000FF+120A0148+0000FFFF+220A014A+000000FF"
+cheat945_enable = false
+
+cheat946_desc = "[Action Replay] Max Strength"
+cheat946_code = "220A013C+000000FF"
+cheat946_enable = false
+
+cheat947_desc = "[Action Replay] Max Resilience"
+cheat947_code = "220A013E+000000FF"
+cheat947_enable = false
+
+cheat948_desc = "[Action Replay] Max Agility"
+cheat948_code = "220A0148+000000FF"
+cheat948_enable = false
+
+cheat949_desc = "[Action Replay] Max Wisdom"
+cheat949_code = "220A0149+000000FF"
+cheat949_enable = false
+
+cheat950_desc = "[Action Replay] Max Luck"
+cheat950_code = "220A014A+000000FF"
+cheat950_enable = false
+
+cheat951_desc = "[Action Replay] Max EXP"
+cheat951_code = "020A011C+05F5E0FF"
+cheat951_enable = false
+
+cheat952_desc = "[Action Replay] Refill HP"
+cheat952_code = "94000130+FCFF0000+D3000000+020A065E+F20A065C+00000002+D2000000+00000000"
+cheat952_enable = false
+
+cheat953_desc = "[Action Replay] Infinite HP"
+cheat953_code = "D3000000+020A065E+F20A065C+00000002+D2000000+00000000"
+cheat953_enable = false
+
+cheat954_desc = "[Action Replay] Max HP"
+cheat954_code = "020A065C+03E703E7"
+cheat954_enable = false
+
+cheat955_desc = "[Action Replay] Refill MP"
+cheat955_code = "94000130+FCFF0000+D3000000+020A0662+F20A0660+00000002+D2000000+00000000"
+cheat955_enable = false
+
+cheat956_desc = "[Action Replay] Infinite MP"
+cheat956_code = "D3000000+020A0662+F20A0660+00000002+D2000000+00000000"
+cheat956_enable = false
+
+cheat957_desc = "[Action Replay] Max MP"
+cheat957_code = "020A0660+03E703E7"
+cheat957_enable = false
+
+cheat958_desc = "[Action Replay] Max All Stats"
+cheat958_code = "220A0658+000000FF+220A065A+000000FF+120A0664+0000FFFF+220A0666+000000FF"
+cheat958_enable = false
+
+cheat959_desc = "[Action Replay] Max Strength"
+cheat959_code = "220A0658+000000FF"
+cheat959_enable = false
+
+cheat960_desc = "[Action Replay] Max Resilience"
+cheat960_code = "220A065A+000000FF"
+cheat960_enable = false
+
+cheat961_desc = "[Action Replay] Max Agility"
+cheat961_code = "220A0664+000000FF"
+cheat961_enable = false
+
+cheat962_desc = "[Action Replay] Max Wisdom"
+cheat962_code = "220A0665+000000FF"
+cheat962_enable = false
+
+cheat963_desc = "[Action Replay] Max Luck"
+cheat963_code = "220A0666+000000FF"
+cheat963_enable = false
+
+cheat964_desc = "[Action Replay] Max EXP"
+cheat964_code = "020A0638+05F5E0FF"
+cheat964_enable = false
+
+cheat965_desc = "[Action Replay] Slot Machine Jackpot, Five 7's When Bet 1 Coin"
+cheat965_code = "9212F082+00000212+2212EFA1+00000000+2212EFD1+00000000+2212F001+00000000+2212F031+00000000+2212F061+00000000+D2000000+00000000"
+cheat965_enable = false
+
+cheat966_desc = "[Action Replay] Slot Machine Jackpot, Five 7's"
+cheat966_code = "94000130+FFFB0000+2212EFA1+00000000+2212EFD1+00000000+2212F001+00000000+2212F031+00000000+2212F061+00000000+D2000000+00000000"
+cheat966_enable = false
+
+cheat967_desc = "[Action Replay] Have All Monsters Recruited"
+cheat967_code = "94000130+FFFB0000+C0000000+00000047+220DF6E4+00000005+DC000000+00000003+D2000000+00000000"
+cheat967_enable = false
+
+cheat968_desc = "[Action Replay] Increased Monster Recruit Rate"
+cheat968_code = "92129B14+00003020+12129B16+00002008+D2000000+00000000"
+cheat968_enable = false
+
+cheat969_desc = "[Action Replay] Increase Monster Recruit Rate"
+cheat969_code = "94000130+FFFB0000+92129B14+00003020+12129B16+00002008+D2000000+00000000"
+cheat969_enable = false
+
+cheat970_desc = "[Action Replay] Monsters Always Drop Items"
+cheat970_code = "92129412+00002032+12129414+00002101+D0000000+00000000"
+cheat970_enable = false
+
+cheat971_desc = "[Action Replay] Monsters Always Drop Items"
+cheat971_code = "94000130+FDBF0000+92129412+00002032+12129414+00002101+D2000000+00000000+94000130+FD7F0000+92129412+00002032+12129414+00005609+D2000000+00000000"
+cheat971_enable = false
+
+cheat972_desc = "[Action Replay] Dracky"
+cheat972_code = "12023D86+00002603"
+cheat972_enable = false
+
+cheat973_desc = "[Action Replay] Bad Apple"
+cheat973_code = "12023D86+00002607"
+cheat973_enable = false
+
+cheat974_desc = "[Action Replay] Fat Rat"
+cheat974_code = "12023D86+0000260A"
+cheat974_enable = false
+
+cheat975_desc = "[Action Replay] Jail Cat"
+cheat975_code = "12023D86+0000267E"
+cheat975_enable = false
+
+cheat976_desc = "[Action Replay] Prestidigitator"
+cheat976_code = "12023D86+00002612"
+cheat976_enable = false
+
+cheat977_desc = "[Action Replay] Ghost"
+cheat977_code = "12023D86+00002619"
+cheat977_enable = false
+
+cheat978_desc = "[Action Replay] Wax Murderer"
+cheat978_code = "12023D86+0000261A"
+cheat978_enable = false
+
+cheat979_desc = "[Action Replay] Heal Slime"
+cheat979_code = "12023D86+0000261E"
+cheat979_enable = false
+
+cheat980_desc = "[Action Replay] Fandangow"
+cheat980_code = "12023D86+00002620"
+cheat980_enable = false
+
+cheat981_desc = "[Action Replay] Slime Knight"
+cheat981_code = "12023D86+00002626"
+cheat981_enable = false
+
+cheat982_desc = "[Action Replay] Brownie"
+cheat982_code = "12023D86+00002628"
+cheat982_enable = false
+
+cheat983_desc = "[Action Replay] Rotten Apple"
+cheat983_code = "12023D86+00002629"
+cheat983_enable = false
+
+cheat984_desc = "[Action Replay] Ticking Timeburrm"
+cheat984_code = "12023D86+0000262A"
+cheat984_enable = false
+
+cheat985_desc = "[Action Replay] Metal Slime"
+cheat985_code = "12023D86+0000262D"
+cheat985_enable = false
+
+cheat986_desc = "[Action Replay] Funghoul"
+cheat986_code = "12023D86+00002630"
+cheat986_enable = false
+
+cheat987_desc = "[Action Replay] Walking Corpse"
+cheat987_code = "12023D86+00002633"
+cheat987_enable = false
+
+cheat988_desc = "[Action Replay] Powie Yowie"
+cheat988_code = "12023D86+00002635"
+cheat988_enable = false
+
+cheat989_desc = "[Action Replay] Small Fry"
+cheat989_code = "12023D86+0000263A"
+cheat989_enable = false
+
+cheat990_desc = "[Action Replay] Grudgerigar"
+cheat990_code = "12023D86+0000263E"
+cheat990_enable = false
+
+cheat991_desc = "[Action Replay] Hulagan"
+cheat991_code = "12023D86+00002641"
+cheat991_enable = false
+
+cheat992_desc = "[Action Replay] Cross Eye"
+cheat992_code = "12023D86+00002644"
+cheat992_enable = false
+
+cheat993_desc = "[Action Replay] Restless Armour"
+cheat993_code = "12023D86+00002648"
+cheat993_enable = false
+
+cheat994_desc = "[Action Replay] Mudraker"
+cheat994_code = "12023D86+0000264A"
+cheat994_enable = false
+
+cheat995_desc = "[Action Replay] Liquid Metal Slime"
+cheat995_code = "12023D86+0000264B"
+cheat995_enable = false
+
+cheat996_desc = "[Action Replay] Pocus Poppet"
+cheat996_code = "12023D86+0000264D"
+cheat996_enable = false
+
+cheat997_desc = "[Action Replay] Magic Marionette"
+cheat997_code = "12023D86+00002650"
+cheat997_enable = false
+
+cheat998_desc = "[Action Replay] Chimaera"
+cheat998_code = "12023D86+0000265E"
+cheat998_enable = false
+
+cheat999_desc = "[Action Replay] Rockbomb"
+cheat999_code = "12023D86+00002662"
+cheat999_enable = false
+
+cheat1000_desc = "[Action Replay] Goodybag"
+cheat1000_code = "12023D86+00002666"
+cheat1000_enable = false
+
+cheat1001_desc = "[Action Replay] Cure Slime"
+cheat1001_code = "12023D86+00002667"
+cheat1001_enable = false
+
+cheat1002_desc = "[Action Replay] King Slime"
+cheat1002_code = "12023D86+0000266B"
+cheat1002_enable = false
+
+cheat1003_desc = "[Action Replay] Flame Thrower"
+cheat1003_code = "12023D86+0000266C"
+cheat1003_enable = false
+
+cheat1004_desc = "[Action Replay] Drag-goof"
+cheat1004_code = "12023D86+00002670"
+cheat1004_enable = false
+
+cheat1005_desc = "[Action Replay] Minidemon"
+cheat1005_code = "12023D86+00002674"
+cheat1005_enable = false
+
+cheat1006_desc = "[Action Replay] Samigina"
+cheat1006_code = "12023D86+00002678"
+cheat1006_enable = false
+
+cheat1007_desc = "[Action Replay] Orc King"
+cheat1007_code = "12023D86+0000267D"
+cheat1007_enable = false
+
+cheat1008_desc = "[Action Replay] Hawk Man"
+cheat1008_code = "12023D86+00002681"
+cheat1008_enable = false
+
+cheat1009_desc = "[Action Replay] Hellion"
+cheat1009_code = "12023D86+00002683"
+cheat1009_enable = false
+
+cheat1010_desc = "[Action Replay] Hoodlum"
+cheat1010_code = "12023D86+00002685"
+cheat1010_enable = false
+
+cheat1011_desc = "[Action Replay] Golem"
+cheat1011_code = "12023D86+0000268C"
+cheat1011_enable = false
+
+cheat1012_desc = "[Action Replay] Revaulting Horse"
+cheat1012_code = "12023D86+00002690"
+cheat1012_enable = false
+
+cheat1013_desc = "[Action Replay] Blizzybody"
+cheat1013_code = "12023D86+00002691"
+cheat1013_enable = false
+
+cheat1014_desc = "[Action Replay] King Cureslime"
+cheat1014_code = "12023D86+00002694"
+cheat1014_enable = false
+
+cheat1015_desc = "[Action Replay] Warhog"
+cheat1015_code = "12023D86+00002698"
+cheat1015_enable = false
+
+cheat1016_desc = "[Action Replay] Hades Helm"
+cheat1016_code = "12023D86+00002699"
+cheat1016_enable = false
+
+cheat1017_desc = "[Action Replay] Bomboulder"
+cheat1017_code = "12023D86+000026A1"
+cheat1017_enable = false
+
+cheat1018_desc = "[Action Replay] Moosifer"
+cheat1018_code = "12023D86+000026A4"
+cheat1018_enable = false
+
+cheat1019_desc = "[Action Replay] Snowbird"
+cheat1019_code = "12023D86+000026A9"
+cheat1019_enable = false
+
+cheat1020_desc = "[Action Replay] Mandrake Marshal"
+cheat1020_code = "12023D86+000026AF"
+cheat1020_enable = false
+
+cheat1021_desc = "[Action Replay] Beast Master"
+cheat1021_code = "12023D86+000026B0"
+cheat1021_enable = false
+
+cheat1022_desc = "[Action Replay] Archdemon"
+cheat1022_code = "12023D86+000026C0"
+cheat1022_enable = false
+
+cheat1023_desc = "[Action Replay] Great Dragon"
+cheat1023_code = "12023D86+000026B5"
+cheat1023_enable = false
+
+cheat1024_desc = "[Action Replay] Killer machine"
+cheat1024_code = "12023D86+000026B7"
+cheat1024_enable = false
+
+cheat1025_desc = "[Action Replay] Hyperanemon"
+cheat1025_code = "12023D86+000026BA"
+cheat1025_enable = false
+
+cheat1026_desc = "[Action Replay] Gigantes"
+cheat1026_code = "12023D86+000026BC"
+cheat1026_enable = false
+
+cheat1027_desc = "[Action Replay] Barbatos"
+cheat1027_code = "12023D86+000026C5"
+cheat1027_enable = false
+
+cheat1028_desc = "[Action Replay] Man o? War"
+cheat1028_code = "12023D86+000026C8"
+cheat1028_enable = false
+
+cheat1029_desc = "[Action Replay] Old Man of The Sea"
+cheat1029_code = "12023D86+000026D7"
+cheat1029_enable = false
+
+cheat1030_desc = "[Action Replay] Pip Fighter"
+cheat1030_code = "12023D86+000026EC"
+cheat1030_enable = false
+
+cheat1031_desc = "[Action Replay] Battle Pip"
+cheat1031_code = "12023D86+000026ED"
+cheat1031_enable = false
+
+cheat1032_desc = "[Action Replay] Epipany"
+cheat1032_code = "12023D86+000026EE"
+cheat1032_enable = false
+
+cheat1033_desc = "[Action Replay] Wiz pip"
+cheat1033_code = "12023D86+000026EF"
+cheat1033_enable = false
+
+cheat1034_desc = "[Action Replay] Conkuistador"
+cheat1034_code = "12023D86+000026F0"
+cheat1034_enable = false
+
+cheat1035_desc = "[Action Replay] Conkerer"
+cheat1035_code = "12023D86+000026F1"
+cheat1035_enable = false
+
+cheat1036_desc = "[Action Replay] Conkuisitor"
+cheat1036_code = "12023D86+000026F2"
+cheat1036_enable = false
+
+cheat1037_desc = "[Action Replay] Conkjurer"
+cheat1037_code = "12023D86+000026F3"
+cheat1037_enable = false
+
+cheat1038_desc = "[Action Replay] Funky Ferret*"
+cheat1038_code = "12023D86+00002608"
+cheat1038_enable = false
+
+cheat1039_desc = "[Action Replay] Drackyma*"
+cheat1039_code = "12023D86+00002618"
+cheat1039_enable = false
+
+cheat1040_desc = "[Action Replay] Brrrattling Snake*"
+cheat1040_code = "12023D86+0000261D"
+cheat1040_enable = false
+
+cheat1041_desc = "[Action Replay] Screwball Pitcher*"
+cheat1041_code = "12023D86+0000261F"
+cheat1041_enable = false
+
+cheat1042_desc = "[Action Replay] Scaraburrower*"
+cheat1042_code = "12023D86+00002622"
+cheat1042_enable = false
+
+cheat1043_desc = "[Action Replay] Eyelasher*"
+cheat1043_code = "12023D86+00002625"
+cheat1043_enable = false
+
+cheat1044_desc = "[Action Replay] Pollywiggle*"
+cheat1044_code = "12023D86+000026C7"
+cheat1044_enable = false
+
+cheat1045_desc = "[Action Replay] Morphean Mollusc*"
+cheat1045_code = "12023D86+000026C9"
+cheat1045_enable = false
+
+cheat1046_desc = "[Action Replay] Cross Bones*"
+cheat1046_code = "12023D86+000026D0"
+cheat1046_enable = false
+
+cheat1047_desc = "[Action Replay] Thaumatosaurus*"
+cheat1047_code = "12023D86+000026D6"
+cheat1047_enable = false
+
+cheat1048_desc = "[Action Replay] x2"
+cheat1048_code = "0200CF94+8981826A+1200CF98+00000049"
+cheat1048_enable = false
+
+cheat1049_desc = "[Action Replay] x4"
+cheat1049_code = "0200CF94+8981826A+1200CF98+00000089"
+cheat1049_enable = false
+
+cheat1050_desc = "[Action Replay] x8"
+cheat1050_code = "0200CF94+8981826A+1200CF98+000000C9"
+cheat1050_enable = false
+
+cheat1051_desc = "[Action Replay] x16"
+cheat1051_code = "0200CF94+8981826A+1200CF98+00000109"
+cheat1051_enable = false
+
+cheat1052_desc = "[Action Replay] x32"
+cheat1052_code = "0200CF94+8981826A+1200CF98+00000149"
+cheat1052_enable = false
+
+cheat1053_desc = "[Action Replay] x64"
+cheat1053_code = "0200CF94+8981826A+1200CF98+00000189"
+cheat1053_enable = false
+
+cheat1054_desc = "[Action Replay] x128"
+cheat1054_code = "0200CF94+8981826A+1200CF98+000001C9"
+cheat1054_enable = false
+
+cheat1055_desc = "[Action Replay] x256"
+cheat1055_code = "0200CF94+8981826A+1200CF98+00000209"
+cheat1055_enable = false
+
+cheat1056_desc = "[Action Replay] x512"
+cheat1056_code = "0200CF94+8981826A+1200CF98+00000249"
+cheat1056_enable = false
+
+cheat1057_desc = "[Action Replay] x2"
+cheat1057_code = "0200E5E4+47700040"
+cheat1057_enable = false
+
+cheat1058_desc = "[Action Replay] x4"
+cheat1058_code = "0200E5E4+47700080"
+cheat1058_enable = false
+
+cheat1059_desc = "[Action Replay] x8"
+cheat1059_code = "0200E5E4+477000C0"
+cheat1059_enable = false
+
+cheat1060_desc = "[Action Replay] x16"
+cheat1060_code = "0200E5E4+47700100"
+cheat1060_enable = false
+
+cheat1061_desc = "[Action Replay] x32"
+cheat1061_code = "0200E5E4+47700140"
+cheat1061_enable = false
+
+cheat1062_desc = "[Action Replay] x64"
+cheat1062_code = "0200E5E4+47700180"
+cheat1062_enable = false
+
+cheat1063_desc = "[Action Replay] x128"
+cheat1063_code = "0200E5E4+477001C0"
+cheat1063_enable = false
+
+cheat1064_desc = "[Action Replay] x256"
+cheat1064_code = "0200E5E4+47700200"
+cheat1064_enable = false
+
+cheat1065_desc = "[Action Replay] x512"
+cheat1065_code = "0200E5E4+47700240"
+cheat1065_enable = false
+
+cheat1066_desc = "[Action Replay] x2 Always On"
+cheat1066_code = "5214FBF0+0000019A+0214FBF0+00000334+D0000000+00000000"
+cheat1066_enable = false
+
+cheat1067_desc = "[Action Replay] x3 Always On"
+cheat1067_code = "5214FBF0+0000019A+0214FBF0+000004CE+D0000000+00000000"
+cheat1067_enable = false
+
+cheat1068_desc = "[Action Replay] x2"
+cheat1068_code = "94000136+FFFD0000+5214FBF0+0000019A+0214FBF0+00000334+D0000000+00000000"
+cheat1068_enable = false
+
+cheat1069_desc = "[Action Replay] x3"
+cheat1069_code = "94000136+FFFD0000+5214FBF0+0000019A+0214FBF0+000004CE+D0000000+00000000"
+cheat1069_enable = false
+
+cheat1070_desc = "[Action Replay] Japanese"
+cheat1070_code = "2211B7D4+00000000"
+cheat1070_enable = false
+
+cheat1071_desc = "[Action Replay] English"
+cheat1071_code = "2211B7D4+00000001"
+cheat1071_enable = false
+
+cheat1072_desc = "[Action Replay] French"
+cheat1072_code = "2211B7D4+00000002"
+cheat1072_enable = false
+
+cheat1073_desc = "[Action Replay] German"
+cheat1073_code = "2211B7D4+00000003"
+cheat1073_enable = false
+
+cheat1074_desc = "[Action Replay] Italian"
+cheat1074_code = "2211B7D4+00000004"
+cheat1074_enable = false
+
+cheat1075_desc = "[Action Replay] Spanish"
+cheat1075_code = "2211B7D4+00000005"
+cheat1075_enable = false
+
+cheat1076_desc = "[Action Replay] Infinite Dice Rolls"
+cheat1076_code = "94000130+FFFB0000+220DE3BE+00000099+D2000000+00000000"
+cheat1076_enable = false
+
+cheat1077_desc = "[Action Replay] Always One Move Left"
+cheat1077_code = "94000130+FDFF0000+220DE3C1+00000001+D2000000+00000000"
+cheat1077_enable = false

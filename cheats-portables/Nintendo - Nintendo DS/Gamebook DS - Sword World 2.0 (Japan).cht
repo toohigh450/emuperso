@@ -1,0 +1,48 @@
+# Recherche locale pour la ROM : Gamebook DS - Sword World 2.0 (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Gamebook%20DS%20-%20Sword%20World%202.0%20(Japan).cht
+
+cheats = 10
+
+cheat0_desc = "[Action Replay] MP99"
+cheat0_code = "94000130+FFFB0000+620493D0+00000000+B20493D0+00000000+20000018+00000063+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] HP99"
+cheat1_code = "94000130+FFFB0000+620493D0+00000000+B20493D0+00000000+20000016+00000063+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] HP Never Decrease"
+cheat2_code = "5202A3A0+E28DD00C+0202A3A4+E1A00000+D0000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Refill HP"
+cheat3_code = "94000130+FDFF0000+62062CD4+00000000+B2062CD4+00000000+DA000000+000003B8+D7000000+000003BA+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Enemy 1 Hit Kill"
+cheat4_code = "52029D70+E1D02CF4+02029D74+E3A02000+D0000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] [R]1 Hit Kill"
+cheat5_code = "94000130+FEFF0000+62062CD4+00000000+B2062CD4+00000000+100003C4+00000000+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] EXP 9999"
+cheat6_code = "94000130+FFFB0000+620493D0+00000000+B20493D0+00000000+100000A4+0000270F+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] All Stats 99 After Level Up"
+cheat7_code = "02030130+E3A03063+0203013C+E3A03063+02030148+E3A03063+02030154+E3A03063+02030160+E3A03063+0203016C+E3A03063"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Max Level When Level Up"
+cheat8_code = "22030124+00000063"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] EXP Never Decreases"
+cheat9_code = "02030114+E1A00000"
+cheat9_enable = false

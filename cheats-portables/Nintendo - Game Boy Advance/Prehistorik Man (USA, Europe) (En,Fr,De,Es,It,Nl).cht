@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Prehistorik Man (USA, Europe) (En,Fr,De,Es,It,Nl).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Prehistorik%20Man%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 8
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00003F7C+000A+10028AA0+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Health"
+cheat1_code = "33002BDC+0003"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Lives"
+cheat2_code = "33002BD8+0009"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Infinite Bones"
+cheat3_code = "83002BE8+03E7"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Max Jewels"
+cheat4_code = "83002E30+03E7"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Invincible"
+cheat5_code = "33002BFA+0019"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Press Select To Refill Shout"
+cheat6_code = "D0000020+0004+83002BF0+0008"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Press Select For Moon Jump"
+cheat7_code = "D0000020+0004+83002EC9+008A"
+cheat7_enable = false

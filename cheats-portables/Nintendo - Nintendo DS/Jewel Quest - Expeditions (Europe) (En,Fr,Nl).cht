@@ -1,0 +1,60 @@
+# Recherche locale pour la ROM : Jewel Quest - Expeditions (Europe) (En,Fr,Nl).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Jewel%20Quest%20-%20Expeditions%20(Europe).cht
+
+cheats = 13
+
+cheat0_desc = "[Action Replay] Infinite Time"
+cheat0_code = "021ADE10+000044A0"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] 99 Lives"
+cheat1_code = "221F5D94+00000063"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] 99 Coins"
+cheat2_code = "221F5D95+00000063"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] x2"
+cheat3_code = "52010DC8+E0811005+02010DC8+E0811085+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] x4"
+cheat4_code = "52010DC8+E0811005+02010DC8+E0811105+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] x8"
+cheat5_code = "52010DC8+E0811005+02010DC8+E0811185+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] x16"
+cheat6_code = "52010DC8+E0811005+02010DC8+E0811205+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] x32"
+cheat7_code = "52010DC8+E0811005+02010DC8+E0811285+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] x64"
+cheat8_code = "52010DC8+E0811005+02010DC8+E0811305+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] x128"
+cheat9_code = "52010DC8+E0811005+02010DC8+E0811385+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] x256"
+cheat10_code = "52010DC8+E0811005+02010DC8+E0811405+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] x512"
+cheat11_code = "52010DC8+E0811005+02010DC8+E0811485+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] x1024"
+cheat12_code = "52010DC8+E0811005+02010DC8+E0811505+D2000000+00000000"
+cheat12_enable = false

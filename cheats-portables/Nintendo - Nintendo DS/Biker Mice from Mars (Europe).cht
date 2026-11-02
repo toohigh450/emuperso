@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Biker Mice from Mars (Europe).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Biker%20Mice%20from%20Mars%20(Europe).cht
+
+cheats = 8
+
+cheat0_desc = "[Action Replay] Max/Infinite Health"
+cheat0_code = "120DA874+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Missiles"
+cheat1_code = "220E4728+00000063"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] No Waiting for Missiles"
+cheat2_code = "220E472C+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max/Infinite Turbo"
+cheat3_code = "120E4750+00001000+220E4754+00000063"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max/Infinite Time"
+cheat4_code = "620D9CD8+00000000+B20D9CD8+00000000+10000010+00008C94+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Max/Infinite Health"
+cheat5_code = "620E8F4C+00000000+B20E8F4C+00000000+000048EC+0000000F+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Max/Infinite Double Jump"
+cheat6_code = "620EA060+00000000+B20EA060+00000000+200000DC+00000000+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] One Hit Kills"
+cheat7_code = "620E8F4C+00000000+B20E8F4C+00000000+20000EEC+00000000+200010BC+00000000+2000128C+00000000+2000145C+00000000+D2000000+00000000"
+cheat7_enable = false

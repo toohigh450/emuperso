@@ -1,0 +1,736 @@
+# Recherche locale pour la ROM : Burnout Legends (Europe) (En,Fr,De,Es,It,Nl).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Burnout%20Legends%20(Europe).cht
+
+cheats = 182
+
+cheat0_desc = "[Action Replay] Max Overall Burnout Points"
+cheat0_code = "02130358+3B9AC9FF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Overall Takedowns"
+cheat1_code = "0213035C+0000270F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Overall Crash Dollars"
+cheat2_code = "02130340+3B9AC9FF"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Infinite Boost"
+cheat3_code = "0212AED8+00002000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Boost Meter"
+cheat4_code = "2212AEDC+00000003"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All Trophies"
+cheat5_code = "22130361+000000FF+22130362+000000FF"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] All Signature Takedowns"
+cheat6_code = "12130408+0000FFFF"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Airport - Eliminator"
+cheat7_code = "221152D9+00000003"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Airport - Pursuit"
+cheat8_code = "221152E4+00000003"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Compact Grand Prix"
+cheat9_code = "2211531B+00000003"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Dockside - Preview Lap"
+cheat10_code = "22115305+00000003"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Harbour Town - Crash"
+cheat11_code = "221152FA+00000003"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Harbour Town - Preview Lap"
+cheat12_code = "22115297+00000003"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Harbour Town - Race"
+cheat13_code = "221152CE+00000003"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Interstate - Face-Off"
+cheat14_code = "221152C3+00000003"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Interstate - Race"
+cheat15_code = "2211528C+00000003"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Palm Bay Marina Road Rage"
+cheat16_code = "221152AD+00000003"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Palm Bay Marina - Crash"
+cheat17_code = "221152B8+00000003"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Palm Bay Marina - Face-Off"
+cheat18_code = "22115310+00000003"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Silver Lake - Pursuit"
+cheat19_code = "221152A2+00000003"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Airport - Face-Off"
+cheat20_code = "22115418+00000003"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Big Surf Shores - Eliminator"
+cheat21_code = "2211540D+00000003"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Coupe Grand Prix"
+cheat22_code = "22115465+00000003"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Downtown - Road Rage"
+cheat23_code = "221153D6+00000003"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Interstage - Preview Lap"
+cheat24_code = "2211544F+00000003"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Island Paradise - Preview Lap"
+cheat25_code = "221153F7+00000003"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Palm Bay Marina - Pursuit"
+cheat26_code = "22115439+00000003"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Riviera - Crash"
+cheat27_code = "22115423+00000003"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Riviera - Race"
+cheat28_code = "22115402+00000003"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Silver Lake - Crash"
+cheat29_code = "221153EC+00000003"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Silver Lake - Race"
+cheat30_code = "221153CB+00000003"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Vineyard - Face-Off"
+cheat31_code = "2211545A+00000003"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Vineyard - Pursuit"
+cheat32_code = "221153E1+00000003"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Vineyard - Road Rage"
+cheat33_code = "22115444+00000003"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Always 1 Lap Race"
+cheat34_code = "7212AE8C+00000064+2212AE8C+00000001+D0000000+00000000"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Always 2 Lap Race"
+cheat35_code = "7212AE8C+00000064+2212AE8C+00000002+D0000000+00000000"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Always 3 Lap Race"
+cheat36_code = "7212AE8C+00000064+2212AE8C+00000003+D0000000+00000000"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Always 4 Lap Race"
+cheat37_code = "7212AE8C+00000064+2212AE8C+00000004+D0000000+00000000"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Always 5 Lap Race"
+cheat38_code = "7212AE8C+00000064+2212AE8C+00000005+D0000000+00000000"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Always 6 Lap Race"
+cheat39_code = "7212AE8C+00000064+2212AE8C+00000006+D0000000+00000000"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Always 7 Lap Race"
+cheat40_code = "7212AE8C+00000064+2212AE8C+00000007+D0000000+00000000"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Always 8 Lap Race"
+cheat41_code = "7212AE8C+00000064+2212AE8C+00000008+D0000000+00000000"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Always 9 Lap Race"
+cheat42_code = "7212AE8C+00000064+2212AE8C+00000009+D0000000+00000000"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Always 10 Lap Race"
+cheat43_code = "7212AE8C+00000064+2212AE8C+0000000A+D0000000+00000000"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Airport - Road Rage"
+cheat44_code = "2211537E+00000003"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Big Surf Shores - Crash"
+cheat45_code = "22115331+00000003"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Big Surf Shores - Face-Off"
+cheat46_code = "2211539F+00000003"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Big Surf Shores - Race"
+cheat47_code = "22115326+00000003"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Dockside - Pursuit"
+cheat48_code = "22115373+00000003"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Dockside - Road Rage"
+cheat49_code = "22115347+00000003"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Downtown - Crash"
+cheat50_code = "221153B5+00000003"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Downtown - Pursuit"
+cheat51_code = "2211533C+00000003"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Downtown - Race"
+cheat52_code = "22115394+00000003"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Golden City - Preview Lap"
+cheat53_code = "221153AA+00000003"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Muscle Grand Prix"
+cheat54_code = "221153C0+00000003"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Palm Bay Marina - Eliminator"
+cheat55_code = "22115368+00000003"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Rivera - Face-Off"
+cheat56_code = "2211535D+00000003"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Rivera - Preview Lap"
+cheat57_code = "22115352+00000003"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Super Fast Score Gain"
+cheat58_code = "1212F198+0000FFFF"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Max Score"
+cheat59_code = "0212F198+05F5E0FF"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Airport - Crash"
+cheat60_code = "221154C8+00000003"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Airport - Race"
+cheat61_code = "221154BD+00000003"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Big Surf Shores - Preview Lap"
+cheat62_code = "221154D3+00000003"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Downtown - Eliminator"
+cheat63_code = "221154DE+00000003"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Downtown - Face-Off"
+cheat64_code = "221154A7+00000003"
+cheat64_enable = false
+
+cheat65_desc = "[Action Replay] Golden City - Pursuit"
+cheat65_code = "22115486+00000003"
+cheat65_enable = false
+
+cheat66_desc = "[Action Replay] Harbour Town - Road Rage"
+cheat66_code = "221154B2+00000003"
+cheat66_enable = false
+
+cheat67_desc = "[Action Replay] Island Paradise - Crash"
+cheat67_code = "2211547B+00000003"
+cheat67_enable = false
+
+cheat68_desc = "[Action Replay] Island Paradise - Pursuit"
+cheat68_code = "221154E9+00000003"
+cheat68_enable = false
+
+cheat69_desc = "[Action Replay] Island Paradise - Race"
+cheat69_code = "22115470+00000003"
+cheat69_enable = false
+
+cheat70_desc = "[Action Replay] Riviera - Road Rage"
+cheat70_code = "22115491+00000003"
+cheat70_enable = false
+
+cheat71_desc = "[Action Replay] Silver Lake - Face-Off"
+cheat71_code = "221154F4+00000003"
+cheat71_enable = false
+
+cheat72_desc = "[Action Replay] Sports Grand Prix"
+cheat72_code = "2211550A+00000003"
+cheat72_enable = false
+
+cheat73_desc = "[Action Replay] Vineyard - Preview Lap"
+cheat73_code = "2211549C+00000003"
+cheat73_enable = false
+
+cheat74_desc = "[Action Replay] Start on Lap 2"
+cheat74_code = "9212AE8C+00000002+9212AE94+00000000+2212AE94+00000001+D0000000+00000000+D0000000+00000000"
+cheat74_enable = false
+
+cheat75_desc = "[Action Replay] Start on Lap 3"
+cheat75_code = "9212AE8C+00000003+9212AE94+00000000+2212AE94+00000002+D0000000+00000000+D0000000+00000000"
+cheat75_enable = false
+
+cheat76_desc = "[Action Replay] Start on Lap 4"
+cheat76_code = "9212AE8C+00000004+9212AE94+00000000+2212AE94+00000003+D0000000+00000000+D0000000+00000000"
+cheat76_enable = false
+
+cheat77_desc = "[Action Replay] Start on Lap 5"
+cheat77_code = "9212AE8C+00000005+9212AE94+00000000+2212AE94+00000004+D0000000+00000000+D0000000+00000000"
+cheat77_enable = false
+
+cheat78_desc = "[Action Replay] Start on Lap 6"
+cheat78_code = "9212AE8C+00000006+9212AE94+00000000+2212AE94+00000005+D0000000+00000000+D0000000+00000000"
+cheat78_enable = false
+
+cheat79_desc = "[Action Replay] Start on Lap 7"
+cheat79_code = "9212AE8C+00000007+9212AE94+00000000+2212AE94+00000006+D0000000+00000000+D0000000+00000000"
+cheat79_enable = false
+
+cheat80_desc = "[Action Replay] Start on Lap 8"
+cheat80_code = "9212AE8C+00000008+9212AE94+00000000+2212AE94+00000007+D0000000+00000000+D0000000+00000000"
+cheat80_enable = false
+
+cheat81_desc = "[Action Replay] Start on Lap 9"
+cheat81_code = "9212AE8C+00000009+9212AE94+00000000+2212AE94+00000008+D0000000+00000000+D0000000+00000000"
+cheat81_enable = false
+
+cheat82_desc = "[Action Replay] Start on Lap 10"
+cheat82_code = "9212AE8C+0000000A+9212AE94+00000000+2212AE94+00000009+D0000000+00000000+D0000000+00000000"
+cheat82_enable = false
+
+cheat83_desc = "[Action Replay] Big Surf Shores - Pursuit"
+cheat83_code = "22115583+00000003"
+cheat83_enable = false
+
+cheat84_desc = "[Action Replay] Dockside - Face-Off"
+cheat84_code = "22115599+00000003"
+cheat84_enable = false
+
+cheat85_desc = "[Action Replay] Dockside - Race"
+cheat85_code = "2211554C+00000003"
+cheat85_enable = false
+
+cheat86_desc = "[Action Replay] Golden City - Crash"
+cheat86_code = "22115562+00000003"
+cheat86_enable = false
+
+cheat87_desc = "[Action Replay] Golden City - Road Rage"
+cheat87_code = "22115515+00000003"
+cheat87_enable = false
+
+cheat88_desc = "[Action Replay] Harbour Town - Face-Off"
+cheat88_code = "22115541+00000003"
+cheat88_enable = false
+
+cheat89_desc = "[Action Replay] Legend Grand Prix"
+cheat89_code = "221155BA+00000003"
+cheat89_enable = false
+
+cheat90_desc = "[Action Replay] Palm Bay Marina - Preview Lap"
+cheat90_code = "22115536+00000003"
+cheat90_enable = false
+
+cheat91_desc = "[Action Replay] Riviera - Pursuit"
+cheat91_code = "2211552B+00000003"
+cheat91_enable = false
+
+cheat92_desc = "[Action Replay] Silver Lake - Eliminator"
+cheat92_code = "22115520+00000003"
+cheat92_enable = false
+
+cheat93_desc = "[Action Replay] Silver Lake - Road Rage"
+cheat93_code = "22115578+00000003"
+cheat93_enable = false
+
+cheat94_desc = "[Action Replay] Special Grand Prix"
+cheat94_code = "221155AF+00000003"
+cheat94_enable = false
+
+cheat95_desc = "[Action Replay] Super Grand Prix"
+cheat95_code = "221155A4+00000003"
+cheat95_enable = false
+
+cheat96_desc = "[Action Replay] Vineyard - Crash"
+cheat96_code = "2211556D+00000003"
+cheat96_enable = false
+
+cheat97_desc = "[Action Replay] Vineyard - Race"
+cheat97_code = "22115557+00000003"
+cheat97_enable = false
+
+cheat98_desc = "[Action Replay] Super Fast Takedown Gain"
+cheat98_code = "1212AEE0+0000FFFF"
+cheat98_enable = false
+
+cheat99_desc = "[Action Replay] Max Takedowns"
+cheat99_code = "0212AEE0+05F5E0FF"
+cheat99_enable = false
+
+cheat100_desc = "[Action Replay] Max Crash Cash"
+cheat100_code = "021149D8+05F5E0FF"
+cheat100_enable = false
+
+cheat101_desc = "[Action Replay] Max Cars Totaled"
+cheat101_code = "1212F10C+00002710"
+cheat101_enable = false
+
+cheat102_desc = "[Action Replay] Max Grand Prix Points"
+cheat102_code = "22114BA4+00000064"
+cheat102_enable = false
+
+cheat103_desc = "[Action Replay] Unlock All Compact Cars"
+cheat103_code = "02114DF8+01010101+02114DFC+01010101+12114E00+00000101+22114E02+00000001"
+cheat103_enable = false
+
+cheat104_desc = "[Action Replay] Unlock All Muscle Cars"
+cheat104_code = "02114E04+01010101+02114E08+01010101+12114E0C+00000101+22114E0E+00000001"
+cheat104_enable = false
+
+cheat105_desc = "[Action Replay] Unlock All Coupe Cars"
+cheat105_code = "02114E10+01010101+02114E14+01010101+12114E18+00000101+22114E1A+00000001"
+cheat105_enable = false
+
+cheat106_desc = "[Action Replay] Unlock All Sports Cars"
+cheat106_code = "02114E1C+01010101+02114E20+01010101+12114E24+00000101+22114E26+00000001"
+cheat106_enable = false
+
+cheat107_desc = "[Action Replay] Unlock All Super Cars"
+cheat107_code = "02114E28+01010101+02114E2C+01010101+12114E30+00000101+22114E32+00000001"
+cheat107_enable = false
+
+cheat108_desc = "[Action Replay] Unlock All Special Cars"
+cheat108_code = "02114DCC+01010101+12114DD0+00000101"
+cheat108_enable = false
+
+cheat109_desc = "[Action Replay] Unlock All Heavy Weight Cars"
+cheat109_code = "02114DEC+01010101+02114DF0+01010101+12114DF4+00000101+22114DF6+00000001"
+cheat109_enable = false
+
+cheat110_desc = "[Action Replay] Unlock Ultimate Coupe (SPECIAL)"
+cheat110_code = "22114DCC+00000001"
+cheat110_enable = false
+
+cheat111_desc = "[Action Replay] Unlock Euro Racer (SPECIAL)"
+cheat111_code = "22114DCD+00000001"
+cheat111_enable = false
+
+cheat112_desc = "[Action Replay] Unlock Classic Hot Rod (SPECIAL)"
+cheat112_code = "22114DCE+00000001"
+cheat112_enable = false
+
+cheat113_desc = "[Action Replay] Unlock Gangster Boss (SPECIAL)"
+cheat113_code = "22114DCF+00000001"
+cheat113_enable = false
+
+cheat114_desc = "[Action Replay] US Racer (SPECIAL)"
+cheat114_code = "22114DD0+00000001"
+cheat114_enable = false
+
+cheat115_desc = "[Action Replay] World Racer (SPECIAL)"
+cheat115_code = "22114DD1+00000001"
+cheat115_enable = false
+
+cheat116_desc = "[Action Replay] Heavy Pick-up (HEAVY WEIGHT)"
+cheat116_code = "22114DEC+00000001"
+cheat116_enable = false
+
+cheat117_desc = "[Action Replay] 4WD Racer (HEAVY WEIGHT)"
+cheat117_code = "22114DED+00000001"
+cheat117_enable = false
+
+cheat118_desc = "[Action Replay] SUV Deluxe (HEAVY WEIGHT)"
+cheat118_code = "22114DEE+00000001"
+cheat118_enable = false
+
+cheat119_desc = "[Action Replay] 4WD Heavy Duty (HEAVY WEIGHT)"
+cheat119_code = "22114DEF+00000001"
+cheat119_enable = false
+
+cheat120_desc = "[Action Replay] Unlock B-Team Van (HEAVY WEIGHT)"
+cheat120_code = "22114DF0+00000001"
+cheat120_enable = false
+
+cheat121_desc = "[Action Replay] Unlock Delivery Truck (HEAVY WEIGHT)"
+cheat121_code = "22114DF1+00000001"
+cheat121_enable = false
+
+cheat122_desc = "[Action Replay] Unlock Tractor Cab (HEAVY WEIGHT)"
+cheat122_code = "22114DF2+00000001"
+cheat122_enable = false
+
+cheat123_desc = "[Action Replay] Unlock Longnose Cab (HEAVY WEIGHT)"
+cheat123_code = "22114DF3+00000001"
+cheat123_enable = false
+
+cheat124_desc = "[Action Replay] Unlock City Bus (HEAVY WEIGHT)"
+cheat124_code = "22114DF4+00000001"
+cheat124_enable = false
+
+cheat125_desc = "[Action Replay] Unlock Trash Truck (HEAVY WEIGHT)"
+cheat125_code = "22114DF5+00000001"
+cheat125_enable = false
+
+cheat126_desc = "[Action Replay] Unlock Firetruck (HEAVY WEIGHT)"
+cheat126_code = "22114DF6+00000001"
+cheat126_enable = false
+
+cheat127_desc = "[Action Replay] Unlock Tuned (COMPACT)"
+cheat127_code = "22114DF8+00000001"
+cheat127_enable = false
+
+cheat128_desc = "[Action Replay] Unlock Prototype (COMPACT)"
+cheat128_code = "22114DF9+00000001"
+cheat128_enable = false
+
+cheat129_desc = "[Action Replay] Unlock Modified (COMPACT)"
+cheat129_code = "22114DFA+00000001"
+cheat129_enable = false
+
+cheat130_desc = "[Action Replay] Unlock Custom (COMPACT)"
+cheat130_code = "22114DFB+00000001"
+cheat130_enable = false
+
+cheat131_desc = "[Action Replay] Unlock Assassin (COMPACT)"
+cheat131_code = "22114DFC+00000001"
+cheat131_enable = false
+
+cheat132_desc = "[Action Replay] Unlock DX (COMPACT)"
+cheat132_code = "22114DFD+00000001"
+cheat132_enable = false
+
+cheat133_desc = "[Action Replay] Unlock Dominator (COMPACT)"
+cheat133_code = "22114DFE+00000001"
+cheat133_enable = false
+
+cheat134_desc = "[Action Replay] Unlock Compact Cop (COMPACT)"
+cheat134_code = "22114DFF+00000001"
+cheat134_enable = false
+
+cheat135_desc = "[Action Replay] Unlock Legend Compact (COMPACT)"
+cheat135_code = "22114E00+00000001"
+cheat135_enable = false
+
+cheat136_desc = "[Action Replay] Unlock Legend Gangster (COMPACT)"
+cheat136_code = "22114E01+00000001"
+cheat136_enable = false
+
+cheat137_desc = "[Action Replay] Unlock Legend Special (COMPACT)"
+cheat137_code = "22114E02+00000001"
+cheat137_enable = false
+
+cheat138_desc = "[Action Replay] Unlock Tuned (MUSCLE)"
+cheat138_code = "22114E04+00000001"
+cheat138_enable = false
+
+cheat139_desc = "[Action Replay] Unlock Prototype (MUSCLE)"
+cheat139_code = "22114E05+00000001"
+cheat139_enable = false
+
+cheat140_desc = "[Action Replay] Unlock Modified (MUSCLE)"
+cheat140_code = "22114E06+00000001"
+cheat140_enable = false
+
+cheat141_desc = "[Action Replay] Unlock Custom (MUSCLE)"
+cheat141_code = "22114E07+00000001"
+cheat141_enable = false
+
+cheat142_desc = "[Action Replay] Unlock Assassin (MUSCLE)"
+cheat142_code = "22114E08+00000001"
+cheat142_enable = false
+
+cheat143_desc = "[Action Replay] Unlock DX (MUSCLE)"
+cheat143_code = "22114E09+00000001"
+cheat143_enable = false
+
+cheat144_desc = "[Action Replay] Unlock Dominator (MUSCLE)"
+cheat144_code = "22114E0A+00000001"
+cheat144_enable = false
+
+cheat145_desc = "[Action Replay] Unlock Muscle Cop (MUSCLE)"
+cheat145_code = "22114E0B+00000001"
+cheat145_enable = false
+
+cheat146_desc = "[Action Replay] Unlock Legend Classic (MUSCLE)"
+cheat146_code = "22114E0C+00000001"
+cheat146_enable = false
+
+cheat147_desc = "[Action Replay] Unlock Legend J-Muscle (MUSCLE)"
+cheat147_code = "22114E0D+00000001"
+cheat147_enable = false
+
+cheat148_desc = "[Action Replay] Unlock Legend Special (MUSCLE)"
+cheat148_code = "22114E0E+00000001"
+cheat148_enable = false
+
+cheat149_desc = "[Action Replay] Unlock Tuned (COUPE)"
+cheat149_code = "22114E10+00000001"
+cheat149_enable = false
+
+cheat150_desc = "[Action Replay] Unlock Prototype (COUPE)"
+cheat150_code = "22114E11+00000001"
+cheat150_enable = false
+
+cheat151_desc = "[Action Replay] Unlock Modified (COUPE)"
+cheat151_code = "22114E12+00000001"
+cheat151_enable = false
+
+cheat152_desc = "[Action Replay] Unlock Custom (COUPE)"
+cheat152_code = "22114E13+00000001"
+cheat152_enable = false
+
+cheat153_desc = "[Action Replay] Unlock Assassin (COUPE)"
+cheat153_code = "22114E14+00000001"
+cheat153_enable = false
+
+cheat154_desc = "[Action Replay] Unlock DX (COUPE)"
+cheat154_code = "22114E15+00000001"
+cheat154_enable = false
+
+cheat155_desc = "[Action Replay] Unlock Dominator (COUPE)"
+cheat155_code = "22114E16+00000001"
+cheat155_enable = false
+
+cheat156_desc = "[Action Replay] Unlock Coupe Cop (COUPE)"
+cheat156_code = "22114E17+00000001"
+cheat156_enable = false
+
+cheat157_desc = "[Action Replay] Unlock Legend Pickup (COUPE)"
+cheat157_code = "22114E18+00000001"
+cheat157_enable = false
+
+cheat158_desc = "[Action Replay] Unlock Legend SUV (COUPE)"
+cheat158_code = "22114E19+00000001"
+cheat158_enable = false
+
+cheat159_desc = "[Action Replay] Unlock Legend Special (COUPE)"
+cheat159_code = "22114E1A+00000001"
+cheat159_enable = false
+
+cheat160_desc = "[Action Replay] Unlock Tuned (SPORTS)"
+cheat160_code = "22114E1C+00000001"
+cheat160_enable = false
+
+cheat161_desc = "[Action Replay] Unlock Prototype (SPORTS)"
+cheat161_code = "22114E1D+00000001"
+cheat161_enable = false
+
+cheat162_desc = "[Action Replay] Unlock Modified (SPORTS)"
+cheat162_code = "22114E1E+00000001"
+cheat162_enable = false
+
+cheat163_desc = "[Action Replay] Unlock Custom (SPORTS)"
+cheat163_code = "22114E1F+00000001"
+cheat163_enable = false
+
+cheat164_desc = "[Action Replay] Unlock Assassin (SPORTS)"
+cheat164_code = "22114E20+00000001"
+cheat164_enable = false
+
+cheat165_desc = "[Action Replay] Unlock DX (SPORTS)"
+cheat165_code = "22114E21+00000001"
+cheat165_enable = false
+
+cheat166_desc = "[Action Replay] Unlock Dominator (SPORTS)"
+cheat166_code = "22114E22+00000001"
+cheat166_enable = false
+
+cheat167_desc = "[Action Replay] Unlock Sports Cop (SPORTS)"
+cheat167_code = "22114E23+00000001"
+cheat167_enable = false
+
+cheat168_desc = "[Action Replay] Unlock Legend Racer (SPORTS)"
+cheat168_code = "22114E24+00000001"
+cheat168_enable = false
+
+cheat169_desc = "[Action Replay] Unlock Legend Roadster (SPORTS)"
+cheat169_code = "22114E25+00000001"
+cheat169_enable = false
+
+cheat170_desc = "[Action Replay] Unlock Legend Special (SPORTS)"
+cheat170_code = "22114E26+00000001"
+cheat170_enable = false
+
+cheat171_desc = "[Action Replay] Unlock Tuned (SUPER)"
+cheat171_code = "22114E28+00000001"
+cheat171_enable = false
+
+cheat172_desc = "[Action Replay] Unlock Prototype (SUPER)"
+cheat172_code = "22114E29+00000001"
+cheat172_enable = false
+
+cheat173_desc = "[Action Replay] Unlock Modified (SUPER)"
+cheat173_code = "22114E2A+00000001"
+cheat173_enable = false
+
+cheat174_desc = "[Action Replay] Unlock Custom (SUPER)"
+cheat174_code = "22114E2B+00000001"
+cheat174_enable = false
+
+cheat175_desc = "[Action Replay] Unlock Assassin (SUPER)"
+cheat175_code = "22114E2C+00000001"
+cheat175_enable = false
+
+cheat176_desc = "[Action Replay] Unlock DX (SUPER)"
+cheat176_code = "22114E2D+00000001"
+cheat176_enable = false
+
+cheat177_desc = "[Action Replay] Unlock Dominator (SUPER)"
+cheat177_code = "22114E2E+00000001"
+cheat177_enable = false
+
+cheat178_desc = "[Action Replay] Unlock Super Cop (SUPER)"
+cheat178_code = "22114E2F+00000001"
+cheat178_enable = false
+
+cheat179_desc = "[Action Replay] Unlock Legend Super Car (SUPER)"
+cheat179_code = "22114E30+00000001"
+cheat179_enable = false
+
+cheat180_desc = "[Action Replay] Unlock Legend Hot Rod (SUPER)"
+cheat180_code = "22114E31+00000001"
+cheat180_enable = false
+
+cheat181_desc = "[Action Replay] Unlock Legend Special (SUPER)"
+cheat181_code = "22114E32+00000001"
+cheat181_enable = false

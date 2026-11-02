@@ -1,0 +1,57 @@
+# Recherche locale pour la ROM : Nintendo World Cup [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Nintendo%20World%20Cup%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Nintendo%20World%20Cup%20(USA%2C%20Europe).cht
+
+cheats = 12
+
+cheat0_desc = "[Game Genie] Computer Can't Score"
+cheat0_code = "00E-2D8-19A"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] No Timer"
+cheat1_code = "00D-2C8-E6E"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] 1:59 Each Half"
+cheat2_code = "01C-DD8-E66"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] 4:59 Each Half"
+cheat3_code = "04C-DD8-E66"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] 6:59 Each Half"
+cheat4_code = "06C-DD8-E66"
+cheat4_enable = false
+
+cheat5_desc = "[Game Genie] 9:59 Each Half"
+cheat5_code = "09C-DD8-E66"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Computer can't score"
+cheat6_code = "00E-2D8-19A"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] No timer"
+cheat7_code = "00D-2C8-E6E"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] 1:59 each half"
+cheat8_code = "01C-DD8-E66"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] 4:59 each half"
+cheat9_code = "04C-DD8-E66"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] 6:59 each half"
+cheat10_code = "06C-DD8-E66"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] 9:59 each half"
+cheat11_code = "09C-DD8-E66"
+cheat11_enable = false

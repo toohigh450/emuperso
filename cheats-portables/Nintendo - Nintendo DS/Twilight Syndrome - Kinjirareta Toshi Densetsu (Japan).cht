@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Twilight Syndrome - Kinjirareta Toshi Densetsu (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Twilight%20Syndrome%20-%20Kinjirareta%20Toshi%20Densetsu%20(Japan).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] All Episode Unlocks"
+cheat0_code = "0210E9D4+FFFFFFFF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Picture Unlocks"
+cheat1_code = "1210E9DC+00007FFF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Voice Unlocks"
+cheat2_code = "1210E9DE+00007FFF"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Ending Unlocks"
+cheat3_code = "2210E9E0+00000001+2210E9E4+000000FF+2210E9E8+0000003F+1210E9EC+0000FFFF+2210E9F0+0000001F+2210E9F4+0000007F+2210E9F8+00000001"
+cheat3_enable = false

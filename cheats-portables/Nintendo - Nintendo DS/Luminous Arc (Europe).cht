@@ -1,0 +1,280 @@
+# Recherche locale pour la ROM : Luminous Arc (Europe).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Luminous%20Arc%20(Europe).cht
+
+cheats = 68
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "52068CC4+EE070F90+E20002F4+00000048+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2E16029+01200035+000A0371+00000009+02068CC4+E92D401E+02068CC8+FAFE5D89+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Cash"
+cheat1_code = "02164408+000F423F+0216440C+000F423F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Press Select For 1 Hit Kill"
+cheat2_code = "94000130+FFFB0000+C0000000+0000000A+12159714+00000001+DC000000+000000A6+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Health"
+cheat3_code = "121591E4+000003E7"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Infinite Health"
+cheat4_code = "12159270+000003E7"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Max MP"
+cheat5_code = "121591E6+000003E7"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Infinite MP"
+cheat6_code = "12159272+000003E7"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Infinite FP"
+cheat7_code = "12159274+0000012C"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Max Attack"
+cheat8_code = "121591E8+000003E7"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Max guard"
+cheat9_code = "121591EA+000003E7"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Max Speed"
+cheat10_code = "121591EC+000003E7"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Max Tech"
+cheat11_code = "121591EE+000003E7"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Max Magic"
+cheat12_code = "121591F0+000003E7"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Max Resist"
+cheat13_code = "121591F2+000003E7"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Max Move"
+cheat14_code = "121591F4+000003E7"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Max Jump"
+cheat15_code = "121591F6+000003E7"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Max Health"
+cheat16_code = "1215928A+000003E7"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Max MP"
+cheat17_code = "1215928C+000003E7"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Infinite Health"
+cheat18_code = "12159316+000003E7"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Infinite MP"
+cheat19_code = "12159318+000003E7"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Infinite FP"
+cheat20_code = "1215931A+0000012C"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Max Attack"
+cheat21_code = "1215928E+000003E7"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Max guard"
+cheat22_code = "12159290+000003E7"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Max Speed"
+cheat23_code = "12159292+000003E7"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Max Tech"
+cheat24_code = "12159294+000003E7"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Max Magic"
+cheat25_code = "12159296+000003E7"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Max Resist"
+cheat26_code = "12159298+000003E7"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Max Move"
+cheat27_code = "1215929A+000003E7"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Max Jump"
+cheat28_code = "1215929C+000003E7"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Max Health"
+cheat29_code = "12159330+000003E7"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Max MP"
+cheat30_code = "12159332+000003E7"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Infinite Health"
+cheat31_code = "121593BC+000003E7"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Infinite MP"
+cheat32_code = "121593BE+000003E7"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Infinite FP"
+cheat33_code = "121593C0+0000012C"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Max Attack"
+cheat34_code = "12159334+000003E7"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Max guard"
+cheat35_code = "12159336+000003E7"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Max Speed"
+cheat36_code = "12159338+000003E7"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Max Tech"
+cheat37_code = "1215933A+000003E7"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Max Magic"
+cheat38_code = "1215933C+000003E7"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Max Resist"
+cheat39_code = "1215933E+000003E7"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Max Move"
+cheat40_code = "12159340+000003E7"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Max Jump"
+cheat41_code = "12159342+000003E7"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Max Health"
+cheat42_code = "121593D6+000003E7"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Max MP"
+cheat43_code = "121593D8+000003E7"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Infinite Health"
+cheat44_code = "12159462+000003E7"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Infinite MP"
+cheat45_code = "12159464+000003E7"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Infinite FP"
+cheat46_code = "12159466+0000012C"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Max Attack"
+cheat47_code = "121593DA+000003E7"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Max guard"
+cheat48_code = "121593DC+000003E7"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Max Speed"
+cheat49_code = "121593DE+000003E7"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Max Tech"
+cheat50_code = "121593E0+000003E7"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Max Magic"
+cheat51_code = "121593E2+000003E7"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Max Resist"
+cheat52_code = "121593E4+000003E7"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Max Move"
+cheat53_code = "121593E6+000003E7"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Max Jump"
+cheat54_code = "121593E8+000003E7"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Max Health"
+cheat55_code = "1215947C+000003E7"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Max MP"
+cheat56_code = "1215947E+000003E7"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Infinite Health"
+cheat57_code = "12159508+000003E7"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Infinite MP"
+cheat58_code = "1215950A+000003E7"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Infinite FP"
+cheat59_code = "1215950C+0000012C"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Max Attack"
+cheat60_code = "12159480+000003E7"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Max guard"
+cheat61_code = "12159482+000003E7"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Max Speed"
+cheat62_code = "12159484+000003E7"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Max Tech"
+cheat63_code = "12159486+000003E7"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Max Magic"
+cheat64_code = "12159488+000003E7"
+cheat64_enable = false
+
+cheat65_desc = "[Action Replay] Max Resist"
+cheat65_code = "1215948A+000003E7"
+cheat65_enable = false
+
+cheat66_desc = "[Action Replay] Max Move"
+cheat66_code = "1215948C+000003E7"
+cheat66_enable = false
+
+cheat67_desc = "[Action Replay] Max Jump"
+cheat67_code = "1215948E+000003E7"
+cheat67_enable = false

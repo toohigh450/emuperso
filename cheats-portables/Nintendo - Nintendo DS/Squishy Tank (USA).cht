@@ -1,0 +1,76 @@
+# Recherche locale pour la ROM : Squishy Tank (USA).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Squishy%20Tank%20(USA).cht
+
+cheats = 17
+
+cheat0_desc = "[Action Replay] Max Score (Press L)"
+cheat0_code = "94000130+FDFF0000+02190404+05F5E0FF+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Shuffle Never Decreases"
+cheat1_code = "5200E5F8+E980000A+0200E5F8+E1A00000+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Refill Timer (Press B)"
+cheat2_code = "94000130+FFFD0000+22185BE6+000000FF+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] 99 Shuffle (Press A)"
+cheat3_code = "94000130+FFFE0000+221928C0+00000063+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] 999 Chain"
+cheat4_code = "1219041E+000003E7"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Auto-win (Press select)"
+cheat5_code = "94000130+FFFB0000+22192600+00000000+22192550+00000000+2219257C+00000000+221925A8+00000000+221925D4+00000000+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Time Counts Up"
+cheat6_code = "94000130+FFBB0000+5200C764+E0521001+0200C764+E0821001+D2000000+00000000+94000130+FF7B0000+5200C764+E0821001+0200C764+E0521001+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] X2"
+cheat7_code = "52006BC8+E0831001+02006BC8+E0831081+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] X4"
+cheat8_code = "52006BC8+E0831001+02006BC8+E0831101+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] X8"
+cheat9_code = "52006BC8+E0831001+02006BC8+E0831181+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] X16"
+cheat10_code = "52006BC8+E0831001+02006BC8+E0831201+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] X32"
+cheat11_code = "52006BC8+E0831001+02006BC8+E0831281+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] X64"
+cheat12_code = "52006BC8+E0831001+02006BC8+E0831301+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] X128"
+cheat13_code = "52006BC8+E0831001+02006BC8+E0831381+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] X256"
+cheat14_code = "52006BC8+E0831001+02006BC8+E0831401+D2000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] X512"
+cheat15_code = "52006BC8+E0831001+02006BC8+E0831481+D2000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] X1024"
+cheat16_code = "52006BC8+E0831001+02006BC8+E0831501+D2000000+00000000"
+cheat16_enable = false

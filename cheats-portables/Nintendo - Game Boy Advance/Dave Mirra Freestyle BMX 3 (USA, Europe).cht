@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Dave Mirra Freestyle BMX 3 (USA, Europe).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Dave%20Mirra%20Freestyle%20BMX%203%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 4
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "000038BA+000A+1004C980+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] 50,000 Cash"
+cheat1_code = "820125CC+C350"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Max Rush"
+cheat2_code = "3200E481+00AA"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] All Levels"
+cheat3_code = "320125C4+00FF"
+cheat3_enable = false

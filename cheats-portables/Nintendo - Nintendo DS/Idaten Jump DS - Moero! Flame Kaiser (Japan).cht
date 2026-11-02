@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Idaten Jump DS - Moero! Flame Kaiser (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Idaten%20Jump%20DS%20-%20Moero!%20Flame%20Kaiser%20(Japan).cht
+
+cheats = 6
+
+cheat0_desc = "[Action Replay] Infinite Health"
+cheat0_code = "0208E058+000FA000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Money"
+cheat1_code = "0205CCE0+000F423F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Unlock All Parts"
+cheat2_code = "D5000000+00000909+C0000000+0000000E+D7000000+0205CE22+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Unlock All Skills"
+cheat3_code = "1205CE42+000003FF"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Unlock All Modes"
+cheat4_code = "2205CC12+0000000F"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Unlock All Vehicles"
+cheat5_code = "1205CE40+0000FFFF"
+cheat5_enable = false

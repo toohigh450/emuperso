@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Need for Speed - Underground (USA, Europe) (En,Fr,De,It).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Need%20for%20Speed%20-%20Underground%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 6
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00000000+0002+1006C284+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Credits"
+cheat1_code = "820008D4+FFFF+820008D6+7FFF"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Unlock All Upgrades/Cars/Tracks"
+cheat2_code = "82000838+FFFF+8200083A+FFFF"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Race Time Is 0:0:01 (You Win The Race)"
+cheat3_code = "83005F0C+0000+83005F0E+0000"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Drift Score is 999,999"
+cheat4_code = "83006A24+423F+83006A26+000F"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Drift Multiplier is 99"
+cheat5_code = "33006A0C+0009"
+cheat5_enable = false

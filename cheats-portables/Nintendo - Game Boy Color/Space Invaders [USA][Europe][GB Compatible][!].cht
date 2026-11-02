@@ -1,0 +1,59 @@
+# Recherche locale pour la ROM : Space Invaders [USA][Europe][GB Compatible][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Space%20Invaders%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Space%20Invaders%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Space%20Invaders%20(USA%2C%20Europe)%20(GB%20Compatible).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Space%20Invaders%20(USA%2C%20Europe)%20(Xploder).cht
+
+cheats = 12
+
+cheat0_desc = "[Game Genie] Infinite Lives"
+cheat0_code = "7EA-12E"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Infinite Shields"
+cheat1_code = "1CB-14B+7E9-6FE"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Infinite Shields"
+cheat2_code = "010184D9"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Infinite Lives"
+cheat3_code = "0103E1D9"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Alien Peace"
+cheat4_code = "010419D1"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Automatically Beat Levels"
+cheat5_code = "0100ADFF"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Infinite Lives"
+cheat6_code = "7EA-12E"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Infinite Shields"
+cheat7_code = "1CB-14B+7E9-6FE"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Test Menu Unlocked"
+cheat8_code = "001-C7B-E62"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Invincibility"
+cheat9_code = "C9A-6EE-081"
+cheat9_enable = false
+
+cheat10_desc = "[Xploder] Unendlich Leben"
+cheat10_code = "$0D23EC20"
+cheat10_enable = false
+
+cheat11_desc = "[Xploder] Gegner schiessen nicht"
+cheat11_code = "$0D254E5E"
+cheat11_enable = false

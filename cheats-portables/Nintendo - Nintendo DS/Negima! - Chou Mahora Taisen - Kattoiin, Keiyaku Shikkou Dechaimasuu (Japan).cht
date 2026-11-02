@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Negima! - Chou Mahora Taisen - Kattoiin, Keiyaku Shikkou Dechaimasuu (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Negima!%20-%20Chou%20Mahora%20Taisen%20-%20Kattoiin%2C%20Keiyaku%20Shikkou%20Dechaimasuu%20(Japan).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Complete Gallery"
+cheat0_code = "120800EA+0000FFFF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Costumes"
+cheat1_code = "0207FF84+FFFFFFFF+0207FF88+FFFFFFFF+0207FF8C+FFFFFFFF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Voices"
+cheat2_code = "D5000000+000000FF+C0000000+000000A6+D8000000+02080042+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Members Max HP"
+cheat3_code = "C0000000+0000000E+1207F3D4+0000270F+DC000000+00000050+D2000000+00000000"
+cheat3_enable = false

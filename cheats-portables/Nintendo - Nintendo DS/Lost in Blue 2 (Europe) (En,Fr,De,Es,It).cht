@@ -1,0 +1,1060 @@
+# Recherche locale pour la ROM : Lost in Blue 2 (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Lost%20in%20Blue%202%20(Europe).cht
+
+cheats = 263
+
+cheat0_desc = "[Action Replay] Press Select to Advance Time"
+cheat0_code = "94000130+FFFB0000+D3000000+0217BCF2+D9000000+00000000+D4000000+00000001+D7000000+00000000+D2000000+00000000+94000130+FFFB0000+9217BCF2+FF00003C+2217BCF2+00000000+D3000000+0217BCF2+D9000000+00000000+D4000000+00000100+D7000000+00000000+D2000000+00000000+94000130+FFFB0000+8217BCF2+00FF1700+2217BCF3+00000000+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Press Start to Rewind Time"
+cheat1_code = "94000130+FFF70000+D3000000+0217BCF2+D9000000+00000000+D4000000+FFFFFFFF+D7000000+00000000+D2000000+00000000+9217BCF2+FF000000+94000130+FFF70000+2217BCF2+0000003C+D3000000+0217BCF2+D9000000+00000000+D4000000+FFFFFEFF+D7000000+00000000+D2000000+00000000+94000130+FFF70000+8217BCF2+00FF1700+2217BCF3+00000017+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] First Cave:Infinite Wood"
+cheat2_code = "2217C138+00000063"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] No Abnormal Status"
+cheat3_code = "2217C1E3+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Infinite Health"
+cheat4_code = "2217C1DB+00000064"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Infinite Stamina"
+cheat5_code = "2217C1DC+00000064"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Infinite Water"
+cheat6_code = "2217C1DD+00000064"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Infinite Stomach"
+cheat7_code = "2217C1DE+00000064"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Infinite Health"
+cheat8_code = "2217C1DF+00000064"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Infinite Stamina"
+cheat9_code = "2217C1E0+00000064"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Infinite Water"
+cheat10_code = "2217C1E1+00000064"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Infinite Stomach"
+cheat11_code = "2217C1E2+00000064"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Abalone Clam"
+cheat12_code = "2217BEDC+00000007"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Short-neck Clam"
+cheat13_code = "2217BEDC+00000008"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Clam"
+cheat14_code = "2217BEDC+00000009"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Scallop"
+cheat15_code = "2217BEDC+0000000A"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Oyster"
+cheat16_code = "2217BEDC+0000000B"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Freshwater Clam"
+cheat17_code = "2217BEDC+0000000C"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Seaweed"
+cheat18_code = "2217BEDC+0000000D"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Red Sea Urchin"
+cheat19_code = "2217BEDC+0000000E"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Mackerel"
+cheat20_code = "2217BEDC+0000000F"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Striped Breakperch"
+cheat21_code = "2217BEDC+00000010"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Sillaginoid"
+cheat22_code = "2217BEDC+00000011"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Balloon Fish"
+cheat23_code = "2217BEDC+00000012"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Moray"
+cheat24_code = "2217BEDC+00000013"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Sardine"
+cheat25_code = "2217BEDC+00000014"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Sting Fish"
+cheat26_code = "2217BEDC+00000015"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] File Fish"
+cheat27_code = "2217BEDC+00000016"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Flat Fish"
+cheat28_code = "2217BEDC+00000017"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Sea Bream"
+cheat29_code = "2217BEDC+00000018"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Parrot Fish"
+cheat30_code = "2217BEDC+00000019"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Black Nibbler"
+cheat31_code = "2217BEDC+0000001A"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Yellowfin Goby"
+cheat32_code = "2217BEDC+0000001B"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Sea Bass"
+cheat33_code = "2217BEDC+0000001C"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Sweetfish"
+cheat34_code = "2217BEDC+0000001D"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Catfish"
+cheat35_code = "2217BEDC+0000001E"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Black Bass"
+cheat36_code = "2217BEDC+0000001F"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Arowana"
+cheat37_code = "2217BEDC+00000020"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Carp"
+cheat38_code = "2217BEDC+00000021"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Eel"
+cheat39_code = "2217BEDC+00000022"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Crucian"
+cheat40_code = "2217BEDC+00000023"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Char"
+cheat41_code = "2217BEDC+00000024"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Red River Fish"
+cheat42_code = "2217BEDC+00000025"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Masu Salmon"
+cheat43_code = "2217BEDC+00000026"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Japanese Huchen (rare)"
+cheat44_code = "2217BEDC+00000027"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Rainbow Trout"
+cheat45_code = "2217BEDC+00000028"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Turtle"
+cheat46_code = "2217BEDC+00000029"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Hermit Crab"
+cheat47_code = "2217BEDC+0000002A"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] River Crab"
+cheat48_code = "2217BEDC+0000002B"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Sand Crab"
+cheat49_code = "2217BEDC+0000002C"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Coconut Crab"
+cheat50_code = "2217BEDC+0000002D"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Tortoise"
+cheat51_code = "2217BEDC+0000002E"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Lizard"
+cheat52_code = "2217BEDC+0000002F"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Pit Viper"
+cheat53_code = "2217BEDC+00000030"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Tarantula"
+cheat54_code = "2217BEDC+00000031"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Boar Meat"
+cheat55_code = "2217BEDC+00000043"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Duck Meat"
+cheat56_code = "2217BEDC+00000044"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Deer Meat"
+cheat57_code = "2217BEDC+00000045"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Raccoon Meat"
+cheat58_code = "2217BEDC+00000046"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Chicken Meat"
+cheat59_code = "2217BEDC+00000047"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Rabbit Meat"
+cheat60_code = "2217BEDC+00000048"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Field Mouse Meat"
+cheat61_code = "2217BEDC+00000049"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Pigeon Meat"
+cheat62_code = "2217BEDC+0000004A"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Goat Meat"
+cheat63_code = "2217BEDC+0000004B"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Lynx Meat"
+cheat64_code = "2217BEDC+0000004C"
+cheat64_enable = false
+
+cheat65_desc = "[Action Replay] Squirrel Meat"
+cheat65_code = "2217BEDC+0000004D"
+cheat65_enable = false
+
+cheat66_desc = "[Action Replay] Wolf Meat"
+cheat66_code = "2217BEDC+0000004E"
+cheat66_enable = false
+
+cheat67_desc = "[Action Replay] Alligator Meat"
+cheat67_code = "2217BEDC+0000004F"
+cheat67_enable = false
+
+cheat68_desc = "[Action Replay] Black Mushroom"
+cheat68_code = "2217BEDC+00000050"
+cheat68_enable = false
+
+cheat69_desc = "[Action Replay] Blue Mushroom"
+cheat69_code = "2217BEDC+00000051"
+cheat69_enable = false
+
+cheat70_desc = "[Action Replay] Brown Mushroom"
+cheat70_code = "2217BEDC+00000052"
+cheat70_enable = false
+
+cheat71_desc = "[Action Replay] Orange Mushroom"
+cheat71_code = "2217BEDC+00000053"
+cheat71_enable = false
+
+cheat72_desc = "[Action Replay] Purple Mushroom"
+cheat72_code = "2217BEDC+00000054"
+cheat72_enable = false
+
+cheat73_desc = "[Action Replay] Red Mushroom"
+cheat73_code = "2217BEDC+00000055"
+cheat73_enable = false
+
+cheat74_desc = "[Action Replay] White Mushroom"
+cheat74_code = "2217BEDC+00000056"
+cheat74_enable = false
+
+cheat75_desc = "[Action Replay] Yellow Mushroom"
+cheat75_code = "2217BEDC+00000057"
+cheat75_enable = false
+
+cheat76_desc = "[Action Replay] Chives"
+cheat76_code = "2217BEDC+00000058"
+cheat76_enable = false
+
+cheat77_desc = "[Action Replay] Bamboo Shoot"
+cheat77_code = "2217BEDC+00000059"
+cheat77_enable = false
+
+cheat78_desc = "[Action Replay] Carrot"
+cheat78_code = "2217BEDC+0000005A"
+cheat78_enable = false
+
+cheat79_desc = "[Action Replay] Dandelion"
+cheat79_code = "2217BEDC+0000005B"
+cheat79_enable = false
+
+cheat80_desc = "[Action Replay] Burdock"
+cheat80_code = "2217BEDC+0000005C"
+cheat80_enable = false
+
+cheat81_desc = "[Action Replay] Onion"
+cheat81_code = "2217BEDC+0000005D"
+cheat81_enable = false
+
+cheat82_desc = "[Action Replay] Potato"
+cheat82_code = "2217BEDC+0000005E"
+cheat82_enable = false
+
+cheat83_desc = "[Action Replay] Radish"
+cheat83_code = "2217BEDC+0000005F"
+cheat83_enable = false
+
+cheat84_desc = "[Action Replay] Taro"
+cheat84_code = "2217BEDC+00000060"
+cheat84_enable = false
+
+cheat85_desc = "[Action Replay] Fern"
+cheat85_code = "2217BEDC+00000061"
+cheat85_enable = false
+
+cheat86_desc = "[Action Replay] Coconut"
+cheat86_code = "2217BEDC+00000062"
+cheat86_enable = false
+
+cheat87_desc = "[Action Replay] Papaya"
+cheat87_code = "2217BEDC+00000063"
+cheat87_enable = false
+
+cheat88_desc = "[Action Replay] Rasberry"
+cheat88_code = "2217BEDC+00000064"
+cheat88_enable = false
+
+cheat89_desc = "[Action Replay] Bread Fruit"
+cheat89_code = "2217BEDC+00000065"
+cheat89_enable = false
+
+cheat90_desc = "[Action Replay] Banana"
+cheat90_code = "2217BEDC+00000066"
+cheat90_enable = false
+
+cheat91_desc = "[Action Replay] Pineapple"
+cheat91_code = "2217BEDC+00000067"
+cheat91_enable = false
+
+cheat92_desc = "[Action Replay] Mugwort"
+cheat92_code = "2217BEDC+00000068"
+cheat92_enable = false
+
+cheat93_desc = "[Action Replay] Lotus Root"
+cheat93_code = "2217BEDC+00000069"
+cheat93_enable = false
+
+cheat94_desc = "[Action Replay] Guava"
+cheat94_code = "2217BEDC+0000006A"
+cheat94_enable = false
+
+cheat95_desc = "[Action Replay] Passion Fruit"
+cheat95_code = "2217BEDC+0000006B"
+cheat95_enable = false
+
+cheat96_desc = "[Action Replay] Treevine"
+cheat96_code = "2217BEDC+0000006C"
+cheat96_enable = false
+
+cheat97_desc = "[Action Replay] Tree Bark"
+cheat97_code = "2217BEDC+0000006D"
+cheat97_enable = false
+
+cheat98_desc = "[Action Replay] Leaf"
+cheat98_code = "2217BEDC+0000006E"
+cheat98_enable = false
+
+cheat99_desc = "[Action Replay] Log"
+cheat99_code = "2217BEDC+0000006F"
+cheat99_enable = false
+
+cheat100_desc = "[Action Replay] Stick"
+cheat100_code = "2217BEDC+00000070"
+cheat100_enable = false
+
+cheat101_desc = "[Action Replay] Twigs"
+cheat101_code = "2217BEDC+00000071"
+cheat101_enable = false
+
+cheat102_desc = "[Action Replay] Large Bones"
+cheat102_code = "2217BEDC+00000072"
+cheat102_enable = false
+
+cheat103_desc = "[Action Replay] Fur"
+cheat103_code = "2217BEDC+00000073"
+cheat103_enable = false
+
+cheat104_desc = "[Action Replay] Stone"
+cheat104_code = "2217BEDC+00000074"
+cheat104_enable = false
+
+cheat105_desc = "[Action Replay] Green Bamboo"
+cheat105_code = "2217BEDC+00000075"
+cheat105_enable = false
+
+cheat106_desc = "[Action Replay] Feather"
+cheat106_code = "2217BEDC+00000076"
+cheat106_enable = false
+
+cheat107_desc = "[Action Replay] Lard"
+cheat107_code = "2217BEDC+00000077"
+cheat107_enable = false
+
+cheat108_desc = "[Action Replay] Sharpened Stone"
+cheat108_code = "2217BEDC+00000078"
+cheat108_enable = false
+
+cheat109_desc = "[Action Replay] Sharpened Bone"
+cheat109_code = "2217BEDC+00000079"
+cheat109_enable = false
+
+cheat110_desc = "[Action Replay] Basket"
+cheat110_code = "2217BEDC+0000007A"
+cheat110_enable = false
+
+cheat111_desc = "[Action Replay] Iron Rod"
+cheat111_code = "2217BEDC+0000007B"
+cheat111_enable = false
+
+cheat112_desc = "[Action Replay] Smoked Meat (small)"
+cheat112_code = "2217BEDC+0000007C"
+cheat112_enable = false
+
+cheat113_desc = "[Action Replay] Smoked Meat (medium)"
+cheat113_code = "2217BEDC+0000007D"
+cheat113_enable = false
+
+cheat114_desc = "[Action Replay] Smoked Meat (Large)"
+cheat114_code = "2217BEDC+0000007E"
+cheat114_enable = false
+
+cheat115_desc = "[Action Replay] Smoked Fish (Small)"
+cheat115_code = "2217BEDC+0000007F"
+cheat115_enable = false
+
+cheat116_desc = "[Action Replay] Smoked Fish (Medium)"
+cheat116_code = "2217BEDC+00000080"
+cheat116_enable = false
+
+cheat117_desc = "[Action Replay] Smoked fish (Large)"
+cheat117_code = "2217BEDC+00000081"
+cheat117_enable = false
+
+cheat118_desc = "[Action Replay] Egg"
+cheat118_code = "2217BEDC+00000082"
+cheat118_enable = false
+
+cheat119_desc = "[Action Replay] Lunchbox"
+cheat119_code = "2217BEDC+00000083"
+cheat119_enable = false
+
+cheat120_desc = "[Action Replay] White Round Shell"
+cheat120_code = "2217BEDC+00000084"
+cheat120_enable = false
+
+cheat121_desc = "[Action Replay] Brown Round Shell"
+cheat121_code = "2217BEDC+00000085"
+cheat121_enable = false
+
+cheat122_desc = "[Action Replay] Black Round Shell"
+cheat122_code = "2217BEDC+00000086"
+cheat122_enable = false
+
+cheat123_desc = "[Action Replay] White Pointy shell"
+cheat123_code = "2217BEDC+00000087"
+cheat123_enable = false
+
+cheat124_desc = "[Action Replay] Brown Pointy Shell"
+cheat124_code = "2217BEDC+00000088"
+cheat124_enable = false
+
+cheat125_desc = "[Action Replay] Black Pointy Shell"
+cheat125_code = "2217BEDC+00000089"
+cheat125_enable = false
+
+cheat126_desc = "[Action Replay] White Odd Shell"
+cheat126_code = "2217BEDC+0000008A"
+cheat126_enable = false
+
+cheat127_desc = "[Action Replay] Brown Odd Shell"
+cheat127_code = "2217BEDC+0000008B"
+cheat127_enable = false
+
+cheat128_desc = "[Action Replay] Black Odd Shell"
+cheat128_code = "2217BEDC+0000008C"
+cheat128_enable = false
+
+cheat129_desc = "[Action Replay] Red Stone"
+cheat129_code = "2217BEDC+0000008D"
+cheat129_enable = false
+
+cheat130_desc = "[Action Replay] Orange Stone"
+cheat130_code = "2217BEDC+0000008E"
+cheat130_enable = false
+
+cheat131_desc = "[Action Replay] Yellow Stone"
+cheat131_code = "2217BEDC+0000008F"
+cheat131_enable = false
+
+cheat132_desc = "[Action Replay] Green Stone"
+cheat132_code = "2217BEDC+00000090"
+cheat132_enable = false
+
+cheat133_desc = "[Action Replay] Light Blue Stone"
+cheat133_code = "2217BEDC+00000091"
+cheat133_enable = false
+
+cheat134_desc = "[Action Replay] Dark Blue Stone"
+cheat134_code = "2217BEDC+00000092"
+cheat134_enable = false
+
+cheat135_desc = "[Action Replay] Purple Stone"
+cheat135_code = "2217BEDC+00000093"
+cheat135_enable = false
+
+cheat136_desc = "[Action Replay] Shell Necklace"
+cheat136_code = "2217BEDC+00000094"
+cheat136_enable = false
+
+cheat137_desc = "[Action Replay] Sun Necklace"
+cheat137_code = "2217BEDC+00000095"
+cheat137_enable = false
+
+cheat138_desc = "[Action Replay] Sunset Necklace"
+cheat138_code = "2217BEDC+00000096"
+cheat138_enable = false
+
+cheat139_desc = "[Action Replay] Moon Necklace"
+cheat139_code = "2217BEDC+00000097"
+cheat139_enable = false
+
+cheat140_desc = "[Action Replay] Young Leaf Necklace"
+cheat140_code = "2217BEDC+00000098"
+cheat140_enable = false
+
+cheat141_desc = "[Action Replay] Blue Sky Necklace"
+cheat141_code = "2217BEDC+00000099"
+cheat141_enable = false
+
+cheat142_desc = "[Action Replay] Deep Sea Necklace"
+cheat142_code = "2217BEDC+0000009A"
+cheat142_enable = false
+
+cheat143_desc = "[Action Replay] Night Sky Necklace"
+cheat143_code = "2217BEDC+0000009B"
+cheat143_enable = false
+
+cheat144_desc = "[Action Replay] Map A"
+cheat144_code = "2217BEDC+0000009C"
+cheat144_enable = false
+
+cheat145_desc = "[Action Replay] Map B"
+cheat145_code = "2217BEDC+0000009D"
+cheat145_enable = false
+
+cheat146_desc = "[Action Replay] Map C"
+cheat146_code = "2217BEDC+0000009E"
+cheat146_enable = false
+
+cheat147_desc = "[Action Replay] Map D"
+cheat147_code = "2217BEDC+0000009F"
+cheat147_enable = false
+
+cheat148_desc = "[Action Replay] Radio"
+cheat148_code = "2217BEDC+000000A0"
+cheat148_enable = false
+
+cheat149_desc = "[Action Replay] Bottle"
+cheat149_code = "2217BEDC+000000A1"
+cheat149_enable = false
+
+cheat150_desc = "[Action Replay] Bottled Water"
+cheat150_code = "2217BEDC+000000A2"
+cheat150_enable = false
+
+cheat151_desc = "[Action Replay] Bottled Milk"
+cheat151_code = "2217BEDC+000000A3"
+cheat151_enable = false
+
+cheat152_desc = "[Action Replay] Oil Drum"
+cheat152_code = "2217BEDC+000000A4"
+cheat152_enable = false
+
+cheat153_desc = "[Action Replay] Flat Rock"
+cheat153_code = "2217BEDC+000000A5"
+cheat153_enable = false
+
+cheat154_desc = "[Action Replay] Indented Rock"
+cheat154_code = "2217BEDC+000000A6"
+cheat154_enable = false
+
+cheat155_desc = "[Action Replay] Fire Starter"
+cheat155_code = "2217BEDC+000000A7"
+cheat155_enable = false
+
+cheat156_desc = "[Action Replay] Fire Starter with Bow"
+cheat156_code = "2217BEDC+000000A8"
+cheat156_enable = false
+
+cheat157_desc = "[Action Replay] Bamboo Fishing Rod A"
+cheat157_code = "2217BEDC+000000A9"
+cheat157_enable = false
+
+cheat158_desc = "[Action Replay] Bamboo Fishing Rod B"
+cheat158_code = "2217BEDC+000000AA"
+cheat158_enable = false
+
+cheat159_desc = "[Action Replay] Wooden Fishing Rod A"
+cheat159_code = "2217BEDC+000000AB"
+cheat159_enable = false
+
+cheat160_desc = "[Action Replay] Wooden Fishing Rod B"
+cheat160_code = "2217BEDC+000000AC"
+cheat160_enable = false
+
+cheat161_desc = "[Action Replay] Wooden Bow"
+cheat161_code = "2217BEDC+000000AD"
+cheat161_enable = false
+
+cheat162_desc = "[Action Replay] Bamboo Bow"
+cheat162_code = "2217BEDC+000000AE"
+cheat162_enable = false
+
+cheat163_desc = "[Action Replay] Bamboo Arrows A"
+cheat163_code = "1217BEDC+0000C0AF"
+cheat163_enable = false
+
+cheat164_desc = "[Action Replay] Bamboo Arrows B"
+cheat164_code = "1217BEDC+0000C0B0"
+cheat164_enable = false
+
+cheat165_desc = "[Action Replay] Bamboo Arrows C"
+cheat165_code = "1217BEDC+0000C0B1"
+cheat165_enable = false
+
+cheat166_desc = "[Action Replay] Bamboo Arrows D"
+cheat166_code = "1217BEDC+0000C0B2"
+cheat166_enable = false
+
+cheat167_desc = "[Action Replay] Wooden Arrows A"
+cheat167_code = "1217BEDC+0000C0B3"
+cheat167_enable = false
+
+cheat168_desc = "[Action Replay] Wooden Arrows B"
+cheat168_code = "1217BEDC+0000C0B4"
+cheat168_enable = false
+
+cheat169_desc = "[Action Replay] Wooden Arrows C"
+cheat169_code = "1217BEDC+0000C0B5"
+cheat169_enable = false
+
+cheat170_desc = "[Action Replay] Wooden Arrows D"
+cheat170_code = "1217BEDC+0000C0B6"
+cheat170_enable = false
+
+cheat171_desc = "[Action Replay] Iron Arrows A"
+cheat171_code = "1217BEDC+0000C0B7"
+cheat171_enable = false
+
+cheat172_desc = "[Action Replay] Iron Arrows B"
+cheat172_code = "1217BEDC+0000C0B8"
+cheat172_enable = false
+
+cheat173_desc = "[Action Replay] Bamboo Spear A"
+cheat173_code = "2217BEDC+000000B9"
+cheat173_enable = false
+
+cheat174_desc = "[Action Replay] Bamboo Spear B"
+cheat174_code = "2217BEDC+000000BA"
+cheat174_enable = false
+
+cheat175_desc = "[Action Replay] Bamboo Spear C"
+cheat175_code = "2217BEDC+000000BB"
+cheat175_enable = false
+
+cheat176_desc = "[Action Replay] Wooden Spear A"
+cheat176_code = "2217BEDC+000000BC"
+cheat176_enable = false
+
+cheat177_desc = "[Action Replay] Wooden Spear B"
+cheat177_code = "2217BEDC+000000BD"
+cheat177_enable = false
+
+cheat178_desc = "[Action Replay] Wooden Spear C"
+cheat178_code = "2217BEDC+000000BE"
+cheat178_enable = false
+
+cheat179_desc = "[Action Replay] Iron Spear"
+cheat179_code = "2217BEDC+000000BF"
+cheat179_enable = false
+
+cheat180_desc = "[Action Replay] Wooden Torch"
+cheat180_code = "2217BEDC+000000C0"
+cheat180_enable = false
+
+cheat181_desc = "[Action Replay] Bamboo Torch"
+cheat181_code = "2217BEDC+000000C1"
+cheat181_enable = false
+
+cheat182_desc = "[Action Replay] Round Lure A"
+cheat182_code = "2217BEDC+000000C2"
+cheat182_enable = false
+
+cheat183_desc = "[Action Replay] Round Lure B"
+cheat183_code = "2217BEDC+000000C3"
+cheat183_enable = false
+
+cheat184_desc = "[Action Replay] Round Lure C"
+cheat184_code = "2217BEDC+000000C4"
+cheat184_enable = false
+
+cheat185_desc = "[Action Replay] Thin Lure A"
+cheat185_code = "2217BEDC+000000C5"
+cheat185_enable = false
+
+cheat186_desc = "[Action Replay] Thin Lure B"
+cheat186_code = "2217BEDC+000000C6"
+cheat186_enable = false
+
+cheat187_desc = "[Action Replay] Thin Lure C"
+cheat187_code = "2217BEDC+000000C7"
+cheat187_enable = false
+
+cheat188_desc = "[Action Replay] Long Lure A"
+cheat188_code = "2217BEDC+000000C8"
+cheat188_enable = false
+
+cheat189_desc = "[Action Replay] Long Lure B"
+cheat189_code = "2217BEDC+000000C9"
+cheat189_enable = false
+
+cheat190_desc = "[Action Replay] Long Lure C"
+cheat190_code = "2217BEDC+000000CA"
+cheat190_enable = false
+
+cheat191_desc = "[Action Replay] Special Lure"
+cheat191_code = "2217BEDC+000000CB"
+cheat191_enable = false
+
+cheat192_desc = "[Action Replay] Small Trap"
+cheat192_code = "2217BEDC+000000CC"
+cheat192_enable = false
+
+cheat193_desc = "[Action Replay] Large Trap"
+cheat193_code = "2217BEDC+000000CD"
+cheat193_enable = false
+
+cheat194_desc = "[Action Replay] Fish Trap"
+cheat194_code = "2217BEDC+000000CE"
+cheat194_enable = false
+
+cheat195_desc = "[Action Replay] Present"
+cheat195_code = "2217BEDC+000000CF"
+cheat195_enable = false
+
+cheat196_desc = "[Action Replay] Egg Salad"
+cheat196_code = "1217BEDC+0000C0D0"
+cheat196_enable = false
+
+cheat197_desc = "[Action Replay] Burdock Root Salad"
+cheat197_code = "1217BEDC+0000C0D2"
+cheat197_enable = false
+
+cheat198_desc = "[Action Replay] Seaweed Salad"
+cheat198_code = "1217BEDC+0000C0D3"
+cheat198_enable = false
+
+cheat199_desc = "[Action Replay] Mushroom Salad"
+cheat199_code = "1217BEDC+0000C0D4"
+cheat199_enable = false
+
+cheat200_desc = "[Action Replay] Item 1 Infinite/Unbreakable"
+cheat200_code = "2217BEDD+00000008"
+cheat200_enable = false
+
+cheat201_desc = "[Action Replay] Item 2 Infinite/Unbreakable"
+cheat201_code = "2217BEE3+00000008"
+cheat201_enable = false
+
+cheat202_desc = "[Action Replay] Item 3 Infinite/Unbreakable"
+cheat202_code = "2217BEE9+00000008"
+cheat202_enable = false
+
+cheat203_desc = "[Action Replay] Item 4 Infinite/Unbreakable"
+cheat203_code = "2217BEEF+00000008"
+cheat203_enable = false
+
+cheat204_desc = "[Action Replay] Item 5 Infinite/Unbreakable"
+cheat204_code = "2217BEF5+00000008"
+cheat204_enable = false
+
+cheat205_desc = "[Action Replay] Item 6 Infinite/Unbreakable"
+cheat205_code = "2217BEFB+00000008"
+cheat205_enable = false
+
+cheat206_desc = "[Action Replay] Item 7 Infinite/Unbreakable"
+cheat206_code = "2217BF01+00000008"
+cheat206_enable = false
+
+cheat207_desc = "[Action Replay] Item 8 Infinite/Unbreakable"
+cheat207_code = "2217BF07+00000008"
+cheat207_enable = false
+
+cheat208_desc = "[Action Replay] Item 9 Infinite/Unbreakable"
+cheat208_code = "2217BF0D+00000008"
+cheat208_enable = false
+
+cheat209_desc = "[Action Replay] Item 10 Infinite/Unbreakable"
+cheat209_code = "2217BF13+00000008"
+cheat209_enable = false
+
+cheat210_desc = "[Action Replay] Item 11 Infinite/Unbreakable"
+cheat210_code = "2217BF19+00000008"
+cheat210_enable = false
+
+cheat211_desc = "[Action Replay] Item 12 Infinite/Unbreakable"
+cheat211_code = "2217BF1F+00000008"
+cheat211_enable = false
+
+cheat212_desc = "[Action Replay] Item 13 Infinite/Unbreakable"
+cheat212_code = "2217BF25+00000008"
+cheat212_enable = false
+
+cheat213_desc = "[Action Replay] Item 14 Infinite/Unbreakable"
+cheat213_code = "2217BF2B+00000008"
+cheat213_enable = false
+
+cheat214_desc = "[Action Replay] Item 15 Infinite/Unbreakable"
+cheat214_code = "2217BF31+00000008"
+cheat214_enable = false
+
+cheat215_desc = "[Action Replay] Item 16 Infinite/Unbreakable"
+cheat215_code = "2217BF37+00000008"
+cheat215_enable = false
+
+cheat216_desc = "[Action Replay] Item 17 Infinite/Unbreakable"
+cheat216_code = "2217BF3D+00000008"
+cheat216_enable = false
+
+cheat217_desc = "[Action Replay] Item 18 Infinite/Unbreakable"
+cheat217_code = "2217BF43+00000008"
+cheat217_enable = false
+
+cheat218_desc = "[Action Replay] Item 19 Infinite/Unbreakable"
+cheat218_code = "2217BF49+00000008"
+cheat218_enable = false
+
+cheat219_desc = "[Action Replay] Item 20 Infinite/Unbreakable"
+cheat219_code = "2217BF4F+00000008"
+cheat219_enable = false
+
+cheat220_desc = "[Action Replay] Slot 1"
+cheat220_code = "1217BEDE+0000FFFF"
+cheat220_enable = false
+
+cheat221_desc = "[Action Replay] Slot 2"
+cheat221_code = "1217BEE4+0000FFFF"
+cheat221_enable = false
+
+cheat222_desc = "[Action Replay] Slot 3"
+cheat222_code = "1217BEEA+0000FFFF"
+cheat222_enable = false
+
+cheat223_desc = "[Action Replay] Slot 4"
+cheat223_code = "1217BEF0+0000FFFF"
+cheat223_enable = false
+
+cheat224_desc = "[Action Replay] Slot 5"
+cheat224_code = "1217BEF6+0000FFFF"
+cheat224_enable = false
+
+cheat225_desc = "[Action Replay] Slot 6"
+cheat225_code = "1217BEFC+0000FFFF"
+cheat225_enable = false
+
+cheat226_desc = "[Action Replay] Slot 7"
+cheat226_code = "1217BF02+0000FFFF"
+cheat226_enable = false
+
+cheat227_desc = "[Action Replay] Slot 8"
+cheat227_code = "1217BF08+0000FFFF"
+cheat227_enable = false
+
+cheat228_desc = "[Action Replay] Slot 9"
+cheat228_code = "1217BF0E+0000FFFF"
+cheat228_enable = false
+
+cheat229_desc = "[Action Replay] Slot 10"
+cheat229_code = "1217BF14+0000FFFF"
+cheat229_enable = false
+
+cheat230_desc = "[Action Replay] Slot 11"
+cheat230_code = "1217BF1A+0000FFFF"
+cheat230_enable = false
+
+cheat231_desc = "[Action Replay] Slot 12"
+cheat231_code = "1217BF20+0000FFFF"
+cheat231_enable = false
+
+cheat232_desc = "[Action Replay] Slot 13"
+cheat232_code = "1217BF26+0000FFFF"
+cheat232_enable = false
+
+cheat233_desc = "[Action Replay] Slot 14"
+cheat233_code = "1217BF2C+0000FFFF"
+cheat233_enable = false
+
+cheat234_desc = "[Action Replay] Slot 15"
+cheat234_code = "1217BF32+0000FFFF"
+cheat234_enable = false
+
+cheat235_desc = "[Action Replay] Slot 16"
+cheat235_code = "1217BF38+0000FFFF"
+cheat235_enable = false
+
+cheat236_desc = "[Action Replay] Slot 17"
+cheat236_code = "1217BF3E+0000FFFF"
+cheat236_enable = false
+
+cheat237_desc = "[Action Replay] Slot 18"
+cheat237_code = "1217BF44+0000FFFF"
+cheat237_enable = false
+
+cheat238_desc = "[Action Replay] Slot 19"
+cheat238_code = "1217BF4A+0000FFFF"
+cheat238_enable = false
+
+cheat239_desc = "[Action Replay] Slot 20"
+cheat239_code = "1217BF50+0000FFFF"
+cheat239_enable = false
+
+cheat240_desc = "[Action Replay] Twigs"
+cheat240_code = "2217C138+0000001D"
+cheat240_enable = false
+
+cheat241_desc = "[Action Replay] Vine"
+cheat241_code = "2217C135+00000031"
+cheat241_enable = false
+
+cheat242_desc = "[Action Replay] Rope"
+cheat242_code = "2217C136+00000031"
+cheat242_enable = false
+
+cheat243_desc = "[Action Replay] Bamboo"
+cheat243_code = "2217C139+00000013"
+cheat243_enable = false
+
+cheat244_desc = "[Action Replay] Basket"
+cheat244_code = "2217C13A+00000013"
+cheat244_enable = false
+
+cheat245_desc = "[Action Replay] Rock Salt"
+cheat245_code = "2217C0E9+00000009"
+cheat245_enable = false
+
+cheat246_desc = "[Action Replay] Pepper Seed"
+cheat246_code = "2217C0EA+00000009"
+cheat246_enable = false
+
+cheat247_desc = "[Action Replay] Tree Sap Drop"
+cheat247_code = "2217C0EB+00000009"
+cheat247_enable = false
+
+cheat248_desc = "[Action Replay] Purple Bean"
+cheat248_code = "2217C0EC+00000009"
+cheat248_enable = false
+
+cheat249_desc = "[Action Replay] Chili Pepper"
+cheat249_code = "2217C0ED+00000009"
+cheat249_enable = false
+
+cheat250_desc = "[Action Replay] Yellow Bud"
+cheat250_code = "2217C0EE+00000009"
+cheat250_enable = false
+
+cheat251_desc = "[Action Replay] Brown Seed"
+cheat251_code = "2217C0EF+00000009"
+cheat251_enable = false
+
+cheat252_desc = "[Action Replay] Blue Seed"
+cheat252_code = "2217C0F0+00000009"
+cheat252_enable = false
+
+cheat253_desc = "[Action Replay] Worms"
+cheat253_code = "2217C0F1+00000005"
+cheat253_enable = false
+
+cheat254_desc = "[Action Replay] White Round Shell"
+cheat254_code = "2217C103+00000009"
+cheat254_enable = false
+
+cheat255_desc = "[Action Replay] White Pointy Shell"
+cheat255_code = "2217C104+00000009"
+cheat255_enable = false
+
+cheat256_desc = "[Action Replay] White Odd Shell"
+cheat256_code = "2217C105+00000009"
+cheat256_enable = false
+
+cheat257_desc = "[Action Replay] Black Round Shell"
+cheat257_code = "2217C106+00000009"
+cheat257_enable = false
+
+cheat258_desc = "[Action Replay] Black Pointy Shell"
+cheat258_code = "2217C107+00000009"
+cheat258_enable = false
+
+cheat259_desc = "[Action Replay] Black Odd Shell"
+cheat259_code = "2217C108+00000009"
+cheat259_enable = false
+
+cheat260_desc = "[Action Replay] Brown Round Shell"
+cheat260_code = "2217C109+00000009"
+cheat260_enable = false
+
+cheat261_desc = "[Action Replay] Brown Pointy Shell"
+cheat261_code = "2217C10B+00000009"
+cheat261_enable = false
+
+cheat262_desc = "[Action Replay] Brown Odd Shell"
+cheat262_code = "2217C10B+00000009"
+cheat262_enable = false

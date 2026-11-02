@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Beyblade G-Revolution (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Beyblade%20G-Revolution%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 4
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000F2B5+000A+1006A748+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Credits"
+cheat1_code = "82001074+FFFF"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Instant Win"
+cheat2_code = "3200C7C8+0000+3200C7D0+0000+330002D8+0000"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Infinite Health"
+cheat3_code = "8200C7C4+FFFF+8200D894+FFFF+8200E728+FFFF+82011730+FFFF+820186B8+FFFF+8201B048+FFFF+8201CFAC+FFFF"
+cheat3_enable = false

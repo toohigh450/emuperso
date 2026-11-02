@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Math Blaster in the Prime Adventure (USA).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Math%20Blaster%20in%20the%20Prime%20Adventure%20(USA).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] Max Score"
+cheat0_code = "620B3ACC+00000000+B20B3ACC+00000000+10000064+0000270F+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Energy Never Decrease"
+cheat1_code = "020146A8+E1A00000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Durability Never Decrease"
+cheat2_code = "0201418C+E1A00000"
+cheat2_enable = false

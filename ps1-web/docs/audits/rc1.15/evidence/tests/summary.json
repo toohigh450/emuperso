@@ -1,0 +1,140 @@
+{
+  "node": [
+    {
+      "suite": "app-preparation.test.mjs",
+      "exit_code": 0,
+      "tests": 5,
+      "pass": 5,
+      "fail": 0
+    },
+    {
+      "suite": "archives.test.mjs",
+      "exit_code": 0,
+      "tests": 7,
+      "pass": 7,
+      "fail": 0
+    },
+    {
+      "suite": "audit-rc113.test.mjs",
+      "exit_code": 0,
+      "tests": 22,
+      "pass": 22,
+      "fail": 0
+    },
+    {
+      "suite": "audit-rc114.test.mjs",
+      "exit_code": 0,
+      "tests": 21,
+      "pass": 21,
+      "fail": 0
+    },
+    {
+      "suite": "catalog-source-guards.test.mjs",
+      "exit_code": 0,
+      "tests": 2,
+      "pass": 2,
+      "fail": 0
+    },
+    {
+      "suite": "cheat-catalog-psx.test.mjs",
+      "exit_code": 0,
+      "tests": 10,
+      "pass": 10,
+      "fail": 0
+    },
+    {
+      "suite": "cheat-controller.test.mjs",
+      "exit_code": 0,
+      "tests": 25,
+      "pass": 25,
+      "fail": 0
+    },
+    {
+      "suite": "cheat-integration.test.mjs",
+      "exit_code": 0,
+      "tests": 20,
+      "pass": 20,
+      "fail": 0
+    },
+    {
+      "suite": "cheat-regression-live.test.mjs",
+      "exit_code": 0,
+      "tests": 4,
+      "pass": 4,
+      "fail": 0
+    },
+    {
+      "suite": "cheat-support.test.mjs",
+      "exit_code": 0,
+      "tests": 10,
+      "pass": 10,
+      "fail": 0
+    },
+    {
+      "suite": "core-options.test.mjs",
+      "exit_code": 0,
+      "tests": 4,
+      "pass": 4,
+      "fail": 0
+    },
+    {
+      "suite": "disc-file.test.mjs",
+      "exit_code": 0,
+      "tests": 5,
+      "pass": 5,
+      "fail": 0
+    },
+    {
+      "suite": "disc-prepare-chunked.test.mjs",
+      "exit_code": 0,
+      "tests": 6,
+      "pass": 6,
+      "fail": 0
+    },
+    {
+      "suite": "engine-input-contract.test.mjs",
+      "exit_code": 0,
+      "tests": 4,
+      "pass": 4,
+      "fail": 0
+    },
+    {
+      "suite": "input-presets.test.mjs",
+      "exit_code": 0,
+      "tests": 6,
+      "pass": 6,
+      "fail": 0
+    },
+    {
+      "suite": "input-profile.test.mjs",
+      "exit_code": 0,
+      "tests": 6,
+      "pass": 6,
+      "fail": 0
+    },
+    {
+      "suite": "regional-safety.test.mjs",
+      "exit_code": 0,
+      "tests": 17,
+      "pass": 17,
+      "fail": 0
+    },
+    {
+      "suite": "save-store.test.mjs",
+      "exit_code": 0,
+      "tests": 9,
+      "pass": 9,
+      "fail": 0
+    },
+    {
+      "suite": "startup-error.test.mjs",
+      "exit_code": 0,
+      "tests": 2,
+      "pass": 2,
+      "fail": 0
+    }
+  ],
+  "node_tests": 185,
+  "python_exit_code": 0,
+  "all_passed": true
+}

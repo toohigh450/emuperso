@@ -1,0 +1,44 @@
+# Recherche locale pour la ROM : Devilish (Europe).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Devilish%20(Europe).cht
+
+cheats = 9
+
+cheat0_desc = "[Action Replay] P Value"
+cheat0_code = "221B9988+00000020"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] S Value"
+cheat1_code = "221B998C+00000008"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Score"
+cheat2_code = "020705FC+0098967F"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Lives"
+cheat3_code = "22070604+00000063"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Time"
+cheat4_code = "12070606+0000012C"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Rocket"
+cheat5_code = "221B97D0+00000001"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Invisible"
+cheat6_code = "221B97D0+00000002"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Lightning"
+cheat7_code = "221B97D0+00000003"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Shield"
+cheat8_code = "221B97D0+00000004"
+cheat8_enable = false

@@ -1,0 +1,196 @@
+# Recherche locale pour la ROM : Mario Slam Basketball (Europe) (En,Ja,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Mario%20Slam%20Basketball%20(Europe).cht
+
+cheats = 47
+
+cheat0_desc = "[Action Replay] Max Profile Points and SSS Rank"
+cheat0_code = "020F80F8+0001869F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Disable AI"
+cheat1_code = "0207FD6C+E3A00000+020964DC+E3A00000+020AEDD0+E3A00000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Practice Stages"
+cheat2_code = "120F8188+000001FF"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Balls Unlocked"
+cheat3_code = "020F8180+0003FFFF"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All Courts"
+cheat4_code = "120F8178+0000FFFF"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All Characters"
+cheat5_code = "120F817A+0000FFFF+020F817C+FFFFFFFF"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Unlock Pro Difficulty"
+cheat6_code = "020F8190+FFFFFFFF"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Hold L+R+Up for Unlock Messages"
+cheat7_code = "94000130+000000BF+020F8194+FFFFFFFF+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Ball 01: Normal Ball"
+cheat8_code = "220F8101+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Ball 02: Red, White and Blue Ball"
+cheat9_code = "220F8101+00000009"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Ball 03: Yellow and Green"
+cheat10_code = "220F8101+00000005"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Ball 04: Purple and Yellow Ball"
+cheat11_code = "220F8101+00000004"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Ball 05: Black and Red Ball"
+cheat12_code = "220F8101+00000003"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Ball 06: Blue and White Ball"
+cheat13_code = "220F8101+0000000C"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Ball 07: Spiked Ball"
+cheat14_code = "220F8101+00000007"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Ball 08: Watermelon Ball"
+cheat15_code = "220F8101+00000006"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Ball 09: Jack-O-Lantern Ball"
+cheat16_code = "220F8101+00000008"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Ball 10: Dice Ball"
+cheat17_code = "220F8101+0000000D"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Ball 11: Soccer Ball"
+cheat18_code = "220F8101+00000011"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Ball 12: Star Ball"
+cheat19_code = "220F8101+0000000F"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Ball 13: Yoshi Egg Ball"
+cheat20_code = "220F8101+0000000B"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Ball 14: Cheep-Cheep Ball"
+cheat21_code = "220F8101+0000000A"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Ball 15: Goomba Ball"
+cheat22_code = "220F8101+00000010"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Ball 16: Rainbow Ball"
+cheat23_code = "220F8101+0000000E"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Ball 17: Silver Ball"
+cheat24_code = "220F8101+00000002"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Ball 18: Golden Ball"
+cheat25_code = "220F8101+00000001"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Mario"
+cheat26_code = "220F8100+00000000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Luigi"
+cheat27_code = "220F8100+00000001"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Peach"
+cheat28_code = "220F8100+00000002"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Daisy"
+cheat29_code = "220F8100+00000003"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Yoshi"
+cheat30_code = "220F8100+00000004"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Wario"
+cheat31_code = "220F8100+00000006"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Waluigi"
+cheat32_code = "220F8100+00000007"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Donky Kong"
+cheat33_code = "220F8100+00000008"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Diddy Kong"
+cheat34_code = "220F8100+00000009"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Bowser Jr."
+cheat35_code = "220F8100+0000000E"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Bowser"
+cheat36_code = "220F8100+0000000D"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Paratroopa"
+cheat37_code = "220F8100+0000000B"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Dixie Kong"
+cheat38_code = "220F8100+0000000A"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Birdo"
+cheat39_code = "220F8100+00000005"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Boo"
+cheat40_code = "220F8100+00000010"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Fly Guy"
+cheat41_code = "220F8100+0000000F"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Ninja"
+cheat42_code = "220F8100+00000011"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] White Mage"
+cheat43_code = "220F8100+00000012"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Black Mage"
+cheat44_code = "220F8100+00000013"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Moogle"
+cheat45_code = "220F8100+00000014"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Cactuar"
+cheat46_code = "220F8100+00000015"
+cheat46_enable = false

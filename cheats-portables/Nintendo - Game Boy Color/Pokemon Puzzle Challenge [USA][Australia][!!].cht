@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Pokemon Puzzle Challenge [USA][Australia][!!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Pokemon%20Puzzle%20Challenge%20(USA%2C%20Australia).cht
+
+cheats = 7
+
+cheat0_desc = "[Format source non précisé] Max Score"
+cheat0_code = "01FF42C8+01FF43C8+01FF44C8"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Stop Timer"
+cheat1_code = "01006BC8"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Game Speed Modifier"
+cheat2_code = "0100A6CE"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Level Modifier"
+cheat3_code = "0100FDDE"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Debug Menu"
+cheat4_code = "011FB6FF"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Skip the Only For GBC screen"
+cheat5_code = "1F3-2B8-912"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Start Game In The Debug Menu"
+cheat6_code = "1F0-23B-80E"
+cheat6_enable = false

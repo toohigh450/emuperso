@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Saru Saru DS (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Saru%20Saru%20DS%20(Japan).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] Enable Options"
+cheat0_code = "221F1EF8+00000001"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Food Never Decrease"
+cheat1_code = "02035860+E1A0400E+02035874+E1A02002"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Stonewares When Receiving Some"
+cheat2_code = "120356CE+0000E1A0"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Food When Receiving Some"
+cheat3_code = "02035770+E59F201C+02035788+E59F0004"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Brain Capacity Becomes 1500CC After Season"
+cheat4_code = "E2000000+00000018+E59F1008+E1C311B8+E1D311B8+EA00D54B+000005DC+E1A00000+52000000+E59F1008+0203553C+EAFF2AAF+D0000000+00000000"
+cheat4_enable = false

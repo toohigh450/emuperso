@@ -1,0 +1,108 @@
+# Recherche locale pour la ROM : Dexter's Laboratory - Deesaster Strikes! (Europe) (En,Fr,De,Es,It).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Dexter's%20Laboratory%20-%20Deesaster%20Strikes!%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 25
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00003EC4+000A+1000066C+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Health"
+cheat1_code = "820325BE+0082"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Tries"
+cheat2_code = "820325BC+0009"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Max Dee Dee's"
+cheat3_code = "32032610+0063"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Have Wrench"
+cheat4_code = "320325E0+0003"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Have Screwdriver"
+cheat5_code = "320325E2+0004"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Have Pliers"
+cheat6_code = "320325E4+0005"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Have Soldering Tool"
+cheat7_code = "320325E6+0006"
+cheat7_enable = false
+
+cheat8_desc = "[Code Breaker] Have Hammer"
+cheat8_code = "320325E8+0007"
+cheat8_enable = false
+
+cheat9_desc = "[Code Breaker] Have Drill"
+cheat9_code = "320325EA+0008"
+cheat9_enable = false
+
+cheat10_desc = "[Code Breaker] Have Zap-a-tron"
+cheat10_code = "320325EC+0009"
+cheat10_enable = false
+
+cheat11_desc = "[Code Breaker] Have Splurgerator"
+cheat11_code = "320325EE+000B"
+cheat11_enable = false
+
+cheat12_desc = "[Code Breaker] Have Green Keycard"
+cheat12_code = "320325F0+000C"
+cheat12_enable = false
+
+cheat13_desc = "[Code Breaker] Have Blue Keycard"
+cheat13_code = "320325F2+000D"
+cheat13_enable = false
+
+cheat14_desc = "[Code Breaker] Have Red Keycard"
+cheat14_code = "320325F4+000E"
+cheat14_enable = false
+
+cheat15_desc = "[Code Breaker] Have Yellow Keycard"
+cheat15_code = "320325F6+000F"
+cheat15_enable = false
+
+cheat16_desc = "[Code Breaker] Have Brown Keycard"
+cheat16_code = "320325F8+0010"
+cheat16_enable = false
+
+cheat17_desc = "[Code Breaker] Have Green Key"
+cheat17_code = "320325FA+0012"
+cheat17_enable = false
+
+cheat18_desc = "[Code Breaker] Have Red Key"
+cheat18_code = "320325FC+0013"
+cheat18_enable = false
+
+cheat19_desc = "[Code Breaker] Have Yellow Key"
+cheat19_code = "320325FE+0014"
+cheat19_enable = false
+
+cheat20_desc = "[Code Breaker] Have Red Gem"
+cheat20_code = "32032600+0016"
+cheat20_enable = false
+
+cheat21_desc = "[Code Breaker] Have Green Gem"
+cheat21_code = "32032602+0017"
+cheat21_enable = false
+
+cheat22_desc = "[Code Breaker] Have Blue Gem"
+cheat22_code = "32032604+0018"
+cheat22_enable = false
+
+cheat23_desc = "[Code Breaker] Have Yellow Gem"
+cheat23_code = "32032606+0019"
+cheat23_enable = false
+
+cheat24_desc = "[Code Breaker] Have Yellow Pill"
+cheat24_code = "32032608+0015"
+cheat24_enable = false

@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : SpongeBob SquarePants featuring Nicktoons - Globs of Doom (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/SpongeBob%20SquarePants%20featuring%20Nicktoons%20-%20Globs%20of%20Doom%20(Europe).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Diamond Max"
+cheat0_code = "121496EC+0000270F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Star Max"
+cheat1_code = "021496B8+7FFFFFFF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Basic Life Max"
+cheat2_code = "021496C8+000003E8+021496CC+000003E8"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Addon Life Max"
+cheat3_code = "021496D0+000003E8+021496D4+000003E8"
+cheat3_enable = false

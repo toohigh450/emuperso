@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Pro Evolution Soccer 6 (Europe) (En,Fr,De,Es,It) (Rev 1).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Pro%20Evolution%20Soccer%206%20(Europe)%20(Rev%201).cht
+
+cheats = 7
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "521D2E38+EE070F90+E2000358+00000046+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2F36B9D+03D9014B+0009000A+00000000+021D2E38+E92D401E+021D2E3C+FAF8B545+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Score in Your Own Goal For Extra Goals"
+cheat1_code = "0208AE7C+E3A02001+0208AEAC+E3A03001+0208AED4+E3A03001"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Silver Coins"
+cheat2_code = "0225DF9C+0000270F"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Gold Coins"
+cheat3_code = "0225DF98+0000270F"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Wins"
+cheat4_code = "0225DFA0+0000270F"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] No Losses"
+cheat5_code = "0225DFA4+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] No Draws"
+cheat6_code = "0225DFA8+00000000"
+cheat6_enable = false

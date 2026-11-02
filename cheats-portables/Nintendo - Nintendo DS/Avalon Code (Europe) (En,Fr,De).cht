@@ -1,0 +1,92 @@
+# Recherche locale pour la ROM : Avalon Code (Europe) (En,Fr,De).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Avalon%20Code%20(Europe).cht
+
+cheats = 21
+
+cheat0_desc = "[Action Replay] Max Zeno-9 Cards (Select)"
+cheat0_code = "94000130+FFFB0000+1215A16A+00000063+D0000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Mystic Jewel (Select)"
+cheat1_code = "94000130+FFFB0000+1215A16C+0000270F+D0000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Movement Speed x2"
+cheat2_code = "5216431C+21640300+121642F6+00002602+1216431C+00000340+D0000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Enable Map Warp"
+cheat3_code = "1208879E+000046C0"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Reset Game Time (L+R+A+B)"
+cheat4_code = "94000130+FCFC0000+0214DC08+00000000+0214DC3C+00000000+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Dungeon Time Never Decrease"
+cheat5_code = "120F1D6C+00002000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Complete Tablets as Unread (Select)"
+cheat6_code = "94000130+FFFB0000+1215F792+00000101+C0000000+00000071+0215F794+01010101+DC000000+00000004+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Refill HP and HP Become Max (L+R)"
+cheat7_code = "94000130+FCFF0000+0215A172+00001414+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Refill HP to Current Value (L+R)"
+cheat8_code = "94000130+FCFF0000+DB000000+0215A172+D8000000+0215A173+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Refill to MAX (L)"
+cheat9_code = "94000130+FDFF0000+1215A172+00001414+D0000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Refill MP and MP Become Max (L+R)"
+cheat10_code = "94000130+FCFF0000+0215A178+01900190+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Refill MP to Current Value (L+R)"
+cheat11_code = "94000130+FCFF0000+DA000000+0215A178+D7000000+0215A17A+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Refill MP to Current Value (Select)"
+cheat12_code = "94000130+FFFB0000+DA000000+0215A178+D7000000+0215A17A+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Refill to MAX (L)"
+cheat13_code = "94000130+FDFF0000+0215A178+01900190+D0000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] x2"
+cheat14_code = "121830EA+00000056"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] x4"
+cheat15_code = "121830EA+00000096"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] x8"
+cheat16_code = "121830EA+000000D6"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] x16"
+cheat17_code = "121830EA+00000116"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] x32"
+cheat18_code = "121830EA+00000156"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] x64"
+cheat19_code = "121830EA+00000156"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] x128"
+cheat20_code = "121830EA+000001D6"
+cheat20_enable = false

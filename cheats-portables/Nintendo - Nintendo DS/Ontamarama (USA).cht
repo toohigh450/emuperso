@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Ontamarama (USA).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Ontamarama%20(USA).cht
+
+cheats = 7
+
+cheat0_desc = "[Action Replay] Max Score"
+cheat0_code = "0206CE04+000F423F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Chain"
+cheat1_code = "1206CE16+00000063+1206CE18+00000063"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Performance"
+cheat2_code = "2206CE34+00000064+1206CE38+000003E8"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Infinite Specials"
+cheat3_code = "6208321C+00000000+B208321C+00000000+2000005C+00000005+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Stats (Rank S)"
+cheat4_code = "0206CE0C+03E703E7+0206CE10+000003E7"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Max Op"
+cheat5_code = "0206CE64+0001869F"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Auto Kill Monsters and Fill Commands"
+cheat6_code = "6208321C+00000000+B208321C+00000000+20000054+00000001+20000058+00000001+D2000000+00000000"
+cheat6_enable = false

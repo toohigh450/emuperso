@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Elemental Monster - Itsu Hashira Gami no Nazo (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Elemental%20Monster%20-%20Itsu%20Hashira%20Gami%20no%20Nazo%20(Japan).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "520E3648+EE070F90+E2000568+0000004A+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2E46111+015D0012+000A0365+00730009+00000000+00000000+020E3648+E92D401E+020E364C+FAFC73C5+D2000000+00000000"
+cheat0_enable = false

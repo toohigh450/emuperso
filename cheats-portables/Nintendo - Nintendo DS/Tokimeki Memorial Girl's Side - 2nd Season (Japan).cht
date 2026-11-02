@@ -1,0 +1,152 @@
+# Recherche locale pour la ROM : Tokimeki Memorial Girl's Side - 2nd Season (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Tokimeki%20Memorial%20Girl's%20Side%20-%202nd%20Season%20(Japan).cht
+
+cheats = 36
+
+cheat0_desc = "[Action Replay] Unlock All Album and Ending (Select)"
+cheat0_code = "92254AA4+00000004+12142084+00000FFF+C0000000+00000010+12142062+0000FFFF+DC000000+00000002+D2000000+00000000+D0000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Stats"
+cheat1_code = "0214216C+00000000+12142170+000003E7+E2142154+00000018+0001863C+0001863C+0001863C+0001863C+0001863C+0001863C"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Intelligence"
+cheat2_code = "02142154+0001863C"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Arts"
+cheat3_code = "02142158+0001863C"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Fashion"
+cheat4_code = "0214215C+0001863C"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Max Fitness"
+cheat5_code = "02142160+0001863C"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Max Social"
+cheat6_code = "02142164+0001863C"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Max Charm"
+cheat7_code = "02142168+0001863C"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] 0 Stress"
+cheat8_code = "0214216C+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Max/Infinite Money"
+cheat9_code = "12142170+000003E7"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Contributions in Society/Club"
+cheat10_code = "C0000000+00000008+1214211C+0000F000+DC000000+00000004+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] All Society/Club Available"
+cheat11_code = "C0000000+00000008+2214211F+00000000+DC000000+00000004+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] All Jobs Available"
+cheat12_code = "D5000000+00008000+C0000000+00000006+D7000000+02142142+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] All Characters Unlocked"
+cheat13_code = "C0000000+0000000B+22142265+000000BF+DC000000+000000AC+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] All Clothing and Accessories (Select)"
+cheat14_code = "92254AA4+00000004+C0000000+00000036+221429DC+000000FF+DC000000+00000001+D2000000+00000000+D0000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] 999 Intelligence"
+cheat15_code = "1203631E+0000E583"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] 999 Arts"
+cheat16_code = "1203636E+0000E583"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] 999 Fashion"
+cheat17_code = "120363BE+0000E583"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] 999 Fitness"
+cheat18_code = "1203640E+0000E583"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] 999 Social"
+cheat19_code = "1203645E+0000E583"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] 999 Charm"
+cheat20_code = "120364AE+0000E583"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Stress Never Increases"
+cheat21_code = "02036590+E3A00000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Saeki Teru"
+cheat22_code = "021421F4+00FF0000+121421FA+00000505+12142270+000001C2"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Katsumi Shiba"
+cheat23_code = "2214229C+000000FF+021422A0+00FF0000+121422A6+00000505+1214231C+000001C2"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Itaru Hikami"
+cheat24_code = "22142348+000000FF+0214234C+00FF0000+12142352+00000505+121423C8+000001C2"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Kounoshin Hariya"
+cheat25_code = "221423F4+000000FF+021423F8+00FF0000+121423FE+00000505+12142474+000001C2"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Christopher Weatherfield"
+cheat26_code = "221424A0+000000FF+021424A4+00FF0000+121424AA+00000505+12142520+000001C2"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Syota Amachi"
+cheat27_code = "2214254C+000000FF+02142550+00FF0000+12142556+00000505+121425CC+000001C2"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Takafumi Wakaoji"
+cheat28_code = "221425F8+000000FF+021425FC+00FF0000+12142602+00000505+12142678+000001C2"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Motoharu Masaki"
+cheat29_code = "221426A4+000000FF+021426A8+00FF0000+121426AE+00000505+12142724+000001C2"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Tasuko Todo"
+cheat30_code = "22142750+000000FF+02142754+00FF0000+1214275A+00000505+121427D0+000001C2"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Chiyomi Onoda"
+cheat31_code = "221427FC+000000FF+02142800+00FF0000+12142806+00000505+1214287C+000001C2"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Haruhi Nishimoto"
+cheat32_code = "221428A8+000000FF+021428AC+00FF0000+121428B2+00000505+12142928+000001C2"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Hisoka Mizushima"
+cheat33_code = "22142954+000000FF+02142958+00FF0000+1214295E+00000505+121429D4+000001C2"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] All Characters Max Affection"
+cheat34_code = "92254AA4+00000004+C0000000+0000000B+221421F0+000000FF+021421F4+00FF0000+121421FA+00000505+12142270+000001C2+DC000000+000000AC+D2000000+00000000+D0000000+00000000"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Best Relationship with All Girls (Select)"
+cheat35_code = "92254AA4+00000004+C0000000+0000000B+221421F0+000000FF+021421F4+00FF01F3+121421FA+00000505+12142270+000001C2+DC000000+000000AC+D2000000+00000000+D0000000+00000000"
+cheat35_enable = false

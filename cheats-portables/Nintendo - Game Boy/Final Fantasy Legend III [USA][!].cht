@@ -1,0 +1,1741 @@
+# Recherche locale pour la ROM : Final Fantasy Legend III [USA][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Final%20Fantasy%20Legend%20III%20(USA)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Final%20Fantasy%20Legend%20III%20(USA).cht
+
+cheats = 433
+
+cheat0_desc = "[Game Genie] Set Initial Power To Mega-Power"
+cheat0_code = "FFA-928-E6A+FF8-918-2A2+FF8-938-2A2"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Always 'Strike First'"
+cheat1_code = "FFA-A09-343"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Everyone Is Confused (Monsters & Party)"
+cheat2_code = "FFA-419-343"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Instant Win (Glitched)"
+cheat3_code = "FFA-409-343"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] Party Attacks Monster With Its Own Attack!"
+cheat4_code = "78A-409-343"
+cheat4_enable = false
+
+cheat5_desc = "[Game Genie] Run Away From Anything! (Even Bosses)"
+cheat5_code = "FFA-B4B-AA3"
+cheat5_enable = false
+
+cheat6_desc = "[Game Genie] Attacks On One Monster Will Hit All Monsters"
+cheat6_code = "45D-BA8-123"
+cheat6_enable = false
+
+cheat7_desc = "[Game Genie] Characters Gain More GP And EXP"
+cheat7_code = "D77-CAA-356"
+cheat7_enable = false
+
+cheat8_desc = "[Game Genie] Killing Leftmost Or Top-Left Monster Kills All Attacking Monsters"
+cheat8_code = "024-CAA-356"
+cheat8_enable = false
+
+cheat9_desc = "[Game Genie] Buy Anything In Shop For Free"
+cheat9_code = "FA7-908"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Always 'Strike First'"
+cheat10_code = "FFA-A09-3B3"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Everyone Is Confused (Monsters &amp; Party)"
+cheat11_code = "FFA-419-3B3"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Instant Win (Glitched)"
+cheat12_code = "FFA-409-3B3"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Party Attacks Monster With Its Own Attack!"
+cheat13_code = "78A-409-3B3"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Run Away From Anything! (Even Bosses)"
+cheat14_code = "FFA-B4B-A23"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Attacks On One Monster Will Hit All Monsters"
+cheat15_code = "45D-BA8-193"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Characters Gain More GP And EXP"
+cheat16_code = "D77-CAA-3B6"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Killing Leftmost Or Top-Left Monster Kills All Attacking Monsters"
+cheat17_code = "024-CAA-3B6"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Character 1 (HERO - Arthur)"
+cheat18_code = "FFA-878-E6E"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Character 2 (Boy - Curtis)"
+cheat19_code = "FFA-E78-E6E"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Character 3 (Girl - Gloria)"
+cheat20_code = "FFB-478-E6A"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Character 4 (Heroine - Sharon)"
+cheat21_code = "FFB-A78-E6A"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Makes The Price of Cure1 About 65,000+ Gold"
+cheat22_code = "FFF-D08-E6A"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Makes The Price of Cure2 About 65,000+ Gold"
+cheat23_code = "FFF-D28-E6A"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Makes The Price of Cure3 About 65,000+ Gold"
+cheat24_code = "FFF-D48-E6E"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Item Shop In Dharm, Present"
+cheat25_code = "008-C68-E69"
+cheat25_enable = false
+
+cheat26_desc = "[Format source non précisé] Item Shop In Elan, Past Or Future"
+cheat26_code = "008-D28-E6D"
+cheat26_enable = false
+
+cheat27_desc = "[Format source non précisé] Item Shop In Floatland Town"
+cheat27_code = "008-DE8-E6D"
+cheat27_enable = false
+
+cheat28_desc = "[Format source non précisé] Item Shop In Darius (1st Town In PureLand)"
+cheat28_code = "008-F08-E61"
+cheat28_enable = false
+
+cheat29_desc = "[Format source non précisé] Set initial power to mega-power"
+cheat29_code = "FFA-928-E6A+FF8-918-2A2+FF8-938-2A2"
+cheat29_enable = false
+
+cheat30_desc = "[Format source non précisé] Hero In Main Menu Has Infinite Magic Power (Arthur)"
+cheat30_code = "01FF14C5"
+cheat30_enable = false
+
+cheat31_desc = "[Format source non précisé] Mutant 1 Has Infinite Magic Power in Main Menu (Curtis)"
+cheat31_code = "01FF74C5"
+cheat31_enable = false
+
+cheat32_desc = "[Format source non précisé] Mutant 2 Has Infinite Magic Power in Main Menu (Gloria)"
+cheat32_code = "01FFD4C5"
+cheat32_enable = false
+
+cheat33_desc = "[Format source non précisé] Heroine Has Infinite Magic Power in Main Menu (Sharon)"
+cheat33_code = "01FFC4C6"
+cheat33_enable = false
+
+cheat34_desc = "[Format source non précisé] Infinite GP"
+cheat34_code = "01C700CB+01BDE1C6"
+cheat34_enable = false
+
+cheat35_desc = "[Format source non précisé] All Characters Have Infinite HP (Overworld Only)"
+cheat35_code = "01DE10C5+017770C5+0162D0C5+012830C6+01D890C6"
+cheat35_enable = false
+
+cheat36_desc = "[Format source non précisé] Infinite Gold"
+cheat36_code = "010FE2C6+0142E1C6+013FE0C6"
+cheat36_enable = false
+
+cheat37_desc = "[Format source non précisé] Wierd Music"
+cheat37_code = "010306CB"
+cheat37_enable = false
+
+cheat38_desc = "[Format source non précisé] Walk Thru Walls [Everywhere]"
+cheat38_code = "01F490C2+010D90C2"
+cheat38_enable = false
+
+cheat39_desc = "[Format source non précisé] Slot 1"
+cheat39_code = "010900C7"
+cheat39_enable = false
+
+cheat40_desc = "[Format source non précisé] Slot 2"
+cheat40_code = "010902C7"
+cheat40_enable = false
+
+cheat41_desc = "[Format source non précisé] Slot 3"
+cheat41_code = "010904C7"
+cheat41_enable = false
+
+cheat42_desc = "[Format source non précisé] Slot 4"
+cheat42_code = "010906C7"
+cheat42_enable = false
+
+cheat43_desc = "[Format source non précisé] Slot 5"
+cheat43_code = "010908C7"
+cheat43_enable = false
+
+cheat44_desc = "[Format source non précisé] Slot 6"
+cheat44_code = "01090AC7"
+cheat44_enable = false
+
+cheat45_desc = "[Format source non précisé] Slot 7"
+cheat45_code = "01090CC7"
+cheat45_enable = false
+
+cheat46_desc = "[Format source non précisé] Slot 8"
+cheat46_code = "01090EC7"
+cheat46_enable = false
+
+cheat47_desc = "[Format source non précisé] Slot 9"
+cheat47_code = "010910C7"
+cheat47_enable = false
+
+cheat48_desc = "[Format source non précisé] Slot 10"
+cheat48_code = "010912C7"
+cheat48_enable = false
+
+cheat49_desc = "[Format source non précisé] Slot 11"
+cheat49_code = "010914C7"
+cheat49_enable = false
+
+cheat50_desc = "[Format source non précisé] Slot 12"
+cheat50_code = "010916C7"
+cheat50_enable = false
+
+cheat51_desc = "[Format source non précisé] Slot 13"
+cheat51_code = "010918C7"
+cheat51_enable = false
+
+cheat52_desc = "[Format source non précisé] Slot 14"
+cheat52_code = "01091AC7"
+cheat52_enable = false
+
+cheat53_desc = "[Format source non précisé] Slot 15"
+cheat53_code = "01091CC7"
+cheat53_enable = false
+
+cheat54_desc = "[Format source non précisé] Slot 16"
+cheat54_code = "01091EC7"
+cheat54_enable = false
+
+cheat55_desc = "[Format source non précisé] Slot 17"
+cheat55_code = "010920C7"
+cheat55_enable = false
+
+cheat56_desc = "[Format source non précisé] Slot 18"
+cheat56_code = "010922C7"
+cheat56_enable = false
+
+cheat57_desc = "[Format source non précisé] Slot 19"
+cheat57_code = "010924C7"
+cheat57_enable = false
+
+cheat58_desc = "[Format source non précisé] Slot 20"
+cheat58_code = "010926C7"
+cheat58_enable = false
+
+cheat59_desc = "[Format source non précisé] 1st Position"
+cheat59_code = "01002BCE"
+cheat59_enable = false
+
+cheat60_desc = "[Format source non précisé] 2nd Position"
+cheat60_code = "01002CCE"
+cheat60_enable = false
+
+cheat61_desc = "[Format source non précisé] 3rd Position"
+cheat61_code = "01002DCE"
+cheat61_enable = false
+
+cheat62_desc = "[Format source non précisé] 4th Position"
+cheat62_code = "01002ECE"
+cheat62_enable = false
+
+cheat63_desc = "[Format source non précisé] Quick Level Gain"
+cheat63_code = "01FF06C5"
+cheat63_enable = false
+
+cheat64_desc = "[Format source non précisé] Infinite HP [Small]"
+cheat64_code = "01FF10C5"
+cheat64_enable = false
+
+cheat65_desc = "[Format source non précisé] Infinite HP [Large]"
+cheat65_code = "01FF11C5"
+cheat65_enable = false
+
+cheat66_desc = "[Format source non précisé] Max HP [Small]"
+cheat66_code = "01FF12C5"
+cheat66_enable = false
+
+cheat67_desc = "[Format source non précisé] Max HP [Large]"
+cheat67_code = "01FF13C5"
+cheat67_enable = false
+
+cheat68_desc = "[Format source non précisé] Infinite MP [Large]"
+cheat68_code = "01FF15C5"
+cheat68_enable = false
+
+cheat69_desc = "[Format source non précisé] Max MP [Small]"
+cheat69_code = "01FF16C6"
+cheat69_enable = false
+
+cheat70_desc = "[Format source non précisé] Max MP [Large]"
+cheat70_code = "01FF17C7"
+cheat70_enable = false
+
+cheat71_desc = "[Format source non précisé] Max Attack"
+cheat71_code = "01FF18C5"
+cheat71_enable = false
+
+cheat72_desc = "[Format source non précisé] Max Defence"
+cheat72_code = "01FF19C5"
+cheat72_enable = false
+
+cheat73_desc = "[Format source non précisé] Max Ability"
+cheat73_code = "01FF1AC5"
+cheat73_enable = false
+
+cheat74_desc = "[Format source non précisé] Max Magic"
+cheat74_code = "01FF1BC5"
+cheat74_enable = false
+
+cheat75_desc = "[Format source non précisé] Quick Level Gain"
+cheat75_code = "01FF66C5"
+cheat75_enable = false
+
+cheat76_desc = "[Format source non précisé] Infinite HP [Small]"
+cheat76_code = "01FF70C5"
+cheat76_enable = false
+
+cheat77_desc = "[Format source non précisé] Infinite HP [Large]"
+cheat77_code = "01FF71C5"
+cheat77_enable = false
+
+cheat78_desc = "[Format source non précisé] Max HP [Small]"
+cheat78_code = "01FF72C5"
+cheat78_enable = false
+
+cheat79_desc = "[Format source non précisé] Max HP [Large]"
+cheat79_code = "01FF73C5"
+cheat79_enable = false
+
+cheat80_desc = "[Format source non précisé] Infinite MP [Large]"
+cheat80_code = "01FF75C5"
+cheat80_enable = false
+
+cheat81_desc = "[Format source non précisé] Max MP [Small]"
+cheat81_code = "01FF76C5"
+cheat81_enable = false
+
+cheat82_desc = "[Format source non précisé] Max MP [Large]"
+cheat82_code = "01FF77C5"
+cheat82_enable = false
+
+cheat83_desc = "[Format source non précisé] Max Attack"
+cheat83_code = "01FF78C5"
+cheat83_enable = false
+
+cheat84_desc = "[Format source non précisé] Max Defence"
+cheat84_code = "01FF79C5"
+cheat84_enable = false
+
+cheat85_desc = "[Format source non précisé] Max Ability"
+cheat85_code = "01FF7AC5"
+cheat85_enable = false
+
+cheat86_desc = "[Format source non précisé] Max Magic"
+cheat86_code = "01FF7BC5"
+cheat86_enable = false
+
+cheat87_desc = "[Format source non précisé] Quick Level Gain"
+cheat87_code = "01FFC6C5"
+cheat87_enable = false
+
+cheat88_desc = "[Format source non précisé] Infinite HP [Small]"
+cheat88_code = "01FFD0C5"
+cheat88_enable = false
+
+cheat89_desc = "[Format source non précisé] Infinite HP [Large]"
+cheat89_code = "01FFD1C5"
+cheat89_enable = false
+
+cheat90_desc = "[Format source non précisé] Max HP [Small"
+cheat90_code = "01FFD2C5"
+cheat90_enable = false
+
+cheat91_desc = "[Format source non précisé] Max HP [Large]"
+cheat91_code = "01FFD3C5"
+cheat91_enable = false
+
+cheat92_desc = "[Format source non précisé] Infinite MP [Large]"
+cheat92_code = "01FFD5C5"
+cheat92_enable = false
+
+cheat93_desc = "[Format source non précisé] Max MP [Small]"
+cheat93_code = "01FFD6C5"
+cheat93_enable = false
+
+cheat94_desc = "[Format source non précisé] Max MP [Large]"
+cheat94_code = "01FFD7C5"
+cheat94_enable = false
+
+cheat95_desc = "[Format source non précisé] Max Attack"
+cheat95_code = "01FFD8C5"
+cheat95_enable = false
+
+cheat96_desc = "[Format source non précisé] Max Defence"
+cheat96_code = "01FFD9C5"
+cheat96_enable = false
+
+cheat97_desc = "[Format source non précisé] Max Ability"
+cheat97_code = "01FFDAC5"
+cheat97_enable = false
+
+cheat98_desc = "[Format source non précisé] Max Magic"
+cheat98_code = "01FFDBC5"
+cheat98_enable = false
+
+cheat99_desc = "[Format source non précisé] Quick Level Gain"
+cheat99_code = "01FF25C6"
+cheat99_enable = false
+
+cheat100_desc = "[Format source non précisé] Infinite HP [Small]"
+cheat100_code = "01FF30C6"
+cheat100_enable = false
+
+cheat101_desc = "[Format source non précisé] Infinite HP [Large]"
+cheat101_code = "01FF31C6"
+cheat101_enable = false
+
+cheat102_desc = "[Format source non précisé] Max HP [Small]"
+cheat102_code = "01FF32C6"
+cheat102_enable = false
+
+cheat103_desc = "[Format source non précisé] Max HP [Large]"
+cheat103_code = "01FF33C6"
+cheat103_enable = false
+
+cheat104_desc = "[Format source non précisé] Infinite MP [Small]"
+cheat104_code = "01FF34C6"
+cheat104_enable = false
+
+cheat105_desc = "[Format source non précisé] Infinite MP [Large]"
+cheat105_code = "01FF35C6"
+cheat105_enable = false
+
+cheat106_desc = "[Format source non précisé] Max MP [Small]"
+cheat106_code = "01FF36C6"
+cheat106_enable = false
+
+cheat107_desc = "[Format source non précisé] Max MP [Large]"
+cheat107_code = "01FF37C6"
+cheat107_enable = false
+
+cheat108_desc = "[Format source non précisé] Max Attack"
+cheat108_code = "01FF38C6"
+cheat108_enable = false
+
+cheat109_desc = "[Format source non précisé] Max Defence"
+cheat109_code = "01FF39C6"
+cheat109_enable = false
+
+cheat110_desc = "[Format source non précisé] Max Ability"
+cheat110_code = "01FF3AC6"
+cheat110_enable = false
+
+cheat111_desc = "[Format source non précisé] Max Magic"
+cheat111_code = "01FF3BC6"
+cheat111_enable = false
+
+cheat112_desc = "[Format source non précisé] Infinite HP [Small]"
+cheat112_code = "01FF90C6"
+cheat112_enable = false
+
+cheat113_desc = "[Format source non précisé] Infinite HP [Large]"
+cheat113_code = "01FF91C6"
+cheat113_enable = false
+
+cheat114_desc = "[Format source non précisé] Max HP [Small]"
+cheat114_code = "01FF92C6"
+cheat114_enable = false
+
+cheat115_desc = "[Format source non précisé] Max HP [Large]"
+cheat115_code = "01FF93C6"
+cheat115_enable = false
+
+cheat116_desc = "[Format source non précisé] Infinite MP [Small]"
+cheat116_code = "01FF94C6"
+cheat116_enable = false
+
+cheat117_desc = "[Format source non précisé] Infinite MP [Large]"
+cheat117_code = "01FF95C6"
+cheat117_enable = false
+
+cheat118_desc = "[Format source non précisé] Max MP [Small]"
+cheat118_code = "01FF96C6"
+cheat118_enable = false
+
+cheat119_desc = "[Format source non précisé] Max MP [Large]"
+cheat119_code = "01FF97C6"
+cheat119_enable = false
+
+cheat120_desc = "[Format source non précisé] Max Attack"
+cheat120_code = "01FF98C6"
+cheat120_enable = false
+
+cheat121_desc = "[Format source non précisé] Max Defence"
+cheat121_code = "01FF99C6"
+cheat121_enable = false
+
+cheat122_desc = "[Format source non précisé] Max Ability"
+cheat122_code = "01FF9AC6"
+cheat122_enable = false
+
+cheat123_desc = "[Format source non précisé] Max Magic"
+cheat123_code = "01FF9BC6"
+cheat123_enable = false
+
+cheat124_desc = "[Format source non précisé] No Random Battles"
+cheat124_code = "01002BCA"
+cheat124_enable = false
+
+cheat125_desc = "[Format source non précisé] Buy Anything In Shop For Free"
+cheat125_code = "FA7-908"
+cheat125_enable = false
+
+cheat126_desc = "[Format source non précisé] Status Modifier"
+cheat126_code = "010061C5"
+cheat126_enable = false
+
+cheat127_desc = "[Format source non précisé] Character Darkened Out Modifier"
+cheat127_code = "010062C5"
+cheat127_enable = false
+
+cheat128_desc = "[Format source non précisé] Level Modifier"
+cheat128_code = "010063C5"
+cheat128_enable = false
+
+cheat129_desc = "[Format source non précisé] NEXT Modifier"
+cheat129_code = "010064C5"
+cheat129_enable = false
+
+cheat130_desc = "[Format source non précisé] EXP. Modifier (Lower)"
+cheat130_code = "010065C5"
+cheat130_enable = false
+
+cheat131_desc = "[Format source non précisé] EXP. Modifier (Higher)"
+cheat131_code = "010066C5"
+cheat131_enable = false
+
+cheat132_desc = "[Format source non précisé] Name Modifier (Character 1)"
+cheat132_code = "010067C5"
+cheat132_enable = false
+
+cheat133_desc = "[Format source non précisé] Name Modifier (Character 2)"
+cheat133_code = "010068C5"
+cheat133_enable = false
+
+cheat134_desc = "[Format source non précisé] Name Modifier (Character 3)"
+cheat134_code = "010069C5"
+cheat134_enable = false
+
+cheat135_desc = "[Format source non précisé] Name Modifier (Character 4)"
+cheat135_code = "01006AC5"
+cheat135_enable = false
+
+cheat136_desc = "[Format source non précisé] Name Modifier (Character 5)"
+cheat136_code = "01006BC5"
+cheat136_enable = false
+
+cheat137_desc = "[Format source non précisé] Name Modifier (Character 6)"
+cheat137_code = "01006CC5"
+cheat137_enable = false
+
+cheat138_desc = "[Format source non précisé] Class Modifier"
+cheat138_code = "01006DC5"
+cheat138_enable = false
+
+cheat139_desc = "[Format source non précisé] Form Modifier"
+cheat139_code = "01006EC5"
+cheat139_enable = false
+
+cheat140_desc = "[Format source non précisé] Total HP Modifier (Lower)"
+cheat140_code = "010070C5"
+cheat140_enable = false
+
+cheat141_desc = "[Format source non précisé] Total HP Modifier (Higher)"
+cheat141_code = "010071C5"
+cheat141_enable = false
+
+cheat142_desc = "[Format source non précisé] Max HP Modifier (Lower)"
+cheat142_code = "010072C5"
+cheat142_enable = false
+
+cheat143_desc = "[Format source non précisé] Max HP Modifier (Higher)"
+cheat143_code = "010073C5"
+cheat143_enable = false
+
+cheat144_desc = "[Format source non précisé] Total MP Modifier (Lower)"
+cheat144_code = "010074C5"
+cheat144_enable = false
+
+cheat145_desc = "[Format source non précisé] Total MP Modifier (Higher)"
+cheat145_code = "010075C5"
+cheat145_enable = false
+
+cheat146_desc = "[Format source non précisé] Max MP Modifier (Lower)"
+cheat146_code = "010076C5"
+cheat146_enable = false
+
+cheat147_desc = "[Format source non précisé] Max MP Modifier (Higher)"
+cheat147_code = "010077C5"
+cheat147_enable = false
+
+cheat148_desc = "[Format source non précisé] Attack Modifier"
+cheat148_code = "010078C5"
+cheat148_enable = false
+
+cheat149_desc = "[Format source non précisé] Defence Modifier"
+cheat149_code = "010079C5"
+cheat149_enable = false
+
+cheat150_desc = "[Format source non précisé] Agility Modifier"
+cheat150_code = "01007AC5"
+cheat150_enable = false
+
+cheat151_desc = "[Format source non précisé] Magic Modifier"
+cheat151_code = "01007BC5"
+cheat151_enable = false
+
+cheat152_desc = "[Format source non précisé] Weapon Modifier"
+cheat152_code = "0100A0C5"
+cheat152_enable = false
+
+cheat153_desc = "[Format source non précisé] Shield Modifier"
+cheat153_code = "0100A1C5"
+cheat153_enable = false
+
+cheat154_desc = "[Format source non précisé] Helmet Modifier"
+cheat154_code = "0100A2C5"
+cheat154_enable = false
+
+cheat155_desc = "[Format source non précisé] Armor Modifier"
+cheat155_code = "0100A3C5"
+cheat155_enable = false
+
+cheat156_desc = "[Format source non précisé] Gloves Modifier"
+cheat156_code = "0100A4C5"
+cheat156_enable = false
+
+cheat157_desc = "[Format source non précisé] Shoes Modifier"
+cheat157_code = "0100A5C5"
+cheat157_enable = false
+
+cheat158_desc = "[Format source non précisé] Other Modifier (1st)"
+cheat158_code = "0100A6C5"
+cheat158_enable = false
+
+cheat159_desc = "[Format source non précisé] Other Modifier (2nd)"
+cheat159_code = "0100A7C5"
+cheat159_enable = false
+
+cheat160_desc = "[Format source non précisé] Hit Modifier"
+cheat160_code = "0100B7C5"
+cheat160_enable = false
+
+cheat161_desc = "[Format source non précisé] Evade Modifier"
+cheat161_code = "01009DC5"
+cheat161_enable = false
+
+cheat162_desc = "[Format source non précisé] M. Def. Modifier"
+cheat162_code = "01009EC5"
+cheat162_enable = false
+
+cheat163_desc = "[Format source non précisé] M. Evade Modifier"
+cheat163_code = "01009FC5"
+cheat163_enable = false
+
+cheat164_desc = "[Format source non précisé] Talent Modifier 1st"
+cheat164_code = "0100A8C5"
+cheat164_enable = false
+
+cheat165_desc = "[Format source non précisé] Talent Modifier 2nd"
+cheat165_code = "0100A9C5"
+cheat165_enable = false
+
+cheat166_desc = "[Format source non précisé] Talent Modifier 3rd"
+cheat166_code = "0100AAC5"
+cheat166_enable = false
+
+cheat167_desc = "[Format source non précisé] Talent Modifier 4th"
+cheat167_code = "0100ABC5"
+cheat167_enable = false
+
+cheat168_desc = "[Format source non précisé] Talent Modifier 5th"
+cheat168_code = "0100ACC5"
+cheat168_enable = false
+
+cheat169_desc = "[Format source non précisé] Talent Modifier 6th"
+cheat169_code = "0100ADC5"
+cheat169_enable = false
+
+cheat170_desc = "[Format source non précisé] Talent Modifier 7th"
+cheat170_code = "0100AEC5"
+cheat170_enable = false
+
+cheat171_desc = "[Format source non précisé] Talent Modifier 8th"
+cheat171_code = "0100AFC5"
+cheat171_enable = false
+
+cheat172_desc = "[Format source non précisé] White Magic Lv1-4 Modifier"
+cheat172_code = "0100B2C5"
+cheat172_enable = false
+
+cheat173_desc = "[Format source non précisé] White Magic Lv5-8 Modifier"
+cheat173_code = "0100B1C5"
+cheat173_enable = false
+
+cheat174_desc = "[Format source non précisé] Black Magic Lv1-4 Modifier"
+cheat174_code = "0100B4C5"
+cheat174_enable = false
+
+cheat175_desc = "[Format source non précisé] Black Magic Lv5-8 Modifier"
+cheat175_code = "0100B3C5"
+cheat175_enable = false
+
+cheat176_desc = "[Format source non précisé] Lost Magic Lv1-4 Modifier"
+cheat176_code = "0100B6C5"
+cheat176_enable = false
+
+cheat177_desc = "[Format source non précisé] Lost Magic Lv5-8 Modifier"
+cheat177_code = "0100B5C5"
+cheat177_enable = false
+
+cheat178_desc = "[Format source non précisé] Status Modifier"
+cheat178_code = "010021C6"
+cheat178_enable = false
+
+cheat179_desc = "[Format source non précisé] Character Darkened Out Modifier"
+cheat179_code = "010022C6"
+cheat179_enable = false
+
+cheat180_desc = "[Format source non précisé] Level Modifier"
+cheat180_code = "010023C6"
+cheat180_enable = false
+
+cheat181_desc = "[Format source non précisé] NEXT Modifier"
+cheat181_code = "010024C6"
+cheat181_enable = false
+
+cheat182_desc = "[Format source non précisé] EXP. Modifier (Lower)"
+cheat182_code = "010025C6"
+cheat182_enable = false
+
+cheat183_desc = "[Format source non précisé] EXP. Modifier (Higher)"
+cheat183_code = "010026C6"
+cheat183_enable = false
+
+cheat184_desc = "[Format source non précisé] Name Modifier (Character 1)"
+cheat184_code = "010027C6"
+cheat184_enable = false
+
+cheat185_desc = "[Format source non précisé] Name Modifier (Character 2)"
+cheat185_code = "010028C6"
+cheat185_enable = false
+
+cheat186_desc = "[Format source non précisé] Name Modifier (Character 3)"
+cheat186_code = "010029C6"
+cheat186_enable = false
+
+cheat187_desc = "[Format source non précisé] Name Modifier (Character 4)"
+cheat187_code = "01002AC6"
+cheat187_enable = false
+
+cheat188_desc = "[Format source non précisé] Name Modifier (Character 5)"
+cheat188_code = "01002BC6"
+cheat188_enable = false
+
+cheat189_desc = "[Format source non précisé] Name Modifier (Character 6)"
+cheat189_code = "01002CC6"
+cheat189_enable = false
+
+cheat190_desc = "[Format source non précisé] Class Modifier"
+cheat190_code = "01002DC6"
+cheat190_enable = false
+
+cheat191_desc = "[Format source non précisé] Form Modifier"
+cheat191_code = "01002EC6"
+cheat191_enable = false
+
+cheat192_desc = "[Format source non précisé] Total HP Modifier (Lower)"
+cheat192_code = "010030C6"
+cheat192_enable = false
+
+cheat193_desc = "[Format source non précisé] Total HP Modifier (Higher)"
+cheat193_code = "010031C6"
+cheat193_enable = false
+
+cheat194_desc = "[Format source non précisé] Max HP Modifier (Lower)"
+cheat194_code = "010032C6"
+cheat194_enable = false
+
+cheat195_desc = "[Format source non précisé] Max HP Modifier (Higher)"
+cheat195_code = "010033C6"
+cheat195_enable = false
+
+cheat196_desc = "[Format source non précisé] Total MP Modifier (Lower)"
+cheat196_code = "010034C6"
+cheat196_enable = false
+
+cheat197_desc = "[Format source non précisé] Total MP Modifier (Higher)"
+cheat197_code = "010035C6"
+cheat197_enable = false
+
+cheat198_desc = "[Format source non précisé] Max MP Modifier (Lower)"
+cheat198_code = "010036C6"
+cheat198_enable = false
+
+cheat199_desc = "[Format source non précisé] Max MP Modifier (Higher)"
+cheat199_code = "010037C6"
+cheat199_enable = false
+
+cheat200_desc = "[Format source non précisé] Attack Modifier"
+cheat200_code = "010038C6"
+cheat200_enable = false
+
+cheat201_desc = "[Format source non précisé] Defence Modifier"
+cheat201_code = "010039C6"
+cheat201_enable = false
+
+cheat202_desc = "[Format source non précisé] Agility Modifier"
+cheat202_code = "01003AC6"
+cheat202_enable = false
+
+cheat203_desc = "[Format source non précisé] Magic Modifier"
+cheat203_code = "01003BC6"
+cheat203_enable = false
+
+cheat204_desc = "[Format source non précisé] Weapon Modifier"
+cheat204_code = "010060C6"
+cheat204_enable = false
+
+cheat205_desc = "[Format source non précisé] Shield Modifier"
+cheat205_code = "010061C6"
+cheat205_enable = false
+
+cheat206_desc = "[Format source non précisé] Helmet Modifier"
+cheat206_code = "010062C6"
+cheat206_enable = false
+
+cheat207_desc = "[Format source non précisé] Armor Modifier"
+cheat207_code = "010063C6"
+cheat207_enable = false
+
+cheat208_desc = "[Format source non précisé] Gloves Modifier"
+cheat208_code = "010064C6"
+cheat208_enable = false
+
+cheat209_desc = "[Format source non précisé] Shoes Modifier"
+cheat209_code = "010065C6"
+cheat209_enable = false
+
+cheat210_desc = "[Format source non précisé] Other Modifier (1st)"
+cheat210_code = "010066C6"
+cheat210_enable = false
+
+cheat211_desc = "[Format source non précisé] Other Modifier (2nd)"
+cheat211_code = "010067C6"
+cheat211_enable = false
+
+cheat212_desc = "[Format source non précisé] Hit Modifier"
+cheat212_code = "010077C6"
+cheat212_enable = false
+
+cheat213_desc = "[Format source non précisé] Evade Modifier"
+cheat213_code = "01005DC6"
+cheat213_enable = false
+
+cheat214_desc = "[Format source non précisé] M. Def. Modifier"
+cheat214_code = "01005EC6"
+cheat214_enable = false
+
+cheat215_desc = "[Format source non précisé] M. Evade Modifier"
+cheat215_code = "01005FC6"
+cheat215_enable = false
+
+cheat216_desc = "[Format source non précisé] Talent Modifier 1st"
+cheat216_code = "010068C6"
+cheat216_enable = false
+
+cheat217_desc = "[Format source non précisé] Talent Modifier 2nd"
+cheat217_code = "010069C6"
+cheat217_enable = false
+
+cheat218_desc = "[Format source non précisé] Talent Modifier 3rd"
+cheat218_code = "01006AC6"
+cheat218_enable = false
+
+cheat219_desc = "[Format source non précisé] Talent Modifier 4th"
+cheat219_code = "01006BC6"
+cheat219_enable = false
+
+cheat220_desc = "[Format source non précisé] Talent Modifier 5th"
+cheat220_code = "01006CC6"
+cheat220_enable = false
+
+cheat221_desc = "[Format source non précisé] Talent Modifier 6th"
+cheat221_code = "01006DC6"
+cheat221_enable = false
+
+cheat222_desc = "[Format source non précisé] Talent Modifier 7th"
+cheat222_code = "01006EC6"
+cheat222_enable = false
+
+cheat223_desc = "[Format source non précisé] Talent Modifier 8th"
+cheat223_code = "01006FC6"
+cheat223_enable = false
+
+cheat224_desc = "[Format source non précisé] White Magic Lv1-4 Modifier"
+cheat224_code = "010072C6"
+cheat224_enable = false
+
+cheat225_desc = "[Format source non précisé] White Magic Lv5-8 Modifier"
+cheat225_code = "010071C6"
+cheat225_enable = false
+
+cheat226_desc = "[Format source non précisé] Black Magic Lv1-4 Modifier"
+cheat226_code = "010074C6"
+cheat226_enable = false
+
+cheat227_desc = "[Format source non précisé] Black Magic Lv5-8 Modifier"
+cheat227_code = "010073C6"
+cheat227_enable = false
+
+cheat228_desc = "[Format source non précisé] Lost Magic Lv1-4 Modifier"
+cheat228_code = "010076C6"
+cheat228_enable = false
+
+cheat229_desc = "[Format source non précisé] Lost Magic Lv5-8 Modifier"
+cheat229_code = "010075C6"
+cheat229_enable = false
+
+cheat230_desc = "[Format source non précisé] Overworld Character Modifer"
+cheat230_code = "011BF3C6"
+cheat230_enable = false
+
+cheat231_desc = "[Format source non précisé] Fast Music"
+cheat231_code = "01FF00CB"
+cheat231_enable = false
+
+cheat232_desc = "[Format source non précisé] A Cool Glitch Code!"
+cheat232_code = "010FA3C0"
+cheat232_enable = false
+
+cheat233_desc = "[Format source non précisé] An Everything Modifier (Store, Events, Etc.)"
+cheat233_code = "01EE0AC2"
+cheat233_enable = false
+
+cheat234_desc = "[Format source non précisé] Easier Way To The Talon Palace (The Place Where The Spacecraft Is)"
+cheat234_code = "0110D1C2"
+cheat234_enable = false
+
+cheat235_desc = "[Format source non précisé] Able To Walk On Water!(Screw Float lol)"
+cheat235_code = "0132E0C2"
+cheat235_enable = false
+
+cheat236_desc = "[Format source non précisé] In Battle Whoever Is In Fifth Postion Will Always Be In Faint/Fall Condition"
+cheat236_code = "01D481C6"
+cheat236_enable = false
+
+cheat237_desc = "[Format source non précisé] Tons Of Random Battles EveryWhere"
+cheat237_code = "01012CCA"
+cheat237_enable = false
+
+cheat238_desc = "[Format source non précisé] No Random Battles AnyWhere"
+cheat238_code = "01002CCA"
+cheat238_enable = false
+
+cheat239_desc = "[Format source non précisé] The Founder Of The Town Dhram(The Towns Elder) And The Water Hag Monster Guarding The Talon Palace Are Always There(World Map)"
+cheat239_code = "01FF04C2"
+cheat239_enable = false
+
+cheat240_desc = "[Format source non précisé] The Founder Of The Town Dhram(The Towns Elder) Will Do/Say Modifier"
+cheat240_code = "010104C2"
+cheat240_enable = false
+
+cheat241_desc = "[Format source non précisé] See 2 Of Yourself (World Map)"
+cheat241_code = "01FF05C2"
+cheat241_enable = false
+
+cheat242_desc = "[Format source non précisé] See 2 Of Yourself And See What You Say/Do Modifier (World Map)"
+cheat242_code = "010005C2"
+cheat242_enable = false
+
+cheat243_desc = "[Format source non précisé] The Water Hag Monster Guarding The Talon Palace Is Gone!"
+cheat243_code = "010006C2"
+cheat243_enable = false
+
+cheat244_desc = "[Format source non précisé] You Are Invisible EveryWhere"
+cheat244_code = "01FF30C2"
+cheat244_enable = false
+
+cheat245_desc = "[Format source non précisé] Water Hag Monster Guarding The Talon Looks Just Your Character's Code"
+cheat245_code = "010086C2"
+cheat245_enable = false
+
+cheat246_desc = "[Format source non précisé] No Debug Room, But A Lot of Interesting Unused Maps"
+cheat246_code = "0100E8C6"
+cheat246_enable = false
+
+cheat247_desc = "[Format source non précisé] Status Modifier"
+cheat247_code = "0100C1C5"
+cheat247_enable = false
+
+cheat248_desc = "[Format source non précisé] Character Darkened Out Modifier"
+cheat248_code = "0100C2C5"
+cheat248_enable = false
+
+cheat249_desc = "[Format source non précisé] Level Modifier"
+cheat249_code = "0100C3C5"
+cheat249_enable = false
+
+cheat250_desc = "[Format source non précisé] NEXT Modifier"
+cheat250_code = "0100C4C5"
+cheat250_enable = false
+
+cheat251_desc = "[Format source non précisé] EXP. Modifier (Lower)"
+cheat251_code = "0100C5C5"
+cheat251_enable = false
+
+cheat252_desc = "[Format source non précisé] EXP. Modifier (Higher)"
+cheat252_code = "0100C6C5"
+cheat252_enable = false
+
+cheat253_desc = "[Format source non précisé] Name Modifier (Character 1)"
+cheat253_code = "0100C7C5"
+cheat253_enable = false
+
+cheat254_desc = "[Format source non précisé] Name Modifier (Character 2)"
+cheat254_code = "0100C8C5"
+cheat254_enable = false
+
+cheat255_desc = "[Format source non précisé] Name Modifier (Character 3)"
+cheat255_code = "0100C9C5"
+cheat255_enable = false
+
+cheat256_desc = "[Format source non précisé] Name Modifier (Character 4)"
+cheat256_code = "0100CAC5"
+cheat256_enable = false
+
+cheat257_desc = "[Format source non précisé] Name Modifier (Character 5)"
+cheat257_code = "0100CBC5"
+cheat257_enable = false
+
+cheat258_desc = "[Format source non précisé] Name Modifier (Character 6)"
+cheat258_code = "0100CCC5"
+cheat258_enable = false
+
+cheat259_desc = "[Format source non précisé] Class Modifier"
+cheat259_code = "0100CDC5"
+cheat259_enable = false
+
+cheat260_desc = "[Format source non précisé] Form Modifier"
+cheat260_code = "0100CEC5"
+cheat260_enable = false
+
+cheat261_desc = "[Format source non précisé] Total HP Modifier (Lower)"
+cheat261_code = "0100D0C5"
+cheat261_enable = false
+
+cheat262_desc = "[Format source non précisé] Total HP Modifier (Higher)"
+cheat262_code = "0100D1C5"
+cheat262_enable = false
+
+cheat263_desc = "[Format source non précisé] Max HP Modifier (Lower)"
+cheat263_code = "0100D2C5"
+cheat263_enable = false
+
+cheat264_desc = "[Format source non précisé] Max HP Modifier (Higher)"
+cheat264_code = "0100D3C5"
+cheat264_enable = false
+
+cheat265_desc = "[Format source non précisé] Total MP Modifier (Lower)"
+cheat265_code = "0100D4C5"
+cheat265_enable = false
+
+cheat266_desc = "[Format source non précisé] Total MP Modifier (Higher)"
+cheat266_code = "0100D5C5"
+cheat266_enable = false
+
+cheat267_desc = "[Format source non précisé] Max MP Modifier (Lower)"
+cheat267_code = "0100D6C5"
+cheat267_enable = false
+
+cheat268_desc = "[Format source non précisé] Max MP Modifier (Higher)"
+cheat268_code = "0100D7C5"
+cheat268_enable = false
+
+cheat269_desc = "[Format source non précisé] Attack Modifier"
+cheat269_code = "0100D8C5"
+cheat269_enable = false
+
+cheat270_desc = "[Format source non précisé] Defence Modifier"
+cheat270_code = "0100D9C5"
+cheat270_enable = false
+
+cheat271_desc = "[Format source non précisé] Agility Modifier"
+cheat271_code = "0100DAC5"
+cheat271_enable = false
+
+cheat272_desc = "[Format source non précisé] Magic Modifier"
+cheat272_code = "0100DBC5"
+cheat272_enable = false
+
+cheat273_desc = "[Format source non précisé] Weapon Modifier"
+cheat273_code = "010000C6"
+cheat273_enable = false
+
+cheat274_desc = "[Format source non précisé] Shield Modifier"
+cheat274_code = "010001C6"
+cheat274_enable = false
+
+cheat275_desc = "[Format source non précisé] Helmet Modifier"
+cheat275_code = "010002C6"
+cheat275_enable = false
+
+cheat276_desc = "[Format source non précisé] Armor Modifier"
+cheat276_code = "010003C6"
+cheat276_enable = false
+
+cheat277_desc = "[Format source non précisé] Gloves Modifier"
+cheat277_code = "010004C6"
+cheat277_enable = false
+
+cheat278_desc = "[Format source non précisé] Shoes Modifier"
+cheat278_code = "010005C6"
+cheat278_enable = false
+
+cheat279_desc = "[Format source non précisé] Other Modifier (1st)"
+cheat279_code = "010006C6"
+cheat279_enable = false
+
+cheat280_desc = "[Format source non précisé] Other Modifier (2nd)"
+cheat280_code = "010007C6"
+cheat280_enable = false
+
+cheat281_desc = "[Format source non précisé] Hit Modifier"
+cheat281_code = "010017C6"
+cheat281_enable = false
+
+cheat282_desc = "[Format source non précisé] Evade Modifier"
+cheat282_code = "0100FDC5"
+cheat282_enable = false
+
+cheat283_desc = "[Format source non précisé] M. Def. Modifier"
+cheat283_code = "0100FEC5"
+cheat283_enable = false
+
+cheat284_desc = "[Format source non précisé] M. Evade Modifier"
+cheat284_code = "0100FFC5"
+cheat284_enable = false
+
+cheat285_desc = "[Format source non précisé] Talent Modifier 1st"
+cheat285_code = "010008C6"
+cheat285_enable = false
+
+cheat286_desc = "[Format source non précisé] Talent Modifier 2nd"
+cheat286_code = "010009C6"
+cheat286_enable = false
+
+cheat287_desc = "[Format source non précisé] Talent Modifier 3rd"
+cheat287_code = "01000AC6"
+cheat287_enable = false
+
+cheat288_desc = "[Format source non précisé] Talent Modifier 4th"
+cheat288_code = "01000BC6"
+cheat288_enable = false
+
+cheat289_desc = "[Format source non précisé] Talent Modifier 5th"
+cheat289_code = "01000CC6"
+cheat289_enable = false
+
+cheat290_desc = "[Format source non précisé] Talent Modifier 6th"
+cheat290_code = "01000DC6"
+cheat290_enable = false
+
+cheat291_desc = "[Format source non précisé] Talent Modifier 7th"
+cheat291_code = "01000EC6"
+cheat291_enable = false
+
+cheat292_desc = "[Format source non précisé] Talent Modifier 8th"
+cheat292_code = "01000FC6"
+cheat292_enable = false
+
+cheat293_desc = "[Format source non précisé] White Magic Lv1-4 Modifier"
+cheat293_code = "010012C6"
+cheat293_enable = false
+
+cheat294_desc = "[Format source non précisé] White Magic Lv5-8 Modifier"
+cheat294_code = "010011C6"
+cheat294_enable = false
+
+cheat295_desc = "[Format source non précisé] Black Magic Lv1-4 Modifier"
+cheat295_code = "010014C6"
+cheat295_enable = false
+
+cheat296_desc = "[Format source non précisé] Black Magic Lv5-8 Modifier"
+cheat296_code = "010013C6"
+cheat296_enable = false
+
+cheat297_desc = "[Format source non précisé] Lost Magic Lv1-4 Modifier"
+cheat297_code = "010016C6"
+cheat297_enable = false
+
+cheat298_desc = "[Format source non précisé] Lost Magic Lv5-8 Modifier"
+cheat298_code = "010015C6"
+cheat298_enable = false
+
+cheat299_desc = "[Format source non précisé] Status Modifier"
+cheat299_code = "010081C6"
+cheat299_enable = false
+
+cheat300_desc = "[Format source non précisé] Character Darkened Out Modifier"
+cheat300_code = "010082C6"
+cheat300_enable = false
+
+cheat301_desc = "[Format source non précisé] Level Modifier"
+cheat301_code = "010083C6"
+cheat301_enable = false
+
+cheat302_desc = "[Format source non précisé] NEXT Modifier"
+cheat302_code = "010084C6"
+cheat302_enable = false
+
+cheat303_desc = "[Format source non précisé] EXP. Modifier (Lower)"
+cheat303_code = "010085C6"
+cheat303_enable = false
+
+cheat304_desc = "[Format source non précisé] EXP. Modifier (Higher)"
+cheat304_code = "010086C6"
+cheat304_enable = false
+
+cheat305_desc = "[Format source non précisé] Name Modifier (Character 1)"
+cheat305_code = "010087C6"
+cheat305_enable = false
+
+cheat306_desc = "[Format source non précisé] Name Modifier (Character 2)"
+cheat306_code = "010088C6"
+cheat306_enable = false
+
+cheat307_desc = "[Format source non précisé] Name Modifier (Character 3)"
+cheat307_code = "010089C6"
+cheat307_enable = false
+
+cheat308_desc = "[Format source non précisé] Name Modifier (Character 4)"
+cheat308_code = "01008AC6"
+cheat308_enable = false
+
+cheat309_desc = "[Format source non précisé] Name Modifier (Character 5)"
+cheat309_code = "01008BC6"
+cheat309_enable = false
+
+cheat310_desc = "[Format source non précisé] Name Modifier (Character 6)"
+cheat310_code = "01008CC6"
+cheat310_enable = false
+
+cheat311_desc = "[Format source non précisé] Class Modifier"
+cheat311_code = "01008DC6"
+cheat311_enable = false
+
+cheat312_desc = "[Format source non précisé] Form Modifier"
+cheat312_code = "01008EC6"
+cheat312_enable = false
+
+cheat313_desc = "[Format source non précisé] Total HP Modifier (Lower)"
+cheat313_code = "010090C6"
+cheat313_enable = false
+
+cheat314_desc = "[Format source non précisé] Total HP Modifier (Higher)"
+cheat314_code = "010091C6"
+cheat314_enable = false
+
+cheat315_desc = "[Format source non précisé] Max HP Modifier (Lower)"
+cheat315_code = "010092C6"
+cheat315_enable = false
+
+cheat316_desc = "[Format source non précisé] Max HP Modifier (Higher)"
+cheat316_code = "010093C6"
+cheat316_enable = false
+
+cheat317_desc = "[Format source non précisé] Total MP Modifier (Lower)"
+cheat317_code = "010094C6"
+cheat317_enable = false
+
+cheat318_desc = "[Format source non précisé] Total MP Modifier (Higher)"
+cheat318_code = "010095C6"
+cheat318_enable = false
+
+cheat319_desc = "[Format source non précisé] Max MP Modifier (Lower)"
+cheat319_code = "010096C6"
+cheat319_enable = false
+
+cheat320_desc = "[Format source non précisé] Max MP Modifier (Higher)"
+cheat320_code = "010097C6"
+cheat320_enable = false
+
+cheat321_desc = "[Format source non précisé] Attack Modifier"
+cheat321_code = "010098C6"
+cheat321_enable = false
+
+cheat322_desc = "[Format source non précisé] Defence Modifier"
+cheat322_code = "010099C6"
+cheat322_enable = false
+
+cheat323_desc = "[Format source non précisé] Agility Modifier"
+cheat323_code = "01009AC6"
+cheat323_enable = false
+
+cheat324_desc = "[Format source non précisé] Magic Modifier"
+cheat324_code = "01009BC6"
+cheat324_enable = false
+
+cheat325_desc = "[Format source non précisé] Weapon Modifier"
+cheat325_code = "0100C0C6"
+cheat325_enable = false
+
+cheat326_desc = "[Format source non précisé] Shield Modifier"
+cheat326_code = "0100C1C6"
+cheat326_enable = false
+
+cheat327_desc = "[Format source non précisé] Helmet Modifier"
+cheat327_code = "0100C2C6"
+cheat327_enable = false
+
+cheat328_desc = "[Format source non précisé] Armor Modifier"
+cheat328_code = "0100C3C6"
+cheat328_enable = false
+
+cheat329_desc = "[Format source non précisé] Gloves Modifier"
+cheat329_code = "0100C4C6"
+cheat329_enable = false
+
+cheat330_desc = "[Format source non précisé] Shoes Modifier"
+cheat330_code = "0100C5C6"
+cheat330_enable = false
+
+cheat331_desc = "[Format source non précisé] Other Modifier (1st)"
+cheat331_code = "0100C6C6"
+cheat331_enable = false
+
+cheat332_desc = "[Format source non précisé] Other Modifier (2nd)"
+cheat332_code = "0100C7C6"
+cheat332_enable = false
+
+cheat333_desc = "[Format source non précisé] Hit Modifier"
+cheat333_code = "0100D7C6"
+cheat333_enable = false
+
+cheat334_desc = "[Format source non précisé] Evade Modifier"
+cheat334_code = "0100BDC6"
+cheat334_enable = false
+
+cheat335_desc = "[Format source non précisé] M. Def. Modifier"
+cheat335_code = "0100BEC6"
+cheat335_enable = false
+
+cheat336_desc = "[Format source non précisé] M. Evade Modifier"
+cheat336_code = "0100BFC6"
+cheat336_enable = false
+
+cheat337_desc = "[Format source non précisé] Talent Modifier 1st"
+cheat337_code = "0100C8C6"
+cheat337_enable = false
+
+cheat338_desc = "[Format source non précisé] Talent Modifier 2nd"
+cheat338_code = "0100C9C6"
+cheat338_enable = false
+
+cheat339_desc = "[Format source non précisé] Talent Modifier 3rd"
+cheat339_code = "0100CAC6"
+cheat339_enable = false
+
+cheat340_desc = "[Format source non précisé] Talent Modifier 4th"
+cheat340_code = "0100CBC6"
+cheat340_enable = false
+
+cheat341_desc = "[Format source non précisé] Talent Modifier 5th"
+cheat341_code = "0100CCC6"
+cheat341_enable = false
+
+cheat342_desc = "[Format source non précisé] Talent Modifier 6th"
+cheat342_code = "0100CDC6"
+cheat342_enable = false
+
+cheat343_desc = "[Format source non précisé] Talent Modifier 7th"
+cheat343_code = "0100CEC6"
+cheat343_enable = false
+
+cheat344_desc = "[Format source non précisé] Talent Modifier 8th"
+cheat344_code = "0100CFC6"
+cheat344_enable = false
+
+cheat345_desc = "[Format source non précisé] White Magic Lv1-4 Modifier"
+cheat345_code = "0100D2C6"
+cheat345_enable = false
+
+cheat346_desc = "[Format source non précisé] White Magic Lv5-8 Modifier"
+cheat346_code = "0100D1C6"
+cheat346_enable = false
+
+cheat347_desc = "[Format source non précisé] Black Magic Lv1-4 Modifier"
+cheat347_code = "0100D4C6"
+cheat347_enable = false
+
+cheat348_desc = "[Format source non précisé] Black Magic Lv5-8 Modifier"
+cheat348_code = "0100D3C6"
+cheat348_enable = false
+
+cheat349_desc = "[Format source non précisé] Lost Magic Lv1-4 Modifier"
+cheat349_code = "0100D6C6"
+cheat349_enable = false
+
+cheat350_desc = "[Format source non précisé] Lost Magic Lv5-8 Modifier"
+cheat350_code = "0100D5C6"
+cheat350_enable = false
+
+cheat351_desc = "[Format source non précisé] Slot 21 Modifier"
+cheat351_code = "010027C7"
+cheat351_enable = false
+
+cheat352_desc = "[Format source non précisé] Slot 21"
+cheat352_code = "010928C7"
+cheat352_enable = false
+
+cheat353_desc = "[Format source non précisé] Slot 22 Modifier"
+cheat353_code = "010029C7"
+cheat353_enable = false
+
+cheat354_desc = "[Format source non précisé] Slot 22"
+cheat354_code = "01092AC7"
+cheat354_enable = false
+
+cheat355_desc = "[Format source non précisé] Slot 23 Modifier"
+cheat355_code = "01002BC7"
+cheat355_enable = false
+
+cheat356_desc = "[Format source non précisé] Slot 23"
+cheat356_code = "01092CC7"
+cheat356_enable = false
+
+cheat357_desc = "[Format source non précisé] Slot 24 Modifier"
+cheat357_code = "01002DC7"
+cheat357_enable = false
+
+cheat358_desc = "[Format source non précisé] Slot 24"
+cheat358_code = "01092EC7"
+cheat358_enable = false
+
+cheat359_desc = "[Format source non précisé] Status Modifier"
+cheat359_code = "010001C5"
+cheat359_enable = false
+
+cheat360_desc = "[Format source non précisé] Character Darkened Out Modifier"
+cheat360_code = "010002C5"
+cheat360_enable = false
+
+cheat361_desc = "[Format source non précisé] Level Modifier"
+cheat361_code = "010003C5"
+cheat361_enable = false
+
+cheat362_desc = "[Format source non précisé] NEXT Modifier"
+cheat362_code = "010004C5"
+cheat362_enable = false
+
+cheat363_desc = "[Format source non précisé] EXP. Modifier (Lower)"
+cheat363_code = "010005C5"
+cheat363_enable = false
+
+cheat364_desc = "[Format source non précisé] EXP. Modifier (Higher)"
+cheat364_code = "010006C5"
+cheat364_enable = false
+
+cheat365_desc = "[Format source non précisé] Name Modifier (Character 1)"
+cheat365_code = "010007C5"
+cheat365_enable = false
+
+cheat366_desc = "[Format source non précisé] Name Modifier (Character 2)"
+cheat366_code = "010008C5"
+cheat366_enable = false
+
+cheat367_desc = "[Format source non précisé] Name Modifier (Character 3)"
+cheat367_code = "010009C5"
+cheat367_enable = false
+
+cheat368_desc = "[Format source non précisé] Name Modifier (Character 4)"
+cheat368_code = "01000AC5"
+cheat368_enable = false
+
+cheat369_desc = "[Format source non précisé] Name Modifier (Character 5)"
+cheat369_code = "01000BC5"
+cheat369_enable = false
+
+cheat370_desc = "[Format source non précisé] Name Modifier (Character 6)"
+cheat370_code = "01000CC5"
+cheat370_enable = false
+
+cheat371_desc = "[Format source non précisé] Class Modifier"
+cheat371_code = "01000DC5"
+cheat371_enable = false
+
+cheat372_desc = "[Format source non précisé] Form Modifier"
+cheat372_code = "01000EC5"
+cheat372_enable = false
+
+cheat373_desc = "[Format source non précisé] Total HP Modifier (Lower)"
+cheat373_code = "010010C5"
+cheat373_enable = false
+
+cheat374_desc = "[Format source non précisé] Total HP Modifier (Higher)"
+cheat374_code = "010011C5"
+cheat374_enable = false
+
+cheat375_desc = "[Format source non précisé] Max HP Modifier (Lower)"
+cheat375_code = "010012C5"
+cheat375_enable = false
+
+cheat376_desc = "[Format source non précisé] Max HP Modifier (Higher)"
+cheat376_code = "010013C5"
+cheat376_enable = false
+
+cheat377_desc = "[Format source non précisé] Total MP Modifier (Lower)"
+cheat377_code = "010014C5"
+cheat377_enable = false
+
+cheat378_desc = "[Format source non précisé] Total MP Modifier (Higher)"
+cheat378_code = "010015C5"
+cheat378_enable = false
+
+cheat379_desc = "[Format source non précisé] Max MP Modifier (Lower)"
+cheat379_code = "010016C5"
+cheat379_enable = false
+
+cheat380_desc = "[Format source non précisé] Max MP Modifier (Higher)"
+cheat380_code = "010017C5"
+cheat380_enable = false
+
+cheat381_desc = "[Format source non précisé] Attack Modifier"
+cheat381_code = "010018C5"
+cheat381_enable = false
+
+cheat382_desc = "[Format source non précisé] Defence Modifier"
+cheat382_code = "010019C5"
+cheat382_enable = false
+
+cheat383_desc = "[Format source non précisé] Agility Modifier"
+cheat383_code = "01001AC5"
+cheat383_enable = false
+
+cheat384_desc = "[Format source non précisé] Magic Modifier"
+cheat384_code = "01001BC5"
+cheat384_enable = false
+
+cheat385_desc = "[Format source non précisé] Weapon Modifier"
+cheat385_code = "010040C5"
+cheat385_enable = false
+
+cheat386_desc = "[Format source non précisé] Shield Modifier"
+cheat386_code = "010041C5"
+cheat386_enable = false
+
+cheat387_desc = "[Format source non précisé] Helmet Modifier"
+cheat387_code = "010042C5"
+cheat387_enable = false
+
+cheat388_desc = "[Format source non précisé] Armor Modifier"
+cheat388_code = "010043C5"
+cheat388_enable = false
+
+cheat389_desc = "[Format source non précisé] Gloves Modifier"
+cheat389_code = "010044C5"
+cheat389_enable = false
+
+cheat390_desc = "[Format source non précisé] Shoes Modifier"
+cheat390_code = "010045C5"
+cheat390_enable = false
+
+cheat391_desc = "[Format source non précisé] Other Modifier (1st)"
+cheat391_code = "010046C5"
+cheat391_enable = false
+
+cheat392_desc = "[Format source non précisé] Other Modifier (2nd)"
+cheat392_code = "010047C5"
+cheat392_enable = false
+
+cheat393_desc = "[Format source non précisé] Hit Modifier"
+cheat393_code = "010057C5"
+cheat393_enable = false
+
+cheat394_desc = "[Format source non précisé] Evade Modifier"
+cheat394_code = "01003DC5"
+cheat394_enable = false
+
+cheat395_desc = "[Format source non précisé] M. Def. Modifier"
+cheat395_code = "01003EC5"
+cheat395_enable = false
+
+cheat396_desc = "[Format source non précisé] M. Evade Modifier"
+cheat396_code = "01003FC5"
+cheat396_enable = false
+
+cheat397_desc = "[Format source non précisé] Talent Modifier 1st"
+cheat397_code = "010048C5"
+cheat397_enable = false
+
+cheat398_desc = "[Format source non précisé] Talent Modifier 2nd"
+cheat398_code = "010049C5"
+cheat398_enable = false
+
+cheat399_desc = "[Format source non précisé] Talent Modifier 3rd"
+cheat399_code = "01004AC5"
+cheat399_enable = false
+
+cheat400_desc = "[Format source non précisé] Talent Modifier 4th"
+cheat400_code = "01004BC5"
+cheat400_enable = false
+
+cheat401_desc = "[Format source non précisé] Talent Modifier 5th"
+cheat401_code = "01004CC5"
+cheat401_enable = false
+
+cheat402_desc = "[Format source non précisé] Talent Modifier 6th"
+cheat402_code = "01004DC5"
+cheat402_enable = false
+
+cheat403_desc = "[Format source non précisé] Talent Modifier 7th"
+cheat403_code = "01004EC5"
+cheat403_enable = false
+
+cheat404_desc = "[Format source non précisé] Talent Modifier 8th"
+cheat404_code = "01004FC5"
+cheat404_enable = false
+
+cheat405_desc = "[Format source non précisé] White Magic Lv1-4 Modifier"
+cheat405_code = "010052C5"
+cheat405_enable = false
+
+cheat406_desc = "[Format source non précisé] White Magic Lv5-8 Modifier"
+cheat406_code = "010051C5"
+cheat406_enable = false
+
+cheat407_desc = "[Format source non précisé] Black Magic Lv1-4 Modifier"
+cheat407_code = "010054C5"
+cheat407_enable = false
+
+cheat408_desc = "[Format source non précisé] Black Magic Lv5-8 Modifier"
+cheat408_code = "010053C5"
+cheat408_enable = false
+
+cheat409_desc = "[Format source non précisé] Lost Magic Lv1-4 Modifier"
+cheat409_code = "010056C5"
+cheat409_enable = false
+
+cheat410_desc = "[Format source non précisé] Lost Magic Lv5-8 Modifier"
+cheat410_code = "010055C5"
+cheat410_enable = false
+
+cheat411_desc = "[Format source non précisé] Press Select To Cycle Item Slot 1 Through Every Item"
+cheat411_code = "C37-19C-2A9+807-1AC-C40+3E7-1BC-4CC+FAE-80C-E6A+8AE-81C-E6A+FFE-82C-E6A+E6E-83C-E6A+04E-84C-E6A+CAE-85C-E6A+8FE-86C-E6A+3EE-87C-E6A+FAE-88C-E6A+FFE-89C-E6A+C6E-8AC-E6A+3CE-8BC-E6A+EAE-8CC-E6A+FFE-8DC-E6A+C6E-8EC-E6A+3EE-8FC-E6A+F0E-91C-E6A+8AE-92C-E6A+A9E-93C-E6A+C3E-94C-E6A+1CE-95C-E6A+37E-96C-E6A"
+cheat411_enable = false
+
+cheat412_desc = "[Format source non précisé] Skip Story Intro"
+cheat412_code = "00E-ADA-08A"
+cheat412_enable = false
+
+cheat413_desc = "[Format source non précisé] Slot 1 Modifier"
+cheat413_code = "0100FFC6"
+cheat413_enable = false
+
+cheat414_desc = "[Format source non précisé] Slot 2 Modifier"
+cheat414_code = "010001C7"
+cheat414_enable = false
+
+cheat415_desc = "[Format source non précisé] Slot 3 Modifier"
+cheat415_code = "010003C7"
+cheat415_enable = false
+
+cheat416_desc = "[Format source non précisé] Slot 4 Modifier"
+cheat416_code = "010005C7"
+cheat416_enable = false
+
+cheat417_desc = "[Format source non précisé] Slot 5 Modifier"
+cheat417_code = "010007C7"
+cheat417_enable = false
+
+cheat418_desc = "[Format source non précisé] Slot 6 Modifier"
+cheat418_code = "010009C7"
+cheat418_enable = false
+
+cheat419_desc = "[Format source non précisé] Slot 7 Modifier"
+cheat419_code = "01000BC7"
+cheat419_enable = false
+
+cheat420_desc = "[Format source non précisé] Slot 8 Modifier"
+cheat420_code = "01000DC7"
+cheat420_enable = false
+
+cheat421_desc = "[Format source non précisé] Slot 9 Modifier"
+cheat421_code = "01000FC7"
+cheat421_enable = false
+
+cheat422_desc = "[Format source non précisé] Slot 10 Modifier"
+cheat422_code = "010011C7"
+cheat422_enable = false
+
+cheat423_desc = "[Format source non précisé] Slot 11 Modifier"
+cheat423_code = "010013C7"
+cheat423_enable = false
+
+cheat424_desc = "[Format source non précisé] Slot 12 Modifier"
+cheat424_code = "010015C7"
+cheat424_enable = false
+
+cheat425_desc = "[Format source non précisé] Slot 13 Modifier"
+cheat425_code = "010017C7"
+cheat425_enable = false
+
+cheat426_desc = "[Format source non précisé] Slot 14 Modifier"
+cheat426_code = "010019C7"
+cheat426_enable = false
+
+cheat427_desc = "[Format source non précisé] Slot 15 Modifier"
+cheat427_code = "01001BC7"
+cheat427_enable = false
+
+cheat428_desc = "[Format source non précisé] Slot 16 Modifier"
+cheat428_code = "01001DC7"
+cheat428_enable = false
+
+cheat429_desc = "[Format source non précisé] Slot 17 Modifier"
+cheat429_code = "01001FC7"
+cheat429_enable = false
+
+cheat430_desc = "[Format source non précisé] Slot 18 Modifier"
+cheat430_code = "010021C7"
+cheat430_enable = false
+
+cheat431_desc = "[Format source non précisé] Slot 19 Modifier"
+cheat431_code = "010023C7"
+cheat431_enable = false
+
+cheat432_desc = "[Format source non précisé] Slot 20 Modifier"
+cheat432_code = "010025C7"
+cheat432_enable = false

@@ -1,0 +1,160 @@
+TAP version 13
+# Subtest: activation simple : coché => appliqué, moteur appelé une fois
+ok 1 - activation simple : coché => appliqué, moteur appelé une fois
+  ---
+  duration_ms: 141.877764
+  type: 'test'
+  ...
+# Subtest: désactivation : décoché => moteur vidé
+ok 2 - désactivation : décoché => moteur vidé
+  ---
+  duration_ms: 58.31424
+  type: 'test'
+  ...
+# Subtest: région non sûre : coché => pending, moteur NON appelé
+ok 3 - région non sûre : coché => pending, moteur NON appelé
+  ---
+  duration_ms: 24.397762
+  type: 'test'
+  ...
+# Subtest: confirmation régionale : applique les pending en une transaction
+ok 4 - confirmation régionale : applique les pending en une transaction
+  ---
+  duration_ms: 60.030665
+  type: 'test'
+  ...
+# Subtest: désactiver tous : purge appliqués ET en attente
+ok 5 - désactiver tous : purge appliqués ET en attente
+  ---
+  duration_ms: 28.710796
+  type: 'test'
+  ...
+# Subtest: confirmer après désactiver-tous ne réactive rien
+ok 6 - confirmer après désactiver-tous ne réactive rien
+  ---
+  duration_ms: 31.226884
+  type: 'test'
+  ...
+# Subtest: échec setCheats à l'activation => rollback complet, cheat reste off
+ok 7 - échec setCheats à l'activation => rollback complet, cheat reste off
+  ---
+  duration_ms: 62.626102
+  type: 'test'
+  ...
+# Subtest: échec partiel puis resynchro OK => pas de cheat fantôme
+ok 8 - échec partiel puis resynchro OK => pas de cheat fantôme
+  ---
+  duration_ms: 33.633593
+  type: 'test'
+  ...
+# Subtest: resetCheat échoue aussi => état INCERTAIN, activations bloquées
+ok 9 - resetCheat échoue aussi => état INCERTAIN, activations bloquées
+  ---
+  duration_ms: 48.621365
+  type: 'test'
+  ...
+# Subtest: changement de jeu rapide : l'ancien jeu n'injecte pas dans le nouveau
+ok 10 - changement de jeu rapide : l'ancien jeu n'injecte pas dans le nouveau
+  ---
+  duration_ms: 45.938492
+  type: 'test'
+  ...
+# Subtest: restauration : cheats restaurés sur édition sûre => appliqués
+ok 11 - restauration : cheats restaurés sur édition sûre => appliqués
+  ---
+  duration_ms: 2.84227
+  type: 'test'
+  ...
+# Subtest: code incompatible (Xploder) ne s'active jamais
+ok 12 - code incompatible (Xploder) ne s'active jamais
+  ---
+  duration_ms: 1.755233
+  type: 'test'
+  ...
+# Subtest: opérations concurrentes : deux activations rapides restent cohérentes
+ok 13 - opérations concurrentes : deux activations rapides restent cohérentes
+  ---
+  duration_ms: 93.424405
+  type: 'test'
+  ...
+# Subtest: changement de jeu pendant une opération : l'opération périmée est abandonnée
+ok 14 - changement de jeu pendant une opération : l'opération périmée est abandonnée
+  ---
+  duration_ms: 170.121913
+  type: 'test'
+  ...
+# Subtest: numéro de série : codes USA sur disque Europe => confirmation requise, rien d'injecté
+ok 15 - numéro de série : codes USA sur disque Europe => confirmation requise, rien d'injecté
+  ---
+  duration_ms: 31.633011
+  type: 'test'
+  ...
+# Subtest: numéro de série exact reste indicatif : confirmation explicite requise
+ok 16 - numéro de série exact reste indicatif : confirmation explicite requise
+  ---
+  duration_ms: 7.94285
+  type: 'test'
+  ...
+# Subtest: numéro de série introuvable => message clair, liste inchangée
+ok 17 - numéro de série introuvable => message clair, liste inchangée
+  ---
+  duration_ms: 67.610136
+  type: 'test'
+  ...
+# Subtest: P0 : « Un Jeu (En,Fr,Es).chd » + cheat restauré Europe => moteur jamais appelé, en attente
+ok 18 - P0 : « Un Jeu (En,Fr,Es).chd » + cheat restauré Europe => moteur jamais appelé, en attente
+  ---
+  duration_ms: 2.02319
+  type: 'test'
+  ...
+# Subtest: P0 : « Un Jeu (En,Fr,Es,Pt-BR).chd » + cheat restauré Europe => moteur jamais appelé, en attente
+ok 19 - P0 : « Un Jeu (En,Fr,Es,Pt-BR).chd » + cheat restauré Europe => moteur jamais appelé, en attente
+  ---
+  duration_ms: 3.200063
+  type: 'test'
+  ...
+# Subtest: P0 : « Un Jeu (En,Fr,Es,zh-Hans-CN).chd » + cheat restauré Europe => moteur jamais appelé, en attente
+ok 20 - P0 : « Un Jeu (En,Fr,Es,zh-Hans-CN).chd » + cheat restauré Europe => moteur jamais appelé, en attente
+  ---
+  duration_ms: 1.197754
+  type: 'test'
+  ...
+# Subtest: P0 : « Un Jeu (En,Fr,Es,zh-Hant-TW).chd » + cheat restauré Europe => moteur jamais appelé, en attente
+ok 21 - P0 : « Un Jeu (En,Fr,Es,zh-Hant-TW).chd » + cheat restauré Europe => moteur jamais appelé, en attente
+  ---
+  duration_ms: 1.902262
+  type: 'test'
+  ...
+# Subtest: P0 : « Un Jeu (En,Fr,Es,Pt-419).chd » + cheat restauré Europe => moteur jamais appelé, en attente
+ok 22 - P0 : « Un Jeu (En,Fr,Es,Pt-419).chd » + cheat restauré Europe => moteur jamais appelé, en attente
+  ---
+  duration_ms: 1.556663
+  type: 'test'
+  ...
+# Subtest: P0 : « Un Jeu (En,Fr,Es,sr-Latn-RS).chd » + cheat restauré Europe => moteur jamais appelé, en attente
+ok 23 - P0 : « Un Jeu (En,Fr,Es,sr-Latn-RS).chd » + cheat restauré Europe => moteur jamais appelé, en attente
+  ---
+  duration_ms: 1.546293
+  type: 'test'
+  ...
+# Subtest: P0 contrôle positif : disque (USA) avec catalogue USA => restauré et appliqué
+ok 24 - P0 contrôle positif : disque (USA) avec catalogue USA => restauré et appliqué
+  ---
+  duration_ms: 1.782584
+  type: 'test'
+  ...
+# Subtest: battery save failure aborts a game switch and preserves the active session
+ok 25 - battery save failure aborts a game switch and preserves the active session
+  ---
+  duration_ms: 30.654005
+  type: 'test'
+  ...
+1..25
+# tests 25
+# suites 0
+# pass 25
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1049.102777

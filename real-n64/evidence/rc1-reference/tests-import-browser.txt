@@ -1,0 +1,10 @@
+RÉUSSI — Import Z64 : vrai fichier local, normalisation et octets chargés dans le cœur conformes
+RÉUSSI — Import V64 : vrai fichier local, normalisation et octets chargés dans le cœur conformes
+RÉUSSI — Import N64 : vrai fichier local, normalisation et octets chargés dans le cœur conformes
+RÉUSSI — ZIP, signature fausse, fichier tronqué et taille non alignée refusés sans moteur
+RÉUSSI — Nom hostile affiché comme texte, extension incohérente signalée et même fichier re-sélectionnable
+RÉUSSI — Diagnostic exporté sans octets de la ROM
+RÉUSSI — Deux lectures concurrentes : le dernier choix reste sélectionné
+RÉUSSI — Démarrage de la référence pendant une lecture : aucune sélection locale tardive ne la remplace
+RÉUSSI — Confidentialité : aucun POST/PUT, aucun corps HTTP, aucun domaine externe ni nom de fichier importé envoyé
+TOTAL 9 contrôles import navigateur

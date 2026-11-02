@@ -1,0 +1,80 @@
+# Recherche locale pour la ROM : Space Invaders Extreme (Europe) (En,Ja,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Space%20Invaders%20Extreme%20(Europe).cht
+
+cheats = 18
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "52009688+EE070F90+E2000498+0000004A+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2E60B99+015E0012+000A03A9+00730009+00000000+00000000+02009688+E92D401E+0200968C+FAFFDB81+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Invincible"
+cheat1_code = "0205FB74+E3A010FE+0205FB58+E3A00000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Infinite Weapon Use (Press Select to drop weapon)"
+cheat2_code = "523D7EB0+0214DB44+A23D7DC0+00000001+123D7DBC+00000100+D2000000+00000000+94000130+FFFB0000+A23D7DC0+00000001+523D7EB0+0214DB44+123D7DBC+00000001+123D7DC0+00000001+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Shoot Enemies to Earn Lives"
+cheat3_code = "0207AF30+E3A01000+0207AF34+E580100C+0207AF38+E8BD8010"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Select Continue to Skip to Next Level"
+cheat4_code = "0207CC98+E3A01004+0207CC8C+E3A00004"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All Difficulties, Stages and Modes"
+cheat5_code = "02168C50+FFFFFFFF"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Basic Fire is Quicker"
+cheat6_code = "120554D4+00000A02"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Basic Fire is Much Quicker"
+cheat7_code = "120554D4+00000A04"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Ship Moves Faster"
+cheat8_code = "02060A18+E3A0BA02"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Ship Moves Much Faster"
+cheat9_code = "02060A18+E3A0BA04"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Harder Chains"
+cheat10_code = "0208A0BC+03A00004"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Easier Chains"
+cheat11_code = "0208A0BC+03A00064"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Start with 1 Life"
+cheat12_code = "22169BE4+00000001"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Start with 9 Lives"
+cheat13_code = "22169BE4+00000009"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Rate X10"
+cheat14_code = "923CFC40+00005544+223CFBCC+0000000A+D2000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Rate X99"
+cheat15_code = "923CFC40+00005544+223CFBCC+00000063+D2000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Infinite Time"
+cheat16_code = "5216D0B2+E2411001+0216D0B0+E2411000+D2000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Harder Bonus Stage"
+cheat17_code = "5216D0B2+E2411001+0216D0B0+E2411002+D2000000+00000000"
+cheat17_enable = false

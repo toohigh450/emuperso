@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Incredible Hulk, The (Europe) (En,Fr,De,Es,It).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Incredible%20Hulk%2C%20The%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 4
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000D8BF+000A+10016B24+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Full Rage Meter"
+cheat1_code = "32000EFF+0063"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Health"
+cheat2_code = "32000EC0+00FF"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] All Fists"
+cheat3_code = "3300043C+000D"
+cheat3_enable = false

@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Ice Age 2 - The Meltdown (Europe) (En,Fr,De,Es,It,Nl).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Ice%20Age%202%20-%20The%20Meltdown%20(Europe).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] 9999 Score"
+cheat0_code = "02132F8C+0000270F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Collect 1 Acorn To Clear Flood Meter"
+cheat1_code = "02132F88+00000031"
+cheat1_enable = false

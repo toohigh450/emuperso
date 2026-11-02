@@ -1,0 +1,44 @@
+# Recherche locale pour la ROM : Rayman Advance (Europe) (En,Fr,De,Es,It).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Rayman%20Advance%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 9
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000CF36+000A+100072C4+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Max Blue Orbs"
+cheat1_code = "3202EEA6+0063"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Lives"
+cheat2_code = "3202EEA0+0063"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Infinite Health"
+cheat3_code = "3202FCF4+0004"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Max Health"
+cheat4_code = "3202EEA9+0005"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Invincible"
+cheat5_code = "8202FCD4+0064"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Have Throwing Fist"
+cheat6_code = "3202BEE4+0001"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Have Golden Fist"
+cheat7_code = "3202EE8C+0008"
+cheat7_enable = false
+
+cheat8_desc = "[Code Breaker] Mega Jump"
+cheat8_code = "3202FCC0+0003"
+cheat8_enable = false

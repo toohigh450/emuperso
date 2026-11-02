@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Robopon 2 - Ring Version (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Robopon%202%20-%20Ring%20Version%20(USA)%20(Code%20Breaker).cht
+
+cheats = 7
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000C6C4+000A+10000712+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] No Time On Clock"
+cheat1_code = "82010000+0000"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Max Money"
+cheat2_code = "82010004+967F+82010006+0098"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] 0 Saves"
+cheat3_code = "8201069C+0000"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Infinite Batteries"
+cheat4_code = "8201013A+0009"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Speed Up Leveling"
+cheat5_code = "720003D4+0070+320003D4+0000"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Hella Exp"
+cheat6_code = "720159EE+0017+82015A04+FFFF+720159EE+0017+82015C88+FFFF"
+cheat6_enable = false

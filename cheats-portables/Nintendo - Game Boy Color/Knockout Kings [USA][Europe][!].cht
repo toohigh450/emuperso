@@ -1,0 +1,37 @@
+# Recherche locale pour la ROM : Knockout Kings [USA][Europe][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Knockout%20Kings%20(USA%2C%20Europe)%20(Xploder).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Knockout%20Kings%20(USA%2C%20Europe).cht
+
+cheats = 7
+
+cheat0_desc = "[Xploder] Unendlich Gesundheit P1"
+cheat0_code = "$0DE945D8"
+cheat0_enable = false
+
+cheat1_desc = "[Xploder] Sofortiger KO P1"
+cheat1_code = "$0D2145D8"
+cheat1_enable = false
+
+cheat2_desc = "[Xploder] Unendlich Gesundheit P2"
+cheat2_code = "$0DE9ACD8"
+cheat2_enable = false
+
+cheat3_desc = "[Xploder] Sofortiger KO P2"
+cheat3_code = "$0D21ACD8"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Computer Can't Hit You"
+cheat4_code = "012A42C2"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Hit Anywhere"
+cheat5_code = "FA8-2EA-E61+FA8-0CA-E61+FA8-1AA-C41+FAF-6DB-C41+FA7-FFA-E61"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Invincibility"
+cheat6_code = "C37-94A-E61"
+cheat6_enable = false

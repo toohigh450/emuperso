@@ -1,0 +1,38 @@
+# Recherche locale pour la ROM : Warhammer 40,000 - Squad Command (Europe) (En,Fr).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Warhammer%2040%2C000%20-%20Squad%20Command%20(Europe)%20(En%2CDe).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Warhammer%2040%2C000%20-%20Squad%20Command%20(Europe)%20(En%2CFr).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Warhammer%2040%2C000%20-%20Squad%20Command%20(Europe)%20(Es%2CIt).cht
+
+cheats = 7
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "520CA680+EE070F90+E2000710+00000054+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2E124E9+015D0012+D2E5004D+08BAC50D+0009000A+0005000A+00000072+00000000+020CA680+E92D401E+020CA684+FAFCD821+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat1_code = "520CA680+EE070F90+E20000F8+00000054+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2E124E9+015D0012+D2E5004D+07BEC8FD+0009000A+0005000A+00000072+00000000+020CA680+E92D401E+020CA684+FAFCD69B+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Fog ON"
+cheat2_code = "1204F908+00002501"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] AP ON"
+cheat3_code = "1204F93C+00002501"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] HP ON"
+cheat4_code = "1204F970+00002501"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Ammo ON"
+cheat5_code = "1204F9A4+00002501"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat6_code = "520CA694+EE070F90+E2000010+00000054+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2E12509+015D0012+D2E5004D+07BEC91D+0009000A+0005000A+00000072+00000000+020CA694+E92D401E+020CA698+FAFCD65C+D2000000+00000000"
+cheat6_enable = false

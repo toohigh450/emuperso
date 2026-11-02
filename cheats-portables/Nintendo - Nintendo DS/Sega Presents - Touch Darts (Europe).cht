@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Sega Presents - Touch Darts (Europe).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Sega%20Presents%20-%20Touch%20Darts%20(Europe).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] AI Never Scores"
+cheat0_code = "620CC06C+00000000+B20CC06C+00000000+B0000028+00000000+10000238+000001F5+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Player Requires Double 20 to Win"
+cheat1_code = "620CC06C+00000000+B20CC06C+00000000+B0000028+00000000+10000174+00000028+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Darts and Faces"
+cheat2_code = "020CC26C+00000000+020CC270+00000000+020CC274+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Tournaments"
+cheat3_code = "020CC278+12001200+020CC27C+10001200+020CC280+10001000+020CC284+10001000+020CC288+10001000+020CC28C+10001000+020CC290+10001000+020CC294+02001000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All Challenges"
+cheat4_code = "020CC2A4+03FF0000+020CC2A8+00001200+020CC2AC+03FF0000+020CC2B0+00001200+020CC2B4+03FF0000+020CC2B8+00001200+020CC2BC+03FF0000+020CC2C0+00001200+020CC2C4+03FF0000+020CC2C8+00001200"
+cheat4_enable = false

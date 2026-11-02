@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Milon no Hoshizora Shabon - Puzzle Kumikyoku (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Milon%20no%20Hoshizora%20Shabon%20-%20Puzzle%20Kumikyoku%20(Japan).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] Max Score"
+cheat0_code = "021FBA0C+000F423F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Money"
+cheat1_code = "021FB500+0001869F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Unlock All Shop Items"
+cheat2_code = "021FB4F8+FFFFFFFF"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Unlock All Characters"
+cheat3_code = "021FB504+01010101+221FB508+00000001"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Unlock All Pictures and BGM"
+cheat4_code = "021FB4F4+FFFFFFFF"
+cheat4_enable = false

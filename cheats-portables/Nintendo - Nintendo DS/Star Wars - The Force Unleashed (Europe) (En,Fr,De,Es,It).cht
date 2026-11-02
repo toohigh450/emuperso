@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Star Wars - The Force Unleashed (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Star%20Wars%20-%20The%20Force%20Unleashed%20(Europe).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] Infinite Force"
+cheat0_code = "6215C7C4+00000000+B215C7C4+00000000+00000094+000003E7+00000098+000003E7+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Health"
+cheat1_code = "6215C7C4+00000000+B215C7C4+00000000+000000DC+000003E7+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Moon Jump (Hold Select)"
+cheat2_code = "94000130+FFFB0000+6215C7C4+00000000+B215C7C4+00000000+00000204+FFFFFF08+D2000000+00000000"
+cheat2_enable = false

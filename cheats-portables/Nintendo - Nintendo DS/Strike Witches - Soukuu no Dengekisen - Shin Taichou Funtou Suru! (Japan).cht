@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Strike Witches - Soukuu no Dengekisen - Shin Taichou Funtou Suru! (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Strike%20Witches%20-%20Soukuu%20no%20Dengekisen%20-%20Shin%20Taichou%20Funtou%20Suru!%20(Japan).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] CG"
+cheat0_code = "120A1BD6+0000FFFF+020A1BD8+FFFFFFFF+020A1BDC+FFFFFFFF+220A1BC0+000000FF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] BGM"
+cheat1_code = "120A1B64+0000FFFF"
+cheat1_enable = false

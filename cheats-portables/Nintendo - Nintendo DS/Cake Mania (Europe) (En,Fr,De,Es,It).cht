@@ -1,0 +1,268 @@
+# Recherche locale pour la ROM : Cake Mania (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Cake%20Mania%20(Europe).cht
+
+cheats = 65
+
+cheat0_desc = "[Action Replay] Max/Infinite Lives"
+cheat0_code = "22159B44+00000004"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Points"
+cheat1_code = "02159B48+3B9AC9FF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max/Infinite Money"
+cheat2_code = "02159B54+3B9AC9FF"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Remove Cash Goal"
+cheat3_code = "94000130+FFFB0000+62081570+00000000+B2081570+00000000+1000688C+00000000+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All Items"
+cheat4_code = "94000130+FCFF0000+C0000000+0000000A+22159B94+00000001+DC000000+00000004+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Level 1 - Janurary"
+cheat5_code = "220D73AC+00000001"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Level 1 - February"
+cheat6_code = "220D73AC+00000002"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Level 1 - March"
+cheat7_code = "220D73AC+00000003"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Level 1 - April"
+cheat8_code = "220D73AC+00000004"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Level 1 - May"
+cheat9_code = "220D73AC+00000005"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Level 1 - June"
+cheat10_code = "220D73AC+00000006"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Level 1 - July"
+cheat11_code = "220D73AC+00000007"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Level 1 - August"
+cheat12_code = "220D73AC+00000008"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Level 1 - September"
+cheat13_code = "220D73AC+00000009"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Level 1 - October"
+cheat14_code = "220D73AC+0000000A"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Level 1 - November"
+cheat15_code = "220D73AC+0000000B"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Level 1 - December"
+cheat16_code = "220D73AC+0000000C"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Level 2 - Janurary"
+cheat17_code = "220DE014+00000001"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Level 2 - February"
+cheat18_code = "220DE014+00000002"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Level 2 - March"
+cheat19_code = "220DE014+00000003"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Level 2 - April"
+cheat20_code = "220DE014+00000004"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Level 2 - May"
+cheat21_code = "220DE014+00000005"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Level 2 - June"
+cheat22_code = "220DE014+00000006"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Level 2 - July"
+cheat23_code = "220DE014+00000007"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Level 2 - August"
+cheat24_code = "220DE014+00000008"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Level 2 - September"
+cheat25_code = "220DE014+00000009"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Level 2 - October"
+cheat26_code = "220DE014+0000000A"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Level 2 - November"
+cheat27_code = "220DE014+0000000B"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Level 2 - December"
+cheat28_code = "220DE014+0000000C"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Level 3 - Janurary"
+cheat29_code = "220E4C7C+00000001"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Level 3 - February"
+cheat30_code = "220E4C7C+00000002"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Level 3 - March"
+cheat31_code = "220E4C7C+00000003"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Level 3 - April"
+cheat32_code = "220E4C7C+00000004"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Level 3 - May"
+cheat33_code = "220E4C7C+00000005"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Level 3 - June"
+cheat34_code = "220E4C7C+00000006"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Level 3 - July"
+cheat35_code = "220E4C7C+00000007"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Level 3 - August"
+cheat36_code = "220E4C7C+00000008"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Level 3 - September"
+cheat37_code = "220E4C7C+00000009"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Level 3 - October"
+cheat38_code = "220E4C7C+0000000A"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Level 3 - November"
+cheat39_code = "220E4C7C+0000000B"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Level 3 - December"
+cheat40_code = "220E4C7C+0000000C"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Level 4 - Janurary"
+cheat41_code = "220EB8E4+00000001"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Level 4 - February"
+cheat42_code = "220EB8E4+00000002"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Level 4 - March"
+cheat43_code = "220EB8E4+00000003"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Level 4 - April"
+cheat44_code = "220EB8E4+00000004"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Level 4 - May"
+cheat45_code = "220EB8E4+00000005"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Level 4 - June"
+cheat46_code = "220EB8E4+00000006"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Level 4 - July"
+cheat47_code = "220EB8E4+00000007"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Level 4 - August"
+cheat48_code = "220EB8E4+00000008"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Level 4 - September"
+cheat49_code = "220EB8E4+00000009"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Level 4 - October"
+cheat50_code = "220EB8E4+0000000A"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Level 4 - November"
+cheat51_code = "220EB8E4+0000000B"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Level 4 - December"
+cheat52_code = "220EB8E4+0000000C"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Level 1 - Janurary"
+cheat53_code = "220F91B4+00000001"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Level 1 - February"
+cheat54_code = "220F91B4+00000002"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Level 1 - March"
+cheat55_code = "220F91B4+00000003"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Level 1 - April"
+cheat56_code = "220F91B4+00000004"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Level 1 - May"
+cheat57_code = "220F91B4+00000005"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Level 1 - June"
+cheat58_code = "220F91B4+00000006"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Level 1 - July"
+cheat59_code = "220F91B4+00000007"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Level 1 - August"
+cheat60_code = "220F91B4+00000008"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Level 1 - September"
+cheat61_code = "220F91B4+00000009"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Level 1 - October"
+cheat62_code = "220F91B4+0000000A"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Level 1 - November"
+cheat63_code = "220F91B4+0000000B"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Level 1 - December"
+cheat64_code = "220F91B4+0000000C"
+cheat64_enable = false

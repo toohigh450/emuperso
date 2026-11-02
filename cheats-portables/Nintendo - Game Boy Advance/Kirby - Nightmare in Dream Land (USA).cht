@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Kirby - Nightmare in Dream Land (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Kirby%20-%20Nightmare%20in%20Dream%20Land%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 8
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000F3FD+000A+100011E6+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Health"
+cheat1_code = "32005588+0030"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Lives"
+cheat2_code = "32007D48+0009"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Invincible"
+cheat3_code = "33002182+000A"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Unlock All Sub-Games"
+cheat4_code = "3200E610+0012"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] World Modifier"
+cheat5_code = "3300238C+00XX"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Level Modifier"
+cheat6_code = "330023EC+00YY"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Room Modifier"
+cheat7_code = "33002468+00ZZ"
+cheat7_enable = false

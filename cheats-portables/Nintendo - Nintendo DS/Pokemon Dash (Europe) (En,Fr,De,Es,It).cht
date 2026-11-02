@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Pokemon Dash (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Pokemon%20Dash%20(Europe).cht
+
+cheats = 6
+
+cheat0_desc = "[Action Replay] Max Series Points (Never Lose Cup)"
+cheat0_code = "2218CA54+00000063"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Unlock All GPs"
+cheat1_code = "220D5578+000000FF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Unlock All Cups"
+cheat2_code = "220D5C8D+000000FF"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Unlock Time Attack"
+cheat3_code = "220D5C8C+00000032"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Low Time: All Tracks"
+cheat4_code = "A20D5610+00000001+D5000000+00010001+C0000000+00000024+D6000000+020D557C+D2000000+00000000+120D5610+00000001"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All Gold Trophies"
+cheat5_code = "220D565D+00000000+120D565E+00000000+020D5660+00000000+020D5664+00000000+020D5668+00000000"
+cheat5_enable = false

@@ -1,0 +1,49 @@
+# Recherche locale pour la ROM : Portal Runner [USA][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Portal%20Runner%20(USA)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Portal%20Runner%20(USA).cht
+
+cheats = 10
+
+cheat0_desc = "[GameShark] Infinite Gems"
+cheat0_code = "91632FC4"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Infinite Health"
+cheat1_code = "910533C4"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Infinite Lives"
+cheat2_code = "916332C4"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Infinte Arrows"
+cheat3_code = "916330C4"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Invincible"
+cheat4_code = "91B00ED0+913663D0"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Infinite Gems"
+cheat5_code = "91632FC4"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Infinite Health"
+cheat6_code = "910533C4"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Infinite Lives"
+cheat7_code = "916332C4"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Infinte Arrows"
+cheat8_code = "916330C4"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Test Menu"
+cheat9_code = "033-429-E6A"
+cheat9_enable = false

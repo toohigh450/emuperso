@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Minna no DS Seminar - Kanpeki Eitango Ryoku (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Minna%20no%20DS%20Seminar%20-%20Kanpeki%20Eitango%20Ryoku%20(Japan).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Max Correct Answer"
+cheat0_code = "222155E0+0000000A"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Rating"
+cheat1_code = "2215D5AB+00000064"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Affection"
+cheat2_code = "0215D5AC+64646464"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Movement"
+cheat3_code = "1215D5B0+00006464"
+cheat3_enable = false

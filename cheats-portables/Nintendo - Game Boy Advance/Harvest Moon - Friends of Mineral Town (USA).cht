@@ -1,0 +1,72 @@
+# Recherche locale pour la ROM : Harvest Moon - Friends of Mineral Town (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Harvest%20Moon%20-%20Friends%20of%20Mineral%20Town%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 16
+
+cheat0_desc = "[Code Breaker] IMPORTANT NOTE"
+cheat0_code = "N/A"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat1_code = "0000E882+000A+100D1BF8+0007"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Max Gold"
+cheat2_code = "820068B4+E0FF+820068B6+05F5"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Infinite Stamina"
+cheat3_code = "32006A29+004B+32006A2A+002A"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Infinite Lumber"
+cheat4_code = "82004E30+03E7"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Max Backpack Slots"
+cheat5_code = "32006A44+0008"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Press Select For Fully-Expanded House!"
+cheat6_code = "74000130+03FB+82005000+009A+74000130+03FB+82005001+FF9A+74000130+03FB+82005003+FF00+74000130+03FB+82005004+FFFF+74000130+03FB+82005005+FFFF"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Weather Modifier"
+cheat7_code = "32004E14+00??"
+cheat7_enable = false
+
+cheat8_desc = "[Code Breaker] Day/Season Modifier"
+cheat8_code = "32004E1D+00??"
+cheat8_enable = false
+
+cheat9_desc = "[Code Breaker] Year Modifier"
+cheat9_code = "33004E1C+00??"
+cheat9_enable = false
+
+cheat10_desc = "[Code Breaker] Infinite Horse Race Medals"
+cheat10_code = "82007A54+9BFF"
+cheat10_enable = false
+
+cheat11_desc = "[Code Breaker] Max Earnings In Current Year"
+cheat11_code = "820069B4+FFFF+820069B6+FFFF"
+cheat11_enable = false
+
+cheat12_desc = "[Code Breaker] Really Fast Running Power"
+cheat12_code = "7203907A+0002+E203906A+000A+7203907A+FFFE+E203906A+FFF5+7203907E+0002+E203906E+000A+7203907E+FFFE+E203906E+FFF5"
+cheat12_enable = false
+
+cheat13_desc = "[Code Breaker] Press L To Increase Time Much Faster"
+cheat13_code = "74000130+03DF+E2004E1E+0100"
+cheat13_enable = false
+
+cheat14_desc = "[Code Breaker] Tomorrow's Weather Modifier"
+cheat14_code = "32004E18+000?"
+cheat14_enable = false
+
+cheat15_desc = "[Code Breaker] Map Modifier"
+cheat15_code = "32005CF8XX"
+cheat15_enable = false

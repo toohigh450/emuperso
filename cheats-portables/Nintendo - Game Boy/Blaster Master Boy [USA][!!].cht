@@ -1,0 +1,57 @@
+# Recherche locale pour la ROM : Blaster Master Boy [USA][!!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Blaster%20Master%20Boy%20(USA)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Blaster%20Master%20Boy%20(USA).cht
+
+cheats = 12
+
+cheat0_desc = "[GameShark] Infinite Lives"
+cheat0_code = "010911C1"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Lives"
+cheat1_code = "010911C1"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Infinite Time"
+cheat2_code = "016311C1"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Invincibility"
+cheat3_code = "010240C4"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Infinite Lives"
+cheat4_code = "01097EC7"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Infinite Energy"
+cheat5_code = "01178EFF"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Hit Anywhere"
+cheat6_code = "7B5-9BE-5D4"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] One Hit Kills Normal Enemies"
+cheat7_code = "AF7-CBC-19E"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] One Hit Kills Bosses"
+cheat8_code = "3E8-49C-2AA"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Invincibility"
+cheat9_code = "10D-06D-7FA+18D-05D-4CA"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Walk Anywhere"
+cheat10_code = "189-B5D-4CA+18A-7ED-4CA+18A-DDD-4CA+18A-0DD-4CA"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Infinite Time"
+cheat11_code = "FAA-45F-4C1"
+cheat11_enable = false

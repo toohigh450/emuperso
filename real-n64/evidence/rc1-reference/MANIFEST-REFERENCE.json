@@ -1,0 +1,332 @@
+{
+  "schema": "emuperso/immutable-ci-reference/v1",
+  "reference": "RC1",
+  "source_commit": "65783821250b286f3a3799ea8fcb930908ede342",
+  "source": "Git blobs read directly from immutable commit; never the possibly rewritten working-tree evidence.",
+  "selection": "Direct tracked files under real-n64/evidence only; no subdirectory, ROM, save original or application source.",
+  "files": {
+    "real-n64/evidence/audio-probe.json": {
+      "copy": "audio-probe.json",
+      "bytes": 41385,
+      "sha256": "dfee1c5393aa0c0c9e0a5e871f0ef5ac04b8d8fe1fb058399998f557b929888c"
+    },
+    "real-n64/evidence/audio-probe.txt": {
+      "copy": "audio-probe.txt",
+      "bytes": 41386,
+      "sha256": "e8893358f49eeee0d5b7d80782ce887f5eabf28e316a75403ba1b6f8656b70f4"
+    },
+    "real-n64/evidence/audio-samples.json": {
+      "copy": "audio-samples.json",
+      "bytes": 501597,
+      "sha256": "b458654a5a7c97d9e0fef4a1bd3fdaec5177572e021c633d202a88f663319529"
+    },
+    "real-n64/evidence/baseline-protected.json": {
+      "copy": "baseline-protected.json",
+      "bytes": 10650,
+      "sha256": "838c19e6ce36d8e46b60e9f818c91f994f971319f197360bb1c1b3972a258d82"
+    },
+    "real-n64/evidence/browser-real-attempt1.txt": {
+      "copy": "browser-real-attempt1.txt",
+      "bytes": 1739,
+      "sha256": "f826c2bfabfaff61fae30fc08cf5a8d9950b2cfbc56bf0d9028fae866eeb9f16"
+    },
+    "real-n64/evidence/browser-real-attempt2.txt": {
+      "copy": "browser-real-attempt2.txt",
+      "bytes": 1737,
+      "sha256": "64f49ab16fc81ac3172b52d7323b6cbff7994ba68d7447200afe1a27557a9dec"
+    },
+    "real-n64/evidence/browser-real-final.txt": {
+      "copy": "browser-real-final.txt",
+      "bytes": 471,
+      "sha256": "2ef6d5699d22a11b7b224668d849669fda209cc2271b9a6701ce9d165c27cf78"
+    },
+    "real-n64/evidence/browser-real-results.json": {
+      "copy": "browser-real-results.json",
+      "bytes": 31562,
+      "sha256": "16a8e84e7eb2f60047b2a69feb8a601755a3f478fbcfa5aa0c98a0c99dd98509"
+    },
+    "real-n64/evidence/build-emulator-boot.txt": {
+      "copy": "build-emulator-boot.txt",
+      "bytes": 1930,
+      "sha256": "1b34312e9ad9a696f03bfff68f5919b4cc2f309ddf505b4ecab3769b77cb94bb"
+    },
+    "real-n64/evidence/build-fallback-doublebuffer.txt": {
+      "copy": "build-fallback-doublebuffer.txt",
+      "bytes": 712,
+      "sha256": "970e3ef2da33da08d3946409a7ae9daa1b9272bba30d3684ee94edc03e3fc48f"
+    },
+    "real-n64/evidence/build-fallback-open.txt": {
+      "copy": "build-fallback-open.txt",
+      "bytes": 712,
+      "sha256": "15c58dcb093c1ff196580d74a4cc891dac987a0f61174ed4be35fe9b73284abf"
+    },
+    "real-n64/evidence/build-first.txt": {
+      "copy": "build-first.txt",
+      "bytes": 337,
+      "sha256": "73b33b375be8078ffc8471f360a78238d9fe15d489950b3e01d36e29b22b3375"
+    },
+    "real-n64/evidence/build-minimal.txt": {
+      "copy": "build-minimal.txt",
+      "bytes": 528,
+      "sha256": "031d81aec7e869d93c6de3ba9278a3799bdb1e3ce66ad1b5a329bcb115b66983"
+    },
+    "real-n64/evidence/build-reproduced-final.txt": {
+      "copy": "build-reproduced-final.txt",
+      "bytes": 712,
+      "sha256": "970e3ef2da33da08d3946409a7ae9daa1b9272bba30d3684ee94edc03e3fc48f"
+    },
+    "real-n64/evidence/ci-bootstrap-failure.txt": {
+      "copy": "ci-bootstrap-failure.txt",
+      "bytes": 640,
+      "sha256": "9c6df11b973909762512955ed742b832d6bb69e4f2168cadbc9b57b638d53f2a"
+    },
+    "real-n64/evidence/ci-first-rc-failure.json": {
+      "copy": "ci-first-rc-failure.json",
+      "bytes": 1100,
+      "sha256": "5b71931aa9758f245927d6ec6611ccd56d65e4233a662dfd7ac94d72910d2ab3"
+    },
+    "real-n64/evidence/ci-second-rc-failure.json": {
+      "copy": "ci-second-rc-failure.json",
+      "bytes": 1055,
+      "sha256": "f042433f18e63e63300c2303eda7665f185b4d79ad370731f5d6c3b770a535bf"
+    },
+    "real-n64/evidence/ci-third-rc-failure.json": {
+      "copy": "ci-third-rc-failure.json",
+      "bytes": 1324,
+      "sha256": "298daee0a1ee31c66eb69a15565ca4a428c62f685d0616b5d5c7def82824c46c"
+    },
+    "real-n64/evidence/ci-validation-rc.json": {
+      "copy": "ci-validation-rc.json",
+      "bytes": 7042,
+      "sha256": "6c68b4d7b70624ec97857ec16ab8c87df083a12cc802bb0bf069b8b94f8fd64a"
+    },
+    "real-n64/evidence/decor-layout.json": {
+      "copy": "decor-layout.json",
+      "bytes": 5036,
+      "sha256": "9b3537247178a028e96fa7b6319859f3cb88be38aca4c3174e42226c26da639a"
+    },
+    "real-n64/evidence/fallback-link-map.txt": {
+      "copy": "fallback-link-map.txt",
+      "bytes": 3341,
+      "sha256": "4629b44c3bb644cd3c0fbd61810f15b07856d0704a7dd0bc4e36d8c191497606"
+    },
+    "real-n64/evidence/import-summary.json": {
+      "copy": "import-summary.json",
+      "bytes": 1390,
+      "sha256": "7f5142a138db3d8bc533e7fd2bc9f64da43ecac9c08a7a87bad6afb7056d8f3a"
+    },
+    "real-n64/evidence/launcher-native-results.json": {
+      "copy": "launcher-native-results.json",
+      "bytes": 1130,
+      "sha256": "1ae0ac922ca927b11fd332e6a40a5cad3ce69960019e350664284102f4e3c9b2"
+    },
+    "real-n64/evidence/preservation-final.json": {
+      "copy": "preservation-final.json",
+      "bytes": 364,
+      "sha256": "c5c8b551014342d2ea3ff6eb7754c451a7b5b07a5bc10afbcb6d37bd916aca44"
+    },
+    "real-n64/evidence/preservation-rc.json": {
+      "copy": "preservation-rc.json",
+      "bytes": 849,
+      "sha256": "83311455b9d90bf41086a7d3312c90c4058787a6256c67bfdafd7e7af5c96198"
+    },
+    "real-n64/evidence/probe-autosave-readonly-rc.json": {
+      "copy": "probe-autosave-readonly-rc.json",
+      "bytes": 4032,
+      "sha256": "6f308ce23bda39e676478a5c09c07f2fe786f1fb5acc58f1f050318aaee054f4"
+    },
+    "real-n64/evidence/probe-cpu.txt": {
+      "copy": "probe-cpu.txt",
+      "bytes": 1033,
+      "sha256": "2fae1e6c1b311b98ccb54711367d197e649e51b0a82cf62494443502b536257d"
+    },
+    "real-n64/evidence/probe-cpu2.txt": {
+      "copy": "probe-cpu2.txt",
+      "bytes": 15346,
+      "sha256": "8a70da517698574e87fca2dd8acd78b75bd778fb0529756a005bce75f1d27f51"
+    },
+    "real-n64/evidence/probe-fallback.txt": {
+      "copy": "probe-fallback.txt",
+      "bytes": 18636,
+      "sha256": "99c62c5ace02b03f14e854686f2f23e0af0ecb2a1fbfaa9eaf643a0aae501fea"
+    },
+    "real-n64/evidence/probe-legacy.txt": {
+      "copy": "probe-legacy.txt",
+      "bytes": 20980,
+      "sha256": "d8b114c735909922b489e9022873cc28c4d0c0363f48a6d5dbdbf91c513ade1e"
+    },
+    "real-n64/evidence/probe-native-roundtrip.json": {
+      "copy": "probe-native-roundtrip.json",
+      "bytes": 21686,
+      "sha256": "0e6a2fab4fb50c52309b576086a93dad405c48c6861b2bf44a17178eb355050c"
+    },
+    "real-n64/evidence/probe-pure.txt": {
+      "copy": "probe-pure.txt",
+      "bytes": 15557,
+      "sha256": "0b8fd74639ff7597ca71419e5d2911d2a93ac4aaa6085911375676188453f2f4"
+    },
+    "real-n64/evidence/probe-restore-baseline.json": {
+      "copy": "probe-restore-baseline.json",
+      "bytes": 8323,
+      "sha256": "28889e32669fed57ceba9fb1edebd62eb4dcaea5710b9b649fb0b613d5cf2922"
+    },
+    "real-n64/evidence/probe-restore-rc.json": {
+      "copy": "probe-restore-rc.json",
+      "bytes": 8489,
+      "sha256": "a27b926c724d51bd26cba0abf01c14815d8b692483f255056074039ed3a6f686"
+    },
+    "real-n64/evidence/probe-results.json": {
+      "copy": "probe-results.json",
+      "bytes": 33586,
+      "sha256": "d77ac12cbf39d71d86455395f5b1d5e730e4a9bac4c8a677e1946c18a0402484"
+    },
+    "real-n64/evidence/runtime-diagnostic.json": {
+      "copy": "runtime-diagnostic.json",
+      "bytes": 6209,
+      "sha256": "8c7ef0f31e5a560b37cacc479a0a418e1a18103f9cc8a1ffbe34b63c4d988bca"
+    },
+    "real-n64/evidence/runtime-verified.txt": {
+      "copy": "runtime-verified.txt",
+      "bytes": 87,
+      "sha256": "b7ceeb61dd4fef67addc7c96eaf114798bf306948f707ec11da5af602d0c2be2"
+    },
+    "real-n64/evidence/sdk-build.txt": {
+      "copy": "sdk-build.txt",
+      "bytes": 25017,
+      "sha256": "1dcf0537177509a61e64808c1c475126c0cc73af96227d5250d7ab68e4cdaebb"
+    },
+    "real-n64/evidence/session-api-probe.json": {
+      "copy": "session-api-probe.json",
+      "bytes": 3447,
+      "sha256": "f6f7da81895d3fb701e70f7ebda9e816ce1f7928f97c2989071ad461adbfb703"
+    },
+    "real-n64/evidence/test-environment.json": {
+      "copy": "test-environment.json",
+      "bytes": 51,
+      "sha256": "5f54ae36c7bf418fbf192a8c6517a27dde1c5bb6d7dd1c30386318a3e3823ec1"
+    },
+    "real-n64/evidence/tests-hub-browser.json": {
+      "copy": "tests-hub-browser.json",
+      "bytes": 50459,
+      "sha256": "f0f60a278e252b7445eafc0168dc6047116e12f92d3f6d51707c9b99c179d444"
+    },
+    "real-n64/evidence/tests-import-browser.json": {
+      "copy": "tests-import-browser.json",
+      "bytes": 24838,
+      "sha256": "0eb202ec7a5d3a466691e94bccfc757646832112f30ee0945df392fcda64f2d3"
+    },
+    "real-n64/evidence/tests-import-browser.txt": {
+      "copy": "tests-import-browser.txt",
+      "bytes": 919,
+      "sha256": "1db8c4b23b68f663c48c3195b00b39433c0599ea2f4a786f43cdb7bbc26d8d71"
+    },
+    "real-n64/evidence/tests-import-unit.txt": {
+      "copy": "tests-import-unit.txt",
+      "bytes": 1213,
+      "sha256": "f7a066e9996f24fb135d80e34a18d545c442a3a977f42ddb1f93d99de73e5e04"
+    },
+    "real-n64/evidence/tests-legacy-battery-browser.json": {
+      "copy": "tests-legacy-battery-browser.json",
+      "bytes": 2753,
+      "sha256": "7621124709fa4f0d371bc64036cf76299f64ca4812b0dd725620dffc065b8e25"
+    },
+    "real-n64/evidence/tests-ram-identification-rc-browser.json": {
+      "copy": "tests-ram-identification-rc-browser.json",
+      "bytes": 6937,
+      "sha256": "bfd1c507d0beeb8e8996d742c670971afe68c18d9ae69b898533a72a70b6361f"
+    },
+    "real-n64/evidence/tests-reference-v0.2.txt": {
+      "copy": "tests-reference-v0.2.txt",
+      "bytes": 471,
+      "sha256": "2ef6d5699d22a11b7b224668d849669fda209cc2271b9a6701ce9d165c27cf78"
+    },
+    "real-n64/evidence/tests-restore-guards-rc-browser.json": {
+      "copy": "tests-restore-guards-rc-browser.json",
+      "bytes": 33106,
+      "sha256": "8c436fface0d33a1dddc5292ffdebc49aafbdfd9cb4f3769552f5e01753af388"
+    },
+    "real-n64/evidence/tests-restore-rc-browser.json": {
+      "copy": "tests-restore-rc-browser.json",
+      "bytes": 58131,
+      "sha256": "4fbeb3269a6bab927f674f4e2b311ff418c60884521b4f9418e3e31088b1efd2"
+    },
+    "real-n64/evidence/tests-save-store-browser.json": {
+      "copy": "tests-save-store-browser.json",
+      "bytes": 11224,
+      "sha256": "74f514a116b021c3962d24952834aa9dec160545272b50df7c761bf361a1e610"
+    },
+    "real-n64/evidence/tests-tools.txt": {
+      "copy": "tests-tools.txt",
+      "bytes": 1596,
+      "sha256": "22d4dcaaaa599bd9490c8b6bea3280c55bc20a75162641098eb06ba654d0ca51"
+    },
+    "real-n64/evidence/tests-unit-rc.json": {
+      "copy": "tests-unit-rc.json",
+      "bytes": 1567,
+      "sha256": "e17f368bbcc2c9ee6020920cdd29d2116cc9c0c129f5dff50861b7b24d28255a"
+    },
+    "real-n64/evidence/tests-unit-rc.txt": {
+      "copy": "tests-unit-rc.txt",
+      "bytes": 13372,
+      "sha256": "81e9ea826967f53c5f7019caa3a98e1e3fbbf65bb1ac84fb71e249acb033aae0"
+    },
+    "real-n64/evidence/tests-web-rc-browser.json": {
+      "copy": "tests-web-rc-browser.json",
+      "bytes": 15252,
+      "sha256": "3c26e4889e4e31c9a0f2d1d3da3010363921ac6f938e666dbfa0782d77bb1186"
+    },
+    "real-n64/evidence/tests-web-rc-restoration.json": {
+      "copy": "tests-web-rc-restoration.json",
+      "bytes": 65965,
+      "sha256": "7aee56aaadbb2a1de9723f3853acdcc0e55766279d88232df44523815969ea19"
+    },
+    "real-n64/evidence/tests-zip-browser.json": {
+      "copy": "tests-zip-browser.json",
+      "bytes": 27785,
+      "sha256": "e9c2f071799111e42d3e7b6cc76a5516f396840d051f30c50ec9599f2a4073f7"
+    },
+    "real-n64/evidence/windows-hub-launcher.json": {
+      "copy": "windows-hub-launcher.json",
+      "bytes": 3601,
+      "sha256": "727f07faec7683559cd6ba2705ebb0fe2d7d98cf6975feb4df2f5017a8c36fc5"
+    },
+    "real-n64/evidence/zip-tests-summary.json": {
+      "copy": "zip-tests-summary.json",
+      "bytes": 802,
+      "sha256": "7d0cbc1e38884a4f285111e6dea0104d5d5bb76abf705c4117c7ccfdca0cb17d"
+    }
+  },
+  "file_count": 58,
+  "sealed_archives": [
+    {
+      "file": "EMUPERSO-N64-0.5.0-RC1-WINDOWS-REVUE-PRIVEE.zip",
+      "bytes": 2221748,
+      "sha256": "1e08f870c5b4a2b04ad93a04380159ef02c4bb5091c09bd1171003c583502a0c",
+      "delivery_commit": "65783821250b286f3a3799ea8fcb930908ede342",
+      "tested_commit": "aea4eb4538bca032d6dff1dcc33bea1164290018",
+      "ci_run": 41311824619,
+      "status": "SCELLEE_RC1_INCHANGEE"
+    },
+    {
+      "file": "EMUPERSO-N64-0.5.0-RC1-WEB-REVUE-PRIVEE.zip",
+      "bytes": 5777994,
+      "sha256": "2484a6f80c5838db2c27909900bcacb52f3d8927a2e69ed713c062db05dc029e",
+      "delivery_commit": "65783821250b286f3a3799ea8fcb930908ede342",
+      "tested_commit": "aea4eb4538bca032d6dff1dcc33bea1164290018",
+      "ci_run": 41311824619,
+      "status": "SCELLEE_RC1_INCHANGEE"
+    },
+    {
+      "file": "EMUPERSO-N64-0.5.0-RC1-SOURCES-AUDIT-PRIVE.zip",
+      "bytes": 16643942,
+      "sha256": "ffd7ab7b7840d1dee8477b8d101e6dd84d45cc80289fa6c5b0becd0791391bab",
+      "delivery_commit": "65783821250b286f3a3799ea8fcb930908ede342",
+      "tested_commit": "aea4eb4538bca032d6dff1dcc33bea1164290018",
+      "ci_run": 41311824619,
+      "status": "SCELLEE_RC1_INCHANGEE"
+    }
+  ],
+  "publication_allowed": false,
+  "tested_on_karl_pc": false,
+  "scope": "Historical RC1 proof only. No assertion that RC2 passed these tests."
+}

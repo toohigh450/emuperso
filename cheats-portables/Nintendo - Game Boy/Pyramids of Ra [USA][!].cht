@@ -1,0 +1,53 @@
+# Recherche locale pour la ROM : Pyramids of Ra [USA][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Pyramids%20of%20Ra%20(USA)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Pyramids%20of%20Ra%20(USA).cht
+
+cheats = 11
+
+cheat0_desc = "[Game Genie] Energy Bar Doesn't Go Down When You Make A Move"
+cheat0_code = "FA5-8EB-4C1"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Only 1 Point Of Energy Per Move On First Attempt At Each Level (Instead Of 3)"
+cheat1_code = "A2A-C48-6EC+3CA-C68-19B+FAA-C38-4C1"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Start On Level 100"
+cheat2_code = "641-AB4-E6E+001-ACF-E6A"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Start On Level 300"
+cheat3_code = "2C1-ABF-E6E+011-ACF-E6A"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] Start On Level 500"
+cheat4_code = "F41-ABF-E6E+011-ACF-E6A"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Energy bar doesn't go down when you make a move"
+cheat5_code = "FA5-8EB-4C1"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Only 1 pt. of energy per move on first attempt at each level [instead of 3]"
+cheat6_code = "A2A-C48-6EC+3CA-C68-19B+FAA-C38-4C1"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Start on level 300"
+cheat7_code = "2C1-ABF-E6E+011-ACF-E6A"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Start on level 500"
+cheat8_code = "F41-ABF-E6E+011-ACF-E6A"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Automatically Beat Levels"
+cheat9_code = "0125CAC3+0125CBC3"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Skip Large Chunks of Levels"
+cheat10_code = "01FF45C4+01FF44C4"
+cheat10_enable = false

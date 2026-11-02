@@ -1,0 +1,184 @@
+# Recherche locale pour la ROM : Cocoto - Kart Racer (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Cocoto%20-%20Kart%20Racer%20(Europe).cht
+
+cheats = 44
+
+cheat0_desc = "[Action Replay] Have Nine Apples"
+cheat0_code = "42176E40+02000000+32176E40+02400000+B2176E40+00000000+20002A08+00000009+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Mosquito Fork/Dart"
+cheat1_code = "42176E40+02000000+32176E40+02400000+B2176E40+00000000+100029F8+00000001+100029FC+00000003+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Fireball/Piranha"
+cheat2_code = "42176E40+02000000+32176E40+02400000+B2176E40+00000000+100029F8+00000002+100029FC+00000003+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Turbo"
+cheat3_code = "42176E40+02000000+32176E40+02400000+B2176E40+00000000+100029F8+00000003+100029FC+00000003+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Invincibility"
+cheat4_code = "42176E40+02000000+32176E40+02400000+B2176E40+00000000+100029F8+00000004+100029FC+00000003+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Fairy/Storm Angel"
+cheat5_code = "42176E40+02000000+32176E40+02400000+B2176E40+00000000+100029F8+00000005+100029FC+00000003+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Multi Fairy/Multistorm Angel"
+cheat6_code = "42176E40+02000000+32176E40+02400000+B2176E40+00000000+100029F8+00000001+100029FC+00000006+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Fireball/Explosive Cloud"
+cheat7_code = "42176E40+02000000+32176E40+02400000+B2176E40+00000000+100029F8+00000001+100029FC+00000007+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Tomato"
+cheat8_code = "42176E40+02000000+32176E40+02400000+B2176E40+00000000+100029F8+00000001+100029FC+00000008+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Sticky Lava/Paralysing Ice"
+cheat9_code = "42176E40+02000000+32176E40+02400000+B2176E40+00000000+100029F8+00000001+100029FC+00000009+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] ???"
+cheat10_code = "2209D2B4+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] ???"
+cheat11_code = "2209D2B4+00000001"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Cocoto"
+cheat12_code = "2209D2B4+00000002"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Scritch"
+cheat13_code = "2209D2B4+00000003"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Shiny"
+cheat14_code = "2209D2B4+00000004"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Turtlini"
+cheat15_code = "2209D2B4+00000005"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Baggi"
+cheat16_code = "2209D2B4+00000006"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Dugger"
+cheat17_code = "2209D2B4+00000007"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Neuro"
+cheat18_code = "2209D2B4+00000008"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Geckill"
+cheat19_code = "2209D2B4+00000009"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] ???"
+cheat20_code = "2209D2B4+0000000A"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Glabooh"
+cheat21_code = "2209D2B4+0000000B"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] ???"
+cheat22_code = "2209D2C4+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] ???"
+cheat23_code = "2209D2C4+00000001"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Cocoto"
+cheat24_code = "2209D2C4+00000002"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Scritch"
+cheat25_code = "2209D2C4+00000003"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Shiny"
+cheat26_code = "2209D2C4+00000004"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Turtlini"
+cheat27_code = "2209D2C4+00000005"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Baggi"
+cheat28_code = "2209D2C4+00000006"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Dugger"
+cheat29_code = "2209D2C4+00000007"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Neuro"
+cheat30_code = "2209D2C4+00000008"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Geckill"
+cheat31_code = "2209D2C4+00000009"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] ???"
+cheat32_code = "2209D2C4+0000000A"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Glabooh"
+cheat33_code = "2209D2C4+0000000B"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Glabooh"
+cheat34_code = "1209839C+00000001"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Glabooh Extended"
+cheat35_code = "1209839C+00000002"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Cerber"
+cheat36_code = "1209839C+00000003"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Cerber Extended"
+cheat37_code = "1209839C+00000004"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Venusia"
+cheat38_code = "1209839C+00000005"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Venusia Extended"
+cheat39_code = "1209839C+00000006"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Bo-Bong"
+cheat40_code = "1209839C+00000007"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Bo-Bong Extended"
+cheat41_code = "1209839C+00000008"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Zaron"
+cheat42_code = "1209839C+00000009"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Zaron Extended"
+cheat43_code = "1209839C+0000000A"
+cheat43_enable = false

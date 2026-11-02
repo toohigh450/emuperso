@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Fossil League - Dino Tournament Championship (Europe).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Fossil%20League%20-%20Dino%20Tournament%20Championship%20(Europe).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] Max Cash"
+cheat0_code = "62000C8C+00000000+B2000C8C+00000000+00000284+000F423F+D2000000+00000000"
+cheat0_enable = false

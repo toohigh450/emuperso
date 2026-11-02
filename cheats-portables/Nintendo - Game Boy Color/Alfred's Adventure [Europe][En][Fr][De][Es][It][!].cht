@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Alfred's Adventure [Europe][En][Fr][De][Es][It][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Alfred's%20Adventure%20(Europe)%20(Xploder).cht
+
+cheats = 2
+
+cheat0_desc = "[Xploder] Unendlich Leben"
+cheat0_code = "$0D24B181"
+cheat0_enable = false
+
+cheat1_desc = "[Xploder] Unendlich Diamanten"
+cheat1_code = "$0DBA9081"
+cheat1_enable = false

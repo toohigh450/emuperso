@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Barcode Taisen Bardigun [Japan][SGB Enhanced][GB Compatible][!!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Barcode%20Taisen%20Bardigun%20(Japan)%20(SGB%20Enhanced)%20(GB%20Compatible).cht
+
+cheats = 2
+
+cheat0_desc = "[Format source non précisé] Cheat Enabled"
+cheat0_code = "010125CB+010127CB"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Cheat Enabled"
+cheat1_code = "00D-E5C-6E5"
+cheat1_enable = false

@@ -1,0 +1,80 @@
+# Recherche locale pour la ROM : Power Rangers - Dino Thunder (Europe) (Fr,De).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Power%20Rangers%20-%20Dino%20Thunder%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 18
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00005160+000A+10000B20+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Health"
+cheat1_code = "3300344D+008F"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Invincible"
+cheat2_code = "33003433+0002"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Max Dino Claws"
+cheat3_code = "3300007B+0063"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Mega Jump"
+cheat4_code = "D0000020+0001+33003450+001E"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] One Item Needed Complete Mission Objectives"
+cheat5_code = "A300007E+0000+3300007E+0001"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Infinite lives in Puzzle"
+cheat6_code = "330033E0+0004"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Select To Fill Puzzle Timer"
+cheat7_code = "74000130+03FB+830033DE+1C20"
+cheat7_enable = false
+
+cheat8_desc = "[Code Breaker] Max Yellow Jewels Collected"
+cheat8_code = "33000084+0028"
+cheat8_enable = false
+
+cheat9_desc = "[Code Breaker] Max Blue Jewels Collected"
+cheat9_code = "33000085+0028"
+cheat9_enable = false
+
+cheat10_desc = "[Code Breaker] Max Red Jewels Collected"
+cheat10_code = "83000086+2828"
+cheat10_enable = false
+
+cheat11_desc = "[Code Breaker] Max Dino Claws Collected"
+cheat11_code = "3300007C+00C8"
+cheat11_enable = false
+
+cheat12_desc = "[Code Breaker] Have All Megazord Weapons"
+cheat12_code = "33003407+0004+83003408+0100+8300340A+0205+3300340C+0003"
+cheat12_enable = false
+
+cheat13_desc = "[Code Breaker] Infinite HP-Megazord"
+cheat13_code = "83003014+707F+83003016+707F"
+cheat13_enable = false
+
+cheat14_desc = "[Code Breaker] 1-Hit To Kill Enemy Zord"
+cheat14_code = "A3003884+0001+83003884+FFFF+A3003886+0001+83003886+FFFF"
+cheat14_enable = false
+
+cheat15_desc = "[Code Breaker] Press L To Cripple Boss 1"
+cheat15_code = "74000130+01FF+33003915+0000"
+cheat15_enable = false
+
+cheat16_desc = "[Code Breaker] Press L To Criple Boss 2"
+cheat16_code = "74000130+01FF+330038CD+0000"
+cheat16_enable = false
+
+cheat17_desc = "[Code Breaker] Press L To Cripple Boss 3"
+cheat17_code = "74000130+01FF+330039ED+0000"
+cheat17_enable = false

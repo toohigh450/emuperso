@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Classic NES Series - Zelda II - The Adventure of Link (USA, Europe).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Classic%20NES%20Series%20-%20Zelda%20II%20-%20The%20Adventure%20of%20Link%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 7
+
+cheat0_desc = "[Code Breaker] Infinite Lives"
+cheat0_code = "33007900+0005"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Health"
+cheat1_code = "33007974+007F"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Have All Spells"
+cheat2_code = "4300797B+0101+00000004+0001+33007981+0001"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Maximum Life Level"
+cheat3_code = "33007979+0008"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Maximum Attack Level"
+cheat4_code = "33007977+0008"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Maximum Magic Level"
+cheat5_code = "33007978+0008"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Infinite Keys"
+cheat6_code = "33007993+0003"
+cheat6_enable = false

@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Music Monstars - The Ultimate Music Machine (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Music%20Monstars%20-%20The%20Ultimate%20Music%20Machine%20(Europe).cht
+
+cheats = 6
+
+cheat0_desc = "[Action Replay] unlock all songs in practice mode"
+cheat0_code = "120EE2D8+0000FFFF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Accuracy"
+cheat1_code = "020E2DF0+42C80000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Score"
+cheat2_code = "020E2DD4+0000270F"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Score Multiplier"
+cheat3_code = "020E2DDC+00000009"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Best Streak"
+cheat4_code = "020E2DE4+000000FF"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Best Rating"
+cheat5_code = "020E2DD8+00000063"
+cheat5_enable = false

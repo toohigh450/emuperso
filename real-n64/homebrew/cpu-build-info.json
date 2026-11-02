@@ -1,0 +1,11 @@
+{
+  "scope": "EXPERIMENTAL_EMULATOR_ONLY_8MIB_CPU_BOOT_NOT_CONSOLE_VALIDATED",
+  "rom": {
+    "file": "demo-emuperso-cpu.z64",
+    "bytes": 139264,
+    "sha256": "f58efbd5eed8c5e87fe447facbd8854aba90ddca9edd4aa42a7393226c9fbde7"
+  },
+  "source": "Unchanged Claude main.c linked by libdragon, flattened ELF; own MIT CPU bootstrap",
+  "boot": "8 MiB assumed, cleared by CPU, raw application copied from ROM; no RSP or physical memory training",
+  "crc": "Header CRC fields zero; this prototype targets the tested emulator only"
+}

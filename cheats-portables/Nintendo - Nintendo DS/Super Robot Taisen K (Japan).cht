@@ -1,0 +1,200 @@
+# Recherche locale pour la ROM : Super Robot Taisen K (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Super%20Robot%20Taisen%20K%20(Japan).cht
+
+cheats = 48
+
+cheat0_desc = "[Action Replay] Completed Game for 99 Times"
+cheat0_code = "221BE220+00000063"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] 1 Kill Equals to 999 Kills"
+cheat1_code = "0201761C+E1A00002"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Turn Always 1"
+cheat2_code = "221BE198+00000001"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max/Infinite Money (Select)"
+cheat3_code = "94000130+FFFB0000+021BE214+05F5E0FF+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All Upgrades and Parts x 99 (Select)"
+cheat4_code = "94000130+FFFB0000+D5000000+00000063+C0000000+0000002E+D8000000+021BE235+D2000000+00000000+94000130+FFFB0000+D5000000+63636363+C0000000+00000018+D6000000+021BE264+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All Pilot and Robots"
+cheat5_code = "E2000060+00000010+E3A00001+E1C100B8+E1D100B8+EA006647+E2000070+00000010+E3A0C001+E7C0C001+E7D00001+E12FFF1E+52000060+E3A00001+52000070+E3A0C001+0201998C+EAFF99B3+0201B8E4+EAFF91E1+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Max HP"
+cheat6_code = "94000130+FFFB0000+C0000000+00000059+021CE15C+0001869F+DC000000+00000058+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Max EN"
+cheat7_code = "94000130+FFFB0000+C0000000+00000059+121CE160+000003E7+DC000000+00000058+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Weapon Max Modification"
+cheat8_code = "94000130+FFFB0000+C0000000+00000059+221CE181+0000000F+DC000000+00000058+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Robot Max Modification"
+cheat9_code = "94000130+FFFB0000+C0000000+00000059+021CE17C+0F0F0F0F+221CE180+0000000F+DC000000+00000058+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Max SP"
+cheat10_code = "94000130+FFFB0000+C0000000+0000006E+121C960C+000003E7+DC000000+00000050+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Max Morale/Will/Stamina"
+cheat11_code = "94000130+FFFB0000+C0000000+0000006E+221C9612+000000FA+DC000000+00000050+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] All Stats 999"
+cheat12_code = "94000130+FFFB0000+C0000000+0000006E+021C963C+63636363+121C9640+00006363+DC000000+00000050+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] All Seishin/Spiritual Command"
+cheat13_code = "94000130+FFFB0000+C0000000+0000006E+121C9642+0000FFFF+121C9644+0000FFFF+221C9646+000000FF+DC000000+00000050+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Infinite Movement for all Pilots (X)"
+cheat14_code = "94000136+FFFE0000+C0000000+00000059+221C52BA+00000001+DC000000+000000C0+D2000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Forever Players Turn"
+cheat15_code = "521EDA04+E3E00000+021EDA08+E3A03000+D0000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Infinite Ammo"
+cheat16_code = "E20000E0+00000018+E59FC00C+E152000C+91A02000+80402004+EA07B47F+00001E98+521ED2EC+EBF8BB26+021ED2F0+EAF84B7A+D0000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] HP Auto Recover After Battle"
+cheat17_code = "E2000000+00000018+E3A0105A+E1550001+31A00002+21A00004+EA006C7C+E1A00000+52000000+E3A0105A+0201B204+EAFF937D+D0000000+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Max Exp After Battle"
+cheat18_code = "02017504+E1A00002"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Nekketsu Condition"
+cheat19_code = "94000130+FFFB0000+C0000000+0000006E+221C9618+00000000+DC000000+00000050+D2000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Tamashii Condition"
+cheat20_code = "94000130+FFFB0000+C0000000+0000006E+221C9619+00000000+DC000000+00000050+D2000000+00000000"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Toushi Condition"
+cheat21_code = "94000130+FFFB0000+C0000000+0000006E+221C961A+00000000+DC000000+00000050+D2000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Hirameki Condition"
+cheat22_code = "94000130+FFFB0000+C0000000+0000006E+221C961B+00000000+DC000000+00000050+D2000000+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Fukutsu Condition"
+cheat23_code = "94000130+FFFB0000+C0000000+0000006E+221C961C+00000000+DC000000+00000050+D2000000+00000000"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Teppeki Condition"
+cheat24_code = "94000130+FFFB0000+C0000000+0000006E+221C961D+00000000+DC000000+00000050+D2000000+00000000"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Kakuran Condition"
+cheat25_code = "94000130+FFFB0000+C0000000+0000006E+221C961E+00000000+DC000000+00000050+D2000000+00000000"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Shuuchuu Condition"
+cheat26_code = "94000130+FFFB0000+C0000000+0000006E+221C961F+00000000+DC000000+00000050+D2000000+00000000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Hichuu Condition"
+cheat27_code = "94000130+FFFB0000+C0000000+0000006E+221C9620+00000000+DC000000+00000050+D2000000+00000000"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Kasoku Condition"
+cheat28_code = "94000130+FFFB0000+C0000000+0000006E+221C9623+00000000+DC000000+00000050+D2000000+00000000"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Kakusei Condition"
+cheat29_code = "94000130+FFFB0000+C0000000+0000006E+221C9624+00000000+DC000000+00000050+D2000000+00000000"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Totsugeki Condition"
+cheat30_code = "94000130+FFFB0000+C0000000+0000006E+221C9626+00000000+DC000000+00000050+D2000000+00000000"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Sogeki Condition"
+cheat31_code = "94000130+FFFB0000+C0000000+0000006E+221C962D+00000000+DC000000+00000050+D2000000+00000000"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Tekagen Condition"
+cheat32_code = "94000130+FFFB0000+C0000000+0000006E+221C9633+00000000+DC000000+00000050+D2000000+00000000"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Chokugeki Condition"
+cheat33_code = "94000130+FFFB0000+C0000000+0000006E+221C9634+00000000+DC000000+00000050+D2000000+00000000"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Kou'un Condition"
+cheat34_code = "94000130+FFFB0000+C0000000+0000006E+221C9637+00000000+DC000000+00000050+D2000000+00000000"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Doryoku Condition"
+cheat35_code = "94000130+FFFB0000+C0000000+0000006E+221C9639+00000000+DC000000+00000050+D2000000+00000000"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] x2"
+cheat36_code = "521EED74+E0800007+121EED74+00000087+D2000000+00000000"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] x4"
+cheat37_code = "521EED74+E0800007+121EED74+00000107+D2000000+00000000"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] x8"
+cheat38_code = "521EED74+E0800007+121EED74+00000187+D2000000+00000000"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] x16"
+cheat39_code = "521EED74+E0800007+121EED74+00000207+D2000000+00000000"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] x32"
+cheat40_code = "521EED74+E0800007+121EED74+00000287+D2000000+00000000"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] x64"
+cheat41_code = "521EED74+E0800007+121EED74+00000307+D2000000+00000000"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] x2"
+cheat42_code = "521EEED4+E0830002+121EEED4+00000082+D2000000+00000000"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] x4"
+cheat43_code = "521EEED4+E0830002+121EEED4+00000102+D2000000+00000000"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] x8"
+cheat44_code = "521EEED4+E0830002+121EEED4+00000182+D2000000+00000000"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] x16"
+cheat45_code = "521EEED4+E0830002+121EEED4+00000202+D2000000+00000000"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] x32"
+cheat46_code = "521EEED4+E0830002+121EEED4+00000282+D2000000+00000000"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] x64"
+cheat47_code = "521EEED4+E0830002+121EEED4+00000302+D2000000+00000000"
+cheat47_enable = false

@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Geojisui Yunmugok (Korea).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Geojisui%20Yunmugok%20(Korea).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Max/Infinite Money"
+cheat0_code = "02069204+0001869F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All item 90"
+cheat1_code = "D5000000+0000005A+C0000000+00000031+D8000000+02069209+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All accessory 99"
+cheat2_code = "120692D0+00006363+E20692A8+00000028+63006300+63636363+63636363+63636363+63636363+63006363+63000063+63000063+63636363+63636363+D5000000+00000063+C0000000+00000034+D8000000+02069271+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Bonus EXP after battle 255"
+cheat3_code = "22072C81+000000FF"
+cheat3_enable = false

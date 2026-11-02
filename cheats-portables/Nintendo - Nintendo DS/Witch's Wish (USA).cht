@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Witch's Wish (USA).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Witch's%20Wish%20(USA).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] Items x99"
+cheat0_code = "120C538A+00006363+220C538C+00000063"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Plot Items"
+cheat1_code = "220C53E7+00000001+020C53E8+01010101+020C53EC+01010101+220C53F0+00000001"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Stages Unlocked"
+cheat2_code = "120C5372+00000303+020C5374+03030303+020C5378+03030303+120C537C+00000303"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Magic"
+cheat3_code = "120C53CA+00000101+020C53CC+01010101+020C53D0+01010101+020C53D4+01010101+220C53D8+00000001"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Complete Diary"
+cheat4_code = "120C545A+00000101+020C545C+01010101+020C5460+01010101+220C5464+00000001"
+cheat4_enable = false

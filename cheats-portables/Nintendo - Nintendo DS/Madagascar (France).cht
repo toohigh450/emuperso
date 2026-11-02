@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Madagascar (France).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Madagascar%20(France).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] Max Health"
+cheat0_code = "220D8EB0+00000005"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Coins"
+cheat1_code = "220D8E84+00000063"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Unlock All Stages"
+cheat2_code = "C0000000+00000018+22149474+00000001+DC000000+00000018+D2000000+00000000+C0000000+00000009+221496F4+00000001+DC000000+00000018+D2000000+00000000"
+cheat2_enable = false

@@ -1,0 +1,29 @@
+# Recherche locale pour la ROM : Pocket Bomberman [Europe][SGB Enhanced][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Pocket%20Bomberman%20(Europe)%20(SGB%20Enhanced).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Pocket%20Bomberman%20(Europe)%20(Xploder).cht
+
+cheats = 5
+
+cheat0_desc = "[Format source non précisé] Unendlich Leben"
+cheat0_code = "01243881"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Unendlich Zeit"
+cheat1_code = "015D5681"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Invulnerability"
+cheat2_code = "C33-6EB-E61"
+cheat2_enable = false
+
+cheat3_desc = "[Xploder] Unendlich Leben"
+cheat3_code = "$0D243881"
+cheat3_enable = false
+
+cheat4_desc = "[Xploder] Unendlich Zeit"
+cheat4_code = "$0D5D5681"
+cheat4_enable = false

@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Amazing Spider-Man, The (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Amazing%20Spider-Man%2C%20The%20(Europe).cht
+
+cheats = 6
+
+cheat0_desc = "[Action Replay] Max Score"
+cheat0_code = "94000130+FFFB0000+023C45A8+000F423F+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Moon Jump"
+cheat1_code = "94000130+FFFD0000+622585D8+00000000+B22585D8+00000000+00000690+FFFFFDE8+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Combo"
+cheat2_code = "927FFFA8+F7FF0000+622585D8+00000000+B22585D8+00000000+20000B70+00000062+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Health Never Decrease"
+cheat3_code = "D9000000+0210A954+622585D8+00000000+B22585D8+00000000+D6000000+00000A38+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Refill Health"
+cheat4_code = "94000130+FFFB0000+D9000000+0210A954+622585D8+00000000+B22585D8+00000000+D6000000+00000A38+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Invincibility"
+cheat5_code = "622585D8+00000000+B22585D8+00000000+20000ADC+00000001+D2000000+00000000"
+cheat5_enable = false

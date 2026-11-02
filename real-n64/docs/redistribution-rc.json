@@ -1,0 +1,98 @@
+{
+  "schema": "emuperso/redistribution-audit/v1",
+  "review_date_utc": "2026-10-31",
+  "candidate": "0.5.0-rc",
+  "publication_allowed": false,
+  "karl_publication_go": false,
+  "gate": "STOP_PUBLIC_DISTRIBUTION_RUNTIME",
+  "verified": {
+    "runtime_locked_files": 39,
+    "runtime_files_sha256_checked": true,
+    "catalog_files_checked": 2,
+    "frontend": {
+      "commit": "e150dc0491ae747028919fb82d6598954976ede6",
+      "npm_package": "@emulatorjs/emulatorjs@4.2.3",
+      "sha256": "8033a18a3398cae5efd7a4c12a633b10672435977290959633d671365b589639",
+      "license_git_blob": "372f2fd95ce1fd475aa30f2d4d8ddff64bd6bf62",
+      "license_sha256": "a617fab6d251b3302b1cb2c1c94f52d1c584f6fcb2fc218ec1a475bc08053a61",
+      "license_evidence": "GPL-3.0 package metadata; license application notice says version3 or later"
+    },
+    "core_package": {
+      "npm_package": "@emulatorjs/core-mupen64plus_next@4.2.3",
+      "sha256": "2b8952aabbe32dc620cbde31b4456a16d7ff96116f471283699dc9ae09724417",
+      "reported_version": "2.0.2",
+      "minimumEJSVersion": "4.2.2",
+      "build_start": "2025-06-14T18:12:53+00:00",
+      "build_end": "2025-06-14T18:16:01+00:00",
+      "metadata_gitHead": "e150dc0491ae747028919fb82d6598954976ede6",
+      "gitHead_is_core_source_revision": false,
+      "exact_core_source_revision": null,
+      "exact_retroarch_source_revision": null
+    },
+    "socketio": {
+      "version": "4.8.1",
+      "source_commit": "8d5528aa2abc530f9e35f53935083894cec38c99",
+      "source_path": "packages/socket.io-client/dist/socket.io.min.js",
+      "source_blob": "c72110d7fa4ed539768ccf66182eb372bba3d68e",
+      "local_git_blob_matches": true,
+      "license": "MIT"
+    },
+    "nipplejs": {
+      "ejs_bundle_blob": "bf35a0c217b34c572b1c7c063e5028c09473daa2",
+      "ejs_declared_dependency_range": "^0.10.2",
+      "exact_bundle_source_revision": null,
+      "license_reference": "MIT at officialv0.10.2"
+    },
+    "catalog_lock": "docs/cheat-catalog-lock.json",
+    "python_lock": "docs/portable-python-lock.json"
+  },
+  "historical_candidates_not_proven_corresponding_source": {
+    "build_commit": "b24e5b535034dc7c3428d76f236d4793881969b6",
+    "mupen_commit": "0346d3ef26016bb4de604cf918d004bd791447ee",
+    "observed_build_script_sdk": "3.1.74",
+    "workflow_sdk_from_repo_variable": true,
+    "uses_git_pull_and_moving_branches": true
+  },
+  "blockers": [
+    {
+      "id": "F6-CORE",
+      "status": "OPEN",
+      "reason": "Exact corresponding source and reproducible recipe of shipped Mupen+RetroArch native executable not established."
+    },
+    {
+      "id": "F6-EXTRACTORS",
+      "status": "OPEN",
+      "reason": "Exact sources, licenses and recipe for compiled7z/zip extractors not established by EJS README."
+    },
+    {
+      "id": "F6-NOTICES",
+      "status": "OPEN",
+      "reason": "Complete linked-module and JavaScript-bundle notices inventory remains incomplete."
+    },
+    {
+      "id": "F6-ASSEMBLY",
+      "status": "OPEN",
+      "reason": "Document licensing of integrated GPL frontend subclasses and MIT independent code; do not license whole third-party assembly as MIT."
+    },
+    {
+      "id": "KARL-GO",
+      "status": "REQUIRED",
+      "reason": "No site or downloadable public release authorized before explicit final approval."
+    }
+  ],
+  "distribution_policy": {
+    "source_windows_zip": "No vendor/cache/Python/userdata binaries; official direct-user downloads with locked hashes. Publication still requires Karl GO.",
+    "web_runtime_bundle": "Local generation/testing only until corresponding-source gate cleared; no public CI artifact or hosting of unresolved binaries.",
+    "public_url_test": "NON TESTABLE until publication approved; localhost does not establish public-origin operation."
+  },
+  "evidence_scope": "Official repositories/docs plus SHA checks of already-cached official artifacts; no ROM/save originals, no engine build, no deployment, no maintainer contact.",
+  "license_copies_sha256": {
+    "docs/licenses/CPython-3.12.10-LICENSE.txt": "a4771d2216653fca4e3472566a762ba8ce5358f6f6599455fe7cfaceb60d14b3",
+    "docs/licenses/EmulatorJS-4.2.3-GPL-3.0.txt": "a617fab6d251b3302b1cb2c1c94f52d1c584f6fcb2fc218ec1a475bc08053a61",
+    "docs/licenses/Mupen64Plus-container-GPL-2.0.txt": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+    "docs/licenses/README.md": "82b9d34c1412edf093c9a2377e889a21b63906d8de206dd6241e21a0d98bc1b0",
+    "docs/licenses/Socket.IO-4.8.1-MIT.txt": "9a86ab0ed57729f382e6836bfc9a50749914adad567215d0464dae67380bc3be",
+    "docs/licenses/UnRAR-license.txt": "6ecc1687808b7d66b24f874755abfed7464d9751ed0001cd4e8e5d9bf397ff8a",
+    "docs/licenses/nipplejs-MIT.txt": "7272cc55f67240bd54eb95284ae4abb74c87725e93b5eee4b34d50b9df42eb5f"
+  }
+}

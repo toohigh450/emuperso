@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : AirForce Delta Storm (USA) (En,Ja,Fr,De).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/AirForce%20Delta%20Storm%20(USA%2C%20Japan)%20(Code%20Breaker).cht
+
+cheats = 3
+
+cheat0_desc = "[Code Breaker] Infinite MSL"
+cheat0_code = "33004DD8+0063"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Max Time Bonus"
+cheat1_code = "83004448+270F"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Max Score"
+cheat2_code = "8300020C+869F+8300020E+0001"
+cheat2_enable = false

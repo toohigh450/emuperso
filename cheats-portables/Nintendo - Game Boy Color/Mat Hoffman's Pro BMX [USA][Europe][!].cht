@@ -1,0 +1,65 @@
+# Recherche locale pour la ROM : Mat Hoffman's Pro BMX [USA][Europe][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Mat%20Hoffman's%20Pro%20BMX%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Mat%20Hoffman's%20Pro%20BMX%20(USA%2C%20Europe).cht
+
+cheats = 14
+
+cheat0_desc = "[GameShark] Enable Jump (Star Level)"
+cheat0_code = "910980CC"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Have All Covers"
+cheat1_code = "911E62CA"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Have All Medals"
+cheat2_code = "910663CA"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Max Score"
+cheat3_code = "910984CC+910985CC+910986CC+910987CC+910988CC+910989CC"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Max Super Meter"
+cheat4_code = "9138DFCC"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] One Letter Needed To Win For Trick and Grind"
+cheat5_code = "91056CCB+91056DCB"
+cheat5_enable = false
+
+cheat6_desc = "[GameShark] One Star Needed To Win"
+cheat6_code = "91096DCB"
+cheat6_enable = false
+
+cheat7_desc = "[GameShark] Stop Timer"
+cheat7_code = "9109BDCC"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Enable Jump (Star Level)"
+cheat8_code = "910980CC"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Have All Covers"
+cheat9_code = "911E62CA"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Have All Medals"
+cheat10_code = "910663CA"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Max Super Meter"
+cheat11_code = "9138DFCC"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] One Star Needed To Win"
+cheat12_code = "91096DCB"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Stop Timer"
+cheat13_code = "9109BDCC"
+cheat13_enable = false

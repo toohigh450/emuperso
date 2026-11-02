@@ -1,0 +1,48 @@
+# Recherche locale pour la ROM : Scooby-Doo 2 - Monsters Unleashed (USA, Europe).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Scooby-Doo%202%20-%20Monsters%20Unleashed%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 10
+
+cheat0_desc = "[Code Breaker] Enable Code"
+cheat0_code = "00005D7E+000A+10098324+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Courage"
+cheat1_code = "33006821+0006"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Tries"
+cheat2_code = "33006831+0007"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Max Scooby Snacks"
+cheat3_code = "8300682E+6363"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Multi Jump"
+cheat4_code = "D0000020+0001+830016F8+F840+D0000020+0001+830016FA+FFFF"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Complete Sneaky Stages"
+cheat5_code = "73000962+0100+83000962+0200"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Skip Level [Press Select+Up]"
+cheat6_code = "74000130+03BB+330067E6+0004+74000130+03BB+830068FC+F00D+74000130+03BB+830068FE+0803"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Access Credits"
+cheat7_code = "73001102+00FF+33001100+0001"
+cheat7_enable = false
+
+cheat8_desc = "[Code Breaker] Access Mini Games"
+cheat8_code = "73001086+0001+83001086+0101"
+cheat8_enable = false
+
+cheat9_desc = "[Code Breaker] Access Special Battles"
+cheat9_code = "73001088+0100+83001088+0101"
+cheat9_enable = false

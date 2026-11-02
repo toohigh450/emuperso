@@ -1,0 +1,52 @@
+# Recherche locale pour la ROM : Bunnyz (Europe) (En,Fr,De,Es,It,Nl).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Bunnyz%20(Europe).cht
+
+cheats = 11
+
+cheat0_desc = "[Action Replay] Have All Food"
+cheat0_code = "221BD1C5+00000009+121BD1C6+00000909+021BD1C8+09090909+221BD1CC+00000009"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Have All Toys"
+cheat1_code = "221BD1CD+00000009+121BD1CE+00000909+021BD1D0+09090909+021BD1D4+09090909+021BD1D8+09090909+221BD1DC+00000009"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Have All Patterns"
+cheat2_code = "221BD1DD+00000001+121BD1DE+00000101+021BD1E0+01010101+021BD1E4+09090909+021BD1E8+09090909+021BD1EC+09090909+021BD1F0+09090909+021BD1F4+09090909+021BD1F8+09090909+021BD1FC+09090909+021BD200+09090909+021BD204+09090909+221BD208+00000009"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Netherland Dwarf"
+cheat3_code = "221BBA78+00000001"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Holland Lop"
+cheat4_code = "221BBA78+00000002"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Mini Rex"
+cheat5_code = "221BBA78+00000003"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] American Fuzzy Lop"
+cheat6_code = "221BBA78+00000004"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] English Angora"
+cheat7_code = "221BBA78+00000005"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Color 1"
+cheat8_code = "221BBA79+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Color 2"
+cheat9_code = "221BBA79+00000001"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Color 3"
+cheat10_code = "221BBA79+00000002"
+cheat10_enable = false

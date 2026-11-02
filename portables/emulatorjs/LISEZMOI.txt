@@ -1,0 +1,19 @@
+Moteur attendu : EmulatorJS 4.2.3, distribution versionnée.
+Par défaut : https://cdn.emulatorjs.org/4.2.3/data/
+
+Pour le mode local, télécharger la release officielle 4.2.3.7z :
+https://github.com/EmulatorJS/EmulatorJS/releases/tag/v4.2.3
+Avant extraction : node tools/verify-engine.mjs --archive chemin/4.2.3.7z
+Extraire son dossier data complet dans emulatorjs/data, avec 7-Zip par exemple.
+Puis : node tools/verify-engine.mjs --frontend emulatorjs/data
+Garder les licences et vérifier les cœurs distribués.
+
+engine-lock.json inventorie uniquement trois fichiers frontend téléchargés et contrôlés.
+Le navigateur impose le SRI du chargeur ; ce SRI ne couvre pas ses sous-ressources.
+Le vérificateur frontend ne couvre pas les cœurs, shaders, traductions et autres fichiers.
+L'archive complète n'a pas été téléchargée pendant la correction : le SHA attendu provient
+explicitement des métadonnées GitHub de la release. Ne pas confondre référence et essai.
+
+Le mode hors ligne ne fonctionne que si tous les fichiers nécessaires sont présents.
+Si le moteur local échoue ou ne devient pas prêt après 60 s, une iframe neuve essaie le CDN.
+Voir THIRD-PARTY.md et REPONSE-AUX-AUDITS-0.2.1.md pour les réserves restantes.

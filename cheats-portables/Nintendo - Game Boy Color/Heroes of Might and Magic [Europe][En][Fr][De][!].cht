@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Heroes of Might and Magic [Europe][En][Fr][De][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Heroes%20of%20Might%20and%20Magic%20(USA%2C%20Europe)%20(Xploder).cht
+
+cheats = 7
+
+cheat0_desc = "[Xploder] Max Holz"
+cheat0_code = "$0D207AE9"
+cheat0_enable = false
+
+cheat1_desc = "[Xploder] Max Quecksilber"
+cheat1_code = "$0D2048E9"
+cheat1_enable = false
+
+cheat2_desc = "[Xploder] Max Erz"
+cheat2_code = "$0D200EE9"
+cheat2_enable = false
+
+cheat3_desc = "[Xploder] Max Schwefel"
+cheat3_code = "$0D2083E9"
+cheat3_enable = false
+
+cheat4_desc = "[Xploder] Max Kristalle"
+cheat4_code = "$0D2018E9"
+cheat4_enable = false
+
+cheat5_desc = "[Xploder] Max Edelsteine"
+cheat5_code = "$0D207FE9"
+cheat5_enable = false
+
+cheat6_desc = "[Xploder] Max Gold"
+cheat6_code = "$0D20A3E9"
+cheat6_enable = false

@@ -1,0 +1,113 @@
+# Recherche locale pour la ROM : Tony Hawk's Pro Skater 3 [USA][Europe][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Tony%20Hawk's%20Pro%20Skater%203%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Tony%20Hawk's%20Pro%20Skater%203%20(USA%2C%20Europe).cht
+
+cheats = 26
+
+cheat0_desc = "[GameShark] Airport Complete"
+cheat0_code = "91FF45DC"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Canada Complete"
+cheat1_code = "91FF44DC"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Foundry Complete"
+cheat2_code = "91FF43DC"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Infinite Time"
+cheat3_code = "9100CADA+9102CBDA"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Los Angeles Complete"
+cheat4_code = "91FF49DC"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Max Balance"
+cheat5_code = "910E40DC"
+cheat5_enable = false
+
+cheat6_desc = "[GameShark] Max Hang"
+cheat6_code = "910E3EDC"
+cheat6_enable = false
+
+cheat7_desc = "[GameShark] Max Ollie"
+cheat7_code = "910E3DDC"
+cheat7_enable = false
+
+cheat8_desc = "[GameShark] Max Points"
+cheat8_code = "91993DD8+91993ED8+91993FD8+910940D8"
+cheat8_enable = false
+
+cheat9_desc = "[GameShark] Max Speed"
+cheat9_code = "910E3CDC"
+cheat9_enable = false
+
+cheat10_desc = "[GameShark] Max Spin"
+cheat10_code = "910E3FDC"
+cheat10_enable = false
+
+cheat11_desc = "[GameShark] Max Switch"
+cheat11_code = "910E41DC"
+cheat11_enable = false
+
+cheat12_desc = "[GameShark] Rio Complete"
+cheat12_code = "91FF42DC"
+cheat12_enable = false
+
+cheat13_desc = "[GameShark] Suburbia Complete"
+cheat13_code = "91FF46DC"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Airport Complete"
+cheat14_code = "91FF45DC"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Canada Complete"
+cheat15_code = "91FF44DC"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Foundry Complete"
+cheat16_code = "91FF43DC"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Los Angeles Complete"
+cheat17_code = "91FF49DC"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Max Balance"
+cheat18_code = "910E40DC"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Max Hang"
+cheat19_code = "910E3EDC"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Max Ollie"
+cheat20_code = "910E3DDC"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Max Speed"
+cheat21_code = "910E3CDC"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Max Spin"
+cheat22_code = "910E3FDC"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Max Switch"
+cheat23_code = "910E41DC"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Rio Complete"
+cheat24_code = "91FF42DC"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Suburbia Complete"
+cheat25_code = "91FF46DC"
+cheat25_enable = false

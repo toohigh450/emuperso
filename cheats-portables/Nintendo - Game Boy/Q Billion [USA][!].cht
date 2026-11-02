@@ -1,0 +1,33 @@
+# Recherche locale pour la ROM : Q Billion [USA][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Q%20Billion%20(USA).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Q%20Billion%20(USA%2C%20Japan)%20(Game%20Genie).cht
+
+cheats = 6
+
+cheat0_desc = "[Format source non précisé] Pressing Select in Game B once gives you 246 sec."
+cheat0_code = "00B-9FE-C42"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite timer"
+cheat1_code = "007-55E-19E"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Level select (Game A)"
+cheat2_code = "3EB-61F-08A+0DB-62F-B3E+00B-63F-08F"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Pressing Select Once Gives You 246 Seconds (Game B)"
+cheat3_code = "00B-9FE-C42"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] Infinite Timer"
+cheat4_code = "007-55E-19E"
+cheat4_enable = false
+
+cheat5_desc = "[Game Genie] Level Select (Game A)"
+cheat5_code = "3EB-61F-08A+0DB-62F-B3E+00B-63F-08F"
+cheat5_enable = false

@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Doki Majo Plus (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Doki%20Majo%20Plus%20(Japan).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] All Black Pandas Captured"
+cheat0_code = "94000130+FFFB0000+C0000000+0000001B+0217ED50+01010101+DC000000+00000004+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Rabbits x9"
+cheat1_code = "0217EDC0+01010101+0217EDC4+01010101+2217EDC8+00000001"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Unlock Extra Modes and Other Options"
+cheat2_code = "94000130+FFFB0000+C0000000+0000000A+1217E91C+00000101+DC000000+00000002+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Unlock All Galleries"
+cheat3_code = "94000130+FFFB0000+1217E93E+00000101+C0000000+0000001F+0217E940+01010101+DC000000+00000004+D2000000+00000000"
+cheat3_enable = false

@@ -1,0 +1,34 @@
+TAP version 13
+# Subtest: format « clé; description|v1|v2 »
+ok 1 - format « clé; description|v1|v2 »
+  ---
+  duration_ms: 5.180645
+  type: 'test'
+  ...
+# Subtest: format « clé|v1|v2 » sans description
+ok 2 - format « clé|v1|v2 » sans description
+  ---
+  duration_ms: 0.398558
+  type: 'test'
+  ...
+# Subtest: espaces en tête et clé proche ne créent pas de faux positif
+ok 3 - espaces en tête et clé proche ne créent pas de faux positif
+  ---
+  duration_ms: 0.204455
+  type: 'test'
+  ...
+# Subtest: option absente => found:false (message « introuvable » légitime)
+ok 4 - option absente => found:false (message « introuvable » légitime)
+  ---
+  duration_ms: 0.126957
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 30.362473

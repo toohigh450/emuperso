@@ -1,0 +1,3 @@
+PASS Chromium : import GB/GBC/GBA/DS, suggestions, association SHA-256, renommage, ROM modifiée, persistance IndexedDB, miroir de sauvegarde, fermeture. Moteur simulé ; aucune émulation réelle validée.
+PASS Chromium audits : quota historique A→B, .cht réimporté, rollback IndexedDB après écritures 1/2/3, reprise après abort, collisions multi-connexions et source 200 sans ready.
+PASS Chromium : démarrage avec IndexedDB bloqué et avertissement de stockage temporaire.

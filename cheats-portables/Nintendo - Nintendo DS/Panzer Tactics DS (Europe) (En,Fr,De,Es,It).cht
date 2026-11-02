@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Panzer Tactics DS (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Panzer%20Tactics%20DS%20(Europe).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "520DBF64+EE070F90+E20003B8+00000054+CA02A20C+02242303+19645CCD+D5FA3B01+42A34B07+784CD104+3101700C+D1FA4224+428AA10C+4778DBED+EE070F90+E8BD803E+2F2F3A73+021C487E+021C48A3+021C48C7+021C4A5D+021CB1B0+021CB263+021CB674+021CB807+00000000+020DBF64+E92D403E+020DBF68+FAFC9112+D2000000+00000000"
+cheat0_enable = false

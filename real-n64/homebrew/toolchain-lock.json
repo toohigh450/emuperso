@@ -1,0 +1,24 @@
+{
+  "schema": "emuperso/homebrew-toolchain-lock/v1",
+  "platform": "linux-x86_64",
+  "toolchain_deb": {
+    "url": "https://github.com/DragonMinded/libdragon/releases/download/toolchain-continuous-prerelease/gcc-toolchain-mips64-amd64.deb",
+    "sha256": "fac8e6572493a66468b7d45df41b042f90b1a630ec96aa218bd5fb1f320a0a4d",
+    "bytes": 105106762,
+    "package": "gcc-toolchain-mips64",
+    "package_version": "16.2.0.34909605681",
+    "gcc": "16.2.0",
+    "newlib_reported": "4.4.0.20231231",
+    "binutils_reported": "2.45",
+    "note": "The release asset URL can move; the expected SHA-256 is authoritative and a changed asset is refused."
+  },
+  "libdragon": {
+    "repository": "https://github.com/DragonMinded/libdragon.git",
+    "commit": "e356bf3f56f7afbf7e5246329562f145965cfdfc",
+    "license": "Unlicense"
+  },
+  "docker": {
+    "status": "NOT_VALIDATED",
+    "reason": "Official GHCR latest pull denied in the execution environment; native toolchain route selected."
+  }
+}

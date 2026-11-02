@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Fuuun! Dairoujou (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Fuuun!%20Dairoujou%20(Japan).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] Max/Infinite Money"
+cheat0_code = "94000130+FFFB0000+022741DC+000F423F+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Score"
+cheat1_code = "94000130+FFFB0000+022741E4+05F5E0FF+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Lives"
+cheat2_code = "222741FF+00000014+2227420B+00000014"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max/Infinite Money and Score After Using/Earning Some"
+cheat3_code = "0202BB3C+E0830001+0202BB7C+E0830001"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Castle Gate Durability Max"
+cheat4_code = "02027464+E3CC2400+02027468+EA000002"
+cheat4_enable = false

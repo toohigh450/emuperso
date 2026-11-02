@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Asterix - These Romans Are Crazy! (Europe) (En,Fr,De,It,Nl).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Asterix%20-%20These%20Romans%20Are%20Crazy!%20(Europe).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Infinite Wild Boars"
+cheat0_code = "520676C0+E5C01000+020676C0+E1A00000+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] 9999 Helmets"
+cheat1_code = "120D5608+0000270F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] 9999 Loundrels"
+cheat2_code = "120D560A+0000270F"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Courses Unlocked"
+cheat3_code = "020D55FC+01010101"
+cheat3_enable = false

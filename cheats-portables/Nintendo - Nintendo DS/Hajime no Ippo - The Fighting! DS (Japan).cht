@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Hajime no Ippo - The Fighting! DS (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Hajime%20no%20Ippo%20-%20The%20Fighting!%20DS%20(Japan).cht
+
+cheats = 7
+
+cheat0_desc = "[Action Replay] Complete Challenge Mode Stage and Free Mode Boxers"
+cheat0_code = "220B234B+0000000F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Free Mode Battle Stages/Arena"
+cheat1_code = "220B2344+0000001F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Free Mode Music"
+cheat2_code = "120B2340+000001FF"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Special Move Meter for Player"
+cheat3_code = "921A6E80+000003E8+021A7594+0098967F+D0000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Opponenet Special Move Meter Never Increase"
+cheat4_code = "921A6E80+000003E8+021B0178+00000000+D0000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Health Never Decreases"
+cheat5_code = "921A6E80+000003E8+D9000000+021A6FE0+D6000000+021A6FE4+D2000000+00000000+D9000000+021A6FF8+D6000000+021A6FF4+D2000000+00000000+D9000000+021A700C+D6000000+021A7008+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Opponent HP Zero"
+cheat6_code = "94000130+FFFB0000+021AFBC4+00000000+021AFBD8+00000000+021AFBEC+00000000+D0000000+00000000"
+cheat6_enable = false

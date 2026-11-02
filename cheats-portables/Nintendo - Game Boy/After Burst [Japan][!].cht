@@ -1,0 +1,45 @@
+# Recherche locale pour la ROM : After Burst [Japan][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/After%20Burst%20(Japan)%20(Xploder).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/After%20Burst%20(Japan).cht
+
+cheats = 9
+
+cheat0_desc = "[Xploder] Unendlich Leben"
+cheat0_code = "$0D2ACA55"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Time"
+cheat1_code = "013B9AC9"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Invincibility"
+cheat2_code = "0100B6CA"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Fire Always At Maximum"
+cheat3_code = "0140BACA"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Infinite Lives"
+cheat4_code = "0109B1CA"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Infinite Lives"
+cheat5_code = "BE0-5BC-3BE"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Invincibility"
+cheat6_code = "C9B-71B-4C1+C91-82E-4C1+BEB-33B-4C1"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Unendlich Leben"
+cheat7_code = "012ACAD5"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Skip Intro Screen"
+cheat8_code = "FAE-598-D5D"
+cheat8_enable = false

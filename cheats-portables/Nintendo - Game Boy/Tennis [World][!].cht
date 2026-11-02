@@ -1,0 +1,138 @@
+# Recherche locale pour la ROM : Tennis [World][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Tennis%20(World)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Tennis%20(World)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Tennis%20(World).cht
+
+cheats = 32
+
+cheat0_desc = "[Game Genie] Neither Player Scores Points (Switch Off To Score)"
+cheat0_code = "001-DAD-3BA"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] 1 Game Needed To Win Set"
+cheat1_code = "010-9CD-F76"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] 2 Games Needed To Win Set"
+cheat2_code = "020-9CD-F76"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] 3 Games Needed To Win Set"
+cheat3_code = "030-9CD-F76"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] 4 Games Needed To Win Set"
+cheat4_code = "040-9CD-F76"
+cheat4_enable = false
+
+cheat5_desc = "[Game Genie] 1st Point Takes You To 40 Points"
+cheat5_code = "011-9AD-E66"
+cheat5_enable = false
+
+cheat6_desc = "[Game Genie] 2nd Point Takes You To 40 Points"
+cheat6_code = "021-9AD-E66"
+cheat6_enable = false
+
+cheat7_desc = "[Game Genie] Neither Player Can Win Game"
+cheat7_code = "000-99D-3BA+E00-74D-6E5+E00-7ED-6E5"
+cheat7_enable = false
+
+cheat8_desc = "[Game Genie] Ball Becomes Real Bouncy"
+cheat8_code = "009+FFE"
+cheat8_enable = false
+
+cheat9_desc = "[Game Genie] Computer Becomes Dumb"
+cheat9_code = "009+66E"
+cheat9_enable = false
+
+cheat10_desc = "[Game Genie] Ball Only Can Go Up & Down In Right Line"
+cheat10_code = "008+FFE"
+cheat10_enable = false
+
+cheat11_desc = "[Game Genie] Mario Calls 'Fault' When P/c Throws Ball Up"
+cheat11_code = "007+EFE"
+cheat11_enable = false
+
+cheat12_desc = "[Game Genie] Computer Can't Move Backwards"
+cheat12_code = "000+EFE"
+cheat12_enable = false
+
+cheat13_desc = "[GameShark] Player 1 1-Point Win"
+cheat13_code = "010?DDC0"
+cheat13_enable = false
+
+cheat14_desc = "[GameShark] Player 2 1-Point Win"
+cheat14_code = "010?DEC0"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Neither player scores points"
+cheat15_code = "001-DAD-3BA"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] 1 game needed to win set"
+cheat16_code = "010-9CD-F76"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] 2 games needed to win set"
+cheat17_code = "020-9CD-F76"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] 3 games needed to win set"
+cheat18_code = "030-9CD-F76"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] 4 games needed to win set"
+cheat19_code = "040-9CD-F76"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] 1st point takes you to 40 points"
+cheat20_code = "011-9AD-E66"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] 2nd point takes you to 40 points"
+cheat21_code = "021-9AD-E66"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Neither player can win game"
+cheat22_code = "000-99D-3BA+E00-74D-6E5+E00-7ED-6E5"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] P1 Has 40 Points"
+cheat23_code = "0104DDC0"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Player 1 1-Point Win"
+cheat24_code = "0101DDC0"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Player 2 1-Point Win"
+cheat25_code = "0100DEC0"
+cheat25_enable = false
+
+cheat26_desc = "[Format source non précisé] Set 1"
+cheat26_code = "0106E0C0"
+cheat26_enable = false
+
+cheat27_desc = "[Format source non précisé] Set 2"
+cheat27_code = "0106E1C0"
+cheat27_enable = false
+
+cheat28_desc = "[Format source non précisé] Set 3"
+cheat28_code = "0106E2C0"
+cheat28_enable = false
+
+cheat29_desc = "[Format source non précisé] Set 1"
+cheat29_code = "0106E3C0"
+cheat29_enable = false
+
+cheat30_desc = "[Format source non précisé] Set 2"
+cheat30_code = "0106E4C0"
+cheat30_enable = false
+
+cheat31_desc = "[Format source non précisé] Set 3"
+cheat31_code = "0106E5C0"
+cheat31_enable = false

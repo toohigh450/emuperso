@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Chou Gekijouban Keroro Gunsou - Enshuu Da yo! - Zenin Shuugou (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Chou%20Gekijouban%20Keroro%20Gunsou%20-%20Enshuu%20Da%20yo!%20-%20Zenin%20Shuugou%20(Japan).cht
+
+cheats = 3
+
+cheat0_desc = "[Action Replay] Max/Infinite Money"
+cheat0_code = "0209DD94+0098967F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] All Games"
+cheat1_code = "020B807C+FFFFFF00+020B8080+FFFFFFFF+120B8084+0000FFFF+220B8086+000000FF"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Models"
+cheat2_code = "220B808B+000000FF+020B808C+FFFFFFFF+020B8090+FFFFFFFF+220B8094+000000FF"
+cheat2_enable = false

@@ -1,0 +1,1329 @@
+{
+  "logs": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (File not found)"
+    },
+    {
+      "type": "log",
+      "text": "Loading language en-US"
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'Exit Emulation'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "{playPause: Object, play: Object, pause: Object, restart: Object, mute: Object}"
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'D-PAD UP'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'D-PAD DOWN'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'D-PAD LEFT'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'D-PAD RIGHT'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'LEFT_BOTTOM_SHOULDER'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for '-1'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for '+1'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for '-1'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for '+1'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for '-1'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for '+1'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for '-1'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for '+1'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'CU'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'CD'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'CL'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'CR'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "[-v, /DEMO N64 EMUPERSO]"
+    },
+    {
+      "type": "log",
+      "text": "Built for EmulatorJS"
+    },
+    {
+      "type": "log",
+      "text": "Download a copy from https://github.com/EmulatorJS/EmulatorJS"
+    },
+    {
+      "type": "log",
+      "text": "View the licence here: https://github.com/EmulatorJS/EmulatorJS/blob/main/LICENSE"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Config]: Looking for config in: \"/home/web_user/.config/retroarch/retroarch.cfg\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] RetroArch 1.21.0 (Git 6dd4353)"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] === Build ======================================="
+    },
+    {
+      "type": "log",
+      "text": "[INFO] Capabilities: "
+    },
+    {
+      "type": "log",
+      "text": "[INFO] Version: 1.21.0"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] Git: 6dd4353"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] Built: Jun 14 2025"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] ================================================="
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Input]: Found input driver: \"emulatorjs\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Overrides]: Redirecting save file to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Overrides]: Redirecting save state to \"/home/web_user/retroarch/userdata/states/Mupen64Plus-Next/DEMO N64 EMUPERSO.state\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: GET_CORE_OPTIONS_VERSION."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: RETRO_ENVIRONMENT_SET_CORE_OPTIONS_V2."
+    },
+    {
+      "type": "log",
+      "text": "Setting up core settings with path: /home/web_user/retroarch/userdata/config/Mupen64Plus-Next/Mupen64Plus-Next.opt"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SET_CONTROLLER_INFO."
+    },
+    {
+      "type": "log",
+      "text": "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\"."
+    },
+    {
+      "type": "log",
+      "text": "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: GET_LOG_INTERFACE."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: GET_PERF_INTERFACE."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SET_PIXEL_FORMAT: XRGB8888."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: GET_RUMBLE_INTERFACE."
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Using full mem base"
+    },
+    {
+      "type": "log",
+      "text": "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Content]: Loading content file: \"/DEMO N64 EMUPERSO\"."
+    },
+    {
+      "type": "log",
+      "text": "[ERROR] [Environ]: GET_VARIABLE: mupen64plus-EnableN64DepthCompare - Invalid value."
+    },
+    {
+      "type": "log",
+      "text": "[ERROR] [Environ]: GET_VARIABLE: mupen64plus-EnableShadersStorage - Invalid value."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SET_HW_RENDER, context type: gl."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] Requesting OpenGLES3 context."
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Goodname: EMUPERSO OPEN DEMO (unknown rom)"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Name: EMUPERSO OPEN DEMO  "
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: MD5: 8D7D313651EE85B1E5075ACFF76D4124"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: CRC: 00000000 00000000"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Imagetype: .z64 (native)"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Rom size: 6144 bytes (or 0 Mb or 0 Megabits)"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: ClockRate = F"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Version: 0"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Manufacturer: 0"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Cartridge_ID: 0"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Country: USA"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: PC = 80000400"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Save type: 0"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [SRAM]: Skipping SRAM load."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Core]: Version of libretro API: 1, Compiled against API: 1"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Core]: Geometry: 640x480, Aspect: 1.333, FPS: 60.00, Sample rate: 44100.00 Hz."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Video]: Set video size to: 1440x1080."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Video]: Using HW render, OpenGL driver forced."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Video]: Using configured \"gl\" driver for GL HW render."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [EMSCRIPTEN/WebGL]: Dimensions: 300x150"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GL]: Found GL context: \"webgl_emscripten\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GL]: Detecting screen resolution: 300x150."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GL]: Vendor: WebKit, Renderer: WebKit WebGL."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GL]: Version: OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium))."
+    },
+    {
+      "type": "log",
+      "text": "[WARN] [GL]: GLES implementation does not have BGRA8888 extension."
+    },
+    {
+      "type": "log",
+      "text": "[GL]: 32-bit path will require conversion."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GL]: Using resolution 300x150."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GL]: Default shader backend found: glsl."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Shader driver]: Using GLSL shader backend."
+    },
+    {
+      "type": "log",
+      "text": "[WARN] [GL]: Stock GLSL shaders will be used."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GLSL]: Found GLSL vertex shader."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] Shader log: WARNING: 0:5: 'GL_OES_standard_derivatives' : extension is not supported"
+    },
+    {
+      "type": "log",
+      "text": ""
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GLSL]: Found GLSL fragment shader."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] Shader log: WARNING: 0:5: 'GL_OES_standard_derivatives' : extension is not supported"
+    },
+    {
+      "type": "log",
+      "text": ""
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GLSL]: Linking GLSL program."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GLSL]: Found GLSL vertex shader."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GLSL]: Found GLSL fragment shader."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GLSL]: Linking GLSL program."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GLSL]: Found GLSL vertex shader."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] Shader log: WARNING: 0:5: 'GL_OES_standard_derivatives' : extension is not supported"
+    },
+    {
+      "type": "log",
+      "text": ""
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GLSL]: Found GLSL fragment shader."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] Shader log: WARNING: 0:5: 'GL_OES_standard_derivatives' : extension is not supported"
+    },
+    {
+      "type": "log",
+      "text": ""
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GLSL]: Linking GLSL program."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GL]: Using 1 textures."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GL]: Loaded 1 program(s)."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GL]: Initializing HW render (1024x1024)."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GL]: Max texture size: 8192 px, renderbuffer size: 8192 px."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GL]: Supports FBO (render-to-texture)."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Video]: Found display server: \"null\"."
+    },
+    {
+      "type": "log",
+      "text": "plugin_start_gfx"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SET_INPUT_DESCRIPTORS:"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Audio]: Set audio input rate to: 44100.00 Hz."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [OpenAL]: Using 10 buffers of 1024 bytes."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Audio]: Started synchronous audio driver."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Display]: Found display driver: \"gl\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SET_SUBSYSTEM_INFO."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Config]: Saved new config to \"/home/web_user/.config/retroarch/retroarch.cfg\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Playlist]: Loading history file: \"/home/web_user/.config/retroarch/content_history.lpl\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Playlist]: Loading history file: \"/home/web_user/.config/retroarch/content_music_history.lpl\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Playlist]: Loading favorites file: \"/home/web_user/.config/retroarch/content_favorites.lpl\"."
+    },
+    {
+      "type": "log",
+      "text": "[ERROR] Cannot push NULL or empty core path into the playlist."
+    },
+    {
+      "type": "log",
+      "text": "Available core options {}"
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'Core (Requires restart)'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "retroarch_core mupen64plus_next"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option retroarch_core. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'Threads'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "ejs_threads disabled"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option ejs_threads. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "shader disabled"
+    },
+    {
+      "type": "log",
+      "text": "[ERROR] [GL]: none shader not supported, falling back to stock GLSL"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Shader driver]: Using GLSL shader backend."
+    },
+    {
+      "type": "log",
+      "text": "[WARN] [GL]: Stock GLSL shaders will be used."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GLSL]: Found GLSL vertex shader."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GLSL]: Found GLSL fragment shader."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GLSL]: Linking GLSL program."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GLSL]: Found GLSL vertex shader."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GLSL]: Found GLSL fragment shader."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GLSL]: Linking GLSL program."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GLSL]: Found GLSL vertex shader."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GLSL]: Found GLSL fragment shader."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [GLSL]: Linking GLSL program."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Shaders]: Applying shader: \"\"."
+    },
+    {
+      "type": "log",
+      "text": "invalid core option shader. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "webgl2Enabled enabled"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option webgl2Enabled. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "fps hide"
+    },
+    {
+      "type": "log",
+      "text": "vsync enabled"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option vsync. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "videoRotation 0"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option videoRotation. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'Screenshot Source'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "screenshotSource canvas"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option screenshotSource. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'Screenshot Format'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "screenshotFormat png"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option screenshotFormat. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'Screenshot Upscale'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "screenshotUpscale 1"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option screenshotUpscale. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'Screen Recording FPS'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "screenRecordFPS 30"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option screenRecordFPS. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'Screen Recording Format'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "screenRecordFormat mp4"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option screenRecordFormat. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'Screen Recording Upscale'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "screenRecordUpscale 1"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option screenRecordUpscale. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'Screen Recording Video Bitrate'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "screenRecordVideoBitrate 2621440"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option screenRecordVideoBitrate. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'Screen Recording Audio Bitrate'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "screenRecordAudioBitrate 196608"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option screenRecordAudioBitrate. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "fastForward disabled"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option fastForward. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "ff-ratio 3.0"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option ff-ratio. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "slowMotion disabled"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option slowMotion. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "sm-ratio 3.0"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option sm-ratio. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "rewindEnabled disabled"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option rewindEnabled. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'Menubar Mouse Trigger'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'Downward Movement'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'Movement Anywhere'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "menubarBehavior downward"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option menubarBehavior. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'Direct Keyboard Input'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "keyboardInput disabled"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option keyboardInput. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'Forward Alt key'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "altKeyboardInput disabled"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option altKeyboardInput. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "Translation not found for 'Lock Mouse'. Language set to 'en-US'"
+    },
+    {
+      "type": "log",
+      "text": "lockMouse disabled"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option lockMouse. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "save-state-slot 1"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option save-state-slot. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "save-state-location download"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option save-state-location. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "save-save-interval 300"
+    },
+    {
+      "type": "log",
+      "text": "Saving every 300000 miliseconds"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option save-save-interval. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-43screensize 640x480"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-169screensize 960x540"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-aspect 4:3"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-EnableNativeResFactor 0"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-ThreadedRenderer False"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-BilinearMode standard"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-HybridFilter True"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-DitheringPattern False"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-DitheringQuantization False"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-RDRAMImageDitheringMode False"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-MultiSampling 0"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-FXAA 0"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-EnableLODEmulation True"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-EnableFBEmulation True"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-EnableCopyAuxToRDRAM False"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-EnableCopyColorToRDRAM Async"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-EnableCopyColorFromRDRAM False"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-EnableCopyDepthToRDRAM Software"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-BackgroundMode OnePiece"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-EnableHWLighting False"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-CorrectTexrectCoords Off"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-EnableInaccurateTextureCoordinates False"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-EnableTexCoordBounds False"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-EnableNativeResTexrects Disabled"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-EnableLegacyBlending True"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-EnableFragmentDepthWrite False"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-EnableTextureCache True"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-EnableOverscan Enabled"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-OverscanTop 0"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-OverscanLeft 0"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-OverscanRight 0"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-OverscanBottom 0"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-MaxHiResTxVramLimit 0"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-MaxTxCacheSize 8000"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-txFilterMode None"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-txEnhancementMode None"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-txFilterIgnoreBG True"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-txHiresEnable False"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-txCacheCompression True"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-txHiresFullAlphaChannel False"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-EnableEnhancedTextureStorage False"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-EnableHiResAltCRC False"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-EnableEnhancedHighResStorage False"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-GLideN64IniBehaviour late"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-cpucore pure_interpreter"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-FrameDuping False"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-Framerate Original"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-virefresh Auto"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-ForceDisableExtraMem False"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-IgnoreTLBExceptions False"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-CountPerOp 0"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-CountPerOpDenomPot 0"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-astick-deadzone 15"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-astick-sensitivity 100"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-r-cbutton C1"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-l-cbutton C2"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-d-cbutton C3"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-u-cbutton C4"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-alt-map False"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-pak1 memory"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-pak2 none"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-pak3 none"
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-pak4 none"
+    },
+    {
+      "type": "log",
+      "text": "Available core options {retroarch_core: Object, ejs_threads: Object, shader: Object, webgl2Enabled: Object, fps: Object}"
+    },
+    {
+      "type": "log",
+      "text": "webgl2Enabled enabled"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option webgl2Enabled. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "ejs_threads disabled"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option ejs_threads. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "mupen64plus-cpucore pure_interpreter"
+    },
+    {
+      "type": "log",
+      "text": "[ERROR] [EMSCRIPTEN]: Could not get screen dimensions!"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Game controller 0 (Standard controller) has a Memory pak plugged in"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Game controller 1 (Standard controller) has nothing plugged in"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Game controller 2 (Standard controller) has nothing plugged in"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Game controller 3 (Standard controller) has nothing plugged in"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Unknown CIC type (00000007BA90A4B2)! using CIC 6102."
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Using CIC type X102"
+    },
+    {
+      "type": "log",
+      "text": "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\"."
+    },
+    {
+      "type": "log",
+      "text": "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\"."
+    },
+    {
+      "type": "log",
+      "text": "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\"."
+    },
+    {
+      "type": "log",
+      "text": "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\"."
+    },
+    {
+      "type": "log",
+      "text": "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\"."
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Initializing 4 RDRAM modules for a total of 8 MB"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Starting R4300 emulator: Pure Interpreter"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] Setting real canvas size: 1026 x 540"
+    }
+  ],
+  "diagnostic": {
+    "d": {
+      "schema": "emuperso/real-engine-diagnostic/v1",
+      "scope": "REAL_ENGINE_TRIAL_NOT_SYNTHETIC_LAB",
+      "warning": "Runtime observations do not validate Karl\u2019s device, commercial games, Conker or Sonic.",
+      "host": {
+        "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "cross_origin_isolated": true
+      },
+      "rom_build": {
+        "scope": "FREESTANDING_REAL_N64_CODE_EMULATOR_ONLY_8MIB_CPU_BOOT",
+        "rom": {
+          "file": "demo-emuperso-open.z64",
+          "bytes": 6144,
+          "sha256": "9a248116b6782b84e87585d62c0d1f90f297dde75fc2244cda025b0684ee4fa0",
+          "header_hex": "80371240"
+        },
+        "source": "New freestanding C port of MIT Claude demo behavior; no libdragon runtime linked. VI timings from libdragon Unlicense, elementary font by Codex.",
+        "compiled": true,
+        "tested_browser": "PENDING",
+        "libraries_linked": [],
+        "bootstrap": "Own MIT CPU loader, no physical RDRAM training, no RSP",
+        "notes": [
+          "Audio and SI input need independent real-engine verification.",
+          "Physical-console and hardware Gamepad not validated."
+        ]
+      },
+      "contexts": [
+        {
+          "state": "running",
+          "sample_rate": 44100
+        }
+      ],
+      "records": [
+        {
+          "seq": 1,
+          "utc": "2026-10-31T17:58:01.725Z",
+          "host_monotonic_ms": 277.54000000003725,
+          "type": "page.open",
+          "data": {
+            "engine_started": false
+          }
+        },
+        {
+          "seq": 2,
+          "utc": "2026-10-31T17:58:02.215Z",
+          "host_monotonic_ms": 766.5850000004284,
+          "type": "rom.fetched",
+          "data": {
+            "bytes": 6144,
+            "sha256": "9a248116b6782b84e87585d62c0d1f90f297dde75fc2244cda025b0684ee4fa0"
+          }
+        },
+        {
+          "seq": 3,
+          "utc": "2026-10-31T17:58:02.215Z",
+          "host_monotonic_ms": 766.7200000002049,
+          "type": "rom.validated",
+          "data": {
+            "name": "demo-emuperso-open.z64",
+            "sha256": "9a248116b6782b84e87585d62c0d1f90f297dde75fc2244cda025b0684ee4fa0",
+            "license": "MIT source; linked notices in homebrew/"
+          }
+        },
+        {
+          "seq": 4,
+          "utc": "2026-10-31T17:58:02.220Z",
+          "host_monotonic_ms": 771.8300000000745,
+          "type": "engine.loader.requested",
+          "data": {
+            "core": "mupen64plus_next",
+            "threads": false
+          }
+        },
+        {
+          "seq": 5,
+          "utc": "2026-10-31T17:58:02.295Z",
+          "host_monotonic_ms": 846.3800000003539,
+          "type": "runtime.update_check.local",
+          "data": {}
+        },
+        {
+          "seq": 6,
+          "utc": "2026-10-31T17:58:02.728Z",
+          "host_monotonic_ms": 1279.4799999999814,
+          "type": "video.context.created",
+          "data": {
+            "kind": "webgl2"
+          }
+        },
+        {
+          "seq": 7,
+          "utc": "2026-10-31T17:58:02.770Z",
+          "host_monotonic_ms": 1322.005000000354,
+          "type": "engine.ready",
+          "data": {}
+        },
+        {
+          "seq": 8,
+          "utc": "2026-10-31T17:58:03.751Z",
+          "host_monotonic_ms": 2302.9000000003725,
+          "type": "wasm.instantiated",
+          "data": {
+            "method": "instantiateStreaming",
+            "export_count": 69
+          }
+        },
+        {
+          "seq": 9,
+          "utc": "2026-10-31T17:58:03.908Z",
+          "host_monotonic_ms": 2459.6650000000373,
+          "type": "video.context.created",
+          "data": {
+            "kind": "webgl2"
+          }
+        },
+        {
+          "seq": 10,
+          "utc": "2026-10-31T17:58:04.099Z",
+          "host_monotonic_ms": 2650.810000000056,
+          "type": "audio.context.created",
+          "data": {
+            "sample_rate": 44100,
+            "state": "running"
+          }
+        },
+        {
+          "seq": 11,
+          "utc": "2026-10-31T17:58:04.345Z",
+          "host_monotonic_ms": 2896.56500000041,
+          "type": "engine.start.callback",
+          "data": {}
+        },
+        {
+          "seq": 12,
+          "utc": "2026-10-31T17:58:04.913Z",
+          "host_monotonic_ms": 3464.8050000001676,
+          "type": "audio.context.state",
+          "data": {
+            "state": "running"
+          }
+        }
+      ]
+    },
+    "e": true,
+    "m": true,
+    "g": true,
+    "frame": 290
+  }
+}

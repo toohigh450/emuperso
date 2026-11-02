@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Chibi Maruko-chan DS - Maru-chan no Machi (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Chibi%20Maruko-chan%20DS%20-%20Maru-chan%20no%20Machi%20(Japan).cht
+
+cheats = 6
+
+cheat0_desc = "[Action Replay] Enable All Menu"
+cheat0_code = "02156E0C+0040FFFF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Maruko Points 9999"
+cheat1_code = "12156C36+0000270F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Complete Item Note"
+cheat2_code = "94000130+FFFB0000+E21569FC+00000018+FFFFFF00+FFFFFFFF+FFFFFFFF+FFFFFFFF+FFFFFFFF+0000003F+E2156A9C+00000010+FFFFFFFF+FFFFFFFF+FFFFFFFF+000001FF+E2156D38+00000038+00010000+00010001+00010001+00010001+00010001+00010001+00010001+00010001+00010001+00010001+00010001+00010001+00010001+00010001+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Complete Gallery"
+cheat3_code = "94000130+FFFB0000+12156BAE+0000FFFF+12156BB0+00003FFF+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Enable All Minigames"
+cheat4_code = "94000130+FFFB0000+12156B8E+00001FFF+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Unlock Everything"
+cheat5_code = "94000130+FFFB0000+12156C26+0000FFFF+02156C28+FFFFFFFF+02156C2C+FFFFFFFF+02156C30+000FFFFF+02156BC8+FFFFFFFF+02156BCC+FFFFFFFF+02156BD0+0FFFFFFF+12156BBE+0000FFFF+02156BC0+FFFFFFFF+02156BC4+FFFFFFFF+12156BB6+0000FFFF+02156BB8+FFFFFFFF+12156BBC+00007FFF+02156BD4+01FFFFFF+D2000000+00000000"
+cheat5_enable = false

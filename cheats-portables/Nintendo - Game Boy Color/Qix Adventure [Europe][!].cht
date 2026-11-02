@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Qix Adventure [Europe][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Qix%20Adventure%20(Europe).cht
+
+cheats = 2
+
+cheat0_desc = "[Format source non précisé] Create Any Shape to Clear Level"
+cheat0_code = "3E5-33A-6EA+3E5-38A-08A"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Invincibility"
+cheat1_code = "FA9-BDB-4C1+C33-8D8-E61"
+cheat1_enable = false

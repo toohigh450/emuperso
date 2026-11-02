@@ -1,0 +1,44 @@
+# Recherche locale pour la ROM : Pirates of the Caribbean - The Curse of the Black Pearl (Europe) (En,Fr,De,Es,It).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Pirates%20of%20the%20Caribbean%20-%20The%20Curse%20of%20the%20Black%20Pearl%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 9
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000E23D+000A+1000A1F6+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Health"
+cheat1_code = "830057AE+2000"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Lives"
+cheat2_code = "330008D0+0005"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Invincible"
+cheat3_code = "330055E8+0020"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Max Gold"
+cheat4_code = "830054E0+270F"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Infinite Big Cannon Balls"
+cheat5_code = "330054DE+0009"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Infinite Ammo Gun"
+cheat6_code = "33005479+0009"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Infinite Items"
+cheat7_code = "4300547E+0009+00000017+0004"
+cheat7_enable = false
+
+cheat8_desc = "[Code Breaker] Enable Max Item Slots (00-17)"
+cheat8_code = "33005476+00??"
+cheat8_enable = false

@@ -1,0 +1,120 @@
+# Recherche locale pour la ROM : Valkyrie Profile - Covenant of the Plume (Europe).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Valkyrie%20Profile%20-%20Covenant%20of%20the%20Plume%20(Europe).cht
+
+cheats = 28
+
+cheat0_desc = "[Action Replay] Max Cash"
+cheat0_code = "020BC994+0098967F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Items (Select)"
+cheat1_code = "94000130+FFFB0000+C0000000+000001FE+220BCA00+000000E3+DC000000+00000001+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Gold (Select)"
+cheat2_code = "94000130+FFFB0000+020BC994+05F5E0FF+D0000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Action Points (Select)"
+cheat3_code = "94000130+FFFB0000+C0000000+00000003+220BB0DE+00000064+DC000000+00000148+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] P1 Infinite Health"
+cheat4_code = "620BAFFC+00000000+D9000000+020BAFFC+D6000000+020BB000+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] P2 Infinite Health"
+cheat5_code = "620BB144+00000000+D9000000+020BB144+D6000000+020BB148+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] P3 Infinite Health"
+cheat6_code = "620BB28C+00000000+D9000000+020BB28C+D6000000+020BB290+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] P4 Infinite Health"
+cheat7_code = "620BB3D4+00000000+D9000000+020BB3D4+D6000000+020BB3D8+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Wylfred Infinite HP in Fight"
+cheat8_code = "020BB000+0000270F"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Ancel Infinite HP in Fight"
+cheat9_code = "020BB148+0000270F"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Some enemies have 0 HP"
+cheat10_code = "94000130+FFFB0000+C0000000+00000003+020BB520+00000000+DC000000+00000148+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Lv.99"
+cheat11_code = "94000130+FFFB0000+C0000000+00000003+220BB0EC+00000063+DC000000+00000148+D2000000+00000000"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Max HP"
+cheat12_code = "C0000000+00000003+020BAFF8+0001869F+020BAFFC+0001869F+020BB000+0001869F+DC000000+00000148+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Max Exp"
+cheat13_code = "C0000000+00000003+020BAFF4+0098967F+DC000000+00000148+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Max Exp (ASM)"
+cheat14_code = "9206ADB6+0000E152+1206ADBA+0000E1A0+D0000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Max Avoid"
+cheat15_code = "C0000000+00000003+120BB03A+0000270F+020BB03C+270F270F+DC000000+00000148+D2000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Max Hits"
+cheat16_code = "C0000000+00000003+020BB034+270F270F+120BB038+0000270F+DC000000+00000148+D2000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Max Attack"
+cheat17_code = "C0000000+00000003+020BB028+270F270F+120BB02C+0000270F+DC000000+00000148+D2000000+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Max Magic"
+cheat18_code = "C0000000+00000003+120BB02E+0000270F+020BB030+270F270F+DC000000+00000148+D2000000+00000000"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Max Rst [Resist Spell Damage]"
+cheat19_code = "C0000000+00000003+120BB046+0000270F+020BB048+270F270F+DC000000+00000148+D2000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Max Rdm [Resist Physical Damage]"
+cheat20_code = "C0000000+00000003+020BB040+270F270F+120BB044+0000270F+DC000000+00000148+D2000000+00000000"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Attack Range 9 Tiles [All Allies]"
+cheat21_code = "C0000000+00000003+220BB0D5+00000009+120BB0D6+00000909+DC000000+00000148+D2000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] 1000 EXP"
+cheat22_code = "A20BD4AC+00000000+020BD4AC+000003E8+D2000000+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] 5000 EXP"
+cheat23_code = "A20BD4AC+00000000+020BD4AC+00001388+D2000000+00000000"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] 10000 EXP"
+cheat24_code = "A20BD4AC+00000000+020BD4AC+00002710+D2000000+00000000"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] 50000 EXP"
+cheat25_code = "A20BD4AC+00000000+020BD4AC+0000C350+D2000000+00000000"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] 100000 EXP"
+cheat26_code = "A20BD4AC+00000000+020BD4AC+000186A0+D2000000+00000000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Max Lvl After a Fight"
+cheat27_code = "5206ADBC+E588200C+0206ADBC+E588000C+D2000000+00000000"
+cheat27_enable = false

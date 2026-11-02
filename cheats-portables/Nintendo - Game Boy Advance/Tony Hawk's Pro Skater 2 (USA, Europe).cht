@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Tony Hawk's Pro Skater 2 (USA, Europe).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Tony%20Hawk's%20Pro%20Skater%202%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 4
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000B509+000A+10022224+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Unlock SpiderMan"
+cheat1_code = "320013D7+0001"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Unlock Mindy"
+cheat2_code = "302001453+0001"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Max Career & Personal Cash (Affects Everyone)"
+cheat3_code = "42000D64+EA60+0000000F+007C+420014CC+EA60+00000002+0004+42006F24+EA60+00000002+0004"
+cheat3_enable = false

@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Spider-Man - Mysterio's Menace (USA, Europe).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Spider-Man%20-%20Mysterio's%20Menace%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 6
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00007B29+000A+10004100+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Web Cartridges"
+cheat1_code = "8200317C+0003"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Web Meter"
+cheat2_code = "82003184+0064"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Infinite Health"
+cheat3_code = "82003158+0096"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Infinite Lives"
+cheat4_code = "820000B8+000A"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Have Armor Suit"
+cheat5_code = "32003178+0096"
+cheat5_enable = false

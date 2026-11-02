@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Need for Speed - Nitro (Europe) (En,Fr,De,Es,It,Nl).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Need%20for%20Speed%20-%20Nitro%20(Europe).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Always in Turbo Mode"
+cheat0_code = "52134468+E59F022C+0213446C+E1A01001+D0000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Disable AI"
+cheat1_code = "020C0714+E12FFF1E"
+cheat1_enable = false

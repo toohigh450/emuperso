@@ -1,0 +1,64 @@
+# Recherche locale pour la ROM : NBA Jam 2002 (USA, Europe).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/NBA%20Jam%202002%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 14
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00000000+0002+1000C850+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Team 1 Scores 999"
+cheat1_code = "830013AE+0009+830013B2+0009+830013B6+0009"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Team 1 Scores 0"
+cheat2_code = "830013AE+0000+830013B2+0000+830013B6+0000"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Team 2 Scores 999"
+cheat3_code = "830013B0+0009+830013B4+0009+830013B8+0009"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Team 2 Scores 0"
+cheat4_code = "830013B0+0000+830013B4+0000+830013B8+0000"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Infinite Shot Clock"
+cheat5_code = "3300136C+0019"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Press Select For 1 Second On Shot Clock"
+cheat6_code = "D0000020+0004+3300136C+0001"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Press Select For 9 Seconds"
+cheat7_code = "D0000020+0004+3300130A+0009"
+cheat7_enable = false
+
+cheat8_desc = "[Code Breaker] Press Select For 5x Seconds"
+cheat8_code = "D0000020+0004+33001309+0005"
+cheat8_enable = false
+
+cheat9_desc = "[Code Breaker] Press Select For 2 Minutes"
+cheat9_code = "D0000020+0004+33001308+0002"
+cheat9_enable = false
+
+cheat10_desc = "[Code Breaker] Press L For 1 Seconds"
+cheat10_code = "D0000020+0200+3300130A+0001"
+cheat10_enable = false
+
+cheat11_desc = "[Code Breaker] Press L For 0x Seconds"
+cheat11_code = "D0000020+0200+33001309+0005"
+cheat11_enable = false
+
+cheat12_desc = "[Code Breaker] Press L For 0 Minutes"
+cheat12_code = "D0000020+0200+33001308+0000"
+cheat12_enable = false
+
+cheat13_desc = "[Code Breaker] Infinite Turbo"
+cheat13_code = "330019BC+002E+330019C0+002E"
+cheat13_enable = false

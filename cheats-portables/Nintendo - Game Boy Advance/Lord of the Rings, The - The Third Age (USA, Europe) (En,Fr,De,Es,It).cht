@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Lord of the Rings, The - The Third Age (USA, Europe) (En,Fr,De,Es,It).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Lord%20of%20the%20Rings%2C%20The%20-%20The%20Third%20Age%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 2
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000CA6A+000A+1001B494+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Max EXP-All Characters"
+cheat1_code = "42002C48+03E7+00000012+0028"
+cheat1_enable = false

@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : R-Type III - The Third Lightning (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/R-Type%20III%20-%20The%20Third%20Lightning%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 7
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000082B+000A+10029884+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Lives"
+cheat1_code = "330043C6+0007"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Invincible"
+cheat2_code = "330043BC+000F"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Press A For Charged Shot"
+cheat3_code = "74000130+03FE+830040D4+0200"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Never Overheat"
+cheat4_code = "730040D0+0005+830040D0+0004"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Press L To Fill Up Hyber Bar"
+cheat5_code = "74000130+01FF+830040E4+0001"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Ship Moves Faster"
+cheat6_code = "83006B84+02FF"
+cheat6_enable = false

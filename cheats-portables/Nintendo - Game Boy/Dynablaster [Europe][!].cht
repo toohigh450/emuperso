@@ -1,0 +1,53 @@
+# Recherche locale pour la ROM : Dynablaster [Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Dynablaster%20(Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Dynablaster%20(Europe).cht
+
+cheats = 11
+
+cheat0_desc = "[GameShark] Bomb Pass"
+cheat0_code = "010205C4"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Wall Pass"
+cheat1_code = "010206C4"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Fire Pass"
+cheat2_code = "010207C4"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] More Speed"
+cheat3_code = "010208C4"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Monster Immunity"
+cheat4_code = "010209C4"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Bomb Pass"
+cheat5_code = "010205C4"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Wall Pass"
+cheat6_code = "010206C4"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Fire Pass"
+cheat7_code = "010207C4"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] More Speed"
+cheat8_code = "010208C4"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Monster Immunity"
+cheat9_code = "010209C4"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Invulnerability"
+cheat10_code = "009-F4F-19E"
+cheat10_enable = false

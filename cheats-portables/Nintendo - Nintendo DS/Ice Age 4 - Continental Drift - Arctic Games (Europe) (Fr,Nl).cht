@@ -1,0 +1,18 @@
+# Recherche locale pour la ROM : Ice Age 4 - Continental Drift - Arctic Games (Europe) (Fr,Nl).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Ice%20Age%204%20-%20Continental%20Drift%20-%20Arctic%20Games%20(Europe)%20(De%2CEs).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Ice%20Age%204%20-%20Continental%20Drift%20-%20Arctic%20Games%20(Europe)%20(En%2CSv).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Ice%20Age%204%20-%20Continental%20Drift%20-%20Arctic%20Games%20(Europe)%20(Fr%2CNl).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Infinite Acorns"
+cheat0_code = "5204E1D0+E2800001+0204E1D0+E3A00063+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Acorns"
+cheat1_code = "5204E228+E2800001+0204E228+E3A00063+D2000000+00000000"
+cheat1_enable = false

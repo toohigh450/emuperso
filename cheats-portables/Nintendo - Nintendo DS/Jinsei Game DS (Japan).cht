@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Jinsei Game DS (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Jinsei%20Game%20DS%20(Japan).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Max/Infinite Money"
+cheat0_code = "0232F3D4+05F5E0FF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Stats"
+cheat1_code = "0232F3C8+03E703E7+0232F3CC+03E703E7"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Skills"
+cheat2_code = "D5000000+00000101+C0000000+00000012+D7000000+0232F3E2+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Affection for All"
+cheat3_code = "0232F41C+64646464+0232F420+64646464+0232F424+64646464"
+cheat3_enable = false

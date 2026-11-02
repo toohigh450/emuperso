@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Yakitate!! Japan - Game Ichigou - Choujou Kessen!! Pantasic Grand Prix! (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Yakitate!!%20Japan%20-%20Game%20Ichigou%20-%20Choujou%20Kessen!!%20Pantasic%20Grand%20Prix!%20(Japan).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] Max/Infinite Points (Player)"
+cheat0_code = "0226031C+000F423F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Points (CPU)"
+cheat1_code = "0226047C+00000000+022605DC+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] All Characters + All Map"
+cheat2_code = "2233191D+000000FF"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Complete Album"
+cheat3_code = "D5000000+000000FF+C0000000+00000089+D8000000+02331934+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] All Knowledge"
+cheat4_code = "22331923+00000008"
+cheat4_enable = false

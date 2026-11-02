@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Star Trek - Tactical Assault (Europe).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Star%20Trek%20-%20Tactical%20Assault%20(Europe).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Infinite Reserve Power"
+cheat0_code = "322FF824+00000001+022FF824+0000FA80+D0000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Upgrade Points"
+cheat1_code = "3224FC14+00000001+0224FC14+00000063+D0000000+00000000"
+cheat1_enable = false

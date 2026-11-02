@@ -1,0 +1,345 @@
+{
+  "scope": "real PCSX + real controller + synthetic ISO/ZIP; forced memory metric only for refusal; no real OOM, physical pad, game audio or RAR/7z proof",
+  "checks": {
+    "slide16_native": true,
+    "copy4_native": true,
+    "conditional16_native": true,
+    "reject_32bit_without_native_call": true,
+    "memory_refusal_retains_real_session": true,
+    "memory_refusal_retains_guest_ram": true,
+    "memory_refusal_no_capture_or_save_write": true,
+    "cancel_archive_retains_real_session": true,
+    "real_zip_boot": true,
+    "real_decompression_byte_counts": true,
+    "accurate_archive_warning": true
+  },
+  "errors": [],
+  "compound": [
+    {
+      "name": "slide16",
+      "code": "50000202 0001\n80011000 5678",
+      "guest_ram": [
+        120,
+        86,
+        121,
+        86,
+        171,
+        205,
+        239,
+        66,
+        129,
+        227,
+        165,
+        199,
+        144,
+        186,
+        220,
+        254
+      ],
+      "pass": true
+    },
+    {
+      "name": "copy4",
+      "code": "C2011000 0004\n80011008 0000",
+      "guest_ram": [
+        104,
+        36,
+        87,
+        19,
+        171,
+        205,
+        239,
+        66,
+        104,
+        36,
+        87,
+        19,
+        144,
+        186,
+        220,
+        254
+      ],
+      "pass": true
+    },
+    {
+      "name": "conditional16",
+      "code": "D0011000 2468\n80011004 ABCD",
+      "guest_ram": [
+        104,
+        36,
+        87,
+        19,
+        205,
+        171,
+        239,
+        66,
+        129,
+        227,
+        165,
+        199,
+        144,
+        186,
+        220,
+        254
+      ],
+      "pass": true
+    }
+  ],
+  "rejected_32bit": true,
+  "native_trace": [
+    {
+      "name": "resetCheat",
+      "args": []
+    },
+    {
+      "name": "resetCheat",
+      "args": []
+    },
+    {
+      "name": "setCheat",
+      "args": [
+        0,
+        true,
+        "50000202 0001+80011000 5678"
+      ]
+    },
+    {
+      "name": "resetCheat",
+      "args": []
+    },
+    {
+      "name": "resetCheat",
+      "args": []
+    },
+    {
+      "name": "setCheat",
+      "args": [
+        0,
+        true,
+        "C2011000 0004+80011008 0000"
+      ]
+    },
+    {
+      "name": "resetCheat",
+      "args": []
+    },
+    {
+      "name": "resetCheat",
+      "args": []
+    },
+    {
+      "name": "setCheat",
+      "args": [
+        0,
+        true,
+        "D0011000 2468+80011004 ABCD"
+      ]
+    },
+    {
+      "name": "resetCheat",
+      "args": []
+    }
+  ],
+  "slots_before": [
+    {
+      "key": "battery:15810d19a0f2c97c996bed3e748c71a40d2c672f36692df61c0f4b075641e21e:1",
+      "revision": 1,
+      "id": "021efe2ba92f1684d3d61e4e0ccb279f",
+      "sha256": "78b6d4ac9ab4d23caf7e5f04f83539bf5d994cccfb0a709d14ac53d05c8e21ef"
+    },
+    {
+      "key": "state:97b877c3c534d46c34ab37aa5f3241987c041dced1222d074b4fda2ff9e8b1e9:1",
+      "revision": 1,
+      "id": "01caf7d9224d445d25e7814695a2701b",
+      "sha256": "28ffc3ed6fe0e12b9263c9c9481bf6807655ed05cfc7d3ec6febf5980eec46f7"
+    }
+  ],
+  "before_refusal": {
+    "session_id": 1,
+    "closed": false,
+    "started": true,
+    "paused": false,
+    "frame": 38,
+    "startup_failure": null,
+    "cheats_quarantined": false,
+    "contexts": [
+      {
+        "state": "running",
+        "sample_rate": 44100
+      }
+    ]
+  },
+  "refusal_status": "Mémoire de l’onglet insuffisante pour décompresser cette archive (estimation indicative 1 Mio, disponible 0 Mio). Lancement refusé avant fermeture : le jeu en cours reste ouvert. Enregistrez votre partie avant de fermer ou recharger la page.",
+  "after_refusal": {
+    "session_id": 1,
+    "closed": false,
+    "started": true,
+    "paused": false,
+    "frame": 53,
+    "startup_failure": null,
+    "cheats_quarantined": false,
+    "contexts": [
+      {
+        "state": "running",
+        "sample_rate": 44100
+      }
+    ]
+  },
+  "slots_after": [
+    {
+      "key": "battery:15810d19a0f2c97c996bed3e748c71a40d2c672f36692df61c0f4b075641e21e:1",
+      "revision": 1,
+      "id": "021efe2ba92f1684d3d61e4e0ccb279f",
+      "sha256": "78b6d4ac9ab4d23caf7e5f04f83539bf5d994cccfb0a709d14ac53d05c8e21ef"
+    },
+    {
+      "key": "state:97b877c3c534d46c34ab37aa5f3241987c041dced1222d074b4fda2ff9e8b1e9:1",
+      "revision": 1,
+      "id": "01caf7d9224d445d25e7814695a2701b",
+      "sha256": "28ffc3ed6fe0e12b9263c9c9481bf6807655ed05cfc7d3ec6febf5980eec46f7"
+    }
+  ],
+  "refusal_journal": "[\n {\n  \"utc\": \"2026-11-01T22:22:52.785Z\",\n  \"type\": \"disc.selected\",\n  \"data\": {\n   \"name\": \"synthetic-demo.iso\",\n   \"size\": 116736,\n   \"last_modified\": 1793571390409,\n   \"replacing\": false,\n   \"device_memory_gib\": 8,\n   \"js_heap_used_mib\": 2,\n   \"js_heap_limit_mib\": 4192\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:52.786Z\",\n  \"type\": \"disc.validated\",\n  \"data\": {\n   \"ext\": \"iso\",\n   \"size\": 116736,\n   \"ms\": 0\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:52.786Z\",\n  \"type\": \"disc.read.start\",\n  \"data\": {\n   \"size\": 116736,\n   \"chunk_bytes\": 8388608,\n   \"ms\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:52.833Z\",\n  \"type\": \"disc.inspect.start\",\n  \"data\": {\n   \"ms\": 48\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:52.835Z\",\n  \"type\": \"disc.inspect.done\",\n  \"data\": {\n   \"serial_found\": false,\n   \"notes\": 2,\n   \"ms\": 49\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:52.838Z\",\n  \"type\": \"disc.read.progress\",\n  \"data\": {\n   \"bytes\": 116736,\n   \"size\": 116736,\n   \"ms\": 52\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:52.838Z\",\n  \"type\": \"disc.hash.done\",\n  \"data\": {\n   \"total_ms\": 53,\n   \"hash_ms\": 18,\n   \"bytes\": 116736\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:52.863Z\",\n  \"type\": \"disc.ready\",\n  \"data\": {\n   \"ms\": 79,\n   \"hash_ms\": 18,\n   \"device_memory_gib\": 8,\n   \"js_heap_used_mib\": 3,\n   \"js_heap_limit_mib\": 4192\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:53.359Z\",\n  \"type\": \"launch.start\",\n  \"data\": {\n   \"name\": \"synthetic-demo.iso\",\n   \"replacing\": false,\n   \"device_memory_gib\": 8,\n   \"js_heap_used_mib\": 3,\n   \"js_heap_limit_mib\": 4192\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:53.776Z\",\n  \"type\": \"video.context.created\",\n  \"data\": {\n   \"kind\": \"webgl2\",\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:53.832Z\",\n  \"type\": \"engine.ready\",\n  \"data\": {\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:54.571Z\",\n  \"type\": \"wasm.instantiated\",\n  \"data\": {\n   \"method\": \"instantiateStreaming\",\n   \"export_count\": 67,\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:54.756Z\",\n  \"type\": \"video.context.created\",\n  \"data\": {\n   \"kind\": \"webgl2\",\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:54.872Z\",\n  \"type\": \"audio.context.created\",\n  \"data\": {\n   \"state\": \"running\",\n   \"sample_rate\": 44100,\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:55.017Z\",\n  \"type\": \"engine.start.callback\",\n  \"data\": {\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:55.077Z\",\n  \"type\": \"audio.context.state\",\n  \"data\": {\n   \"state\": \"running\",\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:55.715Z\",\n  \"type\": \"input.verify\",\n  \"data\": {\n   \"requested_pad_type\": \"standard\",\n   \"core_option_line\": null,\n   \"controls\": {\n    \"0\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"1\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"2\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"3\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"4\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"5\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"6\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"7\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"8\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"9\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"10\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"11\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"12\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"13\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"14\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"15\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"16\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"17\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"18\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"19\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"20\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"21\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"22\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"23\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    }\n   },\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:55.715Z\",\n  \"type\": \"session.committed\",\n  \"data\": {\n   \"generation\": 1,\n   \"previous_generation\": null,\n   \"rom_sha256\": \"7fc36176c546753d3fee9d606165d562e0e1b683e6e21dbb60c99d900f924c74\"\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:56.164Z\",\n  \"type\": \"input.status\",\n  \"data\": {\n   \"mode\": \"custom\",\n   \"reason\": \"Le cœur utilise les périphériques libretro, non exposés par ce runtime : type de manette demandé non vérifié. \",\n   \"pad_type_requested\": \"standard\",\n   \"pad_type_listed\": false,\n   \"core_options_raw\": {\n    \"present\": true,\n    \"type\": \"string\",\n    \"length\": 4995,\n    \"lines\": 51,\n    \"sample\": \"pcsx_rearmed_region|auto; auto|NTSC|PAL\\npcsx_rearmed_bios|auto; auto|HLE\\npcsx_rearmed_show_bios_bootlogo|disabled; disabled|enabled\\npcsx_rearmed_memcard2|disabled; disabled|enabled\\npcsx_rearmed_psxclo\",\n    \"mentions_pad\": false\n   },\n   \"pad_type_reported\": null,\n   \"pad_type_verified\": false,\n   \"core_option_line\": null,\n   \"profile\": {\n    \"analog\": \"off\",\n    \"stickToDpad\": true,\n    \"deadzone\": 0.2,\n    \"native\": false\n   }\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:56.164Z\",\n  \"type\": \"launch.done\",\n  \"data\": {\n   \"name\": \"synthetic-demo.iso\",\n   \"ms\": 2805,\n   \"device_memory_gib\": 8,\n   \"js_heap_used_mib\": 17,\n   \"js_heap_limit_mib\": 4192\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:56.355Z\",\n  \"type\": \"cheats.applied\",\n  \"data\": {\n   \"count\": 0,\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:56.356Z\",\n  \"type\": \"cheats.applied\",\n  \"data\": {\n   \"count\": 0\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:56.363Z\",\n  \"type\": \"cheats.applied\",\n  \"data\": {\n   \"count\": 1,\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:56.363Z\",\n  \"type\": \"cheats.applied\",\n  \"data\": {\n   \"count\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:56.553Z\",\n  \"type\": \"cheats.applied\",\n  \"data\": {\n   \"count\": 0,\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:56.553Z\",\n  \"type\": \"cheats.applied\",\n  \"data\": {\n   \"count\": 0\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:56.625Z\",\n  \"type\": \"cheats.applied\",\n  \"data\": {\n   \"count\": 1,\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:56.625Z\",\n  \"type\": \"cheats.applied\",\n  \"data\": {\n   \"count\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:56.763Z\",\n  \"type\": \"cheats.applied\",\n  \"data\": {\n   \"count\": 0,\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:56.763Z\",\n  \"type\": \"cheats.applied\",\n  \"data\": {\n   \"count\": 0\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:56.858Z\",\n  \"type\": \"cheats.applied\",\n  \"data\": {\n   \"count\": 1,\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:56.858Z\",\n  \"type\": \"cheats.applied\",\n  \"data\": {\n   \"count\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:57.063Z\",\n  \"type\": \"cheats.applied\",\n  \"data\": {\n   \"count\": 0,\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:57.063Z\",\n  \"type\": \"cheats.applied\",\n  \"data\": {\n   \"count\": 0\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:57.452Z\",\n  \"type\": \"audio.context.state\",\n  \"data\": {\n   \"state\": \"suspended\",\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:57.535Z\",\n  \"type\": \"battery.saved\",\n  \"data\": {\n   \"bytes\": 131072\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:57.535Z\",\n  \"type\": \"state.saved\",\n  \"data\": {\n   \"slot\": 1,\n   \"revision\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:57.614Z\",\n  \"type\": \"audio.context.state\",\n  \"data\": {\n   \"state\": \"running\",\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:58.082Z\",\n  \"type\": \"disc.selected\",\n  \"data\": {\n   \"name\": \"Synthetic.zip\",\n   \"size\": 116880,\n   \"last_modified\": 1793571778080,\n   \"replacing\": true,\n   \"device_memory_gib\": 8,\n   \"js_heap_used_mib\": 19,\n   \"js_heap_limit_mib\": 20\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:58.083Z\",\n  \"type\": \"disc.validated\",\n  \"data\": {\n   \"ext\": \"zip\",\n   \"size\": 116880,\n   \"ms\": 0\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:58.083Z\",\n  \"type\": \"disc.read.start\",\n  \"data\": {\n   \"size\": 116880,\n   \"chunk_bytes\": 8388608,\n   \"ms\": 0\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:58.211Z\",\n  \"type\": \"disc.inspect.start\",\n  \"data\": {\n   \"ms\": 129\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:58.211Z\",\n  \"type\": \"disc.inspect.done\",\n  \"data\": {\n   \"serial_found\": false,\n   \"notes\": 1,\n   \"ms\": 129\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:58.212Z\",\n  \"type\": \"disc.read.progress\",\n  \"data\": {\n   \"bytes\": 116880,\n   \"size\": 116880,\n   \"ms\": 129\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:58.212Z\",\n  \"type\": \"disc.hash.done\",\n  \"data\": {\n   \"total_ms\": 129,\n   \"hash_ms\": 1,\n   \"bytes\": 116880\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:58.212Z\",\n  \"type\": \"disc.ready\",\n  \"data\": {\n   \"ms\": 130,\n   \"hash_ms\": 1,\n   \"device_memory_gib\": 8,\n   \"js_heap_used_mib\": 19,\n   \"js_heap_limit_mib\": 20\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:58.452Z\",\n  \"type\": \"launch.start\",\n  \"data\": {\n   \"name\": \"Synthetic.zip\",\n   \"replacing\": true,\n   \"device_memory_gib\": 8,\n   \"js_heap_used_mib\": 19,\n   \"js_heap_limit_mib\": 20\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:58.452Z\",\n  \"type\": \"archive.memory.check\",\n  \"data\": {\n   \"stage\": \"preflight\",\n   \"available\": true,\n   \"estimator_only\": true,\n   \"compressed_bytes\": 116880,\n   \"need_mib\": 1,\n   \"free_mib\": -1,\n   \"session_retained\": true,\n   \"device_memory_gib\": 8,\n   \"js_heap_used_mib\": 19,\n   \"js_heap_limit_mib\": 20\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:58.452Z\",\n  \"type\": \"launch.failed\",\n  \"data\": {\n   \"name\": \"Synthetic.zip\",\n   \"replacing\": true,\n   \"ms\": 1,\n   \"code\": \"E_ARCHIVE_MEMORY\",\n   \"device_memory_gib\": 8,\n   \"js_heap_used_mib\": 19,\n   \"js_heap_limit_mib\": 20\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:22:58.453Z\",\n  \"type\": \"operation.error\",\n  \"data\": {\n   \"code\": \"E_ARCHIVE_MEMORY\",\n   \"message\": \"Mémoire de l’onglet insuffisante pour décompresser cette archive (estimation indicative 1 Mio, disponible 0 Mio). Lancement refusé avant fermeture : le jeu en cours reste ouvert. Enregistrez votre partie avant de fermer ou recharger la page.\",\n   \"stack\": \"Error: Mémoire de l’onglet insuffisante pour décompresser cette archive (estimation indicative 1 Mio, disponible 0 Mio). Lancement refusé avant fermeture : le jeu en cours reste ouvert. Enregistrez votre partie avant de fermer ou recharger la page.\\n    at checkArchiveMemory (http://127.0.0.1:42923/app.js:159:19)\\n    at launch (http://127.0.0.1:42923/app.js:169:16)\\n    at http://127.0.0.1:42923/app.js:278:15\\n    at operation (http://127.0.0.1:42923/app.js:57:15)\\n    at $.onclick (http://127.0.0.1:42923/app.js:275:29)\"\n  }\n }\n]",
+  "zip_snapshot": {
+    "session_id": 2,
+    "closed": false,
+    "started": true,
+    "paused": false,
+    "frame": 9,
+    "startup_failure": null,
+    "cheats_quarantined": false,
+    "contexts": [
+      {
+        "state": "running",
+        "sample_rate": 44100
+      }
+    ]
+  },
+  "archive_events": [
+    {
+      "utc": "2026-11-01T22:22:58.452Z",
+      "type": "archive.memory.check",
+      "data": {
+        "stage": "preflight",
+        "available": true,
+        "estimator_only": true,
+        "compressed_bytes": 116880,
+        "need_mib": 1,
+        "free_mib": -1,
+        "session_retained": true,
+        "device_memory_gib": 8,
+        "js_heap_used_mib": 19,
+        "js_heap_limit_mib": 20
+      }
+    },
+    {
+      "utc": "2026-11-01T22:22:59.526Z",
+      "type": "archive.memory.check",
+      "data": {
+        "stage": "preflight",
+        "available": true,
+        "estimator_only": true,
+        "compressed_bytes": 116880,
+        "need_mib": 1,
+        "free_mib": 3728,
+        "session_retained": true,
+        "device_memory_gib": 8,
+        "js_heap_used_mib": 45,
+        "js_heap_limit_mib": 4192
+      }
+    },
+    {
+      "utc": "2026-11-01T22:22:59.953Z",
+      "type": "archive.memory.check",
+      "data": {
+        "stage": "preflight",
+        "available": true,
+        "estimator_only": true,
+        "compressed_bytes": 116880,
+        "need_mib": 1,
+        "free_mib": 3726,
+        "session_retained": true,
+        "device_memory_gib": 8,
+        "js_heap_used_mib": 46,
+        "js_heap_limit_mib": 4192
+      }
+    },
+    {
+      "utc": "2026-11-01T22:23:00.060Z",
+      "type": "archive.memory.check",
+      "data": {
+        "stage": "before-close",
+        "available": true,
+        "estimator_only": true,
+        "compressed_bytes": 116880,
+        "need_mib": 1,
+        "free_mib": 3724,
+        "session_retained": true,
+        "device_memory_gib": 8,
+        "js_heap_used_mib": 48,
+        "js_heap_limit_mib": 4192
+      }
+    },
+    {
+      "utc": "2026-11-01T22:23:00.122Z",
+      "type": "session.closed.for_archive",
+      "data": {
+        "closed": "synthetic-demo.iso",
+        "next": "Synthetic.zip",
+        "device_memory_gib": 8,
+        "js_heap_used_mib": 49,
+        "js_heap_limit_mib": 4192
+      }
+    },
+    {
+      "utc": "2026-11-01T22:23:00.475Z",
+      "type": "engine.archive.start",
+      "data": {
+        "name": "Synthetic.zip",
+        "size": 116880,
+        "js_heap_used_mib": 47,
+        "js_heap_limit_mib": 4192,
+        "session_generation": 2
+      }
+    },
+    {
+      "utc": "2026-11-01T22:23:01.581Z",
+      "type": "engine.archive.decompression.before",
+      "data": {
+        "compressed_bytes": 116880,
+        "js_heap_used_mib": 19,
+        "js_heap_limit_mib": 4192,
+        "session_generation": 2
+      }
+    },
+    {
+      "utc": "2026-11-01T22:23:01.652Z",
+      "type": "engine.archive.decompression.after",
+      "data": {
+        "compressed_bytes": 116880,
+        "expanded_bytes": 116736,
+        "files": 1,
+        "ms": 71,
+        "peak_measured": false,
+        "js_heap_used_mib": 19,
+        "js_heap_limit_mib": 4192,
+        "session_generation": 2
+      }
+    },
+    {
+      "utc": "2026-11-01T22:23:02.271Z",
+      "type": "engine.archive.done",
+      "data": {
+        "file_in_archive": "Synthetic/SYNTHETIC.ISO",
+        "ms": 1796,
+        "js_heap_used_mib": 23,
+        "js_heap_limit_mib": 4192,
+        "session_generation": 2
+      }
+    }
+  ],
+  "dialogs": [
+    "Ce jeu est une archive : sa décompression peut dépasser l’estimation mémoire. Utilisez uniquement une archive de confiance. Le jeu en cours sera fermé AVANT le lancement. Sa carte mémoire vient d’être enregistrée ; la progression non enregistrée sera perdue. En cas d’échec du nouveau jeu, l’ancienne session ne pourra pas être rétablie. Continuer ?",
+    "Ce jeu est une archive : sa décompression peut dépasser l’estimation mémoire. Utilisez uniquement une archive de confiance. Le jeu en cours sera fermé AVANT le lancement. Sa carte mémoire vient d’être enregistrée ; la progression non enregistrée sera perdue. En cas d’échec du nouveau jeu, l’ancienne session ne pourra pas être rétablie. Continuer ?"
+  ]
+}

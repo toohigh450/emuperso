@@ -1,0 +1,150 @@
+# Recherche locale pour la ROM : Monster Rancher Explorer [USA][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Monster%20Rancher%20Explorer%20(USA)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Monster%20Rancher%20Explorer%20(USA)%20(Xploder).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Monster%20Rancher%20Explorer%20(USA).cht
+
+cheats = 35
+
+cheat0_desc = "[GameShark] Infinite Time (Turn Switch Off After Levels)"
+cheat0_code = "0199D2C2"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Max Score"
+cheat1_code = "0199C6C2+0199C7C2+0199C8C2+0199C9C2"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Level Modifier"
+cheat2_code = "01??C0C2"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Max Monsters Rescued"
+cheat3_code = "0109C4C2"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Infinite Lives"
+cheat4_code = "0199C3C2"
+cheat4_enable = false
+
+cheat5_desc = "[GameShark] Invulnerable"
+cheat5_code = "0103C5C2"
+cheat5_enable = false
+
+cheat6_desc = "[GameShark] Infinite Ammo"
+cheat6_code = "0103CCC2"
+cheat6_enable = false
+
+cheat7_desc = "[GameShark] Infinite Tiger"
+cheat7_code = "0105E1CF"
+cheat7_enable = false
+
+cheat8_desc = "[GameShark] Infinite Mocchi"
+cheat8_code = "0105E2CF"
+cheat8_enable = false
+
+cheat9_desc = "[GameShark] Infinite Hare"
+cheat9_code = "0105E3CF"
+cheat9_enable = false
+
+cheat10_desc = "[GameShark] Infinite Gali"
+cheat10_code = "0105E4CF"
+cheat10_enable = false
+
+cheat11_desc = "[GameShark] Infinite Golem"
+cheat11_code = "0105E5CF"
+cheat11_enable = false
+
+cheat12_desc = "[GameShark] Infinite Suezo"
+cheat12_code = "0105E6CF"
+cheat12_enable = false
+
+cheat13_desc = "[GameShark] Infinite Pheonix"
+cheat13_code = "0105E7CF"
+cheat13_enable = false
+
+cheat14_desc = "[Xploder] Unendlich Leben"
+cheat14_code = "$0D2AD8EF"
+cheat14_enable = false
+
+cheat15_desc = "[Xploder] Unendlich Zeit"
+cheat15_code = "$0D725EEF"
+cheat15_enable = false
+
+cheat16_desc = "[Xploder] Unendlich Herzen"
+cheat16_code = "$0D24A2EF"
+cheat16_enable = false
+
+cheat17_desc = "[Xploder] Unendlich Feuer"
+cheat17_code = "$0D2200EF"
+cheat17_enable = false
+
+cheat18_desc = "[Xploder] Unbesiegbar"
+cheat18_code = "$0D22E0EF"
+cheat18_enable = false
+
+cheat19_desc = "[Xploder] Levelanwahl"
+cheat19_code = "01xxC0C2"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Infinite Time [Turn Switch Off After Levels]"
+cheat20_code = "0199D2C2"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Max Score"
+cheat21_code = "0199C6C2+0199C7C2+0199C8C2+0199C9C2"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Level Modifier"
+cheat22_code = "0100C0C2"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Max Monsters Rescued"
+cheat23_code = "0109C4C2"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Infinite Lives"
+cheat24_code = "0199C3C2"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Invulnerable"
+cheat25_code = "0103C5C2"
+cheat25_enable = false
+
+cheat26_desc = "[Format source non précisé] Infinite Ammo"
+cheat26_code = "0103CCC2"
+cheat26_enable = false
+
+cheat27_desc = "[Format source non précisé] Infinite Tiger"
+cheat27_code = "0105E1CF"
+cheat27_enable = false
+
+cheat28_desc = "[Format source non précisé] Infinite Mocchi"
+cheat28_code = "0105E2CF"
+cheat28_enable = false
+
+cheat29_desc = "[Format source non précisé] Infinite Hare"
+cheat29_code = "0105E3CF"
+cheat29_enable = false
+
+cheat30_desc = "[Format source non précisé] Infinite Gali"
+cheat30_code = "0105E4CF"
+cheat30_enable = false
+
+cheat31_desc = "[Format source non précisé] Infinite Golem"
+cheat31_code = "0105E5CF"
+cheat31_enable = false
+
+cheat32_desc = "[Format source non précisé] Infinite Suezo"
+cheat32_code = "0105E6CF"
+cheat32_enable = false
+
+cheat33_desc = "[Format source non précisé] Infinite Pheonix"
+cheat33_code = "0105E7CF"
+cheat33_enable = false
+
+cheat34_desc = "[Format source non précisé] Levelanwahl"
+cheat34_code = "0101C0C2"
+cheat34_enable = false

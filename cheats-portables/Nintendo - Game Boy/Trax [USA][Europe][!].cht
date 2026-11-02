@@ -1,0 +1,62 @@
+# Recherche locale pour la ROM : Trax [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Trax%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Trax%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Trax%20(USA%2C%20Europe).cht
+
+cheats = 13
+
+cheat0_desc = "[Game Genie] Start With 8 Lives Instead of 2"
+cheat0_code = "095-B4B"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Infinite Energy"
+cheat1_code = "010678C2"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Infinite lives"
+cheat2_code = "003-CBB-C4D"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Start with 1 life"
+cheat3_code = "015-B4B-E66"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Start with 6 lives"
+cheat4_code = "065-B4B-E66"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Start with 9 lives"
+cheat5_code = "095-B4B-E66"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Autofire"
+cheat6_code = "003-0EB-6E2+003-08B-4CA"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Start on stage 2"
+cheat7_code = "3CA-C0F-5D4"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Start at beginning of stage 4"
+cheat8_code = "78A-C0F-5D4"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Start at end of stage 4"
+cheat9_code = "7BA-C0F-5D4"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Skip to win sequence"
+cheat10_code = "3DA-C0F-5D4"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Infinite Energy"
+cheat11_code = "010678C2"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Start With 8 Lives Instead of 2"
+cheat12_code = "095-B4B"
+cheat12_enable = false

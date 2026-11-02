@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Cake Mania 3 (USA).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Cake%20Mania%203%20(USA).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Profit 60000"
+cheat0_code = "62063444+00000000+B2063444+00000000+10000174+0000EA60+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Shop Money 60000"
+cheat1_code = "62063444+00000000+B2063444+00000000+10000178+0000EA60+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Never Have Angry Customers"
+cheat2_code = "520229D8+E1D600F0+520229DC+E3A00005+D0000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Never Times Up"
+cheat3_code = "5200E30C+EBFFEC7B+94000130+FEFF0000+0200E310+E58500B8+D0000000+00000000+5200E30C+EBFFEC7B+94000130+FDFF0000+0200E310+E1A00000+D0000000+00000000"
+cheat3_enable = false

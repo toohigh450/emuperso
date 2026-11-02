@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Hero Shuugou!! Pinball Party [Japan][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Hero%20Shuugou!!%20Pinball%20Party%20(Japan).cht
+
+cheats = 4
+
+cheat0_desc = "[Format source non précisé] Infinite Balls"
+cheat0_code = "008-43A-19E"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Balls"
+cheat1_code = "010A04D2"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Start with ?? Balls, instead of 2 - Normal Game"
+cheat2_code = "04F-15F-E66"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Start with ?? Balls, instead of 2 - Extra Game"
+cheat3_code = "04B-E7E-E66"
+cheat3_enable = false

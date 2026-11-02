@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : ATV Quad Frenzy (Europe) (En,Fr,De).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/ATV%20Quad%20Frenzy%20(Europe).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] Max/Infinite Money"
+cheat0_code = "94000130+FFFB0000+12105390+000003E7+D2000000+00000000"
+cheat0_enable = false

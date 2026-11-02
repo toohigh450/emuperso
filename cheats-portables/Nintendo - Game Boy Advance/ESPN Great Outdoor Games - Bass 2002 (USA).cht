@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : ESPN Great Outdoor Games - Bass 2002 (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/ESPN%20Great%20Outdoor%20Games%20-%20Bass%202002%20(USA)%20(Code%20Breaker).cht
+
+cheats = 4
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00000000+0002+10000802+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Max Power When Casting"
+cheat1_code = "320001D6+0008"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] No Line Tension"
+cheat2_code = "320001E6+0000"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Catch 1 Fish For Max Weight"
+cheat3_code = "820000D2+7FFF"
+cheat3_enable = false

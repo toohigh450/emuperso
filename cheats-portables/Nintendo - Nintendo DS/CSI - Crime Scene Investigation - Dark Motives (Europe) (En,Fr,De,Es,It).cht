@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : CSI - Crime Scene Investigation - Dark Motives (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/CSI%20-%20Crime%20Scene%20Investigation%20-%20Dark%20Motives%20(Europe).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] Test - Case Selection"
+cheat0_code = "02002E48+E3A00000+02002E58+E3A00000+020C6D78+75626564+020C6D7C+656C5F67+020C6D80+736C6576+020C6D84+63656C65+020C6D88+2E313074+020C6D8C+6D73646E+020C6D90+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Load Case 2 Instead of Case 1"
+cheat1_code = "22128F6D+00000032+22128F7C+00000031"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Load Case 3 Instead of Case 1"
+cheat2_code = "22128F6D+00000033+22128F8B+00000031"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Load Case 4 Instead of Case 1"
+cheat3_code = "22128F6D+00000034+22128F9A+00000031"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Load Case 5 Instead of Case 1"
+cheat4_code = "22128F6D+00000035+22128FA9+00000031"
+cheat4_enable = false

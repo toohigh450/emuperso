@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: Sha256 incrémental = SHA-256 de référence (tailles limites, découpages arbitraires)
+ok 1 - Sha256 incrémental = SHA-256 de référence (tailles limites, découpages arbitraires)
+  ---
+  duration_ms: 12.031056
+  type: 'test'
+  ...
+# Subtest: prepareDisc par blocs : même empreinte que WebCrypto, progression monotone, aucune lecture d’un bloc
+ok 2 - prepareDisc par blocs : même empreinte que WebCrypto, progression monotone, aucune lecture d’un bloc
+  ---
+  duration_ms: 26.254914
+  type: 'test'
+  ...
+# Subtest: faux CHD refusé dès le premier bloc, sans lire le reste
+ok 3 - faux CHD refusé dès le premier bloc, sans lire le reste
+  ---
+  duration_ms: 134.473352
+  type: 'test'
+  ...
+# Subtest: lecture refusée en cours de route => E_READ explicite avec la position
+ok 4 - lecture refusée en cours de route => E_READ explicite avec la position
+  ---
+  duration_ms: 11.961434
+  type: 'test'
+  ...
+# Subtest: bloc incomplet (fichier modifié pendant la lecture) => E_READ
+ok 5 - bloc incomplet (fichier modifié pendant la lecture) => E_READ
+  ---
+  duration_ms: 2.334348
+  type: 'test'
+  ...
+# Subtest: annulation entre deux blocs => E_ABORTED, plus aucune lecture ensuite
+ok 6 - annulation entre deux blocs => E_ABORTED, plus aucune lecture ensuite
+  ---
+  duration_ms: 3.120093
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 225.351143

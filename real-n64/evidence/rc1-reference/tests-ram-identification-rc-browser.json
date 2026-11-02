@@ -1,0 +1,339 @@
+{
+  "schema": "emuperso/ram-identification-rc-tests/v1",
+  "results": [
+    {
+      "test": "Identification automatique de la RAM du vrai cœur, limitée à la ROM MIT du dépôt",
+      "status": "RÉUSSI",
+      "proof": {
+        "base": 258801664,
+        "wordSwapped": true,
+        "pointers": [
+          2685665280,
+          2685403136,
+          2685665280,
+          2685403136,
+          2685665280,
+          2685403136
+        ],
+        "candidates": 2,
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "identification_method": "framebuffer-alternation"
+      }
+    },
+    {
+      "test": "Fallback forcé : huit octets vus dans une vraie capture native puis retirés de la capture suivante",
+      "status": "RÉUSSI",
+      "proof": {
+        "automatic_base": 258801664,
+        "forced_base": 258801664,
+        "method": "native-state-nonce",
+        "proof": {
+          "forced": true,
+          "heap_base": 258801664,
+          "state_ram_base": 460,
+          "physical_address": 65552,
+          "byte_count": 8,
+          "original": [
+            16,
+            35,
+            69,
+            103,
+            137,
+            171,
+            205,
+            239
+          ],
+          "nonce": [
+            113,
+            57,
+            178,
+            78,
+            37,
+            216,
+            106,
+            193
+          ],
+          "native_before": [
+            16,
+            35,
+            69,
+            103,
+            137,
+            171,
+            205,
+            239
+          ],
+          "positive_echo": [
+            113,
+            57,
+            178,
+            78,
+            37,
+            216,
+            106,
+            193
+          ],
+          "restored_heap": [
+            16,
+            35,
+            69,
+            103,
+            137,
+            171,
+            205,
+            239
+          ],
+          "restored_native": [
+            16,
+            35,
+            69,
+            103,
+            137,
+            171,
+            205,
+            239
+          ],
+          "positive_matches": true,
+          "restoration_matches": true,
+          "positive_frames": {
+            "before": 51,
+            "after": 54,
+            "delta": 3
+          },
+          "restoration_frames": {
+            "before": 54,
+            "after": 56,
+            "delta": 2
+          }
+        },
+        "independent_native_observations": [
+          {
+            "frame": 33,
+            "bytes": [
+              16,
+              35,
+              69,
+              103,
+              137,
+              171,
+              205,
+              239
+            ]
+          },
+          {
+            "frame": 51,
+            "bytes": [
+              16,
+              35,
+              69,
+              103,
+              137,
+              171,
+              205,
+              239
+            ]
+          },
+          {
+            "frame": 51,
+            "bytes": [
+              16,
+              35,
+              69,
+              103,
+              137,
+              171,
+              205,
+              239
+            ]
+          },
+          {
+            "frame": 54,
+            "bytes": [
+              113,
+              57,
+              178,
+              78,
+              37,
+              216,
+              106,
+              193
+            ]
+          },
+          {
+            "frame": 56,
+            "bytes": [
+              16,
+              35,
+              69,
+              103,
+              137,
+              171,
+              205,
+              239
+            ]
+          },
+          {
+            "frame": 56,
+            "bytes": [
+              16,
+              35,
+              69,
+              103,
+              137,
+              171,
+              205,
+              239
+            ]
+          },
+          {
+            "frame": 56,
+            "bytes": [
+              16,
+              35,
+              69,
+              103,
+              137,
+              171,
+              205,
+              239
+            ]
+          },
+          {
+            "frame": 58,
+            "bytes": [
+              16,
+              35,
+              69,
+              103,
+              137,
+              171,
+              205,
+              239
+            ]
+          },
+          {
+            "frame": 60,
+            "bytes": [
+              16,
+              35,
+              69,
+              103,
+              137,
+              171,
+              205,
+              239
+            ]
+          },
+          {
+            "frame": 60,
+            "bytes": [
+              16,
+              35,
+              69,
+              103,
+              137,
+              171,
+              205,
+              239
+            ]
+          },
+          {
+            "frame": 62,
+            "bytes": [
+              16,
+              35,
+              69,
+              103,
+              137,
+              171,
+              205,
+              239
+            ]
+          },
+          {
+            "frame": 64,
+            "bytes": [
+              16,
+              35,
+              69,
+              103,
+              137,
+              171,
+              205,
+              239
+            ]
+          },
+          {
+            "frame": 64,
+            "bytes": [
+              16,
+              35,
+              69,
+              103,
+              137,
+              171,
+              205,
+              239
+            ]
+          }
+        ],
+        "positive_observation_index": 3,
+        "restored_observation_index": 4,
+        "after_heap_and_native": {
+          "heap": [
+            16,
+            35,
+            69,
+            103,
+            137,
+            171,
+            205,
+            239
+          ],
+          "native": [
+            16,
+            35,
+            69,
+            103,
+            137,
+            171,
+            205,
+            239
+          ],
+          "frame": 64
+        }
+      }
+    },
+    {
+      "test": "Octets initiaux rétablis dans la RAM et une nouvelle capture native, sans compteur simulé",
+      "status": "RÉUSSI",
+      "proof": {
+        "heap": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "native": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "frame": 67,
+        "frame_before": 65
+      }
+    }
+  ],
+  "page_errors": [],
+  "scope": "Actual core, repository MIT diagnostic ROM and temporary unused-RAM marker only. Forced research-helper fallback, no emulation/API/frame mocks. Not a diagnosis or a test of Karl PC.",
+  "sampling_issue": "Six observations separated by 180 ms can alias double-buffer parity; missing observed alternation is not proof that native-state identification failed."
+}

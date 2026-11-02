@@ -1,0 +1,312 @@
+# Recherche locale pour la ROM : Tennis Masters (Europe).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Tennis%20Masters%20(Europe).cht
+
+cheats = 76
+
+cheat0_desc = "[Action Replay] Player 1 Starts At 40"
+cheat0_code = "9230C13C+00000000+2230C13C+00000003+2230C140+00000003+D0000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Player 1 Infinite Power Gauge"
+cheat1_code = "0230C228+00010000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Player 2 Always 00"
+cheat2_code = "2230C13E+00000000+2230C142+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Player 2 No Power Gauge"
+cheat3_code = "0230C22C+00010000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Brian"
+cheat4_code = "2230B590+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Martin"
+cheat5_code = "2230B590+00000001"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] tomas"
+cheat6_code = "2230B590+00000002"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Ricky"
+cheat7_code = "2230B590+00000003"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Leif"
+cheat8_code = "2230B590+00000004"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Eric"
+cheat9_code = "2230B590+00000005"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Henree"
+cheat10_code = "2230B590+00000006"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Jon"
+cheat11_code = "2230B590+00000007"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] 08 Roger"
+cheat12_code = "2230B590+00000008"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Alex"
+cheat13_code = "2230B590+00000009"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Jasper"
+cheat14_code = "2230B590+0000000A"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Mark"
+cheat15_code = "2230B590+0000000B"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Alan"
+cheat16_code = "2230B590+0000000C"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Mike"
+cheat17_code = "2230B590+0000000D"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Terry"
+cheat18_code = "2230B590+0000000E"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Bruce"
+cheat19_code = "2230B590+0000000F"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Clarke"
+cheat20_code = "2230B590+00000010"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Jimmy"
+cheat21_code = "2230B590+00000011"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Perry"
+cheat22_code = "2230B590+00000012"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Jaimie"
+cheat23_code = "2230B590+00000013"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Calvin"
+cheat24_code = "2230B590+00000014"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] John"
+cheat25_code = "2230B590+00000015"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Frank"
+cheat26_code = "2230B590+00000016"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] James"
+cheat27_code = "2230B590+00000017"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Max"
+cheat28_code = "2230B590+00000018"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Vari"
+cheat29_code = "2230B590+00000019"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Hops"
+cheat30_code = "2230B590+0000001A"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Bob"
+cheat31_code = "2230B590+0000001B"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Dave"
+cheat32_code = "2230B590+0000001C"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Wayne"
+cheat33_code = "2230B590+0000001D"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Pedro"
+cheat34_code = "2230B590+0000001E"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Sakari"
+cheat35_code = "2230B590+0000001F"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Brian"
+cheat36_code = "2230B591+00000000"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Martin"
+cheat37_code = "2230B591+00000001"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] tomas"
+cheat38_code = "2230B591+00000002"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Ricky"
+cheat39_code = "2230B591+00000003"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Leif"
+cheat40_code = "2230B591+00000004"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Eric"
+cheat41_code = "2230B591+00000005"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Henree"
+cheat42_code = "2230B591+00000006"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Jon"
+cheat43_code = "2230B591+00000007"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] 08 Roger"
+cheat44_code = "2230B591+00000008"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Alex"
+cheat45_code = "2230B591+00000009"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] Jasper"
+cheat46_code = "2230B591+0000000A"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Mark"
+cheat47_code = "2230B591+0000000B"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Alan"
+cheat48_code = "2230B591+0000000C"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] Mike"
+cheat49_code = "2230B591+0000000D"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] Terry"
+cheat50_code = "2230B591+0000000E"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] Bruce"
+cheat51_code = "2230B591+0000000F"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Clarke"
+cheat52_code = "2230B591+00000010"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Jimmy"
+cheat53_code = "2230B591+00000011"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Perry"
+cheat54_code = "2230B591+00000012"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Jaimie"
+cheat55_code = "2230B591+00000013"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Calvin"
+cheat56_code = "2230B591+00000014"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] John"
+cheat57_code = "2230B591+00000015"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Frank"
+cheat58_code = "2230B591+00000016"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] James"
+cheat59_code = "2230B591+00000017"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Max"
+cheat60_code = "2230B591+00000018"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Vari"
+cheat61_code = "2230B591+00000019"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Hops"
+cheat62_code = "2230B591+0000001A"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Bob"
+cheat63_code = "2230B591+0000001B"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Dave"
+cheat64_code = "2230B591+0000001C"
+cheat64_enable = false
+
+cheat65_desc = "[Action Replay] Wayne"
+cheat65_code = "2230B591+0000001D"
+cheat65_enable = false
+
+cheat66_desc = "[Action Replay] Pedro"
+cheat66_code = "2230B591+0000001E"
+cheat66_enable = false
+
+cheat67_desc = "[Action Replay] Sakari"
+cheat67_code = "2230B591+0000001F"
+cheat67_enable = false
+
+cheat68_desc = "[Action Replay] Montreal"
+cheat68_code = "2230B58C+00000000"
+cheat68_enable = false
+
+cheat69_desc = "[Action Replay] New York"
+cheat69_code = "2230B58C+00000001"
+cheat69_enable = false
+
+cheat70_desc = "[Action Replay] Santiago"
+cheat70_code = "2230B58C+00000002"
+cheat70_enable = false
+
+cheat71_desc = "[Action Replay] London"
+cheat71_code = "2230B58C+00000003"
+cheat71_enable = false
+
+cheat72_desc = "[Action Replay] Stockholm"
+cheat72_code = "2230B58C+00000004"
+cheat72_enable = false
+
+cheat73_desc = "[Action Replay] Paris"
+cheat73_code = "2230B58C+00000005"
+cheat73_enable = false
+
+cheat74_desc = "[Action Replay] Beijing"
+cheat74_code = "2230B58C+00000006"
+cheat74_enable = false
+
+cheat75_desc = "[Action Replay] Sydney"
+cheat75_code = "2230B58C+00000007"
+cheat75_enable = false

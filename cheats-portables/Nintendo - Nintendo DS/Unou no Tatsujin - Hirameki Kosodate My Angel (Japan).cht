@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Unou no Tatsujin - Hirameki Kosodate My Angel (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Unou%20no%20Tatsujin%20-%20Hirameki%20Kosodate%20My%20Angel%20(Japan).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Unlock All Puzzles"
+cheat0_code = "02160444+00FFFFFF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Complete Gallery"
+cheat1_code = "021608D0+FFFFFFFF"
+cheat1_enable = false

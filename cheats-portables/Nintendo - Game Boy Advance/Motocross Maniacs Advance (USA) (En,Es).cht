@@ -1,0 +1,48 @@
+# Recherche locale pour la ROM : Motocross Maniacs Advance (USA) (En,Es).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Motocross%20Maniacs%20Advance%20(USA%2C%20Japan)%20(Code%20Breaker).cht
+
+cheats = 10
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000006D+000A+10000FCC+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Nitro's"
+cheat1_code = "33005D32+0063"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Gas"
+cheat2_code = "83005D3A+1600"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Infinite Retries"
+cheat3_code = "33005BCC+0009"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Extra Nitro Boost"
+cheat4_code = "73005CE6+0008+83005CE6+000E"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Have 200 Cup Points"
+cheat5_code = "33005BB4+00C8"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Start With 5000 Action Points"
+cheat6_code = "73005D40+0000+83005D40+1388"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Press Select+L To End Race"
+cheat7_code = "74000130+01FB+33004039+000B"
+cheat7_enable = false
+
+cheat8_desc = "[Code Breaker] Unlock All Players"
+cheat8_code = "33006D20+0003"
+cheat8_enable = false
+
+cheat9_desc = "[Code Breaker] Unlock All Cups"
+cheat9_code = "83006D2E+FFFF"
+cheat9_enable = false

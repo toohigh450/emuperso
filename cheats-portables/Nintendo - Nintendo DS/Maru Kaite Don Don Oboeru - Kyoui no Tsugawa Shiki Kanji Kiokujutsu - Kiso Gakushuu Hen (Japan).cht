@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Maru Kaite Don Don Oboeru - Kyoui no Tsugawa Shiki Kanji Kiokujutsu - Kiso Gakushuu Hen (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Maru%20Kaite%20Don%20Don%20Oboeru%20-%20Kyoui%20no%20Tsugawa%20Shiki%20Kanji%20Kiokujutsu%20-%20Kiso%20Gakushuu%20Hen%20(Japan).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "52006698+EE070F90+E20005D0+00000038+CA02A20C+02242303+19645CCD+D5FA3B01+42A34B07+784CD104+3101700C+D1FA4224+428AA105+4778DBED+EE070F90+E8BD803E+2F2F3A73+020BD1EC+02006698+E92D403E+0200669C+FAFFE7CB+D2000000+00000000"
+cheat0_enable = false

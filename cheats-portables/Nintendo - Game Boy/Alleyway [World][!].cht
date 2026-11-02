@@ -1,0 +1,177 @@
+# Recherche locale pour la ROM : Alleyway [World][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Alleyway%20(World)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Alleyway%20(World).cht
+
+cheats = 42
+
+cheat0_desc = "[GameShark] Infinite Lives"
+cheat0_code = "010344CA"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Stage Modifier"
+cheat1_code = "01??45CA"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Infinite Time"
+cheat2_code = "015F48CA"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Max High Score"
+cheat3_code = "018922C8+018926C8+01891EC8+01891AC8"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Max Top Score"
+cheat4_code = "01893AC8+018936C8+018932C8+01892EC8"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Infinite time in bonus room (can switch on/off)"
+cheat5_code = "FA9-95E-4C1"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Continue from last stage reached"
+cheat6_code = "FA5-ECF-4C1"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Infinite paddles"
+cheat7_code = "007-EEF-19E"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Infinite Lives"
+cheat8_code = "010344CA"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Stage Modifier"
+cheat9_code = "010045CA"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Infinite Time"
+cheat10_code = "015F48CA"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Destroy One Brick To Win Level"
+cheat11_code = "0101C9FF"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Infinite Lives"
+cheat12_code = "BE7-EEF-19E"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Paddle Hits Ball Anywhere"
+cheat13_code = "00C-D1F-D56"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Start With 9 Lives"
+cheat14_code = "095-FCF-F7A"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Start With 255 Lives"
+cheat15_code = "FF5-FCF-F7A"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Pausing/Unpausing Does Not Play a Sound Effect Nor Change Current Song"
+cheat16_code = "003-F59-F7A"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Clear a Stage To See The Ending"
+cheat17_code = "048-32F-E62"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Paddle Does Not Shrink When Hitting the Top Section In Later Stages"
+cheat18_code = "18C-FFF-6EA"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Pierce Through Blocks on Normal Stages"
+cheat19_code = "01E-79F-E6A"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Can See The Next Part of The Stage Past The Left Side"
+cheat20_code = "806-20B-6EB"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Skip Stage Intro"
+cheat21_code = "006-F9F-E6E"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Start Each Normal Stage With 80 Seconds"
+cheat22_code = "017-00F-E6A+017-2CF-E6A+017-A7F-E6A"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Bonus Stage Music Plays on All Normal Stages"
+cheat23_code = "017-9BF-E6A"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Die To Complete The Stage"
+cheat24_code = "017-E1F-E6A"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Crazy Stages"
+cheat25_code = "FA9-40F-6EE"
+cheat25_enable = false
+
+cheat26_desc = "[Format source non précisé] Earn 256 Points For Every 1 Point You Gain"
+cheat26_code = "E08-24B-2A9"
+cheat26_enable = false
+
+cheat27_desc = "[Format source non précisé] Null Graphics And I/O Rendering Allowing Only Operations For Music Playback"
+cheat27_code = "012-29F-E6A"
+cheat27_enable = false
+
+cheat28_desc = "[Format source non précisé] Start With Mushroom"
+cheat28_code = "018-34B-E6A+008-40B-E62"
+cheat28_enable = false
+
+cheat29_desc = "[Format source non précisé] Start With Flower"
+cheat29_code = "018-34B-E6A+008-3AB-E6E"
+cheat29_enable = false
+
+cheat30_desc = "[Format source non précisé] Start With Star"
+cheat30_code = "018-34B-E6A"
+cheat30_enable = false
+
+cheat31_desc = "[Format source non précisé] The Entire Game is in Bonus Stage Mode"
+cheat31_code = "AA7-CBB-E6E+FF7-CCB-C4D"
+cheat31_enable = false
+
+cheat32_desc = "[Format source non précisé] Complete Initial Stage To Enter And Continue On From Selected Stage"
+cheat32_code = "459-84F-E6A+CA9-85F-E69+8DF-E6A"
+cheat32_enable = false
+
+cheat33_desc = "[Format source non précisé] Pause to Complete Current Stage"
+cheat33_code = "087-CFF-D5A"
+cheat33_enable = false
+
+cheat34_desc = "[Format source non précisé] Pause To See The Ending"
+cheat34_code = "097-CFF-D5A"
+cheat34_enable = false
+
+cheat35_desc = "[Format source non précisé] High Speed"
+cheat35_code = "EA5-25F-D5D"
+cheat35_enable = false
+
+cheat36_desc = "[Format source non précisé] Ball Is Fast When It Hits The Paddle"
+cheat36_code = "031-3CE-E6A"
+cheat36_enable = false
+
+cheat37_desc = "[Format source non précisé] Ball Is Really Fast When It Hits The Paddle"
+cheat37_code = "051-3CE-E6A"
+cheat37_enable = false
+
+cheat38_desc = "[Format source non précisé] Ball Is Extremely Fast When It Hits The Paddle"
+cheat38_code = "0E1-3CE-E6A"
+cheat38_enable = false
+
+cheat39_desc = "[Format source non précisé] Paddle Speed Modifier"
+cheat39_code = "01B7E69E"
+cheat39_enable = false
+
+cheat40_desc = "[Format source non précisé] Paddle Can Pass Through Left Side of Stage"
+cheat40_code = "180-C8E-2AA"
+cheat40_enable = false
+
+cheat41_desc = "[Format source non précisé] Paddle Can Pass Through Right Side Of Stage"
+cheat41_code = "180-D9E-08A"
+cheat41_enable = false

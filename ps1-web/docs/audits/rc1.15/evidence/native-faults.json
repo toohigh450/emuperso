@@ -1,0 +1,205 @@
+{
+  "scope": "real PCSX core with synthetic ISO; exceptions instrumented at JS/native boundary, not inside WASM",
+  "checks": {
+    "native_positive": true,
+    "partial_failure_rollback_native": true,
+    "uncertain_captures_refused": true,
+    "existing_slots_preserved": true,
+    "quarantined_paused": true,
+    "resync_cannot_lift_quarantine": true,
+    "new_realm_only_recovery": true,
+    "recovery_preserves_slots": true,
+    "state_warning_cancel": true,
+    "saved_ram_effects_not_new_injection": true,
+    "no_reinjection_before_confirmation": true,
+    "positive_after_reconfirmation": true,
+    "accurate_state_warning": true
+  },
+  "errors": [],
+  "initial_ram": [
+    120,
+    86,
+    87,
+    19,
+    171,
+    205
+  ],
+  "slots_before_fault": [
+    {
+      "key": "battery:be28f311e964cd589373efd933bd9317ed022ea6ea66b67acb2b37fe07c47f7c:1",
+      "revision": 1,
+      "id": "1e607644f8e5303ebc46ec11d2290ccb",
+      "sha256": "78b6d4ac9ab4d23caf7e5f04f83539bf5d994cccfb0a709d14ac53d05c8e21ef"
+    },
+    {
+      "key": "state:f686f02cec22968f85df28c370cdf472fe91292170a10233ea7c4d58c60df022:1",
+      "revision": 1,
+      "id": "933af7d1ef0eb50932c4e0d555d15d1d",
+      "sha256": "3f4b2a9f70dbee8839e11a46c6c13467bb42489566d8b60357fb2ef101f9d4a3"
+    }
+  ],
+  "rollback_frame_before": 12,
+  "rollback_frame_after": 14,
+  "partial_failure_ram": [
+    120,
+    86,
+    87,
+    19,
+    171,
+    205
+  ],
+  "fault_after_native_set": true,
+  "poisoned_snapshot": {
+    "session_id": 1,
+    "closed": false,
+    "started": true,
+    "paused": true,
+    "frame": 14,
+    "startup_failure": null,
+    "cheats_quarantined": true,
+    "contexts": [
+      {
+        "state": "suspended",
+        "sample_rate": 44100
+      }
+    ]
+  },
+  "direct_capture_refusals": [
+    "Moteur en quarantaine : captures et réactivation refusées. Recréez une session saine.",
+    "Moteur en quarantaine : captures et réactivation refusées. Recréez une session saine."
+  ],
+  "capture_calls_while_poisoned": 0,
+  "slots_after_capture_attempts": [
+    {
+      "key": "battery:be28f311e964cd589373efd933bd9317ed022ea6ea66b67acb2b37fe07c47f7c:1",
+      "revision": 1,
+      "id": "1e607644f8e5303ebc46ec11d2290ccb",
+      "sha256": "78b6d4ac9ab4d23caf7e5f04f83539bf5d994cccfb0a709d14ac53d05c8e21ef"
+    },
+    {
+      "key": "state:f686f02cec22968f85df28c370cdf472fe91292170a10233ea7c4d58c60df022:1",
+      "revision": 1,
+      "id": "933af7d1ef0eb50932c4e0d555d15d1d",
+      "sha256": "3f4b2a9f70dbee8839e11a46c6c13467bb42489566d8b60357fb2ef101f9d4a3"
+    }
+  ],
+  "recovered_snapshot": {
+    "session_id": 2,
+    "closed": false,
+    "started": true,
+    "paused": false,
+    "frame": 9,
+    "startup_failure": null,
+    "cheats_quarantined": false,
+    "contexts": [
+      {
+        "state": "running",
+        "sample_rate": 44100
+      }
+    ]
+  },
+  "slots_after_recovery": [
+    {
+      "key": "battery:be28f311e964cd589373efd933bd9317ed022ea6ea66b67acb2b37fe07c47f7c:1",
+      "revision": 1,
+      "id": "1e607644f8e5303ebc46ec11d2290ccb",
+      "sha256": "78b6d4ac9ab4d23caf7e5f04f83539bf5d994cccfb0a709d14ac53d05c8e21ef"
+    },
+    {
+      "key": "state:f686f02cec22968f85df28c370cdf472fe91292170a10233ea7c4d58c60df022:1",
+      "revision": 1,
+      "id": "933af7d1ef0eb50932c4e0d555d15d1d",
+      "sha256": "3f4b2a9f70dbee8839e11a46c6c13467bb42489566d8b60357fb2ef101f9d4a3"
+    }
+  ],
+  "restored_ram": [
+    120,
+    86,
+    87,
+    19,
+    171,
+    205
+  ],
+  "state_after_load": {
+    "hasSession": true,
+    "gameName": "synthetic-demo.iso",
+    "cheats": [
+      {
+        "index": 0,
+        "name": "Synthetic A",
+        "display": "Synthetic A",
+        "code": "80011000 5678",
+        "source": "manuel",
+        "state": "off",
+        "validated": false,
+        "incompatible": false,
+        "origin": "saisie manuelle",
+        "format": "GameShark",
+        "reason": null
+      },
+      {
+        "index": 1,
+        "name": "Synthetic B",
+        "display": "Synthetic B",
+        "code": "80011004 ABCD",
+        "source": "manuel",
+        "state": "off",
+        "validated": false,
+        "incompatible": false,
+        "origin": "saisie manuelle",
+        "format": "GameShark",
+        "reason": null
+      }
+    ],
+    "edition": null,
+    "applied": 0,
+    "pending": 0,
+    "summary": {
+      "text": "2 code(s) pour ce jeu (0 importé(s) non validé(s) 📥). Aucun actif.",
+      "warn": false
+    },
+    "info": {
+      "text": "🔍 Jeu non reconnu dans le catalogue (synthetic-demo.iso). Ce n'est pas forcément qu'il n'existe pas de cheats — le titre peut différer. Codes manuels conservés.",
+      "warn": false
+    },
+    "note": {
+      "text": "",
+      "warn": false
+    },
+    "engineSync": "ok",
+    "region": {
+      "text": "⚠️ Région et édition non vérifiées. Vos codes manuels restent désactivés avant votre accord explicite pour cette session.",
+      "confirmLabel": "Je confirme : appliquer mes codes manuels à cette session (applique aussi 1 cheat(s) restauré(s))",
+      "restoreCount": 1,
+      "gameRegion": "inconnue",
+      "catalogRegion": "manuel",
+      "catalogTitle": "code manuel",
+      "uncertain": true,
+      "manual": true
+    },
+    "pendingRestore": 1,
+    "editionEvidence": {
+      "status": "unverified",
+      "authenticated": false,
+      "serial": null
+    },
+    "candidates": [],
+    "candidateKind": null,
+    "modInfo": null,
+    "editionLabel": null
+  },
+  "ram_before_reconfirmation": [
+    104,
+    36,
+    87,
+    19,
+    171,
+    205
+  ],
+  "dialogs": [
+    "Recréer une session saine sans capturer l’état incertain ? Les sauvegardes existantes seront conservées. La progression non enregistrée sera abandonnée.",
+    "Cet état mémorise des cheats. Ses données RAM peuvent déjà contenir leurs effets. Aucun code ne sera réactivé avant votre confirmation explicite dans la nouvelle session. Continuer ?",
+    "Cet état mémorise des cheats. Ses données RAM peuvent déjà contenir leurs effets. Aucun code ne sera réactivé avant votre confirmation explicite dans la nouvelle session. Continuer ?"
+  ],
+  "journal": "[\n {\n  \"utc\": \"2026-11-01T22:24:53.779Z\",\n  \"type\": \"disc.selected\",\n  \"data\": {\n   \"name\": \"synthetic-demo.iso\",\n   \"size\": 116736,\n   \"last_modified\": 1793571836081,\n   \"replacing\": false,\n   \"device_memory_gib\": 8,\n   \"js_heap_used_mib\": 2,\n   \"js_heap_limit_mib\": 4192\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:53.780Z\",\n  \"type\": \"disc.validated\",\n  \"data\": {\n   \"ext\": \"iso\",\n   \"size\": 116736,\n   \"ms\": 0\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:53.780Z\",\n  \"type\": \"disc.read.start\",\n  \"data\": {\n   \"size\": 116736,\n   \"chunk_bytes\": 8388608,\n   \"ms\": 0\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:53.817Z\",\n  \"type\": \"disc.inspect.start\",\n  \"data\": {\n   \"ms\": 37\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:53.820Z\",\n  \"type\": \"disc.inspect.done\",\n  \"data\": {\n   \"serial_found\": false,\n   \"notes\": 2,\n   \"ms\": 40\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:53.820Z\",\n  \"type\": \"disc.read.progress\",\n  \"data\": {\n   \"bytes\": 116736,\n   \"size\": 116736,\n   \"ms\": 40\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:53.820Z\",\n  \"type\": \"disc.hash.done\",\n  \"data\": {\n   \"total_ms\": 40,\n   \"hash_ms\": 33,\n   \"bytes\": 116736\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:53.837Z\",\n  \"type\": \"disc.ready\",\n  \"data\": {\n   \"ms\": 61,\n   \"hash_ms\": 33,\n   \"device_memory_gib\": 8,\n   \"js_heap_used_mib\": 3,\n   \"js_heap_limit_mib\": 4192\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:54.054Z\",\n  \"type\": \"launch.start\",\n  \"data\": {\n   \"name\": \"synthetic-demo.iso\",\n   \"replacing\": false,\n   \"device_memory_gib\": 8,\n   \"js_heap_used_mib\": 3,\n   \"js_heap_limit_mib\": 4192\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:54.781Z\",\n  \"type\": \"video.context.created\",\n  \"data\": {\n   \"kind\": \"webgl2\",\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:54.835Z\",\n  \"type\": \"engine.ready\",\n  \"data\": {\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:55.547Z\",\n  \"type\": \"wasm.instantiated\",\n  \"data\": {\n   \"method\": \"instantiateStreaming\",\n   \"export_count\": 67,\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:55.735Z\",\n  \"type\": \"video.context.created\",\n  \"data\": {\n   \"kind\": \"webgl2\",\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:55.860Z\",\n  \"type\": \"audio.context.created\",\n  \"data\": {\n   \"state\": \"running\",\n   \"sample_rate\": 44100,\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:56.013Z\",\n  \"type\": \"engine.start.callback\",\n  \"data\": {\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:56.081Z\",\n  \"type\": \"audio.context.state\",\n  \"data\": {\n   \"state\": \"running\",\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:56.712Z\",\n  \"type\": \"input.verify\",\n  \"data\": {\n   \"requested_pad_type\": \"standard\",\n   \"core_option_line\": null,\n   \"controls\": {\n    \"0\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"1\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"2\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"3\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"4\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"5\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"6\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"7\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"8\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"9\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"10\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"11\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"12\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"13\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"14\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"15\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"16\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"17\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"18\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"19\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"20\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"21\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"22\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"23\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    }\n   },\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:56.712Z\",\n  \"type\": \"session.committed\",\n  \"data\": {\n   \"generation\": 1,\n   \"previous_generation\": null,\n   \"rom_sha256\": \"8647fa4531b2873500afcabf3f7265d789794343dad1a1bbd442a46314e055fd\"\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:56.916Z\",\n  \"type\": \"input.status\",\n  \"data\": {\n   \"mode\": \"custom\",\n   \"reason\": \"Le cœur utilise les périphériques libretro, non exposés par ce runtime : type de manette demandé non vérifié. \",\n   \"pad_type_requested\": \"standard\",\n   \"pad_type_listed\": false,\n   \"core_options_raw\": {\n    \"present\": true,\n    \"type\": \"string\",\n    \"length\": 4995,\n    \"lines\": 51,\n    \"sample\": \"pcsx_rearmed_region|auto; auto|NTSC|PAL\\npcsx_rearmed_bios|auto; auto|HLE\\npcsx_rearmed_show_bios_bootlogo|disabled; disabled|enabled\\npcsx_rearmed_memcard2|disabled; disabled|enabled\\npcsx_rearmed_psxclo\",\n    \"mentions_pad\": false\n   },\n   \"pad_type_reported\": null,\n   \"pad_type_verified\": false,\n   \"core_option_line\": null,\n   \"profile\": {\n    \"analog\": \"off\",\n    \"stickToDpad\": true,\n    \"deadzone\": 0.2,\n    \"native\": false\n   }\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:56.916Z\",\n  \"type\": \"launch.done\",\n  \"data\": {\n   \"name\": \"synthetic-demo.iso\",\n   \"ms\": 2862,\n   \"device_memory_gib\": 8,\n   \"js_heap_used_mib\": 15,\n   \"js_heap_limit_mib\": 4192\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:56.921Z\",\n  \"type\": \"cheats.applied\",\n  \"data\": {\n   \"count\": 1,\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:56.921Z\",\n  \"type\": \"cheats.applied\",\n  \"data\": {\n   \"count\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:57.254Z\",\n  \"type\": \"audio.context.state\",\n  \"data\": {\n   \"state\": \"suspended\",\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:57.313Z\",\n  \"type\": \"battery.saved\",\n  \"data\": {\n   \"bytes\": 131072\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:57.313Z\",\n  \"type\": \"state.saved\",\n  \"data\": {\n   \"slot\": 1,\n   \"revision\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:57.327Z\",\n  \"type\": \"audio.context.state\",\n  \"data\": {\n   \"state\": \"running\",\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:57.467Z\",\n  \"type\": \"cheats.apply_failed\",\n  \"data\": {\n   \"message\": \"SYNTHETIC exception after native setCheat(1)\",\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:57.467Z\",\n  \"type\": \"cheats.applied\",\n  \"data\": {\n   \"count\": 1,\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:57.468Z\",\n  \"type\": \"cheats.resynced\",\n  \"data\": {\n   \"count\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:57.468Z\",\n  \"type\": \"cheats.apply_failed\",\n  \"data\": {\n   \"message\": \"SYNTHETIC exception after native setCheat(1)\"\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:57.623Z\",\n  \"type\": \"cheats.resync_failed\",\n  \"data\": {\n   \"message\": \"SYNTHETIC persistent resetCheat exception\"\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:57.623Z\",\n  \"type\": \"cheats.quarantined\",\n  \"data\": {\n   \"captures_blocked\": true,\n   \"recovery\": \"new-realm\",\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:57.624Z\",\n  \"type\": \"cheats.apply_failed\",\n  \"data\": {\n   \"message\": \"SYNTHETIC persistent resetCheat exception\"\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:57.624Z\",\n  \"type\": \"audio.context.state\",\n  \"data\": {\n   \"state\": \"suspended\",\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:57.634Z\",\n  \"type\": \"operation.error\",\n  \"data\": {\n   \"code\": null,\n   \"message\": \"Capture refusée : moteur incertain. Recréez une session saine ; les sauvegardes existantes sont conservées.\",\n   \"stack\": \"Error: Capture refusée : moteur incertain. Recréez une session saine ; les sauvegardes existantes sont conservées.\\n    at requireCaptureSafe (http://127.0.0.1:36047/app.js:149:11)\\n    at http://127.0.0.1:36047/app.js:286:3\\n    at operation (http://127.0.0.1:36047/app.js:57:15)\\n    at $.onclick (http://127.0.0.1:36047/app.js:285:33)\\n    at eval (eval at evaluate (:311:30), <anonymous>:1:39)\\n    at eval (<anonymous>)\\n    at UtilityScript.evaluate (<anonymous>:311:30)\\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\"\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:57.636Z\",\n  \"type\": \"operation.error\",\n  \"data\": {\n   \"code\": null,\n   \"message\": \"Capture refusée : moteur incertain. Recréez une session saine ; les sauvegardes existantes sont conservées.\",\n   \"stack\": \"Error: Capture refusée : moteur incertain. Recréez une session saine ; les sauvegardes existantes sont conservées.\\n    at requireCaptureSafe (http://127.0.0.1:36047/app.js:149:11)\\n    at saveBattery (http://127.0.0.1:36047/app.js:136:3)\\n    at http://127.0.0.1:36047/app.js:283:51\\n    at operation (http://127.0.0.1:36047/app.js:57:15)\\n    at $.onclick (http://127.0.0.1:36047/app.js:283:35)\\n    at eval (eval at evaluate (:311:30), <anonymous>:1:41)\\n    at eval (<anonymous>)\\n    at UtilityScript.evaluate (<anonymous>:311:30)\\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\"\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:57.663Z\",\n  \"type\": \"cheats.resync_failed\",\n  \"data\": {\n   \"message\": \"Moteur en quarantaine : captures et réactivation refusées. Recréez une session saine.\"\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:57.663Z\",\n  \"type\": \"cheats.quarantined\",\n  \"data\": {\n   \"captures_blocked\": true,\n   \"recovery\": \"new-realm\",\n   \"session_generation\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:57.663Z\",\n  \"type\": \"cheats.apply_failed\",\n  \"data\": {\n   \"message\": \"Moteur en quarantaine : captures et réactivation refusées. Recréez une session saine.\"\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:57.790Z\",\n  \"type\": \"session.recovery.requested\",\n  \"data\": {\n   \"unsafe_capture_skipped\": true\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:58.249Z\",\n  \"type\": \"video.context.created\",\n  \"data\": {\n   \"kind\": \"webgl2\",\n   \"session_generation\": 2\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:58.275Z\",\n  \"type\": \"engine.ready\",\n  \"data\": {\n   \"session_generation\": 2\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:59.479Z\",\n  \"type\": \"wasm.instantiated\",\n  \"data\": {\n   \"method\": \"instantiateStreaming\",\n   \"export_count\": 67,\n   \"session_generation\": 2\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:59.537Z\",\n  \"type\": \"video.context.created\",\n  \"data\": {\n   \"kind\": \"webgl2\",\n   \"session_generation\": 2\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:59.615Z\",\n  \"type\": \"audio.context.created\",\n  \"data\": {\n   \"state\": \"running\",\n   \"sample_rate\": 44100,\n   \"session_generation\": 2\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:59.700Z\",\n  \"type\": \"engine.start.callback\",\n  \"data\": {\n   \"session_generation\": 2\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:59.737Z\",\n  \"type\": \"audio.context.state\",\n  \"data\": {\n   \"state\": \"running\",\n   \"session_generation\": 2\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:59.858Z\",\n  \"type\": \"battery.injected\",\n  \"data\": {\n   \"bytes\": 131072,\n   \"session_generation\": 2\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:59.859Z\",\n  \"type\": \"input.verify\",\n  \"data\": {\n   \"requested_pad_type\": \"standard\",\n   \"core_option_line\": null,\n   \"controls\": {\n    \"0\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"1\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"2\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"3\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"4\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"5\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"6\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"7\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"8\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"9\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"10\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"11\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"12\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"13\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"14\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"15\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"16\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"17\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"18\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"19\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"20\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"21\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"22\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"23\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    }\n   },\n   \"session_generation\": 2\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:59.860Z\",\n  \"type\": \"session.disposed\",\n  \"data\": {\n   \"generation\": 1,\n   \"audio\": [\n    {\n     \"state\": \"closed\",\n     \"sample_rate\": 44100\n    }\n   ],\n   \"timeout\": false\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:24:59.917Z\",\n  \"type\": \"session.committed\",\n  \"data\": {\n   \"generation\": 2,\n   \"previous_generation\": 1,\n   \"rom_sha256\": \"8647fa4531b2873500afcabf3f7265d789794343dad1a1bbd442a46314e055fd\"\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:00.074Z\",\n  \"type\": \"input.status\",\n  \"data\": {\n   \"mode\": \"custom\",\n   \"reason\": \"Le cœur utilise les périphériques libretro, non exposés par ce runtime : type de manette demandé non vérifié. \",\n   \"pad_type_requested\": \"standard\",\n   \"pad_type_listed\": false,\n   \"core_options_raw\": {\n    \"present\": true,\n    \"type\": \"string\",\n    \"length\": 4995,\n    \"lines\": 51,\n    \"sample\": \"pcsx_rearmed_region|auto; auto|NTSC|PAL\\npcsx_rearmed_bios|auto; auto|HLE\\npcsx_rearmed_show_bios_bootlogo|disabled; disabled|enabled\\npcsx_rearmed_memcard2|disabled; disabled|enabled\\npcsx_rearmed_psxclo\",\n    \"mentions_pad\": false\n   },\n   \"pad_type_reported\": null,\n   \"pad_type_verified\": false,\n   \"core_option_line\": null,\n   \"profile\": {\n    \"analog\": \"off\",\n    \"stickToDpad\": true,\n    \"deadzone\": 0.2,\n    \"native\": false\n   }\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:00.847Z\",\n  \"type\": \"battery.saved\",\n  \"data\": {\n   \"bytes\": 131072\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:01.157Z\",\n  \"type\": \"video.context.lost\",\n  \"data\": {\n   \"session_generation\": 3\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:01.157Z\",\n  \"type\": \"audio.context.state\",\n  \"data\": {\n   \"state\": \"suspended\",\n   \"session_generation\": 2\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:01.247Z\",\n  \"type\": \"video.context.created\",\n  \"data\": {\n   \"kind\": \"webgl2\",\n   \"session_generation\": 3\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:01.275Z\",\n  \"type\": \"engine.ready\",\n  \"data\": {\n   \"session_generation\": 3\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:01.893Z\",\n  \"type\": \"wasm.instantiated\",\n  \"data\": {\n   \"method\": \"instantiateStreaming\",\n   \"export_count\": 67,\n   \"session_generation\": 3\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:01.952Z\",\n  \"type\": \"video.context.created\",\n  \"data\": {\n   \"kind\": \"webgl2\",\n   \"session_generation\": 3\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:02.007Z\",\n  \"type\": \"audio.context.created\",\n  \"data\": {\n   \"state\": \"running\",\n   \"sample_rate\": 44100,\n   \"session_generation\": 3\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:02.090Z\",\n  \"type\": \"engine.start.callback\",\n  \"data\": {\n   \"session_generation\": 3\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:02.131Z\",\n  \"type\": \"audio.context.state\",\n  \"data\": {\n   \"state\": \"running\",\n   \"session_generation\": 3\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:02.443Z\",\n  \"type\": \"battery.injected\",\n  \"data\": {\n   \"bytes\": 131072,\n   \"session_generation\": 3\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:02.444Z\",\n  \"type\": \"input.verify\",\n  \"data\": {\n   \"requested_pad_type\": \"standard\",\n   \"core_option_line\": null,\n   \"controls\": {\n    \"0\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"1\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"2\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"3\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"4\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"5\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"6\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"7\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"8\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"9\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"10\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"11\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"12\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"13\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"14\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"15\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"16\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"17\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"18\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"19\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"20\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"21\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"22\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    },\n    \"23\": {\n     \"key\": 0,\n     \"pad\": \"\"\n    }\n   },\n   \"session_generation\": 3\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:02.458Z\",\n  \"type\": \"state.header.unchecked\",\n  \"data\": {\n   \"reason\": \"En-tête PS1 non vérifié : taille seulement.\",\n   \"session_generation\": 3\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:02.464Z\",\n  \"type\": \"state.native.return\",\n  \"data\": {\n   \"native_status\": 0,\n   \"session_generation\": 3\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:02.513Z\",\n  \"type\": \"audio.context.state\",\n  \"data\": {\n   \"state\": \"suspended\",\n   \"session_generation\": 3\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:02.514Z\",\n  \"type\": \"audio.context.state\",\n  \"data\": {\n   \"state\": \"running\",\n   \"session_generation\": 3\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:02.975Z\",\n  \"type\": \"session.disposed\",\n  \"data\": {\n   \"generation\": 2,\n   \"audio\": [\n    {\n     \"state\": \"closed\",\n     \"sample_rate\": 44100\n    }\n   ],\n   \"timeout\": false\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:03.032Z\",\n  \"type\": \"session.committed\",\n  \"data\": {\n   \"generation\": 3,\n   \"previous_generation\": 2,\n   \"rom_sha256\": \"8647fa4531b2873500afcabf3f7265d789794343dad1a1bbd442a46314e055fd\"\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:03.233Z\",\n  \"type\": \"input.status\",\n  \"data\": {\n   \"mode\": \"custom\",\n   \"reason\": \"Le cœur utilise les périphériques libretro, non exposés par ce runtime : type de manette demandé non vérifié. \",\n   \"pad_type_requested\": \"standard\",\n   \"pad_type_listed\": false,\n   \"core_options_raw\": {\n    \"present\": true,\n    \"type\": \"string\",\n    \"length\": 4995,\n    \"lines\": 51,\n    \"sample\": \"pcsx_rearmed_region|auto; auto|NTSC|PAL\\npcsx_rearmed_bios|auto; auto|HLE\\npcsx_rearmed_show_bios_bootlogo|disabled; disabled|enabled\\npcsx_rearmed_memcard2|disabled; disabled|enabled\\npcsx_rearmed_psxclo\",\n    \"mentions_pad\": false\n   },\n   \"pad_type_reported\": null,\n   \"pad_type_verified\": false,\n   \"core_option_line\": null,\n   \"profile\": {\n    \"analog\": \"off\",\n    \"stickToDpad\": true,\n    \"deadzone\": 0.2,\n    \"native\": false\n   }\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:03.234Z\",\n  \"type\": \"state.loaded\",\n  \"data\": {\n   \"slot\": 1,\n   \"previous\": false,\n   \"payload_sha256\": \"3f4b2a9f70dbee8839e11a46c6c13467bb42489566d8b60357fb2ef101f9d4a3\"\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:03.615Z\",\n  \"type\": \"cheats.applied\",\n  \"data\": {\n   \"count\": 1,\n   \"session_generation\": 3\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:03.616Z\",\n  \"type\": \"cheats.applied\",\n  \"data\": {\n   \"count\": 1\n  }\n },\n {\n  \"utc\": \"2026-11-01T22:25:03.616Z\",\n  \"type\": \"cheats.restored\",\n  \"data\": {\n   \"count\": 1,\n   \"afterRegionConfirm\": true\n  }\n }\n]"
+}

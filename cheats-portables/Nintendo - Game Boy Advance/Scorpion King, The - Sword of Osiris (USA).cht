@@ -1,0 +1,68 @@
+# Recherche locale pour la ROM : Scorpion King, The - Sword of Osiris (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Scorpion%20King%2C%20The%20-%20Sword%20of%20Osiris%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 15
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00005CF3+000A+1000BF9A+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Have All Runes (Inventory)"
+cheat1_code = "330000EC+00FF"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Invincible"
+cheat2_code = "83000140+009D"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Have Fireball Ability (Scorpion King)"
+cheat3_code = "33000108+0001"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Always Sword Equipped (Scorpion King)"
+cheat4_code = "3300014C+0000"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Always Hooks Equipped (Scorpion King)"
+cheat5_code = "3300014C+0001"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Burning Weapons (Scorpion King)"
+cheat6_code = "33000234+0001"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Max Scorpions"
+cheat7_code = "33000258+0063"
+cheat7_enable = false
+
+cheat8_desc = "[Code Breaker] Infinite Lives"
+cheat8_code = "33000288+0063"
+cheat8_enable = false
+
+cheat9_desc = "[Code Breaker] Have Sword Of Osiris (Scorpion King)"
+cheat9_code = "33000290+0001"
+cheat9_enable = false
+
+cheat10_desc = "[Code Breaker] Have Flames"
+cheat10_code = "33000294+0001"
+cheat10_enable = false
+
+cheat11_desc = "[Code Breaker] Skip Logos"
+cheat11_code = "73001DC8+0029+33001DC8+002C"
+cheat11_enable = false
+
+cheat12_desc = "[Code Breaker] Debug Menu (Choose Continue At Title Screen Menu)"
+cheat12_code = "73001DC8+0025+33001DC8+002D"
+cheat12_enable = false
+
+cheat13_desc = "[Code Breaker] Infinite Health"
+cheat13_code = "3300327D+0008"
+cheat13_enable = false
+
+cheat14_desc = "[Code Breaker] Press Select For Moon Jump"
+cheat14_code = "D0000020+0004+830032BA+FFFC"
+cheat14_enable = false

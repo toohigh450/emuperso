@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Star Wars - The Clone Wars - Republic Heroes (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Star%20Wars%20-%20The%20Clone%20Wars%20-%20Republic%20Heroes%20(Europe).cht
+
+cheats = 7
+
+cheat0_desc = "[Action Replay] HP never decrease"
+cheat0_code = "02000010+21FF6CB1+02000014+6CB164B1+02000018+F01A4348+1200001C+0000F97C+9200001C+0000F97C+0201A304+FE84F7E5+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Shield never decrease"
+cheat1_code = "02000000+21FF6D31+02000004+6D316531+02000008+43482064+0200000C+F9BDF01A+5200000C+F9BDF01A+0201A384+FE3CF7E5+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Credits 99999 (Select)"
+cheat2_code = "94000130+FFFB0000+020AE200+0001869F+020AE204+0001869F+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] All Stages (Select)"
+cheat3_code = "94000130+FFFB0000+C0000000+0000000E+220AE234+000000FF+DC000000+00000004+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Life"
+cheat4_code = "62120310+00000000+1212032A+00000505+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Max/Infinite Coins (Select)"
+cheat5_code = "94000130+FFFB0000+02122E60+0001869F+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Max Colour (Select)"
+cheat6_code = "94000130+FFFB0000+12122E62+000003E7+D2000000+00000000"
+cheat6_enable = false

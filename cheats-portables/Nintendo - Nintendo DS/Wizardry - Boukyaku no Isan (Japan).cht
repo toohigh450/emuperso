@@ -1,0 +1,112 @@
+# Recherche locale pour la ROM : Wizardry - Boukyaku no Isan (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Wizardry%20-%20Boukyaku%20no%20Isan%20(Japan).cht
+
+cheats = 26
+
+cheat0_desc = "[Action Replay] Anti-Piracy Bypass Code"
+cheat0_code = "520009F8+E12FFF1E+020009F8+EA0FF9C6+D2000000+00000000+023FF100+E59F0000+E23FF104+00000048+E12FFF1E+0030EB87+E59F0000+E12FFF1E+00323E6F+E92D4007+E59F001C+E59F101C+E5912000+E1500002+059F0014+05810000+0280000C+0581003C+E8BD8007+0212F040+0212E158+023FF100+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] [SEL]Max/Infinite Money"
+cheat1_code = "94000130+FFFB0000+62119048+00000000+B2119048+00000000+00002B0C+05F5E0FF+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Always Torch"
+cheat2_code = "0203A19C+E3A00004+0203A1A0+E12FFF1E"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] [SEL+START]Save Anywhere in Dungeon"
+cheat3_code = "02046630+E7D03003+02046EAC+E5D008CC+02048818+E5D40000+02048AD8+E5D51001+02048ADC+E5D40004+02048AE0+E1D420B6+94000130+FFF30000+02046630+E3A03010+02046EAC+E3A00005+02048818+E3A00018+02048AD8+E3A01000+02048ADC+E3A00002+02048AE0+E3A02018+D0000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Unlock Monster Gallery"
+cheat4_code = "020B3CCC+E3A01002+020B3CD0+EBFD885E+020B3CD4+E3A00001"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Remove Equipment Restriction on Job Class"
+cheat5_code = "0206A528+E3A00B01+0206A52C+E2400001+0206A530+E1C903BC+0208C1CC+E3A00B01+0208C1D0+E2400001+0208C1D4+E1C703BC+0208C1D8+E3A00001"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] [B+START/SEL On/Off]Always Chest Drp["
+cheat6_code = "00000000+00000000+94000130+FFF90000+120837D8+0000009A+D0000000+00000000+94000130+FFF50000+120837D8+00000037+D0000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Always Drop Golden Chest"
+cheat7_code = "02029F58+E3A06003"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] [SEL+L Point Becomes 0]Character Creation Bonus Point Never Decrease"
+cheat8_code = "52055C14+E7913108+02055C18+E2421000+D2000000+00000000+94000130+FDFB0000+02055C18+E3A01000+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Increase Movement Speed"
+cheat9_code = "02048030+E3A03005+02048054+E3A03005+02048078+E3A03005+0204809C+E3A03005"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] No Encounter Hold [START] For Encounter"
+cheat10_code = "0203D318+E3A00000+94000130+FFF70000+0203D318+E3A00002+D0000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Always First Strike"
+cheat11_code = "02036D38+EA000003"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] 2"
+cheat12_code = "020359A8+E1A04080"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] 4"
+cheat13_code = "020359A8+E1A04100"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] 8"
+cheat14_code = "020359A8+E1A04180"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] 16"
+cheat15_code = "020359A8+E1A04200"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] 32"
+cheat16_code = "020359A8+E1A04280"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] 64"
+cheat17_code = "020359A8+E1A04300"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] 128"
+cheat18_code = "020359A8+E1A04380"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] 2"
+cheat19_code = "020359B8+E1A04080"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] 4"
+cheat20_code = "020359B8+E1A04100"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] 8"
+cheat21_code = "020359B8+E1A04180"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] 16"
+cheat22_code = "020359B8+E1A04200"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] 32"
+cheat23_code = "020359B8+E1A04280"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] 64"
+cheat24_code = "020359B8+E1A04300"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] 128"
+cheat25_code = "020359B8+E1A04380"
+cheat25_enable = false

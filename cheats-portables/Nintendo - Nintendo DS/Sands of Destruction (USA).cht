@@ -1,0 +1,624 @@
+# Recherche locale pour la ROM : Sands of Destruction (USA).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Sands%20of%20Destruction%20(USA).cht
+
+cheats = 154
+
+cheat0_desc = "[Action Replay] Max/Infinite Money"
+cheat0_code = "920A2326+00000004+020AA888+05F5E0FF+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Camera Zoom"
+cheat1_code = "94000130+FF7D0000+74000100+FF00003F+620A5E58+00000000+B20A5E58+00000000+DB000000+0000007A+D4000000+FFFFFFFF+D8000000+0000007A+D2000000+00000000+94000130+FFBD0000+74000100+FF00003F+620A5E58+00000000+B20A5E58+00000000+DB000000+0000007A+D4000000+00000001+D8000000+0000007A+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Extended Options Menu"
+cheat2_code = "2213081B+00000004+12130826+00000000+12130850+00000000+5206748C+E5D11018+22057AEC+00000003+E2067498+00000024+E3A02000+E3510000+03A02000+E3510001+03A0203C+E3510002+03A02050+E3510003+03A02064+00000000+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Louder Sound Settings"
+cheat3_code = "220673B4+0000003C+220673D8+00000050+220673D0+00000064+220673C8+00000078+2213081B+00000004+12130826+00000000+12130850+00000000+5206748C+E5D11018+22057ADC+00000002+22057AEC+00000002+0206748C+E5911018+E2067498+00000024+E3A02000+E3510000+03A0203C+E3510001+03A02050+E3510002+03A02064+E3510003+03A02078+00000000+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] 00:00:00"
+cheat4_code = "020AD080+00000000+020AD084+00000000+020AD088+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] 99:59:59"
+cheat5_code = "020AD080+00000063+020AD084+0000003B+020AD088+0000003B"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Walk Through Walls v1"
+cheat6_code = "520C2948+E3100001+920A2326+00000204+020C294C+EA000012+D2000000+00000000+520C2948+E3100001+920A2326+00000104+020C294C+0A000012+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Walk Through Walls v2"
+cheat7_code = "520C2948+E3100001+94000130+FFBB0000+020C294C+EA000012+D2000000+00000000+520C2948+E3100001+94000130+FF7B0000+020C294C+0A000012+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Morte Last Item Slot Item Hunter Ability v1"
+cheat8_code = "94000130+FFFB0000+220AAF5C+0000003A+D2000000+00000000"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Morte Last Item Slot Rare Hunter Ability v2"
+cheat9_code = "94000130+FFFB0000+220AAF5C+0000003B+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Always Get Regular Spoils"
+cheat10_code = "220AADC3+00000002"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Always Get Rare Spoils"
+cheat11_code = "220AADC3+00000008"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] No Random Battle Always On"
+cheat12_code = "520C17E4+E1D022F8+020C17E8+E2822000+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] No Encounters v1"
+cheat13_code = "520C17E4+E1D022F8+020C17E8+E2822000+D2000000+00000000+94000130+FDFF0000+920C17E8+00002000+020C17E8+E2822001+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] No Encounters v2"
+cheat14_code = "520C17E4+E1D022F8+020C17E8+E2822000+D2000000+00000000+94000130+FEFF0000+920C17E8+00002000+020C17E8+E2822001+D2000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] 1 = On"
+cheat15_code = "520C17E4+E1D022F8+920A2326+00000044+020C17E8+E2822000+D2000000+00000000"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] 2 = Off"
+cheat16_code = "520C17E4+E1D022F8+920A2326+00000084+020C17E8+E2822001+D2000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] 3 = Increase Encounter Rate"
+cheat17_code = "520C17E4+E1D022F8+920A2326+00000024+020C17E8+E28220FF+D2000000+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Max 5 1st Items:"
+cheat18_code = "220AD09C+00000063+220AD0B8+00000063+220AD0D4+00000063+220AD0F0+00000063+220AD10C+00000063"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] To have First 23 Slots of Item x99"
+cheat19_code = "94000130+FFFB0000+C0000000+00000016+220AD09C+00000063+DC000000+0000001C+D2000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Must Be Enabled for All Items"
+cheat20_code = "220AFC24+00000039"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] All Items"
+cheat21_code = "94000130+FFFB0000+D5000000+00000000+C0000000+00000039+D6000000+020AD098+DC000000+00000018+D4000000+00000001+D2000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] All Weapons"
+cheat22_code = "220AFC24+000000B0+94000130+FFFB0000+D5000000+00000050+C0000000+00000077+D6000000+020AD6D4+DC000000+00000018+D4000000+00000001+D2000000+00000000"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] All Armors"
+cheat23_code = "220AFC24+00000088+94000130+FFFB0000+D5000000+000000FF+C0000000+0000004F+D6000000+020AD6D4+DC000000+00000018+D4000000+00000001+D2000000+00000000"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Max Quantity All Item Slots"
+cheat24_code = "94000130+FFFB0000+C0000000+000000FF+120AD09C+00000163+DC000000+0000001C+D2000000+00000000"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Scroll Through Items Slot #1"
+cheat25_code = "920A2326+00000A00+74000100+FF000020+DA000000+020AD098+D4000000+FFFFFFFE+D7000000+020AD098+D2000000+00000000+920A2326+00000600+74000100+FF000020+DA000000+020AD098+D4000000+00000001+D7000000+020AD098+D2000000+00000000"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Scroll Through Items Slot #2"
+cheat26_code = "920A2326+00000900+74000100+FF000020+DA000000+020AD0B4+D4000000+FFFFFFFE+D7000000+020AD0B4+D2000000+00000000+920A2326+00000500+74000100+FF000020+DA000000+020AD0B4+D4000000+00000001+D7000000+020AD0B4+D2000000+00000000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Scroll Through Items Slot #3"
+cheat27_code = "920A2326+00000808+74000100+FF000020+DA000000+020AD0D0+D4000000+FFFFFFFE+D7000000+020AD0D0+D2000000+00000000+920A2326+00000408+74000100+FF000020+DA000000+020AD0D0+D4000000+00000001+D7000000+020AD0D0+D2000000+00000000"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] Scroll Through Items Slot #4"
+cheat28_code = "920A2326+00000804+74000100+FF000020+DA000000+020AD0EC+D4000000+FFFFFFFE+D7000000+020AD0EC+D2000000+00000000+920A2326+00000404+74000100+FF000020+DA000000+020AD0EC+D4000000+00000001+D7000000+020AD0EC+D2000000+00000000"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] HP and MP Never Decreases (ASM)"
+cheat29_code = "520CBDF4+E5900010+020CBDF4+EBFCD081+02000000+E3580002+02000004+CA000003+02000008+E5901014+0200000C+E5801010+02000010+E590101C+02000014+E5801018+02000018+E5900010+0200001C+E12FFF1E+D2000000+00000000"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] HP Never Decreases (All Players)"
+cheat30_code = "D3000000+02159858+F2159854+00000001+D2000000+00000000+D3000000+021585F8+F21585F4+00000001+D2000000+00000000+D3000000+0215AAB8+F215AAB4+00000001+D2000000+00000000"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] MP Never Decreases (All Players)"
+cheat31_code = "D3000000+02159860+F215985C+00000001+D2000000+00000000+D3000000+02158600+F21585FC+00000001+D2000000+00000000+D3000000+0215AAC0+F215AABC+00000001+D2000000+00000000"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] 999 HP"
+cheat32_code = "94000130+FFFB0000+02159854+000003E7+0215AAB4+000003E7+021585F4+000003E7+D2000000+00000000"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] 999 MP"
+cheat33_code = "94000130+FFFB0000+0215985C+000003E7+021585FC+000003E7+0215AABC+000003E7+D2000000+00000000"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] INF. BP (All Players)"
+cheat34_code = "22159DF8+00000006+22158B98+00000006+2215B058+00000006"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] 99 combo (All Players)"
+cheat35_code = "22159E03+00000063+22158BA3+00000063+2215B063+00000063"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Restore HP After Battle"
+cheat36_code = "C0000000+00000006+DA000000+020AA8C0+D7000000+020AA8BC+DC000000+000005AE+D2000000+00000000"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Restore HP After Battle"
+cheat37_code = "94000130+FFFB0000+C0000000+00000006+DA000000+020AA8C0+D7000000+020AA8BC+DC000000+000005AE+D2000000+00000000"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] x2"
+cheat38_code = "92132772+00005851+02062428+47084900+0206242C+02000001+D2000000+00000000+5206242C+02000001+02000000+58404901+02000004+47700040+02000008+00000528+D2000000+00000000"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] x4"
+cheat39_code = "92132772+00005851+02062428+47084900+0206242C+02000001+D2000000+00000000+5206242C+02000001+02000000+58404901+02000004+47700080+02000008+00000528+D2000000+00000000"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] x16"
+cheat40_code = "92132772+00005851+02062428+47084900+0206242C+02000001+D2000000+00000000+5206242C+02000001+02000000+58404901+02000004+477000C0+02000008+00000528+D2000000+00000000"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] x16"
+cheat41_code = "92132772+00005851+02062428+47084900+0206242C+02000001+D2000000+00000000+5206242C+02000001+02000000+58404901+02000004+47700100+02000008+00000528+D2000000+00000000"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] x32"
+cheat42_code = "92132772+00005851+02062428+47084900+0206242C+02000001+D2000000+00000000+5206242C+02000001+02000000+58404901+02000004+47700140+02000008+00000528+D2000000+00000000"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] x64"
+cheat43_code = "92132772+00005851+02062428+47084900+0206242C+02000001+D2000000+00000000+5206242C+02000001+02000000+58404901+02000004+47700180+02000008+00000528+D2000000+00000000"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] x128"
+cheat44_code = "92132772+00005851+02062428+47084900+0206242C+02000001+D2000000+00000000+5206242C+02000001+02000000+58404901+02000004+477001C0+02000008+00000528+D2000000+00000000"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] x2"
+cheat45_code = "92132772+00005851+02132778+47084900+0213277C+02000011+D2000000+00000000+5213277C+02000011+E2000010+00000018+0C000400+90080040+46C02038+47084900+02132781+46C046C0+D2000000+00000000"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] x4"
+cheat46_code = "92132772+00005851+02132778+47084900+0213277C+02000011+D2000000+00000000+5213277C+02000011+E2000010+00000018+0C000400+90080080+46C02038+47084900+02132781+46C046C0+D2000000+00000000"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] x8"
+cheat47_code = "92132772+00005851+02132778+47084900+0213277C+02000011+D2000000+00000000+5213277C+02000011+E2000010+00000018+0C000400+900800C0+46C02038+47084900+02132781+46C046C0+D2000000+00000000"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] x16"
+cheat48_code = "92132772+00005851+02132778+47084900+0213277C+02000011+D2000000+00000000+5213277C+02000011+E2000010+00000018+0C000400+90080100+46C02038+47084900+02132781+46C046C0+D2000000+00000000"
+cheat48_enable = false
+
+cheat49_desc = "[Action Replay] x32"
+cheat49_code = "92132772+00005851+02132778+47084900+0213277C+02000011+D2000000+00000000+5213277C+02000011+E2000010+00000018+0C000400+90080140+46C02038+47084900+02132781+46C046C0+D2000000+00000000"
+cheat49_enable = false
+
+cheat50_desc = "[Action Replay] x64"
+cheat50_code = "92132772+00005851+02132778+47084900+0213277C+02000011+D2000000+00000000+5213277C+02000011+E2000010+00000018+0C000400+90080180+46C02038+47084900+02132781+46C046C0+D2000000+00000000"
+cheat50_enable = false
+
+cheat51_desc = "[Action Replay] x128"
+cheat51_code = "92132772+00005851+02132778+47084900+0213277C+02000011+D2000000+00000000+5213277C+02000011+E2000010+00000018+0C000400+900801C0+46C02038+47084900+02132781+46C046C0+D2000000+00000000"
+cheat51_enable = false
+
+cheat52_desc = "[Action Replay] Level 99"
+cheat52_code = "220AA8AC+00000063+020AA8B0+00000000+020AA8B4+00000000"
+cheat52_enable = false
+
+cheat53_desc = "[Action Replay] Max HP"
+cheat53_code = "120AA8CC+000003E7"
+cheat53_enable = false
+
+cheat54_desc = "[Action Replay] Max MP"
+cheat54_code = "120AA8D0+000003E7"
+cheat54_enable = false
+
+cheat55_desc = "[Action Replay] Max CP"
+cheat55_code = "020AA8FC+0001869F"
+cheat55_enable = false
+
+cheat56_desc = "[Action Replay] Max STR"
+cheat56_code = "120AA8D4+00000063"
+cheat56_enable = false
+
+cheat57_desc = "[Action Replay] Max VIT"
+cheat57_code = "120AA8D6+00000063"
+cheat57_enable = false
+
+cheat58_desc = "[Action Replay] Max AGI"
+cheat58_code = "120AA8D8+00000063"
+cheat58_enable = false
+
+cheat59_desc = "[Action Replay] Max WIS"
+cheat59_code = "120AA8DA+00000063"
+cheat59_enable = false
+
+cheat60_desc = "[Action Replay] Level 99"
+cheat60_code = "220AAE5C+00000063+020AAE60+00000000+020AAE64+00000000"
+cheat60_enable = false
+
+cheat61_desc = "[Action Replay] Max HP"
+cheat61_code = "120AAE7C+000003E7"
+cheat61_enable = false
+
+cheat62_desc = "[Action Replay] Max MP"
+cheat62_code = "120AAE80+000003E7"
+cheat62_enable = false
+
+cheat63_desc = "[Action Replay] Max CP"
+cheat63_code = "020AAEAC+0001869F"
+cheat63_enable = false
+
+cheat64_desc = "[Action Replay] Max STR"
+cheat64_code = "120AAE84+00000063"
+cheat64_enable = false
+
+cheat65_desc = "[Action Replay] Max VIT"
+cheat65_code = "120AAE86+00000063"
+cheat65_enable = false
+
+cheat66_desc = "[Action Replay] Max AGI"
+cheat66_code = "120AAE88+00000063"
+cheat66_enable = false
+
+cheat67_desc = "[Action Replay] Max WIS"
+cheat67_code = "120AAE8A+00000063"
+cheat67_enable = false
+
+cheat68_desc = "[Action Replay] Level 99"
+cheat68_code = "220AB40C+00000063+020AB410+00000000+020AB414+00000000"
+cheat68_enable = false
+
+cheat69_desc = "[Action Replay] Max HP"
+cheat69_code = "120AB42C+000003E7"
+cheat69_enable = false
+
+cheat70_desc = "[Action Replay] Max MP"
+cheat70_code = "120AB430+000003E7"
+cheat70_enable = false
+
+cheat71_desc = "[Action Replay] Max CP"
+cheat71_code = "020AB45C+0001869F"
+cheat71_enable = false
+
+cheat72_desc = "[Action Replay] Max STR"
+cheat72_code = "120AB434+00000063"
+cheat72_enable = false
+
+cheat73_desc = "[Action Replay] Max VIT"
+cheat73_code = "120AB436+00000063"
+cheat73_enable = false
+
+cheat74_desc = "[Action Replay] Max AGI"
+cheat74_code = "120AB438+00000063"
+cheat74_enable = false
+
+cheat75_desc = "[Action Replay] Max WIS"
+cheat75_code = "120AB43A+00000063"
+cheat75_enable = false
+
+cheat76_desc = "[Action Replay] Level 99"
+cheat76_code = "220AC51C+00000063+020AC520+00000000+020AC524+00000000"
+cheat76_enable = false
+
+cheat77_desc = "[Action Replay] Max HP"
+cheat77_code = "120AC53C+000003E7"
+cheat77_enable = false
+
+cheat78_desc = "[Action Replay] Max MP"
+cheat78_code = "120AC540+000003E7"
+cheat78_enable = false
+
+cheat79_desc = "[Action Replay] Max CP"
+cheat79_code = "020AC56C+0001869F"
+cheat79_enable = false
+
+cheat80_desc = "[Action Replay] Max STR"
+cheat80_code = "120AC544+00000063"
+cheat80_enable = false
+
+cheat81_desc = "[Action Replay] Max VIT"
+cheat81_code = "120AC546+00000063"
+cheat81_enable = false
+
+cheat82_desc = "[Action Replay] Max AGI"
+cheat82_code = "120AC548+00000063"
+cheat82_enable = false
+
+cheat83_desc = "[Action Replay] Max WIS"
+cheat83_code = "120AC54A+00000063"
+cheat83_enable = false
+
+cheat84_desc = "[Action Replay] Level 99"
+cheat84_code = "220ABF6C+00000063+020ABF70+00000000+020ABF74+00000000"
+cheat84_enable = false
+
+cheat85_desc = "[Action Replay] Max HP"
+cheat85_code = "120ABF8C+000003E7"
+cheat85_enable = false
+
+cheat86_desc = "[Action Replay] Max MP"
+cheat86_code = "120ABF90+000003E7"
+cheat86_enable = false
+
+cheat87_desc = "[Action Replay] Max CP"
+cheat87_code = "020ABFBC+0001869F"
+cheat87_enable = false
+
+cheat88_desc = "[Action Replay] Max STR"
+cheat88_code = "120ABF94+00000063"
+cheat88_enable = false
+
+cheat89_desc = "[Action Replay] Max VIT"
+cheat89_code = "120ABF96+00000063"
+cheat89_enable = false
+
+cheat90_desc = "[Action Replay] Max AGI"
+cheat90_code = "120ABF98+00000063"
+cheat90_enable = false
+
+cheat91_desc = "[Action Replay] Max WIS"
+cheat91_code = "120ABF9A+00000063"
+cheat91_enable = false
+
+cheat92_desc = "[Action Replay] Level 99"
+cheat92_code = "220AB9BC+00000063+020AB9C0+00000000+020AB9C4+00000000"
+cheat92_enable = false
+
+cheat93_desc = "[Action Replay] Max HP"
+cheat93_code = "120AB9DC+000003E7"
+cheat93_enable = false
+
+cheat94_desc = "[Action Replay] Max MP"
+cheat94_code = "120AB9E0+000003E7"
+cheat94_enable = false
+
+cheat95_desc = "[Action Replay] Max CP"
+cheat95_code = "020ABA0C+0001869F"
+cheat95_enable = false
+
+cheat96_desc = "[Action Replay] Max STR"
+cheat96_code = "120AB9E4+00000063"
+cheat96_enable = false
+
+cheat97_desc = "[Action Replay] Max VIT"
+cheat97_code = "120AB9E6+00000063"
+cheat97_enable = false
+
+cheat98_desc = "[Action Replay] Max AGI"
+cheat98_code = "120AB9E8+00000063"
+cheat98_enable = false
+
+cheat99_desc = "[Action Replay] Max WIS"
+cheat99_code = "120AB9EA+00000063"
+cheat99_enable = false
+
+cheat100_desc = "[Action Replay] Level 99"
+cheat100_code = "220ACACC+00000063+020ACAD0+00000000+020ACAD4+00000000"
+cheat100_enable = false
+
+cheat101_desc = "[Action Replay] Max HP"
+cheat101_code = "120ACAEC+000003E7"
+cheat101_enable = false
+
+cheat102_desc = "[Action Replay] Max MP"
+cheat102_code = "120ACAF0+000003E7"
+cheat102_enable = false
+
+cheat103_desc = "[Action Replay] Max CP"
+cheat103_code = "020ACB1C+0001869F"
+cheat103_enable = false
+
+cheat104_desc = "[Action Replay] Max STR"
+cheat104_code = "120ACAF4+00000063"
+cheat104_enable = false
+
+cheat105_desc = "[Action Replay] Max VIT"
+cheat105_code = "120ACAF6+00000063"
+cheat105_enable = false
+
+cheat106_desc = "[Action Replay] Max AGI"
+cheat106_code = "120ACAF8+00000063"
+cheat106_enable = false
+
+cheat107_desc = "[Action Replay] Max WIS"
+cheat107_code = "120ACAFA+00000063"
+cheat107_enable = false
+
+cheat108_desc = "[Action Replay] Kyrie"
+cheat108_code = "020AA88C+00000000"
+cheat108_enable = false
+
+cheat109_desc = "[Action Replay] Morte"
+cheat109_code = "020AA88C+00000001"
+cheat109_enable = false
+
+cheat110_desc = "[Action Replay] Agan"
+cheat110_code = "020AA88C+00000002"
+cheat110_enable = false
+
+cheat111_desc = "[Action Replay] Taupy"
+cheat111_code = "020AA88C+00000005"
+cheat111_enable = false
+
+cheat112_desc = "[Action Replay] Rhi'a"
+cheat112_code = "020AA88C+00000004"
+cheat112_enable = false
+
+cheat113_desc = "[Action Replay] Naja"
+cheat113_code = "020AA88C+00000003"
+cheat113_enable = false
+
+cheat114_desc = "[Action Replay] Empty"
+cheat114_code = "020AA890+FFFFFFFF"
+cheat114_enable = false
+
+cheat115_desc = "[Action Replay] Kyrie"
+cheat115_code = "020AA890+00000000"
+cheat115_enable = false
+
+cheat116_desc = "[Action Replay] Morte"
+cheat116_code = "020AA890+00000001"
+cheat116_enable = false
+
+cheat117_desc = "[Action Replay] Agan"
+cheat117_code = "020AA890+00000002"
+cheat117_enable = false
+
+cheat118_desc = "[Action Replay] Taupy"
+cheat118_code = "020AA890+00000005"
+cheat118_enable = false
+
+cheat119_desc = "[Action Replay] Rhi'a"
+cheat119_code = "020AA890+00000004"
+cheat119_enable = false
+
+cheat120_desc = "[Action Replay] Naja"
+cheat120_code = "020AA890+00000003"
+cheat120_enable = false
+
+cheat121_desc = "[Action Replay] Rajiv (Bugged)"
+cheat121_code = "020AA890+00000006"
+cheat121_enable = false
+
+cheat122_desc = "[Action Replay] Empty"
+cheat122_code = "020AA894+FFFFFFFF"
+cheat122_enable = false
+
+cheat123_desc = "[Action Replay] Kyrie"
+cheat123_code = "020AA894+00000000"
+cheat123_enable = false
+
+cheat124_desc = "[Action Replay] Morte"
+cheat124_code = "020AA894+00000001"
+cheat124_enable = false
+
+cheat125_desc = "[Action Replay] Agan"
+cheat125_code = "020AA894+00000002"
+cheat125_enable = false
+
+cheat126_desc = "[Action Replay] Taupy"
+cheat126_code = "020AA894+00000005"
+cheat126_enable = false
+
+cheat127_desc = "[Action Replay] Rhi'a"
+cheat127_code = "020AA894+00000004"
+cheat127_enable = false
+
+cheat128_desc = "[Action Replay] Naja"
+cheat128_code = "020AA894+00000003"
+cheat128_enable = false
+
+cheat129_desc = "[Action Replay] Rajiv (Bugged)"
+cheat129_code = "020AA894+00000006"
+cheat129_enable = false
+
+cheat130_desc = "[Action Replay] Empty"
+cheat130_code = "020AA898+FFFFFFFF"
+cheat130_enable = false
+
+cheat131_desc = "[Action Replay] Kyrie"
+cheat131_code = "020AA898+00000000"
+cheat131_enable = false
+
+cheat132_desc = "[Action Replay] Morte"
+cheat132_code = "020AA898+00000001"
+cheat132_enable = false
+
+cheat133_desc = "[Action Replay] Agan"
+cheat133_code = "020AA898+00000002"
+cheat133_enable = false
+
+cheat134_desc = "[Action Replay] Taupy"
+cheat134_code = "020AA898+00000005"
+cheat134_enable = false
+
+cheat135_desc = "[Action Replay] Rhi'a"
+cheat135_code = "020AA898+00000004"
+cheat135_enable = false
+
+cheat136_desc = "[Action Replay] Naja"
+cheat136_code = "020AA898+00000003"
+cheat136_enable = false
+
+cheat137_desc = "[Action Replay] Rajiv (Bugged)"
+cheat137_code = "020AA898+00000006"
+cheat137_enable = false
+
+cheat138_desc = "[Action Replay] Empty"
+cheat138_code = "020AA89C+FFFFFFFF"
+cheat138_enable = false
+
+cheat139_desc = "[Action Replay] Kyrie"
+cheat139_code = "020AA89C+00000000"
+cheat139_enable = false
+
+cheat140_desc = "[Action Replay] Morte"
+cheat140_code = "020AA89C+00000001"
+cheat140_enable = false
+
+cheat141_desc = "[Action Replay] Agan"
+cheat141_code = "020AA89C+00000002"
+cheat141_enable = false
+
+cheat142_desc = "[Action Replay] Taupy"
+cheat142_code = "020AA89C+00000005"
+cheat142_enable = false
+
+cheat143_desc = "[Action Replay] Rhi'a"
+cheat143_code = "020AA89C+00000004"
+cheat143_enable = false
+
+cheat144_desc = "[Action Replay] Naja"
+cheat144_code = "020AA89C+00000003"
+cheat144_enable = false
+
+cheat145_desc = "[Action Replay] Rajiv (Bugged)"
+cheat145_code = "020AA89C+00000006"
+cheat145_enable = false
+
+cheat146_desc = "[Action Replay] Empty"
+cheat146_code = "020AA8A0+FFFFFFFF"
+cheat146_enable = false
+
+cheat147_desc = "[Action Replay] Kyrie"
+cheat147_code = "020AA8A0+00000000"
+cheat147_enable = false
+
+cheat148_desc = "[Action Replay] Morte"
+cheat148_code = "020AA8A0+00000001"
+cheat148_enable = false
+
+cheat149_desc = "[Action Replay] Agan"
+cheat149_code = "020AA8A0+00000002"
+cheat149_enable = false
+
+cheat150_desc = "[Action Replay] Taupy"
+cheat150_code = "020AA8A0+00000005"
+cheat150_enable = false
+
+cheat151_desc = "[Action Replay] Rhi'a"
+cheat151_code = "020AA8A0+00000004"
+cheat151_enable = false
+
+cheat152_desc = "[Action Replay] Naja"
+cheat152_code = "020AA8A0+00000003"
+cheat152_enable = false
+
+cheat153_desc = "[Action Replay] Rajiv (Bugged)"
+cheat153_code = "020AA8A0+00000006"
+cheat153_enable = false

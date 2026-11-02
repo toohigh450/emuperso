@@ -1,0 +1,194 @@
+# Tests NES / SNES et non-régression — 2026-11-01 / 02
+
+**Mise à jour indépendante du 2 novembre :** voir `CORRECTIFS-AUDITS-2026-11-02.md` pour les corrections
+et les nouvelles vérifications. Le résultat DS « RÉUSSI » du tableau historique ci-dessous était fondé
+sur une capture du lanceur, insuffisante pour exclure un écran natif blanc. La démo est maintenant
+corrigée et testée sur son image native avec les deux cœurs DeSmuME. Les résultats qui suivent
+restent le compte rendu des essais antérieurs, pas une nouvelle validation de tous ces jeux.
+
+Environnement réellement utilisé : Windows 10 (19045), **Google Chrome installé sur le PC de Karl**
+piloté par Playwright 1.56.1, en mode sans fenêtre (headless), Node 24.22.1, Python 3.15.
+Moteur EmulatorJS 4.2.3 et vrais cœurs FCEUmm / Snes9x téléchargés depuis le CDN officiel.
+
+Légende : **RÉUSSI** testé réellement et fonctionnel · **ÉCHEC** testé, problème constaté ·
+**NON TESTÉ** environnement ou matériel indisponible · **LIMITATION** non pris en charge.
+
+Rien n'a été testé sur un vrai téléphone Android ni avec une vraie manette. L'« émulation téléphone » de
+Chrome (écran tactile simulé) n'est **pas** une validation Android.
+
+## Plan de validation du mandat (section 15)
+
+| # | Vérification | NES | SNES | Preuve |
+|---|---|---|---|---|
+| 1 | Ouverture depuis le portail | RÉUSSI | RÉUSSI | `tools/test-portail.mjs` (liens HTTP 200, console présélectionnée) |
+| 2 | Démo open source | RÉUSSI (Snake) | RÉUSSI (Neon Breaker, Shmup, SA-1, DSP-1) | `tests/real-nes-snes.mjs`, image animée mesurée |
+| 3 | ROM locale compatible | RÉUSSI | RÉUSSI | ROM d'essai + 7 jeux NES et 12 jeux SNES de `E:\roms` (voir plus bas) |
+| 4 | Audio | NON TESTÉ à l'oreille | NON TESTÉ à l'oreille | Contexte audio du moteur à l'état « running » (RÉUSSI technique) ; personne n'a écouté |
+| 5 | Affichage | RÉUSSI | RÉUSSI | 256×224 (512×224 en haute résolution SNES), couleurs mesurées pixel par pixel |
+| 6 | Clavier | NON TESTÉ | NON TESTÉ | Touches par défaut documentées ; aucune frappe réelle simulée dans un jeu |
+| 7 | Tactile Android | NON TESTÉ (vrai téléphone) | NON TESTÉ (vrai téléphone) | Émulation Chrome RÉUSSIE : manette tactile visible (NES : croix, A, B, Start, Select ; SNES : croix, A, B, X, Y, L, R), appui A sans erreur |
+| 8 | Manettes | NON TESTÉ | NON TESTÉ | Pas de manette dans cet environnement |
+| 9 | Sauvegarde normale | RÉUSSI | RÉUSSI | Compteur en mémoire sauvegardée lu, exporté, puis retrouvé |
+| 10 | Save state | RÉUSSI | RÉUSSI | Enregistrer → redémarrer (compteur +1) → charger (compteur revenu) |
+| 11 | Export / import | RÉUSSI | RÉUSSI | Export `.sav` téléchargé ; import d'une sauvegarde forcée à 0x40 → le jeu lit 0x41 |
+| 12 | Cheat activé | RÉUSSI | RÉUSSI | Game Genie (ROM) et code RAM : couleur de l'écran changée dans le vrai cœur |
+| 13 | Cheat désactivé | RÉUSSI | RÉUSSI | Couleur d'origine revenue, dans le vrai cœur |
+| 14 | Relancement du jeu | RÉUSSI | RÉUSSI | Redémarrage, codes conservés |
+| 15 | Changement de ROM | RÉUSSI | RÉUSSI | NES → SNES sans recharger ; sauvegarde NES écrite avant fermeture |
+| 16 | Changement de console | RÉUSSI | RÉUSSI | Huit démos lancées et fermées tour à tour, iframe moteur libérée |
+| 17 | Rafraîchissement de la page | RÉUSSI | RÉUSSI | Couvert par le point 18 (profil conservé) |
+| 18 | Retour après fermeture du navigateur | RÉUSSI | RÉUSSI | Navigateur fermé puis relancé sur le même profil : sauvegarde (compteur 66 attendu = 66), codes et états retrouvés, ROM renommée comprise |
+| 19 | Erreurs de console | RÉUSSI | RÉUSSI | Aucune erreur JavaScript de page dans toutes les suites |
+| 20 | Non-régression des autres émulateurs | RÉUSSI (voir plus bas) | | |
+
+## Résultats chiffrés
+
+| Suite | Résultat |
+|---|---|
+| `portables` : `npm test` (logique) | 113/113 |
+| `portables` : `npm run test:browser` (Chromium, moteur simulé, contrôles d'audit existants + nouveaux) | 3/3 groupes réussis |
+| `portables` : `npm run test:real` (vrais cœurs NES/SNES) | 43/43 |
+| `portables` : `npm run test:real-saves` (reprise des sauvegardes GB/GBA/DS, vrais cœurs) | 16/16 |
+| `tools/test-portail.mjs` (site assemblé, local) | 56/56 |
+| `tools/test-portail.mjs` **sur l'aperçu Vercel public** | 56/56 |
+| `tools/test-mobile.mjs` (émulation Android, local) | 16/16 |
+| `tools/test-mobile.mjs` **sur l'aperçu Vercel public** | 16/16 |
+| Racine (laboratoire N64) : `npm test` | 82/82 |
+| PS1 : `python ps1-web/tools/run_tests.py` | 185 tests Node + Python : tous réussis |
+| N64 : `node --test real-n64/tests/*.test.mjs` | 80/80 |
+| N64 : tests Python | voir « Non-régression N64 » |
+
+## Codes de triche : comment l'effet a été prouvé
+
+Deux ROM d'essai écrites pour le projet (`tests/test-roms.mjs`) affichent une couleur de fond qui dépend
+d'un octet de ROM et d'un octet de RAM. Un Game Genie qui remplace l'octet de ROM, ou un code RAM, change
+donc la couleur ; la couleur est relevée dans la capture du cœur.
+
+| Console | Base | Game Genie | Code RAM |
+|---|---|---|---|
+| NES | bleu (33,56,239) | `ZZAAAO` → vert (74,223,74) puis bleu | `0300:16` → rouge (222,40,0) puis bleu |
+| SNES | orange (255,199,57) | `3D6D-0DDD` → bleu (0,56,198) puis orange | `7E0100:03` (Pro Action Replay) → vert (24,199,0) puis orange |
+
+Défaut trouvé et corrigé pendant ces essais : FCEUmm **ignore l'état « désactivé »** d'un code ; décocher
+dans le menu du moteur réactivait le code, et un code préchargé était actif dès le lancement. Les sources
+de mGBA et DeSmuME 2015 font de même. Le lanceur ne transmet donc plus que les codes cochés.
+
+## Jeux de la collection de Karl (lecture seule)
+
+Fichiers lus par le navigateur depuis `E:\roms`, sans copie ni modification. Démarrage réel, images qui
+avancent pendant 8 s, capture non vide. « 50 images/s » = jeu PAL bien reconnu.
+
+| Jeu | Carte / puce | Région, vidéo | Résultat |
+|---|---|---|---|
+| Super Mario Bros. (Europe) | NROM | PAL, 50 i/s | RÉUSSI |
+| The Legend of Zelda (Europe) | MMC1 + pile | PAL, 50 i/s | RÉUSSI |
+| Metroid (Europe) | MMC1 | PAL, 50 i/s | RÉUSSI |
+| Mega Man 2 (Europe) | MMC1 | PAL, 50 i/s | RÉUSSI |
+| Super Mario Bros. 3 (Europe) | MMC3 | PAL, 50 i/s | RÉUSSI |
+| Kirby's Adventure (France) | MMC3 + pile | PAL, 50 i/s | RÉUSSI |
+| Castlevania III (Europe) | MMC5 | PAL, 50 i/s | RÉUSSI (écran de démarrage peu coloré à 8 s) |
+| Super Mario World (U) | LoROM + pile | NTSC, 60 i/s | RÉUSSI |
+| Donkey Kong Country (U) | HiROM, haute résolution | NTSC | RÉUSSI |
+| Tales of Phantasia (J) | ExHiROM 48 Mbit | NTSC | RÉUSSI (après correction de la détection ExHiROM) |
+| Super Mario RPG (U) | SA-1 | NTSC | RÉUSSI |
+| Star Fox (U) v1.2 | Super FX | NTSC | RÉUSSI |
+| Yoshi's Island (U) | Super FX 2 | NTSC | RÉUSSI |
+| Super Mario Kart (U) | DSP-1 | NTSC | RÉUSSI |
+| Pilotwings (E) | DSP-1 | PAL, 50 i/s | RÉUSSI |
+| Super Metroid (E) | LoROM + pile | PAL, 50 i/s | RÉUSSI |
+| Mega Man X2 (U) | Cx4 | NTSC | **ÉCHEC puis corrigé** : refusé à tort (« Super Game Boy »), sous-type Cx4 = $10 ; RÉUSSI après correction |
+| Street Fighter Alpha 2 (U) | S-DD1 | NTSC | RÉUSSI |
+| Chrono Trigger (U) [T+Fre] | HiROM, traduction française | NTSC | RÉUSSI |
+| Metroid.7z (jeu de hacks) | — | — | LIMITATION : refusé avec le message d'extraction |
+
+« Démarre et affiche » ne veut pas dire « entièrement jouable » : aucune partie n'a été jouée.
+
+## Non-régression des autres émulateurs
+
+| Console | Présence portail | Moteur / démo | Erreurs | Remarque |
+|---|---|---|---|---|
+| GB | RÉUSSI | RÉUSSI (Libbet, Gambatte) | aucune | |
+| GBC | RÉUSSI | RÉUSSI (Geometrix) | aucune | |
+| GBA | RÉUSSI | RÉUSSI (@rkanoid, mGBA) | aucune | |
+| DS | RÉUSSI | RÉUSSI (Pong, DeSmuME 2015) | aucune | |
+| N64 | RÉUSSI | RÉUSSI (démo homebrew, « Session lancée ») | aucune | Isolation COOP/COEP active sur l'origine commune |
+| PS1 | RÉUSSI | RÉUSSI (homebrew, écran rouge attendu, 7 → 76 images) | aucune | Isolation COOP/COEP active |
+
+Import de ROM, sauvegardes et contrôles de N64 et PS1 : leurs suites existantes passent ; aucun de leurs
+fichiers n'est modifié par cette branche (`real-n64/` et `ps1-web/` identiques aux branches alpha).
+
+### Non-régression N64 (tests Python) — à lire
+
+`python -m unittest` dans `real-n64/tests` sur ce PC : 33 tests, 1 échec, 3 erreurs, 5 ignorés.
+- 2 erreurs : création de liens symboliques refusée par Windows (privilège manquant) — environnement.
+- 1 erreur : `homebrew/demo-emuperso.z64` absent (fichier de construction ignoré par Git) — environnement.
+- 1 échec : `test_originals_preserved`. Sur ce PC, Git convertit les fins de ligne (CRLF), ce qui change
+  les empreintes de tous les fichiers protégés. **Mais ce test a aussi révélé que la première version de
+  cette branche modifiait deux originaux protégés, `index.html` et `README.md`.** Corrigé : les deux sont
+  revenus à l'identique (vérifié après normalisation des fins de ligne) ; le portail est publié comme
+  accueil du site par la construction, sans toucher au `index.html` du dépôt.
+
+## Défaut moteur contourné : redémarrage ignoré
+
+Snes9x (via EmulatorJS) ignorait parfois un redémarrage demandé dans la même image qu'une capture d'état
+(reproduit : 1 échec sur 4). Le lanceur reporte désormais le redémarrage à l'image suivante : 10 essais sur
+10 réussis, et la suite réelle repasse à 43/43.
+
+## Déploiement Vercel de prévisualisation
+
+- URL : https://emuperso-git-feature-nes-snes-unified-toohigh450-1311.vercel.app/
+- Construction Vercel réussie avec le nouveau `vercel.json` (moteurs N64/PS1 téléchargés et vérifiés).
+- Accès **sans compte Vercel ni GitHub** : accueil, `portables/`, démos NES/SNES, `real-n64/`, `ps1-web/`,
+  moteurs `vendor/` et laboratoire N64 répondent HTTP 200 sans authentification ; en-têtes d'isolation
+  présents sur `/real-n64/` et `/ps1-web/`.
+- Suites relancées **sur l'URL publique** : site complet 56/56 (8 consoles, démos réelles), émulation
+  téléphone 16/16. Les aperçus Vercel ajoutent leur propre iframe (barre d'outils) : les tests visent
+  l'iframe du moteur.
+
+## Reprise des sauvegardes GB/GBC/GBA/DS (0.3.0-alpha.2)
+
+Jusqu'en 0.3.0-alpha.1, le moteur nommait la sauvegarde GB/GBC/GBA/DS d'après le **nom du fichier** :
+une ROM renommée repartait de zéro, et deux ROM différentes de même nom partageaient la même sauvegarde.
+Ces consoles reçoivent maintenant, comme NES/SNES, un nom tiré de l'empreinte SHA-256 et du cœur.
+
+Au premier lancement, juste avant que le moteur ne lise sa base, le lanceur **copie** l'ancienne sauvegarde
+(`/data/saves/<cœur>/<ancien nom>.srm`, `.rtc`, `.dsv`…) vers le nouveau nom. Ancien nom cherché : nom
+actuel du fichier, puis nom enregistré au lancement précédent de la même ROM. L'originale n'est jamais
+modifiée ni supprimée ; une sauvegarde déjà présente sous le nouveau nom n'est jamais remplacée.
+
+Essai réel (`npm run test:real-saves`, Chrome, vrais cœurs) : l'**ancienne version** du lanceur (commit
+`7d2db05`) et la nouvelle sont servies sur la même origine ; les anciennes sauvegardes sont créées par
+l'ancienne version elle-même. **16/16 RÉUSSI** :
+
+| Vérification | Résultat |
+|---|---|
+| GB (Gambatte) : ancienne sauvegarde copiée octet pour octet avant le démarrage, puis utilisée par le jeu (compteur 1 → 2) | RÉUSSI |
+| GB : ancienne sauvegarde intacte ; message « Sauvegarde existante reprise » affiché | RÉUSSI |
+| GB : ROM renommée ensuite → même sauvegarde (compteur 3), aucune nouvelle reprise | RÉUSSI |
+| GB : l'ancienne version rejoue sous l'ancien nom → la sauvegarde au nouveau nom n'est pas remplacée | RÉUSSI |
+| GB : ROM renommée **avant** la mise à jour → reprise via le nom du lancement précédent | RÉUSSI |
+| GB : jeu jamais ouvert → départ normal, aucun message | RÉUSSI |
+| GBA (mGBA, SRAM) : sauvegarde reprise (compteur 1 → 2) | RÉUSSI |
+| DS (DeSmuME 2015, démo Pong-NDS) : `.dsv` copié sous le nouveau nom, original intact | RÉUSSI |
+| DS (DeSmuME) : dossier de sauvegarde confirmé | RÉUSSI |
+
+ROM utilisées : ROM d'essai GB et GBA écrites pour le projet (compteur de démarrages en mémoire
+sauvegardée, `tests/test-roms.mjs`) et démo libre Pong-NDS.
+
+Limites : **melonDS** (BIOS requis) non démarré ; son dossier de sauvegarde (`melonDS`) est lu dans le
+binaire du cœur EmulatorJS 4.2.3. GBC passe par le même cœur (Gambatte) et le même code que GB, sans ROM
+GBC dédiée dans l'essai. Une ROM renommée deux fois **avant** la mise à jour n'est retrouvée que sous ses
+deux derniers noms ; les copies de sécurité de l'onglet Sauvegardes restent exportables et importables.
+
+## Reproduire
+
+```
+cd portables
+npm test
+npm install --no-save playwright   # ou PLAYWRIGHT_MODULE vers une installation existante
+CHROMIUM_PATH="C:/Program Files/Google/Chrome/Application/chrome.exe" npm run test:browser
+CHROMIUM_PATH="C:/Program Files/Google/Chrome/Application/chrome.exe" npm run test:real
+CHROMIUM_PATH="C:/Program Files/Google/Chrome/Application/chrome.exe" npm run test:real-saves
+node tools/test-collection.mjs "E:\roms\...\jeu.smc"     # ROM personnelles, lecture seule
+```
+Portail complet : voir `docs/PORTAIL-8-CONSOLES.md`.

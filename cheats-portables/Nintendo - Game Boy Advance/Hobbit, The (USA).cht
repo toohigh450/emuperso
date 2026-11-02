@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Hobbit, The (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Hobbit%2C%20The%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 7
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00009D86+000A+10066590+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Always Invisible"
+cheat1_code = "33004B58+0001"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Health"
+cheat2_code = "33004AC4+0063"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Max HP"
+cheat3_code = "33004BAC+0063"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Infinite Lives"
+cheat4_code = "33005ACC+0063"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Infinite Keys"
+cheat5_code = "33004B78+0063"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Have Max All Items"
+cheat6_code = "43004AE0+6301+0000000C+0004"
+cheat6_enable = false

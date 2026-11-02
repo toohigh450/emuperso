@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Sagaia [Japan][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Sagaia%20(Japan).cht
+
+cheats = 5
+
+cheat0_desc = "[Format source non précisé] Infinite Lives"
+cheat0_code = "01032FE0"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Invincibility Against The Environment"
+cheat1_code = "01FF0AF0"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Always Have Shield"
+cheat2_code = "0103F0C1"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Infinite Lives"
+cheat3_code = "009-3CE-E6E"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Invulnerability"
+cheat4_code = "048-F2E-195"
+cheat4_enable = false

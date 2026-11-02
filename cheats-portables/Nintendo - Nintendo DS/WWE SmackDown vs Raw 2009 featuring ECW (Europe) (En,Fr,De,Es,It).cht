@@ -1,0 +1,133 @@
+# Recherche locale pour la ROM : WWE SmackDown vs Raw 2009 featuring ECW (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/WWE%20SmackDown%20vs%20Raw%202009%20featuring%20ECW%20(Europe)%20(En%2CFr%2CDe%2CEs%2CIt).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/WWE%20SmackDown%20vs%20Raw%202009%20featuring%20ECW%20(Europe).cht
+
+cheats = 31
+
+cheat0_desc = "[Action Replay] Max/Infinite Money and RP (Press X)"
+cheat0_code = "94000136+FFFE0000+020D05FC+000F423F+120D05B4+000001F4+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Stats (Press X)"
+cheat1_code = "94000136+FFFE0000+020D05B8+000AAAAA+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Level and EXP (Press X)"
+cheat2_code = "94000136+FFFE0000+C0000000+00000003+020D05D4+0063000A+DC000000+00000008+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max HP for Head,Body,Arms,Legs (Press X)"
+cheat3_code = "94000136+FFFE0000+C0000000+00000003+020D05D8+270F270F+DC000000+00000008+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Recover for Head,Body,Arms,Legs (Press L)"
+cheat4_code = "94000130+FDFF0000+120D1AD6+0000A0A0+020D1AD8+A0BEA0A0+020D1ADC+BEA0A0A0+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Player Energy Gauge Max, Opponent Min (Press R)"
+cheat5_code = "94000130+FEFF0000+020D1AFC+00064000+020D21F8+00000000+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] unendlich Fertigkeitspunkte"
+cheat6_code = "221E4C7F+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Kraft / Power 10"
+cheat7_code = "221E4C7A+0000000A"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Submission 10"
+cheat8_code = "221E4C7B+0000000A"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Zaehigkeit / Durability 10"
+cheat9_code = "221E4C7C+0000000A"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Schnelligkeit / Speed 10"
+cheat10_code = "221E4C7D+0000000A"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Schwung / Momentum 10"
+cheat11_code = "221E4C7E+0000000A"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] unendlich / infinite Smackdowns"
+cheat12_code = "020D1AFC+00064000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] kein / No Smackdowns"
+cheat13_code = "020D1AFC+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] unendlich Energie Kopf / infinite Health Head"
+cheat14_code = "220D1AD6+000000AA"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] unendlich Energie Koerper / infinite Health Body"
+cheat15_code = "220D1AD7+000000AA"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] unendlich Energie Arme / infinite Health Arms"
+cheat16_code = "220D1AD8+000000AA"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] unendlich Energie Beine / infinite Health Legs"
+cheat17_code = "220D1AD9+000000AA"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] unendlich / infinite Smackdown"
+cheat18_code = "020D21F8+00064000"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] kein / No Smackdown"
+cheat19_code = "020D21F8+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] unendlich Energie Kopf / infinite Health Head"
+cheat20_code = "220D21D2+000000AA"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] unendlich Energie Koerper / infinite Health Body"
+cheat21_code = "220D21D3+000000AA"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] unendlich Energie Arme / infinite Health Arms"
+cheat22_code = "220D21D4+000000AA"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] unendlich Energie Beine / infinite Health Legs"
+cheat23_code = "220D21D5+000000AA"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] [SELECT]Max/Infinite Money"
+cheat24_code = "94000130+FFFB0000+020D057C+000F423F+D2000000+00000000"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] [SELECT]All Stats Max"
+cheat25_code = "94000130+FFFB0000+120D0538+0000AAAA+220D053A+0000000A+D2000000+00000000"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] [SELECT]RP Max"
+cheat26_code = "94000130+FFFB0000+120D0534+000001F4+D2000000+00000000"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] [SELECT]Body Level Max"
+cheat27_code = "94000130+FFFB0000+C0000000+00000003+220D0554+0000000A+DC000000+00000008+D2000000+00000000"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] [SELECT]All Body EXP Max"
+cheat28_code = "94000130+FFFB0000+C0000000+00000003+220D0556+00000063+DC000000+00000008+D2000000+00000000"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] [SELECT]All Body HP Max"
+cheat29_code = "94000130+FFFB0000+C0000000+00000003+120D0558+0000270F+DC000000+00000008+D2000000+00000000"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] [SELECT]All Body Current Max"
+cheat30_code = "94000130+FFFB0000+C0000000+00000003+120D055A+0000270F+DC000000+00000008+D2000000+00000000"
+cheat30_enable = false

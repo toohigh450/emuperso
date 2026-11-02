@@ -1,0 +1,185 @@
+# Recherche locale pour la ROM : Wario Land 3 [World][En][Ja][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Wario%20Land%203%20(World)%20(En%2CJa).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Wario%20Land%203%20(World)%20(GameShark).cht
+
+cheats = 44
+
+cheat0_desc = "[Format source non précisé] Total Coins Modifier"
+cheat0_code = "010005CA"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Musical Coin Modifier"
+cheat1_code = "01005CCA"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Key Modifier"
+cheat2_code = "01015BCA"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Rapid Jump &amp; Charge"
+cheat3_code = "010093C0"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] All Power-Ups (Except The Last One)"
+cheat4_code = "01083CCA"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Wario Always Does His Idle Animation"
+cheat5_code = "01FF84CA+010685CA"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Wario Never Does His Idle Animation"
+cheat6_code = "010084CA+010185CA"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Fat Wario"
+cheat7_code = "01848ECA+01008FCA"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Ball-O-String Wario"
+cheat8_code = "01C38ECA+01018FCA"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Fire Wario Phase 1 (Running)"
+cheat9_code = "01C18ECA+01018FCA"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Fire Wario Phase 2 (On fire)"
+cheat10_code = "01C18ECA+01028FCA"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Hammer Wario"
+cheat11_code = "01098ECA+01008FCA"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Ice Skatin' Wario"
+cheat12_code = "014D8ECA+01008FCA"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Zombie Wario"
+cheat13_code = "01488ECA+01008FCA"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Balloon Wario"
+cheat14_code = "01078ECA+01008FCA"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Vampire Wario"
+cheat15_code = "014B8ECA+01008FCA"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Electroshock Wario"
+cheat16_code = "01858ECA+01008FCA"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Invisible Wario"
+cheat17_code = "01068ECA+01008FCA"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Snowman Wario"
+cheat18_code = "01508ECA+01008FCA"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Snowball Wario (Size 1)"
+cheat19_code = "01508ECA+01018FCA"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Snowball Wario (Size 2)"
+cheat20_code = "01508ECA+01028FCA"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Snowball Wario (Size 3)"
+cheat21_code = "01508ECA+01038FCA"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Flat Wario"
+cheat22_code = "01428ECA+01008FCA"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Dizzy Wario"
+cheat23_code = "010A8ECA+01008FCA"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Bubble Wario"
+cheat24_code = "014C8ECA+01008FCA"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Blind Wario"
+cheat25_code = "01538ECA+01008FCA"
+cheat25_enable = false
+
+cheat26_desc = "[Format source non précisé] Normal Wario"
+cheat26_code = "01008ECA+01008FCA"
+cheat26_enable = false
+
+cheat27_desc = "[Format source non précisé] Inf Hitstun A1"
+cheat27_code = "01008CCA"
+cheat27_enable = false
+
+cheat28_desc = "[Format source non précisé] Inf Hitstun A2"
+cheat28_code = "01018CCA"
+cheat28_enable = false
+
+cheat29_desc = "[Format source non précisé] Inf Hitstun A3"
+cheat29_code = "01158CCA"
+cheat29_enable = false
+
+cheat30_desc = "[Format source non précisé] Inf Hitstun B1"
+cheat30_code = "01008DCA"
+cheat30_enable = false
+
+cheat31_desc = "[Format source non précisé] Inf Hitstun B2"
+cheat31_code = "01018DCA"
+cheat31_enable = false
+
+cheat32_desc = "[Format source non précisé] Everlasting Fire, Fat, and Hammer Wario"
+cheat32_code = "010390CA+010391CA"
+cheat32_enable = false
+
+cheat33_desc = "[Format source non précisé] MoonJump"
+cheat33_code = "EA0-948-081"
+cheat33_enable = false
+
+cheat34_desc = "[Format source non précisé] Have Effect of Rolling Wario!"
+cheat34_code = "01029DCA"
+cheat34_enable = false
+
+cheat35_desc = "[Format source non précisé] Revert Back to Wario"
+cheat35_code = "018D83CA"
+cheat35_enable = false
+
+cheat36_desc = "[Format source non précisé] Ground pound while crouched"
+cheat36_code = "010196CA"
+cheat36_enable = false
+
+cheat37_desc = "[Format source non précisé] Jump in Midair"
+cheat37_code = "000-D48-7F6+1A0-D08-7F6"
+cheat37_enable = false
+
+cheat38_desc = "[GameShark] Total Coins Modifier"
+cheat38_code = "01??05CA"
+cheat38_enable = false
+
+cheat39_desc = "[GameShark] Musical Coin Modifier"
+cheat39_code = "01??5CCA"
+cheat39_enable = false
+
+cheat40_desc = "[GameShark] Key Modifier"
+cheat40_code = "01??5BCA"
+cheat40_enable = false
+
+cheat41_desc = "[GameShark] Rapid Jump & Charge"
+cheat41_code = "010093C0"
+cheat41_enable = false
+
+cheat42_desc = "[GameShark] All Power-Ups (Execpt The Last One)"
+cheat42_code = "01083CCA"
+cheat42_enable = false
+
+cheat43_desc = "[GameShark] Mega Jump"
+cheat43_code = "01018CCA+010074CA+010075CA+010076CA+010077CA"
+cheat43_enable = false

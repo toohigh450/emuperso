@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Kill Switch (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Kill%20Switch%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 4
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00009D2E+000A+10005AA8+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Unlock Customize Options"
+cheat1_code = "8200000C+FFFF"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Timer Countdown Missions"
+cheat2_code = "330400C0+001E"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Health"
+cheat3_code = "83005EFC+0400"
+cheat3_enable = false

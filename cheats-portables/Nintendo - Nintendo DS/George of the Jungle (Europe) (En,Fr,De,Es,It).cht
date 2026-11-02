@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : George of the Jungle (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/George%20of%20the%20Jungle%20(Europe).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Infinite Health"
+cheat0_code = "0202F5DC+E3A01006"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite Double Jump"
+cheat1_code = "620EBF10+00000000+B20EBF10+00000000+B0000014+00000000+B0000010+00000000+DC000000+0000001C+90000000+FFF80007+20000000+00000006+D2000000+00000000"
+cheat1_enable = false

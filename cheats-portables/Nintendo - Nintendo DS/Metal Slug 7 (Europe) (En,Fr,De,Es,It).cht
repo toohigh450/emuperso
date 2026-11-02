@@ -1,0 +1,204 @@
+# Recherche locale pour la ROM : Metal Slug 7 (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Metal%20Slug%207%20(Europe).cht
+
+cheats = 49
+
+cheat0_desc = "[Action Replay] Invincible"
+cheat0_code = "220E56B8+000000FF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Score"
+cheat1_code = "12241846+00009990+12241848+00009999+2224184A+00000009"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] People Saved x 99"
+cheat2_code = "2224359A+00000063"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Unlock All Stages"
+cheat3_code = "220E2544+00000007"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Hold B to Moon Jump"
+cheat4_code = "94000130+FFFD0000+120F855E+0000012C+D0000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Max Gauge"
+cheat5_code = "220E5709+0000007F+220E570A+000000FF"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Infinite Lives"
+cheat6_code = "220E5937+00000063"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Infinite Grenade"
+cheat7_code = "220E56F1+00000063"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Infinite Cannon"
+cheat8_code = "22243672+00000063"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Infinite Primary Ammo"
+cheat9_code = "120E56F4+0000FFFF+120E5700+0000FFFF"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Infinite Secondary Ammo"
+cheat10_code = "120E5702+0000FFFF+120E570E+0000FFFF"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Infinite Time"
+cheat11_code = "222430F3+000000FF"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Infinite Credit"
+cheat12_code = "2223F5BC+00000063"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Random 1st Weapon (Press Select+L)"
+cheat13_code = "94000130+FDFB0000+DB000000+020E56FC+D4000000+00000001+120E5700+0000FFFF+D8000000+020E56FC+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Shotgun"
+cheat14_code = "220E56FC+00000002"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Rocket Launcher"
+cheat15_code = "220E56FC+00000003"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Flame Thrower"
+cheat16_code = "220E56FC+00000004"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Heavy Machine Gun"
+cheat17_code = "220E56FC+00000005"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Laser"
+cheat18_code = "220E56FC+00000006"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Powerup Shotgun"
+cheat19_code = "220E56FC+00000007"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Powerup Rocket Launcher"
+cheat20_code = "220E56FC+00000008"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Powerup Flame Thrower"
+cheat21_code = "220E56FC+00000009"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Powerup Heavy Machinegun"
+cheat22_code = "220E56FC+0000000A"
+cheat22_enable = false
+
+cheat23_desc = "[Action Replay] Powerup Laser"
+cheat23_code = "220E56FC+0000000B"
+cheat23_enable = false
+
+cheat24_desc = "[Action Replay] Enemy Chaser"
+cheat24_code = "220E56FC+0000000C"
+cheat24_enable = false
+
+cheat25_desc = "[Action Replay] Iron Lizard"
+cheat25_code = "220E56FC+0000000D"
+cheat25_enable = false
+
+cheat26_desc = "[Action Replay] Drop Shot"
+cheat26_code = "220E56FC+0000000E"
+cheat26_enable = false
+
+cheat27_desc = "[Action Replay] Super Grenade"
+cheat27_code = "220E56FC+0000000F"
+cheat27_enable = false
+
+cheat28_desc = "[Action Replay] 2 Heavy Machine Guns"
+cheat28_code = "220E56FC+00000012"
+cheat28_enable = false
+
+cheat29_desc = "[Action Replay] Z Zatoichi"
+cheat29_code = "220E56FC+00000013"
+cheat29_enable = false
+
+cheat30_desc = "[Action Replay] Thunder Shot"
+cheat30_code = "220E56FC+00000014"
+cheat30_enable = false
+
+cheat31_desc = "[Action Replay] Random 2nd Weapon (Press L+A)"
+cheat31_code = "94000130+FDFE0000+DB000000+020E56FD+D4000000+00000001+120E5702+0000FFFF+D8000000+020E56FD+D2000000+00000000"
+cheat31_enable = false
+
+cheat32_desc = "[Action Replay] Shotgun"
+cheat32_code = "220E56FD+00000002"
+cheat32_enable = false
+
+cheat33_desc = "[Action Replay] Rocket Launcher"
+cheat33_code = "220E56FD+00000003"
+cheat33_enable = false
+
+cheat34_desc = "[Action Replay] Flame Thrower"
+cheat34_code = "220E56FD+00000004"
+cheat34_enable = false
+
+cheat35_desc = "[Action Replay] Heavy Machine Gun"
+cheat35_code = "220E56FD+00000005"
+cheat35_enable = false
+
+cheat36_desc = "[Action Replay] Laser"
+cheat36_code = "220E56FD+00000006"
+cheat36_enable = false
+
+cheat37_desc = "[Action Replay] Powerup Shotgun"
+cheat37_code = "220E56FD+00000007"
+cheat37_enable = false
+
+cheat38_desc = "[Action Replay] Powerup Rocket Launcher"
+cheat38_code = "220E56FD+00000008"
+cheat38_enable = false
+
+cheat39_desc = "[Action Replay] Powerup Flame Thrower"
+cheat39_code = "220E56FD+00000009"
+cheat39_enable = false
+
+cheat40_desc = "[Action Replay] Powerup Heavy Machinegun"
+cheat40_code = "220E56FD+0000000A"
+cheat40_enable = false
+
+cheat41_desc = "[Action Replay] Powerup Laser"
+cheat41_code = "220E56FD+0000000B"
+cheat41_enable = false
+
+cheat42_desc = "[Action Replay] Enemy Chaser"
+cheat42_code = "220E56FD+0000000C"
+cheat42_enable = false
+
+cheat43_desc = "[Action Replay] Iron Lizard"
+cheat43_code = "220E56FD+0000000D"
+cheat43_enable = false
+
+cheat44_desc = "[Action Replay] Drop Shot"
+cheat44_code = "220E56FD+0000000E"
+cheat44_enable = false
+
+cheat45_desc = "[Action Replay] Super Grenade"
+cheat45_code = "220E56FD+0000000F"
+cheat45_enable = false
+
+cheat46_desc = "[Action Replay] 2 Heavy Machine Guns"
+cheat46_code = "220E56FD+00000012"
+cheat46_enable = false
+
+cheat47_desc = "[Action Replay] Z Zatoichi"
+cheat47_code = "220E56FD+00000013"
+cheat47_enable = false
+
+cheat48_desc = "[Action Replay] Thunder Shot"
+cheat48_code = "220E56FD+00000014"
+cheat48_enable = false

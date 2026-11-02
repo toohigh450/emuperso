@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Top Spin 3 (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Top%20Spin%203%20(Europe).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Player 1 Requires Only a Point to Win a Game"
+cheat0_code = "62115FDC+00000000+B2115FDC+00000000+DC000000+00000010+90000000+00000000+20000000+00000003+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Player 2 Never Scores"
+cheat1_code = "62115FDC+00000000+B2115FDC+00000000+20000014+00000000+D2000000+00000000"
+cheat1_enable = false

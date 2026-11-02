@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Real Time Conflict - Shogun Empires (USA).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Real%20Time%20Conflict%20-%20Shogun%20Empires%20(USA).cht
+
+cheats = 5
+
+cheat0_desc = "[Action Replay] Max Count"
+cheat0_code = "221D6FE9+000000FF"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Morale"
+cheat1_code = "121D6FF2+0000270F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max Durability"
+cheat2_code = "121D6FF4+0000270F"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max Honor Points"
+cheat3_code = "121D6360+0000270F"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max Total Honor"
+cheat4_code = "121D6362+0000270F"
+cheat4_enable = false

@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: positionnel OEM : bas=Croix(B), droite=Rond(A), gauche=Carré(Y), haut=Triangle(X)
+ok 1 - positionnel OEM : bas=Croix(B), droite=Rond(A), gauche=Carré(Y), haut=Triangle(X)
+  ---
+  duration_ms: 5.522052
+  type: 'test'
+  ...
+# Subtest: croix physique toujours utilisable, seule ou avec le stick
+ok 2 - croix physique toujours utilisable, seule ou avec le stick
+  ---
+  duration_ms: 0.273939
+  type: 'test'
+  ...
+# Subtest: numérique : stick gauche -> croix, zone morte respectée
+ok 3 - numérique : stick gauche -> croix, zone morte respectée
+  ---
+  duration_ms: 1.409388
+  type: 'test'
+  ...
+# Subtest: analogique : axes -> identifiants 16..19 / 20..23, zone morte radiale, croix intacte
+ok 4 - analogique : axes -> identifiants 16..19 / 20..23, zone morte radiale, croix intacte
+  ---
+  duration_ms: 0.683632
+  type: 'test'
+  ...
+# Subtest: configuration : valeurs bornées, type de manette = valeurs réelles du cœur, sans manette tout à zéro
+ok 5 - configuration : valeurs bornées, type de manette = valeurs réelles du cœur, sans manette tout à zéro
+  ---
+  duration_ms: 0.505663
+  type: 'test'
+  ...
+# Subtest: normalizeInput préserve _profile quand présent
+ok 6 - normalizeInput préserve _profile quand présent
+  ---
+  duration_ms: 0.275274
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 42.493891

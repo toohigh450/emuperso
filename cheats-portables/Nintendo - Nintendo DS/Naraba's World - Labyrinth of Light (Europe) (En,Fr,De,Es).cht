@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Naraba's World - Labyrinth of Light (Europe) (En,Fr,De,Es).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Naraba's%20World%20-%20Labyrinth%20of%20Light%20(Europe).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] Freeze Time"
+cheat0_code = "520430C4+B2821001+220430C4+00000000+D2000000+00000000"
+cheat0_enable = false

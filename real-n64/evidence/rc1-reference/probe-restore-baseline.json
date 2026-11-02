@@ -1,0 +1,280 @@
+{
+  "schema": "emuperso/restore-independent-probe/v1",
+  "baseline": true,
+  "baseline_commit": "029845b800a61eeee60915363c16c0b218e6e39e",
+  "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+  "scope": "Repository MIT ROM, fresh browser profile, controlled RAM/MEMFS test only. Not a reproduction of Karl Windows PC.",
+  "results": [
+    {
+      "test": "Valid native state restores actual unused-RAM marker",
+      "status": "RÉUSSI",
+      "expected_ram": 4951,
+      "actual_ram": 4951,
+      "adapter_result": {
+        "native_status": 0,
+        "frame_before": 57,
+        "frame_after": 64,
+        "contexts": [
+          {
+            "state": "running",
+            "sample_rate": 44100
+          }
+        ]
+      }
+    },
+    {
+      "test": "Native queued file-read failure is not accepted as restored",
+      "status": "ÉCHOUÉ",
+      "injection": "Actual native load queued, then its MEMFS file removed before task processing; actual native return unchanged",
+      "adapter": {
+        "accepted": true,
+        "result": {
+          "native_status": 0,
+          "frame_before": 66,
+          "frame_after": 76,
+          "contexts": [
+            {
+              "state": "running",
+              "sample_rate": 44100
+            }
+          ]
+        }
+      },
+      "expected_ram": 4951,
+      "actual_ram": 9320,
+      "native_log": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 403 (Ressource non publique)"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 403 (Ressource non publique)"
+        },
+        {
+          "type": "log",
+          "text": "[INFO] [State]: Loading state \"/hub-verified-state.bin\", 16793440 bytes."
+        },
+        {
+          "type": "log",
+          "text": "[INFO] [State]: Loading state \"/hub-verified-state.bin\", 0 bytes."
+        },
+        {
+          "type": "log",
+          "text": "[ERROR] [State]: Failed to load state from \"/hub-verified-state.bin\"."
+        }
+      ]
+    },
+    {
+      "test": "Pending WebAudio suspend is bounded and releases the UI with an error",
+      "status": "ÉCHOUÉ",
+      "injection": "Existing actual session AudioContext.suspend replaced by a deliberately never-settling promise, simulating an unresolved WebAudio operation",
+      "suspend_calls": 1,
+      "load_button_still_disabled": true,
+      "observed_wait_ms": 3000,
+      "message": "Restauration dans une session neuve…"
+    }
+  ],
+  "console": [
+    {
+      "type": "log",
+      "text": "screenRecordFormat mp4"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option screenRecordFormat. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "screenRecordUpscale 1"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option screenRecordUpscale. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "screenRecordVideoBitrate 2621440"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option screenRecordVideoBitrate. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "screenRecordAudioBitrate 196608"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option screenRecordAudioBitrate. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "rewindEnabled disabled"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option rewindEnabled. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "menubarBehavior downward"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option menubarBehavior. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "keyboardInput disabled"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option keyboardInput. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "altKeyboardInput disabled"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option altKeyboardInput. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "lockMouse disabled"
+    },
+    {
+      "type": "log",
+      "text": "invalid core option lockMouse. This is not an error."
+    },
+    {
+      "type": "log",
+      "text": "Available core options {retroarch_core: Object, shader: Object, fps: Object, videoRotation: Object, screenshotSource: Object}"
+    },
+    {
+      "type": "log",
+      "text": "[ERROR] [EMSCRIPTEN]: Could not get screen dimensions!"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Game controller 0 (Standard controller) has a Memory pak plugged in"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Game controller 1 (Standard controller) has nothing plugged in"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Game controller 2 (Standard controller) has nothing plugged in"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Game controller 3 (Standard controller) has nothing plugged in"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Unknown CIC type (00000007BA90A53A)! using CIC 6102."
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Using CIC type X102"
+    },
+    {
+      "type": "log",
+      "text": "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\"."
+    },
+    {
+      "type": "log",
+      "text": "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\"."
+    },
+    {
+      "type": "log",
+      "text": "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\"."
+    },
+    {
+      "type": "log",
+      "text": "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\"."
+    },
+    {
+      "type": "log",
+      "text": "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\"."
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Initializing 4 RDRAM modules for a total of 8 MB"
+    },
+    {
+      "type": "log",
+      "text": "[libretro INFO] mupen64plus: Starting R4300 emulator: Pure Interpreter"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] Setting real canvas size: 1026 x 560"
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [SRAM]: Saving RAM type #0 to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [SRAM]: Saved successfully to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [State]: Loading state \"/hub-verified-state.bin\", 16793440 bytes."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [State]: Loading state \"/hub-verified-state.bin\", 0 bytes."
+    },
+    {
+      "type": "log",
+      "text": "[ERROR] [State]: Failed to load state from \"/hub-verified-state.bin\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [SRAM]: Saving RAM type #0 to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [SRAM]: Saved successfully to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [SRAM]: Saving RAM type #0 to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [SRAM]: Saved successfully to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [SRAM]: Saving RAM type #0 to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\"."
+    },
+    {
+      "type": "log",
+      "text": "[INFO] [SRAM]: Saved successfully to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\"."
+    }
+  ]
+}

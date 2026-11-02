@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Petz - Nursery (Europe) (En,Fr,De,Es,It,Nl,Sv,No,Da).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Petz%20-%20Nursery%20(Europe).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "520C4DF4+EE070F90+E2000074+0000004C+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2E7EB11+0009000A+00120044+D2EA015F+0000BAB1+00000000+020C4DF4+E92D401E+020C4DF8+FAFCEC9D+D2000000+00000000"
+cheat0_enable = false

@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Razor Freestyle Scooter (USA).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Razor%20Freestyle%20Scooter%20(USA)%20(Code%20Breaker).cht
+
+cheats = 4
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00009ACB+000A+100018F8+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Max Wheels"
+cheat1_code = "820005F4+0063"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Time"
+cheat2_code = "82002F78+0009+82002F7A+0005+82002F7C+0009"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Max Special Meter"
+cheat3_code = "82003834+0045"
+cheat3_enable = false

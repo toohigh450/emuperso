@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : OK! - First for Celebrity News - Puzzle Stars (Europe).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/OK!%20-%20First%20for%20Celebrity%20News%20-%20Puzzle%20Stars%20(Europe).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] Unlimited Stars"
+cheat0_code = "120B4624+0000270F"
+cheat0_enable = false

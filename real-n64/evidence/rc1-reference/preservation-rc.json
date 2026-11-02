@@ -1,0 +1,15 @@
+{
+  "schema": "emuperso/rc-preservation/v1",
+  "checked_utc": "2026-11-01T13:46:00.601519+00:00",
+  "checked_commit": "aea4eb4538bca032d6dff1dcc33bea1164290018",
+  "protected_original_files": 98,
+  "protected_disk_and_git_sha256_match": true,
+  "v040_reference_files": 43,
+  "v040_reference_commit": "029845b800a61eeee60915363c16c0b218e6e39e",
+  "v040_reference_verification": "Independent read-only review:43copies plusreference manifest and163originalmanifestentries againstGitblobs",
+  "main_remote_ref_checked": "https://api.github.com/repos/toohigh450/emuperso/git/ref/heads/main",
+  "main_expected_sha": "4936007df68882a5417746e5ef36cfadadf5537e",
+  "main_observed_sha": "4936007df68882a5417746e5ef36cfadadf5537e",
+  "status": "RÉUSSI",
+  "scope": "Read only hash checks; no original ROM/save read or modified. No main merge/site/release."
+}

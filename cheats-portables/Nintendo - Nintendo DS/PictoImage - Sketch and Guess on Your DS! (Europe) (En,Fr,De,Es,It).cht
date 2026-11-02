@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : PictoImage - Sketch and Guess on Your DS! (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/PictoImage%20-%20Sketch%20and%20Guess%20on%20Your%20DS!%20(Europe).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Complete Characters"
+cheat0_code = "02203C2C+02020202+02203C30+02020202+22203C34+00000002"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Press L+R For Answers in Single Player Mode Drawing"
+cheat1_code = "94000130+FCFF0000+02203C50+03030300+D5000000+03030303+C0000000+00000049+D6000000+02203C54+D2000000+00000000+D0000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Press Select For Answers in Riddle Mode"
+cheat2_code = "94000130+FFFB0000+D5000000+00000303+C0000000+00000095+D7000000+02203C50+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Press Select For Complete in Learning Drawings"
+cheat3_code = "94000130+FFFB0000+D5000000+00000002+C0000000+00000080+D8000000+02203D84+D2000000+00000000"
+cheat3_enable = false

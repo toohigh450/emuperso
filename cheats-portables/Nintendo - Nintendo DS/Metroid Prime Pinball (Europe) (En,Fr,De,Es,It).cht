@@ -1,0 +1,100 @@
+# Recherche locale pour la ROM : Metroid Prime Pinball (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Metroid%20Prime%20Pinball%20(Europe).cht
+
+cheats = 23
+
+cheat0_desc = "[Action Replay] Max/Infinite Morph Balls"
+cheat0_code = "223D4280+0000000A"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Morph Ball Health"
+cheat1_code = "223C760C+00000008"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Max/Infinite Combat Mode Health"
+cheat2_code = "223D8CB0+00000004"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Max/Infinite Bombs"
+cheat3_code = "223D42A8+00000003"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Max/Infinite Power Bombs"
+cheat4_code = "223D42AC+00000001"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Max/Infinite Missiles"
+cheat5_code = "223D42D4+00000004"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Max/Infinite Score"
+cheat6_code = "023BB9B0+0BEBC1F6"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Max/Infinite Specials"
+cheat7_code = "223D4294+00000063"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] Max/Infinite Force Ball"
+cheat8_code = "120A7674+0000FFFF"
+cheat8_enable = false
+
+cheat9_desc = "[Action Replay] Max/Infinite Flipper Barrier"
+cheat9_code = "120ACDD4+0000FFFF+94000136+FFFE0000+120ACDD4+00000000+D2000000+00000000"
+cheat9_enable = false
+
+cheat10_desc = "[Action Replay] Enable/Disable Flipper Barrier"
+cheat10_code = "94000130+FEDD0000+120ACDD4+0000FFFF+D2000000+00000000+94000130+FEED0000+120ACDD4+00000000+D2000000+00000000"
+cheat10_enable = false
+
+cheat11_desc = "[Action Replay] Max/Infinite Kickback"
+cheat11_code = "223D3CF4+00000002+223D3D0C+00000002"
+cheat11_enable = false
+
+cheat12_desc = "[Action Replay] Enable Kickback"
+cheat12_code = "94000130+FFFB0000+223D3CF4+00000002+223D3D0C+00000002+D2000000+00000000"
+cheat12_enable = false
+
+cheat13_desc = "[Action Replay] Max/Infinite Chozo Artifacts"
+cheat13_code = "94000130+FFFB0000+223D428C+00000075+223D427C+0000000A+D2000000+00000000"
+cheat13_enable = false
+
+cheat14_desc = "[Action Replay] Finish Game"
+cheat14_code = "94000130+FCFB0000+223D4280+00000000+D2000000+00000000"
+cheat14_enable = false
+
+cheat15_desc = "[Action Replay] Mission Time 00:00:02"
+cheat15_code = "123D42F4+00000001"
+cheat15_enable = false
+
+cheat16_desc = "[Action Replay] Impact Crater"
+cheat16_code = "94000130+FFFB0000+223D4274+00000000+D2000000+00000000"
+cheat16_enable = false
+
+cheat17_desc = "[Action Replay] Phazon Mines"
+cheat17_code = "94000130+FFFB0000+223D4274+00000001+D2000000+00000000"
+cheat17_enable = false
+
+cheat18_desc = "[Action Replay] Phendrana Drifts"
+cheat18_code = "94000130+FFFB0000+223D4274+00000002+D2000000+00000000"
+cheat18_enable = false
+
+cheat19_desc = "[Action Replay] Artifact Temple"
+cheat19_code = "94000130+FFFB0000+223D4274+00000003+D2000000+00000000"
+cheat19_enable = false
+
+cheat20_desc = "[Action Replay] Tallon Overworld"
+cheat20_code = "94000130+FFFB0000+223D4274+00000004+D2000000+00000000"
+cheat20_enable = false
+
+cheat21_desc = "[Action Replay] Pirate Frigate"
+cheat21_code = "94000130+FFFB0000+223D4274+00000005+D2000000+00000000"
+cheat21_enable = false
+
+cheat22_desc = "[Action Replay] Magmoor Caverns"
+cheat22_code = "94000130+FFFB0000+223D4274+00000007+D2000000+00000000"
+cheat22_enable = false

@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Antz Racing [Europe][En][Fr][De][Es][It][Nl][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Antz%20Racing%20(USA%2C%20Europe)%20(GameShark).cht
+
+cheats = 1
+
+cheat0_desc = "[GameShark] No Damage"
+cheat0_code = "9160A5C2"
+cheat0_enable = false

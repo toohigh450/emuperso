@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : LEGO Rock Band (Europe) (En,Fr,De,Es,It,Da).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/LEGO%20Rock%20Band%20(Europe).cht
+
+cheats = 7
+
+cheat0_desc = "[Action Replay] Max/Infinite Studs"
+cheat0_code = "02295598+0098967F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max/Infinite Fans"
+cheat1_code = "02295594+0098967F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Infinite Health"
+cheat2_code = "9217503C+00000001+6217B924+00000000+B217B924+00000000+10000024+00001000+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Quick Score Gain"
+cheat3_code = "9217503C+00000001+6217B924+00000000+B217B924+00000000+20000018+000000FF+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Can Use Overdrive Anytime"
+cheat4_code = "0209F2D0+E3A00A01+0209F0E0+E3A01A01+0209F0E4+E58411B0"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Start With Full Overdrive"
+cheat5_code = "0209B028+E3A02A01"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Infinite Overdrive Use"
+cheat6_code = "0209F200+E3A00A01"
+cheat6_enable = false

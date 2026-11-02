@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Simple DS Series Vol. 39 - The Shouboutai (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Simple%20DS%20Series%20Vol.%2039%20-%20The%20Shouboutai%20(Japan).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] Infinite Time"
+cheat0_code = "52076050+E5901004+02076054+E3A01000+D0000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Infinite HP"
+cheat1_code = "120BD13C+0000270F+120BD148+0000270F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Infinite Stamina"
+cheat2_code = "120BD1D0+0000270F+120BD1A8+0000270F"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Infinite Items"
+cheat3_code = "1205C4E2+0000004E+0205C4E4+002A004E+0205C4E8+012C002A"
+cheat3_enable = false

@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : LEGO Island - Xtreme Stunts (USA, Europe) (En,Fr,De,Es,It,Nl,Sv,Da).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/LEGO%20Island%20-%20Xtreme%20Stunts%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 3
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "0000335F+000A+10003824+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Infinite Time"
+cheat1_code = "32024B7C+283B"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Health"
+cheat2_code = "82024B8C+0400"
+cheat2_enable = false

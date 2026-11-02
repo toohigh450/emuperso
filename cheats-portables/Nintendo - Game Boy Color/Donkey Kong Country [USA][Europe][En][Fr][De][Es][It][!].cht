@@ -1,0 +1,29 @@
+# Recherche locale pour la ROM : Donkey Kong Country [USA][Europe][En][Fr][De][Es][It][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Donkey%20Kong%20Country%20(USA%2C%20Europe)%20(En%2CFr%2CDe%2CEs%2CIt).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Donkey%20Kong%20Country%20(USA%2C%20Europe)%20(GameShark).cht
+
+cheats = 5
+
+cheat0_desc = "[Format source non précisé] Infinite Lives"
+cheat0_code = "01991DC3"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Bannanas"
+cheat1_code = "01991BC3"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Invincibility"
+cheat2_code = "010A30C8"
+cheat2_enable = false
+
+cheat3_desc = "[GameShark] Infinite Bananas"
+cheat3_code = "01991BC3"
+cheat3_enable = false
+
+cheat4_desc = "[GameShark] Infinite Lives"
+cheat4_code = "01991DC3"
+cheat4_enable = false

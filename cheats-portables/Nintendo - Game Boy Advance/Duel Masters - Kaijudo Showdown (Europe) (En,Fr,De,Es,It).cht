@@ -1,0 +1,60 @@
+# Recherche locale pour la ROM : Duel Masters - Kaijudo Showdown (Europe) (En,Fr,De,Es,It).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Duel%20Masters%20-%20Kaijudo%20Showdown%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 13
+
+cheat0_desc = "[Code Breaker] Enable Code (Must Be On)"
+cheat0_code = "00000000+0002+101652B8+0007"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Walk Through Walls"
+cheat1_code = "830008C8+0010"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Money"
+cheat2_code = "830043BC+FFFF"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Max Money"
+cheat3_code = "830043BC+E0FF+830043BE+05F5"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Have All Cards"
+cheat4_code = "430043C2+6262+00000096+0002"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Have All Preset Decks"
+cheat5_code = "43004542+0101+00000004+0002"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Max Passes"
+cheat6_code = "330041C0+00C8"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Have All Cool Stuff"
+cheat7_code = "430041C2+FFFF+00000014+0002"
+cheat7_enable = false
+
+cheat8_desc = "[Code Breaker] Have All Artifacts"
+cheat8_code = "430041EE+FFFF+00000003+0002"
+cheat8_enable = false
+
+cheat9_desc = "[Code Breaker] Start Duel With 2 Mana"
+cheat9_code = "730015C8+0000+830015C8+0200"
+cheat9_enable = false
+
+cheat10_desc = "[Code Breaker] Tap R To Summon With No Sacrifices"
+cheat10_code = "74000130+02FF+E3001458+0001+33001459+0001+73001458+010A+83001458+0101"
+cheat10_enable = false
+
+cheat11_desc = "[Code Breaker] Press L+R For Enemies Have No Shields"
+cheat11_code = "74000130+00FF+330016A5+0000"
+cheat11_enable = false
+
+cheat12_desc = "[Code Breaker] Infinite Shields"
+cheat12_code = "33001679+0005"
+cheat12_enable = false

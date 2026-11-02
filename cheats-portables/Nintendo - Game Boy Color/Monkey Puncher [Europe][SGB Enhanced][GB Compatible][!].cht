@@ -1,0 +1,72 @@
+# Recherche locale pour la ROM : Monkey Puncher [Europe][SGB Enhanced][GB Compatible][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Monkey%20Puncher%20(Europe)%20(SGB%20Enhanced)%20(GB%20Compatible).cht
+
+cheats = 16
+
+cheat0_desc = "[Format source non précisé] Infinite Health"
+cheat0_code = "012F85D3"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Stamina"
+cheat1_code = "012F93D3"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Infinite Match Time"
+cheat2_code = "9163C9D5"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] How Many Items You Carry"
+cheat3_code = "010064C1"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Items Slot 1 Modifier"
+cheat4_code = "010065C1"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Max Items Slot 1"
+cheat5_code = "016366C1"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Items Slot 2 Modifier"
+cheat6_code = "010067C1"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Max Items Slot 2"
+cheat7_code = "016368C1"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Items Slot 3 Modifier"
+cheat8_code = "010069C1"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Max Items Slot 3"
+cheat9_code = "01636AC1"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Items Slot 4 Modifier"
+cheat10_code = "01006BC1"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Max Items Slot 4"
+cheat11_code = "01636CC1"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Items Slot 5 Modifier"
+cheat12_code = "01006DC1"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Max Items Slot 5"
+cheat13_code = "01636EC1"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Items Slot 6 Modifier"
+cheat14_code = "01006FC1"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Max Items Slot 6"
+cheat15_code = "016370C1"
+cheat15_enable = false

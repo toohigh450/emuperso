@@ -1,0 +1,44 @@
+# Recherche locale pour la ROM : Micro Machines V4 (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Micro%20Machines%20V4%20(Europe).cht
+
+cheats = 9
+
+cheat0_desc = "[Action Replay] Infinite Health"
+cheat0_code = "02150F40+00064000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Red COM Has No Health"
+cheat1_code = "92150F48+00064000+02150F48+00000000+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Yellow COM Has No Health"
+cheat2_code = "92150F50+00064000+02150F50+00000000+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Green COM Has No Health"
+cheat3_code = "92150F58+00064000+02150F58+00000000+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Infinite Time"
+cheat4_code = "02187390+00003030"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Start On Lap 2"
+cheat5_code = "921AA288+00000000+221AA288+00000001+D2000000+00000000"
+cheat5_enable = false
+
+cheat6_desc = "[Action Replay] Instant Win Race and Time Trial (Press Select)"
+cheat6_code = "94000130+FFFB0000+221AA288+00000003+D2000000+00000000"
+cheat6_enable = false
+
+cheat7_desc = "[Action Replay] Instant Win Duel (Press Select)"
+cheat7_code = "94000130+FFFB0000+021CC828+00000008+D2000000+00000000"
+cheat7_enable = false
+
+cheat8_desc = "[Action Replay] COM Has 0 Points (Duel)"
+cheat8_code = "021CC82C+00000000"
+cheat8_enable = false

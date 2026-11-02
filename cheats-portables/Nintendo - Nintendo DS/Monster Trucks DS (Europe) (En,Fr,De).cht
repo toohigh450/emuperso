@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Monster Trucks DS (Europe) (En,Fr,De).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Monster%20Trucks%20DS%20(Europe).cht
+
+cheats = 2
+
+cheat0_desc = "[Action Replay] Max Cash"
+cheat0_code = "120F0448+0000270F"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Low Time"
+cheat1_code = "020F0344+00000001"
+cheat1_enable = false

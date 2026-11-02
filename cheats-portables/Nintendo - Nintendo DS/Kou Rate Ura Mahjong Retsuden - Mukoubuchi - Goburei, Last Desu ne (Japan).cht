@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Kou Rate Ura Mahjong Retsuden - Mukoubuchi - Goburei, Last Desu ne (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Kou%20Rate%20Ura%20Mahjong%20Retsuden%20-%20Mukoubuchi%20-%20Goburei%2C%20Last%20Desu%20ne%20(Japan).cht
+
+cheats = 1
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "520CC4B4+EE070F90+E20005F4+00000048+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2E4875D+0009000A+00350077+00000120+020CC4B4+E92D401E+020CC4B8+FAFCD04D+D2000000+00000000"
+cheat0_enable = false

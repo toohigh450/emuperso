@@ -1,0 +1,93 @@
+# Recherche locale pour la ROM : Dr. Mario [World][!!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Dr.%20Mario%20(World)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Dr.%20Mario%20(World).cht
+
+cheats = 21
+
+cheat0_desc = "[GameShark] Always Get Pill Modifier"
+cheat0_code = "01??13C2"
+cheat0_enable = false
+
+cheat1_desc = "[GameShark] Pill Colour Modifier"
+cheat1_code = "01XX13C2"
+cheat1_enable = false
+
+cheat2_desc = "[GameShark] Postion Of Pill Falling Modifier"
+cheat2_code = "01XX13C3"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Screen doesn't blank in pause mode"
+cheat3_code = "CEE-B5E-D50+9EE-B7E-911"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Get 4 pills in a row or kill 1 virus to complete level"
+cheat4_code = "00B-E3D-B32"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] No speed increase every 10 pills"
+cheat5_code = "C9A-5FD-E69"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Speed increase after every pill"
+cheat6_code = "01A-5ED-C42"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Speed increase after every 5 pills"
+cheat7_code = "05A-5ED-C42"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Always Get Pill Modifier"
+cheat8_code = "010013C2"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Pill Colour Modifier"
+cheat9_code = "010013C2"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Postion Of Pill Falling Modifier"
+cheat10_code = "010013C3"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Drop Capsule Anywhere To Clear Level"
+cheat11_code = "18A-3AD-6EA+3EB-E2D-6EA"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Cannot See Next Pill"
+cheat12_code = "A91-D5E-4C3+114-38C-6EE"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Selected Pill Always Appears"
+cheat13_code = "3E1-C9E-6E9+001-CBE-087+001-CAE-5D4"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Press Down To Descend Pill"
+cheat14_code = "002-3CE-19E"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Always Get The Same Pill"
+cheat15_code = "FA1-CCE-4C1"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] OFF-In Game Music Modifier"
+cheat16_code = "000-14C-F76"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Virus Level Menu Music Modifier"
+cheat17_code = "0149E69D"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Speed Menu Music Modifier"
+cheat18_code = "0141E69F"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Music Does Not Stop When Paused"
+cheat19_code = "00E-B9E-E6E"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Access Lost 1 Player VS COM Game Select"
+cheat20_code = "145-97F-D5A"
+cheat20_enable = false

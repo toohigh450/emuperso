@@ -1,0 +1,96 @@
+# Recherche locale pour la ROM : Konami GB Collection Vol.4 [Europe][GB Compatible][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Konami%20GB%20Collection%20Vol.4%20(Europe)%20(GB%20Compatible).cht
+
+cheats = 22
+
+cheat0_desc = "[Format source non précisé] Infinite Time"
+cheat0_code = "EAE-9AB-081"
+cheat0_enable = false
+
+cheat1_desc = "[Format source non précisé] Infinite Time"
+cheat1_code = "016325C5"
+cheat1_enable = false
+
+cheat2_desc = "[Format source non précisé] Infinite Health"
+cheat2_code = "010D89CC"
+cheat2_enable = false
+
+cheat3_desc = "[Format source non précisé] Infinite Hearts"
+cheat3_code = "019A86CC"
+cheat3_enable = false
+
+cheat4_desc = "[Format source non précisé] Infinite Lives"
+cheat4_code = "0199C5C8"
+cheat4_enable = false
+
+cheat5_desc = "[Format source non précisé] Infinite Time"
+cheat5_code = "010D82CC"
+cheat5_enable = false
+
+cheat6_desc = "[Format source non précisé] Infinite Lives"
+cheat6_code = "019980C9"
+cheat6_enable = false
+
+cheat7_desc = "[Format source non précisé] Invincibility"
+cheat7_code = "C95-EAB-E69"
+cheat7_enable = false
+
+cheat8_desc = "[Format source non précisé] Infinite Health"
+cheat8_code = "2AE-EFE-6E2"
+cheat8_enable = false
+
+cheat9_desc = "[Format source non précisé] Infinite Hearts"
+cheat9_code = "008-24B-E6E"
+cheat9_enable = false
+
+cheat10_desc = "[Format source non précisé] Infinite Lives"
+cheat10_code = "008-B3A-E6E"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Infinite Time"
+cheat11_code = "2A3-CBA-6E2"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Hit Anywhere"
+cheat12_code = "00E-208-C4E"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Multi-Jump"
+cheat13_code = "872-A3B-E62+C82-A4B-E69+E62-A5B-19E+102-A6B-C41+202-A7B-6E5+152-A8B-E67+C94-D8E-809"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Start with ?? Lives, instead of 2"
+cheat14_code = "056-91E-E62+EA6-95E-081"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Invincibility"
+cheat15_code = "C9A-00B-081"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Never Lose Powerup Space"
+cheat16_code = "FAB-3BB-4C1"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Infinite Lives"
+cheat17_code = "002-588-E6E"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Hit Anywhere"
+cheat18_code = "3D3-3BB-C4B+053-81A-E6E+003-2EB-A29+003-1DB-A29"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Autofire without pressing A"
+cheat19_code = "00E-DAB-C49"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Start with ?? Lives, instead of 2"
+cheat20_code = "055-F48-E62"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Start on Level ??"
+cheat21_code = "025-DF8-E6E"
+cheat21_enable = false

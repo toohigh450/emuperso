@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Winx Club - Saving Alfea (Europe) (En,Fr,De,Es,It,Pt).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Winx%20Club%20-%20Saving%20Alfea%20(Europe).cht
+
+cheats = 6
+
+cheat0_desc = "[Action Replay] Max Orbs"
+cheat0_code = "94000130+FFFB0000+1217D558+000003E7+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Health Never Decrease"
+cheat1_code = "6213CA98+00000000+B213CA98+00000000+DA000000+00000450+D7000000+00000444+D2000000+00000000"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] Refill Health"
+cheat2_code = "94000130+FFFB0000+6213CA98+00000000+B213CA98+00000000+DA000000+00000450+D7000000+00000444+D2000000+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Invincible"
+cheat3_code = "6213CA98+00000000+B213CA98+00000000+10000470+0000FFFF+D2000000+00000000"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Moon Jump"
+cheat4_code = "94000130+FFBD0000+6213CA98+00000000+B213CA98+00000000+B00001E0+00000000+0000008C+FFFFEC80+D2000000+00000000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] Spell Meter Never Decrease"
+cheat5_code = "6213CA98+00000000+B213CA98+00000000+B00001E0+00000000+10000420+00000000+D2000000+00000000"
+cheat5_enable = false

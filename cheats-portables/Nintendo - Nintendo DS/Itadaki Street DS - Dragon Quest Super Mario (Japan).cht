@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Itadaki Street DS - Dragon Quest Super Mario (Japan).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Itadaki%20Street%20DS%20-%20Dragon%20Quest%20Super%20Mario%20(Japan).cht
+
+cheats = 4
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "52009D64+EE070F90+E2000424+00000048+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2DCE3A9+01200035+000A0371+00000009+02009D64+E92D401E+02009D68+FAFFD9AD+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Points"
+cheat1_code = "021BAA7C+0001869F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] CPU Has 0 Points"
+cheat2_code = "021BAD44+00000000+021BB00C+00000000+021BB2D4+00000000"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] Press Button for Dice Side Modifier"
+cheat3_code = "927FFFA8+FBFF0000+222281E0+00000006+D0000000+00000000+927FFFA8+F7FF0000+222281E0+00000001+D2000000+00000000"
+cheat3_enable = false

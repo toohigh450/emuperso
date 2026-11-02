@@ -1,0 +1,197 @@
+# Recherche locale pour la ROM : Crystalis [USA][!].gbc
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Crystalis%20(USA)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Color/Crystalis%20(USA).cht
+
+cheats = 47
+
+cheat0_desc = "[Game Genie] Infinite Gold"
+cheat0_code = "FA1-4D8-4C1+FA1-518-4C1"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Infinite HP"
+cheat1_code = "FA9-F0B-4C1"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Take No Damage From Poison"
+cheat2_code = "009-78B-A28"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Take No Damage From Poison Field"
+cheat3_code = "00A-FDB-19E"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] Take No Damage From Oak Forest Gas"
+cheat4_code = "003-1C9-19E"
+cheat4_enable = false
+
+cheat5_desc = "[Game Genie] Refresh Uses No MP"
+cheat5_code = "FA2-BB9-4C1"
+cheat5_enable = false
+
+cheat6_desc = "[Game Genie] Telepathy Uses No MP"
+cheat6_code = "FA9-68C-4C1"
+cheat6_enable = false
+
+cheat7_desc = "[Game Genie] Teleport Uses No MP"
+cheat7_code = "FA5-A29-4C1"
+cheat7_enable = false
+
+cheat8_desc = "[Game Genie] Paralysis Uses No MP"
+cheat8_code = "003-4E9-F7A"
+cheat8_enable = false
+
+cheat9_desc = "[Game Genie] Barrier Uses No MP"
+cheat9_code = "009-A49-E6E"
+cheat9_enable = false
+
+cheat10_desc = "[Game Genie] Change Uses No MP"
+cheat10_code = "00B-35C-B3A"
+cheat10_enable = false
+
+cheat11_desc = "[Game Genie] Flight Uses No MP"
+cheat11_code = "00A-6B9-E6E+00A-7D9-E6E"
+cheat11_enable = false
+
+cheat12_desc = "[Game Genie] Level 3 Sword Power Uses No MP"
+cheat12_code = "FAE-A99-4C1"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Infinite HP"
+cheat13_code = "01FFC8C2"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Max HP"
+cheat14_code = "01FFC7C2"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Infinite MP"
+cheat15_code = "01FFCAC2"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Max MP"
+cheat16_code = "01FFC9C2"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Infinite Gold"
+cheat17_code = "01FFECC2+01FFEDC2"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Max Attack"
+cheat18_code = "0163CCC2"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Max Defense Armor"
+cheat19_code = "0163CEC2"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Max Defense Shield"
+cheat20_code = "0163D0C2"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Max Level"
+cheat21_code = "0110D9C2"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Quick Exp"
+cheat22_code = "01FFDAC2"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Have All Swords"
+cheat23_code = "01FFDCC2"
+cheat23_enable = false
+
+cheat24_desc = "[Format source non précisé] Have All Armors"
+cheat24_code = "01FFDDC2"
+cheat24_enable = false
+
+cheat25_desc = "[Format source non précisé] Have All Shields"
+cheat25_code = "01FFDEC2"
+cheat25_enable = false
+
+cheat26_desc = "[Format source non précisé] Have All Powers"
+cheat26_code = "01FFDFC2"
+cheat26_enable = false
+
+cheat27_desc = "[Format source non précisé] Have All Magics"
+cheat27_code = "01FFE0C2"
+cheat27_enable = false
+
+cheat28_desc = "[Format source non précisé] 65280 Money (Inf. money if left on)"
+cheat28_code = "01FFECC2"
+cheat28_enable = false
+
+cheat29_desc = "[Format source non précisé] 65280 exp for Each Enemy Killed"
+cheat29_code = "01FFDBC2"
+cheat29_enable = false
+
+cheat30_desc = "[Format source non précisé] Always Have Sword Charges Up"
+cheat30_code = "0132ABC2"
+cheat30_enable = false
+
+cheat31_desc = "[Format source non précisé] Max/Infinite Magic Points"
+cheat31_code = "01FECAC2"
+cheat31_enable = false
+
+cheat32_desc = "[Format source non précisé] Max/Infinite Hit Points"
+cheat32_code = "01FAC8C2"
+cheat32_enable = false
+
+cheat33_desc = "[Format source non précisé] Untouchable"
+cheat33_code = "0106AEC2"
+cheat33_enable = false
+
+cheat34_desc = "[Format source non précisé] Infinite Gold"
+cheat34_code = "FA1-4D8-4C1+FA1-518-4C1"
+cheat34_enable = false
+
+cheat35_desc = "[Format source non précisé] Infinite HP"
+cheat35_code = "FA9-F0B-4C1"
+cheat35_enable = false
+
+cheat36_desc = "[Format source non précisé] Take No Damage From Poison"
+cheat36_code = "009-78B-A28"
+cheat36_enable = false
+
+cheat37_desc = "[Format source non précisé] Take No Damage From Poison Field"
+cheat37_code = "00A-FDB-19E"
+cheat37_enable = false
+
+cheat38_desc = "[Format source non précisé] Take No Damage From Oak Forest Gas"
+cheat38_code = "003-1C9-19E"
+cheat38_enable = false
+
+cheat39_desc = "[Format source non précisé] Refresh Uses No MP"
+cheat39_code = "FA2-BB9-4C1"
+cheat39_enable = false
+
+cheat40_desc = "[Format source non précisé] Telepathy Uses No MP"
+cheat40_code = "FA9-68C-4C1"
+cheat40_enable = false
+
+cheat41_desc = "[Format source non précisé] Teleport Uses No MP"
+cheat41_code = "FA5-A29-4C1"
+cheat41_enable = false
+
+cheat42_desc = "[Format source non précisé] Paralysis Uses No MP"
+cheat42_code = "003-4E9-F7A"
+cheat42_enable = false
+
+cheat43_desc = "[Format source non précisé] Barrier Uses No MP"
+cheat43_code = "009-A49-E6E"
+cheat43_enable = false
+
+cheat44_desc = "[Format source non précisé] Change Uses No MP"
+cheat44_code = "00B-35C-B3A"
+cheat44_enable = false
+
+cheat45_desc = "[Format source non précisé] Flight Uses No MP"
+cheat45_code = "00A-6B9-E6E+00A-7D9-E6E"
+cheat45_enable = false
+
+cheat46_desc = "[Format source non précisé] Level 3 Sword Power Uses No MP"
+cheat46_code = "FAE-A99-4C1"
+cheat46_enable = false

@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Need for Speed - ProStreet (Europe) (En,Fr,De,Es,It).nds
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20DS/Need%20for%20Speed%20-%20ProStreet%20(Europe).cht
+
+cheats = 6
+
+cheat0_desc = "[Action Replay] WFCReplay HTTPS Bypass Code (v0.7)"
+cheat0_code = "520491B8+EE070F90+E2000518+0000004A+CA02A20D+58CC4B0B+D105429C+785C185B+3301701C+D1FA4224+00A45E14+3202D005+D3EF1909+881403A1+4778E7F9+EE070F90+E8BD801E+2F2F3A73+D2DE39C5+0009000A+001C0073+015D0012+00000000+00000000+020491B8+E92D401E+020491BC+FAFEDCD5+D2000000+00000000"
+cheat0_enable = false
+
+cheat1_desc = "[Action Replay] Max Cash"
+cheat1_code = "02076558+000F423F"
+cheat1_enable = false
+
+cheat2_desc = "[Action Replay] No AI"
+cheat2_code = "2206BDA8+00000001"
+cheat2_enable = false
+
+cheat3_desc = "[Action Replay] 1 Lap Races"
+cheat3_code = "2206BD88+00000001"
+cheat3_enable = false
+
+cheat4_desc = "[Action Replay] Infinite Turbo"
+cheat4_code = "12075E58+00001000"
+cheat4_enable = false
+
+cheat5_desc = "[Action Replay] All Cars Unlocked"
+cheat5_code = "022FE454+FFFFFFFF+022FE458+FFFFFFFF"
+cheat5_enable = false

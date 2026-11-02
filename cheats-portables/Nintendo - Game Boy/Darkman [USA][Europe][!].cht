@@ -1,0 +1,106 @@
+# Recherche locale pour la ROM : Darkman [USA][Europe][!].gb
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Darkman%20(USA%2C%20Europe)%20(Game%20Genie).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Darkman%20(USA%2C%20Europe)%20(GameShark).cht
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy/Darkman%20(USA%2C%20Europe).cht
+
+cheats = 24
+
+cheat0_desc = "[Game Genie] Start 1st Life With Mega-Energy"
+cheat0_code = "63F-91C-91A"
+cheat0_enable = false
+
+cheat1_desc = "[Game Genie] Start 1st Life With 1/2 Energy"
+cheat1_code = "0AF-91C-91A"
+cheat1_enable = false
+
+cheat2_desc = "[Game Genie] Start Rest Of Lives With Mega-Energy"
+cheat2_code = "636-40D-91A"
+cheat2_enable = false
+
+cheat3_desc = "[Game Genie] Start With 1 Life"
+cheat3_code = "002-4DF-E66"
+cheat3_enable = false
+
+cheat4_desc = "[Game Genie] Start With 8 Lives"
+cheat4_code = "072-4DF-E66"
+cheat4_enable = false
+
+cheat5_desc = "[Game Genie] Infinite Lives"
+cheat5_code = "014-DDF-E69"
+cheat5_enable = false
+
+cheat6_desc = "[Game Genie] Infinite Time"
+cheat6_code = "005-97F-E6E"
+cheat6_enable = false
+
+cheat7_desc = "[Game Genie] Start With 9 Minutes"
+cheat7_code = "909-ACA-E6B"
+cheat7_enable = false
+
+cheat8_desc = "[Game Genie] Infinite Energy"
+cheat8_code = "BA5-0FF-081"
+cheat8_enable = false
+
+cheat9_desc = "[GameShark] Infinite Time"
+cheat9_code = "016489C0"
+cheat9_enable = false
+
+cheat10_desc = "[GameShark] Infinite Health"
+cheat10_code = "016418C4"
+cheat10_enable = false
+
+cheat11_desc = "[Format source non précisé] Start 1st life with mega-energy"
+cheat11_code = "63F-91C-91A"
+cheat11_enable = false
+
+cheat12_desc = "[Format source non précisé] Start 1st life with 1/2 energy"
+cheat12_code = "0AF-91C-91A"
+cheat12_enable = false
+
+cheat13_desc = "[Format source non précisé] Start rest of lives with mega-energy"
+cheat13_code = "636-40D-91A"
+cheat13_enable = false
+
+cheat14_desc = "[Format source non précisé] Start with 1 life"
+cheat14_code = "002-4DF-E66"
+cheat14_enable = false
+
+cheat15_desc = "[Format source non précisé] Start with 8 lives"
+cheat15_code = "072-4DF-E66"
+cheat15_enable = false
+
+cheat16_desc = "[Format source non précisé] Infinite lives"
+cheat16_code = "014-DDF-E69"
+cheat16_enable = false
+
+cheat17_desc = "[Format source non précisé] Infinite time"
+cheat17_code = "005-97F-E6E"
+cheat17_enable = false
+
+cheat18_desc = "[Format source non précisé] Start with 9 minutes"
+cheat18_code = "909-ACA-E6B"
+cheat18_enable = false
+
+cheat19_desc = "[Format source non précisé] Infinite energy"
+cheat19_code = "BA5-0FF-081"
+cheat19_enable = false
+
+cheat20_desc = "[Format source non précisé] Infinite Time"
+cheat20_code = "016489C0"
+cheat20_enable = false
+
+cheat21_desc = "[Format source non précisé] Infinite Health"
+cheat21_code = "016418C4"
+cheat21_enable = false
+
+cheat22_desc = "[Format source non précisé] Invincibility"
+cheat22_code = "018BB6C0"
+cheat22_enable = false
+
+cheat23_desc = "[Format source non précisé] Infinite Lives"
+cheat23_code = "01038AC0"
+cheat23_enable = false

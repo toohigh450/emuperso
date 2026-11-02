@@ -1,0 +1,60 @@
+# Recherche locale pour la ROM : Star Wars - Episode III - Revenge of the Sith (USA) (En,Fr,Es).gba
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Game%20Boy%20Advance/Star%20Wars%20-%20Episode%20III%20-%20Revenge%20of%20the%20Sith%20(USA%2C%20Europe)%20(Code%20Breaker).cht
+
+cheats = 13
+
+cheat0_desc = "[Code Breaker] Infinite Health"
+cheat0_code = "830077AE+6D6D"
+cheat0_enable = false
+
+cheat1_desc = "[Code Breaker] Max Health"
+cheat1_code = "8300775A+6D6D"
+cheat1_enable = false
+
+cheat2_desc = "[Code Breaker] Infinite Force Bar"
+cheat2_code = "830077B0+7373"
+cheat2_enable = false
+
+cheat3_desc = "[Code Breaker] Max Force Bar"
+cheat3_code = "8300775C+7373"
+cheat3_enable = false
+
+cheat4_desc = "[Code Breaker] Full Fury Meter"
+cheat4_code = "830077B4+6868"
+cheat4_enable = false
+
+cheat5_desc = "[Code Breaker] Infinite Lives"
+cheat5_code = "830077B2+0303"
+cheat5_enable = false
+
+cheat6_desc = "[Code Breaker] Infinite Skill Points"
+cheat6_code = "8300774A+03E7"
+cheat6_enable = false
+
+cheat7_desc = "[Code Breaker] Max Strenght"
+cheat7_code = "8300775E+6363"
+cheat7_enable = false
+
+cheat8_desc = "[Code Breaker] All Fury Attacks"
+cheat8_code = "83007764+0303"
+cheat8_enable = false
+
+cheat9_desc = "[Code Breaker] All Force Skills"
+cheat9_code = "4300774E+6969+00000006+0002"
+cheat9_enable = false
+
+cheat10_desc = "[Code Breaker] Infinite Time"
+cheat10_code = "33002A9C+0032"
+cheat10_enable = false
+
+cheat11_desc = "[Code Breaker] Low Mission Time"
+cheat11_code = "730076D8+0100+830076D8+0000"
+cheat11_enable = false
+
+cheat12_desc = "[Code Breaker] All Missions Open"
+cheat12_code = "83007760+1616"
+cheat12_enable = false
