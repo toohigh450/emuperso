@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Wild Guns (World) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Wild%20Guns%20%28World%29%20%28Game%20Genie%29.cht
+
+cheats = 3 
+
+cheat0_desc = "Infinite Points And Lives"
+cheat0_code = "EEF2-2A78+ABF2-2A58+BCF2-2A88+78F2-2AE8"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Bombs (To Use, Press X Button)"
+cheat1_code = "17FC-2A78"
+cheat1_enable = false 
+
+cheat2_desc = "Always Have Double Shotgun"
+cheat2_code = "D0FC-2378"
+cheat2_enable = false

@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Xardion (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Xardion%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 3 
+
+cheat0_desc = "Immune To Most Collisions"
+cheat0_code = "4A25-0FB4"
+cheat0_enable = false 
+
+cheat1_desc = "Immune To Most Bullets"
+cheat1_code = "4A31-6DFD"
+cheat1_enable = false 
+
+cheat2_desc = "Start Characters At Level 12"
+cheat2_code = "DDE2-07CD"
+cheat2_enable = false

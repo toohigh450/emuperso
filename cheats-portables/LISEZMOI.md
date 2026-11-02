@@ -1,6 +1,6 @@
-# Cheats individuels Portables
+# Cheats individuels — Portables, NES et SNES
 
-2958 fichiers .cht, 82154 codes issus de sources publiques. Les codes sont désactivés et non testés en jeu. Correspondance par titre, région et révision ; aucun rom_sha256 ajouté sans identifier les octets. Confirme chaque association dans Portables. Les hacks et variantes sans source précise restent dans RECHERCHES-RESTANTES.json.
+7993 fichiers .cht, 204641 codes issus de sources publiques (portables : 2958 fichiers / 82154 codes ; NES : 2262 fichiers / 44504 codes ; SNES : 2773 fichiers / 77983 codes). Les codes sont désactivés et non testés en jeu. Correspondance par titre, région et révision ; aucun rom_sha256 ajouté sans identifier les octets. Confirme chaque association dans Portables. Les hacks et variantes sans source précise restent dans RECHERCHES-RESTANTES.json.
 
 Source et attribution : contributeurs libretro/libretro-database, https://github.com/libretro/libretro-database, commit 2fdd069d45883449cecf97deddd493492e77ff29. Licence CC BY-SA 4.0 jointe. Adaptations : sélection pour l’inventaire local, regroupement par fichier de ROM, préfixes d’appareil, métadonnées de provenance, activation initiale désactivée. Les fichiers de ce lot restent sous cette licence.
 

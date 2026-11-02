@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Ys IV - Mask of the Sun (Japan) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Ys%20IV%20-%20Mask%20of%20the%20Sun%20%28Japan%29%20%28Action%20Replay%29.cht
+
+cheats = 3 
+
+cheat0_desc = "Max Exp"
+cheat0_code = "7E097BFF+7E097CFF"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite HP"
+cheat1_code = "7E0973FF"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite GP"
+cheat2_code = "7E0983FF+7E0984FF"
+cheat2_enable = false

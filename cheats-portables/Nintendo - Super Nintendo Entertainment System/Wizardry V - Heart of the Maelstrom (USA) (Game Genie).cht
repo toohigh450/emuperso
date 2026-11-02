@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Wizardry V - Heart of the Maelstrom (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Wizardry%20V%20-%20Heart%20of%20the%20Maelstrom%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 3 
+
+cheat0_desc = "More Gold When Creating New Character"
+cheat0_code = "D0BF-D4F7"
+cheat0_enable = false 
+
+cheat1_desc = "Super Gnomes Samuri and Lords"
+cheat1_code = "4DBF-DD27+FBBD-D427"
+cheat1_enable = false 
+
+cheat2_desc = "Super Gnomes Wizards and Ninjas"
+cheat2_code = "4DBF-DD27+9BBD-D427"
+cheat2_enable = false

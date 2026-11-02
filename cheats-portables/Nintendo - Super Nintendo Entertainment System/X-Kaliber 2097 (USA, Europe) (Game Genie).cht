@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : X-Kaliber 2097 (USA, Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/X-Kaliber%202097%20%28USA,%20Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 3 
+
+cheat0_desc = "Infinite Time"
+cheat0_code = "C260-D767"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "3C6C-A76D"
+cheat1_enable = false 
+
+cheat2_desc = "Pop Cans Give You 50% Health Back"
+cheat2_code = "9C63-D56D"
+cheat2_enable = false

@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : World Soccer 94 - Road to Glory (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/World%20Soccer%2094%20-%20Road%20to%20Glory%20%28USA%29.cht
+
+cheats = 1
+
+cheat0_desc = "Score From Anywhere Goalline"
+cheat0_code = "C2ED-C7AD+C9EF-CDDD+D2EF-CD0D+99EF-CDAD"
+cheat0_enable = false

@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Wild Guns (World) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Wild%20Guns%20%28World%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Infinite Lives P1"
+cheat0_code = "7E1FB263"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Time"
+cheat1_code = "7E024699"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Blasts P1 (Purple Orbs)"
+cheat2_code = "7E1FA009"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Secondary Weapon Bullets P1"
+cheat3_code = "7E1FB099"
+cheat3_enable = false 
+
+cheat4_desc = "Secondary Weapon Modifier P1"
+cheat4_code = "7E1FA8XX"
+cheat4_enable = false
