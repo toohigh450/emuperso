@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Ren _ Stimpy Show, The - Veediots! (USA, Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Ren%20_%20Stimpy%20Show,%20The%20-%20Veediots!%20%28USA,%20Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Infinite Time"
+cheat0_code = "C2CF-D7A9"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Health"
+cheat1_code = "C2CD-0FA0"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Lives"
+cheat2_code = "C2C5-0460"
+cheat2_enable = false 
+
+cheat3_desc = "Powdered Toast Shield Lasts 85x Longer"
+cheat3_code = "EEE8-6DD6"
+cheat3_enable = false 
+
+cheat4_desc = ""Socks" Power Up Lasts 200x Longer"
+cheat4_code = "EEEF-D7AB"
+cheat4_enable = false 
+
+cheat5_desc = "Stimpy's Mouth Won't Close"
+cheat5_code = "C2C5-0FD9"
+cheat5_enable = false 
+
+cheat6_desc = "Money Is Worth 10x More"
+cheat6_code = "ECBC-6DA5+ECAB-DDA5"
+cheat6_enable = false

@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : NBA Live 98 (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/NBA%20Live%2098%20%28USA%29.cht
+
+cheats = 3
+
+cheat0_desc = "Team 1 Points Modifier"
+cheat0_code = "7E461D00"
+cheat0_enable = false
+
+cheat1_desc = "Team 2 Points Modifier"
+cheat1_code = "7E468300"
+cheat1_enable = false
+
+cheat2_desc = "Never Miss A Shot"
+cheat2_code = "CABF-1F4C+51BF-1F1C+D9BF-1FCC+FDBF-1F3C+56BF-14CC+BABF-143C"
+cheat2_enable = false

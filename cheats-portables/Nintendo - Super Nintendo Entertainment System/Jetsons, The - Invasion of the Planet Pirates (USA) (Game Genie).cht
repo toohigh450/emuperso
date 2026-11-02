@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Jetsons, The - Invasion of the Planet Pirates (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Jetsons,%20The%20-%20Invasion%20of%20the%20Planet%20Pirates%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "C26D-4767"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Time"
+cheat1_code = "C2AD-4D6F"
+cheat1_enable = false 
+
+cheat2_desc = "Invincible"
+cheat2_code = "3C62-1761"
+cheat2_enable = false 
+
+cheat3_desc = "Maximum Vacuum Power"
+cheat3_code = "D0BB-146D"
+cheat3_enable = false

@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Magic Knight Rayearth (Japan) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Magic%20Knight%20Rayearth%20%28Japan%29%20%28Action%20Replay%29.cht
+
+cheats = 1 
+
+cheat0_desc = "Infinite Money"
+cheat0_code = "7E0D8A3F+7E0D8B42+7E0D8C0F"
+cheat0_enable = false

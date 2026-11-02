@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Majin Tensei II - Spiral Nemesis (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Majin%20Tensei%20II%20-%20Spiral%20Nemesis%20%28Japan%29.cht
+
+cheats = 7
+
+cheat0_desc = "Infinite Money"
+cheat0_code = "7E00B29F+7E00B386+7E00B401"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Magic"
+cheat1_code = "7E00B59F+7E00B686+7E00B701"
+cheat1_enable = false
+
+cheat2_desc = "Naoki Infinite Hp"
+cheat2_code = "7E20000F+7E200127"
+cheat2_enable = false
+
+cheat3_desc = "Kaoru Infinite Hp"
+cheat3_code = "7E20400F+7E204127"
+cheat3_enable = false
+
+cheat4_desc = "Tomoharu Infinite Hp"
+cheat4_code = "7E20800F+7E208127"
+cheat4_enable = false
+
+cheat5_desc = "Aya Infinite Hp"
+cheat5_code = "7E20C00F+7E20C127"
+cheat5_enable = false
+
+cheat6_desc = "Karen Rose Infinite Hp"
+cheat6_code = "7E21000F+7E210127"
+cheat6_enable = false

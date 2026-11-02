@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Jikkyou Oshaberi Parodius (Japan) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Jikkyou%20Oshaberi%20Parodius%20%28Japan%29%20%28Game%20Genie%29.cht
+
+cheats = 3 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "822C-3DDD"
+cheat0_enable = false 
+
+cheat1_desc = "Infinte Continues"
+cheat1_code = "C224-3F6F"
+cheat1_enable = false 
+
+cheat2_desc = "Power Up More Quickly"
+cheat2_code = "C2BB-4FFD"
+cheat2_enable = false

@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Kunio-kun no Dodge Ball Da yo Zenin Shuugou! (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Kunio-kun%20no%20Dodge%20Ball%20Da%20yo%20Zenin%20Shuugou!%20%28Japan%29.cht
+
+cheats = 1
+
+cheat0_desc = "Infinite Team Money"
+cheat0_code = "7E044A0F+7E044B27"
+cheat0_enable = false

@@ -1,0 +1,56 @@
+# Recherche locale pour la ROM : Legend of Zelda, The - A Link to the Past (USA, Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Legend%20of%20Zelda,%20The%20-%20A%20Link%20to%20the%20Past%20%28USA,%20Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 12 
+
+cheat0_desc = "Some Shops Don't Take Your Money"
+cheat0_code = "AEEC-A586"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Bombs"
+cheat1_code = "AE67-0D30"
+cheat1_enable = false 
+
+cheat2_desc = "Almost Infinite Energy"
+cheat2_code = "AE6E-DF2A"
+cheat2_enable = false 
+
+cheat3_desc = "Almost Infinite Magic"
+cheat3_code = "AE8A-D4FA+AE8D-0D9A"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Magic"
+cheat4_code = "AE8D-0D9A+AE8A-D4FA+AE28-D4C7+AEC7-6D2E+AEC8-6FBE"
+cheat4_enable = false 
+
+cheat5_desc = "Walk Through Walls"
+cheat5_code = "EEA8-D4FA"
+cheat5_enable = false 
+
+cheat6_desc = "Get Chests Infinite Times"
+cheat6_code = "A230-DD05"
+cheat6_enable = false 
+
+cheat7_desc = "Spin Sword And Shoot Like A Higher Level Sword (Good For One Use Per Screen)"
+cheat7_code = "EE22-AF1F"
+cheat7_enable = false 
+
+cheat8_desc = "Enemies Respawn"
+cheat8_code = "C9A8-DD2A"
+cheat8_enable = false 
+
+cheat9_desc = "Free Fortune Telling And Receive 81 Rupees"
+cheat9_code = "E9A5-0F81"
+cheat9_enable = false 
+
+cheat10_desc = "Free Fortune Telling"
+cheat10_code = "DDA5-0FE1"
+cheat10_enable = false 
+
+cheat11_desc = "Warp Between Worlds Freely"
+cheat11_code = "6DC9-0D23"
+cheat11_enable = false

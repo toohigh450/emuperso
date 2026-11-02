@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Panel de Pon (Japan) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Panel%20de%20Pon%20%28Japan%29%20%28Game%20Genie%29.cht
+
+cheats = 3 
+
+cheat0_desc = "The Computer Becomes Ineffective"
+cheat0_code = "DD34-FEEC"
+cheat0_enable = false 
+
+cheat1_desc = "Freeze The Time At The Start"
+cheat1_code = "DDD7-2376"
+cheat1_enable = false 
+
+cheat2_desc = "You Always Throw A Lot of Attacks Even With Small Chains"
+cheat2_code = "17D8-938B"
+cheat2_enable = false

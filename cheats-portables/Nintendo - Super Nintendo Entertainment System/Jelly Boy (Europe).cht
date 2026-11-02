@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Jelly Boy (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Jelly%20Boy%20%28Europe%29.cht
+
+cheats = 6
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "C228-3FD4"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Time"
+cheat1_code = "C2E3-1D05"
+cheat1_enable = false
+
+cheat2_desc = "Don't Loose Music Notes When Hit"
+cheat2_code = "C226-4FA7"
+cheat2_enable = false
+
+cheat3_desc = "No Timer for Transformations"
+cheat3_code = "7E1B5663"
+cheat3_enable = false
+
+cheat4_desc = "Invincibility"
+cheat4_code = "7E1B58FF"
+cheat4_enable = false
+
+cheat5_desc = "Moon  Jump"
+cheat5_code = "C2AF-37AD+B6A4-3DDD+FAA4-3D0D+FDA4-3D6D"
+cheat5_enable = false

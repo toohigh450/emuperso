@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Jaleco Rally Big Run - The Supreme 4WD Challenge (Japan) (En)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Jaleco%20Rally%20Big%20Run%20-%20The%20Supreme%204WD%20Challenge%20%28Japan%29%20%28En%29.cht
+
+cheats = 4
+
+cheat0_desc = "Get Over 1 Million Dollars After Picking Staff"
+cheat0_code = "AEC5-6FA5"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Time"
+cheat1_code = "CEB6-AD6C"
+cheat1_enable = false
+
+cheat2_desc = "Increase Max Speed!"
+cheat2_code = "33C7-D4AF"
+cheat2_enable = false
+
+cheat3_desc = "Finish Level"
+cheat3_code = "00C7-D4AF"
+cheat3_enable = false

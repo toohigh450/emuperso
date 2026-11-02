@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Kouryuu no Mimi (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Kouryuu%20no%20Mimi%20%28Japan%29.cht
+
+cheats = 6
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "7E09C040"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Power"
+cheat1_code = "7E008C20"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Energy"
+cheat2_code = "CB6D-1F24+0D6D-14F4+DD6D-1494+626D-17F4"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Weapon Usage"
+cheat3_code = "7E09DE09"
+cheat3_enable = false
+
+cheat4_desc = "Stage Modifier"
+cheat4_code = "7E007E00"
+cheat4_enable = false
+
+cheat5_desc = "Weapon Modifier"
+cheat5_code = "7E0BC000"
+cheat5_enable = false

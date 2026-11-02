@@ -1,0 +1,56 @@
+# Recherche locale pour la ROM : Mighty Max (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Mighty%20Max%20%28USA%29.cht
+
+cheats = 12
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "7E028C09"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Energy"
+cheat1_code = "7E029403"
+cheat1_enable = false
+
+cheat2_desc = "Invincibility"
+cheat2_code = "7E0254A1"
+cheat2_enable = false
+
+cheat3_desc = "Hit Anywhere"
+cheat3_code = ""
+cheat3_enable = false
+
+cheat4_desc = "Get Items From Anywhere"
+cheat4_code = ""
+cheat4_enable = false
+
+cheat5_desc = "Super Jump"
+cheat5_code = "2E69-CF0F"
+cheat5_enable = false
+
+cheat6_desc = "No Weapon Pieces Needed"
+cheat6_code = ""
+cheat6_enable = false
+
+cheat7_desc = "Infinite Health"
+cheat7_code = ""
+cheat7_enable = false
+
+cheat8_desc = "Infinite Lives"
+cheat8_code = ""
+cheat8_enable = false
+
+cheat9_desc = "Invincible"
+cheat9_code = ""
+cheat9_enable = false
+
+cheat10_desc = "Freeze Timer"
+cheat10_code = ""
+cheat10_enable = false
+
+cheat11_desc = "Enable Debug Level Select"
+cheat11_code = ""
+cheat11_enable = false

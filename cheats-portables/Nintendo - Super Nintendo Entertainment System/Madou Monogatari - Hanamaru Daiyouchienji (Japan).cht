@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Madou Monogatari - Hanamaru Daiyouchienji (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Madou%20Monogatari%20-%20Hanamaru%20Daiyouchienji%20%28Japan%29.cht
+
+cheats = 7
+
+cheat0_desc = "1 EXP = 1 Level"
+cheat0_code = "DD36-6FA6"
+cheat0_enable = false
+
+cheat1_desc = "Fighting Weak Enemies Gives You 99 EXP"
+cheat1_code = "17CE-6DA5"
+cheat1_enable = false
+
+cheat2_desc = "Earn 1 Cookie In Battle To Get 9999"
+cheat2_code = "DDC1-A405"
+cheat2_enable = false
+
+cheat3_desc = "No Random Battles"
+cheat3_code = "BABF-DD6B"
+cheat3_enable = false
+
+cheat4_desc = "Can Always Buy Things"
+cheat4_code = "6DB3-67A6"
+cheat4_enable = false
+
+cheat5_desc = "Sell An Item For 9999 Cookies"
+cheat5_code = "DDED-0C74"
+cheat5_enable = false
+
+cheat6_desc = "Get 9984 Cookies When You Buy Something You Can't Afford"
+cheat6_code = "45B0-AD66"
+cheat6_enable = false

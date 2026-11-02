@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Mr. Tuff (Europe) (En,Fr,De,Es,It) (Proto) (1994-12-05)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Mr.%20Tuff%20%28Europe%29%20%28En,Fr,De,Es,It%29%20%28Proto%29%20%281994-12-05%29.cht
+
+cheats = 4
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "82A3-44A1"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "822B-4761"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Time"
+cheat2_code = "C230-1765"
+cheat2_enable = false
+
+cheat3_desc = "Invincibility"
+cheat3_code = "2D87-3F65"
+cheat3_enable = false

@@ -1,0 +1,44 @@
+# Recherche locale pour la ROM : Putty Squad (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Putty%20Squad%20%28Europe%29.cht
+
+cheats = 9
+
+cheat0_desc = "Invincibility against 1-Hit Deaths"
+cheat0_code = "042D-470D+04A1-3FD7"
+cheat0_enable = false
+
+cheat1_desc = "Invincibility against Enemies and Hazzards"
+cheat1_code = "6D62-449B"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Health"
+cheat2_code = "8BEC-170D"
+cheat2_enable = false
+
+cheat3_desc = "Inflation uses no Health"
+cheat3_code = "6D62-CF9C+C969-3DFC"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Lives"
+cheat4_code = "C964-470F"
+cheat4_enable = false
+
+cheat5_desc = "Stars worth ??"
+cheat5_code = "D42D-1DAD"
+cheat5_enable = false
+
+cheat6_desc = "Infinite Health"
+cheat6_code = "7E00264E"
+cheat6_enable = false
+
+cheat7_desc = "Infinite Lives"
+cheat7_code = "7E003563"
+cheat7_enable = false
+
+cheat8_desc = "Keep Stars after Dying"
+cheat8_code = "C969-4FDF+C969-44DF"
+cheat8_enable = false

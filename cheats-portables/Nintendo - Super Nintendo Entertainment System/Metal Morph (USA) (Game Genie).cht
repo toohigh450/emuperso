@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Metal Morph (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Metal%20Morph%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Start With 255 Continues"
+cheat0_code = "EE6C-1FDD"
+cheat0_enable = false 
+
+cheat1_desc = "Get 255 Laser Rounds When You Collect Them"
+cheat1_code = "DA36-CDA5+DD36-CFD5"
+cheat1_enable = false 
+
+cheat2_desc = "Start With 255 Continues"
+cheat2_code = "EE6C-1FDD"
+cheat2_enable = false 
+
+cheat3_desc = "Freeze Timer On Continue Screen"
+cheat3_code = "C2AD-4D65"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Ammo For All Weapons"
+cheat4_code = "C926-C7A1"
+cheat4_enable = false 
+
+cheat5_desc = "Get 255 Laser Rounds When You Collect Them"
+cheat5_code = "DA36-CDA5+DD36-CFD5"
+cheat5_enable = false 
+
+cheat6_desc = "Infinite Continues"
+cheat6_code = "C9A9-4F65"
+cheat6_enable = false

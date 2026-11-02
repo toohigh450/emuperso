@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Kidou Senshi Z Gundam - Away to the Newtype (Japan) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Kidou%20Senshi%20Z%20Gundam%20-%20Away%20to%20the%20Newtype%20%28Japan%29%20%28Game%20Genie%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Experience Is At 100"
+cheat0_code = "10F2-9AEC"
+cheat0_enable = false 
+
+cheat1_desc = "Experience Is At 255"
+cheat1_code = "EEF2-9AEC"
+cheat1_enable = false 
+
+cheat2_desc = "Experience Is At 9999"
+cheat2_code = "37F2-9AEC+D7F2-927C"
+cheat2_enable = false 
+
+cheat3_desc = "Experience Is At 65535"
+cheat3_code = "EEF2-9AEC+EEF2-927C"
+cheat3_enable = false 
+
+cheat4_desc = "You Have 0 Up Grade Points"
+cheat4_code = "DDFC-FE5B"
+cheat4_enable = false 
+
+cheat5_desc = "You Have 100 Up Grade Points"
+cheat5_code = "10FC-FE5B"
+cheat5_enable = false 
+
+cheat6_desc = "You Have 255 Up Grade Points"
+cheat6_code = "EEFC-FE5B"
+cheat6_enable = false

@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Maerchen Adventure Cotton 100- (Japan) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Maerchen%20Adventure%20Cotton%20100-%20%28Japan%29%20%28Action%20Replay%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "7E0BE909"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Super Attacks"
+cheat1_code = "7E11DE09"
+cheat1_enable = false 
+
+cheat2_desc = "Max Fairies"
+cheat2_code = "7E0FCC04"
+cheat2_enable = false 
+
+cheat3_desc = "More Powerful Gun"
+cheat3_code = "7E11B809"
+cheat3_enable = false 
+
+cheat4_desc = "Enable Cutscene Viewer (Press Start At Title Screen)"
+cheat4_code = "7E0C0F01"
+cheat4_enable = false 
+
+cheat5_desc = "Invincibility"
+cheat5_code = "7E20F85D"
+cheat5_enable = false 
+
+cheat6_desc = "Level Modifier"
+cheat6_code = "7E0BEF0?"
+cheat6_enable = false

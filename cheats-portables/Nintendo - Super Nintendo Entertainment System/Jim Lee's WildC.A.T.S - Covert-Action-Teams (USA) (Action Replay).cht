@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Jim Lee's WildC.A.T.S - Covert-Action-Teams (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Jim%20Lee's%20WildC.A.T.S%20-%20Covert-Action-Teams%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "7E401E48"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives P1"
+cheat1_code = "7E1F9309"
+cheat1_enable = false 
+
+cheat2_desc = "Power Is Always Maxed Out"
+cheat2_code = "7E0D7B9F"
+cheat2_enable = false 
+
+cheat3_desc = "Power At 5"
+cheat3_code = "7E1F9505"
+cheat3_enable = false 
+
+cheat4_desc = "Enemy Has 1 Hit"
+cheat4_code = "7EC1FE01"
+cheat4_enable = false 
+
+cheat5_desc = "Most Enemies Have 1 Hit"
+cheat5_code = "7E431E00+7E433E00+7E41FE00+7E413E00+7E461E00+7E467E00+7E455E00+7E437E00+7E45BE00"
+cheat5_enable = false

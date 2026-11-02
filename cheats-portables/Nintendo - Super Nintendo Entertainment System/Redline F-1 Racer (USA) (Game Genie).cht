@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Redline F-1 Racer (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Redline%20F-1%20Racer%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Always In 1st Place"
+cheat0_code = "C98E+6FDF"
+cheat0_enable = false 
+
+cheat1_desc = "Don't Lose Speed When You Get Off Accelerator Button"
+cheat1_code = "C98C+6F0F"
+cheat1_enable = false 
+
+cheat2_desc = "No Loss Of Speed On Grass"
+cheat2_code = "C9BD+0F04"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Special Fuel"
+cheat3_code = "3CAA+AF04"
+cheat3_enable = false 
+
+cheat4_desc = "Instant 255 MPH Speed (Best To Get Into 6th Gear Before You Activate This Code, Then You Can Go 357 MPH)"
+cheat4_code = "CBC5+D70F+EEC5+D7AF"
+cheat4_enable = false

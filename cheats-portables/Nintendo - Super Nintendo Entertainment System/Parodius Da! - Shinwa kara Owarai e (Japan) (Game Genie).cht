@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Parodius Da! - Shinwa kara Owarai e (Japan) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Parodius%20Da!%20-%20Shinwa%20kara%20Owarai%20e%20%28Japan%29%20%28Game%20Genie%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "8287-DFAD"
+cheat0_enable = false 
+
+cheat1_desc = "Start Each Life At Speed Level 4 With Missles, Lasers, And Option (Vic Viper Only)"
+cheat1_code = "D081-A404+DD86-DF64+6285-AFD4+6281-A764"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Super Bombs Once You Collect One"
+cheat2_code = "892A-AFAD"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite "Upside-Down" Konami Code Use"
+cheat3_code = "828A-DFDF"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite "Super Bomb" Controller Code Use"
+cheat4_code = "8283-D76F"
+cheat4_enable = false 
+
+cheat5_desc = "Get Laser Weapon Instead Of Shield With Konami Code"
+cheat5_code = "5D3D-D76F+5D3F-DD0F"
+cheat5_enable = false 
+
+cheat6_desc = "Konami Code Speed Modifier"
+cheat6_code = "##33-ADDD"
+cheat6_enable = false

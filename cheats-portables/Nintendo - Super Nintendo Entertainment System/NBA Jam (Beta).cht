@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : NBA Jam (Beta)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/NBA%20Jam%20%28Beta%29.cht
+
+cheats = 4
+
+cheat0_desc = "Secret Player Modifier, Player 1"
+cheat0_code = "7E1CFF36+7E1D0000"
+cheat0_enable = false
+
+cheat1_desc = "Secret Player Modifier, Player 2"
+cheat1_code = "7E1D0100+7E1D0200"
+cheat1_enable = false
+
+cheat2_desc = "Secret Player Modifier, Player 3"
+cheat2_code = "7E1D0300+7E1D0400"
+cheat2_enable = false
+
+cheat3_desc = "Secret Player Modifier, Player 4"
+cheat3_code = "7E1D0500+7E1D0600"
+cheat3_enable = false

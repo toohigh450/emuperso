@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : HyperZone (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/HyperZone%20%28USA%29.cht
+
+cheats = 7
+
+cheat0_desc = "Start with 8 lives"
+cheat0_code = "D5C4-DFD1"
+cheat0_enable = false
+
+cheat1_desc = "Start with 1 life"
+cheat1_code = "DDC4-DFD1"
+cheat1_enable = false
+
+cheat2_desc = "Restore energy more quickly"
+cheat2_code = "D76A-D7D5"
+cheat2_enable = false
+
+cheat3_desc = "Restore energy more slowly"
+cheat3_code = "DD6A-D7D5"
+cheat3_enable = false
+
+cheat4_desc = "Infinite energy"
+cheat4_code = "4A8A-DFD1"
+cheat4_enable = false
+
+cheat5_desc = "Invincibility"
+cheat5_code = "7E18EDFF+7E18EEFF"
+cheat5_enable = false
+
+cheat6_desc = "Instantly Clear Zone"
+cheat6_code = "7E13C101"
+cheat6_enable = false

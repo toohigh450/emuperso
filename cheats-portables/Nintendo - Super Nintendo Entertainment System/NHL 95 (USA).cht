@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : NHL 95 (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/NHL%2095%20%28USA%29.cht
+
+cheats = 1
+
+cheat0_desc = "Score From Anywhere"
+cheat0_code = "C900-7F9F+AD00-7FBF+DC00-7F2F+FD00-74FF+C100-742F+0900-77FF"
+cheat0_enable = false

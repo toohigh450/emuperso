@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Ossu!! Karate-bu (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Ossu!!%20Karate-bu%20%28Japan%29.cht
+
+cheats = 6
+
+cheat0_desc = "Inf.Health"
+cheat0_code = "7E0A15A0"
+cheat0_enable = false
+
+cheat1_desc = "Inf.Special"
+cheat1_code = "7E0A1460"
+cheat1_enable = false
+
+cheat2_desc = "Character Modifier"
+cheat2_code = "7E085800"
+cheat2_enable = false
+
+cheat3_desc = "Opponent Modifier"
+cheat3_code = "7E0878BE"
+cheat3_enable = false
+
+cheat4_desc = "Opponent No Special"
+cheat4_code = "7E0A3400"
+cheat4_enable = false
+
+cheat5_desc = "Enable Takagi and Chiyo Moyo Cheat"
+cheat5_code = "7E0F0901"
+cheat5_enable = false

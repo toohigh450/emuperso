@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Kikou Keisatsu Metal Jack (Japan) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Kikou%20Keisatsu%20Metal%20Jack%20%28Japan%29%20%28Action%20Replay%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Infinite Time"
+cheat0_code = "7E003106+7E003200"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Health"
+cheat1_code = "7E006031"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Lives"
+cheat2_code = "7E006109"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Ammo"
+cheat3_code = "7E006B63"
+cheat3_enable = false 
+
+cheat4_desc = "Moon Jump"
+cheat4_code = "7E005F01"
+cheat4_enable = false 
+
+cheat5_desc = "Moon Jump When Attacking"
+cheat5_code = "7E007220"
+cheat5_enable = false 
+
+cheat6_desc = "Can't Walk"
+cheat6_code = "7E006C03"
+cheat6_enable = false

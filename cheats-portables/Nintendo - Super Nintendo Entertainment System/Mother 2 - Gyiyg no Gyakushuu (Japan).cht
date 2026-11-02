@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Mother 2 - Gyiyg no Gyakushuu (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Mother%202%20-%20Gyiyg%20no%20Gyakushuu%20%28Japan%29.cht
+
+cheats = 2
+
+cheat0_desc = "Talk to the air to get to the Higher-Tier Debug Menu"
+cheat0_code = "4478-EFA1+5E78-E4D1+7978-E401+AF78-E461+3C78-E4A1"
+cheat0_enable = false
+
+cheat1_desc = "Talk to the air to get to the 'Apple' Debug Menu"
+cheat1_code = "0978-E4D1+A078-E401+A578-E701"
+cheat1_enable = false

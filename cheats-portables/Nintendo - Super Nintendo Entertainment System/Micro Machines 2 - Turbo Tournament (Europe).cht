@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Micro Machines 2 - Turbo Tournament (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Micro%20Machines%202%20-%20Turbo%20Tournament%20%28Europe%29.cht
+
+cheats = 4
+
+cheat0_desc = "Auto Win Race - Challenge Race and Super League"
+cheat0_code = "7E12D600"
+cheat0_enable = false
+
+cheat1_desc = "Auto Win Extra Life Game"
+cheat1_code = "7E1AAC1E"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Lives"
+cheat2_code = "7E02E509"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Time - Extra Life Game"
+cheat3_code = "7E19CE00+7E19CF03+7E19D000"
+cheat3_enable = false

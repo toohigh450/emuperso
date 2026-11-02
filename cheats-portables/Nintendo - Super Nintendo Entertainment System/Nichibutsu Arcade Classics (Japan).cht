@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Nichibutsu Arcade Classics (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Nichibutsu%20Arcade%20Classics%20%28Japan%29.cht
+
+cheats = 4
+
+cheat0_desc = "Infinite (II) Ships Once You Destroy The (I) Ship"
+cheat0_code = "7E095806+7E095A02"
+cheat0_enable = false
+
+cheat1_desc = "Infinite (III) Ships Once You Destroy The (I &amp; II) Ships"
+cheat1_code = "7E095804+7E095A04"
+cheat1_enable = false
+
+cheat2_desc = "Ship Modifier (Buggy)"
+cheat2_code = "7E0A9E01"
+cheat2_enable = false
+
+cheat3_desc = "Always Have 1st Ship"
+cheat3_code = "7E095809"
+cheat3_enable = false

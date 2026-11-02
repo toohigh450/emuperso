@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : J.R.R. Tolkien's The Lord of the Rings - Volume 1 (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/J.R.R.%20Tolkien's%20The%20Lord%20of%20the%20Rings%20-%20Volume%201%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Start With 908 H.P."
+cheat0_code = "DBCE-C360+DBCE-C4A0"
+cheat0_enable = false 
+
+cheat1_desc = "Start With 9908 H.P."
+cheat1_code = "BBCE-C360+BBCE-C4A0"
+cheat1_enable = false 
+
+cheat2_desc = "Start The Game With More Strength"
+cheat2_code = "62CD-34D0"
+cheat2_enable = false 
+
+cheat3_desc = "Start Frodo With..."
+cheat3_code = "62CD-3F60"
+cheat3_enable = false 
+
+cheat4_desc = "Start A New Game With..."
+cheat4_code = "62C4-3D60"
+cheat4_enable = false 
+
+cheat5_desc = "All Your Characters Are Invincible"
+cheat5_code = "82A2-CF6D"
+cheat5_enable = false

@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Majuu Ou (Japan) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Majuu%20Ou%20%28Japan%29%20%28Game%20Genie%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Start A New Game On Stage 2"
+cheat0_code = "DF6D-1DA4"
+cheat0_enable = false 
+
+cheat1_desc = "Start A New Game On Stage 3"
+cheat1_code = "D16D-1DA4"
+cheat1_enable = false 
+
+cheat2_desc = "Start A New Game On Stage 4"
+cheat2_code = "DB6D-1DA4"
+cheat2_enable = false 
+
+cheat3_desc = "Start A New Game On Stage 5"
+cheat3_code = "DC6D-1DA4"
+cheat3_enable = false 
+
+cheat4_desc = "Start A New Game On Stage 6"
+cheat4_code = "D36D-1DA4"
+cheat4_enable = false 
+
+cheat5_desc = "Start A New Game On Stage 7"
+cheat5_code = "F76D-1DA4"
+cheat5_enable = false 
+
+cheat6_desc = "Music/Sound Test Menu Activated When Starting A New Game"
+cheat6_code = "F06D-1DA4"
+cheat6_enable = false

@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Inindo - Way of the Ninja (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Inindo%20-%20Way%20of%20the%20Ninja%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Money"
+cheat0_code = "7EF01BFF+7EF01CFF"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite HP In Battle"
+cheat1_code = "7E9606E7+7E960703"
+cheat1_enable = false 
+
+cheat2_desc = "Max HP"
+cheat2_code = "7EF0B6E7+7EF0B703"
+cheat2_enable = false 
+
+cheat3_desc = "Max Energy"
+cheat3_code = "7EF0BAE7+7EF0BB03"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Energy"
+cheat4_code = "7EF0BCE7+7EF0BD03"
+cheat4_enable = false 
+
+cheat5_desc = "Quick Level Up"
+cheat5_code = "7EF0BE01+7EF0BF00"
+cheat5_enable = false 
+
+cheat6_desc = "Infinite Chips"
+cheat6_code = "7EF076FF+7EF077FF"
+cheat6_enable = false

@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : JWP Joshi Pro Wres - Pure Wrestle Queens (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/JWP%20Joshi%20Pro%20Wres%20-%20Pure%20Wrestle%20Queens%20%28Japan%29.cht
+
+cheats = 6
+
+cheat0_desc = "Selection Menu Music Sounds Different"
+cheat0_code = "7E001401"
+cheat0_enable = false
+
+cheat1_desc = "Player 1 Modifier"
+cheat1_code = ""
+cheat1_enable = false
+
+cheat2_desc = "Player 1 Partner Modifier"
+cheat2_code = ""
+cheat2_enable = false
+
+cheat3_desc = "Player 2 Modifier"
+cheat3_code = ""
+cheat3_enable = false
+
+cheat4_desc = "Player 2 Partner Modifier"
+cheat4_code = ""
+cheat4_enable = false
+
+cheat5_desc = "Pinfall / Ring Out Count Modifier"
+cheat5_code = ""
+cheat5_enable = false

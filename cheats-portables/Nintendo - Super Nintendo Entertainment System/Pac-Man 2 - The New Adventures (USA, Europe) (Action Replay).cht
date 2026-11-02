@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Pac-Man 2 - The New Adventures (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Pac-Man%202%20-%20The%20New%20Adventures%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 8 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "7E091C03"
+cheat0_enable = false 
+
+cheat1_desc = "Ghosts Are Always Edible"
+cheat1_code = "7E0A2854+7E0A2A54+7E0A2C54+7E0A2E54"
+cheat1_enable = false 
+
+cheat2_desc = "Have Rope-Way And Train Pass"
+cheat2_code = "7E050004"
+cheat2_enable = false 
+
+cheat3_desc = "Have All 3 Power Pellets"
+cheat3_code = "7E050603"
+cheat3_enable = false 
+
+cheat4_desc = "Have All 3 Cartridges"
+cheat4_code = "7E050707"
+cheat4_enable = false 
+
+cheat5_desc = "Have All 3 I.D. Cards"
+cheat5_code = "7E050807"
+cheat5_enable = false 
+
+cheat6_desc = "Have Milk"
+cheat6_code = "7E050901"
+cheat6_enable = false 
+
+cheat7_desc = "Password Cheat Modifier"
+cheat7_code = "7E094E??"
+cheat7_enable = false

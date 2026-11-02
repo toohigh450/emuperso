@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Lemmings 2 - The Tribes (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Lemmings%202%20-%20The%20Tribes%20%28USA%29.cht
+
+cheats = 8
+
+cheat0_desc = "Automatically Beat Levels"
+cheat0_code = "7E299B40"
+cheat0_enable = false
+
+cheat1_desc = "Ability Modifier Slot 1"
+cheat1_code = "7E0EA501"
+cheat1_enable = false
+
+cheat2_desc = "Ability Modifier Slot 2"
+cheat2_code = "7E0EA600"
+cheat2_enable = false
+
+cheat3_desc = "Ability Modifier Slot 3"
+cheat3_code = "7E0EA700"
+cheat3_enable = false
+
+cheat4_desc = "Ability Modifier Slot 4"
+cheat4_code = "7E0EA800"
+cheat4_enable = false
+
+cheat5_desc = "Ability Modifier Slot 5"
+cheat5_code = "7E0EA900"
+cheat5_enable = false
+
+cheat6_desc = "Ability Modifier Slot 6"
+cheat6_code = "7E0EAA00"
+cheat6_enable = false
+
+cheat7_desc = "Ability Modifier Slot 7"
+cheat7_code = "7E0EAB00"
+cheat7_enable = false

@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Magna Braban - Henreki no Yuusha (1994)(ASK Kodansha)(JP)[tr en]
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Magna%20Braban%20-%20Henreki%20no%20Yuusha%20%281994%29%28ASK%20Kodansha%29%28JP%29[tr%20en].cht
+
+cheats = 6
+
+cheat0_desc = "Hero Infinite HP"
+cheat0_code = "7E1060E7+7E106103"
+cheat0_enable = false
+
+cheat1_desc = "Hero Infinite PP"
+cheat1_code = "7E10E0E7+7E10E103"
+cheat1_enable = false
+
+cheat2_desc = "Gates Infinite HP"
+cheat2_code = "7E0422E7+7E042303"
+cheat2_enable = false
+
+cheat3_desc = "Gate Infinite PP"
+cheat3_code = "7E10E2E7+7E10E303"
+cheat3_enable = false
+
+cheat4_desc = "Gina Infinite HP"
+cheat4_code = "7E042AE7+7E042B03"
+cheat4_enable = false
+
+cheat5_desc = "Gina Infinite PP"
+cheat5_code = "7E10E4E7+7E10E503"
+cheat5_enable = false

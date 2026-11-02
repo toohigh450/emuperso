@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Imperium (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Imperium%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Start With 1 Life Point"
+cheat0_code = "DFA2-D4A4"
+cheat0_enable = false 
+
+cheat1_desc = "Start With 3 Life Points"
+cheat1_code = "D7A2-D4A4"
+cheat1_enable = false 
+
+cheat2_desc = "Start With 5 Bombs"
+cheat2_code = "D9BD-64D7"
+cheat2_enable = false 
+
+cheat3_desc = "Start With 9 Bombs"
+cheat3_code = "DBBD-64D7"
+cheat3_enable = false 
+
+cheat4_desc = "Invincible Against Lesser Robots, Weapons And Lasers"
+cheat4_code = "1D34-D4A1+1DC3-DDF7"
+cheat4_enable = false

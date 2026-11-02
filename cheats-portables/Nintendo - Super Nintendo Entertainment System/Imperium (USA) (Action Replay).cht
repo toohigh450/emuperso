@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Imperium (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Imperium%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Start With 5 Bombs"
+cheat0_code = "009E0805"
+cheat0_enable = false 
+
+cheat1_desc = "Start With 9 Bombs"
+cheat1_code = "009E0809"
+cheat1_enable = false 
+
+cheat2_desc = "Start With 1 Life Point"
+cheat2_code = "00C8DB01"
+cheat2_enable = false 
+
+cheat3_desc = "Start With 3 Life Points"
+cheat3_code = "00C8DB03"
+cheat3_enable = false 
+
+cheat4_desc = "Invincible Against Lesser Robots, Weapons And Lasers"
+cheat4_code = "01E82B60+04ACE060"
+cheat4_enable = false

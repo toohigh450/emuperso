@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Onizuka Katsuya Super Virtual Boxing - Shin Kentou Ou Densetsu (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Onizuka%20Katsuya%20Super%20Virtual%20Boxing%20-%20Shin%20Kentou%20Ou%20Densetsu%20%28Japan%29.cht
+
+cheats = 3
+
+cheat0_desc = "P1 Infinite Spirit"
+cheat0_code = "7E04C2FF+7E05207F+7E0056FF+7E03907F+7E0422FF"
+cheat0_enable = false
+
+cheat1_desc = "P2 No Spirit"
+cheat1_code = "7E039100+7E044200+7E04F200+7E052100"
+cheat1_enable = false
+
+cheat2_desc = "Minutes Modifier per round"
+cheat2_code = "7E064A01"
+cheat2_enable = false

@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Michael Jordan - Chaos in the Windy City (USA, Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Michael%20Jordan%20-%20Chaos%20in%20the%20Windy%20City%20%28USA,%20Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Start With 10 Lives"
+cheat0_code = "DBC8-5700"
+cheat0_enable = false 
+
+cheat1_desc = "Start With 7 Lives"
+cheat1_code = "D1C8-5700"
+cheat1_enable = false 
+
+cheat2_desc = "Start With 2 Lives"
+cheat2_code = "DFC8-5700"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Lives"
+cheat3_code = "C2D2-746D"
+cheat3_enable = false 
+
+cheat4_desc = "Invincibility Shoes Last Longer"
+cheat4_code = "4DAB-5FA5"
+cheat4_enable = false 
+
+cheat5_desc = "Super Jump"
+cheat5_code = "D74E-57DF+D745-54DD+D74B-5FA4"
+cheat5_enable = false

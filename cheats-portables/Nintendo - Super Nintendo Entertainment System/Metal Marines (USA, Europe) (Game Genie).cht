@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Metal Marines (USA, Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Metal%20Marines%20%28USA,%20Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 5 
+
+cheat0_desc = "All Buildings Built/Upgraded Work As I.C.B.M.s"
+cheat0_code = "CB63-07AC+066E-0DDC"
+cheat0_enable = false 
+
+cheat1_desc = "Instant-Maximum Energy"
+cheat1_code = "DD29-64DD"
+cheat1_enable = false 
+
+cheat2_desc = "Instant-Maximum War Funds"
+cheat2_code = "DD24-6D6D"
+cheat2_enable = false 
+
+cheat3_desc = "Enemy Always Has 0 Energy"
+cheat3_code = "BA2F-6F6D"
+cheat3_enable = false 
+
+cheat4_desc = "Enemy Always Has 0 War Funds"
+cheat4_code = "BA20-67DD"
+cheat4_enable = false

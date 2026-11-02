@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : NFL Football (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/NFL%20Football%20%28USA%29.cht
+
+cheats = 4
+
+cheat0_desc = "Play Clock Modifier"
+cheat0_code = "7E035200"
+cheat0_enable = false
+
+cheat1_desc = "Game Clock Seconds Modifier"
+cheat1_code = "7E034C00"
+cheat1_enable = false
+
+cheat2_desc = "Game Clock Minutes Modifier"
+cheat2_code = "7E034A00"
+cheat2_enable = false
+
+cheat3_desc = "Down Modifier"
+cheat3_code = "7E032600+7F034600"
+cheat3_enable = false
