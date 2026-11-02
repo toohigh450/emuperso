@@ -1,4 +1,4 @@
-// Reconnaissance des consoles et lecture des en-têtes de ROM (NES, SNES, GB, GBC, GBA, DS).
+// Reconnaissance des consoles et lecture des en-têtes de ROM (NES, SNES, Genesis, GB, GBC, GBA, DS).
 // Module pur : aucune dépendance au navigateur, testable avec Node.
 
 const KiB = 1024;
@@ -29,7 +29,7 @@ export const SYSTEMS = {
     exts: ['md', 'smd', 'gen'],
     ejsCore: 'segaMD', // cœur genesis_plus_gx par défaut dans EmulatorJS ; pas de BIOS requis
     coreId: 'genesis_plus_gx',
-    maxBytes: 4 * MiB, // cartouches Genesis max ~4 Mo
+    maxBytes: 16 * MiB, // inclut les homebrews et hacks étendus ; compatibilité du cœur à vérifier
     aspect: '4 / 3',
   },
   gb: {
@@ -90,6 +90,7 @@ export const UNSUPPORTED_FORMATS = {
   spc: 'Fichier musical SNES (.spc) : ce n’est pas un jeu.',
   bs: 'Satellaview (.bs) : prise en charge incomplète, non proposée.',
   st: 'Sufami Turbo (.st) : demande le BIOS commercial de la cartouche de base, non proposé.',
+  '32x': 'Sega 32X (.32x) : cœur PicoDrive distinct, non intégré au lanceur Genesis.',
   ips: 'Patch .ips : applique-le d’abord à ta ROM avec un outil de patch, puis ouvre la ROM patchée.',
   bps: 'Patch .bps : applique-le d’abord à ta ROM avec un outil de patch, puis ouvre la ROM patchée.',
   ups: 'Patch .ups : applique-le d’abord à ta ROM avec un outil de patch, puis ouvre la ROM patchée.',
@@ -99,6 +100,7 @@ export const UNSUPPORTED_FORMATS = {
 export function engineExtension(analysis) {
   if (analysis.system === 'nes') return analysis.format === 'UNIF' ? 'unf' : 'nes';
   if (analysis.system === 'snes') return analysis.copierHeader ? 'smc' : 'sfc';
+  if (analysis.system === 'genesis') return ['md', 'smd', 'gen'].includes(analysis.ext) ? analysis.ext : 'md';
   return analysis.system;
 }
 
@@ -434,12 +436,42 @@ export function parseSnes(bytes) {
   return info;
 }
 
+// --- Sega Mega Drive / Genesis --------------------------------------------------
+// Aucun octet de ROM n'est réécrit. L'en-tête SEGA n'est pas une preuve d'authenticité
+// ou de compatibilité ; certaines traductions/homebrews utilisent d'autres signatures.
+// Les SMD interleavés gardent leur format : Genesis Plus GX les décode au chargement.
+const SEGA_MAGIC = [0x53, 0x45, 0x47, 0x41];
+export function parseGenesis(bytes, ext = 'md') {
+  const info = { warnings: [], errors: [], headerOk: false, region: 'inconnue', title: '', format: ext === 'smd' ? 'SMD' : 'Mega Drive' };
+  if (bytes.length < 0x200) {
+    info.errors.push('Fichier trop petit pour une cartouche Sega Mega Drive / Genesis (minimum 512 octets).');
+    return info;
+  }
+  if (!startsWithAt(bytes, 0x100, SEGA_MAGIC)) {
+    info.warnings.push(ext === 'smd'
+      ? 'Format SMD : en-tête SEGA non lisible sans désentrelacement ; validation du moteur requise.'
+      : 'Signature SEGA non reconnue : fichier non authentifié, lancement à vérifier.');
+    return info;
+  }
+  info.headerOk = true;
+  info.title = asciiAt(bytes, 0x150, 0x180) || asciiAt(bytes, 0x120, 0x150);
+  const flags = asciiAt(bytes, 0x1f0, 0x1f4).toUpperCase();
+  const regions = [];
+  if (flags.includes('J')) regions.push('Japon');
+  if (flags.includes('U')) regions.push('USA');
+  if (flags.includes('E')) regions.push('Europe');
+  if (regions.length) info.region = regions.join(', ');
+  if (regions.length === 1) info.video = regions[0] === 'Europe' ? 'PAL' : 'NTSC';
+  return info;
+}
+
 // --- Détection ------------------------------------------------------------------
 function detectByHeader(bytes) {
   if (startsWithAt(bytes, 0, INES_MAGIC) || startsWithAt(bytes, 0, UNIF_MAGIC)) return 'nes';
   if (startsWithAt(bytes, 0xc0, GBA_LOGO) && bytes.length >= 0x200) return 'nds';
   if (startsWithAt(bytes, 0x04, GBA_LOGO) && bytes.length >= 0xc0) return 'gba';
   if (startsWithAt(bytes, 0x104, GB_LOGO)) return bytes[0x143] === 0x80 || bytes[0x143] === 0xc0 ? 'gbc' : 'gb';
+  if (startsWithAt(bytes, 0x100, SEGA_MAGIC)) return 'genesis';
   return null;
 }
 
@@ -487,7 +519,7 @@ export function analyzeRom(fileName, bytes) {
   if (!system) {
     result.errors.push(
       ext
-        ? `Format « .${ext} » non reconnu. Formats acceptés : .nes, .unf, .sfc, .smc, .gb, .gbc, .gba, .nds (ou un .zip qui en contient un).`
+        ? `Format « .${ext} » non reconnu. Formats acceptés : .nes, .unf, .sfc, .smc, .md, .smd, .gen, .gb, .gbc, .gba, .nds (ou un .zip qui en contient un).`
         : 'Format de fichier non reconnu.'
     );
     return result;
@@ -557,6 +589,21 @@ export function analyzeRom(fileName, bytes) {
       mapperName: parsed.mapperName,
       battery: parsed.battery,
       video: parsed.timing,
+      headerOk: parsed.headerOk,
+    });
+    result.warnings.push(...parsed.warnings);
+  } else if (system === 'genesis') {
+    const parsed = parseGenesis(bytes, ext);
+    if (parsed.errors.length) {
+      result.errors.push(...parsed.errors);
+      return result;
+    }
+    Object.assign(result, {
+      title: stemOf(fileName), // inclure nom des hacks/traductions, pas seulement le titre interne
+      cartridgeTitle: parsed.title,
+      region: parsed.region,
+      video: parsed.video,
+      format: parsed.format,
       headerOk: parsed.headerOk,
     });
     result.warnings.push(...parsed.warnings);
