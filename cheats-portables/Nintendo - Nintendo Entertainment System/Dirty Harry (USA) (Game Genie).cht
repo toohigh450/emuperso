@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Dirty Harry (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Dirty%20Harry%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "SXUKOKVK"
+cheat0_enable = false 
+
+cheat1_desc = "1 Life"
+cheat1_code = "PANSGIIA"
+cheat1_enable = false 
+
+cheat2_desc = "10 Lives"
+cheat2_code = "ZANSGIIE"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Energy"
+cheat3_code = "GXXGXGST"
+cheat3_enable = false 
+
+cheat4_desc = "Maximum Energy From Chili Dogs"
+cheat4_code = "AEVLIPZA"
+cheat4_enable = false 
+
+cheat5_desc = "Only 10 Magnum Bullets Allowed"
+cheat5_code = "ZESSTSPO+ZEVIZSPO"
+cheat5_enable = false 
+
+cheat6_desc = "50 Magnum Bullets Allowed"
+cheat6_code = "ZUSSTSPP+ZUVIZSPP"
+cheat6_enable = false

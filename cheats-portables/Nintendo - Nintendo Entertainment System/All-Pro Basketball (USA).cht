@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : All-Pro Basketball (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/All-Pro%20Basketball%20%28USA%29.cht
+
+cheats = 4
+
+cheat0_desc = "Quarters 1:11 Long"
+cheat0_code = "AUOAXIPL+PUOEXIAL"
+cheat0_enable = false
+
+cheat1_desc = "Team 1 Points Modifier"
+cheat1_code = "0077:30+0078:30+0079:30"
+cheat1_enable = false
+
+cheat2_desc = "Team 2 Points Modifier"
+cheat2_code = "007A:30+007B:30+007C:30"
+cheat2_enable = false
+
+cheat3_desc = "Time Modifier"
+cheat3_code = "006E:30+006F:30+0070:30"
+cheat3_enable = false

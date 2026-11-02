@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Mighty Final Fight (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Mighty%20Final%20Fight%20%28Japan%29.cht
+
+cheats = 8
+
+cheat0_desc = "Invincibility"
+cheat0_code = "EAOGXYAA"
+cheat0_enable = false
+
+cheat1_desc = "Infinite lives"
+cheat1_code = "SZUIXIVG"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Health"
+cheat2_code = "SZXNUPSA"
+cheat2_enable = false
+
+cheat3_desc = "Special Attack uses no Health"
+cheat3_code = "SZSANASA"
+cheat3_enable = false
+
+cheat4_desc = "Start on Round 2 - Riverside "
+cheat4_code = "PAUKAYAA"
+cheat4_enable = false
+
+cheat5_desc = "Start on Round 3 - Old Town "
+cheat5_code = "ZAUKAYAA"
+cheat5_enable = false
+
+cheat6_desc = "Start on Round 4 - Factory"
+cheat6_code = "LAUKAYAA"
+cheat6_enable = false
+
+cheat7_desc = "Start on Round 5 - Bay Area "
+cheat7_code = "GAUKAYAA"
+cheat7_enable = false

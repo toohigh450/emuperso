@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Bugs Bunny Fun House (USA) (Beta)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Bugs%20Bunny%20Fun%20House%20%28USA%29%20%28Beta%29.cht
+
+cheats = 2
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "007C:63"
+cheat0_enable = false
+
+cheat1_desc = "Stage Modifier"
+cheat1_code = "0068:05"
+cheat1_enable = false

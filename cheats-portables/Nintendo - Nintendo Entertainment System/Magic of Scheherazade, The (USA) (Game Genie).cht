@@ -1,0 +1,48 @@
+# Recherche locale pour la ROM : Magic of Scheherazade, The (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Magic%20of%20Scheherazade,%20The%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 10 
+
+cheat0_desc = "1 Life"
+cheat0_code = "PAKTAZLA"
+cheat0_enable = false 
+
+cheat1_desc = "6 Lives"
+cheat1_code = "TAKTAZLA"
+cheat1_enable = false 
+
+cheat2_desc = "9 Lives"
+cheat2_code = "PAKTAZLE"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Lives"
+cheat3_code = "SXEVPLVG"
+cheat3_enable = false 
+
+cheat4_desc = "Start With Only 20 Gold Coins"
+cheat4_code = "ZAUTAZIA"
+cheat4_enable = false 
+
+cheat5_desc = "Less Energy Gained From Bread"
+cheat5_code = "POKAOZZU"
+cheat5_enable = false 
+
+cheat6_desc = "Less Magic Gained From Mashroobs"
+cheat6_code = "ZAEEXGIA"
+cheat6_enable = false 
+
+cheat7_desc = "Never Lose Mashroobs"
+cheat7_code = "SZEAEKVK"
+cheat7_enable = false 
+
+cheat8_desc = "Infinite Energy"
+cheat8_code = "OTSXLGSV"
+cheat8_enable = false 
+
+cheat9_desc = "Take Minimum Damage"
+cheat9_code = "OTSXLGSV+PASXGGAA"
+cheat9_enable = false

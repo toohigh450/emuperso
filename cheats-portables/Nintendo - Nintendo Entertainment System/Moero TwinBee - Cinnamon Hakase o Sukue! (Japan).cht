@@ -1,0 +1,44 @@
+# Recherche locale pour la ROM : Moero TwinBee - Cinnamon Hakase o Sukue! (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Moero%20TwinBee%20-%20Cinnamon%20Hakase%20o%20Sukue!%20%28Japan%29.cht
+
+cheats = 9
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "0038:03"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Lives P1"
+cheat1_code = "0038:09"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Lives P2"
+cheat2_code = "0039:09"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Lives P3"
+cheat3_code = "003A:09"
+cheat3_enable = false
+
+cheat4_desc = "Untouchable-Player 1"
+cheat4_code = ""
+cheat4_enable = false
+
+cheat5_desc = "Super Firepower-Player 1"
+cheat5_code = ""
+cheat5_enable = false
+
+cheat6_desc = "Hit Anywhere"
+cheat6_code = "AENSVOAL+AEOIEAZL"
+cheat6_enable = false
+
+cheat7_desc = "Infinite Lives"
+cheat7_code = "SZXGEGVI"
+cheat7_enable = false
+
+cheat8_desc = "Invincibility"
+cheat8_code = "ATSIIOOL"
+cheat8_enable = false

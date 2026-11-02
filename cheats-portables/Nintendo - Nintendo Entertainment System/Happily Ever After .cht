@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Happily Ever After 
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Happily%20Ever%20After%20.cht
+
+cheats = 6
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "SXEVIIVG+SZKTZIVG"
+cheat0_enable = false
+
+cheat1_desc = "Start with All Powers"
+cheat1_code = "YNOGLTPE"
+cheat1_enable = false
+
+cheat2_desc = "Start on Level 2"
+cheat2_code = "PANKYTAA"
+cheat2_enable = false
+
+cheat3_desc = "Start on Level 3"
+cheat3_code = "ZANKYTAA"
+cheat3_enable = false
+
+cheat4_desc = "Start on Level 4"
+cheat4_code = "LANKYTAA"
+cheat4_enable = false
+
+cheat5_desc = "Invincibility"
+cheat5_code = "00CB:06"
+cheat5_enable = false

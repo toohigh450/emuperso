@@ -1,0 +1,68 @@
+# Recherche locale pour la ROM : Bomber Man (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Bomber%20Man%20%28Japan%29.cht
+
+cheats = 15
+
+cheat0_desc = "!- Important Note"
+cheat0_code = ""
+cheat0_enable = false
+
+cheat1_desc = "Start With Max Bomb Power"
+cheat1_code = "EEKGALAP"
+cheat1_enable = false
+
+cheat2_desc = "Start With Walk Through Walls, Detonator And Inmune To Explosions"
+cheat2_code = "PEKGGLAA"
+cheat2_enable = false
+
+cheat3_desc = "Start With Walk Through Bombs"
+cheat3_code = "PAEGLGAA"
+cheat3_enable = false
+
+cheat4_desc = "Don't Loose Items When You Die"
+cheat4_code = "PANKTGAA"
+cheat4_enable = false
+
+cheat5_desc = "Infinite Lives"
+cheat5_code = "SXOGAGVG"
+cheat5_enable = false
+
+cheat6_desc = "Start With 99 Lives"
+cheat6_code = "LVXGLLZA"
+cheat6_enable = false
+
+cheat7_desc = "Infinite Time"
+cheat7_code = "SZKKATVG"
+cheat7_enable = false
+
+cheat8_desc = "Invincibility"
+cheat8_code = "AANSGAPA"
+cheat8_enable = false
+
+cheat9_desc = "Perfect Invincibility"
+cheat9_code = "ATNIPASZ"
+cheat9_enable = false
+
+cheat10_desc = "Invulnerable To Explosions"
+cheat10_code = "ENIKYT"
+cheat10_enable = false
+
+cheat11_desc = "Invulnerable To Explosions (Alt)"
+cheat11_code = "ENIKLT"
+cheat11_enable = false
+
+cheat12_desc = "Invulnerable To Enemies"
+cheat12_code = "EYTIIA"
+cheat12_enable = false
+
+cheat13_desc = "Show Location Of Hidden Tiles"
+cheat13_code = "AAPGVL"
+cheat13_enable = false
+
+cheat14_desc = "Start With 9 Lives"
+cheat14_code = "PEZGLU"
+cheat14_enable = false

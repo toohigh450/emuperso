@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Jordan vs Bird - One on One (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Jordan%20vs%20Bird%20-%20One%20on%20One%20%28USA%29.cht
+
+cheats = 6
+
+cheat0_desc = "Infinite Shoot Time"
+cheat0_code = "0626:63"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Time (Seconds)"
+cheat1_code = "0628:FF"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Time (Minutes)"
+cheat2_code = "0629:FF"
+cheat2_enable = false
+
+cheat3_desc = "Score Modifier (Player 1)"
+cheat3_code = "062A:00"
+cheat3_enable = false
+
+cheat4_desc = "Score Modifier (Player 2)"
+cheat4_code = "062C:00"
+cheat4_enable = false
+
+cheat5_desc = "Skip Intro Screen"
+cheat5_code = "LENGNIIO"
+cheat5_enable = false

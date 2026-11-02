@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Prince of Persia (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Prince%20of%20Persia%20%28USA%29.cht
+
+cheats = 6
+
+cheat0_desc = "Infinite Time"
+cheat0_code = "04EF:80"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Energy"
+cheat1_code = "06CF:03"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Health"
+cheat2_code = "SLXAINSO"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Time"
+cheat3_code = "SZKLIXSE"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Health"
+cheat4_code = "06CF:03"
+cheat4_enable = false
+
+cheat5_desc = "Level Modifier"
+cheat5_code = "0070:BE"
+cheat5_enable = false

@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Hacker, The (NJ032) (Ch) [!]
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Hacker,%20The%20%28NJ032%29%20%28Ch%29%20[!].cht
+
+cheats = 2
+
+cheat0_desc = "Infinite Time"
+cheat0_code = "02CA:0A+02CB:0A+02CC:03"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "03EC:63"
+cheat1_enable = false

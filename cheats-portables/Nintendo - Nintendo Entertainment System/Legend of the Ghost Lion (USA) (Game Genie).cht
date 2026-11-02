@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Legend of the Ghost Lion (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Legend%20of%20the%20Ghost%20Lion%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 3 
+
+cheat0_desc = "Infinite Courage Points! (Take No Damage)"
+cheat0_code = "SZUPNNSE"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Dream Points!"
+cheat1_code = "SXXKTSSE"
+cheat1_enable = false 
+
+cheat2_desc = "Don't Lose Rubies When Buying Things!"
+cheat2_code = "SXSKLKSE"
+cheat2_enable = false

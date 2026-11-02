@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Nintendo World Championships 1990 (USA) (Competition Cart)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Nintendo%20World%20Championships%201990%20%28USA%29%20%28Competition%20Cart%29.cht
+
+cheats = 5
+
+cheat0_desc = "Only need to collect 1 coin in SMB"
+cheat0_code = "PAOLUGZL"
+cheat0_enable = false
+
+cheat1_desc = "Only need to collect 25 coins in SMB"
+cheat1_code = "PPOLUGZU"
+cheat1_enable = false
+
+cheat2_desc = "Need to collect 100 coins in SMB"
+cheat2_code = "GTOLUGZL"
+cheat2_enable = false
+
+cheat3_desc = "Can Never Finish SMB Course"
+cheat3_code = "OZOLXKOK"
+cheat3_enable = false
+
+cheat4_desc = "Automatically Start Game"
+cheat4_code = "AEXEGYAP"
+cheat4_enable = false

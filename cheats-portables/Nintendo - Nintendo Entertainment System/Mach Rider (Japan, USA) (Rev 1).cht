@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Mach Rider (Japan, USA) (Rev 1)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Mach%20Rider%20%28Japan,%20USA%29%20%28Rev%201%29.cht
+
+cheats = 5
+
+cheat0_desc = "Shots Run Out Half As Fast"
+cheat0_code = "SZLGXZ"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Shots"
+cheat1_code = "SZLGXZ+SZLGKZ"
+cheat1_enable = false
+
+cheat2_desc = "Energy Last Longer"
+cheat2_code = "SXAZNG"
+cheat2_enable = false
+
+cheat3_desc = "Don't Explode When Hit"
+cheat3_code = "SXGLXY"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Energy"
+cheat4_code = "SXTLKY+SXAZNG"
+cheat4_enable = false

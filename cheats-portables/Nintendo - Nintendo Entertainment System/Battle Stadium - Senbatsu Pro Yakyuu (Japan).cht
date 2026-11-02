@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Battle Stadium - Senbatsu Pro Yakyuu (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Battle%20Stadium%20-%20Senbatsu%20Pro%20Yakyuu%20%28Japan%29.cht
+
+cheats = 3
+
+cheat0_desc = "Max Player Stats"
+cheat0_code = "0549:FF+054A:FF"
+cheat0_enable = false
+
+cheat1_desc = "Balls Are Strikes"
+cheat1_code = "IEELLATA"
+cheat1_enable = false
+
+cheat2_desc = "Skip Intro Screens"
+cheat2_code = "AASAKLNY"
+cheat2_enable = false

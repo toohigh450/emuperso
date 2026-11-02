@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Kamen no Ninja - Hanamaru (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Kamen%20no%20Ninja%20-%20Hanamaru%20%28Japan%29.cht
+
+cheats = 7
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "04B2:32+04B5:42"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Power"
+cheat1_code = "00DD:14"
+cheat1_enable = false
+
+cheat2_desc = "Invincibility"
+cheat2_code = "00A8:63"
+cheat2_enable = false
+
+cheat3_desc = "Invincibility"
+cheat3_code = "SZXLLTAX"
+cheat3_enable = false
+
+cheat4_desc = "Stage Select"
+cheat4_code = "00A9:01"
+cheat4_enable = false
+
+cheat5_desc = "Upper Right Card In Sub Game is Always A III Multiplier"
+cheat5_code = "05E4:82"
+cheat5_enable = false
+
+cheat6_desc = "Jump in Midair"
+cheat6_code = "AEUGSKTZ"
+cheat6_enable = false

@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Mario's Time Machine (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Mario's%20Time%20Machine%20%28USA%29.cht
+
+cheats = 3
+
+cheat0_desc = "Kill One Koopa To Get Item"
+cheat0_code = "ZEUUGYAA"
+cheat0_enable = false
+
+cheat1_desc = "Title screen music modifier"
+cheat1_code = ""
+cheat1_enable = false
+
+cheat2_desc = "All Stages Complete"
+cheat2_code = "0035:01+0036:01+0037:01+0038:01+0039:01+003A:01+003B:01+003C:01+003D:01+003E:01+003F:01+0040:01+0041:01+0042:01+0043:01+0044:01+0045:01+0046:01+0047:01+0048:01+0049:01"
+cheat2_enable = false

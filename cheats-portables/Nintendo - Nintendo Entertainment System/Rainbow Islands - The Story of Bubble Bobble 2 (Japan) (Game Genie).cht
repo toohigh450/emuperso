@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Rainbow Islands - The Story of Bubble Bobble 2 (Japan) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Rainbow%20Islands%20-%20The%20Story%20of%20Bubble%20Bobble%202%20%28Japan%29%20%28Game%20Genie%29.cht
+
+cheats = 2 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "OZUKTTVS"
+cheat0_enable = false 
+
+cheat1_desc = "Invincibility (Tested Up To Level 3x3"
+cheat1_code = "TSXGAKTP"
+cheat1_enable = false

@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Hit the Ice (USA) (Proto)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Hit%20the%20Ice%20%28USA%29%20%28Proto%29.cht
+
+cheats = 4
+
+cheat0_desc = "P1 Score Modifier"
+cheat0_code = "0406:00"
+cheat0_enable = false
+
+cheat1_desc = "P2 Always 0 Scores"
+cheat1_code = "0407:00"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Gold"
+cheat2_code = "0168:E7+0169:03"
+cheat2_enable = false
+
+cheat3_desc = "P2 Always 0 Score"
+cheat3_code = "XTVIKXOO"
+cheat3_enable = false

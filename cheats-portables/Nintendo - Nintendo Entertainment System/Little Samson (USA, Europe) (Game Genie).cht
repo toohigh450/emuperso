@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Little Samson (USA, Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Little%20Samson%20%28USA,%20Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Increase Samson's Energy Gauge"
+cheat0_code = "AOKTPSAE"
+cheat0_enable = false 
+
+cheat1_desc = "Increase Kikira's Energy Gauge"
+cheat1_code = "AOKTZSAE"
+cheat1_enable = false 
+
+cheat2_desc = "Increase Gamm's Energy Gauge"
+cheat2_code = "AXKTLIAP"
+cheat2_enable = false 
+
+cheat3_desc = "Increase K.O.'s Energy Gauge"
+cheat3_code = "AOKTGIGA"
+cheat3_enable = false

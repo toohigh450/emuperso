@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Alex DeMeo's Race America (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Alex%20DeMeo's%20Race%20America%20%28USA%29.cht
+
+cheats = 7
+
+cheat0_desc = "Go super fast in 6th gear"
+cheat0_code = "OZNOAAEN+NYNOPAIE+SAXPGZVT"
+cheat0_enable = false
+
+cheat1_desc = "Cars only have 4 gears"
+cheat1_code = "IAVUILYA+IAKXAIYA"
+cheat1_enable = false
+
+cheat2_desc = "Can't down shift"
+cheat2_code = "SGSUGLVI"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Fuel"
+cheat3_code = "04FC:0C"
+cheat3_enable = false
+
+cheat4_desc = "CPU Never Can Finish A Race"
+cheat4_code = "0080:00"
+cheat4_enable = false
+
+cheat5_desc = "Invincibility"
+cheat5_code = "0008:03"
+cheat5_enable = false
+
+cheat6_desc = "Go Very, Very Fast (Almost Lightspeed)"
+cheat6_code = "0055:FF"
+cheat6_enable = false

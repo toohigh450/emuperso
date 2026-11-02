@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Ninja Jajamaru - Ginga Daisakusen (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Ninja%20Jajamaru%20-%20Ginga%20Daisakusen%20%28Japan%29.cht
+
+cheats = 7
+
+cheat0_desc = "Invincibility"
+cheat0_code = "04CB:00"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "04C4:03"
+cheat1_enable = false
+
+cheat2_desc = "Fly"
+cheat2_code = "002C:0A"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Lives"
+cheat3_code = "SIVOGKVS"
+cheat3_enable = false
+
+cheat4_desc = "Invincibility"
+cheat4_code = "SZNPGTAX"
+cheat4_enable = false
+
+cheat5_desc = "Infinite Time"
+cheat5_code = "XVNVTSVK+XTEVPVVK+XTOTGVVK"
+cheat5_enable = false
+
+cheat6_desc = "Infinite Item Air Fly"
+cheat6_code = "OXKPGPVK+PEKPIOAG"
+cheat6_enable = false

@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Ice Climber (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Ice%20Climber%20%28Japan%29.cht
+
+cheats = 7
+
+cheat0_desc = "Invincible"
+cheat0_code = "PAKIYGYA"
+cheat0_enable = false
+
+cheat1_desc = "Enemies Dead After Touch You"
+cheat1_code = "PAKSGLAZ+PAKIYGYA"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Lives"
+cheat2_code = "IEEIZGAZ"
+cheat2_enable = false
+
+cheat3_desc = "Controllable Jump"
+cheat3_code = "AAVEEVZZ"
+cheat3_enable = false
+
+cheat4_desc = "Controllable Jump (Bonus Game)"
+cheat4_code = "AANPZSZP"
+cheat4_enable = false
+
+cheat5_desc = "Start With 9 Lives"
+cheat5_code = "PEZKTK"
+cheat5_enable = false
+
+cheat6_desc = "Infinite Lives"
+cheat6_code = "SUAIPG"
+cheat6_enable = false

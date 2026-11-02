@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Eliminator Boat Duel (USA, Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Eliminator%20Boat%20Duel%20%28USA,%20Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Start With 36 Nitros"
+cheat0_code = "IZEEZZGA"
+cheat0_enable = false 
+
+cheat1_desc = "Start With 0 Nitros"
+cheat1_code = "AAEEZZGA"
+cheat1_enable = false 
+
+cheat2_desc = "Almost Infinite Nitros (No On Buoy Stage)"
+cheat2_code = "SZVSVNVS"
+cheat2_enable = false 
+
+cheat3_desc = "Boat Starts With Full Turbo, Steering, Hull, Max Engine Power"
+cheat3_code = "IENEYPPA"
+cheat3_enable = false 
+
+cheat4_desc = "Have Full Hull Strength"
+cheat4_code = "SXUGOEVS"
+cheat4_enable = false 
+
+cheat5_desc = "Computer Boat Goes Crazy"
+cheat5_code = "KAAISZ"
+cheat5_enable = false

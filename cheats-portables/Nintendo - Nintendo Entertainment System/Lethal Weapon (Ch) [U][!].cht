@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Lethal Weapon (Ch) [U][!]
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Lethal%20Weapon%20%28Ch%29%20[U][!].cht
+
+cheats = 2
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "SZUAVXVK+SZUEOXVK"
+cheat0_enable = false
+
+cheat1_desc = "No Reload"
+cheat1_code = "SXNNTNVV"
+cheat1_enable = false

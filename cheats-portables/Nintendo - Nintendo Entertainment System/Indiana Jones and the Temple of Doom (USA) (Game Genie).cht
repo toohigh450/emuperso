@@ -1,0 +1,56 @@
+# Recherche locale pour la ROM : Indiana Jones and the Temple of Doom (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Indiana%20Jones%20and%20the%20Temple%20of%20Doom%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 12 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "SZEXOKVK"
+cheat0_enable = false 
+
+cheat1_desc = "Start With 1 Life"
+cheat1_code = "AEKLULGA"
+cheat1_enable = false 
+
+cheat2_desc = "Start With 10 Lives"
+cheat2_code = "PEKLULGE"
+cheat2_enable = false 
+
+cheat3_desc = "Start With 15 Lives"
+cheat3_code = "TEKLULGE"
+cheat3_enable = false 
+
+cheat4_desc = "Always Keep Sword"
+cheat4_code = "SZSZGUVK"
+cheat4_enable = false 
+
+cheat5_desc = "Always Keep Gun"
+cheat5_code = "SZUXZVVK"
+cheat5_enable = false 
+
+cheat6_desc = "Freeze Timer"
+cheat6_code = "SZXZAEVK"
+cheat6_enable = false 
+
+cheat7_desc = "Start On Level 2"
+cheat7_code = "PPKLEKYA"
+cheat7_enable = false 
+
+cheat8_desc = "Start On Level 4"
+cheat8_code = "IPKLEKYA"
+cheat8_enable = false 
+
+cheat9_desc = "Start On Level 6"
+cheat9_code = "PPKLEKYE"
+cheat9_enable = false 
+
+cheat10_desc = "Start On Level 8"
+cheat10_code = "IPKLEKYE"
+cheat10_enable = false 
+
+cheat11_desc = "Start With Less Time"
+cheat11_code = "GLKUXGLV+LVEXUUGL+LTOXVKGL"
+cheat11_enable = false

@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Adventures of Rocky and Bullwinkle and Friends, The (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Adventures%20of%20Rocky%20and%20Bullwinkle%20and%20Friends,%20The%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 8 
+
+cheat0_desc = "Start With 2 Lives"
+cheat0_code = "PAOEZAGA"
+cheat0_enable = false 
+
+cheat1_desc = "Start Game With 30 Bombs"
+cheat1_code = "TPOEYEZE"
+cheat1_enable = false 
+
+cheat2_desc = "Rocky Loses No Energy When Flying"
+cheat2_code = "TAVEYGYA"
+cheat2_enable = false 
+
+cheat3_desc = "Rocky Loses More Energy When Flying"
+cheat3_code = "TAVEAGZA"
+cheat3_enable = false 
+
+cheat4_desc = "Bullwinkle Loses No Energy When Headbutting"
+cheat4_code = "AANAIGPA"
+cheat4_enable = false 
+
+cheat5_desc = "Bullwinkle Loses More Energy When Headbutting"
+cheat5_code = "AANAPGGE"
+cheat5_enable = false 
+
+cheat6_desc = "Infinite Lives"
+cheat6_code = "SZNEUKVK"
+cheat6_enable = false 
+
+cheat7_desc = "Start Game With No Bombs"
+cheat7_code = "AAOEYEZA+AEEIGXZA"
+cheat7_enable = false

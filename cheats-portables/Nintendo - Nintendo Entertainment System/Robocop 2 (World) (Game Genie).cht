@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Robocop 2 (World) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Robocop%202%20%28World%29%20%28Game%20Genie%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "SXKTPNOO+SXKTINOO"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "SZNKIPVS"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Time"
+cheat2_code = "SXVVLTVK"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Nuke ("N") On Pick-Up"
+cheat3_code = "SZTGZO"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Time"
+cheat4_code = "SXVVLTVG"
+cheat4_enable = false 
+
+cheat5_desc = "Nukes Worth 10 Each"
+cheat5_code = "AAEVKALA"
+cheat5_enable = false

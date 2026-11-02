@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Mickey Mousecapade (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Mickey%20Mousecapade%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "SZSOPZVG"
+cheat0_enable = false 
+
+cheat1_desc = "Start With 2 Lives"
+cheat1_code = "PESOIPGA"
+cheat1_enable = false 
+
+cheat2_desc = "Start With 6 Lives"
+cheat2_code = "IESOIPGA"
+cheat2_enable = false 
+
+cheat3_desc = "Start With 9 Lives"
+cheat3_code = "AESOIPGE"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Energy"
+cheat4_code = "OVOPPTSV"
+cheat4_enable = false 
+
+cheat5_desc = "Mickey And Minnie Can Shoot On Any Level"
+cheat5_code = "GPSIEVGE+LAVSVTZA"
+cheat5_enable = false

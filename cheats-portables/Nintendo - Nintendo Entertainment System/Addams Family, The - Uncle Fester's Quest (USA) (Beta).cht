@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Addams Family, The - Uncle Fester's Quest (USA) (Beta)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Addams%20Family,%20The%20-%20Uncle%20Fester's%20Quest%20%28USA%29%20%28Beta%29.cht
+
+cheats = 2
+
+cheat0_desc = "Unlimited Health"
+cheat0_code = "04E5:09+04E9:09"
+cheat0_enable = false
+
+cheat1_desc = "Invincible"
+cheat1_code = "04F8:B0"
+cheat1_enable = false

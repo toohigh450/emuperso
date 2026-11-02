@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Antarctic Adventure (J) [T+Eng1.00_DvD Translations]
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Antarctic%20Adventure%20%28J%29%20[T+Eng1.00_DvD%20Translations].cht
+
+cheats = 3
+
+cheat0_desc = "Distance left to the goal decreases dramatically (In a matter of 1 or 2 seconds you make into the goal)"
+cheat0_code = "AAVKTNPA"
+cheat0_enable = false
+
+cheat1_desc = "Go always at max speed"
+cheat1_code = "GAUGZVIA+SXXTZASA+SXOVGASA"
+cheat1_enable = false
+
+cheat2_desc = "Crash with an obstacle to become invulnerable to obstacles"
+cheat2_code = "AOVTIAAE+SEVVAAVT"
+cheat2_enable = false

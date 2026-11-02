@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Rock 'n' Ball (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Rock%20'n'%20Ball%20%28USA%29.cht
+
+cheats = 4
+
+cheat0_desc = "Infinite Balls"
+cheat0_code = "SLNXYEVS"
+cheat0_enable = false
+
+cheat1_desc = "Score 1 Goal or Allow 1 Goal To Win"
+cheat1_code = "0473:03+0474:04"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Balls P1"
+cheat2_code = "03D1:09"
+cheat2_enable = false
+
+cheat3_desc = "Character Highlighter Modifier P1"
+cheat3_code = "0020:00"
+cheat3_enable = false

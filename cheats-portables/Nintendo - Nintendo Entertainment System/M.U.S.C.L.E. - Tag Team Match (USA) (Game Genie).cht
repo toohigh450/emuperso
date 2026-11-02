@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : M.U.S.C.L.E. - Tag Team Match (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/M.U.S.C.L.E.%20-%20Tag%20Team%20Match%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Set Bout Length Timer To 20"
+cheat0_code = "ZESELPLA"
+cheat0_enable = false 
+
+cheat1_desc = "Set Bout Length Timer To 60"
+cheat1_code = "TESELPLA"
+cheat1_enable = false 
+
+cheat2_desc = "Set Bout Length Timer To 90"
+cheat2_code = "PESELPLE"
+cheat2_enable = false 
+
+cheat3_desc = "Computer Controlled Players Jump Faster"
+cheat3_code = "ZEUOUPPA"
+cheat3_enable = false 
+
+cheat4_desc = "Computer Controlled Players Speed Up"
+cheat4_code = "ZASXAAPA"
+cheat4_enable = false 
+
+cheat5_desc = "Invincibility Player 1 Team"
+cheat5_code = "OZUEPZSX+LTUEZXYG"
+cheat5_enable = false

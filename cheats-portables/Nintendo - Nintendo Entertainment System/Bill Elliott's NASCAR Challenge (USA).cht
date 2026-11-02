@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Bill Elliott's NASCAR Challenge (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Bill%20Elliott's%20NASCAR%20Challenge%20%28USA%29.cht
+
+cheats = 5
+
+cheat0_desc = "Accelerate faster"
+cheat0_code = "EUEKTLEP"
+cheat0_enable = false
+
+cheat1_desc = "Infinite 'free time' in the pits"
+cheat1_code = "SZUETKVK"
+cheat1_enable = false
+
+cheat2_desc = "Freeze timer while crew works on car in pits"
+cheat2_code = "SXOAZVVK"
+cheat2_enable = false
+
+cheat3_desc = "Complete 1 Lap To Win"
+cheat3_code = "7990:08"
+cheat3_enable = false
+
+cheat4_desc = "Maximum Speed/Acceleration P1"
+cheat4_code = "7960:FF"
+cheat4_enable = false

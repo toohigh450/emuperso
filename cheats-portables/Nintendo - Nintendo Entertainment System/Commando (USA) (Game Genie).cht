@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Commando (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Commando%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Start With Infinite Lives"
+cheat0_code = "EZEGNOVG"
+cheat0_enable = false 
+
+cheat1_desc = "Start With Infinite Grenades"
+cheat1_code = "XVULASXK"
+cheat1_enable = false 
+
+cheat2_desc = "Both Players Start With 1 Life"
+cheat2_code = "AEKKIILA"
+cheat2_enable = false 
+
+cheat3_desc = "Both Players Start With 6 Lives"
+cheat3_code = "TEKKIILA"
+cheat3_enable = false 
+
+cheat4_desc = "Both Players Start With 9 Lives"
+cheat4_code = "PEKKIILE"
+cheat4_enable = false 
+
+cheat5_desc = "Start With Double Rations Of Grenades"
+cheat5_code = "AOSGIIIA"
+cheat5_enable = false

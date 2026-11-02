@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Jajamaru Gekimaden - Maboroshi no Kinmajou (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Jajamaru%20Gekimaden%20-%20Maboroshi%20no%20Kinmajou%20%28Japan%29.cht
+
+cheats = 8
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "040F:08"
+cheat0_enable = false
+
+cheat1_desc = "Invincibility"
+cheat1_code = "04BB:01"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Money"
+cheat2_code = "0433:FF"
+cheat2_enable = false
+
+cheat3_desc = "Infinite JP"
+cheat3_code = "0411:32"
+cheat3_enable = false
+
+cheat4_desc = "Infinite HP"
+cheat4_code = "040F:32"
+cheat4_enable = false
+
+cheat5_desc = "Infinite Shuriken"
+cheat5_code = "0418:32"
+cheat5_enable = false
+
+cheat6_desc = "Infinite Bombs"
+cheat6_code = "041A:32"
+cheat6_enable = false
+
+cheat7_desc = "Walk Through Walls"
+cheat7_code = "0474:00+0475:00+0476:00+0477:00"
+cheat7_enable = false

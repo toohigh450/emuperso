@@ -1,0 +1,48 @@
+# Recherche locale pour la ROM : Castle of Dragon (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Castle%20of%20Dragon%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 10 
+
+cheat0_desc = "Stop Skeletons From Fighting"
+cheat0_code = "PEVPULAP"
+cheat0_enable = false 
+
+cheat1_desc = "Enemies And You Each Fight Faster!"
+cheat1_code = "GEOGYZPA"
+cheat1_enable = false 
+
+cheat2_desc = "Super Strong Monsters"
+cheat2_code = "ZPSLONLP"
+cheat2_enable = false 
+
+cheat3_desc = "No Harm From Most Monster Attacks"
+cheat3_code = "SZVUSNVK"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Energy"
+cheat4_code = "YNOLSYAE"
+cheat4_enable = false 
+
+cheat5_desc = "Super Energy"
+cheat5_code = "NYXKLAGE"
+cheat5_enable = false 
+
+cheat6_desc = "Start With Knives"
+cheat6_code = "ZAXGLAAA"
+cheat6_enable = false 
+
+cheat7_desc = "Start With Knives And Mace"
+cheat7_code = "LAXGLAAA"
+cheat7_enable = false 
+
+cheat8_desc = "Start With Armor"
+cheat8_code = "EAXGLAAA"
+cheat8_enable = false 
+
+cheat9_desc = "Start With Armor, Knives And Mace!"
+cheat9_code = "UAXGLAAA"
+cheat9_enable = false

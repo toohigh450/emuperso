@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : 8 BIT XMAS 2009
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/8%20BIT%20XMAS%202009.cht
+
+cheats = 5
+
+cheat0_desc = "Start With 6 Minutes"
+cheat0_code = "TAXAYPPA"
+cheat0_enable = false
+
+cheat1_desc = "Start With 7 Minutes"
+cheat1_code = "YAXAYPPA"
+cheat1_enable = false
+
+cheat2_desc = "Start With 8 Minutes"
+cheat2_code = "AAXAYPPE"
+cheat2_enable = false
+
+cheat3_desc = "Start With 9 Minutes"
+cheat3_code = "PAXAYPPE"
+cheat3_enable = false
+
+cheat4_desc = "Tripleshot Everyone"
+cheat4_code = "ALUANPEY"
+cheat4_enable = false

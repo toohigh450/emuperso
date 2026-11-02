@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Orb-3D (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Orb-3D%20%28USA%29.cht
+
+cheats = 6
+
+cheat0_desc = "Infinite Fuel"
+cheat0_code = "03FD:50"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Fuel"
+cheat1_code = "SXETGVVK+SXXTYVSE+SZUVLVSE"
+cheat1_enable = false
+
+cheat2_desc = "Only Need To Eliminate One Object On Most Of The Levels"
+cheat2_code = "03C6:01"
+cheat2_enable = false
+
+cheat3_desc = "Level Select"
+cheat3_code = "03E2:00"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Fuel P1"
+cheat4_code = "03FD:55"
+cheat4_enable = false
+
+cheat5_desc = "Max Bonus Time"
+cheat5_code = "0468:FF+0469:FF"
+cheat5_enable = false

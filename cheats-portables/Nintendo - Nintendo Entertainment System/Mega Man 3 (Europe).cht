@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Mega Man 3 (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Mega%20Man%203%20%28Europe%29.cht
+
+cheats = 6
+
+cheat0_desc = "Wrap Around To The Top When You Fall Down A Bottomless Pit"
+cheat0_code = "AVUNLNOG"
+cheat0_enable = false
+
+cheat1_desc = "Wrap Around To The Bottom When You Jump Through The Top Of The Screen"
+cheat1_code = "AVSNINOT"
+cheat1_enable = false
+
+cheat2_desc = "Walk Through Walls To The Left"
+cheat2_code = "ATEYPTAZ"
+cheat2_enable = false
+
+cheat3_desc = "Walk Through Walls To The Right"
+cheat3_code = "AVUNYIAZ"
+cheat3_enable = false
+
+cheat4_desc = "Jump Through Roof"
+cheat4_code = "AVNNATAZ"
+cheat4_enable = false
+
+cheat5_desc = "Scrolling Doesn't Stop"
+cheat5_code = "SPKESEPZ"
+cheat5_enable = false

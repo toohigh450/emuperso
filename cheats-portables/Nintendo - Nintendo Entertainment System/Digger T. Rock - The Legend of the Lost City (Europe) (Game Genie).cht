@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Digger T. Rock - The Legend of the Lost City (Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Digger%20T.%20Rock%20-%20The%20Legend%20of%20the%20Lost%20City%20%28Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Start With Weapons"
+cheat0_code = "PAONOGAE"
+cheat0_enable = false 
+
+cheat1_desc = "Less Rocks On Pick-Up"
+cheat1_code = "IAUGZUPA"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Rocks On Pick-Up"
+cheat2_code = "SZEYTVVK"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Rope On Pick-Up"
+cheat3_code = "SXEUIUVK"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Dynamite On Pick-Up"
+cheat4_code = "SXEXTEVK"
+cheat4_enable = false 
+
+cheat5_desc = "Infinite Energy"
+cheat5_code = "SXSYOPVG"
+cheat5_enable = false 
+
+cheat6_desc = "Infinite Lives"
+cheat6_code = "SXVAYTVG"
+cheat6_enable = false

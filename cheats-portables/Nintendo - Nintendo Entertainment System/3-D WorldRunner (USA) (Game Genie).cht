@@ -1,0 +1,68 @@
+# Recherche locale pour la ROM : 3-D WorldRunner (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/3-D%20WorldRunner%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 15 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "AEUOLTPA"
+cheat0_enable = false 
+
+cheat1_desc = "Freeze Timer"
+cheat1_code = "SXUPZGVG"
+cheat1_enable = false 
+
+cheat2_desc = "Slow Down Timer"
+cheat2_code = "NNXOYGEK"
+cheat2_enable = false 
+
+cheat3_desc = "Speed Up Timer"
+cheat3_code = "AVXOYGEG"
+cheat3_enable = false 
+
+cheat4_desc = "Start With And Keep Laser Missiles"
+cheat4_code = "AEUOVIGA"
+cheat4_enable = false 
+
+cheat5_desc = "Autofire"
+cheat5_code = "OXUONISX"
+cheat5_enable = false 
+
+cheat6_desc = "Start With 1 Life"
+cheat6_code = "PEUPPTLA+PLVOLTLL"
+cheat6_enable = false 
+
+cheat7_desc = "Start With 6 Lives"
+cheat7_code = "TEUPPTLA+TLVOLTLL"
+cheat7_enable = false 
+
+cheat8_desc = "Start With 9 Lives"
+cheat8_code = "PEUPPTLE+PLVOLTLU"
+cheat8_enable = false 
+
+cheat9_desc = "Start On World 2"
+cheat9_code = "XZEAUOOZ+PAEAKPAA+VAEASPSA"
+cheat9_enable = false 
+
+cheat10_desc = "Start On World 3"
+cheat10_code = "XZEAUOOZ+ZAEAKPAA+VAEASPSA"
+cheat10_enable = false 
+
+cheat11_desc = "Start On World 4"
+cheat11_code = "XZEAUOOZ+LAEAKPAA+VAEASPSA"
+cheat11_enable = false 
+
+cheat12_desc = "Start On World 5"
+cheat12_code = "XZEAUOOZ+GAEAKPAA+VAEASPSA"
+cheat12_enable = false 
+
+cheat13_desc = "Start On World 6"
+cheat13_code = "XZEAUOOZ+IAEAKPAA+VAEASPSA"
+cheat13_enable = false 
+
+cheat14_desc = "Start On World 7"
+cheat14_code = "XZEAUOOZ+TAEAKPAA+VAEASPSA"
+cheat14_enable = false

@@ -1,0 +1,48 @@
+# Recherche locale pour la ROM : Robocco Wars (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Robocco%20Wars%20%28Japan%29.cht
+
+cheats = 10
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "0775:03"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "0777:09"
+cheat1_enable = false
+
+cheat2_desc = "Invincibility"
+cheat2_code = "07A4:02"
+cheat2_enable = false
+
+cheat3_desc = "One Hit Kills Middle Boss"
+cheat3_code = "056F:01"
+cheat3_enable = false
+
+cheat4_desc = "One Hit Kills Boss"
+cheat4_code = "0782:01"
+cheat4_enable = false
+
+cheat5_desc = "Start At Level 5"
+cheat5_code = "GLUZOAAE"
+cheat5_enable = false
+
+cheat6_desc = "Moon Jump"
+cheat6_code = "TYNZKVOY+GZNXETEI+OKEZSVOY+AEEXXVTT+XXXZEVOY"
+cheat6_enable = false
+
+cheat7_desc = "Start At Secret Level"
+cheat7_code = "ILUZOAAE"
+cheat7_enable = false
+
+cheat8_desc = "Hit Anywhere"
+cheat8_code = "AAOEVSIG+AAKAXSPZ"
+cheat8_enable = false
+
+cheat9_desc = "Infinite Hearts"
+cheat9_code = "0775:03"
+cheat9_enable = false

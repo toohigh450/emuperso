@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Downtown Special - Kunio-kun no Jidaigeki Da yo Zenin Shuugou! (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Downtown%20Special%20-%20Kunio-kun%20no%20Jidaigeki%20Da%20yo%20Zenin%20Shuugou!%20%28Japan%29.cht
+
+cheats = 5
+
+cheat0_desc = "Infinite Cash"
+cheat0_code = "7AE0:FF+7AE1:FF"
+cheat0_enable = false
+
+cheat1_desc = "P1 Infinite Health"
+cheat1_code = "7A00:44"
+cheat1_enable = false
+
+cheat2_desc = "P2 Infinite Health"
+cheat2_code = "7A01:44"
+cheat2_enable = false
+
+cheat3_desc = "Kill Enemies With 1 Hit"
+cheat3_code = "7A02:00"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Growth Ability Points"
+cheat4_code = "008B:01"
+cheat4_enable = false

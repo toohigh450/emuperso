@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Championship Rally (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Championship%20Rally%20%28Europe%29.cht
+
+cheats = 4
+
+cheat0_desc = "Infinite Time"
+cheat0_code = "00AD:00"
+cheat0_enable = false
+
+cheat1_desc = "Start In The Last Lap"
+cheat1_code = "00AA:01"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Time"
+cheat2_code = "SXUYAZVT"
+cheat2_enable = false
+
+cheat3_desc = "Quick Laps"
+cheat3_code = "AASKSLAZ"
+cheat3_enable = false

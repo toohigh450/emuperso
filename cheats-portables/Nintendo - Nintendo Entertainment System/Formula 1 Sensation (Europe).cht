@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Formula 1 Sensation (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Formula%201%20Sensation%20%28Europe%29.cht
+
+cheats = 5
+
+cheat0_desc = "Max Speed"
+cheat0_code = "00B2:FF"
+cheat0_enable = false
+
+cheat1_desc = "Max Engine"
+cheat1_code = "00AC:14"
+cheat1_enable = false
+
+cheat2_desc = "Max Tire"
+cheat2_code = "00AD:14"
+cheat2_enable = false
+
+cheat3_desc = "Max Wing"
+cheat3_code = "00AE:14"
+cheat3_enable = false
+
+cheat4_desc = "One Lap To Go"
+cheat4_code = "00B6:00"
+cheat4_enable = false

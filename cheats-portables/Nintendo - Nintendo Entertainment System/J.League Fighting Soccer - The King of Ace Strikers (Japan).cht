@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : J.League Fighting Soccer - The King of Ace Strikers (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/J.League%20Fighting%20Soccer%20-%20The%20King%20of%20Ace%20Strikers%20%28Japan%29.cht
+
+cheats = 4
+
+cheat0_desc = "Player 1 Score Modifier"
+cheat0_code = "039B:00"
+cheat0_enable = false
+
+cheat1_desc = "Player 2 Score Modifier"
+cheat1_code = "039E:00"
+cheat1_enable = false
+
+cheat2_desc = "Seconds Modifier"
+cheat2_code = "036E:00"
+cheat2_enable = false
+
+cheat3_desc = "Minutes Modifier"
+cheat3_code = "036F:00"
+cheat3_enable = false

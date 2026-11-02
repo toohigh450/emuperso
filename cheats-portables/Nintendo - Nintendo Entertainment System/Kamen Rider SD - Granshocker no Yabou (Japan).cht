@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Kamen Rider SD - Granshocker no Yabou (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Kamen%20Rider%20SD%20-%20Granshocker%20no%20Yabou%20%28Japan%29.cht
+
+cheats = 6
+
+cheat0_desc = "Move Unlimited Spaces"
+cheat0_code = "7369:05"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Money"
+cheat1_code = "647F:FF+6480:FF"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Credits"
+cheat2_code = "6481:FF+6482:FF"
+cheat2_enable = false
+
+cheat3_desc = "Team 1 - Max Experience"
+cheat3_code = "6416:FF+6417:FF+6418:FF+640D:FF+640E:FF+640F:FF"
+cheat3_enable = false
+
+cheat4_desc = "Team 2 - Max Experience"
+cheat4_code = "6410:FF+6411:FF+6412:FF+6419:FF+641A:FF+641B:FF"
+cheat4_enable = false
+
+cheat5_desc = "Team 3 - Max Experience"
+cheat5_code = "6413:FF+6414:FF+6415:FF+6416:FF+6417:FF+6418:FF"
+cheat5_enable = false

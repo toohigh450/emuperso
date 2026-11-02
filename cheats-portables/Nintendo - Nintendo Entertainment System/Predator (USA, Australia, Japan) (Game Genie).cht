@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Predator (USA, Australia, Japan) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Predator%20%28USA,%20Australia,%20Japan%29%20%28Game%20Genie%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Infinite Lives In Jungle Mode"
+cheat0_code = "SZNGGXVK"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives In Big Mode"
+cheat1_code = "SXXGZOVK"
+cheat1_enable = false 
+
+cheat2_desc = "Start With Double Lives"
+cheat2_code = "AAVKGPGE"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Life Points In Jungle Mode"
+cheat3_code = "AVUGVGSA"
+cheat3_enable = false 
+
+cheat4_desc = "Mega-Jumps In Jungle Mode"
+cheat4_code = "AEOETOPE"
+cheat4_enable = false 
+
+cheat5_desc = "Don't Die If You Fall Down Holes"
+cheat5_code = "NTEENEGE+ATOAEEOZ"
+cheat5_enable = false 
+
+cheat6_desc = "Start Each Life With Laser Rifle"
+cheat6_code = "LASEOELA+XLSEUEVX"
+cheat6_enable = false

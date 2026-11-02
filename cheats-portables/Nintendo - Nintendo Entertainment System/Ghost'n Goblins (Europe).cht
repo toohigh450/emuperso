@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Ghost'n Goblins (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Ghost'n%20Goblins%20%28Europe%29.cht
+
+cheats = 4
+
+cheat0_desc = "Infinite Time"
+cheat0_code = "SXOIGUVK"
+cheat0_enable = false
+
+cheat1_desc = "Invincibility Against Monsters/Bullets"
+cheat1_code = "AVVYLIAZ"
+cheat1_enable = false
+
+cheat2_desc = "Weapon 1 In Level 5 Is The Cross"
+cheat2_code = "PAVEPOZE"
+cheat2_enable = false
+
+cheat3_desc = "Weapon 2 In Level 5 Is The Cross"
+cheat3_code = "PEXEPPTE"
+cheat3_enable = false

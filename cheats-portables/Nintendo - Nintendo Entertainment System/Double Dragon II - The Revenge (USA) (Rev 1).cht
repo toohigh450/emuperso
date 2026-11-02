@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Double Dragon II - The Revenge (USA) (Rev 1)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Double%20Dragon%20II%20-%20The%20Revenge%20%28USA%29%20%28Rev%201%29.cht
+
+cheats = 6
+
+cheat0_desc = "Press Start To Remove Some Enemies"
+cheat0_code = "OXNTVVPK+AENTNTEA+TUNVOTIU"
+cheat0_enable = false
+
+cheat1_desc = "Invulnerability"
+cheat1_code = "AEXXOITA"
+cheat1_enable = false
+
+cheat2_desc = "Start With 9 Lives"
+cheat2_code = "PASVETGE"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Lives"
+cheat3_code = "SUOANXVS"
+cheat3_enable = false
+
+cheat4_desc = "Walk Anywhere On Map"
+cheat4_code = "EYUSNZEI"
+cheat4_enable = false
+
+cheat5_desc = "Cheat Mode"
+cheat5_code = "AEVOVEIL"
+cheat5_enable = false

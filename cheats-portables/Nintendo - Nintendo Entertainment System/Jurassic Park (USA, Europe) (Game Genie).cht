@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Jurassic Park (USA, Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Jurassic%20Park%20%28USA,%20Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 8 
+
+cheat0_desc = "Infinite Ammo On Pick-Up"
+cheat0_code = "GZUXXKVS"
+cheat0_enable = false 
+
+cheat1_desc = "More Bullets Picked Up From Small Dinosaurs"
+cheat1_code = "PAVPAGZE"
+cheat1_enable = false 
+
+cheat2_desc = "Fewer Bullets Picked Up From Small Dinosaurs"
+cheat2_code = "PAVPAGZA"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Lives"
+cheat3_code = "GZEULOVK"
+cheat3_enable = false 
+
+cheat4_desc = "Immune To Most Attacks"
+cheat4_code = "ATVGZOSA"
+cheat4_enable = false 
+
+cheat5_desc = "Infinite Health"
+cheat5_code = "SZVGZOSE"
+cheat5_enable = false 
+
+cheat6_desc = "Infinite Lives"
+cheat6_code = "SZEULOVK"
+cheat6_enable = false 
+
+cheat7_desc = "Infinite Bullets"
+cheat7_code = "SZUXXKVS"
+cheat7_enable = false

@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Iron Tank - The Invasion of Normandy (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Iron%20Tank%20-%20The%20Invasion%20of%20Normandy%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Super Strong Tank"
+cheat0_code = "SLUVKESO"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "OIOGIIPA+SXUKTKVK"
+cheat1_enable = false 
+
+cheat2_desc = "Start With 1 Life"
+cheat2_code = "OIOGIIPA+AAUKGGZA"
+cheat2_enable = false 
+
+cheat3_desc = "Start With 6 Lives"
+cheat3_code = "OIOGIIPA+IAUKGGZA"
+cheat3_enable = false 
+
+cheat4_desc = "Start With 9 Lives"
+cheat4_code = "OIOGIIPA+AAUKGGZE"
+cheat4_enable = false

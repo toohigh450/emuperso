@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Harry Potter
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Harry%20Potter.cht
+
+cheats = 6
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "018D:09"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Health"
+cheat1_code = "0193:00"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Energy"
+cheat2_code = "SZVUZSSE"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Lives"
+cheat3_code = "SXOYSXVK"
+cheat3_enable = false
+
+cheat4_desc = "Start With 10 Lives"
+cheat4_code = "ZEEOPGIE"
+cheat4_enable = false
+
+cheat5_desc = "1 Hit Kills Most Bosses"
+cheat5_code = "PEOUPEYZ+PEOUYEYI+PEOUGAYG"
+cheat5_enable = false

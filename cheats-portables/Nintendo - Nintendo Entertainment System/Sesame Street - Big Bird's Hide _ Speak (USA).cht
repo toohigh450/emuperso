@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Sesame Street - Big Bird's Hide _ Speak (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Sesame%20Street%20-%20Big%20Bird's%20Hide%20_%20Speak%20%28USA%29.cht
+
+cheats = 1
+
+cheat0_desc = "Reveal The Locations of All Sesame Street Characters"
+cheat0_code = "005D:04"
+cheat0_enable = false

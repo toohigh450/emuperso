@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Ferrari Grand Prix Challenge (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Ferrari%20Grand%20Prix%20Challenge%20%28USA%29.cht
+
+cheats = 6
+
+cheat0_desc = "Always 1st Place"
+cheat0_code = "06C0:01"
+cheat0_enable = false
+
+cheat1_desc = "Lap Modifier"
+cheat1_code = "0078:09"
+cheat1_enable = false
+
+cheat2_desc = "Low Timer (One Digit - Seconds)"
+cheat2_code = "05E2:00"
+cheat2_enable = false
+
+cheat3_desc = "Low Timer (Ten Digit - Seconds)"
+cheat3_code = "05E1:00"
+cheat3_enable = false
+
+cheat4_desc = "Low Timer (Microsecond Digit)"
+cheat4_code = "05E3:00"
+cheat4_enable = false
+
+cheat5_desc = "Car Goes At Max Speed"
+cheat5_code = "0610:0F"
+cheat5_enable = false

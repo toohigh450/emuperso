@@ -1,0 +1,56 @@
+# Recherche locale pour la ROM : Metal Max (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Metal%20Max%20%28Japan%29.cht
+
+cheats = 12
+
+cheat0_desc = "No Random Battles"
+cheat0_code = "0544:00"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Gold"
+cheat1_code = "645D:FF+645E:FF+645F:FF"
+cheat1_enable = false
+
+cheat2_desc = "P1 Health"
+cheat2_code = "6466:FF"
+cheat2_enable = false
+
+cheat3_desc = "P2 Health"
+cheat3_code = "6468:FF"
+cheat3_enable = false
+
+cheat4_desc = "P3 Health"
+cheat4_code = "64EA:FF"
+cheat4_enable = false
+
+cheat5_desc = "P4 Health"
+cheat5_code = "64EE:FF"
+cheat5_enable = false
+
+cheat6_desc = "P1 Experience"
+cheat6_code = "64C9:FF+64CA:FF+64CB:FF"
+cheat6_enable = false
+
+cheat7_desc = "P2 Experience"
+cheat7_code = "64CC:FF+64CD:FF+64CE:FF"
+cheat7_enable = false
+
+cheat8_desc = "P3 Experience"
+cheat8_code = "64CF:FF+64D0:FF+64D1:FF"
+cheat8_enable = false
+
+cheat9_desc = "P4 Experience"
+cheat9_code = "64D2:FF+64D3:FF+64D4:FF"
+cheat9_enable = false
+
+cheat10_desc = "Vertical Position"
+cheat10_code = "035C:00"
+cheat10_enable = false
+
+cheat11_desc = "Horizontal Position"
+cheat11_code = "0358:00"
+cheat11_enable = false

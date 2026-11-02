@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Ninja-kun - Ashura no Shou (J) [T+Chi]
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Ninja-kun%20-%20Ashura%20no%20Shou%20%28J%29%20[T+Chi].cht
+
+cheats = 1
+
+cheat0_desc = "Long Range Shurikens"
+cheat0_code = "05DA:00+05DB:00"
+cheat0_enable = false

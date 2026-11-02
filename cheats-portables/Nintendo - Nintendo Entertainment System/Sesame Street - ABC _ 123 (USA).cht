@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Sesame Street - ABC _ 123 (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Sesame%20Street%20-%20ABC%20_%20123%20%28USA%29.cht
+
+cheats = 1
+
+cheat0_desc = "Zips (Green Men) Modifier (In Astro Grover)"
+cheat0_code = "00A6:00"
+cheat0_enable = false

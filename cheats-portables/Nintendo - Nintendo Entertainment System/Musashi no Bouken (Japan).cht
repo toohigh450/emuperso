@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Musashi no Bouken (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Musashi%20no%20Bouken%20%28Japan%29.cht
+
+cheats = 5
+
+cheat0_desc = "No Random Battles"
+cheat0_code = "GXVUIIEY"
+cheat0_enable = false
+
+cheat1_desc = "Lots Of Random Battles"
+cheat1_code = "ASVUIIEY"
+cheat1_enable = false
+
+cheat2_desc = "No Random Battles"
+cheat2_code = "0074:FF"
+cheat2_enable = false
+
+cheat3_desc = "Lost Of Random Battles"
+cheat3_code = "0074:00"
+cheat3_enable = false
+
+cheat4_desc = "Sound Test"
+cheat4_code = "PAXLSYGE"
+cheat4_enable = false

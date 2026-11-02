@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Metroid (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Metroid%20%28Europe%29.cht
+
+cheats = 5
+
+cheat0_desc = "Take Bombs And Get Every Upgrade"
+cheat0_code = "ANVIVUPE+AVVINLPE"
+cheat0_enable = false
+
+cheat1_desc = "Shooting Breaks Any Block"
+cheat1_code = "AAOSYTAL"
+cheat1_enable = false
+
+cheat2_desc = "Explosion Animation When Hitting a Object"
+cheat2_code = "AENIAIZA"
+cheat2_enable = false
+
+cheat3_desc = "Shoot Through Walls"
+cheat3_code = "AIOIZTEL"
+cheat3_enable = false
+
+cheat4_desc = "Shooting Slices Through Blocks And Destroys Them"
+cheat4_code = "AIOIZTEL+GAOILTAO+AZXIPVGG+IGOIPTEX"
+cheat4_enable = false

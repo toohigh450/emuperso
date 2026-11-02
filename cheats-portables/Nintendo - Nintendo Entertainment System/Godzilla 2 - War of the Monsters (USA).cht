@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Godzilla 2 - War of the Monsters (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Godzilla%202%20-%20War%20of%20the%20Monsters%20%28USA%29.cht
+
+cheats = 3
+
+cheat0_desc = "Kill Monsters In One Shot"
+cheat0_code = "067E:00+067F:00+0680:00+0681:00+0682:00+0683:00+0684:00+0685:00"
+cheat0_enable = false
+
+cheat1_desc = "Turn Modifier"
+cheat1_code = "06D6:00"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Moves"
+cheat2_code = "YAOSSLTA"
+cheat2_enable = false

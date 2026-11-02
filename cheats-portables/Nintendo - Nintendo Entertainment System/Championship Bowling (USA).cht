@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Championship Bowling (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Championship%20Bowling%20%28USA%29.cht
+
+cheats = 5
+
+cheat0_desc = "Pins Knocked Down Modifier"
+cheat0_code = "0385:0A"
+cheat0_enable = false
+
+cheat1_desc = "Hit Anywhere"
+cheat1_code = "AASETNZP"
+cheat1_enable = false
+
+cheat2_desc = "Bowling Ball Modifier (At Player Selection Screen)"
+cheat2_code = "0004:00"
+cheat2_enable = false
+
+cheat3_desc = "First Bowling Ball Score Modifier (0X, '9' Recommended)"
+cheat3_code = "0385:00"
+cheat3_enable = false
+
+cheat4_desc = "Second Bowling Ball Score Modifier (0X, '9' Recommended)"
+cheat4_code = "0386:00"
+cheat4_enable = false

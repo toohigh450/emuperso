@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Balloon Fight (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Balloon%20Fight%20%28Europe%29.cht
+
+cheats = 2
+
+cheat0_desc = "Start With 9 Lives (Player 1)"
+cheat0_code = "PEYYPO"
+cheat0_enable = false
+
+cheat1_desc = "Balloon's Can't Be Popped"
+cheat1_code = "AAIVSY"
+cheat1_enable = false

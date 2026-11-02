@@ -1,0 +1,60 @@
+# Recherche locale pour la ROM : Elevator Action (USA, Japan) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Elevator%20Action%20%28USA,%20Japan%29%20%28Game%20Genie%29.cht
+
+cheats = 13 
+
+cheat0_desc = "Player 1 Has Infinite Lives"
+cheat0_code = "GXEUOUVK"
+cheat0_enable = false 
+
+cheat1_desc = "Player 1 Starts With 1 Life"
+cheat1_code = "AAULNLZA"
+cheat1_enable = false 
+
+cheat2_desc = "Player 1 Starts With 6 Lives"
+cheat2_code = "IAULNLZA"
+cheat2_enable = false 
+
+cheat3_desc = "Player 1 Starts With 9 Lives"
+cheat3_code = "AAULNLZE"
+cheat3_enable = false 
+
+cheat4_desc = "Player 2 Starts With 6 Lives"
+cheat4_code = "IEVUULZA"
+cheat4_enable = false 
+
+cheat5_desc = "Player 2 Starts With 9 Lives"
+cheat5_code = "AEVUULZE"
+cheat5_enable = false 
+
+cheat6_desc = "Can Only Shoot One Bullet"
+cheat6_code = "GASTLPTA"
+cheat6_enable = false 
+
+cheat7_desc = "Slower Man"
+cheat7_code = "PESIAYLA+NNUSZNSN"
+cheat7_enable = false 
+
+cheat8_desc = "Faster Man"
+cheat8_code = "IESIAYLA+XNUSZNSN"
+cheat8_enable = false 
+
+cheat9_desc = "Faster Bullets"
+cheat9_code = "ZAVTLOAE+VYVTYOEY"
+cheat9_enable = false 
+
+cheat10_desc = "Slower Bullets"
+cheat10_code = "GAVTLOAA+KYVTYOEN"
+cheat10_enable = false 
+
+cheat11_desc = "Faster Enemy"
+cheat11_code = "GEONGPZA+XNXNGOVN"
+cheat11_enable = false 
+
+cheat12_desc = "Slower Enemy"
+cheat12_code = "PEONGPZA+NNXNGOVN"
+cheat12_enable = false

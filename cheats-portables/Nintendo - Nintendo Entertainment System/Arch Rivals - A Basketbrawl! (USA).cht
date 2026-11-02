@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Arch Rivals - A Basketbrawl! (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Arch%20Rivals%20-%20A%20Basketbrawl!%20%28USA%29.cht
+
+cheats = 5
+
+cheat0_desc = "More time for a quarter"
+cheat0_code = "ALXLNZGU+ALNLPPGU"
+cheat0_enable = false
+
+cheat1_desc = "Less time for a quarter"
+cheat1_code = "ZLXLNZGL+ZLNLPPGL"
+cheat1_enable = false
+
+cheat2_desc = "Run faster without ball"
+cheat2_code = "AVNPLAAZ+ATVPAPAZ"
+cheat2_enable = false
+
+cheat3_desc = "Super speed"
+cheat3_code = "IXVOPAGA+IZSPGPGA"
+cheat3_enable = false
+
+cheat4_desc = "Never Miss A Shot"
+cheat4_code = "GZVPOZEI"
+cheat4_enable = false

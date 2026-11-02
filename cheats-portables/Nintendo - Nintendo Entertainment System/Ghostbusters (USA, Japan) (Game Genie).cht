@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Ghostbusters (USA, Japan) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Ghostbusters%20%28USA,%20Japan%29%20%28Game%20Genie%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Start With $1,000,000"
+cheat0_code = "AVVETNTI"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Fuel"
+cheat1_code = "SXKZAZVG"
+cheat1_enable = false 
+
+cheat2_desc = "Immune To Ghosts On Zuul Stairway"
+cheat2_code = "OXOXKPVK"
+cheat2_enable = false 
+
+cheat3_desc = "Permanent Ghost Alarm"
+cheat3_code = "PAEEXKPX"
+cheat3_enable = false 
+
+cheat4_desc = "Permanent Ghost Vacuum"
+cheat4_code = "PASPLOPX"
+cheat4_enable = false 
+
+cheat5_desc = "Self-Emptying Traps"
+cheat5_code = "OXSESGSX"
+cheat5_enable = false 
+
+cheat6_desc = "Super Sprinting Up Zuul Stairway"
+cheat6_code = "AEEZOAPA"
+cheat6_enable = false

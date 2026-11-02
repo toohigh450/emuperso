@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Immortal, The (USA) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Immortal,%20The%20%28USA%29%20%28Game%20Genie%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Enemy's Fatigue Level Doesn't Go Down"
+cheat0_code = "GZOLIXVK"
+cheat0_enable = false 
+
+cheat1_desc = "Your Fatigue Level Doesn't Go Down"
+cheat1_code = "GZOUIXVK"
+cheat1_enable = false 
+
+cheat2_desc = "Your Fatigue Level Goes Down Faster"
+cheat2_code = "YLEUIXYN"
+cheat2_enable = false 
+
+cheat3_desc = "Your Fatigue Level Goes Down Slower"
+cheat3_code = "NYEUIXYN"
+cheat3_enable = false 
+
+cheat4_desc = "Don't Lose Energy From Fighting"
+cheat4_code = "SZSLTXVK"
+cheat4_enable = false 
+
+cheat5_desc = "Your Fatigue Level Never Rises"
+cheat5_code = "SZNLPXVV"
+cheat5_enable = false 
+
+cheat6_desc = "More Damage From Fireballs"
+cheat6_code = "ZAKSIYPA"
+cheat6_enable = false

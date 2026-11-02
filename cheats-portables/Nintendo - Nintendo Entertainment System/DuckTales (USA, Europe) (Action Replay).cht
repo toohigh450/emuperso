@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : DuckTales (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/DuckTales%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 2 
+
+cheat0_desc = "Unlimited Lives"
+cheat0_code = "36102"
+cheat0_enable = false 
+
+cheat1_desc = "Unlimited Time"
+cheat1_code = "15905"
+cheat1_enable = false

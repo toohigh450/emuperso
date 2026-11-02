@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Galaga (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Galaga%20%28Europe%29.cht
+
+cheats = 3
+
+cheat0_desc = "Skip Title Scroll"
+cheat0_code = ""
+cheat0_enable = false
+
+cheat1_desc = "Shoot Like There's Two Planes"
+cheat1_code = "AEAVYA"
+cheat1_enable = false
+
+cheat2_desc = "Start A New Game On A Different Stage"
+cheat2_code = "PAGGXI"
+cheat2_enable = false

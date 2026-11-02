@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : San Guo Zhi 4 - Chi Bi Feng Yun (Ch) [!]
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/San%20Guo%20Zhi%204%20-%20Chi%20Bi%20Feng%20Yun%20%28Ch%29%20[!].cht
+
+cheats = 1
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "0517:00"
+cheat0_enable = false

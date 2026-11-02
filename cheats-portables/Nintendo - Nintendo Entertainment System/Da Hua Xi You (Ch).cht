@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Da Hua Xi You (Ch)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Da%20Hua%20Xi%20You%20%28Ch%29.cht
+
+cheats = 6
+
+cheat0_desc = "Infinite HP"
+cheat0_code = "0566:FF"
+cheat0_enable = false
+
+cheat1_desc = "Infinite MP"
+cheat1_code = "0568:FF"
+cheat1_enable = false
+
+cheat2_desc = "Max ATK"
+cheat2_code = "056A:FF"
+cheat2_enable = false
+
+cheat3_desc = "Max DEF"
+cheat3_code = "056B:FF"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Gold"
+cheat4_code = "0562:FF+0563:FF"
+cheat4_enable = false
+
+cheat5_desc = "Instant Kill"
+cheat5_code = "0484:FF"
+cheat5_enable = false

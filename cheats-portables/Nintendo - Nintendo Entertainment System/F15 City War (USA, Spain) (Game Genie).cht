@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : F15 City War (USA, Spain) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/F15%20City%20War%20%28USA,%20Spain%29%20%28Game%20Genie%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Start With 1 Life"
+cheat0_code = "PEVYGPIA"
+cheat0_enable = false 
+
+cheat1_desc = "Start With 9 Lives"
+cheat1_code = "PEVYGPIE"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Lives For 3-D Sections"
+cheat2_code = "SZOYYLVG"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Lives For Top-View Sections"
+cheat3_code = "SXOIYIVG"
+cheat3_enable = false 
+
+cheat4_desc = "No Forward Movement On Top-View Sections"
+cheat4_code = "GXEETVVS"
+cheat4_enable = false 
+
+cheat5_desc = "Slower Left And Right Movement On 3-D Sections"
+cheat5_code = "GXOEIUVN+GXVALUVS"
+cheat5_enable = false

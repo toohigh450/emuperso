@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Gyrodine (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Gyrodine%20%28Japan%29.cht
+
+cheats = 7
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "SZXUTTVG"
+cheat0_enable = false
+
+cheat1_desc = "Start with 5 Lives, instead of 3"
+cheat1_code = "IEEAUZLA"
+cheat1_enable = false
+
+cheat2_desc = "Start with 7 Lives"
+cheat2_code = "YEEAUZLA"
+cheat2_enable = false
+
+cheat3_desc = "Start with 10 Lives"
+cheat3_code = "ZEEAUZLE"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Lives"
+cheat4_code = "0039:09"
+cheat4_enable = false
+
+cheat5_desc = "Enable Invincibility Cheat (Enable on Title Screen)"
+cheat5_code = "EIOAKGEY"
+cheat5_enable = false
+
+cheat6_desc = "Enable Invincibility Cheat"
+cheat6_code = "012D:06"
+cheat6_enable = false

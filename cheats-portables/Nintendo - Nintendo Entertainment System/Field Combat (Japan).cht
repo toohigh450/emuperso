@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Field Combat (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Field%20Combat%20%28Japan%29.cht
+
+cheats = 2
+
+cheat0_desc = "Invincibility"
+cheat0_code = "AAOXIAEA"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "VTVEGPVG"
+cheat1_enable = false

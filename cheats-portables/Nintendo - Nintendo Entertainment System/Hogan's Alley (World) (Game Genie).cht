@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Hogan's Alley (World) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Hogan's%20Alley%20%28World%29%20%28Game%20Genie%29.cht
+
+cheats = 5 
+
+cheat0_desc = "5 Misses Allowed (Game A)"
+cheat0_code = "IAEKOIAP"
+cheat0_enable = false 
+
+cheat1_desc = "20 Misses Allowed (Game A)"
+cheat1_code = "AZEKOIAP"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Misses Allowed (All Games)"
+cheat2_code = "AAOGETPA"
+cheat2_enable = false 
+
+cheat3_desc = "Each Miss Counts As 2 (All Games)"
+cheat3_code = "ZAOGETPA"
+cheat3_enable = false 
+
+cheat4_desc = "28 Misses Allowed (Works Only In Games A & B)"
+cheat4_code = "YZEKOIAP"
+cheat4_enable = false

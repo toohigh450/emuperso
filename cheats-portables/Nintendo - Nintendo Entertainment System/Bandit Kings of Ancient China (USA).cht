@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Bandit Kings of Ancient China (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Bandit%20Kings%20of%20Ancient%20China%20%28USA%29.cht
+
+cheats = 5
+
+cheat0_desc = "255 Men"
+cheat0_code = "6052:FF+6053:FF"
+cheat0_enable = false
+
+cheat1_desc = "255 Strength"
+cheat1_code = "6054:FF"
+cheat1_enable = false
+
+cheat2_desc = "255 Dexterity"
+cheat2_code = "6055:FF"
+cheat2_enable = false
+
+cheat3_desc = "255 Wisdom"
+cheat3_code = "6056:FF"
+cheat3_enable = false
+
+cheat4_desc = "9999 Popularity"
+cheat4_code = "605B:27+605C:0F"
+cheat4_enable = false

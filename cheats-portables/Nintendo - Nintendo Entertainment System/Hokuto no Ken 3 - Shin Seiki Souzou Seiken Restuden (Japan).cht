@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Hokuto no Ken 3 - Shin Seiki Souzou Seiken Restuden (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Hokuto%20no%20Ken%203%20-%20Shin%20Seiki%20Souzou%20Seiken%20Restuden%20%28Japan%29.cht
+
+cheats = 5
+
+cheat0_desc = "No Random Battles"
+cheat0_code = "0079:00"
+cheat0_enable = false
+
+cheat1_desc = "All Character Infinite Hp"
+cheat1_code = "640E:00+640F:00+6410:00+6411:00+6412:00+6413:00+6414:00+6415:00"
+cheat1_enable = false
+
+cheat2_desc = "Boss No Hp"
+cheat2_code = "64F6:00"
+cheat2_enable = false
+
+cheat3_desc = "Enemies No Hp"
+cheat3_code = "64F7:00+64F8:00+64F9:00"
+cheat3_enable = false
+
+cheat4_desc = "Infinite OP"
+cheat4_code = "642A:FF"
+cheat4_enable = false

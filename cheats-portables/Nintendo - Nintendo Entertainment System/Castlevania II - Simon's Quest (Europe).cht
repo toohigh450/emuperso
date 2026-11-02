@@ -1,0 +1,52 @@
+# Recherche locale pour la ROM : Castlevania II - Simon's Quest (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Castlevania%20II%20-%20Simon's%20Quest%20%28Europe%29.cht
+
+cheats = 11
+
+cheat0_desc = "Go Through Blocks"
+cheat0_code = "AEXAYLYA"
+cheat0_enable = false
+
+cheat1_desc = "Max Hearts"
+cheat1_code = "0048:99+0049:99"
+cheat1_enable = false
+
+cheat2_desc = "Max Experience"
+cheat2_code = "0046:99+0047:99"
+cheat2_enable = false
+
+cheat3_desc = "Have All Daggers, Holy Water, Diamond, Sacred Flame, & Wooden Stake"
+cheat3_code = "004A:FF"
+cheat3_enable = false
+
+cheat4_desc = "Mansion Music Plays During the Daytime"
+cheat4_code = "0024:01"
+cheat4_enable = false
+
+cheat5_desc = "Stage Scrambler"
+cheat5_code = "0051:05"
+cheat5_enable = false
+
+cheat6_desc = "Area Modifier"
+cheat6_code = ""
+cheat6_enable = false
+
+cheat7_desc = "Enemies Respawn after being killed"
+cheat7_code = "003C:01"
+cheat7_enable = false
+
+cheat8_desc = "Enemies & Town People Fall Through the Floor / Ground"
+cheat8_code = "003A:01"
+cheat8_enable = false
+
+cheat9_desc = "Weird Enemy & Town People Movement"
+cheat9_code = "0037:01"
+cheat9_enable = false
+
+cheat10_desc = "Disable Sound & Music"
+cheat10_code = "001B:01"
+cheat10_enable = false

@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Power Rangers
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/Power%20Rangers.cht
+
+cheats = 4
+
+cheat0_desc = "Hit Anywhere (Ranger Mode)"
+cheat0_code = "GXENLTEP+GXOYZTEI+GXONPTEY"
+cheat0_enable = false
+
+cheat1_desc = "Hit Anywhere (MegaZord Mode)"
+cheat1_code = "GXSPGPEL+ASSOGPEP"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Health (Ranger Mode)"
+cheat2_code = "0087:00"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Health (Zord Mode)"
+cheat3_code = "00A8:4F"
+cheat3_enable = false

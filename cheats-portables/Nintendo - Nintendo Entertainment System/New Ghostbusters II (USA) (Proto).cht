@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : New Ghostbusters II (USA) (Proto)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Nintendo%20Entertainment%20System/New%20Ghostbusters%20II%20%28USA%29%20%28Proto%29.cht
+
+cheats = 6
+
+cheat0_desc = "Infinite Credits"
+cheat0_code = "SXXXGOVK"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Credits"
+cheat1_code = "07CE:03"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Lives"
+cheat2_code = "SXXKPUVK"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Lives"
+cheat3_code = "07CB:03"
+cheat3_enable = false
+
+cheat4_desc = "Invincibility"
+cheat4_code = "SZVIUVSE"
+cheat4_enable = false
+
+cheat5_desc = "Invincibility"
+cheat5_code = "07BD:00"
+cheat5_enable = false
