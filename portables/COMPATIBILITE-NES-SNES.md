@@ -129,4 +129,6 @@ laisser une valeur en mémoire jusqu'au redémarrage du jeu (bouton « Redémarr
   la nouvelle validation couvre NROM, les ROM d'essai et les cinq démos NES/SNES. Aucune partie complète validée.
 - Manettes physiques et Android réel : non testés (pas de matériel dans cet environnement).
 - Snes9x : licence non commerciale.
-- GB/GBC/GBA/DS (antérieur, inchangé) : la sauvegarde du moteur suit le nom du fichier ROM.
+- GB/GBC/GBA/DS : depuis 0.3.0-alpha.2, la sauvegarde du moteur suit l'empreinte de la ROM, comme NES/SNES.
+  Une sauvegarde d'avant (nommée d'après le fichier) est copiée au premier lancement, sans toucher l'originale
+  (voir « Reprise des sauvegardes GB/GBC/GBA/DS » dans TESTS-NES-SNES.md).

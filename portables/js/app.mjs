@@ -10,6 +10,7 @@ import { parseCht, classifyCheatFiles, linkedCheatValid, normalizeName, deviceLa
 import { CONTROL_PROFILES, buildDefaultControls } from './controls.mjs';
 import { Session } from './session.mjs';
 import { createBrowserHost } from './player-host.mjs';
+import { migrateLegacySave, LEGACY_SAVE_SYSTEMS } from './save-migration.mjs';
 
 import { memoryPlan, MAX_INPUT_BYTES, MAX_ROM_BYTES, MiB } from './resources.mjs';
 import { validateDsBios, MAX_BIOS_ZIP } from './bios.mjs';
@@ -311,14 +312,21 @@ async function openGame(file) {
   };
 
   const defaultControls = buildDefaultControls(settings.controlProfile);
+  const engineStem = ejsGameName(analysis.title, core.coreId, fp.hex);
   const boot = {
     enginePaths,
     // Les cœurs se servent aussi de l'extension : transmettre celle détectée,
     // même si le fichier d'origine était .bin, .srl ou mal nommé.
-    // Le moteur nomme la sauvegarde de cartouche d'après ce nom de fichier. NES/SNES : nom tiré de
-    // l'empreinte et du cœur, donc une sauvegarde par jeu, même ROM renommée, jamais partagée entre deux
-    // ROM de même nom. GB/GBC/GBA/DS gardent l'ancien nommage pour retrouver les sauvegardes existantes.
-    rom: { name: `${['nes', 'snes'].includes(analysis.system) ? ejsGameName(analysis.title, core.coreId, fp.hex) : stemOf(rom.name)}.${engineExtension(analysis)}`, bytes: rom.bytes },
+    // Le moteur nomme la sauvegarde de cartouche d'après ce nom de fichier : nom tiré de l'empreinte et
+    // du cœur, donc une sauvegarde par jeu, même ROM renommée, jamais partagée entre deux ROM de même nom.
+    rom: { name: `${engineStem}.${engineExtension(analysis)}`, bytes: rom.bytes },
+    // GB/GBC/GBA/DS : les sauvegardes d'avant 0.3.0-alpha.2 portent le nom du fichier ; player.html
+    // appelle cette fonction une fois l'ancien moteur fermé et avant de charger le nouveau.
+    prepareSaves: LEGACY_SAVE_SYSTEMS.has(analysis.system) ? () => takeOverLegacySave(game, {
+      coreId: core.coreId,
+      newStem: engineStem,
+      oldStems: [stemOf(rom.name), previous?.fileName ? stemOf(previous.fileName) : null],
+    }) : null,
     // Seuls les codes que l'utilisateur a activés partent au moteur (voir player.html).
     codes: codes.filter((c) => c.enabled).map((c) => c.code),
     bios: core.bios,
@@ -367,6 +375,23 @@ function renderWarnings(game) {
 }
 
 // --- Sauvegardes ------------------------------------------------------------------
+// Copie (jamais déplacement) de la sauvegarde nommée d'après l'ancien nom de fichier de la ROM.
+async function takeOverLegacySave(game, request) {
+  try {
+    const plan = await migrateLegacySave(request);
+    if (plan.action === 'copy') {
+      game.warnings.push(`Sauvegarde existante reprise depuis « ${plan.fromStem} » : elle est maintenant liée à l'empreinte de la ROM et suit le jeu même renommé. L'ancienne sauvegarde reste intacte.`);
+      if (currentGame === game) renderWarnings(game);
+    }
+    return plan;
+  } catch (err) {
+    console.error("Reprise de l'ancienne sauvegarde impossible", err);
+    game.warnings.push(`Ancienne sauvegarde non reprise (${err.message || err}) : elle reste intacte et peut être importée depuis l'onglet Sauvegardes.`);
+    if (currentGame === game) renderWarnings(game);
+    return null;
+  }
+}
+
 async function mirrorSave(spaceId, e) {
   const data = e && e.save ? new Uint8Array(e.save) : null;
   if (!data || data.length === 0) return;

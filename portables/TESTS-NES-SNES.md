@@ -45,9 +45,10 @@ Chrome (écran tactile simulé) n'est **pas** une validation Android.
 
 | Suite | Résultat |
 |---|---|
-| `portables` : `npm test` (logique) | 105/105 |
+| `portables` : `npm test` (logique) | 113/113 |
 | `portables` : `npm run test:browser` (Chromium, moteur simulé, contrôles d'audit existants + nouveaux) | 3/3 groupes réussis |
 | `portables` : `npm run test:real` (vrais cœurs NES/SNES) | 43/43 |
+| `portables` : `npm run test:real-saves` (reprise des sauvegardes GB/GBA/DS, vrais cœurs) | 16/16 |
 | `tools/test-portail.mjs` (site assemblé, local) | 56/56 |
 | `tools/test-portail.mjs` **sur l'aperçu Vercel public** | 56/56 |
 | `tools/test-mobile.mjs` (émulation Android, local) | 16/16 |
@@ -144,6 +145,41 @@ Snes9x (via EmulatorJS) ignorait parfois un redémarrage demandé dans la même 
   téléphone 16/16. Les aperçus Vercel ajoutent leur propre iframe (barre d'outils) : les tests visent
   l'iframe du moteur.
 
+## Reprise des sauvegardes GB/GBC/GBA/DS (0.3.0-alpha.2)
+
+Jusqu'en 0.3.0-alpha.1, le moteur nommait la sauvegarde GB/GBC/GBA/DS d'après le **nom du fichier** :
+une ROM renommée repartait de zéro, et deux ROM différentes de même nom partageaient la même sauvegarde.
+Ces consoles reçoivent maintenant, comme NES/SNES, un nom tiré de l'empreinte SHA-256 et du cœur.
+
+Au premier lancement, juste avant que le moteur ne lise sa base, le lanceur **copie** l'ancienne sauvegarde
+(`/data/saves/<cœur>/<ancien nom>.srm`, `.rtc`, `.dsv`…) vers le nouveau nom. Ancien nom cherché : nom
+actuel du fichier, puis nom enregistré au lancement précédent de la même ROM. L'originale n'est jamais
+modifiée ni supprimée ; une sauvegarde déjà présente sous le nouveau nom n'est jamais remplacée.
+
+Essai réel (`npm run test:real-saves`, Chrome, vrais cœurs) : l'**ancienne version** du lanceur (commit
+`7d2db05`) et la nouvelle sont servies sur la même origine ; les anciennes sauvegardes sont créées par
+l'ancienne version elle-même. **16/16 RÉUSSI** :
+
+| Vérification | Résultat |
+|---|---|
+| GB (Gambatte) : ancienne sauvegarde copiée octet pour octet avant le démarrage, puis utilisée par le jeu (compteur 1 → 2) | RÉUSSI |
+| GB : ancienne sauvegarde intacte ; message « Sauvegarde existante reprise » affiché | RÉUSSI |
+| GB : ROM renommée ensuite → même sauvegarde (compteur 3), aucune nouvelle reprise | RÉUSSI |
+| GB : l'ancienne version rejoue sous l'ancien nom → la sauvegarde au nouveau nom n'est pas remplacée | RÉUSSI |
+| GB : ROM renommée **avant** la mise à jour → reprise via le nom du lancement précédent | RÉUSSI |
+| GB : jeu jamais ouvert → départ normal, aucun message | RÉUSSI |
+| GBA (mGBA, SRAM) : sauvegarde reprise (compteur 1 → 2) | RÉUSSI |
+| DS (DeSmuME 2015, démo Pong-NDS) : `.dsv` copié sous le nouveau nom, original intact | RÉUSSI |
+| DS (DeSmuME) : dossier de sauvegarde confirmé | RÉUSSI |
+
+ROM utilisées : ROM d'essai GB et GBA écrites pour le projet (compteur de démarrages en mémoire
+sauvegardée, `tests/test-roms.mjs`) et démo libre Pong-NDS.
+
+Limites : **melonDS** (BIOS requis) non démarré ; son dossier de sauvegarde (`melonDS`) est lu dans le
+binaire du cœur EmulatorJS 4.2.3. GBC passe par le même cœur (Gambatte) et le même code que GB, sans ROM
+GBC dédiée dans l'essai. Une ROM renommée deux fois **avant** la mise à jour n'est retrouvée que sous ses
+deux derniers noms ; les copies de sécurité de l'onglet Sauvegardes restent exportables et importables.
+
 ## Reproduire
 
 ```
@@ -152,6 +188,7 @@ npm test
 npm install --no-save playwright   # ou PLAYWRIGHT_MODULE vers une installation existante
 CHROMIUM_PATH="C:/Program Files/Google/Chrome/Application/chrome.exe" npm run test:browser
 CHROMIUM_PATH="C:/Program Files/Google/Chrome/Application/chrome.exe" npm run test:real
+CHROMIUM_PATH="C:/Program Files/Google/Chrome/Application/chrome.exe" npm run test:real-saves
 node tools/test-collection.mjs "E:\roms\...\jeu.smc"     # ROM personnelles, lecture seule
 ```
 Portail complet : voir `docs/PORTAIL-8-CONSOLES.md`.

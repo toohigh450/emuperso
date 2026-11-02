@@ -10,7 +10,8 @@
     "test:windows": "node tests/windows-server.mjs",
     "check": "node tools/check-syntax.mjs",
     "test:engine": "node tests/engine-smoke.mjs",
-    "test:real": "node tests/real-nes-snes.mjs"
+    "test:real": "node tests/real-nes-snes.mjs",
+    "test:real-saves": "node tests/real-save-migration.mjs"
   },
   "engines": {
     "node": ">=22.17"

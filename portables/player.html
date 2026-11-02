@@ -139,11 +139,18 @@
     events.onError('Moteur interrompu pendant ' + phase + (reason ? ' : ' + reason : '.'));
   });
   window.EJS_pathtodata = source.path;
-  var script = document.createElement('script');
-  script.src = source.path + 'loader.js';
-  if (source.integrity) { script.integrity = source.integrity; script.crossOrigin = 'anonymous'; }
-  script.onerror = function () { events.onError('Chargeur absent ou contrôle d’intégrité refusé.'); };
-  document.body.appendChild(script);
+  function loadEngine() {
+    var script = document.createElement('script');
+    script.src = source.path + 'loader.js';
+    if (source.integrity) { script.integrity = source.integrity; script.crossOrigin = 'anonymous'; }
+    script.onerror = function () { events.onError('Chargeur absent ou contrôle d’intégrité refusé.'); };
+    document.body.appendChild(script);
+  }
+  // Reprise d'une sauvegarde à l'ancien nom (GB/GBC/GBA/DS), avant que le moteur ne lise sa base :
+  // l'ancien moteur est déjà fermé à ce stade. Un échec n'empêche pas le démarrage.
+  var prepare;
+  try { prepare = boot.prepareSaves ? boot.prepareSaves() : null; } catch (err) { console.error(err); }
+  Promise.resolve(prepare).catch(function (err) { console.error(err); }).then(loadEngine);
 })();
 </script>
 </body>

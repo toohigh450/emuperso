@@ -112,3 +112,59 @@ export function snesColor(v) {
   const x = (n) => Math.round((n & 31) * 255 / 31);
   return [x(c), x(c >> 5), x(c >> 10)];
 }
+
+// --- Game Boy : MBC1 + RAM + pile, compteur de démarrages en $A000 --------------------
+// La RAM d'une cartouche neuve peut valoir $FF : elle est alors ramenée à 0 avant l'incrément.
+export function makeGbTestRom({ variant = 0 } = {}) {
+  const rom = new Uint8Array(32768);
+  rom.set([0x00, 0xc3, 0x50, 0x01], 0x100); // nop ; jp $0150
+  rom.set([0xce, 0xed, 0x66, 0x66, 0xcc, 0x0d, 0x00, 0x0b], 0x104); // début du logo (détection)
+  const title = 'MIGRATION';
+  for (let i = 0; i < title.length; i++) rom[0x134 + i] = title.charCodeAt(i);
+  rom[0x147] = 0x03; // MBC1 + RAM + pile
+  rom[0x148] = 0x00; // 32 Kio
+  rom[0x149] = 0x02; // 8 Kio de RAM
+  rom[0x14a] = 0x01;
+  rom[0x14c] = variant; // version : une autre variante = une autre empreinte
+  let x = 0;
+  for (let i = 0x134; i <= 0x14c; i++) x = (x - rom[i] - 1) & 0xff;
+  rom[0x14d] = x;
+  rom.set([
+    0xf3, // di
+    0x31, 0xfe, 0xff, // ld sp,$FFFE
+    0x3e, 0x0a, 0xea, 0x00, 0x00, // RAM de cartouche activée
+    0x21, 0x00, 0xa0, // ld hl,$A000
+    0x7e, 0xfe, 0xff, 0x20, 0x01, 0xaf, // ld a,(hl) ; cp $FF ; jr nz,+1 ; xor a
+    0x3c, 0x77, // inc a ; ld (hl),a
+    0x18, 0xfe, // boucle
+  ], 0x150);
+  return rom;
+}
+
+// --- Game Boy Advance : SRAM, compteur de démarrages en $0E000000 ---------------------
+export function makeGbaTestRom({ variant = 0 } = {}) {
+  const rom = new Uint8Array(0x8000);
+  const word = (off, v) => { rom[off] = v & 0xff; rom[off + 1] = (v >>> 8) & 0xff; rom[off + 2] = (v >>> 16) & 0xff; rom[off + 3] = v >>> 24; };
+  word(0x00, 0xea00002e); // b $080000C0
+  rom.set([0x24, 0xff, 0xae, 0x51, 0x69, 0x9a, 0xa2, 0x21], 0x04); // début du logo (détection)
+  const ascii = (off, s) => { for (let i = 0; i < s.length; i++) rom[off + i] = s.charCodeAt(i); };
+  ascii(0xa0, 'MIGRATION');
+  ascii(0xac, 'AMGE');
+  ascii(0xb0, '01');
+  rom[0xb2] = 0x96;
+  rom[0xbc] = variant;
+  let c = 0;
+  for (let i = 0xa0; i <= 0xbc; i++) c = (c - rom[i]) & 0xff;
+  rom[0xbd] = (c - 0x19) & 0xff;
+  [
+    0xe3a0040e, // mov r0,#0x0E000000
+    0xe5d01000, // ldrb r1,[r0]
+    0xe35100ff, // cmp r1,#0xFF
+    0x03a01000, // moveq r1,#0
+    0xe2811001, // add r1,r1,#1
+    0xe5c01000, // strb r1,[r0]
+    0xeafffffe, // boucle
+  ].forEach((v, i) => word(0xc0 + i * 4, v));
+  ascii(0x100, 'SRAM_V113'); // type de sauvegarde lu par mGBA
+  return rom;
+}

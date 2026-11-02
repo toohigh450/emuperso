@@ -47,7 +47,8 @@ Aperçu public (sans compte Vercel) : https://emuperso-git-feature-nes-snes-unif
 | NES/SNES, vrais cœurs FCEUmm/Snes9x (`npm run test:real`) : ouverture, affichage, Game Genie et codes RAM activés **puis désactivés** (effet mesuré à l'écran), sauvegarde, état, export/import, changement de ROM, **fermeture du navigateur puis reprise**, démos | **43/43** |
 | Site complet sur l'**aperçu Vercel public** : 8 consoles, liens, démos réelles GB/GBC/GBA/DS/NES/SNES/N64/PS1 | **56/56** |
 | Émulation téléphone Android sur l'aperçu public : manette tactile NES/SNES, portrait/paysage, arrière-plan | **16/16** |
-| Logique `portables` / Chromium simulé (contrôles d'audit existants compris) | 105/105 · 3/3 groupes |
+| Reprise des sauvegardes GB/GBA/DS (`npm run test:real-saves`) : ancienne version du lanceur puis nouvelle, sur la même origine ; copie avant démarrage, original intact, jamais d'écrasement, ROM renommée | **16/16** |
+| Logique `portables` / Chromium simulé (contrôles d'audit existants compris) | 113/113 · 3/3 groupes |
 | Non-régression : racine (labo N64) / PS1 / N64 Node | 82/82 · 185 + Python OK · 80/80 |
 | **19 jeux de la collection de Karl** (7 NES, 12 SNES) (lecture seule) : NROM, MMC1, MMC3, MMC5 (PAL 50 i/s) ; LoROM, HiROM, ExHiROM, SA-1, Super FX, Super FX 2, DSP-1, Cx4, S-DD1, PAL, traduction FR | **19/19 démarrent** (Mega Man X2 après correction) ; `.7z` refusé avec message |
 
@@ -59,11 +60,12 @@ Tests Python N64 sur ce PC : 1 échec + 3 erreurs dus à l'environnement Windows
 
 - `.7z` / `.rar` non ouverts dans le navigateur (le jeu de hacks NES en contient 34 127 ROM dans 1 708 archives) : extraire avec 7-Zip.
 - Snes9x : licence **non commerciale**.
-- GB/GBC/GBA/DS (antérieur, inchangé pour ne pas perdre de sauvegardes) : la sauvegarde du moteur suit le nom du fichier ROM. NES/SNES utilisent l'empreinte. Une migration est proposée en suivi.
+- GB/GBC/GBA/DS : la sauvegarde du moteur suit maintenant l'empreinte de la ROM, comme NES/SNES (0.3.0-alpha.2). Une sauvegarde existante, nommée d'après l'ancien nom de fichier, est **copiée** au premier lancement ; l'originale n'est ni modifiée ni supprimée, et une sauvegarde déjà présente sous le nouveau nom n'est jamais remplacée. Essai réel : `npm run test:real-saves` (16/16).
 - Démo Super FX libre écartée (non détectée par Snes9x d'après son auteur) ; Super FX vérifié avec Star Fox et Yoshi's Island de la collection de Karl.
 
 ## Commits
 
+- (ce commit) Sauvegardes GB/GBC/GBA/DS liées à l'empreinte, reprise par copie des anciennes
 - 1538a6c TESTS-NES-SNES.md : nombre exact de jeux SNES testés (12, pas 14)
 - 32c7604 Tests sur l'aperçu Vercel public : 56/56 site complet, 16/16 émulation téléphone
 - 8c43585 Redémarrage fiable après une capture d'état ; indicateur « lanceur prêt »
