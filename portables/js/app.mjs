@@ -119,7 +119,7 @@ function render(snap) {
 async function readGameFile(file) {
   if (extensionOf(file.name) === '7z') throw new Error('Archive .7z non prise en charge dans le navigateur : extrais la ROM voulue avec 7-Zip dans un dossier séparé (sans toucher à l’original), puis ouvre-la ici. Les .zip sont acceptés.');
   if (extensionOf(file.name) === 'rar') throw new Error('Archive .rar non prise en charge : extrais la ROM avec 7-Zip, puis ouvre-la ici. Les .zip sont acceptés.');
-  if (extensionOf(file.name) === 'torrent') throw new Error('Un .torrent n’est pas une ROM. Ouvre un fichier de jeu complet (.nes, .sfc, .smc, .gb, .gbc, .gba, .nds ou .zip).');
+  if (extensionOf(file.name) === 'torrent') throw new Error('Un .torrent n’est pas une ROM. Ouvre un fichier de jeu complet (.nes, .sfc, .smc, .md, .smd, .gen, .gb, .gbc, .gba, .nds ou .zip).');
   if (file.size > MAX_INPUT_BYTES) throw new Error('Fichier trop gros pour cette application (maximum 512 Mio + 16 Mio).');
   const options = { deviceMemory: navigator.deviceMemory, activeBytes: currentGame?.romBytes || 0 };
   let warned = false;
@@ -172,6 +172,7 @@ async function resolveCore(system) {
 function coreLabel(system) {
   if (system === 'nes') return 'FCEUmm';
   if (system === 'snes') return 'Snes9x';
+  if (system === 'genesis') return 'Genesis Plus GX';
   return system === 'gba' ? 'mGBA' : system === 'nds' ? (DS_CORES[settings.dsCore] || DS_CORES.desmume2015).label : 'Gambatte';
 }
 
@@ -221,6 +222,9 @@ function gameDetails(analysis) {
   if (analysis.system === 'nes') {
     parts.push(analysis.format, analysis.mapperName);
     if (analysis.battery) parts.push('pile (sauvegarde)');
+  } else if (analysis.system === 'genesis') {
+    parts.push(analysis.format);
+    if (analysis.cartridgeTitle) parts.push('titre cartouche : ' + analysis.cartridgeTitle);
   } else if (analysis.system === 'snes') {
     parts.push(analysis.layout);
     if (analysis.chip) parts.push(`puce ${analysis.chip.toUpperCase()}`);
@@ -306,7 +310,7 @@ async function openGame(file) {
     headerOk: analysis.headerOk,
     coreId: core.coreId,
     coreLabel: core.label,
-    regionText: [region, analysis.code || null, analysis.system === 'nes' ? null : `version ${analysis.version}`].filter(Boolean).join(', ') || 'inconnue',
+    regionText: [region, analysis.code || null, ['nes', 'genesis'].includes(analysis.system) ? null : `version ${analysis.version}`].filter(Boolean).join(', ') || 'inconnue',
     details: gameDetails(analysis),
     warnings: analysis.warnings.concat(rom.note ? [rom.note] : []),
   };
