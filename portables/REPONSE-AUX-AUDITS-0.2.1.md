@@ -51,3 +51,7 @@ Depuis `portables/` :
 - `node tools/verify-engine.mjs --frontend chemin/data` vérifie les trois fichiers. `--archive chemin/4.2.3.7z` vérifie l'empreinte annoncée par GitHub pour l'archive complète. L'archive de 303 Mo n'a pas été téléchargée pendant ce travail ; son empreinte de référence vient de l'API de release.
 
 Seul le workflow `.github/workflows/portables-tests.yml` est ajouté hors de `portables/` pour répondre au point CI. Aucun fichier N64 ou PS1 existant n'est modifié. La PR reste en brouillon et la décision de fusion reste à Karl.
+
+## Correction révélée par la première CI
+
+Le premier commit de correction (`4a93aca`) passait sous Node 24 sur Linux/Windows mais échouait sous Node 22 : `--test-isolation=none` n’y existe pas. La commande npm utilise maintenant un agrégateur `node:test` sans ce drapeau. Le harnais de tests fournit aussi, sous Node 22, un adaptateur zlib pour `deflate-raw`, API fournie nativement par Chrome et Node 24. Cet adaptateur ne fait pas partie de l’application navigateur. Les résultats de CI du commit final doivent être consultés sur GitHub ; les échecs initiaux restent visibles dans l’historique.
