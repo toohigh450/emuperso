@@ -1,0 +1,27 @@
+{
+  "schema": "emuperso/cheat-catalog-lock/v1",
+  "repository": "https://github.com/mupen64plus/mupen64plus-core",
+  "commit": "dc1411a196b0e35745e9a5661a44e60809fad250",
+  "license": "GPL-2.0-or-later",
+  "permission": "Source header: Used and relicensed GPL with permission from Gent. Historical Project64-only header is quoted as original header, followed by explicit relicensing.",
+  "assets": [
+    {
+      "file": "mupencheat.txt",
+      "url": "https://raw.githubusercontent.com/mupen64plus/mupen64plus-core/dc1411a196b0e35745e9a5661a44e60809fad250/data/mupencheat.txt",
+      "bytes": 1272116,
+      "sha256": "d3206c3f5cf57a8ebcc29729837fb9f5c1645a6c571e68aa08a178db2e950b36",
+      "source_path": "data/mupencheat.txt"
+    },
+    {
+      "file": "COPYING.GPL-2.txt",
+      "url": "https://raw.githubusercontent.com/mupen64plus/mupen64plus-core/dc1411a196b0e35745e9a5661a44e60809fad250/doc/gpl-license",
+      "bytes": 18639,
+      "sha256": "4b3f9e9d51d6064da376c2de2e237f43a2e21b381bb02bd7e07ebca785759449",
+      "source_path": "doc/gpl-license"
+    }
+  ],
+  "upstream_game_blocks": 558,
+  "upstream_unique_rom_keys": 556,
+  "upstream_cheat_entries": 9238,
+  "warning": "Community codes are not verified against user ROMs; header CRC/country matching is not cryptographic authentication."
+}

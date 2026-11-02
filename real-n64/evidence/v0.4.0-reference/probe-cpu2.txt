@@ -1,0 +1,293 @@
+error Failed to load resource: the server responded with a status of 404 (File not found)
+log Loading language en-US
+log Translation not found for 'Exit Emulation'. Language set to 'en-US'
+log {playPause: Object, play: Object, pause: Object, restart: Object, mute: Object}
+log Translation not found for 'D-PAD UP'. Language set to 'en-US'
+log Translation not found for 'D-PAD DOWN'. Language set to 'en-US'
+log Translation not found for 'D-PAD LEFT'. Language set to 'en-US'
+log Translation not found for 'D-PAD RIGHT'. Language set to 'en-US'
+log Translation not found for 'LEFT_BOTTOM_SHOULDER'. Language set to 'en-US'
+log Translation not found for '-1'. Language set to 'en-US'
+log Translation not found for '+1'. Language set to 'en-US'
+log Translation not found for '-1'. Language set to 'en-US'
+log Translation not found for '+1'. Language set to 'en-US'
+log Translation not found for '-1'. Language set to 'en-US'
+log Translation not found for '+1'. Language set to 'en-US'
+log Translation not found for '-1'. Language set to 'en-US'
+log Translation not found for '+1'. Language set to 'en-US'
+log Translation not found for 'CU'. Language set to 'en-US'
+log Translation not found for 'CD'. Language set to 'en-US'
+log Translation not found for 'CL'. Language set to 'en-US'
+log Translation not found for 'CR'. Language set to 'en-US'
+log [-v, /DEMO N64 EMUPERSO]
+log Built for EmulatorJS
+log Download a copy from https://github.com/EmulatorJS/EmulatorJS
+log View the licence here: https://github.com/EmulatorJS/EmulatorJS/blob/main/LICENSE
+log [INFO] [Config]: Looking for config in: "/home/web_user/.config/retroarch/retroarch.cfg".
+log [INFO] RetroArch 1.21.0 (Git 6dd4353)
+log [INFO] === Build =======================================
+log [INFO] Capabilities: 
+log [INFO] Version: 1.21.0
+log [INFO] Git: 6dd4353
+log [INFO] Built: Jun 14 2025
+log [INFO] =================================================
+log [INFO] [Input]: Found input driver: "emulatorjs".
+log [INFO] [Overrides]: Redirecting save file to "/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm".
+log [INFO] [Overrides]: Redirecting save state to "/home/web_user/retroarch/userdata/states/Mupen64Plus-Next/DEMO N64 EMUPERSO.state".
+log [INFO] [Environ]: GET_CORE_OPTIONS_VERSION.
+log [INFO] [Environ]: RETRO_ENVIRONMENT_SET_CORE_OPTIONS_V2.
+log Setting up core settings with path: /home/web_user/retroarch/userdata/config/Mupen64Plus-Next/Mupen64Plus-Next.opt
+log [INFO] [Environ]: SET_CONTROLLER_INFO.
+log [WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO
+log [INFO] [Environ]: SYSTEM_DIRECTORY: "/".
+log [WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO
+log [INFO] [Environ]: SYSTEM_DIRECTORY: "/".
+log [INFO] [Environ]: GET_LOG_INTERFACE.
+log [INFO] [Environ]: GET_PERF_INTERFACE.
+log [INFO] [Environ]: SET_PIXEL_FORMAT: XRGB8888.
+log [INFO] [Environ]: GET_RUMBLE_INTERFACE.
+log [libretro INFO] mupen64plus: Using full mem base
+log [WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO
+log [INFO] [Environ]: SYSTEM_DIRECTORY: "/".
+log [INFO] [Content]: Loading content file: "/DEMO N64 EMUPERSO".
+log [ERROR] [Environ]: GET_VARIABLE: mupen64plus-EnableN64DepthCompare - Invalid value.
+log [ERROR] [Environ]: GET_VARIABLE: mupen64plus-EnableShadersStorage - Invalid value.
+log [INFO] [Environ]: SET_HW_RENDER, context type: gl.
+log [INFO] Requesting OpenGLES3 context.
+log [libretro INFO] mupen64plus: Goodname: EMUPERSO CPU BOOT (unknown rom)
+log [libretro INFO] mupen64plus: Name: EMUPERSO CPU BOOT
+log [libretro INFO] mupen64plus: MD5: 462A99909F25E4CD8CFC8335BED0CA9E
+log [libretro INFO] mupen64plus: CRC: 00000000 00000000
+log [libretro INFO] mupen64plus: Imagetype: .z64 (native)
+log [libretro INFO] mupen64plus: Rom size: 139264 bytes (or 0 Mb or 0 Megabits)
+log [libretro INFO] mupen64plus: ClockRate = 0
+log [libretro INFO] mupen64plus: Version: 0
+log [libretro INFO] mupen64plus: Manufacturer: Nintendo
+log [libretro INFO] mupen64plus: Cartridge_ID: 0
+log [libretro INFO] mupen64plus: Country: Demo
+log [libretro INFO] mupen64plus: PC = 80000400
+log [libretro INFO] mupen64plus: Save type: 0
+log [INFO] [SRAM]: Skipping SRAM load.
+log [INFO] [Core]: Version of libretro API: 1, Compiled against API: 1
+log [INFO] [Core]: Geometry: 640x480, Aspect: 1.333, FPS: 60.00, Sample rate: 44100.00 Hz.
+log [INFO] [Video]: Set video size to: 1440x1080.
+log [INFO] [Video]: Using HW render, OpenGL driver forced.
+log [INFO] [Video]: Using configured "gl" driver for GL HW render.
+log [INFO] [EMSCRIPTEN/WebGL]: Dimensions: 300x150
+log [INFO] [GL]: Found GL context: "webgl_emscripten".
+log [INFO] [GL]: Detecting screen resolution: 300x150.
+log [INFO] [GL]: Vendor: WebKit, Renderer: WebKit WebGL.
+log [INFO] [GL]: Version: OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)).
+log [WARN] [GL]: GLES implementation does not have BGRA8888 extension.
+log [GL]: 32-bit path will require conversion.
+log [INFO] [GL]: Using resolution 300x150.
+log [INFO] [GL]: Default shader backend found: glsl.
+log [INFO] [Shader driver]: Using GLSL shader backend.
+log [WARN] [GL]: Stock GLSL shaders will be used.
+log [INFO] [GLSL]: Found GLSL vertex shader.
+log [INFO] Shader log: WARNING: 0:5: 'GL_OES_standard_derivatives' : extension is not supported
+log 
+log [INFO] [GLSL]: Found GLSL fragment shader.
+log [INFO] Shader log: WARNING: 0:5: 'GL_OES_standard_derivatives' : extension is not supported
+log 
+log [INFO] [GLSL]: Linking GLSL program.
+log [INFO] [GLSL]: Found GLSL vertex shader.
+log [INFO] [GLSL]: Found GLSL fragment shader.
+log [INFO] [GLSL]: Linking GLSL program.
+log [INFO] [GLSL]: Found GLSL vertex shader.
+log [INFO] Shader log: WARNING: 0:5: 'GL_OES_standard_derivatives' : extension is not supported
+log 
+log [INFO] [GLSL]: Found GLSL fragment shader.
+log [INFO] Shader log: WARNING: 0:5: 'GL_OES_standard_derivatives' : extension is not supported
+log 
+log [INFO] [GLSL]: Linking GLSL program.
+log [INFO] [GL]: Using 1 textures.
+log [INFO] [GL]: Loaded 1 program(s).
+log [INFO] [GL]: Initializing HW render (1024x1024).
+log [INFO] [GL]: Max texture size: 8192 px, renderbuffer size: 8192 px.
+log [INFO] [GL]: Supports FBO (render-to-texture).
+log [INFO] [Video]: Found display server: "null".
+log plugin_start_gfx
+log [INFO] [Environ]: SET_INPUT_DESCRIPTORS:
+log [INFO] [Audio]: Set audio input rate to: 44100.00 Hz.
+log [INFO] [OpenAL]: Using 10 buffers of 1024 bytes.
+log [INFO] [Audio]: Started synchronous audio driver.
+log [INFO] [Display]: Found display driver: "gl".
+log [INFO] [Environ]: SET_SUBSYSTEM_INFO.
+log [INFO] [Config]: Saved new config to "/home/web_user/.config/retroarch/retroarch.cfg".
+log [INFO] [Playlist]: Loading history file: "/home/web_user/.config/retroarch/content_history.lpl".
+log [INFO] [Playlist]: Loading history file: "/home/web_user/.config/retroarch/content_music_history.lpl".
+log [INFO] [Playlist]: Loading favorites file: "/home/web_user/.config/retroarch/content_favorites.lpl".
+log [ERROR] Cannot push NULL or empty core path into the playlist.
+log Available core options {}
+log Translation not found for 'Core (Requires restart)'. Language set to 'en-US'
+log retroarch_core mupen64plus_next
+log invalid core option retroarch_core. This is not an error.
+log Translation not found for 'Threads'. Language set to 'en-US'
+log ejs_threads disabled
+log invalid core option ejs_threads. This is not an error.
+log shader disabled
+log [ERROR] [GL]: none shader not supported, falling back to stock GLSL
+log [INFO] [Shader driver]: Using GLSL shader backend.
+log [WARN] [GL]: Stock GLSL shaders will be used.
+log [INFO] [GLSL]: Found GLSL vertex shader.
+log [INFO] [GLSL]: Found GLSL fragment shader.
+log [INFO] [GLSL]: Linking GLSL program.
+log [INFO] [GLSL]: Found GLSL vertex shader.
+log [INFO] [GLSL]: Found GLSL fragment shader.
+log [INFO] [GLSL]: Linking GLSL program.
+log [INFO] [GLSL]: Found GLSL vertex shader.
+log [INFO] [GLSL]: Found GLSL fragment shader.
+log [INFO] [GLSL]: Linking GLSL program.
+log [INFO] [Shaders]: Applying shader: "".
+log invalid core option shader. This is not an error.
+log webgl2Enabled enabled
+log invalid core option webgl2Enabled. This is not an error.
+log fps hide
+log vsync enabled
+log invalid core option vsync. This is not an error.
+log videoRotation 0
+log invalid core option videoRotation. This is not an error.
+log Translation not found for 'Screenshot Source'. Language set to 'en-US'
+log screenshotSource canvas
+log invalid core option screenshotSource. This is not an error.
+log Translation not found for 'Screenshot Format'. Language set to 'en-US'
+log screenshotFormat png
+log invalid core option screenshotFormat. This is not an error.
+log Translation not found for 'Screenshot Upscale'. Language set to 'en-US'
+log screenshotUpscale 1
+log invalid core option screenshotUpscale. This is not an error.
+log Translation not found for 'Screen Recording FPS'. Language set to 'en-US'
+log screenRecordFPS 30
+log invalid core option screenRecordFPS. This is not an error.
+log Translation not found for 'Screen Recording Format'. Language set to 'en-US'
+log screenRecordFormat mp4
+log invalid core option screenRecordFormat. This is not an error.
+log Translation not found for 'Screen Recording Upscale'. Language set to 'en-US'
+log screenRecordUpscale 1
+log invalid core option screenRecordUpscale. This is not an error.
+log Translation not found for 'Screen Recording Video Bitrate'. Language set to 'en-US'
+log screenRecordVideoBitrate 2621440
+log invalid core option screenRecordVideoBitrate. This is not an error.
+log Translation not found for 'Screen Recording Audio Bitrate'. Language set to 'en-US'
+log screenRecordAudioBitrate 196608
+log invalid core option screenRecordAudioBitrate. This is not an error.
+log fastForward disabled
+log invalid core option fastForward. This is not an error.
+log ff-ratio 3.0
+log invalid core option ff-ratio. This is not an error.
+log slowMotion disabled
+log invalid core option slowMotion. This is not an error.
+log sm-ratio 3.0
+log invalid core option sm-ratio. This is not an error.
+log rewindEnabled disabled
+log invalid core option rewindEnabled. This is not an error.
+log Translation not found for 'Menubar Mouse Trigger'. Language set to 'en-US'
+log Translation not found for 'Downward Movement'. Language set to 'en-US'
+log Translation not found for 'Movement Anywhere'. Language set to 'en-US'
+log menubarBehavior downward
+log invalid core option menubarBehavior. This is not an error.
+log Translation not found for 'Direct Keyboard Input'. Language set to 'en-US'
+log keyboardInput disabled
+log invalid core option keyboardInput. This is not an error.
+log Translation not found for 'Forward Alt key'. Language set to 'en-US'
+log altKeyboardInput disabled
+log invalid core option altKeyboardInput. This is not an error.
+log Translation not found for 'Lock Mouse'. Language set to 'en-US'
+log lockMouse disabled
+log invalid core option lockMouse. This is not an error.
+log save-state-slot 1
+log invalid core option save-state-slot. This is not an error.
+log save-state-location download
+log invalid core option save-state-location. This is not an error.
+log save-save-interval 300
+log Saving every 300000 miliseconds
+log invalid core option save-save-interval. This is not an error.
+log mupen64plus-43screensize 640x480
+log mupen64plus-169screensize 960x540
+log mupen64plus-aspect 4:3
+log mupen64plus-EnableNativeResFactor 0
+log mupen64plus-ThreadedRenderer False
+log mupen64plus-BilinearMode standard
+log mupen64plus-HybridFilter True
+log mupen64plus-DitheringPattern False
+log mupen64plus-DitheringQuantization False
+log mupen64plus-RDRAMImageDitheringMode False
+log mupen64plus-MultiSampling 0
+log mupen64plus-FXAA 0
+log mupen64plus-EnableLODEmulation True
+log mupen64plus-EnableFBEmulation True
+log mupen64plus-EnableCopyAuxToRDRAM False
+log mupen64plus-EnableCopyColorToRDRAM Async
+log mupen64plus-EnableCopyColorFromRDRAM False
+log mupen64plus-EnableCopyDepthToRDRAM Software
+log mupen64plus-BackgroundMode OnePiece
+log mupen64plus-EnableHWLighting False
+log mupen64plus-CorrectTexrectCoords Off
+log mupen64plus-EnableInaccurateTextureCoordinates False
+log mupen64plus-EnableTexCoordBounds False
+log mupen64plus-EnableNativeResTexrects Disabled
+log mupen64plus-EnableLegacyBlending True
+log mupen64plus-EnableFragmentDepthWrite False
+log mupen64plus-EnableTextureCache True
+log mupen64plus-EnableOverscan Enabled
+log mupen64plus-OverscanTop 0
+log mupen64plus-OverscanLeft 0
+log mupen64plus-OverscanRight 0
+log mupen64plus-OverscanBottom 0
+log mupen64plus-MaxHiResTxVramLimit 0
+log mupen64plus-MaxTxCacheSize 8000
+log mupen64plus-txFilterMode None
+log mupen64plus-txEnhancementMode None
+log mupen64plus-txFilterIgnoreBG True
+log mupen64plus-txHiresEnable False
+log mupen64plus-txCacheCompression True
+log mupen64plus-txHiresFullAlphaChannel False
+log mupen64plus-EnableEnhancedTextureStorage False
+log mupen64plus-EnableHiResAltCRC False
+log mupen64plus-EnableEnhancedHighResStorage False
+log mupen64plus-GLideN64IniBehaviour late
+log mupen64plus-cpucore pure_interpreter
+log mupen64plus-FrameDuping False
+log mupen64plus-Framerate Original
+log mupen64plus-virefresh Auto
+log mupen64plus-ForceDisableExtraMem False
+log mupen64plus-IgnoreTLBExceptions False
+log mupen64plus-CountPerOp 0
+log mupen64plus-CountPerOpDenomPot 0
+log mupen64plus-astick-deadzone 15
+log mupen64plus-astick-sensitivity 100
+log mupen64plus-r-cbutton C1
+log mupen64plus-l-cbutton C2
+log mupen64plus-d-cbutton C3
+log mupen64plus-u-cbutton C4
+log mupen64plus-alt-map False
+log mupen64plus-pak1 memory
+log mupen64plus-pak2 none
+log mupen64plus-pak3 none
+log mupen64plus-pak4 none
+log Available core options {retroarch_core: Object, ejs_threads: Object, shader: Object, webgl2Enabled: Object, fps: Object}
+log webgl2Enabled enabled
+log invalid core option webgl2Enabled. This is not an error.
+log ejs_threads disabled
+log invalid core option ejs_threads. This is not an error.
+log mupen64plus-cpucore pure_interpreter
+log [ERROR] [EMSCRIPTEN]: Could not get screen dimensions!
+log [libretro INFO] mupen64plus: Game controller 0 (Standard controller) has a Memory pak plugged in
+log [libretro INFO] mupen64plus: Game controller 1 (Standard controller) has nothing plugged in
+log [libretro INFO] mupen64plus: Game controller 2 (Standard controller) has nothing plugged in
+log [libretro INFO] mupen64plus: Game controller 3 (Standard controller) has nothing plugged in
+log [libretro INFO] mupen64plus: Unknown CIC type (00000007BA90ACB8)! using CIC 6102.
+log [libretro INFO] mupen64plus: Using CIC type X102
+log [WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO
+log [INFO] [Environ]: SYSTEM_DIRECTORY: "/".
+log [WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO
+log [INFO] [Environ]: SYSTEM_DIRECTORY: "/".
+log [WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO
+log [INFO] [Environ]: SYSTEM_DIRECTORY: "/".
+log [WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO
+log [INFO] [Environ]: SYSTEM_DIRECTORY: "/".
+log [WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO
+log [INFO] [Environ]: SYSTEM_DIRECTORY: "/".
+log [libretro INFO] mupen64plus: Initializing 4 RDRAM modules for a total of 8 MB
+log [libretro INFO] mupen64plus: Starting R4300 emulator: Pure Interpreter

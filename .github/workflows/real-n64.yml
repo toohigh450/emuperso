@@ -1,0 +1,122 @@
+name: N64 reel - branche de developpement uniquement
+on:
+  push:
+    branches: [emulateur-reel]
+    paths: ['real-n64/**', 'DEMARRER-N64.bat', '.github/workflows/real-n64.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows-one-click:
+    if: github.ref == 'refs/heads/emulateur-reel'
+    runs-on: windows-2022
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: powershell
+        working-directory: "N64 Lab d'Karl-épreuve/real-n64"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          path: "N64 Lab d'Karl-épreuve"
+      - name: Tester le lancement Windows avec Python portable vierge
+        run: ./tests/windows-launcher.ps1 -RequireFresh
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Installer le navigateur de test Windows fige
+        timeout-minutes: 5
+        env:
+          PYTHONUTF8: '1'
+          PLAYWRIGHT_BROWSERS_PATH: "${{ github.workspace }}/N64 Lab d'Karl-épreuve/real-n64/cache/playwright-windows-ci"
+        run: |
+          python -X utf8 -m pip install --timeout 30 --retries 2 playwright==1.62.0 pillow==12.3.0
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -X utf8 -m playwright install chromium
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Tester les vraies restaurations et le Hub dans Chrome sous Windows
+        timeout-minutes: 18
+        env:
+          PYTHONUTF8: '1'
+          PLAYWRIGHT_BROWSERS_PATH: "${{ github.workspace }}/N64 Lab d'Karl-épreuve/real-n64/cache/playwright-windows-ci"
+        run: ./tests/windows-browser-rc.ps1
+      - name: Deposer les journaux Windows sans ROM utilisateur
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: n64-lancement-windows-${{ github.sha }}
+          path: |
+            N64 Lab d'Karl-épreuve/real-n64/evidence/windows-launcher/*.json
+            N64 Lab d'Karl-épreuve/real-n64/evidence/windows-launcher/*.txt
+            N64 Lab d'Karl-épreuve/real-n64/evidence/windows-browser-rc/*.json
+            N64 Lab d'Karl-épreuve/real-n64/evidence/windows-browser-rc/*.txt
+            N64 Lab d'Karl-épreuve/real-n64/evidence/windows-browser-rc/*.png
+          retention-days: 14
+  homebrew-web:
+    if: github.ref == 'refs/heads/emulateur-reel'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Installer la chaine officielle et compiler les sources
+        working-directory: real-n64
+        run: |
+          python3 homebrew/setup-toolchain.py --jobs 4
+          N64_INST="$PWD/cache/toolchain/opt/libdragon" bash homebrew/build.sh
+          python3 homebrew/fallback-open/build.py
+      - name: Telecharger et verifier le runtime officiel fige
+        working-directory: real-n64
+        run: |
+          python3 tools/fetch_runtime.py
+          python3 tools/fetch_runtime.py --verify-only
+          python3 tools/fetch_cheats.py
+          python3 tests/launcher_native.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Tester la validation des formats ROM et ZIP
+        working-directory: real-n64
+        run: |
+          node tests/rom-file.test.mjs
+          node tests/zip-rom.test.mjs
+          node tests/save-store.test.mjs
+          node tests/state-bundle.test.mjs
+          node tests/legacy-battery.test.mjs
+          node tests/cheat-catalog.test.mjs
+          node tests/native-state.test.mjs
+          node tests/runtime-integrity.test.mjs
+          python3 -m unittest discover -s tests -p test_cheat_installer.py -v
+          python3 -X utf8 -m unittest discover -s tests -p test_server_allowlist.py -v
+          python3 -X utf8 -m unittest discover -s tests -p test_distribution.py -v
+          python3 -X utf8 tests/run_linux_browser_rc.py --self-test
+      - name: Installer les outils de test
+        timeout-minutes: 8
+        run: |
+          timeout --kill-after=5s 120s python3 -m pip install --timeout 30 --retries 2 playwright==1.62.0 pillow==12.3.0
+          # The Azure mirror stalled this runner for 24 minutes (run 41250044375).
+          # Keep Ubuntu's signed packages and TLS, using its official archive.
+          if test -f /etc/apt/apt-mirrors.txt; then
+            printf '%s\n' 'https://archive.ubuntu.com/ubuntu/' | sudo tee /etc/apt/apt-mirrors.txt
+          fi
+          timeout --kill-after=5s 120s sudo apt-get -o Acquire::Retries=1 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 update
+          timeout --kill-after=5s 120s sudo apt-get -o Acquire::Retries=1 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 install -y --no-install-recommends tesseract-ocr
+          timeout --kill-after=5s 300s python3 -m playwright install --with-deps chromium
+      - name: Tester tous les bancs navigateur avec preuves Linux fraiches
+        timeout-minutes: 22
+        working-directory: real-n64
+        run: |
+          python3 -X utf8 tests/run_linux_browser_rc.py --budget-seconds 1080
+      - name: Deposer uniquement les preuves Linux fraiches sans binaire
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: emuperso-linux-rc-${{ github.sha }}
+          path: |
+            real-n64/evidence/linux-browser-rc/*.json
+            real-n64/evidence/linux-browser-rc/*.txt
+            real-n64/evidence/linux-browser-rc/*.png
+          if-no-files-found: error
+          retention-days: 14

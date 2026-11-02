@@ -1,0 +1,2279 @@
+{
+  "schema": "emuperso/hub-browser-tests/v1",
+  "results": [
+    {
+      "test": "Session réelle isolée, identité des octets et animation",
+      "status": "RÉUSSI",
+      "proof": {
+        "identity": {
+          "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+          "engine_sha256": "76f1e9315302e1996454839bcde48aabe0fad399bf333ee0f5f66e698b28574c",
+          "config_sha256": "4e78a12696bbdf17d0c8f232689375ebff860e0f1b3796154c949329914ed571",
+          "state_schema": "emuperso-real-state-v2"
+        },
+        "loaded": {
+          "bytes": 6144,
+          "sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+        },
+        "frame_before": 42,
+        "frame_after": 59,
+        "iframe_count": 1,
+        "cheats_active_by_default": 0
+      }
+    },
+    {
+      "test": "Chargements directs non vérifiés et changement de configuration bloqués",
+      "status": "RÉUSSI",
+      "proof": {
+        "wrapper": false,
+        "configuration_unchanged": true
+      }
+    },
+    {
+      "test": "Import invalide pendant le jeu : session et progression conservées",
+      "status": "RÉUSSI",
+      "proof": {
+        "generation": 1,
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+      }
+    },
+    {
+      "test": "Trois emplacements réels, empreintes et révision précédente",
+      "status": "RÉUSSI",
+      "proof": {
+        "slots": [
+          {
+            "slot": 1,
+            "kind": "state",
+            "revision": 2,
+            "id": "f8545d609c3e0ebcd80c72464e07cbbe",
+            "created_utc": "2026-11-01T14:42:31.435Z",
+            "updated_utc": "2026-11-01T14:42:31.665Z",
+            "label": "same-name.z64",
+            "cheats": [],
+            "payload_size": 17090424,
+            "has_previous": true,
+            "payload_verified": false
+          },
+          {
+            "slot": 2,
+            "kind": "state",
+            "revision": 1,
+            "id": "178cd4d1e2d099e970cb8e8baf0257b3",
+            "created_utc": "2026-11-01T14:42:32.238Z",
+            "updated_utc": "2026-11-01T14:42:32.420Z",
+            "label": "same-name.z64",
+            "cheats": [],
+            "payload_size": 17090424,
+            "has_previous": false,
+            "payload_verified": false
+          },
+          {
+            "slot": 3,
+            "kind": "state",
+            "revision": 1,
+            "id": "67fb42040abb0a90750900ed9c820402",
+            "created_utc": "2026-11-01T14:42:33.190Z",
+            "updated_utc": "2026-11-01T14:42:33.288Z",
+            "label": "same-name.z64",
+            "cheats": [],
+            "payload_size": 17090424,
+            "has_previous": false,
+            "payload_verified": false
+          }
+        ],
+        "current_payload_sha256": "6bf9c3ab43803df0e9c68226bb5e7acc7023f5ebe79ef8c4a86c932d22ac6ae7",
+        "previous_payload_sha256": "b7e9b2653165b03207bfcb9a3e65d620cb70ba0ca4257a64c53c2ea9a1cb9365"
+      }
+    },
+    {
+      "test": "Capture de la sauvegarde native réellement fournie par le cœur",
+      "status": "RÉUSSI",
+      "proof": {
+        "bytes": 296960,
+        "sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795"
+      }
+    },
+    {
+      "test": "Export utilisateur d’un véritable état intègre, copie privée de la mémoire du jeu",
+      "status": "RÉUSSI",
+      "proof": {
+        "payload_size": 17090424,
+        "payload_sha256": "6bf9c3ab43803df0e9c68226bb5e7acc7023f5ebe79ef8c4a86c932d22ac6ae7",
+        "download_name": "N64-sauvegarde-emplacement-1-2026-11-01T14-42-35-003Z.json"
+      }
+    },
+    {
+      "test": "Import d’état vérifié : aucun lancement implicite, checksum altéré refusé sans écrasement",
+      "status": "RÉUSSI",
+      "proof": {
+        "imported_payload_sha256": "6bf9c3ab43803df0e9c68226bb5e7acc7023f5ebe79ef8c4a86c932d22ac6ae7",
+        "target_slot": 3,
+        "bad_checksum_rejected": true,
+        "live_ram_unchanged": 9320
+      }
+    },
+    {
+      "test": "Changement en cours de jeu : ancienne boucle arrêtée, audio fermé, sauvegardes isolées par hash",
+      "status": "RÉUSSI",
+      "proof": {
+        "old_identity": {
+          "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+          "engine_sha256": "76f1e9315302e1996454839bcde48aabe0fad399bf333ee0f5f66e698b28574c",
+          "config_sha256": "4e78a12696bbdf17d0c8f232689375ebff860e0f1b3796154c949329914ed571",
+          "state_schema": "emuperso-real-state-v2"
+        },
+        "new_identity": {
+          "rom_sha256": "e1e80920d13e5968d3755ab19c6948076c3d58e4cf7ef8cb445050b8f9f0fab9",
+          "engine_sha256": "76f1e9315302e1996454839bcde48aabe0fad399bf333ee0f5f66e698b28574c",
+          "config_sha256": "4e78a12696bbdf17d0c8f232689375ebff860e0f1b3796154c949329914ed571",
+          "state_schema": "emuperso-real-state-v2"
+        },
+        "same_filename": "same-name.z64",
+        "disposed": {
+          "generation": 1,
+          "audio": [
+            {
+              "state": "closed",
+              "sample_rate": 44100
+            }
+          ],
+          "timeout": false
+        },
+        "old_counter_stable": 246
+      }
+    },
+    {
+      "test": "Retour par ZIP au même contenu : les trois états restent retrouvables",
+      "status": "RÉUSSI",
+      "proof": {
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "source": "local-zip",
+        "slots": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "test": "Fermeture/réouverture Chromium : vrai état restauré, RAM et audio vérifiés",
+      "status": "RÉUSSI",
+      "proof": {
+        "identity": {
+          "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+          "engine_sha256": "76f1e9315302e1996454839bcde48aabe0fad399bf333ee0f5f66e698b28574c",
+          "config_sha256": "4e78a12696bbdf17d0c8f232689375ebff860e0f1b3796154c949329914ed571",
+          "state_schema": "emuperso-real-state-v2"
+        },
+        "payload_sha256": "6bf9c3ab43803df0e9c68226bb5e7acc7023f5ebe79ef8c4a86c932d22ac6ae7",
+        "ram_marker": 9320,
+        "audio": {
+          "tone_max_rms": 0.13625834523607108,
+          "released_max_rms": 0,
+          "frame_delta_per_observed_second": 16,
+          "physical_speakers": "NON TESTABLE"
+        },
+        "rom_reselected_by_user": true,
+        "filename_treated_as_text": true
+      }
+    },
+    {
+      "test": "Récupération de la version précédente : ancien contenu RAM réellement restauré",
+      "status": "RÉUSSI",
+      "proof": {
+        "marker": 4951,
+        "payload_sha256": "b7e9b2653165b03207bfcb9a3e65d620cb70ba0ca4257a64c53c2ea9a1cb9365",
+        "current_slot_revision_preserved": 2
+      }
+    },
+    {
+      "test": "Catalogue/recherche sans activation implicite et ajout manuel désactivé",
+      "status": "RÉUSSI",
+      "proof": {
+        "manual_label_treated_as_text": true,
+        "active_cheats": 0,
+        "ram_marker_unchanged": 4951,
+        "unsupported_manual_code_rejected_before_activation": true
+      }
+    },
+    {
+      "test": "GameShark appliqué au vrai cœur ; désactiver ne prétend pas nettoyer la RAM",
+      "status": "RÉUSSI",
+      "proof": {
+        "code": "81010000 A1B2",
+        "observed_ram": 41394,
+        "active_after_disable": 0,
+        "tainted_after_disable": true
+      }
+    },
+    {
+      "test": "Point d’avant cheats : mémoire restaurée, états utilisateur intacts",
+      "status": "RÉUSSI",
+      "proof": {
+        "ram_marker": 4951,
+        "native_before": {
+          "bytes": 296960,
+          "sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795"
+        },
+        "native_after": {
+          "bytes": 296960,
+          "sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795"
+        },
+        "user_slots_preserved": true
+      }
+    },
+    {
+      "test": "Reset propre : nouvelle RAM sans cheats, sauvegardes conservées et audio actif",
+      "status": "RÉUSSI",
+      "proof": {
+        "ram_marker": 0,
+        "native_before": {
+          "bytes": 296960,
+          "sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795"
+        },
+        "native_after": {
+          "bytes": 296960,
+          "sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795"
+        },
+        "audio": {
+          "tone_max_rms": 0.13620398061596767,
+          "released_max_rms": 0,
+          "frame_delta_per_observed_second": 15,
+          "physical_speakers": "NON TESTABLE"
+        }
+      }
+    },
+    {
+      "test": "Lecture de ROM pendant une sauvegarde : résultat conservé, aucune attente bloquée",
+      "status": "RÉUSSI",
+      "proof": {
+        "selected": "fixture-race-preparation.z64"
+      }
+    },
+    {
+      "test": "Diagnostics et confidentialité : aucune ROM/sauvegarde envoyée",
+      "status": "RÉUSSI",
+      "proof": {
+        "http_requests": 172,
+        "diagnostic_contains_save_payload": false,
+        "page_errors": [],
+        "private_rom_used": false
+      }
+    }
+  ],
+  "page_errors": [],
+  "http": [
+    {
+      "url": "http://127.0.0.1:8776/",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/style.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/assets/emuperso-banner.png",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/app.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/rom-file.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/zip-rom.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/save-store.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/session-controller.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/legacy-battery.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/state-bundle.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/cheat-catalog.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/docs/runtime-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/00a044e5-c336-4877-bbab-6c167b08b84a",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/9dec4e14-7c39-4471-b3e1-b98f58a504a7",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/6eaeb7f7-dd13-42cd-9d2f-e14a8047ce10",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/46e10a7c-f1e1-464b-b02c-7958508df45f",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/docs/cheat-catalog-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/cheats/mupencheat.txt",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/fe8b2033-1047-4e6f-99c2-b12e68db8361",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/c61009ad-0162-4699-9305-e059b791fbe1",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/86a7ea05-6287-4290-a3fd-162ac21cbf57",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/3b0a12de-aa3e-4a44-9d2a-3e27521d265c",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/66ea891b-fb02-4e6c-ae99-6c08baa0bd16",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/e7be6991-e55c-4eec-9e4a-48987a419e40",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/cd8b0fec-3b81-404d-ab9b-1309344fa044",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/b9e91b80-3062-4ee9-aa52-9b7fad7fef68",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/style.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/assets/emuperso-banner.png",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/app.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/rom-file.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/zip-rom.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/save-store.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/session-controller.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/legacy-battery.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/state-bundle.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/cheat-catalog.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/docs/runtime-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/62eb0609-da42-4b3d-b12d-0013296db0e4",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/3f31b4c3-6e16-46d5-b81f-3daa65ddb7e9",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/6a8e48a1-0030-403b-b4f4-425e24760f41",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/95b78791-1b9e-41c0-bcc4-51b0c4337ad4",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/docs/cheat-catalog-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/cheats/mupencheat.txt",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/26d100f7-5959-4a6e-9e77-188880e54419",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/f460d4ea-0b08-4f51-9f7f-21d5dc1548cd",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/f7c54acc-7d58-4cc8-8dee-fcead7ee4f83",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/020e15c3-1d60-4444-a10b-18adc4ff59ff",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/47a6a7b8-7d8e-4b5e-88ed-c04be579783f",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/5fdeeeb3-c872-42e9-b288-6a81ef894a5e",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/e4154333-0f36-4248-970d-8ceb794a20de",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/5c61315e-229b-460c-a4e2-185a047f100c",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/f8377606-ecd1-4019-a7c3-62049690fcdf",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/1c6553d2-a131-42e5-bf14-33006896961d",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/9fbbc8a7-40cd-4d8e-8557-a3e16c99c46f",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/2a14137c-c6c2-48a7-943c-64fce0fb6a89",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8776/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/c5fe69f7-d2db-4007-8c1e-7312ab8ce9d8",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/51eeb64a-f9ee-493f-8651-9e83a180f0dc",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/3ce08b3a-3bb3-4d7e-954c-3d8455677b59",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:http://127.0.0.1:8776/a5a17955-7d18-4596-80d8-07e5cb48bae9",
+      "method": "GET",
+      "body_bytes": 0
+    }
+  ],
+  "dialogs_accepted_by_test": [
+    "Importer cette copie dans l’emplacement choisi ? La version actuelle sera conservée en version précédente.",
+    "Revenir au point d’avant les cheats ? La progression depuis ce point sera abandonnée. Les états enregistrés restent conservés.",
+    "Redémarrer le jeu sans cheats ? La partie en mémoire recommencera ; les sauvegardes conservées ne seront pas effacées."
+  ],
+  "server_requests": [
+    [
+      "GET",
+      "/",
+      0
+    ],
+    [
+      "GET",
+      "/style.css",
+      0
+    ],
+    [
+      "GET",
+      "/assets/emuperso-banner.png",
+      0
+    ],
+    [
+      "GET",
+      "/app.js",
+      0
+    ],
+    [
+      "GET",
+      "/rom-file.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/zip-rom.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/session-controller.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/legacy-battery.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/cheat-catalog.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/save-store.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/state-bundle.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/engine.html",
+      0
+    ],
+    [
+      "GET",
+      "/engine.css",
+      0
+    ],
+    [
+      "GET",
+      "/engine-session.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/native-state.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/runtime-integrity.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/docs/runtime-lock.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/emulator.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/nipplejs.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/shaders.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/storage.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/gamepad.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/GameManager.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/socket.io.min.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/compression.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/emulator.css",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/version.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/reports/mupen64plus_next.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/mupen64plus_next-wasm.data",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/compression/extract7z.js",
+      0
+    ],
+    [
+      "GET",
+      "/docs/cheat-catalog-lock.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/cheats/mupencheat.txt",
+      0
+    ],
+    [
+      "GET",
+      "/engine.html",
+      0
+    ],
+    [
+      "GET",
+      "/engine.css",
+      0
+    ],
+    [
+      "GET",
+      "/engine-session.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/native-state.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/runtime-integrity.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/emulator.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/nipplejs.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/shaders.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/storage.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/gamepad.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/GameManager.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/socket.io.min.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/compression.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/emulator.css",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/version.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/reports/mupen64plus_next.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/mupen64plus_next-wasm.data",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/compression/extract7z.js",
+      0
+    ],
+    [
+      "GET",
+      "/engine.html",
+      0
+    ],
+    [
+      "GET",
+      "/engine.css",
+      0
+    ],
+    [
+      "GET",
+      "/engine-session.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/runtime-integrity.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/native-state.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/emulator.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/nipplejs.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/shaders.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/storage.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/gamepad.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/GameManager.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/socket.io.min.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/compression.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/emulator.css",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/version.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/reports/mupen64plus_next.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/mupen64plus_next-wasm.data",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/compression/extract7z.js",
+      0
+    ],
+    [
+      "GET",
+      "/",
+      0
+    ],
+    [
+      "GET",
+      "/style.css",
+      0
+    ],
+    [
+      "GET",
+      "/assets/emuperso-banner.png",
+      0
+    ],
+    [
+      "GET",
+      "/app.js",
+      0
+    ],
+    [
+      "GET",
+      "/zip-rom.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/rom-file.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/save-store.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/session-controller.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/legacy-battery.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/state-bundle.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/cheat-catalog.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/engine.html",
+      0
+    ],
+    [
+      "GET",
+      "/engine.css",
+      0
+    ],
+    [
+      "GET",
+      "/engine-session.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/native-state.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/runtime-integrity.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/docs/runtime-lock.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/emulator.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/nipplejs.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/shaders.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/storage.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/gamepad.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/GameManager.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/socket.io.min.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/compression.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/emulator.css",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/version.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/reports/mupen64plus_next.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/mupen64plus_next-wasm.data",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/compression/extract7z.js",
+      0
+    ],
+    [
+      "GET",
+      "/docs/cheat-catalog-lock.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/cheats/mupencheat.txt",
+      0
+    ],
+    [
+      "GET",
+      "/engine.html",
+      0
+    ],
+    [
+      "GET",
+      "/engine.css",
+      0
+    ],
+    [
+      "GET",
+      "/engine-session.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/native-state.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/runtime-integrity.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/emulator.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/nipplejs.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/shaders.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/storage.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/gamepad.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/GameManager.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/socket.io.min.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/compression.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/emulator.css",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/version.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/reports/mupen64plus_next.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/mupen64plus_next-wasm.data",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/compression/extract7z.js",
+      0
+    ],
+    [
+      "GET",
+      "/engine.html",
+      0
+    ],
+    [
+      "GET",
+      "/engine.css",
+      0
+    ],
+    [
+      "GET",
+      "/engine-session.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/native-state.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/runtime-integrity.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/emulator.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/nipplejs.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/shaders.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/storage.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/gamepad.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/GameManager.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/socket.io.min.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/compression.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/emulator.css",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/version.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/reports/mupen64plus_next.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/mupen64plus_next-wasm.data",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/compression/extract7z.js",
+      0
+    ],
+    [
+      "GET",
+      "/engine.html",
+      0
+    ],
+    [
+      "GET",
+      "/engine-session.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/engine.css",
+      0
+    ],
+    [
+      "GET",
+      "/runtime-integrity.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/native-state.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/emulator.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/nipplejs.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/shaders.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/storage.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/gamepad.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/GameManager.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/socket.io.min.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/compression.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/emulator.css",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/version.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/reports/mupen64plus_next.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/mupen64plus_next-wasm.data",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/compression/extract7z.js",
+      0
+    ],
+    [
+      "GET",
+      "/engine.html",
+      0
+    ],
+    [
+      "GET",
+      "/engine.css",
+      0
+    ],
+    [
+      "GET",
+      "/engine-session.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/native-state.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/runtime-integrity.mjs",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/emulator.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/nipplejs.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/shaders.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/storage.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/gamepad.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/GameManager.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/socket.io.min.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/src/compression.js",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/emulator.css",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/version.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/reports/mupen64plus_next.json",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/cores/mupen64plus_next-wasm.data",
+      0
+    ],
+    [
+      "GET",
+      "/vendor/data/compression/extract7z.js",
+      0
+    ]
+  ],
+  "rdram_probe": {
+    "sessions": [
+      {
+        "generation": 1,
+        "base": 258801664,
+        "wordSwapped": true,
+        "pointers": [
+          2685665280,
+          2685403136,
+          2685665280,
+          2685403136,
+          2685665280,
+          2685403136
+        ],
+        "candidates": 2,
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "identification_method": "framebuffer-alternation"
+      },
+      {
+        "generation": 3,
+        "base": 258801664,
+        "wordSwapped": true,
+        "pointers": [
+          2685403136,
+          2685403136,
+          2685403136,
+          2685403136,
+          2685665280,
+          2685665280
+        ],
+        "candidates": 2,
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "identification_method": "framebuffer-alternation"
+      },
+      {
+        "generation": 1,
+        "base": 258801664,
+        "wordSwapped": true,
+        "pointers": [
+          2685665280,
+          2685403136,
+          2685665280,
+          2685403136,
+          2685665280,
+          2685403136
+        ],
+        "candidates": 2,
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "identification_method": "framebuffer-alternation"
+      },
+      {
+        "generation": 2,
+        "base": 258801664,
+        "wordSwapped": true,
+        "pointers": [
+          2685665280,
+          2685403136,
+          2685403136,
+          2685665280,
+          2685403136,
+          2685665280
+        ],
+        "candidates": 5,
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "identification_method": "framebuffer-alternation"
+      },
+      {
+        "generation": 3,
+        "base": 258801664,
+        "wordSwapped": true,
+        "pointers": [
+          2685665280,
+          2685403136,
+          2685403136,
+          2685665280,
+          2685403136,
+          2685403136
+        ],
+        "candidates": 5,
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "identification_method": "framebuffer-alternation"
+      },
+      {
+        "generation": 4,
+        "base": 258801664,
+        "wordSwapped": true,
+        "pointers": [
+          2685665280,
+          2685665280,
+          2685665280,
+          2685403136,
+          2685665280,
+          2685403136
+        ],
+        "candidates": 5,
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "identification_method": "framebuffer-alternation"
+      },
+      {
+        "generation": 5,
+        "base": 258801664,
+        "wordSwapped": true,
+        "pointers": [
+          2685403136,
+          2685665280,
+          2685403136,
+          2685665280,
+          2685403136,
+          2685665280
+        ],
+        "candidates": 2,
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "identification_method": "framebuffer-alternation"
+      }
+    ],
+    "physical_marker_address": 65536
+  },
+  "scope": "Owned MIT diagnostic ROM, revision-byte variant and own ZIP only. No commercial ROM or original save.",
+  "non_testables": [
+    "Chrome on Karl PC",
+    "Physical gamepad",
+    "Physical speakers",
+    "Commercial games"
+  ]
+}

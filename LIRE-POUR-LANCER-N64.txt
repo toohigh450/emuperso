@@ -1,0 +1,39 @@
+N64 WEB - LANCEMENT WINDOWS SIMPLIFIE
+
+1. Extraire TOUT le ZIP dans un dossier.
+2. Double-cliquer DEMARRER-N64.bat (a cote de ce document).
+3. Attendre la preparation puis l'ouverture automatique du navigateur.
+
+Choisir une ROM accepte .z64, .n64, .v64 et directement .zip.
+Une ROM dans le ZIP : extraction automatique dans le navigateur.
+Plusieurs ROM : choisir une entree puis Preparer cette ROM.
+La ROM reste dans le navigateur ; aucun envoi au serveur.
+ZIP non chiffre Stockage/Deflate jusqu a 96 Mio ; ROM jusqu a 64 Mio.
+Lancer la demo homebrew reste disponible comme test de reference.
+
+Ne pas ouvrir N64-Web-Lab-Phase1A.html : c'est le laboratoire de simulation
+preserve, qui ne contient pas le nouvel import de ROM.
+
+Premier lancement : Internet requis pour preparer Python portable (~11 Mo)
+et le moteur officiel. Aucune commande, aucun Python systeme, aucun npm,
+aucun compte et aucun droit administrateur demandes par notre lanceur.
+Windows 10/11 64 bits et Google Chrome recommandes.
+
+Garder la fenetre du lanceur ouverte pendant le jeu.
+Ctrl+C permet d'arreter le serveur local. La fenetre affiche une pause a la fin.
+En cas d'erreur, le message reste visible : envoyer une capture de la fenetre.
+Journaux : real-n64/cache/launcher-bootstrap.log et launcher.log.
+Si Chrome est introuvable, le navigateur par defaut est utilise.
+Adresse locale : http://127.0.0.1:8770/
+
+Apres preparation, le lancement normal utilise les fichiers deja verifies
+localement. Aucun telechargement de ROM n'est effectue par ce lanceur.
+Aucune compatibilite avec un jeu commercial n'est garantie.
+
+VERSION 0.5.0 RC2 - CANDIDATE D AUDIT : changer de jeu pendant la partie, cheats par jeu,
+etats internes trois emplacements, copies precedentes et reset sans cheats.
+Un point de retour est cree avant le premier cheat.
+Guide et limites : real-n64/docs/HUB-0.4.0.html.
+
+Chargement verifie : une restauration non confirmee est refusee sans ecraser le coffre.
+La publication du site et des ZIP reste bloquee avant audits et GO de Karl.

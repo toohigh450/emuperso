@@ -1,0 +1,1468 @@
+{
+  "schema": "emuperso/cheat-faults-rc-tests/v1",
+  "results": [
+    {
+      "test": "C01/C03 : vue active protégée ; variantes HTML retrouvées après désactivation",
+      "status": "RÉUSSI",
+      "proof": {
+        "fixture": "Original synthetic MIT catalog aliases; no regional/commercial ROM used",
+        "active_view": {
+          "selected": "0",
+          "rows": [
+            {
+              "text": "USA writer 1",
+              "checked": true,
+              "id": "0:0"
+            },
+            {
+              "text": "USA writer 2",
+              "checked": false,
+              "id": "0:1"
+            },
+            {
+              "text": "USA writer 3",
+              "checked": false,
+              "id": "0:2"
+            },
+            {
+              "text": "USA writer 4",
+              "checked": false,
+              "id": "0:3"
+            }
+          ],
+          "active": [
+            {
+              "id": "0:0",
+              "name": "USA writer 1",
+              "code": "81010000 A1A1",
+              "enabled": true
+            }
+          ],
+          "active_generation": 1
+        },
+        "actual_active_writer": {
+          "addresses": [
+            65536,
+            65538,
+            65540,
+            65542
+          ],
+          "expected": [
+            41377,
+            29186,
+            29443,
+            29700
+          ],
+          "actual": [
+            41377,
+            29186,
+            29443,
+            29700
+          ],
+          "real_frames": {
+            "before": 123,
+            "after": 144
+          },
+          "interpretation": "Active writers replace sentinels; disabled writers leave them unchanged."
+        },
+        "blocked_attempts": [
+          {
+            "attempted_view": "EUR",
+            "picker_disabled": true,
+            "programmatic_guard_event": {
+              "active_count": 1
+            },
+            "actual_writer": {
+              "addresses": [
+                65536,
+                65538,
+                65540,
+                65542
+              ],
+              "expected": [
+                41377,
+                29186,
+                29443,
+                29700
+              ],
+              "actual": [
+                41377,
+                29186,
+                29443,
+                29700
+              ],
+              "real_frames": {
+                "before": 146,
+                "after": 168
+              },
+              "interpretation": "Active writers replace sentinels; disabled writers leave them unchanged."
+            }
+          },
+          {
+            "attempted_view": "USA",
+            "picker_disabled": true,
+            "programmatic_guard_event": {
+              "active_count": 1
+            },
+            "actual_writer": {
+              "addresses": [
+                65536,
+                65538,
+                65540,
+                65542
+              ],
+              "expected": [
+                41377,
+                29186,
+                29443,
+                29700
+              ],
+              "actual": [
+                41377,
+                29186,
+                29443,
+                29700
+              ],
+              "real_frames": {
+                "before": 172,
+                "after": 193
+              },
+              "interpretation": "Active writers replace sentinels; disabled writers leave them unchanged."
+            }
+          }
+        ],
+        "restored_state_with_ambiguous_catalog": {
+          "list": {
+            "selected": "",
+            "rows": [
+              {
+                "text": "USA writer 1",
+                "checked": true,
+                "id": "0:0"
+              }
+            ],
+            "active": [
+              {
+                "code": "81010000 A1A1",
+                "enabled": true,
+                "id": "0:0",
+                "name": "USA writer 1"
+              }
+            ],
+            "active_generation": 2
+          },
+          "actual_writer": {
+            "addresses": [
+              65536,
+              65538,
+              65540,
+              65542
+            ],
+            "expected": [
+              41377,
+              29186,
+              29443,
+              29700
+            ],
+            "actual": [
+              41377,
+              29186,
+              29443,
+              29700
+            ],
+            "real_frames": {
+              "before": 122,
+              "after": 143
+            },
+            "interpretation": "Active writers replace sentinels; disabled writers leave them unchanged."
+          },
+          "active_code_visible_without_catalog_variant_selected": true
+        },
+        "after_disable_actual_no_writers": {
+          "addresses": [
+            65536,
+            65538,
+            65540,
+            65542
+          ],
+          "expected": [
+            28929,
+            29186,
+            29443,
+            29700
+          ],
+          "actual": [
+            28929,
+            29186,
+            29443,
+            29700
+          ],
+          "real_frames": {
+            "before": 147,
+            "after": 168
+          },
+          "interpretation": "Active writers replace sentinels; disabled writers leave them unchanged."
+        },
+        "allowed_inactive_selections": [
+          {
+            "view": "EUR",
+            "HTML_value": "1",
+            "rows": [
+              {
+                "text": "EUR writer 1",
+                "checked": false,
+                "id": "1:0"
+              },
+              {
+                "text": "EUR writer 2",
+                "checked": false,
+                "id": "1:1"
+              },
+              {
+                "text": "EUR writer 3",
+                "checked": false,
+                "id": "1:2"
+              },
+              {
+                "text": "EUR writer 4",
+                "checked": false,
+                "id": "1:3"
+              }
+            ]
+          },
+          {
+            "view": "USA",
+            "HTML_value": "0",
+            "rows": [
+              {
+                "text": "USA writer 1",
+                "checked": false,
+                "id": "0:0"
+              },
+              {
+                "text": "USA writer 2",
+                "checked": false,
+                "id": "0:1"
+              },
+              {
+                "text": "USA writer 3",
+                "checked": false,
+                "id": "0:2"
+              },
+              {
+                "text": "USA writer 4",
+                "checked": false,
+                "id": "0:3"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "test": "C02 : échec du deuxième ajout natif, quarantaine et reprise propre explicite",
+      "status": "RÉUSSI",
+      "proof": {
+        "invalid_second_input_preflight": {
+          "rejection": {
+            "accepted": false,
+            "code": "E_CHEAT_INPUT",
+            "message": "Code de cheat invalide. Aucun code modifié."
+          },
+          "native_reset_calls": 0,
+          "native_add_calls": 0,
+          "prior_list_effects": {
+            "addresses": [
+              65536,
+              65538,
+              65540,
+              65542
+            ],
+            "expected": [
+              41377,
+              45746,
+              29443,
+              29700
+            ],
+            "actual": [
+              41377,
+              45746,
+              29443,
+              29700
+            ],
+            "real_frames": {
+              "before": 193,
+              "after": 214
+            },
+            "interpretation": "Active writers replace sentinels; disabled writers leave them unchanged."
+          },
+          "vault_unchanged": true
+        },
+        "known_list_before_fault": {
+          "addresses": [
+            65536,
+            65538,
+            65540,
+            65542
+          ],
+          "expected": [
+            41377,
+            45746,
+            29443,
+            29700
+          ],
+          "actual": [
+            41377,
+            45746,
+            29443,
+            29700
+          ],
+          "real_frames": {
+            "before": 220,
+            "after": 241
+          },
+          "interpretation": "Active writers replace sentinels; disabled writers leave them unchanged."
+        },
+        "quarantine": {
+          "fault": {
+            "mode": "set",
+            "target": 2,
+            "set_calls": [
+              {
+                "index": 0,
+                "enabled": true,
+                "code": "81010000 A1A1"
+              },
+              {
+                "index": 1,
+                "enabled": true,
+                "code": "81010002 B2B2"
+              }
+            ],
+            "reset_calls": 2,
+            "completed_native_sets": 1,
+            "snapshot": {
+              "session_id": 2,
+              "closed": true,
+              "started": false,
+              "paused": true,
+              "frame": 0,
+              "poisoned": true,
+              "fault_code": "E_CHEAT_STATE_UNKNOWN",
+              "contexts": []
+            },
+            "old_native_frame": 257
+          },
+          "blocked_api_calls": {
+            "captureState": "E_CHEAT_STATE_UNKNOWN",
+            "captureBattery": "E_CHEAT_STATE_UNKNOWN",
+            "play": "E_CHEAT_STATE_UNKNOWN"
+          },
+          "waited_ms": 16500,
+          "vault_before": {
+            "record_count": 5,
+            "sha256": "b4ba034c0ae9209b8d26d80098870f0566e1b028737b9be1c19502ea11fe375f",
+            "records": [
+              {
+                "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+                "kind": "battery",
+                "slot": 1,
+                "revision": 1,
+                "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+                "previous_sha256": null
+              },
+              {
+                "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+                "kind": "battery",
+                "slot": 2,
+                "revision": 1,
+                "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+                "previous_sha256": null
+              },
+              {
+                "key": "checkpoint:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+                "kind": "checkpoint",
+                "slot": 2,
+                "revision": 1,
+                "current_sha256": "6b1ccd31a68b5ab6c16adefd0a941666a905794ddc20aa8dd509c11b25835581",
+                "previous_sha256": null
+              },
+              {
+                "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+                "kind": "state",
+                "slot": 1,
+                "revision": 1,
+                "current_sha256": "9441e0f9c422d8681d5aee69e852526899e4e8ef57c7a9c78dbb1465001de82d",
+                "previous_sha256": null
+              },
+              {
+                "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+                "kind": "state",
+                "slot": 2,
+                "revision": 1,
+                "current_sha256": "b0b345901182ddfb832f66f6eb06c5dce39a13f4014fd291a24d0f27adc00b40",
+                "previous_sha256": null
+              }
+            ]
+          },
+          "vault_after_wait": {
+            "record_count": 5,
+            "sha256": "b4ba034c0ae9209b8d26d80098870f0566e1b028737b9be1c19502ea11fe375f",
+            "records": [
+              {
+                "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+                "kind": "battery",
+                "slot": 1,
+                "revision": 1,
+                "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+                "previous_sha256": null
+              },
+              {
+                "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+                "kind": "battery",
+                "slot": 2,
+                "revision": 1,
+                "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+                "previous_sha256": null
+              },
+              {
+                "key": "checkpoint:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+                "kind": "checkpoint",
+                "slot": 2,
+                "revision": 1,
+                "current_sha256": "6b1ccd31a68b5ab6c16adefd0a941666a905794ddc20aa8dd509c11b25835581",
+                "previous_sha256": null
+              },
+              {
+                "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+                "kind": "state",
+                "slot": 1,
+                "revision": 1,
+                "current_sha256": "9441e0f9c422d8681d5aee69e852526899e4e8ef57c7a9c78dbb1465001de82d",
+                "previous_sha256": null
+              },
+              {
+                "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+                "kind": "state",
+                "slot": 2,
+                "revision": 1,
+                "current_sha256": "b0b345901182ddfb832f66f6eb06c5dce39a13f4014fd291a24d0f27adc00b40",
+                "previous_sha256": null
+              }
+            ]
+          },
+          "automatic_restart": false,
+          "error": {
+            "message": "Une commande de cheats a échoué. La partie a été arrêtée par précaution, sans enregistrer sa mémoire incertaine. Vos sauvegardes sont conservées. « Relancer ce jeu sans cheats » repart de la dernière sauvegarde native conservée ; le point d’avant cheats reste accessible après relance s’il existe dans le coffre.",
+            "detail": "L’application des cheats a échoué ; l’état du moteur est indéterminé. Cette session est arrêtée et ne peut plus être sauvegardée. Redémarrez une session neuve sans cheats.",
+            "code": "E_CHEAT_STATE_UNKNOWN"
+          }
+        },
+        "explicit_recovery": {
+          "generation": 3,
+          "rom": {
+            "bytes": 6144,
+            "sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+          },
+          "native": {
+            "bytes": 296960,
+            "byte17": 255,
+            "byte18": 255,
+            "sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795"
+          },
+          "actual_no_writer_proof": {
+            "addresses": [
+              65536,
+              65538,
+              65540,
+              65542
+            ],
+            "expected": [
+              28929,
+              29186,
+              29443,
+              29700
+            ],
+            "actual": [
+              28929,
+              29186,
+              29443,
+              29700
+            ],
+            "real_frames": {
+              "before": 122,
+              "after": 143
+            },
+            "interpretation": "Active writers replace sentinels; disabled writers leave them unchanged."
+          },
+          "vault_unchanged": true,
+          "event": {
+            "active_count": 0
+          }
+        }
+      }
+    },
+    {
+      "test": "C02 : échec du troisième ajout natif, aucun writer résiduel après relance",
+      "status": "RÉUSSI",
+      "proof": {
+        "known_list_before_fault": {
+          "addresses": [
+            65536,
+            65538,
+            65540,
+            65542
+          ],
+          "expected": [
+            41377,
+            45746,
+            50115,
+            29700
+          ],
+          "actual": [
+            41377,
+            45746,
+            50115,
+            29700
+          ],
+          "real_frames": {
+            "before": 165,
+            "after": 186
+          },
+          "interpretation": "Active writers replace sentinels; disabled writers leave them unchanged."
+        },
+        "quarantine": {
+          "fault": {
+            "mode": "set",
+            "target": 3,
+            "set_calls": [
+              {
+                "index": 0,
+                "enabled": true,
+                "code": "81010000 A1A1"
+              },
+              {
+                "index": 1,
+                "enabled": true,
+                "code": "81010002 B2B2"
+              },
+              {
+                "index": 2,
+                "enabled": true,
+                "code": "81010004 C3C3"
+              }
+            ],
+            "reset_calls": 2,
+            "completed_native_sets": 2,
+            "snapshot": {
+              "session_id": 3,
+              "closed": true,
+              "started": false,
+              "paused": true,
+              "frame": 0,
+              "poisoned": true,
+              "fault_code": "E_CHEAT_STATE_UNKNOWN",
+              "contexts": []
+            },
+            "old_native_frame": 199
+          },
+          "blocked_api_calls": {
+            "captureState": "E_CHEAT_STATE_UNKNOWN",
+            "captureBattery": "E_CHEAT_STATE_UNKNOWN",
+            "play": "E_CHEAT_STATE_UNKNOWN"
+          },
+          "waited_ms": 700,
+          "vault_before": {
+            "record_count": 5,
+            "sha256": "0bc1fea811a0062e47122fe21d7108dfe454935e43a1d3aaa5eb4911e88814e3",
+            "records": [
+              {
+                "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+                "kind": "battery",
+                "slot": 1,
+                "revision": 1,
+                "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+                "previous_sha256": null
+              },
+              {
+                "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+                "kind": "battery",
+                "slot": 2,
+                "revision": 2,
+                "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+                "previous_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795"
+              },
+              {
+                "key": "checkpoint:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+                "kind": "checkpoint",
+                "slot": 2,
+                "revision": 2,
+                "current_sha256": "b99c8336256c487351c7daed00f144cdd9c6f89e1068757b5434fc3fa816adc7",
+                "previous_sha256": "6b1ccd31a68b5ab6c16adefd0a941666a905794ddc20aa8dd509c11b25835581"
+              },
+              {
+                "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+                "kind": "state",
+                "slot": 1,
+                "revision": 1,
+                "current_sha256": "9441e0f9c422d8681d5aee69e852526899e4e8ef57c7a9c78dbb1465001de82d",
+                "previous_sha256": null
+              },
+              {
+                "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+                "kind": "state",
+                "slot": 2,
+                "revision": 1,
+                "current_sha256": "b0b345901182ddfb832f66f6eb06c5dce39a13f4014fd291a24d0f27adc00b40",
+                "previous_sha256": null
+              }
+            ]
+          },
+          "vault_after_wait": {
+            "record_count": 5,
+            "sha256": "0bc1fea811a0062e47122fe21d7108dfe454935e43a1d3aaa5eb4911e88814e3",
+            "records": [
+              {
+                "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+                "kind": "battery",
+                "slot": 1,
+                "revision": 1,
+                "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+                "previous_sha256": null
+              },
+              {
+                "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+                "kind": "battery",
+                "slot": 2,
+                "revision": 2,
+                "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+                "previous_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795"
+              },
+              {
+                "key": "checkpoint:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+                "kind": "checkpoint",
+                "slot": 2,
+                "revision": 2,
+                "current_sha256": "b99c8336256c487351c7daed00f144cdd9c6f89e1068757b5434fc3fa816adc7",
+                "previous_sha256": "6b1ccd31a68b5ab6c16adefd0a941666a905794ddc20aa8dd509c11b25835581"
+              },
+              {
+                "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+                "kind": "state",
+                "slot": 1,
+                "revision": 1,
+                "current_sha256": "9441e0f9c422d8681d5aee69e852526899e4e8ef57c7a9c78dbb1465001de82d",
+                "previous_sha256": null
+              },
+              {
+                "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+                "kind": "state",
+                "slot": 2,
+                "revision": 1,
+                "current_sha256": "b0b345901182ddfb832f66f6eb06c5dce39a13f4014fd291a24d0f27adc00b40",
+                "previous_sha256": null
+              }
+            ]
+          },
+          "automatic_restart": false,
+          "error": {
+            "message": "Une commande de cheats a échoué. La partie a été arrêtée par précaution, sans enregistrer sa mémoire incertaine. Vos sauvegardes sont conservées. « Relancer ce jeu sans cheats » repart de la dernière sauvegarde native conservée ; le point d’avant cheats reste accessible après relance s’il existe dans le coffre.",
+            "detail": "L’application des cheats a échoué ; l’état du moteur est indéterminé. Cette session est arrêtée et ne peut plus être sauvegardée. Redémarrez une session neuve sans cheats.",
+            "code": "E_CHEAT_STATE_UNKNOWN"
+          }
+        },
+        "explicit_recovery": {
+          "generation": 4,
+          "rom": {
+            "bytes": 6144,
+            "sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+          },
+          "native": {
+            "bytes": 296960,
+            "byte17": 255,
+            "byte18": 255,
+            "sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795"
+          },
+          "actual_no_writer_proof": {
+            "addresses": [
+              65536,
+              65538,
+              65540,
+              65542
+            ],
+            "expected": [
+              28929,
+              29186,
+              29443,
+              29700
+            ],
+            "actual": [
+              28929,
+              29186,
+              29443,
+              29700
+            ],
+            "real_frames": {
+              "before": 122,
+              "after": 143
+            },
+            "interpretation": "Active writers replace sentinels; disabled writers leave them unchanged."
+          },
+          "vault_unchanged": true,
+          "event": {
+            "active_count": 0
+          }
+        }
+      }
+    },
+    {
+      "test": "C02 : reset natif et cleanup en erreur, session retirée et nouveau cœur sans cheats",
+      "status": "RÉUSSI",
+      "proof": {
+        "known_list_before_fault": {
+          "addresses": [
+            65536,
+            65538,
+            65540,
+            65542
+          ],
+          "expected": [
+            41377,
+            45746,
+            29443,
+            29700
+          ],
+          "actual": [
+            41377,
+            45746,
+            29443,
+            29700
+          ],
+          "real_frames": {
+            "before": 159,
+            "after": 180
+          },
+          "interpretation": "Active writers replace sentinels; disabled writers leave them unchanged."
+        },
+        "quarantine": {
+          "fault": {
+            "mode": "reset",
+            "target": 0,
+            "set_calls": [],
+            "reset_calls": 2,
+            "completed_native_sets": 0,
+            "snapshot": {
+              "session_id": 4,
+              "closed": true,
+              "started": false,
+              "paused": true,
+              "frame": 0,
+              "poisoned": true,
+              "fault_code": "E_CHEAT_STATE_UNKNOWN",
+              "contexts": []
+            },
+            "old_native_frame": 196
+          },
+          "blocked_api_calls": {
+            "captureState": "E_CHEAT_STATE_UNKNOWN",
+            "captureBattery": "E_CHEAT_STATE_UNKNOWN",
+            "play": "E_CHEAT_STATE_UNKNOWN"
+          },
+          "waited_ms": 700,
+          "vault_before": {
+            "record_count": 5,
+            "sha256": "33f1fcf62feefe481ba15b4a51282a1813cbd5c4ff02af293d1e7d9108aa60b8",
+            "records": [
+              {
+                "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+                "kind": "battery",
+                "slot": 1,
+                "revision": 1,
+                "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+                "previous_sha256": null
+              },
+              {
+                "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+                "kind": "battery",
+                "slot": 2,
+                "revision": 3,
+                "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+                "previous_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795"
+              },
+              {
+                "key": "checkpoint:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+                "kind": "checkpoint",
+                "slot": 2,
+                "revision": 3,
+                "current_sha256": "36f29e8d8a1ab785fd12bacb74ac12ce5ebac731199316a56ddf4e21fcd669d7",
+                "previous_sha256": "b99c8336256c487351c7daed00f144cdd9c6f89e1068757b5434fc3fa816adc7"
+              },
+              {
+                "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+                "kind": "state",
+                "slot": 1,
+                "revision": 1,
+                "current_sha256": "9441e0f9c422d8681d5aee69e852526899e4e8ef57c7a9c78dbb1465001de82d",
+                "previous_sha256": null
+              },
+              {
+                "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+                "kind": "state",
+                "slot": 2,
+                "revision": 1,
+                "current_sha256": "b0b345901182ddfb832f66f6eb06c5dce39a13f4014fd291a24d0f27adc00b40",
+                "previous_sha256": null
+              }
+            ]
+          },
+          "vault_after_wait": {
+            "record_count": 5,
+            "sha256": "33f1fcf62feefe481ba15b4a51282a1813cbd5c4ff02af293d1e7d9108aa60b8",
+            "records": [
+              {
+                "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+                "kind": "battery",
+                "slot": 1,
+                "revision": 1,
+                "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+                "previous_sha256": null
+              },
+              {
+                "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+                "kind": "battery",
+                "slot": 2,
+                "revision": 3,
+                "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+                "previous_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795"
+              },
+              {
+                "key": "checkpoint:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+                "kind": "checkpoint",
+                "slot": 2,
+                "revision": 3,
+                "current_sha256": "36f29e8d8a1ab785fd12bacb74ac12ce5ebac731199316a56ddf4e21fcd669d7",
+                "previous_sha256": "b99c8336256c487351c7daed00f144cdd9c6f89e1068757b5434fc3fa816adc7"
+              },
+              {
+                "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+                "kind": "state",
+                "slot": 1,
+                "revision": 1,
+                "current_sha256": "9441e0f9c422d8681d5aee69e852526899e4e8ef57c7a9c78dbb1465001de82d",
+                "previous_sha256": null
+              },
+              {
+                "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+                "kind": "state",
+                "slot": 2,
+                "revision": 1,
+                "current_sha256": "b0b345901182ddfb832f66f6eb06c5dce39a13f4014fd291a24d0f27adc00b40",
+                "previous_sha256": null
+              }
+            ]
+          },
+          "automatic_restart": false,
+          "error": {
+            "message": "Une commande de cheats a échoué. La partie a été arrêtée par précaution, sans enregistrer sa mémoire incertaine. Vos sauvegardes sont conservées. « Relancer ce jeu sans cheats » repart de la dernière sauvegarde native conservée ; le point d’avant cheats reste accessible après relance s’il existe dans le coffre.",
+            "detail": "L’application des cheats a échoué ; l’état du moteur est indéterminé. Cette session est arrêtée et ne peut plus être sauvegardée. Redémarrez une session neuve sans cheats.",
+            "code": "E_CHEAT_STATE_UNKNOWN"
+          }
+        },
+        "explicit_recovery": {
+          "generation": 5,
+          "rom": {
+            "bytes": 6144,
+            "sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+          },
+          "native": {
+            "bytes": 296960,
+            "byte17": 255,
+            "byte18": 255,
+            "sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795"
+          },
+          "actual_no_writer_proof": {
+            "addresses": [
+              65536,
+              65538,
+              65540,
+              65542
+            ],
+            "expected": [
+              28929,
+              29186,
+              29443,
+              29700
+            ],
+            "actual": [
+              28929,
+              29186,
+              29443,
+              29700
+            ],
+            "real_frames": {
+              "before": 122,
+              "after": 143
+            },
+            "interpretation": "Active writers replace sentinels; disabled writers leave them unchanged."
+          },
+          "vault_unchanged": true,
+          "event": {
+            "active_count": 0
+          }
+        }
+      }
+    }
+  ],
+  "page_errors": [],
+  "http": [
+    {
+      "url": "http://127.0.0.1:18883/",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/style.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/assets/emuperso-banner.png",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/app.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/rom-file.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/zip-rom.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/save-store.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/session-controller.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/legacy-battery.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/state-bundle.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/cheat-catalog.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/homebrew/fallback-open/build-info.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/homebrew/fallback-open/demo-emuperso-open.z64",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/docs/runtime-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/docs/cheat-catalog-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/cheats/mupencheat.txt",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:18883/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    }
+  ],
+  "dialogs": [
+    "Cet état contient une mémoire modifiée par des cheats. Le charger rétablira ces modifications. Continuer ?"
+  ],
+  "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+  "catalog_fixture": {
+    "synthetic": true,
+    "MIT_original": true,
+    "header_key": "00000000-00000000-C:45",
+    "sha256": "4b113ce950eafe88047d97a7bcae9298b82a80ba1963fae2499f59fb10dd7d06",
+    "game_views": 2,
+    "cheat_entries": 8
+  },
+  "scope": "Real pinned N64 core and unchanged repository MIT demo in a fresh temporary profile. Synthetic catalog HTTP responses and explicitly injected native wrapper exceptions. Actual RAM writes, stopped old loop, unchanged vault and explicit new clean core are checked.",
+  "not_tested": [
+    "Karl Windows PC",
+    "Commercial games and regional compatibility",
+    "All cheats or all failure modes"
+  ],
+  "original_saves_used": false
+}

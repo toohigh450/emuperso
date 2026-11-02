@@ -1,0 +1,24 @@
+{
+  "schema": "emuperso/rc-ci-attempt/v1",
+  "commit": "cc2709dc7e2116b40481bc00bac58f8b1275158f",
+  "run_id": 41309478777,
+  "status": "ÉCHOUÉ",
+  "failed_bench_both_platforms": "restore-independent",
+  "cause": "Page.evaluate appelle automatiquement une expression de fonction ; injection du helper avec argument null, incompatible avec le paramètre options. Échec avant le premier contrôle de restauration.",
+  "correction": "Installer le helper dans une IIFE, sans appel implicite par Playwright, comme dans les autres bancs.",
+  "product_runtime_changed_by_probe_fix": false,
+  "windows_passed_benches": {
+    "launcher": 11,
+    "ram-identification": 3,
+    "restore-regressions": 9,
+    "restore-guards": 4,
+    "hub-full": 17
+  },
+  "linux_passed_main_groups": 97,
+  "linux_passed_nested_web_restore_groups": 9,
+  "not_a_diagnosis_on_karl_pc": true,
+  "artifact_sha256": {
+    "windows": "e5679ce408b7a1c9dba4f5d994665a2ceb333214b3fee7802353ece4d8bb7c80",
+    "linux": "b76a6326edfaf6393a7ffe1f685cd48050f97f05d3835172cbda0d0cc0b8400e"
+  }
+}

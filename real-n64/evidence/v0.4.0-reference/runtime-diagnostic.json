@@ -1,0 +1,210 @@
+{
+  "schema": "emuperso/real-engine-diagnostic/v2",
+  "scope": "REAL_ENGINE_TRIAL_NOT_SYNTHETIC_LAB",
+  "warning": "No ROM or save payload bytes in this diagnostic. Metadata can reveal game and cheat names.",
+  "host": {
+    "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "cross_origin_isolated": true
+  },
+  "phase": "started",
+  "local_selection": null,
+  "active_rom": {
+    "source": "reference-demo",
+    "name": "demo-emuperso-open.z64",
+    "size": 6144,
+    "filename_extension": "z64",
+    "detected_format": "z64",
+    "extension_mismatch": false,
+    "source_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+    "canonical_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+    "canonical_format": "z64",
+    "validation_scope": "Signature, taille et ordre des octets seulement ; CRC, code et compatibilit\u00e9 non valid\u00e9s."
+  },
+  "identity": {
+    "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+    "engine_sha256": "76f1e9315302e1996454839bcde48aabe0fad399bf333ee0f5f66e698b28574c",
+    "config_sha256": "4e78a12696bbdf17d0c8f232689375ebff860e0f1b3796154c949329914ed571",
+    "state_schema": "emuperso-real-state-v1"
+  },
+  "session": {
+    "generation": 1,
+    "active_generation": 1,
+    "candidate_generation": null,
+    "disposed": 0,
+    "active": {
+      "session_id": 1,
+      "closed": false,
+      "started": true,
+      "paused": false,
+      "frame": 731,
+      "contexts": [
+        {
+          "state": "running",
+          "sample_rate": 44100
+        }
+      ]
+    },
+    "frame_count": 1
+  },
+  "cheats": {
+    "active": [],
+    "tainted": false
+  },
+  "saves": [],
+  "rom_build": {
+    "scope": "FREESTANDING_REAL_N64_CODE_EMULATOR_ONLY_8MIB_CPU_BOOT",
+    "rom": {
+      "file": "demo-emuperso-open.z64",
+      "bytes": 6144,
+      "sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+      "header_hex": "80371240"
+    },
+    "source": "New freestanding C port of MIT Claude demo behavior; no libdragon runtime linked. VI timings from libdragon Unlicense, elementary font by Codex.",
+    "compiled": true,
+    "tested_browser": "PENDING",
+    "libraries_linked": [],
+    "bootstrap": "Own MIT CPU loader, no physical RDRAM training, no RSP",
+    "notes": [
+      "Audio and SI input need independent real-engine verification.",
+      "Physical-console and hardware Gamepad not validated."
+    ]
+  },
+  "contexts": [
+    {
+      "state": "running",
+      "sample_rate": 44100
+    }
+  ],
+  "records": [
+    {
+      "seq": 1,
+      "utc": "2026-10-31T21:13:57.036Z",
+      "host_monotonic_ms": 448.9300000015646,
+      "type": "page.open",
+      "data": {
+        "engine_started": false
+      }
+    },
+    {
+      "seq": 2,
+      "utc": "2026-10-31T21:13:57.388Z",
+      "host_monotonic_ms": 800.8950000014156,
+      "type": "rom.fetched",
+      "data": {
+        "bytes": 6144,
+        "sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+      }
+    },
+    {
+      "seq": 3,
+      "utc": "2026-10-31T21:13:57.728Z",
+      "host_monotonic_ms": 1140.464999999851,
+      "type": "video.context.created",
+      "data": {
+        "kind": "webgl2",
+        "session_generation": 1
+      }
+    },
+    {
+      "seq": 4,
+      "utc": "2026-10-31T21:13:57.781Z",
+      "host_monotonic_ms": 1193.2200000006706,
+      "type": "engine.ready",
+      "data": {
+        "session_generation": 1
+      }
+    },
+    {
+      "seq": 5,
+      "utc": "2026-10-31T21:13:58.442Z",
+      "host_monotonic_ms": 1854.710000000894,
+      "type": "wasm.instantiated",
+      "data": {
+        "method": "instantiateStreaming",
+        "export_count": 69,
+        "session_generation": 1
+      }
+    },
+    {
+      "seq": 6,
+      "utc": "2026-10-31T21:13:58.611Z",
+      "host_monotonic_ms": 2023.9750000014901,
+      "type": "video.context.created",
+      "data": {
+        "kind": "webgl2",
+        "session_generation": 1
+      }
+    },
+    {
+      "seq": 7,
+      "utc": "2026-10-31T21:13:58.716Z",
+      "host_monotonic_ms": 2128.3100000005215,
+      "type": "audio.context.created",
+      "data": {
+        "state": "running",
+        "sample_rate": 44100,
+        "session_generation": 1
+      }
+    },
+    {
+      "seq": 8,
+      "utc": "2026-10-31T21:13:58.851Z",
+      "host_monotonic_ms": 2263.425000000745,
+      "type": "engine.start.callback",
+      "data": {
+        "session_generation": 1
+      }
+    },
+    {
+      "seq": 9,
+      "utc": "2026-10-31T21:13:59.213Z",
+      "host_monotonic_ms": 2625.9500000011176,
+      "type": "audio.context.state",
+      "data": {
+        "state": "running",
+        "session_generation": 1
+      }
+    },
+    {
+      "seq": 10,
+      "utc": "2026-10-31T21:13:59.777Z",
+      "host_monotonic_ms": 3190.1450000014156,
+      "type": "session.committed",
+      "data": {
+        "generation": 1,
+        "previous_generation": null,
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+      }
+    },
+    {
+      "seq": 11,
+      "utc": "2026-10-31T21:13:59.797Z",
+      "host_monotonic_ms": 3209.7949999999255,
+      "type": "rom.validated",
+      "data": {
+        "source": "reference-demo",
+        "name": "demo-emuperso-open.z64",
+        "size": 6144,
+        "filename_extension": "z64",
+        "detected_format": "z64",
+        "extension_mismatch": false,
+        "source_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "canonical_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "canonical_format": "z64",
+        "validation_scope": "Signature, taille et ordre des octets seulement ; CRC, code et compatibilit\u00e9 non valid\u00e9s.",
+        "license": "MIT homebrew reference"
+      }
+    },
+    {
+      "seq": 12,
+      "utc": "2026-10-31T21:14:12.086Z",
+      "host_monotonic_ms": 15498.88000000082,
+      "type": "battery.saved",
+      "data": {
+        "bytes": 296960,
+        "slot": 1,
+        "payload_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795"
+      }
+    }
+  ]
+}

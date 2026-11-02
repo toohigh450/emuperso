@@ -1,0 +1,103 @@
+{
+  "schema": "emuperso/legacy-battery-browser-tests/v1",
+  "results": [
+    {
+      "test": "Base absente : aucune base créée",
+      "status": "RÉUSSI",
+      "proof": {
+        "before": [],
+        "after": [],
+        "empty": true
+      }
+    },
+    {
+      "test": "Lecture d’un seul chemin exact, transaction readonly et aucune écriture",
+      "status": "RÉUSSI",
+      "proof": {
+        "bytes": 296960,
+        "sha256": "9150f7e0b3ecb2094c583a921c86a3c8d9200b45369dbe2cdf417c73bf8b8f7b",
+        "audit": {
+          "open": [
+            [
+              "/data/saves"
+            ]
+          ],
+          "transaction": [
+            [
+              "FILE_DATA",
+              "readonly"
+            ]
+          ],
+          "get": [
+            "/data/saves/Mupen64Plus-Next/EMUPERSO_LOCAL_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.srm"
+          ],
+          "writes": []
+        }
+      }
+    },
+    {
+      "test": "Copie vers le nouveau coffre ; source historique inchangée",
+      "status": "RÉUSSI",
+      "proof": {
+        "vault_sha256": "9150f7e0b3ecb2094c583a921c86a3c8d9200b45369dbe2cdf417c73bf8b8f7b",
+        "legacy_sha256": "9150f7e0b3ecb2094c583a921c86a3c8d9200b45369dbe2cdf417c73bf8b8f7b",
+        "legacy_first": 0
+      }
+    },
+    {
+      "test": "Référence identifiée strictement ; aucune recherche par nom approchant",
+      "status": "RÉUSSI",
+      "proof": {
+        "bytes": [
+          41,
+          42,
+          43
+        ],
+        "wrong": "E_LEGACY_IDENTITY",
+        "missing": true
+      }
+    },
+    {
+      "test": "Source hors limites refusée sans modification",
+      "status": "RÉUSSI",
+      "proof": {
+        "code": "E_LEGACY_SIZE",
+        "original_size": 1048577
+      }
+    },
+    {
+      "test": "Énumération indisponible : migration ignorée sans création",
+      "status": "RÉUSSI",
+      "proof": {
+        "returned_null": true
+      }
+    },
+    {
+      "test": "Course de suppression synthétique : nouvelle création avortée",
+      "status": "RÉUSSI",
+      "proof": {
+        "absent": true,
+        "legacy_recreated": false
+      }
+    }
+  ],
+  "page_errors": [],
+  "http": [
+    {
+      "url": "http://127.0.0.1:8779/tests/legacy-battery-browser.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8779/legacy-battery.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8779/save-store.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    }
+  ],
+  "scope": "Only fresh temporary browser profile, synthetic legacy records and new-vault copy. No user original save was accessed. Deletion race removes only the database created by this test."
+}

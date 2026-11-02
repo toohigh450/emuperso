@@ -1,0 +1,155 @@
+{
+  "schema": "emuperso/save-store-browser-tests/v1",
+  "results": [
+    {
+      "test": "Écriture et lecture IndexedDB réelles",
+      "status": "RÉUSSI",
+      "proof": {
+        "revision": 1,
+        "list_contains_payload": false
+      }
+    },
+    {
+      "test": "Version précédente conservée atomiquement",
+      "status": "RÉUSSI",
+      "proof": {
+        "current": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "previous": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "revision": 2
+      }
+    },
+    {
+      "test": "Persistance après fermeture complète de Chromium",
+      "status": "RÉUSSI",
+      "proof": {
+        "bytes": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "revision": 2
+      }
+    },
+    {
+      "test": "ROM, sauvegarde système et checkpoint isolés des états utilisateur",
+      "status": "RÉUSSI",
+      "proof": {
+        "battery": [
+          9,
+          10
+        ],
+        "checkpoint": [
+          31,
+          32
+        ],
+        "state": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "other": "E_EMPTY"
+      }
+    },
+    {
+      "test": "Corruption refusée et copie précédente récupérable",
+      "status": "RÉUSSI",
+      "proof": {
+        "loadError": "E_INTEGRITY",
+        "overwriteError": "E_INTEGRITY",
+        "backup": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "test": "Deux connexions concurrentes sans perte de révision",
+      "status": "RÉUSSI",
+      "proof": {
+        "revisions": [
+          1,
+          2
+        ],
+        "current": [
+          22
+        ],
+        "previous": [
+          21
+        ]
+      }
+    },
+    {
+      "test": "Échec quota injecté : ancienne sauvegarde conservée",
+      "status": "RÉUSSI",
+      "proof": {
+        "code": "E_QUOTA",
+        "current": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "previous": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "quota_is_simulated": true
+      }
+    },
+    {
+      "test": "Suppression explicite limitée au bon emplacement",
+      "status": "RÉUSSI",
+      "proof": {
+        "empty": "E_EMPTY",
+        "remaining": [
+          1
+        ],
+        "battery": [
+          9,
+          10
+        ]
+      }
+    }
+  ],
+  "page_errors": [],
+  "http": [
+    {
+      "url": "http://127.0.0.1:8774/tests/save-store-browser.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8774/save-store.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8774/tests/save-store-browser.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:8774/save-store.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    }
+  ],
+  "scope": "Real Chromium IndexedDB, synthetic state/battery bytes only. No emulator restoration or ROM compatibility tested here.",
+  "quota_failure": "Injected exception, not a real full-disk experiment."
+}

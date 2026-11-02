@@ -1,0 +1,31 @@
+test_fresh_sdk_checkout_and_dirty_guard (test_real_tools.Tests.test_fresh_sdk_checkout_and_dirty_guard) ... + git init /tmp/tmpys1uwg2j/checkout
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: will change to "main" in Git 3.0. To configure the initial branch name
+hint: to use in all of your new repositories, which will suppress this warning,
+hint: call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Initialized empty Git repository in /tmp/tmpys1uwg2j/checkout/.git/
++ git -C /tmp/tmpys1uwg2j/checkout remote add origin /tmp/tmpys1uwg2j/upstream
++ git -C /tmp/tmpys1uwg2j/checkout fetch --depth 1 origin b55fb9f6095a51beffec6ed6b370d4a91c75fd1c
+From /tmp/tmpys1uwg2j/upstream
+ * branch            b55fb9f6095a51beffec6ed6b370d4a91c75fd1c -> FETCH_HEAD
++ git -C /tmp/tmpys1uwg2j/checkout checkout --detach b55fb9f6095a51beffec6ed6b370d4a91c75fd1c
+HEAD is now at b55fb9f synthetic SDK fixture
+ok
+test_originals_preserved (test_real_tools.Tests.test_originals_preserved) ... ok
+test_paths (test_real_tools.Tests.test_paths) ... ok
+test_rom_header_and_hash (test_real_tools.Tests.test_rom_header_and_hash) ... ok
+test_symlink (test_real_tools.Tests.test_symlink) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.054s
+
+OK

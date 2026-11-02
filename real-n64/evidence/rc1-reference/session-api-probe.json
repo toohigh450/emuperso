@@ -1,0 +1,112 @@
+{
+  "info": {
+    "path": "/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm",
+    "nativeBytes": 296960,
+    "states": true,
+    "stateBytes": 16793440,
+    "statePrefix": [
+      82,
+      65,
+      83,
+      84,
+      65,
+      84,
+      69,
+      1,
+      77,
+      69,
+      77,
+      32,
+      68,
+      63,
+      0,
+      1,
+      77,
+      54,
+      52,
+      43,
+      83,
+      65,
+      86,
+      69,
+      0,
+      1,
+      9,
+      0,
+      50,
+      51,
+      68,
+      68
+    ],
+    "frame": 6
+  },
+  "ram_candidates": {
+    "heap_raw": [],
+    "heap_swapped": [
+      258801664,
+      527240192,
+      809746628,
+      826540060
+    ],
+    "state_raw": [],
+    "state_swapped": [
+      460
+    ]
+  },
+  "cheat_pattern_offsets": [
+    [],
+    [
+      65996
+    ],
+    []
+  ],
+  "restore_result": {
+    "native_status": 0,
+    "frame_before": 136,
+    "frame_after": 144,
+    "contexts": [
+      {
+        "state": "running",
+        "sample_rate": 44100
+      }
+    ]
+  },
+  "after_restore_pattern_offsets": [
+    [],
+    [],
+    []
+  ],
+  "invalid_native_status": 0,
+  "console": [
+    "lockMouse disabled",
+    "invalid core option lockMouse. This is not an error.",
+    "Available core options {retroarch_core: Object, shader: Object, fps: Object, videoRotation: Object, screenshotSource: Object}",
+    "[ERROR] [EMSCRIPTEN]: Could not get screen dimensions!",
+    "[libretro INFO] mupen64plus: Game controller 0 (Standard controller) has a Memory pak plugged in",
+    "[libretro INFO] mupen64plus: Game controller 1 (Standard controller) has nothing plugged in",
+    "[libretro INFO] mupen64plus: Game controller 2 (Standard controller) has nothing plugged in",
+    "[libretro INFO] mupen64plus: Game controller 3 (Standard controller) has nothing plugged in",
+    "[libretro INFO] mupen64plus: Unknown CIC type (00000007BA90A53A)! using CIC 6102.",
+    "[libretro INFO] mupen64plus: Using CIC type X102",
+    "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO",
+    "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\".",
+    "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO",
+    "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\".",
+    "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO",
+    "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\".",
+    "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO",
+    "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\".",
+    "[WARN] [Environ]: SYSTEM DIR is empty, assume CONTENT DIR /DEMO N64 EMUPERSO",
+    "[INFO] [Environ]: SYSTEM_DIRECTORY: \"/\".",
+    "[libretro INFO] mupen64plus: Initializing 4 RDRAM modules for a total of 8 MB",
+    "[libretro INFO] mupen64plus: Starting R4300 emulator: Pure Interpreter",
+    "[INFO] Setting real canvas size: 1026 x 540",
+    "[INFO] [SRAM]: Saving RAM type #0 to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\".",
+    "[INFO] [SRAM]: Saved successfully to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\".",
+    "[INFO] [State]: Loading state \"/hub-verified-state.bin\", 16793440 bytes.",
+    "[INFO] [State]: Loading state \"/bad-state.bin\", 4 bytes.",
+    "[libretro INFO] mupen64plus: Savestate is not a valid Mupen64plus savestate.",
+    "[INFO] [SRAM]: Saving RAM type #0 to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\".",
+    "[INFO] [SRAM]: Saved successfully to \"/data/saves/Mupen64Plus-Next/DEMO N64 EMUPERSO.srm\"."
+  ]
+}

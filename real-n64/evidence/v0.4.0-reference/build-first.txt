@@ -1,0 +1,7 @@
+make: Entering directory '/workspace/emuperso-real/real-n64/homebrew'
+    [CC] main.c
+    [LD] build/demo-emuperso.elf
+      text       data        bss      total filename
+    112536      21732       2900     137168 build/demo-emuperso.elf
+    [Z64] demo-emuperso.z64
+make: Leaving directory '/workspace/emuperso-real/real-n64/homebrew'

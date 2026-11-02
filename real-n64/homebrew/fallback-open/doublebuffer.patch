@@ -1,0 +1,43 @@
+--- main-frontbuffer.c
++++ main.c
+@@ -10,7 +10,9 @@
+ #define SI MMIO(0xA4800000u)
+ #define AI MMIO(0xA4500000u)
+ #define FB_PHYS 0x00100000u
+-#define FB ((volatile uint16_t *)0xA0100000u)
++#define FB_ALT_PHYS 0x00140000u
++static volatile uint16_t *fb = (volatile uint16_t *)0xA0100000u;
++#define FB fb
+ #define JOY ((volatile uint8_t *)0xA0200000u)
+ #define JOY_PHYS 0x00200000u
+ #define PCM ((volatile int16_t *)0xA0300000u)
+@@ -55,12 +57,13 @@
+  AI[0]=PCM_PHYS;AI[1]=736*4;
+ }
+ void main(void){
+- for(int i=0;i<WIDTH*HEIGHT;i++)FB[i]=color(2,5,10);
++ for(int i=0;i<WIDTH*HEIGHT;i++){((volatile uint16_t *)0xA0100000u)[i]=color(2,5,10);((volatile uint16_t *)0xA0140000u)[i]=color(2,5,10);}
+  for(int i=1;i<14;i++)VI[i]=ntsc[i];
+  VI[1]=FB_PHYS;VI[2]=WIDTH;VI[0]=0x00003202u;
+  AI[2]=1;AI[4]=1103;AI[5]=15; /* NTSC 48.681812 MHz / 1104, approx 44.096 kHz */
+- uint32_t frame=0;int box=20,dx=2;
++ uint32_t frame=0;int box=20,dx=2;unsigned back=1;
+  for(;;){
++  fb=(volatile uint16_t *)(back?0xA0140000u:0xA0100000u);
+   uint32_t start=count();uint16_t keys=buttons();unsigned a=(keys>>15)&1,b=(keys>>14)&1;
+   uint16_t bg=color(((frame>>1)&7)+(a?16:0),((frame>>2)&7)+(b?16:0),8+((frame>>3)&7));
+   for(int i=0;i<WIDTH*HEIGHT;i++)FB[i]=bg;
+@@ -69,6 +72,13 @@
+   text(18,145,"CPU VI SI AI REELS");
+   box+=dx;if(box<10||box>290)dx=-dx;
+   for(int y=190;y<210;y++)for(int x=box;x<box+20;x++)FB[y*WIDTH+x]=0xffff;
++  /* Never draw into the displayed surface. Flip only after this frame is complete.
++   * Wait for vertical blank where available; bounded by CPU Count so a missing
++   * VI scanline update cannot lock the diagnostic ROM. */
++  while((VI[4]&0x3ffu)<0x200u && (uint32_t)(count()-start)<1562500u)audio(a);
++  __asm__ volatile("sync" ::: "memory");
++  VI[1]=back?FB_ALT_PHYS:FB_PHYS;
++  back^=1;
+   frame++;audio(a);
+   while((uint32_t)(count()-start)<781250u)audio(a);
+  }

@@ -1,0 +1,194 @@
+{
+  "schema": "emuperso/rc-final-ci-validation/v1",
+  "status": "RÉUSSI",
+  "verified_utc": "2026-11-01T18:24:28.389256+00:00",
+  "run_id": 41335193583,
+  "tested_commit": "4f10811f05a75aa44910bfe5e0a178e008de17bc",
+  "url": "https://github.com/toohigh450/emuperso/actions/runs/41335193583",
+  "artifacts": {
+    "windows": {
+      "id": 13095510833,
+      "filename": "ci-windows-41335193583.zip",
+      "bytes": 3331186,
+      "sha256": "e2c95487ed4384c3c923c7128b27542a2767d98f9a87e5097871ab73e8c164d5"
+    },
+    "linux": {
+      "id": 13095378094,
+      "filename": "ci-linux-41335193583.zip",
+      "bytes": 12008562,
+      "sha256": "c8271ab8956f9189da053878b77970cd7a92a76cf9dad4cf47fb1587c626746f"
+    }
+  },
+  "platforms": {
+    "windows": {
+      "status": "RÉUSSI",
+      "launcher_groups": 11,
+      "browser_groups": 40,
+      "reports": [
+        {
+          "file": "windows-browser-rc/tests-ram-identification-rc-browser.json",
+          "groups": 3,
+          "sha256": "f55146eb4560560bc51161645c680c9611e04feeca5c03b086613dc7c66a35d8"
+        },
+        {
+          "file": "windows-browser-rc/probe-restore-rc.json",
+          "groups": 3,
+          "sha256": "7c66d4b1b94255de62ca0174fde3f5da28ebfe62c4d4f5c9408f1f98bbd69013"
+        },
+        {
+          "file": "windows-browser-rc/tests-restore-rc-browser.json",
+          "groups": 9,
+          "sha256": "a0a729f22c7b29137c220e23f879bbb483a77a4ad7a589181a781ad90538a64b"
+        },
+        {
+          "file": "windows-browser-rc/tests-restore-guards-rc-browser.json",
+          "groups": 4,
+          "sha256": "7ef312796a31c6d9f15f9adbbd4f807432a63fee976b32925f7e4c5362431ce0"
+        },
+        {
+          "file": "windows-browser-rc/tests-cheat-faults-rc-browser.json",
+          "groups": 4,
+          "sha256": "3a643ffc8f10fa4aabca4bf0b72ea9fb9ee8f48982a58259c10ee90c7676287d"
+        },
+        {
+          "file": "windows-browser-rc/tests-hub-browser.json",
+          "groups": 17,
+          "sha256": "f9ebc7c218890906c126fa4efb9913bad8d6286e1a03b503a2f5c7c43a4c2744"
+        }
+      ],
+      "environment": {
+        "schema": "emuperso/windows-browser-environment/v1",
+        "python": {
+          "executable": "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+          "version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+          "platform": "Windows-2022Server-10.0.20348-SP0"
+        },
+        "packages": {
+          "playwright": "1.62.0",
+          "pillow": "12.3.0"
+        },
+        "chromium": {
+          "executable": "D:\\a\\emuperso\\emuperso\\N64 Lab d'Karl-épreuve\\real-n64\\cache\\playwright-windows-ci\\chromium-1234\\chrome-win64\\chrome.exe",
+          "version": "151.0.7922.34"
+        },
+        "scope": "Windows Server 2022 GitHub Actions runner and pinned Chrome for Testing; actual N64 Wasm core with only the repository MIT demo.",
+        "tested_on_karl_pc": false,
+        "not_tested": [
+          "Karl Windows/Chrome device",
+          "physical gamepad and speakers",
+          "commercial ROM compatibility",
+          "all native save peripherals"
+        ]
+      }
+    },
+    "linux": {
+      "status": "RÉUSSI",
+      "browser_groups": 104,
+      "nested_https_restore_groups": 9,
+      "reports": [
+        {
+          "file": "engine-real--browser-real-results.json",
+          "groups": 7,
+          "sha256": "3d23d1bf2beb23e6682cf35eaa8fbec338f1ccb45ccc8599c21af28fc013ea05"
+        },
+        {
+          "file": "rom-import--tests-import-browser.json",
+          "groups": 9,
+          "sha256": "b33a0ea666e03e0cd80e86d42a32a8ed8a40a0c263396e54b069866c1555d0dd"
+        },
+        {
+          "file": "zip-import--tests-zip-browser.json",
+          "groups": 10,
+          "sha256": "a6c5a67afc4c3e19ebbb79b4d3b500d90a8b567056ad3a401fe1e89c074dc9ac"
+        },
+        {
+          "file": "vault--tests-save-store-browser.json",
+          "groups": 18,
+          "sha256": "5fc3a6cf785a8a68cd8f446116ccf1efc55d239850aff37feea88a7e449e45d7"
+        },
+        {
+          "file": "legacy-native--tests-legacy-battery-browser.json",
+          "groups": 7,
+          "sha256": "7621124709fa4f0d371bc64036cf76299f64ca4812b0dd725620dffc065b8e25"
+        },
+        {
+          "file": "native-roundtrip--probe-native-roundtrip.json",
+          "groups": 5,
+          "sha256": "a5e5a993cbfcdd2ba881e7e634804869f4d570e22745ca260840dc459ddd1b0a"
+        },
+        {
+          "file": "ram-identification--tests-ram-identification-rc-browser.json",
+          "groups": 3,
+          "sha256": "93de34ea02ae90b6e323c4f5d5ae18462c7c6991642b8e432718ad844c7cd24c"
+        },
+        {
+          "file": "restore-independent--probe-restore-rc.json",
+          "groups": 3,
+          "sha256": "ceddcc54ed7f52068bbf4370cc340858370f41332e6a8b429d28ad9c209e4d44"
+        },
+        {
+          "file": "restore-regressions--tests-restore-rc-browser.json",
+          "groups": 9,
+          "sha256": "da1e91638a41140fcfa3d8794c2696b8782db1a3d4766269f4d7f6c07b7bea9f"
+        },
+        {
+          "file": "restore-guards--tests-restore-guards-rc-browser.json",
+          "groups": 4,
+          "sha256": "684d369c83e1d080432d8380bc808d6f6eb62931b4c947bd1dd44da00af2ebf3"
+        },
+        {
+          "file": "cheat-faults--tests-cheat-faults-rc-browser.json",
+          "groups": 4,
+          "sha256": "8b28e2b917acdd166d133bcea4d410922dcf6e58f2b9499be8d9e57ca36c205c"
+        },
+        {
+          "file": "hub-full--tests-hub-browser.json",
+          "groups": 17,
+          "sha256": "85aa81f80243e296a61cde71af6d295a7dfa3b74c9ab12d96518d76e922f58c8"
+        },
+        {
+          "file": "web-https-review--tests-web-rc-browser.json",
+          "groups": 8,
+          "sha256": "99b6b34d57815d0c1133fa9d6397386d849d7b343faef8653c80ca40e548290b"
+        },
+        {
+          "file": "web-https-review--tests-web-rc-restoration.json",
+          "groups": 9,
+          "sha256": "a022c402ebbe87a34477fbe4daec08f799503ed8946c398dcc4e4cad87a8d3bb"
+        }
+      ],
+      "environment": {
+        "schema": "emuperso/linux-browser-environment/v1",
+        "python": {
+          "executable": "/usr/bin/python3",
+          "version": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+          "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39"
+        },
+        "packages": {
+          "playwright": "1.62.0",
+          "pillow": "12.3.0"
+        },
+        "chromium": {
+          "executable": "/home/runner/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome",
+          "version": "151.0.7922.34"
+        },
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "tested_on_karl_pc": false,
+        "public_deployment": false
+      }
+    }
+  },
+  "job_logs_sha256": {
+    "windows-job.txt": "1a926df69188db6f4ce5a0f31d40754e4c3a5ed331660bc0ea03f95ce1a81356",
+    "linux-job.txt": "64b36bfc0ca02144e78b22092581c0d79950af1436e97744426a08589a63da07"
+  },
+  "publication_allowed": false,
+  "tested_on_karl_pc": false,
+  "open": [
+    "F6 corresponding source/recipes/notices",
+    "Karl PC validation",
+    "GPT/Méo independent audits",
+    "Legitimate near-boot state may be refused"
+  ],
+  "scope": "Official job conclusions and fresh reports checked independently against downloaded artifact hashes. Own MIT ROM only; no simulated emulator."
+}

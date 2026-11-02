@@ -1,0 +1,28 @@
+{
+  "rom": {
+    "file": "demo-emuperso.z64",
+    "bytes": 147456,
+    "sha256": "dbcac8bbc7922f21844a298544cb65d26a1b33874be2f9652ebacee4f5c8e727",
+    "header_hex": "80371240",
+    "header_title": "DEMO N64 EMUPERSO\u0000\u0000\u0000"
+  },
+  "source": {
+    "origin_repo": "https://github.com/toohigh450/emuperso",
+    "origin_branch": "emulateur-reel",
+    "origin_commit": "1219ecfeb51a43011c050b0113aa01dd5249ed9e",
+    "file": "demo-n64/main.c",
+    "source_sha256": "625e34fe7490e72d8df1e8b1c05da58a5b92d5c180d0c4668488c2877dc8a233",
+    "license": "MIT"
+  },
+  "libdragon": {
+    "commit": "e356bf3f56f7afbf7e5246329562f145965cfdfc",
+    "toolchain_deb_sha256": "fac8e6572493a66468b7d45df41b042f90b1a630ec96aa218bd5fb1f320a0a4d",
+    "gcc": "16.2.0",
+    "build_command": "N64_INST=<local prefix> make all",
+    "docker": "NOT USED - official registry denied; native official toolchain used"
+  },
+  "tested": {
+    "compiled": true,
+    "browser_boot": "PENDING"
+  }
+}

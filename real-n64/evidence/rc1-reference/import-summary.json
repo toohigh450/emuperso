@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0-local-import",
+  "tests": {
+    "unit_pass": 12,
+    "import_browser_pass": 9,
+    "reference_browser_pass": 7,
+    "tools_pass": 5
+  },
+  "privacy": "Browser and server observed: only bodyless local GET requests; local input bytes passed by Blob, no server ROM GET for imports. Diagnostic has no ROM data.",
+  "inputs": "MIT homebrew conversions and synthetic invalid files only",
+  "commercial_rom_used": false,
+  "user_archive": "NON TESTABLE — transfer tool rejected archive over 32 MiB; no private archive was read or included.",
+  "protected_base_files_unchanged": 98,
+  "rom_reference_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+  "test_scope": "Chromium/Linux, not Karl Chrome/Windows or physical devices",
+  "artifacts": {
+    "real-n64/app.js": "af7c7643c3efb6eb5337897a21418de8f1ffc1666e96a056f988e584a2663607",
+    "real-n64/rom-file.mjs": "16b10ea88e34af7da4b7851417d0247e4623a4f5bf06d0bb45a45771fa6ed433",
+    "real-n64/index.html": "77d304d7a4485687969ea2b5bfb869db8277221bd25d5ec2d038481dfd74f489",
+    "real-n64/tools/serve.py": "460e9bcf92b0c557e834f420f91b769d36ca3ea88500f244d52abe6ffe0e347a",
+    "real-n64/tests/browser_import.py": "8c7944359d560f4aca64ad96b971f63b5271bcf7d0f99f922893105b6f287ac3",
+    "real-n64/tests/browser_real.py": "3d544eea1c5a596788c4c41553ec7b6f837142e8fa938e77ed968ed9b8c4cac7"
+  }
+}

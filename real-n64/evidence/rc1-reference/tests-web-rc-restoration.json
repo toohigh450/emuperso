@@ -1,0 +1,2129 @@
+{
+  "schema": "emuperso/restore-rc-browser-tests/v1",
+  "results": [
+    {
+      "test": "Progression réellement dessinée par la ROM : chiffres FRAME et pixels du canvas",
+      "status": "RÉUSSI",
+      "proof": {
+        "before": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 29,
+              "digits": "29"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 30,
+              "digits": "30"
+            }
+          ],
+          "drawn_frame": 30
+        },
+        "after": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 51,
+              "digits": "51"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 50,
+              "digits": "50"
+            }
+          ],
+          "drawn_frame": 51
+        },
+        "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252"
+      }
+    },
+    {
+      "test": "Natif distinctif : deux captures réelles et révision précédente, sans sauvegarde personnelle",
+      "status": "RÉUSSI",
+      "proof": {
+        "fresh": {
+          "bytes": 296960,
+          "byte17": 255,
+          "byte18": 255,
+          "sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795"
+        },
+        "first": {
+          "bytes": 296960,
+          "byte17": 165,
+          "byte18": 255,
+          "sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c"
+        },
+        "current": {
+          "bytes": 296960,
+          "byte17": 165,
+          "byte18": 148,
+          "sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd"
+        }
+      }
+    },
+    {
+      "test": "Chargement réel : RAM, compteur dessiné et natif reviennent au point enregistré",
+      "status": "RÉUSSI",
+      "proof": {
+        "saved": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 217,
+              "digits": "217"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 218,
+              "digits": "218"
+            }
+          ],
+          "drawn_frame": 218
+        },
+        "diverged": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 399,
+              "digits": "399"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 398,
+              "digits": "398"
+            }
+          ],
+          "drawn_frame": 399
+        },
+        "restored": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 259,
+              "digits": "259"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 260,
+              "digits": "260"
+            }
+          ],
+          "drawn_frame": 260
+        },
+        "marker": 9320,
+        "native": {
+          "bytes": 296960,
+          "byte17": 165,
+          "byte18": 148,
+          "sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd"
+        }
+      }
+    },
+    {
+      "test": "Changement de ROM : états isolés, refus du mauvais jeu et récupération du natif au retour",
+      "status": "RÉUSSI",
+      "proof": {
+        "other_rom": "e1e80920d13e5968d3755ab19c6948076c3d58e4cf7ef8cb445050b8f9f0fab9",
+        "restored_rom": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+        "native": {
+          "bytes": 296960,
+          "byte17": 165,
+          "byte18": 148,
+          "sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd"
+        },
+        "slots": [
+          1,
+          2,
+          3
+        ],
+        "native_priming": {
+          "bytes": 296960,
+          "slot": 1,
+          "payload_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+          "skipped_unchanged": false
+        },
+        "vault_before_rejected_load": {
+          "record_count": 5,
+          "sha256": "62da932fb547548414c41c73b2d2bbdbb9ae1e633d0d5aed899211ef42002d55",
+          "records": [
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c"
+            },
+            {
+              "key": "battery:359754e3669f6739711a04486845fdbec35ae9ab0fef5e4ef6728e9de46f0e33:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 1,
+              "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "state",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "219471daee700022e0c4696dd59d28fc9cf7857402c38c98748bb2b3acd897f2",
+              "previous_sha256": "36f88db70e1417ebca61fa6d901fae8bcdd10f2e7925c312ceb01bd302378a1b"
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "state",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "0e0c324a775da7c0c68459c10a26e7d540db001ecb6c56fa8d4176f12952738e",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:3",
+              "kind": "state",
+              "slot": 3,
+              "revision": 1,
+              "current_sha256": "8f4fa4114bfbb4881010d5748488985df513380c3f261d2fa9653f981c8e9e4c",
+              "previous_sha256": null
+            }
+          ]
+        },
+        "vault_after_rejected_load": {
+          "record_count": 5,
+          "sha256": "62da932fb547548414c41c73b2d2bbdbb9ae1e633d0d5aed899211ef42002d55",
+          "records": [
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c"
+            },
+            {
+              "key": "battery:359754e3669f6739711a04486845fdbec35ae9ab0fef5e4ef6728e9de46f0e33:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 1,
+              "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "state",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "219471daee700022e0c4696dd59d28fc9cf7857402c38c98748bb2b3acd897f2",
+              "previous_sha256": "36f88db70e1417ebca61fa6d901fae8bcdd10f2e7925c312ceb01bd302378a1b"
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "state",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "0e0c324a775da7c0c68459c10a26e7d540db001ecb6c56fa8d4176f12952738e",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:3",
+              "kind": "state",
+              "slot": 3,
+              "revision": 1,
+              "current_sha256": "8f4fa4114bfbb4881010d5748488985df513380c3f261d2fa9653f981c8e9e4c",
+              "previous_sha256": null
+            }
+          ]
+        },
+        "rejected_load_events": [
+          {
+            "seq": 105,
+            "utc": "2026-11-01T13:31:45.015Z",
+            "host_monotonic_ms": 40411.41500000656,
+            "type": "operation.failed",
+            "data": {
+              "message": "Cet emplacement est vide pour ce jeu et ce moteur.",
+              "detail": "Cet emplacement est vide pour ce jeu et ce moteur.",
+              "code": "E_EMPTY"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "test": "Fermeture complète : vrai état et version précédente restaurés, natif distinctif conservé",
+      "status": "RÉUSSI",
+      "proof": {
+        "fresh_counter": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 29,
+              "digits": "29"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 28,
+              "digits": "28"
+            }
+          ],
+          "drawn_frame": 29
+        },
+        "current_counter": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 257,
+              "digits": "257"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 256,
+              "digits": "256"
+            }
+          ],
+          "drawn_frame": 257
+        },
+        "previous_counter": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 217,
+              "digits": "217"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 216,
+              "digits": "216"
+            }
+          ],
+          "drawn_frame": 217
+        },
+        "current_marker": 9320,
+        "previous_marker": 4951,
+        "native": {
+          "bytes": 296960,
+          "byte17": 165,
+          "byte18": 148,
+          "sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd"
+        }
+      }
+    },
+    {
+      "test": "Échec format natif : toutes les lignes, révisions et copies précédentes restent identiques",
+      "status": "RÉUSSI",
+      "proof": {
+        "injected_fault": true,
+        "error": {
+          "message": "Le bloc mémoire n’est pas un état Mupen64Plus reconnu.",
+          "detail": "Le bloc mémoire n’est pas un état Mupen64Plus reconnu.",
+          "code": "E_NATIVE_CORE"
+        },
+        "vault_before": {
+          "record_count": 7,
+          "sha256": "1af63c5ee267cc1ae0f3cdb3a6d29ce4a942d642e2b1216522e0efb07bebd492",
+          "records": [
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c"
+            },
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "battery",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": null
+            },
+            {
+              "key": "battery:359754e3669f6739711a04486845fdbec35ae9ab0fef5e4ef6728e9de46f0e33:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 1,
+              "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+              "previous_sha256": null
+            },
+            {
+              "key": "checkpoint:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "checkpoint",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "ceae1dcc1bb85746aa5d12efc7e81f518a7a38039aed58be93ebc84a917b4f04",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "state",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "219471daee700022e0c4696dd59d28fc9cf7857402c38c98748bb2b3acd897f2",
+              "previous_sha256": "36f88db70e1417ebca61fa6d901fae8bcdd10f2e7925c312ceb01bd302378a1b"
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "state",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "0e0c324a775da7c0c68459c10a26e7d540db001ecb6c56fa8d4176f12952738e",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:3",
+              "kind": "state",
+              "slot": 3,
+              "revision": 2,
+              "current_sha256": "1d3425330d78344f86eac66dd827ad761c2b1ff051c3926be4af4d07814ccf4b",
+              "previous_sha256": "8f4fa4114bfbb4881010d5748488985df513380c3f261d2fa9653f981c8e9e4c"
+            }
+          ]
+        },
+        "vault_after": {
+          "record_count": 7,
+          "sha256": "1af63c5ee267cc1ae0f3cdb3a6d29ce4a942d642e2b1216522e0efb07bebd492",
+          "records": [
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c"
+            },
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "battery",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": null
+            },
+            {
+              "key": "battery:359754e3669f6739711a04486845fdbec35ae9ab0fef5e4ef6728e9de46f0e33:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 1,
+              "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+              "previous_sha256": null
+            },
+            {
+              "key": "checkpoint:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "checkpoint",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "ceae1dcc1bb85746aa5d12efc7e81f518a7a38039aed58be93ebc84a917b4f04",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "state",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "219471daee700022e0c4696dd59d28fc9cf7857402c38c98748bb2b3acd897f2",
+              "previous_sha256": "36f88db70e1417ebca61fa6d901fae8bcdd10f2e7925c312ceb01bd302378a1b"
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "state",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "0e0c324a775da7c0c68459c10a26e7d540db001ecb6c56fa8d4176f12952738e",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:3",
+              "kind": "state",
+              "slot": 3,
+              "revision": 2,
+              "current_sha256": "1d3425330d78344f86eac66dd827ad761c2b1ff051c3926be4af4d07814ccf4b",
+              "previous_sha256": "8f4fa4114bfbb4881010d5748488985df513380c3f261d2fa9653f981c8e9e4c"
+            }
+          ]
+        },
+        "retained_generation": 3,
+        "ram_marker": 24158,
+        "visible_before": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 235,
+              "digits": "235"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 236,
+              "digits": "236"
+            }
+          ],
+          "drawn_frame": 236
+        },
+        "visible_after": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 251,
+              "digits": "251"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 252,
+              "digits": "252"
+            }
+          ],
+          "drawn_frame": 252
+        },
+        "old_native_before": {
+          "bytes": 296960,
+          "byte17": 165,
+          "byte18": 148,
+          "sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd"
+        },
+        "old_native_after": {
+          "bytes": 296960,
+          "byte17": 150,
+          "byte18": 148,
+          "sha256": "5c91756d4cd1d617a756acfe327412d37f2a2cbce0a006a9003b840d697011e4"
+        },
+        "real_native_load_noop_calls": null
+      }
+    },
+    {
+      "test": "Échec de préparation candidate : ancienne partie et coffre complets conservés",
+      "status": "RÉUSSI",
+      "proof": {
+        "injected_fault": true,
+        "error": {
+          "message": "Failed to read a named property 'N64Engine' from 'Window': Blocked a frame with origin \"https://localhost:18880\" from accessing a cross-origin frame.",
+          "detail": "Failed to read a named property 'N64Engine' from 'Window': Blocked a frame with origin \"https://localhost:18880\" from accessing a cross-origin frame.",
+          "code": 18
+        },
+        "vault_before": {
+          "record_count": 7,
+          "sha256": "1af63c5ee267cc1ae0f3cdb3a6d29ce4a942d642e2b1216522e0efb07bebd492",
+          "records": [
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c"
+            },
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "battery",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": null
+            },
+            {
+              "key": "battery:359754e3669f6739711a04486845fdbec35ae9ab0fef5e4ef6728e9de46f0e33:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 1,
+              "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+              "previous_sha256": null
+            },
+            {
+              "key": "checkpoint:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "checkpoint",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "ceae1dcc1bb85746aa5d12efc7e81f518a7a38039aed58be93ebc84a917b4f04",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "state",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "219471daee700022e0c4696dd59d28fc9cf7857402c38c98748bb2b3acd897f2",
+              "previous_sha256": "36f88db70e1417ebca61fa6d901fae8bcdd10f2e7925c312ceb01bd302378a1b"
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "state",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "0e0c324a775da7c0c68459c10a26e7d540db001ecb6c56fa8d4176f12952738e",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:3",
+              "kind": "state",
+              "slot": 3,
+              "revision": 2,
+              "current_sha256": "1d3425330d78344f86eac66dd827ad761c2b1ff051c3926be4af4d07814ccf4b",
+              "previous_sha256": "8f4fa4114bfbb4881010d5748488985df513380c3f261d2fa9653f981c8e9e4c"
+            }
+          ]
+        },
+        "vault_after": {
+          "record_count": 7,
+          "sha256": "1af63c5ee267cc1ae0f3cdb3a6d29ce4a942d642e2b1216522e0efb07bebd492",
+          "records": [
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c"
+            },
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "battery",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": null
+            },
+            {
+              "key": "battery:359754e3669f6739711a04486845fdbec35ae9ab0fef5e4ef6728e9de46f0e33:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 1,
+              "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+              "previous_sha256": null
+            },
+            {
+              "key": "checkpoint:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "checkpoint",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "ceae1dcc1bb85746aa5d12efc7e81f518a7a38039aed58be93ebc84a917b4f04",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "state",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "219471daee700022e0c4696dd59d28fc9cf7857402c38c98748bb2b3acd897f2",
+              "previous_sha256": "36f88db70e1417ebca61fa6d901fae8bcdd10f2e7925c312ceb01bd302378a1b"
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "state",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "0e0c324a775da7c0c68459c10a26e7d540db001ecb6c56fa8d4176f12952738e",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:3",
+              "kind": "state",
+              "slot": 3,
+              "revision": 2,
+              "current_sha256": "1d3425330d78344f86eac66dd827ad761c2b1ff051c3926be4af4d07814ccf4b",
+              "previous_sha256": "8f4fa4114bfbb4881010d5748488985df513380c3f261d2fa9653f981c8e9e4c"
+            }
+          ]
+        },
+        "retained_generation": 3,
+        "ram_marker": 24158,
+        "visible_before": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 257,
+              "digits": "257"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 258,
+              "digits": "258"
+            }
+          ],
+          "drawn_frame": 258
+        },
+        "visible_after": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 271,
+              "digits": "271"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 272,
+              "digits": "272"
+            }
+          ],
+          "drawn_frame": 272
+        },
+        "old_native_before": {
+          "bytes": 296960,
+          "byte17": 165,
+          "byte18": 148,
+          "sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd"
+        },
+        "old_native_after": {
+          "bytes": 296960,
+          "byte17": 150,
+          "byte18": 148,
+          "sha256": "5c91756d4cd1d617a756acfe327412d37f2a2cbce0a006a9003b840d697011e4"
+        },
+        "real_native_load_noop_calls": null
+      }
+    },
+    {
+      "test": "Absence de désérialisation : les seules frames réelles ne prouvent pas le chargement",
+      "status": "RÉUSSI",
+      "proof": {
+        "injected_fault": true,
+        "error": {
+          "message": "La mémoire du jeu n’a pas confirmé la restauration dans le délai prévu. Chargement annulé ; aucune sauvegarde écrasée. Exportez le diagnostic pour analyse.",
+          "detail": "La mémoire du jeu n’a pas confirmé la restauration dans le délai prévu. Chargement annulé ; aucune sauvegarde écrasée. Exportez le diagnostic pour analyse.",
+          "code": "E_RESTORE_UNCONFIRMED"
+        },
+        "vault_before": {
+          "record_count": 7,
+          "sha256": "1af63c5ee267cc1ae0f3cdb3a6d29ce4a942d642e2b1216522e0efb07bebd492",
+          "records": [
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c"
+            },
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "battery",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": null
+            },
+            {
+              "key": "battery:359754e3669f6739711a04486845fdbec35ae9ab0fef5e4ef6728e9de46f0e33:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 1,
+              "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+              "previous_sha256": null
+            },
+            {
+              "key": "checkpoint:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "checkpoint",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "ceae1dcc1bb85746aa5d12efc7e81f518a7a38039aed58be93ebc84a917b4f04",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "state",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "219471daee700022e0c4696dd59d28fc9cf7857402c38c98748bb2b3acd897f2",
+              "previous_sha256": "36f88db70e1417ebca61fa6d901fae8bcdd10f2e7925c312ceb01bd302378a1b"
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "state",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "0e0c324a775da7c0c68459c10a26e7d540db001ecb6c56fa8d4176f12952738e",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:3",
+              "kind": "state",
+              "slot": 3,
+              "revision": 2,
+              "current_sha256": "1d3425330d78344f86eac66dd827ad761c2b1ff051c3926be4af4d07814ccf4b",
+              "previous_sha256": "8f4fa4114bfbb4881010d5748488985df513380c3f261d2fa9653f981c8e9e4c"
+            }
+          ]
+        },
+        "vault_after": {
+          "record_count": 7,
+          "sha256": "1af63c5ee267cc1ae0f3cdb3a6d29ce4a942d642e2b1216522e0efb07bebd492",
+          "records": [
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": "889a835010038310b4a30a67091e44b5f00e90fba58e69e6a4c8199c7c4cd48c"
+            },
+            {
+              "key": "battery:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "battery",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd",
+              "previous_sha256": null
+            },
+            {
+              "key": "battery:359754e3669f6739711a04486845fdbec35ae9ab0fef5e4ef6728e9de46f0e33:1",
+              "kind": "battery",
+              "slot": 1,
+              "revision": 1,
+              "current_sha256": "75fc05c335851f0083f2f51a5852175329c32e4c6f833802aa440c5c3a6f2795",
+              "previous_sha256": null
+            },
+            {
+              "key": "checkpoint:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "checkpoint",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "ceae1dcc1bb85746aa5d12efc7e81f518a7a38039aed58be93ebc84a917b4f04",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:1",
+              "kind": "state",
+              "slot": 1,
+              "revision": 2,
+              "current_sha256": "219471daee700022e0c4696dd59d28fc9cf7857402c38c98748bb2b3acd897f2",
+              "previous_sha256": "36f88db70e1417ebca61fa6d901fae8bcdd10f2e7925c312ceb01bd302378a1b"
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:2",
+              "kind": "state",
+              "slot": 2,
+              "revision": 1,
+              "current_sha256": "0e0c324a775da7c0c68459c10a26e7d540db001ecb6c56fa8d4176f12952738e",
+              "previous_sha256": null
+            },
+            {
+              "key": "state:26378d6db276f8ef023b9ec6e27fa9a9e766d785233b1f83142dd555fec2c85b:3",
+              "kind": "state",
+              "slot": 3,
+              "revision": 2,
+              "current_sha256": "1d3425330d78344f86eac66dd827ad761c2b1ff051c3926be4af4d07814ccf4b",
+              "previous_sha256": "8f4fa4114bfbb4881010d5748488985df513380c3f261d2fa9653f981c8e9e4c"
+            }
+          ]
+        },
+        "retained_generation": 3,
+        "ram_marker": 24158,
+        "visible_before": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 275,
+              "digits": "275"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 276,
+              "digits": "276"
+            }
+          ],
+          "drawn_frame": 276
+        },
+        "visible_after": {
+          "surfaces": [
+            {
+              "framebuffer": 1048576,
+              "drawn_frame": 293,
+              "digits": "293"
+            },
+            {
+              "framebuffer": 1310720,
+              "drawn_frame": 292,
+              "digits": "292"
+            }
+          ],
+          "drawn_frame": 293
+        },
+        "old_native_before": {
+          "bytes": 296960,
+          "byte17": 165,
+          "byte18": 148,
+          "sha256": "db7d73032495dcea9f347fe64eef44d6b0277692cada6a14319ccefb447db9dd"
+        },
+        "old_native_after": {
+          "bytes": 296960,
+          "byte17": 150,
+          "byte18": 148,
+          "sha256": "5c91756d4cd1d617a756acfe327412d37f2a2cbce0a006a9003b840d697011e4"
+        },
+        "real_native_load_noop_calls": 1
+      }
+    },
+    {
+      "test": "Audio suspend jamais résolu : commande bornée, contrôles réactivés et résultat explicite",
+      "status": "RÉUSSI",
+      "proof": {
+        "injected_fault": "old AudioContext.suspend returns a never-settling Promise",
+        "outcome": "explicit_error_and_rollback",
+        "not_a_reproduction_on_karl_pc": true
+      }
+    }
+  ],
+  "page_errors": [],
+  "http": [
+    {
+      "url": "https://localhost:18880/lab/",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/style.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/assets/emuperso-banner.png",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/app.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/rom-file.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/zip-rom.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/save-store.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/session-controller.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/legacy-battery.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/state-bundle.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/cheat-catalog.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/docs/runtime-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/b76ceee5-130b-4dfa-96f8-4994e14e1cb3",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/6e9d9845-cddd-48f2-89c4-a32e08f2adf3",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/f3932528-02c5-4fcb-83ea-d618780a9142",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/1aab9878-d7e0-4f97-ac75-1b4af3e738b8",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/docs/cheat-catalog-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/cheats/mupencheat.txt",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/cb445871-e5d1-42d3-85da-bcee2df640ac",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/12aaaa0e-1187-4ea8-9551-31f394d1c042",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/b9458783-c7a5-4372-9341-5a98a1042bfa",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/b5f60ccb-2c05-4ea3-aae6-a3cf721a426e",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/215dc413-b7c5-4ec3-8366-d91ebdedc07e",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/e18622a1-d657-48bc-8e69-3f9ed631856b",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/417e2191-f216-4dfe-9f3f-06a5671e99f5",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/9ba02155-d20d-4e71-9d51-272296ae0ec0",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/7b863144-cc3e-40d9-99bc-f4da25db95de",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/04a3680c-5da1-4978-8cac-b202b1ba22e7",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/4e025afb-1545-40ff-bd53-b95a98410b14",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/944bb250-5911-42e9-a918-c6ebc29be344",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/style.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/assets/emuperso-banner.png",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/app.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/rom-file.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/zip-rom.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/save-store.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/session-controller.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/legacy-battery.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/state-bundle.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/cheat-catalog.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/docs/runtime-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/42009fc9-b51a-4221-889d-d5dfb9e928a5",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/96e1c946-7ef8-4cb1-9b88-7b8fe40afd21",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/63cdea66-3aeb-4a73-8f6f-f31917aa8398",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/61d83173-11bc-469d-b45a-0123bde308d7",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/docs/cheat-catalog-lock.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/cheats/mupencheat.txt",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/756875a9-8cfa-4d5a-90ff-0d3c91aeaa0c",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/8b6d006b-7f59-48e4-9f63-07328fcd3791",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/231b9e71-7273-436b-859d-1a92018c877f",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/7bef41d4-6e4f-478d-92c2-2bc4029e8bf3",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/8519174c-aa97-4de3-9f21-7506ae2328c4",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/fc0453cc-a22e-44b0-8089-ce446f6556c3",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/ada9b26e-e670-48d5-8953-c749e7b73a8a",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/f149fe31-dc54-461a-a0c6-7d1b7e0aee06",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/69a195a0-a73b-4f6f-89d8-d9e94b8b00e0",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/b0f6318a-4b9b-4d67-9d30-ca1642e6f5e3",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/ff3a9e8b-12c2-43ae-877c-a512e03aa150",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/244e9ee3-4cc3-408b-8d95-1c7a3bd9790f",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/emulator.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/nipplejs.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/shaders.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/storage.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/gamepad.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/GameManager.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/socket.io.min.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/src/compression.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/emulator.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/version.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/cores/reports/mupen64plus_next.json",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/cores/mupen64plus_next-wasm.data",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/vendor/data/compression/extract7z.js",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/84a109ee-2973-4560-9a02-84cb55e96e85",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/b0ec621b-092b-4004-b29d-e6ec288b516e",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/ea0913b7-7c15-48aa-ad07-ccefdb39939f",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "blob:https://localhost:18880/9cbb4bcf-abaa-4ff2-89c9-787307c2df9b",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine.html",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine.css",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/engine-session.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/native-state.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    },
+    {
+      "url": "https://localhost:18880/lab/runtime-integrity.mjs",
+      "method": "GET",
+      "body_bytes": 0
+    }
+  ],
+  "dialogs": [],
+  "ram_probes": [
+    {
+      "base": 258801664,
+      "wordSwapped": true,
+      "pointers": [
+        2685665280,
+        2685403136,
+        2685403136,
+        2685665280,
+        2685403136,
+        2685665280
+      ],
+      "candidates": 2,
+      "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+      "identification_method": "framebuffer-alternation"
+    },
+    {
+      "base": 258801664,
+      "wordSwapped": true,
+      "pointers": [
+        2685403136,
+        2685665280,
+        2685403136,
+        2685665280,
+        2685665280,
+        2685403136
+      ],
+      "candidates": 5,
+      "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+      "identification_method": "framebuffer-alternation"
+    },
+    {
+      "base": 258801664,
+      "wordSwapped": true,
+      "pointers": [
+        2685665280,
+        2685403136,
+        2685665280,
+        2685665280,
+        2685403136,
+        2685665280
+      ],
+      "candidates": 2,
+      "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+      "identification_method": "framebuffer-alternation"
+    },
+    {
+      "base": 258801664,
+      "wordSwapped": true,
+      "pointers": [
+        2685665280,
+        2685403136,
+        2685403136,
+        2685665280,
+        2685665280,
+        2685403136
+      ],
+      "candidates": 2,
+      "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+      "identification_method": "framebuffer-alternation"
+    },
+    {
+      "base": 258801664,
+      "wordSwapped": true,
+      "pointers": [
+        2685403136,
+        2685665280,
+        2685403136,
+        2685403136,
+        2685665280,
+        2685665280
+      ],
+      "candidates": 5,
+      "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+      "identification_method": "framebuffer-alternation"
+    },
+    {
+      "base": 258801664,
+      "wordSwapped": true,
+      "pointers": [
+        2685403136,
+        2685665280,
+        2685403136,
+        2685665280,
+        2685403136,
+        2685403136
+      ],
+      "candidates": 5,
+      "rom_sha256": "f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252",
+      "identification_method": "framebuffer-alternation"
+    }
+  ],
+  "scope": "Real pinned N64 engine and only our MIT diagnostic ROM; new temporary persistent profile, generated native bytes and explicitly injected failures. Actual RDRAM plus framebuffer digit decoding prove progression restoration; frontend frame counts alone are insufficient.",
+  "not_tested": [
+    "Karl Windows/Chrome device",
+    "Commercial game progression or compatibility",
+    "All native-save peripherals",
+    "Physical gamepad and speakers"
+  ],
+  "original_saves_used": false
+}

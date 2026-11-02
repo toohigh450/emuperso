@@ -1,0 +1,13 @@
+{
+  "schema": "emuperso/rc2-preservation/v1",
+  "status": "RÉUSSI",
+  "checked_utc": "2026-11-01T18:19:51.254479+00:00",
+  "checked_code_commit": "4f10811f05a75aa44910bfe5e0a178e008de17bc",
+  "protected_files_unchanged": 98,
+  "rc1_delivery_manifest_entries_unchanged": 7,
+  "rc1_direct_proofs_preserved": 58,
+  "original_rom_or_save_used": false,
+  "publication_allowed": false,
+  "main_observed_sha": "4936007df68882a5417746e5ef36cfadadf5537e",
+  "main_ref_source": "https://api.github.com/repos/toohigh450/emuperso/git/ref/heads/main"
+}

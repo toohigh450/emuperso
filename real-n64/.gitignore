@@ -1,0 +1,44 @@
+# Generated dependencies and local build outputs, never touch the Lab
+vendor/
+cache/
+__pycache__/
+*.pyc
+homebrew/build/
+homebrew/*.z64
+homebrew/*.elf
+evidence/*.png
+evidence/*.wav
+delivery/
+# Experimental generated variants remain local. Publish only the audited port ROM.
+*.z64
+!homebrew/fallback-open/demo-emuperso-open.z64
+homebrew/build*/
+homebrew/fallback-open/build/
+homebrew/emulator-boot/build/
+homebrew/emulator-boot/bin/
+*.o
+*.a
+*.elf
+*.d
+*.map
+.python/
+# User games and save exports are private; only the owned MIT demo is distributed.
+*.[zZ]64
+*.[nN]64
+*.[vV]64
+*.[zZ][iI][pP]
+*.sav
+*.srm
+*.state
+*.eep
+*.fla
+*.mpk
+*.pak
+N64-sauvegarde-emplacement-*.json
+EMUPERSO-moteur-reel-diagnostic.json
+EMUPERSO-moteur-reel-diagnostic-*.json
+!homebrew/fallback-open/demo-emuperso-open.z64
+
+# Fresh platform-scoped CI artifacts stay private local review inputs.
+evidence/linux-browser-rc/
+evidence/windows-browser-rc/

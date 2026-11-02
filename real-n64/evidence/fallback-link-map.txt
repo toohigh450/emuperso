@@ -1,0 +1,69 @@
+
+Discarded input sections
+
+ .reginfo       0x00000000       0x18 /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/start.o
+ .MIPS.abiflags
+                0x00000000       0x18 /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/start.o
+ .reginfo       0x00000000       0x18 /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/main.o
+ .MIPS.abiflags
+                0x00000000       0x18 /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/main.o
+ .comment       0x00000000       0x13 /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/main.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x80000400                        . = 0x80000400
+
+.text           0x80000400      0x5e0
+ *(.text.start)
+ .text.start    0x80000400       0x24 /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/start.o
+                0x80000400                _start
+ *(.text .text.*)
+ .text          0x80000424        0x0 /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/start.o
+ .text          0x80000424      0x1a8 /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/main.o
+ .text.startup  0x800005cc      0x414 /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/main.o
+                0x800005cc                main
+
+.rodata         0x800009e0      0x198
+ *(.rodata .rodata.*)
+ .rodata.str1.4
+                0x800009e0       0x63 /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/main.o
+ *fill*         0x80000a43        0x1 
+ .rodata        0x80000a44      0x134 /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/main.o
+
+.data           0x80000b78        0x4
+ *(.data .data.*)
+ .data          0x80000b78        0x0 /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/start.o
+ .data          0x80000b78        0x4 /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/main.o
+
+.bss            0x80000b7c        0x4
+ *(.bss .bss.* COMMON)
+ .bss           0x80000b7c        0x0 /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/start.o
+ .bss           0x80000b7c        0x4 /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/main.o
+
+/DISCARD/
+ *(.MIPS.abiflags)
+ *(.reginfo)
+ *(.comment)
+ *(.note*)
+LOAD /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/start.o
+LOAD /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/main.o
+OUTPUT(/workspace/emuperso-real/real-n64/homebrew/fallback-open/build/app.elf elf32-bigmips)
+
+.pdr            0x00000000       0x80
+ .pdr           0x00000000        0x0 /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/start.o
+ .pdr           0x00000000       0x80 /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/main.o
+
+.gnu.attributes
+                0x00000000       0x10
+ .gnu.attributes
+                0x00000000       0x10 /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/start.o
+ .gnu.attributes
+                0x00000010       0x10 /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/main.o
+
+.mdebug.abi32   0x00000000        0x0
+ .mdebug.abi32  0x00000000        0x0 /workspace/emuperso-real/real-n64/homebrew/fallback-open/build/main.o
