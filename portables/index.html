@@ -187,9 +187,21 @@
     </section>
 
     <section class="panel" id="panelPad" role="tabpanel" aria-labelledby="tabPad" hidden>
-      <p class="muted">Profil de la manette Xbox 360 pour les prochains jeux ouverts. Le clavier et la manette restent utilisables dans tous les cas.</p>
-      <div id="controlProfiles" class="choices"></div>
-      <p class="muted small-text">Le profil positionnel est à valider avec ta manette.</p>
+      <p class="pad-status" id="padStatus">Aucune manette détectée. Branche-la ou appuie sur un de ses boutons.</p>
+      <label class="field" for="padSystem">Console réglée</label>
+      <select id="padSystem"></select>
+      <div id="padProfiles" class="choices"></div>
+      <label class="choice" for="padGameOnly"><input type="checkbox" id="padGameOnly" disabled> Réglage propre au jeu ouvert (sinon : toute la console)</label>
+      <label class="field" for="padDeadzone">Zone morte du stick : <output id="padDeadzoneOut">0,25</output></label>
+      <input type="range" id="padDeadzone" min="0.05" max="0.6" step="0.05">
+      <h2>Commandes tactiles</h2>
+      <label class="choice" for="padHideTouch"><input type="checkbox" id="padHideTouch"> Les cacher quand une manette est branchée (elles reviennent si elle se débranche)</label>
+      <label class="field" for="padTouchSize">Taille : <output id="padTouchSizeOut">100 %</output></label>
+      <input type="range" id="padTouchSize" min="0.6" max="1.6" step="0.1">
+      <label class="field" for="padTouchOpacity">Opacité : <output id="padTouchOpacityOut">85 %</output></label>
+      <input type="range" id="padTouchOpacity" min="0.2" max="1" step="0.05">
+      <div class="actions"><button class="btn small" id="padReset" type="button">Rétablir les réglages par défaut</button></div>
+      <p class="muted small-text">Appliqué tout de suite au jeu en cours et retenu sur cet appareil. Les sauvegardes ne sont jamais touchées. PSP : ✕ ○ □ △, stick analogique et croix séparés à l’écran.</p>
       <h2>Clavier par défaut</h2>
       <table class="keys">
         <thead><tr><th>Touche</th><th>NES</th><th>SNES</th><th>GB / GBA / DS</th></tr></thead>

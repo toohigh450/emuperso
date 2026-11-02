@@ -15,3 +15,4 @@ import './catalog-store.test.mjs';
 import './demos.test.mjs';
 import './save-migration.test.mjs';
 import './psp.test.mjs';
+import './input-profiles.test.mjs';

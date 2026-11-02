@@ -7,7 +7,8 @@ import { isZip, extractFirst, listCandidates, extractAll, buildZip } from './zip
 import { fingerprint, fingerprintBlob, saveSpaceId, gameKey, ejsGameName, legacyEjsGameName, slug, toHex } from './hash.mjs';
 import { Store, IdbAdapter, MemoryAdapter, CHEAT_LIMITS, STATE_SLOTS } from './store.mjs';
 import { parseCht, classifyCheatFiles, linkedCheatValid, normalizeName, deviceLabel, inferSystemFromPath } from './cheats.mjs';
-import { CONTROL_PROFILES, buildDefaultControls, buildPspControls } from './controls.mjs';
+import { buildPspControls } from './controls.mjs';
+import { PAD_PROFILES, normalizePad, touchLayout } from './input-profiles.mjs';
 import { Session } from './session.mjs';
 import { createBrowserHost } from './player-host.mjs';
 import { migrateLegacySave, LEGACY_SAVE_SYSTEMS } from './save-migration.mjs';
@@ -36,7 +37,7 @@ let currentGame = null; // détails du jeu affiché dans la fente
 let opening = false;
 let importingCheats = false;
 const panelTickets = { saves: 0, history: 0, cheats: 0, codes: 0, states: 0 };
-let settings = { controlProfile: 'defaut', dsCore: 'desmume2015' };
+let settings = { dsCore: 'desmume2015', legacyPositional: false };
 let pspMirrorTimer = 0;
 
 // --- Utilitaires d'affichage -------------------------------------------------------
@@ -88,7 +89,7 @@ function render(snap) {
     if (currentGame?.system === 'psp') pspMirrorTimer = setInterval(() => mirrorPspSaves(renderedGame), 60000);
     for (const panel of Object.keys(panelTickets)) panelTickets[panel]++;
     for (const id of ['saveMirror', 'history', 'cheatInfo', 'cheatMatches', 'cheatSearchResults', 'codeList', 'stateSlots']) clear($(id));
-    Promise.all([refreshSavePanel(), refreshCheatPanel(), refreshCodePanel(), refreshStatePanel()]).catch(err => {
+    Promise.all([refreshSavePanel(), refreshCheatPanel(), refreshCodePanel(), refreshStatePanel(), refreshPadUi()]).catch(err => {
       if (currentGame === renderedGame) setStatus(`Panneau indisponible : ${err.message}`, 'error');
     });
   }
@@ -361,7 +362,10 @@ async function openGame(file) {
   // Profil positionnel Nintendo : sans objet pour la croix et le rond de la PSP.
   const psp = analysis.system === 'psp';
   // PSP : sans la touche de chargement rapide d'état, qui fige le cœur nightly (voir pspNightlyFragile).
-  const defaultControls = psp ? buildPspControls() : buildDefaultControls(settings.controlProfile);
+  // La manette est lue par le lanceur (profils EMUPERSO) ; le clavier garde les touches du moteur.
+  const defaultControls = psp ? buildPspControls() : null;
+  const pad = await padSettingsFor(analysis.system, key);
+  const layoutTouch = touchLayout(analysis.system);
   const engineStem = ejsGameName(analysis.title, core.coreId, fp.hex);
   const boot = {
     // PSP : moteur nightly d'abord (cœur ppsspp plus rapide), puis les sources 4.2.3 en secours.
@@ -401,7 +405,10 @@ async function openGame(file) {
       // PSP : les codes CWCheat ne sont lus que si l'option du cœur est active.
       EJS_defaultOptions: { 'save-save-interval': '30', ...(psp ? { ppsspp_cheats: 'enabled' } : {}) },
       ...(defaultControls ? { EJS_defaultControls: defaultControls } : {}),
+      ...(layoutTouch ? { EJS_VirtualGamepadSettings: layoutTouch } : {}),
     },
+    pad: { system: analysis.system, settings: pad.settings },
+    onPad: (id) => showPadStatus(id),
     onSaveUpdate: (e) => mirrorSave(spaceId, e).catch(err => {
       console.error('Copie miroir impossible', err);
       if (currentGame?.spaceId === spaceId) setStatus("La copie de sécurité a échoué. Exporte la sauvegarde actuelle pour la conserver.", 'error');
@@ -1027,23 +1034,110 @@ function applyConsoleFromUrl() {
   if (demo) demo.classList.add('primary');
 }
 
+// --- Manette (mandat Controller V2) ----------------------------------------------------
+// Réglages par console (« pad:<console> ») et, si demandé, par jeu (« pad:game:<clé> ») ; le réglage
+// du jeu l'emporte. Ils ne touchent ni aux sauvegardes ni aux codes.
+async function padSettingsFor(system, gameKeyValue) {
+  const game = gameKeyValue ? await store.getSetting(`pad:game:${gameKeyValue}`, null) : null;
+  if (game) return { settings: normalizePad(game), scope: 'jeu' };
+  const consoleSettings = await store.getSetting(`pad:${system}`, null);
+  if (consoleSettings) return { settings: normalizePad(consoleSettings), scope: 'console' };
+  return { settings: normalizePad(settings.legacyPositional ? { profile: 'authentique' } : {}), scope: 'défaut' };
+}
+
+function padUiSystem() {
+  return currentGame?.system || $('padSystem').value || 'nes';
+}
+
+async function refreshPadUi() {
+  const system = padUiSystem();
+  $('padSystem').value = system;
+  const gameOnly = !!currentGame && currentGame.system === system && (await padSettingsFor(system, currentGame.key)).scope === 'jeu';
+  const { settings: cfg } = await padSettingsFor(system, gameOnly ? currentGame.key : null);
+  $('padGameOnly').disabled = !currentGame || currentGame.system !== system;
+  $('padGameOnly').checked = gameOnly;
+  for (const input of document.querySelectorAll('input[name=padProfile]')) input.checked = input.value === cfg.profile;
+  $('padDeadzone').value = String(cfg.deadzone);
+  $('padDeadzoneOut').textContent = cfg.deadzone.toFixed(2).replace('.', ',');
+  $('padHideTouch').checked = cfg.hideTouch;
+  $('padTouchSize').value = String(cfg.touchSize);
+  $('padTouchSizeOut').textContent = `${Math.round(cfg.touchSize * 100)} %`;
+  $('padTouchOpacity').value = String(cfg.touchOpacity);
+  $('padTouchOpacityOut').textContent = `${Math.round(cfg.touchOpacity * 100)} %`;
+}
+
+async function savePadUi() {
+  const system = padUiSystem();
+  const checked = document.querySelector('input[name=padProfile]:checked');
+  const cfg = normalizePad({
+    profile: checked ? checked.value : undefined,
+    deadzone: Number($('padDeadzone').value),
+    hideTouch: $('padHideTouch').checked,
+    touchSize: Number($('padTouchSize').value),
+    touchOpacity: Number($('padTouchOpacity').value),
+  });
+  const forGame = $('padGameOnly').checked && currentGame && currentGame.system === system;
+  if (forGame) await store.setSetting(`pad:game:${currentGame.key}`, cfg);
+  else {
+    await store.setSetting(`pad:${system}`, cfg);
+    if (currentGame && currentGame.system === system) await store.setSetting(`pad:game:${currentGame.key}`, null);
+  }
+  if (currentGame && currentGame.system === system) {
+    const control = session.control();
+    if (control && control.setPad) control.setPad(cfg);
+  }
+  await refreshPadUi();
+}
+
+function buildPadUi() {
+  const sel = clear($('padSystem'));
+  for (const sys of Object.values(SYSTEMS)) sel.append(h('option', { value: sys.id }, sys.label));
+  const wanted = new URLSearchParams(location.search).get('console');
+  if (wanted && SYSTEMS[wanted]) sel.value = wanted;
+  const box = clear($('padProfiles'));
+  for (const p of Object.values(PAD_PROFILES)) {
+    const id = `pad-${p.id}`;
+    box.append(h('label', { class: 'choice', for: id },
+      h('input', { type: 'radio', name: 'padProfile', id, value: p.id, onchange: () => savePadUi().catch((err) => setStatus(err.message, 'error')) }),
+      h('span', {}, h('strong', {}, p.label), h('br'), h('small', { class: 'muted' }, p.description))));
+  }
+  sel.addEventListener('change', () => refreshPadUi());
+  $('padGameOnly').addEventListener('change', () => savePadUi().catch((err) => setStatus(err.message, 'error')));
+  for (const id of ['padDeadzone', 'padTouchSize', 'padTouchOpacity', 'padHideTouch']) {
+    $(id).addEventListener('change', () => savePadUi().catch((err) => setStatus(err.message, 'error')));
+  }
+  $('padReset').addEventListener('click', async () => {
+    const system = padUiSystem();
+    await store.setSetting(`pad:${system}`, null);
+    if (currentGame && currentGame.system === system) await store.setSetting(`pad:game:${currentGame.key}`, null);
+    const { settings: cfg } = await padSettingsFor(system, currentGame?.system === system ? currentGame.key : null);
+    const control = session.control();
+    if (control && control.setPad && currentGame?.system === system) control.setPad(cfg);
+    await refreshPadUi();
+    setStatus(`Réglages de manette par défaut rétablis pour ${SYSTEMS[system].label}.`, 'ok');
+  });
+  window.addEventListener('gamepadconnected', (e) => showPadStatus(e.gamepad.id));
+  window.addEventListener('gamepaddisconnected', () => showPadStatus(null));
+}
+
+function showPadStatus(id) {
+  $('padStatus').textContent = id
+    ? `Manette reconnue : ${id}`
+    : 'Aucune manette détectée. Branche-la ou appuie sur un de ses boutons.';
+  $('padStatus').dataset.kind = id ? 'ok' : '';
+}
+
 // --- Réglages ---------------------------------------------------------------------
 async function loadSettings() {
-  settings.controlProfile = await store.getSetting('controlProfile', 'defaut');
+  // Ancien réglage « positionnel » (0.3) : il devient le profil Authentique par défaut.
+  settings.legacyPositional = (await store.getSetting('controlProfile', 'defaut')) === 'positionnel';
   settings.dsCore = await store.getSetting('dsCore', 'desmume2015');
   favorites = new Set(await store.getSetting('favorites', []));
-  if (!CONTROL_PROFILES[settings.controlProfile]) settings.controlProfile = 'defaut';
   if (!DS_CORES[settings.dsCore]) settings.dsCore = 'desmume2015';
 }
 
 function buildSettingsUi() {
-  const cp = clear($('controlProfiles'));
-  for (const p of Object.values(CONTROL_PROFILES)) {
-    const id = `cp-${p.id}`;
-    cp.append(h('label', { class: 'choice', for: id },
-      h('input', { type: 'radio', name: 'cp', id, checked: settings.controlProfile === p.id, onchange: async () => { settings.controlProfile = p.id; await store.setSetting('controlProfile', p.id); } }),
-      p.label));
-  }
+  buildPadUi();
   const dc = clear($('dsCores'));
   for (const [id, spec] of Object.entries(DS_CORES)) {
     const rid = `ds-${id}`;

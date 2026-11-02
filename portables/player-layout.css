@@ -60,3 +60,6 @@
 .ejs_parent[data-portable-touch-controls] .ejs_virtualGamepad_right {
   bottom: 70px;
 }
+
+/* Taille des commandes tactiles réglable dans l'onglet Manette (variable posée par js/pad-input.mjs). */
+.ejs_virtualGamepad_parent > * { zoom: var(--emuperso-touch-size, 1); }

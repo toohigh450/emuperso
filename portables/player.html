@@ -128,6 +128,8 @@
       return entry.control.flush().then(function () { if (restart !== false) restartNextFrame(); });
     },
     restart: function () { manager(); restartNextFrame(); },
+    // Nouveaux réglages de manette appliqués tout de suite (profil, zone morte, commandes tactiles).
+    setPad: function (settings) { if (padInput) padInput.update(settings); },
     enginePath: source.path, // source réellement chargée (la PSP peut repasser de nightly à 4.2.3)
     screenshot: function () { return manager().screenshot(); },
     // Écrit la sauvegarde de la cartouche dans IndexedDB tout de suite (le moteur ne le fait
@@ -178,9 +180,20 @@
     updateLayout();
     if (window.EJS_startOnLoaded) starting();
   };
+  // Manette selon le profil EMUPERSO (Authentique, Confort moderne ou Natif) : voir js/pad-input.mjs.
+  var padInput = null;
+  function startPad() {
+    if (!boot.pad) return;
+    import('./js/pad-input.mjs').then(function (m) {
+      padInput = m.installPadInput(window.EJS_emulator, boot.pad.system, boot.pad.settings, function (padId) {
+        try { if (boot.onPad) boot.onPad(padId); } catch (err) { console.error(err); }
+      });
+    }).catch(function (err) { console.error('Manette EMUPERSO indisponible', err); });
+  }
   window.EJS_onGameStart = function () {
     phase = 'exécution du jeu';
     updateLayout();
+    startPad();
     // PSP : les codes de départ sont déjà dans le fichier du jeu ; ici ppsspp ne connaît pas encore
     // l'identifiant du disque et les écrirait ailleurs.
     if (!boot.pspCheats) { try { applyCodes(); } catch (err) { console.error(err); } }
