@@ -44,10 +44,12 @@ try {
     const pad = await page.frames()[1].evaluate(() => {
       const root = document.querySelector('.ejs_virtualGamepad_parent');
       if (!root) return null;
-      const visible = getComputedStyle(root).display !== 'none' && root.getBoundingClientRect().height > 0;
+      // Le conteneur a une hauteur nulle (boutons en position absolue) : on mesure la croix elle-même.
+      const dpadEl = root.querySelector('.ejs_dpad_main');
+      const visible = getComputedStyle(root).display !== 'none' && !!dpadEl && dpadEl.getBoundingClientRect().width > 0;
       const labels = [...root.querySelectorAll('.ejs_virtualGamepad_button')].filter((b) => b.getBoundingClientRect().width > 0)
         .map((b) => b.textContent.trim().toUpperCase()).filter(Boolean);
-      return { visible, labels, dpad: !!root.querySelector('.ejs_dpad_main') };
+      return { visible, labels, dpad: !!dpadEl };
     });
     const missing = pad ? expected.filter((l) => !pad.labels.includes(l)) : expected;
     record(sys, 'manette tactile visible avec les bons boutons', !!pad && pad.visible && pad.dpad && missing.length === 0, pad ? `boutons : ${pad.labels.join(' ')}${missing.length ? ` ; manquants : ${missing.join(' ')}` : ''}` : 'absente');

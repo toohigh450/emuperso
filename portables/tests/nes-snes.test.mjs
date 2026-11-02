@@ -213,3 +213,29 @@ test('Fichiers .cht libretro : dossiers NES et SNES reconnus', () => {
   assert.equal(inferSystemFromPath('cht/Nintendo - Super Nintendo Entertainment System/Super Metroid (USA).cht'), 'snes');
   assert.equal(inferSystemFromPath('cht/Nintendo - Game Boy Advance/x.cht'), 'gba');
 });
+
+test('SNES : Cx4 (sous-type $10) reconnu, et en-tête ExHiROM préféré à la copie vide', () => {
+  const fix = (rom, h) => {
+    rom[h + 0x1c] = 0xff; rom[h + 0x1d] = 0xff; rom[h + 0x1e] = 0; rom[h + 0x1f] = 0;
+    const s = snesChecksum(rom); const c = s ^ 0xffff;
+    rom[h + 0x1e] = s & 0xff; rom[h + 0x1f] = s >> 8; rom[h + 0x1c] = c & 0xff; rom[h + 0x1d] = c >> 8;
+  };
+  const lo = new Uint8Array(0x80000);
+  const h = 0x7fc0;
+  lo.set(new TextEncoder().encode('MEGAMAN X2           '), h);
+  lo[h + 0x15] = 0x20; lo[h + 0x16] = 0xf3; lo[h - 1] = 0x10; lo[h + 0x17] = 0x0b; lo[h + 0x19] = 0x01; lo[h + 0x3d] = 0x80;
+  fix(lo, h);
+  const p = parseSnes(lo);
+  assert.equal(p.chip, 'cx4');
+  assert.deepEqual(p.errors, []);
+  const ex = new Uint8Array(0x600000);
+  for (const base of [0xffc0, 0x40ffc0]) {
+    ex.set(new TextEncoder().encode('TALES OF PHANTASIA   '), base);
+    ex[base + 0x15] = 0x35; ex[base + 0x17] = 0x0d; ex[base + 0x3d] = 0x80;
+    ex[base + 0x1c] = 0xff; ex[base + 0x1d] = 0xff;
+  }
+  fix(ex, 0x40ffc0);
+  const e = parseSnes(ex);
+  assert.equal(e.layout, 'ExHiROM');
+  assert.equal(e.checksumOk, true);
+});

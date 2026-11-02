@@ -47,6 +47,9 @@ export function createBrowserHost(container, { timeoutMs = 60000 } = {}) {
           const control = ready && entry && entry.control;
           destroyed = true;
           attempt++;
+          // Registre et minuterie libérés tout de suite ; l'iframe reste le temps d'écrire la sauvegarde.
+          clearTimeout(timer);
+          if (id) delete window.__portablesBoots[id];
           // Sauvegarde de cartouche écrite avant de détruire le moteur (changement de jeu, fermeture).
           if (control && typeof control.flush === 'function') {
             try { await control.flush(); } catch { /* le moteur peut déjà être arrêté */ }

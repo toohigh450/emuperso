@@ -331,7 +331,8 @@ export const SNES_CHIPS = {
   cx4: { label: 'Cx4', snes9x: true },
 };
 const SNES_CHIP_NIBBLE = { 0: 'dsp', 1: 'superfx', 2: 'obc1', 3: 'sa1', 4: 'sdd1', 5: 'srtc', 0xe: 'other' };
-const SNES_CUSTOM = { 0: 'spc7110', 1: 'st010', 2: 'st018', 3: 'cx4' };
+// Sous-type de puce (octet $xFBF) quand le type de cartouche vaut $Fx. Cx4 = $10 (Mega Man X2/X3).
+const SNES_CUSTOM = { 0x00: 'spc7110', 0x01: 'st010', 0x02: 'st018', 0x10: 'cx4' };
 
 function snesHeaderScore(bytes, base, expectHi) {
   if (base + 0x40 > bytes.length) return -1;
@@ -381,6 +382,8 @@ export function parseSnes(bytes) {
     { base: 0xffc0, layout: 'HiROM', hi: true },
     { base: 0x40ffc0, layout: 'ExHiROM', hi: true },
   ].map((c) => ({ ...c, score: snesHeaderScore(rom, c.base, c.hi) })).filter((c) => c.score >= 0);
+  // ExHiROM (plus de 4 Mio) : la copie d'en-tête en $FFC0 est souvent un modèle vide ; la vraie est en $40FFC0.
+  for (const c of candidates) if (c.layout === 'ExHiROM' && rom.length > 0x400000 && (rom[c.base + 0x15] & 0x0f) === 0x05) c.score += 3;
   candidates.sort((a, b) => b.score - a.score);
   const best = candidates[0];
   if (!best || best.score < 6) {
@@ -392,6 +395,7 @@ export function parseSnes(bytes) {
   info.title = asciiAt(rom, b, b + 21);
   info.mapMode = rom[b + 0x15];
   if ((info.mapMode & 0x0f) === 0x03) info.layout = 'SA-1';
+  if ((info.mapMode & 0x0f) === 0x05) info.layout = 'ExHiROM';
   info.fastRom = !!(info.mapMode & 0x10);
   const type = rom[b + 0x16];
   info.romSize = rom[b + 0x17] <= 0x0d ? (1 << rom[b + 0x17]) * KiB : 0;
