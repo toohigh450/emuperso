@@ -66,7 +66,7 @@ async function variety(page) {
 const settle = (page, ms = 700) => page.waitForTimeout(ms);
 // Le bouton Démarrer du moteur peut apparaître avant d'être actif : on réessaie jusqu'au démarrage.
 async function pressStart(page) {
-  const button = page.frameLocator('iframe').locator('.ejs_start_button');
+  const button = page.frameLocator('iframe.player-frame').locator('.ejs_start_button');
   await button.waitFor({ timeout: 120000 });
   for (let attempt = 0; attempt < 8; attempt++) {
     await button.click({ timeout: 5000 }).catch(() => {});
@@ -98,7 +98,7 @@ async function waitCounter(page, ok) {
   return n;
 }
 async function audioState(page) {
-  return page.frames()[1].evaluate(() => {
+  return page.frames().find((f) => f.url().includes('player.html')).evaluate(() => {
     const m = window.EJS_emulator && window.EJS_emulator.Module;
     const ctx = m && m.AL && m.AL.currentCtx && m.AL.currentCtx.audioCtx;
     return ctx ? ctx.state : 'inconnu';

@@ -16,7 +16,7 @@ const record = (scope, step, ok, detail = '') => {
 const ANDROID = 'Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36';
 
 async function pressStart(page) {
-  const button = page.frameLocator('iframe').locator('.ejs_start_button');
+  const button = page.frameLocator('iframe.player-frame').locator('.ejs_start_button');
   await button.waitFor({ timeout: 120000 });
   for (let attempt = 0; attempt < 8; attempt++) {
     await button.tap({ timeout: 5000 }).catch(() => button.click({ timeout: 5000 }).catch(() => {}));
@@ -24,7 +24,7 @@ async function pressStart(page) {
   }
   throw new Error('Le jeu ne démarre pas.');
 }
-const frames = (page) => page.frames()[1].evaluate(() => window.EJS_emulator.gameManager.getFrameNum());
+const frames = (page) => page.frames().find((f) => f.url().includes('player.html')).evaluate(() => window.EJS_emulator.gameManager.getFrameNum());
 
 try {
   for (const [sys, demo, expected] of [['nes', 'nes', ['A', 'B', 'START', 'SELECT']], ['snes', 'snes', ['A', 'B', 'X', 'Y', 'L', 'R', 'START', 'SELECT']]]) {
@@ -42,7 +42,7 @@ try {
     await page.locator(`[data-portable-demo="${demo}"]`).tap();
     await pressStart(page);
     await page.waitForTimeout(2500);
-    const pad = await page.frames()[1].evaluate(() => {
+    const pad = await page.frames().find((f) => f.url().includes('player.html')).evaluate(() => {
       const root = document.querySelector('.ejs_virtualGamepad_parent');
       if (!root) return null;
       // Le conteneur a une hauteur nulle (boutons en position absolue) : on mesure la croix elle-même.
@@ -55,7 +55,7 @@ try {
     const missing = pad ? expected.filter((l) => !pad.labels.includes(l)) : expected;
     record(sys, 'manette tactile visible avec les bons boutons', !!pad && pad.visible && pad.dpad && missing.length === 0, pad ? `boutons : ${pad.labels.join(' ')}${missing.length ? ` ; manquants : ${missing.join(' ')}` : ''}` : 'absente');
     // Appui tactile réel sur le bouton A virtuel : le moteur doit continuer à tourner sans erreur.
-    const box = await page.frameLocator('iframe').locator('.ejs_virtualGamepad_button', { hasText: /^A$/ }).first().boundingBox();
+    const box = await page.frameLocator('iframe.player-frame').locator('.ejs_virtualGamepad_button', { hasText: /^A$/ }).first().boundingBox();
     if (box) await page.touchscreen.tap(box.x + box.width / 2, box.y + box.height / 2);
     record(sys, 'appui tactile sur A sans erreur', !!box && errors.length === 0);
     const layout = await page.evaluate(() => {

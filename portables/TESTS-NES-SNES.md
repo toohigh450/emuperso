@@ -43,7 +43,9 @@ Chrome (écran tactile simulé) n'est **pas** une validation Android.
 | `portables` : `npm run test:browser` (Chromium, moteur simulé, contrôles d'audit existants + nouveaux) | 3/3 groupes réussis |
 | `portables` : `npm run test:real` (vrais cœurs NES/SNES) | 43/43 |
 | `tools/test-portail.mjs` (site assemblé, local) | 56/56 |
-| `tools/test-mobile.mjs` (émulation Android) | 16/16 |
+| `tools/test-portail.mjs` **sur l'aperçu Vercel public** | 56/56 |
+| `tools/test-mobile.mjs` (émulation Android, local) | 16/16 |
+| `tools/test-mobile.mjs` **sur l'aperçu Vercel public** | 16/16 |
 | Racine (laboratoire N64) : `npm test` | 82/82 |
 | PS1 : `python ps1-web/tools/run_tests.py` | 185 tests Node + Python : tous réussis |
 | N64 : `node --test real-n64/tests/*.test.mjs` | 80/80 |
@@ -119,9 +121,22 @@ fichiers n'est modifié par cette branche (`real-n64/` et `ps1-web/` identiques 
   revenus à l'identique (vérifié après normalisation des fins de ligne) ; le portail est publié comme
   accueil du site par la construction, sans toucher au `index.html` du dépôt.
 
+## Défaut moteur contourné : redémarrage ignoré
+
+Snes9x (via EmulatorJS) ignorait parfois un redémarrage demandé dans la même image qu'une capture d'état
+(reproduit : 1 échec sur 4). Le lanceur reporte désormais le redémarrage à l'image suivante : 10 essais sur
+10 réussis, et la suite réelle repasse à 43/43.
+
 ## Déploiement Vercel de prévisualisation
 
-Voir le rapport final (PR) : URL, accès sans compte et résultats des suites relancées sur l'URL publique.
+- URL : https://emuperso-git-feature-nes-snes-unified-toohigh450-1311.vercel.app/
+- Construction Vercel réussie avec le nouveau `vercel.json` (moteurs N64/PS1 téléchargés et vérifiés).
+- Accès **sans compte Vercel ni GitHub** : accueil, `portables/`, démos NES/SNES, `real-n64/`, `ps1-web/`,
+  moteurs `vendor/` et laboratoire N64 répondent HTTP 200 sans authentification ; en-têtes d'isolation
+  présents sur `/real-n64/` et `/ps1-web/`.
+- Suites relancées **sur l'URL publique** : site complet 56/56 (8 consoles, démos réelles), émulation
+  téléphone 16/16. Les aperçus Vercel ajoutent leur propre iframe (barre d'outils) : les tests visent
+  l'iframe du moteur.
 
 ## Reproduire
 

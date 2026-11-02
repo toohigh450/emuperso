@@ -22,16 +22,16 @@ try {
     let line;
     try {
       await page.locator('#romInput').setInputFiles(path);
-      const button = page.frameLocator('iframe').locator('.ejs_start_button');
+      const button = page.frameLocator('iframe.player-frame').locator('.ejs_start_button');
       await button.waitFor({ timeout: 120000 });
       for (let i = 0; i < 8 && (await page.evaluate(() => document.body.dataset.state)) !== 'running'; i++) {
         await button.click({ timeout: 5000 }).catch(() => {});
         await page.waitForTimeout(3000);
       }
       const facts = await page.evaluate(() => ['gameSystem', 'gameRegion', 'gameDetails', 'gameCore'].map((id) => document.getElementById(id).textContent).join(' | '));
-      const f0 = await page.frames()[1].evaluate(() => window.EJS_emulator.gameManager.getFrameNum());
+      const f0 = await page.frames().find((f) => f.url().includes('player.html')).evaluate(() => window.EJS_emulator.gameManager.getFrameNum());
       await page.waitForTimeout(8000);
-      const f1 = await page.frames()[1].evaluate(() => window.EJS_emulator.gameManager.getFrameNum());
+      const f1 = await page.frames().find((f) => f.url().includes('player.html')).evaluate(() => window.EJS_emulator.gameManager.getFrameNum());
       const colors = await page.evaluate(async () => {
         const c = Object.values(window.__portablesBoots)[0].control;
         const bmp = await createImageBitmap(new Blob([await c.screenshot()], { type: 'image/png' }));
