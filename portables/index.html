@@ -4,24 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>Consoles Nintendo : NES, SNES, Game Boy, Color, Advance et DS</title>
+<title>EMUPERSO : Nintendo et Sega Genesis</title>
 <link rel="stylesheet" href="css/app.css">
 </head>
 <body data-state="idle">
 <header class="top">
-  <p class="crumb"><a href="../">← Accueil EMUPERSO (8 consoles)</a></p>
-  <h1>Consoles Nintendo <small>0.3.0 alpha.3</small></h1>
-  <p>NES, Super Nintendo, Game Boy, Game Boy Color, Game Boy Advance et DS dans Chrome. Un seul jeu à la fois.</p>
+  <p class="crumb"><a href="../">← Accueil EMUPERSO (9 consoles en aperçu)</a></p>
+  <h1>Consoles Nintendo et Sega <small>Genesis — alpha / essais</small></h1>
+  <p>NES, Super Nintendo, Sega Genesis / Mega Drive, Game Boy, Game Boy Color, Game Boy Advance et DS dans Chrome. Un seul jeu à la fois.</p>
 </header>
 
-<p class="alpha-note">Version alpha : exporte tes sauvegardes avant les essais. Les tests réels et leurs limites sont dans TESTS-NES-SNES.md.</p>
+<p class="alpha-note">Version alpha : exporte tes sauvegardes avant les essais. Genesis : .md / .smd / .gen ou ZIP ; les archives 7z doivent être extraites localement. Sega 32X n’est pas encore pris en charge. Les tests réels restent à effectuer.</p>
 <p class="console-hint" id="consoleHint" hidden></p>
 <main class="layout">
   <section class="rail" aria-label="Jeu et réglages">
     <div class="slot" id="slot">
       <div class="slot-empty" id="slotEmpty">
         <p class="slot-title">La fente est vide</p>
-        <p class="muted">Choisis un fichier .nes, .sfc, .smc, .gb, .gbc, .gba, .nds ou un .zip qui en contient un. Tes fichiers sont lus localement et ne sont envoyés à aucun serveur. Le moteur tiers chargé depuis Internet peut y accéder.</p>
+        <p class="muted">Choisis un fichier .nes, .sfc, .smc, .md, .smd, .gen, .gb, .gbc, .gba, .nds ou un .zip qui en contient un. Tes fichiers sont lus localement et ne sont envoyés à aucun serveur. Le moteur tiers chargé depuis Internet peut y accéder.</p>
         <button class="btn primary" id="pickGame" type="button">Choisir un jeu</button>
         <p class="muted small-text">Tu peux aussi glisser le fichier sur la page, ou ouvrir tout un dossier dans l’onglet Catalogue.</p>
       </div>
@@ -42,7 +42,7 @@
           <button class="btn danger" id="closeGame" type="button">Fermer le jeu</button>
         </div>
       </div>
-      <input type="file" id="romInput" accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.gb,.gbc,.gba,.nds,.sgb,.srl,.bin,.rom,.dsi,.zip,.7z,.fds" class="visually-hidden" tabindex="-1">
+      <input type="file" id="romInput" accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.md,.smd,.gen,.gb,.gbc,.gba,.nds,.sgb,.srl,.bin,.rom,.dsi,.zip,.7z,.fds,.32x" class="visually-hidden" tabindex="-1">
     </div>
 
     <section class="demo-panel" aria-labelledby="demoHeading">
@@ -83,7 +83,7 @@
         <button class="btn" id="catFilesBtn" type="button">Choisir des fichiers</button>
       </div>
       <input type="file" id="catFolder" webkitdirectory multiple class="visually-hidden" tabindex="-1">
-      <input type="file" id="catFiles" multiple accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.gb,.gbc,.gba,.nds,.zip,.7z" class="visually-hidden" tabindex="-1">
+      <input type="file" id="catFiles" multiple accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.md,.smd,.gen,.gb,.gbc,.gba,.nds,.zip,.7z" class="visually-hidden" tabindex="-1">
       <div id="catalogTools" hidden>
         <label class="field" for="catSearch">Rechercher</label>
         <input type="search" id="catSearch" placeholder="Titre du jeu" autocomplete="off">
@@ -93,6 +93,7 @@
               <option value="tous">Toutes</option>
               <option value="nes">NES</option>
               <option value="snes">Super Nintendo</option>
+              <option value="genesis">Sega Genesis / Mega Drive</option>
               <option value="gb">Game Boy</option>
               <option value="gbc">Game Boy Color</option>
               <option value="gba">Game Boy Advance</option>
@@ -206,7 +207,7 @@
 
     <section class="panel" id="panelEngine" role="tabpanel" aria-labelledby="tabEngine" hidden>
       <p id="engineInfo" class="muted"></p>
-      <p class="muted small-text">Cœurs : FCEUmm (NES, GPL-2.0), Snes9x (SNES, licence Snes9x non commerciale), Gambatte (GB/GBC), mGBA (GBA), DeSmuME / melonDS (DS). Compatibilité détaillée et limites : COMPATIBILITE-NES-SNES.md.</p>
+      <p class="muted small-text">Cœurs : FCEUmm (NES, GPL-2.0), Snes9x (SNES, licence Snes9x non commerciale), Genesis Plus GX (Genesis, licence tierce), Gambatte (GB/GBC), mGBA (GBA), DeSmuME / melonDS (DS). Compatibilité détaillée et limites : COMPATIBILITE-NES-SNES.md.</p>
       <p class="muted small-text">ROM : plafond théorique 512 Mio, soumis au budget mémoire. Une ROM de 512 Mio est refusée si la mémoire déclarée est inconnue, 2 ou 4 Gio ; elle peut passer à 8 Gio sans jeu actif. Le budget ne mesure pas la RAM libre.</p>
       <h2>Cœur DS</h2>
       <p class="muted">Changer de cœur crée un autre espace de sauvegarde pour le même jeu.</p>
