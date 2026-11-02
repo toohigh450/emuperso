@@ -1,6 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
+  "git": { "deploymentEnabled": { "feature/local-autonomous-test-runner": false } },
   "installCommand": "echo \"Aucune dependance npm a installer\"",
   "buildCommand": "python3 ps1-web/tools/fetch_runtime.py && python3 ps1-web/tools/build-vercel-alpha.py && python3 real-n64/tools/fetch_runtime.py && python3 real-n64/tools/fetch_cheats.py && python3 real-n64/tools/build-vercel-alpha.py && node tools/build-portail.mjs",
   "outputDirectory": "dist",

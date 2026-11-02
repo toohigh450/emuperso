@@ -1,0 +1,9 @@
+{
+  "name": "emuperso-local-runner",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=22.17"},
+  "scripts": {"test": "node --test test.mjs", "start": "node cli.mjs run"},
+  "dependencies": {"playwright": "1.64.1"}
+}
