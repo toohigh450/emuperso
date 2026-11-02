@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Bahamut Lagoon (Japan) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Bahamut%20Lagoon%20%28Japan%29%20%28Game%20Genie%29.cht
+
+cheats = 2 
+
+cheat0_desc = "Gain 65 525 Gold After Battle"
+cheat0_code = "DB8B-DFD0+BD8B-DF00+DD8B-DF60"
+cheat0_enable = false 
+
+cheat1_desc = "Start New Game With A Lot of Gold"
+cheat1_code = "EE6A-5650+EE6A-5680"
+cheat1_enable = false

@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Dai-3-ji Super Robot Taisen (Japan) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Dai-3-ji%20Super%20Robot%20Taisen%20%28Japan%29%20%28Game%20Genie%29.cht
+
+cheats = 5 
+
+cheat0_desc = "255 Move"
+cheat0_code = "CBBC-0DDD+CB8F-6408"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Actions (Doesn't Seem To Work For Enemies)"
+cheat1_code = "DDA1-A7A6"
+cheat1_enable = false 
+
+cheat2_desc = "Get 65535 EXP From Defeating An Enemy"
+cheat2_code = "DD29-6D08"
+cheat2_enable = false 
+
+cheat3_desc = "Get Max Cr From Defeating An Enemy"
+cheat3_code = "DDC0-0F6D"
+cheat3_enable = false 
+
+cheat4_desc = "End Turn Or Move To End Battle"
+cheat4_code = "50C5-A701"
+cheat4_enable = false

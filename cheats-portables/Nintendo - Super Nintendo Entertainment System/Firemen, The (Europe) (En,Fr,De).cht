@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Firemen, The (Europe) (En,Fr,De)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Firemen,%20The%20%28Europe%29%20%28En,Fr,De%29.cht
+
+cheats = 6
+
+cheat0_desc = "Infinite Time"
+cheat0_code = "7E198209+7E198309+7E198409+7E198509"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Energy"
+cheat1_code = "7E15C730"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Extingushing Bombs"
+cheat2_code = "7E091A05"
+cheat2_enable = false
+
+cheat3_desc = "Invincibility"
+cheat3_code = "7E08C902"
+cheat3_enable = false
+
+cheat4_desc = "Walk Through Walls"
+cheat4_code = "DDC4-14DD"
+cheat4_enable = false
+
+cheat5_desc = "Infinite Water Bombs"
+cheat5_code = "62B8-14D7"
+cheat5_enable = false

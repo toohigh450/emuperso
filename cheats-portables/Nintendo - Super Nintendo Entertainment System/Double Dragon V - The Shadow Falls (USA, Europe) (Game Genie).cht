@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Double Dragon V - The Shadow Falls (USA, Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Double%20Dragon%20V%20-%20The%20Shadow%20Falls%20%28USA,%20Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Computer (Player 2) Can't Perform Special Moves"
+cheat0_code = "B3C8-CFBF+B3C6-CDBF+BAC9-3FBF"
+cheat0_enable = false 
+
+cheat1_desc = "Allows You To Pick Up To 9 Points Of Any Attribute Instead Of 5"
+cheat1_code = "DBBC-1F27"
+cheat1_enable = false 
+
+cheat2_desc = "Both Characters Start With 50% Energy"
+cheat2_code = "46C6-340D"
+cheat2_enable = false 
+
+cheat3_desc = "Both Characters Start With 25% Energy"
+cheat3_code = "F0C6-340D"
+cheat3_enable = false 
+
+cheat4_desc = "Player 1 Always Wins"
+cheat4_code = "DDAB-3DAE"
+cheat4_enable = false 
+
+cheat5_desc = "Harder To Recover From Dizziness"
+cheat5_code = "3C85-CF07"
+cheat5_enable = false 
+
+cheat6_desc = "Dizziness Doesn't Last Long"
+cheat6_code = "D685-C407"
+cheat6_enable = false

@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Hokuto no Ken 6 - Gekitou Denshouken Haou e no Michi (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Hokuto%20no%20Ken%206%20-%20Gekitou%20Denshouken%20Haou%20e%20no%20Michi%20%28Japan%29.cht
+
+cheats = 2
+
+cheat0_desc = "Infinite Health P1"
+cheat0_code = "7E02CA70"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Health P2"
+cheat1_code = "7E032370"
+cheat1_enable = false

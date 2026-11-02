@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Choplifter III (Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Choplifter%20III%20%28Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Infinite Secondary Weapons"
+cheat0_code = "3C60-34D7"
+cheat0_enable = false 
+
+cheat1_desc = "Chopper Can Carry 30 Hostages"
+cheat1_code = "F3C7-3D53+F3C1-1F5E"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Choppers"
+cheat2_code = "C26D-1767"
+cheat2_enable = false 
+
+cheat3_desc = "Have All Weapons And Infinite Ammo"
+cheat3_code = "DD67-CDA7+DD60-CF67"
+cheat3_enable = false

@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Fushigi no Dungeon 2 - Fuurai no Shiren (Japan) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Fushigi%20no%20Dungeon%202%20-%20Fuurai%20no%20Shiren%20%28Japan%29%20%28Action%20Replay%29.cht
+
+cheats = 2 
+
+cheat0_desc = "Move D-Pad To Jump To Next Floor"
+cheat0_code = "C3EA8880+C3EA8900"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite HP Shiren"
+cheat1_code = "7E8604FF"
+cheat1_enable = false

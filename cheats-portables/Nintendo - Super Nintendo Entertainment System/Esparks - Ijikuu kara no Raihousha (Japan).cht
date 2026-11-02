@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Esparks - Ijikuu kara no Raihousha (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Esparks%20-%20Ijikuu%20kara%20no%20Raihousha%20%28Japan%29.cht
+
+cheats = 5
+
+cheat0_desc = "Always Run"
+cheat0_code = "7E009202"
+cheat0_enable = false
+
+cheat1_desc = "Can't be Hit"
+cheat1_code = "7E064F40"
+cheat1_enable = false
+
+cheat2_desc = "Lots o Cash"
+cheat2_code = "7E10CEFF+7E10CFFF"
+cheat2_enable = false
+
+cheat3_desc = "1st Character 999 HP"
+cheat3_code = "7E0ACEE7+7E0ACF03"
+cheat3_enable = false
+
+cheat4_desc = "2nd Character 999 HP"
+cheat4_code = "7E0AD0E7+7E0AD103"
+cheat4_enable = false

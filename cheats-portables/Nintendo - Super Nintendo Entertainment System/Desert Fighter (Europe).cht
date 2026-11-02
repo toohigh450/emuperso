@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Desert Fighter (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Desert%20Fighter%20%28Europe%29.cht
+
+cheats = 6
+
+cheat0_desc = "Infinite Damage"
+cheat0_code = "7E080620"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Missiles and Flares"
+cheat1_code = "7E081E50"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Fuel"
+cheat2_code = "7E080AC0+7E080BA8"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Vulcan"
+cheat3_code = "7E081C00+7E081D02"
+cheat3_enable = false
+
+cheat4_desc = "Unlock unused Cockpit C control scheme on game setup screen"
+cheat4_code = "7E00A204"
+cheat4_enable = false
+
+cheat5_desc = "Unlock unused Mania difficulty on game setup screen"
+cheat5_code = "7E00A004"
+cheat5_enable = false

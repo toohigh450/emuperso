@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Dragon Quest III - Soshite Densetsu e... (Japan) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Dragon%20Quest%20III%20-%20Soshite%20Densetsu%20e...%20%28Japan%29%20%28Game%20Genie%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Infinite HP"
+cheat0_code = "C276-572D"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite MP"
+cheat1_code = "C275-EDBD"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Gold"
+cheat2_code = "C29F-EDB4+C29F-EFB4"
+cheat2_enable = false 
+
+cheat3_desc = "Enables Debug Menu"
+cheat3_code = "EEEE-E765+EEEE-E7A5+6DEE-E4B8"
+cheat3_enable = false

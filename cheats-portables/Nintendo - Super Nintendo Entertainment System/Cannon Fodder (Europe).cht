@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Cannon Fodder (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Cannon%20Fodder%20%28Europe%29.cht
+
+cheats = 8
+
+cheat0_desc = "Infinite Grenades"
+cheat0_code = "7E15C603"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Missiles"
+cheat1_code = "7E15CC06"
+cheat1_enable = false
+
+cheat2_desc = "Number of Men Away is 0"
+cheat2_code = "7E091900"
+cheat2_enable = false
+
+cheat3_desc = "Leader Becomes General"
+cheat3_code = "7E05AB0F"
+cheat3_enable = false
+
+cheat4_desc = "Skip Mission (Press SELECT Ingame)"
+cheat4_code = "7EFAE376+7EFAE498"
+cheat4_enable = false
+
+cheat5_desc = "Infinite Recruits"
+cheat5_code = "C281-1403"
+cheat5_enable = false
+
+cheat6_desc = "Press Select to Skip Missions"
+cheat6_code = "DD61-C769+DD61-C7A9"
+cheat6_enable = false
+
+cheat7_desc = "Recruits Remaining"
+cheat7_code = ""
+cheat7_enable = false

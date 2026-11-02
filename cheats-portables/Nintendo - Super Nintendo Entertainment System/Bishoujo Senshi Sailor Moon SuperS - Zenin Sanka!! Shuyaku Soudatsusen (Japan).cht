@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Bishoujo Senshi Sailor Moon SuperS - Zenin Sanka!! Shuyaku Soudatsusen (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Bishoujo%20Senshi%20Sailor%20Moon%20SuperS%20-%20Zenin%20Sanka!!%20Shuyaku%20Soudatsusen%20%28Japan%29.cht
+
+cheats = 8
+
+cheat0_desc = "P1 Character Modifier"
+cheat0_code = "7E100000"
+cheat0_enable = false
+
+cheat1_desc = "P2 Character Modifier"
+cheat1_code = "7E108000"
+cheat1_enable = false
+
+cheat2_desc = "P1 Character Select"
+cheat2_code = "7E1B4000"
+cheat2_enable = false
+
+cheat3_desc = "P2 Character Select"
+cheat3_code = "7E1B8000"
+cheat3_enable = false
+
+cheat4_desc = "P1 HP Modifier"
+cheat4_code = "7E104900"
+cheat4_enable = false
+
+cheat5_desc = "P2 HP Modifier"
+cheat5_code = "7E10C900"
+cheat5_enable = false
+
+cheat6_desc = "P1 Win Modifier"
+cheat6_code = "7E1E0200"
+cheat6_enable = false
+
+cheat7_desc = "P2 Wins Modifier"
+cheat7_code = "7E1E0300"
+cheat7_enable = false

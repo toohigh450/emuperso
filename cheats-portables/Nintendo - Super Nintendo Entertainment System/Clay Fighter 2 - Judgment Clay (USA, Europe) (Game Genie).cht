@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Clay Fighter 2 - Judgment Clay (USA, Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Clay%20Fighter%202%20-%20Judgment%20Clay%20%28USA,%20Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Select More Speed In Options"
+cheat0_code = "4D08-E4A1"
+cheat0_enable = false 
+
+cheat1_desc = "Select More Difficulty In Options"
+cheat1_code = "DB0B-E4D1"
+cheat1_enable = false 
+
+cheat2_desc = "Both Players Jump Off The Screen"
+cheat2_code = "8F59-EDA7"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Energy And Infinite Time"
+cheat3_code = "CB51-7D64+6251-7F04+4651-7F64+F651-7FA4"
+cheat3_enable = false

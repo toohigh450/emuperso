@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : FIFA Soccer 97 (USA) (En,Fr,De,Es,It,Sv)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/FIFA%20Soccer%2097%20%28USA%29%20%28En,Fr,De,Es,It,Sv%29.cht
+
+cheats = 2
+
+cheat0_desc = "Score Modifier (Team 2)"
+cheat0_code = "7E18D700"
+cheat0_enable = false
+
+cheat1_desc = "Score Modifier (Team 1)"
+cheat1_code = "7E18D600"
+cheat1_enable = false

@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Galaxy Wars (Japan) (En)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Galaxy%20Wars%20%28Japan%29%20%28En%29.cht
+
+cheats = 6
+
+cheat0_desc = "Hit Anywhere"
+cheat0_code = "6DB2-D76C+4FB2-D7AC"
+cheat0_enable = false
+
+cheat1_desc = "Invincibility"
+cheat1_code = "6DCD-D40B+6DB1-A7A8"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Lives"
+cheat2_code = "C2B3-D7DB"
+cheat2_enable = false
+
+cheat3_desc = "Hit Anywhere"
+cheat3_code = "6D8D-AF66+4F8D-AFA6"
+cheat3_enable = false
+
+cheat4_desc = "Invincibility"
+cheat4_code = "6DA9-A466+6D89-AFAC"
+cheat4_enable = false
+
+cheat5_desc = "Infinite Lives"
+cheat5_code = "C2CB-6D6B"
+cheat5_enable = false

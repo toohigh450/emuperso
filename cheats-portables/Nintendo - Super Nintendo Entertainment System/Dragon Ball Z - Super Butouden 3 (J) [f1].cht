@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Dragon Ball Z - Super Butouden 3 (J) [f1]
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Dragon%20Ball%20Z%20-%20Super%20Butouden%203%20%28J%29%20[f1].cht
+
+cheats = 4
+
+cheat0_desc = "Hit Anywhere P1"
+cheat0_code = "4028-4FD5+402B-4765"
+cheat0_enable = false
+
+cheat1_desc = "Hit Anywhere P2"
+cheat1_code = "402B-1DA5+4025-1705"
+cheat1_enable = false
+
+cheat2_desc = "Invincibility P1"
+cheat2_code = "6D26-14D5+6D23-1D05"
+cheat2_enable = false
+
+cheat3_desc = "Invincibility P2"
+cheat3_code = "6D2C-4405+6D2D-1D65"
+cheat3_enable = false

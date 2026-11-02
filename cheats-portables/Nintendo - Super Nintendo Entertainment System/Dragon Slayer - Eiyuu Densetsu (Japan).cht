@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Dragon Slayer - Eiyuu Densetsu (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Dragon%20Slayer%20-%20Eiyuu%20Densetsu%20%28Japan%29.cht
+
+cheats = 5
+
+cheat0_desc = "Infinite HP"
+cheat0_code = "7E13CD0F+7E13CE27"
+cheat0_enable = false
+
+cheat1_desc = "Max HP"
+cheat1_code = "7E13CF0F+7E13D027"
+cheat1_enable = false
+
+cheat2_desc = "Infinite MP"
+cheat2_code = "7E13D10F+7E13D227"
+cheat2_enable = false
+
+cheat3_desc = "Max MP"
+cheat3_code = "7E13D30F+7E13D427"
+cheat3_enable = false
+
+cheat4_desc = "65,000 Experience"
+cheat4_code = "7E13D5E8+7E13D6FD"
+cheat4_enable = false

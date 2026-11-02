@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Dragon Ball Z - Ultime Menace (France) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Dragon%20Ball%20Z%20-%20Ultime%20Menace%20%28France%29%20%28Action%20Replay%29.cht
+
+cheats = 2 
+
+cheat0_desc = "P1 Full Yellow Bar"
+cheat0_code = "7E0563C8"
+cheat0_enable = false 
+
+cheat1_desc = "P1 Full Green Bar"
+cheat1_code = "7E0562C8"
+cheat1_enable = false

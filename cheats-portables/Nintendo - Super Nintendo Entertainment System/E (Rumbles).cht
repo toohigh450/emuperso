@@ -1,0 +1,25 @@
+# Recherche locale pour la ROM : E (Rumbles)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/E%20%28Rumbles%29.cht
+
+cheat0_address = "197"
+cheat0_address_bit_position = "0"
+cheat0_big_endian = "false"
+cheat0_cheat_type = "0"
+cheat0_code = ""
+cheat0_desc = "Rumble on energy loss"
+cheat0_enable = "false"
+cheat0_handler = "1"
+cheat0_memory_search_size = "3"
+cheat0_rumble_port = "1"
+cheat0_rumble_primary_duration = "200"
+cheat0_rumble_primary_strength = "25700"
+cheat0_rumble_secondary_duration = "200"
+cheat0_rumble_secondary_strength = "25700"
+cheat0_rumble_type = "0"
+cheat0_rumble_value = "0"
+cheat0_value = "22"
+cheats = "1"

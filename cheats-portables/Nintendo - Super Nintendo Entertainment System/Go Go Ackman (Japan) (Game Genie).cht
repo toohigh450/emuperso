@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Go Go Ackman (Japan) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Go%20Go%20Ackman%20%28Japan%29%20%28Game%20Genie%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "C265-3DBD"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Health On Foot"
+cheat1_code = "C2B9-4D9A"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Bombs"
+cheat2_code = "C2BC-3492"
+cheat2_enable = false 
+
+cheat3_desc = "Don't Lose Weapon When Hit"
+cheat3_code = "C2B7-442A"
+cheat3_enable = false 
+
+cheat4_desc = "Don't Lose Weapon When You Die"
+cheat4_code = "C261-349D"
+cheat4_enable = false 
+
+cheat5_desc = "Keep Weapon When Stage Is Cleared"
+cheat5_code = "C2C7-449F"
+cheat5_enable = false

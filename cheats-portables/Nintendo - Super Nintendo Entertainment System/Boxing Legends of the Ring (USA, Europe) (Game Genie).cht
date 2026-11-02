@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Boxing Legends of the Ring (USA, Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Boxing%20Legends%20of%20the%20Ring%20%28USA,%20Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 3 
+
+cheat0_desc = "Each Round Is 1 Minute"
+cheat0_code = "DF8D-CDA7"
+cheat0_enable = false 
+
+cheat1_desc = "Each Round Is 2 Minutes"
+cheat1_code = "D48D-CDA7"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Time Per Round (Must Get Knockout)"
+cheat2_code = "C2BA-A7A7"
+cheat2_enable = false

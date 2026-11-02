@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Foreman for Real (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Foreman%20for%20Real%20%28USA%29.cht
+
+cheats = 6
+
+cheat0_desc = "George Foreman In Career Mode"
+cheat0_code = "7E10AE00"
+cheat0_enable = false
+
+cheat1_desc = "Opponent No Stamina"
+cheat1_code = "7E040400"
+cheat1_enable = false
+
+cheat2_desc = "P1 Infinite Stamina"
+cheat2_code = "7E11AE64+7E107227+7E043A78+7E045A64"
+cheat2_enable = false
+
+cheat3_desc = "Enable everyone for Career Mode"
+cheat3_code = "C26E-34AC"
+cheat3_enable = false
+
+cheat4_desc = "Matches set for number of Rounds Modifier"
+cheat4_code = "7E11B412"
+cheat4_enable = false
+
+cheat5_desc = "Round length in minutes modifier"
+cheat5_code = "7E0FD0BE"
+cheat5_enable = false

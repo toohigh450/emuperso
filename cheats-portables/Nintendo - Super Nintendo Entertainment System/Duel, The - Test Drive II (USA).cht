@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Duel, The - Test Drive II (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Duel,%20The%20-%20Test%20Drive%20II%20%28USA%29.cht
+
+cheats = 4
+
+cheat0_desc = "Infinite Cars Left"
+cheat0_code = "7E1C8609"
+cheat0_enable = false
+
+cheat1_desc = "Auto Accelerate at Maximum Speed"
+cheat1_code = "7E11CEFF"
+cheat1_enable = false
+
+cheat2_desc = "Player Car Modifier"
+cheat2_code = ""
+cheat2_enable = false
+
+cheat3_desc = "Opponent Car Modifier"
+cheat3_code = ""
+cheat3_enable = false

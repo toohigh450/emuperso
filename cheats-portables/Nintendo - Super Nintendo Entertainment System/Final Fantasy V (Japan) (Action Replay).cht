@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Final Fantasy V (Japan) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Final%20Fantasy%20V%20%28Japan%29%20%28Action%20Replay%29.cht
+
+cheats = 6
+
+cheat0_desc = "Have All Jobs"
+cheat0_code = "7E0840FF+7E0841FF+7E0842FF"
+cheat0_enable = false
+
+cheat1_desc = "999 APB (First Character Slot)"
+cheat1_code = "7E053BE7+7E053C03"
+cheat1_enable = false
+
+cheat2_desc = "999 APB (Second Character Slot)"
+cheat2_code = "7E058BE7+7E058C03"
+cheat2_enable = false
+
+cheat3_desc = "999 APB (Third Character Slot)"
+cheat3_code = "7E05DBE7+7E05DC03"
+cheat3_enable = false
+
+cheat4_desc = "999 APB (Fourth Character Slot)"
+cheat4_code = "7E062BE7+7E062C03"
+cheat4_enable = false
+
+cheat5_desc = "Get All Blue Spells"
+cheat5_code = "7E0960FF+7E0961FF+7E0962FF+7E0963FF"
+cheat5_enable = false

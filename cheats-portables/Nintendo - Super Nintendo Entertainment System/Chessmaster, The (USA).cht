@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Chessmaster, The (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Chessmaster,%20The%20%28USA%29.cht
+
+cheats = 6
+
+cheat0_desc = "White player's timer is stopped"
+cheat0_code = "C9C7-D76F"
+cheat0_enable = false
+
+cheat1_desc = "Black player's timer is stopped"
+cheat1_code = "C9C9-DFDF"
+cheat1_enable = false
+
+cheat2_desc = "Timers count 2x as slow"
+cheat2_code = "56C4-D46F"
+cheat2_enable = false
+
+cheat3_desc = "Timers count 3x times as slow"
+cheat3_code = "80C4-D46F"
+cheat3_enable = false
+
+cheat4_desc = "Timers count 2x as fast"
+cheat4_code = "F3C4-D46F"
+cheat4_enable = false
+
+cheat5_desc = "Timers count 3x times as fast"
+cheat5_code = "F0C4-D46F"
+cheat5_enable = false

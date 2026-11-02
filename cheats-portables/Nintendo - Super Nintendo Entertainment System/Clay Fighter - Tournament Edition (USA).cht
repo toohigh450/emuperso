@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Clay Fighter - Tournament Edition (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Clay%20Fighter%20-%20Tournament%20Edition%20%28USA%29.cht
+
+cheats = 6
+
+cheat0_desc = "Hit Anywhere Both Players"
+cheat0_code = "6D26-58D0+9426-5800"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Energy P1"
+cheat1_code = "7E3AA860"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Energy P2 Or CPU"
+cheat2_code = "7E3AAC60"
+cheat2_enable = false
+
+cheat3_desc = "No Energy P1"
+cheat3_code = "7E3AA800"
+cheat3_enable = false
+
+cheat4_desc = "Skip Intro Screens"
+cheat4_code = "C27B-EB06+C27B-ECD6"
+cheat4_enable = false
+
+cheat5_desc = "Win One Round To Win the Match P1"
+cheat5_code = "7E3AA402"
+cheat5_enable = false

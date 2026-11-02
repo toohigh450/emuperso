@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Capcom's Soccer Shootout (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Capcom's%20Soccer%20Shootout%20%28USA%29.cht
+
+cheats = 4
+
+cheat0_desc = "Seconds Modifier"
+cheat0_code = "7E18A200"
+cheat0_enable = false
+
+cheat1_desc = "Minutes Modifier"
+cheat1_code = "7E18A300"
+cheat1_enable = false
+
+cheat2_desc = "1 Player Score Modifier"
+cheat2_code = "7E06CE00"
+cheat2_enable = false
+
+cheat3_desc = "2 Player Score Modifier"
+cheat3_code = "7E06CF00"
+cheat3_enable = false

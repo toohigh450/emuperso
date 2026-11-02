@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Dai-4-ji Super Robot Taisen (Japan) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Dai-4-ji%20Super%20Robot%20Taisen%20%28Japan%29%20%28Game%20Genie%29.cht
+
+cheats = 3 
+
+cheat0_desc = "Extra Experience"
+cheat0_code = "CB3C-D76A+EE3C-D7AA+EE38-DDDA"
+cheat0_enable = false 
+
+cheat1_desc = "Alternate Code"
+cheat1_code = "CB38-D7DA+EE38-D70A+EE38-D76A"
+cheat1_enable = false 
+
+cheat2_desc = "Press 'B' Over An Enemy To Give It 0 HP"
+cheat2_code = "B336-4FD6"
+cheat2_enable = false

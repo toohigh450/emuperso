@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Cannondale Cup (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Cannondale%20Cup%20%28USA%29.cht
+
+cheats = 3
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "7E078BF0"
+cheat0_enable = false
+
+cheat1_desc = "At The End Of A Race, Have A Large Amount Of Score"
+cheat1_code = "7E096D99"
+cheat1_enable = false
+
+cheat2_desc = "Freeze CPU Opponents"
+cheat2_code = "7E06D299+7E06D499+7E06D699+7E06D899+7E06DA99+7E06DC99+7E06DE99"
+cheat2_enable = false

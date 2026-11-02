@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Dragon Ball Z - Super Gokuu Den - Totsugeki Hen (Japan) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Dragon%20Ball%20Z%20-%20Super%20Gokuu%20Den%20-%20Totsugeki%20Hen%20%28Japan%29%20%28Game%20Genie%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Goku's HP Is 0"
+cheat0_code = "DDD6-F288"
+cheat0_enable = false 
+
+cheat1_desc = "Goku's HP Is 255"
+cheat1_code = "EED6-F288"
+cheat1_enable = false 
+
+cheat2_desc = "Goku's HP Is 999"
+cheat2_code = "35D6-F288+D7D6-FE28"
+cheat2_enable = false 
+
+cheat3_desc = "Goku's HP Is 9999"
+cheat3_code = "DED6-F288+45D6-FE28"
+cheat3_enable = false 
+
+cheat4_desc = "Goku's Current Power Is 9,999,999"
+cheat4_code = "5ED6-F378+B1D6-F358+B6D6-F388+DDD6-F3E8"
+cheat4_enable = false 
+
+cheat5_desc = "Goku's Max Power Is 9,999,999"
+cheat5_code = "5ED6-FE78+B1D6-FE58+B6D6-FE88+DDD6-FEE8"
+cheat5_enable = false

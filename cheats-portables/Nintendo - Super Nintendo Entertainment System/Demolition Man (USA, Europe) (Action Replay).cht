@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Demolition Man (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Demolition%20Man%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "7E045C63"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Health"
+cheat1_code = "7E9F307F"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Grenades"
+cheat2_code = "7E9FBC05"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Ammo For Special Guns (Below)"
+cheat3_code = "7E9FC014"
+cheat3_enable = false 
+
+cheat4_desc = "Have Shotgun"
+cheat4_code = "7E9FBE01"
+cheat4_enable = false 
+
+cheat5_desc = "Have Magnum (Use Only One Gun Code At A Time)"
+cheat5_code = "7E9FBE02"
+cheat5_enable = false

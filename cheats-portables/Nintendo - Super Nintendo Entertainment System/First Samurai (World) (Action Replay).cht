@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : First Samurai (World) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/First%20Samurai%20%28World%29%20%28Action%20Replay%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Infinite Health"
+cheat0_code = "7E006E3F+7E006F3F"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "7E007209"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Blue Pots"
+cheat2_code = "7E007805"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Bells (Slot 1 Item)"
+cheat3_code = "7E007409"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Axe/Dagger/Grenade (Slot 2 Item)"
+cheat4_code = "7E007399"
+cheat4_enable = false 
+
+cheat5_desc = "Have All Rune Stones"
+cheat5_code = "7E007505"
+cheat5_enable = false

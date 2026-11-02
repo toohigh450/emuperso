@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Emmitt Smith Football (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Emmitt%20Smith%20Football%20%28USA%29.cht
+
+cheats = 1
+
+cheat0_desc = "Cannot Be Tackled"
+cheat0_code = "C2AF-1F04+99AF-1F64+DFAF-1FA4+3EAF-1404"
+cheat0_enable = false
