@@ -2,6 +2,7 @@
 // One disposable browser realm per engine session. No ROM or save is uploaded.
 import { inspectNativeState, makeRestoreWitness, compareRestoreWitness } from './native-state.mjs';
 import { sriValue, verifyRuntimeBytes } from './runtime-integrity.mjs';
+import { createFrameCapture, installRuntimeFrameHook } from './frame-capture.mjs';
 const contexts = new Set();
 let emulator = null, romURL = null, closed = false, notify = () => {}, sessionId = null;
 let cheatFault = null;
@@ -13,6 +14,12 @@ async function bounded(promise, milliseconds, code, message) {
   try { return await Promise.race([promise, new Promise((_, reject) => { timer = setTimeout(() => reject(failure(code, message)), milliseconds); })]); }
   finally { clearTimeout(timer); }
 }
+const frameCapture = createFrameCapture({
+  read: () => new Uint8Array(gm().getState()), resume: play, pause,
+  isPaused: () => emulator?.paused ?? true, isClosed: () => closed,
+  frameNumber: () => gm().getFrameNum()
+});
+installRuntimeFrameHook(window, frameCapture.onFrame);
 let restoreAttempt = null;
 for (const level of ['log', 'warn', 'error']) {
   const original = console[level].bind(console);
@@ -102,6 +109,8 @@ async function play() {
 }
 async function close() {
   if (closed) return snapshot();
+  closed = true;
+  frameCapture.cancel();
   if (emulator?.gameManager) {
     try { emulator.gameManager.resetCheat(); emulator.gameManager.toggleMainLoop(0); } catch {}
     try { emulator.Module.pauseMainLoop?.(); } catch {}
@@ -156,7 +165,11 @@ async function start(config, callback) {
   // automatic IDBFS writes are replaced by a session-local MEMFS directory.
   const OriginalManager = window.EJS_GameManager;
   window.EJS_GameManager = class extends OriginalManager {
-    async mountFileSystems() { this.mkdir('/data'); this.mkdir('/data/saves'); }
+    async mountFileSystems() {
+      this.mkdir('/data'); this.mkdir('/data/saves');
+      // Preserve the vendor's mount/unmount lifecycle without its shared IDBFS.
+      this.FS.mount(this.FS.filesystems.MEMFS, {}, '/data/saves');
+    }
     loadState() { note('state.unguarded.blocked', { source: 'vendor-wrapper' }); return false; }
     quickLoad() { note('state.unguarded.blocked', { source: 'quick-load' }); return false; }
     setVariable(option, value) {
@@ -212,7 +225,7 @@ async function start(config, callback) {
   }
   return snapshot();
 }
-function captureState() { return new Uint8Array(gm().getState()); }
+function captureState() { return frameCapture.capture(); }
 function captureBattery() {
   const value = gm().getSaveFile();
   return value?.length ? new Uint8Array(value) : null;
@@ -233,9 +246,9 @@ async function loadState(bytes) {
   let trackedRead, nativeStatus, stage = 'prepare-memory-witness';
   try {
     await pause();
-    const beforeA = captureState();
+    const beforeA = await captureState();
     await play(); await waitFrames(manager, 2); await wait(250); await pause();
-    const beforeB = captureState(), fresh = inspectNativeState(beforeB);
+    const beforeB = await captureState(), fresh = inspectNativeState(beforeB);
     if (expected.rom_md5 !== fresh.rom_md5 || expected.core_version !== fresh.core_version) {
       throw failure('E_RESTORE_NATIVE_IDENTITY', 'Le format natif ou l’identité interne de cet état diffère du jeu lancé. Aucune sauvegarde modifiée.');
     }
@@ -261,22 +274,7 @@ async function loadState(bytes) {
             let end = 0;
             for (const range of attempt.ranges) { if (range[0] > end) break; end = Math.max(end, range[1]); }
             attempt.consumed_bytes = end;
-            if (end === input.length && !attempt.immediateScheduled) {
-              attempt.immediateScheduled = true;
-              // Run only after the current native call stack has returned.
-              // Observe, without changing RAM, whether its complete contents
-              // match before another animation-frame iteration can advance it.
-              queueMicrotask(() => {
-                if (closed || restoreAttempt !== attempt) return;
-                try {
-                  const observed = inspectNativeState(captureState()).rdram;
-                  let different = 0;
-                  for (let i = 0; i < observed.length; i++) if (observed[i] !== expected.rdram[i]) different++;
-                  attempt.immediate = { exact_rdram: different === 0, different_bytes: different, bytes: observed.length };
-                  note('state.memory.immediate.observed', attempt.immediate);
-                } catch (error) { note('state.memory.immediate.unavailable', { message: error.message }); }
-              });
-            }
+
           }
         }
       }
@@ -294,7 +292,16 @@ async function loadState(bytes) {
     while (!closed && performance.now() < deadline) {
       await wait(16);
       if (attempt.errors.length) throw failure('E_NATIVE_REJECTED', 'Le cœur a refusé le chargement de cet état. La partie précédente et le coffre restent conservés.');
-      const observed = compareRestoreWitness(witness, captureState());
+      if (attempt.consumed_bytes !== input.length) continue;
+      const observedState = await captureState();
+      if (!attempt.firstSafeFrame) {
+        const ram = inspectNativeState(observedState).rdram;
+        let different = 0;
+        for (let i = 0; i < ram.length; i++) if (ram[i] !== expected.rdram[i]) different++;
+        attempt.firstSafeFrame = { exact_rdram: different === 0, different_bytes: different, bytes: ram.length };
+        note('state.memory.first_safe_frame.observed', attempt.firstSafeFrame);
+      }
+      const observed = compareRestoreWitness(witness, observedState);
       lastObserved = observed;
       if (attempt.consumed_bytes === input.length && (observed.verified || observed.equivalent)) { proof = observed; break; }
     }
@@ -312,7 +319,7 @@ async function loadState(bytes) {
     const result = { native_status: nativeStatus, frame_before: before, frame_after: after,
       observed_elapsed_ms: elapsed, native_payload_read_bytes: attempt.consumed_bytes,
       native_payload_expected_bytes: input.length, memory: proof, already_equivalent: !!proof.already_equivalent,
-      immediate_memory: attempt.immediate ?? null,
+      first_safe_frame_memory: attempt.firstSafeFrame ?? null,
       contexts: snapshot().contexts };
     note(proof.verified ? 'state.memory.verified' : 'state.memory.equivalent', result);
     return result;

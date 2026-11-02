@@ -71,6 +71,6 @@ Start, Select, Fast et Slow disposent maintenant d’une bande opaque séparée 
 
 `npm run test:fullscreen` vérifie le vrai moteur GBA, la vraie API Fullscreen et les pressions/relâchements des quatre commandes sur trois profils Android simulés : paysage 844×390, portrait 390×844 et tablette 1024×768. Essais avec la démo libre et une ROM GBA locale. Aucun téléphone physique revendiqué.
 
-### Limite N64 encore ouverte
+### Suivi du défaut N64
 
-Super Mario 64 (Europe) démarre et progresse, mais restaurer certains états avec le cœur Mupen64Plus-Next verrouillé provoque une erreur WebAssembly dans le chemin audio. Le chargement reste refusé et la session précédente est conservée. Ce défaut ne fait pas partie des corrections validées de cette version. Les contrôles d’identité et de mémoire ne sont pas affaiblis et aucun état sauvegardé n’est modifié.
+Le défaut de restauration de Super Mario 64 PAL identifié dans l’audit a ensuite reçu un correctif de capture synchronisée dans N64. Le moteur et les contrôles d’identité/RAM restent verrouillés. Le stockage temporaire de chaque session est aussi réellement monté en MEMFS, ce qui corrige l’erreur de fermeture au rechargement. Voir [le rapport N64](../real-n64/docs/CORRECTIFS-ETATS-2026-11-02.md). Les états déjà incohérents ne sont pas reconstruits ; les copies et l’ancienne session sont conservées en cas de refus.

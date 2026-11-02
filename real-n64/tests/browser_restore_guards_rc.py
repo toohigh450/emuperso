@@ -35,7 +35,7 @@ results,errors,requests,dialogs=[],[],[],[]
 # Its MEM payload layout and the code byte order are independently checked
 # against our exact MIT ROM. No RAM byte is written by this fingerprint helper.
 CORE_FINGERPRINT=r'''async()=>{
-  const e=EJS_emulator,api=RealN64.engineWindow.N64Engine,state=api.captureState();
+  const e=EJS_emulator,api=RealN64.engineWindow.N64Engine,state=await api.captureState();
   const sha=async bytes=>[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(v=>v.toString(16).padStart(2,'0')).join('');
   const rom=e.gameManager.FS.readFile(e.fileName),romSha=await sha(rom);
   if(romSha!=='f18280a16c83721bdd56564701d505f96346784f36168402e5431b12499e2252')throw Error('Guard is restricted to the owned MIT ROM');
@@ -94,6 +94,8 @@ def diagnostic(page):return common.diagnostic(page)
 
 def events(page,name):return common.events(page,name)
 
+def event_cursor(page,kind):return common.event_cursor(page,kind)
+
 def idle(page):return common.idle(page)
 
 def vault(page):return common.vault(page)
@@ -121,7 +123,7 @@ def assert_retained(page,before_diag,before_core):
 
 
 def wait_failed(page,count,timeout=30000):
-    page.wait_for_function('n=>RealN64.diagnostic().records.filter(r=>r.type==="operation.failed").length>n',arg=count,timeout=timeout)
+    page.wait_for_function('n=>RealN64.diagnostic().records.some(r=>r.type==="operation.failed"&&r.seq>n)',arg=count,timeout=timeout)
     idle(page)
     error=events(page,'operation.failed')[-1]['data']
     assert isinstance(error.get('message'),str) and len(error['message'])>25,error
@@ -164,13 +166,13 @@ def mark_unused_pages(page,phase):
 def failed_pause_action(page,selector,success_event,name,extra_check=None):
     running_audio(page)
     before_diag=diagnostic(page);before_core=core(page);before_vault=vault(page)
-    failures=len(events(page,'operation.failed'));successes=len(events(page,success_event));remember_engine(page)
+    failures=event_cursor(page,'operation.failed');successes=event_cursor(page,success_event);remember_engine(page)
     inject_suspend(page)
     try:
         page.locator(selector).click();error=wait_failed(page,failures)
         assert error.get('code')=='E_AUDIO_SUSPEND_TIMEOUT',error
         assert page.evaluate('RealN64.engineWindow.__guardSuspendCalls')>0
-        assert len(events(page,success_event))==successes
+        assert event_cursor(page,success_event)==successes
         assert vault(page)==before_vault
         retained=assert_retained(page,before_diag,before_core)
         assert retained['after']['paused'] is False,'The failed pause must resume the actual old main loop'
@@ -207,7 +209,7 @@ def main():
             near_boot_core=core(page)
             assert near_boot_core['unused_nonzero_bytes']==0,'First state must contain no diagnostic RAM marker'
             before_diag=diagnostic(page);before_core=core(page);before_vault=vault(page);remember_engine(page)
-            failures=len(events(page,'operation.failed'));loads=len(events(page,'state.loaded'))
+            failures=event_cursor(page,'operation.failed');loads=event_cursor(page,'state.loaded')
             page.evaluate('()=>{window.__rcNoopLoad=true;window.__rcNoopCalls=0;}')
             try:
                 page.locator('#state-load').click();error=wait_failed(page,failures)
@@ -218,7 +220,7 @@ def main():
                 else:
                     assert error.get('code') in ('E_RESTORE_UNCONFIRMED','E_NATIVE_REJECTED'),error
                     disposition='native_noop_reached_and_rejected'
-                assert len(events(page,'state.loaded'))==loads,'No-op must not be announced as loaded'
+                assert event_cursor(page,'state.loaded')==loads,'No-op must not be announced as loaded'
                 assert vault(page)==before_vault
                 retained=assert_retained(page,before_diag,before_core)
                 near_boot_proof={
@@ -238,7 +240,7 @@ def main():
             common.action(page,'#state-save','state.saved')
             live_markers=mark_unused_pages(page,'live')
             before_diag=diagnostic(page);before_core=core(page);before_vault=vault(page);remember_engine(page)
-            failures=len(events(page,'operation.failed'));loads=len(events(page,'state.loaded'))
+            failures=event_cursor(page,'operation.failed');loads=event_cursor(page,'state.loaded')
             page.evaluate('''()=>{window.__rcNoopLoad=true;window.__rcNoopCalls=0;window.__guardLoadMode='read-all-no-apply';window.__guardReadAll=null;}''')
             try:
                 page.locator('#state-load').click();error=wait_failed(page,failures)
@@ -247,7 +249,7 @@ def main():
                 assert read_all and read_all['read_bytes']==read_all['expected_bytes']>0,read_all
                 assert read_all['native_deserialize_called'] is False
                 assert error.get('code') in ('E_RESTORE_UNCONFIRMED','E_NATIVE_REJECTED'),error
-                assert len(events(page,'state.loaded'))==loads
+                assert event_cursor(page,'state.loaded')==loads
                 assert vault(page)==before_vault
                 read_all_proof={'injected_fault':'The complete verified input is read through actual FS.readFile, but native deserialization is deliberately omitted.',
                     'native_fault_reached':True,'read_all':read_all,'error':error,
@@ -271,11 +273,11 @@ def main():
             checkbox=page.locator('#cheat-list label').filter(has_text=manual_name).locator('input[type=checkbox]')
             assert checkbox.count()==1 and not checkbox.is_checked()
             assert diagnostic(page)['cheats']=={'active':[],'tainted':False}
-            before_checkpoints=len(events(page,'cheats.checkpoint.saved'));before_changed=len(events(page,'cheats.changed'))
+            before_checkpoints=event_cursor(page,'cheats.checkpoint.saved');before_changed=event_cursor(page,'cheats.changed')
             def no_cheat_enabled():
                 assert diagnostic(page)['cheats']=={'active':[],'tainted':False}
-                assert len(events(page,'cheats.checkpoint.saved'))==before_checkpoints
-                assert len(events(page,'cheats.changed'))==before_changed
+                assert event_cursor(page,'cheats.checkpoint.saved')==before_checkpoints
+                assert event_cursor(page,'cheats.changed')==before_changed
                 page.wait_for_function('''name=>{
                   const label=[...document.querySelectorAll('#cheat-list label')].find(e=>e.textContent.includes(name));
                   return label&&!label.querySelector('input').checked;
@@ -283,7 +285,7 @@ def main():
             # The locator resolves the current row even after a render replaces it.
             running_audio(page)
             before_diag=diagnostic(page);before_core=core(page);before_vault=vault(page);remember_engine(page)
-            failures=len(events(page,'operation.failed'));inject_suspend(page)
+            failures=event_cursor(page,'operation.failed');inject_suspend(page)
             try:
                 checkbox.click();error=wait_failed(page,failures)
                 assert error.get('code')=='E_AUDIO_SUSPEND_TIMEOUT'
@@ -304,7 +306,7 @@ def main():
             page.locator('#save-slot').select_option('1');common.action(page,'#state-save','state.saved')
             common.set_marker(page,0x2468)
             before_vault=vault(page);before_generation=diagnostic(page)['session']['active_generation']
-            before_failures=len(events(page,'operation.failed'));before_warnings=len(events(page,'storage.list.warning'));before_loads=len(events(page,'state.loaded'))
+            before_failures=event_cursor(page,'operation.failed');before_warnings=event_cursor(page,'storage.list.warning');before_loads=event_cursor(page,'state.loaded')
             page.evaluate('''previous=>{
               window.__guardIndexGetAll=IDBIndex.prototype.getAll;window.__guardListFailures=0;
               IDBIndex.prototype.getAll=function(...args){
@@ -318,12 +320,12 @@ def main():
             try:
                 page.locator('#state-load').click()
                 page.wait_for_function('''({loads,failures})=>{
-                  const rows=RealN64.diagnostic().records;return rows.filter(r=>r.type==='state.loaded').length>loads||rows.filter(r=>r.type==='operation.failed').length>failures;
+                  const rows=RealN64.diagnostic().records;return rows.some(r=>r.type==='state.loaded'&&r.seq>loads)||rows.some(r=>r.type==='operation.failed'&&r.seq>failures);
                 }''',arg={'loads':before_loads,'failures':before_failures},timeout=70000)
                 idle(page)
-                assert len(events(page,'operation.failed'))==before_failures,events(page,'operation.failed')[-1:]
-                assert len(events(page,'state.loaded'))==before_loads+1
-                assert len(events(page,'storage.list.warning'))==before_warnings+1
+                assert event_cursor(page,'operation.failed')==before_failures,events(page,'operation.failed')[-1:]
+                assert len([r for r in events(page,'state.loaded') if r['seq']>before_loads])==1
+                assert len([r for r in events(page,'storage.list.warning') if r['seq']>before_warnings])==1
                 assert page.evaluate('window.__guardListFailures')==1
                 assert diagnostic(page)['session']['active_generation']>before_generation
                 common.probe(page);assert common.marker(page)==0x1357

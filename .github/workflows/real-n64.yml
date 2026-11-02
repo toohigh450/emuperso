@@ -87,6 +87,7 @@ jobs:
           node tests/legacy-battery.test.mjs
           node tests/cheat-catalog.test.mjs
           node tests/native-state.test.mjs
+          node --test tests/frame-capture.test.mjs
           node tests/runtime-integrity.test.mjs
           python3 -m unittest discover -s tests -p test_cheat_installer.py -v
           python3 -X utf8 -m unittest discover -s tests -p test_server_allowlist.py -v
