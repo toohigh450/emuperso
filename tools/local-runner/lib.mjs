@@ -72,13 +72,23 @@ export async function processInfo(pid) {
   const s=await runFile('powershell.exe',['-NoProfile','-NonInteractive','-Command',script],{timeout:15000});
   return s.trim()?JSON.parse(s):null;
 }
+export function sameOwnedProcess(record,live) {
+  return !!(record&&live&&record.pid===live.pid&&record.created===live.created&&record.token&&record.command?.includes(record.token)&&(!live.command||live.command.includes(record.token)));
+}
 export async function killOwned(record) {
   if(!record?.pid) return;
   if(process.platform==='win32') {
     const live=await processInfo(record.pid);
-    if(!live||live.created!==record.created||!live.command?.includes(record.token)) return;
-    await runFile('taskkill.exe',['/PID',String(record.pid),'/T','/F'],{timeout:15000}).catch(()=>{});
+    if(!sameOwnedProcess(record,live)) return {action:'not-live-or-not-owned'};
+    const outcome={action:'terminate-owned',pid:record.pid,commandUnavailable:!live.command};
+    try{outcome.output=await runFile('taskkill.exe',['/PID',String(record.pid),'/T','/F'],{timeout:15000});}catch(e){outcome.error=e.message;}
+    // Le processus parent peut déjà être mort ; /T échoue alors parfois sur cet arbre.
+    // Revalider l'identité avant un repli direct sur CE PID uniquement.
+    if(outcome.error&&sameOwnedProcess(record,await processInfo(record.pid)))try{
+      outcome.fallback=await runFile('powershell.exe',['-NoProfile','-NonInteractive','-Command',`Stop-Process -Id ${Number(record.pid)} -Force -ErrorAction Stop`],{timeout:10000});
+    }catch(e){outcome.fallbackError=e.message;}
     await runFile('powershell.exe',['-NoProfile','-NonInteractive','-Command',`$p=Get-Process -Id ${Number(record.pid)} -ErrorAction SilentlyContinue; if($p){$p|Wait-Process -Timeout 5 -ErrorAction SilentlyContinue}`],{timeout:10000}).catch(()=>{});
+    return outcome;
   } else { try {process.kill(record.pid,'SIGTERM');} catch {} }
 }
 export async function waitOwnedExit(record, timeoutMs=10000) {

@@ -48,7 +48,11 @@ async function recover() {
     if(a.result&&readJSON(path.join(dir,'cleanup.json'))?.complete)continue;
     // Vérification PID + date de création + jeton, jamais par nom chrome.exe/node.exe.
     await killOwned(readJSON(path.join(dir,'worker-owner.json')));
-    await killOwned(readJSON(path.join(dir,'browser-owner.json')));
+    const recoveryBrowser=readJSON(path.join(dir,'browser-owner.json'));
+    await killOwned(recoveryBrowser);
+    if(!await waitOwnedExit(recoveryBrowser))throw Error('Ancien navigateur encore actif : reprise differee, aucun nouveau jeu lance.');
+    const previousCleanup=readJSON(path.join(dir,'cleanup.json'));
+    if(previousCleanup?.complete===false)atomic(path.join(dir,'cleanup.json'),{...previousCleanup,complete:true,browserAlive:false,recoveredDuringResume:new Date().toISOString()});
     if(!a.result){const p=readJSON(path.join(dir,'progress.json'),{});atomic(path.join(dir,'result.json'),{...p,id:a.item.id,attempt:a.attempt,interrupted:true,interruptionReason:'Processus superviseur interrompu ; reprise automatique.',status:STATUS.untested,end:new Date().toISOString()});append(c,{event:'recovered-interruption',id:a.item.id,attempt:a.attempt});}
     const tmp=path.join(c.stateDir,'tmp',a.token);
     if(a.token&&/^[a-f0-9-]{36}$/.test(a.token)&&fs.existsSync(tmp))removeTemporary(c,tmp);
@@ -59,6 +63,10 @@ async function monitor() {
   try {
     lastResources=await resourceSample([...active.values()].map(a=>a.child.pid));
     fs.appendFileSync(path.join(c.stateDir,'resources.ndjson'),JSON.stringify({time:new Date().toISOString(),...lastResources})+'\n');
+    for(const a of active.values()){
+      const progress=readJSON(path.join(a.out,'progress.json'),{});
+      console.log(`EN COURS ${a.item.system.toUpperCase()} | ${a.phase||progress.phase||'preparation'} | ${Math.round((Date.now()-a.start)/1000)} s | CPU ${lastResources.cpuPercent??'?'} % | RAM libre ${(lastResources.freeMiB/1024).toFixed(1)} Gio`);
+    }
     const byPID=new Map(lastResources.processes.map(p=>[p.pid,p]));
     for(const a of active.values()) {
       let ids=new Set([a.child.pid]),changed=true;
@@ -76,22 +84,29 @@ async function one(item,number) {
   const log=fs.openSync(path.join(out,'worker.log'),'a');
   const child=spawn(process.execPath,[path.join(HERE,'worker.mjs'),c.filename,path.join(out,'job.json'),token],{windowsHide:true,stdio:['ignore',log,log,'ipc'],env:{...process.env,EMUPERSO_TIMEOUT_MS:String(c.timeoutMs)}});
   fs.closeSync(log);
-  const a={child,out,token,start:Date.now(),peakRssMiB:0};active.set(token,a);
-  a.abort=async()=>{await killOwned(a.owner);await killOwned(readJSON(path.join(out,'browser-owner.json')));};
+  const a={child,out,token,item,start:Date.now(),peakRssMiB:0};active.set(token,a);
+  let aborting=false;
+  a.abort=async()=>{
+    if(aborting)return;aborting=true;
+    // Ce handle vient directement de spawn : il désigne notre enfant, sans recherche CIM
+    // et sans risque de viser un PID réutilisé pendant un délai de surveillance Windows.
+    child.kill();
+    await killOwned(readJSON(path.join(out,'browser-owner.json')));
+  };
+  const timer=setTimeout(()=>{a.timeout=true;a.reason='Délai global dépassé';a.abort();},c.timeoutMs);
   let resolveExit;const exited=new Promise(resolve=>{resolveExit=resolve;});
   child.on('error',e=>{a.spawnError=e.message;resolveExit({code:null,error:e.message});});
   child.on('exit',(code,signal)=>resolveExit({code,signal}));
   child.on('message',m=>{if(m.browserOwner)atomic(path.join(out,'browser-owner.json'),m.browserOwner);});
-  a.owner=await processInfo(child.pid);if(a.owner){a.owner.token=token;atomic(path.join(out,'worker-owner.json'),a.owner);}
-  let aborting=false;
-  a.abort=async()=>{if(aborting)return;aborting=true;await killOwned(a.owner);await killOwned(readJSON(path.join(out,'browser-owner.json')));};
-  if(stopping) {a.reason='Arrêt demandé';a.abort();}
-  const timer=setTimeout(()=>{a.timeout=true;a.reason='Délai global dépassé';a.abort();},c.timeoutMs);
   append(c,{event:'start',id:item.id,attempt:number,pid:child.pid,token});
   console.log(`DÉBUT ${item.system} ${item.name} (${number})`);
+  a.owner=await processInfo(child.pid);if(a.owner){a.owner.token=token;atomic(path.join(out,'worker-owner.json'),a.owner);}
+  if(stopping) {a.reason='Arrêt demandé';a.abort();}
   const exit=await exited;clearTimeout(timer);
+  const workerExitMs=Date.now()-a.start;
+  a.phase='fermeture du navigateur';
   // Inclut les descendants Chrome survivant à une fermeture défectueuse du worker.
-  await killOwned(readJSON(path.join(out,'browser-owner.json')));
+  const cleanupActions=[await killOwned(readJSON(path.join(out,'browser-owner.json')))];
   let result=readJSON(path.join(out,'result.json'));
   if(!result) {
     const p=readJSON(path.join(out,'progress.json'),{});
@@ -99,13 +114,24 @@ async function one(item,number) {
   }
   if(a.timeout){result.timeout=true;result.status=STATUS.timeout;result.interruptionReason=a.reason;}
   if(!result.originalSha256After&&result.originalSha256)try{result.originalAfter=stamp(item.path);result.originalSha256After=await fileHash(item.path);result.originalChanged=JSON.stringify(result.originalBefore)!==JSON.stringify(result.originalAfter)||result.originalSha256!==result.originalSha256After;}catch(e){result.verificationError=e.message;}
-  result.supervisor={exit,peakRssMiB:a.peakRssMiB,deadlineMs:c.timeoutMs,reason:a.reason||null};
+  result.supervisor={exit,workerExitMs,peakRssMiB:a.peakRssMiB,deadlineMs:c.timeoutMs,reason:a.reason||null};
   atomic(path.join(out,'result.json'),result);
   const browserOwner=readJSON(path.join(out,'browser-owner.json'));
   // Windows peut conserver brièvement un processus Chrome en cours de terminaison dans CIM.
   // Attendre sa disparition réelle avant de conclure à un navigateur survivant.
-  const cleanupComplete=await waitOwnedExit(browserOwner);
-  atomic(path.join(out,'cleanup.json'),{complete:cleanupComplete,checked:new Date().toISOString(),workerExited:true,browserAlive:!cleanupComplete});
+  let cleanupComplete=await waitOwnedExit(browserOwner);
+  for(let retry=1;!cleanupComplete&&retry<=3;retry++){
+    console.log(`ATTENTE fermeture du navigateur de ${item.system} ; recuperation automatique ${retry}/3.`);
+    append(c,{event:'cleanup-retry',token,retry});
+    cleanupActions.push(await killOwned(browserOwner));
+    cleanupComplete=await waitOwnedExit(browserOwner,15000);
+  }
+  if(c.diagnostics?.forceCleanupPauseOnce&&!fs.existsSync(path.join(c.stateDir,'diagnostic-cleanup-once.json'))){
+    atomic(path.join(c.stateDir,'diagnostic-cleanup-once.json'),{injected:true,actualProcessGone:cleanupComplete,token});
+    cleanupActions.push({controlledFault:'Pause de nettoyage injectee une fois pour verifier le watchdog',actualProcessGone:cleanupComplete});
+    cleanupComplete=false;
+  }
+  atomic(path.join(out,'cleanup.json'),{complete:cleanupComplete,checked:new Date().toISOString(),workerExited:true,browserAlive:!cleanupComplete,actions:cleanupActions});
   active.delete(token);
   if(!cleanupComplete){fs.writeFileSync(marker('pause'),'Nettoyage processus non confirmé');append(c,{event:'cleanup-unconfirmed',token});}
   const tmp=path.join(c.stateDir,'tmp',token);if(cleanupComplete&&fs.existsSync(tmp))removeTemporary(c,tmp);

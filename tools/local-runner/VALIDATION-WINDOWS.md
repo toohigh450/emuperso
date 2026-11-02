@@ -33,3 +33,9 @@ Les premiers essais ont révélé des défauts du banc qui restent dans les jour
 - La surveillance RAM est périodique. Le banc ne réserve pas matériellement la mémoire et attend si la surveillance CIM devient indisponible.
 
 Le banc s'inspire du testeur PSP autonome local de Claude, examiné en lecture seule : résultats privés après chaque essai, reprise et petits fichiers d'abord. Le superviseur séparé, la vérification d'identité des processus, l'inventaire par entrée d'archive et les classifications prudentes répondent au mandat complémentaire hors PSP.
+
+## Renforcement après les pauses réelles de nettoyage
+
+La campagne a révélé des arrêts automatiques après fermeture de Chrome non confirmée. Il ne s'agissait pas de la fin de la file. Les diagnostics conservés montrent notamment des retours `taskkill` en erreur sur des processus en terminaison. Les erreurs de fermeture ne sont plus masquées : revalidation d'identité, repli direct sur le seul PID concerné, attente et nouvelles tentatives sont consignés. Un watchdog indépendant reprend la campagne après crash ou récupération de cette pause technique, sans ignorer les demandes de pause/arrêt.
+
+Validations complémentaires réelles avec les démos libres NES/SNES : crash volontaire du testeur pendant le premier jeu, relance automatique par le watchdog, conservation de la tentative interrompue ; pause de nettoyage injectée une fois puis récupération automatique et passage au second jeu, sans doublon ; pause utilisateur respectée avec un jeu restant ; renderer NES bloqué volontairement puis timeout et démarrage du jeu SNES suivant sans intervention. Le nettoyage des processus du cas bloqué est vérifié. Cinq tests Node passent, dont la protection contre un PID réutilisé. Ces essais ne valident toujours ni gameplay ni sauvegardes.

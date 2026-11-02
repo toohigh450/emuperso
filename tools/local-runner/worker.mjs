@@ -140,7 +140,7 @@ try {
     if(!ready)throw Error('Le moteur ne produit pas de progression du compteur.');
   }
   r.engineStarted=true;r.bootMs=Date.now()-began;
-  if(c.diagnostics?.hangAfterBoot===true) {
+  if(c.diagnostics?.hangAfterBoot===true&&(!c.diagnostics.hangSystem||c.diagnostics.hangSystem===s)) {
     r.controlledFault='Boucle infinie injectée volontairement dans le renderer après le démarrage.';
     phase('controlled-renderer-hang');
     await page.evaluate(()=>{for(;;){} });

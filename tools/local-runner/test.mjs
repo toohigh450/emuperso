@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import {parse7z,safeEntry,classify,STATUS,atomic,readJSON,inside,config} from './lib.mjs';
+import {parse7z,safeEntry,classify,STATUS,atomic,readJSON,inside,config,sameOwnedProcess} from './lib.mjs';
 import {report} from './report.mjs';
 
 test('un compteur qui avance ne valide ni gameplay ni sauvegarde',()=>{
@@ -35,4 +35,11 @@ test('rapport : historique conservé, résultat interrompu non terminé, HTML é
 test('atomic : un résultat existant reste lisible après remplacement',()=>{
   const root=fs.mkdtempSync(path.join(os.tmpdir(),'emuperso-atomic-'));
   try{const p=path.join(root,'r.json');atomic(p,{attempt:1});atomic(p,{attempt:2});assert.deepEqual(readJSON(p),{attempt:2});assert.equal(fs.readdirSync(root).length,1);}finally{fs.rmSync(root,{recursive:true,force:true});}
+});
+test('nettoyage : identité conservée pendant la terminaison, PID réutilisé refusé',()=>{
+  const owner={pid:123,created:'2026-11-02T22:00:00Z',token:'unique-token',command:'chrome --emuperso-lab=unique-token'};
+  assert.equal(sameOwnedProcess(owner,{...owner,command:null}),true);
+  assert.equal(sameOwnedProcess(owner,{...owner,created:'2026-11-02T22:01:00Z',command:null}),false);
+  assert.equal(sameOwnedProcess(owner,{...owner,command:'chrome personnel'}),false);
+  assert.equal(sameOwnedProcess({...owner,command:'autre programme'},owner),false);
 });
