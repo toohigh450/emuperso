@@ -94,7 +94,16 @@ try {
     await p.locator(`[data-portable-demo="${demo}"]`).click();
     await pressStart(p);
     await p.waitForTimeout(5000);
-    const colors = await colorsOf(p, p.locator('#screen'));
+    // Une bordure colorée autour d'un canvas blanc ne valide pas une image de jeu.
+    const colors = await p.evaluate(async () => {
+      const c = Object.values(window.__portablesBoots)[0].control;
+      const bmp = await createImageBitmap(new Blob([await c.screenshot()], {type:'image/png'}));
+      const g = new OffscreenCanvas(bmp.width,bmp.height).getContext('2d');
+      g.drawImage(bmp,0,0);
+      const d=g.getImageData(0,0,bmp.width,bmp.height).data, colors=new Set();
+      for(let i=0;i<d.length;i+=4)colors.add((d[i]<<16)|(d[i+1]<<8)|d[i+2]);
+      return colors.size;
+    });
     record(sys, 'démo libre lancée avec le vrai cœur, image non uniforme', colors >= 3, `${colors} couleurs, ${await p.locator('#gameCore').textContent()}`);
     await p.getByRole('button', { name: 'Fermer le jeu', exact: true }).click();
     await p.locator('#slotEmpty').waitFor({ state: 'visible' });

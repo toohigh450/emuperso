@@ -201,15 +201,15 @@ async function cheatsForGame(analysis, key, romName, hex) {
  */
 async function codesForGame(analysis, key, romName, hex) {
   const fromFiles = await cheatsForGame(analysis, key, romName, hex);
-  const stored = await store.getCodes(key);
-  const same = (e, c) => e.origin === 'fichier' && e.code === c.code && e.name === c.desc;
-  // Les codes d'un fichier dont l'association a été retirée ou modifiée disparaissent avec elle.
-  const kept = stored.filter((e) => e.origin !== 'fichier' || fromFiles.some((c) => same(e, c)));
-  for (const c of fromFiles) {
-    if (!kept.some((e) => same(e, c))) kept.push({ id: newCodeId(), name: c.desc, code: c.code, enabled: false, origin: 'fichier' });
-  }
-  if (kept.length !== stored.length || kept.some((e, i) => e !== stored[i])) await store.setCodes(key, kept);
-  return kept;
+  return store.updateCodes(key, (stored) => {
+    const same = (e, c) => e.origin === 'fichier' && e.code === c.code && e.name === c.desc;
+    // Les codes d'un fichier dont l'association a été retirée ou modifiée disparaissent avec elle.
+    const kept = stored.filter((e) => e.origin !== 'fichier' || fromFiles.some((c) => same(e, c)));
+    for (const c of fromFiles) {
+      if (!kept.some((e) => same(e, c))) kept.push({ id: newCodeId(), name: c.desc, code: c.code, enabled: false, origin: 'fichier' });
+    }
+    return kept;
+  });
 }
 function newCodeId() {
   return `c${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`;
@@ -335,7 +335,10 @@ async function openGame(file) {
       EJS_defaultOptions: { 'save-save-interval': '30' },
       ...(defaultControls ? { EJS_defaultControls: defaultControls } : {}),
     },
-    onSaveUpdate: (e) => mirrorSave(spaceId, e),
+    onSaveUpdate: (e) => mirrorSave(spaceId, e).catch(err => {
+      console.error('Copie miroir impossible', err);
+      if (currentGame?.spaceId === spaceId) setStatus("La copie de sécurité a échoué. Exporte la sauvegarde actuelle pour la conserver.", 'error');
+    }),
     onLifecycle: (event) => {
       store.recordLifecycle(key, event).then(() => refreshHistory()).catch(err => {
         if (currentGame === game) setStatus(`Historique non enregistré : ${err.message}`, 'warn');
@@ -365,16 +368,11 @@ function renderWarnings(game) {
 
 // --- Sauvegardes ------------------------------------------------------------------
 async function mirrorSave(spaceId, e) {
-  try {
-    const data = e && e.save ? new Uint8Array(e.save) : null;
-    if (!data || data.length === 0) return;
-    const hash = toHex(await crypto.subtle.digest('SHA-256', data));
-    const r = await store.mirrorSave(spaceId, data, hash);
-    if (r.changed && currentGame && currentGame.spaceId === spaceId) await refreshSavePanel();
-  } catch (err) {
-    console.error('Copie miroir impossible', err);
-    if (currentGame?.spaceId === spaceId) setStatus("La copie de sécurité de la sauvegarde a échoué : la sauvegarde du moteur n'est pas touchée.", 'error');
-  }
+  const data = e && e.save ? new Uint8Array(e.save) : null;
+  if (!data || data.length === 0) return;
+  const hash = toHex(await crypto.subtle.digest('SHA-256', data));
+  const r = await store.mirrorSave(spaceId, data, hash);
+  if (r.changed && currentGame && currentGame.spaceId === spaceId) await refreshSavePanel();
 }
 
 async function refreshSavePanel() {
@@ -629,10 +627,11 @@ async function refreshCodePanel() {
 }
 
 async function saveCodes(game, mutate) {
-  const entries = await store.getCodes(game.key);
-  const next = mutate(entries.map((e) => ({ ...e })));
-  await store.setCodes(game.key, next);
-  if (game === currentGame) applyLiveCodes(next);
+  await store.updateCodes(game.key, mutate);
+  if (game === currentGame) {
+    const entries = await store.getCodes(game.key);
+    if (game === currentGame) applyLiveCodes(entries);
+  }
   await refreshCodePanel();
 }
 
@@ -662,9 +661,10 @@ async function addCode() {
   const parsed = parseCheatCode(game.system, $('codeValue').value);
   const report = (text, kind) => { $('codeCheck').textContent = text; $('codeCheck').dataset.kind = kind; };
   if (!parsed.ok) { report(parsed.error, 'error'); return; }
-  const existing = await store.getCodes(game.key);
-  if (existing.some((e) => e.code === parsed.code)) { report('Ce code existe déjà pour ce jeu.', 'error'); return; }
-  await saveCodes(game, (entries) => [...entries, { id: newCodeId(), name: name || parsed.code, code: parsed.code, enabled: false, origin: 'manuel', format: parsed.format }]);
+  await saveCodes(game, (entries) => {
+    if (entries.some((e) => e.code === parsed.code)) throw new Error('Ce code existe déjà pour ce jeu.');
+    return [...entries, { id: newCodeId(), name: name || parsed.code, code: parsed.code, enabled: false, origin: 'manuel', format: parsed.format }];
+  });
   $('codeName').value = '';
   $('codeValue').value = '';
   report('Code ajouté, désactivé. Coche-le pour l’activer.', 'ok');
@@ -696,11 +696,16 @@ async function importSave(file) {
   if (!game || !control) { setStatus('Lance le jeu avant d’importer une sauvegarde.', 'warn'); return; }
   if (file.size > 4 * 1024 * 1024) { setStatus('Fichier de sauvegarde trop gros (4 Mio maximum).', 'error'); return; }
   if (!confirm(`Remplacer la sauvegarde de « ${game.title} » par « ${file.name} » ?\nLa sauvegarde actuelle est d’abord copiée dans les copies de sécurité. Le jeu redémarre ensuite.`)) return;
-  const current = control.getSave();
-  if (current && current.length) await mirrorSave(game.spaceId, { save: current });
   const bytes = new Uint8Array(await file.arrayBuffer());
+  if (game !== currentGame || control !== session.control()) throw new Error('Le jeu a changé pendant la lecture.');
+  const current = control.getSave();
+  if (current && current.length) {
+    try { await mirrorSave(game.spaceId, { save: current }); }
+    catch { throw new Error('Copie de sécurité impossible. Sauvegarde actuelle conservée ; utilise « Exporter maintenant » avant de réessayer.'); }
+  }
+  if (game !== currentGame || control !== session.control()) throw new Error('Le jeu a changé pendant la copie.');
   control.importSave(bytes);
-  setStatus(`Sauvegarde importée (${fmtSize(bytes.length)}) ; jeu redémarré. L’ancienne reste dans les copies de sécurité.`, 'ok');
+  setStatus(`Sauvegarde importée (${fmtSize(bytes.length)}) ; jeu redémarré.${current?.length ? ' L’ancienne reste dans les copies de sécurité.' : ''}`, 'ok');
   await refreshSavePanel();
 }
 

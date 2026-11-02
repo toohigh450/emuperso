@@ -18,6 +18,7 @@ try {
     page.on('pageerror', (e) => errors.push(e.message));
     page.on('dialog', (d) => d.accept());
     await page.goto(server.url);
+    await page.waitForFunction(() => document.body.dataset.ready === 'true');
     const name = path.split(/[\\/]/).pop();
     let line;
     try {
@@ -40,11 +41,11 @@ try {
         const d = g.getImageData(0, 0, bmp.width, bmp.height).data;
         const set = new Set();
         for (let i = 0; i < d.length; i += 4) set.add((d[i] << 16) | (d[i + 1] << 8) | d[i + 2]);
-        return `${set.size} couleurs ${bmp.width}×${bmp.height}`;
+        return { count: set.size, width: bmp.width, height: bmp.height };
       });
       const fps = Math.round((f1 - f0) / 8);
-      const ok = f1 > f0 && errors.length === 0;
-      line = `${ok ? 'RÉUSSI' : 'ÉCHEC '} ${name} — ${facts} — ${fps} images/s (headless) — ${colors}${errors.length ? ` — erreurs : ${errors.join(' | ')}` : ''}`;
+      const ok = f1 > f0 && colors.count > 1 && errors.length === 0;
+      line = `${ok ? 'RÉUSSI' : 'ÉCHEC '} ${name} — ${facts} — ${fps} images/s (headless) — ${colors.count} couleurs ${colors.width}×${colors.height}${errors.length ? ` — erreurs : ${errors.join(' | ')}` : ''}`;
       if (!ok) failures++;
     } catch (err) {
       failures++;

@@ -52,6 +52,7 @@ try {
   page.on('dialog', dialog => dialog.accept());
   const rom = makeGba({ title: 'IDENTITY', code: 'ABCE' });
   const upload = async (name, buffer) => {
+    await page.waitForFunction(() => document.body.dataset.ready === 'true');
     await page.locator('#romInput').setInputFiles({ name, mimeType: 'application/octet-stream', buffer: Buffer.from(buffer) });
     await page.waitForFunction(() => !document.getElementById('changeGame').disabled);
     await page.frameLocator('iframe').locator('#start').waitFor();

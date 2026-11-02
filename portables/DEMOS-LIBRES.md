@@ -9,9 +9,14 @@ Les ROMs des démos ne sont **pas enregistrées dans ce dépôt** : leur récup�
 | GB | Libbet and the Magic Floor | Damian Yerrick (pinobatch), **Zlib** | https://github.com/pinobatch/libbet ; binaire repris avec attribution de https://github.com/mxmgorin/oxgbc (commit \`7ef5a8aeeb6813dbf80963b96a39bd5220e63fdd\`) | 32768 | \`73ccbad40caa3abf83457fb7145a200438c1194b\` |
 | GBC | Geometrix | Antonio Niño Díaz (AntonioND), **GPLv3** | https://github.com/AntonioND/geometrix ; binaire repris avec attribution de https://github.com/mxmgorin/oxgbc (même commit) | 32768 | \`b1d0241fcb28e950b460047e008defdcc217c417\` |
 | GBA | @rkanoid, version modernisée | Ben Orozco, **MIT** | https://github.com/benoror/gbadev (commit \`b61cb1e8d6646789c833522a7d3d64adda27581a\`, fichier \`public/roms/@rkanoid MODERN - RECOMPILED.gba\`) | 183248 | \`33951fd6dfaedaad12763ad7fdd8dae418d5d8c3\` |
-| DS | Pong-NDS | Chi-Iroh, **MIT** | https://github.com/Chi-Iroh/Pong-NDS (commit \`dfabbdde030b9fb2c72af968c98485dcde81855f\`, fichier \`Pong-NDS.nds\`) | 2472960 | \`dda8c65e7f4cd36f0c54cc70fedbdd04032ca203\` |
+| DS | Pong-NDS (version compatible) | Chi-Iroh, **MIT** | https://github.com/Chi-Iroh/Pong-NDS (commit `80ff184546cc20cfd1a117f15ed8f4453b4db24b`, fichier `Pong-NDS.nds`) | 2447360 | `fc6583803f7763b0fda4fbfe69041c4a19983fca` |
 
 Les licences originales des auteurs restent applicables aux sources et aux binaires. L'interface Portables ne prétend pas modifier la licence des jeux.
+
+Correction du 2 novembre : l'ancienne sélection au commit `dfabbdde` affichait une image native blanche
+avec DeSmuME 2015. L'auteur [documente l'incompatibilité de libnds 2.0 avec les émulateurs](https://github.com/Chi-Iroh/Pong-NDS#libnds-20).
+La sélection revient au binaire du 10 juillet 2024 : image native non uniforme vérifiée avec DeSmuME 2015.
+Le changement concerne uniquement la démo libre ; aucun cœur ni espace de sauvegarde personnel n'est migré.
 
 ## Tests à effectuer sur Chrome Android et Windows
 

@@ -1,5 +1,11 @@
 # Tests NES / SNES et non-régression — 2026-11-01 / 02
 
+**Mise à jour indépendante du 2 novembre :** voir `CORRECTIFS-AUDITS-2026-11-02.md` pour les corrections
+et les nouvelles vérifications. Le résultat DS « RÉUSSI » du tableau historique ci-dessous était fondé
+sur une capture du lanceur, insuffisante pour exclure un écran natif blanc. La démo est maintenant
+corrigée et testée sur son image native avec les deux cœurs DeSmuME. Les résultats qui suivent
+restent le compte rendu des essais antérieurs, pas une nouvelle validation de tous ces jeux.
+
 Environnement réellement utilisé : Windows 10 (19045), **Google Chrome installé sur le PC de Karl**
 piloté par Playwright 1.56.1, en mode sans fenêtre (headless), Node 24.22.1, Python 3.15.
 Moteur EmulatorJS 4.2.3 et vrais cœurs FCEUmm / Snes9x téléchargés depuis le CDN officiel.

@@ -18,7 +18,16 @@
   if (!entry) { document.body.textContent = 'Session introuvable.'; return; }
   var boot = entry.boot, events = entry.events;
   var source = entry.source;
-  var preparing = true;
+  var phase = 'préparation du moteur';
+  function starting() {
+    if (phase === 'exécution du jeu') return;
+    phase = 'démarrage du cœur';
+    if (events.onStarting) events.onStarting();
+  }
+  // Le délai de démarrage commence au clic, pas pendant l'attente de l'utilisateur.
+  document.addEventListener('click', function (e) {
+    if (e.target.closest && e.target.closest('.ejs_start_button')) starting();
+  }, true);
 
   // Variables globales lues par EmulatorJS.
   Object.keys(boot.ejs).forEach(function (k) { window[k] = boot.ejs[k]; });
@@ -100,7 +109,7 @@
   });
   window.addEventListener('pagehide', function () { entry.control.flush(); });
   window.EJS_ready = function () {
-    preparing = false;
+    phase = 'attente du démarrage';
     var emulator = window.EJS_emulator;
     if (emulator && typeof emulator.on === 'function') {
       // 4.2.3 émet saveSaveFiles, mais son loader ne branche pas EJS_onSaveUpdate.
@@ -110,8 +119,10 @@
       emulator.on('exit', function () { events.onExit(); });
     }
     events.onReady();
+    if (window.EJS_startOnLoaded) starting();
   };
   window.EJS_onGameStart = function () {
+    phase = 'exécution du jeu';
     try { applyCodes(); } catch (err) { console.error(err); }
     events.onStart();
   };
@@ -120,8 +131,13 @@
     try { if (boot.onSaveUpdate) boot.onSaveUpdate(e); } catch (err) { console.error(err); }
   };
 
-  window.addEventListener('error', function () { if (preparing) events.onError('Erreur pendant la préparation du moteur.'); });
-  window.addEventListener('unhandledrejection', function () { if (preparing) events.onError('Initialisation du moteur interrompue.'); });
+  window.addEventListener('error', function (e) {
+    events.onError('Erreur pendant ' + phase + (e.message ? ' : ' + e.message : '.'));
+  });
+  window.addEventListener('unhandledrejection', function (e) {
+    var reason = e.reason && (e.reason.message || String(e.reason));
+    events.onError('Moteur interrompu pendant ' + phase + (reason ? ' : ' + reason : '.'));
+  });
   window.EJS_pathtodata = source.path;
   var script = document.createElement('script');
   script.src = source.path + 'loader.js';

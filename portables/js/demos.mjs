@@ -44,9 +44,10 @@ const DEMOS = Object.freeze({
     url: 'https://raw.githubusercontent.com/benoror/gbadev/b61cb1e8d6646789c833522a7d3d64adda27581a/public/roms/%40rkanoid%20MODERN%20-%20RECOMPILED.gba'
   },
   nds: {
-    title: 'Pong-NDS', filename: 'Pong-NDS.nds', size: 2472960,
-    blob: 'dda8c65e7f4cd36f0c54cc70fedbdd04032ca203',
-    url: 'https://raw.githubusercontent.com/Chi-Iroh/Pong-NDS/dfabbdde030b9fb2c72af968c98485dcde81855f/Pong-NDS.nds'
+    // Version antérieure à libnds 2.0 : la version récente reste blanche avec DeSmuME 2015.
+    title: 'Pong-NDS', filename: 'Pong-NDS.nds', size: 2447360,
+    blob: 'fc6583803f7763b0fda4fbfe69041c4a19983fca',
+    url: 'https://raw.githubusercontent.com/Chi-Iroh/Pong-NDS/80ff184546cc20cfd1a117f15ed8f4453b4db24b/Pong-NDS.nds'
   }
 });
 

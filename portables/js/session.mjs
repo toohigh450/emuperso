@@ -50,6 +50,9 @@ export class Session {
           boot.onLifecycle?.('started');
           this._set('running', { detail: 'Jeu lancé.' });
         },
+        onStarting: () => {
+          if (token === this.token && !started) this._set('starting', { detail: 'Démarrage du cœur…' });
+        },
         onExit: () => {
           if (token === this.token) this.stop();
         },

@@ -44,6 +44,12 @@ export class MemoryAdapter {
   async keys(bucket) {
     return [...this.data.get(bucket).keys()];
   }
+  async updateCodes(key, mutate) {
+    const entries = structuredClone(this.data.get('codes').get(key)?.entries || []);
+    const next = mutate(entries);
+    this.data.get('codes').set(key, { entries: structuredClone(next), at: Date.now() });
+    return next;
+  }
   async commitCheats(entries, limits) {
     this.data.set('cheatfiles', checkedCheatMap(this.data.get('cheatfiles'), entries, limits));
   }
@@ -116,6 +122,24 @@ export class IdbAdapter {
   }
   keys(bucket) {
     return this.tx(bucket, 'readonly', (s) => s.getAllKeys());
+  }
+  // Lecture et écriture dans la même transaction : sérialisées aussi entre onglets.
+  async updateCodes(key, mutate) {
+    const db = await this.open();
+    return new Promise((resolve, reject) => {
+      const tx = db.transaction('codes', 'readwrite');
+      const bucket = tx.objectStore('codes');
+      let next, failure;
+      tx.oncomplete = () => resolve(next);
+      tx.onerror = tx.onabort = () => reject(failure || tx.error || new Error('Codes non enregistrés.'));
+      const req = bucket.get(key);
+      req.onsuccess = () => {
+        try {
+          next = mutate(req.result?.entries || []);
+          bucket.put({ entries: next, at: Date.now() }, key);
+        } catch (err) { failure = err; tx.abort(); }
+      };
+    });
   }
   async commitCheats(entries, limits) {
     const db = await this.open();
@@ -351,6 +375,9 @@ export class Store {
   }
   async setCodes(gameKey, entries) {
     await this.a.put('codes', gameKey, { entries: entries.map((e) => ({ ...e })), at: Date.now() });
+  }
+  updateCodes(gameKey, mutate) {
+    return this.a.updateCodes(gameKey, mutate);
   }
 
   // --- États de jeu (save states), par espace de sauvegarde et par emplacement ----

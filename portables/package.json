@@ -1,11 +1,12 @@
 {
   "name": "emuperso-portables",
-  "version": "0.3.0-alpha.1",
+  "version": "0.3.0-alpha.2",
   "private": true,
   "description": "NES, Super Nintendo, Game Boy, Game Boy Color, Game Boy Advance et DS dans Chrome, un seul jeu actif à la fois.",
   "scripts": {
     "test": "node tests/run.mjs",
-    "test:browser": "node tests/browser.mjs",
+    "test:browser": "node tests/browser.mjs && node tests/audit-regressions.mjs",
+    "test:nds": "node tests/real-nds.mjs",
     "test:windows": "node tests/windows-server.mjs",
     "check": "node tools/check-syntax.mjs",
     "test:engine": "node tests/engine-smoke.mjs",

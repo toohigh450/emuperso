@@ -1,11 +1,11 @@
 // Chaque tentative de source vit dans une iframe neuve : pas de mélange de moteurs.
 let counter = 0;
-export function createBrowserHost(container, { timeoutMs = 60000 } = {}) {
+export function createBrowserHost(container, { timeoutMs = 60000, startTimeoutMs = 120000 } = {}) {
   window.__portablesBoots = window.__portablesBoots || {};
   return {
     async create(boot, events) {
       const sources = boot.enginePaths.slice();
-      let frame, id, timer, destroyed = false, ready = false, attempt = 0, entry = null;
+      let frame, id, timer, destroyed = false, ready = false, starting = false, started = false, failed = false, attempt = 0, entry = null;
       const dispose = () => {
         clearTimeout(timer);
         if (id) delete window.__portablesBoots[id];
@@ -15,19 +15,27 @@ export function createBrowserHost(container, { timeoutMs = 60000 } = {}) {
         dispose();
         if (destroyed) return;
         ready = false;
+        starting = started = failed = false;
         const token = ++attempt;
         const source = sources.shift();
         if (!source) { events.onError(`Impossible de préparer EmulatorJS. ${reason}`); return; }
         id = `b${Date.now().toString(36)}${counter++}`;
         const live = () => !destroyed && token === attempt;
         const fail = (message) => {
-          if (!live()) return;
-          if (ready) { events.onError(message); return; }
+          if (!live() || failed) return;
+          if (ready || starting || started) { failed = true; clearTimeout(timer); events.onError(message); return; }
           next(message);
         };
         entry = window.__portablesBoots[id] = { boot, source, events: {
-          onReady() { if (live()) { ready = true; clearTimeout(timer); events.onReady(); } },
-          onStart() { if (live()) events.onStart(); },
+          onReady() { if (live() && !ready && !failed) { ready = true; if (!starting) clearTimeout(timer); events.onReady(); } },
+          onStarting() {
+            if (!live() || failed || starting || started) return;
+            starting = true;
+            clearTimeout(timer);
+            events.onStarting?.();
+            timer = setTimeout(() => fail('Délai de démarrage du cœur dépassé. Réessaie ou choisis un autre cœur compatible.'), startTimeoutMs);
+          },
+          onStart() { if (live() && !failed && !started) { started = true; clearTimeout(timer); events.onStart(); } },
           onExit() { if (live()) events.onExit(); },
           onError: fail,
         } };

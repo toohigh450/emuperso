@@ -36,9 +36,11 @@ Tailles maximales : NES 64 Mio (compilations multi-jeux), SNES 8 Mio + 512 octet
 
 - **NES** : l'en-tête iNES ne contient pas de région. Le lanceur affiche la région lue dans le nom de
   fichier (« d'après le nom »). PAL/NTSC : octet 12 de NES 2.0, ou octet 9 d'iNES (rarement rempli).
-  FCEUmm choisit lui-même la région (option « Auto » du cœur). **Non testé** avec un jeu PAL réel.
+  FCEUmm choisit lui-même la région (option « Auto » du cœur). Démarrage PAL rapporté dans
+  `TESTS-NES-SNES.md` ; revérifié le 2 novembre sur Super Mario Bros. (Europe), 50 images/s.
 - **SNES** : pays lu dans l'en-tête interne (Japon, USA, Europe, France, Allemagne…) et vidéo PAL/NTSC
-  déduite. Snes9x choisit PAL/NTSC d'après l'en-tête. **Non testé** avec un jeu PAL réel.
+  déduite. Snes9x choisit PAL/NTSC d'après l'en-tête. Démarrage PAL rapporté sur Pilotwings et
+  Super Metroid dans `TESTS-NES-SNES.md` ; pas de nouvelle vérification de ces deux jeux ici.
 - Le catalogue filtre USA / Europe / Japon / France et « en français » d'après les étiquettes des noms
   (No-Intro, GoodTools : `(F)`, `(Fr)`, `[T+Fre]`).
 
@@ -48,23 +50,25 @@ FCEUmm prend en charge plusieurs centaines de cartes (NROM, MMC1, UxROM, CNROM, 
 MMC2/4, VRC2/4/6/7, Namco 163, FME-7…). Le lanceur affiche le nom des cartes courantes et prévient pour
 une carte rare.
 
-**Réellement testé** : NROM (mapper 0) avec la ROM d'essai et Snake. Tout le reste est **annoncé, non
-testé** dans ce navigateur. MMC1, MMC3 et MMC5 sont à valider avec les jeux de Karl.
+**Réellement testé à nouveau** : NROM (mapper 0), ROM d'essai, Snake et Super Mario Bros. (Europe).
+Le rapport Windows `TESTS-NES-SNES.md` rapporte également le démarrage de jeux MMC1, MMC3 et MMC5 de la
+collection de Karl. Ces essais antérieurs ne constituent pas une validation de parties complètes.
 
 ## Puces spéciales SNES
 
 | Puce | Lanceur | Snes9x | Test réel |
 |---|---|---|---|
-| Super FX (GSU) | accepté, avertissement | annoncée | non testé (le seul homebrew libre trouvé n'est pas détecté par Snes9x, voir DEMOS-LIBRES.md) |
+| Super FX (GSU) | accepté, avertissement | annoncée | démarrage de Star Fox et Yoshi's Island rapporté dans TESTS-NES-SNES.md ; pas de nouvelle vérification ici |
 | SA-1 | accepté, avertissement | annoncée | **Démarrée** (démo Étoiles) |
 | DSP-1 | accepté, avertissement | annoncée | **Démarrée** (démo Sol) |
-| DSP-2/3/4, S-DD1, SPC7110, Cx4, OBC1, S-RTC, ST010/011 | accepté, avertissement | annoncées | non testé |
+| S-DD1, Cx4 | accepté, avertissement | annoncées | démarrage de Street Fighter Alpha 2 et Mega Man X2 rapporté dans TESTS-NES-SNES.md ; pas de nouvelle vérification ici |
+| DSP-2/3/4, SPC7110, OBC1, S-RTC, ST010/011 | accepté, avertissement | annoncées | non testé |
 | ST018 | **refusé** | non prise en charge | — |
 | Super Game Boy, Satellaview | **refusé** | non prise en charge | — |
 | MSU-1 | — | demande des fichiers audio séparés | non proposé |
 
 « Démarrée » signifie : le cœur exécute la ROM et affiche une image animée dans Chrome Windows. Les
-performances sur téléphone ne sont pas mesurées ; Super FX et SA-1 sont les plus lourdes. Super FX est à vérifier avec un jeu de Karl (Star Fox, Yoshi's Island).
+performances sur téléphone ne sont pas mesurées ; Super FX et SA-1 sont les plus lourdes.
 
 ## Codes de triche
 
@@ -102,7 +106,8 @@ laisser une valeur en mémoire jusqu'au redémarrage du jeu (bouton « Redémarr
   Nommée d'après l'empreinte de la ROM : une ROM renommée retrouve sa sauvegarde.
 - **Copies de sécurité** : 3 versions par jeu, jamais écrasées sans décalage (existant).
 - **Exporter maintenant** / **Importer une sauvegarde** (`.sav`, `.srm`) : l'import copie d'abord la
-  sauvegarde actuelle dans les copies de sécurité, puis redémarre le jeu.
+  sauvegarde actuelle dans les copies de sécurité, puis redémarre le jeu. Si la copie échoue,
+  le remplacement est refusé et l'export de la sauvegarde actuelle reste possible.
 - **États de jeu** : 4 emplacements par jeu ; remplacer un emplacement garde l'état précédent
   (« Charger le précédent »). Export et import de fichiers `.state` (même ROM et même cœur seulement).
 - Stockage du navigateur : espace utilisé affiché, demande de stockage persistant proposée. Le
@@ -120,7 +125,8 @@ laisser une valeur en mémoire jusqu'au redémarrage du jeu (bouton « Redémarr
 ## Limites connues
 
 - 7z / RAR non ouverts dans le navigateur (voir plus haut).
-- Jeux PAL, cartes autres que NROM, puces autres que SA-1 / DSP-1 (dont Super FX) : non testés.
+- Les démarrages PAL, MMC1/MMC3/MMC5, Super FX, Cx4 et S-DD1 sont rapportés dans le compte rendu Windows ;
+  la nouvelle validation couvre NROM, les ROM d'essai et les cinq démos NES/SNES. Aucune partie complète validée.
 - Manettes physiques et Android réel : non testés (pas de matériel dans cet environnement).
 - Snes9x : licence non commerciale.
 - GB/GBC/GBA/DS (antérieur, inchangé) : la sauvegarde du moteur suit le nom du fichier ROM.
