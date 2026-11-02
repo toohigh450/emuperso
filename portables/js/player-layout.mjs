@@ -2,7 +2,8 @@
 const installed = new WeakMap();
 export function installPlayerLayout(emulator) {
   const parent = emulator?.elements?.parent;
-  const pad = emulator?.virtualGamepad;
+  // Moteur 4.2.3 : propriété virtualGamepad ; moteur nightly (PSP) : seulement la classe CSS.
+  const pad = emulator?.virtualGamepad || parent?.querySelector('.ejs_virtualGamepad_parent');
   if (!parent || !pad) return;
   if (installed.has(parent)) { installed.get(parent)(); return; }
   const update = () => {

@@ -39,7 +39,9 @@ export const PAD_PROFILES = Object.freeze({
   confort: Object.freeze({ id: 'confort', label: 'Confort moderne', description: 'Même disposition, plus le stick gauche comme croix et des doublons sur les gâchettes. Choix conseillé.' }),
   natif: Object.freeze({ id: 'natif', label: 'Natif EmulatorJS', description: 'Les commandes du moteur, sans la disposition EMUPERSO (à utiliser si une manette n’est pas reconnue).' }),
 });
-export const DEFAULT_PAD = Object.freeze({ profile: 'confort', deadzone: 0.25, hideTouch: true, touchSize: 1, touchOpacity: 0.85 });
+export const DEFAULT_PAD = Object.freeze({ profile: 'confort', deadzone: 0.25, hideTouch: true, touchSize: 1, touchOpacity: 0.85, touchOffsets: Object.freeze({}) });
+// Éléments tactiles déplaçables : un bouton (classe b_<id> du moteur) ou un bloc entier (croix et stick).
+export const MOVABLE_KEY = /^(?:b_[a-z0-9_-]{1,20}|left|right|top|center)$/i;
 
 /** Réglages normalisés (valeurs bornées), pour une console ou un jeu. */
 export function normalizePad(value) {
@@ -51,6 +53,9 @@ export function normalizePad(value) {
     hideTouch: v.hideTouch !== false,
     touchSize: num(v.touchSize, 0.6, 1.6, DEFAULT_PAD.touchSize),
     touchOpacity: num(v.touchOpacity, 0.2, 1, DEFAULT_PAD.touchOpacity),
+    touchOffsets: Object.freeze(Object.fromEntries(Object.entries(v.touchOffsets && typeof v.touchOffsets === 'object' ? v.touchOffsets : {})
+      .filter(([k, o]) => MOVABLE_KEY.test(k) && Array.isArray(o) && o.length === 2 && o.every(Number.isFinite))
+      .slice(0, 40).map(([k, [x, y]]) => [k, [Math.max(-600, Math.min(600, Math.round(x))), Math.max(-600, Math.min(600, Math.round(y)))]]))),
   });
 }
 
@@ -100,16 +105,18 @@ export function pickPad(pads) {
 }
 
 // Commandes tactiles PSP : le moteur n'en a pas (disposition générique Y/X/B/A, sans stick).
-// ✕ ○ □ △ en losange, stick analogique et croix séparés à gauche, L/R en haut, Start/Select au centre.
+// Comme sur la console : croix en haut à gauche et stick analogique dessous, ✕ ○ □ △ en losange,
+// L/R en haut ; Select/Start dans la bande centrale réservée sous l'image (player-layout.css).
 export const PSP_TOUCH_LAYOUT = Object.freeze([
   { type: 'button', text: '△', id: 'triangle', location: 'right', left: 40, top: 0, bold: true, input_value: 9 },
   { type: 'button', text: '□', id: 'square', location: 'right', left: 0, top: 40, bold: true, input_value: 1 },
   { type: 'button', text: '○', id: 'circle', location: 'right', left: 81, top: 40, bold: true, input_value: 8 },
   { type: 'button', text: '✕', id: 'cross', location: 'right', left: 40, top: 80, bold: true, input_value: 0 },
-  { type: 'zone', id: 'stick', location: 'left', left: '50%', top: '100%', joystickInput: true, inputValues: [16, 17, 18, 19] },
-  { type: 'zone', id: 'dpad', location: 'left', left: '50%', top: '0%', joystickInput: false, inputValues: [4, 5, 6, 7] },
-  { type: 'button', text: 'L', id: 'l', block: true, location: 'top', left: 10, top: -40, bold: true, input_value: 10 },
-  { type: 'button', text: 'R', id: 'r', block: true, location: 'top', right: 10, top: -40, bold: true, input_value: 11 },
+  // Croix remontée et stick abaissé : ils ne se chevauchent plus (mesuré en portrait et en paysage).
+  { type: 'dpad', id: 'dpad', location: 'left', left: '50%', top: '-40%', joystickInput: false, inputValues: [4, 5, 6, 7] },
+  { type: 'zone', id: 'stick', location: 'left', left: '40%', top: '120%', joystickInput: true, inputValues: [16, 17, 18, 19] },
+  { type: 'button', text: 'L', id: 'l', block: true, location: 'top', left: 10, top: -80, bold: true, input_value: 10 },
+  { type: 'button', text: 'R', id: 'r', block: true, location: 'top', right: 10, top: -80, bold: true, input_value: 11 },
   { type: 'button', text: 'Select', id: 'select', location: 'center', left: -5, fontSize: 15, block: true, input_value: 2 },
   { type: 'button', text: 'Start', id: 'start', location: 'center', left: 60, fontSize: 15, block: true, input_value: 3 },
 ]);

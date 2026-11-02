@@ -130,6 +130,8 @@
     restart: function () { manager(); restartNextFrame(); },
     // Nouveaux réglages de manette appliqués tout de suite (profil, zone morte, commandes tactiles).
     setPad: function (settings) { if (padInput) padInput.update(settings); },
+    // Mode « déplacer les boutons » : résout avec les nouvelles positions quand l'utilisateur touche Terminé.
+    editTouch: function () { return padInput ? padInput.editTouch() : Promise.reject(new Error('Commandes tactiles pas encore prêtes.')); },
     enginePath: source.path, // source réellement chargée (la PSP peut repasser de nightly à 4.2.3)
     screenshot: function () { return manager().screenshot(); },
     // Écrit la sauvegarde de la cartouche dans IndexedDB tout de suite (le moteur ne le fait

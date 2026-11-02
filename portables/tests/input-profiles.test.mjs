@@ -65,15 +65,17 @@ test('Aucune manette : tout relâché ; préférence pour la disposition « stan
 });
 
 test('Réglages bornés et valeurs par défaut', () => {
-  assert.deepEqual(normalizePad({}), { profile: 'confort', deadzone: 0.25, hideTouch: true, touchSize: 1, touchOpacity: 0.85 });
-  assert.deepEqual(normalizePad({ profile: 'x', deadzone: 5, touchSize: 0.1, touchOpacity: 2, hideTouch: false }), { profile: 'confort', deadzone: 0.6, hideTouch: false, touchSize: 0.6, touchOpacity: 1 });
+  assert.deepEqual(normalizePad({}), { profile: 'confort', deadzone: 0.25, hideTouch: true, touchSize: 1, touchOpacity: 0.85, touchOffsets: {} });
+  assert.deepEqual(normalizePad({ profile: 'x', deadzone: 5, touchSize: 0.1, touchOpacity: 2, hideTouch: false }), { profile: 'confort', deadzone: 0.6, hideTouch: false, touchSize: 0.6, touchOpacity: 1, touchOffsets: {} });
+  // Positions des boutons : clés connues seulement, valeurs bornées.
+  assert.deepEqual(normalizePad({ touchOffsets: { b_a: [12.4, -900], left: [5, 5], 'x;y': [1, 1], right: ['a', 1] } }).touchOffsets, { b_a: [12, -600], left: [5, 5] });
 });
 
 test('Commandes tactiles PSP : ✕ ○ □ △, stick analogique, croix, L/R, Start/Select', () => {
   const layout = touchLayout('psp');
   assert.deepEqual(layout.filter((b) => b.type === 'button').map((b) => [b.text, b.input_value]).sort(), [['L', 10], ['R', 11], ['Select', 2], ['Start', 3], ['□', 1], ['○', 8], ['△', 9], ['✕', 0]].sort());
   assert.ok(layout.some((b) => b.type === 'zone' && b.joystickInput && b.inputValues.join() === '16,17,18,19'));
-  assert.ok(layout.some((b) => b.type === 'zone' && !b.joystickInput && b.inputValues.join() === '4,5,6,7'));
+  assert.ok(layout.some((b) => b.type === 'dpad' && b.inputValues.join() === '4,5,6,7'));
   assert.equal(touchLayout('snes'), null);
 });
 

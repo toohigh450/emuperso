@@ -3,7 +3,7 @@
 import { inspectNativeState, makeRestoreWitness, compareRestoreWitness } from './native-state.mjs';
 import { sriValue, verifyRuntimeBytes } from './runtime-integrity.mjs';
 import { createFrameCapture, installRuntimeFrameHook } from './frame-capture.mjs';
-import { computeN64Inputs, normalizeN64Pad, pickPad } from './n64-input.mjs';
+import { computeN64Inputs, normalizeN64Pad, pickPad, touchLayout } from './n64-input.mjs';
 const contexts = new Set();
 let emulator = null, romURL = null, closed = false, notify = () => {}, sessionId = null;
 let cheatFault = null;
@@ -250,7 +250,7 @@ async function start(config, callback) {
   romURL = URL.createObjectURL(new Blob([config.bytes], { type: 'application/octet-stream' }));
   const options = {
     gameUrl: romURL, dataPath: 'vendor/data/', system: 'mupen64plus_next', gameName: config.gameName,
-    startOnLoad: true, threads: false, language: 'en-US', shaders: window.EJS_SHADERS,
+    startOnLoad: true, threads: false, language: 'en-US', shaders: window.EJS_SHADERS, VirtualGamepadSettings: touchLayout(),
     disableDatabases: true, disableLocalStorage: true, cacheLimit: 0, volume: 0.45,
     defaultOptions: { webgl2Enabled: config.legacy ? 'disabled' : 'enabled', ejs_threads: 'disabled', 'mupen64plus-cpucore': 'pure_interpreter' },
     buttonOpts: { rightClick: false, saveState: false, loadState: false, quickSave: false, quickLoad: false,

@@ -1077,7 +1077,10 @@ async function refreshPadUi() {
 async function savePadUi() {
   const system = padUiSystem();
   const checked = document.querySelector('input[name=padProfile]:checked');
+  const forGameScope = $('padGameOnly').checked && currentGame && currentGame.system === system;
+  const previous = (await padSettingsFor(system, forGameScope ? currentGame.key : null)).settings;
   const cfg = normalizePad({
+    touchOffsets: previous.touchOffsets, // positions des boutons gardées quand on change un autre réglage
     profile: checked ? checked.value : undefined,
     deadzone: Number($('padDeadzone').value),
     hideTouch: $('padHideTouch').checked,
@@ -1123,6 +1126,20 @@ function buildPadUi() {
     if (control && control.setPad && currentGame?.system === system) control.setPad(cfg);
     await refreshPadUi();
     setStatus(`Réglages de manette par défaut rétablis pour ${SYSTEMS[system].label}.`, 'ok');
+  });
+  $('padMove').addEventListener('click', async () => {
+    const control = session.control();
+    if (!control || !control.editTouch || !currentGame) { setStatus('Ouvre et démarre un jeu sur l’écran tactile pour déplacer ses boutons.', 'warn'); return; }
+    setStatus('Glisse les boutons dans la fenêtre du jeu, puis touche « Terminé ».');
+    $('screen').scrollIntoView({ block: 'center' });
+    try {
+      const offsets = await control.editTouch();
+      const system = currentGame.system;
+      const forGame = $('padGameOnly').checked;
+      const base = (await padSettingsFor(system, forGame ? currentGame.key : null)).settings;
+      await store.setSetting(forGame ? `pad:game:${currentGame.key}` : `pad:${system}`, normalizePad({ ...base, touchOffsets: offsets }));
+      setStatus(`Position des boutons enregistrée pour ${forGame ? 'ce jeu' : SYSTEMS[system].label}.`, 'ok');
+    } catch (err) { setStatus(err.message, 'error'); }
   });
   window.addEventListener('gamepadconnected', (e) => showPadStatus(e.gamepad.id));
   window.addEventListener('gamepaddisconnected', () => showPadStatus(null));

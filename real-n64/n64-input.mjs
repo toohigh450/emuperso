@@ -62,3 +62,22 @@ export function pickPad(pads) {
   const list = [...(pads || [])].filter((p) => p && p.connected);
   return list.find((p) => p.mapping === 'standard') || list[0] || null;
 }
+
+// Commandes tactiles N64 : celles du moteur, sans Fast/Slow (bloqués par cette application, donc sans effet),
+// croix dessinée en croix (et non en second stick). Stick, A, B, Z, L, R, Start et les quatre C.
+export const N64_TOUCH_LAYOUT = Object.freeze([
+  { type: 'button', text: 'B', id: 'b', location: 'right', left: -10, top: 95, input_value: 1, bold: true },
+  { type: 'button', text: 'A', id: 'a', location: 'right', left: 40, top: 150, input_value: 0, bold: true },
+  // Croix remontée et stick abaissé : ils ne se chevauchent plus ; L et Z sur une même ligne en haut.
+  { type: 'zone', id: 'stick', location: 'left', left: '40%', top: '120%', joystickInput: true, inputValues: [16, 17, 18, 19] },
+  { type: 'dpad', id: 'dpad', location: 'left', left: '50%', top: '-45%', joystickInput: false, inputValues: [4, 5, 6, 7] },
+  { type: 'button', text: 'Start', id: 'start', location: 'center', left: 30, top: -10, fontSize: 15, block: true, input_value: 3 },
+  { type: 'button', text: 'L', id: 'l', block: true, location: 'top', left: 10, top: -90, bold: true, input_value: 10 },
+  { type: 'button', text: 'R', id: 'r', block: true, location: 'top', right: 75, top: -90, bold: true, input_value: 11 }, // à gauche du bouton menu du moteur
+  { type: 'button', text: 'Z', id: 'z', block: true, location: 'top', left: 70, top: -90, bold: true, input_value: 12 },
+  { type: 'button', text: 'C▲', id: 'cu', fontSize: 20, joystickInput: true, location: 'right', left: 25, top: -65, input_value: 23 },
+  { type: 'button', text: 'C▼', id: 'cd', fontSize: 20, joystickInput: true, location: 'right', left: 25, top: 15, input_value: 22 },
+  { type: 'button', text: 'C◀', id: 'cl', fontSize: 20, joystickInput: true, location: 'right', left: -15, top: -25, input_value: 21 },
+  { type: 'button', text: 'C▶', id: 'cr', fontSize: 20, joystickInput: true, location: 'right', left: 65, top: -25, input_value: 20 },
+]);
+export const touchLayout = () => N64_TOUCH_LAYOUT.map((b) => ({ ...b }));
