@@ -16,7 +16,7 @@ Chrome (écran tactile simulé) n'est **pas** une validation Android.
 |---|---|---|---|---|
 | 1 | Ouverture depuis le portail | RÉUSSI | RÉUSSI | `tools/test-portail.mjs` (liens HTTP 200, console présélectionnée) |
 | 2 | Démo open source | RÉUSSI (Snake) | RÉUSSI (Neon Breaker, Shmup, SA-1, DSP-1) | `tests/real-nes-snes.mjs`, image animée mesurée |
-| 3 | ROM locale compatible | RÉUSSI | RÉUSSI | ROM d'essai + 7 jeux NES et 14 jeux SNES de `E:\roms` (voir plus bas) |
+| 3 | ROM locale compatible | RÉUSSI | RÉUSSI | ROM d'essai + 7 jeux NES et 12 jeux SNES de `E:\roms` (voir plus bas) |
 | 4 | Audio | NON TESTÉ à l'oreille | NON TESTÉ à l'oreille | Contexte audio du moteur à l'état « running » (RÉUSSI technique) ; personne n'a écouté |
 | 5 | Affichage | RÉUSSI | RÉUSSI | 256×224 (512×224 en haute résolution SNES), couleurs mesurées pixel par pixel |
 | 6 | Clavier | NON TESTÉ | NON TESTÉ | Touches par défaut documentées ; aucune frappe réelle simulée dans un jeu |
