@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Frank Thomas Big Hurt Baseball (USA, Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Frank%20Thomas%20Big%20Hurt%20Baseball%20%28USA,%20Europe%29.cht
+
+cheats = 4
+
+cheat0_desc = "Allows the game to run on emulators, or with a Game Genie attached."
+cheat0_code = "RY3A-A6WJ"
+cheat0_enable = false
+
+cheat1_desc = "You get 99 trys in homerun derby"
+cheat1_code = "NPJT-BA7N"
+cheat1_enable = false
+
+cheat2_desc = "20 tries in home run derby (instead of 10)."
+cheat2_code = "CVJT-BA7N"
+cheat2_enable = false
+
+cheat3_desc = "30 tries in home run derby."
+cheat3_code = "D3JT-BA7N"
+cheat3_enable = false

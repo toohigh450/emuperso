@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Stargate (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Stargate%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Infinite Grenades"
+cheat0_code = "FFC891:63"
+cheat0_enable = false 
+
+cheat1_desc = "Gun Never Heats Up"
+cheat1_code = "FFFC64:00"
+cheat1_enable = false 
+
+cheat2_desc = "Turbo Mode"
+cheat2_code = "FFC935:63"
+cheat2_enable = false 
+
+cheat3_desc = "Level Modifier"
+cheat3_code = "FFFFA5:XX"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Alien Grenades"
+cheat4_code = "FFC892:0A"
+cheat4_enable = false 
+
+cheat5_desc = "Infinite Energy"
+cheat5_code = "FFFC62:0340"
+cheat5_enable = false

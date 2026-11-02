@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Lethal Enforcers II - Gun Fighters (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Lethal%20Enforcers%20II%20-%20Gun%20Fighters%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Infinite Health P1"
+cheat0_code = "FFB0AF:99"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Bullets P1"
+cheat1_code = "FFB0BF:06"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Health P2"
+cheat2_code = "FFB0B1:99"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Bullets P2"
+cheat3_code = "FFB0C1:06"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Credits"
+cheat4_code = "FFB0A5:63"
+cheat4_enable = false 
+
+cheat5_desc = "Always Have The Rifle P1"
+cheat5_code = "FFB0BB:03"
+cheat5_enable = false

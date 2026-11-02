@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Pro Striker Final Stage (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Pro%20Striker%20Final%20Stage%20%28Japan%29.cht
+
+cheats = 4
+
+cheat0_desc = "Score Modifier Left Team"
+cheat0_code = "FFF50C:0000"
+cheat0_enable = false
+
+cheat1_desc = "Score Modifier Right Team"
+cheat1_code = "FFF50E:0000"
+cheat1_enable = false
+
+cheat2_desc = "Time Modifier"
+cheat2_code = "FFF5BA:0000"
+cheat2_enable = false
+
+cheat3_desc = "Regional Lockout Bypass"
+cheat3_code = "AADA-AA5R"
+cheat3_enable = false

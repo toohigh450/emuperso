@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Captain Lang (Japan) (En,Ja)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Captain%20Lang%20%28Japan%29%20%28En,Ja%29.cht
+
+cheats = 6
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "AVYA-AA5W"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Health"
+cheat1_code = "AL1A-AA38"
+cheat1_enable = false
+
+cheat2_desc = "Invincibility (Disable Hit Detection)"
+cheat2_code = "RZBA-A6T8+RZBT-A6Y8+RYPA-G6YW+RYNA-G602+RYFT-G6X8+R1ZT-A61R"
+cheat2_enable = false
+
+cheat3_desc = "Keep Diamands After The Death"
+cheat3_code = "ALST-CA48"
+cheat3_enable = false
+
+cheat4_desc = "Freeze Time"
+cheat4_code = "ALZT-AA30"
+cheat4_enable = false
+
+cheat5_desc = "Freeze Time Continue"
+cheat5_code = "AK1A-AA6C"
+cheat5_enable = false

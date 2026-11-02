@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Alien Storm (World) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Alien%20Storm%20%28World%29%20%28Action%20Replay%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Full Energy & Life Bar"
+cheat0_code = "00352A:31FC+00352C:FFFF"
+cheat0_enable = false 
+
+cheat1_desc = "Unlimited Continues"
+cheat1_code = "003A2E:6002"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Lives P1"
+cheat2_code = "FFCE0B:0060"
+cheat2_enable = false 
+
+cheat3_desc = "Unlimited Energy P1"
+cheat3_code = "FFCE0C:0080"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Lives P2"
+cheat4_code = "FFCE8B:0060"
+cheat4_enable = false 
+
+cheat5_desc = "Unlimited Energy P2"
+cheat5_code = "FFCE8C:0080"
+cheat5_enable = false

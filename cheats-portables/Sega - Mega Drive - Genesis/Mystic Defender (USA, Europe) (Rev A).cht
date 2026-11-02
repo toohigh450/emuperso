@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Mystic Defender (USA, Europe) (Rev A)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Mystic%20Defender%20%28USA,%20Europe%29%20%28Rev%20A%29.cht
+
+cheats = 4
+
+cheat0_desc = "Unlimited Lives"
+cheat0_code = "FFF62E:000C+FFF776:0000+FFF628:0002+FFF7C2:0028+FFF62A:0008"
+cheat0_enable = false
+
+cheat1_desc = "Unlimited Energy"
+cheat1_code = "F00BC0:3200+FFF620:0200"
+cheat1_enable = false
+
+cheat2_desc = "Invincibility"
+cheat2_code = "ADHA-AN8T"
+cheat2_enable = false
+
+cheat3_desc = "Power Never Goes Down"
+cheat3_code = "AVLA-AA5N"
+cheat3_enable = false

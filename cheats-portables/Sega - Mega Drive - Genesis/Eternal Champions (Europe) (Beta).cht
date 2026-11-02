@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Eternal Champions (Europe) (Beta)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Eternal%20Champions%20%28Europe%29%20%28Beta%29.cht
+
+cheats = 4
+
+cheat0_desc = "Infinite Energy P1"
+cheat0_code = "FFABEA:0068"
+cheat0_enable = false
+
+cheat1_desc = "No Energy P2"
+cheat1_code = "FFAAB2:0000"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Time"
+cheat2_code = "FF9CAC:0099"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Inner Strength P1"
+cheat3_code = "FFACAA:0034"
+cheat3_enable = false

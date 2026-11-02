@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : ATP Tour Championship Tennis (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/ATP%20Tour%20Championship%20Tennis%20%28USA%29.cht
+
+cheats = 6
+
+cheat0_desc = "The first one that makes a point wins a game, you or the cpu"
+cheat0_code = "AJAA-CA3J"
+cheat0_enable = false
+
+cheat1_desc = "Cpu Never Scores"
+cheat1_code = "9TRA-BGEG+AARA-AAEJ+96RA-AAEL+NERA-AAEN"
+cheat1_enable = false
+
+cheat2_desc = "1P Score Modifier"
+cheat2_code = "FF0060:0000"
+cheat2_enable = false
+
+cheat3_desc = "2P Score Modifier"
+cheat3_code = "FF0060:0000"
+cheat3_enable = false
+
+cheat4_desc = "Debug Menu (Options Menu)"
+cheat4_code = "FFF18E:0001"
+cheat4_enable = false
+
+cheat5_desc = "Debug Menu (Options Menu)"
+cheat5_code = "RERA-C6XY+RERA-C6Z4"
+cheat5_enable = false

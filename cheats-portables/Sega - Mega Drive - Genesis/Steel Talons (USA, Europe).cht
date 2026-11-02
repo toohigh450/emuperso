@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Steel Talons (USA, Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Steel%20Talons%20%28USA,%20Europe%29.cht
+
+cheats = 7
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "RGWA-G61W"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "AWXA-GA24"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Missles"
+cheat2_code = "AWZA-GA86"
+cheat2_enable = false
+
+cheat3_desc = "Start With 9 Lives"
+cheat3_code = "BE4A-GAER"
+cheat3_enable = false
+
+cheat4_desc = "Start with 99 Missles"
+cheat4_code = "NRST-HA6E"
+cheat4_enable = false
+
+cheat5_desc = "Infinite Missiles"
+cheat5_code = "FF0B8C:00FF"
+cheat5_enable = false
+
+cheat6_desc = "Infinite Lives (Ignore HUD)"
+cheat6_code = "FFED14:0009"
+cheat6_enable = false

@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Dyna Brothers (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Dyna%20Brothers%20%28Japan%29.cht
+
+cheats = 4
+
+cheat0_desc = "Max PW Points"
+cheat0_code = "FF7BD6:0099"
+cheat0_enable = false
+
+cheat1_desc = "PW Points Refill By 9999 Instead Of 25"
+cheat1_code = "XHPA-BXBA"
+cheat1_enable = false
+
+cheat2_desc = "Master Code"
+cheat2_code = "AADA-AA7R"
+cheat2_enable = false
+
+cheat3_desc = "PW Points Don't Decrease"
+cheat3_code = "A2YT-CA3E"
+cheat3_enable = false

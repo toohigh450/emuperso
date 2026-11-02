@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : George Foreman's KO Boxing (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/George%20Foreman's%20KO%20Boxing%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Infinite Energy P1"
+cheat0_code = "FF819E:40"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Energy P2 Or CPU"
+cheat1_code = "FF821E:40"
+cheat1_enable = false 
+
+cheat2_desc = "No Energy P2 Or CPU"
+cheat2_code = "FF821E:00"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Time"
+cheat3_code = "FFF0E8:02+FFF0E9:05+FFF0EA:09"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Power Punches"
+cheat4_code = "FF81A1:08"
+cheat4_enable = false 
+
+cheat5_desc = "Referee Countdown Voice Modifier"
+cheat5_code = "FF83F0:??"
+cheat5_enable = false

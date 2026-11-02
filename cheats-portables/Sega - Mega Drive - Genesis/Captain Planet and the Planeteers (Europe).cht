@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Captain Planet and the Planeteers (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Captain%20Planet%20and%20the%20Planeteers%20%28Europe%29.cht
+
+cheats = 5
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "AJ2T-AA3N+ALDA-AA8Y+AJ3A-AA5Y+AJ9T-AA5G+AJ9T-AA58+AT8A-AA9C+AL8T-AA90+AJ4A-AA9E"
+cheat0_enable = false
+
+cheat1_desc = "Invincibility"
+cheat1_code = "RY2T-A6VG+RY3A-A6XJ+RY8A-A606"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Power"
+cheat2_code = "BBET-AA62"
+cheat2_enable = false
+
+cheat3_desc = "Freeze Time In Choosing The Levels"
+cheat3_code = "AJSA-AA7G"
+cheat3_enable = false
+
+cheat4_desc = "Freeze Time Miles "
+cheat4_code = "AJSA-AA7G"
+cheat4_enable = false

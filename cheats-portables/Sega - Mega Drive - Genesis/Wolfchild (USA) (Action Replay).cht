@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Wolfchild (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Wolfchild%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "FF0663:63"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Smart Bombs"
+cheat1_code = "FF066D:63"
+cheat1_enable = false 
+
+cheat2_desc = "Start As Wolf (Don't Collect Life Powerups)"
+cheat2_code = "FF02B5:FF"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Energy (Life Powerups Won't Turn You To Wolf, Turn To Wolf Before Using This Code)"
+cheat3_code = "FF0675:12"
+cheat3_enable = false 
+
+cheat4_desc = "Max Energy"
+cheat4_code = "FF0673:12"
+cheat4_enable = false

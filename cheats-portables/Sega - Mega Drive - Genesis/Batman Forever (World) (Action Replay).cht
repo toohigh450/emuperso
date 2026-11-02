@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Batman Forever (World) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Batman%20Forever%20%28World%29%20%28Action%20Replay%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Infinite Health P1"
+cheat0_code = "FFE917:63"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives P1"
+cheat1_code = "FFD9D5:09"
+cheat1_enable = false 
+
+cheat2_desc = "Some Enemies Automatically Die"
+cheat2_code = "FFE579:00+FFE9CF:00"
+cheat2_enable = false 
+
+cheat3_desc = "Fake Infinite Health P1"
+cheat3_code = "FFE6FD:XX"
+cheat3_enable = false

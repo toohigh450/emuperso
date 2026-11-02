@@ -10,9 +10,9 @@ import { fileURLToPath } from 'node:url';
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const OUT = join(ROOT, 'dist');
 // Dossiers jamais publiés tels quels : dépôt, dépendances, sorties, sources remplacées par leur dist.
-const SKIP_DIRS = new Set(['.git', '.github', 'node_modules', 'dist', '.vercel', 'ps1-web', 'real-n64', 'portail', 'cache', 'vendor', '__pycache__', '.python']);
+const SKIP_DIRS = new Set(['.git', '.github', 'node_modules', 'dist', '.vercel', 'ps1-web', 'real-n64', 'portail', 'cache', 'vendor', '__pycache__', '.python', 'roms', 'rom', 'games']);
 // Fichiers personnels possibles : refusés même s'ils traînent dans le dossier de construction.
-const PRIVATE = /\.(iso|bin|img|chd|pbp|cue|zip|rar|7z|sav|srm|state|mcr|mcd|z64|n64|v64|smc|gba|gbc|gb|nds)$/i;
+const PRIVATE = /\.(iso|bin|img|chd|pbp|cue|zip|rar|7z|sav|srm|state|mcr|mcd|z64|n64|v64|smc|gba|gbc|gb|nds|smd|gen|mdx|32x|68k)$/i;
 // Seules exceptions : les homebrews libres publiés exprès (licences dans portables/demos).
 const ALLOWED_ROMS = /^portables[\\/]demos[\\/]opensnes-[a-z0-9-]+\.sfc$|^portables[\\/]demos[\\/]opennes-snake\.nes$/;
 
@@ -40,9 +40,18 @@ const add = (rel, from = join(ROOT, rel)) => {
   manifest[rel.split(sep).join('/')] = createHash('sha256').update(readFileSync(from)).digest('hex');
 };
 
+// Les fichiers Markdown sont publiés pour leurs liens documentaires. Mais .md est
+// aussi une extension binaire Mega Drive : bloquer ceux qui ressemblent à des ROMs
+// (octets NUL dans l'en-tête) au lieu d'interdire toute la documentation .md.
+function isBinaryMegaDriveMd(rel) {
+  if (!/\\.md$/i.test(rel)) return false;
+  const start = readFileSync(join(ROOT, rel)).subarray(0, 512);
+  return start.includes(0) || (start.length > 0x104 && start.toString('ascii', 0x100, 0x104) === 'SEGA');
+}
+
 let skipped = 0;
 for (const rel of walk(ROOT, skipRepo)) {
-  if (PRIVATE.test(rel) && !ALLOWED_ROMS.test(rel)) { skipped++; continue; }
+  if ((PRIVATE.test(rel) && !ALLOWED_ROMS.test(rel)) || isBinaryMegaDriveMd(rel)) { skipped++; continue; }
   if (['.bat', '.ps1'].includes(extname(rel).toLowerCase())) { skipped++; continue; }
   add(rel);
 }

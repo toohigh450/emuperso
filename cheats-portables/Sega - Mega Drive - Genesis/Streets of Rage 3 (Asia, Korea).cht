@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Streets of Rage 3 (Asia, Korea)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Streets%20of%20Rage%203%20%28Asia,%20Korea%29.cht
+
+cheats = 7
+
+cheat0_desc = "Invincibility (Disable Hit Detection)"
+cheat0_code = "RZCA-E6XC+R02T-E6ZN+RZHA-E608+RZBA-E6ZE"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "AMDA-AA9E"
+cheat1_enable = false
+
+cheat2_desc = "Enabled Cheat Code Play As The Same Character"
+cheat2_code = "ACAA-JA3J+ALBA-JA56+ALBA-JA3Y"
+cheat2_enable = false
+
+cheat3_desc = "Enabled Cheat Code Ash In Select Player"
+cheat3_code = "RHYT-A61N"
+cheat3_enable = false
+
+cheat4_desc = "Enabled Cheat Code Shiva In Select Player"
+cheat4_code = "RHYT-A60T"
+cheat4_enable = false
+
+cheat5_desc = "Infinite Energy Power Attack All Characters"
+cheat5_code = "AMGT-AA84+AMHA-AA4L+AMKA-AA3L+AMJA-AA80+AMHT-AA70+AMKT-AA7E+AMRA-AA3A+AMLT-AA46+AMMA-AA3T"
+cheat5_enable = false
+
+cheat6_desc = "Enabled Cheat Code Stage Select In Options"
+cheat6_code = "ALXT-JA22+AWXT-JA3T+RGXT-J6X0+CC1T-JA4L+CC2A-JA5N"
+cheat6_enable = false

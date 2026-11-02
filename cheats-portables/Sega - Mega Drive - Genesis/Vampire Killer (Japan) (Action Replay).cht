@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Vampire Killer (Japan) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Vampire%20Killer%20%28Japan%29%20%28Action%20Replay%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Infinite Health"
+cheat0_code = "FF9C10:0056"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Gems"
+cheat1_code = "FFFB0E:0909"
+cheat1_enable = false 
+
+cheat2_desc = "Room Modifier"
+cheat2_code = "FFFB2A:????"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Lives"
+cheat3_code = "FFFB2E:0003"
+cheat3_enable = false

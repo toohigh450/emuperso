@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Body Count (Brazil)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Body%20Count%20%28Brazil%29.cht
+
+cheats = 4
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "ALKT-AA9G"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Granades"
+cheat1_code = "AKHT-AA6R"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Ammo"
+cheat2_code = "AK6A-AA4W"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Credits"
+cheat3_code = "A4LA-AA9W"
+cheat3_enable = false

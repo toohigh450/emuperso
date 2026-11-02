@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Indiana Jones and the Last Crusade (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Indiana%20Jones%20and%20the%20Last%20Crusade%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "FF7F59:20"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Whips"
+cheat1_code = "FF7F53:0A"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Time"
+cheat2_code = "FF7D75:09"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Credits"
+cheat3_code = "FFA033:09"
+cheat3_enable = false

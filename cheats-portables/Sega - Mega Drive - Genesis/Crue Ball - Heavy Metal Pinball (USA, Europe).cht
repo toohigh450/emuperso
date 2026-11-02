@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Crue Ball - Heavy Metal Pinball (USA, Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Crue%20Ball%20-%20Heavy%20Metal%20Pinball%20%28USA,%20Europe%29.cht
+
+cheats = 8
+
+cheat0_desc = "Level modifier"
+cheat0_code = "FF8439:0001"
+cheat0_enable = false
+
+cheat1_desc = "Infinite balls"
+cheat1_code = "FF843D:0003"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Balls"
+cheat2_code = "9T0T-PCET+AA0T-NAEW+HY0T-NKEY"
+cheat2_enable = false
+
+cheat3_desc = "Enable in-game Level Select"
+cheat3_code = "FFFFFA:0045"
+cheat3_enable = false
+
+cheat4_desc = "Skip Levels Before you launch the ball Hold Up Press B Or Hold Down And Press B return to previous levels"
+cheat4_code = "RE1T-N60J"
+cheat4_enable = false
+
+cheat5_desc = "Master Code"
+cheat5_code = "R1ZT-R6VA"
+cheat5_enable = false
+
+cheat6_desc = "Infinite Balls"
+cheat6_code = "AT0T-NA6N"
+cheat6_enable = false
+
+cheat7_desc = "Sound Test Before you launch the ball Press A+B+C"
+cheat7_code = "AMST-LA3J"
+cheat7_enable = false

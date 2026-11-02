@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : General Chaos (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/General%20Chaos%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Infinite Health Blue Team In Close-Combat"
+cheat0_code = "FFD3E5:09"
+cheat0_enable = false 
+
+cheat1_desc = "No Health Red Team In Close-Combat"
+cheat1_code = "FFDDB1:00"
+cheat1_enable = false 
+
+cheat2_desc = "Turn Off SFX"
+cheat2_code = "FFD3C9:00"
+cheat2_enable = false 
+
+cheat3_desc = "Blue Team Health"
+cheat3_code = "FFD253:64+FFD3F5:64+FFD597:64+FFD739:64+FFD8DB:64"
+cheat3_enable = false 
+
+cheat4_desc = "Red Team Health"
+cheat4_code = "FFDA7D:00+FFDC1F:00+FFDDC1:00+FFDF63:00+FFE105:00"
+cheat4_enable = false 
+
+cheat5_desc = "Auto Complete Special Mission"
+cheat5_code = "FFE4E3:01"
+cheat5_enable = false

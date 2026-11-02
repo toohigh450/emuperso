@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Battlemaster (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Battlemaster%20%28USA%29.cht
+
+cheats = 5
+
+cheat0_desc = "Leader Doesn't Lose Any Morale"
+cheat0_code = "AJ8A-AA2W"
+cheat0_enable = false
+
+cheat1_desc = "Leader's Morale Increases Faster"
+cheat1_code = "FKTA-BA10"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Gold"
+cheat2_code = "FFCFAA:270F"
+cheat2_enable = false
+
+cheat3_desc = "Leader Has Infinite Health And Morale"
+cheat3_code = "FFD772:487D"
+cheat3_enable = false
+
+cheat4_desc = "All 4 Troops Have Infinite Health And Morale"
+cheat4_code = "FFD78E:487D+FFD7AA:487D+FFD7C6:487D+FFD7E2:487D"
+cheat4_enable = false

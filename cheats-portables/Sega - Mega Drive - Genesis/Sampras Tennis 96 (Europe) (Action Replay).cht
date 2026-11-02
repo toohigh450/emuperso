@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Sampras Tennis 96 (Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Sampras%20Tennis%2096%20%28Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Score Modifier P1"
+cheat0_code = "FF29E9"
+cheat0_enable = false 
+
+cheat1_desc = "Opponent Score Modifier (CPU/P2)"
+cheat1_code = "FF2A0B:XX"
+cheat1_enable = false 
+
+cheat2_desc = "Character Modifier P1"
+cheat2_code = "FF2817:XX"
+cheat2_enable = false 
+
+cheat3_desc = "Character Modifier P2"
+cheat3_code = "FF28AB:XX"
+cheat3_enable = false 
+
+cheat4_desc = "Court Modifier"
+cheat4_code = "FF7739:XX"
+cheat4_enable = false

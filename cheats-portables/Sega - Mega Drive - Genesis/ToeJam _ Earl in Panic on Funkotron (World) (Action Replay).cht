@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : ToeJam _ Earl in Panic on Funkotron (World) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/ToeJam%20_%20Earl%20in%20Panic%20on%20Funkotron%20%28World%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Infinite Health P1"
+cheat0_code = "FFA92B:14"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Health P2"
+cheat1_code = "FFA92D:14"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Time Underwater"
+cheat2_code = "FFA92F:63"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Specials"
+cheat3_code = "FFA929:63"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Coins"
+cheat4_code = "FFA923:63"
+cheat4_enable = false

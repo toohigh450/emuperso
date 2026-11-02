@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Shikinjou (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Shikinjou%20%28Japan%29.cht
+
+cheats = 6
+
+cheat0_desc = "Level Modifier"
+cheat0_code = "FF819E:0000"
+cheat0_enable = false
+
+cheat1_desc = "Master Code"
+cheat1_code = "RELT-A61L"
+cheat1_enable = false
+
+cheat2_desc = "Choose any Stage"
+cheat2_code = "A2WT-AA7N"
+cheat2_enable = false
+
+cheat3_desc = "Push Anything Out of Your Way"
+cheat3_code = "AA9T-AA30"
+cheat3_enable = false
+
+cheat4_desc = "Walk Thru Anything"
+cheat4_code = "AJ9T-AA3E"
+cheat4_enable = false
+
+cheat5_desc = "Choose any Stage"
+cheat5_code = "FF96FD:00C7"
+cheat5_enable = false

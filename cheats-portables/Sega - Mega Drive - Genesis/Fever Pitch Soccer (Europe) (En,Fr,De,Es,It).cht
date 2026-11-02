@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Fever Pitch Soccer (Europe) (En,Fr,De,Es,It)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Fever%20Pitch%20Soccer%20%28Europe%29%20%28En,Fr,De,Es,It%29.cht
+
+cheats = 2
+
+cheat0_desc = "Team 1 Score Modifier (P1)"
+cheat0_code = "FFDEC8:0000"
+cheat0_enable = false
+
+cheat1_desc = "Team 2 Score Modifier (P2/CPU)"
+cheat1_code = "FFDF10:0000"
+cheat1_enable = false

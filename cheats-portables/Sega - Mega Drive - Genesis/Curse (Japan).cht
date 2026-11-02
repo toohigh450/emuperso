@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Curse (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Curse%20%28Japan%29.cht
+
+cheats = 3
+
+cheat0_desc = "Invincibility"
+cheat0_code = "CK2T-AA9W"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "AVZT-AA9G"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Shield"
+cheat2_code = "RF4A-A614"
+cheat2_enable = false

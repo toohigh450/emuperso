@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : King of Fighters '98
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/King%20of%20Fighters%20'98.cht
+
+cheats = 7
+
+cheat0_desc = "Infinite Energy P1"
+cheat0_code = "FF0212:0050"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Energy P2"
+cheat1_code = "FF0412:0050"
+cheat1_enable = false
+
+cheat2_desc = "No Energy P1"
+cheat2_code = "FF0212:0000"
+cheat2_enable = false
+
+cheat3_desc = "No Energy P2"
+cheat3_code = "FF0412:0000"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Time"
+cheat4_code = "FF0708:0063"
+cheat4_enable = false
+
+cheat5_desc = "Character Modifier"
+cheat5_code = ""
+cheat5_enable = false
+
+cheat6_desc = "Opponent Modifier"
+cheat6_code = ""
+cheat6_enable = false

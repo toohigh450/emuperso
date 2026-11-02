@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Danny Sullivan's Indy Heat (USA) (Proto)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Danny%20Sullivan's%20Indy%20Heat%20%28USA%29%20%28Proto%29.cht
+
+cheats = 5
+
+cheat0_desc = "Infinite Coins"
+cheat0_code = "AT3T-AA8W"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Purse $"
+cheat1_code = "AKPT-AA58"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Turbo"
+cheat2_code = "ALBT-AA72"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Coins"
+cheat3_code = "FF5EDD:0003"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Purse $"
+cheat4_code = "FF5EDB:001E"
+cheat4_enable = false

@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Pete Sampras Tennis (USA, Europe) (v1.2) (J-Cart) (MDSTEE13)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Pete%20Sampras%20Tennis%20%28USA,%20Europe%29%20%28v1.2%29%20%28J-Cart%29%20%28MDSTEE13%29.cht
+
+cheats = 1
+
+cheat0_desc = "Enable Crazy and Huge Tour Modes on Title Screen"
+cheat0_code = "FFDEED:0001"
+cheat0_enable = false

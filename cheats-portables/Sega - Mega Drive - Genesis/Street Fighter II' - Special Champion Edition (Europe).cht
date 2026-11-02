@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Street Fighter II' - Special Champion Edition (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Street%20Fighter%20II'%20-%20Special%20Champion%20Edition%20%28Europe%29.cht
+
+cheats = 4
+
+cheat0_desc = "Regional Lockout Bypass"
+cheat0_code = "EAAT-BL1T"
+cheat0_enable = false
+
+cheat1_desc = "Regional Lockout Bypass"
+cheat1_code = "EAAT-AY1T"
+cheat1_enable = false
+
+cheat2_desc = "MASTER CODE--MUST BE ENTERED"
+cheat2_code = "BLAT-AA3R"
+cheat2_enable = false
+
+cheat3_desc = "P1 Inf HP"
+cheat3_code = "9T0A-DGRR+0A0A-CAGT+960A-CAGW+JJ0A-CBGY"
+cheat3_enable = false

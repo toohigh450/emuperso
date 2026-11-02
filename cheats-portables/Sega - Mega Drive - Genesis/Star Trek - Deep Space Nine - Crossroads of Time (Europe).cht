@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Star Trek - Deep Space Nine - Crossroads of Time (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Star%20Trek%20-%20Deep%20Space%20Nine%20-%20Crossroads%20of%20Time%20%28Europe%29.cht
+
+cheats = 2
+
+cheat0_desc = "Regional Lockout Bypass"
+cheat0_code = "EAAT-BL1T"
+cheat0_enable = false
+
+cheat1_desc = "Regional Lockout Bypass"
+cheat1_code = "EAAT-AY1T"
+cheat1_enable = false

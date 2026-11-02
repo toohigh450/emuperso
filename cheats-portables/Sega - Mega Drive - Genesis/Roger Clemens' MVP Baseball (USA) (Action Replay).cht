@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Roger Clemens' MVP Baseball (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Roger%20Clemens'%20MVP%20Baseball%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Balls Modifier"
+cheat0_code = "FF8BE1:XX"
+cheat0_enable = false 
+
+cheat1_desc = "Strikes Modifier"
+cheat1_code = "FF8BE3:XX"
+cheat1_enable = false 
+
+cheat2_desc = "Outs Modifier"
+cheat2_code = "FF8BE5:XX"
+cheat2_enable = false 
+
+cheat3_desc = "Team 1 Runs Modifier"
+cheat3_code = "FF8BEF:XX"
+cheat3_enable = false 
+
+cheat4_desc = "Team 2 Runs Modifier"
+cheat4_code = "FF8BF1:XX"
+cheat4_enable = false 
+
+cheat5_desc = "Team 1 Score Total Modifier"
+cheat5_code = "FF8C19:XX"
+cheat5_enable = false 
+
+cheat6_desc = "Team 2 Score Total Modifier"
+cheat6_code = "FF8C17:XX"
+cheat6_enable = false

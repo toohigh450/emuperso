@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : NBA Showdown '94 (USA, Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/NBA%20Showdown%20'94%20%28USA,%20Europe%29.cht
+
+cheats = 3
+
+cheat0_desc = "Sound Test Unlocked Under Coaching Options"
+cheat0_code = "A65A-CAD0"
+cheat0_enable = false
+
+cheat1_desc = "Regional Lockout Bypass"
+cheat1_code = "EAAT-AY1T"
+cheat1_enable = false
+
+cheat2_desc = "Master Code"
+cheat2_code = "R0MV-86VR"
+cheat2_enable = false

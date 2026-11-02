@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Might and Magic III - Isles of Terra (USA) (Proto)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Might%20and%20Magic%20III%20-%20Isles%20of%20Terra%20%28USA%29%20%28Proto%29.cht
+
+cheats = 2
+
+cheat0_desc = "Have Lots of Gold"
+cheat0_code = "FFC82E:00FF"
+cheat0_enable = false
+
+cheat1_desc = "Have Maxed Out Gold"
+cheat1_code = "FFC82E:00FF+FFC82E:00FF"
+cheat1_enable = false

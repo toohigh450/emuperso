@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Boxing Legends of the Ring (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Boxing%20Legends%20of%20the%20Ring%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Round Modifier (0-B)"
+cheat0_code = "FFB5B5:000?"
+cheat0_enable = false 
+
+cheat1_desc = "Exhibition CPU Is Like A Punching Bag"
+cheat1_code = "FFAA79:0009"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Time"
+cheat2_code = "FFCBBE:0040"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Health P1"
+cheat3_code = "FFCBBE:63"
+cheat3_enable = false

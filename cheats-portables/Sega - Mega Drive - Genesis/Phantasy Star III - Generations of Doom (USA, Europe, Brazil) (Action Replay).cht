@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Phantasy Star III - Generations of Doom (USA, Europe, Brazil) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Phantasy%20Star%20III%20-%20Generations%20of%20Doom%20%28USA,%20Europe,%20Brazil%29%20%28Action%20Replay%29.cht
+
+cheats = 2 
+
+cheat0_desc = "No Random Attacks"
+cheat0_code = "FFC03F:20"
+cheat0_enable = false 
+
+cheat1_desc = "Mucho & Infinite Meseta"
+cheat1_code = "FFC041:00FF"
+cheat1_enable = false

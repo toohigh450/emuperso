@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : X-Men (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/X-Men%20%28Europe%29.cht
+
+cheats = 4
+
+cheat0_desc = "Starts The Battle Against Zaldane"
+cheat0_code = "MVEA-ALRR+1BEA-ACGT"
+cheat0_enable = false
+
+cheat1_desc = "Starts The Battle Against Juggernaut (Stage 1)"
+cheat1_code = "X7EA-B6GR+5BEA-ACGT"
+cheat1_enable = false
+
+cheat2_desc = "Regional Lockout Bypass"
+cheat2_code = "EAAT-BL1T"
+cheat2_enable = false
+
+cheat3_desc = "Regional Lockout Bypass"
+cheat3_code = "EAAT-AY1T"
+cheat3_enable = false

@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Sampras Tennis 96 (Europe) (J-Cart)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Sampras%20Tennis%2096%20%28Europe%29%20%28J-Cart%29.cht
+
+cheats = 7
+
+cheat0_desc = "Cpu Never Scores"
+cheat0_code = "9WTT-BGBC+ACTT-AABE+98TT-AABG+BRTT-AYKJ"
+cheat0_enable = false
+
+cheat1_desc = "Score Modifier P1"
+cheat1_code = ""
+cheat1_enable = false
+
+cheat2_desc = "Opponent Score Modifier (CPU/P2)"
+cheat2_code = "FF2A0A:0000"
+cheat2_enable = false
+
+cheat3_desc = "Character Modifier P1"
+cheat3_code = "FF2816:0000"
+cheat3_enable = false
+
+cheat4_desc = "Character Modifier P2"
+cheat4_code = "FF28AA:0000"
+cheat4_enable = false
+
+cheat5_desc = "Court Modifier"
+cheat5_code = "FF7738:0000"
+cheat5_enable = false
+
+cheat6_desc = "Robot (fastest player in the game) is available in the character select menu. See notes."
+cheat6_code = "AEKT-AAC0"
+cheat6_enable = false

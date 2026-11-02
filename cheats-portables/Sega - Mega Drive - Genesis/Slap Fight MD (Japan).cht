@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Slap Fight MD (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Slap%20Fight%20MD%20%28Japan%29.cht
+
+cheats = 7
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "AKST-AA84"
+cheat0_enable = false
+
+cheat1_desc = "Invincibility"
+cheat1_code = "AKEA-AA6E"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Ships P1"
+cheat2_code = "FF088A:0009"
+cheat2_enable = false
+
+cheat3_desc = "Keep Big Chip After The Death"
+cheat3_code = "FF08C3:0001"
+cheat3_enable = false
+
+cheat4_desc = "Enable Muteki"
+cheat4_code = "FF0860:00FF"
+cheat4_enable = false
+
+cheat5_desc = "Enable Toaplan Mode"
+cheat5_code = "FF0861:00FF"
+cheat5_enable = false
+
+cheat6_desc = "Disable Muteki"
+cheat6_code = "FF0860:0000"
+cheat6_enable = false

@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Sonic Compilation _ Sonic Classics (USA, Europe, Korea) (Rev A)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Sonic%20Compilation%20_%20Sonic%20Classics%20%28USA,%20Europe,%20Korea%29%20%28Rev%20A%29.cht
+
+cheats = 7
+
+cheat0_desc = "infinite lives"
+cheat0_code = "GJ6C-CA46"
+cheat0_enable = false
+
+cheat1_desc = "99 lives"
+cheat1_code = "NN3W-AAAG"
+cheat1_enable = false
+
+cheat2_desc = "You can't be hurt by enemies or spikes when you collect rings"
+cheat2_code = "ATTA-CABE"
+cheat2_enable = false
+
+cheat3_desc = "Rings always count up to 999"
+cheat3_code = "AP2A-CAR4"
+cheat3_enable = false
+
+cheat4_desc = "Grab rings from anywhere"
+cheat4_code = "AP2A-CAPA"
+cheat4_enable = false
+
+cheat5_desc = "Dont lose rings when Hit"
+cheat5_code = "AWRW-AA3R"
+cheat5_enable = false
+
+cheat6_desc = "Dont lose rings when Hit"
+cheat6_code = "ATTA-CA92"
+cheat6_enable = false

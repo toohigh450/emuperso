@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : ST II' Turbo (USA) (Proto) (Unl) (Pirate) [b]
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/ST%20II'%20Turbo%20%28USA%29%20%28Proto%29%20%28Unl%29%20%28Pirate%29%20[b].cht
+
+cheats = 6
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "9VMT-DGJT+WBMT-CAAW+97MT-CAAY+7BMT-CHA0"
+cheat0_enable = false
+
+cheat1_desc = "P1 Infinite Health"
+cheat1_code = "FF83E8:0090"
+cheat1_enable = false
+
+cheat2_desc = "P1 One Hit To Kill"
+cheat2_code = "FF83E8:0000"
+cheat2_enable = false
+
+cheat3_desc = "P2 Infinite Health"
+cheat3_code = "FF86E8:0090"
+cheat3_enable = false
+
+cheat4_desc = "P2 One Hit To Kill"
+cheat4_code = "FF86E8:0000"
+cheat4_enable = false
+
+cheat5_desc = "Infinite Time"
+cheat5_code = "FF8A6A:0099"
+cheat5_enable = false

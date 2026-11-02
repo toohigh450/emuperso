@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Galaxy Force II (Japan) (En)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Galaxy%20Force%20II%20%28Japan%29%20%28En%29.cht
+
+cheats = 5
+
+cheat0_desc = "Address Error"
+cheat0_code = "RP2A-E4ST"
+cheat0_enable = false
+
+cheat1_desc = "Take No Damage"
+cheat1_code = "RZPA-E6TA"
+cheat1_enable = false
+
+cheat2_desc = "Energy Doesn't Decay"
+cheat2_code = "SAKT-AYWG"
+cheat2_enable = false
+
+cheat3_desc = "Enemies/Bullets Can't Touch You"
+cheat3_code = "ABNT-EA52"
+cheat3_enable = false
+
+cheat4_desc = "Master Code"
+cheat4_code = "B4YT-EA3E"
+cheat4_enable = false

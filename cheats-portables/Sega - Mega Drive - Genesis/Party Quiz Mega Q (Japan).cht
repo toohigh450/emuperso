@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Party Quiz Mega Q (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Party%20Quiz%20Mega%20Q%20%28Japan%29.cht
+
+cheats = 2
+
+cheat0_desc = "Regional Lockout Bypass"
+cheat0_code = "AJKA-AA20"
+cheat0_enable = false
+
+cheat1_desc = "Master Code"
+cheat1_code = "CTJA-AA7N"
+cheat1_enable = false

@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Tom and Jerry - Frantic Antics (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Tom%20and%20Jerry%20-%20Frantic%20Antics%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Infinite Health"
+cheat0_code = "FFD52F:81"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "FFFC1B:63"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Time (Minutes Digit)"
+cheat2_code = "FFFC0E:09"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Time (Tens Digit)"
+cheat3_code = "FFFC0F:09"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Time (Ones Digit)"
+cheat4_code = "FFFC10:0A"
+cheat4_enable = false 
+
+cheat5_desc = "Infinite Fish Bones"
+cheat5_code = "FFFC29:09"
+cheat5_enable = false 
+
+cheat6_desc = "Infinite Footballs"
+cheat6_code = "FFD47C:09"
+cheat6_enable = false

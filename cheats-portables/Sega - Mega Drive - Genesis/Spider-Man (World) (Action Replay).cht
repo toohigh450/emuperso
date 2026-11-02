@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Spider-Man (World) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Spider-Man%20%28World%29%20%28Action%20Replay%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Infinite Health"
+cheat0_code = "FFD3CA:6300"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "FFD786:0300"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Blue And Red Webs"
+cheat2_code = "FFD77A:143C"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Blue And Red Granades"
+cheat3_code = "FFD77C:0202"
+cheat3_enable = false

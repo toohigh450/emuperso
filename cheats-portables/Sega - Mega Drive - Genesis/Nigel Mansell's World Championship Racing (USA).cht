@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Nigel Mansell's World Championship Racing (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Nigel%20Mansell's%20World%20Championship%20Racing%20%28USA%29.cht
+
+cheats = 6
+
+cheat0_desc = "Low Timer (Minutes)"
+cheat0_code = "FF73F0:0000"
+cheat0_enable = false
+
+cheat1_desc = "Low Timer (Seconds)"
+cheat1_code = "FF73F2:0000"
+cheat1_enable = false
+
+cheat2_desc = "Low Timer (Micro-Seconds)"
+cheat2_code = "FF73F2:0000"
+cheat2_enable = false
+
+cheat3_desc = "Master code"
+cheat3_code = "RECA-A6W4"
+cheat3_enable = false
+
+cheat4_desc = "Improved master code"
+cheat4_code = "DACA-AA4C"
+cheat4_enable = false
+
+cheat5_desc = "Accelerate much faster"
+cheat5_code = "KKMA-AK4N"
+cheat5_enable = false

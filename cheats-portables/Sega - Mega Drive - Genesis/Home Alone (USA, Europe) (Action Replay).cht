@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Home Alone (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Home%20Alone%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Infinite Charge (Outside Only, Turn off Indoors)"
+cheat0_code = "FFF54C:30"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Time"
+cheat1_code = "FFF583:3B"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Air Rifle"
+cheat2_code = "FFF884:30"
+cheat2_enable = false 
+
+cheat3_desc = "Looting Does Not Go Up"
+cheat3_code = "FFF548:00"
+cheat3_enable = false

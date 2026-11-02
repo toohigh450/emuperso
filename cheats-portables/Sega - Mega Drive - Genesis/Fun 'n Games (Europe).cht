@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Fun 'n Games (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Fun%20'n%20Games%20%28Europe%29.cht
+
+cheats = 6
+
+cheat0_desc = "Regional Lockout Bypass"
+cheat0_code = "EAAT-BL1T"
+cheat0_enable = false
+
+cheat1_desc = "Regional Lockout Bypass"
+cheat1_code = "EAAT-AY1T"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Mouse - Mouse Maze "
+cheat2_code = "AJTA-CA4T"
+cheat2_enable = false
+
+cheat3_desc = "Infinite NRG - Space Lazer "
+cheat3_code = "AXBA-AA7W"
+cheat3_enable = false
+
+cheat4_desc = "Invincibility - Space Lazer (Disable Hit Detection)"
+cheat4_code = "R1EA-A60R+R1AA-A6T4"
+cheat4_enable = false
+
+cheat5_desc = "Invincibility - Mouse Maze"
+cheat5_code = "RYVA-C6TJ"
+cheat5_enable = false

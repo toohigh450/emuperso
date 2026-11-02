@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Jeopardy! - Deluxe Edition (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Jeopardy!%20-%20Deluxe%20Edition%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Infinite Time To Buzz In"
+cheat0_code = "FF4085:09"
+cheat0_enable = false 
+
+cheat1_desc = "Player 1 Has A Great Score"
+cheat1_code = "FF3EA2:FF+FF3EA3:FF"
+cheat1_enable = false 
+
+cheat2_desc = "Player 2 Has No Score"
+cheat2_code = "FF3EA7:00"
+cheat2_enable = false 
+
+cheat3_desc = "Player 3 Has No Score"
+cheat3_code = "FF3EAB:00"
+cheat3_enable = false

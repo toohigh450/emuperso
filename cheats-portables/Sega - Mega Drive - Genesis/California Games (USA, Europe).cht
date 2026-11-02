@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : California Games (USA, Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/California%20Games%20%28USA,%20Europe%29.cht
+
+cheats = 6
+
+cheat0_desc = "Fake Infinite Time"
+cheat0_code = "FFEECE:0039+FFEECE:0039+FFEED0:0039"
+cheat0_enable = false
+
+cheat1_desc = "Master Code"
+cheat1_code = "REBT-A6VL"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Time"
+cheat2_code = "FFFC88:0014"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Time"
+cheat3_code = "AM6A-CA5A"
+cheat3_enable = false
+
+cheat4_desc = "Don't Fall in BMX Event"
+cheat4_code = "KVXA-EA2C"
+cheat4_enable = false
+
+cheat5_desc = "Don't Fall in Skate Event"
+cheat5_code = "RY0A-C6WE"
+cheat5_enable = false

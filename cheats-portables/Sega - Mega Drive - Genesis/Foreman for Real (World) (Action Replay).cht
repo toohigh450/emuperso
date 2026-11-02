@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Foreman for Real (World) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Foreman%20for%20Real%20%28World%29%20%28Action%20Replay%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Health Regenerates Fast For P1"
+cheat0_code = "FF5A3F:63"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Health P1"
+cheat1_code = "FF5A61:63"
+cheat1_enable = false 
+
+cheat2_desc = "No Health P2/CPU"
+cheat2_code = "FF599D:00"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Time (Minutes Digit)"
+cheat3_code = "FF327F:09"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Time (Seconds - Ten's Digit)"
+cheat4_code = "FF3280:09"
+cheat4_enable = false 
+
+cheat5_desc = "Infinite Time (Seconds - One's Digit)"
+cheat5_code = "FF3281:09"
+cheat5_enable = false
