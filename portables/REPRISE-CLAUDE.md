@@ -53,3 +53,18 @@ Le format 3:4 a été retenu après mesure. Avec une zone plus haute (78 % de l'
 | Chrome Windows 1440 × 900 + Pokémon Rouge Feu | inchangé : écran 888 × 592, démarre au clic |
 
 Non vérifié : un vrai téléphone Android. À confirmer par Karl sur l'aperçu Vercel.
+
+## 6. Réponse aux audits du commit 67a25ec (Méo et Gemini)
+
+Mesures faites en lisant directement la zone où le moteur dessine l'image (viewport WebGL) et la position des boutons de la manette tactile, avec la vraie ROM.
+
+| Point soulevé | Vérification | Conclusion |
+|---|---|---|
+| Méo : « Démarrer » au toucher non confirmé | Le bouton répond à un vrai toucher (`touchscreen.tap` aux coordonnées du bouton) sur Pixel 7, Moto G4, Galaxy S8, en portrait et en paysage, et au clic de souris sur Chrome Windows (GBA et DS). | Résolu. **Correction de la section 5** : l'échec à 78 % venait de la méthode de test (`locator.tap` de Playwright), pas du moteur. La même méthode échouait aussi sur Windows avec le CSS d'origine de Codex. |
+| Méo : image GBA étirée en 3:4 | Rapport largeur/hauteur de l'image mesuré : 1,500 sur tous les appareils. | Pas d'étirement : le moteur garde le format et ajoute du noir autour. |
+| Constat Claude : en 3:4, L et R mordaient sur le bas de l'image | Image 0–242 px, L/R 164–200 px. | Corrigé : la hauteur suit maintenant la largeur (image + 340 px), plafonnée à 85 % de l'écran. Pixel 7 : image 0–243, L/R dès 263. Moto G4 : image 0–208, L/R dès 224. |
+| Non couvert par les audits : téléphone en paysage | Avant : écran 335 × 240 dans la mise en page PC ; L et R hors du cadre, manette sur l'image. | Corrigé : une colonne et 94 % de la hauteur visible. Croix à gauche, A/B à droite, image au centre (507 × 338). Select/Start mordent légèrement sur le bas. |
+| DS en portrait | Image 363 × 545 ; la manette couvre l'écran du bas. | Accepté : c'est l'écran tactile de la DS, il doit rester touchable. Le paysage est conseillé pour la DS. |
+| Gemini : « buffer overflow », « désynchronisation audio/vidéo », « taux de rafraîchissement », tests par émulateur | Aucune de ces notions n'existe dans les commits ; les 78 tests portent sur la logique de l'appli (sessions, stockage, codes), pas sur chaque émulateur. | Audit non vérifiable : il ne cite aucune commande, aucun fichier ni aucune mesure. Son verdict n'est pas retenu comme preuve. |
+
+Chrome Windows (souris, 1440 × 900) : inchangé. Les règles ne visent que les écrans tactiles (`pointer: coarse`).
