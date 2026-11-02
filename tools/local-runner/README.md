@@ -91,6 +91,8 @@ Le code compare PID, date de création du processus et jeton de session avant de
 
 Le lanceur d'arrière-plan assure aussi l'inventaire initial (ou reprend un inventaire partiel) grâce à `--inventory-first`. Une fois l'inventaire complet, il le réutilise. Le banc alterne les consoles en privilégiant les petits fichiers à l'intérieur de chaque console. Ces choix reprennent les principes du testeur PSP local de Claude (`portables/tools/test-psp-collection.mjs`, examiné en lecture seule) : parcours autonome, résultats privés après chaque jeu, relance et petits fichiers en premier. Son fichier et sa campagne ne sont pas modifiés. Ici, le délai est imposé dans un autre processus que le moteur pour pouvoir fermer un renderer bloqué.
 
+Pour une fenêtre de commande visible, lancer `SUIVI-VISIBLE.bat --config "C:\chemin\campagne.json"` après arrêt/pause de l'ancien superviseur. Cette fenêtre exécute la campagne et affiche chaque début/fin de jeu. Elle peut être réduite ; fermer Codex ne l'arrête pas. La fermer interrompt la session, qui sera reprise par `resume`. Le verrou interdit un deuxième superviseur sur la même campagne. Lors du nettoyage, le banc attend jusqu'à dix secondes que le PID Chrome disparaisse réellement de CIM avant de se mettre en pause : Windows peut encore l'énumérer brièvement pendant sa terminaison.
+
 ## Modes, mesures et classifications
 
 `mode: "short"` : démarrage, deux captures et observation de six secondes (plus chargement et attente initiale). `mode: "deep"` : observation prolongée configurable, signaux Start/A/B/direction envoyés au moteur et troisième capture. **Ce second mode ne prouve ni jouabilité, ni sauvegarde.** Il sert à sélectionner des cas à examiner manuellement.

@@ -81,6 +81,16 @@ export async function killOwned(record) {
     await runFile('powershell.exe',['-NoProfile','-NonInteractive','-Command',`$p=Get-Process -Id ${Number(record.pid)} -ErrorAction SilentlyContinue; if($p){$p|Wait-Process -Timeout 5 -ErrorAction SilentlyContinue}`],{timeout:10000}).catch(()=>{});
   } else { try {process.kill(record.pid,'SIGTERM');} catch {} }
 }
+export async function waitOwnedExit(record, timeoutMs=10000) {
+  if(!record)return true;
+  const deadline=Date.now()+timeoutMs;
+  do {
+    const live=await processInfo(record.pid);
+    if(!live||live.created!==record.created)return true;
+    await sleep(300);
+  }while(Date.now()<deadline);
+  return false;
+}
 export async function resourceSample(workerPids=[]) {
   if(process.platform!=='win32') return {freeMiB:os.freemem()/1048576,totalMiB:os.totalmem()/1048576,cpuPercent:null,processes:[]};
   const pids=workerPids.map(Number).join(',');

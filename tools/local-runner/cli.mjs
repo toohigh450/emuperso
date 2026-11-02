@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {spawn} from 'node:child_process';
 import {randomUUID} from 'node:crypto';
-import {HERE,config,readJSON,atomic,append,sleep,processInfo,killOwned,resourceSample,bytesIn,removeTemporary,STATUS,stamp,fileHash} from './lib.mjs';
+import {HERE,config,readJSON,atomic,append,sleep,processInfo,killOwned,waitOwnedExit,resourceSample,bytesIn,removeTemporary,STATUS,stamp,fileHash} from './lib.mjs';
 import {inventory} from './inventory.mjs';
 import {attempts,report} from './report.mjs';
 
@@ -102,8 +102,9 @@ async function one(item,number) {
   result.supervisor={exit,peakRssMiB:a.peakRssMiB,deadlineMs:c.timeoutMs,reason:a.reason||null};
   atomic(path.join(out,'result.json'),result);
   const browserOwner=readJSON(path.join(out,'browser-owner.json'));
-  const browserLive=browserOwner?await processInfo(browserOwner.pid):null;
-  const cleanupComplete=!browserOwner||!browserLive||browserLive.created!==browserOwner.created;
+  // Windows peut conserver brièvement un processus Chrome en cours de terminaison dans CIM.
+  // Attendre sa disparition réelle avant de conclure à un navigateur survivant.
+  const cleanupComplete=await waitOwnedExit(browserOwner);
   atomic(path.join(out,'cleanup.json'),{complete:cleanupComplete,checked:new Date().toISOString(),workerExited:true,browserAlive:!cleanupComplete});
   active.delete(token);
   if(!cleanupComplete){fs.writeFileSync(marker('pause'),'Nettoyage processus non confirmé');append(c,{event:'cleanup-unconfirmed',token});}
