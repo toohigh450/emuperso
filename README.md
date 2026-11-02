@@ -5,7 +5,7 @@ Banc d'essai **synthétique** pour le projet N64 Web de Karl.
 Il simule le contrat technique (sauvegarde/chargement d'état, journal, audio)
 pour valider l'instrumentation avant tout vrai moteur.
 
-Démo en ligne : `index.html` (même contenu que `N64-Web-Lab-Phase1A.html`).
+Démo en ligne : `N64-Web-Lab-Phase1A.html` (jusqu'à la branche `feature/nes-snes-unified`, `index.html` en était une copie identique ; `index.html` devient l'accueil commun du portail, voir plus bas).
 
 ## Statut
 
@@ -39,3 +39,19 @@ Chaque IA utilise son propre accès autorisé au dépôt.
 - `docs/` : rapports d'audit (Codex, GPT, contre-audit Méo).
 - `references/` : pièces de transmission (fichiers binaires de référence exclus du dépôt — disponibles sur demande, traçabilité par SHA-256 dans le manifeste).
 - `evidence*/` : exports de validation (captures PNG exclues du dépôt).
+
+## Portail EMUPERSO — 8 consoles (branche `feature/nes-snes-unified`)
+
+`index.html` est l'accueil unique : NES, Super Nintendo, Game Boy, Game Boy Color, Game Boy Advance et DS
+(application `portables/`), Nintendo 64 (`real-n64/`) et PlayStation (`ps1-web/`). Architecture et
+construction Vercel : `docs/PORTAIL-8-CONSOLES.md`. NES/SNES : `portables/COMPATIBILITE-NES-SNES.md` et
+`portables/TESTS-NES-SNES.md`.
+
+Construire et tester en local (Python 3.10+, Node 22+, Chrome) :
+
+```
+python ps1-web/tools/fetch_runtime.py && python ps1-web/tools/build-vercel-alpha.py
+python real-n64/tools/fetch_runtime.py && python real-n64/tools/fetch_cheats.py && python real-n64/tools/build-vercel-alpha.py
+node tools/build-portail.mjs
+node tools/serve-portail.mjs 8080
+```
