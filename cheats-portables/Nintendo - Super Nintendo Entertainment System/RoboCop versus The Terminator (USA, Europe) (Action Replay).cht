@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : RoboCop versus The Terminator (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/RoboCop%20versus%20The%20Terminator%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "019DF100"
+cheat0_enable = false 
+
+cheat1_desc = "Full Life Bar"
+cheat1_code = "7E10FC50"
+cheat1_enable = false 
+
+cheat2_desc = "Super Jump"
+cheat2_code = "80EE3800"
+cheat2_enable = false 
+
+cheat3_desc = "Normal Pistol Does More Damage"
+cheat3_code = "81804A0F"
+cheat3_enable = false 
+
+cheat4_desc = "Rockets Do More Damage"
+cheat4_code = "8182EA0F"
+cheat4_enable = false 
+
+cheat5_desc = "Infinite Life"
+cheat5_code = "7E10C50A"
+cheat5_enable = false 
+
+cheat6_desc = "Weapon Modifier"
+cheat6_code = "7E021C??"
+cheat6_enable = false

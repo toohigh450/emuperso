@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Wagyan Paradise (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Wagyan%20Paradise%20%28Japan%29.cht
+
+cheats = 6
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "7E270099"
+cheat0_enable = false
+
+cheat1_desc = "Lots of Stars"
+cheat1_code = "7E2702FF"
+cheat1_enable = false
+
+cheat2_desc = "Full Power"
+cheat2_code = "7E271603"
+cheat2_enable = false
+
+cheat3_desc = "Rise into the air"
+cheat3_code = "7E006100"
+cheat3_enable = false
+
+cheat4_desc = "Character Mod"
+cheat4_code = "7E274600"
+cheat4_enable = false
+
+cheat5_desc = "Level Modifier"
+cheat5_code = "7E270400"
+cheat5_enable = false

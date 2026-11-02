@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Star Fox (USA, Japan) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Star%20Fox%20%28USA,%20Japan%29%20%28Game%20Genie%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Never-Ending Launching Tube"
+cheat0_code = "5560-DDF3"
+cheat0_enable = false 
+
+cheat1_desc = "Zoom In On Your Ship When It Explodes In Your Death Scene"
+cheat1_code = "XX60-DDFB"
+cheat1_enable = false 
+
+cheat2_desc = "View In Different Perspective Of The Launch Pad/Tube"
+cheat2_code = "5561-DDF3"
+cheat2_enable = false 
+
+cheat3_desc = "View In Different Perspective Of The Launch Pad/Tube #2"
+cheat3_code = "1161-DDF3"
+cheat3_enable = false

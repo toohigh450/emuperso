@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Twisted Tales of Spike McFang, The (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Twisted%20Tales%20of%20Spike%20McFang,%20The%20%28USA%29.cht
+
+cheats = 6
+
+cheat0_desc = "Invincible"
+cheat0_code = "CEA5-34DF"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Money"
+cheat1_code = "C260-3766"
+cheat1_enable = false
+
+cheat2_desc = "All Coins Worth 999"
+cheat2_code = "2DA3-3FAF+DDA3-34DF"
+cheat2_enable = false
+
+cheat3_desc = "Infinite HP"
+cheat3_code = "7E4CE0FF+7E4CE14F"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Money"
+cheat4_code = "7E0A57E7+7E0A5803"
+cheat4_enable = false
+
+cheat5_desc = "Enable Debug Menu"
+cheat5_code = ""
+cheat5_enable = false

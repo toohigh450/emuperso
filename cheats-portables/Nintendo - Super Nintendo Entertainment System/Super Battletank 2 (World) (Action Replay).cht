@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Super Battletank 2 (World) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Super%20Battletank%202%20%28World%29%20%28Action%20Replay%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Infinite Hits"
+cheat0_code = "7E00AD00"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite 120 mm Bullets"
+cheat1_code = "7E10E363"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite 7.62 mm Bullets"
+cheat2_code = "7E10E763"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Phalanx"
+cheat3_code = "7E10E809"
+cheat3_enable = false

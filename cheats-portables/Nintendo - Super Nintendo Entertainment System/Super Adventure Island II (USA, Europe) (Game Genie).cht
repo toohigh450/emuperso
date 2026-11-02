@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Super Adventure Island II (USA, Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Super%20Adventure%20Island%20II%20%28USA,%20Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "C29B-EF0F"
+cheat0_enable = false 
+
+cheat1_desc = "Almost Invincible After Getting Hit"
+cheat1_code = "C2D6-8FAB"
+cheat1_enable = false 
+
+cheat2_desc = "Stacks Of Cash"
+cheat2_code = "CB45-ED6D"
+cheat2_enable = false 
+
+cheat3_desc = "Small Potions Don't Restore Energy"
+cheat3_code = "C2B4-7D8E"
+cheat3_enable = false 
+
+cheat4_desc = "Fall Slowly"
+cheat4_code = "DFF1-770B"
+cheat4_enable = false 
+
+cheat5_desc = "Don't Fall At All (Switch Off To Touch The Ground Again)"
+cheat5_code = "DDF1-770B"
+cheat5_enable = false

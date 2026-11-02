@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Uniracers (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Uniracers%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "No Timer In Almost Every Race"
+cheat0_code = "81C726EA"
+cheat0_enable = false 
+
+cheat1_desc = "CPU Uniracers Just Braking From Starting To Finish On The Starting Line"
+cheat1_code = "828ECFFF"
+cheat1_enable = false 
+
+cheat2_desc = "1 Z-Flip = 1 Z-Filp City"
+cheat2_code = "829620EB"
+cheat2_enable = false 
+
+cheat3_desc = "Double Or Treble Rolls Or Filps For Just Do Them Once"
+cheat3_code = "829B50A1"
+cheat3_enable = false 
+
+cheat4_desc = "Game Is At Slow Speed"
+cheat4_code = "82DC0102"
+cheat4_enable = false

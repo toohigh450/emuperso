@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Top Gear (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Top%20Gear%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Race In Any Country"
+cheat0_code = "0F933780"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Fuel P1"
+cheat1_code = "7E1E63FF"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Fuel P2"
+cheat2_code = "7E1E65FF"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Nitro P1"
+cheat3_code = "7E1E6C02"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Nitro P2"
+cheat4_code = "7E1E6E02"
+cheat4_enable = false

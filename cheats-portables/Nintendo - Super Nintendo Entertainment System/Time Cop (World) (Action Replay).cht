@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Time Cop (World) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Time%20Cop%20%28World%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Lives Modifier"
+cheat0_code = "7E06EB??"
+cheat0_enable = false 
+
+cheat1_desc = "Bombs Modifier"
+cheat1_code = "7E06F7??"
+cheat1_enable = false 
+
+cheat2_desc = "Gun Modifier"
+cheat2_code = "7E06F5??"
+cheat2_enable = false 
+
+cheat3_desc = "Life Modifier"
+cheat3_code = "7E06F3??"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Time"
+cheat4_code = "7E063863"
+cheat4_enable = false

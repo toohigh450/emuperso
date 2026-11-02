@@ -1,0 +1,48 @@
+# Recherche locale pour la ROM : Toys - Let the Toy Wars begin! (USA, Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Toys%20-%20Let%20the%20Toy%20Wars%20begin!%20%28USA,%20Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 10 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "C261-3D7B"
+cheat0_enable = false 
+
+cheat1_desc = "Start With 1 Life"
+cheat1_code = "DF2D-37AC"
+cheat1_enable = false 
+
+cheat2_desc = "Start With 9 Lives"
+cheat2_code = "DB2D-37AC"
+cheat2_enable = false 
+
+cheat3_desc = "Protection Against Most Hazards"
+cheat3_code = "C2B6-3F5C+C2A4-3F8C"
+cheat3_enable = false 
+
+cheat4_desc = "Fewer Toys Gained From Floor Boxes"
+cheat4_code = "DC85-4D34"
+cheat4_enable = false 
+
+cheat5_desc = "More Toys Gained From Floor Boxes"
+cheat5_code = "1EB5-4D34+EEB5-440F"
+cheat5_enable = false 
+
+cheat6_desc = "Lots More Toys Gained From Floor Boxes"
+cheat6_code = "7985-4D34+EEB5-440F"
+cheat6_enable = false 
+
+cheat7_desc = "Fewer Toys Gained From Carousel"
+cheat7_code = "DC69-CF47"
+cheat7_enable = false 
+
+cheat8_desc = "More Toys Gained From Carousel"
+cheat8_code = "7969-CF47"
+cheat8_enable = false 
+
+cheat9_desc = "Lots More Toys Gained From Carousel"
+cheat9_code = "1E69-CF47"
+cheat9_enable = false

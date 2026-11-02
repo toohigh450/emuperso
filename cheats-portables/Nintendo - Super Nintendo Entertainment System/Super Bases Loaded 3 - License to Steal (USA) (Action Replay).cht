@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Super Bases Loaded 3 - License to Steal (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Super%20Bases%20Loaded%203%20-%20License%20to%20Steal%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Out Modifier"
+cheat0_code = "7E0681??"
+cheat0_enable = false 
+
+cheat1_desc = "Away Score Modifier"
+cheat1_code = "7E0677??"
+cheat1_enable = false 
+
+cheat2_desc = "Home Score Modifier"
+cheat2_code = "7E0678??"
+cheat2_enable = false 
+
+cheat3_desc = "Inning Modifier"
+cheat3_code = "7E0671??"
+cheat3_enable = false 
+
+cheat4_desc = "Instant Win Away"
+cheat4_code = "7E068103+7E0677FF+7E0671FF"
+cheat4_enable = false 
+
+cheat5_desc = "Instant Win Home"
+cheat5_code = "7E068103+7E0678FF+7E0671FF"
+cheat5_enable = false

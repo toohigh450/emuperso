@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Steven Seagal Is The Final Option (USA) (Proto)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Steven%20Seagal%20Is%20The%20Final%20Option%20%28USA%29%20%28Proto%29.cht
+
+cheats = 2
+
+cheat0_desc = "Infinite Health"
+cheat0_code = "7E10E60F"
+cheat0_enable = false
+
+cheat1_desc = "Start The First Level To See The Ending"
+cheat1_code = "C186-4D6F+6E86-4DAF"
+cheat1_enable = false

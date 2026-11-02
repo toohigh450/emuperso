@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Super Street Fighter II (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Super%20Street%20Fighter%20II%20%28Europe%29.cht
+
+cheats = 3
+
+cheat0_desc = "Player 1 Infinite Health "
+cheat0_code = "CB98-57DD+8D98-570D+6298-576D+7F98-57AD+D99A-5DDD"
+cheat0_enable = false
+
+cheat1_desc = "Allows You To Select Up To 40 Stars Instead Of 3 For Turbo Mode"
+cheat1_code = "06F8-E7AF"
+cheat1_enable = false
+
+cheat2_desc = "Very Slow Timer countdown"
+cheat2_code = "EE03-5D6D"
+cheat2_enable = false

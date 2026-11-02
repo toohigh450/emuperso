@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Super Smash T.V. (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Super%20Smash%20T.V.%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "7E053105"
+cheat0_enable = false 
+
+cheat1_desc = "Once A Weapon Is Picked Up You Do Not Lose It Until The Next One Is Picked Up"
+cheat1_code = "7E189906"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Lives"
+cheat2_code = "009891BD"
+cheat2_enable = false 
+
+cheat3_desc = "Weapons Gauge Doesn't Lose Power Until You Die"
+cheat3_code = "00BEECBD"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Continues"
+cheat4_code = "0ED4EEAD"
+cheat4_enable = false 
+
+cheat5_desc = "Go To Ending"
+cheat5_code = "0081FD00+0081FE02+0081FF19"
+cheat5_enable = false 
+
+cheat6_desc = "Once You Get A Moblie Force Field, Keep It Forever (The Visible Effect Will Wear Off)"
+cheat6_code = "038A7980+038A7A01"
+cheat6_enable = false

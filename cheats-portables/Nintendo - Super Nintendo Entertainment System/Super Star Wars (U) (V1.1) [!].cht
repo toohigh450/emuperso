@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Super Star Wars (U) (V1.1) [!]
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Super%20Star%20Wars%20%28U%29%20%28V1.1%29%20[!].cht
+
+cheats = 3
+
+cheat0_desc = "Hit Anywhere"
+cheat0_code = "AD89-1F07+DD89-1F67+DD89-1FA7+2D89-14D7+1D89-1407+DD81-1DA7"
+cheat0_enable = false
+
+cheat1_desc = "Enable Debug Menu plus Invincibility and Player Coordinate Display"
+cheat1_code = "DDB4-4DA7"
+cheat1_enable = false
+
+cheat2_desc = "Enable Stage Skip"
+cheat2_code = "DDBD-4DD7"
+cheat2_enable = false

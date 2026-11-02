@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Waterworld (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Waterworld%20%28Europe%29.cht
+
+cheats = 5
+
+cheat0_desc = "Hit Anywhere"
+cheat0_code = "6DA5-170D+4CA5-176D+1DAC-17DD"
+cheat0_enable = false
+
+cheat1_desc = "Get Items From Anywhere"
+cheat1_code = "6D36-CDA0+F636-CFD0"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Health Underwater"
+cheat2_code = "C2B7-34A0"
+cheat2_enable = false
+
+cheat3_desc = "Invincibility Underwater"
+cheat3_code = "DDCB-C7A9"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Energy (Overworld)"
+cheat4_code = "7E02887F"
+cheat4_enable = false

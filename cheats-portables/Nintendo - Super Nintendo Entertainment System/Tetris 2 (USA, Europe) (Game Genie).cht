@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Tetris 2 (USA, Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Tetris%202%20%28USA,%20Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 8 
+
+cheat0_desc = "Select Any Round (At Round Select Meter, Keep Pressing 'Right' On D-Pad - 1-Player Mode Only)"
+cheat0_code = "9DBD-3DF4"
+cheat0_enable = false 
+
+cheat1_desc = "Tile Speed Always At 0"
+cheat1_code = "CBC5-4FDC+DDC5-4F0C+DDC5-4F6C"
+cheat1_enable = false 
+
+cheat2_desc = "Tile Speed Always At 255"
+cheat2_code = "CBC5-4FDC+EEC5-4F0C+DDC5-4F6C"
+cheat2_enable = false 
+
+cheat3_desc = "More Time To Place The Blocks Where You Want Them (Even After They Hit The Ground - Left And Right Only Once On Ground)"
+cheat3_code = "6DB1-346B"
+cheat3_enable = false 
+
+cheat4_desc = "All Pieces On Left"
+cheat4_code = "KAGEIO"
+cheat4_enable = false 
+
+cheat5_desc = "Random Effects"
+cheat5_code = "**TOXE"
+cheat5_enable = false 
+
+cheat6_desc = "Cool Title Screen Music"
+cheat6_code = "KAYEIO"
+cheat6_enable = false 
+
+cheat7_desc = "Pieces Mess Up And Form Cool Designs"
+cheat7_code = "GATEIO"
+cheat7_enable = false

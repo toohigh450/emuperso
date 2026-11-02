@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : SimCity (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/SimCity%20%28Europe%29.cht
+
+cheats = 6
+
+cheat0_desc = "Special Item 1"
+cheat0_code = "7E03F500"
+cheat0_enable = false
+
+cheat1_desc = "Special Item 2"
+cheat1_code = "7E03F600"
+cheat1_enable = false
+
+cheat2_desc = "Special Item 3"
+cheat2_code = "7E03F700"
+cheat2_enable = false
+
+cheat3_desc = "Special Item 4"
+cheat3_code = "7E03F800"
+cheat3_enable = false
+
+cheat4_desc = "Police Coverage Range"
+cheat4_code = "7FAFE8FF+7FB0AAFF"
+cheat4_enable = false
+
+cheat5_desc = "Always Have Power"
+cheat5_code = "DD86-070A"
+cheat5_enable = false

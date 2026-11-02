@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : SD Hiryuu no Ken (Japan) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/SD%20Hiryuu%20no%20Ken%20%28Japan%29%20%28Action%20Replay%29.cht
+
+cheats = 2 
+
+cheat0_desc = "Infinite Health P1"
+cheat0_code = "7E10D160"
+cheat0_enable = false 
+
+cheat1_desc = "Instant Death P2/CPU"
+cheat1_code = "7E10DB00"
+cheat1_enable = false

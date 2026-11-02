@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Shin Megami Tensei (Japan) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Shin%20Megami%20Tensei%20%28Japan%29%20%28Game%20Genie%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Have Enough Pts. To Max Out Characters"
+cheat0_code = "C4C3-CF03"
+cheat0_enable = false 
+
+cheat1_desc = "Ignore Distributable Points"
+cheat1_code = "DD6B-D7D5"
+cheat1_enable = false 
+
+cheat2_desc = "Max Level, Experience Points In 1 Battle"
+cheat2_code = "D9A8-6DD9"
+cheat2_enable = false 
+
+cheat3_desc = "Buy Or Sell An Item To Get Maximum Money"
+cheat3_code = "DCBC-A78E"
+cheat3_enable = false 
+
+cheat4_desc = "Win A Battle With Low Magnetite To Get Maximum Magnetite"
+cheat4_code = "D9AB-ADA9"
+cheat4_enable = false 
+
+cheat5_desc = "Magnetite Isn't Drained While Demons Are Summoned"
+cheat5_code = "BAA9-0467"
+cheat5_enable = false

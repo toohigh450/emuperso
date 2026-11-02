@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Shin Nekketsu Kouha - Kunio-tachi no Banka (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Shin%20Nekketsu%20Kouha%20-%20Kunio-tachi%20no%20Banka%20%28Japan%29.cht
+
+cheats = 2
+
+cheat0_desc = "Invincibility"
+cheat0_code = "C22B-1466"
+cheat0_enable = false
+
+cheat1_desc = "One Hit Kill"
+cheat1_code = "AD23-37AB+D62E-3DDB+DD2E-3D0B+7D2E-3D6B"
+cheat1_enable = false

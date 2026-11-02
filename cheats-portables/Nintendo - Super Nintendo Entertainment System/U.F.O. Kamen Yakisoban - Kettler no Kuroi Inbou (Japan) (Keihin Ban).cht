@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : U.F.O. Kamen Yakisoban - Kettler no Kuroi Inbou (Japan) (Keihin Ban)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/U.F.O.%20Kamen%20Yakisoban%20-%20Kettler%20no%20Kuroi%20Inbou%20%28Japan%29%20%28Keihin%20Ban%29.cht
+
+cheats = 3
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "7E017528"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Time"
+cheat1_code = "7E0AF3B0"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Lives"
+cheat2_code = "7E017607"
+cheat2_enable = false

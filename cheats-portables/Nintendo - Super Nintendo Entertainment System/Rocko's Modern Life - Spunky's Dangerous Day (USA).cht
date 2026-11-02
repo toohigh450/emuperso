@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Rocko's Modern Life - Spunky's Dangerous Day (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Rocko's%20Modern%20Life%20-%20Spunky's%20Dangerous%20Day%20%28USA%29.cht
+
+cheats = 8
+
+cheat0_desc = "Infinite Life Spunky"
+cheat0_code = "7E02041A"
+cheat0_enable = false
+
+cheat1_desc = "Can't Touch Spunky"
+cheat1_code = "7E391036"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Lives"
+cheat2_code = "7E020209"
+cheat2_enable = false
+
+cheat3_desc = "Infinite Health"
+cheat3_code = "C220-17D4"
+cheat3_enable = false
+
+cheat4_desc = "Invincibility"
+cheat4_code = "F6CE-1701"
+cheat4_enable = false
+
+cheat5_desc = "Infinite Lives"
+cheat5_code = "C232-37AD"
+cheat5_enable = false
+
+cheat6_desc = "Infinite Items"
+cheat6_code = "C26C-14A9"
+cheat6_enable = false
+
+cheat7_desc = "Invincibility Spunky"
+cheat7_code = "F639-4F69"
+cheat7_enable = false

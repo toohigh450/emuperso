@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Super Turrican 2 (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Super%20Turrican%202%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Infinite Health"
+cheat0_code = "7E0AEE0C"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Time"
+cheat1_code = "7E0AEA03+7E0AEB55"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Lives"
+cheat2_code = "7E0AF202"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Bombs"
+cheat3_code = "7E0AF403"
+cheat3_enable = false 
+
+cheat4_desc = "Have Missile Sub-Weapon"
+cheat4_code = "7E034A01"
+cheat4_enable = false 
+
+cheat5_desc = "Stage Modifier"
+cheat5_code = "7E007E??"
+cheat5_enable = false

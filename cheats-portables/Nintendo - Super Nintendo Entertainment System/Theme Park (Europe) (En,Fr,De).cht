@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Theme Park (Europe) (En,Fr,De)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Theme%20Park%20%28Europe%29%20%28En,Fr,De%29.cht
+
+cheats = 1
+
+cheat0_desc = "Infinite 999,000,000 Money"
+cheat0_code = "7EA598C0+7EA59987+7EA59A8B+7EA59B3B"
+cheat0_enable = false

@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : SimCity 2000 - The Ultimate City Simulator (USA, Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/SimCity%202000%20-%20The%20Ultimate%20City%20Simulator%20%28USA,%20Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 3 
+
+cheat0_desc = "To Start With $99,999,999 On All The Maps EXCEPT "Land of Freedom""
+cheat0_code = "EEF3-8700+3DF3-8760+E9FE-8D60+D9FE-8DA0"
+cheat0_enable = false 
+
+cheat1_desc = "Start The "Land of Freedom" Map With $99,999,999"
+cheat1_code = "EEF3-8D00+3DF3-8D60+E9F3-8F60+D9F3-8FA0"
+cheat1_enable = false 
+
+cheat2_desc = "Make Cash Around 2,120,613,888 Every Update"
+cheat2_code = "AEAB-7DF3"
+cheat2_enable = false

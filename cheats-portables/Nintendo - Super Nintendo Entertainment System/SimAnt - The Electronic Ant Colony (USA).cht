@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : SimAnt - The Electronic Ant Colony (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/SimAnt%20-%20The%20Electronic%20Ant%20Colony%20%28USA%29.cht
+
+cheats = 5
+
+cheat0_desc = "Yellow Ant Always Wins"
+cheat0_code = "DDA7-6402"
+cheat0_enable = false
+
+cheat1_desc = "Keep Maximum Energy"
+cheat1_code = "DD88-0D0A"
+cheat1_enable = false
+
+cheat2_desc = "Inf. Food To Drop After Grabbing A Piece"
+cheat2_code = "EEC0-6703"
+cheat2_enable = false
+
+cheat3_desc = "Always Ant Type/Carrying"
+cheat3_code = "FDCF-D7D3+CBCF-D4A3+DDCF-D703"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Yellow Ant Lives During Scenario Games"
+cheat4_code = "C923-D462"
+cheat4_enable = false

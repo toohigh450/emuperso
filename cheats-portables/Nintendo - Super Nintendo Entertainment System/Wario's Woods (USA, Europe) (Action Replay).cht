@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Wario's Woods (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Wario's%20Woods%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Level Modifier"
+cheat0_code = "7E0699??"
+cheat0_enable = false 
+
+cheat1_desc = "Get One Coin To Gain A Life"
+cheat1_code = "7E1B8B63"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Lives"
+cheat2_code = "7F24FC09"
+cheat2_enable = false 
+
+cheat3_desc = "End of Round Coins"
+cheat3_code = "7F218C??"
+cheat3_enable = false 
+
+cheat4_desc = "Keeps Wario From Dropping The Giant Brick On You"
+cheat4_code = "7E184911"
+cheat4_enable = false 
+
+cheat5_desc = "CPU Will Never Score A Win"
+cheat5_code = "7E1B8800"
+cheat5_enable = false 
+
+cheat6_desc = "Even If You Lose, You Win"
+cheat6_code = "7E1B8703"
+cheat6_enable = false

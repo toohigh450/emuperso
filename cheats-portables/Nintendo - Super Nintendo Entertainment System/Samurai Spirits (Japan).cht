@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Samurai Spirits (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Samurai%20Spirits%20%28Japan%29.cht
+
+cheats = 6
+
+cheat0_desc = "Player 1 Health Modifier"
+cheat0_code = "7E621400"
+cheat0_enable = false
+
+cheat1_desc = "Player 2 Health Modifier"
+cheat1_code = "7E661400"
+cheat1_enable = false
+
+cheat2_desc = "Time Modifier"
+cheat2_code = "7EBE9B00"
+cheat2_enable = false
+
+cheat3_desc = "Time Modifier"
+cheat3_code = "7E7A4900"
+cheat3_enable = false
+
+cheat4_desc = "Player 1 Health Modifier"
+cheat4_code = "7E41C200"
+cheat4_enable = false
+
+cheat5_desc = "Player 2 Health Modifier"
+cheat5_code = "7E45C200"
+cheat5_enable = false

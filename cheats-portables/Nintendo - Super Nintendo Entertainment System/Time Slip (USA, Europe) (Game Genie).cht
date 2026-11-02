@@ -1,0 +1,72 @@
+# Recherche locale pour la ROM : Time Slip (USA, Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Time%20Slip%20%28USA,%20Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 16 
+
+cheat0_desc = "Keep Gun Power-Ups After Dying"
+cheat0_code = "CD24+67A7+CD24+6467"
+cheat0_enable = false 
+
+cheat1_desc = "Start With 16 Lives"
+cheat1_code = "EE6B+670D"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Lives"
+cheat2_code = "C22E+04A7"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Energy"
+cheat3_code = "C2B7+6DD0"
+cheat3_enable = false 
+
+cheat4_desc = "Start With 4 Energy (After 1st Life)"
+cheat4_code = "DE2E+0F67"
+cheat4_enable = false 
+
+cheat5_desc = "Start With 3 Energy (After 1st Life)"
+cheat5_code = "D52E+0F67"
+cheat5_enable = false 
+
+cheat6_desc = "Start With 4 Energy (1st Life)"
+cheat6_code = "DE6C+6F0D"
+cheat6_enable = false 
+
+cheat7_desc = "Start With 3 Energy (1st Life)"
+cheat7_code = "D56C+6F0D"
+cheat7_enable = false 
+
+cheat8_desc = "Invincibility"
+cheat8_code = "3CC2-D769"
+cheat8_enable = false 
+
+cheat9_desc = "Flash 2X Longer When Hit"
+cheat9_code = "6DB7+6460"
+cheat9_enable = false 
+
+cheat10_desc = "Barely Flash At All"
+cheat10_code = "FDB7+6460"
+cheat10_enable = false 
+
+cheat11_desc = "Fewer Enemies"
+cheat11_code = "C26F+6FD1+C26C+07A1+C26F+ADD1+C26C+0FA1"
+cheat11_enable = false 
+
+cheat12_desc = "Start With All Weapons And 9 Rounds (On Foot Missions)"
+cheat12_code = "DB68-6D0D"
+cheat12_enable = false 
+
+cheat13_desc = "Infinite Ammo (On Foot Missions)"
+cheat13_code = "C2C3-AFD0"
+cheat13_enable = false 
+
+cheat14_desc = "TGS Meter Doesn't Decrease"
+cheat14_code = "C284-A409"
+cheat14_enable = false 
+
+cheat15_desc = "Stage Select"
+cheat15_code = "CB24-D707+DD24-D7A7+6227-DDD7+##24-D767"
+cheat15_enable = false

@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Super Tetris 2 + Bombliss (Japan) (En)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Super%20Tetris%202%20+%20Bombliss%20%28Japan%29%20%28En%29.cht
+
+cheats = 2
+
+cheat0_desc = "Always Get Straight Pieces"
+cheat0_code = "CB82-D7D5+D182-D705"
+cheat0_enable = false
+
+cheat1_desc = "Drop Pieces To Clear Line"
+cheat1_code = "DFB4-64D7"
+cheat1_enable = false

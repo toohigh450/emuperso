@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Super Bomberman 3 (Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Super%20Bomberman%203%20%28Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Infinite Time"
+cheat0_code = "C29C-77DC"
+cheat0_enable = false 
+
+cheat1_desc = "Start With 8 Bombs"
+cheat1_code = "D6DB-EF2D"
+cheat1_enable = false 
+
+cheat2_desc = "Start With 8 Bombs, Maximum Bomb Power, Maximum Speed, Remote Detonation, Kick Bomb, Throw Glove"
+cheat2_code = "DDDC-E7FD"
+cheat2_enable = false 
+
+cheat3_desc = "Start With 8 Bombs, Maximum Bomb Power, Maximum Speed, Remote Detonation, Kick Bomb, Throw Glove, Gel Bombs, Power Bombs, Super Bombs"
+cheat3_code = "DDDC-E7FD+55DA-ED9D"
+cheat3_enable = false 
+
+cheat4_desc = "Start With Remote Detonation, Kick Bomb, Throw Glove, Gel Bombs, Power Bombs, Super Bombs, And Don't Lose Power-Ups When Dying"
+cheat4_code = "55DA-E7BD"
+cheat4_enable = false 
+
+cheat5_desc = "Always Have Power (Super?) Bombs Effect"
+cheat5_code = "CBD0-5724"
+cheat5_enable = false

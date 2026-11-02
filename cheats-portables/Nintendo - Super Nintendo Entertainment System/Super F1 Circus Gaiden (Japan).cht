@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Super F1 Circus Gaiden (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Super%20F1%20Circus%20Gaiden%20%28Japan%29.cht
+
+cheats = 3
+
+cheat0_desc = "Car Has No Damage P1"
+cheat0_code = "7E0A4338"
+cheat0_enable = false
+
+cheat1_desc = "Auto-Accelerate at Maximum Speed P1"
+cheat1_code = "7E0A20FF+7E0A2112"
+cheat1_enable = false
+
+cheat2_desc = "Car Has No Damage P2"
+cheat2_code = "7E0B6338"
+cheat2_enable = false

@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Warlock (World) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Warlock%20%28World%29%20%28Game%20Genie%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Invincibility"
+cheat0_code = "CBBE-A4D7+33CC-DD64"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Items On Pickup"
+cheat1_code = "3C65-D46C"
+cheat1_enable = false 
+
+cheat2_desc = "Enter The Password GRKKL To Go To The Final Battle"
+cheat2_code = "7FAC-DD2F"
+cheat2_enable = false 
+
+cheat3_desc = "Enter The Password GRKKL To Go To The Ending"
+cheat3_code = "74AC-DD2F"
+cheat3_enable = false

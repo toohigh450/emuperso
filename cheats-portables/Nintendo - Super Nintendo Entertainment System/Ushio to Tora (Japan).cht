@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Ushio to Tora (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Ushio%20to%20Tora%20%28Japan%29.cht
+
+cheats = 6
+
+cheat0_desc = "Infinite Health"
+cheat0_code = "7E021E40"
+cheat0_enable = false
+
+cheat1_desc = "Untouchable"
+cheat1_code = "7E022226"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Lives"
+cheat2_code = "7E060863"
+cheat2_enable = false
+
+cheat3_desc = "1 Hit Kills Bosses"
+cheat3_code = "7E084400"
+cheat3_enable = false
+
+cheat4_desc = "Hit Anywhere"
+cheat4_code = "6DA3-040F+7FA3-046F"
+cheat4_enable = false
+
+cheat5_desc = "One Hit Kills"
+cheat5_code = "DDA5-6D0F"
+cheat5_enable = false

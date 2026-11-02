@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Sound Novel Tsukuru (Japan) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Sound%20Novel%20Tsukuru%20%28Japan%29%20%28Game%20Genie%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "22BB-AD01"
+cheat0_enable = false 
+
+cheat1_desc = "Keep Main Weapon After Continue"
+cheat1_code = "C2C9-67DF"
+cheat1_enable = false 
+
+cheat2_desc = "Sound Is Visible"
+cheat2_code = "BD45-1112"
+cheat2_enable = false 
+
+cheat3_desc = "James Bond Like Mustache"
+cheat3_code = "49CC-4189"
+cheat3_enable = false

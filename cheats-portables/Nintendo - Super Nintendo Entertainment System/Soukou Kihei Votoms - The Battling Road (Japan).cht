@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Soukou Kihei Votoms - The Battling Road (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Soukou%20Kihei%20Votoms%20-%20The%20Battling%20Road%20%28Japan%29.cht
+
+cheats = 5
+
+cheat0_desc = "INFINITE HEALTH"
+cheat0_code = "7E03AA00"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Health"
+cheat1_code = "7E044A00"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Ammo"
+cheat2_code = "7E03C663"
+cheat2_enable = false
+
+cheat3_desc = "Automatically Finish Stages "
+cheat3_code = "7E044AFF+7E04EAFF+7E058AFF"
+cheat3_enable = false
+
+cheat4_desc = "Infinite Missiles Once Gained P1 (in Both Arena & Rail Stages)"
+cheat4_code = "7E03C60A+7E04660A"
+cheat4_enable = false

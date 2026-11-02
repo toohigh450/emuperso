@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Skuljagger - Revolt of the Westicans (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Skuljagger%20-%20Revolt%20of%20the%20Westicans%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Have Infinite Time"
+cheat0_code = "7E02BE95"
+cheat0_enable = false 
+
+cheat1_desc = "Have Infinite Lives"
+cheat1_code = "7E17C399"
+cheat1_enable = false 
+
+cheat2_desc = "Have 99 Green Gems"
+cheat2_code = "7E17C299"
+cheat2_enable = false 
+
+cheat3_desc = "Can Fire Many Red Gems At A Time"
+cheat3_code = "7E17C499"
+cheat3_enable = false 
+
+cheat4_desc = "Character Animation Modifier"
+cheat4_code = "7E17C0XX"
+cheat4_enable = false 
+
+cheat5_desc = "Invincible"
+cheat5_code = "7E1A0209"
+cheat5_enable = false

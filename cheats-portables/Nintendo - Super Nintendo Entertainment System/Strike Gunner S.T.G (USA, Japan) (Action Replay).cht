@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Strike Gunner S.T.G (USA, Japan) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Strike%20Gunner%20S.T.G%20%28USA,%20Japan%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Start With 25 Lives (Player 1 & 2)"
+cheat0_code = "7E023819"
+cheat0_enable = false 
+
+cheat1_desc = "Start With 50 Lives (Player 1 & 2)"
+cheat1_code = "7E023832"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Continues (Player 1 & 2)"
+cheat2_code = "7E023505"
+cheat2_enable = false 
+
+cheat3_desc = "Start With 99 Lives (Player 1 & 2)"
+cheat3_code = "7E023863"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Time To Select Special Weapon (Instead Of Only 10 Seconds) (Player 1 & 2)"
+cheat4_code = "7E1BE10A"
+cheat4_enable = false

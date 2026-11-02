@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Twisted Tales of Spike McFang, The (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Twisted%20Tales%20of%20Spike%20McFang,%20The%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 2 
+
+cheat0_desc = "Infinite HP"
+cheat0_code = "7E4CE0FF+7E4CE14F"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Money"
+cheat1_code = "7E0A57E7+7E0A5803"
+cheat1_enable = false

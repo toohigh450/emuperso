@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Utopia - The Creation of a Nation (USA, Europe) (Game Genie)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Utopia%20-%20The%20Creation%20of%20a%20Nation%20%28USA,%20Europe%29%20%28Game%20Genie%29.cht
+
+cheats = 2 
+
+cheat0_desc = "1-Day Buildings"
+cheat0_code = "DDBB-6D0F"
+cheat0_enable = false 
+
+cheat1_desc = "Get Tons of Money"
+cheat1_code = "CBC3-040F+69C3-07DF+5FC3-070F"
+cheat1_enable = false

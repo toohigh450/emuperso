@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : S.O.S - Sink or Swim (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/S.O.S%20-%20Sink%20or%20Swim%20%28USA%29.cht
+
+cheats = 4
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "7E097209"
+cheat0_enable = false
+
+cheat1_desc = "Noone Left"
+cheat1_code = "7E164A00"
+cheat1_enable = false
+
+cheat2_desc = "9 People saved"
+cheat2_code = "7E164C09"
+cheat2_enable = false
+
+cheat3_desc = "Noone To Rescue"
+cheat3_code = "7E165000"
+cheat3_enable = false

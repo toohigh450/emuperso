@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Rockman 7 - Shukumei no Taiketsu! (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Rockman%207%20-%20Shukumei%20no%20Taiketsu!%20%28Japan%29.cht
+
+cheats = 2
+
+cheat0_desc = "Can Access Any Weapon, Infinite Use"
+cheat0_code = "C046-3800+C046-8B00+C12F-0EA9"
+cheat0_enable = false
+
+cheat1_desc = "Start Game On Level ??"
+cheat1_code = "C00C-9701+C00C-9973"
+cheat1_enable = false

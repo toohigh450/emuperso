@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Super James Pond II (Europe, Japan) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Super%20James%20Pond%20II%20%28Europe,%20Japan%29%20%28Action%20Replay%29.cht
+
+cheats = 1 
+
+cheat0_desc = "Infinite Batteries"
+cheat0_code = "7EB13002"
+cheat0_enable = false

@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Super Morph (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/Super%20Morph%20%28Europe%29.cht
+
+cheats = 5
+
+cheat0_desc = "Infinite Transformations"
+cheat0_code = "7EBD6863+7EBD5E63"
+cheat0_enable = false
+
+cheat1_desc = "Are Not Restricted By Any Quota Of Transforms"
+cheat1_code = "7EBD5609+7EBD5809+7EBD5A09+7EBD5C09+7EBD6009+7EBD6209+7EBD6409+7EBD6609"
+cheat1_enable = false
+
+cheat2_desc = "Have The Cog"
+cheat2_code = "7EBD7C01"
+cheat2_enable = false
+
+cheat3_desc = "Have The Key"
+cheat3_code = "7EBD8001"
+cheat3_enable = false
+
+cheat4_desc = "Complete The Last Garden To See The Ending"
+cheat4_code = "7EBB7E09+7EBB800A+7EBB820A+7EBB840A"
+cheat4_enable = false
