@@ -1,3 +1,6 @@
 # Le batch est stocke directement en CRLF, y compris dans les archives GitHub.
 *.bat -text
 *.ps1 text eol=crlf
+# ROM homebrew libres : octets exacts, jamais de conversion de fin de ligne.
+demos/*.nes binary
+demos/*.sfc binary

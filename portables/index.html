@@ -4,30 +4,33 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>Portables : Game Boy, Color, Advance et DS</title>
+<title>Consoles Nintendo : NES, SNES, Game Boy, Color, Advance et DS</title>
 <link rel="stylesheet" href="css/app.css">
 </head>
 <body data-state="idle">
 <header class="top">
-  <h1>Portables <small>0.2.1 alpha.2</small></h1>
-  <p>Game Boy, Game Boy Color, Game Boy Advance et DS dans Chrome. Un seul jeu à la fois.</p>
+  <p class="crumb"><a href="../">← Accueil EMUPERSO (8 consoles)</a></p>
+  <h1>Consoles Nintendo <small>0.3.0 alpha.1</small></h1>
+  <p>NES, Super Nintendo, Game Boy, Game Boy Color, Game Boy Advance et DS dans Chrome. Un seul jeu à la fois.</p>
 </header>
 
-<p class="alpha-note">Version alpha : exporte tes sauvegardes avant les essais. Jeux réels et lanceur Windows restent à valider.</p>
+<p class="alpha-note">Version alpha : exporte tes sauvegardes avant les essais. Les tests réels et leurs limites sont dans TESTS-NES-SNES.md.</p>
+<p class="console-hint" id="consoleHint" hidden></p>
 <main class="layout">
   <section class="rail" aria-label="Jeu et réglages">
     <div class="slot" id="slot">
       <div class="slot-empty" id="slotEmpty">
         <p class="slot-title">La fente est vide</p>
-        <p class="muted">Choisis un fichier .gb, .gbc, .gba, .nds ou un .zip qui en contient un. Tes fichiers sont lus localement. Le moteur tiers chargé depuis Internet peut y accéder.</p>
+        <p class="muted">Choisis un fichier .nes, .sfc, .smc, .gb, .gbc, .gba, .nds ou un .zip qui en contient un. Tes fichiers sont lus localement et ne sont envoyés à aucun serveur. Le moteur tiers chargé depuis Internet peut y accéder.</p>
         <button class="btn primary" id="pickGame" type="button">Choisir un jeu</button>
-        <p class="muted small-text">Tu peux aussi glisser le fichier sur la page.</p>
+        <p class="muted small-text">Tu peux aussi glisser le fichier sur la page, ou ouvrir tout un dossier dans l’onglet Catalogue.</p>
       </div>
       <div class="slot-game" id="slotGame" hidden>
         <p class="slot-title" id="gameTitle"></p>
         <dl class="facts">
           <div><dt>Console</dt><dd id="gameSystem"></dd></div>
           <div><dt>Version</dt><dd id="gameRegion"></dd></div>
+          <div><dt>Détails</dt><dd id="gameDetails"></dd></div>
           <div><dt>Fichier</dt><dd id="gameFile"></dd></div>
           <div><dt>Empreinte</dt><dd id="gameHash"></dd></div>
           <div><dt>Cœur</dt><dd id="gameCore"></dd></div>
@@ -39,38 +42,133 @@
           <button class="btn danger" id="closeGame" type="button">Fermer le jeu</button>
         </div>
       </div>
-      <input type="file" id="romInput" accept=".gb,.gbc,.gba,.nds,.sgb,.srl,.bin,.rom,.dsi,.zip" class="visually-hidden" tabindex="-1">
+      <input type="file" id="romInput" accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.gb,.gbc,.gba,.nds,.sgb,.srl,.bin,.rom,.dsi,.zip,.7z,.fds" class="visually-hidden" tabindex="-1">
     </div>
 
     <section class="demo-panel" aria-labelledby="demoHeading">
-      <h2 id="demoHeading">4 jeux de démonstration libres</h2>
-      <p class="muted small-text">Clique pour essayer un homebrew open source. La ROM est téléchargée uniquement au clic, puis vérifiée avant de passer au même moteur que tes fichiers personnels.</p>
+      <h2 id="demoHeading">Jeux de démonstration libres</h2>
+      <p class="muted small-text">Homebrews open source, sans ROM personnelle ni compte. La ROM est chargée au clic, puis son empreinte est vérifiée avant de passer au même moteur que tes fichiers.</p>
       <div class="actions">
+        <button type="button" class="btn" data-portable-demo="nes">NES · Snake</button>
+        <button type="button" class="btn" data-portable-demo="snes">SNES · Neon Breaker</button>
+        <button type="button" class="btn" data-portable-demo="snes-shmup">SNES · Shmup</button>
         <button type="button" class="btn" data-portable-demo="gb">GB · Libbet</button>
         <button type="button" class="btn" data-portable-demo="gbc">GBC · Geometrix</button>
         <button type="button" class="btn" data-portable-demo="gba">GBA · @rkanoid</button>
         <button type="button" class="btn" data-portable-demo="nds">DS · Pong</button>
       </div>
-      <p id="demoStatus" role="status" aria-live="polite" class="muted small-text">Aucun compte Vercel nécessaire. Connexion Internet requise pour les démos et le moteur.</p>
+      <details>
+        <summary class="small-text">Démos techniques SNES (puces SA-1 et DSP-1)</summary>
+        <div class="actions">
+          <button type="button" class="btn small" data-portable-demo="snes-sa1">SA-1 · Étoiles</button>
+          <button type="button" class="btn small" data-portable-demo="snes-dsp1">DSP-1 · Sol</button>
+        </div>
+      </details>
+      <p id="demoStatus" role="status" aria-live="polite" class="muted small-text">Aucun compte Vercel nécessaire. Connexion Internet requise pour le moteur.</p>
       <p class="muted small-text"><a href="DEMOS-LIBRES.md">Crédits, licences et sources des démos</a>. Aucune ROM commerciale, aucun BIOS et aucune sauvegarde ne sont fournis.</p>
     </section>
 
     <div class="tabs" role="tablist" aria-label="Réglages">
+      <button role="tab" id="tabCatalog" aria-controls="panelCatalog" type="button">Catalogue</button>
       <button role="tab" id="tabSaves" aria-controls="panelSaves" type="button">Sauvegardes</button>
       <button role="tab" id="tabCheats" aria-controls="panelCheats" type="button">Codes</button>
       <button role="tab" id="tabPad" aria-controls="panelPad" type="button">Manette</button>
       <button role="tab" id="tabEngine" aria-controls="panelEngine" type="button">Moteur</button>
     </div>
 
-    <section class="panel" id="panelSaves" role="tabpanel" aria-labelledby="tabSaves">
+    <section class="panel" id="panelCatalog" role="tabpanel" aria-labelledby="tabCatalog">
+      <p class="muted">Ouvre un dossier entier (même des milliers de ROM) : seuls les noms sont lus, rien n’est envoyé. Le site ne peut pas lire ton disque tout seul ; le choix reste le tien à chaque visite. Sur Android, utilise « Choisir des fichiers » (sélection multiple) si le choix de dossier n’est pas proposé.</p>
+      <div class="actions">
+        <button class="btn" id="catFolderBtn" type="button">Choisir un dossier</button>
+        <button class="btn" id="catFilesBtn" type="button">Choisir des fichiers</button>
+      </div>
+      <input type="file" id="catFolder" webkitdirectory multiple class="visually-hidden" tabindex="-1">
+      <input type="file" id="catFiles" multiple accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.gb,.gbc,.gba,.nds,.zip,.7z" class="visually-hidden" tabindex="-1">
+      <div id="catalogTools" hidden>
+        <label class="field" for="catSearch">Rechercher</label>
+        <input type="search" id="catSearch" placeholder="Titre du jeu" autocomplete="off">
+        <div class="filters">
+          <label>Console
+            <select id="catSystem">
+              <option value="tous">Toutes</option>
+              <option value="nes">NES</option>
+              <option value="snes">Super Nintendo</option>
+              <option value="gb">Game Boy</option>
+              <option value="gbc">Game Boy Color</option>
+              <option value="gba">Game Boy Advance</option>
+              <option value="nds">Nintendo DS</option>
+            </select>
+          </label>
+          <label>Région
+            <select id="catRegion">
+              <option value="toutes">Toutes</option>
+              <option value="USA">USA</option>
+              <option value="Europe">Europe</option>
+              <option value="Japon">Japon</option>
+              <option value="France">France</option>
+            </select>
+          </label>
+          <label>Type
+            <select id="catKind">
+              <option value="tous">Tous</option>
+              <option value="originaux">Originaux</option>
+              <option value="hacks">Hacks</option>
+              <option value="traductions">Traductions</option>
+            </select>
+          </label>
+        </div>
+        <div class="filters checks">
+          <label><input type="checkbox" id="catFrench"> En français (selon le nom)</label>
+          <label><input type="checkbox" id="catHideBad" checked> Masquer mauvais dumps</label>
+          <label><input type="checkbox" id="catHideDup" checked> Masquer doublons</label>
+          <label><input type="checkbox" id="catFav"> Favoris seulement</label>
+        </div>
+      </div>
+      <p class="muted small-text" id="catSummary" aria-live="polite">Aucun dossier choisi.</p>
+      <div class="cat-list" id="catList" tabindex="0" aria-label="Liste des jeux">
+        <div id="catSpacer" class="cat-spacer"></div>
+        <ul id="catRows" class="cat-rows"></ul>
+      </div>
+      <p class="muted small-text">Les régions, langues et hacks viennent des étiquettes des noms de fichiers (No-Intro, GoodTools) : un nom peut mentir. Les archives .7z sont listées mais doivent être extraites avec 7-Zip avant l’ouverture.</p>
+    </section>
+
+    <section class="panel" id="panelSaves" role="tabpanel" aria-labelledby="tabSaves" hidden>
       <p class="muted">Chaque jeu a son propre espace de sauvegarde, identifié par l'empreinte du fichier et le cœur utilisé. Les sauvegardes du moteur restent dans ce navigateur. Une copie de sécurité (3 versions) est gardée en plus : elle ne remplace jamais la précédente sans la conserver.</p>
+      <h2>Sauvegarde du jeu</h2>
+      <div class="actions">
+        <button class="btn small" id="saveExport" type="button">Exporter maintenant</button>
+        <button class="btn small" id="saveImportBtn" type="button">Importer une sauvegarde</button>
+      </div>
+      <input type="file" id="saveImport" accept=".sav,.srm,.sa1,.dsv,.bin" class="visually-hidden" tabindex="-1">
       <div id="saveMirror"></div>
+      <h2>États de jeu</h2>
+      <p class="muted small-text">Instantané complet de la partie, 4 emplacements par jeu. Remplacer un emplacement garde l’état précédent. Un état n’est lisible qu’avec la même ROM et le même cœur.</p>
+      <div id="stateSlots"></div>
+      <input type="file" id="stateImport" accept=".state,.st0,.st1,.st2,.st3" class="visually-hidden" tabindex="-1">
+      <h2>Stockage du navigateur</h2>
+      <p class="muted small-text" id="storageInfo"></p>
+      <button class="btn small" id="persistBtn" type="button" hidden>Demander un stockage persistant</button>
       <h2>Jeux déjà ouverts</h2>
       <div id="history"></div>
     </section>
 
     <section class="panel" id="panelCheats" role="tabpanel" aria-labelledby="tabCheats" hidden>
-      <p class="muted">Importe tes fichiers de codes au format .cht (par exemple le dossier « cht » de la base libretro). Les noms servent de suggestions. Confirme une association pour l’enregistrer pour cette ROM, même renommée. Une empreinte rom_sha256 déclarée dans le .cht permet aussi de l’identifier. Les nouveaux codes sont proposés désactivés ; le moteur peut mémoriser tes activations.</p>
+      <h2>Codes de ce jeu</h2>
+      <div id="codeList"></div>
+      <form id="codeAddForm" class="code-form" hidden>
+        <label class="field" for="codeName">Nom du code</label>
+        <input type="text" id="codeName" maxlength="80" autocomplete="off" placeholder="Vies infinies">
+        <label class="field" for="codeValue">Code</label>
+        <input type="text" id="codeValue" maxlength="400" autocomplete="off" spellcheck="false" autocapitalize="characters" placeholder="SXIOPO ou C2AF-3D07 ou 7E0DBE05">
+        <p id="codeCheck" class="small-text" aria-live="polite"></p>
+        <div class="actions">
+          <button class="btn primary" type="submit">Ajouter (désactivé)</button>
+          <button class="btn" id="codeRestart" type="button">Redémarrer le jeu</button>
+        </div>
+      </form>
+      <p class="muted small-text">Les codes sont enregistrés pour ces octets précis de ROM (empreinte SHA-256) : une autre région ou un hack a sa propre liste. Le menu de codes du moteur est masqué : seul ce panneau décide, car plusieurs cœurs ignorent l’état « désactivé ».</p>
+      <h2>Fichiers de codes (.cht)</h2>
+      <p class="muted">Importe tes fichiers de codes au format .cht (par exemple le dossier « cht » de la base libretro). Les noms servent de suggestions. Confirme une association pour l’enregistrer pour cette ROM, même renommée. Une empreinte rom_sha256 déclarée dans le .cht permet aussi de l’identifier. Ses codes apparaissent ci-dessus, désactivés.</p>
       <div class="actions">
         <button class="btn" id="cheatFolderBtn" type="button">Importer un dossier</button>
         <button class="btn" id="cheatFilesBtn" type="button">Importer des fichiers</button>
@@ -90,16 +188,31 @@
       <p class="muted">Profil de la manette Xbox 360 pour les prochains jeux ouverts. Le clavier et la manette restent utilisables dans tous les cas.</p>
       <div id="controlProfiles" class="choices"></div>
       <p class="muted small-text">Le profil positionnel est à valider avec ta manette.</p>
+      <h2>Clavier par défaut</h2>
+      <table class="keys">
+        <thead><tr><th>Touche</th><th>NES</th><th>SNES</th><th>GB / GBA / DS</th></tr></thead>
+        <tbody>
+          <tr><td>Flèches</td><td colspan="3">Croix directionnelle</td></tr>
+          <tr><td>Z</td><td>A</td><td>A</td><td>A</td></tr>
+          <tr><td>X</td><td>B</td><td>B</td><td>B</td></tr>
+          <tr><td>A</td><td>—</td><td>X</td><td>X (DS)</td></tr>
+          <tr><td>S</td><td>—</td><td>Y</td><td>Y (DS)</td></tr>
+          <tr><td>Q / E</td><td>—</td><td>L / R</td><td>L / R</td></tr>
+          <tr><td>Entrée / V</td><td colspan="3">Start / Select</td></tr>
+        </tbody>
+      </table>
+      <p class="muted small-text">Pour changer une touche ou un bouton de manette : icône manette dans la barre du jeu. Ce réglage est mémorisé par le moteur pour chaque jeu. Sur téléphone, les boutons tactiles apparaissent sous l’image (NES : A, B, Start, Select ; SNES : A, B, X, Y, L, R) ; leur disposition se règle dans le menu du jeu. Une manette Bluetooth reconnue par Chrome fonctionne aussi, à valider sur ton appareil.</p>
     </section>
 
     <section class="panel" id="panelEngine" role="tabpanel" aria-labelledby="tabEngine" hidden>
       <p id="engineInfo" class="muted"></p>
+      <p class="muted small-text">Cœurs : FCEUmm (NES, GPL-2.0), Snes9x (SNES, licence Snes9x non commerciale), Gambatte (GB/GBC), mGBA (GBA), DeSmuME / melonDS (DS). Compatibilité détaillée et limites : COMPATIBILITE-NES-SNES.md.</p>
       <p class="muted small-text">ROM : plafond théorique 512 Mio, soumis au budget mémoire. Une ROM de 512 Mio est refusée si la mémoire déclarée est inconnue, 2 ou 4 Gio ; elle peut passer à 8 Gio sans jeu actif. Le budget ne mesure pas la RAM libre.</p>
       <h2>Cœur DS</h2>
       <p class="muted">Changer de cœur crée un autre espace de sauvegarde pour le même jeu.</p>
       <div id="dsCores" class="choices"></div>
       <p id="biosState" class="muted small-text"></p>
-      <p class="muted small-text">BIOS : vérification de structure et CRC seulement, sans preuve d’authenticité. Les entrées supplémentaires sont ignorées ; seuls bios7.bin, bios9.bin et firmware.bin à la racine sont contrôlés.</p>
+      <p class="muted small-text">BIOS : vérification de structure et CRC seulement, sans preuve d’authenticité. Les entrées supplémentaires sont ignorées ; seuls bios7.bin, bios9.bin et firmware.bin à la racine sont contrôlés. NES et SNES n’utilisent aucun BIOS.</p>
       <div class="actions">
         <button class="btn" id="biosBtn" type="button">Importer le BIOS DS (ZIP)</button>
         <button class="btn danger" id="biosClear" type="button">Retirer le BIOS</button>

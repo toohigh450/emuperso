@@ -28,12 +28,17 @@ try {
   const mockEngine = `
     if (!(EJS_gameUrl instanceof File)) throw Error('ROM must be an iframe File');
     if (!EJS_gameUrl.name.endsWith('.' + (EJS_core === 'gb' ? (EJS_gameUrl.name.endsWith('.gbc') ? 'gbc' : 'gb') : EJS_core === 'gba' ? 'gba' : 'nds'))) throw Error('wrong ROM extension');
-    window.testCheats = EJS_cheats;
+    // 0.3 : aucun code n'est transmis par EJS_cheats ; seuls les codes activés partent, via player.html.
+    if (typeof EJS_cheats !== 'undefined') throw Error('EJS_cheats ne doit plus être utilisé');
     window.testGameName = EJS_gameName;
+    window.cheatCalls = [];
     const listeners = new Map();
-    window.EJS_emulator = { on(name, fn) { listeners.set(name, fn); }, emit(name, value) { listeners.get(name)?.(value); } };
+    window.EJS_emulator = { started: false, cheats: [{ desc: 'ancien', code: 'X', checked: true }],
+      gameManager: { resetCheat() { cheatCalls.push('reset'); }, setCheat(i, on, code) { cheatCalls.push([i, on, code]); } },
+      on(name, fn) { listeners.set(name, fn); }, emit(name, value) { listeners.get(name)?.(value); } };
     document.getElementById('game').innerHTML = '<button id="start">Démarrer test</button>';
     document.getElementById('start').onclick = () => {
+      EJS_emulator.started = true;
       EJS_onGameStart();
       EJS_emulator.emit('saveSaveFiles', new Uint8Array([1,2,3]));
     };
@@ -51,7 +56,17 @@ try {
     await page.waitForFunction(() => !document.getElementById('changeGame').disabled);
     await page.frameLocator('iframe').locator('#start').waitFor();
   };
-  const cheats = () => page.frames()[1].evaluate(() => window.testCheats);
+  // Codes proposés pour ce jeu (fichier .cht associé), d'après le stockage du lanceur.
+  const cheats = () => page.evaluate(async () => {
+    const { Store, IdbAdapter } = await import('./js/store.mjs');
+    const ids = { 'Game Boy': 'gb', 'Game Boy Color': 'gbc', 'Game Boy Advance': 'gba', 'Nintendo DS': 'nds' };
+    const sys = ids[document.getElementById('gameSystem').textContent];
+    const hex = document.getElementById('gameHash').title;
+    const list = await new Store(new IdbAdapter()).getCodes(`${sys}:${hex.slice(0, 32)}`);
+    return list.filter((e) => e.origin === 'fichier').map((e) => [e.name, e.code]);
+  });
+  // Codes réellement transmis au moteur au lancement : toujours vides tant que rien n'est coché.
+  const sent = () => page.evaluate(() => Object.values(window.__portablesBoots)[0].boot.codes);
   await upload('Identity (USA).gba', rom);
   assert.deepEqual(await cheats(), []);
   await page.getByRole('tab', { name: 'Codes', exact: true }).click();
@@ -62,7 +77,17 @@ try {
   await page.getByText('Association enregistrée pour cette ROM :').waitFor();
   await upload('Renamed.gba', rom);
   assert.deepEqual(await cheats(), [['Test', '12345678+1234']]);
+  assert.deepEqual(await sent(), []);
   await page.frameLocator('iframe').locator('#start').click();
+  // Au démarrage : anciens codes du moteur écartés, aucun code activé.
+  assert.deepEqual(await page.frames()[1].evaluate(() => [window.cheatCalls, EJS_emulator.cheats]), [['reset'], []]);
+  await page.getByRole('tab', { name: 'Codes', exact: true }).click();
+  await page.getByLabel(/Test/).check();
+  await page.waitForFunction(() => document.querySelector('iframe').contentWindow.cheatCalls.length === 3);
+  assert.deepEqual(await page.frames()[1].evaluate(() => window.cheatCalls), ['reset', 'reset', [0, 1, '12345678+1234']]);
+  await page.getByLabel(/Test/).uncheck();
+  await page.waitForFunction(() => document.querySelector('iframe').contentWindow.cheatCalls.length === 4);
+  assert.deepEqual(await page.frames()[1].evaluate(() => window.cheatCalls.at(-1)), 'reset');
   await page.getByRole('tab', { name: 'Sauvegardes', exact: true }).click();
   await page.getByRole('button', { name: 'Exporter', exact: true }).waitFor();
   // P03 : une erreur avant session.start ne doit déplacer ni la session ni ses outils.
@@ -97,6 +122,7 @@ try {
   await page.reload();
   await upload('Persistent.gba', rom);
   assert.deepEqual(await cheats(), [['Test', '12345678+1234']]);
+  assert.deepEqual(await sent(), []);
   // P06 : un fichier réimporté au même chemin doit être confirmé à nouveau.
   await page.getByRole('tab',{name:'Codes',exact:true}).click();
   await page.locator('#cheatFiles').setInputFiles({ name:'Identity (USA).cht', mimeType:'text/plain', buffer:Buffer.from('cheat0_desc = "Changed"\ncheat0_code = "00000000+3333"') });
@@ -191,7 +217,7 @@ try {
   assert.match(await page.locator('#saveMirror').textContent(), /Ouvre un jeu/);
   assert.equal(await page.locator('#cheatMatches').textContent(), '');
   assert.deepEqual(errors, []);
-  console.log('PASS Chromium : import GB/GBC/GBA/DS, suggestions, association SHA-256, renommage, ROM modifiée, persistance IndexedDB, miroir de sauvegarde, fermeture. Moteur simulé ; aucune émulation réelle validée.');
+  console.log('PASS Chromium : import GB/GBC/GBA/DS, suggestions, association SHA-256, renommage, ROM modifiée, persistance IndexedDB, miroir de sauvegarde, fermeture, codes désactivés par défaut et activation en direct. Moteur simulé ; aucune émulation réelle validée.');
   // P04 : interruption après chacune des trois écritures d'une vraie transaction IDB.
   const atomic = await page.evaluate(async () => {
     const {Store,IdbAdapter} = await import('./js/store.mjs');
@@ -257,7 +283,7 @@ try {
     const {createBrowserHost}=await import('./js/player-host.mjs');
     const mount=document.createElement('div');document.body.append(mount);
     const host=createBrowserHost(mount,{timeoutMs:500});
-    const boot={enginePaths:[{path:'stuck/'},{path:'https://cdn.emulatorjs.org/4.2.3/data/',integrity}],rom:{name:'test.gba',bytes:new Uint8Array(rom)},ejs:{EJS_core:'gba',EJS_cheats:[],EJS_gameName:'retry',EJS_gameID:9}};
+    const boot={enginePaths:[{path:'stuck/'},{path:'https://cdn.emulatorjs.org/4.2.3/data/',integrity}],rom:{name:'test.gba',bytes:new Uint8Array(rom)},ejs:{EJS_core:'gba',EJS_gameName:'retry',EJS_gameID:9}};
     let readyResolve;const ready=new Promise(r=>readyResolve=r);
     const handle=await host.create(boot,{onReady:()=>readyResolve(),onStart(){},onExit(){},onError:e=>readyResolve(e)});
     const error=await ready;

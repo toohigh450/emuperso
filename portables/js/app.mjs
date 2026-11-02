@@ -1,9 +1,12 @@
 // Interface : une fente, un seul jeu actif, saveurs de sauvegarde et de codes visibles et honnêtes.
-import { SYSTEMS, DS_CORES, ROM_EXTENSIONS, LOOSE_EXTENSIONS, analyzeRom, extensionOf, stemOf } from './systems.mjs';
+import { SYSTEMS, DS_CORES, ROM_EXTENSIONS, LOOSE_EXTENSIONS, analyzeRom, extensionOf, stemOf, engineExtension } from './systems.mjs';
+import { parseCheatCode, describeCode, CODE_FORMATS } from './codes.mjs';
+import { parseRomName } from './romnames.mjs';
+import { buildCatalog, filterCatalog, visibleWindow } from './catalog.mjs';
 import { isZip, extractFirst, listCandidates } from './zip.mjs';
 import { fingerprint, saveSpaceId, gameKey, ejsGameName, legacyEjsGameName, slug, toHex } from './hash.mjs';
-import { Store, IdbAdapter, MemoryAdapter, CHEAT_LIMITS } from './store.mjs';
-import { parseCht, classifyCheatFiles, linkedCheatValid, normalizeName, deviceLabel, inferSystemFromPath, toEjsCheats } from './cheats.mjs';
+import { Store, IdbAdapter, MemoryAdapter, CHEAT_LIMITS, STATE_SLOTS } from './store.mjs';
+import { parseCht, classifyCheatFiles, linkedCheatValid, normalizeName, deviceLabel, inferSystemFromPath } from './cheats.mjs';
 import { CONTROL_PROFILES, buildDefaultControls } from './controls.mjs';
 import { Session } from './session.mjs';
 import { createBrowserHost } from './player-host.mjs';
@@ -30,7 +33,7 @@ let engineLocal = false;
 let currentGame = null; // détails du jeu affiché dans la fente
 let opening = false;
 let importingCheats = false;
-const panelTickets = { saves: 0, history: 0, cheats: 0 };
+const panelTickets = { saves: 0, history: 0, cheats: 0, codes: 0, states: 0 };
 let settings = { controlProfile: 'defaut', dsCore: 'desmume2015' };
 
 // --- Utilitaires d'affichage -------------------------------------------------------
@@ -78,8 +81,8 @@ function render(snap) {
   if (previousGame !== currentGame) {
     const renderedGame = currentGame;
     for (const panel of Object.keys(panelTickets)) panelTickets[panel]++;
-    for (const id of ['saveMirror', 'history', 'cheatInfo', 'cheatMatches', 'cheatSearchResults']) clear($(id));
-    Promise.all([refreshSavePanel(), refreshCheatPanel()]).catch(err => {
+    for (const id of ['saveMirror', 'history', 'cheatInfo', 'cheatMatches', 'cheatSearchResults', 'codeList', 'stateSlots']) clear($(id));
+    Promise.all([refreshSavePanel(), refreshCheatPanel(), refreshCodePanel(), refreshStatePanel()]).catch(err => {
       if (currentGame === renderedGame) setStatus(`Panneau indisponible : ${err.message}`, 'error');
     });
   }
@@ -98,6 +101,7 @@ function render(snap) {
     $('gameHash').textContent = `SHA-256 ${g.hex.slice(0, 16)}…`;
     $('gameHash').title = g.hex;
     $('gameCore').textContent = g.coreLabel;
+    $('gameDetails').textContent = g.details || '—';
     $('gameHeader').textContent = g.headerOk ? 'En-tête reconnu' : "En-tête non vérifié (voir les avertissements)";
     const [aw, ah] = SYSTEMS[g.system].aspect.split('/').map((n) => Number(n.trim()));
     const screen = $('screen');
@@ -112,8 +116,9 @@ function render(snap) {
 
 // --- Ouverture d'un jeu -----------------------------------------------------------
 async function readGameFile(file) {
-  if (extensionOf(file.name) === '7z') throw new Error('Archive .7z non prise en charge : extrais une ROM avec 7-Zip dans un dossier séparé, puis ouvre-la ici.');
-  if (extensionOf(file.name) === 'torrent') throw new Error('Un .torrent n’est pas une ROM. Ouvre un fichier de jeu complet (.gb, .gbc, .gba, .nds ou .zip).');
+  if (extensionOf(file.name) === '7z') throw new Error('Archive .7z non prise en charge dans le navigateur : extrais la ROM voulue avec 7-Zip dans un dossier séparé (sans toucher à l’original), puis ouvre-la ici. Les .zip sont acceptés.');
+  if (extensionOf(file.name) === 'rar') throw new Error('Archive .rar non prise en charge : extrais la ROM avec 7-Zip, puis ouvre-la ici. Les .zip sont acceptés.');
+  if (extensionOf(file.name) === 'torrent') throw new Error('Un .torrent n’est pas une ROM. Ouvre un fichier de jeu complet (.nes, .sfc, .smc, .gb, .gbc, .gba, .nds ou .zip).');
   if (file.size > MAX_INPUT_BYTES) throw new Error('Fichier trop gros pour cette application (maximum 512 Mio + 16 Mio).');
   const options = { deviceMemory: navigator.deviceMemory, activeBytes: currentGame?.romBytes || 0 };
   let warned = false;
@@ -152,6 +157,7 @@ async function readGameFile(file) {
 
 async function resolveCore(system) {
   if (system !== 'nds') return { ejsCore: SYSTEMS[system].ejsCore, coreId: SYSTEMS[system].coreId, label: coreLabel(system), bios: null };
+  // NES et SNES : aucun BIOS (le Famicom Disk System, qui en demande un, est refusé à l'ouverture).
   const spec = DS_CORES[settings.dsCore] || DS_CORES.desmume2015;
   let bios = null;
   if (spec.needsBios) {
@@ -163,6 +169,8 @@ async function resolveCore(system) {
   return { ejsCore: spec.ejsCore, coreId: settings.dsCore, label: spec.label, bios };
 }
 function coreLabel(system) {
+  if (system === 'nes') return 'FCEUmm';
+  if (system === 'snes') return 'Snes9x';
   return system === 'gba' ? 'mGBA' : system === 'nds' ? (DS_CORES[settings.dsCore] || DS_CORES.desmume2015).label : 'Gambatte';
 }
 
@@ -185,6 +193,41 @@ async function cheatsForGame(analysis, key, romName, hex) {
     for (const c of parseCht(f.text)) all.push({ desc: dev ? `[${dev}] ${c.desc}` : c.desc, code: c.code });
   }
   return all;
+}
+
+/**
+ * Liste des codes du jeu : codes saisis à la main + codes du fichier .cht associé.
+ * Un code nouveau arrive toujours désactivé ; l'état choisi par l'utilisateur est conservé par jeu.
+ */
+async function codesForGame(analysis, key, romName, hex) {
+  const fromFiles = await cheatsForGame(analysis, key, romName, hex);
+  const stored = await store.getCodes(key);
+  const same = (e, c) => e.origin === 'fichier' && e.code === c.code && e.name === c.desc;
+  // Les codes d'un fichier dont l'association a été retirée ou modifiée disparaissent avec elle.
+  const kept = stored.filter((e) => e.origin !== 'fichier' || fromFiles.some((c) => same(e, c)));
+  for (const c of fromFiles) {
+    if (!kept.some((e) => same(e, c))) kept.push({ id: newCodeId(), name: c.desc, code: c.code, enabled: false, origin: 'fichier' });
+  }
+  if (kept.length !== stored.length || kept.some((e, i) => e !== stored[i])) await store.setCodes(key, kept);
+  return kept;
+}
+function newCodeId() {
+  return `c${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`;
+}
+
+function gameDetails(analysis) {
+  const parts = [];
+  if (analysis.system === 'nes') {
+    parts.push(analysis.format, analysis.mapperName);
+    if (analysis.battery) parts.push('pile (sauvegarde)');
+  } else if (analysis.system === 'snes') {
+    parts.push(analysis.layout);
+    if (analysis.chip) parts.push(`puce ${analysis.chip.toUpperCase()}`);
+    if (analysis.battery) parts.push('pile (sauvegarde)');
+    if (analysis.copierHeader) parts.push('en-tête de copieur');
+  }
+  if (analysis.video) parts.push(analysis.video);
+  return parts.filter(Boolean).join(', ');
 }
 
 async function openFile(file) {
@@ -242,8 +285,11 @@ async function openGame(file) {
   const engineName = legacyNaming
     ? legacyEjsGameName(engineTitle, core.coreId, fp.hex)
     : ejsGameName(analysis.title, core.coreId, fp.hex);
-  const cheats = await cheatsForGame(analysis, key, rom.name, fp.hex);
+  const codes = await codesForGame(analysis, key, rom.name, fp.hex);
   const spec = SYSTEMS[analysis.system];
+  // NES : l'en-tête iNES ne dit pas la région ; on reprend les étiquettes du nom de fichier.
+  const named = parseRomName(rom.name);
+  const region = analysis.region !== 'inconnue' ? analysis.region : named.regions.length ? `${named.regions.join(', ')} (d'après le nom)` : null;
 
   const game = {
     key,
@@ -259,7 +305,8 @@ async function openGame(file) {
     headerOk: analysis.headerOk,
     coreId: core.coreId,
     coreLabel: core.label,
-    regionText: [analysis.region !== 'inconnue' ? analysis.region : null, analysis.code || null, `version ${analysis.version}`].filter(Boolean).join(', '),
+    regionText: [region, analysis.code || null, analysis.system === 'nes' ? null : `version ${analysis.version}`].filter(Boolean).join(', ') || 'inconnue',
+    details: gameDetails(analysis),
     warnings: analysis.warnings.concat(rom.note ? [rom.note] : []),
   };
 
@@ -268,18 +315,24 @@ async function openGame(file) {
     enginePaths,
     // Les cœurs se servent aussi de l'extension : transmettre celle détectée,
     // même si le fichier d'origine était .bin, .srl ou mal nommé.
-    rom: { name: `${stemOf(rom.name)}.${analysis.system}`, bytes: rom.bytes },
+    // Le moteur nomme la sauvegarde de cartouche d'après ce nom de fichier. NES/SNES : nom tiré de
+    // l'empreinte et du cœur, donc une sauvegarde par jeu, même ROM renommée, jamais partagée entre deux
+    // ROM de même nom. GB/GBC/GBA/DS gardent l'ancien nommage pour retrouver les sauvegardes existantes.
+    rom: { name: `${['nes', 'snes'].includes(analysis.system) ? ejsGameName(analysis.title, core.coreId, fp.hex) : stemOf(rom.name)}.${engineExtension(analysis)}`, bytes: rom.bytes },
+    // Seuls les codes que l'utilisateur a activés partent au moteur (voir player.html).
+    codes: codes.filter((c) => c.enabled).map((c) => c.code),
     bios: core.bios,
     ejs: {
       EJS_core: core.ejsCore,
       EJS_gameName: engineName,
       EJS_gameID: await store.engineNumericId(spaceId),
-      EJS_cheats: toEjsCheats(cheats),
       EJS_color: '#E0457B',
       EJS_backgroundColor: '#1b1940',
       EJS_alignStartButton: 'center',
       EJS_startButtonName: 'Démarrer',
       EJS_threads: false,
+      // Sauvegarde de cartouche écrite toutes les 30 s (5 min par défaut dans le moteur).
+      EJS_defaultOptions: { 'save-save-interval': '30' },
       ...(defaultControls ? { EJS_defaultControls: defaultControls } : {}),
     },
     onSaveUpdate: (e) => mirrorSave(spaceId, e),
@@ -534,10 +587,284 @@ async function importCheatFiles(fileList) {
   await refreshCheatPanel();
 }
 
+// --- Codes du jeu (saisie, activation, suppression) --------------------------------
+const SYSTEM_CODE_HELP = {
+  nes: 'NES : Game Genie (6 ou 8 lettres), brut 0300:16, brut conditionnel 91D9?AD:A5, Pro Action Rocky (8 chiffres).',
+  snes: 'SNES : Game Genie C2AF-3D07, Pro Action Replay 7E0DBE05, brut 7E0DBE:05 ou 7E0DBE=03?05.',
+};
+
+async function refreshCodePanel() {
+  const ticket = ++panelTickets.codes;
+  const game = currentGame;
+  const box = document.createDocumentFragment();
+  if (!game) {
+    box.append(h('p', { class: 'muted' }, 'Ouvre un jeu pour gérer ses codes.'));
+  } else {
+    const entries = await store.getCodes(game.key);
+    if (ticket !== panelTickets.codes || game !== currentGame) return;
+    box.append(h('p', { class: 'muted small-text' }, SYSTEM_CODE_HELP[game.system] ||
+      `${game.systemLabel} : format non contrôlé par le lanceur ; un code mal formé est ignoré par le moteur.`));
+    if (entries.length === 0) box.append(h('p', { class: 'muted' }, 'Aucun code pour ce jeu.'));
+    const list = h('ul', { class: 'rows codes' });
+    for (const e of entries) {
+      const parsed = parseCheatCode(game.system, e.code);
+      const id = `code-${e.id}`;
+      list.append(h('li', {},
+        h('label', { class: 'choice', for: id },
+          h('input', { type: 'checkbox', id, checked: !!e.enabled, onchange: (ev) => toggleCode(game, e.id, ev.target.checked) }),
+          h('span', {}, h('strong', {}, e.name || 'Sans nom'), h('br'), h('code', {}, e.code), ' ',
+            h('small', { class: parsed.ok ? 'muted' : 'warn' }, parsed.ok ? (parsed.unchecked ? 'format non contrôlé' : describeCode(parsed)) : parsed.error),
+            e.origin === 'fichier' ? h('small', { class: 'muted' }, ' — fichier .cht associé') : '')),
+        e.origin === 'manuel' ? h('button', { class: 'btn small danger', type: 'button', onclick: () => deleteCode(game, e) }, 'Supprimer') : ''));
+    }
+    box.append(list);
+    const active = entries.filter((e) => e.enabled).length;
+    box.append(h('p', { class: active ? 'warn small-text' : 'muted small-text' }, active
+      ? `${active} code(s) actif(s). Un code peut modifier la mémoire sauvegardée : exporte ta sauvegarde avant d'enregistrer en jeu avec un code actif.`
+      : 'Aucun code actif. Les codes ne sont jamais activés automatiquement.'));
+  }
+  if (ticket !== panelTickets.codes || game !== currentGame) return;
+  $('codeList').replaceChildren(box);
+  $('codeAddForm').hidden = !game;
+}
+
+async function saveCodes(game, mutate) {
+  const entries = await store.getCodes(game.key);
+  const next = mutate(entries.map((e) => ({ ...e })));
+  await store.setCodes(game.key, next);
+  if (game === currentGame) applyLiveCodes(next);
+  await refreshCodePanel();
+}
+
+function applyLiveCodes(entries) {
+  const enabled = entries.filter((e) => e.enabled).map((e) => e.code);
+  const control = session.control();
+  if (!control) { setStatus('Codes enregistrés pour ce jeu ; ils seront appliqués au prochain lancement.', 'ok'); return; }
+  try {
+    control.setCodes(enabled);
+    setStatus(`Codes appliqués au moteur : ${enabled.length} actif(s). Un code retiré peut laisser une valeur en mémoire jusqu’au redémarrage du jeu.`, 'ok');
+  } catch (err) { setStatus(`Codes non appliqués : ${err.message}`, 'error'); }
+}
+
+async function toggleCode(game, id, enabled) {
+  await saveCodes(game, (entries) => entries.map((e) => (e.id === id ? { ...e, enabled } : e)));
+}
+
+async function deleteCode(game, entry) {
+  if (!confirm(`Supprimer le code « ${entry.name || entry.code} » de ce jeu ?`)) return;
+  await saveCodes(game, (entries) => entries.filter((e) => e.id !== entry.id));
+}
+
+async function addCode() {
+  const game = currentGame;
+  if (!game) return;
+  const name = $('codeName').value.trim();
+  const parsed = parseCheatCode(game.system, $('codeValue').value);
+  const report = (text, kind) => { $('codeCheck').textContent = text; $('codeCheck').dataset.kind = kind; };
+  if (!parsed.ok) { report(parsed.error, 'error'); return; }
+  const existing = await store.getCodes(game.key);
+  if (existing.some((e) => e.code === parsed.code)) { report('Ce code existe déjà pour ce jeu.', 'error'); return; }
+  await saveCodes(game, (entries) => [...entries, { id: newCodeId(), name: name || parsed.code, code: parsed.code, enabled: false, origin: 'manuel', format: parsed.format }]);
+  $('codeName').value = '';
+  $('codeValue').value = '';
+  report('Code ajouté, désactivé. Coche-le pour l’activer.', 'ok');
+}
+
+function checkCodeInput() {
+  const game = currentGame;
+  const value = $('codeValue').value;
+  if (!game || !value.trim()) { $('codeCheck').textContent = ''; return; }
+  const parsed = parseCheatCode(game.system, value);
+  $('codeCheck').textContent = parsed.ok ? (parsed.unchecked ? 'Format non contrôlé pour cette console.' : describeCode(parsed)) : parsed.error;
+  $('codeCheck').dataset.kind = parsed.ok ? 'ok' : 'error';
+}
+
+// --- Sauvegarde du jeu : export immédiat et import ----------------------------------
+async function exportCurrentSave() {
+  const game = currentGame;
+  const control = session.control();
+  if (!game || !control) { setStatus('Lance le jeu avant d’exporter sa sauvegarde.', 'warn'); return; }
+  const bytes = control.getSave();
+  if (!bytes || bytes.length === 0) { setStatus('Aucune sauvegarde pour ce jeu (pas de pile, ou rien d’enregistré dans le jeu).', 'warn'); return; }
+  download(`${slug(game.title)}-${game.system}-${game.coreId}.sav`, bytes);
+  setStatus(`Sauvegarde exportée (${fmtSize(bytes.length)}).`, 'ok');
+}
+
+async function importSave(file) {
+  const game = currentGame;
+  const control = session.control();
+  if (!game || !control) { setStatus('Lance le jeu avant d’importer une sauvegarde.', 'warn'); return; }
+  if (file.size > 4 * 1024 * 1024) { setStatus('Fichier de sauvegarde trop gros (4 Mio maximum).', 'error'); return; }
+  if (!confirm(`Remplacer la sauvegarde de « ${game.title} » par « ${file.name} » ?\nLa sauvegarde actuelle est d’abord copiée dans les copies de sécurité. Le jeu redémarre ensuite.`)) return;
+  const current = control.getSave();
+  if (current && current.length) await mirrorSave(game.spaceId, { save: current });
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  control.importSave(bytes);
+  setStatus(`Sauvegarde importée (${fmtSize(bytes.length)}) ; jeu redémarré. L’ancienne reste dans les copies de sécurité.`, 'ok');
+  await refreshSavePanel();
+}
+
+// --- États de jeu (save states) ----------------------------------------------------
+let stateImportSlot = 1;
+
+async function refreshStatePanel() {
+  const ticket = ++panelTickets.states;
+  const game = currentGame;
+  const box = document.createDocumentFragment();
+  if (!game) {
+    box.append(h('p', { class: 'muted' }, 'Ouvre un jeu pour utiliser les états.'));
+  } else {
+    const slots = await store.listStates(game.spaceId);
+    if (ticket !== panelTickets.states || game !== currentGame) return;
+    const list = h('ul', { class: 'rows' });
+    for (const s of slots) {
+      list.append(h('li', { class: 'state-row' },
+        h('span', {}, `Emplacement ${s.slot} : ${s.at ? `${fmtDate(s.at)}, ${fmtSize(s.size)}` : 'vide'}`),
+        h('span', { class: 'actions tight' },
+          h('button', { class: 'btn small', type: 'button', onclick: () => saveState(game, s) }, 'Enregistrer'),
+          s.at ? h('button', { class: 'btn small', type: 'button', onclick: () => loadState(game, s.slot) }, 'Charger') : '',
+          s.at ? h('button', { class: 'btn small', type: 'button', onclick: () => exportState(game, s.slot) }, 'Exporter') : '',
+          h('button', { class: 'btn small', type: 'button', onclick: () => { stateImportSlot = s.slot; $('stateImport').click(); } }, 'Importer'),
+          s.previousAt ? h('button', { class: 'btn small', type: 'button', onclick: () => loadState(game, s.slot, true) }, 'Charger le précédent') : '')));
+    }
+    box.append(list);
+  }
+  if (ticket !== panelTickets.states || game !== currentGame) return;
+  $('stateSlots').replaceChildren(box);
+}
+
+async function saveState(game, slot) {
+  const control = session.control();
+  if (!control || game !== currentGame) { setStatus('Lance le jeu avant d’enregistrer un état.', 'warn'); return; }
+  if (slot.at && !confirm(`Remplacer l’état de l’emplacement ${slot.slot} ? L’ancien reste disponible comme « précédent ».`)) return;
+  try {
+    const bytes = control.getState();
+    await store.putState(game.spaceId, slot.slot, bytes, { title: game.title, system: game.system, coreId: game.coreId });
+    setStatus(`État enregistré dans l’emplacement ${slot.slot} (${fmtSize(bytes.length)}).`, 'ok');
+  } catch (err) { setStatus(`État non enregistré : ${err.message || err}`, 'error'); }
+  await refreshStatePanel();
+}
+
+async function loadState(game, slot, previous = false) {
+  const control = session.control();
+  if (!control || game !== currentGame) { setStatus('Lance le jeu avant de charger un état.', 'warn'); return; }
+  const entry = await store.getState(game.spaceId, slot, previous);
+  if (!entry) return;
+  if (!confirm(`Charger l’état ${previous ? 'précédent de l’emplacement' : 'de l’emplacement'} ${slot} ? La partie en cours non enregistrée sera perdue.`)) return;
+  try {
+    control.loadState(entry.bytes);
+    setStatus(`État ${slot} chargé.`, 'ok');
+  } catch (err) { setStatus(`État non chargé : ${err.message || err}`, 'error'); }
+}
+
+async function exportState(game, slot) {
+  const entry = await store.getState(game.spaceId, slot);
+  if (entry) download(`${slug(game.title)}-${game.system}-${game.coreId}-etat${slot}.state`, entry.bytes);
+}
+
+async function importState(file) {
+  const game = currentGame;
+  if (!game) return;
+  if (file.size > 64 * 1024 * 1024) { setStatus('Fichier d’état trop gros.', 'error'); return; }
+  if (!confirm(`Importer « ${file.name} » dans l’emplacement ${stateImportSlot} de « ${game.title} » ?\nUn état ne fonctionne qu’avec la même ROM et le même cœur (${game.coreLabel}).`)) return;
+  await store.putState(game.spaceId, stateImportSlot, new Uint8Array(await file.arrayBuffer()), { title: game.title, imported: file.name });
+  setStatus(`État importé dans l’emplacement ${stateImportSlot}.`, 'ok');
+  await refreshStatePanel();
+}
+
+async function refreshStorageInfo() {
+  const node = $('storageInfo');
+  if (!navigator.storage || !navigator.storage.estimate) { node.textContent = 'Le navigateur n’indique pas l’espace disponible.'; return; }
+  const [estimate, persisted] = await Promise.all([navigator.storage.estimate(), navigator.storage.persisted ? navigator.storage.persisted() : false]);
+  node.textContent = `Espace utilisé par ce site : ${fmtSize(estimate.usage || 0)} sur ${fmtSize(estimate.quota || 0)} autorisés. ` +
+    (persisted ? 'Stockage persistant accordé : le navigateur ne l’effacera pas de lui-même.' : 'Stockage non persistant : le navigateur peut l’effacer s’il manque de place, ou si tu effaces les données du site. Exporte régulièrement.');
+  $('persistBtn').hidden = !!persisted || !navigator.storage.persist;
+}
+
+// --- Catalogue ---------------------------------------------------------------------
+const ROW_HEIGHT = 56;
+let catalog = { entries: [], skipped: 0, truncated: false };
+let catalogView = [];
+let favorites = new Set();
+
+function importCatalog(fileList) {
+  const started = performance.now();
+  catalog = buildCatalog(fileList);
+  $('catalogTools').hidden = catalog.entries.length === 0;
+  applyCatalogFilters();
+  const ms = Math.round(performance.now() - started);
+  setStatus(`${catalog.entries.length} fichier(s) dans le catalogue (${ms} ms)${catalog.skipped ? `, ${catalog.skipped} autre(s) ignoré(s)` : ''}${catalog.truncated ? ' ; liste tronquée à 200 000 entrées' : ''}. Rien n’est lu avant le lancement.`, 'ok');
+}
+
+function catalogFilters() {
+  return {
+    q: $('catSearch').value,
+    system: $('catSystem').value,
+    region: $('catRegion').value,
+    french: $('catFrench').checked,
+    kind: $('catKind').value,
+    hideBad: $('catHideBad').checked,
+    hideDuplicates: $('catHideDup').checked,
+    favorites: $('catFav').checked,
+    favSet: favorites,
+  };
+}
+
+function applyCatalogFilters() {
+  catalogView = filterCatalog(catalog.entries, catalogFilters());
+  $('catSummary').textContent = catalog.entries.length
+    ? `${catalogView.length} sur ${catalog.entries.length} affiché(s).`
+    : 'Aucun dossier choisi.';
+  $('catList').scrollTop = 0;
+  $('catSpacer').style.height = `${catalogView.length * ROW_HEIGHT}px`;
+  renderCatalogRows();
+}
+
+function renderCatalogRows() {
+  const list = $('catList');
+  const { first, last } = visibleWindow(catalogView.length, list.scrollTop, list.clientHeight || 400, ROW_HEIGHT);
+  const rows = $('catRows');
+  rows.style.transform = `translateY(${first * ROW_HEIGHT}px)`;
+  rows.replaceChildren(...catalogView.slice(first, last).map((e) => {
+    const fav = favorites.has(e.favKey);
+    return h('li', { class: 'cat-row' },
+      h('button', { class: 'star', type: 'button', 'aria-pressed': String(fav), 'aria-label': fav ? 'Retirer des favoris' : 'Ajouter aux favoris', onclick: () => toggleFavorite(e) }, fav ? '★' : '☆'),
+      h('button', { class: 'cat-open', type: 'button', onclick: () => openFile(e.file) },
+        h('span', { class: 'cat-name' }, e.name),
+        h('span', { class: 'cat-meta' }, [
+          e.system ? SYSTEMS[e.system].label : 'console à détecter',
+          e.label,
+          fmtSize(e.size),
+          e.variants > 1 ? `${e.variants} variantes` : '',
+          e.duplicateOf !== null ? 'doublon' : '',
+          e.ext === '7z' ? '7z : à extraire' : '',
+        ].filter(Boolean).join(' · '))));
+  }));
+}
+
+async function toggleFavorite(entry) {
+  if (favorites.has(entry.favKey)) favorites.delete(entry.favKey); else favorites.add(entry.favKey);
+  await store.setSetting('favorites', [...favorites]);
+  if ($('catFav').checked) applyCatalogFilters(); else renderCatalogRows();
+}
+
+function applyConsoleFromUrl() {
+  const wanted = new URLSearchParams(location.search).get('console');
+  if (!wanted || !SYSTEMS[wanted]) return;
+  $('catSystem').value = wanted;
+  document.body.dataset.console = wanted;
+  const hint = $('consoleHint');
+  hint.hidden = false;
+  hint.textContent = `Console choisie depuis l’accueil : ${SYSTEMS[wanted].label}. Les autres consoles restent disponibles ici.`;
+  const demo = document.querySelector(`[data-portable-demo="${wanted}"]`);
+  if (demo) demo.classList.add('primary');
+}
+
 // --- Réglages ---------------------------------------------------------------------
 async function loadSettings() {
   settings.controlProfile = await store.getSetting('controlProfile', 'defaut');
   settings.dsCore = await store.getSetting('dsCore', 'desmume2015');
+  favorites = new Set(await store.getSetting('favorites', []));
   if (!CONTROL_PROFILES[settings.controlProfile]) settings.controlProfile = 'defaut';
   if (!DS_CORES[settings.dsCore]) settings.dsCore = 'desmume2015';
 }
@@ -601,6 +928,12 @@ function initTabs() {
 }
 
 function initEvents() {
+  // Android : Chrome traduit « accept » en types MIME et grise les extensions inconnues (.nes, .sfc…).
+  // Sur écran tactile on laisse tout choisir ; le fichier est de toute façon vérifié après le choix.
+  if (window.matchMedia && matchMedia('(pointer: coarse)').matches) {
+    for (const id of ['romInput', 'catFiles', 'saveImport', 'stateImport', 'cheatFiles']) $(id).removeAttribute('accept');
+    $('catFolderBtn').title = 'Sur Android, le choix d’un dossier peut être indisponible : utilise « Choisir des fichiers » (sélection multiple).';
+  }
   const input = $('romInput');
   input.addEventListener('change', () => { openFile(input.files[0]); input.value = ''; });
   $('pickGame').addEventListener('click', () => input.click());
@@ -614,11 +947,18 @@ function initEvents() {
       currentGame = null;
       await refreshSavePanel();
       await refreshCheatPanel();
+      await refreshCodePanel();
+      await refreshStatePanel();
     }
   });
   for (const ev of ['dragenter', 'dragover']) window.addEventListener(ev, (e) => { e.preventDefault(); document.body.classList.add('dragging'); });
   for (const ev of ['dragleave', 'drop']) window.addEventListener(ev, (e) => { e.preventDefault(); document.body.classList.remove('dragging'); });
-  window.addEventListener('drop', (e) => { const f = e.dataTransfer && e.dataTransfer.files[0]; if (f) openFile(f); });
+  window.addEventListener('drop', (e) => {
+    const files = e.dataTransfer ? e.dataTransfer.files : [];
+    // Plusieurs fichiers déposés : ils vont au catalogue ; un seul : il est ouvert directement.
+    if (files.length > 1) { importCatalog(files); document.getElementById('tabCatalog').click(); }
+    else if (files[0]) openFile(files[0]);
+  });
   window.addEventListener('unhandledrejection', (event) => { event.preventDefault(); console.error(event.reason); setStatus(`Opération interrompue : ${event.reason?.message || event.reason}`, 'error'); });
   window.addEventListener('beforeunload', (e) => { if (session.hasActiveGame) { e.preventDefault(); e.returnValue = ''; } });
 
@@ -646,6 +986,38 @@ function initEvents() {
     finally { e.target.value = ''; }
   });
   $('biosClear').addEventListener('click', async () => { await store.deleteBios('nds-bios'); await refreshEngineInfo(); });
+
+  // Codes du jeu
+  $('codeValue').addEventListener('input', checkCodeInput);
+  $('codeAddForm').addEventListener('submit', (e) => { e.preventDefault(); addCode().catch((err) => setStatus(err.message, 'error')); });
+  $('codeRestart').addEventListener('click', () => {
+    const control = session.control();
+    if (!control) return;
+    if (confirm('Redémarrer le jeu ? Les progrès non enregistrés seront perdus. Les codes actifs restent actifs.')) control.restart();
+  });
+
+  // Sauvegardes et états
+  $('saveExport').addEventListener('click', () => exportCurrentSave().catch((err) => setStatus(err.message, 'error')));
+  $('saveImportBtn').addEventListener('click', () => $('saveImport').click());
+  $('saveImport').addEventListener('change', (e) => { const f = e.target.files[0]; e.target.value = ''; if (f) importSave(f).catch((err) => setStatus(`Import refusé : ${err.message}`, 'error')); });
+  $('stateImport').addEventListener('change', (e) => { const f = e.target.files[0]; e.target.value = ''; if (f) importState(f).catch((err) => setStatus(`Import refusé : ${err.message}`, 'error')); });
+  $('persistBtn').addEventListener('click', async () => {
+    const ok = await navigator.storage.persist();
+    setStatus(ok ? 'Stockage persistant accordé par le navigateur.' : 'Le navigateur a refusé le stockage persistant (Chrome l’accorde souvent après plusieurs visites ou une installation).', ok ? 'ok' : 'warn');
+    await refreshStorageInfo();
+  });
+
+  // Catalogue
+  $('catFolderBtn').addEventListener('click', () => $('catFolder').click());
+  $('catFilesBtn').addEventListener('click', () => $('catFiles').click());
+  for (const id of ['catFolder', 'catFiles']) {
+    $(id).addEventListener('change', (e) => { if (e.target.files.length) importCatalog(e.target.files); e.target.value = ''; });
+  }
+  let filterTimer;
+  $('catSearch').addEventListener('input', () => { clearTimeout(filterTimer); filterTimer = setTimeout(applyCatalogFilters, 120); });
+  for (const id of ['catSystem', 'catRegion', 'catFrench', 'catKind', 'catHideBad', 'catHideDup', 'catFav']) $(id).addEventListener('change', applyCatalogFilters);
+  let scrollFrame = 0;
+  $('catList').addEventListener('scroll', () => { if (!scrollFrame) scrollFrame = requestAnimationFrame(() => { scrollFrame = 0; renderCatalogRows(); }); }, { passive: true });
 }
 
 async function main() {
@@ -660,10 +1032,15 @@ async function main() {
   initTabs();
   buildSettingsUi();
   initEvents();
+  applyConsoleFromUrl();
+  applyCatalogFilters();
   render(session.snapshot());
   if (storageNote) setStatus(storageNote, 'warn');
   await refreshEngineInfo();
   await refreshSavePanel();
   await refreshCheatPanel();
+  await refreshCodePanel();
+  await refreshStatePanel();
+  await refreshStorageInfo().catch(() => {});
 }
 main().catch((err) => { console.error(err); setStatus(`Erreur au démarrage : ${err.message || err}`, 'error'); });

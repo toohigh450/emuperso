@@ -1,7 +1,33 @@
-// Démos libres pour le lanceur Portables. Versions Git figées + empreintes Git SHA-1.
-// Aucun jeu commercial ni BIOS. Les fichiers privés du visiteur ne sont jamais transférés.
-// Git blob SHA-1 = SHA1("blob " + taille + "\0" + octets), vérifié avant le chargement.
+// Démos libres pour le lanceur. Aucun jeu commercial ni BIOS. Les fichiers privés du visiteur ne sont jamais transférés.
+// GB/GBC/GBA/DS : versions Git figées chez l'auteur, Git blob SHA-1 = SHA1("blob " + taille + "\0" + octets).
+// NES/SNES : copies hébergées avec le site (licences zlib et MIT dans demos/), contrôle SHA-256.
+// Toutes les empreintes sont vérifiées avant de passer la ROM au lanceur.
 const DEMOS = Object.freeze({
+  nes: {
+    title: 'Snake (openNES)', filename: 'opennes-snake.nes', size: 24592,
+    sha256: '71792a9b4e4db52fb60df4633400301fac8f244f802b88d336b58e079c75acc7',
+    url: 'demos/opennes-snake.nes'
+  },
+  snes: {
+    title: 'Neon Breaker (OpenSNES)', filename: 'opensnes-breakout.sfc', size: 262144,
+    sha256: 'ea5c46832f7a1c71c00c1dc2f92b34da19477ca97bd5a993971fa2b6df2a05ec',
+    url: 'demos/opensnes-breakout.sfc'
+  },
+  'snes-shmup': {
+    title: 'Shmup (OpenSNES)', filename: 'opensnes-shmup.sfc', size: 262144,
+    sha256: '772da03b812a29298969c6cbdb2ce7e268b4adea95ba0c9bfc1f44d98eab0861',
+    url: 'demos/opensnes-shmup.sfc'
+  },
+  'snes-sa1': {
+    title: 'Étoiles SA-1 (OpenSNES)', filename: 'opensnes-sa1-starfield.sfc', size: 262144,
+    sha256: '16e47092f08bfa9bdc21b75325852e33a64f1ff85076c595628e6171439c1169',
+    url: 'demos/opensnes-sa1-starfield.sfc'
+  },
+  'snes-dsp1': {
+    title: 'Sol DSP-1 (OpenSNES)', filename: 'opensnes-dsp1-ground.sfc', size: 262144,
+    sha256: 'b9eb22c0bbcd5ad0448048377ad893ffd9f90cf4fa7df9646ecc60d2f220c753',
+    url: 'demos/opensnes-dsp1-ground.sfc'
+  },
   gb: {
     title: 'Libbet', filename: 'libbet.gb', size: 32768,
     blob: '73ccbad40caa3abf83457fb7145a200438c1194b',
@@ -43,19 +69,24 @@ async function verifyGitBlob(bytes, sha) {
   return actual === sha;
 }
 
+async function verifySha256(bytes, sha) {
+  const digest = await crypto.subtle.digest('SHA-256', bytes);
+  return [...new Uint8Array(digest)].map(n => n.toString(16).padStart(2, '0')).join('') === sha;
+}
+
 async function launchDemo(key) {
   if (loading || !Object.hasOwn(DEMOS, key)) return;
   loading = true;
   const demo = DEMOS[key];
   buttons.forEach(b => { b.disabled = true; });
   try {
-    say('Téléchargement de ' + demo.title + ' depuis la source libre…');
-    const response = await fetch(demo.url, { mode: 'cors', cache: 'force-cache' });
+    say('Téléchargement de ' + demo.title + (demo.sha256 ? '…' : ' depuis la source libre…'));
+    const response = await fetch(demo.url, demo.sha256 ? { cache: 'no-cache' } : { mode: 'cors', cache: 'force-cache' });
     if (!response.ok) throw new Error('Source inaccessible (HTTP ' + response.status + ').');
     const bytes = new Uint8Array(await response.arrayBuffer());
     if (bytes.length !== demo.size) throw new Error('Taille différente de la version vérifiée. Aucun jeu ouvert.');
     say('Contrôle de l’intégrité de ' + demo.title + '…');
-    if (!(await verifyGitBlob(bytes, demo.blob))) {
+    if (!(await (demo.sha256 ? verifySha256(bytes, demo.sha256) : verifyGitBlob(bytes, demo.blob)))) {
       throw new Error('Empreinte différente : téléchargement refusé. Aucun jeu ouvert.');
     }
     const input = document.getElementById('romInput');

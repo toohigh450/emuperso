@@ -8,7 +8,11 @@ import { SYSTEMS, DS_CORES } from './systems.mjs';
 // Les sauvegardes « vivantes » appartiennent au moteur ; ici on garde une copie de sécurité
 // versionnée (3 générations) qui n'écrase jamais silencieusement la précédente.
 
-export const BUCKETS = ['games', 'saves', 'cheatfiles', 'links', 'settings', 'bios'];
+// Version 2 : ajout de « codes » (codes saisis et état activé, par jeu) et « states » (états de jeu, par espace).
+// La montée de version crée seulement les magasins absents : aucune donnée existante n'est touchée.
+export const BUCKETS = ['games', 'saves', 'cheatfiles', 'links', 'settings', 'bios', 'codes', 'states'];
+export const DB_VERSION = 2;
+export const STATE_SLOTS = 4;
 export const SAVE_GENERATIONS = 3;
 export const CHEAT_LIMITS = { fileBytes: 2 * 1024 * 1024, batchBytes: 32 * 1024 * 1024, batchFiles: 1000, totalBytes: 64 * 1024 * 1024, totalFiles: 5000 };
 
@@ -78,13 +82,14 @@ export class IdbAdapter {
   open() {
     if (!this.dbPromise) {
       this.dbPromise = new Promise((resolve, reject) => {
-        const req = indexedDB.open(this.name, 1);
+        const req = indexedDB.open(this.name, DB_VERSION);
         req.onupgradeneeded = () => {
           const db = req.result;
           for (const b of BUCKETS) if (!db.objectStoreNames.contains(b)) db.createObjectStore(b);
         };
         req.onsuccess = () => resolve(req.result);
         req.onerror = () => reject(req.error || new Error('IndexedDB indisponible'));
+        req.onblocked = () => reject(new Error('Mise à jour du stockage bloquée : ferme les autres onglets du lanceur puis recharge la page.'));
       });
     }
     return this.dbPromise;
@@ -336,6 +341,43 @@ export class Store {
   }
   async getCheatLink(gameKey) {
     return (await this.a.get('links', gameKey)) || null;
+  }
+
+  // --- Codes de triche par jeu (saisis à la main ou issus d'un .cht associé) -----
+  // Chaque entrée : { id, name, code, enabled, origin: 'manuel' | 'fichier', format }.
+  async getCodes(gameKey) {
+    const v = await this.a.get('codes', gameKey);
+    return v && Array.isArray(v.entries) ? v.entries : [];
+  }
+  async setCodes(gameKey, entries) {
+    await this.a.put('codes', gameKey, { entries: entries.map((e) => ({ ...e })), at: Date.now() });
+  }
+
+  // --- États de jeu (save states), par espace de sauvegarde et par emplacement ----
+  // Écraser un emplacement garde l'état précédent en copie « -avant » : rien n'est perdu en un clic.
+  async putState(spaceId, slot, bytes, meta = {}, now = Date.now()) {
+    if (!Number.isInteger(slot) || slot < 1 || slot > STATE_SLOTS) throw new Error('Emplacement d’état invalide.');
+    const key = `${spaceId}#${slot}`;
+    const previous = await this.a.get('states', key);
+    if (previous) await this.a.put('states', `${key}-avant`, previous);
+    const copy = new Uint8Array(bytes);
+    await this.a.put('states', key, { bytes: copy, size: copy.length, at: now, ...meta });
+  }
+  async getState(spaceId, slot, previous = false) {
+    return (await this.a.get('states', `${spaceId}#${slot}${previous ? '-avant' : ''}`)) || null;
+  }
+  async listStates(spaceId) {
+    const out = [];
+    for (let slot = 1; slot <= STATE_SLOTS; slot++) {
+      const e = await this.a.get('states', `${spaceId}#${slot}`);
+      const p = await this.a.get('states', `${spaceId}#${slot}-avant`);
+      out.push({ slot, at: e?.at || null, size: e?.size || 0, previousAt: p?.at || null });
+    }
+    return out;
+  }
+  async deleteState(spaceId, slot) {
+    await this.a.del('states', `${spaceId}#${slot}`);
+    await this.a.del('states', `${spaceId}#${slot}-avant`);
   }
 
   // --- Réglages et BIOS optionnels ---------------------------------------------

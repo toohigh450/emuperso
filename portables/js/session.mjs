@@ -93,6 +93,11 @@ export class Session {
     this._set('idle', { detail: '' });
   }
 
+  /** API du moteur actif (codes, états, sauvegardes), ou null s'il n'est pas prêt. */
+  control() {
+    return this.handle && typeof this.handle.control === 'function' ? this.handle.control() : null;
+  }
+
   get hasActiveGame() {
     return this.state !== 'idle';
   }

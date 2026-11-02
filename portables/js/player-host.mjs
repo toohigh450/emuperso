@@ -5,7 +5,7 @@ export function createBrowserHost(container, { timeoutMs = 60000 } = {}) {
   return {
     async create(boot, events) {
       const sources = boot.enginePaths.slice();
-      let frame, id, timer, destroyed = false, ready = false, attempt = 0;
+      let frame, id, timer, destroyed = false, ready = false, attempt = 0, entry = null;
       const dispose = () => {
         clearTimeout(timer);
         if (id) delete window.__portablesBoots[id];
@@ -25,7 +25,7 @@ export function createBrowserHost(container, { timeoutMs = 60000 } = {}) {
           if (ready) { events.onError(message); return; }
           next(message);
         };
-        window.__portablesBoots[id] = { boot, source, events: {
+        entry = window.__portablesBoots[id] = { boot, source, events: {
           onReady() { if (live()) { ready = true; clearTimeout(timer); events.onReady(); } },
           onStart() { if (live()) events.onStart(); },
           onExit() { if (live()) events.onExit(); },
@@ -41,7 +41,21 @@ export function createBrowserHost(container, { timeoutMs = 60000 } = {}) {
         container.replaceChildren(frame);
       };
       next();
-      return { destroy() { destroyed = true; attempt++; dispose(); } };
+      // control : API exposée par player.html une fois le moteur chargé (codes, états, sauvegardes).
+      return {
+        async destroy() {
+          const control = ready && entry && entry.control;
+          destroyed = true;
+          attempt++;
+          // Sauvegarde de cartouche écrite avant de détruire le moteur (changement de jeu, fermeture).
+          if (control && typeof control.flush === 'function') {
+            try { await control.flush(); } catch { /* le moteur peut déjà être arrêté */ }
+          }
+          dispose();
+          entry = null;
+        },
+        control: () => (ready && entry && entry.control) || null,
+      };
     },
   };
 }

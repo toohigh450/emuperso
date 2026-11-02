@@ -188,3 +188,37 @@ body.dragging .drop-hint { display: grid; }
 .demo-panel .actions { margin-bottom: 8px; }
 .demo-panel button[disabled] { opacity: .6; cursor: wait; }
 .demo-panel #demoStatus[data-error="true"] { color: var(--err); }
+
+/* NES / SNES 0.3 : fil d'Ariane vers l'accueil commun, catalogue, codes, états. */
+.top .crumb { margin: 0 0 6px; font-size: 0.9rem; }
+.top .crumb a { color: #d8d6ff; }
+.console-hint { margin: 12px clamp(16px, 4vw, 40px) 0; padding: 8px 12px; border-radius: 8px; background: var(--card); border: 1px solid var(--line); }
+.filters { display: flex; flex-wrap: wrap; gap: 8px 14px; margin: 10px 0; }
+.filters label { display: flex; flex-direction: column; gap: 4px; font-size: 0.875rem; color: var(--ink-soft); }
+.filters.checks label { flex-direction: row; align-items: center; gap: 6px; min-height: 32px; }
+.filters select, .code-form input[type=text] {
+  padding: 9px 10px; border-radius: 8px; border: 1px solid var(--line);
+  background: var(--card); color: var(--ink); font: inherit; min-height: 44px;
+}
+.code-form input[type=text] { width: 100%; font-family: ui-monospace, Consolas, monospace; }
+#codeCheck[data-kind=ok] { color: var(--ok); }
+#codeCheck[data-kind=error] { color: var(--err); font-weight: 600; }
+.rows.codes li { align-items: flex-start; }
+.rows.codes code { font-family: ui-monospace, Consolas, monospace; overflow-wrap: anywhere; }
+.actions.tight { margin: 0; gap: 4px; justify-content: flex-end; }
+.state-row { flex-wrap: wrap; }
+/* Liste virtuelle : seules les lignes visibles existent dans le DOM. */
+.cat-list { position: relative; height: min(52vh, 460px); overflow-y: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--card); overscroll-behavior: contain; }
+.cat-spacer { width: 1px; }
+.cat-rows { position: absolute; top: 0; left: 0; right: 0; margin: 0; padding: 0; list-style: none; }
+.cat-row { display: flex; align-items: stretch; height: 56px; border-bottom: 1px solid var(--line); }
+.cat-row .star { flex: 0 0 44px; border: 0; background: none; color: var(--accent); font-size: 1.2rem; cursor: pointer; }
+.cat-open { flex: 1; min-width: 0; text-align: left; border: 0; background: none; color: var(--ink); padding: 6px 8px 6px 0; cursor: pointer; display: flex; flex-direction: column; justify-content: center; }
+.cat-open:hover .cat-name { text-decoration: underline; }
+.cat-name, .cat-meta { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cat-name { font-weight: 600; font-size: 0.92rem; }
+.cat-meta { font-size: 0.78rem; color: var(--ink-soft); }
+.keys { border-collapse: collapse; width: 100%; font-size: 0.875rem; }
+.keys th, .keys td { border-bottom: 1px solid var(--line); padding: 6px 4px; text-align: left; }
+/* Pas de défilement ni de zoom du navigateur pendant les gestes sur l'écran de jeu. */
+body:not([data-state=idle]) .screen { touch-action: none; overscroll-behavior: contain; }
