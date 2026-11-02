@@ -17,7 +17,7 @@ import { createBrowserHost } from './player-host.mjs';
 import { migrateLegacySave, LEGACY_SAVE_SYSTEMS } from './save-migration.mjs';
 
 import { memoryPlan, pspMemoryPlan, MAX_INPUT_BYTES, MAX_ROM_BYTES, MiB } from './resources.mjs';
-import { analyzePsp, blobReader, PSP_EXTENSIONS, saveDataPrefix, checkSaveArchive, SAVE_ARCHIVE_LIMITS, pspCheatFile } from './psp.mjs';
+import { analyzePsp, blobReader, PSP_EXTENSIONS, saveDataPrefix, checkSaveArchive, SAVE_ARCHIVE_LIMITS, pspCheatFile, PSP_PERFORMANCE, pspPerformanceOptions } from './psp.mjs';
 import { validateDsBios, MAX_BIOS_ZIP } from './bios.mjs';
 import { REMOTE_ENGINE, LOADER_INTEGRITY, ENGINE_VERSION, PSP_ENGINE } from './engine.mjs';
 
@@ -92,7 +92,7 @@ function render(snap) {
     if (currentGame?.system === 'psp') pspMirrorTimer = setInterval(() => mirrorPspSaves(renderedGame), 60000);
     for (const panel of Object.keys(panelTickets)) panelTickets[panel]++;
     for (const id of ['saveMirror', 'history', 'cheatInfo', 'cheatMatches', 'cheatSearchResults', 'codeList', 'stateSlots']) clear($(id));
-    Promise.all([refreshSavePanel(), refreshCheatPanel(), refreshCodePanel(), refreshStatePanel(), refreshPadUi()]).catch(err => {
+    Promise.all([refreshSavePanel(), refreshCheatPanel(), refreshCodePanel(), refreshStatePanel(), refreshPadUi(), refreshPerfUi()]).catch(err => {
       if (currentGame === renderedGame) setStatus(`Panneau indisponible : ${err.message}`, 'error');
     });
   }
@@ -404,6 +404,9 @@ async function openGame(file) {
 
   // Profil positionnel Nintendo : sans objet pour la croix et le rond de la PSP.
   const psp = analysis.system === 'psp';
+  // PSP : réglage de performance du jeu (ou de la console), imposé au cœur au démarrage.
+  const perf = psp ? await pspPerformanceFor(key) : null;
+  const perfOptions = psp ? pspPerformanceOptions(perf.preset) : {};
   // PSP : sans la touche de chargement rapide d'état, qui fige le cœur nightly (voir pspNightlyFragile).
   // La manette est lue par le lanceur (profils EMUPERSO) ; le clavier garde les touches du moteur.
   const defaultControls = psp ? buildPspControls() : null;
@@ -428,6 +431,7 @@ async function openGame(file) {
     }) : null,
     // Seuls les codes que l'utilisateur a activés partent au moteur (voir player.html).
     codes: codes.filter((c) => c.enabled && !isPlaceholderCode(analysis.system, c.code)).map((c) => c.code),
+    coreOptions: psp ? perfOptions : null,
     // PSP : codes actifs écrits dans le fichier CWCheat du jeu avant son démarrage (voir pspCheatFile).
     pspCheats: psp ? pspCheatFile(analysis.discId, codes.filter((c) => c.enabled && !isPlaceholderCode('psp', c.code))) : null,
     bios: core.bios,
@@ -446,7 +450,7 @@ async function openGame(file) {
       ...(psp ? { EJS_CacheLimit: 0, EJS_Buttons: { loadState: false, quickLoad: false, restart: false } } : {}),
       // Sauvegarde de cartouche écrite toutes les 30 s (5 min par défaut dans le moteur).
       // PSP : les codes CWCheat ne sont lus que si l'option du cœur est active.
-      EJS_defaultOptions: { 'save-save-interval': '30', ...(psp ? { ppsspp_cheats: 'enabled' } : {}) },
+      EJS_defaultOptions: { 'save-save-interval': '30', ...(psp ? { ppsspp_cheats: 'enabled', ...perfOptions } : {}) },
       ...(defaultControls ? { EJS_defaultControls: defaultControls } : {}),
       ...(layoutTouch ? { EJS_VirtualGamepadSettings: layoutTouch } : {}),
     },
@@ -1194,6 +1198,46 @@ function showPadStatus(id) {
   $('padStatus').dataset.kind = id ? 'ok' : '';
 }
 
+// --- Performance PSP ---------------------------------------------------------------------
+// « pspPerf » pour toute la console, « pspPerf:<clé du jeu> » pour un seul jeu (prioritaire).
+async function pspPerformanceFor(key) {
+  const game = key ? await store.getSetting(`pspPerf:${key}`, null) : null;
+  if (game && PSP_PERFORMANCE[game]) return { preset: game, scope: 'jeu' };
+  const all = await store.getSetting('pspPerf', 'qualite');
+  return { preset: PSP_PERFORMANCE[all] ? all : 'qualite', scope: 'console' };
+}
+
+async function refreshPerfUi() {
+  const game = currentGame?.system === 'psp' ? currentGame : null;
+  const { preset, scope } = await pspPerformanceFor(game?.key);
+  for (const input of document.querySelectorAll('input[name=pspPerf]')) input.checked = input.value === preset;
+  $('pspPerfGame').disabled = !game;
+  $('pspPerfGame').checked = scope === 'jeu';
+}
+
+async function savePerf() {
+  const preset = document.querySelector('input[name=pspPerf]:checked')?.value || 'qualite';
+  const game = currentGame?.system === 'psp' ? currentGame : null;
+  if (game && $('pspPerfGame').checked) await store.setSetting(`pspPerf:${game.key}`, preset);
+  else {
+    await store.setSetting('pspPerf', preset);
+    if (game) await store.setSetting(`pspPerf:${game.key}`, null);
+  }
+  setStatus(`Performance PSP « ${PSP_PERFORMANCE[preset].label} » enregistrée${game && $('pspPerfGame').checked ? ' pour ce jeu' : ''} : ferme puis rouvre le jeu pour l’appliquer.`, 'ok');
+  await refreshPerfUi();
+}
+
+function buildPerfUi() {
+  const box = clear($('pspPerf'));
+  for (const p of Object.values(PSP_PERFORMANCE)) {
+    const id = `pspPerf-${p.id}`;
+    box.append(h('label', { class: 'choice', for: id },
+      h('input', { type: 'radio', name: 'pspPerf', id, value: p.id, onchange: () => savePerf().catch((err) => setStatus(err.message, 'error')) }),
+      h('span', {}, h('strong', {}, p.label), h('br'), h('small', { class: 'muted' }, p.description))));
+  }
+  $('pspPerfGame').addEventListener('change', () => savePerf().catch((err) => setStatus(err.message, 'error')));
+}
+
 // --- Réglages ---------------------------------------------------------------------
 async function loadSettings() {
   // Ancien réglage « positionnel » (0.3) : il devient le profil Authentique par défaut.
@@ -1362,6 +1406,7 @@ async function main() {
   initTabs();
   buildSettingsUi();
   initEvents();
+  buildPerfUi();
   applyConsoleFromUrl();
   applyCatalogFilters();
   render(session.snapshot());

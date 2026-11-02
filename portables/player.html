@@ -192,9 +192,16 @@
       });
     }).catch(function (err) { console.error('Manette EMUPERSO indisponible', err); });
   }
+  // Options du cœur imposées au démarrage (performance PSP), même si le moteur en avait mémorisé d'autres.
+  function applyCoreOptions() {
+    if (!boot.coreOptions) return;
+    var gm = manager();
+    Object.keys(boot.coreOptions).forEach(function (k) { try { gm.setVariable(k, boot.coreOptions[k]); } catch (err) { console.error(err); } });
+  }
   window.EJS_onGameStart = function () {
     phase = 'exécution du jeu';
     updateLayout();
+    try { applyCoreOptions(); } catch (err) { console.error(err); }
     startPad();
     // PSP : les codes de départ sont déjà dans le fichier du jeu ; ici ppsspp ne connaît pas encore
     // l'identifiant du disque et les écrirait ailleurs.

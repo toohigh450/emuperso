@@ -306,3 +306,12 @@ test('Commandes PSP : touche de chargement rapide d’état retirée, le reste i
   assert.equal(psp[0][3].value, 'enter');
   assert.equal(buildDefaultControls('defaut'), null);
 });
+
+test('Performance PSP : Qualité remet le cœur d’origine, Équilibré et Fluidité sautent des images', async () => {
+  const { pspPerformanceOptions, PSP_PERFORMANCE } = await import('../js/psp.mjs');
+  assert.deepEqual(Object.keys(PSP_PERFORMANCE), ['qualite', 'equilibre', 'fluidite']);
+  assert.equal(pspPerformanceOptions('qualite').ppsspp_frameskip, 'disabled');
+  assert.equal(pspPerformanceOptions('inconnu').ppsspp_auto_frameskip, 'disabled');
+  assert.deepEqual([pspPerformanceOptions('equilibre').ppsspp_frameskip, pspPerformanceOptions('equilibre').ppsspp_auto_frameskip, pspPerformanceOptions('equilibre').ppsspp_skip_buffer_effects], ['2', 'enabled', 'disabled']);
+  assert.deepEqual([pspPerformanceOptions('fluidite').ppsspp_frameskip, pspPerformanceOptions('fluidite').ppsspp_skip_buffer_effects, pspPerformanceOptions('fluidite').ppsspp_skip_gpu_readbacks], ['3', 'disabled', 'enabled']);
+});
