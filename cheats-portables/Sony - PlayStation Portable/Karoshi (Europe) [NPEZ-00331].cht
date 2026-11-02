@@ -1,0 +1,11 @@
+# Recherche locale pour le jeu : Karoshi (Europe).cso (disque NPEZ-00331, « Karoshi »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Karoshi%20(Mini)%20%5BEU%5D%20%5BNPEZ-00331%5D.cht
+
+cheats = "1"
+
+cheat0_desc = "Moonjump"
+cheat0_code =  "_L 0x20002000 0x3C0FC0E0 _L 0x20002004 0x0A2207E0 _L 0x20002008 0x448FD000 _L 0x20081F78 0xC61A006C _L 0x2014D400 0xBFFF4000 _L 0x20081F78 0x0A200800 _L 0xD2000000 0x00000000"

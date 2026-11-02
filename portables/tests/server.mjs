@@ -10,6 +10,9 @@ export async function startTestServer() {
     try {
       const body=await readFile(path);
       res.setHeader('Content-Type',({'.html':'text/html','.mjs':'text/javascript','.css':'text/css','.json':'application/json'})[extname(path)]||'application/octet-stream');
+      // Mêmes en-têtes d'isolation que Vercel et serveur.ps1 : la PSP (ppsspp à fils) en a besoin.
+      res.setHeader('Cross-Origin-Opener-Policy','same-origin');
+      res.setHeader('Cross-Origin-Embedder-Policy','require-corp');
       res.end(body);
     } catch {res.writeHead(404).end();}
   });

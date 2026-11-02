@@ -1,0 +1,13 @@
+# Recherche locale pour le jeu : Drums Challenge (USA).cso (disque NPUZ-00214, « DRUMS CHALLENGE »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Drums%20Challenge%20(Mini)%20%5BUS%5D%20%5BNPUZ-00214%5D.cht
+
+cheats = "2"
+
+cheat0_desc = "Infinite Mistake Meter"
+cheat0_code =  "_L 0x2001B768 0x00000000 _L 0x2001B8F8 0x00000000"
+cheat1_desc = "Unlock All Levels"
+cheat1_code =  "_L 0x20002000 0x8D290004 _L 0x20002004 0x240FFFFF _L 0x20002008 0x152F0002 _L 0x20002010 0xAD200004 _L 0x20002014 0x0A20A1B7 _L 0x200286D0 0x01267021 _L 0x200286D4 0x0A200800"

@@ -1,0 +1,15 @@
+# Recherche locale pour le jeu : Bleach - Heat the Soul 2 (Japan).iso (disque UCJS-10017, « BLEACH ヒート・ザ・ソウル２ »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Bleach%20-%20Heat%20The%20Soul%202%20%5BJP%5D%20%5BUCJS-10017%5D.cht
+
+cheats = "3"
+
+cheat0_desc = "Hit Anywhere [P1]"
+cheat0_code =  "_L 0x200BAE54 0x00000000"
+cheat1_desc = "Invincibility [P1]"
+cheat1_code =  "_L 0x200BB07C 0x00000000"
+cheat2_desc = "Point Max"
+cheat2_code =  "_L 0x20300CE4 0x05F5E0FF"

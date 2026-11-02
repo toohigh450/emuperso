@@ -9,3 +9,14 @@ export function memoryPlan(romBytes, { deviceMemory, archiveBytes = 0, activeByt
   if (estimated > budget) throw new Error(`Mémoire estimée excessive (${Math.ceil(estimated / MiB)} Mio, budget prudent ${Math.floor(budget / MiB)} Mio). Ferme le jeu actif, utilise une ROM plus petite ou un émulateur natif.`);
   return { estimated, budget, warn: romBytes >= 256 * MiB };
 }
+
+// PSP : le lanceur ne garde pas le jeu en mémoire (lecture par tranches, empreinte par morceaux).
+// Le moteur, lui, lit tout le fichier puis le copie dans son système de fichiers : environ deux fois
+// la taille du jeu, plus le cœur PPSSPP et sa mémoire (estimés à 700 Mio). Estimation, pas mesure.
+export const PSP_WARN_BYTES = 700 * MiB;
+export function pspMemoryPlan(fileBytes, { deviceMemory } = {}) {
+  const estimated = 700 * MiB + 2 * fileBytes;
+  const budget = deviceMemory > 0 && deviceMemory < 8 ? deviceMemory * 1024 * MiB / 2 : 4 * 1024 * MiB;
+  if (estimated > budget) throw new Error(`Jeu PSP trop lourd pour cet appareil dans le navigateur (estimation ${Math.ceil(estimated / MiB)} Mio, budget prudent ${Math.floor(budget / MiB)} Mio). Compresse-le en CSO avec maxcso, ou joue-le avec PPSSPP installé sur le PC.`);
+  return { estimated, budget, warn: fileBytes >= PSP_WARN_BYTES };
+}

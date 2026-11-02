@@ -8,6 +8,7 @@ const EXT_SYSTEM = {
   nes: 'nes', unf: 'nes', unif: 'nes', sfc: 'snes', smc: 'snes', swc: 'snes', fig: 'snes',
   gb: 'gb', gbc: 'gbc', gba: 'gba', nds: 'nds',
   md: 'genesis', smd: 'genesis', gen: 'genesis',
+  iso: 'psp', cso: 'psp', pbp: 'psp',
 };
 const ARCHIVES = new Set(['zip', '7z']);
 // Mots du chemin qui désignent une console, pour les archives dont le nom ne le dit pas.
@@ -16,6 +17,7 @@ const PATH_HINTS = [
   [/game ?boy ?advance|\bgba\b/i, 'gba'],
   [/game ?boy ?colou?r|\bgbc\b/i, 'gbc'],
   [/nintendo ?ds|\bnds\b/i, 'nds'],
+  [/playstation ?portable|\bpsp\b/i, 'psp'],
   [/game ?boy|\bgb\b/i, 'gb'],
   [/\bnes\b|famicom|nintendo entertainment/i, 'nes'],
   [/\bgenesis\b|mega ?drive|sega ?md/i, 'genesis'],

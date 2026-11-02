@@ -1,0 +1,31 @@
+# Recherche locale pour le jeu : Dragoneer's Aria (USA).cso (disque ULUS-10291, « Dragoneer's Aria »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Dragoneer's%20Aria%20%5BUS%5D%20%5BULUS-10291%5D.cht
+
+cheats = "11"
+
+cheat0_desc = "________________[>>>FPS Cheats<<<]________________"
+cheat0_code =  "_L 0x00000000 0x00000000"
+cheat1_desc = "30 FPS"
+cheat1_code =  "_L 0x200A82C4 0x3C0241F2"
+cheat2_desc = "↑[#Force FPS To Run At 30 FPS]"
+cheat2_code =  "_L 0x00000000 0x00000000"
+cheat3_desc = "________________[>>>General Cheats<<<]________________"
+cheat3_code =  "_L 0x00000000 0x00000000"
+cheat4_desc = "Dragon Orbs Level 99"
+cheat4_code =  "_L 0x004F4978 0x00000063 _L 0x00513900 0x00000063 _L 0x00513A00 0x00000063 _L 0x00513B00 0x00000063 _L 0x00513C00 0x00000063 _L 0x00513D00 0x00000063 _L 0x00513E00 0x00000063 _L 0x00513F00 0x00000063 _L 0x00514000 0x00000063 _L 0x00514100 0x00000063 _L 0x00514200 0x00000063 _L 0x00514300 0x00000063 _L 0x00514400 0x00000063"
+cheat5_desc = "Inf. HP (Valen)"
+cheat5_code =  "_L 0x104F4938 0x00002135"
+cheat6_desc = "Max Mana"
+cheat6_code =  "_L 0x104F4BE4 0x000003E8"
+cheat7_desc = "Max Out All Items"
+cheat7_code =  "_L 0x805A1A02 0x01540004 _L 0x00000063 0x00000000"
+cheat8_desc = "Quick Level Up (Euphe)"
+cheat8_code =  "_L 0x104F49FC 0x00007530"
+cheat9_desc = "Quick Level Up (Mary)"
+cheat9_code =  "_L 0x104F4AC4 0x00007530 _L 0x104F4B8C 0x00007530"
+cheat10_desc = "Quick Level Up (Valen)"
+cheat10_code =  "_L 0x104F4934 0x00007530"

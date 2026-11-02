@@ -1,0 +1,11 @@
+# Recherche locale pour le jeu : HISTORY - Egypt - Engineering an Empire (USA).cso (disque NPUZ-00090, « HISTORY™ - Egypt Engineering an Empire »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/History%20Egypt%20-%20Engineering%20An%20Empire%20(PlayStation%20Store)%20%5BUS%5D%20%5BNPUZ-00090%5D.cht
+
+cheats = "1"
+
+cheat0_desc = "Money 9999"
+cheat0_code =  "_L 0x10CEDB76 0x0000270F _L 0x10CECF96 0x0000270F _L 0x10CEDCC6 0x0000270F _L 0x10CEDAE6 0x0000270F _L 0x10CEDB46 0x0000270F _L 0x10CEDBA6 0x0000270F"

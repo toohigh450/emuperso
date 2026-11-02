@@ -1,0 +1,19 @@
+# Recherche locale pour le jeu : The Bigs 2.cso (disque ULUS-10448, « The BIGS 2 »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/The%20Bigs%202%20%5BUS%5D%20%5BULUS-10448%5D.cht
+
+cheats = "5"
+
+cheat0_desc = "Inf. Points"
+cheat0_code =  "_L 0x209D7FC4 0x00989680 _L 0x209D7FC8 0x00989680"
+cheat1_desc = "Inf. Upgrade Points"
+cheat1_code =  "_L 0x209D5C44 0x000F4240"
+cheat2_desc = "x99 Homerun Derby"
+cheat2_code =  "_L 0x009E0558 0x00000063"
+cheat3_desc = "x99 Score [Home Team]"
+cheat3_code =  "_L 0x009D7FF8 0x00000014"
+cheat4_desc = "Zero Score [Away Team]"
+cheat4_code =  "_L 0x009D6904 0x00000000 _L 0x009D6906 0x00000000 _L 0x009D7CF8 0x00000000 _L 0x209D68D0 0x00000000 _L 0x209D68D4 0x00000000"

@@ -1,4 +1,5 @@
 // Reconnaissance des consoles et lecture des en-têtes de ROM (NES, SNES, Genesis, GB, GBC, GBA, DS).
+// La PSP (images disque de plusieurs centaines de Mio) est analysée à part, par tranches : voir psp.mjs.
 // Module pur : aucune dépendance au navigateur, testable avec Node.
 
 const KiB = 1024;
@@ -68,6 +69,15 @@ export const SYSTEMS = {
     maxBytes: 1024 * MiB,
     aspect: '2 / 3',
   },
+  psp: {
+    id: 'psp',
+    label: 'PlayStation Portable',
+    exts: ['iso', 'cso', 'pbp'],
+    ejsCore: 'psp', // cœur ppsspp, version à fils d'exécution seulement (isolation COOP/COEP requise)
+    coreId: 'ppsspp',
+    maxBytes: 1800 * MiB, // UMD double couche
+    aspect: '16 / 9', // 480 × 272
+  },
 };
 
 // Cœurs DS proposés (le cœur choisi fait partie de l'espace de sauvegarde du jeu).
@@ -94,6 +104,8 @@ export const UNSUPPORTED_FORMATS = {
   ips: 'Patch .ips : applique-le d’abord à ta ROM avec un outil de patch, puis ouvre la ROM patchée.',
   bps: 'Patch .bps : applique-le d’abord à ta ROM avec un outil de patch, puis ouvre la ROM patchée.',
   ups: 'Patch .ups : applique-le d’abord à ta ROM avec un outil de patch, puis ouvre la ROM patchée.',
+  chd: 'CHD : le cœur PSP de cette version d’EmulatorJS ne lit pas ce format. Convertis-le en ISO avec chdman (« chdman extractdvd -i jeu.chd -o jeu.iso »), puis en CSO avec maxcso si tu veux gagner de la place. Garde l’original.',
+  zso: 'ZSO : le cœur PSP de cette version d’EmulatorJS ne lit pas ce format. Décompresse-le avec maxcso (--decompress) puis ouvre l’ISO ou recompresse-le en CSO.',
 };
 
 /** Extension à donner au cœur (certains cœurs choisissent leur chargeur d'après elle). */
@@ -101,6 +113,7 @@ export function engineExtension(analysis) {
   if (analysis.system === 'nes') return analysis.format === 'UNIF' ? 'unf' : 'nes';
   if (analysis.system === 'snes') return analysis.copierHeader ? 'smc' : 'sfc';
   if (analysis.system === 'genesis') return ['md', 'smd', 'gen'].includes(analysis.ext) ? analysis.ext : 'md';
+  if (analysis.system === 'psp') return analysis.format; // iso, cso ou pbp : ppsspp choisit son lecteur d'après l'extension
   return analysis.system;
 }
 
@@ -519,7 +532,7 @@ export function analyzeRom(fileName, bytes) {
   if (!system) {
     result.errors.push(
       ext
-        ? `Format « .${ext} » non reconnu. Formats acceptés : .nes, .unf, .sfc, .smc, .md, .smd, .gen, .gb, .gbc, .gba, .nds (ou un .zip qui en contient un).`
+        ? `Format « .${ext} » non reconnu. Formats acceptés : .nes, .unf, .sfc, .smc, .md, .smd, .gen, .gb, .gbc, .gba, .nds (ou un .zip qui en contient un), et .iso, .cso, .pbp pour la PSP.`
         : 'Format de fichier non reconnu.'
     );
     return result;

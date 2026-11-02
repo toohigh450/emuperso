@@ -1,0 +1,13 @@
+# Recherche locale pour le jeu : Strikers 1945 Plus Portable.cso (disque NPUH-10020, « STRIKERS 1945 PLUS Portable »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Strikers%201945%20Plus%20Portable%20(PlayStation%20Store)%20%5BJP%5D%20%5BNPUH-10020%5D.cht
+
+cheats = "2"
+
+cheat0_desc = "Inf. Bomb"
+cheat0_code =  "_L 0x01042794 0x00000009"
+cheat1_desc = "Inf. Lives"
+cheat1_code =  "_L 0x00F828D0 0x00000009"

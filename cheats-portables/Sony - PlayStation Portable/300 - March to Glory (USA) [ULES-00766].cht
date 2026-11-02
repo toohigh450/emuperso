@@ -1,0 +1,19 @@
+# Recherche locale pour le jeu : 300 - March to Glory (USA).iso (disque ULES-00766, « 300: March to Glory »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/300%20-%20March%20To%20Glory%20%5BEU%5D%20%5BULES-00766%5D.cht
+
+cheats = "5"
+
+cheat0_desc = "100000 Kleos"
+cheat0_code =  "_L 0x205F2A90 0x47730000"
+cheat1_desc = "Infinite Health"
+cheat1_code =  "_L 0x603E2B50 0x434A0000 _L 0x00020001 0x000026C8"
+cheat2_desc = "Infinite Wrath"
+cheat2_code =  "_L 0x603E2B50 0x434A0000 _L 0x00020001 0x00002704"
+cheat3_desc = "Max Gold"
+cheat3_code =  "_L 0x207B1B00 0x48435000 _L 0x207E8238 0x48435000"
+cheat4_desc = "Max Kleos"
+cheat4_code =  "_L 0x205F2A90 0x47C35000"

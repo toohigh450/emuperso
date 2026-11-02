@@ -3,3 +3,10 @@
 /ps1-web/dist/
 /real-n64/dist/
 node_modules/
+
+# Jeux PSP personnels : jamais dans le dépôt.
+*.iso
+*.cso
+*.zso
+*.chd
+*.pbp

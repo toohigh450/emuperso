@@ -1,0 +1,19 @@
+# Recherche locale pour le jeu : Dungeons & Dragons Tactics (USA).cso (disque ULUS-10232, « Dungeons & Dragons® Tactics »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Dungeons%20%26%20Dragons%20Tactics%20%5BUS%5D%20%5BULUS-10232%5D.cht
+
+cheats = "5"
+
+cheat0_desc = "35 Character Creation Stat Points"
+cheat0_code =  "_L 0x00A36C80 0x00000023"
+cheat1_desc = "999999 Gold"
+cheat1_code =  "_L 0x208F71D4 0x000F423F"
+cheat2_desc = "Always Show Level Up Options"
+cheat2_code =  "_L 0x201143E4 0x00000000"
+cheat3_desc = "Max Gold"
+cheat3_code =  "_L 0x208F71D4 0x05F5E0FF"
+cheat4_desc = "Unlimited Feat Points In Char. Creation"
+cheat4_code =  "_L 0x00A36C88 0x00000001"

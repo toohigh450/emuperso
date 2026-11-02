@@ -1,0 +1,13 @@
+# Recherche locale pour le jeu : Influence (USA).cso (disque NPUX-80453, « INFLUENCE™ »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Influence%20(Mini)%20%5BUS%5D%20%5BNPUX-80453%5D.cht
+
+cheats = "2"
+
+cheat0_desc = "Disable Timer"
+cheat0_code =  "_L 0x2002E624 0x00000000"
+cheat1_desc = "Enable Timer"
+cheat1_code =  "_L 0x2002E624 0xAE2200B4"

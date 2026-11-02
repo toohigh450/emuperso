@@ -1,20 +1,21 @@
 // Interface : une fente, un seul jeu actif, saveurs de sauvegarde et de codes visibles et honnêtes.
 import { SYSTEMS, DS_CORES, ROM_EXTENSIONS, LOOSE_EXTENSIONS, analyzeRom, extensionOf, stemOf, engineExtension } from './systems.mjs';
-import { parseCheatCode, describeCode, CODE_FORMATS } from './codes.mjs';
+import { parseCheatCode, describeCode, CODE_FORMATS, isPlaceholderCode, pspCodeConflicts } from './codes.mjs';
 import { parseRomName } from './romnames.mjs';
 import { buildCatalog, filterCatalog, visibleWindow } from './catalog.mjs';
-import { isZip, extractFirst, listCandidates } from './zip.mjs';
-import { fingerprint, saveSpaceId, gameKey, ejsGameName, legacyEjsGameName, slug, toHex } from './hash.mjs';
+import { isZip, extractFirst, listCandidates, extractAll, buildZip } from './zip.mjs';
+import { fingerprint, fingerprintBlob, saveSpaceId, gameKey, ejsGameName, legacyEjsGameName, slug, toHex } from './hash.mjs';
 import { Store, IdbAdapter, MemoryAdapter, CHEAT_LIMITS, STATE_SLOTS } from './store.mjs';
 import { parseCht, classifyCheatFiles, linkedCheatValid, normalizeName, deviceLabel, inferSystemFromPath } from './cheats.mjs';
-import { CONTROL_PROFILES, buildDefaultControls } from './controls.mjs';
+import { CONTROL_PROFILES, buildDefaultControls, buildPspControls } from './controls.mjs';
 import { Session } from './session.mjs';
 import { createBrowserHost } from './player-host.mjs';
 import { migrateLegacySave, LEGACY_SAVE_SYSTEMS } from './save-migration.mjs';
 
-import { memoryPlan, MAX_INPUT_BYTES, MAX_ROM_BYTES, MiB } from './resources.mjs';
+import { memoryPlan, pspMemoryPlan, MAX_INPUT_BYTES, MAX_ROM_BYTES, MiB } from './resources.mjs';
+import { analyzePsp, blobReader, PSP_EXTENSIONS, saveDataPrefix, checkSaveArchive, SAVE_ARCHIVE_LIMITS, pspCheatFile } from './psp.mjs';
 import { validateDsBios, MAX_BIOS_ZIP } from './bios.mjs';
-import { REMOTE_ENGINE, LOADER_INTEGRITY, ENGINE_VERSION } from './engine.mjs';
+import { REMOTE_ENGINE, LOADER_INTEGRITY, ENGINE_VERSION, PSP_ENGINE } from './engine.mjs';
 
 const $ = (id) => document.getElementById(id);
 
@@ -36,6 +37,7 @@ let opening = false;
 let importingCheats = false;
 const panelTickets = { saves: 0, history: 0, cheats: 0, codes: 0, states: 0 };
 let settings = { controlProfile: 'defaut', dsCore: 'desmume2015' };
+let pspMirrorTimer = 0;
 
 // --- Utilitaires d'affichage -------------------------------------------------------
 function setStatus(text, kind = '') {
@@ -81,6 +83,9 @@ function render(snap) {
   currentGame = snap.game || null;
   if (previousGame !== currentGame) {
     const renderedGame = currentGame;
+    clearInterval(pspMirrorTimer);
+    // PSP : le moteur ne signale pas les écritures de la carte mémoire ; copie de sécurité toutes les minutes.
+    if (currentGame?.system === 'psp') pspMirrorTimer = setInterval(() => mirrorPspSaves(renderedGame), 60000);
     for (const panel of Object.keys(panelTickets)) panelTickets[panel]++;
     for (const id of ['saveMirror', 'history', 'cheatInfo', 'cheatMatches', 'cheatSearchResults', 'codeList', 'stateSlots']) clear($(id));
     Promise.all([refreshSavePanel(), refreshCheatPanel(), refreshCodePanel(), refreshStatePanel()]).catch(err => {
@@ -156,6 +161,35 @@ async function readGameFile(file) {
   return { name, bytes, note };
 }
 
+// PSP : le fichier n'est jamais chargé entier par le lanceur. On lit l'en-tête et quelques secteurs
+// (identifiant du disque, titre), puis le fichier d'origine est confié tel quel au moteur.
+function isPspCandidate(fileName) {
+  const ext = extensionOf(fileName);
+  return PSP_EXTENSIONS.has(ext) || ext === 'chd' || ext === 'zso';
+}
+
+async function readPspFile(file) {
+  if (!window.crossOriginIsolated) {
+    throw new Error('La PSP demande une page isolée (en-têtes COOP/COEP), que ce serveur n’envoie pas. Ouvre Portables par le site Vercel ou par DEMARRER-PORTABLES.bat.');
+  }
+  const info = await analyzePsp(blobReader(file), file.size);
+  if (info.errors.length) return { analysis: { ...info, ok: false } };
+  const plan = pspMemoryPlan(file.size, { deviceMemory: navigator.deviceMemory });
+  if (plan.warn && !confirm(`Jeu PSP de ${fmtSize(file.size)}. Le moteur le charge en entier : environ ${Math.ceil(plan.estimated / MiB)} Mio de mémoire estimés, sans garantie. Ferme les autres onglets lourds. Continuer ?`)) {
+    throw new Error('Ouverture annulée.');
+  }
+  const analysis = {
+    ...info,
+    ok: true,
+    fileName: file.name,
+    ext: extensionOf(file.name),
+    size: file.size,
+    title: info.title || stemOf(file.name),
+    code: info.discId || '',
+  };
+  return { rom: { name: file.name, file, bytes: null, size: file.size, note: '' }, analysis };
+}
+
 async function resolveCore(system) {
   if (system !== 'nds') return { ejsCore: SYSTEMS[system].ejsCore, coreId: SYSTEMS[system].coreId, label: coreLabel(system), bios: null };
   // NES et SNES : aucun BIOS (le Famicom Disk System, qui en demande un, est refusé à l'ouverture).
@@ -173,6 +207,7 @@ function coreLabel(system) {
   if (system === 'nes') return 'FCEUmm';
   if (system === 'snes') return 'Snes9x';
   if (system === 'genesis') return 'Genesis Plus GX';
+  if (system === 'psp') return `PPSSPP (${PSP_ENGINE.label}, secours ${ENGINE_VERSION})`;
   return system === 'gba' ? 'mGBA' : system === 'nds' ? (DS_CORES[settings.dsCore] || DS_CORES.desmume2015).label : 'Gambatte';
 }
 
@@ -225,6 +260,9 @@ function gameDetails(analysis) {
   } else if (analysis.system === 'genesis') {
     parts.push(analysis.format);
     if (analysis.cartridgeTitle) parts.push('titre cartouche : ' + analysis.cartridgeTitle);
+  } else if (analysis.system === 'psp') {
+    parts.push({ iso: 'image ISO', cso: 'image CSO compressée', pbp: 'EBOOT.PBP' }[analysis.format]);
+    if (analysis.discId) parts.push(`disque ${analysis.discId}`);
   } else if (analysis.system === 'snes') {
     parts.push(analysis.layout);
     if (analysis.chip) parts.push(`puce ${analysis.chip.toUpperCase()}`);
@@ -249,14 +287,17 @@ async function openFile(file) {
 
 async function openGame(file) {
   setStatus('Lecture du fichier…');
-  let rom;
+  let rom, analysis;
   try {
-    rom = await readGameFile(file);
+    if (isPspCandidate(file.name)) ({ rom, analysis } = await readPspFile(file));
+    else {
+      rom = await readGameFile(file);
+      analysis = analyzeRom(rom.name, rom.bytes);
+    }
   } catch (err) {
     setStatus(err.message || String(err), 'error');
     return;
   }
-  const analysis = analyzeRom(rom.name, rom.bytes);
   if (!analysis.ok) {
     setStatus(analysis.errors.join(' '), 'error');
     return;
@@ -280,7 +321,8 @@ async function openGame(file) {
     setStatus(err.message || String(err), 'error');
     return;
   }
-  const fp = await fingerprint(rom.bytes);
+  const fp = rom.bytes ? await fingerprint(rom.bytes)
+    : await fingerprintBlob(rom.file, (done, total) => setStatus(`Calcul de l'empreinte du jeu… ${Math.floor(done * 100 / total)} %`));
   const key = gameKey(analysis.system, fp.hex);
   const spaceId = saveSpaceId(analysis.system, core.coreId, fp.hex);
   const previous = await store.getGame(key);
@@ -306,7 +348,8 @@ async function openGame(file) {
     romStem: stemOf(rom.name),
     hex: fp.hex,
     hashAlgo: fp.algo,
-    romBytes: rom.bytes.length,
+    romBytes: rom.bytes ? rom.bytes.length : rom.size,
+    discId: analysis.discId || null,
     headerOk: analysis.headerOk,
     coreId: core.coreId,
     coreLabel: core.label,
@@ -315,15 +358,20 @@ async function openGame(file) {
     warnings: analysis.warnings.concat(rom.note ? [rom.note] : []),
   };
 
-  const defaultControls = buildDefaultControls(settings.controlProfile);
+  // Profil positionnel Nintendo : sans objet pour la croix et le rond de la PSP.
+  const psp = analysis.system === 'psp';
+  // PSP : sans la touche de chargement rapide d'état, qui fige le cœur nightly (voir pspNightlyFragile).
+  const defaultControls = psp ? buildPspControls() : buildDefaultControls(settings.controlProfile);
   const engineStem = ejsGameName(analysis.title, core.coreId, fp.hex);
   const boot = {
-    enginePaths,
+    // PSP : moteur nightly d'abord (cœur ppsspp plus rapide), puis les sources 4.2.3 en secours.
+    enginePaths: psp ? [PSP_ENGINE, ...enginePaths] : enginePaths,
     // Les cœurs se servent aussi de l'extension : transmettre celle détectée,
     // même si le fichier d'origine était .bin, .srl ou mal nommé.
     // Le moteur nomme la sauvegarde de cartouche d'après ce nom de fichier : nom tiré de l'empreinte et
     // du cœur, donc une sauvegarde par jeu, même ROM renommée, jamais partagée entre deux ROM de même nom.
-    rom: { name: `${engineStem}.${engineExtension(analysis)}`, bytes: rom.bytes },
+    // PSP : le File d'origine (lu sur le disque) au lieu d'une copie en mémoire.
+    rom: { name: `${engineStem}.${engineExtension(analysis)}`, bytes: rom.bytes, file: rom.file || null },
     // GB/GBC/GBA/DS : les sauvegardes d'avant 0.3.0-alpha.2 portent le nom du fichier ; player.html
     // appelle cette fonction une fois l'ancien moteur fermé et avant de charger le nouveau.
     prepareSaves: LEGACY_SAVE_SYSTEMS.has(analysis.system) ? () => takeOverLegacySave(game, {
@@ -332,7 +380,9 @@ async function openGame(file) {
       oldStems: [stemOf(rom.name), previous?.fileName ? stemOf(previous.fileName) : null],
     }) : null,
     // Seuls les codes que l'utilisateur a activés partent au moteur (voir player.html).
-    codes: codes.filter((c) => c.enabled).map((c) => c.code),
+    codes: codes.filter((c) => c.enabled && !isPlaceholderCode(analysis.system, c.code)).map((c) => c.code),
+    // PSP : codes actifs écrits dans le fichier CWCheat du jeu avant son démarrage (voir pspCheatFile).
+    pspCheats: psp ? pspCheatFile(analysis.discId, codes.filter((c) => c.enabled && !isPlaceholderCode('psp', c.code))) : null,
     bios: core.bios,
     ejs: {
       EJS_core: core.ejsCore,
@@ -342,9 +392,14 @@ async function openGame(file) {
       EJS_backgroundColor: '#1b1940',
       EJS_alignStartButton: 'center',
       EJS_startButtonName: 'Démarrer',
-      EJS_threads: false,
+      // ppsspp n'existe qu'en version à fils d'exécution (SharedArrayBuffer, page isolée).
+      EJS_threads: psp,
+      // PSP : pas de copie du jeu (des centaines de Mio) dans le cache IndexedDB du moteur.
+      // PSP : pas de copie du jeu dans le cache IndexedDB du moteur, ni de bouton « charger un état » du moteur.
+      ...(psp ? { EJS_CacheLimit: 0, EJS_Buttons: { loadState: false, quickLoad: false, restart: false } } : {}),
       // Sauvegarde de cartouche écrite toutes les 30 s (5 min par défaut dans le moteur).
-      EJS_defaultOptions: { 'save-save-interval': '30' },
+      // PSP : les codes CWCheat ne sont lus que si l'option du cœur est active.
+      EJS_defaultOptions: { 'save-save-interval': '30', ...(psp ? { ppsspp_cheats: 'enabled' } : {}) },
       ...(defaultControls ? { EJS_defaultControls: defaultControls } : {}),
     },
     onSaveUpdate: (e) => mirrorSave(spaceId, e).catch(err => {
@@ -404,6 +459,53 @@ async function mirrorSave(spaceId, e) {
   if (r.changed && currentGame && currentGame.spaceId === spaceId) await refreshSavePanel();
 }
 
+// --- Sauvegardes PSP : dossiers de la carte mémoire virtuelle, échangés en ZIP -------------------
+// Date fixe dans le ZIP : même contenu = mêmes octets, donc pas de copie de sécurité en double.
+const ZIP_DATE = new Date(2000, 0, 1);
+
+function pspSaveFiles(game) {
+  const control = session.control();
+  const prefix = saveDataPrefix(game.discId);
+  if (!control || !prefix) return null;
+  return control.listSaveData(prefix).sort((a, b) => (a.name < b.name ? -1 : 1));
+}
+
+async function mirrorPspSaves(game) {
+  if (game !== currentGame) return;
+  try {
+    const files = pspSaveFiles(game);
+    if (files && files.length) await mirrorSave(game.spaceId, { save: buildZip(files, ZIP_DATE) });
+  } catch (err) { console.error('Copie de sécurité PSP impossible', err); }
+}
+
+async function exportPspSave(game) {
+  const files = pspSaveFiles(game);
+  if (!files) { setStatus('Lance le jeu avant d’exporter sa sauvegarde (identifiant du disque requis).', 'warn'); return; }
+  if (!files.length) { setStatus(`Aucune sauvegarde PSP pour ce jeu (dossiers ${saveDataPrefix(game.discId)}… absents) : enregistre d’abord dans le jeu.`, 'warn'); return; }
+  const zip = buildZip(files, ZIP_DATE);
+  await mirrorSave(game.spaceId, { save: zip });
+  download(`${slug(game.title)}-psp-${game.discId}.zip`, zip);
+  setStatus(`Sauvegarde PSP exportée : ${new Set(files.map((f) => f.name.split('/')[0])).size} dossier(s), ${fmtSize(zip.length)}.`, 'ok');
+}
+
+async function importPspSave(game, file) {
+  const control = session.control();
+  const prefix = saveDataPrefix(game.discId);
+  if (!/\.zip$/i.test(file.name)) { setStatus('Sauvegarde PSP : choisis le ZIP exporté par Portables (dossiers de la carte mémoire).', 'error'); return; }
+  if (file.size > SAVE_ARCHIVE_LIMITS.bytes) { setStatus('Archive trop grosse (64 Mio maximum).', 'error'); return; }
+  const files = await extractAll(new Uint8Array(await file.arrayBuffer()), { maxBytes: SAVE_ARCHIVE_LIMITS.bytes, maxFiles: SAVE_ARCHIVE_LIMITS.files });
+  const check = checkSaveArchive(files, prefix);
+  if (!check.ok) { setStatus(`Import refusé : ${check.error}`, 'error'); return; }
+  if (!confirm(`Importer ${check.folders.length} dossier(s) de sauvegarde dans « ${game.title} » (${game.discId}) ?\n${check.folders.join('\n')}\n\nLes fichiers de même nom sont remplacés ; les sauvegardes actuelles sont d’abord copiées dans les copies de sécurité. Le jeu redémarre ensuite, ou tu le rouvres avec le moteur rapide.`)) return;
+  if (game !== currentGame || !control) return;
+  const current = pspSaveFiles(game);
+  if (current && current.length) await mirrorSave(game.spaceId, { save: buildZip(current, ZIP_DATE) });
+  const fragile = pspNightlyFragile(game, control);
+  await control.writeSaveData(files, !fragile);
+  setStatus(`Sauvegarde PSP importée (${check.folders.length} dossier(s)) ; ${fragile ? 'ferme puis rouvre le jeu pour qu’il la lise (pas de redémarrage automatique avec le moteur rapide)' : 'jeu redémarré'}. L’ancienne reste dans les copies de sécurité.`, 'ok');
+  await refreshSavePanel();
+}
+
 async function refreshSavePanel() {
   const ticket = ++panelTickets.saves;
   const game = currentGame;
@@ -415,7 +517,9 @@ async function refreshSavePanel() {
     if (ticket !== panelTickets.saves || game !== currentGame) return;
     box.append(h('p', {}, `Espace de sauvegarde : ${game.title} (${game.systemLabel}, ${game.coreLabel}).`));
     if (info.length === 0) {
-      box.append(h('p', { class: 'muted' }, "Aucune copie de sécurité pour l'instant. Elle apparaît dès que le moteur détecte un changement de sauvegarde dans le jeu."));
+      box.append(h('p', { class: 'muted' }, game.system === 'psp'
+        ? "Aucune copie de sécurité pour l'instant. PSP : la carte mémoire du jeu est copiée chaque minute pendant la partie, et à chaque export ou import (ZIP des dossiers de sauvegarde)."
+        : "Aucune copie de sécurité pour l'instant. Elle apparaît dès que le moteur détecte un changement de sauvegarde dans le jeu."));
     } else {
       const list = h('ul', { class: 'rows' });
       for (const g of info) {
@@ -424,7 +528,7 @@ async function refreshSavePanel() {
             h('span', {}, `${g.generation === 0 ? 'Dernière' : `Version précédente ${g.generation}`} : ${fmtDate(g.at)}, ${fmtSize(g.size)}`),
             h('button', { class: 'btn small', onclick: async () => {
               const e = await store.getMirrorSave(game.spaceId, g.generation);
-              if (e) download(`${slug(game.title)}-${game.coreId}.sav`, e.bytes);
+              if (e) download(`${slug(game.title)}-${game.coreId}.${game.system === 'psp' ? 'zip' : 'sav'}`, e.bytes);
             } }, 'Exporter')
           )
         );
@@ -486,7 +590,7 @@ async function refreshCheatPanel() {
   if (!valid()) return;
   if (!game || total === 0) { publish(); return; }
   const files = await store.listCheatFiles(game.system);
-  const { identified, exact, sameTitle } = classifyCheatFiles(game.fileName, game.hex, files);
+  const { identified, sameDisc, exact, sameTitle } = classifyCheatFiles(game.fileName, game.hex, files, { discId: game.discId });
   const link = await store.getCheatLink(game.key);
 
   if (!valid()) return;
@@ -507,13 +611,20 @@ async function refreshCheatPanel() {
     list.append(h('p', {}, `${identified.length} fichier(s) identifié(s) par SHA-256 complet. Cela vérifie l'association déclarée, pas l'efficacité des codes.`));
     list.append(h('ul', { class: 'rows' }, identified.map((f) => h('li', {}, f.name))));
   }
+  if (sameDisc.length) {
+    list.append(h('p', { class: 'warn' }, `Même identifiant de disque (${game.discId}) : même jeu et même région ; la révision reste à vérifier. Confirme une fois ; ton choix sera retenu pour cette ROM même renommée.`));
+    list.append(h('ul', { class: 'rows' }, sameDisc.map((f) => h('li', {},
+      h('span', {}, f.name),
+      h('button', { class: 'btn small', onclick: () => associateCheat(f) }, 'Associer à cette ROM')
+    ))));
+  }
   if (exact.length) {
     list.append(h('p', { class: 'warn' }, 'Même nom : région, révision ou hack à vérifier. Confirme une fois ; ton choix sera retenu pour cette ROM même renommée.'));
     list.append(h('ul', { class: 'rows' }, exact.map((f) => h('li', {},
       h('span', {}, f.name),
       h('button', { class: 'btn small', onclick: () => associateCheat(f) }, 'Associer à cette ROM')
     ))));
-  } else if (!identified.length && !link) {
+  } else if (!identified.length && !sameDisc.length && !link) {
     list.append(h('p', { class: 'muted' }, 'Aucune correspondance. Importe tes codes ou recherche un fichier ci-dessous.'));
   }
   if (sameTitle.length) {
@@ -618,6 +729,7 @@ async function importCheatFiles(fileList) {
 const SYSTEM_CODE_HELP = {
   nes: 'NES : Game Genie (6 ou 8 lettres), brut 0300:16, brut conditionnel 91D9?AD:A5, Pro Action Rocky (8 chiffres).',
   snes: 'SNES : Game Genie C2AF-3D07, Pro Action Replay 7E0DBE05, brut 7E0DBE:05 ou 7E0DBE=03?05.',
+  psp: 'PSP : CWCheat, « _L 0xAAAAAAAA 0xVVVVVVVV » par paire (plusieurs lignes acceptées). Les lignes « _L 0x00000000 0x00000000 » des fichiers sont des titres de section : elles ne s’activent pas.',
 };
 
 async function refreshCodePanel() {
@@ -636,6 +748,10 @@ async function refreshCodePanel() {
     for (const e of entries) {
       const parsed = parseCheatCode(game.system, e.code);
       const id = `code-${e.id}`;
+      if (parsed.ok && parsed.placeholder) {
+        list.append(h('li', { class: 'code-section' }, h('strong', {}, e.name || 'Section'), h('small', { class: 'muted' }, ' — titre de section, rien à activer')));
+        continue;
+      }
       list.append(h('li', {},
         h('label', { class: 'choice', for: id },
           h('input', { type: 'checkbox', id, checked: !!e.enabled, onchange: (ev) => toggleCode(game, e.id, ev.target.checked) }),
@@ -649,6 +765,11 @@ async function refreshCodePanel() {
     box.append(h('p', { class: active ? 'warn small-text' : 'muted small-text' }, active
       ? `${active} code(s) actif(s). Un code peut modifier la mémoire sauvegardée : exporte ta sauvegarde avant d'enregistrer en jeu avec un code actif.`
       : 'Aucun code actif. Les codes ne sont jamais activés automatiquement.'));
+    if (game.system === 'psp') {
+      for (const [a, b, address] of pspCodeConflicts(entries.filter((e) => e.enabled))) {
+        box.append(h('p', { class: 'warn small-text' }, `Codes en conflit : « ${a} » et « ${b} » écrivent une valeur différente à ${address}. Ce sont sans doute des variantes exclusives : n’en garde qu’un.`));
+      }
+    }
   }
   if (ticket !== panelTickets.codes || game !== currentGame) return;
   $('codeList').replaceChildren(box);
@@ -665,7 +786,8 @@ async function saveCodes(game, mutate) {
 }
 
 function applyLiveCodes(entries) {
-  const enabled = entries.filter((e) => e.enabled).map((e) => e.code);
+  const system = currentGame?.system;
+  const enabled = entries.filter((e) => e.enabled && !isPlaceholderCode(system, e.code)).map((e) => e.code);
   const control = session.control();
   if (!control) { setStatus('Codes enregistrés pour ce jeu ; ils seront appliqués au prochain lancement.', 'ok'); return; }
   try {
@@ -690,6 +812,7 @@ async function addCode() {
   const parsed = parseCheatCode(game.system, $('codeValue').value);
   const report = (text, kind) => { $('codeCheck').textContent = text; $('codeCheck').dataset.kind = kind; };
   if (!parsed.ok) { report(parsed.error, 'error'); return; }
+  if (parsed.placeholder) { report(parsed.note, 'error'); return; }
   await saveCodes(game, (entries) => {
     if (entries.some((e) => e.code === parsed.code)) throw new Error('Ce code existe déjà pour ce jeu.');
     return [...entries, { id: newCodeId(), name: name || parsed.code, code: parsed.code, enabled: false, origin: 'manuel', format: parsed.format }];
@@ -713,6 +836,7 @@ async function exportCurrentSave() {
   const game = currentGame;
   const control = session.control();
   if (!game || !control) { setStatus('Lance le jeu avant d’exporter sa sauvegarde.', 'warn'); return; }
+  if (game.system === 'psp') { await exportPspSave(game); return; }
   const bytes = control.getSave();
   if (!bytes || bytes.length === 0) { setStatus('Aucune sauvegarde pour ce jeu (pas de pile, ou rien d’enregistré dans le jeu).', 'warn'); return; }
   download(`${slug(game.title)}-${game.system}-${game.coreId}.sav`, bytes);
@@ -723,6 +847,7 @@ async function importSave(file) {
   const game = currentGame;
   const control = session.control();
   if (!game || !control) { setStatus('Lance le jeu avant d’importer une sauvegarde.', 'warn'); return; }
+  if (game.system === 'psp') { await importPspSave(game, file); return; }
   if (file.size > 4 * 1024 * 1024) { setStatus('Fichier de sauvegarde trop gros (4 Mio maximum).', 'error'); return; }
   if (!confirm(`Remplacer la sauvegarde de « ${game.title} » par « ${file.name} » ?\nLa sauvegarde actuelle est d’abord copiée dans les copies de sécurité. Le jeu redémarre ensuite.`)) return;
   const bytes = new Uint8Array(await file.arrayBuffer());
@@ -762,6 +887,7 @@ async function refreshStatePanel() {
           s.previousAt ? h('button', { class: 'btn small', type: 'button', onclick: () => loadState(game, s.slot, true) }, 'Charger le précédent') : '')));
     }
     box.append(list);
+    if (game.system === 'psp') box.append(h('p', { class: 'warn small-text' }, 'PSP : avec le moteur rapide (nightly), charger un état ou redémarrer fige le jeu ; ces actions sont bloquées. Les sauvegardes du jeu (carte mémoire) fonctionnent.'));
   }
   if (ticket !== panelTickets.states || game !== currentGame) return;
   $('stateSlots').replaceChildren(box);
@@ -779,9 +905,16 @@ async function saveState(game, slot) {
   await refreshStatePanel();
 }
 
+// Cœur ppsspp nightly : charger un état ou redémarrer le jeu le fige, même moteur en pause (essais du
+// 2 novembre 2026, Bust-A-Move Ghost). Avec le moteur de secours 4.2.3, les deux fonctionnent.
+function pspNightlyFragile(game, control) {
+  return game.system === 'psp' && /\/nightly\//.test(control?.enginePath || '');
+}
+
 async function loadState(game, slot, previous = false) {
   const control = session.control();
   if (!control || game !== currentGame) { setStatus('Lance le jeu avant de charger un état.', 'warn'); return; }
+  if (pspNightlyFragile(game, control)) { setStatus('Chargement d’état bloqué : il fige le moteur PSP rapide (bug du moteur nightly). Utilise les sauvegardes du jeu ; les états restent exportables.', 'warn'); return; }
   const entry = await store.getState(game.spaceId, slot, previous);
   if (!entry) return;
   if (!confirm(`Charger l’état ${previous ? 'précédent de l’emplacement' : 'de l’emplacement'} ${slot} ? La partie en cours non enregistrée sera perdue.`)) return;
@@ -924,6 +1057,7 @@ async function refreshEngineInfo() {
   $('engineInfo').textContent = engineLocal
     ? `Moteur local présent, chargeur attendu : EmulatorJS ${ENGINE_VERSION}. Hors ligne seulement si tous les fichiers requis sont installés. Secours : CDN versionné.`
     : `Moteur distant EmulatorJS ${ENGINE_VERSION} (CDN). Ce code tiers accède à la ROM et au stockage du navigateur. Voir LISEZMOI.md pour le mode local.`;
+  $('engineInfo').textContent += ` PSP : ${PSP_ENGINE.label} (cœur ppsspp plus rapide, version non figée, sans contrôle d’intégrité), puis ${ENGINE_VERSION} en secours.`;
   const bios = await store.getBios('nds-bios');
   $('biosState').textContent = bios ? `BIOS DS importé (${fmtSize(bios.bytes.length)}).` : 'Aucun BIOS DS importé (inutile avec DeSmuME).';
 }
@@ -1027,6 +1161,7 @@ function initEvents() {
   $('codeRestart').addEventListener('click', () => {
     const control = session.control();
     if (!control) return;
+    if (currentGame && pspNightlyFragile(currentGame, control)) { setStatus('Redémarrage bloqué : il fige le moteur PSP rapide (bug du moteur nightly). Ferme le jeu puis rouvre-le.', 'warn'); return; }
     if (confirm('Redémarrer le jeu ? Les progrès non enregistrés seront perdus. Les codes actifs restent actifs.')) control.restart();
   });
 

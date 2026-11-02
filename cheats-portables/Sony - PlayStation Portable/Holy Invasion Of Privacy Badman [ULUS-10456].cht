@@ -1,0 +1,29 @@
+# Recherche locale pour le jeu : Holy Invasion Of Privacy Badman.cso (disque ULUS-10456, « Holy Invasion of Privacy, Badman! »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Holy%20Invasion%20Of%20Privacy%2C%20Badman!%20What%20Did%20I%20Do%20To%20Deserve%20This%20%5BUS%5D%20%5BULUS-10456%5D.cht
+
+cheats = "10"
+
+cheat0_desc = "Dragon Is Level 5 (White)"
+cheat0_code =  "_L 0x001E1D24 0x00000004"
+cheat1_desc = "Hero Upgrade Points"
+cheat1_code =  "_L 0x001C3154 0x00000063"
+cheat2_desc = "Inf. Digs"
+cheat2_code =  "_L 0x201B753C 0x000003E7 _L 0x201D3C3C 0x000003E7"
+cheat3_desc = "Inf. Mana"
+cheat3_code =  "_L 0x101BCFF8 0x0000270F"
+cheat4_desc = "Inf. Nutrients"
+cheat4_code =  "_L 0x101BCFF4 0x0000270F"
+cheat5_desc = "Insect Is Level 5 (Gold)"
+cheat5_code =  "_L 0x001E1D04 0x00000004"
+cheat6_desc = "Lilith Is Level 5 (White)"
+cheat6_code =  "_L 0x001E1D1C 0x00000004"
+cheat7_desc = "Lizardmen Is Level 5 (White)"
+cheat7_code =  "_L 0x001E1D0C 0x00000004"
+cheat8_desc = "Slimoss Is Level 5 (Pink)"
+cheat8_code =  "_L 0x001E1CFC 0x00000004"
+cheat9_desc = "Spirit Is Level 3 (Red)"
+cheat9_code =  "_L 0x001E1D14 0x00000002"
