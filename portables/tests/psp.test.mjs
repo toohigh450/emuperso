@@ -152,15 +152,18 @@ test('PSP : EBOOT.PBP lu par son PARAM.SFO', async () => {
   assert.equal(info.title, 'Démo PSN');
 });
 
-test('PSP : formats refusés avec une explication (CHD, ZSO, CSO v2, autre console, inconnu, trop gros)', async () => {
+test('PSP : formats refusés avec une explication (CHD, ZSO, CSO v2, inconnu, trop gros) ; image refaite acceptée', async () => {
   const chd = new TextEncoder().encode('MComprHD' + '\0'.repeat(120));
   assert.match((await analyzePsp(reader(chd), chd.length)).errors[0], /chdman/);
   const zso = new TextEncoder().encode('ZISO' + '\0'.repeat(60));
   assert.match((await analyzePsp(reader(zso), zso.length)).errors[0], /ZSO/);
   const v2 = cso(iso(), { version: 2 });
   assert.match((await analyzePsp(reader(v2), v2.length)).errors[0], /version 2/);
-  const ps2 = iso({ systemId: 'PLAYSTATION' });
-  assert.match((await analyzePsp(reader(ps2), ps2.length)).errors[0], /autre console/);
+  const rebuilt = iso({ systemId: 'HJH VCDROM Extension' });
+  const r = await analyzePsp(reader(rebuilt), rebuilt.length);
+  assert.deepEqual(r.errors, []);
+  assert.equal(r.discId, 'ULUS-10041');
+  assert.match(r.warnings[0], /Image refaite/);
   const junk = randomBytes(40000);
   assert.match((await analyzePsp(reader(junk), junk.length)).errors[0], /pas un jeu PSP/);
   assert.match((await analyzePsp(reader(junk), PSP_MAX_BYTES + 1)).errors[0], /trop gros/);

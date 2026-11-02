@@ -1,0 +1,15 @@
+# Recherche locale pour le jeu : Mercury.iso (disque ULUS-10017, « Archer Maclean's Mercury »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Archer%20Maclean's%20Mercury%20%5BUS%5D%20%5BULUS-10017%5D.cht
+
+cheats = "3"
+
+cheat0_desc = "Infinite Time"
+cheat0_code =  "_L 0x2014EC3E 0x00000014"
+cheat1_desc = "Infinite Time v2"
+cheat1_code =  "_L 0x2014EC3C 0x42C60000"
+cheat2_desc = "Infinite Time v3"
+cheat2_code =  "_L 0x2014EC3C 0x42C70000 _L 0x2014EC40 0x42C70000"

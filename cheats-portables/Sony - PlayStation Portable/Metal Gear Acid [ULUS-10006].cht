@@ -1,0 +1,17 @@
+# Recherche locale pour le jeu : Metal Gear Acid.cso (disque ULUS-10006, « METAL GEAR ACID »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Metal%20Gear%20Ac!d%20%5BUS%5D%20%5BULUS-10006%5D.cht
+
+cheats = "4"
+
+cheat0_desc = "999 Health (Snake)"
+cheat0_code =  "_L 0x10C1A308 0x000003E7"
+cheat1_desc = "All Cards Max Amount"
+cheat1_code =  "_L 0x801D6098 0x00D50001 _L 0x00000063 0x00000000"
+cheat2_desc = "Infinite Packs"
+cheat2_code =  "_L 0x001D6088 0x0000000A _L 0x001D6089 0x0000000A _L 0x001D608B 0x0000000A _L 0x001D608A 0x0000000A"
+cheat3_desc = "Max Money/Points"
+cheat3_code =  "_L 0x201D64F8 0x0098967F"

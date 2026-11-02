@@ -1,0 +1,17 @@
+# Recherche locale pour le jeu : Bust-A-Move - Deluxe (USA).cso (disque ULUS-10057, « BUST A MOVE DELUXE »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Bust-A-Move%20Deluxe%20%5BUS%5D%20%5BULUS-10057%5D.cht
+
+cheats = "4"
+
+cheat0_desc = "999999999 Score"
+cheat0_code =  "_L 0x200AC3D4 0x3B9AC9FF"
+cheat1_desc = "Always Enable Pointer"
+cheat1_code =  "_L 0x000A5668 0x00000001"
+cheat2_desc = "Always Get 0:00 Clear Time"
+cheat2_code =  "_L 0x000AC63C 0x00000000"
+cheat3_desc = "Max Highscore"
+cheat3_code =  "_L 0x200AC3D4 0x0098967F"

@@ -1,0 +1,15 @@
+# Recherche locale pour le jeu : Doodle Fit (USA).cso (disque NPUZ-00263, « Doodle Fit »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Doodle%20Fit%20(Mini)%20%5BUS%5D%20%5BNPUZ-00263%5D.cht
+
+cheats = "3"
+
+cheat0_desc = "Display All Hints"
+cheat0_code =  "_L 0x200065A8 0x8C8607FC _L 0x200065E8 0x8E2407FC"
+cheat1_desc = "Place One Piece To Complete Puzzle"
+cheat1_code =  "_L 0x20006DC8 0x8C8507FC"
+cheat2_desc = "Unlock All Levels"
+cheat2_code =  "_L 0x20002000 0x14E00003 _L 0x20002008 0x24070001 _L 0x2000200C 0xACC70000 _L 0x20002010 0x0A202FFA _L 0x2000BFE0 0x0A200800"

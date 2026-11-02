@@ -1,0 +1,33 @@
+# Recherche locale pour le jeu : Free Runing.cso (disque ULES-00704, « FREE RUNNING »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Free%20Running%20%5BEU%5D%20%5BULES-00704%5D.cht
+
+cheats = "12"
+
+cheat0_desc = "Game Speed: Docks"
+cheat0_code =  "_L 0x20705E9C 0x40000000"
+cheat1_desc = "Game Speed: Home"
+cheat1_code =  "_L 0x20705E9C 0x40000000"
+cheat2_desc = "Inf. Health: Mills"
+cheat2_code =  "_L 0x208462BC 0x3F800000"
+cheat3_desc = "Inf. Health: Wharehouse"
+cheat3_code =  "_L 0x208309BC 0x3F800000"
+cheat4_desc = "Inf. Health+Sprint: Docks"
+cheat4_code =  "_L 0x208355BC 0x3F800000 _L 0x208355C0 0x3F800000"
+cheat5_desc = "Inf. Health+Sprint: Flats"
+cheat5_code =  "_L 0x2083FFBC 0x3F800000 _L 0x2083FFC0 0x3F800000"
+cheat6_desc = "Inf. Health+Sprint: Frieghter"
+cheat6_code =  "_L 0x2083FABC 0x3F800000 _L 0x2083FAC0 0x3F800000"
+cheat7_desc = "Inf. Health+Sprint: Home"
+cheat7_code =  "_L 0x2083A2BC 0x3F800000 _L 0x2083A2C0 0x3F800000"
+cheat8_desc = "Infinite Health"
+cheat8_code =  "_L 0x6080F3C8 0x3F800000 _L 0x00020001 0x0000177C"
+cheat9_desc = "Infinite Sprint"
+cheat9_code =  "_L 0x6080F3C8 0x3F800000 _L 0x00020001 0x00001780"
+cheat10_desc = "Invisable Player"
+cheat10_code =  "_L 0x20833EBC 0x00000000"
+cheat11_desc = "Player Speed: Home"
+cheat11_code =  "_L 0x20849288 0x40000000"

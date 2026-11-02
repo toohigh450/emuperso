@@ -1,0 +1,11 @@
+# Recherche locale pour le jeu : Brainpipe (USA).cso (disque NPUZ-00009, « BRAINPIPE »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Brainpipe%20(PlayStation%20Store)%20%5BUS%5D%20%5BNPUZ-00009%5D.cht
+
+cheats = "1"
+
+cheat0_desc = "Max Score"
+cheat0_code =  "_L 0x20A68BA4 0x000F423F _L 0x20A68FA8 0x000F423F"

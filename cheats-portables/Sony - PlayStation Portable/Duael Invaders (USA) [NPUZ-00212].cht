@@ -1,0 +1,15 @@
+# Recherche locale pour le jeu : Duael Invaders (USA).cso (disque NPUZ-00212, « DUÆL INVADERS »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Duael%20Invaders%20(Mini)%20%5BUS%5D%20%5BNPUZ-00212%5D.cht
+
+cheats = "3"
+
+cheat0_desc = "Infinite Lives (Both Players)"
+cheat0_code =  "_L 0x20002000 0x00000000 _L 0x20002004 0x24060009 _L 0x20002008 0xAE260000 _L 0x2000200C 0x0A201A60 _L 0x20002010 0x8E260000 _L 0x20006978 0x0A200800"
+cheat1_desc = "Infinite Lives (Player 1 Only)"
+cheat1_code =  "_L 0x20002000 0x16600002 _L 0x20002004 0x24060009 _L 0x20002008 0xAE260000 _L 0x2000200C 0x0A201A60 _L 0x20002010 0x8E260000 _L 0x20006978 0x0A200800"
+cheat2_desc = "Infinite Lives (Player 2 Only)"
+cheat2_code =  "_L 0x20002000 0x12600002 _L 0x20002004 0x24060009 _L 0x20002008 0xAE260000 _L 0x2000200C 0x0A201A60 _L 0x20002010 0x8E260000 _L 0x20006978 0x0A200800"

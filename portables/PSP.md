@@ -18,7 +18,8 @@ Aucun jeu, aucun BIOS fourni : la PSP n'en demande pas, PPSSPP émule le systèm
 |---|---|
 | `.iso`, `.cso` (v1), `.pbp` | acceptés ; identifiant du disque et titre lus dans UMD_DATA.BIN / PARAM.SFO |
 | `.chd`, `.zso`, CSO v2 | refusés avec la commande de conversion (chdman, maxcso) : absents du cœur |
-| image d'une autre console | refusée (identifiant système ISO différent de « PSP GAME ») |
+| image refaite (« HJH VCDROM Extension », 12 jeux de la collection) | acceptée si elle contient PSP_GAME/PARAM.SFO, avec un avertissement |
+| image d'une autre console | refusée (ni « PSP GAME », ni PSP_GAME/PARAM.SFO) |
 | CSO en cours de téléchargement | refusé : « CSO incomplet », table des blocs plus longue que le fichier |
 
 Le lanceur ne charge jamais le jeu entier : il lit quelques secteurs, calcule le SHA-256 complet par morceaux

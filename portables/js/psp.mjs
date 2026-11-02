@@ -175,16 +175,21 @@ export async function analyzePsp(readAt, size) {
     if (format === 'cso' && sectors.totalBytes > PSP_MAX_BYTES) { info.errors.push('L’en-tête CSO annonce une image de plus de 1 800 Mio.'); return info; }
     const pvd = await sectors.read(16);
     if (pvd[0] !== 1 || ascii(pvd, 1, 6) !== 'CD001') { info.errors.push('Image disque illisible : descripteur ISO 9660 absent.'); return info; }
+    // L'identifiant système vaut « PSP GAME » sur un UMD ; des images refaites par certains outils portent
+    // « HJH VCDROM Extension » (12 jeux de la collection de Karl). Le contenu tranche : PSP_GAME/PARAM.SFO.
     const systemId = ascii(pvd, 8, 40);
-    if (systemId !== 'PSP GAME') {
-      info.errors.push(`Image disque d’une autre console (« ${systemId || 'inconnue'} ») : seuls les UMD PSP sont acceptés ici.`);
-      return info;
-    }
     const root = { lba: u32(pvd, 156 + 2), size: u32(pvd, 156 + 10), dir: true };
     const umd = await findFile(sectors, root, 'UMD_DATA.BIN');
     if (umd) info.discId = normalizeDiscId(ascii(umd, 0, 10).split('|')[0]);
     const param = await findFile(sectors, root, 'PSP_GAME/PARAM.SFO');
     if (param) sfo = parseSfo(param);
+    if (systemId !== 'PSP GAME') {
+      if (!sfo) {
+        info.errors.push(`Image disque d’une autre console (« ${systemId || 'inconnue'} », sans PSP_GAME/PARAM.SFO) : seuls les jeux PSP sont acceptés ici.`);
+        return info;
+      }
+      info.warnings.push(`Image refaite (identifiant système « ${systemId} » au lieu de « PSP GAME ») : contenu PSP reconnu.`);
+    }
     info.volume = ascii(pvd, 40, 72);
     info.headerOk = !!(info.discId || sfo);
     if (!info.headerOk) info.warnings.push('UMD_DATA.BIN et PARAM.SFO introuvables : identifiant du disque inconnu.');

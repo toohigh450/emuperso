@@ -1,0 +1,25 @@
+# Recherche locale pour le jeu : Paper Wars - Cannon Fodder (USA).cso (disque NPUZ-00206, « Paper Wars: Cannon Fodder »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Paper%20Wars%20-%20Cannon%20Fodder%20(Mini)%20%5BUS%5D%20%5BNPUZ-00206%5D.cht
+
+cheats = "8"
+
+cheat0_desc = "Infinite Primary Ammo"
+cheat0_code =  "_L 0x20052E68 0x20C40000 _L 0x20052E84 0x20A40000"
+cheat1_desc = "Infinite Secondary Ammo"
+cheat1_code =  "_L 0x20052C48 0x20A60000"
+cheat2_desc = "Instant Weapon Charge"
+cheat2_code =  "_L 0x20057F2C 0x3C0442C8"
+cheat3_desc = "Max Soldiers Killed"
+cheat3_code =  "_L 0x20002000 0xA4820018 _L 0x20002004 0x03E00008 _L 0x20002008 0x94820018 _L 0x2004461C 0x0A200800 _L 0x20044620 0x2402270F"
+cheat4_desc = "No Soldiers Missed"
+cheat4_code =  "_L 0x20002010 0x03E00008 _L 0x20002014 0x94820018 _L 0x20044628 0x0A200804 _L 0x2004462C 0xA4800018"
+cheat5_desc = "Timer (Faster)"
+cheat5_code =  "_L 0x20002020 0x3C0F4325 _L 0x20002024 0x448FA000 _L 0x20002028 0x0A21184D _L 0x2000202C 0xC64C0044 _L 0x2004612C 0x0A200808 _L 0x20046134 0x46146301"
+cheat6_desc = "Timer (Frozen)"
+cheat6_code =  "_L 0x2004612C 0xC64C0044 _L 0x20046134 0x00000000"
+cheat7_desc = "Timer (Normal)"
+cheat7_code =  "_L 0x2004612C 0xC64C0044 _L 0x20046134 0x46146301"

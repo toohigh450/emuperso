@@ -1,0 +1,13 @@
+# Recherche locale pour le jeu : Beach Buzzin' Chopper (Europe).cso (disque NPEZ-00217, « BEACH BUZZIN' CHOPPER »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Beach%20Buzzin'%20Chopper%20(PlayStation%20Store)%20%5BEU%5D%20%5BNPEZ-00217%5D.cht
+
+cheats = "2"
+
+cheat0_desc = "Helicopters HP Unabated"
+cheat0_code =  "_L 0x20217818 0x3F800000"
+cheat1_desc = "Time To Stop"
+cheat1_code =  "_L 0x10217884 0x000001C2"

@@ -1,0 +1,19 @@
+# Recherche locale pour le jeu : F1 Grand Prix.ISO (disque UCES-00004, « F1 »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/F1%20Grand%20Prix%20%5BEU%5D%20%5BUCES-00004%5D.cht
+
+cheats = "5"
+
+cheat0_desc = "1st"
+cheat0_code =  "_L 0x20B5919C 0x00000000"
+cheat1_desc = "Inf. Time"
+cheat1_code =  "_L 0x20B59164 0x412A68AC"
+cheat2_desc = "Lap"
+cheat2_code =  "_L 0x20B591A4 0x00030000"
+cheat3_desc = "Slow Motion"
+cheat3_code =  "_L 0x201EE1A4 0x42C80000"
+cheat4_desc = "Speed"
+cheat4_code =  "_L 0x201EE1A4 0x00000000"

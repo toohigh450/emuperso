@@ -1,0 +1,25 @@
+# Recherche locale pour le jeu : Tenchu Shadow Assassins 4.cso (disque ULES-01237, « Tenchu: Shadow Assassins »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Tenchu%20-%20Shadow%20Assassins%20%5BEU%5D%20%5BULES-01237%5D.cht
+
+cheats = "8"
+
+cheat0_desc = "________________[>>>FPS Cheats<<<]________________"
+cheat0_code =  "_L 0x00000000 0x00000000"
+cheat1_desc = "60 FPS"
+cheat1_code =  "_L 0x200313D0 0x00000000 _L 0x203D20E4 0x0000003C"
+cheat2_desc = "↑[#Force FPS To Run At 60 FPS]"
+cheat2_code =  "_L 0x00000000 0x00000000"
+cheat3_desc = "60 FPS [Off]"
+cheat3_code =  "_L 0x200313D0 0x14A0FFF1 _L 0x203D20E4 0x0000001E"
+cheat4_desc = "↑[#Restore Force FPS To Run At 60 FPS]"
+cheat4_code =  "_L 0x00000000 0x00000000"
+cheat5_desc = "________________[>>>General Cheats<<<]________________"
+cheat5_code =  "_L 0x00000000 0x00000000"
+cheat6_desc = "Always In The Shadows"
+cheat6_code =  "_L 0x20042984 0x24020001"
+cheat7_desc = "Always In The Shadows [Off]"
+cheat7_code =  "_L 0x20042984 0x00001025"
