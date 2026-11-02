@@ -1,4 +1,4 @@
-# PSP dans Portables — 0.4.0-alpha.1 (branche feature/psp)
+# PSP dans Portables — 0.4.0-alpha.2 (branche feature/psp)
 
 2 novembre 2026. La PSP rejoint le lanceur `portables/` (même fente, mêmes sauvegardes, même panneau de codes).
 Aucun jeu, aucun BIOS fourni : la PSP n'en demande pas, PPSSPP émule le système lui-même.
@@ -11,6 +11,28 @@ Aucun jeu, aucun BIOS fourni : la PSP n'en demande pas, PPSSPP émule le systèm
   `tests/server.mjs`. Le CDN EmulatorJS répond `Cross-Origin-Resource-Policy: cross-origin` : les autres
   consoles continuent de charger leur moteur.
 - `EJS_CacheLimit: 0` : le moteur ne recopie pas le jeu (des centaines de Mio) dans son cache IndexedDB.
+
+### Moteur nightly pour la PSP seulement (depuis le 2 novembre 2026)
+
+Les 8 autres consoles restent sur EmulatorJS 4.2.3. La PSP essaie d'abord `https://cdn.emulatorjs.org/nightly/data/`,
+puis 4.2.3 si la préparation échoue (vérifié : nightly bloqué → 4.2.3 prêt en 1 s).
+
+| Gran Turismo (UCUS-98632), Chrome + RTX 2060 | 4.2.3 (cœur juin 2025) | nightly (cœur juillet 2026) |
+|---|---|---|
+| Chargement (logo GT) | 5-6 images/s, encore sur le logo après 90 s | 19-38 images/s |
+| Menu principal | non atteint | atteint, 59-60 images/s |
+
+Réglages sans effet sur 4.2.3 : processeur IR / interpréteur, mémoire rapide, lecture rapide, textures paresseuses,
+relectures GPU. 4.3.0-pre (version figée) ne démarre pas. Course non mesurée (choix de voiture non automatisé).
+
+Limites du nightly, constatées avec Bust-A-Move Ghost et **bloquées par le lanceur** :
+- charger un état fige le jeu (même moteur en pause) : bouton « Charger » refusé, touche « 2 » et boutons du moteur retirés ;
+- redémarrer fige le jeu : « Redémarrer » refusé, bouton du moteur retiré ; un import de sauvegarde demande de rouvrir le jeu.
+
+Avec 4.2.3 (secours), états et redémarrage fonctionnent. Nightly change sans numéro de version et sans contrôle
+d'intégrité possible : une mise à jour peut modifier son comportement. Fonctions revérifiées sur nightly :
+fichier de codes écrit avant le démarrage, codes changés en partie, carte mémoire (écriture, lecture, persistance),
+enregistrement d'état (40 Mio), image et 57-60 images/s.
 
 ## Formats
 
@@ -42,7 +64,7 @@ Mémoire estimée : 700 Mio + 2 × la taille du jeu ; confirmation au-delà de 7
 - Export : ZIP des dossiers de ce jeu. Import : ZIP refusé s'il contient un autre jeu, un chemin absolu ou « .. » ;
   sauvegarde actuelle copiée avant remplacement, puis redémarrage.
 - Copie de sécurité de la carte mémoire du jeu toutes les minutes pendant la partie.
-- États : 4 emplacements, environ 40 Mio chacun.
+- États : 4 emplacements, environ 40 Mio chacun ; chargement bloqué avec le moteur nightly (voir plus haut).
 
 ## Essais réels (Chrome, 2 novembre 2026)
 

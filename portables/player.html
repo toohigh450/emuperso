@@ -98,8 +98,9 @@
       });
       return out;
     },
-    // Écrit des fichiers sous PSP/SAVEDATA (chemins déjà contrôlés par le lanceur), puis redémarre le jeu.
-    writeSaveData: function (files) {
+    // Écrit des fichiers sous PSP/SAVEDATA (chemins déjà contrôlés par le lanceur), puis redémarre le jeu
+    // si restart (le cœur ppsspp nightly se fige au redémarrage : le lanceur demande alors de rouvrir le jeu).
+    writeSaveData: function (files, restart) {
       var gm = manager();
       files.forEach(function (f) {
         var parts = (SAVEDATA + '/' + f.name).split('/'), dir = '';
@@ -110,9 +111,10 @@
         }
         gm.FS.writeFile(SAVEDATA + '/' + f.name, new Uint8Array(f.bytes));
       });
-      return entry.control.flush().then(function () { restartNextFrame(); });
+      return entry.control.flush().then(function () { if (restart !== false) restartNextFrame(); });
     },
     restart: function () { manager(); restartNextFrame(); },
+    enginePath: source.path, // source réellement chargée (la PSP peut repasser de nightly à 4.2.3)
     screenshot: function () { return manager().screenshot(); },
     // Écrit la sauvegarde de la cartouche dans IndexedDB tout de suite (le moteur ne le fait
     // sinon qu'à intervalles), avant une fermeture, un changement de jeu ou une mise en arrière-plan.

@@ -297,3 +297,12 @@ test('Codes PSP en conflit : même adresse, valeurs différentes ; conditionnels
   ]);
   assert.deepEqual(conflicts, [['Niveau 1', 'Niveau 2', '0x08802020']]);
 });
+
+test('Commandes PSP : touche de chargement rapide d’état retirée, le reste inchangé', async () => {
+  const { buildPspControls, buildDefaultControls } = await import('../js/controls.mjs');
+  const psp = buildPspControls();
+  assert.equal(psp[0][25].value, '');
+  assert.equal(psp[0][24].value, '1'); // enregistrement rapide conservé
+  assert.equal(psp[0][3].value, 'enter');
+  assert.equal(buildDefaultControls('defaut'), null);
+});

@@ -7,7 +7,7 @@ import { isZip, extractFirst, listCandidates, extractAll, buildZip } from './zip
 import { fingerprint, fingerprintBlob, saveSpaceId, gameKey, ejsGameName, legacyEjsGameName, slug, toHex } from './hash.mjs';
 import { Store, IdbAdapter, MemoryAdapter, CHEAT_LIMITS, STATE_SLOTS } from './store.mjs';
 import { parseCht, classifyCheatFiles, linkedCheatValid, normalizeName, deviceLabel, inferSystemFromPath } from './cheats.mjs';
-import { CONTROL_PROFILES, buildDefaultControls } from './controls.mjs';
+import { CONTROL_PROFILES, buildDefaultControls, buildPspControls } from './controls.mjs';
 import { Session } from './session.mjs';
 import { createBrowserHost } from './player-host.mjs';
 import { migrateLegacySave, LEGACY_SAVE_SYSTEMS } from './save-migration.mjs';
@@ -15,7 +15,7 @@ import { migrateLegacySave, LEGACY_SAVE_SYSTEMS } from './save-migration.mjs';
 import { memoryPlan, pspMemoryPlan, MAX_INPUT_BYTES, MAX_ROM_BYTES, MiB } from './resources.mjs';
 import { analyzePsp, blobReader, PSP_EXTENSIONS, saveDataPrefix, checkSaveArchive, SAVE_ARCHIVE_LIMITS, pspCheatFile } from './psp.mjs';
 import { validateDsBios, MAX_BIOS_ZIP } from './bios.mjs';
-import { REMOTE_ENGINE, LOADER_INTEGRITY, ENGINE_VERSION } from './engine.mjs';
+import { REMOTE_ENGINE, LOADER_INTEGRITY, ENGINE_VERSION, PSP_ENGINE } from './engine.mjs';
 
 const $ = (id) => document.getElementById(id);
 
@@ -206,7 +206,7 @@ async function resolveCore(system) {
 function coreLabel(system) {
   if (system === 'nes') return 'FCEUmm';
   if (system === 'snes') return 'Snes9x';
-  if (system === 'psp') return 'PPSSPP';
+  if (system === 'psp') return `PPSSPP (${PSP_ENGINE.label}, secours ${ENGINE_VERSION})`;
   return system === 'gba' ? 'mGBA' : system === 'nds' ? (DS_CORES[settings.dsCore] || DS_CORES.desmume2015).label : 'Gambatte';
 }
 
@@ -356,10 +356,12 @@ async function openGame(file) {
 
   // Profil positionnel Nintendo : sans objet pour la croix et le rond de la PSP.
   const psp = analysis.system === 'psp';
-  const defaultControls = psp ? null : buildDefaultControls(settings.controlProfile);
+  // PSP : sans la touche de chargement rapide d'état, qui fige le cœur nightly (voir pspNightlyFragile).
+  const defaultControls = psp ? buildPspControls() : buildDefaultControls(settings.controlProfile);
   const engineStem = ejsGameName(analysis.title, core.coreId, fp.hex);
   const boot = {
-    enginePaths,
+    // PSP : moteur nightly d'abord (cœur ppsspp plus rapide), puis les sources 4.2.3 en secours.
+    enginePaths: psp ? [PSP_ENGINE, ...enginePaths] : enginePaths,
     // Les cœurs se servent aussi de l'extension : transmettre celle détectée,
     // même si le fichier d'origine était .bin, .srl ou mal nommé.
     // Le moteur nomme la sauvegarde de cartouche d'après ce nom de fichier : nom tiré de l'empreinte et
@@ -389,7 +391,8 @@ async function openGame(file) {
       // ppsspp n'existe qu'en version à fils d'exécution (SharedArrayBuffer, page isolée).
       EJS_threads: psp,
       // PSP : pas de copie du jeu (des centaines de Mio) dans le cache IndexedDB du moteur.
-      ...(psp ? { EJS_CacheLimit: 0 } : {}),
+      // PSP : pas de copie du jeu dans le cache IndexedDB du moteur, ni de bouton « charger un état » du moteur.
+      ...(psp ? { EJS_CacheLimit: 0, EJS_Buttons: { loadState: false, quickLoad: false, restart: false } } : {}),
       // Sauvegarde de cartouche écrite toutes les 30 s (5 min par défaut dans le moteur).
       // PSP : les codes CWCheat ne sont lus que si l'option du cœur est active.
       EJS_defaultOptions: { 'save-save-interval': '30', ...(psp ? { ppsspp_cheats: 'enabled' } : {}) },
@@ -491,12 +494,13 @@ async function importPspSave(game, file) {
   const files = await extractAll(new Uint8Array(await file.arrayBuffer()), { maxBytes: SAVE_ARCHIVE_LIMITS.bytes, maxFiles: SAVE_ARCHIVE_LIMITS.files });
   const check = checkSaveArchive(files, prefix);
   if (!check.ok) { setStatus(`Import refusé : ${check.error}`, 'error'); return; }
-  if (!confirm(`Importer ${check.folders.length} dossier(s) de sauvegarde dans « ${game.title} » (${game.discId}) ?\n${check.folders.join('\n')}\n\nLes fichiers de même nom sont remplacés ; les sauvegardes actuelles sont d’abord copiées dans les copies de sécurité. Le jeu redémarre ensuite.`)) return;
+  if (!confirm(`Importer ${check.folders.length} dossier(s) de sauvegarde dans « ${game.title} » (${game.discId}) ?\n${check.folders.join('\n')}\n\nLes fichiers de même nom sont remplacés ; les sauvegardes actuelles sont d’abord copiées dans les copies de sécurité. Le jeu redémarre ensuite, ou tu le rouvres avec le moteur rapide.`)) return;
   if (game !== currentGame || !control) return;
   const current = pspSaveFiles(game);
   if (current && current.length) await mirrorSave(game.spaceId, { save: buildZip(current, ZIP_DATE) });
-  await control.writeSaveData(files);
-  setStatus(`Sauvegarde PSP importée (${check.folders.length} dossier(s)) ; jeu redémarré. L’ancienne reste dans les copies de sécurité.`, 'ok');
+  const fragile = pspNightlyFragile(game, control);
+  await control.writeSaveData(files, !fragile);
+  setStatus(`Sauvegarde PSP importée (${check.folders.length} dossier(s)) ; ${fragile ? 'ferme puis rouvre le jeu pour qu’il la lise (pas de redémarrage automatique avec le moteur rapide)' : 'jeu redémarré'}. L’ancienne reste dans les copies de sécurité.`, 'ok');
   await refreshSavePanel();
 }
 
@@ -874,6 +878,7 @@ async function refreshStatePanel() {
           s.previousAt ? h('button', { class: 'btn small', type: 'button', onclick: () => loadState(game, s.slot, true) }, 'Charger le précédent') : '')));
     }
     box.append(list);
+    if (game.system === 'psp') box.append(h('p', { class: 'warn small-text' }, 'PSP : avec le moteur rapide (nightly), charger un état ou redémarrer fige le jeu ; ces actions sont bloquées. Les sauvegardes du jeu (carte mémoire) fonctionnent.'));
   }
   if (ticket !== panelTickets.states || game !== currentGame) return;
   $('stateSlots').replaceChildren(box);
@@ -891,9 +896,16 @@ async function saveState(game, slot) {
   await refreshStatePanel();
 }
 
+// Cœur ppsspp nightly : charger un état ou redémarrer le jeu le fige, même moteur en pause (essais du
+// 2 novembre 2026, Bust-A-Move Ghost). Avec le moteur de secours 4.2.3, les deux fonctionnent.
+function pspNightlyFragile(game, control) {
+  return game.system === 'psp' && /\/nightly\//.test(control?.enginePath || '');
+}
+
 async function loadState(game, slot, previous = false) {
   const control = session.control();
   if (!control || game !== currentGame) { setStatus('Lance le jeu avant de charger un état.', 'warn'); return; }
+  if (pspNightlyFragile(game, control)) { setStatus('Chargement d’état bloqué : il fige le moteur PSP rapide (bug du moteur nightly). Utilise les sauvegardes du jeu ; les états restent exportables.', 'warn'); return; }
   const entry = await store.getState(game.spaceId, slot, previous);
   if (!entry) return;
   if (!confirm(`Charger l’état ${previous ? 'précédent de l’emplacement' : 'de l’emplacement'} ${slot} ? La partie en cours non enregistrée sera perdue.`)) return;
@@ -1036,6 +1048,7 @@ async function refreshEngineInfo() {
   $('engineInfo').textContent = engineLocal
     ? `Moteur local présent, chargeur attendu : EmulatorJS ${ENGINE_VERSION}. Hors ligne seulement si tous les fichiers requis sont installés. Secours : CDN versionné.`
     : `Moteur distant EmulatorJS ${ENGINE_VERSION} (CDN). Ce code tiers accède à la ROM et au stockage du navigateur. Voir LISEZMOI.md pour le mode local.`;
+  $('engineInfo').textContent += ` PSP : ${PSP_ENGINE.label} (cœur ppsspp plus rapide, version non figée, sans contrôle d’intégrité), puis ${ENGINE_VERSION} en secours.`;
   const bios = await store.getBios('nds-bios');
   $('biosState').textContent = bios ? `BIOS DS importé (${fmtSize(bios.bytes.length)}).` : 'Aucun BIOS DS importé (inutile avec DeSmuME).';
 }
@@ -1139,6 +1152,7 @@ function initEvents() {
   $('codeRestart').addEventListener('click', () => {
     const control = session.control();
     if (!control) return;
+    if (currentGame && pspNightlyFragile(currentGame, control)) { setStatus('Redémarrage bloqué : il fige le moteur PSP rapide (bug du moteur nightly). Ferme le jeu puis rouvre-le.', 'warn'); return; }
     if (confirm('Redémarrer le jeu ? Les progrès non enregistrés seront perdus. Les codes actifs restent actifs.')) control.restart();
   });
 
