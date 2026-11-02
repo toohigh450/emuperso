@@ -41,6 +41,7 @@ if (typeof window !== 'undefined') window.__cheatController = ctl;
 function controls() {
   const on = !!sessions.current;
   $('choose').disabled = busy; $('launch').disabled = busy || !selected; $('launch').textContent = on ? 'Changer pour ce jeu' : 'Lancer';
+  $('demo-homebrew').disabled = busy;
   $('prep-cancel').hidden = !preparing; $('prep-cancel').disabled = !preparing;
   for (const id of ['audio', 'state-save', 'state-load', 'state-previous', 'battery-save', 'cheat-add', 'cheat-off', 'in-apply']) $(id).disabled = busy || !on;
   if (ctl.view().engineSync === 'unknown') for (const id of ['state-save', 'battery-save']) $(id).disabled = true;
@@ -218,6 +219,32 @@ async function loadState(previous) {
   event('state.loaded', { slot, previous, payload_sha256: loaded.envelope.payload_sha256 }); say('save-note', 'État chargé dans une session neuve ; taille et progression contrôlées, contenu natif non authentifié. Vérifiez image, son et commandes.');
 }
 $('choose').onclick = () => $('disc-file').click();
+
+$('demo-homebrew').onclick = () => operation(async () => {
+  // A tiny original MIT PS-X EXE in ISO9660, built from our own source code.
+  // Always run through the exact normal disc preparation and session path.
+  // Do not modify or upload the user's ROMs, saves or cheat data.
+  event('demo.homebrew.requested', { replacing: !!sessions.current });
+  say('status', 'Chargement de la démo PS1 libre (programme MIPS original)…');
+  const response = await fetch('homebrew/demo-emuperso-ps1.iso', { cache: 'no-store' });
+  if (!response.ok) throw new Error('Démo libre absente du site (HTTP ' + response.status + ').');
+  const buffer = await response.arrayBuffer();
+  if (buffer.byteLength !== 131072) throw new Error('Démo libre incomplète (taille inattendue).');
+  const file = new File([buffer], 'emuperso-homebrew.iso', { type: 'application/octet-stream' });
+  const prepared = await prepareDisc(file, { onStage: (stage, data) => event('demo.disc.' + stage, data) });
+  event('demo.homebrew.prepared', { size: buffer.byteLength, sha256: prepared.metadata.canonical_sha256 });
+  await launch(prepared);
+  const beforeFrame = sessions.current?.api?.snapshot?.()?.frame ?? 0;
+  await new Promise(resolve => setTimeout(resolve, 1100));
+  const afterFrame = sessions.current?.api?.snapshot?.()?.frame ?? 0;
+  const progressing = afterFrame > beforeFrame;
+  event('demo.homebrew.frames', { before: beforeFrame, after: afterFrame, progressing });
+  say('status', 'Homebrew PS1 lancé. Écran rouge attendu : commande GPU native. '
+    + (progressing ? 'Compteur moteur actif (' + beforeFrame + ' → ' + afterFrame + ' images).'
+                   : 'Compteur moteur non confirmé : vérifier le diagnostic et l’image.')
+    + ' Cette démo ne teste pas le son ni les manettes.', !progressing);
+});
+
 // P0 chargement (mandat RC-1.13) : chaque étape de préparation est horodatée dans le
 // diagnostic ; un chien de garde signale toute absence de progression, et « Annuler la
 // lecture » libère l'interface sans toucher au jeu en cours (le bloc déjà demandé au
