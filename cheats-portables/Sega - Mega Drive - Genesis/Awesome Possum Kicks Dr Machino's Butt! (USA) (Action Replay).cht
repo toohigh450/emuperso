@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Awesome Possum Kicks Dr Machino's Butt! (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Awesome%20Possum%20Kicks%20Dr%20Machino's%20Butt!%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "FFE8DD:0A"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "FFE8F6:64"
+cheat1_enable = false 
+
+cheat2_desc = "Enable Secret Options Menu"
+cheat2_code = "FFE897:01"
+cheat2_enable = false 
+
+cheat3_desc = "Speech Modifier"
+cheat3_code = "FFE8A0:0?"
+cheat3_enable = false 
+
+cheat4_desc = "Have Jump Shoes"
+cheat4_code = "FFE91A:01"
+cheat4_enable = false 
+
+cheat5_desc = "Have Lightning Speed Power-Up"
+cheat5_code = "FFE91D:96"
+cheat5_enable = false

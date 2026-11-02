@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : ESPN Speed World (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/ESPN%20Speed%20World%20%28USA%29.cht
+
+cheats = 3
+
+cheat0_desc = "P1's Car Goes At Insane Speeds"
+cheat0_code = "FF0D8A:0063"
+cheat0_enable = false
+
+cheat1_desc = "Regional Lockout Bypass"
+cheat1_code = "EAAT-AL1T"
+cheat1_enable = false
+
+cheat2_desc = "Regional Lockout Bypass"
+cheat2_code = "EAAT-AY1T"
+cheat2_enable = false

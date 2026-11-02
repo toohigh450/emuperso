@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Double Dragon II - The Revenge (Japan) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Double%20Dragon%20II%20-%20The%20Revenge%20%28Japan%29%20%28Action%20Replay%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Infinite Energy P1"
+cheat0_code = "FF6001:20"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives P1"
+cheat1_code = "FF6001:09"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Energy P2"
+cheat2_code = "FF6041:20"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Lives P2"
+cheat3_code = "FF6078:09"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Time"
+cheat4_code = "FF4840:63"
+cheat4_enable = false 
+
+cheat5_desc = "Level Modifier"
+cheat5_code = "FF485D:0?"
+cheat5_enable = false 
+
+cheat6_desc = "Mr X's Drive By Style (Intro)"
+cheat6_code = "FF6098:0B"
+cheat6_enable = false

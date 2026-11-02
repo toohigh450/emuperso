@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Back to the Future Part III (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Back%20to%20the%20Future%20Part%20III%20%28Europe%29.cht
+
+cheats = 3
+
+cheat0_desc = "Invincibility In Pursuit Of The Wagon Clara Clayton (Europe Version)"
+cheat0_code = "R09T-A6ZA+R0VA-A6W4"
+cheat0_enable = false
+
+cheat1_desc = "Invincibility In Level Throwing Plates (Europe Version)"
+cheat1_code = "R18T-G6Z8"
+cheat1_enable = false
+
+cheat2_desc = "Invincibility Last Level (Europe Version)"
+cheat2_code = "RY2A-L6XY+RZHA-L6Z2+RZNT-L6T2+RZLA-L61Y"
+cheat2_enable = false

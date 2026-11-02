@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Cheese Cat-Astrophe Starring Speedy Gonzales (Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Cheese%20Cat-Astrophe%20Starring%20Speedy%20Gonzales%20%28Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Infinite Yellow Hats"
+cheat0_code = "FFE4AB:09"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Cheese (Health)"
+cheat1_code = "FFE4B2:09"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Lives"
+cheat2_code = "FFE4AD:09"
+cheat2_enable = false 
+
+cheat3_desc = "Cannot Be Touched"
+cheat3_code = "FFF96F:2A"
+cheat3_enable = false

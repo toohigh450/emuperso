@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Ghostbusters (World) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Ghostbusters%20%28World%29%20%28Action%20Replay%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Infinite Health"
+cheat0_code = "FFFE2C:10"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Bombs"
+cheat1_code = "FFFE1D:09"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Lives"
+cheat2_code = "FFFE2B:09"
+cheat2_enable = false 
+
+cheat3_desc = "Gives You Lots of Money For Use In Shops"
+cheat3_code = "014D30:6008"
+cheat3_enable = false 
+
+cheat4_desc = "Gives Your Player An Unlimited Amount of Bombs"
+cheat4_code = "006D42:6004"
+cheat4_enable = false 
+
+cheat5_desc = "Gives Your Player Infinite Lives"
+cheat5_code = "0088E2:6004"
+cheat5_enable = false

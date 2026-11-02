@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Batman (Europe, Japan) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Batman%20%28Europe,%20Japan%29%20%28Action%20Replay%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "004B54:6002"
+cheat0_enable = false 
+
+cheat1_desc = "Invincibility"
+cheat1_code = "010162:6008"
+cheat1_enable = false 
+
+cheat2_desc = "Extra Bullets And Rockets"
+cheat2_code = "0068E6:6002"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Rockets For Bat Car"
+cheat3_code = "00696A:6002"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Rockets For Bat Plane"
+cheat4_code = "0069AE:6002"
+cheat4_enable = false 
+
+cheat5_desc = "Skip Levels"
+cheat5_code = "000BB6:4E71"
+cheat5_enable = false

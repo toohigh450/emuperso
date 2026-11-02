@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : DEcapAttack (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/DEcapAttack%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Chuck Is Immune To Enemy Attack"
+cheat0_code = "02EC9E:6002"
+cheat0_enable = false 
+
+cheat1_desc = "Allows Chuck To Walk On Lava"
+cheat1_code = "02B166:6002"
+cheat1_enable = false 
+
+cheat2_desc = "Removes All Enemies From The Game"
+cheat2_code = "02EC38:6004"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Chucks"
+cheat3_code = "02EB88:4E71"
+cheat3_enable = false 
+
+cheat4_desc = "Use To Skip Through Levels"
+cheat4_code = "02EB62:6002"
+cheat4_enable = false

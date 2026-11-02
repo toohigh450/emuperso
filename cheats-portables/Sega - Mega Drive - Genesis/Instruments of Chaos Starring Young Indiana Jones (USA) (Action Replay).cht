@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Instruments of Chaos Starring Young Indiana Jones (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Instruments%20of%20Chaos%20Starring%20Young%20Indiana%20Jones%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "FFF08A:00"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "FFF08D:09"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Ammo"
+cheat2_code = "FFF090:0063"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Grenade"
+cheat3_code = "FFF08E:0063"
+cheat3_enable = false

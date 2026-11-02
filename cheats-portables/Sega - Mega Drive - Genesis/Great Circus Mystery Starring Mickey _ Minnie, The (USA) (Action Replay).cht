@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Great Circus Mystery Starring Mickey _ Minnie, The (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Great%20Circus%20Mystery%20Starring%20Mickey%20_%20Minnie,%20The%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Infinite Energy P1"
+cheat0_code = "FF81DE:03"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives P1"
+cheat1_code = "FF8273:0A"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Energy P2"
+cheat2_code = "FF835E:03"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Lives P2"
+cheat3_code = "FF83F3:0A"
+cheat3_enable = false

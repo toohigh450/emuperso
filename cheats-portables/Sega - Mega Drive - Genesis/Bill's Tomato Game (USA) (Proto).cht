@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Bill's Tomato Game (USA) (Proto)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Bill's%20Tomato%20Game%20%28USA%29%20%28Proto%29.cht
+
+cheats = 7
+
+cheat0_desc = "Freeze Time"
+cheat0_code = "FFEE49:00AD"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "FFEBF3:0003"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Attempts"
+cheat2_code = "FFEBF5:0040"
+cheat2_enable = false
+
+cheat3_desc = "1 Jump Kill Final Boss"
+cheat3_code = ""
+cheat3_enable = false
+
+cheat4_desc = "1 Jump Kill Final Boss"
+cheat4_code = "BT3A-WA7T"
+cheat4_enable = false
+
+cheat5_desc = "Infinite Items"
+cheat5_code = "AJXT-YA5C+AJYA-YA4J+AJ3A-YA80"
+cheat5_enable = false
+
+cheat6_desc = "Infinite Items"
+cheat6_code = "FFEE11:0008+FFEE13:0008+FFEE1D:0008+FFEE15:0008+FFEE17:0008"
+cheat6_enable = false

@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Dynamite Headdy (Japan) (Beta) (April, 1994)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Dynamite%20Headdy%20%28Japan%29%20%28Beta%29%20%28April,%201994%29.cht
+
+cheats = 2
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "AXBA-AA7Y+AT5T-CA7N"
+cheat0_enable = false
+
+cheat1_desc = "Invincibility (Disable Hit Detection)"
+cheat1_code = "R1BA-A6ZT+RY5A-C60R+RY5T-C61C"
+cheat1_enable = false

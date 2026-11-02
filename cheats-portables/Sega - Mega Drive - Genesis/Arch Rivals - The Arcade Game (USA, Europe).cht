@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Arch Rivals - The Arcade Game (USA, Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Arch%20Rivals%20-%20The%20Arcade%20Game%20%28USA,%20Europe%29.cht
+
+cheats = 2
+
+cheat0_desc = "1P Team (Home) Score Modifier"
+cheat0_code = "FF0098:0000"
+cheat0_enable = false
+
+cheat1_desc = "2P Team (Visitor)Score Modifier"
+cheat1_code = "FF0096:0000"
+cheat1_enable = false

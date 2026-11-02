@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Ex-Mutants (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Ex-Mutants%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Unlimited Men"
+cheat0_code = "FF006B:0003"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Health"
+cheat1_code = "FF005A:0C"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Primary Weapon"
+cheat2_code = "FF005C:63"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Secondary Weapon"
+cheat3_code = "FF005D:99"
+cheat3_enable = false 
+
+cheat4_desc = "Max Money"
+cheat4_code = "FF0069:63"
+cheat4_enable = false

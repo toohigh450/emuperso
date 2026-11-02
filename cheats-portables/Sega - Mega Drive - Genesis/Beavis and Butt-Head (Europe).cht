@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Beavis and Butt-Head (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Beavis%20and%20Butt-Head%20%28Europe%29.cht
+
+cheats = 5
+
+cheat0_desc = "Infinite Beavis Energy"
+cheat0_code = "9VKA-DGAL+EBKA-CAAN"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Butt-Head Energy"
+cheat1_code = "9VKA-DGA0+EBKA-CAA2"
+cheat1_enable = false
+
+cheat2_desc = "Invincibility"
+cheat2_code = "ABJT-CAH8+FDKA-CN9R+FBKA-DGTG"
+cheat2_enable = false
+
+cheat3_desc = "Walk thru walls"
+cheat3_code = "ABZT-CA2L+ABZT-CA7W"
+cheat3_enable = false
+
+cheat4_desc = "Moonjump"
+cheat4_code = "BBMA-CAGY+BBMA-CAHW"
+cheat4_enable = false

@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Adventures of Mighty Max, The (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Adventures%20of%20Mighty%20Max,%20The%20%28Europe%29.cht
+
+cheats = 6
+
+cheat0_desc = "Infinite health"
+cheat0_code = "ATZA-AA80+ATZA-AA2C"
+cheat0_enable = false
+
+cheat1_desc = "Infinite lives"
+cheat1_code = "ATZA-AA4L+ATZT-AA28"
+cheat1_enable = false
+
+cheat2_desc = "Infinite time"
+cheat2_code = "AT9A-AA90"
+cheat2_enable = false
+
+cheat3_desc = "Moon jump (slow descent)"
+cheat3_code = "97VA-B96L"
+cheat3_enable = false
+
+cheat4_desc = "Moon jump (super slow descent)"
+cheat4_code = "97VA-B96J"
+cheat4_enable = false
+
+cheat5_desc = "Walk thru walls"
+cheat5_code = "RZWA-C61R"
+cheat5_enable = false

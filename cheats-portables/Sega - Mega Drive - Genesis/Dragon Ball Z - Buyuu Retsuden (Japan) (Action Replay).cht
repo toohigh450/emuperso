@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Dragon Ball Z - Buyuu Retsuden (Japan) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Dragon%20Ball%20Z%20-%20Buyuu%20Retsuden%20%28Japan%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Health Modifier Player 1"
+cheat0_code = "FFE783:XX+FFE785:XX"
+cheat0_enable = false 
+
+cheat1_desc = "Health Modifier Player 2"
+cheat1_code = "FFE8AB:XX+FFE8AD:XX"
+cheat1_enable = false 
+
+cheat2_desc = "Character Modifier Player 1"
+cheat2_code = "FFE7B6:XX"
+cheat2_enable = false 
+
+cheat3_desc = "Character Modifier Player 2"
+cheat3_code = "FFE8DE:XX"
+cheat3_enable = false 
+
+cheat4_desc = "Battle Round Modifiers"
+cheat4_code = "FFEA16:XX+FFEA1E:XX"
+cheat4_enable = false

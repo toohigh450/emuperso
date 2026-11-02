@@ -1,0 +1,44 @@
+# Recherche locale pour la ROM : Chiki Chiki Boys (USA, Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Chiki%20Chiki%20Boys%20%28USA,%20Europe%29.cht
+
+cheats = 9
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "AAPA-AAAE"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Bombs"
+cheat1_code = "AKYA-AA2A"
+cheat1_enable = false
+
+cheat2_desc = "Invincibility"
+cheat2_code = "EBJA-AN8C"
+cheat2_enable = false
+
+cheat3_desc = "Start With A Much Longer Life-Bar"
+cheat3_code = "9BNA-AADC"
+cheat3_enable = false
+
+cheat4_desc = "Master Code"
+cheat4_code = "REBT-A6WY"
+cheat4_enable = false
+
+cheat5_desc = "Master Code "
+cheat5_code = "AJBT-AA4Y"
+cheat5_enable = false
+
+cheat6_desc = "Infinite Coins"
+cheat6_code = "AJWA-AA22"
+cheat6_enable = false
+
+cheat7_desc = "Invincibility"
+cheat7_code = "FFAF15:0010"
+cheat7_enable = false
+
+cheat8_desc = "Infinite Continues"
+cheat8_code = "AKKT-AA8N"
+cheat8_enable = false

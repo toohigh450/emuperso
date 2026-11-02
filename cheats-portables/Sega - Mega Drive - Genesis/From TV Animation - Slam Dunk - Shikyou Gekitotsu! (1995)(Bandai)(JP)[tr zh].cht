@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : From TV Animation - Slam Dunk - Shikyou Gekitotsu! (1995)(Bandai)(JP)[tr zh]
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/From%20TV%20Animation%20-%20Slam%20Dunk%20-%20Shikyou%20Gekitotsu!%20%281995%29%28Bandai%29%28JP%29[tr%20zh].cht
+
+cheats = 2
+
+cheat0_desc = "Regional Lockout Bypass"
+cheat0_code = "AJGA-AA2N"
+cheat0_enable = false
+
+cheat1_desc = "Master Code"
+cheat1_code = "RYCA-A6ZA"
+cheat1_enable = false
