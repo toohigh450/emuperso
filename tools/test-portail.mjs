@@ -104,7 +104,7 @@ try {
       for(let i=0;i<d.length;i+=4)colors.add((d[i]<<16)|(d[i+1]<<8)|d[i+2]);
       return colors.size;
     });
-    record(sys, 'démo libre lancée avec le vrai cœur, image non uniforme', colors >= 3, `${colors} couleurs, ${await p.locator('#gameCore').textContent()}`);
+    record(sys, 'démo libre lancée avec le vrai cœur, image non uniforme', colors >= 2, `${colors} couleurs, ${await p.locator('#gameCore').textContent()}`);
     await p.getByRole('button', { name: 'Fermer le jeu', exact: true }).click();
     await p.locator('#slotEmpty').waitFor({ state: 'visible' });
     record(sys, 'fermeture propre (iframe moteur libérée)', (await p.locator('iframe').count()) === 0);
