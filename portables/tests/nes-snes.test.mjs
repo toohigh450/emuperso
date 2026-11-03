@@ -247,7 +247,7 @@ test('codes longs du catalogue (Action Replay DS, CWCheat PSP) acceptés ; colla
   assert.equal(parseCheatCode('nds', 'A'.repeat(20001)).ok, false);
 });
 
-test('Mega Drive : au plus 150 lignes de codes actives (au-delà Genesis Plus GX plante)', async () => {
+test('Mega Drive et NES : nombre de lignes de codes actives limité (au-delà le cœur plante)', async () => {
   const { limitActiveCodes } = await import('../js/codes.mjs');
   const many = Array.from({ length: 235 }, (_, i) => `FF${String(i).padStart(4, '0')}:0001`);
   const r = limitActiveCodes('genesis', many);
@@ -255,5 +255,6 @@ test('Mega Drive : au plus 150 lignes de codes actives (au-delà Genesis Plus GX
   assert.equal(r.dropped, 85);
   // Un code à deux lignes compte double ; les autres consoles ne sont pas limitées.
   assert.equal(limitActiveCodes('genesis', ['A:1+B:2', ...many.slice(0, 149)]).codes.length, 149);
+  assert.equal(limitActiveCodes('nes', [...many, ...many]).codes.length, 256);
   assert.equal(limitActiveCodes('snes', many).codes.length, 235);
 });

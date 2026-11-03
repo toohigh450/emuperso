@@ -96,11 +96,12 @@ export function encodeSnesGameGenie(address, value) {
 export const MAX_CODE_LENGTH = 20000;
 
 /**
- * Lignes de codes actives qu'un cœur supporte. Genesis Plus GX n'en garde que 150 et plante au-delà
- * (« table index is out of bounds » : 147 lignes tiennent, 160 plantent, vu sur la collection). Une
- * ligne = un morceau séparé par « + ».
+ * Lignes de codes actives qu'un cœur supporte, mesurées sur la collection (une ligne = un morceau
+ * séparé par « + ») : Genesis Plus GX garde 150 lignes et plante au-delà (147 tiennent, 160 plantent,
+ * « table index is out of bounds ») ; FCEUmm (NES) tient 256 lignes et plante à 361 (« memory access
+ * out of bounds »). Les autres cœurs ont tenu plus de 700 lignes (PSP) ou 2 900 (DS).
  */
-export const ENGINE_CODE_LINES = Object.freeze({ genesis: 150 });
+export const ENGINE_CODE_LINES = Object.freeze({ genesis: 150, nes: 256 });
 
 /** Codes actifs gardés dans l'ordre jusqu'à la limite du cœur ; dropped = codes laissés de côté. */
 export function limitActiveCodes(system, codes) {
