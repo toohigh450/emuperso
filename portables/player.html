@@ -213,11 +213,24 @@
     try { if (boot.onSaveUpdate) boot.onSaveUpdate(e); } catch (err) { console.error(err); }
   };
 
+  function note(kind, message) { try { if (boot.onLog) boot.onLog(kind, message); } catch (err) { /* lanceur fermé */ } }
+  // Refus sans gravité du navigateur : garder l'écran allumé (wake lock) ou passer en plein écran pendant que
+  // l'onglet est caché (« The requesting page is not visible »). Le cœur PSP nightly le demande : il ne doit
+  // jamais arrêter la partie (plantage constaté par Karl sur Gran Turismo en changeant de fenêtre).
+  function harmless(reason) {
+    var name = reason && reason.name, text = reason && (reason.message || String(reason));
+    return name === 'NotAllowedError' || /not visible|wake ?lock|fullscreen|pointer ?lock|user gesture|play\(\) request/i.test(text || '');
+  }
   window.addEventListener('error', function (e) {
+    note('erreur moteur', 'Pendant ' + phase + (e.message ? ' : ' + e.message : ''));
     events.onError('Erreur pendant ' + phase + (e.message ? ' : ' + e.message : '.'));
   });
   window.addEventListener('unhandledrejection', function (e) {
     var reason = e.reason && (e.reason.message || String(e.reason));
+    if (harmless(e.reason)) { e.preventDefault(); note('refus ignoré', reason || 'refus du navigateur'); return; }
+    note('erreur moteur', 'Promesse rejetée pendant ' + phase + (reason ? ' : ' + reason : ''));
+    // Partie en cours : on signale sans couper le jeu ; avant, un échec de préparation reste bloquant.
+    if (phase === 'exécution du jeu') { e.preventDefault(); return; }
     events.onError('Moteur interrompu pendant ' + phase + (reason ? ' : ' + reason : '.'));
   });
   window.EJS_pathtodata = source.path;
