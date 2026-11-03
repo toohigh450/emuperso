@@ -160,7 +160,13 @@ async function measure(page, seconds) {
   await page.waitForTimeout(seconds * 1000);
   const f1 = await frameNum(page);
   let c = await colors(page);
-  if (c < 4 && f1 > f0) { await page.waitForTimeout(8000); c = await colors(page); } // écran noir de chargement
+  // Écran noir de chargement : seconde chance. Les disques PS1 ont souvent une intro noire de plus
+  // d'une minute (Alien Resurrection : image vers 90 s), d'où une attente plus longue.
+  if (c < 4 && f1 > f0) {
+    for (let waited = 0, limit = page.url().includes('/ps1-web/') ? 75000 : 8000; c < 4 && waited < limit; waited += 8000) {
+      await page.waitForTimeout(8000); c = await colors(page);
+    }
+  }
   return { fps: Math.round((f1 - f0) / seconds), colors: c, verdict: f1 <= f0 ? 'figé' : c >= 4 ? 'image' : 'noir' };
 }
 
