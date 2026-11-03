@@ -4,6 +4,7 @@ import { contentStartupError } from './startup-error.mjs';
 // One disposable browser realm per engine session. No ROM or save is uploaded.
 import { computeInputs, padType } from './input-profile.mjs';
 import { watchTouch } from './touch-editor.mjs';
+import { repairCue } from './cue-repair.mjs';
 // Tactile (mandat Controller V2) : masqué quand une manette est branchée, boutons déplaçables ; réglé par la page.
 export const PS1_TOUCH_KEY = 'emuperso-ps1-touch';
 let touchWatch = null;
@@ -162,13 +163,29 @@ async function start(config, callback) {
       return originalCompression.call(this, data, message, fileCallback);
     const started = performance.now(); let files = 0, expandedBytes = 0;
     note('engine.archive.decompression.before', { compressed_bytes: data.byteLength, ...heap() });
+    // Les .cue sont remis au moteur en dernier, une fois tous les noms connus : une feuille dont les
+    // pistes ont été renommées dans l'archive est corrigée en mémoire (cue-repair.mjs).
+    const names = [], cues = [];
+    const fixCue = (name, bytes) => {
+      const dir = name.includes('/') ? name.slice(0, name.lastIndexOf('/') + 1) : '';
+      const siblings = names.filter((n) => n.startsWith(dir) && !n.slice(dir.length).includes('/')).map((n) => n.slice(dir.length));
+      const repaired = repairCue(new TextDecoder().decode(bytes), siblings);
+      if (!repaired) return bytes;
+      note('engine.cue.repaired', { cue: name.slice(dir.length), files: repaired.map });
+      return new TextEncoder().encode(repaired.text);
+    };
     const measuredCallback = (name, bytes) => {
-      files++; expandedBytes += bytes.byteLength;
+      files++; expandedBytes += bytes.byteLength; names.push(name);
+      if (/\.cue$/i.test(name)) { cues.push([name, bytes]); return; }
       return fileCallback(name, bytes);
     };
     try {
       const result = await originalCompression.call(this, data, message, typeof fileCallback === 'function' ? measuredCallback : fileCallback);
-      if (typeof fileCallback !== 'function') for (const bytes of Object.values(result)) { files++; expandedBytes += bytes.byteLength; }
+      for (const [name, bytes] of cues) fileCallback(name, fixCue(name, bytes));
+      if (typeof fileCallback !== 'function') for (const [name, bytes] of Object.entries(result)) {
+        files++; expandedBytes += bytes.byteLength; names.push(name);
+      }
+      if (typeof fileCallback !== 'function') for (const name of Object.keys(result)) if (/\.cue$/i.test(name)) result[name] = fixCue(name, result[name]);
       note('engine.archive.decompression.after', { compressed_bytes: data.byteLength, expanded_bytes: expandedBytes, files,
         ms: Math.round(performance.now() - started), peak_measured: false, ...heap() });
       return result;
