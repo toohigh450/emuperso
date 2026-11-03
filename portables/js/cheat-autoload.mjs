@@ -4,6 +4,7 @@
 // dans le panneau Codes comme suggestions à confirmer (même disque pour la PSP, même titre sinon).
 import { parseRomName } from './romnames.mjs';
 import { discIdOfCheatName, parseCht } from './cheats.mjs';
+import { parseCheatCode, isPlaceholderCode } from './codes.mjs';
 
 export const CHEAT_FOLDERS = Object.freeze({
   nes: 'Nintendo - Nintendo Entertainment System',
@@ -72,7 +73,9 @@ export async function autoloadCheats({ store, system, romName, altName = null, d
     const r = await fetch(`${base}${encodeURIComponent(folder)}/${encodeURIComponent(name)}`, { cache: 'force-cache' });
     if (!r.ok) continue;
     const text = await r.text();
-    if (!parseCht(text).length) continue; // aucun code utilisable (vibrations seulement, par exemple)
+    // Aucun code utilisable : vibrations seulement (« Rumbles »), ou codes que la console refuse
+    // (fichiers « (Action Replay) » NES/SNES faits de « 2000.00 », « 7E081B?? »…).
+    if (!parseCht(text).some((c) => parseCheatCode(system, c.code).ok && !isPlaceholderCode(system, c.code))) continue;
     entries.push(await store.prepareCheatFile({ system, path, name, text }));
   }
   if (entries.length) await store.commitCheatFiles(entries);

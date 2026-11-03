@@ -161,9 +161,10 @@ async function measure(page, seconds) {
   const f1 = await frameNum(page);
   let c = await colors(page);
   // Écran noir de chargement : seconde chance. Les disques PS1 ont souvent une intro noire de plus
-  // d'une minute (Alien Resurrection : image vers 90 s), d'où une attente plus longue.
+  // d'une minute (Alien Resurrection : image vers 90 s), d'où une attente plus longue ; la N64 aussi
+  // (logos noirs de Donkey Kong 64, Bottom of the 9th).
   if (c < 4 && f1 > f0) {
-    for (let waited = 0, limit = page.url().includes('/ps1-web/') ? 75000 : 8000; c < 4 && waited < limit; waited += 8000) {
+    for (let waited = 0, limit = page.url().includes('/ps1-web/') ? 75000 : page.url().includes('/real-n64/') ? 40000 : 8000; c < 4 && waited < limit; waited += 8000) {
       await page.waitForTimeout(8000); c = await colors(page);
     }
   }

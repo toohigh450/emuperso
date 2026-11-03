@@ -94,11 +94,12 @@ test('Codes automatiques : même disque (PSP), même titre entre noms No-Intro e
   assert.deepEqual(findCheatCandidates('psp', 'x.cso', null, ['Bust A Move Ghost [ULES-00233].cht']), []);
 });
 
-test('Codes automatiques : un fichier sans code utilisable (vibrations « Rumbles ») n’est pas importé', async () => {
+test('Codes automatiques : un fichier sans code utilisable (« Rumbles », Action Replay refusés) n’est pas importé', async () => {
   const { autoloadCheats } = await import('../js/cheat-autoload.mjs');
   const files = {
     '3 Ninjas Kick Back (USA).cht': 'cheats = 1\ncheat0_desc = "Vies infinies"\ncheat0_code = "7E0D5A09"\ncheat0_enable = false\n',
     '3 Ninjas Kick Back (Rumbles).cht': 'cheats = 1\ncheat0_desc = "Rumble on energy loss"\ncheat0_code = ""\ncheat0_handler = "1"\n',
+    '3 Ninjas Kick Back (USA) (Action Replay).cht': 'cheats = 2\ncheat0_desc = "Score"\ncheat0_code = "7E081B??"\ncheat1_desc = "x"\ncheat1_code = "2000.00"\n',
   };
   const realFetch = globalThis.fetch;
   globalThis.fetch = async (url) => {
