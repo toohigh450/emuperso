@@ -122,7 +122,8 @@ async function openRom(page, g, timeout) {
     if (await pick.isVisible().catch(() => false)) await pick.click().catch(() => {});
     const status = await page.locator('#status').textContent();
     if (/Moteur prêt/.test(status) && (await page.locator('iframe.player-frame').count())) return status;
-    if (/impossible|refus|non reconnu|incomplet|trop |annulée|Aucun jeu reconnu|BIOS/i.test(status)) throw Object.assign(new Error(status), { refused: true });
+    // « Mémoire estimée excessive » : garde-fou du lanceur (ROM DS de 512 Mio), refus voulu.
+    if (/impossible|refus|non reconnu|incomplet|trop |annulée|Aucun jeu reconnu|BIOS|excessive/i.test(status)) throw Object.assign(new Error(status), { refused: true });
     await page.waitForTimeout(500);
   }
   throw new Error('moteur pas prêt à temps');
