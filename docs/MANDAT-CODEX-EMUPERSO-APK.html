@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Mandat Codex — EMUPERSO.apk — Reprise PWA/TWA — 2026-11-02</title>
+<style>
+:root{--bg:#0b1017;--panel:#162131;--line:#304158;--text:#ebf3fa;--muted:#a8bfd1;--mint:#8be5c5;--gold:#f2cd85;--rose:#f1a5b8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:950px;margin:auto;padding:32px 20px 65px}h1{font-size:2rem;line-height:1.2;margin:0 0 7px}h2{font-size:1.15rem;color:var(--gold);border-bottom:1px solid var(--line);padding-bottom:6px;margin-top:32px}h3{font-size:1rem;color:var(--mint);margin-bottom:4px}
+p,li{margin-top:6px}small,.muted{color:var(--muted)}.eyebrow{letter-spacing:.12em;text-transform:uppercase;font-size:.76rem;color:var(--mint);font-weight:700}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 19px;margin:15px 0}
+.warn{border-left:4px solid var(--rose)}.good{border-left:4px solid var(--mint)}
+table{width:100%;border-collapse:collapse;margin:12px 0}th,td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}th{background:var(--panel);color:var(--gold)}
+code,pre{background:#090e15;border:1px solid var(--line);border-radius:5px;padding:1px 5px;overflow-wrap:anywhere}pre{padding:12px;overflow:auto;white-space:pre-wrap}a{color:var(--mint)}
+ol{padding-left:22px}li{margin:7px 0}.todo li::marker{color:var(--gold)}
+@media print{body{background:#fff;color:#111}h2,h3{color:#173d44}.box,th{background:#f1f4f6}a{color:#056b77}}
+</style>
+</head>
+<body><main>
+<p class="eyebrow">EMUPERSO · Mandat de passation technique · Version 1.0</p>
+<h1>📱 Codex — terminer EMUPERSO.apk</h1>
+<p class="muted">2 novembre 2026 · Décision : Karl (PDG) · Fondation : Méo · Correctif PWA : GPT · Exécution à poursuivre : Codex · Contre-audit : GPT / Méo</p>
+<div class="box good"><strong>Objectif ferme :</strong> produire <strong>un seul APK Android EMUPERSO</strong> donnant accès au portail Web à <strong>dix consoles</strong> (NES, SNES, GB, GBC, GBA, DS, N64, PS1, PSP, Genesis / Mega Drive), avec les manettes Controller V2, l'import local, les cheats déjà présents et les sauvegardes. Ne pas remplacer l'application par Lemuroid ni par un émulateur tiers autonome.</div>
+<div class="box warn"><strong>État honnête :</strong> la fondation PWA existe sur GitHub, <strong>mais aucun APK compilé, signé et testé n'est encore établi par ce mandat</strong>. La branche PWA provient de main et doit être intégrée sans écraser les développements les plus récents des dix consoles. Les trois icônes PNG référencées ne sont pas présentes sur la branche au moment de la vérification.</div>
+<h2>1. Reprise vérifiée — ne pas refaire l'existant</h2>
+<table><tr><th>Élément</th><th>État à reprendre</th></tr>
+<tr><td>Dépôt</td><td><a href="https://github.com/toohigh450/emuperso">toohigh450/emuperso</a></td></tr>
+<tr><td>Fondation Méo</td><td>Branche <code>feature/pwa-apk</code>, commit <code>c8b011e</code> : <code>portail/manifest.webmanifest</code>, <code>portail/sw.js</code>, balises PWA, adaptation du build.</td></tr>
+<tr><td>Correctif GPT</td><td>Commit <code>1e0e3f1</code> sur <code>feature/pwa-apk</code> : <code>portail/index.html</code> et <code>tools/build-portail.mjs</code> repris du portail dix consoles, avec les ajouts PWA. <strong>Déjà sauvegardé sur GitHub</strong>.</td></tr>
+<tr><td>Portail dix consoles</td><td>Branche <code>feature/unified-controller-profiles</code> : N64, PS1, PSP, Genesis, contrôles Android et autres correctifs actifs. Inspecter le HEAD juste avant toute intégration.</td></tr>
+<tr><td>Lien partagé aux proches</td><td><a href="https://emuperso-git-feature-unified-controller-55789a-toohigh450-1311.vercel.app/">Preview stable Controller V2</a> : <strong>ne pas casser, remplacer ni exiger de connexion Vercel</strong>.</td></tr>
+<tr><td>Émulateurs / jeux</td><td>Campagne PSP de Claude : 543 tests séparés. Banc local Codex : neuf autres consoles. Ne pas toucher aux deux campagnes ni à leurs sauvegardes.</td></tr></table>
+<h2>2. Règles non négociables du PDG</h2>
+<ol>
+<li><strong>Travail isolé :</strong> conserver <code>main</code>, les branches Claude/Méo/Codex, leurs worktrees, ROMs et sauvegardes intacts. Créer si nécessaire une branche de travail issue du HEAD le plus récent de <code>feature/unified-controller-profiles</code>, puis y reporter uniquement les changements PWA nécessaires. Une PR en brouillon, pas de fusion automatique.</li>
+<li><strong>Lien public préservé :</strong> l'URL Preview Controller V2 déjà partagée doit rester opérationnelle. Si l'APK exige un déploiement supplémentaire, utiliser une URL temporaire distincte durant les essais et documenter la bascule; ne jamais supposer qu'un nouveau déploiement conserve les mêmes URL sans vérification.</li>
+<li><strong>Aucune ROM commerciale ni BIOS</strong> dans l'APK, dans GitHub, sur Vercel ou dans le cache. Démonstrations open source explicitement licenciées seulement. ROMs personnelles, BIOS, clés de signature et mots de passe restent sur l'appareil ou sur le PC autorisé.</li>
+<li><strong>Ne jamais activer automatiquement les cheats.</strong> Conserver l'association par version de ROM et la confirmation de l'utilisateur.</li>
+<li><strong>Rapports honnêtes :</strong> distinguer installation, image détectée, menu, gameplay réel, audio, manette et sauvegarde. Aucun résultat « testé » sans essai réellement effectué.</li>
+<li><strong>Autorisation obligatoire de Karl</strong> avant fusion vers <code>main</code>, déploiement de production, publication sur Play Store ou diffusion publique élargie.</li>
+</ol>
+<h2>3. Plan de travail Codex — ordre d'exécution</h2>
+<h3>Phase A — Comparer, isoler, intégrer la PWA</h3>
+<ol class="todo">
+<li>Actualiser les refs GitHub; comparer <code>feature/pwa-apk</code> et <code>feature/unified-controller-profiles</code>, repérer leurs changements concurrents depuis les commits ci-dessus.</li>
+<li>Reporter le manifeste, le service worker et la copie dans <code>dist/</code> <strong>sans écraser</strong> les fonctionnalités récentes de Controller V2, PSP, Genesis, archives et BIOS.</li>
+<li>Créer ou intégrer de vraies icônes PNG : <code>portail/icon-192.png</code>, <code>portail/icon-512.png</code>, <code>portail/icon-maskable-512.png</code>. Vérifier les tailles, l'ouverture, la licence et le SHA-256. Le chemin <code>~/workspace/user/files/EMUPERSO-PWA-icons/</code> de Méo est indicatif : vérifier la présence réelle des fichiers avant de l'utiliser.</li>
+<li>Vérifier le <code>start_url</code>, le <code>scope</code> et les chemins absolus du manifeste sur le domaine cible; tester que <code>/manifest.webmanifest</code>, <code>/sw.js</code>, les trois icônes et <code>/</code> répondent en 200 avec les bons types MIME.</li>
+<li>Auditer le service worker : pas de mise en cache involontaire des fichiers utilisateurs ou de réponses privées, pas de cache infini des actifs énormes, mise à jour Web visible sans purge manuelle; tester un redéploiement et le mode hors ligne limité sans promettre un émulateur complet hors ligne.</li>
+</ol>
+<h3>Phase B — Construire et signer l'APK de test</h3>
+<ol class="todo">
+<li>Préparer Node, JDK et Android SDK dans un environnement isolé. Utiliser <code>@bubblewrap/cli</code> / Trusted Web Activity; vérifier les versions installées avant le build.</li>
+<li>Initialiser Bubblewrap à partir de <strong>l'URL du manifeste effectivement publiée</strong>, en conservant le package Android de test <code>com.emuperso.twa</code> et le nom affiché « EMUPERSO ». Utiliser le navigateur Android comme moteur, sans annoncer une émulation native.</li>
+<li>Créer une <strong>clé de test</strong> hors du dépôt, noter son empreinte de certificat SHA-256 et ne jamais committer le keystore, le mot de passe, les secrets ou des artefacts contenant des informations personnelles.</li>
+<li>Publier <code>/.well-known/assetlinks.json</code> <strong>sur l'origine exacte ouverte par la TWA</strong>, avec l'ID de package et l'empreinte réels. Valider le JSON, le type MIME et le code 200. Corriger l'affichage de la barre Chrome si la vérification de domaine échoue.</li>
+<li>Construire l'APK de test, vérifier son installation sur Android et produire le SHA-256 du fichier. Ne pas dire « APK prêt » avant installation et lancement démontrés.</li>
+</ol>
+<h3>Phase C — Tests terrain du PDG (OnePlus 10T + PC)</h3>
+<table>
+<tr><th>ID</th><th>Essai</th><th>Critère de validation</th></tr>
+<tr><td>T1</td><td>Installer l'APK</td><td>Installation réussie, icône EMUPERSO visible</td></tr>
+<tr><td>T2</td><td>Ouvrir le portail</td><td>Dix consoles visibles; TWA plein écran après validation d'origine</td></tr>
+<tr><td>T3</td><td>Importer jeux locaux sur chaque console</td><td>Android ouvre le sélecteur; chargement local; aucun upload</td></tr>
+<tr><td>T4</td><td>Tester image/son et progression</td><td>NES, Genesis, GBA puis autres; noter séparément menu et jouabilité</td></tr>
+<tr><td>T5</td><td>Controller V2 tactile</td><td>Portrait et paysage; repositionnement et préférences persistantes</td></tr>
+<tr><td>T6</td><td>Manette Bluetooth/Xbox</td><td>Détection Gamepad API; profils Authentique et Confort moderne, pas de double commande</td></tr>
+<tr><td>T7</td><td>Sauvegarde et rechargement</td><td>Fermer/réouvrir l'application; données présentes; pas de mélange entre jeux</td></tr>
+<tr><td>T8</td><td>Cheats par version</td><td>Fichiers proposés au bon jeu; aucun code activé sans accord</td></tr>
+<tr><td>T9</td><td>ZIP/7z et choix de version</td><td>Sélection avant démarrage, extraction locale limitée et messages d'erreur clairs</td></tr>
+<tr><td>T10</td><td>Mise à jour du portail</td><td>Correctif Web visible sans reconstruire l'APK; l'URL des testeurs reste valide</td></tr>
+</table>
+<p class="muted">Noter en complément la compatibilité spécifiques PS1/PSP, les limites de mémoire et de performance sur Android, les écrans DS et les commandes N64.</p>
+<h2>4. État, décisions et obstacles</h2>
+<div class="box">
+<p><strong>Déjà fait :</strong> PWA de Méo et correctif GPT dans GitHub. <strong>À faire / non démontré :</strong> icônes binaires, fusion sûre avec le HEAD Controller V2, build Vercel réel, certificat et assetlinks, APK signé, tests T1–T10. Ne pas confondre plan et réalisation.</p>
+<p><strong>Décision de principe tirée du mandat de Méo :</strong> cibler en priorité la Preview de dix consoles actuellement partagée, pas la production de huit consoles. Le nom commercial « EMUPERSO » et la diffusion initiale aux testeurs par installation directe restent proposés; obtenir le GO de Karl si une nouvelle décision de distribution est nécessaire.</p>
+<p><strong>Internationalisation :</strong> futur chantier i18n (français conservé, autres langues par fichiers de traduction). Ne pas retarder l'APK de test pour traduire tout le portail sans mandat distinct.</p>
+</div>
+<h2>5. Livrables et passage de relais</h2>
+<ol>
+<li>Branche dédiée, commits clairs et PR en brouillon sans fusion, avec comparaison explicite des changements de Claude et de Méo.</li>
+<li><code>EMUPERSO-test.apk</code> signé avec clé de test, empreinte SHA-256 et instructions d'installation en français.</li>
+<li>Preuves des tests T1–T10 : appareil, OS, version, captures, journaux techniques expurgés et verdicts précis (testé / échec / non testé).</li>
+<li>Rapport HTML d'audit et liste des problèmes non résolus, notamment les limites PSP, les saves, le offline et les archives.</li>
+<li>Confirmation explicite que le lien Vercel stable est toujours accessible sans connexion et que <code>main</code> n'a pas été modifiée.</li>
+</ol>
+<div class="box good"><strong>Consigne de reprise à Codex :</strong> commencer par l'audit des deux branches et la validation des icônes, construire ensuite une Preview isolée et l'APK de test, puis arrêter avant toute fusion ou diffusion non approuvée. En cas de conflit, préserver en priorité les correctifs récents du portail dix consoles et demander l'arbitrage de Karl plutôt que de les écraser.</div>
+<p class="muted">Ce document constitue le mandat de transfert rédigé à partir du mandat HTML de Méo et de la vérification de la branche GitHub. Le code des APK, la signature et les tests Android ne sont pas présentés comme effectués par GPT.</p>
+</main></body></html>
