@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
-<meta name="description" content="EMUPERSO : un seul portail pour jouer dans Chrome à la NES, la Super Nintendo, la Game Boy, la Game Boy Color, la Game Boy Advance, la DS, la Nintendo 64 et la PlayStation, sur ordinateur et téléphone.">
+<meta name="description" content="EMUPERSO : NES, SNES, Sega Genesis, Game Boy, Game Boy Color, Game Boy Advance, Nintendo DS, Nintendo 64, PlayStation et PlayStation Portable dans Chrome, sur ordinateur et téléphone.">
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#0d1117">
 <meta name="mobile-web-app-capable" content="yes">
@@ -14,7 +14,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
 <link rel="apple-touch-icon" href="/icon-192.png">
-<title>EMUPERSO — 8 consoles</title>
+<title>EMUPERSO — 10 consoles</title>
 <style>
 :root {
   --bg: #0b111a; --panel: #131e2c; --panel-2: #172536; --line: #33445a;
@@ -53,7 +53,7 @@ footer a { margin-right: 14px; }
 <body>
 <div class="wrap">
   <header>
-    <div class="brand"><b>EMUPERSO</b><span>Portail rétro · 8 consoles</span></div>
+    <div class="brand"><b>EMUPERSO</b><span>Portail rétro · 10 consoles</span></div>
     <p>Joue dans Chrome sur ordinateur ou téléphone, sans application à installer et sans compte. Chaque console propose une démo libre pour essayer tout de suite ; tes propres jeux restent sur ton appareil.</p>
   </header>
 
@@ -98,6 +98,13 @@ footer a { margin-right: 14px; }
         <p>Moteur DeSmuME (ou melonDS avec ton BIOS). Démo libre : Pong.</p>
         <span class="go">Jouer →</span>
       </a>
+      <a class="card" href="portables/?console=genesis">
+        <span class="badge new">À tester</span>
+        <span class="tag">Sega · 1988</span>
+        <h3>Genesis / Mega Drive</h3>
+        <p>Moteur Genesis Plus GX. Charge une ROM locale .md, .smd, .gen ou ZIP. Cheats à importer ; 32X non pris en charge.</p>
+        <span class="go">Essayer →</span>
+      </a>
       <a class="card" href="real-n64/">
         <span class="badge">Alpha</span>
         <span class="tag">Nintendo · 1996</span>
@@ -110,6 +117,13 @@ footer a { margin-right: 14px; }
         <span class="tag">Sony · 1994</span>
         <h3>PlayStation</h3>
         <p>Moteur PCSX ReARMed. Démo libre EMUPERSO. Jeux réels en cours de validation.</p>
+        <span class="go">Jouer →</span>
+      </a>
+      <a class="card" href="portables/?console=psp">
+        <span class="badge">Alpha</span>
+        <span class="tag">Sony · 2004</span>
+        <h3>PlayStation Portable</h3>
+        <p>Moteur PPSSPP. Tes jeux .iso, .cso ou .pbp. Codes CWCheat par jeu, sauvegardes de carte mémoire et états. Ordinateur conseillé.</p>
         <span class="go">Jouer →</span>
       </a>
     </nav>
@@ -135,6 +149,7 @@ footer a { margin-right: 14px; }
     <a href="N64-Web-Lab-Phase1A.html">Laboratoire N64 (fondation Phase 1A)</a>
     <a href="portables/DEMOS-LIBRES.md">Démos libres et licences</a>
     <a href="docs/PORTAIL-8-CONSOLES.md">Architecture du portail</a>
+    <a href="docs/CONTROLLER-V2.html">Manettes et commandes (Controller V2)</a>
   </footer>
 </div>
 <script>
