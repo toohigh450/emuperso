@@ -10,3 +10,7 @@ body{position:relative;isolation:isolate;background:#07111f}body::before{content
 /* Téléphone : zone de jeu à la taille de l'écran (portrait : image + commandes ; paysage : toute la hauteur). */
 @media (pointer:coarse) and (orientation:portrait){#game{height:calc(75vw + 330px);max-height:none}}
 @media (pointer:coarse) and (orientation:landscape) and (max-height:520px){main{padding:8px}.player-panel{padding:4px;margin:8px 0}#game{height:calc(100svh - 16px);max-height:none}}
+
+/* Fond d'écran d'époque EMUPERSO. */
+body::before { content: ""; position: fixed; inset: 0; z-index: 0; background: url('/bg/bg-n64.jpg') center / cover no-repeat; opacity: .22; pointer-events: none; }
+body > * { position: relative; z-index: 1; }

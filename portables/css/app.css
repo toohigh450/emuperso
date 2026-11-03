@@ -33,6 +33,17 @@
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; }
+/* Fonds d'écran par console — images d'époque, discrètes derrière l'interface. */
+body[data-console]::before { content: ""; position: fixed; inset: 0; z-index: 0; background-size: cover; background-position: center; background-repeat: no-repeat; opacity: .20; pointer-events: none; }
+body[data-console="nes"]::before { background-image: url('/bg/bg-nes.jpg'); }
+body[data-console="snes"]::before { background-image: url('/bg/bg-snes.jpg'); }
+body[data-console="gb"]::before { background-image: url('/bg/bg-gb.jpg'); }
+body[data-console="gbc"]::before { background-image: url('/bg/bg-gbc.jpg'); }
+body[data-console="gba"]::before { background-image: url('/bg/bg-gba.jpg'); }
+body[data-console="nds"]::before { background-image: url('/bg/bg-nds.jpg'); }
+body[data-console="genesis"]::before { background-image: url('/bg/bg-genesis.jpg'); }
+body[data-console="psp"]::before { background-image: url('/bg/bg-psp.jpg'); }
+body[data-console] > * { position: relative; z-index: 1; }
 body {
   background: var(--paper);
   color: var(--ink);

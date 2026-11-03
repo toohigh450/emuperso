@@ -10,7 +10,7 @@ const DIST = resolve(ROOT, 'dist');
 const config = JSON.parse(await readFile(join(ROOT, 'vercel.json'), 'utf8'));
 const TYPES = {
   '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css',
-  '.json': 'application/json', '.wasm': 'application/wasm', '.png': 'image/png', '.svg': 'image/svg+xml',
+  '.json': 'application/json', '.wasm': 'application/wasm', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml',
   '.md': 'text/markdown; charset=utf-8', '.txt': 'text/plain; charset=utf-8', '.data': 'application/octet-stream',
 };
 const rules = config.headers.map((h) => ({ re: new RegExp(`^${h.source.replace('(.*)', '.*')}$`), headers: h.headers }));

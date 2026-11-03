@@ -78,6 +78,15 @@ if (existsSync(CHEAT_DIR)) {
 // vérifiée par real-n64/tests/test_real_tools.py) n'est jamais modifié ; le laboratoire reste publié
 // sous son nom d'origine, N64-Web-Lab-Phase1A.html.
 add('index.html', join(ROOT, 'portail', 'index.html'));
+// i18n : chargeur + fichiers de traduction du portail (FR par défaut, EN en option).
+for (const f of ['i18n.js', 'i18n/fr.json', 'i18n/en.json']) {
+  add(f, join(ROOT, 'portail', f));
+}
+// Fonds d'écran + logo : une seule direction /bg/ à la racine, servie à tout le site.
+for (const f of ['bg/bg-nes.jpg', 'bg/bg-snes.jpg', 'bg/bg-gb.jpg', 'bg/bg-gbc.jpg', 'bg/bg-gba.jpg', 'bg/bg-nds.jpg', 'bg/bg-genesis.jpg', 'bg/bg-n64.jpg', 'bg/bg-ps1.jpg', 'bg/bg-psp.jpg', 'bg/bg-portal.jpg']) {
+  add(f, join(ROOT, 'portail', f));
+}
+add('logo.png', join(ROOT, 'portail', 'logo.png'));
 writeFileSync(join(OUT, 'PORTAIL-MANIFEST.json'), JSON.stringify({
   projet: 'EMUPERSO — portail unique 10 consoles',
   fichiers: Object.keys(manifest).length,
