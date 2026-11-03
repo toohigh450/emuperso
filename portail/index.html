@@ -47,6 +47,11 @@ h2 { font-size: 1.05rem; letter-spacing: 0.5px; margin: 34px 0 12px; color: var(
 .card .go { margin-top: auto; padding-top: 10px; color: var(--mint); font-weight: 700; font-size: 0.95rem; }
 .card .badge { position: absolute; top: 14px; right: 14px; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: #2a3f36; color: var(--mint); border: 1px solid #416956; }
 .card .badge.new { background: #47283a; color: var(--rose); border-color: #7a4560; }
+.apk { background: var(--panel); border: 1px solid var(--mint); border-radius: 12px; padding: 18px; margin: 8px 0 22px; }
+.apk h2 { margin-top: 0; }
+.apk ol { margin: 8px 0 14px; padding-left: 22px; color: var(--muted); }
+.apk .dl { display: inline-block; background: var(--mint); color: #0b1410; font-weight: 700; text-decoration: none; padding: 12px 18px; border-radius: 10px; }
+.apk .hash { font-size: 0.75rem; color: var(--muted); overflow-wrap: anywhere; }
 .notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
 .note { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
 .note h3 { margin: 0 0 6px; font-size: 1rem; }
@@ -137,6 +142,18 @@ footer a { margin-right: 14px; }
         <span class="go" data-i18n="card.play">Jouer →</span>
       </a>
     </nav>
+
+    <section class="apk" id="android">
+      <h2 data-i18n="apk.title">Application Android (test)</h2>
+      <p data-i18n="apk.text">EMUPERSO en application : elle ouvre ce même site en plein écran, sans barre Chrome. Android 7 ou plus, Chrome à jour. Version de test : son installation reste à confirmer sur ton téléphone.</p>
+      <ol>
+        <li data-i18n="apk.step1">Télécharge le fichier depuis ton téléphone Android.</li>
+        <li data-i18n="apk.step2">Ouvre-le. Si Android le demande, autorise pour cette fois l’installation depuis l’application qui l’ouvre.</li>
+        <li data-i18n="apk.step3">Installe, puis retire cette autorisation. Aucun jeu ni BIOS n’est inclus : tes jeux restent sur ton appareil.</li>
+      </ol>
+      <a class="dl" href="/android/EMUPERSO.apk" download="EMUPERSO.apk" data-i18n="apk.download">Télécharger EMUPERSO.apk (2,5 Mo)</a>
+      <p class="hash"><span data-i18n="apk.hash">Empreinte SHA-256 du fichier :</span> e0b42c20567eb15c133ae2bc36b8491f48c45ded906fd6bc6772b95ea0fce8c5</p>
+    </section>
 
     <h2 data-i18n="notes.title">Bon à savoir</h2>
     <section class="notes">

@@ -99,6 +99,10 @@ add('logo.png', join(ROOT, 'portail', 'logo.png'));
 for (const f of ['manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 'sw.js']) {
   add(f, join(ROOT, 'portail', f));
 }
+// APK de test : publié seulement s'il est placé exprès dans portail/android/ (lien de la page d'accueil).
+// Un .apk ailleurs dans le dépôt n'est jamais copié.
+const APK = join(ROOT, 'portail', 'android', 'EMUPERSO.apk');
+if (existsSync(APK)) add('android/EMUPERSO.apk', APK);
 writeFileSync(join(OUT, 'PORTAIL-MANIFEST.json'), JSON.stringify({
   projet: 'EMUPERSO — portail unique 10 consoles',
   fichiers: Object.keys(manifest).length,
