@@ -209,7 +209,9 @@ async function tryN64(page, g, r) {
 async function tryPS1(page, g, r) {
   await page.goto(`${base}ps1-web/`, { timeout: 90000 });
   await page.locator('#disc-file').setInputFiles(g.path);
-  await page.waitForFunction(() => { const s = document.getElementById('status'); return /Disque prêt/.test(s.textContent) || s.classList.contains('error'); }, null, { timeout: 420000 });
+  // « Aucune progression depuis N s » est un avertissement (rouge) de lecture lente, pas un échec :
+  // avec 4 postes sur le même disque, la lecture d'un gros .rar marque parfois une pause.
+  await page.waitForFunction(() => { const s = document.getElementById('status'); return /Disque prêt/.test(s.textContent) || (s.classList.contains('error') && !/Aucune progression/.test(s.textContent)); }, null, { timeout: 420000 });
   if (!(await page.locator('#launch').isEnabled())) { r.boot = 'refusé'; r.detail = await page.locator('#status').textContent(); return r; }
   await page.locator('#launch').click();
   await page.waitForFunction(() => { const s = document.getElementById('status'); return /Session lancée/.test(s.textContent) || s.classList.contains('error'); }, null, { timeout: 300000 });
