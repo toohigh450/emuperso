@@ -56,6 +56,10 @@ for (const app of ['ps1-web', 'real-n64']) {
 // vérifiée par real-n64/tests/test_real_tools.py) n'est jamais modifié ; le laboratoire reste publié
 // sous son nom d'origine, N64-Web-Lab-Phase1A.html.
 add('index.html', join(ROOT, 'portail', 'index.html'));
+// PWA / APK : manifeste, icones et service worker du portail.
+for (const f of ['manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 'sw.js']) {
+  add(f, join(ROOT, 'portail', f));
+}
 writeFileSync(join(OUT, 'PORTAIL-MANIFEST.json'), JSON.stringify({
   projet: 'EMUPERSO — portail unique 8 consoles',
   fichiers: Object.keys(manifest).length,
