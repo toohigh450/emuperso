@@ -7,3 +7,7 @@ main{width:100%;min-width:0}section,.panel,.buttons,.player-panel,details,dl{min
 
 /* Original decorative artwork: controls and game always remain unobstructed. */
 body{position:relative;isolation:isolate;background:#07111f}body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(rgba(5,12,23,.38),rgba(5,12,23,.66)),url("assets/emuperso-banner.png") center center/cover no-repeat}.panel{background:rgba(18,31,48,.97);box-shadow:0 12px 35px #0004}.player-panel{background:#0a1424}.brand-banner{margin:24px 0 0;border:1px solid #37536c;border-radius:14px;background:#07111f;overflow:hidden}.brand-banner img{display:block;width:100%;height:auto;max-height:270px;object-fit:contain}.tag{display:inline-block;background:#091521d9;border:1px solid #37536c;padding:5px 9px;border-radius:6px}header>h1,header>p{text-shadow:0 2px 12px #000}header>p{color:#e1eaf5}@media(max-width:700px){body::before{background-position:center;background-size:auto 100%;opacity:.45}.panel{background:#122033}.brand-banner img{max-height:none}.brand-banner{margin-top:16px}}
+
+/* Fond d'écran d'époque EMUPERSO. */
+body::before { content: ""; position: fixed; inset: 0; z-index: 0; background: url('/bg/bg-n64.jpg') center / cover no-repeat; opacity: .22; pointer-events: none; }
+body > * { position: relative; z-index: 1; }

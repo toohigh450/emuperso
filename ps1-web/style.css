@@ -14,3 +14,7 @@ body{position:relative;isolation:isolate;background:#07111f}body::before{content
 .cheat-row .cheat-meta{grid-column:2;color:var(--muted);font-size:12px;overflow-wrap:anywhere}
 .cheat-row.rejected .cheat-name{opacity:.7}
 .cheat-edition{padding:8px 12px;font-weight:600;border-bottom:1px solid var(--line)}
+
+/* Fond d'écran d'époque EMUPERSO. */
+body::before { content: ""; position: fixed; inset: 0; z-index: 0; background: url('/bg/bg-ps1.jpg') center / cover no-repeat; opacity: .22; pointer-events: none; }
+body > * { position: relative; z-index: 1; }

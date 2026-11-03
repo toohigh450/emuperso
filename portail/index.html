@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
-<meta name="description" content="EMUPERSO : un seul portail pour jouer dans Chrome à la NES, la Super Nintendo, la Game Boy, la Game Boy Color, la Game Boy Advance, la DS, la Nintendo 64 et la PlayStation, sur ordinateur et téléphone.">
-<title>EMUPERSO — 8 consoles</title>
+<meta name="description" content="EMUPERSO : NES, SNES, Sega Genesis, Game Boy, Game Boy Color, Game Boy Advance, Nintendo DS, Nintendo 64, PlayStation et PlayStation Portable dans Chrome, sur ordinateur et téléphone.">
+<title>EMUPERSO — 10 consoles</title>
 <style>
 :root {
   --bg: #0b111a; --panel: #131e2c; --panel-2: #172536; --line: #33445a;
@@ -13,12 +13,18 @@
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; }
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; background: url('/bg/bg-portal.jpg') center / cover no-repeat; opacity: .28; pointer-events: none; }
 body { background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, 'Segoe UI', sans-serif; min-height: 100vh; }
 a { color: var(--mint); }
 a:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 6px; }
 .wrap { max-width: 1180px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
-header { padding: 34px 0 14px; }
-.brand { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+header { padding: 34px 0 14px; position: relative; }
+.lang { position: absolute; top: 34px; right: 0; display: flex; gap: 6px; }
+.lang button { background: var(--panel); color: var(--muted); border: 1px solid var(--line); border-radius: 8px; padding: 4px 12px; font-size: .8rem; font-weight: 700; cursor: pointer; }
+.lang button[aria-pressed="true"] { color: var(--mint); border-color: var(--mint); }
+.lang button:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+.brand { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.brand .logo { height: 68px; width: 68px; border-radius: 18px; box-shadow: 0 4px 24px rgba(0,0,0,.5); }
 .brand b { font-size: clamp(30px, 6vw, 44px); letter-spacing: -1px; color: var(--mint); font-weight: 900; }
 .brand span { color: var(--muted); font-size: 0.95rem; letter-spacing: 1.5px; text-transform: uppercase; }
 header p { max-width: 62ch; color: var(--muted); margin: 10px 0 0; }
@@ -44,89 +50,109 @@ footer a { margin-right: 14px; }
 <body>
 <div class="wrap">
   <header>
-    <div class="brand"><b>EMUPERSO</b><span>Portail rétro · 8 consoles</span></div>
-    <p>Joue dans Chrome sur ordinateur ou téléphone, sans application à installer et sans compte. Chaque console propose une démo libre pour essayer tout de suite ; tes propres jeux restent sur ton appareil.</p>
+    <div class="brand"><img src="/logo.png" alt="EMUPERSO" class="logo"><b>EMUPERSO</b><span data-i18n="header.subtitle">Portail rétro · 10 consoles</span></div>
+    <div class="lang" role="group" aria-label="Langue / Language">
+      <button type="button" data-lang-btn="fr" aria-pressed="true">FR</button>
+      <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+    </div>
+    <p data-i18n="header.intro">Joue dans Chrome sur ordinateur ou téléphone, sans application à installer et sans compte. Chaque console propose une démo libre pour essayer tout de suite ; tes propres jeux restent sur ton appareil.</p>
   </header>
 
   <main>
-    <h2>Choisis une console</h2>
+    <h2 data-i18n="consoles.title">Choisis une console</h2>
     <nav class="grid" aria-label="Consoles">
       <a class="card" href="portables/?console=nes">
-        <span class="badge new">Nouveau</span>
+        <span class="badge new" data-i18n="badge.new">Nouveau</span>
         <span class="tag">Nintendo · 1983</span>
         <h3>NES / Famicom</h3>
-        <p>Moteur FCEUmm. Démo libre : Snake. Codes Game Genie, sauvegardes et états.</p>
-        <span class="go">Jouer →</span>
+        <p data-i18n="card.nes.desc">Moteur FCEUmm. Démo libre : Snake. Codes Game Genie, sauvegardes et états.</p>
+        <span class="go" data-i18n="card.play">Jouer →</span>
       </a>
       <a class="card" href="portables/?console=snes">
-        <span class="badge new">Nouveau</span>
+        <span class="badge new" data-i18n="badge.new">Nouveau</span>
         <span class="tag">Nintendo · 1990</span>
         <h3>Super Nintendo / Super Famicom</h3>
-        <p>Moteur Snes9x. Démos libres : Neon Breaker, Shmup, puces SA-1 et DSP-1. Game Genie et Action Replay.</p>
-        <span class="go">Jouer →</span>
+        <p data-i18n="card.snes.desc">Moteur Snes9x. Démos libres : Neon Breaker, Shmup, puces SA-1 et DSP-1. Game Genie et Action Replay.</p>
+        <span class="go" data-i18n="card.play">Jouer →</span>
       </a>
       <a class="card" href="portables/?console=gb">
         <span class="tag">Nintendo · 1989</span>
         <h3>Game Boy</h3>
-        <p>Moteur Gambatte. Démo libre : Libbet.</p>
-        <span class="go">Jouer →</span>
+        <p data-i18n="card.gb.desc">Moteur Gambatte. Démo libre : Libbet.</p>
+        <span class="go" data-i18n="card.play">Jouer →</span>
       </a>
       <a class="card" href="portables/?console=gbc">
         <span class="tag">Nintendo · 1998</span>
         <h3>Game Boy Color</h3>
-        <p>Moteur Gambatte. Démo libre : Geometrix.</p>
-        <span class="go">Jouer →</span>
+        <p data-i18n="card.gbc.desc">Moteur Gambatte. Démo libre : Geometrix.</p>
+        <span class="go" data-i18n="card.play">Jouer →</span>
       </a>
       <a class="card" href="portables/?console=gba">
         <span class="tag">Nintendo · 2001</span>
         <h3>Game Boy Advance</h3>
-        <p>Moteur mGBA. Démo libre : @rkanoid.</p>
-        <span class="go">Jouer →</span>
+        <p data-i18n="card.gba.desc">Moteur mGBA. Démo libre : @rkanoid.</p>
+        <span class="go" data-i18n="card.play">Jouer →</span>
       </a>
       <a class="card" href="portables/?console=nds">
         <span class="tag">Nintendo · 2004</span>
         <h3>Nintendo DS</h3>
-        <p>Moteur DeSmuME (ou melonDS avec ton BIOS). Démo libre : Pong.</p>
-        <span class="go">Jouer →</span>
+        <p data-i18n="card.nds.desc">Moteur DeSmuME (ou melonDS avec ton BIOS). Démo libre : Pong.</p>
+        <span class="go" data-i18n="card.play">Jouer →</span>
+      </a>
+      <a class="card" href="portables/?console=genesis">
+        <span class="badge new" data-i18n="badge.totest">À tester</span>
+        <span class="tag">Sega · 1988</span>
+        <h3>Genesis / Mega Drive</h3>
+        <p data-i18n="card.genesis.desc">Moteur Genesis Plus GX. Charge une ROM locale .md, .smd, .gen ou ZIP. Cheats à importer ; 32X non pris en charge.</p>
+        <span class="go" data-i18n="card.genesis.go">Essayer →</span>
       </a>
       <a class="card" href="real-n64/">
-        <span class="badge">Alpha</span>
+        <span class="badge" data-i18n="badge.alpha">Alpha</span>
         <span class="tag">Nintendo · 1996</span>
         <h3>Nintendo 64</h3>
-        <p>Moteur Mupen64Plus-Next. Démo libre EMUPERSO. Jeux réels en cours de validation.</p>
-        <span class="go">Jouer →</span>
+        <p data-i18n="card.n64.desc">Moteur Mupen64Plus-Next. Démo libre EMUPERSO. Jeux réels en cours de validation.</p>
+        <span class="go" data-i18n="card.play">Jouer →</span>
       </a>
       <a class="card" href="ps1-web/">
-        <span class="badge">Alpha</span>
+        <span class="badge" data-i18n="badge.alpha">Alpha</span>
         <span class="tag">Sony · 1994</span>
         <h3>PlayStation</h3>
-        <p>Moteur PCSX ReARMed. Démo libre EMUPERSO. Jeux réels en cours de validation.</p>
-        <span class="go">Jouer →</span>
+        <p data-i18n="card.ps1.desc">Moteur PCSX ReARMed. Démo libre EMUPERSO. Jeux réels en cours de validation.</p>
+        <span class="go" data-i18n="card.play">Jouer →</span>
+      </a>
+      <a class="card" href="portables/?console=psp">
+        <span class="badge" data-i18n="badge.alpha">Alpha</span>
+        <span class="tag">Sony · 2004</span>
+        <h3>PlayStation Portable</h3>
+        <p data-i18n="card.psp.desc">Moteur PPSSPP. Tes jeux .iso, .cso ou .pbp. Codes CWCheat par jeu, sauvegardes de carte mémoire et états. Ordinateur conseillé.</p>
+        <span class="go" data-i18n="card.play">Jouer →</span>
       </a>
     </nav>
 
-    <h2>Bon à savoir</h2>
+    <h2 data-i18n="notes.title">Bon à savoir</h2>
     <section class="notes">
       <div class="note">
-        <h3>Tes jeux restent chez toi</h3>
-        <p>Le site ne peut pas lire ton disque : tu choisis toi-même un fichier ou un dossier. Rien n’est envoyé à un serveur ; le jeu tourne dans ton navigateur. Aucun jeu commercial ni BIOS n’est fourni.</p>
+        <h3 data-i18n="note.home.title">Tes jeux restent chez toi</h3>
+        <p data-i18n="note.home.text">Le site ne peut pas lire ton disque : tu choisis toi-même un fichier ou un dossier. Rien n’est envoyé à un serveur ; le jeu tourne dans ton navigateur. Aucun jeu commercial ni BIOS n’est fourni.</p>
       </div>
       <div class="note">
-        <h3>Sauvegardes séparées</h3>
-        <p>Chaque jeu a son propre espace, identifié par l’empreinte de son fichier. Le navigateur peut effacer ces données (nettoyage, manque de place) : exporte régulièrement tes sauvegardes.</p>
+        <h3 data-i18n="note.saves.title">Sauvegardes séparées</h3>
+        <p data-i18n="note.saves.text">Chaque jeu a son propre espace, identifié par l’empreinte de son fichier. Le navigateur peut effacer ces données (nettoyage, manque de place) : exporte régulièrement tes sauvegardes.</p>
       </div>
       <div class="note">
-        <h3>Téléphone Android</h3>
-        <p>Les boutons tactiles apparaissent sous l’image. Le son démarre après un premier toucher. Une manette Bluetooth reconnue par Chrome fonctionne aussi.</p>
+        <h3 data-i18n="note.android.title">Téléphone Android</h3>
+        <p data-i18n="note.android.text">Les boutons tactiles apparaissent sous l’image. Le son démarre après un premier toucher. Une manette Bluetooth reconnue par Chrome fonctionne aussi.</p>
       </div>
     </section>
   </main>
 
   <footer>
-    <a href="N64-Web-Lab-Phase1A.html">Laboratoire N64 (fondation Phase 1A)</a>
-    <a href="portables/DEMOS-LIBRES.md">Démos libres et licences</a>
-    <a href="docs/PORTAIL-8-CONSOLES.md">Architecture du portail</a>
+    <a href="N64-Web-Lab-Phase1A.html" data-i18n="footer.lab">Laboratoire N64 (fondation Phase 1A)</a>
+    <a href="portables/DEMOS-LIBRES.md" data-i18n="footer.demos">Démos libres et licences</a>
+    <a href="docs/PORTAIL-8-CONSOLES.md" data-i18n="footer.archi">Architecture du portail</a>
+    <a href="docs/CONTROLLER-V2.html" data-i18n="footer.controllers">Manettes et commandes (Controller V2)</a>
   </footer>
 </div>
+<script src="i18n.js" defer></script>
 </body>
 </html>
