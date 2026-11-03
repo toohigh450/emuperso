@@ -91,10 +91,14 @@ export function encodeSnesGameGenie(address, value) {
  * Analyse un code pour une console. Retourne { ok, code (forme envoyée au moteur), format, parts, error }.
  * Plusieurs codes peuvent être joints par « + » : chacun doit être valide.
  */
+// Les codes Action Replay DS et CWCheat PSP du catalogue dépassent souvent 400 caractères (jusqu'à
+// 15 049) : la limite reste un garde-fou contre un collage aberrant, pas une contrainte du moteur.
+export const MAX_CODE_LENGTH = 20000;
+
 export function parseCheatCode(system, input) {
   const raw = String(input || '').trim();
   if (!raw) return { ok: false, error: 'Code vide.' };
-  if (raw.length > 400) return { ok: false, error: 'Code trop long (400 caractères maximum).' };
+  if (raw.length > MAX_CODE_LENGTH) return { ok: false, error: `Code trop long (${MAX_CODE_LENGTH} caractères maximum).` };
   if (system === 'psp') return parsePspCode(raw);
   if (system !== 'nes' && system !== 'snes') {
     if (/[^\x20-\x7e]/.test(raw)) return { ok: false, error: 'Caractères non pris en charge dans le code.' };

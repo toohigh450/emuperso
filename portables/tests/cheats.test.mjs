@@ -74,6 +74,8 @@ test('association : même titre, la même région que la ROM proposée en premie
   const files = [{ path: 'eu', name: 'Addams Family, The (Europe) (En,Fr,De).cht' }, { path: 'jp', name: 'Addams Family, The (Japan).cht' }, { path: 'us', name: 'Addams Family, The (USA).cht' }];
   assert.equal(matchCheatFiles('Addams Family, The (U) [!].smc', files).sameTitle[0].path, 'us');
   assert.equal(matchCheatFiles('Addams Family, The (E) [!].smc', files).sameTitle[0].path, 'eu');
+  const ar = [{ path: 'ar', name: 'Araiguma Rascal (Japan) (Action Replay).cht' }, { path: 'plain', name: 'Araiguma Rascal (Japan).cht' }];
+  assert.equal(matchCheatFiles('Araiguma Rascal (J).smc', ar).sameTitle[0].path, 'plain');
 });
 
 test('association : rien si la ROM a été renommée sans titre commun', () => {

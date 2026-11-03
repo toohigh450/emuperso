@@ -136,10 +136,11 @@ export function matchCheatFiles(romName, files) {
     if (normalizeName(f.name) === full) exact.push(f);
     else if (loose && looseTitle(f.name) === loose) sameTitle.push(f);
   }
-  // Même titre : la même région que la ROM d'abord (Addams Family (U) → fichier (USA) avant (Europe)).
+  // Même titre : la même région que la ROM d'abord (Addams Family (U) → fichier (USA) avant (Europe)),
+  // puis le fichier sans nom d'appareil (les « (Action Replay) » contiennent souvent des modèles « ?? »).
   const regions = new Set(parseRomName(String(romName).replace(/^.*[\\/]/, '')).regions);
-  const shared = (f) => (parseRomName(String(f.name)).regions.some((r) => regions.has(r)) ? 0 : 1);
-  sameTitle.sort((a, b) => shared(a) - shared(b));
+  const rank = (f) => (parseRomName(String(f.name)).regions.some((r) => regions.has(r)) ? 0 : 2) + (deviceLabel(f.name) ? 1 : 0);
+  sameTitle.sort((a, b) => rank(a) - rank(b));
   return { exact, sameTitle };
 }
 

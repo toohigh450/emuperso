@@ -215,7 +215,7 @@ body.dragging .drop-hint { display: grid; }
 #codeCheck[data-kind=ok] { color: var(--ok); }
 #codeCheck[data-kind=error] { color: var(--err); font-weight: 600; }
 .rows.codes li { align-items: flex-start; }
-.rows.codes code { font-family: ui-monospace, Consolas, monospace; overflow-wrap: anywhere; }
+.rows.codes code { font-family: ui-monospace, Consolas, monospace; overflow-wrap: anywhere; display: inline-block; max-height: 7.5em; overflow-y: auto; }
 .actions.tight { margin: 0; gap: 4px; justify-content: flex-end; }
 .state-row { flex-wrap: wrap; }
 /* Liste virtuelle : seules les lignes visibles existent dans le DOM. */

@@ -239,3 +239,10 @@ test('SNES : Cx4 (sous-type $10) reconnu, et en-tête ExHiROM préféré à la c
   assert.equal(e.layout, 'ExHiROM');
   assert.equal(e.checksumOk, true);
 });
+
+test('codes longs du catalogue (Action Replay DS, CWCheat PSP) acceptés ; collage aberrant refusé', () => {
+  const ds = Array.from({ length: 60 }, (_, i) => `D2000000+${String(i).padStart(8, '0')}`).join('+'); // ~1 100 caractères
+  assert.ok(ds.length > 400);
+  assert.equal(parseCheatCode('nds', ds).ok, true);
+  assert.equal(parseCheatCode('nds', 'A'.repeat(20001)).ok, false);
+});
