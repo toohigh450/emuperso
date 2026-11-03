@@ -15,12 +15,15 @@ const SKIP_DIRS = new Set(['.git', '.github', 'node_modules', 'dist', '.vercel',
 const PRIVATE = /\.(iso|cso|zso|bin|img|chd|pbp|cue|zip|rar|7z|sav|srm|state|mcr|mcd|z64|n64|v64|smc|gba|gbc|gb|nds|smd|gen|mdx|32x|68k)$/i;
 // Seules exceptions : les homebrews libres publiés exprès (licences dans portables/demos).
 const ALLOWED_ROMS = /^portables[\\/]demos[\\/]opensnes-[a-z0-9-]+\.sfc$|^portables[\\/]demos[\\/]opennes-snake\.nes$/;
+// Aussi applicable aux dist des moteurs et au fichier .git des worktrees.
+const SENSITIVE = /(?:^|[\\/])(?:\.git|\.aws|\.codex|\.agents|\.ssh|\.env(?:\.[^\\/]*)?|\.npmrc|\.pypirc)(?:[\\/]|$)|\.(?:jks|keystore|p12|pfx|pem|key|apk|aab)$/i;
 
 // Fichiers sous base (chemins relatifs à base), dossiers à sauter décidés par skip(nom, cheminRelatif).
 function walk(base, skip = () => false, dir = base, out = []) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     const path = join(dir, entry.name);
     const rel = relative(base, path);
+    if (SENSITIVE.test(rel)) continue;
     if (entry.isSymbolicLink()) throw new Error(`Lien symbolique refusé : ${rel}`);
     if (entry.isDirectory()) {
       if (!skip(entry.name, rel)) walk(base, skip, path, out);
@@ -87,6 +90,10 @@ for (const f of ['bg/bg-nes.jpg', 'bg/bg-snes.jpg', 'bg/bg-gb.jpg', 'bg/bg-gbc.j
   add(f, join(ROOT, 'portail', f));
 }
 add('logo.png', join(ROOT, 'portail', 'logo.png'));
+// PWA / APK : manifeste, icones et service worker du portail.
+for (const f of ['manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 'sw.js']) {
+  add(f, join(ROOT, 'portail', f));
+}
 writeFileSync(join(OUT, 'PORTAIL-MANIFEST.json'), JSON.stringify({
   projet: 'EMUPERSO — portail unique 10 consoles',
   fichiers: Object.keys(manifest).length,
