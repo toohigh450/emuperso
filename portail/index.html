@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
 <meta name="description" content="EMUPERSO : NES, SNES, Sega Genesis, Game Boy, Game Boy Color, Game Boy Advance, Nintendo DS, Nintendo 64, PlayStation et PlayStation Portable dans Chrome, sur ordinateur et téléphone.">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#0d1117">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="EMUPERSO">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+<link rel="apple-touch-icon" href="/icon-192.png">
 <title>EMUPERSO — 10 consoles</title>
 <style>
 :root {
@@ -143,5 +152,12 @@ footer a { margin-right: 14px; }
     <a href="docs/CONTROLLER-V2.html">Manettes et commandes (Controller V2)</a>
   </footer>
 </div>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('/sw.js').catch(function () {});
+  });
+}
+</script>
 </body>
 </html>
