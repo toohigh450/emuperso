@@ -14,3 +14,6 @@ body{position:relative;isolation:isolate;background:#07111f}body::before{content
 .cheat-row .cheat-meta{grid-column:2;color:var(--muted);font-size:12px;overflow-wrap:anywhere}
 .cheat-row.rejected .cheat-name{opacity:.7}
 .cheat-edition{padding:8px 12px;font-weight:600;border-bottom:1px solid var(--line)}
+/* Téléphone : zone de jeu à la taille de l'écran (portrait : image + commandes ; paysage : toute la hauteur). */
+@media (pointer:coarse) and (orientation:portrait){#game{height:calc(75vw + 370px);max-height:none}}
+@media (pointer:coarse) and (orientation:landscape) and (max-height:520px){main{padding:8px}.player-panel{padding:4px;margin:8px 0}#game{height:calc(100svh - 16px);max-height:none}}

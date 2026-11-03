@@ -40,7 +40,7 @@
     <tr><td>Genesis / Mega Drive</td><td>rangée A-B-C = X, A, B ; rangée X-Y-Z = LB, Y, RB ; Back = Mode</td><td>LT = X, RT = Z</td><td>croix en Confort</td></tr>
     <tr><td>PSP</td><td>✕ = A, ○ = B, □ = X, △ = Y, LB/RB = L/R</td><td>LT = L, RT = R</td><td>analogique (zone morte réglable)</td></tr>
     <tr><td>Nintendo 64</td><td>A = A, B = X, C = stick droit, Z = LT, L/R = LB/RB, Start = Menu</td><td>Z aussi sur RT, C bas = B, C gauche = Y</td><td>analogique, zone morte et sensibilité</td></tr>
-    <tr><td>PlayStation</td><td colspan="3">Profils existants « PS1 authentique » et « Confort moderne » conservés sans modification (<code>ps1-web/input-presets.mjs</code>).</td></tr>
+    <tr><td>PlayStation</td><td colspan="3">Profils existants « PS1 authentique » et « Confort moderne » conservés sans modification (<code>ps1-web/input-presets.mjs</code>). Commandes tactiles refaites : △ ○ ✕ □, croix et stick, L1 L2 R1 R2, Select/Start, sans Fast/Slow ; zone de jeu à la taille du téléphone.</td></tr>
   </tbody>
 </table></div>
 <p class="muted">Natif : les commandes d’EmulatorJS, sans disposition EMUPERSO. Le clavier garde partout les touches du moteur. La correspondance N64 est la proposition du mandat, à valider avec la vraie manette.</p>
@@ -51,6 +51,7 @@
   <tbody>
     <tr><td>SNES (démo libre), Genesis (Sonic), PSP (Bust-A-Move), manette simulée dans le navigateur</td><td class="ok">boutons attendus reçus par le moteur ; Start/Select ; stick → croix en Confort, pas en Authentique après changement en partie ; 0 liaison manette du moteur restante</td></tr>
     <tr><td>N64 (démo homebrew libre), manette simulée</td><td class="ok">A, B, Z, L/R, Start, les quatre C, stick + C + A simultanés ; RT = Z seulement en Confort</td></tr>
+    <tr><td>Audit tactile Android simulé (Pixel 7), portrait et paysage : NES, SNES, GBA, DS, Genesis, PSP, N64, PS1</td><td class="ok">tous démarrent ; aucun bouton hors écran ; PSP, N64 et PS1 corrigés (voir ci-dessus) ; boutons déplaçables au doigt dans le lanceur</td></tr>
     <tr><td>PSP en Android simulé (Pixel 7)</td><td class="ok">boutons tactiles △ □ ○ ✕ L R Select Start ; cachés avec une manette, revenus après débranchement</td></tr>
     <tr><td>Codes automatiques sur le site construit</td><td class="ok">Sonic [USA][Europe][!] : 5 fichiers trouvés, 16 codes après association, 0 actif ; Ace Armstrong (PSP) : 1 fichier, 11 codes, 0 actif</td></tr>
     <tr><td>Genesis avec 4 jeux de la collection (extraits des .7z, originaux intacts)</td><td class="ok">60 images/s, son actif, touches prises en compte ; traduction française .bin reconnue</td></tr>
@@ -76,7 +77,7 @@
 
 <h2>Limites connues</h2>
 <ul>
-  <li>Boutons tactiles : taille et opacité réglables, mais pas encore déplaçables au doigt.</li>
+  <li>Boutons tactiles déplaçables au doigt dans le lanceur (8 consoles) ; pas encore dans les pages N64 et PS1 (dispositions corrigées, mais fixes).</li>
   <li>PSP sur le moteur nightly : charger un état et redémarrer figent le jeu ; ces actions sont bloquées par le lanceur.</li>
   <li>Genesis : la collection est en .7z, que le navigateur n’ouvre pas ; extraire la version voulue avant de l’ouvrir.</li>
   <li>Codes automatiques : proposés par identifiant de disque (PSP) ou par titre ; l’association reste à confirmer d’un clic, aucun code n’est activé.</li>

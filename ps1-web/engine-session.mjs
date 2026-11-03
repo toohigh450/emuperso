@@ -233,7 +233,25 @@ async function start(config, callback) {
   // sinon setupKeys() plante sur this.controls[1] (undefined).
   // Joueur 0 = neutralisé (mapping custom) ; joueurs 1-3 = bindings natifs préservés.
   const defaultControllers = { 0: unbound, 1: {}, 2: {}, 3: {} };
+  // Commandes tactiles PS1 (mandat Controller V2) : le moteur affichait la manette générique Y/X/B/A, sans
+  // L1/R1/L2/R2. △ ○ ✕ □ (PCSX : △ = X, ○ = A, ✕ = B, □ = Y), croix, stick analogique, gâchettes, Select/Start ;
+  // sans Fast/Slow. Les profils de manette physique (input-presets.mjs) ne changent pas.
+  const PS1_TOUCH = [
+    { type: 'button', text: '△', id: 'triangle', location: 'right', left: 40, top: 0, bold: true, input_value: 9 },
+    { type: 'button', text: '□', id: 'square', location: 'right', left: 0, top: 40, bold: true, input_value: 1 },
+    { type: 'button', text: '○', id: 'circle', location: 'right', left: 81, top: 40, bold: true, input_value: 8 },
+    { type: 'button', text: '✕', id: 'cross', location: 'right', left: 40, top: 80, bold: true, input_value: 0 },
+    { type: 'dpad', id: 'dpad', location: 'left', left: '50%', top: '-40%', joystickInput: false, inputValues: [4, 5, 6, 7] },
+    { type: 'zone', id: 'stick', location: 'left', left: '40%', top: '120%', joystickInput: true, inputValues: [16, 17, 18, 19] },
+    { type: 'button', text: 'L1', id: 'l1', block: true, location: 'top', left: 10, top: -90, bold: true, input_value: 10 },
+    { type: 'button', text: 'L2', id: 'l2', block: true, location: 'top', left: 70, top: -90, bold: true, input_value: 12 },
+    { type: 'button', text: 'R2', id: 'r2', block: true, location: 'top', right: 135, top: -90, bold: true, input_value: 13 },
+    { type: 'button', text: 'R1', id: 'r1', block: true, location: 'top', right: 75, top: -90, bold: true, input_value: 11 },
+    { type: 'button', text: 'Select', id: 'select', location: 'center', left: -5, fontSize: 15, block: true, input_value: 2 },
+    { type: 'button', text: 'Start', id: 'start', location: 'center', left: 60, fontSize: 15, block: true, input_value: 3 },
+  ];
   const options = {
+    VirtualGamepadSettings: PS1_TOUCH,
     gameUrl: romURL, dataPath: 'vendor/data/', system: 'pcsx_rearmed', gameName: config.gameName,
     startOnLoad: true, ...(profile.native ? {} : { defaultControllers }), threads: false, language: 'en-US', shaders: window.EJS_SHADERS,
     disableDatabases: true, disableLocalStorage: true, cacheLimit: 0, volume: 0.45,
