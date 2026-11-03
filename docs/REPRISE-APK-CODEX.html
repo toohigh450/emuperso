@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EMUPERSO — audit APK et reprise locale</title>
+<style>body{font:17px/1.6 system-ui;max-width:950px;margin:32px auto;padding:0 20px;background:#0d1117;color:#e8f0fa}a{color:#8ce8c4}pre{white-space:pre-wrap;background:#161e29;padding:16px}table{border-collapse:collapse;width:100%}td,th{border:1px solid #40516b;padding:8px;text-align:left}h2{color:#f8d18a}</style>
+<h1>EMUPERSO.apk : audit et reprise sur ordinateur</h1>
+<p>3 novembre 2026. Mission : <a href="https://github.com/toohigh450/emuperso/issues/7">issue #7</a>. <strong>APK non construit ; aucune installation Android vérifiée.</strong></p>
+<h2>Constats vérifiés par GitHub</h2>
+<ul>
+<li>La branche PWA est au commit c917ce711ecbe358952d0c3508cc1540eb3538db lors de l'audit.</li>
+<li>La comparaison vers feature/unified-controller-profiles indique 28 commits d'avance et 3 de retard. Cette comparaison n'est pas une validation fonctionnelle des 28 commits.</li>
+<li>portail/ ne contient que index.html, manifest.webmanifest et sw.js : les trois icônes PNG manquent. Leur copie obligatoire fait échouer la construction du portail.</li>
+<li>Le build de la branche manettes ne copie pas les ressources PWA ; celui de la branche PWA ajoute cette copie. L'intégration doit préserver le portail et les moteurs récents.</li>
+<li>Le service worker v1 met en cache tous les GET de même origine et supprime aussi les caches d'autres applications. Cela dépasse l'enveloppe prévue par le mandat.</li>
+</ul>
+<h2>Correctif proposé</h2>
+<p>Le service worker v2 limite le cache à cinq URL exactes : /, le manifeste et les trois icônes. Il utilise le réseau en priorité et une copie locale en cas de panne réseau. Les routes des moteurs, jeux, BIOS et sauvegardes ne sont pas interceptées. Il retire les anciens caches emuperso-sw-* et préserve les autres caches. Les erreurs HTTP et redirections ne remplacent pas une bonne copie. Les écritures en cache sont attendues ; un dépassement de quota ne bloque pas la réponse réseau.</p>
+<p>Sept tests automatisés réussis dans une simulation Node du service worker : installation, nettoyage des caches, absence d'interception des autres ressources, mise à jour réseau, repli hors ligne, erreurs HTTP/redirections et quota. Commande : <code>node tests/pwa-service-worker.test.mjs</code>. Ces tests ne remplacent pas Chrome Android ni une validation TWA.</p>
+<h2>Limites de cet environnement</h2>
+<p>Le connecteur GitHub fonctionne. Les commandes git clone et curl échouent avec « Failed to connect to proxy port 8080 ». Node 24 et Java 21 sont disponibles, mais adb, sdkmanager et gradle ne sont pas dans le PATH. Aucun appareil Android n'est connecté. Les icônes originales indiquées dans le mandat ne sont pas disponibles dans cet espace de travail. Aucun keystore n'a été créé.</p>
+<h2>Consigne à copier dans Codex sur l'ordinateur</h2>
+<pre>Reprends la mission https://github.com/toohigh450/emuperso/issues/7 et le mandat docs/MANDAT-CODEX-EMUPERSO-APK.html.
+Lis les AGENTS.md locaux. Inspecte git status et les branches avant toute modification. Travaille dans un worktree isolé, sans toucher aux essais PSP ni aux essais des neuf autres consoles.
+Une proposition de correctif du service worker est sur codex/pwa-cache-audit, basée sur feature/pwa-apk. Relis son diff et exécute node tests/pwa-service-worker.test.mjs.
+Actualise la comparaison avec feature/unified-controller-profiles. Prépare une intégration isolée des ajouts PWA sur le HEAD récent des dix consoles, sans remplacer leurs correctifs par les anciennes versions. Ne fusionne pas les branches partagées sans GO.
+Retrouve les trois icônes originales mentionnées dans le mandat ; si elles sont absentes, demande leur emplacement. Complète le build et vérifie manifeste, icônes, service worker et installabilité sur un déploiement d'essai distinct.
+Préserve exactement le lien testeurs : https://emuperso-git-feature-unified-controller-55789a-toohigh450-1311.vercel.app/
+Confirme le domaine exact à emballer avant de générer la TWA. Aucun domaine d'APK n'a été arrêté pendant l'audit cloud.
+Construis avec Bubblewrap, application com.emuperso.twa, nom EMUPERSO, plein écran et clé de test exclusivement. Place le projet Android, les APK et la clé HORS du dépôt ET HORS de tout dossier parcouru par build-portail.mjs : son filtre actuel ne protège pas les keystores ou fichiers .env laissés dans le dépôt.
+Publie assetlinks.json sur le domaine exact de l'APK, avec la vraie empreinte SHA-256 du certificat de test ; ne commets jamais une empreinte fictive. Vérifie une réponse HTTPS 200 publique, sans redirection ni authentification.
+Livre EMUPERSO.apk de test signé, SHA-256 du fichier, empreinte du certificat, guide français en cinq étapes, rapport HTML et preuves anonymisées. Fais T1–T10 sur le OnePlus ou marque chaque cas non testé. Aucune clé de production, ROM commerciale, BIOS ou sauvegarde dans le dépôt ou les livrables.
+Maintiens une PR brouillon ; aucune fusion dans main, publication générale ou Play Store.</pre>
+<h2>Statut T1–T10</h2>
+<table><tr><th>Cas</th><th>Objet</th><th>Verdict réel</th></tr>
+<tr><td>T1</td><td>Installation APK</td><td>Non testé — aucun APK construit</td></tr>
+<tr><td>T2</td><td>Lancement plein écran / dix consoles</td><td>Non testé</td></tr>
+<tr><td>T3</td><td>Import ROM par console</td><td>Non testé</td></tr>
+<tr><td>T4</td><td>Jeu et son NES / Genesis / GBA</td><td>Non testé</td></tr>
+<tr><td>T5</td><td>Tactile portrait / paysage</td><td>Non testé</td></tr>
+<tr><td>T6</td><td>Manette Bluetooth Xbox</td><td>Non testé</td></tr>
+<tr><td>T7</td><td>Persistance des sauvegardes</td><td>Non testé</td></tr>
+<tr><td>T8</td><td>Cheats proposés et désactivés par défaut</td><td>Non testé</td></tr>
+<tr><td>T9</td><td>Choix de version .7z</td><td>Non testé</td></tr>
+<tr><td>T10</td><td>Mise à jour web dans l'APK</td><td>Non testé — réseau prioritaire testé seulement en simulation</td></tr></table>
+<p>Aucun déploiement Vercel demandé pendant cet audit, aucun banc d'émulateurs relancé. Aucun SHA-256 d'APK, certificat ou capture Android disponible à ce stade.</p>
+</html>
