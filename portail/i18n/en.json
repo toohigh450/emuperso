@@ -12,7 +12,7 @@
  "card.gbc.desc": "Gambatte engine. Free demo: Geometrix.",
  "card.gba.desc": "mGBA engine. Free demo: @rkanoid.",
  "card.nds.desc": "DeSmuME engine (or melonDS with your BIOS). Free demo: Pong.",
- "card.genesis.desc": "Genesis Plus GX engine. Load a local .md, .smd, .gen or ZIP ROM. Cheats to import; 32X not supported.",
+ "card.genesis.desc": "Genesis Plus GX engine. Your .md, .smd, .gen, .bin, ZIP or 7z games, with a version picker. Cheats loaded per game, saves and states. 32X not supported.",
  "card.n64.desc": "Mupen64Plus-Next engine. Free EMUPERSO demo. Real games being validated.",
  "card.ps1.desc": "PCSX ReARMed engine. Free EMUPERSO demo. Real games being validated.",
  "card.psp.desc": "PPSSPP engine. Your .iso, .cso or .pbp games. Per-game CWCheat codes, memory card saves and states. Desktop recommended.",
@@ -34,6 +34,5 @@
  "footer.demos": "Free demos and licenses",
  "footer.archi": "Portal architecture",
  "footer.controllers": "Controllers (Controller V2)",
- "card.play": "Play →",
- "card.genesis.go": "Try →"
+ "card.play": "Play →"
 }

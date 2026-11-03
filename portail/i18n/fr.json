@@ -12,7 +12,7 @@
  "card.gbc.desc": "Moteur Gambatte. Démo libre : Geometrix.",
  "card.gba.desc": "Moteur mGBA. Démo libre : @rkanoid.",
  "card.nds.desc": "Moteur DeSmuME (ou melonDS avec ton BIOS). Démo libre : Pong.",
- "card.genesis.desc": "Moteur Genesis Plus GX. Charge une ROM locale .md, .smd, .gen ou ZIP. Cheats à importer ; 32X non pris en charge.",
+ "card.genesis.desc": "Moteur Genesis Plus GX. Tes jeux .md, .smd, .gen, .bin, ZIP ou 7z, avec choix de la version. Cheats chargés selon le jeu, sauvegardes et états. 32X non pris en charge.",
  "card.n64.desc": "Moteur Mupen64Plus-Next. Démo libre EMUPERSO. Jeux réels en cours de validation.",
  "card.ps1.desc": "Moteur PCSX ReARMed. Démo libre EMUPERSO. Jeux réels en cours de validation.",
  "card.psp.desc": "Moteur PPSSPP. Tes jeux .iso, .cso ou .pbp. Codes CWCheat par jeu, sauvegardes de carte mémoire et états. Ordinateur conseillé.",
@@ -34,6 +34,5 @@
  "footer.demos": "Démos libres et licences",
  "footer.archi": "Architecture du portail",
  "footer.controllers": "Manettes et commandes (Controller V2)",
- "card.play": "Jouer →",
- "card.genesis.go": "Essayer →"
+ "card.play": "Jouer →"
 }
