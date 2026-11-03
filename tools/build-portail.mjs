@@ -6,6 +6,7 @@ import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, readFileSync, write
 import { createHash } from 'node:crypto';
 import { join, relative, sep, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { parseCht } from '../portables/js/cheats.mjs';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const OUT = join(ROOT, 'dist');
@@ -63,12 +64,15 @@ for (const app of ['ps1-web', 'real-n64']) {
 }
 // Catalogue des fichiers de codes (noms seulement) : le lanceur y cherche les codes du jeu ouvert,
 // puis ne télécharge que les fichiers correspondants (voir portables/js/cheat-autoload.mjs).
+// Un fichier sans aucun code utilisable (ex. « (Rumbles) » : vibrations de manette, codes vides) n'y
+// figure pas : proposé au joueur, il donnerait zéro code après association.
 const CHEAT_DIR = join(ROOT, 'cheats-portables');
 if (existsSync(CHEAT_DIR)) {
   const catalogue = {};
   for (const folder of readdirSync(CHEAT_DIR, { withFileTypes: true })) {
     if (!folder.isDirectory()) continue;
-    catalogue[folder.name] = readdirSync(join(CHEAT_DIR, folder.name)).filter((n) => n.toLowerCase().endsWith('.cht')).sort();
+    catalogue[folder.name] = readdirSync(join(CHEAT_DIR, folder.name))
+      .filter((n) => n.toLowerCase().endsWith('.cht') && parseCht(readFileSync(join(CHEAT_DIR, folder.name, n), 'utf8')).length > 0).sort();
   }
   const rel = join('cheats-portables', 'catalogue.json');
   writeFileSync(join(OUT, rel), JSON.stringify(catalogue));

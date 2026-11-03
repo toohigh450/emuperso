@@ -3,7 +3,7 @@
 // Règles conservées : aucun code activé, aucune association imposée. Les fichiers trouvés arrivent
 // dans le panneau Codes comme suggestions à confirmer (même disque pour la PSP, même titre sinon).
 import { parseRomName } from './romnames.mjs';
-import { discIdOfCheatName } from './cheats.mjs';
+import { discIdOfCheatName, parseCht } from './cheats.mjs';
 
 export const CHEAT_FOLDERS = Object.freeze({
   nes: 'Nintendo - Nintendo Entertainment System',
@@ -68,7 +68,9 @@ export async function autoloadCheats({ store, system, romName, discId, base = '.
     if (existing.has(path)) continue;
     const r = await fetch(`${base}${encodeURIComponent(folder)}/${encodeURIComponent(name)}`, { cache: 'force-cache' });
     if (!r.ok) continue;
-    entries.push(await store.prepareCheatFile({ system, path, name, text: await r.text() }));
+    const text = await r.text();
+    if (!parseCht(text).length) continue; // aucun code utilisable (vibrations seulement, par exemple)
+    entries.push(await store.prepareCheatFile({ system, path, name, text }));
   }
   if (entries.length) await store.commitCheatFiles(entries);
   return { found: names, imported: entries.map((e) => e.name) };

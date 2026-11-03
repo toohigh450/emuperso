@@ -94,6 +94,28 @@ test('Codes automatiques : même disque (PSP), même titre entre noms No-Intro e
   assert.deepEqual(findCheatCandidates('psp', 'x.cso', null, ['Bust A Move Ghost [ULES-00233].cht']), []);
 });
 
+test('Codes automatiques : un fichier sans code utilisable (vibrations « Rumbles ») n’est pas importé', async () => {
+  const { autoloadCheats } = await import('../js/cheat-autoload.mjs');
+  const files = {
+    '3 Ninjas Kick Back (USA).cht': 'cheats = 1\ncheat0_desc = "Vies infinies"\ncheat0_code = "7E0D5A09"\ncheat0_enable = false\n',
+    '3 Ninjas Kick Back (Rumbles).cht': 'cheats = 1\ncheat0_desc = "Rumble on energy loss"\ncheat0_code = ""\ncheat0_handler = "1"\n',
+  };
+  const realFetch = globalThis.fetch;
+  globalThis.fetch = async (url) => {
+    const u = decodeURIComponent(String(url));
+    if (u.endsWith('catalogue.json')) return { ok: true, json: async () => ({ 'Nintendo - Super Nintendo Entertainment System': Object.keys(files) }) };
+    const name = Object.keys(files).find((n) => u.endsWith(n));
+    return name ? { ok: true, text: async () => files[name] } : { ok: false };
+  };
+  const committed = [];
+  const store = { listCheatFiles: async () => [], prepareCheatFile: async (f) => f, commitCheatFiles: async (list) => { committed.push(...list); } };
+  try {
+    const r = await autoloadCheats({ store, system: 'snes', romName: '3 Ninjas Kick Back (U) [!].smc', base: 'http://test/rumbles/' });
+    assert.deepEqual(r.imported, ['3 Ninjas Kick Back (USA).cht']);
+    assert.deepEqual(committed.map((f) => f.name), ['3 Ninjas Kick Back (USA).cht']);
+  } finally { globalThis.fetch = realFetch; }
+});
+
 // --- Choix de version dans une archive ------------------------------------------------
 test('Versions d’une archive : vérifiée et Europe/USA d’abord, hacks et mauvais dumps à la fin', async () => {
   const { rankVersions, versionLabels } = await import('../js/version-picker.mjs');
