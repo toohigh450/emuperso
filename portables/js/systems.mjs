@@ -108,6 +108,14 @@ export const UNSUPPORTED_FORMATS = {
   zso: 'ZSO : le cœur PSP de cette version d’EmulatorJS ne lit pas ce format. Décompresse-le avec maxcso (--decompress) puis ouvre l’ISO ou recompresse-le en CSO.',
 };
 
+// BIOS, boot ROM et BIOS de copieurs (Super Wild Card…) rangés avec les jeux dans les collections :
+// ce ne sont pas des jeux. Le lanceur n'en fournit et n'en demande aucun (sauf melonDS, importé à part).
+const BIOS_NAME = /\[BIOS\]|\(BIOS\)|\bBIOS\b|\bboot ?rom\b|^(?:bios[79]|firmware|gba_bios|gb_bios|gbc_bios|sgb_bios|disksys)\.(?:bin|rom)$/i;
+export const BIOS_MESSAGE = 'Ce fichier est un BIOS (logiciel interne d’une console ou d’un copieur), pas un jeu : il ne se lance pas ici. Aucun BIOS n’est nécessaire pour ces consoles, sauf melonDS pour la DS, à importer à part dans l’onglet Moteur. Il reste sur ton appareil, rien n’est envoyé.';
+export function isBiosName(fileName) {
+  return BIOS_NAME.test(String(fileName || '').replace(/^.*[\\/]/, ''));
+}
+
 /** Extension à donner au cœur (certains cœurs choisissent leur chargeur d'après elle). */
 export function engineExtension(analysis) {
   if (analysis.system === 'nes') return analysis.format === 'UNIF' ? 'unf' : 'nes';
@@ -517,6 +525,10 @@ export function analyzeRom(fileName, bytes) {
 
   if (UNSUPPORTED_FORMATS[ext]) {
     result.errors.push(UNSUPPORTED_FORMATS[ext]);
+    return result;
+  }
+  if (isBiosName(fileName)) {
+    result.errors.push(BIOS_MESSAGE);
     return result;
   }
   let system = null;

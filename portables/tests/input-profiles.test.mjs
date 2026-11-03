@@ -114,3 +114,16 @@ test('Notation des HackSets : [H.…] hack, [T.Por-…] traduction, [!!] vérifi
   const ranked = rankVersions(['Sonic The Hedgehog [Japan][Europe][Korea][H.sonic_1_character_pak-5619].md', 'Sonic The Hedgehog [Japan][Europe][Korea][!!].md'].map((name) => ({ name, size: 1 })));
   assert.equal(ranked[0].name, 'Sonic The Hedgehog [Japan][Europe][Korea][!!].md');
 });
+
+test('BIOS rangés avec les jeux : message clair au lieu de « fichier trop petit », en fin de liste des versions', async () => {
+  const { isBiosName, analyzeRom, BIOS_MESSAGE } = await import('../js/systems.mjs');
+  const { rankVersions, versionLabels } = await import('../js/version-picker.mjs');
+  for (const n of ['[BIOS] Nintendo Game Boy Boot ROM [World][Rev 1][!].gb', 'Super Wild Card V2.8CC 06-08-94 BIOS [h2].smc', 'Tri-Star Super 8 BIOS (NES-SNES Adapter) (V1.1).smc', 'bios7.bin', 'gba_bios.bin']) {
+    assert.equal(isBiosName(n), true, n);
+  }
+  for (const n of ['Biosphere (USA).nes', 'Super Mario World (USA).sfc', 'Robot Boot Camp (USA).gba']) assert.equal(isBiosName(n), false, n);
+  assert.deepEqual(analyzeRom('[BIOS] Nintendo Game Boy Boot ROM [World][Rev 1][!].gb', new Uint8Array(256)).errors, [BIOS_MESSAGE]);
+  const ranked = rankVersions([{ name: '[BIOS] Nintendo Game Boy Boot ROM [World][!].gb', size: 256 }, { name: 'Tetris [World][!].gb', size: 32768 }]);
+  assert.equal(ranked[0].name, 'Tetris [World][!].gb');
+  assert.equal(versionLabels('[BIOS] Nintendo Game Boy Boot ROM [World][!].gb').tags[0], 'BIOS, pas un jeu');
+});

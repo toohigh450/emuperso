@@ -1,6 +1,7 @@
 // Choix de la version d'un jeu dans une archive qui en contient plusieurs (ZIP ou 7z), avant le démarrage.
 // rankVersions est pur (testable) ; pickVersion affiche une fenêtre utilisable au doigt et au clavier.
 import { parseRomName } from './romnames.mjs';
+import { isBiosName } from './systems.mjs';
 
 const REGION_ORDER = ['France', 'Europe', 'World', 'USA', 'Canada', 'Japon'];
 
@@ -33,6 +34,7 @@ export function versionLabels(name) {
   if (i.trainer) tags.push('trainer');
   if (i.overdump) tags.push('surdump');
   if (i.alternate) tags.push('variante');
+  if (isBiosName(file)) { i.bios = true; tags.unshift('BIOS, pas un jeu'); }
   return { title: i.title || file, tags, info: i };
 }
 
@@ -41,6 +43,7 @@ export function rankVersions(entries) {
   const score = (e) => {
     const { info: i } = versionLabels(e.name);
     let s = 0;
+    if (i.bios) s += 200;
     if (i.bad || i.overdump) s += 100;
     if (i.pirate || i.trainer) s += 50;
     if (i.hack) s += 30;
