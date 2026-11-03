@@ -95,6 +95,28 @@ export function encodeSnesGameGenie(address, value) {
 // 15 049) : la limite reste un garde-fou contre un collage aberrant, pas une contrainte du moteur.
 export const MAX_CODE_LENGTH = 20000;
 
+/**
+ * Lignes de codes actives qu'un cœur supporte. Genesis Plus GX n'en garde que 150 et plante au-delà
+ * (« table index is out of bounds » : 147 lignes tiennent, 160 plantent, vu sur la collection). Une
+ * ligne = un morceau séparé par « + ».
+ */
+export const ENGINE_CODE_LINES = Object.freeze({ genesis: 150 });
+
+/** Codes actifs gardés dans l'ordre jusqu'à la limite du cœur ; dropped = codes laissés de côté. */
+export function limitActiveCodes(system, codes) {
+  const max = ENGINE_CODE_LINES[system];
+  if (!max) return { codes: codes.slice(), dropped: 0, max: null };
+  const kept = [];
+  let lines = 0;
+  for (const code of codes) {
+    const n = String(code).split('+').filter((p) => p.trim()).length || 1;
+    if (lines + n > max) continue;
+    kept.push(code);
+    lines += n;
+  }
+  return { codes: kept, dropped: codes.length - kept.length, max };
+}
+
 export function parseCheatCode(system, input) {
   const raw = String(input || '').trim();
   if (!raw) return { ok: false, error: 'Code vide.' };

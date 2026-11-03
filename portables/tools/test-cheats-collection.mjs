@@ -20,6 +20,7 @@ import { join, extname, resolve, sep } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { findCheatCandidates, CHEAT_FOLDERS, titleKey } from '../js/cheat-autoload.mjs';
 import { rankVersions } from '../js/version-picker.mjs';
+import { limitActiveCodes } from '../js/codes.mjs';
 
 const args = process.argv.slice(2);
 const opt = (name) => (args.find((a) => a.startsWith(`--${name}=`)) || '').slice(name.length + 3);
@@ -295,7 +296,10 @@ async function tryGame(browser, g) {
     const valid = codes.filter((c) => !c.bad).map((c) => c.code);
     Object.assign(r.cheats, { total: codes.length, valid: valid.length, invalid: codes.length - valid.length });
     if (!valid.length) { r.cheats.verdict = 'aucun code valide'; return r; }
-    await page.evaluate((list) => { const boots = Object.values(window.__portablesBoots); boots[boots.length - 1].control.setCodes(list); }, valid);
+    // Même limite que le lanceur (applyLiveCodes) : Mega Drive, 150 lignes de codes au plus.
+    const limited = limitActiveCodes(g.system, valid);
+    if (limited.dropped) r.cheats.dropped = limited.dropped;
+    await page.evaluate((list) => { const boots = Object.values(window.__portablesBoots); boots[boots.length - 1].control.setCodes(list); }, limited.codes);
     return await withCodes(page, g, r, errors);
   } catch (err) {
     if (!r.boot) r.boot = 'erreur';

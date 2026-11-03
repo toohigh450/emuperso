@@ -1,6 +1,6 @@
 // Interface : une fente, un seul jeu actif, saveurs de sauvegarde et de codes visibles et honnêtes.
 import { SYSTEMS, DS_CORES, ROM_EXTENSIONS, LOOSE_EXTENSIONS, analyzeRom, extensionOf, stemOf, engineExtension } from './systems.mjs';
-import { parseCheatCode, describeCode, CODE_FORMATS, isPlaceholderCode, pspCodeConflicts } from './codes.mjs';
+import { parseCheatCode, describeCode, CODE_FORMATS, isPlaceholderCode, pspCodeConflicts, limitActiveCodes } from './codes.mjs';
 import { parseRomName } from './romnames.mjs';
 import { buildCatalog, filterCatalog, visibleWindow } from './catalog.mjs';
 import { isZip, extractFirst, listCandidates, extractAll, buildZip } from './zip.mjs';
@@ -417,6 +417,9 @@ async function openGame(file) {
   const pad = await padSettingsFor(analysis.system, key);
   const layoutTouch = touchLayout(analysis.system);
   const engineStem = ejsGameName(analysis.title, core.coreId, fp.hex);
+  // Limite du cœur (Mega Drive : 150 lignes) : les codes en trop ne partent pas au moteur.
+  const bootCodes = limitActiveCodes(analysis.system, codes.filter((c) => c.enabled && !isPlaceholderCode(analysis.system, c.code)).map((c) => c.code));
+  if (bootCodes.dropped) game.warnings.push(codeLimitText(game.systemLabel, bootCodes));
   const boot = {
     // PSP : moteur nightly d'abord (cœur ppsspp plus rapide), puis les sources 4.2.3 en secours.
     enginePaths: psp ? [PSP_ENGINE, ...enginePaths] : enginePaths,
@@ -434,7 +437,7 @@ async function openGame(file) {
       oldStems: [stemOf(rom.name), previous?.fileName ? stemOf(previous.fileName) : null],
     }) : null,
     // Seuls les codes que l'utilisateur a activés partent au moteur (voir player.html).
-    codes: codes.filter((c) => c.enabled && !isPlaceholderCode(analysis.system, c.code)).map((c) => c.code),
+    codes: bootCodes.codes,
     coreOptions: psp ? perfOptions : null,
     // PSP : codes actifs écrits dans le fichier CWCheat du jeu avant son démarrage (voir pspCheatFile).
     pspCheats: psp ? pspCheatFile(analysis.discId, codes.filter((c) => c.enabled && !isPlaceholderCode('psp', c.code))) : null,
@@ -857,14 +860,20 @@ async function saveCodes(game, mutate) {
   await refreshCodePanel();
 }
 
+function codeLimitText(label, limited) {
+  return `${label} : le moteur accepte au plus ${limited.max} lignes de codes actives ; ${limited.dropped} code(s) activé(s) en trop ne sont pas appliqués (au-delà, le jeu planterait). Désactive ceux dont tu n’as pas besoin.`;
+}
+
 function applyLiveCodes(entries) {
   const system = currentGame?.system;
-  const enabled = entries.filter((e) => e.enabled && !isPlaceholderCode(system, e.code)).map((e) => e.code);
+  const limited = limitActiveCodes(system, entries.filter((e) => e.enabled && !isPlaceholderCode(system, e.code)).map((e) => e.code));
+  const enabled = limited.codes;
   const control = session.control();
-  if (!control) { setStatus('Codes enregistrés pour ce jeu ; ils seront appliqués au prochain lancement.', 'ok'); return; }
+  if (!control) { setStatus(limited.dropped ? codeLimitText(currentGame.systemLabel, limited) : 'Codes enregistrés pour ce jeu ; ils seront appliqués au prochain lancement.', limited.dropped ? 'warn' : 'ok'); return; }
   try {
     control.setCodes(enabled);
-    setStatus(`Codes appliqués au moteur : ${enabled.length} actif(s). Un code retiré peut laisser une valeur en mémoire jusqu’au redémarrage du jeu.`, 'ok');
+    if (limited.dropped) setStatus(codeLimitText(currentGame.systemLabel, limited), 'warn');
+    else setStatus(`Codes appliqués au moteur : ${enabled.length} actif(s). Un code retiré peut laisser une valeur en mémoire jusqu’au redémarrage du jeu.`, 'ok');
   } catch (err) { setStatus(`Codes non appliqués : ${err.message}`, 'error'); }
 }
 
