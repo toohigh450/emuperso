@@ -45,8 +45,10 @@ h2 { font-size: 1.05rem; letter-spacing: 0.5px; margin: 34px 0 12px; color: var(
 .card h3 { margin: 0; font-size: 1.3rem; line-height: 1.2; }
 .card p { margin: 0; color: var(--muted); font-size: 0.9rem; }
 .card .go { margin-top: auto; padding-top: 10px; color: var(--mint); font-weight: 700; font-size: 0.95rem; }
-.card .badge { position: absolute; top: 14px; right: 14px; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: #2a3f36; color: var(--mint); border: 1px solid #416956; }
-.card .badge.new { background: #47283a; color: var(--rose); border-color: #7a4560; }
+/* Badge ALPHA (mandat du 3 nov.) : même statut pour les 10 émulateurs ; texte hors i18n. Fond ambre à 24 %
+   et contour pour rester lisible par-dessus les fonds d'écran. */
+.card .badge { position: absolute; top: 12px; right: 12px; font-size: 0.72rem; font-weight: 800; letter-spacing: 1px; line-height: 1.5; padding: 2px 10px; border-radius: 999px; background: rgba(248, 209, 138, 0.24); color: #ffe2a8; border: 1px solid rgba(248, 209, 138, 0.7); text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); pointer-events: auto; }
+.card .tag { padding-right: 70px; }
 .apk { background: var(--panel); border: 1px solid var(--mint); border-radius: 12px; padding: 18px; margin: 8px 0 22px; }
 .apk h2 { margin-top: 0; }
 .apk ol { margin: 8px 0 14px; padding-left: 22px; color: var(--muted); }
@@ -76,66 +78,70 @@ footer a { margin-right: 14px; }
     <h2 data-i18n="consoles.title">Choisis une console</h2>
     <nav class="grid" aria-label="Consoles">
       <a class="card" href="portables/?console=nes">
-        <span class="badge new" data-i18n="badge.new">Nouveau</span>
+        <span class="badge alpha" title="Version alpha — en phase de tests">ALPHA</span>
         <span class="tag">Nintendo · 1983</span>
         <h3>NES / Famicom</h3>
         <p data-i18n="card.nes.desc">Moteur FCEUmm. Démo libre : Snake. Codes Game Genie, sauvegardes et états.</p>
         <span class="go" data-i18n="card.play">Jouer →</span>
       </a>
       <a class="card" href="portables/?console=snes">
-        <span class="badge new" data-i18n="badge.new">Nouveau</span>
+        <span class="badge alpha" title="Version alpha — en phase de tests">ALPHA</span>
         <span class="tag">Nintendo · 1990</span>
         <h3>Super Nintendo / Super Famicom</h3>
         <p data-i18n="card.snes.desc">Moteur Snes9x. Démos libres : Neon Breaker, Shmup, puces SA-1 et DSP-1. Game Genie et Action Replay.</p>
         <span class="go" data-i18n="card.play">Jouer →</span>
       </a>
       <a class="card" href="portables/?console=gb">
+        <span class="badge alpha" title="Version alpha — en phase de tests">ALPHA</span>
         <span class="tag">Nintendo · 1989</span>
         <h3>Game Boy</h3>
         <p data-i18n="card.gb.desc">Moteur Gambatte. Démo libre : Libbet.</p>
         <span class="go" data-i18n="card.play">Jouer →</span>
       </a>
       <a class="card" href="portables/?console=gbc">
+        <span class="badge alpha" title="Version alpha — en phase de tests">ALPHA</span>
         <span class="tag">Nintendo · 1998</span>
         <h3>Game Boy Color</h3>
         <p data-i18n="card.gbc.desc">Moteur Gambatte. Démo libre : Geometrix.</p>
         <span class="go" data-i18n="card.play">Jouer →</span>
       </a>
       <a class="card" href="portables/?console=gba">
+        <span class="badge alpha" title="Version alpha — en phase de tests">ALPHA</span>
         <span class="tag">Nintendo · 2001</span>
         <h3>Game Boy Advance</h3>
         <p data-i18n="card.gba.desc">Moteur mGBA. Démo libre : @rkanoid.</p>
         <span class="go" data-i18n="card.play">Jouer →</span>
       </a>
       <a class="card" href="portables/?console=nds">
+        <span class="badge alpha" title="Version alpha — en phase de tests">ALPHA</span>
         <span class="tag">Nintendo · 2004</span>
         <h3>Nintendo DS</h3>
         <p data-i18n="card.nds.desc">Moteur DeSmuME (ou melonDS avec ton BIOS). Démo libre : Pong.</p>
         <span class="go" data-i18n="card.play">Jouer →</span>
       </a>
       <a class="card" href="portables/?console=genesis">
-        <span class="badge new" data-i18n="badge.totest">À tester</span>
+        <span class="badge alpha" title="Version alpha — en phase de tests">ALPHA</span>
         <span class="tag">Sega · 1988</span>
         <h3>Genesis / Mega Drive</h3>
         <p data-i18n="card.genesis.desc">Moteur Genesis Plus GX. Charge une ROM locale .md, .smd, .gen ou ZIP. Cheats à importer ; 32X non pris en charge.</p>
         <span class="go" data-i18n="card.genesis.go">Essayer →</span>
       </a>
       <a class="card" href="real-n64/">
-        <span class="badge" data-i18n="badge.alpha">Alpha</span>
+        <span class="badge alpha" title="Version alpha — en phase de tests">ALPHA</span>
         <span class="tag">Nintendo · 1996</span>
         <h3>Nintendo 64</h3>
         <p data-i18n="card.n64.desc">Moteur Mupen64Plus-Next. Démo libre EMUPERSO. Jeux réels en cours de validation.</p>
         <span class="go" data-i18n="card.play">Jouer →</span>
       </a>
       <a class="card" href="ps1-web/">
-        <span class="badge" data-i18n="badge.alpha">Alpha</span>
+        <span class="badge alpha" title="Version alpha — en phase de tests">ALPHA</span>
         <span class="tag">Sony · 1994</span>
         <h3>PlayStation</h3>
         <p data-i18n="card.ps1.desc">Moteur PCSX ReARMed. Démo libre EMUPERSO. Jeux réels en cours de validation.</p>
         <span class="go" data-i18n="card.play">Jouer →</span>
       </a>
       <a class="card" href="portables/?console=psp">
-        <span class="badge" data-i18n="badge.alpha">Alpha</span>
+        <span class="badge alpha" title="Version alpha — en phase de tests">ALPHA</span>
         <span class="tag">Sony · 2004</span>
         <h3>PlayStation Portable</h3>
         <p data-i18n="card.psp.desc">Moteur PPSSPP. Tes jeux .iso, .cso ou .pbp. Codes CWCheat par jeu, sauvegardes de carte mémoire et états. Ordinateur conseillé.</p>
@@ -181,6 +187,12 @@ footer a { margin-right: 14px; }
 </div>
 <script src="i18n.js" defer></script>
 <script>
+// Infobulle du badge ALPHA dans la langue de la page (i18n.js change l'attribut lang de <html>).
+new MutationObserver(function () {
+  var en = document.documentElement.lang === 'en';
+  var badges = document.querySelectorAll('.card .badge.alpha');
+  for (var i = 0; i < badges.length; i++) badges[i].title = en ? 'Alpha version — under testing' : 'Version alpha — en phase de tests';
+}).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
     navigator.serviceWorker.register('/sw.js').catch(function () {});
