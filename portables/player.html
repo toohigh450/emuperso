@@ -180,8 +180,23 @@
     try { if (boot.onSaveUpdate) boot.onSaveUpdate(e); } catch (err) { console.error(err); }
   };
 
-  window.addEventListener('error', function () { if (preparing) events.onError('Erreur pendant la préparation du moteur.'); });
-  window.addEventListener('unhandledrejection', function () { if (preparing) events.onError('Initialisation du moteur interrompue.'); });
+  function note(kind, message) { try { if (boot.onLog) boot.onLog(kind, message); } catch (err) { /* lanceur fermé */ } }
+  // Refus sans gravité du navigateur (garder l'écran allumé, plein écran… pendant que l'onglet est caché) :
+  // notés et ignorés. Les autres erreurs ne bloquent que pendant la préparation du moteur, comme avant.
+  function harmless(reason) {
+    var name = reason && reason.name, text = reason && (reason.message || String(reason));
+    return name === 'NotAllowedError' || /not visible|wake ?lock|fullscreen|pointer ?lock|user gesture|play\(\) request/i.test(text || '');
+  }
+  window.addEventListener('error', function (e) {
+    note('erreur moteur', (preparing ? 'Pendant la préparation' : 'Pendant la partie') + (e.message ? ' : ' + e.message : ''));
+    if (preparing) events.onError('Erreur pendant la préparation du moteur.');
+  });
+  window.addEventListener('unhandledrejection', function (e) {
+    var reason = e.reason && (e.reason.message || String(e.reason));
+    if (harmless(e.reason)) { e.preventDefault(); note('refus ignoré', reason || 'refus du navigateur'); return; }
+    note('erreur moteur', 'Promesse rejetée' + (reason ? ' : ' + reason : ''));
+    if (preparing) events.onError('Initialisation du moteur interrompue.');
+  });
   window.EJS_pathtodata = source.path;
   function loadEngine() {
     var script = document.createElement('script');

@@ -8,6 +8,7 @@ import { fingerprint, fingerprintBlob, saveSpaceId, gameKey, ejsGameName, legacy
 import { Store, IdbAdapter, MemoryAdapter, CHEAT_LIMITS, STATE_SLOTS } from './store.mjs';
 import { parseCht, classifyCheatFiles, linkedCheatValid, normalizeName, deviceLabel, inferSystemFromPath } from './cheats.mjs';
 import { CONTROL_PROFILES, buildDefaultControls, buildPspControls } from './controls.mjs';
+import { log as journal, exportText as journalText } from './journal.mjs';
 import { Session } from './session.mjs';
 import { createBrowserHost } from './player-host.mjs';
 import { migrateLegacySave, LEGACY_SAVE_SYSTEMS } from './save-migration.mjs';
@@ -41,6 +42,7 @@ let pspMirrorTimer = 0;
 
 // --- Utilitaires d'affichage -------------------------------------------------------
 function setStatus(text, kind = '') {
+  journal(kind === 'error' ? 'erreur' : 'statut', text);
   const s = $('status');
   s.textContent = text;
   s.dataset.kind = kind;
@@ -402,6 +404,8 @@ async function openGame(file) {
       EJS_defaultOptions: { 'save-save-interval': '30', ...(psp ? { ppsspp_cheats: 'enabled', ...perfOptions } : {}) },
       ...(defaultControls ? { EJS_defaultControls: defaultControls } : {}),
     },
+    // Évènements du moteur (erreurs, refus sans gravité) consignés dans le journal exportable.
+    onLog: (kind, message) => journal(kind, message),
     onSaveUpdate: (e) => mirrorSave(spaceId, e),
     onLifecycle: (event) => {
       store.recordLifecycle(key, event).then(() => refreshHistory()).catch(err => {
@@ -1163,6 +1167,13 @@ function initEvents() {
     else if (files[0]) openFile(files[0]);
   });
   window.addEventListener('unhandledrejection', (event) => { event.preventDefault(); console.error(event.reason); setStatus(`Opération interrompue : ${event.reason?.message || event.reason}`, 'error'); });
+  window.addEventListener('error', (event) => journal('erreur page', event.message || String(event.error || '')));
+  $('exportLog').addEventListener('click', () => {
+    const g = currentGame;
+    const text = journalText({ 'Jeu en cours': g ? `${g.title} (${g.systemLabel}, ${g.coreLabel}, ${g.fileName})` : 'aucun', 'Moteur': session.control()?.enginePath || enginePaths.map((p) => p.path).join(' puis ') });
+    download(`emuperso-journal-${new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-')}.txt`, new TextEncoder().encode(text));
+    setStatus('Journal exporté : envoie ce fichier pour que le problème soit analysé (il ne contient aucun jeu ni aucune sauvegarde).', 'ok');
+  });
   window.addEventListener('beforeunload', (e) => { if (session.hasActiveGame) { e.preventDefault(); e.returnValue = ''; } });
 
   $('cheatFolder').addEventListener('change', (e) => { importCheatFiles(e.target.files); e.target.value = ''; });
