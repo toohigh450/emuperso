@@ -1,5 +1,5 @@
 // Interface : une fente, un seul jeu actif, saveurs de sauvegarde et de codes visibles et honnêtes.
-import { SYSTEMS, DS_CORES, ROM_EXTENSIONS, LOOSE_EXTENSIONS, analyzeRom, extensionOf, stemOf, engineExtension } from './systems.mjs';
+import { SYSTEMS, DS_CORES, ARCADE_CORES, ARCADE_CORE_ORDER, ROM_EXTENSIONS, LOOSE_EXTENSIONS, analyzeRom, analyzeArcade, extensionOf, stemOf, engineExtension } from './systems.mjs';
 import { parseCheatCode, describeCode, CODE_FORMATS, isPlaceholderCode, pspCodeConflicts, limitActiveCodes } from './codes.mjs';
 import { parseRomName } from './romnames.mjs';
 import { buildCatalog, filterCatalog, visibleWindow } from './catalog.mjs';
@@ -238,6 +238,7 @@ async function readPspFile(file) {
 }
 
 async function resolveCore(system) {
+  if (system === 'arcade') return { ejsCore: SYSTEMS.arcade.ejsCore, coreId: SYSTEMS.arcade.coreId, label: ARCADE_CORES.mame2003_plus.label, bios: null };
   if (system !== 'nds') return { ejsCore: SYSTEMS[system].ejsCore, coreId: SYSTEMS[system].coreId, label: coreLabel(system), bios: null };
   // NES et SNES : aucun BIOS (le Famicom Disk System, qui en demande un, est refusé à l'ouverture).
   const spec = DS_CORES[settings.dsCore] || DS_CORES.desmume2015;
@@ -254,6 +255,7 @@ function coreLabel(system) {
   if (system === 'nes') return 'FCEUmm';
   if (system === 'snes') return 'Snes9x';
   if (system === 'genesis') return 'Genesis Plus GX';
+  if (system === 'arcade') return 'MAME 2003-Plus / FBNeo';
   if (system === 'psp') return `PPSSPP (${PSP_ENGINE.label}, secours ${ENGINE_VERSION})`;
   return system === 'gba' ? 'mGBA' : system === 'nds' ? (DS_CORES[settings.dsCore] || DS_CORES.desmume2015).label : 'Gambatte';
 }
@@ -332,14 +334,55 @@ async function openFile(file) {
   }
 }
 
-async function openGame(file) {
+// Arcade : console choisie depuis l'accueil ou dans le catalogue ; sinon un .zip sans ROM de console.
+function arcadeWanted(file) {
+  if (!/\.zip$/i.test(file.name)) return false;
+  return new URLSearchParams(location.search).get('console') === 'arcade' || $('catSystem')?.value === 'arcade';
+}
+async function readArcadeFile(file) {
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  return { rom: { name: file.name, bytes, note: '' }, analysis: analyzeArcade(file.name, bytes) };
+}
+// Cœur arcade du jeu : celui qui a déjà marché sur cet appareil, sinon MAME 2003-Plus puis FBNeo.
+async function arcadeCore(hex, forced) {
+  const id = forced || await store.getSetting(`arcade-core:${hex}`, null) || ARCADE_CORE_ORDER[0];
+  const spec = ARCADE_CORES[id] || ARCADE_CORES[ARCADE_CORE_ORDER[0]];
+  return { ejsCore: spec.ejsCore, coreId: id, label: spec.label, bios: null };
+}
+// Verdict du cœur (player.html) : on retient le cœur qui reconnaît le romset, sinon on essaie l'autre.
+async function arcadeVerdict(game, file, options, ok) {
+  if (game !== currentGame) return;
+  if (ok) {
+    await store.setSetting(`arcade-core:${game.hex}`, game.coreId);
+    setStatus(`${game.title} : romset reconnu par ${ARCADE_CORES[game.coreId].label}.${game.coreId === 'mame2003_plus' ? ' Cheats du jeu : onglet Codes, « Ouvrir les cheats du jeu ».' : ''}`, 'ok');
+    return;
+  }
+  const tried = [...(options.tried || []), game.coreId];
+  const next = ARCADE_CORE_ORDER.find((id) => !tried.includes(id));
+  if (!next) {
+    await store.setSetting(`arcade-core:${game.hex}`, null);
+    setStatus(`Ni MAME 2003-Plus ni FBNeo ne reconnaissent « ${game.fileName} » : ce romset vient sans doute d’une autre version de MAME (le moteur web n’a pas de MAME récent). Un pack au format MAME 2003-Plus (0.78) ou FBNeo le ferait marcher.`, 'error');
+    return;
+  }
+  setStatus(`${ARCADE_CORES[game.coreId].label} ne reconnaît pas ce romset : essai avec ${ARCADE_CORES[next].label}…`);
+  await openGame(file, { arcadeCore: next, tried, noConfirm: true });
+}
+
+async function openGame(file, options = {}) {
   setStatus('Lecture du fichier…');
   let rom, analysis;
   try {
     if (isPspCandidate(file.name)) ({ rom, analysis } = await readPspFile(file));
+    else if (arcadeWanted(file)) ({ rom, analysis } = await readArcadeFile(file));
     else {
-      rom = await readGameFile(file);
-      analysis = analyzeRom(rom.name, rom.bytes);
+      try {
+        rom = await readGameFile(file);
+        analysis = analyzeRom(rom.name, rom.bytes);
+      } catch (err) {
+        // Aucune ROM de console dans le .zip : c'est sans doute un romset arcade.
+        if (!/\.zip$/i.test(file.name) || !/^Aucun jeu reconnu dans cette archive/.test(err.message || '')) throw err;
+        ({ rom, analysis } = await readArcadeFile(file));
+      }
     }
   } catch (err) {
     setStatus(err.message || String(err), 'error');
@@ -349,7 +392,7 @@ async function openGame(file) {
     setStatus(analysis.errors.join(' '), 'error');
     return;
   }
-  if (session.hasActiveGame) {
+  if (session.hasActiveGame && !options.noConfirm) {
     const ok = confirm(
       `Fermer « ${session.current ? session.current.title : 'le jeu en cours'} » et ouvrir « ${analysis.title} » ?\n\n` +
       'Un seul jeu est actif à la fois. Le jeu précédent sera fermé avant le démarrage du nouveau moteur ; il ne pourra pas être repris automatiquement si ce démarrage échoue. Les sauvegardes déjà enregistrées restent conservées. Si tu as des progrès non enregistrés dans le jeu, annule et enregistre-les d\'abord.'
@@ -370,6 +413,7 @@ async function openGame(file) {
   }
   const fp = rom.bytes ? await fingerprint(rom.bytes)
     : await fingerprintBlob(rom.file, (done, total) => setStatus(`Calcul de l'empreinte du jeu… ${Math.floor(done * 100 / total)} %`));
+  if (analysis.system === 'arcade') core = await arcadeCore(fp.hex, options.arcadeCore);
   const key = gameKey(analysis.system, fp.hex);
   const spaceId = saveSpaceId(analysis.system, core.coreId, fp.hex);
   const previous = await store.getGame(key);
@@ -428,7 +472,8 @@ async function openGame(file) {
     // Le moteur nomme la sauvegarde de cartouche d'après ce nom de fichier : nom tiré de l'empreinte et
     // du cœur, donc une sauvegarde par jeu, même ROM renommée, jamais partagée entre deux ROM de même nom.
     // PSP : le File d'origine (lu sur le disque) au lieu d'une copie en mémoire.
-    rom: { name: `${engineStem}.${engineExtension(analysis)}`, bytes: rom.bytes, file: rom.file || null },
+    // Arcade : MAME et FBNeo reconnaissent le jeu à son nom court (« xxmissio.zip ») ; il ne doit pas changer.
+    rom: { name: analysis.system === 'arcade' ? `${analysis.code}.zip` : `${engineStem}.${engineExtension(analysis)}`, bytes: rom.bytes, file: rom.file || null },
     // GB/GBC/GBA/DS : les sauvegardes d'avant 0.3.0-alpha.2 portent le nom du fichier ; player.html
     // appelle cette fonction une fois l'ancien moteur fermé et avant de charger le nouveau.
     prepareSaves: LEGACY_SAVE_SYSTEMS.has(analysis.system) ? () => takeOverLegacySave(game, {
@@ -465,6 +510,9 @@ async function openGame(file) {
     onPad: (id) => showPadStatus(id),
     // Évènements du moteur (erreurs, refus sans gravité) consignés dans le journal exportable.
     onLog: (kind, message) => journal(kind, message),
+    // Arcade : cœur essayé et cheat.dat de MAME 2003-Plus (codes du jeu lancé, menu du cœur).
+    arcade: analysis.system === 'arcade' ? { core: core.coreId, cheatUrl: core.coreId === 'mame2003_plus' ? '../cheats-arcade/cheat.dat' : null } : null,
+    onArcadeVerdict: analysis.system === 'arcade' ? (ok) => { arcadeVerdict(game, file, options, ok).catch((err) => setStatus(err.message || String(err), 'error')); } : null,
     onSaveUpdate: (e) => mirrorSave(spaceId, e).catch(err => {
       console.error('Copie miroir impossible', err);
       if (currentGame?.spaceId === spaceId) setStatus("La copie de sécurité a échoué. Exporte la sauvegarde actuelle pour la conserver.", 'error');
@@ -813,6 +861,16 @@ async function refreshCodePanel() {
   const box = document.createDocumentFragment();
   if (!game) {
     box.append(h('p', { class: 'muted' }, 'Ouvre un jeu pour gérer ses codes.'));
+  } else if (game.system === 'arcade') {
+    // Arcade : MAME 2003-Plus ignore les codes envoyés de l'extérieur ; il lit cheat.dat (codes du jeu lancé
+    // seulement) et les propose dans son propre menu. FBNeo n'a pas de codes ici.
+    if (game.coreId === 'mame2003_plus') {
+      box.append(h('p', {}, 'Les cheats de ce jeu sont chargés par MAME 2003-Plus (cheat.dat, 4 860 jeux d’arcade) et se règlent dans son menu : « Cheat », puis active les codes voulus avec la croix et A. Manette : clic du stick gauche.'));
+      box.append(h('button', { class: 'btn primary', type: 'button', onclick: () => { const c = session.control(); if (c && c.openArcadeMenu) c.openArcadeMenu(); else setStatus('Lance d’abord le jeu.', 'warn'); } }, 'Ouvrir les cheats du jeu'));
+      box.append(h('p', { class: 'muted small-text' }, 'Si le jeu n’a pas de codes, le menu affiche « there are no cheats for this game ». B pour revenir, « Return to Game » pour reprendre.'));
+    } else {
+      box.append(h('p', { class: 'muted' }, 'Ce jeu tourne avec FBNeo : pas de cheats intégrés pour ce cœur ici.'));
+    }
   } else {
     const entries = await store.getCodes(game.key);
     if (ticket !== panelTickets.codes || game !== currentGame) return;
@@ -848,7 +906,7 @@ async function refreshCodePanel() {
   }
   if (ticket !== panelTickets.codes || game !== currentGame) return;
   $('codeList').replaceChildren(box);
-  $('codeAddForm').hidden = !game;
+  $('codeAddForm').hidden = !game || game.system === 'arcade';
 }
 
 async function saveCodes(game, mutate) {

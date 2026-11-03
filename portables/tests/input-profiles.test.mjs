@@ -150,3 +150,17 @@ test('BIOS rangés avec les jeux : message clair au lieu de « fichier trop peti
   assert.equal(ranked[0].name, 'Tetris [World][!].gb');
   assert.equal(versionLabels('[BIOS] Nintendo Game Boy Boot ROM [World][!].gb').tags[0], 'BIOS, pas un jeu');
 });
+
+test('Arcade : romset .zip confié tel quel, BIOS arcade refusé, nom court conseillé', async () => {
+  const { analyzeArcade, ARCADE_CORE_ORDER } = await import('../js/systems.mjs');
+  const zip = new Uint8Array([0x50, 0x4b, 3, 4, ...new Array(40).fill(0)]);
+  const ok = analyzeArcade('xxmissio.zip', zip);
+  assert.equal(ok.ok, true);
+  assert.equal(ok.system, 'arcade');
+  assert.equal(ok.code, 'xxmissio');
+  assert.equal(analyzeArcade('neogeo.zip', zip).ok, false);
+  assert.equal(analyzeArcade('xxmissio.7z', zip).ok, false);
+  assert.equal(analyzeArcade('pas-un-zip.zip', new Uint8Array(40)).ok, false);
+  assert.equal(analyzeArcade('Super Mario (USA).zip', zip).warnings.length, 1);
+  assert.deepEqual(ARCADE_CORE_ORDER, ['mame2003_plus', 'fbneo']);
+});

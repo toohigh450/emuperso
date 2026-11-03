@@ -1,6 +1,6 @@
 {
  "meta.description": "EMUPERSO: NES, SNES, Sega Genesis, Game Boy, Game Boy Color, Game Boy Advance, Nintendo DS, Nintendo 64, PlayStation and PlayStation Portable in Chrome, on desktop and phone.",
- "header.subtitle": "Retro portal · 10 consoles",
+ "header.subtitle": "Retro portal · 11 consoles",
  "header.intro": "Play in Chrome on desktop or phone, no app to install and no account. Each console offers a free demo to try right away; your own games stay on your device.",
  "consoles.title": "Choose a console",
  "badge.new": "New",
@@ -16,6 +16,7 @@
  "card.n64.desc": "Mupen64Plus-Next engine. Free EMUPERSO demo. Real games being validated.",
  "card.ps1.desc": "PCSX ReARMed engine. Free EMUPERSO demo. Real games being validated.",
  "card.psp.desc": "PPSSPP engine. Your .iso, .cso or .pbp games. Per-game CWCheat codes, memory card saves and states. Desktop recommended.",
+ "card.arcade.desc": "MAME 2003-Plus and FBNeo engines, picked automatically for each game. Your .zip romsets (MAME short names). Per-game cheats in the MAME menu. No BIOS provided.",
  "notes.title": "Good to know",
  "note.home.title": "Your games stay with you",
  "note.home.text": "The site can't read your drive: you pick a file or folder yourself. Nothing is sent to a server; the game runs in your browser. No commercial game or BIOS provided.",

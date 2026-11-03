@@ -29,6 +29,9 @@ const LAYOUTS = {
   genesis: { authentique: [[PAD.left, RP.Y], [PAD.bottom, RP.B], [PAD.right, RP.A], [PAD.LB, RP.L], [PAD.top, RP.X], [PAD.RB, RP.R]], confort: [[PAD.LT, RP.L], [PAD.RT, RP.R]] },
   // PSP (ppsspp) : ✕ = B, ○ = A, □ = Y, △ = X ; même losange que la manette Xbox.
   psp: { authentique: [[PAD.bottom, RP.B], [PAD.right, RP.A], [PAD.left, RP.Y], [PAD.top, RP.X], [PAD.LB, RP.L], [PAD.RB, RP.R]], confort: [[PAD.LT, RP.L], [PAD.RT, RP.R]] },
+  // Arcade (MAME 2003-Plus, FBNeo) : boutons 1 à 6 = B, A, Y, X, L, R du RetroPad ; Pièce = Select (Back),
+  // Start = Start. Clic du stick gauche (L3) = menu de MAME 2003-Plus, où sont les cheats du jeu.
+  arcade: { authentique: [[PAD.bottom, RP.B], [PAD.right, RP.A], [PAD.left, RP.Y], [PAD.top, RP.X], [PAD.LB, RP.L], [PAD.RB, RP.R], [PAD.LS, RP.L3]], confort: [[PAD.LT, RP.L], [PAD.RT, RP.R]] },
 };
 
 // Consoles à stick analogique : le stick gauche reste analogique (jamais converti en croix).

@@ -78,7 +78,24 @@ export const SYSTEMS = {
     maxBytes: 1800 * MiB, // UMD double couche
     aspect: '16 / 9', // 480 × 272
   },
+  arcade: {
+    id: 'arcade',
+    label: 'Arcade (MAME 2003-Plus / FBNeo)',
+    exts: [], // un romset arcade est un .zip de puces sans format reconnaissable : voir analyzeArcade
+    ejsCore: 'mame2003_plus',
+    coreId: 'mame2003_plus',
+    maxBytes: 256 * MiB,
+    aspect: '4 / 3',
+  },
 };
+
+// Cœurs arcade du moteur web : aucun MAME récent n'existe dans EmulatorJS. Un romset d'un MAME récent n'est
+// reconnu que s'il n'a pas changé depuis ; le lanceur essaie un cœur puis l'autre et retient celui qui marche.
+export const ARCADE_CORES = {
+  mame2003_plus: { ejsCore: 'mame2003_plus', label: 'MAME 2003-Plus' },
+  fbneo: { ejsCore: 'fbneo', label: 'FBNeo' },
+};
+export const ARCADE_CORE_ORDER = ['mame2003_plus', 'fbneo'];
 
 // Cœurs DS proposés (le cœur choisi fait partie de l'espace de sauvegarde du jeu).
 export const DS_CORES = {
@@ -501,6 +518,23 @@ function detectByHeader(bytes) {
  * @param {string} fileName nom du fichier (ou de l'entrée ZIP)
  * @param {Uint8Array} bytes contenu brut
  */
+/**
+ * Romset arcade : un .zip confié tel quel au cœur, dont le nom court (« xxmissio.zip ») est celui du jeu
+ * pour MAME et FBNeo. Rien n'est extrait ni modifié ; un BIOS arcade (neogeo.zip…) est refusé comme ailleurs.
+ */
+export function analyzeArcade(fileName, bytes) {
+  const name = String(fileName || '').replace(/^.*[\\/]/, '');
+  const stem = name.replace(/\.zip$/i, '');
+  const result = { ok: false, fileName: name, ext: 'zip', size: bytes.length, system: 'arcade', title: stem, code: stem, region: 'inconnue', version: 0, headerOk: false, warnings: [], errors: [] };
+  if (!/\.zip$/i.test(name)) result.errors.push('Un jeu arcade s’ouvre tel quel, en .zip (nom court MAME, par exemple xxmissio.zip).');
+  else if (bytes.length < 22 || bytes[0] !== 0x50 || bytes[1] !== 0x4b) result.errors.push('Ce fichier n’est pas un .zip valide.');
+  else if (bytes.length > SYSTEMS.arcade.maxBytes) result.errors.push('Romset trop gros pour le navigateur (256 Mio au plus).');
+  else if (isBiosName(name) || /^(neogeo|pgm|cpzn1|cpzn2|naomi|awbios|decocass|skns|stvbios|konamigx|nss|playch10|megaplay|isgsm)\.zip$/i.test(name)) result.errors.push(BIOS_MESSAGE);
+  else if (!/^[a-z0-9_]{1,16}$/i.test(stem)) result.warnings.push('Nom de fichier inhabituel pour un romset : MAME et FBNeo reconnaissent le jeu à son nom court (par exemple xxmissio.zip). Ne renomme pas les fichiers.');
+  if (!result.errors.length) { result.ok = true; result.headerOk = true; }
+  return result;
+}
+
 export function analyzeRom(fileName, bytes) {
   const ext = extensionOf(fileName);
   const result = {
