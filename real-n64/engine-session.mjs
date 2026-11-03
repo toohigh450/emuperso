@@ -4,6 +4,7 @@ import { inspectNativeState, makeRestoreWitness, compareRestoreWitness } from '.
 import { sriValue, verifyRuntimeBytes } from './runtime-integrity.mjs';
 import { createFrameCapture, installRuntimeFrameHook } from './frame-capture.mjs';
 import { computeN64Inputs, normalizeN64Pad, pickPad, touchLayout } from './n64-input.mjs';
+import { watchTouch } from './touch-editor.mjs';
 const contexts = new Set();
 let emulator = null, romURL = null, closed = false, notify = () => {}, sessionId = null;
 let cheatFault = null;
@@ -112,7 +113,8 @@ async function play() {
 // changements appliqués en cours de partie par l'évènement « storage ». Les liaisons manette du moteur
 // sont vidées sauf en profil natif, pour éviter les doubles commandes ; le clavier n'est pas touché.
 export const N64_PAD_KEY = 'emuperso-n64-pad';
-let padRaf = 0;
+export const N64_TOUCH_KEY = 'emuperso-n64-touch';
+let padRaf = 0, touchWatch = null;
 function readPadSettings() {
   try { return normalizeN64Pad(JSON.parse(localStorage.getItem(N64_PAD_KEY) || '{}')); } catch { return normalizeN64Pad({}); }
 }
@@ -143,21 +145,19 @@ function installN64Pad() {
     try {
       const pad = pickPad(navigator.getGamepads ? navigator.getGamepads() : []);
       if ((pad?.id ?? null) !== padId) { padId = pad?.id ?? null; note('input.pad', { id: padId }); }
-      const vg = emulator.virtualGamepad || document.querySelector('.ejs_virtualGamepad_parent');
-      const hide = !!pad && settings.hideTouch;
-      if (vg && (emulator.touch || emulator.hasTouchScreen) && vg.dataset.emupersoHidden !== String(hide)) {
-        vg.dataset.emupersoHidden = String(hide); vg.style.display = hide ? 'none' : '';
-      }
       const inputs = computeN64Inputs(pad, settings);
       if (!inputs || !emulator.started) return;
       for (const [id, value] of Object.entries(inputs)) if ((sent.get(id) || 0) !== value) { sent.set(id, value); gm().simulateInput(0, Number(id), value); }
     } catch (error) { note('input.error', { message: error.message }); }
   };
   padRaf = requestAnimationFrame(poll);
+  // Tactile : masqué avec une manette (réglage de la page) et boutons déplaçables.
+  touchWatch = watchTouch({ key: N64_TOUCH_KEY, emulator: () => (closed ? null : emulator), hideTouch: () => settings.hideTouch });
+  window.EMUPERSO_editTouch = () => touchWatch.edit();
   note('input.profile', { profile: settings.profile });
 }
 async function close() {
-  cancelAnimationFrame(padRaf);
+  cancelAnimationFrame(padRaf); touchWatch?.stop();
   if (closed) return snapshot();
   closed = true;
   frameCapture.cancel();

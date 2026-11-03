@@ -14,6 +14,15 @@ let zipPending = null, importAbort = null, saveList = [], catalog = null, cheatR
 let sequence = 0, lastNativeHash = null;
 let recoveryPrepared = null;
 let operationDone = Promise.resolve();
+// Journal gardé sur cet appareil : après un plantage ou un rechargement de l'onglet, l'export contient
+// encore les évènements d'avant. Métadonnées seulement, comme le diagnostic.
+const JOURNAL_KEY = 'emuperso-n64-journal', pageLoadUtc = new Date().toISOString();
+let earlierRecords = []; try { earlierRecords = JSON.parse(localStorage.getItem(JOURNAL_KEY) || '[]').slice(-300); } catch { earlierRecords = []; }
+let journalTimer = 0;
+const clipRecord = r => { const text = JSON.stringify(r); return text.length > 2000 ? { utc: r.utc, type: r.type, data: text.slice(0, 2000) } : r; };
+function flushJournal() { clearTimeout(journalTimer); try { localStorage.setItem(JOURNAL_KEY, JSON.stringify([...earlierRecords, { utc: pageLoadUtc, type: 'page.load' }, ...records.map(clipRecord)].slice(-400))); } catch { /* stockage plein ou bloqué */ } }
+function keepJournal() { clearTimeout(journalTimer); journalTimer = setTimeout(flushJournal, 300); }
+const harmless = reason => reason?.name === 'NotAllowedError' || /not visible|wake ?lock|fullscreen|pointer ?lock|user gesture|play\(\) request/i.test(String(reason?.message ?? reason ?? ''));
 const sessions = new SessionController($('game'), (type, data) => {
   event(type, data);
   if (type === 'session.stage') {
@@ -29,6 +38,7 @@ Object.defineProperty(window, 'EJS_emulator', { configurable: true, get: () => s
 function event(type, data = {}) {
   records.push({ seq: ++sequence, utc: new Date().toISOString(), host_monotonic_ms: performance.now(), type, data });
   if (records.length > 600) records.shift(); $('log').textContent = JSON.stringify(records, null, 2);
+  keepJournal();
 }
 function status(message, error = false) { $('status').textContent = message; $('status').classList.toggle('error', error); }
 function saveStatus(message, error = false) { $('save-status').textContent = message; $('save-status').classList.toggle('error', error); }
@@ -443,15 +453,19 @@ function diagnostic() {
   return { schema: 'emuperso/real-engine-diagnostic/v2', scope: 'REAL_ENGINE_TRIAL_NOT_SYNTHETIC_LAB', warning: 'No ROM or save payload bytes in this diagnostic. Metadata can reveal game and cheat names.',
     host: { user_agent: navigator.userAgent, cross_origin_isolated: crossOriginIsolated }, phase, local_selection: selected ? { ...selected.metadata } : null, active_rom: activeRom ? { ...activeRom } : null,
     identity: sessions.current?.identity ?? null, session: sessions.diagnostic(), storage: { database: vault.databaseName }, cheats: { active: sessions.current?.cheats ?? [], tainted: sessions.current?.tainted ?? false }, saves: saveList,
-    rom_build: lock, contexts: (sessions.current?.api.snapshot().contexts ?? []).map(c => ({ state: c.state, sample_rate: c.sample_rate })), records: structuredClone(records) };
+    rom_build: lock, contexts: (sessions.current?.api.snapshot().contexts ?? []).map(c => ({ state: c.state, sample_rate: c.sample_rate })), records: structuredClone(records), earlier_records: earlierRecords };
 }
 $('export').onclick = () => downloadJSON(diagnostic(), 'EMUPERSO-moteur-reel-diagnostic.json');
 window.RealN64 = Object.freeze({ diagnostic, version: '0.5.0-rc2-safe-frame-capture', get engineWindow() { return (sessions.candidate ?? sessions.current)?.frame.contentWindow ?? null; } });
 setInterval(() => { audioStatus(); if (!busy && !reading && !zipPending && sessions.current) void operation(() => saveNative()); }, 15000);
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden' && !busy && !reading && !zipPending && sessions.current) void operation(() => saveNative()); });
-window.addEventListener('pagehide', () => { importAbort?.abort(); void sessions.current?.api.close(); });
+window.addEventListener('pagehide', () => { importAbort?.abort(); void sessions.current?.api.close(); flushJournal(); });
 window.addEventListener('error', error => { event('browser.error', { message: error.message }); status(error.message, true); });
-window.addEventListener('unhandledrejection', error => { event('browser.unhandledrejection', { message: String(error.reason) }); status(String(error.reason), true); });
+window.addEventListener('unhandledrejection', error => {
+  // Refus sans gravité (onglet caché, plein écran, wake lock…) : noté, sans message d'erreur rouge.
+  if (harmless(error.reason)) { error.preventDefault(); event('browser.refusal.ignored', { message: String(error.reason?.message ?? error.reason) }); return; }
+  event('browser.unhandledrejection', { message: String(error.reason) }); status(String(error.reason), true);
+});
 // --- Manette (mandat Controller V2) : réglage partagé avec la session du moteur par localStorage.
 const PAD_KEY = 'emuperso-n64-pad';
 function padSettings() { try { return normalizeN64Pad(JSON.parse(localStorage.getItem(PAD_KEY) || '{}')); } catch { return normalizeN64Pad({}); } }
@@ -468,6 +482,13 @@ function savePad() {
   try { localStorage.setItem(PAD_KEY, JSON.stringify(cfg)); } catch { status('Réglage de manette non enregistré : stockage du navigateur indisponible.', true); }
   event('input.profile.saved', { profile: cfg.profile }); renderPad();
 }
+// Boutons tactiles déplaçables : l'éditeur vit dans la page du moteur, où sont les boutons.
+$('pad-move').onclick = async () => {
+  const win = sessions.current?.frame.contentWindow;
+  if (!win?.EMUPERSO_editTouch) { status('Lance un jeu sur l’écran tactile pour déplacer ses boutons.'); return; }
+  status('Glisse les boutons dans la fenêtre du jeu, puis touche « Terminé ».'); $('game').scrollIntoView({ block: 'center' });
+  try { await win.EMUPERSO_editTouch(); status('Position des boutons tactiles enregistrée sur cet appareil.'); event('input.touch.moved'); } catch (error) { status(error.message, true); }
+};
 for (const p of Object.values(N64_PROFILES)) {
   const label = document.createElement('label'); const input = document.createElement('input');
   input.type = 'radio'; input.name = 'pad-profile'; input.value = p.id; input.onchange = savePad;

@@ -104,7 +104,7 @@ export async function makeHarness({ appPath = 'app.js', catalogFile = 'data/psx-
   const getEl = (id, tag) => { if (!elements.has(id)) elements.set(id, new FakeEl(id, tag)); return elements.get(id); };
   const document = { getElementById: id => getEl(id), createElement: tag => new FakeEl(null, tag) };
   const idb = fakeIndexedDB();
-  const win = {};
+  const win = { addEventListener: () => {} };
   const confirms = [];
   const h = { elements, $: id => getEl(id), idb, confirms, engines: [], answerConfirm: true };
   const realFetch = globalThis.fetch;
@@ -147,6 +147,7 @@ export async function makeHarness({ appPath = 'app.js', catalogFile = 'data/psx-
   // Modules réels éventuellement requis par la version refactorée d'app.js.
   h.mods = mods;
   mods['./cheat-controller.mjs'] = await import('../../cheat-controller.mjs').catch(() => undefined);
+  mods['./touch-editor.mjs'] = await import('../../touch-editor.mjs');
 
   const source = readFileSync(ROOT + appPath, 'utf8')
     .replace(/^import\s*\{([^}]*)\}\s*from\s*'(\.\/[^']+)';?/gm, (_, names, spec) => `const {${names.replace(/\s+as\s+/g, ': ')}} = __mods['${spec}'];`)

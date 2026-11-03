@@ -3,6 +3,10 @@ import { findCoreOptionLine, coreOptionLists, coreOptionKeys, coreOptionCurrent 
 import { contentStartupError } from './startup-error.mjs';
 // One disposable browser realm per engine session. No ROM or save is uploaded.
 import { computeInputs, padType } from './input-profile.mjs';
+import { watchTouch } from './touch-editor.mjs';
+// Tactile (mandat Controller V2) : masqué quand une manette est branchée, boutons déplaçables ; réglé par la page.
+export const PS1_TOUCH_KEY = 'emuperso-ps1-touch';
+let touchWatch = null;
 const contexts = new Set();
 let emulator = null, romURL = null, closed = false, notify = () => {}, sessionId = null;
 let startupFailure = null;
@@ -88,7 +92,7 @@ async function play() {
 }
 async function close() {
   if (closed) return snapshot();
-  inputProfile = null; cancelAnimationFrame(inputRaf);
+  inputProfile = null; cancelAnimationFrame(inputRaf); touchWatch?.stop();
   if (emulator?.gameManager) {
     try { emulator.gameManager.resetCheat(); emulator.gameManager.toggleMainLoop(0); } catch {}
     try { emulator.Module.pauseMainLoop?.(); } catch {}
@@ -260,6 +264,8 @@ async function start(config, callback) {
       saveSavFiles: false, loadSavFiles: false, cheat: false, restart: false, exitEmulation: false, netplay: false }
   };
   emulator = new window.EmulatorJS('#game', options); window.EJS_emulator = emulator;
+  touchWatch = watchTouch({ key: PS1_TOUCH_KEY, emulator: () => (closed ? null : emulator) });
+  window.EMUPERSO_editTouch = () => touchWatch.edit();
   emulator.storage.states = new window.EJS_DUMMYSTORAGE();
   emulator.on('ready', () => note('engine.ready'));
   emulator.on('start', () => note('engine.start.callback'));

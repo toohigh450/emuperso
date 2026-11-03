@@ -9,12 +9,27 @@ import { normalizeInput } from './input-profile.mjs';
 import { PROFILES, DEFAULT_PROFILE_ID, resolveProfile } from './input-presets.mjs';
 import { findCheatsForGame, catalogMeta, loadCatalog, detectRegion, detectRegions, regionsCompatible, detectMod } from './cheat-catalog-psx.mjs';
 import { createCheatController, codeValid, gameKey } from './cheat-controller.mjs';
+import { readTouch, writeTouch } from './touch-editor.mjs';
 const $ = id => document.getElementById(id), vault = new SaveStore('emuperso-real-saves-v1-ps1'), records = [];
 let selected = null, busy = false, meta = null, preparing = null, lastPrep = null;
 // Heuristique héritée de Claude ; ni borne de décompression, ni garantie mémoire.
 const ARCHIVE_MEMORY_FACTOR = 4.5, isArchiveName = name => /\.(rar|zip|7z)$/i.test(String(name ?? ''));
 const say = (id, text, error = false) => { $(id).textContent = text; $(id).classList.toggle('error', error); };
-function event(type, data = {}) { records.push({ utc: new Date().toISOString(), type, data }); if (records.length > 500) records.shift(); $('log').textContent = JSON.stringify(records.slice(-80), null, 1); }
+// Journal gardé sur cet appareil : après un plantage ou un rechargement de l'onglet, l'export contient
+// encore les évènements d'avant. Métadonnées seulement, comme le diagnostic.
+const JOURNAL_KEY = 'emuperso-ps1-journal', pageLoadUtc = new Date().toISOString();
+let earlierRecords = []; try { earlierRecords = JSON.parse(localStorage.getItem(JOURNAL_KEY) || '[]').slice(-300); } catch { earlierRecords = []; }
+let journalTimer = 0;
+const clipRecord = r => { const text = JSON.stringify(r); return text.length > 2000 ? { utc: r.utc, type: r.type, data: text.slice(0, 2000) } : r; };
+function flushJournal() { clearTimeout(journalTimer); try { localStorage.setItem(JOURNAL_KEY, JSON.stringify([...earlierRecords, { utc: pageLoadUtc, type: 'page.load' }, ...records.map(clipRecord)].slice(-400))); } catch { /* stockage plein ou bloqué */ } }
+const harmless = reason => reason?.name === 'NotAllowedError' || /not visible|wake ?lock|fullscreen|pointer ?lock|user gesture|play\(\) request/i.test(String(reason?.message ?? reason ?? ''));
+function event(type, data = {}) { records.push({ utc: new Date().toISOString(), type, data }); if (records.length > 500) records.shift(); $('log').textContent = JSON.stringify(records.slice(-80), null, 1); clearTimeout(journalTimer); journalTimer = setTimeout(flushJournal, 300); }
+window.addEventListener('pagehide', flushJournal);
+window.addEventListener('error', e => event('browser.error', { message: e.message }));
+window.addEventListener('unhandledrejection', e => {
+  if (harmless(e.reason)) { e.preventDefault(); event('browser.refusal.ignored', { message: String(e.reason?.message ?? e.reason) }); return; }
+  event('browser.unhandledrejection', { message: String(e.reason) });
+});
 const sessions = new SessionController($('game'), (type, data) => {
   event(type, data);
   if (type === 'state.unguarded.blocked') say('status', 'Utilisez les boutons de sauvegarde de l’application : le chargement direct du moteur est désactivé.');
@@ -332,7 +347,7 @@ $('export').onclick = () => {
   const inProgress = preparing && { stage: preparing.stage, bytes: preparing.bytes, size: preparing.size, elapsed_ms: Math.round(preparing.elapsed()), quiet_ms: Math.round(performance.now() - preparing.last) };
   const blob = new Blob([JSON.stringify({ app: 'emuperso-ps1-web ' + APP_VERSION, tested: false, exported_utc: new Date().toISOString(), env,
     preparation: { in_progress: inProgress || null, last: lastPrep },
-    game: meta && { name: meta.name, size: meta.size, serial: meta.serial, sha256: meta.canonical_sha256 }, session: sessions.diagnostic(), events: records }, null, 1)], { type: 'application/json' });
+    game: meta && { name: meta.name, size: meta.size, serial: meta.serial, sha256: meta.canonical_sha256 }, session: sessions.diagnostic(), events: records, earlier_events: earlierRecords }, null, 1)], { type: 'application/json' });
   const link = document.createElement('a'); link.href = URL.createObjectURL(blob); link.download = 'EMUPERSO-ps1-diagnostic.json'; link.click(); setTimeout(() => URL.revokeObjectURL(link.href), 5000);
 };
 const readInput = () => normalizeInput({ analog: $('in-analog').value, stickToDpad: $('in-dpad').checked, deadzone: Number($('in-dz').value), native: $('in-native').checked });
@@ -359,4 +374,14 @@ $('in-apply').onclick = () => operation(async () => {
   await inputDB.set(gameKey(meta), cfg); await launch(current.prepared, { input: cfg });
 });
 // Ancien catalogue vide supprimé (RC-1.0) — le catalogue PS1 est dans data/psx-catalog.json
+// Commandes tactiles (mandat Controller V2) : réglage de l'appareil, lu en direct par la page du moteur.
+const PS1_TOUCH_KEY = 'emuperso-ps1-touch';
+$('in-hide-touch').checked = readTouch(PS1_TOUCH_KEY).hideTouch;
+$('in-hide-touch').onchange = () => { try { writeTouch(PS1_TOUCH_KEY, { ...readTouch(PS1_TOUCH_KEY), hideTouch: $('in-hide-touch').checked }); } catch { say('status', 'Réglage non enregistré : stockage du navigateur indisponible.', true); } };
+$('in-move').onclick = async () => {
+  const win = sessions.current?.frame.contentWindow;
+  if (!win?.EMUPERSO_editTouch) { say('status', 'Lance un jeu sur l’écran tactile pour déplacer ses boutons.'); return; }
+  say('status', 'Glisse les boutons dans la fenêtre du jeu, puis touche « Terminé ».'); $('game').scrollIntoView({ block: 'center' });
+  try { await win.EMUPERSO_editTouch(); say('status', 'Position des boutons tactiles enregistrée sur cet appareil.'); event('input.touch.moved'); } catch (error) { say('status', error.message, true); }
+};
 show(null); renderCheats();
