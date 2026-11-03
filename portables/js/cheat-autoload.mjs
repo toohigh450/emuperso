@@ -57,10 +57,13 @@ export async function loadCatalogue(base = '../cheats-portables/') {
  * Trouve, télécharge et importe (désactivés) les fichiers de codes du jeu. Ne remplace jamais un fichier
  * déjà importé. Retourne { found, imported } (noms).
  */
-export async function autoloadCheats({ store, system, romName, discId, base = '../cheats-portables/' }) {
+export async function autoloadCheats({ store, system, romName, altName = null, discId, base = '../cheats-portables/' }) {
   const folder = CHEAT_FOLDERS[system];
   if (!folder) return { found: [], imported: [] };
-  const names = findCheatCandidates(system, romName, discId, (await loadCatalogue(base))[folder]);
+  const list = (await loadCatalogue(base))[folder];
+  // altName : titre complet tiré de l'archive quand la version à l'intérieur a un nom tronqué.
+  let names = findCheatCandidates(system, romName, discId, list);
+  if (!names.length && altName) names = findCheatCandidates(system, altName, discId, list);
   const existing = new Set((await store.listCheatFiles(system)).map((f) => f.path));
   const entries = [];
   for (const name of names) {

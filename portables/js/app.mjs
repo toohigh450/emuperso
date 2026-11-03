@@ -6,7 +6,7 @@ import { buildCatalog, filterCatalog, visibleWindow } from './catalog.mjs';
 import { isZip, extractFirst, listCandidates, extractAll, buildZip } from './zip.mjs';
 import { fingerprint, fingerprintBlob, saveSpaceId, gameKey, ejsGameName, legacyEjsGameName, slug, toHex } from './hash.mjs';
 import { Store, IdbAdapter, MemoryAdapter, CHEAT_LIMITS, STATE_SLOTS } from './store.mjs';
-import { parseCht, classifyCheatFiles, linkedCheatValid, normalizeName, deviceLabel, inferSystemFromPath } from './cheats.mjs';
+import { parseCht, classifyCheatFiles, linkedCheatValid, normalizeName, deviceLabel, inferSystemFromPath, archiveCheatName } from './cheats.mjs';
 import { buildPspControls } from './controls.mjs';
 import { autoloadCheats } from './cheat-autoload.mjs';
 import { log as journal, exportText as journalText } from './journal.mjs';
@@ -204,7 +204,8 @@ async function readGameFile(file) {
     bytes = r.bytes;
     if (candidates.length > 1) note = `Version choisie dans le ZIP : ${name}.`;
   }
-  return { name, bytes, note };
+  // Nom de l'archive gardé : il porte parfois le titre complet quand celui de la version est tronqué.
+  return { name, bytes, note, archive: name !== file.name ? file.name : null };
 }
 
 // PSP : le fichier n'est jamais chargé entier par le lanceur. On lit l'en-tête et quelques secteurs
@@ -391,6 +392,7 @@ async function openGame(file) {
     systemLabel: spec.label,
     title: analysis.title,
     fileName: rom.name,
+    cheatAltName: archiveCheatName(rom.name, rom.archive),
     romStem: stemOf(rom.name),
     hex: fp.hex,
     hashAlgo: fp.algo,
@@ -484,7 +486,7 @@ async function openGame(file) {
   });
   await session.start(game, boot); // Le rendu déclenche les panneaux sans bloquer le prochain changement.
   // Codes du jeu cherchés sur le site et importés désactivés, sans attendre (voir cheat-autoload.mjs).
-  autoloadCheats({ store, system: game.system, romName: game.fileName, discId: game.discId }).then(async (r) => {
+  autoloadCheats({ store, system: game.system, romName: game.fileName, altName: game.cheatAltName, discId: game.discId }).then(async (r) => {
     if (game !== currentGame || !r.found.length) return;
     await refreshCheatPanel();
     await refreshCodePanel();
@@ -655,7 +657,12 @@ async function refreshCheatPanel() {
   if (!valid()) return;
   if (!game || total === 0) { publish(); return; }
   const files = await store.listCheatFiles(game.system);
-  const { identified, sameDisc, exact, sameTitle } = classifyCheatFiles(game.fileName, game.hex, files, { discId: game.discId });
+  let classified = classifyCheatFiles(game.fileName, game.hex, files, { discId: game.discId });
+  // Titre tronqué dans l'archive : on cherche aussi avec le titre de l'archive (voir archiveCheatName).
+  if (game.cheatAltName && !classified.sameDisc.length && !classified.exact.length && !classified.sameTitle.length) {
+    classified = { ...classifyCheatFiles(game.cheatAltName, game.hex, files, { discId: game.discId }), identified: classified.identified };
+  }
+  const { identified, sameDisc, exact, sameTitle } = classified;
   const link = await store.getCheatLink(game.key);
 
   if (!valid()) return;

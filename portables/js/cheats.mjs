@@ -98,18 +98,42 @@ export function baseTitle(name) {
 }
 
 /**
+ * Titre comparable malgré la ponctuation, les accents et « The » : GoodTools « A.S.P. Air Strike Patrol »
+ * et No-Intro « A.S.P. - Air Strike Patrol ». Même règle que le chargement automatique (cheat-autoload).
+ */
+export function looseTitle(name) {
+  return baseTitle(name).normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/^the\s+|,\s*the\b/g, ' ').replace(/[^a-z0-9]+/g, ' ').trim();
+}
+
+/**
+ * Nom de recherche des codes tiré de l'archive, quand la version à l'intérieur porte un titre tronqué
+ * (HackSets : « Aero the Acro-B2 [Europe][!].md » dans « Aero the Acro-Bat 2.7z ») : titre de l'archive
+ * suivi des étiquettes de la version choisie (région, [!]…). null si l'archive n'apporte rien de plus.
+ */
+export function archiveCheatName(romName, archiveName) {
+  if (!archiveName) return null;
+  const stem = String(archiveName).replace(/^.*[\\/]/, '').replace(/\.[^.]+$/, '');
+  const file = String(romName || '').replace(/^.*[\\/]/, '');
+  if (!looseTitle(stem) || looseTitle(stem) === looseTitle(file)) return null;
+  const ext = (file.match(/\.[^.]+$/) || [''])[0];
+  const tags = (file.slice(0, file.length - ext.length).match(/\s*(?:\([^)]*\)|\[[^\]]*\])/g) || []).join('');
+  return `${stem}${tags}${ext}`;
+}
+
+/**
  * Classe les fichiers de codes d'une console par rapport au nom de la ROM.
  * exact : même nom (étiquettes de région et version comprises) → suggestions à confirmer.
  * sameTitle : même titre mais autre région/version → NON appliqués par défaut.
  */
 export function matchCheatFiles(romName, files) {
   const full = normalizeName(romName);
-  const base = baseTitle(romName);
+  const loose = looseTitle(romName);
   const exact = [];
   const sameTitle = [];
   for (const f of files) {
     if (normalizeName(f.name) === full) exact.push(f);
-    else if (base && baseTitle(f.name) === base) sameTitle.push(f);
+    else if (loose && looseTitle(f.name) === loose) sameTitle.push(f);
   }
   return { exact, sameTitle };
 }

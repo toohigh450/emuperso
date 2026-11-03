@@ -1,5 +1,7 @@
 // Essai sans surveillance des jeux ET de leurs cheats, toutes consoles du lanceur, en LECTURE SEULE.
-//   node tools/test-cheats-collection.mjs [--max=N] [--postes=2] [--console=nes,snes] [--refaire]
+//   node tools/test-cheats-collection.mjs [--max=N] [--postes=2] [--console=nes,snes] [--jeu=motif] [--refaire]
+// --jeu : seulement les jeux dont le nom contient ce motif (expression régulière, sans casse).
+// EMUPERSO_SITE : autre copie du site (pour essayer une correction sans toucher à la campagne en cours).
 // Pour chaque jeu qui a un fichier de codes publié sur le site, le déroulé est celui d'un joueur :
 //   1. ouvrir la ROM (fenêtre de version : la version conseillée), démarrer, vérifier l'image ;
 //   2. attendre les codes chargés automatiquement (cheat-autoload), les associer à la ROM ;
@@ -25,6 +27,7 @@ const redo = args.includes('--refaire');
 const max = Number(opt('max')) || Infinity;
 const workers = Math.max(1, Math.min(4, Number(opt('postes')) || 2));
 const only = opt('console') ? new Set(opt('console').split(',')) : null;
+const pattern = opt('jeu') ? new RegExp(opt('jeu'), 'i') : null;
 const home = join(process.env.LOCALAPPDATA || '.', 'emuperso', 'tests-cheats');
 const outDir = resolve(process.env.EMUPERSO_RESULTATS || home);
 mkdirSync(join(outDir, 'captures'), { recursive: true });
@@ -36,7 +39,7 @@ const results = existsSync(jsonPath) && !redo ? JSON.parse(readFileSync(jsonPath
 const mod = process.env.PLAYWRIGHT_MODULE;
 const { chromium } = await import(mod ? pathToFileURL(mod).href : 'playwright-core');
 const chrome = process.env.CHROME_PATH || 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
-const site = resolve(config.site);
+const site = resolve(process.env.EMUPERSO_SITE || config.site);
 const catalogue = JSON.parse(readFileSync(join(site, 'cheats-portables', 'catalogue.json'), 'utf8'));
 const LABEL = { nes: 'NES', snes: 'Super Nintendo', gb: 'Game Boy', gbc: 'Game Boy Color', gba: 'Game Boy Advance', nds: 'Nintendo DS', genesis: 'Mega Drive / Genesis', psp: 'PSP', n64: 'Nintendo 64', ps1: 'PlayStation' };
 
@@ -49,6 +52,7 @@ for (const [system, sources] of Object.entries(config.sources)) {
   const groups = new Map();
   for (const path of files) {
     const name = path.replace(/^.*[\\/]/, '');
+    if (pattern && !pattern.test(name)) continue;
     // Les archives portent le nom du jeu. La PSP est reconnue par son disque à l'ouverture, la N64 par
     // l'en-tête de la ROM (catalogue intégré à sa page) : tous leurs jeux sont essayés.
     const byFile = system === 'psp' || system === 'n64' || system === 'ps1';
