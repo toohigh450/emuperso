@@ -26,7 +26,7 @@
   <h2 style="margin-top:0">En bref</h2>
   <ul>
     <li><span class="ok">Fait</span> : deux profils (Authentique, Confort moderne) et un mode Natif pour les 8 consoles du lanceur et la N64 ; manette lue par EMUPERSO, sans double commande ; commandes tactiles PSP ✕ ○ □ △ avec stick ; commandes tactiles cachées quand une manette est branchée ; réglages par console ou par jeu ; codes chargés automatiquement à l’ouverture d’un jeu.</li>
-    <li><span class="warn">Pas encore fait</span> : déplacement des boutons tactiles au doigt ; PS1 laissée telle quelle (déjà deux profils) ; essais sur vraie manette Xbox et sur le OnePlus 10T (Karl).</li>
+    <li><span class="ok">Fait aussi (2 novembre au soir)</span> : boutons tactiles déplaçables au doigt partout (lanceur, N64, PS1) ; PS1 : commandes tactiles cachées quand une manette est branchée ; journal exportable gardé après un plantage sur les trois pages ; vraie manette Xbox 360 validée par Karl (Sonic 2, profil Confort moderne, Chrome Windows). <span class="warn">Pas encore fait</span> : essais sur le OnePlus 10T (Karl).</li>
   </ul>
 </section>
 
@@ -55,7 +55,7 @@
     <tr><td>PSP en Android simulé (Pixel 7)</td><td class="ok">boutons tactiles △ □ ○ ✕ L R Select Start ; cachés avec une manette, revenus après débranchement</td></tr>
     <tr><td>Codes automatiques sur le site construit</td><td class="ok">Sonic [USA][Europe][!] : 5 fichiers trouvés, 16 codes après association, 0 actif ; Ace Armstrong (PSP) : 1 fichier, 11 codes, 0 actif</td></tr>
     <tr><td>Genesis avec 4 jeux de la collection (extraits des .7z, originaux intacts)</td><td class="ok">60 images/s, son actif, touches prises en compte ; traduction française .bin reconnue</td></tr>
-    <tr><td>Tests automatiques</td><td class="ok">Portables 147/147 ; N64 : n64-input 4/4 et autres tests JS inchangés</td></tr>
+    <tr><td>Tests automatiques</td><td class="ok">Portables 152/152 ; PS1 185/185 ; N64 : tests JS 91/91. N64 et PS1 en Android simulé (412×915, tactile) : bouton glissé au doigt et position retrouvée après rechargement, tactile caché puis revenu avec une manette simulée, journal exporté avec les évènements d’avant le rechargement</td></tr>
   </tbody>
 </table></div>
 
@@ -77,9 +77,9 @@
 
 <h2>Limites connues</h2>
 <ul>
-  <li>Boutons tactiles déplaçables au doigt dans le lanceur (8 consoles) ; pas encore dans les pages N64 et PS1 (dispositions corrigées, mais fixes).</li>
+  <li>Boutons tactiles déplaçables au doigt : position retenue par appareil (par console ou par jeu dans le lanceur ; par appareil pour la N64 et la PS1).</li>
   <li>PSP sur le moteur nightly : charger un état et redémarrer figent le jeu ; ces actions sont bloquées par le lanceur.</li>
-  <li>Genesis : la collection est en .7z, que le navigateur n’ouvre pas ; extraire la version voulue avant de l’ouvrir.</li>
+  <li>Archives 7z de plus de 256 Mio : extraire la version voulue avec 7-Zip avant de l’ouvrir.</li>
   <li>Codes automatiques : proposés par identifiant de disque (PSP) ou par titre ; l’association reste à confirmer d’un clic, aucun code n’est activé.</li>
 </ul>
 <p class="muted">Aucune ROM, aucun BIOS ni aucune sauvegarde dans le dépôt ou sur Vercel. Aucune fusion dans <code>main</code> sans l’accord de Karl.</p>
