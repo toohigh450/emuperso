@@ -1,6 +1,7 @@
 // Fichiers de codes au format libretro (.cht) : lecture, association à une version précise du jeu.
 // Règles : aucun code n'est actif par défaut, aucun code n'est présenté comme vérifié en jeu,
 // et un fichier d'une autre version/région du même jeu n'est jamais appliqué sans choix explicite.
+import { parseRomName } from './romnames.mjs';
 
 export const CHEAT_FOLDER_ALIASES = {
   gb: 'game boy',
@@ -135,6 +136,10 @@ export function matchCheatFiles(romName, files) {
     if (normalizeName(f.name) === full) exact.push(f);
     else if (loose && looseTitle(f.name) === loose) sameTitle.push(f);
   }
+  // Même titre : la même région que la ROM d'abord (Addams Family (U) → fichier (USA) avant (Europe)).
+  const regions = new Set(parseRomName(String(romName).replace(/^.*[\\/]/, '')).regions);
+  const shared = (f) => (parseRomName(String(f.name)).regions.some((r) => regions.has(r)) ? 0 : 1);
+  sameTitle.sort((a, b) => shared(a) - shared(b));
   return { exact, sameTitle };
 }
 

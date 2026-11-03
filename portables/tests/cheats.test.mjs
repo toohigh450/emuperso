@@ -70,6 +70,12 @@ test('association : titre tronqué dans une archive HackSet → titre de l’arc
   assert.deepEqual(match(alt, [{ path: 'a', name: 'Aero the Acro-Bat 2 (Europe).cht' }]).sameTitle.map((f) => f.path), ['a']);
 });
 
+test('association : même titre, la même région que la ROM proposée en premier', () => {
+  const files = [{ path: 'eu', name: 'Addams Family, The (Europe) (En,Fr,De).cht' }, { path: 'jp', name: 'Addams Family, The (Japan).cht' }, { path: 'us', name: 'Addams Family, The (USA).cht' }];
+  assert.equal(matchCheatFiles('Addams Family, The (U) [!].smc', files).sameTitle[0].path, 'us');
+  assert.equal(matchCheatFiles('Addams Family, The (E) [!].smc', files).sameTitle[0].path, 'eu');
+});
+
 test('association : rien si la ROM a été renommée sans titre commun', () => {
   const m = matchCheatFiles('jeu.gba', [{ path: 'a', name: 'Zelda (USA).cht' }]);
   assert.equal(m.exact.length, 0);
