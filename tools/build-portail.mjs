@@ -1,4 +1,4 @@
-// Assemble le site unique EMUPERSO dans dist/ : portail à 8 consoles + applications existantes.
+// Assemble le site unique EMUPERSO dans dist/ : portail à 10 consoles + applications existantes.
 // Précondition (voir vercel.json) : ps1-web/dist et real-n64/dist construits par leurs propres outils,
 // qui téléchargent les moteurs verrouillés par SHA-256. Aucune ROM personnelle ni sauvegarde n'est copiée.
 //   node tools/build-portail.mjs
@@ -10,9 +10,9 @@ import { fileURLToPath } from 'node:url';
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const OUT = join(ROOT, 'dist');
 // Dossiers jamais publiés tels quels : dépôt, dépendances, sorties, sources remplacées par leur dist.
-const SKIP_DIRS = new Set(['.git', '.github', 'node_modules', 'dist', '.vercel', 'ps1-web', 'real-n64', 'portail', 'cache', 'vendor', '__pycache__', '.python']);
+const SKIP_DIRS = new Set(['.git', '.github', 'node_modules', 'dist', '.vercel', 'ps1-web', 'real-n64', 'portail', 'cache', 'vendor', '__pycache__', '.python', 'roms', 'rom', 'games']);
 // Fichiers personnels possibles : refusés même s'ils traînent dans le dossier de construction.
-const PRIVATE = /\.(iso|bin|img|chd|pbp|cue|zip|rar|7z|sav|srm|state|mcr|mcd|z64|n64|v64|smc|gba|gbc|gb|nds)$/i;
+const PRIVATE = /\.(iso|cso|zso|bin|img|chd|pbp|cue|zip|rar|7z|sav|srm|state|mcr|mcd|z64|n64|v64|smc|gba|gbc|gb|nds|smd|gen|mdx|32x|68k)$/i;
 // Seules exceptions : les homebrews libres publiés exprès (licences dans portables/demos).
 const ALLOWED_ROMS = /^portables[\\/]demos[\\/]opensnes-[a-z0-9-]+\.sfc$|^portables[\\/]demos[\\/]opennes-snake\.nes$/;
 
@@ -40,9 +40,18 @@ const add = (rel, from = join(ROOT, rel)) => {
   manifest[rel.split(sep).join('/')] = createHash('sha256').update(readFileSync(from)).digest('hex');
 };
 
+// Les fichiers Markdown sont publiés pour leurs liens documentaires. Mais .md est
+// aussi une extension binaire Mega Drive : bloquer ceux qui ressemblent à des ROMs
+// (octets NUL dans l'en-tête) au lieu d'interdire toute la documentation .md.
+function isBinaryMegaDriveMd(rel) {
+  if (!/\.md$/i.test(rel)) return false;
+  const start = readFileSync(join(ROOT, rel)).subarray(0, 512);
+  return start.includes(0) || (start.length > 0x104 && start.toString('ascii', 0x100, 0x104) === 'SEGA');
+}
+
 let skipped = 0;
 for (const rel of walk(ROOT, skipRepo)) {
-  if (PRIVATE.test(rel) && !ALLOWED_ROMS.test(rel)) { skipped++; continue; }
+  if ((PRIVATE.test(rel) && !ALLOWED_ROMS.test(rel)) || isBinaryMegaDriveMd(rel)) { skipped++; continue; }
   if (['.bat', '.ps1'].includes(extname(rel).toLowerCase())) { skipped++; continue; }
   add(rel);
 }
@@ -52,12 +61,29 @@ for (const app of ['ps1-web', 'real-n64']) {
   if (!existsSync(join(built, 'index.html'))) throw new Error(`${app}/dist absent : lancer d'abord sa construction (voir vercel.json).`);
   for (const rel of walk(built)) add(join(app, rel), join(built, rel));
 }
+// Catalogue des fichiers de codes (noms seulement) : le lanceur y cherche les codes du jeu ouvert,
+// puis ne télécharge que les fichiers correspondants (voir portables/js/cheat-autoload.mjs).
+const CHEAT_DIR = join(ROOT, 'cheats-portables');
+if (existsSync(CHEAT_DIR)) {
+  const catalogue = {};
+  for (const folder of readdirSync(CHEAT_DIR, { withFileTypes: true })) {
+    if (!folder.isDirectory()) continue;
+    catalogue[folder.name] = readdirSync(join(CHEAT_DIR, folder.name)).filter((n) => n.toLowerCase().endsWith('.cht')).sort();
+  }
+  const rel = join('cheats-portables', 'catalogue.json');
+  writeFileSync(join(OUT, rel), JSON.stringify(catalogue));
+  manifest[rel.split(sep).join('/')] = createHash('sha256').update(readFileSync(join(OUT, rel))).digest('hex');
+}
 // Accueil du site : portail/index.html. Le index.html du dépôt (copie protégée du laboratoire N64,
 // vérifiée par real-n64/tests/test_real_tools.py) n'est jamais modifié ; le laboratoire reste publié
 // sous son nom d'origine, N64-Web-Lab-Phase1A.html.
 add('index.html', join(ROOT, 'portail', 'index.html'));
+// i18n : chargeur + fichiers de traduction du portail (FR par défaut, EN en option).
+for (const f of ['i18n.js', 'i18n/fr.json', 'i18n/en.json']) {
+  add(f, join(ROOT, 'portail', f));
+}
 writeFileSync(join(OUT, 'PORTAIL-MANIFEST.json'), JSON.stringify({
-  projet: 'EMUPERSO — portail unique 8 consoles',
+  projet: 'EMUPERSO — portail unique 10 consoles',
   fichiers: Object.keys(manifest).length,
   ignores: skipped,
   sha256: manifest,
