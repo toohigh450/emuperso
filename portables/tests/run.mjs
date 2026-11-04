@@ -8,6 +8,7 @@ import './resources.test.mjs';
 import './session.test.mjs';
 import './store.test.mjs';
 import './systems.test.mjs';
+import './doom.test.mjs';
 import './zip.test.mjs';
 import './nes-snes.test.mjs';
 import './genesis.test.mjs';
