@@ -28,7 +28,9 @@ try {
   assert.notEqual(Number(new URL(url).port),port);
   const page = await fetch(url);
   assert.equal(page.status,200);
-  assert.match(await page.text(),/Portables : Game Boy/);
+  const html = await page.text();
+  assert.match(html, /<title>EMUPERSO/);
+  assert.match(html, /id="romInput"/);
   const head = await fetch(url+'js/app.mjs',{method:'HEAD'});
   assert.equal(head.status,200);
   assert.match(head.headers.get('content-type'),/text\/javascript/);

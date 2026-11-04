@@ -122,7 +122,25 @@ export function analyzeWad(fileName, bytes) {
   if (magic === 'PWAD') result.errors.push('Ce .wad est un niveau additionnel (PWAD, par exemple un des Master Levels) : il ne se lance pas seul. Ouvre le jeu complet (doom2.wad…) ; les niveaux additionnels viendront plus tard.');
   else if (magic !== 'IWAD') result.errors.push('Ce fichier n’est pas un .wad de DOOM.');
   else if (bytes.length > SYSTEMS.doom.maxBytes) result.errors.push('Fichier trop gros pour le navigateur.');
-  else if (!DOOM_IWADS[stem]) result.warnings.push('Nom de fichier inhabituel : PrBoom reconnaît le jeu à son nom (doom.wad, doom2.wad, plutonia.wad, tnt.wad). Ne renomme pas le fichier.');
+  else if (bytes.length < 12) result.errors.push('En-tête WAD incomplet.');
+  else {
+    const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+    const count = view.getInt32(4, true);
+    const directory = view.getInt32(8, true);
+    if (count <= 0 || directory < 12 || directory + count * 16 > bytes.length) {
+      result.errors.push('Répertoire WAD invalide ou tronqué.');
+    } else {
+      for (let i = 0; i < count; i++) {
+        const offset = view.getInt32(directory + i * 16, true);
+        const size = view.getInt32(directory + i * 16 + 4, true);
+        if (offset < 0 || size < 0 || offset + size > bytes.length) {
+          result.errors.push('Données WAD hors du fichier : archive invalide ou tronquée.');
+          break;
+        }
+      }
+    }
+  }
+  if (!result.errors.length && !DOOM_IWADS[stem]) result.warnings.push('Nom de fichier inhabituel : PrBoom reconnaît le jeu à son nom (doom.wad, doom2.wad, plutonia.wad, tnt.wad). Ne renomme pas le fichier.');
   if (!result.errors.length) { result.ok = true; result.headerOk = true; }
   return result;
 }
