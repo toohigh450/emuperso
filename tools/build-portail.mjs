@@ -12,9 +12,10 @@ const OUT = join(ROOT, 'dist');
 // Dossiers jamais publiés tels quels : dépôt, dépendances, sorties, sources remplacées par leur dist.
 const SKIP_DIRS = new Set(['.git', '.github', 'node_modules', 'dist', '.vercel', 'ps1-web', 'real-n64', 'portail', 'cache', 'vendor', '__pycache__', '.python', 'roms', 'rom', 'games']);
 // Fichiers personnels possibles : refusés même s'ils traînent dans le dossier de construction.
-const PRIVATE = /\.(iso|cso|zso|bin|img|chd|pbp|cue|zip|rar|7z|sav|srm|state|mcr|mcd|z64|n64|v64|smc|gba|gbc|gb|nds|smd|gen|mdx|32x|68k)$/i;
+const PRIVATE = /\.(iso|cso|zso|bin|img|chd|pbp|cue|zip|rar|7z|sav|srm|state\d*|st\d+|mcr|mcd|z64|n64|v64|nes|unf|unif|sfc|smc|swc|fig|gba|gbc|gb|nds|smd|gen|mdx|32x|68k|wad|rom|sgb|dsi|srl)$/i;
 // Seules exceptions : les homebrews libres publiés exprès (licences dans portables/demos).
 const ALLOWED_ROMS = /^portables[\\/]demos[\\/]opensnes-[a-z0-9-]+\.sfc$|^portables[\\/]demos[\\/]opennes-snake\.nes$/;
+const ALLOWED_BUILT_ROMS = new Set(['ps1-web/homebrew/demo-emuperso-ps1.iso', 'real-n64/homebrew/fallback-open/demo-emuperso-open.z64']);
 // Aussi applicable aux dist des moteurs et au fichier .git des worktrees.
 const SENSITIVE = /(?:^|[\\/])(?:\.git|\.aws|\.codex|\.agents|\.ssh|\.env(?:\.[^\\/]*)?|\.npmrc|\.pypirc)(?:[\\/]|$)|\.(?:jks|keystore|p12|pfx|pem|key|apk|aab)$/i;
 
@@ -46,9 +47,9 @@ const add = (rel, from = join(ROOT, rel)) => {
 // Les fichiers Markdown sont publiés pour leurs liens documentaires. Mais .md est
 // aussi une extension binaire Mega Drive : bloquer ceux qui ressemblent à des ROMs
 // (octets NUL dans l'en-tête) au lieu d'interdire toute la documentation .md.
-function isBinaryMegaDriveMd(rel) {
+function isBinaryMegaDriveMd(rel, base = ROOT) {
   if (!/\.md$/i.test(rel)) return false;
-  const start = readFileSync(join(ROOT, rel)).subarray(0, 512);
+  const start = readFileSync(join(base, rel)).subarray(0, 512);
   return start.includes(0) || (start.length > 0x104 && start.toString('ascii', 0x100, 0x104) === 'SEGA');
 }
 
@@ -62,7 +63,11 @@ for (const rel of walk(ROOT, skipRepo)) {
 for (const app of ['ps1-web', 'real-n64']) {
   const built = join(ROOT, app, 'dist');
   if (!existsSync(join(built, 'index.html'))) throw new Error(`${app}/dist absent : lancer d'abord sa construction (voir vercel.json).`);
-  for (const rel of walk(built)) add(join(app, rel), join(built, rel));
+  for (const rel of walk(built)) {
+    const target = join(app, rel);
+    if ((PRIVATE.test(rel) && !ALLOWED_BUILT_ROMS.has(target.split(sep).join('/'))) || isBinaryMegaDriveMd(rel, built)) { skipped++; continue; }
+    add(target, join(built, rel));
+  }
 }
 // Catalogue des fichiers de codes (noms seulement) : le lanceur y cherche les codes du jeu ouvert,
 // puis ne télécharge que les fichiers correspondants (voir portables/js/cheat-autoload.mjs).

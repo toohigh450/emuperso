@@ -8,6 +8,7 @@
   'use strict';
   var LANGS = ['fr', 'en'];
   var KEY = 'emuperso_lang';
+  var languageRequest = 0;
 
   function pick() {
     try {
@@ -34,14 +35,17 @@
   }
 
   function setLang(lang) {
+    var request = ++languageRequest;
     if (LANGS.indexOf(lang) < 0) lang = 'fr';
     try { localStorage.setItem(KEY, lang); } catch (e) {}
     fetch('i18n/' + lang + '.json', { cache: 'no-cache' }).then(function (r) {
       if (!r.ok) throw new Error('i18n ' + r.status);
       return r.json();
     }).then(function (dict) {
+      if (request !== languageRequest) return;
       apply(lang, dict);
     }).catch(function () {
+      if (request !== languageRequest) return;
       /* JSON injoignable : on garde le français du HTML. */
       if (lang !== 'fr') apply('fr', {});
     });
