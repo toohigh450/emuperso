@@ -11,3 +11,39 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js').catch(function () {});
   });
 }
+// Journal des mises à jour (mandat du 3 nov.) : charge changelog.json et affiche les entrées
+// dans la langue de la page. Repli silencieux si le fichier est absent ou invalide.
+(function () {
+  var list = document.getElementById('changelog-list');
+  if (!list) return;
+  function render(entries) {
+    var en = document.documentElement.lang === 'en';
+    list.innerHTML = '';
+    entries.slice(0, 8).forEach(function (e) {
+      var t = (en ? e.en : e.fr) || e.fr || e.en;
+      if (!t) return;
+      var li = document.createElement('li');
+      var date = document.createElement('span');
+      date.className = 'date';
+      date.textContent = e.date || '';
+      var b = document.createElement('b');
+      b.textContent = t.title || '';
+      var p = document.createElement('p');
+      p.textContent = t.text || '';
+      li.appendChild(date);
+      li.appendChild(b);
+      li.appendChild(p);
+      list.appendChild(li);
+    });
+  }
+  function load() {
+    fetch('/changelog.json', { cache: 'no-store' }).then(function (r) {
+      if (!r.ok) throw new Error('no changelog');
+      return r.json();
+    }).then(render).catch(function () { /* repli silencieux */ });
+  }
+  load();
+  new MutationObserver(function () {
+    load();
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+})();

@@ -91,11 +91,12 @@ for (const f of ['i18n.js', 'i18n/fr.json', 'i18n/en.json']) {
   add(f, join(ROOT, 'portail', f));
 }
 // Fonds d'écran + logo : une seule direction /bg/ à la racine, servie à tout le site.
-for (const f of ['bg/bg-nes.jpg', 'bg/bg-snes.jpg', 'bg/bg-gb.jpg', 'bg/bg-gbc.jpg', 'bg/bg-gba.jpg', 'bg/bg-nds.jpg', 'bg/bg-genesis.jpg', 'bg/bg-n64.jpg', 'bg/bg-ps1.jpg', 'bg/bg-psp.jpg', 'bg/bg-portal.jpg']) {
+for (const f of ['bg/bg-nes.jpg', 'bg/bg-snes.jpg', 'bg/bg-gb.jpg', 'bg/bg-gbc.jpg', 'bg/bg-gba.jpg', 'bg/bg-nds.jpg', 'bg/bg-genesis.jpg', 'bg/bg-n64.jpg', 'bg/bg-ps1.jpg', 'bg/bg-psp.jpg', 'bg/bg-portal.jpg', 'bg/bg-debugger.jpg']) {
   add(f, join(ROOT, 'portail', f));
 }
 add('logo.png', join(ROOT, 'portail', 'logo.png'));
 add('portail.js', join(ROOT, 'portail', 'portail.js'));
+add('changelog.json', join(ROOT, 'portail', 'changelog.json'));
 // PWA / APK : manifeste, icones et service worker du portail.
 for (const f of ['manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 'sw.js']) {
   add(f, join(ROOT, 'portail', f));

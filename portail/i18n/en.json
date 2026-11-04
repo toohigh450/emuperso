@@ -36,5 +36,6 @@
  "footer.demos": "Free demos and licenses",
  "footer.archi": "Portal architecture",
  "footer.controllers": "Controllers (Controller V2)",
- "card.play": "Play →"
+ "card.play": "Play →",
+ "changelog.title": "What's new"
 }
