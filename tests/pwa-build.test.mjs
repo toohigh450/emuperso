@@ -14,9 +14,9 @@ test('assemblage isolé : ressources PWA copiées, secrets et jeux privés exclu
   try {
     mkdirSync(join(root, 'tools'));
     copyFileSync(new URL('../tools/build-portail.mjs', import.meta.url), join(root, 'tools/build-portail.mjs'));
-    const wallpapers = ['nes', 'snes', 'gb', 'gbc', 'gba', 'nds', 'genesis', 'n64', 'ps1', 'psp', 'portal'].map((id) => `bg/bg-${id}.jpg`);
+    const wallpapers = ['nes', 'snes', 'gb', 'gbc', 'gba', 'nds', 'genesis', 'n64', 'ps1', 'psp', 'portal', 'debugger'].map((id) => `bg/bg-${id}.jpg`);
     const resources = ['index.html', 'manifest.webmanifest', 'sw.js', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png',
-      'i18n.js', 'i18n/fr.json', 'i18n/en.json', 'logo.png', 'portail.js', ...wallpapers];
+      'i18n.js', 'i18n/fr.json', 'i18n/en.json', 'logo.png', 'portail.js', 'changelog.json', ...wallpapers];
     // Fixtures de copie uniquement : ne représentent pas des icônes installables.
     for (const name of resources) put('portail/' + name, 'fixture ' + name);
     for (const app of ['ps1-web', 'real-n64']) {
