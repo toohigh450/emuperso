@@ -95,6 +95,7 @@ for (const f of ['bg/bg-nes.jpg', 'bg/bg-snes.jpg', 'bg/bg-gb.jpg', 'bg/bg-gbc.j
   add(f, join(ROOT, 'portail', f));
 }
 add('logo.png', join(ROOT, 'portail', 'logo.png'));
+add('portail.js', join(ROOT, 'portail', 'portail.js'));
 // PWA / APK : manifeste, icones et service worker du portail.
 for (const f of ['manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 'sw.js']) {
   add(f, join(ROOT, 'portail', f));

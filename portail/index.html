@@ -193,18 +193,6 @@ footer a { margin-right: 14px; }
   </footer>
 </div>
 <script src="i18n.js" defer></script>
-<script>
-// Infobulle du badge ALPHA dans la langue de la page (i18n.js change l'attribut lang de <html>).
-new MutationObserver(function () {
-  var en = document.documentElement.lang === 'en';
-  var badges = document.querySelectorAll('.card .badge.alpha');
-  for (var i = 0; i < badges.length; i++) badges[i].title = en ? 'Alpha version — under testing' : 'Version alpha — en phase de tests';
-}).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js').catch(function () {});
-  });
-}
-</script>
+<script src="portail.js" defer></script>
 </body>
 </html>

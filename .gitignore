@@ -10,3 +10,15 @@ node_modules/
 *.zso
 *.chd
 *.pbp
+
+# Secrets et clés : jamais dans le dépôt (la clé de signature de l'APK reste sur le PC de Karl).
+.env
+.env.*
+*.keystore
+*.jks
+*.p12
+*.pfx
+*.pem
+*.key
+id_rsa*
+.vercel/
