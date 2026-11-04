@@ -35,5 +35,6 @@
  "footer.demos": "Démos libres et licences",
  "footer.archi": "Architecture du portail",
  "footer.controllers": "Manettes et commandes (Controller V2)",
- "card.play": "Jouer →"
+ "card.play": "Jouer →",
+ "changelog.title": "Nouveautés"
 }
