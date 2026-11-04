@@ -1,1 +1,90 @@
-[{"date":"2026-11-03","en":{"text":"11th portal console (MAME 2003-Plus / FBNeo). First validated game: Captain America and the Avengers, with 13 cheats.","title":"Arcade console added"},"fr":{"text":"11e console du portail (MAME 2003-Plus / FBNeo). Premier jeu validé : Captain America and the Avengers, avec 13 cheats.","title":"Console Arcade ajoutée"}},{"date":"2026-11-03","en":{"text":"Strict protection rules site-wide, no login required. The testers' link stays freely accessible.","title":"Security hardened"},"fr":{"text":"Règles de protection strictes sur tout le site, sans connexion requise. Le lien des testeurs reste en accès libre.","title":"Sécurité renforcée"}},{"date":"2026-11-03","en":{"text":"All 11 consoles now show their alpha status.","title":"ALPHA badges"},"fr":{"text":"Les 11 consoles affichent leur statut alpha.","title":"Badges ALPHA"}},{"date":"2026-11-03","en":{"text":"8,000+ games tested, over 99% success rate.","title":"Cheats campaign complete"},"fr":{"text":"Plus de 8 000 jeux testés, taux de réussite supérieur à 99 %.","title":"Campagne cheats terminée"}},{"date":"2026-11-02","en":{"text":"EMUPERSO.apk downloadable from the portal, with SHA-256 fingerprint shown.","title":"Android app (test)"},"fr":{"text":"EMUPERSO.apk téléchargeable depuis le portail, avec empreinte SHA-256 affichée.","title":"Application Android (test)"}},{"date":"2026-11-02","en":{"text":"Each console gets its era wallpaper, plus the logo on the homepage.","title":"Wallpapers"},"fr":{"text":"Chaque console a son fond d'écran d'époque, plus le logo sur la page d'accueil.","title":"Fonds d'écran"}},{"date":"2026-11-02","en":{"text":"French and English, auto-detected.","title":"Bilingual portal"},"fr":{"text":"Français et anglais, détection automatique.","title":"Portail en 2 langues"}}]
+[
+  {
+    "date": "2026-11-04",
+    "fr": {
+      "title": "12 systèmes rétro",
+      "text": "DOOM rejoint les 11 systèmes précédents. Terminologie du portail harmonisée en français et en anglais."
+    },
+    "en": {
+      "title": "12 retro systems",
+      "text": "DOOM joins the previous 11 systems. Portal terminology aligned in French and English."
+    }
+  },
+  {
+    "date": "2026-11-03",
+    "en": {
+      "text": "Arcade system added to the portal (MAME 2003-Plus / FBNeo). First validated game: Captain America and the Avengers, with 13 cheats.",
+      "title": "Arcade console added"
+    },
+    "fr": {
+      "text": "Système Arcade ajouté au portail (MAME 2003-Plus / FBNeo). Premier jeu validé : Captain America and the Avengers, avec 13 cheats.",
+      "title": "Console Arcade ajoutée"
+    }
+  },
+  {
+    "date": "2026-11-03",
+    "en": {
+      "text": "Strict protection rules site-wide, no login required. The testers' link stays freely accessible.",
+      "title": "Security hardened"
+    },
+    "fr": {
+      "text": "Règles de protection strictes sur tout le site, sans connexion requise. Le lien des testeurs reste en accès libre.",
+      "title": "Sécurité renforcée"
+    }
+  },
+  {
+    "date": "2026-11-03",
+    "en": {
+      "text": "All 12 systems now show their alpha status.",
+      "title": "ALPHA badges"
+    },
+    "fr": {
+      "text": "Les 12 systèmes affichent leur statut alpha.",
+      "title": "Badges ALPHA"
+    }
+  },
+  {
+    "date": "2026-11-03",
+    "en": {
+      "text": "8,000+ games tested, over 99% success rate.",
+      "title": "Cheats campaign complete"
+    },
+    "fr": {
+      "text": "Plus de 8 000 jeux testés, taux de réussite supérieur à 99 %.",
+      "title": "Campagne cheats terminée"
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "en": {
+      "text": "EMUPERSO.apk downloadable from the portal, with SHA-256 fingerprint shown.",
+      "title": "Android app (test)"
+    },
+    "fr": {
+      "text": "EMUPERSO.apk téléchargeable depuis le portail, avec empreinte SHA-256 affichée.",
+      "title": "Application Android (test)"
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "en": {
+      "text": "Each console gets its era wallpaper, plus the logo on the homepage.",
+      "title": "Wallpapers"
+    },
+    "fr": {
+      "text": "Chaque console a son fond d'écran d'époque, plus le logo sur la page d'accueil.",
+      "title": "Fonds d'écran"
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "en": {
+      "text": "French and English, auto-detected.",
+      "title": "Bilingual portal"
+    },
+    "fr": {
+      "text": "Français et anglais, détection automatique.",
+      "title": "Portail en 2 langues"
+    }
+  }
+]
