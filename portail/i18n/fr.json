@@ -1,6 +1,6 @@
 {
  "meta.description": "EMUPERSO : NES, SNES, Sega Genesis, Game Boy, Game Boy Color, Game Boy Advance, Nintendo DS, Nintendo 64, PlayStation et PlayStation Portable dans Chrome, sur ordinateur et téléphone.",
- "header.subtitle": "Portail rétro · 11 consoles",
+ "header.subtitle": "Portail rétro · 12 consoles",
  "header.intro": "Joue dans Chrome sur ordinateur ou téléphone, sans application à installer et sans compte. Chaque console propose une démo libre pour essayer tout de suite ; tes propres jeux restent sur ton appareil.",
  "consoles.title": "Choisis une console",
  "badge.new": "Nouveau",
@@ -17,6 +17,7 @@
  "card.ps1.desc": "Moteur PCSX ReARMed. Démo libre EMUPERSO. Jeux réels en cours de validation.",
  "card.psp.desc": "Moteur PPSSPP. Tes jeux .iso, .cso ou .pbp. Codes CWCheat par jeu, sauvegardes de carte mémoire et états. Ordinateur conseillé.",
  "card.arcade.desc": "Moteurs MAME 2003-Plus et FBNeo, choisis seuls pour chaque jeu. Tes romsets .zip (nom court MAME). Cheats du jeu dans le menu de MAME. Aucun BIOS fourni.",
+ "card.doom.desc": "Moteur PrBoom. Tes jeux DOOM GOG en .wad : DOOM, DOOM II, Final DOOM (Plutonia, TNT). Manette et commandes tactiles. Aucun jeu fourni.",
  "notes.title": "Bon à savoir",
  "note.home.title": "Tes jeux restent chez toi",
  "note.home.text": "Le site ne peut pas lire ton disque : tu choisis toi-même un fichier ou un dossier. Rien n’est envoyé à un serveur ; le jeu tourne dans ton navigateur. Aucun jeu commercial ni BIOS n’est fourni.",

@@ -97,6 +97,36 @@ export const ARCADE_CORES = {
 };
 export const ARCADE_CORE_ORDER = ['mame2003_plus', 'fbneo'];
 
+// DOOM (jeux PC de Karl, versions GOG) : PrBoom lit le .wad du jeu complet (IWAD). Il reconnaît le jeu à
+// son nom de fichier (doom2.wad, plutonia.wad…), qui ne doit donc pas changer.
+export const DOOM_IWADS = Object.freeze({
+  doom: 'DOOM', doom1: 'DOOM (shareware)', doomu: 'The Ultimate DOOM', doom2: 'DOOM II',
+  plutonia: 'Final DOOM : The Plutonia Experiment', tnt: 'Final DOOM : TNT Evilution', freedoom1: 'Freedoom 1', freedoom2: 'Freedoom 2',
+});
+SYSTEMS.doom = {
+  id: 'doom',
+  label: 'DOOM (PrBoom)',
+  exts: [],
+  ejsCore: 'prboom',
+  coreId: 'prboom',
+  maxBytes: 64 * MiB,
+  aspect: '4 / 3',
+};
+
+/** Fichier .wad : jeu complet (IWAD) accepté ; un niveau additionnel (PWAD) demande son jeu à côté. */
+export function analyzeWad(fileName, bytes) {
+  const name = String(fileName || '').replace(/^.*[\\/]/, '');
+  const stem = name.replace(/\.wad$/i, '').toLowerCase();
+  const magic = String.fromCharCode(...bytes.subarray(0, 4));
+  const result = { ok: false, fileName: name, ext: 'wad', size: bytes.length, system: 'doom', title: DOOM_IWADS[stem] || name, code: stem, region: 'inconnue', version: 0, headerOk: false, warnings: [], errors: [] };
+  if (magic === 'PWAD') result.errors.push('Ce .wad est un niveau additionnel (PWAD, par exemple un des Master Levels) : il ne se lance pas seul. Ouvre le jeu complet (doom2.wad…) ; les niveaux additionnels viendront plus tard.');
+  else if (magic !== 'IWAD') result.errors.push('Ce fichier n’est pas un .wad de DOOM.');
+  else if (bytes.length > SYSTEMS.doom.maxBytes) result.errors.push('Fichier trop gros pour le navigateur.');
+  else if (!DOOM_IWADS[stem]) result.warnings.push('Nom de fichier inhabituel : PrBoom reconnaît le jeu à son nom (doom.wad, doom2.wad, plutonia.wad, tnt.wad). Ne renomme pas le fichier.');
+  if (!result.errors.length) { result.ok = true; result.headerOk = true; }
+  return result;
+}
+
 // Cœurs DS proposés (le cœur choisi fait partie de l'espace de sauvegarde du jeu).
 export const DS_CORES = {
   desmume2015: { ejsCore: 'desmume2015', label: 'DeSmuME 2015 (sans BIOS)', needsBios: false },

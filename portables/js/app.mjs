@@ -1,5 +1,5 @@
 // Interface : une fente, un seul jeu actif, saveurs de sauvegarde et de codes visibles et honnêtes.
-import { SYSTEMS, DS_CORES, ARCADE_CORES, ARCADE_CORE_ORDER, ROM_EXTENSIONS, LOOSE_EXTENSIONS, analyzeRom, analyzeArcade, extensionOf, stemOf, engineExtension } from './systems.mjs';
+import { SYSTEMS, DS_CORES, ARCADE_CORES, ARCADE_CORE_ORDER, ROM_EXTENSIONS, LOOSE_EXTENSIONS, analyzeRom, analyzeArcade, analyzeWad, extensionOf, stemOf, engineExtension } from './systems.mjs';
 import { parseCheatCode, describeCode, CODE_FORMATS, isPlaceholderCode, pspCodeConflicts, limitActiveCodes } from './codes.mjs';
 import { parseRomName } from './romnames.mjs';
 import { buildCatalog, filterCatalog, visibleWindow } from './catalog.mjs';
@@ -256,6 +256,7 @@ function coreLabel(system) {
   if (system === 'snes') return 'Snes9x';
   if (system === 'genesis') return 'Genesis Plus GX';
   if (system === 'arcade') return 'MAME 2003-Plus / FBNeo';
+  if (system === 'doom') return 'PrBoom';
   if (system === 'psp') return `PPSSPP (${PSP_ENGINE.label}, secours ${ENGINE_VERSION})`;
   return system === 'gba' ? 'mGBA' : system === 'nds' ? (DS_CORES[settings.dsCore] || DS_CORES.desmume2015).label : 'Gambatte';
 }
@@ -374,6 +375,12 @@ async function openGame(file, options = {}) {
   try {
     if (isPspCandidate(file.name)) ({ rom, analysis } = await readPspFile(file));
     else if (arcadeWanted(file)) ({ rom, analysis } = await readArcadeFile(file));
+    else if (/[.]wad$/i.test(file.name)) {
+      // DOOM : le .wad est confié tel quel à PrBoom, sous son nom d'origine.
+      const bytes = new Uint8Array(await file.arrayBuffer());
+      rom = { name: file.name, bytes, note: '' };
+      analysis = analyzeWad(file.name, bytes);
+    }
     else {
       try {
         rom = await readGameFile(file);
@@ -473,7 +480,7 @@ async function openGame(file, options = {}) {
     // du cœur, donc une sauvegarde par jeu, même ROM renommée, jamais partagée entre deux ROM de même nom.
     // PSP : le File d'origine (lu sur le disque) au lieu d'une copie en mémoire.
     // Arcade : MAME et FBNeo reconnaissent le jeu à son nom court (« xxmissio.zip ») ; il ne doit pas changer.
-    rom: { name: analysis.system === 'arcade' ? `${analysis.code}.zip` : `${engineStem}.${engineExtension(analysis)}`, bytes: rom.bytes, file: rom.file || null },
+    rom: { name: analysis.system === 'arcade' ? `${analysis.code}.zip` : analysis.system === 'doom' ? `${analysis.code}.wad` : `${engineStem}.${engineExtension(analysis)}`, bytes: rom.bytes, file: rom.file || null },
     // GB/GBC/GBA/DS : les sauvegardes d'avant 0.3.0-alpha.2 portent le nom du fichier ; player.html
     // appelle cette fonction une fois l'ancien moteur fermé et avant de charger le nouveau.
     prepareSaves: LEGACY_SAVE_SYSTEMS.has(analysis.system) ? () => takeOverLegacySave(game, {
@@ -861,6 +868,10 @@ async function refreshCodePanel() {
   const box = document.createDocumentFragment();
   if (!game) {
     box.append(h('p', { class: 'muted' }, 'Ouvre un jeu pour gérer ses codes.'));
+  } else if (game.system === 'doom') {
+    // DOOM : PrBoom ne lit les codes (IDDQD…) qu'au clavier, et seulement si le joueur 1 est un clavier, ce qui
+    // couperait la manette et le tactile ; la version web plante si on les lui envoie autrement.
+    box.append(h('p', {}, 'Les codes de DOOM (IDDQD, IDKFA…) ne sont pas encore pris en charge dans la version navigateur : PrBoom ne les lit qu’au clavier, ce qui couperait la manette et les commandes tactiles. Ils sont prévus dans une prochaine version.'));
   } else if (game.system === 'arcade') {
     // Arcade : MAME 2003-Plus ignore les codes envoyés de l'extérieur ; il lit cheat.dat (codes du jeu lancé
     // seulement) et les propose dans son propre menu. FBNeo n'a pas de codes ici.
@@ -906,7 +917,7 @@ async function refreshCodePanel() {
   }
   if (ticket !== panelTickets.codes || game !== currentGame) return;
   $('codeList').replaceChildren(box);
-  $('codeAddForm').hidden = !game || game.system === 'arcade';
+  $('codeAddForm').hidden = !game || game.system === 'arcade' || game.system === 'doom';
 }
 
 async function saveCodes(game, mutate) {

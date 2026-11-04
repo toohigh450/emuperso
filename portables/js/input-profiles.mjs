@@ -31,11 +31,14 @@ const LAYOUTS = {
   psp: { authentique: [[PAD.bottom, RP.B], [PAD.right, RP.A], [PAD.left, RP.Y], [PAD.top, RP.X], [PAD.LB, RP.L], [PAD.RB, RP.R]], confort: [[PAD.LT, RP.L], [PAD.RT, RP.R]] },
   // Arcade (MAME 2003-Plus, FBNeo) : boutons 1 à 6 = B, A, Y, X, L, R du RetroPad ; Pièce = Select (Back),
   // Start = Start. Clic du stick gauche (L3) = menu de MAME 2003-Plus, où sont les cheats du jeu.
+  // DOOM (PrBoom) : X = tirer, A = utiliser/ouvrir, Y = courir, B = pas de côté, L/R = pas de côté gauche/droite,
+  // L2/R2 = arme précédente/suivante, Select = carte, Start = menu. Confort : gâchettes pour tirer et courir.
+  doom: { authentique: [[PAD.bottom, RP.A], [PAD.right, RP.B], [PAD.left, RP.X], [PAD.top, RP.Y], [PAD.LB, RP.L], [PAD.RB, RP.R], [PAD.LT, RP.L2], [PAD.RT, RP.R2]], confort: [[PAD.RT, RP.X], [PAD.LT, RP.Y]] },
   arcade: { authentique: [[PAD.bottom, RP.B], [PAD.right, RP.A], [PAD.left, RP.Y], [PAD.top, RP.X], [PAD.LB, RP.L], [PAD.RB, RP.R], [PAD.LS, RP.L3]], confort: [[PAD.LT, RP.L], [PAD.RT, RP.R]] },
 };
 
 // Consoles à stick analogique : le stick gauche reste analogique (jamais converti en croix).
-const ANALOG = new Set(['psp']);
+const ANALOG = new Set(['psp', 'doom']);
 
 export const PAD_PROFILES = Object.freeze({
   authentique: Object.freeze({ id: 'authentique', label: 'Authentique', description: 'Les boutons à la place qu’ils ont sur la manette d’origine. Le stick ne remplace pas la croix.' }),
