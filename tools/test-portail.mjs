@@ -112,13 +112,13 @@ try {
     await context.close();
   }
 
-  // PSP : aucune démo libre fournie ; on vérifie l'isolation exigée par le cœur ppsspp (fils d'exécution).
-  {
-    const { p, context, errors } = await page('portables/?console=psp', 'psp');
+  // Sans démo fournie : présélection et isolation, sans prétendre valider un jeu.
+  for (const sys of ['psp', 'genesis', 'arcade', 'doom']) {
+    const { p, context, errors } = await page(`portables/?console=${sys}`, sys);
     await p.waitForFunction(() => document.body.dataset.ready === 'true', null, { timeout: 60000 });
-    record('psp', 'console présélectionnée depuis l’accueil', (await p.locator('#catSystem').inputValue()) === 'psp');
-    record('psp', 'isolation inter-origines active (SharedArrayBuffer)', await p.evaluate(() => window.crossOriginIsolated === true && typeof SharedArrayBuffer === 'function'));
-    record('psp', 'aucune erreur JavaScript', errors.length === 0, errors.join(' | '));
+    record(sys, 'console présélectionnée depuis l’accueil', (await p.locator('#catSystem').inputValue()) === sys);
+    record(sys, 'isolation inter-origines active (SharedArrayBuffer)', await p.evaluate(() => window.crossOriginIsolated === true && typeof SharedArrayBuffer === 'function'));
+    record(sys, 'aucune erreur JavaScript', errors.length === 0, errors.join(' | '));
     await context.close();
   }
 
