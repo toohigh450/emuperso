@@ -1,6 +1,6 @@
-# Portail EMUPERSO — 8 consoles sur un seul site
+# Portail EMUPERSO — consoles sur un seul site
 
-Branche : `feature/nes-snes-unified`. Aucun changement sur `main` tant que la PR n'est pas acceptée.
+Branche : `feature/gamecube-web`. Aucun changement sur `main` tant que la PR n'est pas acceptée.
 
 ## Une seule page d'accueil
 
@@ -18,6 +18,7 @@ L'accueil commun est `portail/index.html`, publié comme page d'accueil du site 
 | Nintendo 64 | `real-n64/` | EmulatorJS 4.2.3 + Mupen64Plus-Next (moteur verrouillé) |
 | PlayStation | `ps1-web/` | EmulatorJS 4.2.3 + PCSX ReARMed (moteur verrouillé) |
 | PlayStation Portable | `portables/?console=psp` | EmulatorJS 4.2.3 + PPSSPP (à fils, page isolée) — voir `portables/PSP.md` |
+| Nintendo GameCube | `portables/?console=gamecube` | Gecko compilé en WebAssembly/WebGPU (expérimental, sans audio) — voir `portables/gamecube/SOURCE.md` |
 
 Le `index.html` du dépôt **n'est pas modifié** : c'est une copie octet pour octet du laboratoire N64 Phase 1A,
 protégée par `real-n64/tests/test_real_tools.py` (`test_originals_preserved`, avec `README.md`). Sur le site

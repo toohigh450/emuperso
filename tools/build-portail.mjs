@@ -1,4 +1,4 @@
-// Assemble le site unique EMUPERSO dans dist/ : portail à 9 consoles + applications existantes.
+// Assemble le site unique EMUPERSO dans dist/ : portail à 10 consoles + applications existantes.
 // Précondition (voir vercel.json) : ps1-web/dist et real-n64/dist construits par leurs propres outils,
 // qui téléchargent les moteurs verrouillés par SHA-256. Aucune ROM personnelle ni sauvegarde n'est copiée.
 //   node tools/build-portail.mjs
@@ -57,7 +57,7 @@ for (const app of ['ps1-web', 'real-n64']) {
 // sous son nom d'origine, N64-Web-Lab-Phase1A.html.
 add('index.html', join(ROOT, 'portail', 'index.html'));
 writeFileSync(join(OUT, 'PORTAIL-MANIFEST.json'), JSON.stringify({
-  projet: 'EMUPERSO — portail unique 9 consoles',
+  projet: 'EMUPERSO — portail unique 10 consoles',
   fichiers: Object.keys(manifest).length,
   ignores: skipped,
   sha256: manifest,

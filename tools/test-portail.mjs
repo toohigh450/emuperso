@@ -1,4 +1,4 @@
-// Non-régression du site assemblé (dist/) : accueil 9 consoles, liens, démos réelles de chaque console.
+// Non-régression du site assemblé (dist/) : accueil 10 consoles, liens, démos réelles de chaque console.
 // Moteurs réels : CDN EmulatorJS pour les consoles Nintendo portables/NES/SNES, moteurs vendored pour N64/PS1.
 //   node tools/build-portail.mjs && PLAYWRIGHT_MODULE=… CHROMIUM_PATH=… node tools/test-portail.mjs [url]
 import { startPortail } from './serve-portail.mjs';
@@ -6,7 +6,7 @@ import { startPortail } from './serve-portail.mjs';
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const remote = process.argv[2];
 const server = remote ? { url: remote.endsWith('/') ? remote : remote + '/', close: async () => {} } : await startPortail();
-const browser = await chromium.launch({ headless: true, executablePath: process.env.CHROMIUM_PATH || undefined, args: ['--autoplay-policy=no-user-gesture-required'] });
+const browser = await chromium.launch({ headless: true, executablePath: process.env.CHROMIUM_PATH || undefined, args: ['--autoplay-policy=no-user-gesture-required', '--enable-unsafe-webgpu', '--enable-features=Vulkan'] });
 const results = [];
 const record = (scope, step, ok, detail = '') => {
   results.push({ scope, step, ok, detail });
@@ -70,7 +70,7 @@ try {
   {
     const { p, context, errors } = await page('', 'accueil');
     const links = await p.locator('nav.grid a.card').evaluateAll((as) => as.map((a) => [a.querySelector('h3').textContent, a.getAttribute('href')]));
-    record('accueil', '9 consoles sur la même page', links.length === 9, links.map((l) => l[0]).join(', '));
+    record('accueil', '10 consoles sur la même page', links.length === 10, links.map((l) => l[0]).join(', '));
     for (const [name, href] of links) {
       const status = await p.evaluate(async (u) => (await fetch(u, { cache: 'no-store' })).status, href);
       record('accueil', `lien ${name}`, status === 200, `${href} → HTTP ${status}`);
@@ -110,6 +110,30 @@ try {
     record('psp', 'console présélectionnée depuis l’accueil', (await p.locator('#catSystem').inputValue()) === 'psp');
     record('psp', 'isolation inter-origines active (SharedArrayBuffer)', await p.evaluate(() => window.crossOriginIsolated === true && typeof SharedArrayBuffer === 'function'));
     record('psp', 'aucune erreur JavaScript', errors.length === 0, errors.join(' | '));
+    await context.close();
+  }
+
+  // GameCube : moteur dédié Gecko/WASM, pas de bouton Démarrer ; on vérifie canvas WebGPU et get_perf.
+  {
+    const { p, context, errors } = await page('portables/?console=gamecube', 'gamecube');
+    await p.waitForFunction(() => document.body.dataset.ready === 'true', null, { timeout: 60000 });
+    record('gamecube', 'console présélectionnée depuis l’accueil', (await p.locator('#catSystem').inputValue()) === 'gamecube');
+    await p.locator('[data-portable-demo="gamecube"]').click();
+    const frame = await p.waitForEvent('framenavigated', { predicate: (f) => f.url().includes('gcplayer.html'), timeout: 60000 }).catch(() => null);
+    const gc = frame || p.frames().find((f) => f.url().includes('gcplayer.html'));
+    record('gamecube', 'iframe moteur dédiée', !!gc);
+    let canvas = false;
+    let perf = null;
+    if (gc) {
+      try { await gc.waitForSelector('body > canvas', { timeout: 180000 }); canvas = true; } catch {}
+      perf = await p.waitForFunction(() => {
+        const e = Object.values(window.__portablesBoots || {})[0];
+        const v = e && e.control && typeof e.control.getPerf === 'function' ? e.control.getPerf() : null;
+        return v && v[1] > 0 ? Array.from(v) : null;
+      }, null, { timeout: 60000 }).then((h) => h.jsonValue()).catch(() => null);
+    }
+    record('gamecube', 'canvas WebGPU et moteur démarré', canvas && !!perf && perf[1] > 0, `canvas=${canvas}, perf=${perf ? `${perf[0].toFixed(1)} fps / ${perf[1].toFixed(1)} %` : 'n/a'}`);
+    record('gamecube', 'aucune erreur JavaScript', errors.length === 0, errors.join(' | '));
     await context.close();
   }
 
