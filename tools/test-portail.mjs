@@ -1,4 +1,4 @@
-// Non-régression du site assemblé (dist/) : accueil 10 consoles, liens, démos réelles de chaque console.
+// Non-régression du site assemblé (dist/) : accueil 13 systèmes, liens, démos réelles de chaque console.
 // Moteurs réels : CDN EmulatorJS pour les consoles Nintendo portables/NES/SNES, moteurs vendored pour N64/PS1.
 //   node tools/build-portail.mjs && PLAYWRIGHT_MODULE=… CHROMIUM_PATH=… node tools/test-portail.mjs [url]
 import { startPortail } from './serve-portail.mjs';
@@ -70,7 +70,7 @@ try {
   {
     const { p, context, errors } = await page('', 'accueil');
     const links = await p.locator('nav.grid a.card').evaluateAll((as) => as.map((a) => [a.querySelector('h3').textContent, a.getAttribute('href')]));
-    record('accueil', '10 consoles sur la même page', links.length === 10, links.map((l) => l[0]).join(', '));
+    record('accueil', '13 systèmes sur la même page', links.length === 13, links.map((l) => l[0]).join(', '));
     for (const [name, href] of links) {
       const status = await p.evaluate(async (u) => (await fetch(u, { cache: 'no-store' })).status, href);
       record('accueil', `lien ${name}`, status === 200, `${href} → HTTP ${status}`);
@@ -110,6 +110,16 @@ try {
     record('psp', 'console présélectionnée depuis l’accueil', (await p.locator('#catSystem').inputValue()) === 'psp');
     record('psp', 'isolation inter-origines active (SharedArrayBuffer)', await p.evaluate(() => window.crossOriginIsolated === true && typeof SharedArrayBuffer === 'function'));
     record('psp', 'aucune erreur JavaScript', errors.length === 0, errors.join(' | '));
+    await context.close();
+  }
+
+  // Genesis, Arcade, DOOM : sans démo fournie, présélection et isolation, sans prétendre valider un jeu.
+  for (const sys of ['genesis', 'arcade', 'doom']) {
+    const { p, context, errors } = await page(`portables/?console=${sys}`, sys);
+    await p.waitForFunction(() => document.body.dataset.ready === 'true', null, { timeout: 60000 });
+    record(sys, 'console présélectionnée depuis l’accueil', (await p.locator('#catSystem').inputValue()) === sys);
+    record(sys, 'isolation inter-origines active (SharedArrayBuffer)', await p.evaluate(() => window.crossOriginIsolated === true && typeof SharedArrayBuffer === 'function'));
+    record(sys, 'aucune erreur JavaScript', errors.length === 0, errors.join(' | '));
     await context.close();
   }
 

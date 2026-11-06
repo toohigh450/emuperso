@@ -12,6 +12,7 @@ export const CHEAT_FOLDER_ALIASES = {
   snes: 'super nintendo entertainment system',
   // « Sony - PlayStation Portable » ; les noms de fichiers y finissent par « [US] [ULUS-10080] ».
   psp: 'playstation portable',
+  genesis: 'sega - mega drive - genesis',
 };
 
 /** Déduit la console d'après les dossiers du chemin (ex. « Nintendo - Game Boy Advance/… »). */

@@ -6,6 +6,7 @@ import { extensionOf } from './systems.mjs';
 
 const EXT_SYSTEM = {
   nes: 'nes', unf: 'nes', unif: 'nes', sfc: 'snes', smc: 'snes', swc: 'snes', fig: 'snes',
+  md: 'genesis', smd: 'genesis', gen: 'genesis',
   gb: 'gb', gbc: 'gbc', gba: 'gba', nds: 'nds',
   gcm: 'gamecube', rvz: 'gamecube', dol: 'gamecube',
   iso: 'psp', cso: 'psp', pbp: 'psp',
@@ -20,6 +21,7 @@ const PATH_HINTS = [
   [/game ?cube|nintendo game ?cube/i, 'gamecube'],
   [/playstation ?portable|\bpsp\b/i, 'psp'],
   [/game ?boy|\bgb\b/i, 'gb'],
+  [/\bgenesis\b|mega ?drive|sega ?md/i, 'genesis'],
   [/\bnes\b|famicom|nintendo entertainment/i, 'nes'],
 ];
 export const CATALOG_LIMIT = 200000;

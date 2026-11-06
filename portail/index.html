@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
-<meta name="description" content="EMUPERSO : un seul portail pour jouer dans Chrome à la NES, la Super Nintendo, la Game Boy, la Game Boy Color, la Game Boy Advance, la DS, la Nintendo 64, la PlayStation, la PSP et la GameCube, sur ordinateur et téléphone.">
-<title>EMUPERSO — 10 consoles</title>
+<meta name="description" content="EMUPERSO : un seul portail pour jouer dans Chrome à la NES, la Super Nintendo, la Genesis, la Game Boy, la Game Boy Color, la Game Boy Advance, la DS, la Nintendo 64, la PlayStation, la PSP, la GameCube, l'Arcade et DOOM, sur ordinateur et téléphone.">
+<title>EMUPERSO — 13 systèmes</title>
 <style>
 :root {
   --bg: #0b111a; --panel: #131e2c; --panel-2: #172536; --line: #33445a;
@@ -44,7 +44,7 @@ footer a { margin-right: 14px; }
 <body>
 <div class="wrap">
   <header>
-    <div class="brand"><b>EMUPERSO</b><span>Portail rétro · 10 consoles</span></div>
+    <div class="brand"><b>EMUPERSO</b><span>Portail rétro · 13 systèmes</span></div>
     <p>Joue dans Chrome sur ordinateur ou téléphone, sans application à installer et sans compte. Chaque console propose une démo libre pour essayer tout de suite ; tes propres jeux restent sur ton appareil.</p>
   </header>
 
@@ -89,6 +89,13 @@ footer a { margin-right: 14px; }
         <p>Moteur DeSmuME (ou melonDS avec ton BIOS). Démo libre : Pong.</p>
         <span class="go">Jouer →</span>
       </a>
+      <a class="card" href="portables/?console=genesis">
+        <span class="badge">Alpha</span>
+        <span class="tag">Sega · 1988</span>
+        <h3>Genesis / Mega Drive</h3>
+        <p>Moteur Genesis Plus GX. Tes jeux .md, .smd, .gen, .bin, ZIP ou 7z, avec choix de la version. Cheats chargés selon le jeu, sauvegardes et états. 32X non pris en charge.</p>
+        <span class="go">Jouer →</span>
+      </a>
       <a class="card" href="real-n64/">
         <span class="badge">Alpha</span>
         <span class="tag">Nintendo · 1996</span>
@@ -115,6 +122,20 @@ footer a { margin-right: 14px; }
         <span class="tag">Nintendo · 2001</span>
         <h3>Nintendo GameCube</h3>
         <p>Moteur Gecko en WebAssembly/WebGPU. Démo libre : Swiss. Images .iso, .gcm, .rvz ou .dol. Interprété, sans audio ; ordinateur avec WebGPU conseillé.</p>
+        <span class="go">Jouer →</span>
+      </a>
+      <a class="card" href="portables/?console=arcade">
+        <span class="badge">Alpha</span>
+        <span class="tag">Arcade · 1978-2004</span>
+        <h3>Arcade</h3>
+        <p>Moteurs MAME 2003-Plus et FBNeo, choisis seuls pour chaque jeu. Tes romsets .zip (nom court MAME). Cheats du jeu dans le menu de MAME. Aucun BIOS fourni.</p>
+        <span class="go">Jouer →</span>
+      </a>
+      <a class="card" href="portables/?console=doom">
+        <span class="badge">Alpha</span>
+        <span class="tag">PC · 1993-1996</span>
+        <h3>DOOM</h3>
+        <p>Moteur PrBoom. Tes jeux DOOM GOG en .wad : DOOM, DOOM II, Final DOOM (Plutonia, TNT). Manette et commandes tactiles. Aucun jeu fourni.</p>
         <span class="go">Jouer →</span>
       </a>
     </nav>

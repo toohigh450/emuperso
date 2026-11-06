@@ -133,7 +133,7 @@ export async function extractFirst(zipBytes, accept, { name, maxBytes = 1024 * 1
   const view = new DataView(zipBytes.buffer, zipBytes.byteOffset, zipBytes.byteLength);
   const candidates = listCandidates(zipBytes, accept);
   if (candidates.length === 0) {
-    throw new ZipError('Aucun jeu (.gb, .gbc, .gba, .nds) trouvé dans ce ZIP.');
+    throw new ZipError('Aucun jeu (.nes, .sfc, .smc, .md, .smd, .gen, .gb, .gbc, .gba, .nds) trouvé dans ce ZIP.');
   }
   const entry = name === undefined ? candidates[0] : candidates.find((e) => e.name === name);
   if (!entry) throw new ZipError('Jeu sélectionné introuvable dans le ZIP.');

@@ -33,6 +33,29 @@
     boot.bios.bytes = null;
   }
   window.EJS_player = '#game';
+  // Arcade (MAME 2003-Plus, FBNeo) : le cœur dit dans son journal s'il a reconnu le romset. Le lanceur en a
+  // besoin pour passer seul à l'autre cœur ; ces lignes ne sortent qu'avec le journal détaillé d'EmulatorJS.
+  var arcade = boot.arcade || null, arcadeVerdict = null, arcadeCheat = null;
+  function arcadeDecide(ok, reason) {
+    if (!arcade || arcadeVerdict !== null) return;
+    arcadeVerdict = ok;
+    note(ok ? 'arcade' : 'arcade refusé', (arcade.core === 'fbneo' ? 'FBNeo' : 'MAME 2003-Plus') + ' : ' + reason);
+    try { if (boot.onArcadeVerdict) boot.onArcadeVerdict(ok, reason); } catch (err) { console.error(err); }
+  }
+  if (arcade) {
+    window.EJS_DEBUG_XX = true;
+    ['log', 'info', 'warn', 'error'].forEach(function (level) {
+      var original = console[level];
+      console[level] = function () {
+        var text = Array.prototype.join.call(arguments, ' ');
+        if (/Succesfully loaded ROMs|\[FBNeo\] Romset found at/.test(text)) arcadeDecide(true, 'romset reconnu');
+        else if (/Game driver not found|\[Content\]: Failed to load content/.test(text)) arcadeDecide(false, 'romset inconnu de ce cœur');
+        return original.apply(console, arguments);
+      };
+    });
+    // cheat.dat de MAME 2003-Plus : téléchargé pendant que le moteur se prépare (voir EJS_ready).
+    if (arcade.cheatUrl) arcadeCheat = fetch(arcade.cheatUrl, { cache: 'force-cache' }).then(function (r) { return r.ok ? r.arrayBuffer() : null; }).catch(function () { return null; });
+  }
   // Les codes passent uniquement par le panneau du lanceur : le menu du moteur est masqué,
   // car plusieurs cœurs (fceumm, mGBA, DeSmuME) ignorent l'état « désactivé » d'un code.
   window.EJS_Buttons = Object.assign({}, window.EJS_Buttons, { cheat: false });
@@ -114,6 +137,8 @@
       return entry.control.flush().then(function () { if (restart !== false) restartNextFrame(); });
     },
     restart: function () { manager(); restartNextFrame(); },
+    // Arcade : ouvre le menu de MAME 2003-Plus (L3), dont l'entrée « Cheat » liste les codes du jeu.
+    openArcadeMenu: function () { manager(); pressSequence([RETRO_L3]); },
     enginePath: source.path, // source réellement chargée (la PSP peut repasser de nightly à 4.2.3)
     screenshot: function () { return manager().screenshot(); },
     // Écrit la sauvegarde de la cartouche dans IndexedDB tout de suite (le moteur ne le fait
@@ -145,6 +170,19 @@
         emulator.on('saveSaveFiles', function (save) { if (save) window.EJS_onSaveUpdate({ save: save }); });
       }
       emulator.on('exit', function () { events.onExit(); });
+      // Arcade : cheat.dat déposé dans le dossier système du cœur (« / ») avant le démarrage ; MAME 2003-Plus
+      // n'en garde que les codes du jeu lancé et les propose dans son menu (bouton « Cheats du jeu »).
+      if (arcadeCheat) {
+        emulator.on('saveDatabaseLoaded', function (FS) {
+          arcadeCheat.then(function (buf) {
+            if (!buf) { note('arcade', 'cheat.dat indisponible : jeu lancé sans cheats'); return; }
+            try {
+              if (!FS.analyzePath('/mame2003-plus').exists) FS.mkdir('/mame2003-plus');
+              FS.writeFile('/mame2003-plus/cheat.dat', new Uint8Array(buf));
+            } catch (err) { console.error('cheat.dat non écrit', err); }
+          });
+        });
+      }
       // PSP : fichier CWCheat écrit une fois la carte mémoire montée, avant que ppsspp lise le jeu.
       if (boot.pspCheats) {
         emulator.on('saveDatabaseLoaded', function (FS) {
@@ -172,7 +210,14 @@
     try { applyCoreOptions(); } catch (err) { console.error(err); }
     // PSP : les codes de départ sont déjà dans le fichier du jeu ; ici ppsspp ne connaît pas encore
     // l'identifiant du disque et les écrirait ailleurs.
-    if (!boot.pspCheats) { try { applyCodes(); } catch (err) { console.error(err); } }
+    if (!boot.pspCheats && !arcade) { try { applyCodes(); } catch (err) { console.error(err); } }
+    if (arcade) {
+      // MAME 2003-Plus affiche un avertissement de droits d'auteur qui reste par-dessus son menu : il se ferme
+      // avec Gauche puis Droite (« tape OK »). FBNeo n'en a pas.
+      if (arcade.core === 'mame2003_plus') setTimeout(function () { pressSequence([RETRO_LEFT, RETRO_RIGHT]); }, 1200);
+      // Sans signe du cœur, un romset reconnu affiche pourtant son jeu : verdict prudent au bout de 20 s.
+      setTimeout(function () { arcadeDecide(arcade.core === 'mame2003_plus', 'aucun message du cœur'); }, 20000);
+    }
     events.onStart();
   };
   window.EJS_onExit = function () { events.onExit(); };
@@ -180,6 +225,14 @@
     try { if (boot.onSaveUpdate) boot.onSaveUpdate(e); } catch (err) { console.error(err); }
   };
 
+  var RETRO_LEFT = 6, RETRO_RIGHT = 7, RETRO_L3 = 14;
+  function pressSequence(ids) {
+    var gm = window.EJS_emulator && window.EJS_emulator.gameManager;
+    if (!gm) return;
+    ids.forEach(function (id, i) {
+      setTimeout(function () { gm.simulateInput(0, id, 1); setTimeout(function () { gm.simulateInput(0, id, 0); }, 120); }, i * 400);
+    });
+  }
   function note(kind, message) { try { if (boot.onLog) boot.onLog(kind, message); } catch (err) { /* lanceur fermé */ } }
   // Refus sans gravité du navigateur (garder l'écran allumé, plein écran… pendant que l'onglet est caché) :
   // notés et ignorés. Les autres erreurs ne bloquent que pendant la préparation du moteur, comme avant.

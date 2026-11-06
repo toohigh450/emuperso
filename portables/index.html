@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>Consoles portables et Nintendo : NES, SNES, Game Boy, Color, Advance, DS, PSP et GameCube</title>
+<title>Consoles : NES, SNES, Genesis, Game Boy, Color, Advance, DS, PSP, GameCube, Arcade et DOOM</title>
 <link rel="stylesheet" href="css/app.css">
 </head>
 <body data-state="idle">
 <header class="top">
-  <p class="crumb"><a href="../">← Accueil EMUPERSO (10 consoles)</a></p>
-  <h1>Consoles Nintendo <small>0.3.0 alpha.2</small></h1>
-  <p>NES, Super Nintendo, Game Boy, Game Boy Color, Game Boy Advance, DS, PSP et GameCube dans Chrome. Un seul jeu à la fois. GameCube exige WebGPU et reste expérimental (interprété, sans audio).</p>
+  <p class="crumb"><a href="../">← Accueil EMUPERSO (13 systèmes)</a></p>
+  <h1>Consoles Nintendo, Sega, Arcade et DOOM <small>0.3.0 alpha.2</small></h1>
+  <p>NES, Super Nintendo, Sega Genesis / Mega Drive, Game Boy, Game Boy Color, Game Boy Advance, DS, PSP, GameCube, Arcade et DOOM dans Chrome. Un seul jeu à la fois. GameCube exige WebGPU et reste expérimental (interprété, sans audio).</p>
 </header>
 
 <p class="alpha-note">Version alpha : exporte tes sauvegardes avant les essais. Les tests réels et leurs limites sont dans TESTS-NES-SNES.md.</p>
@@ -21,7 +21,7 @@
     <div class="slot" id="slot">
       <div class="slot-empty" id="slotEmpty">
         <p class="slot-title">La fente est vide</p>
-        <p class="muted">Choisis un fichier .nes, .sfc, .smc, .gb, .gbc, .gba, .nds ou un .zip qui en contient un, un jeu PSP .iso, .cso ou .pbp, ou une image GameCube .iso, .gcm, .rvz, .dol (ou un .zip qui en contient un). Tes fichiers sont lus localement et ne sont envoyés à aucun serveur. Le moteur tiers chargé depuis Internet peut y accéder.</p>
+        <p class="muted">Choisis un fichier .nes, .sfc, .smc, .md, .smd, .gen, .gb, .gbc, .gba, .nds ou un .zip qui en contient un, un romset arcade .zip, un jeu DOOM .wad, un jeu PSP .iso, .cso ou .pbp, ou une image GameCube .iso, .gcm, .rvz, .dol (ou un .zip qui en contient un). Tes fichiers sont lus localement et ne sont envoyés à aucun serveur. Le moteur tiers chargé depuis Internet peut y accéder.</p>
         <button class="btn primary" id="pickGame" type="button">Choisir un jeu</button>
         <p class="muted small-text">Tu peux aussi glisser le fichier sur la page, ou ouvrir tout un dossier dans l’onglet Catalogue.</p>
       </div>
@@ -42,7 +42,7 @@
           <button class="btn danger" id="closeGame" type="button">Fermer le jeu</button>
         </div>
       </div>
-      <input type="file" id="romInput" accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.gb,.gbc,.gba,.nds,.sgb,.srl,.bin,.rom,.dsi,.zip,.7z,.fds,.iso,.cso,.pbp,.chd,.gcm,.rvz,.dol" class="visually-hidden" tabindex="-1">
+      <input type="file" id="romInput" accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.md,.smd,.gen,.gb,.gbc,.gba,.nds,.sgb,.srl,.bin,.rom,.dsi,.zip,.7z,.fds,.32x,.iso,.cso,.pbp,.chd,.gcm,.rvz,.dol,.wad" class="visually-hidden" tabindex="-1">
     </div>
 
     <section class="demo-panel" aria-labelledby="demoHeading">
@@ -84,7 +84,7 @@
         <button class="btn" id="catFilesBtn" type="button">Choisir des fichiers</button>
       </div>
       <input type="file" id="catFolder" webkitdirectory multiple class="visually-hidden" tabindex="-1">
-      <input type="file" id="catFiles" multiple accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.gb,.gbc,.gba,.nds,.zip,.7z,.iso,.cso,.pbp,.gcm,.rvz,.dol" class="visually-hidden" tabindex="-1">
+      <input type="file" id="catFiles" multiple accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.md,.smd,.gen,.gb,.gbc,.gba,.nds,.zip,.7z,.iso,.cso,.pbp,.gcm,.rvz,.dol" class="visually-hidden" tabindex="-1">
       <div id="catalogTools" hidden>
         <label class="field" for="catSearch">Rechercher</label>
         <input type="search" id="catSearch" placeholder="Titre du jeu" autocomplete="off">
@@ -98,8 +98,11 @@
               <option value="gbc">Game Boy Color</option>
               <option value="gba">Game Boy Advance</option>
               <option value="nds">Nintendo DS</option>
+              <option value="genesis">Sega Genesis / Mega Drive</option>
               <option value="psp">PlayStation Portable</option>
               <option value="gamecube">Nintendo GameCube</option>
+              <option value="arcade">Arcade (MAME 2003-Plus / FBNeo)</option>
+              <option value="doom">DOOM (PrBoom)</option>
             </select>
           </label>
           <label>Région
@@ -162,7 +165,7 @@
         <label class="field" for="codeName">Nom du code</label>
         <input type="text" id="codeName" maxlength="80" autocomplete="off" placeholder="Vies infinies">
         <label class="field" for="codeValue">Code</label>
-        <input type="text" id="codeValue" maxlength="400" autocomplete="off" spellcheck="false" autocapitalize="characters" placeholder="SXIOPO ou C2AF-3D07 ou 7E0DBE05">
+        <input type="text" id="codeValue" maxlength="20000" autocomplete="off" spellcheck="false" autocapitalize="characters" placeholder="SXIOPO ou C2AF-3D07 ou 7E0DBE05">
         <p id="codeCheck" class="small-text" aria-live="polite"></p>
         <div class="actions">
           <button class="btn primary" type="submit">Ajouter (désactivé)</button>

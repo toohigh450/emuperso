@@ -87,6 +87,33 @@ export function encodeSnesGameGenie(address, value) {
   return `${g.slice(0, 4)}-${g.slice(4)}`;
 }
 
+// Les codes Action Replay DS et CWCheat PSP du catalogue dépassent souvent 400 caractères (jusqu'à
+// 15 049) : la limite reste un garde-fou contre un collage aberrant, pas une contrainte du moteur.
+export const MAX_CODE_LENGTH = 20000;
+
+/**
+ * Lignes de codes actives qu'un cœur supporte, mesurées sur la collection (une ligne = un morceau
+ * séparé par « + ») : Genesis Plus GX garde 150 lignes et plante au-delà (147 tiennent, 160 plantent,
+ * « table index is out of bounds ») ; FCEUmm (NES) tient 256 lignes et plante à 361 (« memory access
+ * out of bounds »). Les autres cœurs ont tenu plus de 700 lignes (PSP) ou 2 900 (DS).
+ */
+export const ENGINE_CODE_LINES = Object.freeze({ genesis: 150, nes: 256 });
+
+/** Codes actifs gardés dans l'ordre jusqu'à la limite du cœur ; dropped = codes laissés de côté. */
+export function limitActiveCodes(system, codes) {
+  const max = ENGINE_CODE_LINES[system];
+  if (!max) return { codes: codes.slice(), dropped: 0, max: null };
+  const kept = [];
+  let lines = 0;
+  for (const code of codes) {
+    const n = String(code).split('+').filter((p) => p.trim()).length || 1;
+    if (lines + n > max) continue;
+    kept.push(code);
+    lines += n;
+  }
+  return { codes: kept, dropped: codes.length - kept.length, max };
+}
+
 /**
  * Analyse un code pour une console. Retourne { ok, code (forme envoyée au moteur), format, parts, error }.
  * Plusieurs codes peuvent être joints par « + » : chacun doit être valide.
@@ -94,7 +121,7 @@ export function encodeSnesGameGenie(address, value) {
 export function parseCheatCode(system, input) {
   const raw = String(input || '').trim();
   if (!raw) return { ok: false, error: 'Code vide.' };
-  if (raw.length > 400) return { ok: false, error: 'Code trop long (400 caractères maximum).' };
+  if (raw.length > MAX_CODE_LENGTH) return { ok: false, error: `Code trop long (${MAX_CODE_LENGTH} caractères maximum).` };
   if (system === 'psp') return parsePspCode(raw);
   if (system !== 'nes' && system !== 'snes') {
     if (/[^\x20-\x7e]/.test(raw)) return { ok: false, error: 'Caractères non pris en charge dans le code.' };
