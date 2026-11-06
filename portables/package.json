@@ -2,7 +2,7 @@
   "name": "emuperso-portables",
   "version": "0.3.0-alpha.2",
   "private": true,
-  "description": "NES, Super Nintendo, Game Boy, Game Boy Color, Game Boy Advance, DS et PSP dans Chrome, un seul jeu actif à la fois.",
+  "description": "NES, Super Nintendo, Game Boy, Game Boy Color, Game Boy Advance, DS, PSP et GameCube dans Chrome, un seul jeu actif à la fois.",
   "scripts": {
     "test": "node tests/run.mjs",
     "test:browser": "node tests/browser.mjs",
@@ -10,7 +10,8 @@
     "check": "node tools/check-syntax.mjs",
     "test:engine": "node tests/engine-smoke.mjs",
     "test:real": "node tests/real-nes-snes.mjs",
-    "test:real-saves": "node tests/real-save-migration.mjs"
+    "test:real-saves": "node tests/real-save-migration.mjs",
+    "test:gamecube-real": "node tests/gamecube-real.mjs"
   },
   "engines": {
     "node": ">=22.17"

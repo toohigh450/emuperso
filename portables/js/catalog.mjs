@@ -7,6 +7,7 @@ import { extensionOf } from './systems.mjs';
 const EXT_SYSTEM = {
   nes: 'nes', unf: 'nes', unif: 'nes', sfc: 'snes', smc: 'snes', swc: 'snes', fig: 'snes',
   gb: 'gb', gbc: 'gbc', gba: 'gba', nds: 'nds',
+  gcm: 'gamecube', rvz: 'gamecube', dol: 'gamecube',
   iso: 'psp', cso: 'psp', pbp: 'psp',
 };
 const ARCHIVES = new Set(['zip', '7z']);
@@ -16,6 +17,7 @@ const PATH_HINTS = [
   [/game ?boy ?advance|\bgba\b/i, 'gba'],
   [/game ?boy ?colou?r|\bgbc\b/i, 'gbc'],
   [/nintendo ?ds|\bnds\b/i, 'nds'],
+  [/game ?cube|nintendo game ?cube/i, 'gamecube'],
   [/playstation ?portable|\bpsp\b/i, 'psp'],
   [/game ?boy|\bgb\b/i, 'gb'],
   [/\bnes\b|famicom|nintendo entertainment/i, 'nes'],

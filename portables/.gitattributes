@@ -4,3 +4,7 @@
 # ROM homebrew libres : octets exacts, jamais de conversion de fin de ligne.
 demos/*.nes binary
 demos/*.sfc binary
+demos/*.dol binary
+# Moteur GameCube : wasm et collage wasm-bindgen, octets exacts.
+gamecube/*.wasm binary
+gamecube/*.js text eol=lf

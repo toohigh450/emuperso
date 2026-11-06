@@ -47,6 +47,11 @@ const DEMOS = Object.freeze({
     title: 'Pong-NDS', filename: 'Pong-NDS.nds', size: 2472960,
     blob: 'dda8c65e7f4cd36f0c54cc70fedbdd04032ca203',
     url: 'https://raw.githubusercontent.com/Chi-Iroh/Pong-NDS/dfabbdde030b9fb2c72af968c98485dcde81855f/Pong-NDS.nds'
+  },
+  gamecube: {
+    title: 'Swiss (homebrew GameCube)', filename: 'swiss_r2073.dol', size: 787720,
+    sha256: '5553ad6641716ea7d1ceb155490f18485096e3ffe25617f1901c6c0500e2fa75',
+    url: 'demos/swiss_r2073.dol'
   }
 });
 

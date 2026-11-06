@@ -16,6 +16,12 @@ Le code chargé dans l'iframe a accès aux fichiers qu'on lui transmet et, avec 
 
 Gambatte, mGBA, DeSmuME, DeSmuME 2015 et melonDS ont chacun des sources et des obligations distinctes. La licence du frontend ne suffit pas à conclure sur les droits de redistribution de leurs binaires. Les révisions exactes de tous les cœurs et leurs notices doivent encore être inventoriées depuis une distribution complète vérifiée avant toute redistribution publique du moteur. Aucun droit universel de redistribution n'est affirmé ici.
 
+## GameCube (expérimental)
+
+- Moteur : Gecko (`ioncodes/gecko`), commit `39e82205a0da154f23fd36b95e64a8029d468618`, **GPL-3.0**, compilé en WebAssembly/WebGPU. Sortie vendored dans `gamecube/` (`web.js`, `web_bg.wasm`, `*.d.ts`) ; source correspondante = amont épinglé + `gamecube/gecko-web-disc.patch` (voir `gamecube/SOURCE.md`). Licence du patch/projet de référence : `gamecube/LICENSE-CubeDeck-GPL-3.0.txt`.
+- Démonstration : Swiss r2073 (`demos/swiss_r2073.dol`), homebrew **GPL-3.0**, licence dans `demos/swiss_r2073.LICENSE.txt`, provenance dans `demos/NOTICE.md`.
+- Limites : build interprété (pas de JIT), WebGPU requis, sans audio, sans états de sauvegarde, un seul boot par iframe. Les jeux commerciaux ne sont ni fournis ni téléchargés ; l'import reste local.
+
 ## Code du projet
 
 Aucune licence générale du code original n'est choisie à la place de Karl. Une décision de licence reste à prendre avant une diffusion publique plus large.

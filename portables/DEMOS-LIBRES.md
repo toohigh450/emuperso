@@ -37,3 +37,11 @@ Contrairement aux quatre démos ci-dessus, les homebrews NES et SNES sont **copi
 La licence zlib de Snake et la licence MIT d'OpenSNES autorisent la redistribution à condition de garder leur notice : les deux textes sont publiés à côté des ROMs. Les deux démos « puces » servent à vérifier que Snes9x fait tourner SA-1 et DSP-1 dans Chrome ; ce ne sont pas des jeux complets. L'exemple Super FX d'OpenSNES (`superfx_3d.sfc`) a été écarté : son propre README indique que Snes9x ne détecte pas son GSU (« GSU: NOT DETECTED ») ; le publier aurait affiché une fausse preuve. Aucune autre démo Super FX libre n'a été trouvée.
 
 Vérifié le 2026-11-01 : les cinq ROMs démarrent avec les vrais cœurs FCEUmm et Snes9x dans Chrome Windows (voir TESTS-NES-SNES.md). Non vérifié sur un vrai téléphone Android.
+
+## GameCube — hébergée avec le site (expérimental)
+
+| Console | Démo | Auteur / licence | Source | Taille | SHA-256 |
+| --- | --- | --- | --- | ---: | --- |
+| GameCube | Swiss r2073 (homebrew, exécutable DOL) | Swiss / emukidid, **GPL-3.0** (`demos/swiss_r2073.LICENSE.txt`, `demos/NOTICE.md`) | https://github.com/emukidid/swiss-gc | 787720 | `5553ad6641716ea7d1ceb155490f18485096e3ffe25617f1901c6c0500e2fa75` |
+
+Le moteur GameCube est Gecko compilé en WebAssembly/WebGPU (GPL-3.0, voir `gamecube/SOURCE.md`). Il est interprété, n'a pas d'audio et exige WebGPU. Sur la machine de test, la démo DOL et deux images disque fournies localement (.zip contenant .rvz) démarrent avec canvas WebGPU, mais à environ 16–23 % de la vitesse native : preuve de boot, pas de jouabilité complète.

@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>Consoles portables et Nintendo : NES, SNES, Game Boy, Color, Advance, DS et PSP</title>
+<title>Consoles portables et Nintendo : NES, SNES, Game Boy, Color, Advance, DS, PSP et GameCube</title>
 <link rel="stylesheet" href="css/app.css">
 </head>
 <body data-state="idle">
 <header class="top">
-  <p class="crumb"><a href="../">← Accueil EMUPERSO (9 consoles)</a></p>
+  <p class="crumb"><a href="../">← Accueil EMUPERSO (10 consoles)</a></p>
   <h1>Consoles Nintendo <small>0.3.0 alpha.2</small></h1>
-  <p>NES, Super Nintendo, Game Boy, Game Boy Color, Game Boy Advance, DS et PSP dans Chrome. Un seul jeu à la fois.</p>
+  <p>NES, Super Nintendo, Game Boy, Game Boy Color, Game Boy Advance, DS, PSP et GameCube dans Chrome. Un seul jeu à la fois. GameCube exige WebGPU et reste expérimental (interprété, sans audio).</p>
 </header>
 
 <p class="alpha-note">Version alpha : exporte tes sauvegardes avant les essais. Les tests réels et leurs limites sont dans TESTS-NES-SNES.md.</p>
@@ -21,7 +21,7 @@
     <div class="slot" id="slot">
       <div class="slot-empty" id="slotEmpty">
         <p class="slot-title">La fente est vide</p>
-        <p class="muted">Choisis un fichier .nes, .sfc, .smc, .gb, .gbc, .gba, .nds ou un .zip qui en contient un, ou un jeu PSP .iso, .cso ou .pbp. Tes fichiers sont lus localement et ne sont envoyés à aucun serveur. Le moteur tiers chargé depuis Internet peut y accéder.</p>
+        <p class="muted">Choisis un fichier .nes, .sfc, .smc, .gb, .gbc, .gba, .nds ou un .zip qui en contient un, un jeu PSP .iso, .cso ou .pbp, ou une image GameCube .iso, .gcm, .rvz, .dol (ou un .zip qui en contient un). Tes fichiers sont lus localement et ne sont envoyés à aucun serveur. Le moteur tiers chargé depuis Internet peut y accéder.</p>
         <button class="btn primary" id="pickGame" type="button">Choisir un jeu</button>
         <p class="muted small-text">Tu peux aussi glisser le fichier sur la page, ou ouvrir tout un dossier dans l’onglet Catalogue.</p>
       </div>
@@ -42,7 +42,7 @@
           <button class="btn danger" id="closeGame" type="button">Fermer le jeu</button>
         </div>
       </div>
-      <input type="file" id="romInput" accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.gb,.gbc,.gba,.nds,.sgb,.srl,.bin,.rom,.dsi,.zip,.7z,.fds,.iso,.cso,.pbp,.chd" class="visually-hidden" tabindex="-1">
+      <input type="file" id="romInput" accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.gb,.gbc,.gba,.nds,.sgb,.srl,.bin,.rom,.dsi,.zip,.7z,.fds,.iso,.cso,.pbp,.chd,.gcm,.rvz,.dol" class="visually-hidden" tabindex="-1">
     </div>
 
     <section class="demo-panel" aria-labelledby="demoHeading">
@@ -56,6 +56,7 @@
         <button type="button" class="btn" data-portable-demo="gbc">GBC · Geometrix</button>
         <button type="button" class="btn" data-portable-demo="gba">GBA · @rkanoid</button>
         <button type="button" class="btn" data-portable-demo="nds">DS · Pong</button>
+        <button type="button" class="btn" data-portable-demo="gamecube">GameCube · Swiss</button>
       </div>
       <details>
         <summary class="small-text">Démos techniques SNES (puces SA-1 et DSP-1)</summary>
@@ -83,7 +84,7 @@
         <button class="btn" id="catFilesBtn" type="button">Choisir des fichiers</button>
       </div>
       <input type="file" id="catFolder" webkitdirectory multiple class="visually-hidden" tabindex="-1">
-      <input type="file" id="catFiles" multiple accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.gb,.gbc,.gba,.nds,.zip,.7z,.iso,.cso,.pbp" class="visually-hidden" tabindex="-1">
+      <input type="file" id="catFiles" multiple accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.gb,.gbc,.gba,.nds,.zip,.7z,.iso,.cso,.pbp,.gcm,.rvz,.dol" class="visually-hidden" tabindex="-1">
       <div id="catalogTools" hidden>
         <label class="field" for="catSearch">Rechercher</label>
         <input type="search" id="catSearch" placeholder="Titre du jeu" autocomplete="off">
@@ -98,6 +99,7 @@
               <option value="gba">Game Boy Advance</option>
               <option value="nds">Nintendo DS</option>
               <option value="psp">PlayStation Portable</option>
+              <option value="gamecube">Nintendo GameCube</option>
             </select>
           </label>
           <label>Région
@@ -207,8 +209,8 @@
 
     <section class="panel" id="panelEngine" role="tabpanel" aria-labelledby="tabEngine" hidden>
       <p id="engineInfo" class="muted"></p>
-      <p class="muted small-text">Cœurs : FCEUmm (NES, GPL-2.0), Snes9x (SNES, licence Snes9x non commerciale), Gambatte (GB/GBC), mGBA (GBA), DeSmuME / melonDS (DS). Compatibilité détaillée et limites : COMPATIBILITE-NES-SNES.md.</p>
-      <p class="muted small-text">ROM : plafond théorique 512 Mio, soumis au budget mémoire. Une ROM de 512 Mio est refusée si la mémoire déclarée est inconnue, 2 ou 4 Gio ; elle peut passer à 8 Gio sans jeu actif. Le budget ne mesure pas la RAM libre.</p>
+      <p class="muted small-text">Cœurs : FCEUmm (NES, GPL-2.0), Snes9x (SNES, licence Snes9x non commerciale), Gambatte (GB/GBC), mGBA (GBA), DeSmuME / melonDS (DS), PPSSPP (PSP) et Gecko compilé en WebAssembly (GameCube, GPL-3.0, sans audio). Compatibilité détaillée et limites : COMPATIBILITE-NES-SNES.md.</p>
+      <p class="muted small-text">ROM : plafond théorique 512 Mio pour les consoles Nintendo/PSP, soumis au budget mémoire ; GameCube accepte jusqu’à 1,5 Gio (image disque) sous le même principe de budget. Une ROM de 512 Mio est refusée si la mémoire déclarée est inconnue, 2 ou 4 Gio ; elle peut passer à 8 Gio sans jeu actif. Le budget ne mesure pas la RAM libre.</p>
       <h2>Performance PSP</h2>
       <p class="muted">Si un gros jeu PSP saccade (Gran Turismo…), essaie Équilibré puis Fluidité. Appliqué au prochain lancement du jeu.</p>
       <div id="pspPerf" class="choices"></div>

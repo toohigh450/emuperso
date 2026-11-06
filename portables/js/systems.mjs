@@ -69,6 +69,15 @@ export const SYSTEMS = {
     maxBytes: 1800 * MiB, // UMD double couche
     aspect: '16 / 9', // 480 × 272
   },
+  gamecube: {
+    id: 'gamecube',
+    label: 'Nintendo GameCube',
+    exts: ['iso', 'gcm', 'rvz', 'dol'],
+    ejsCore: 'gamecube', // pas EmulatorJS : moteur Gecko/WASM dédié (gcplayer.html)
+    coreId: 'gecko',
+    maxBytes: 1536 * MiB, // image disque GameCube compressée ou non
+    aspect: '40 / 33', // 640 × 528
+  },
 };
 
 // Cœurs DS proposés (le cœur choisi fait partie de l'espace de sauvegarde du jeu).
@@ -103,6 +112,12 @@ export function engineExtension(analysis) {
   if (analysis.system === 'nes') return analysis.format === 'UNIF' ? 'unf' : 'nes';
   if (analysis.system === 'snes') return analysis.copierHeader ? 'smc' : 'sfc';
   if (analysis.system === 'psp') return analysis.format; // iso, cso ou pbp : ppsspp choisit son lecteur d'après l'extension
+  if (analysis.system === 'gamecube') {
+    if (analysis.format === 'DOL') return 'dol';
+    if (analysis.format === 'RVZ') return 'rvz';
+    if (analysis.format === 'ZIP') return 'zip';
+    return 'iso'; // ISO/GCM/.bin reconnu par la magie : le moteur lit le contenu, pas l'extension.
+  }
   return analysis.system;
 }
 
@@ -438,12 +453,56 @@ export function parseSnes(bytes) {
   return info;
 }
 
+// --- Nintendo GameCube ---------------------------------------------------------
+// En-tête disque : identifiant de jeu sur 6 octets puis mot de magie 0xC2339F3D à 0x1C.
+export const GC_EXTENSIONS = new Set(['iso', 'gcm', 'rvz', 'dol']);
+const GC_MAGIC = 0xc2339f3d;
+
+export function gameCubeIdFromHead(head) {
+  if (!head || head.length < 0x20) return null;
+  const magic = ((head[0x1c] << 24) | (head[0x1d] << 16) | (head[0x1e] << 8) | head[0x1f]) >>> 0;
+  if (magic !== GC_MAGIC) return null;
+  const id = String.fromCharCode(head[0], head[1], head[2], head[3], head[4], head[5]);
+  return /^[A-Z0-9]{6}$/.test(id) ? id : null;
+}
+
+function parseGameCube(bytes, fileName) {
+  const ext = extensionOf(fileName);
+  const info = {
+    format: ext === 'dol' ? 'DOL' : ext === 'rvz' ? 'RVZ' : ext === 'gcm' ? 'GCM' : 'ISO',
+    gameId: null,
+    headerOk: false,
+    warnings: [],
+    errors: [],
+  };
+  if (ext === 'rvz') {
+    info.warnings.push('Image RVZ compressée : l’en-tête n’est pas vérifiable sans décompression ; le moteur la contrôle au chargement.');
+    return info;
+  }
+  if (ext === 'dol') {
+    info.warnings.push('Fichier DOL : homebrew ou exécutable, sans en-tête de disque.');
+    return info;
+  }
+  if (bytes.length < 0x20) {
+    info.errors.push('Fichier trop petit pour contenir un en-tête GameCube.');
+    return info;
+  }
+  info.gameId = gameCubeIdFromHead(bytes);
+  if (!info.gameId) {
+    info.errors.push('En-tête GameCube absent : le mot de magie à 0x1C ne correspond pas à une image de disque GameCube.');
+    return info;
+  }
+  info.headerOk = true;
+  return info;
+}
+
 // --- Détection ------------------------------------------------------------------
 function detectByHeader(bytes) {
   if (startsWithAt(bytes, 0, INES_MAGIC) || startsWithAt(bytes, 0, UNIF_MAGIC)) return 'nes';
   if (startsWithAt(bytes, 0xc0, GBA_LOGO) && bytes.length >= 0x200) return 'nds';
   if (startsWithAt(bytes, 0x04, GBA_LOGO) && bytes.length >= 0xc0) return 'gba';
   if (startsWithAt(bytes, 0x104, GB_LOGO)) return bytes[0x143] === 0x80 || bytes[0x143] === 0xc0 ? 'gbc' : 'gb';
+  if (gameCubeIdFromHead(bytes)) return 'gamecube';
   return null;
 }
 
@@ -479,7 +538,8 @@ export function analyzeRom(fileName, bytes) {
     return result;
   }
   let system = null;
-  if (EXT_SYSTEM[ext]) system = EXT_SYSTEM[ext];
+  if (GC_EXTENSIONS.has(ext)) system = 'gamecube';
+  else if (EXT_SYSTEM[ext]) system = EXT_SYSTEM[ext];
   else if (ROM_EXTENSIONS.has(ext)) system = ext;
   else if (LOOSE_EXTENSIONS.has(ext) || !ext) system = detectByHeader(bytes);
   const detected = detectByHeader(bytes);
@@ -491,7 +551,7 @@ export function analyzeRom(fileName, bytes) {
   if (!system) {
     result.errors.push(
       ext
-        ? `Format « .${ext} » non reconnu. Formats acceptés : .nes, .unf, .sfc, .smc, .gb, .gbc, .gba, .nds (ou un .zip qui en contient un), et .iso, .cso, .pbp pour la PSP.`
+        ? `Format « .${ext} » non reconnu. Formats acceptés : .nes, .unf, .sfc, .smc, .gb, .gbc, .gba, .nds (ou un .zip qui en contient un), .iso/.cso/.pbp pour la PSP, et .iso/.gcm/.rvz/.dol (ou un .zip) pour la GameCube.`
         : 'Format de fichier non reconnu.'
     );
     return result;
@@ -581,6 +641,19 @@ export function analyzeRom(fileName, bytes) {
       battery: parsed.battery,
       copierHeader: parsed.copierHeader,
       headerOk: parsed.headerOk,
+    });
+    result.warnings.push(...parsed.warnings);
+  } else if (system === 'gamecube') {
+    const parsed = parseGameCube(bytes, fileName);
+    if (parsed.errors.length) {
+      result.errors.push(...parsed.errors);
+      return result;
+    }
+    Object.assign(result, {
+      format: parsed.format,
+      code: parsed.gameId || '',
+      headerOk: parsed.headerOk,
+      gameId: parsed.gameId || null,
     });
     result.warnings.push(...parsed.warnings);
   }

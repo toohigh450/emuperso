@@ -54,3 +54,11 @@ export function makeNds({ title = 'TESTNDS', code = 'ATSE', unit = 0, version = 
   b[0x15f] = (crc >> 8) & 0xff;
   return b;
 }
+
+// En-tête disque GameCube synthétique : ID 6 octets + magie 0xC2339F3D à 0x1C.
+export function makeGc({ gameId = 'GPVE01', size = 0x8000, badMagic = false } = {}) {
+  const b = new Uint8Array(size);
+  putAscii(b, 0x00, gameId);
+  put(b, 0x1c, badMagic ? [0xc2, 0x33, 0x9f, 0x3e] : [0xc2, 0x33, 0x9f, 0x3d]);
+  return b;
+}

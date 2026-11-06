@@ -1,5 +1,5 @@
 // Interface : une fente, un seul jeu actif, saveurs de sauvegarde et de codes visibles et honnêtes.
-import { SYSTEMS, DS_CORES, ROM_EXTENSIONS, LOOSE_EXTENSIONS, analyzeRom, extensionOf, stemOf, engineExtension } from './systems.mjs';
+import { SYSTEMS, DS_CORES, ROM_EXTENSIONS, LOOSE_EXTENSIONS, analyzeRom, extensionOf, stemOf, engineExtension, gameCubeIdFromHead, GC_EXTENSIONS } from './systems.mjs';
 import { parseCheatCode, describeCode, CODE_FORMATS, isPlaceholderCode, pspCodeConflicts } from './codes.mjs';
 import { parseRomName } from './romnames.mjs';
 import { buildCatalog, filterCatalog, visibleWindow } from './catalog.mjs';
@@ -13,7 +13,7 @@ import { Session } from './session.mjs';
 import { createBrowserHost } from './player-host.mjs';
 import { migrateLegacySave, LEGACY_SAVE_SYSTEMS } from './save-migration.mjs';
 
-import { memoryPlan, pspMemoryPlan, MAX_INPUT_BYTES, MAX_ROM_BYTES, MiB } from './resources.mjs';
+import { memoryPlan, pspMemoryPlan, gamecubeMemoryPlan, MAX_INPUT_BYTES, MAX_ROM_BYTES, GC_MAX_BYTES, MiB } from './resources.mjs';
 import { analyzePsp, blobReader, PSP_EXTENSIONS, saveDataPrefix, checkSaveArchive, SAVE_ARCHIVE_LIMITS, pspCheatFile, PSP_PERFORMANCE, pspPerformanceOptions } from './psp.mjs';
 import { validateDsBios, MAX_BIOS_ZIP } from './bios.mjs';
 import { REMOTE_ENGINE, LOADER_INTEGRITY, ENGINE_VERSION, PSP_ENGINE } from './engine.mjs';
@@ -39,6 +39,8 @@ let importingCheats = false;
 const panelTickets = { saves: 0, history: 0, cheats: 0, codes: 0, states: 0 };
 let settings = { controlProfile: 'defaut', dsCore: 'desmume2015' };
 let pspMirrorTimer = 0;
+// GameCube : le moteur web ne redémarre pas sans recréer l'iframe ; on garde la source pour la réouverture.
+let gameCubeSource = null;
 
 // --- Utilitaires d'affichage -------------------------------------------------------
 function setStatus(text, kind = '') {
@@ -192,6 +194,70 @@ async function readPspFile(file) {
   return { rom: { name: file.name, file, bytes: null, size: file.size, note: '' }, analysis };
 }
 
+// GameCube : comme la PSP, le fichier n'est pas chargé entier par le lanceur ; l'iframe lit le File.
+const GC_ZIP_ACCEPT = new Set(['iso', 'gcm', 'rvz', 'dol']);
+function gcAnalysis(fileName, size, format, gameId, headerOk, warnings = [], errors = []) {
+  return {
+    system: 'gamecube', ok: errors.length === 0, fileName, ext: extensionOf(fileName), size,
+    title: stemOf(fileName), code: gameId || '', region: 'inconnue', version: '', discId: null,
+    headerOk, warnings, errors, format, gameId: gameId || null,
+  };
+}
+
+async function readGameCubeFile(file) {
+  const ext = extensionOf(file.name);
+  if (file.size === 0) return { analysis: gcAnalysis(file.name, 0, 'ISO', null, false, [], ['Le fichier est vide.']) };
+  if (file.size > GC_MAX_BYTES) {
+    return { analysis: gcAnalysis(file.name, file.size, ext.toUpperCase(), null, false, [], [`Image trop grosse pour GameCube (${fmtSize(file.size)}, maximum ${fmtSize(GC_MAX_BYTES)}).`]) };
+  }
+  const plan = gamecubeMemoryPlan(file.size, { deviceMemory: navigator.deviceMemory });
+  if (plan.warn && !confirm(`Image GameCube de ${fmtSize(file.size)}. Le moteur WASM la lit entièrement en mémoire : environ ${Math.ceil(plan.estimated / MiB)} Mio estimés, sans garantie. Le build web est interprété et sans audio ; les jeux commerciaux tournent souvent sous la pleine vitesse. Continuer ?`)) {
+    throw new Error('Ouverture annulée.');
+  }
+  const head = await blobReader(file)(0, 0x20);
+  const isDisc = ext === 'iso' || ext === 'gcm' || ext === 'bin';
+  const gameId = isDisc ? gameCubeIdFromHead(head) : null;
+  if (isDisc && !gameId) {
+    return { analysis: gcAnalysis(file.name, file.size, ext.toUpperCase(), null, false, [], ['En-tête GameCube absent : le mot de magie à 0x1C ne correspond pas à une image de disque GameCube.']) };
+  }
+  const warnings = [];
+  if (ext === 'rvz') warnings.push('Image RVZ compressée : en-tête non vérifiable sans décompression ; le moteur la contrôle au chargement.');
+  if (ext === 'dol') warnings.push('Fichier DOL : homebrew ou exécutable, sans en-tête de disque.');
+  const format = ext === 'dol' ? 'DOL' : ext === 'rvz' ? 'RVZ' : ext === 'gcm' ? 'GCM' : 'ISO';
+  return {
+    rom: { name: file.name, file, bytes: null, size: file.size, note: '' },
+    analysis: gcAnalysis(file.name, file.size, format, gameId, isDisc, warnings),
+  };
+}
+
+async function readGameCubeZip(file) {
+  if (extensionOf(file.name) !== 'zip' || file.size > GC_MAX_BYTES) return null;
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  if (!isZip(bytes)) return null;
+  const candidates = listCandidates(bytes, GC_ZIP_ACCEPT);
+  if (candidates.length !== 1) return null;
+  const candidate = candidates[0];
+  if (!GC_EXTENSIONS.has(extensionOf(candidate.name))) return null;
+  const plan = gamecubeMemoryPlan(file.size, { deviceMemory: navigator.deviceMemory });
+  if (plan.warn && !confirm(`Archive GameCube de ${fmtSize(file.size)} contenant ${candidate.name}. Le moteur WASM la décompresse en mémoire : environ ${Math.ceil(plan.estimated / MiB)} Mio estimés, sans garantie. Continuer ?`)) {
+    throw new Error('Ouverture annulée.');
+  }
+  return {
+    rom: { name: file.name, file, bytes: null, size: file.size, note: `Jeu choisi dans le ZIP : ${candidate.name}.` },
+    analysis: gcAnalysis(file.name, file.size, 'ZIP', null, false, ['Image ZIP : contenu non inspecté sans décompression ; le moteur la contrôle au chargement.']),
+  };
+}
+
+async function maybeGameCubeFile(file) {
+  const ext = extensionOf(file.name);
+  if (ext === 'zip') return readGameCubeZip(file);
+  if (ext === 'iso' || ext === 'bin') {
+    const head = new Uint8Array(await file.slice(0, 0x20).arrayBuffer());
+    if (!gameCubeIdFromHead(head)) return null; // .iso PSP ou .bin d'une autre console : autres branches.
+  } else if (!GC_EXTENSIONS.has(ext)) return null;
+  return readGameCubeFile(file);
+}
+
 async function resolveCore(system) {
   if (system !== 'nds') return { ejsCore: SYSTEMS[system].ejsCore, coreId: SYSTEMS[system].coreId, label: coreLabel(system), bios: null };
   // NES et SNES : aucun BIOS (le Famicom Disk System, qui en demande un, est refusé à l'ouverture).
@@ -209,6 +275,7 @@ function coreLabel(system) {
   if (system === 'nes') return 'FCEUmm';
   if (system === 'snes') return 'Snes9x';
   if (system === 'psp') return `PPSSPP (${PSP_ENGINE.label}, secours ${ENGINE_VERSION})`;
+  if (system === 'gamecube') return 'Gecko (WebAssembly/WebGPU, sans audio)';
   return system === 'gba' ? 'mGBA' : system === 'nds' ? (DS_CORES[settings.dsCore] || DS_CORES.desmume2015).label : 'Gambatte';
 }
 
@@ -261,6 +328,9 @@ function gameDetails(analysis) {
   } else if (analysis.system === 'psp') {
     parts.push({ iso: 'image ISO', cso: 'image CSO compressée', pbp: 'EBOOT.PBP' }[analysis.format]);
     if (analysis.discId) parts.push(`disque ${analysis.discId}`);
+  } else if (analysis.system === 'gamecube') {
+    parts.push({ ISO: 'image disque', GCM: 'image GCM', RVZ: 'image RVZ compressée', ZIP: 'archive ZIP', DOL: 'exécutable DOL' }[analysis.format] || analysis.format);
+    if (analysis.gameId) parts.push(`disque ${analysis.gameId}`);
   } else if (analysis.system === 'snes') {
     parts.push(analysis.layout);
     if (analysis.chip) parts.push(`puce ${analysis.chip.toUpperCase()}`);
@@ -287,7 +357,9 @@ async function openGame(file) {
   setStatus('Lecture du fichier…');
   let rom, analysis;
   try {
-    if (isPspCandidate(file.name)) ({ rom, analysis } = await readPspFile(file));
+    const gc = await maybeGameCubeFile(file);
+    if (gc) ({ rom, analysis } = gc);
+    else if (isPspCandidate(file.name)) ({ rom, analysis } = await readPspFile(file));
     else {
       rom = await readGameFile(file);
       analysis = analyzeRom(rom.name, rom.bytes);
@@ -323,6 +395,12 @@ async function openGame(file) {
     : await fingerprintBlob(rom.file, (done, total) => setStatus(`Calcul de l'empreinte du jeu… ${Math.floor(done * 100 / total)} %`));
   const key = gameKey(analysis.system, fp.hex);
   const spaceId = saveSpaceId(analysis.system, core.coreId, fp.hex);
+  // GameCube : la carte mémoire de 2 Mio vit dans le miroir de sauvegarde (dernière version).
+  let gcMemcard = null;
+  if (analysis.system === 'gamecube') {
+    const mirror = await store.getMirrorSave(spaceId, 0);
+    gcMemcard = mirror && mirror.bytes && mirror.bytes.length === 2 * 1024 * 1024 ? new Uint8Array(mirror.bytes) : null;
+  }
   const previous = await store.getGame(key);
   // Conserver les espaces existants sans déplacer ni supprimer les sauvegardes.
   const legacyNaming = !!previous && (previous.engineNamingVersion || 1) === 1;
@@ -358,6 +436,10 @@ async function openGame(file) {
 
   // Profil positionnel Nintendo : sans objet pour la croix et le rond de la PSP.
   const psp = analysis.system === 'psp';
+  const gamecube = analysis.system === 'gamecube';
+  if (gamecube) {
+    gameCubeSource = { name: rom.name, file: rom.file || null, bytes: rom.bytes || null, size: rom.size ?? rom.bytes?.length ?? rom.file?.size ?? 0 };
+  }
   // PSP : réglage de performance du jeu (ou de la console), imposé au cœur au démarrage.
   const perf = psp ? await pspPerformanceFor(key) : null;
   const perfOptions = psp ? pspPerformanceOptions(perf.preset) : {};
@@ -367,6 +449,9 @@ async function openGame(file) {
   const boot = {
     // PSP : moteur nightly d'abord (cœur ppsspp plus rapide), puis les sources 4.2.3 en secours.
     enginePaths: psp ? [PSP_ENGINE, ...enginePaths] : enginePaths,
+    // GameCube : moteur Gecko/WASM dédié (gcplayer.html), pas EmulatorJS.
+    gamecube,
+    gc: gamecube ? { spaceId, memcard: gcMemcard } : null,
     // Les cœurs se servent aussi de l'extension : transmettre celle détectée,
     // même si le fichier d'origine était .bin, .srl ou mal nommé.
     // Le moteur nomme la sauvegarde de cartouche d'après ce nom de fichier : nom tiré de l'empreinte et
@@ -525,7 +610,9 @@ async function refreshSavePanel() {
     if (info.length === 0) {
       box.append(h('p', { class: 'muted' }, game.system === 'psp'
         ? "Aucune copie de sécurité pour l'instant. PSP : la carte mémoire du jeu est copiée chaque minute pendant la partie, et à chaque export ou import (ZIP des dossiers de sauvegarde)."
-        : "Aucune copie de sécurité pour l'instant. Elle apparaît dès que le moteur détecte un changement de sauvegarde dans le jeu."));
+        : game.system === 'gamecube'
+          ? "Aucune copie de sécurité pour l'instant. GameCube : la carte mémoire de 2 Mio est copiée quand le jeu y écrit, et à la fermeture du jeu."
+          : "Aucune copie de sécurité pour l'instant. Elle apparaît dès que le moteur détecte un changement de sauvegarde dans le jeu."));
     } else {
       const list = h('ul', { class: 'rows' });
       for (const g of info) {
@@ -736,6 +823,7 @@ const SYSTEM_CODE_HELP = {
   nes: 'NES : Game Genie (6 ou 8 lettres), brut 0300:16, brut conditionnel 91D9?AD:A5, Pro Action Rocky (8 chiffres).',
   snes: 'SNES : Game Genie C2AF-3D07, Pro Action Replay 7E0DBE05, brut 7E0DBE:05 ou 7E0DBE=03?05.',
   psp: 'PSP : CWCheat, « _L 0xAAAAAAAA 0xVVVVVVVV » par paire (plusieurs lignes acceptées). Les lignes « _L 0x00000000 0x00000000 » des fichiers sont des titres de section : elles ne s’activent pas.',
+  gamecube: 'GameCube : codes non pris en charge par le moteur web Gecko ; laisse la liste vide.',
 };
 
 async function refreshCodePanel() {
@@ -836,10 +924,39 @@ function checkCodeInput() {
 }
 
 // --- Sauvegarde du jeu : export immédiat et import ----------------------------------
+const GC_MEMCARD_BYTES = 2 * 1024 * 1024;
+async function reopenGameCubeSource() {
+  const src = gameCubeSource;
+  if (!src || !src.name || (!src.file && !src.bytes)) throw new Error('Source GameCube introuvable : rouvre le jeu manuellement.');
+  const file = src.file || new File([src.bytes], src.name, { type: 'application/octet-stream' });
+  await openGame(file);
+}
+
+async function importGameCubeSave(game, file) {
+  if (file.size !== GC_MEMCARD_BYTES) { setStatus('Sauvegarde GameCube : image de carte mémoire de 2 Mio attendue (.mcr, .raw ou .bin de 2 Mio).', 'error'); return; }
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  if (!confirm(`Remplacer la carte mémoire de « ${game.title} » par « ${file.name} » ?\nLa carte actuelle est d’abord copiée dans les copies de sécurité. Le jeu est fermé puis rouvert pour charger la nouvelle image.`)) return;
+  const control = session.control();
+  const current = control && typeof control.getSave === 'function' ? control.getSave() : null;
+  await session.stop();
+  if (current && current.length) await mirrorSave(game.spaceId, { save: current });
+  await mirrorSave(game.spaceId, { save: bytes });
+  await reopenGameCubeSource();
+  setStatus('Sauvegarde GameCube importée (carte mémoire 2 Mio) ; jeu rouvert. L’ancienne reste dans les copies de sécurité.', 'ok');
+  await refreshSavePanel();
+}
+
 async function exportCurrentSave() {
   const game = currentGame;
   const control = session.control();
   if (!game || !control) { setStatus('Lance le jeu avant d’exporter sa sauvegarde.', 'warn'); return; }
+  if (game.system === 'gamecube') {
+    const bytes = control.getSave();
+    if (!bytes || bytes.length !== GC_MEMCARD_BYTES) { setStatus('Aucune carte mémoire GameCube de 2 Mio pour ce jeu (enregistre d’abord dans le jeu).', 'warn'); return; }
+    download(`${slug(game.title)}-gamecube-gecko.mcr`, bytes);
+    setStatus(`Carte mémoire GameCube exportée (${fmtSize(bytes.length)}).`, 'ok');
+    return;
+  }
   if (game.system === 'psp') { await exportPspSave(game); return; }
   const bytes = control.getSave();
   if (!bytes || bytes.length === 0) { setStatus('Aucune sauvegarde pour ce jeu (pas de pile, ou rien d’enregistré dans le jeu).', 'warn'); return; }
@@ -851,6 +968,7 @@ async function importSave(file) {
   const game = currentGame;
   const control = session.control();
   if (!game || !control) { setStatus('Lance le jeu avant d’importer une sauvegarde.', 'warn'); return; }
+  if (game.system === 'gamecube') { await importGameCubeSave(game, file); return; }
   if (game.system === 'psp') { await importPspSave(game, file); return; }
   if (file.size > 4 * 1024 * 1024) { setStatus('Fichier de sauvegarde trop gros (4 Mio maximum).', 'error'); return; }
   if (!confirm(`Remplacer la sauvegarde de « ${game.title} » par « ${file.name} » ?\nLa sauvegarde actuelle est d’abord copiée dans les copies de sécurité. Le jeu redémarre ensuite.`)) return;
@@ -871,6 +989,8 @@ async function refreshStatePanel() {
   const box = document.createDocumentFragment();
   if (!game) {
     box.append(h('p', { class: 'muted' }, 'Ouvre un jeu pour utiliser les états.'));
+  } else if (game.system === 'gamecube') {
+    box.append(h('p', { class: 'warn' }, 'États de jeu non pris en charge : le moteur GameCube web (Gecko) n’a pas de sérialisation. Utilise la carte mémoire du jeu (onglet Sauvegardes).'));
   } else {
     const slots = await store.listStates(game.spaceId);
     if (ticket !== panelTickets.states || game !== currentGame) return;
@@ -1208,7 +1328,10 @@ function initEvents() {
     const control = session.control();
     if (!control) return;
     if (currentGame && pspNightlyFragile(currentGame, control)) { setStatus('Redémarrage bloqué : il fige le moteur PSP rapide (bug du moteur nightly). Ferme le jeu puis rouvre-le.', 'warn'); return; }
-    if (confirm('Redémarrer le jeu ? Les progrès non enregistrés seront perdus. Les codes actifs restent actifs.')) control.restart();
+    if (confirm('Redémarrer le jeu ? Les progrès non enregistrés seront perdus. Les codes actifs restent actifs.')) {
+      try { control.restart(); }
+      catch (err) { setStatus(err.message || String(err), 'warn'); }
+    }
   });
 
   // Sauvegardes et états

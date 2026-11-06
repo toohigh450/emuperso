@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { analyzeRom, crc16Modbus, regionFromGameCode, extensionOf, stemOf } from '../js/systems.mjs';
-import { makeGb, makeGba, makeNds } from './helpers.mjs';
+import { analyzeRom, crc16Modbus, regionFromGameCode, extensionOf, stemOf, gameCubeIdFromHead, engineExtension } from '../js/systems.mjs';
+import { makeGb, makeGba, makeNds, makeGc } from './helpers.mjs';
 
 test('CRC16 MODBUS : vecteur de référence', () => {
   const data = new TextEncoder().encode('123456789');
@@ -123,4 +123,40 @@ test('les octets ne sont jamais modifiés', () => {
   const copy = rom.slice();
   analyzeRom('x.gba', rom);
   assert.deepEqual(rom, copy);
+});
+
+test('GameCube : en-tête disque reconnu et identifiant lu', () => {
+  const rom = makeGc({ gameId: 'GPVE01' });
+  const r = analyzeRom('Pikmin 2.iso', rom);
+  assert.equal(r.ok, true);
+  assert.equal(r.system, 'gamecube');
+  assert.equal(r.gameId, 'GPVE01');
+  assert.equal(r.code, 'GPVE01');
+  assert.equal(engineExtension(r), 'iso');
+  const bin = analyzeRom('dump.bin', makeGc({ gameId: 'ABCD01' }));
+  assert.equal(bin.ok, true);
+  assert.equal(bin.system, 'gamecube');
+  assert.equal(bin.gameId, 'ABCD01');
+  assert.equal(engineExtension(bin), 'iso');
+  assert.equal(r.headerOk, true);
+  assert.equal(r.format, 'ISO');
+  assert.equal(gameCubeIdFromHead(rom), 'GPVE01');
+});
+
+test('GameCube : mauvaise magie = refus', () => {
+  const r = analyzeRom('x.iso', makeGc({ badMagic: true }));
+  assert.equal(r.ok, false);
+  assert.match(r.errors[0], /En-tête GameCube absent/);
+});
+
+test('GameCube : DOL et RVZ acceptés avec avertissement, ZIP non analysé ici', () => {
+  const dol = analyzeRom('swiss.dol', new Uint8Array(787720));
+  assert.equal(dol.ok, true);
+  assert.equal(dol.system, 'gamecube');
+  assert.equal(dol.format, 'DOL');
+  assert.equal(dol.headerOk, false);
+  const rvz = analyzeRom('x.rvz', new Uint8Array(1024));
+  assert.equal(rvz.ok, true);
+  assert.equal(rvz.format, 'RVZ');
+  assert.ok(rvz.warnings.some((w) => w.includes('RVZ')));
 });
