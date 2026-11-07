@@ -216,7 +216,13 @@ async function start(config, callback) {
   const OriginalManager = window.EJS_GameManager;
   window.EJS_GameManager = class extends OriginalManager {
     async mountFileSystems() {
-      this.mkdir('/data'); this.mkdir('/data/saves');
+      // Le cœur Mupen64Plus-Next écrit sa sauvegarde (.srm) dans
+      // /data/saves/Mupen64Plus-Next/<jeu>.srm. Sans ce dossier, la première
+      // partie ne peut pas écrire sa carte mémoire (même catch-22 que le
+      // correctif PS1 RC-1.16 : le dossier n'était créé que comme effet
+      // secondaire de writeFile() lors de l'injection d'une batterie
+      // existante). mkdir() est idempotent.
+      this.mkdir('/data'); this.mkdir('/data/saves'); this.mkdir('/data/saves/Mupen64Plus-Next');
       // Preserve the vendor's mount/unmount lifecycle without its shared IDBFS.
       this.FS.mount(this.FS.filesystems.MEMFS, {}, '/data/saves');
     }
