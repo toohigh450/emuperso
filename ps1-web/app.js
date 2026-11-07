@@ -159,7 +159,7 @@ async function saveBattery(force) {
 // le .srm vit en MEMFS et n'atteignait le coffre qu'au clic « Carte mémoire », à un
 // changement de jeu ou à un état enregistré. Sans capture automatique, fermer l'onglet
 // après une sauvegarde en jeu l'effaçait. Meilleur effort : jamais bloquer la fermeture.
-let batteryAutoSaving = false, batteryAutoSavedAt = 0;
+let batteryAutoSaving = false, batteryAutoSavedAt = -Infinity;
 async function autoSaveBattery() {
   const current = sessions.current;
   if (!current || batteryAutoSaving || performance.now() - batteryAutoSavedAt < 2000) return;
