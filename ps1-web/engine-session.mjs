@@ -319,6 +319,16 @@ async function start(config, callback) {
     note('battery.injected', { bytes: config.battery.length });
   }
   verifyInput(profile);
+  // Diagnostic manette : la gamepad API n'émet gamepadconnected que pour une
+  // connexion postérieure au chargement. Instantané de getGamepads() au démarrage
+  // et 1,5 s après, pour distinguer « manette absente » de « branchement raté ».
+  const padsSnapshot = () => ({ pads: [...(navigator.getGamepads?.() ?? [])].map(p => p ? {
+    id: p.id, mapping: p.mapping, connected: p.connected,
+    buttons: p.buttons?.length ?? 0, axes: p.axes?.length ?? 0,
+    pressed: [...(p.buttons ?? [])].filter(b => b.pressed).length,
+  } : null) });
+  note('input.pads.snapshot', padsSnapshot());
+  setTimeout(() => { if (!closed) note('input.pads.snapshot.delayed', padsSnapshot()); }, 1500);
   return snapshot();
 }
 function captureState() { requireTrustedCheats(); return new Uint8Array(gm().getState()); }
