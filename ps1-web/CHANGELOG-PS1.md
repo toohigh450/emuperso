@@ -1,5 +1,27 @@
 # CHANGELOG — EMUPERSO PS1
 
+## RC-1.16-memcard-autosave (correctif carte mémoire, 7 novembre 2026)
+
+Bug rapporté par Lesteem (Discord, 17h45) : Future Cop L.A.P.D. affiche « no memory card »,
+sauvegarde impossible ; et la carte mémoire n'était capturée qu'au clic « Carte mémoire »,
+à un changement de jeu ou à un état enregistré — la fermer l'onglet l'effaçait.
+
+- engine-session.mjs : `mountFileSystems()` crée désormais aussi
+  `/data/saves/PCSX-ReARMed` avant le démarrage du moteur. Le cœur écrit son `.srm` dans ce
+  dossier ; à la première partie il n'existait pas (créé seulement comme effet secondaire de
+  `writeFile()` lors de l'injection d'une batterie existante), donc l'écriture native du jeu
+  échouait et `captureBattery()` retournait null. `mkdir()` du gestionnaire est idempotent.
+- app.js : capture automatique de la batterie du jeu en cours au masquage de la page
+  (`visibilitychange` → hidden, qui laisse le temps aux écritures IndexedDB) et à la
+  fermeture (`pagehide`, `beforeunload`), meilleur effort sans bloquer la fermeture.
+  Garde-fous inchangés : capture refusée si le moteur est en quarantaine, aucune écriture
+  si aucune carte n'a été produite, déduplication de 2 s entre déclencheurs.
+- Coffre, enveloppes, emplacements et identités : inchangés (mandat §3.c respecté).
+- Portage `emulateur-ps1` (alpha PS1) : NON effectué — en attente du GO de Karl (mandat §3.d).
+  Le même correctif s'applique : (a) ajouter le `mkdir` du dossier `PCSX-ReARMed` dans le
+  `mountFileSystems()` de la session moteur, (b) brancher la capture auto sur
+  `visibilitychange`/`pagehide`/`beforeunload` vers le coffre de l'alpha.
+
 ## RC-1.15-audit-candidate (contre-audits de RC-1.14)
 
 - R1 reproduit : refus mémoire après fermeture du jeu précédent. Contrôle conservateur déplacé avant capture/fermeture et répété après la confirmation ; aucun pari sur la récupération mémoire future.

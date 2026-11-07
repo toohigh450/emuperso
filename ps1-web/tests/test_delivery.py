@@ -12,6 +12,12 @@ class Delivery(unittest.TestCase):
 
     def test_css_local_assets_exist(self):
         text=(ROOT/'style.css').read_text(encoding='utf-8')
+        repo=ROOT.parent
         for value in re.findall(r'url\([\"\']?([^\)\"\']+)',text):
-            if not value.startswith(('data:','http:','https:')):
-                self.assertTrue((ROOT/value).is_file(), 'Missing stylesheet asset: '+value)
+            if value.startswith(('data:','http:','https:')): continue
+            # Les URL absolues (« /bg/x ») désignent la racine du site déployé, où
+            # build-portail.mjs copie les fonds depuis portail/. On accepte donc
+            # l'asset local à ps1-web, à la racine du dépôt ou dans portail/.
+            rel=value.lstrip('/')
+            candidates=[ROOT/value, ROOT/rel, repo/rel, repo/'portail'/rel, repo/'dist'/rel]
+            self.assertTrue(any(p.is_file() for p in candidates), 'Missing stylesheet asset: '+value)

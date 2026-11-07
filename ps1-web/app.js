@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 // Version de l'application — mettre à jour à chaque release
-const APP_VERSION = 'RC-1.15-audit-candidate';
+const APP_VERSION = 'RC-1.16-memcard-autosave';
 import { prepareDisc } from './disc-file.mjs';
 import { SaveStore, makeStateEnvelope } from './save-store.mjs';
 import { packStateBundle, unpackStateBundle } from './state-bundle.mjs';
@@ -155,6 +155,30 @@ async function saveBattery(force) {
   await vault.put(current.batteryIdentity, 1, await makeStateEnvelope(bytes, current.batteryIdentity, { kind: 'battery', label: 'Carte mémoire' }));
   event('battery.saved', { bytes: bytes.length }); if (force) say('save-note', 'Carte mémoire enregistrée pour ce jeu.');
 }
+// Carte mémoire (bug « no memory card » / perte à la fermeture, Lesteem 2026-11-07) :
+// le .srm vit en MEMFS et n'atteignait le coffre qu'au clic « Carte mémoire », à un
+// changement de jeu ou à un état enregistré. Sans capture automatique, fermer l'onglet
+// après une sauvegarde en jeu l'effaçait. Meilleur effort : jamais bloquer la fermeture.
+let batteryAutoSaving = false, batteryAutoSavedAt = 0;
+async function autoSaveBattery() {
+  const current = sessions.current;
+  if (!current || batteryAutoSaving || performance.now() - batteryAutoSavedAt < 2000) return;
+  batteryAutoSaving = true;
+  try {
+    requireCaptureSafe();
+    const bytes = current.api.captureBattery();
+    if (!bytes?.length) return;
+    await vault.put(current.batteryIdentity, 1, await makeStateEnvelope(bytes, current.batteryIdentity, { kind: 'battery', label: 'Carte mémoire' }));
+    batteryAutoSavedAt = performance.now();
+    event('battery.saved', { bytes: bytes.length, automatic: true });
+    flushJournal();
+  } catch (error) {
+    event('battery.save.failed', { message: error?.message ?? String(error), automatic: true });
+  } finally { batteryAutoSaving = false; }
+}
+document.addEventListener?.('visibilitychange', () => { if (document.visibilityState === 'hidden') void autoSaveBattery(); });
+window.addEventListener('pagehide', () => { void autoSaveBattery(); });
+window.addEventListener('beforeunload', () => { void autoSaveBattery(); });
 async function refreshSlots() {
   if (!sessions.current) return;
   const slot = Number($('slot').value), row = (await vault.list(sessions.current.identity, { kind: 'state' })).find(r => r.slot === slot);

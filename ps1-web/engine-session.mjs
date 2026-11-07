@@ -199,7 +199,11 @@ async function start(config, callback) {
   // automatic IDBFS writes are replaced by a session-local MEMFS directory.
   const OriginalManager = window.EJS_GameManager;
   window.EJS_GameManager = class extends OriginalManager {
-    async mountFileSystems() { this.mkdir('/data'); this.mkdir('/data/saves'); }
+    // Le cœur PCSX-ReARMed écrit sa carte mémoire (.srm) dans
+    // /data/saves/PCSX-ReARMed/<jeu>.srm. Sans ce dossier, la première partie
+    // affiche « no memory card » et aucune capture n'est possible (bug Lesteem,
+    // 2026-11-07). mkdir() du gestionnaire est idempotent (try/catch interne).
+    async mountFileSystems() { this.mkdir('/data'); this.mkdir('/data/saves'); this.mkdir('/data/saves/PCSX-ReARMed'); }
     loadState() { note('state.unguarded.blocked', { source: 'vendor-wrapper' }); return false; }
     quickLoad() { note('state.unguarded.blocked', { source: 'quick-load' }); return false; }
     setVariable(option, value) {
