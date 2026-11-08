@@ -14,7 +14,11 @@ const SHELL = [
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(VERSION).then((cache) => cache.addAll(SHELL)).then(() => self.skipWaiting())
+    // addAll échouerait entier si une icône répond 404 : on met en cache
+    // chaque ressource séparément et on ignore les échecs.
+    caches.open(VERSION).then((cache) => Promise.all(SHELL.map((path) =>
+      fetch(path).then((r) => (r.ok ? cache.put(path, r) : undefined)).catch(() => {})
+    ))).then(() => self.skipWaiting())
   );
 });
 

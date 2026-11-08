@@ -131,6 +131,22 @@ snes:snes9x:3f82b0b7ce181613…  (version hack)</pre>
 <tr><td>Cosmétique</td><td>Pas de wallpaper dédié arcade/doom ; pages consoles en français uniquement</td><td class="na">cosmétique</td></tr>
 </table>
 
+<h2>6 bis. Correctifs post-contre-audit CodeRabbit (PR #13, 24 findings)</h2>
+<p>Revue automatique CodeRabbit sur la PR #13 : 8 major + 8 minor + 8 nitpicks. Traitement :</p>
+<table>
+<tr><th>#</th><th>Finding</th><th>Correctif</th></tr>
+<tr><td>1</td><td>N64 : mkdir du dossier de sauvegarde avant le mount MEMFS → dossier invisible</td><td class="ok">✅ mkdir déplacé après le mount</td></tr>
+<tr><td>2</td><td>test-portail attendait 12 consoles</td><td class="ok">✅ 13, suite à relancer</td></tr>
+<tr><td>3</td><td>Build dist/ : .rvz/.gcm/.dol etc. pouvaient être copiés</td><td class="ok">✅ PRIVATE étendu (rvz, gcm, gcz, wbfs, wia, xci, nsp, nsz, dol)</td></tr>
+<tr><td>4</td><td>GC : miroir localStorage ~2,7 Mio/game, quota ~5 Mio, échec silencieux</td><td class="ok">✅ éviction du plus vieux miroir + échec affiché</td></tr>
+<tr><td>5</td><td>GC : .rvz/.zip gardaient la clé par nom de fichier</td><td class="ok">✅ ID de disque lu aussi dans RVZ (en-tête GC à 0x58, vérifié sur image réelle) et dans le préfixe ZIP sans décompresser</td></tr>
+<tr><td>6</td><td>GC : vidage final de carte jamais écrit avant loadCard</td><td class="ok">✅ stopEngine async : flush + attente message + flushCard avant changement de jeu</td></tr>
+<tr><td>7</td><td>GC : import de carte écrasait la carte du dernier jeu lancé</td><td class="ok">✅ import clé sur le jeu sélectionné (ID disque ou nom)</td></tr>
+<tr><td>8</td><td>PSP : deux ROM même discId partageaient le dossier SAVEDATA du cœur</td><td class="warn">⚠️ partiel : avertissement affiché au lancement ; isolation par SHA-256 du dossier PPSSPP impossible sans patch du cœur (le chemin est dérivé du discId). Miroirs/exports restent séparés par empreinte.</td></tr>
+<tr><td>9-16</td><td>Minors : bouton stop GC, CRLF .bat, promesse changelog, .dol retiré des formats, badge EN TEST traduit, mkdir shots, i18n démo/identité</td><td class="ok">✅ corrigés</td></tr>
+<tr><td>nitpicks</td><td>SW icônes 404, refetch changelog au toggle langue, manifest incomplet, .cht relu entier, argv non validés, URL Vercel en dur</td><td class="ok">✅ corrigés</td></tr>
+</table>
+
 <h2>7. Bugs découverts en cours de route (historique)</h2>
 <ul>
 <li>Carte mémoire vierge non formatée au premier boot PS1/N64 (catch-22) → corrigé RC-1.17</li>

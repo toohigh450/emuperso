@@ -48,14 +48,17 @@ if ('serviceWorker' in navigator) {
       list.appendChild(li);
     });
   }
+  var entries = null;
   function load() {
     fetch('/changelog.json', { cache: 'no-store' }).then(function (r) {
       if (!r.ok) throw new Error('no changelog');
       return r.json();
-    }).then(render).catch(function () { /* repli silencieux */ });
+    }).then(function (data) { entries = data; render(data); }).catch(function () { /* repli silencieux */ });
   }
   load();
+  // Changement de langue : on réaffiche les entrées déjà chargées, sans
+  // redemander le JSON.
   new MutationObserver(function () {
-    load();
+    if (entries) render(entries);
   }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
 })();
