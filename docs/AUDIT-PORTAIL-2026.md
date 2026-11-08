@@ -41,7 +41,14 @@ Statut : **en cours** — audit statique + tests automatisés faits ; tests terr
 
 ## Problèmes ouverts
 
-1. **PS1 « no memory card » persiste en jeu** (signalé par Karl après RC-1.17) : la carte vierge est bien injectée (`.srm` 128 Kio `MC` présent au boot dans MEMFS), pourtant le jeu affiche toujours « no memory card ». Piste : le cœur lit peut-être la présence de carte via un autre mécanisme que le fichier `.srm` (ou le fichier n'est pas rechargé par le cœur après injection). **À investiguer** — diagnostic JSON avec `input.pads.snapshot` + état MEMFS demandés.
+1. **PS1 « no memory card » persiste en jeu** (signalé par Karl après RC-1.17) — **diagnostic profond effectué** :
+   - `.srm` = image carte mémoire 1 (`Mcd1Data` via `RETRO_MEMORY_SAVE_RAM`, 128 Kio) — pas du SRAM
+   - Carte **toujours valide en RAM au boot** (`init_memcard`), prouvé en bloquant l'injection `.srm` : `Mcd1Data` contient quand même la carte vierge formatée
+   - Slot carte **toujours activé** (`McdDisable[0]=0` en mode libretro)
+   - `refresh_save_files` charge fichier→RAM et `cmd_savefiles` écrit RAM→fichier — round-trip prouvé par marqueur
+   - HLE BIOS implémente les fonctions carte (`dev_card_*`, `_card_info/load/save`, `InitCARD`, `StartCARD`)
+   - **Conclusion** : la mécanique sauvegarde fonctionne de bout en bout ; le « no memory card » vient du jeu qui ne détecte pas la carte (limite HLE BIOS / driver mcman noyau, ou bug spécifique du build wasm déployé v2.0.2). Pistes restantes : vrai BIOS utilisateur (`biosUrl` supporté par le moteur), build `mednafen_psx_hw`, rapport upstream EmulatorJS/PCSX-ReARMed.
+   - **Résolution partielle (RC-1.18)** : bug **connu du jeu** — *Future Cop L.A.P.D.* affiche « memory card not found » sur tous les émulateurs PS1 (thread Next Generation Emulation, même symptôme sous ePSXe). Correctif documenté : vrai BIOS + CPU 1x. **GT2 sauvegarde à l'infini** → carte mémoire fonctionnelle pour les autres jeux. RC-1.18 ajoute le chargement d'un **BIOS PS1 personnel** (fichier local, IndexedDB, jamais uploadé) — vérifié : `found BIOS file` + `BIOS: 19951204, 'CEX-3000/1001/1002 by K.S.'` en vrai navigateur. Reste à valider en jeu réel avec le BIOS de Karl.
 2. **Tests terrain réels** : Future Cop save→fermeture→reouverture (avec/sans bouton), 2e jeu PS1, N64 save/reload, et démarrage/son/manette/sauvegarde des 11 autres consoles — nécessitent les ROMs de Karl.
 3. **Manette physique** : G7 Pro fonctionnelle après MAJ firmware + reboot (confirmé par Karl sur GT1/GT2) ; si récurrence, exporter diagnostic avec `input.pads.snapshot`.
 4. **Audio** : non audité en conditions réelles (tests headless ne valident pas le son).

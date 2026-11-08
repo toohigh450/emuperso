@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 // Version de l'application — mettre à jour à chaque release
-const APP_VERSION = 'RC-1.17-empty-memcard';
+const APP_VERSION = 'RC-1.18-personal-bios';
 import { prepareDisc } from './disc-file.mjs';
 import { SaveStore, makeStateEnvelope } from './save-store.mjs';
 import { packStateBundle, unpackStateBundle } from './state-bundle.mjs';
@@ -43,7 +43,29 @@ const kv = name => {
   };
   return { get: key => run('readonly', s => s.get(key)), set: (key, value) => run('readwrite', s => s.put(value, key)) };
 };
-const cheatDB = kv('emuperso-ps1-cheats-v1'), inputDB = kv('emuperso-ps1-input-v1'), editionDB = kv('emuperso-ps1-editions-v1');
+const cheatDB = kv('emuperso-ps1-cheats-v1'), inputDB = kv('emuperso-ps1-input-v1'), editionDB = kv('emuperso-ps1-editions-v1'), biosDB = kv('emuperso-ps1-bios-v1');
+// BIOS PS1 personnelle (dump de la console de l'utilisateur, jamais uploadé).
+// Persistée en IndexedDB comme un Blob ; le cœur la cherche sous un nom
+// « scph* »/« ps* » de 512 Kio ou 4 Mio dans son répertoire système.
+let biosFile = null;
+function showBios() {
+  $('bios-status').textContent = biosFile
+    ? `BIOS chargé : ${biosFile.name} (${Math.round(biosFile.size / 1024)} Kio) — conservé sur ce PC`
+    : 'Aucun — BIOS émulé (HLE) du cœur utilisé';
+  $('clear-bios').hidden = !biosFile;
+}
+$('choose-bios').onclick = () => $('bios-file').click();
+$('bios-file').onchange = () => operation(async () => {
+  const file = $('bios-file').files[0]; $('bios-file').value = ''; if (!file) return;
+  if (![524288, 4194304].includes(file.size))
+    say('status', `Attention : ${file.name} fait ${Math.round(file.size / 1024)} Kio — un BIOS PS1 fait 512 Kio (ou 4 Mio). Le cœur risque de ne pas le reconnaître.`, true);
+  biosFile = file; await biosDB.set('file', file); showBios();
+  event('bios.personal.set', { name: file.name, size: file.size });
+});
+$('clear-bios').onclick = () => operation(async () => {
+  biosFile = null; await biosDB.set('file', null); showBios(); event('bios.personal.cleared');
+});
+biosDB.get('file').then(f => { if (f instanceof Blob) { biosFile = f; showBios(); event('bios.personal.restored', { name: f.name, size: f.size }); } }).catch(() => {});
 // Toute la logique d'état des cheats vit dans cheat-controller.mjs (RC-1.9) : app.js ne fait
 // que brancher le moteur, le catalogue, le stockage et l'affichage.
 const ctl = createCheatController({
@@ -231,7 +253,7 @@ async function launch(prepared, { state = null, battery, cheatList = [], input, 
   let candidate;
   try {
     const config = input ?? normalizeInput(await inputDB.get(gameKey(prepared.metadata)).catch(() => null));
-    candidate = await sessions.prepare(prepared, config);
+    candidate = await sessions.prepare(prepared, config, biosFile);
     const stored = battery === undefined ? await optionalLoad(candidate.batteryIdentity, 1, 'battery') : null;
     say('status', state ? 'Restauration dans une session neuve…' : 'Démarrage du jeu…');
     // B02 : aucune réinjection de cheats au démarrage. Les cheats restaurés (cheatList) sont confiés

@@ -1,5 +1,28 @@
 # CHANGELOG — EMUPERSO PS1
 
+## RC-1.18-personal-bios (BIOS personnelle, 7 novembre 2026)
+
+Nouveau : chargement manuel d'un **BIOS PS1 personnel** (dump de la console de
+l'utilisateur). Un vrai BIOS désactive le BIOS HLE du cœur et améliore la
+compatibilité — notamment les jeux sensibles au timing comme *Future Cop
+L.A.P.D.*, dont le « no memory card » est un bug connu sur ému­lateurs
+(problème de détection carte, pas de sauvegarde : GT2 sauvegarde normalement,
+carte mémoire prouvée fonctionnelle de bout en bout par sondes navigateur).
+
+- `index.html`/`app.js` : sélecteur de fichier BIOS (512 Kio ou 4 Mio), statut
+  affiché, retrait possible. Le fichier est conservé dans IndexedDB **uniquement
+  sur ce PC** — jamais uploadé, jamais commité.
+- `session-controller.mjs` : le BIOS est transmis au moteur et entre dans
+  l'empreinte `config_sha256` des états (`bios: 'personal-file'` vs `'hle'`) —
+  un état HLE n'est pas proposé sous vrai BIOS. La carte mémoire reste
+  partagée (identité batterie inchangée).
+- `engine-session.mjs` : `biosUrl` passé à EmulatorJS après réencapsulation du
+  `File` dans le realm de l'iframe (le `instanceof Blob` d'EmulatorJS échouait
+  cross-realm et le BIOS n'était jamais écrit dans le MEMFS — bug trouvé par
+  sonde). Le cœur le dépose à `/SCPHxxxx.BIN`, `find_any_bios` le détecte.
+- Vérifié en vrai navigateur (tools/browser_bios_probe.py) : `found BIOS file`
+  puis `BIOS: 19951204, 'CEX-3000/1001/1002 by K.S.'` — le vrai BIOS boote.
+
 ## RC-1.17-empty-memcard (carte vierge au boot, 7 novembre 2026)
 
 Suite du bug « no memory card » : la sonde navigateur (tools/browser_memcard_probe.py)

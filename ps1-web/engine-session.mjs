@@ -280,9 +280,23 @@ async function start(config, callback) {
     { type: 'button', text: 'Select', id: 'select', location: 'center', left: -5, fontSize: 15, block: true, input_value: 2 },
     { type: 'button', text: 'Start', id: 'start', location: 'center', left: 60, fontSize: 15, block: true, input_value: 3 },
   ];
+  // Le BIOS arrive en File du realm parent : instanceof Blob/File échoue dans
+  // cette iframe et EmulatorJS sauterait downloadGameFile sans rien écrire.
+  // On réencapsule les octets dans un File local au moteur.
+  let biosFile = null;
+  if (config.bios) {
+    try {
+      const b = config.bios;
+      const bytes = typeof b.arrayBuffer === 'function' ? await b.arrayBuffer()
+        : b instanceof ArrayBuffer ? b
+        : b.buffer ? b.buffer.slice(b.byteOffset ?? 0, (b.byteOffset ?? 0) + b.byteLength) : null;
+      if (bytes) biosFile = new File([bytes], b.name || 'scph1001.bin', { type: b.type || 'application/octet-stream' });
+    } catch (error) { note('engine.bios.personal.failed', { message: String(error?.message || error) }); }
+  }
   const options = {
     VirtualGamepadSettings: PS1_TOUCH,
     gameUrl: romURL, dataPath: 'vendor/data/', system: 'pcsx_rearmed', gameName: config.gameName,
+    ...(biosFile ? { biosUrl: biosFile } : {}),
     startOnLoad: true, ...(profile.native ? {} : { defaultControllers }), threads: false, language: 'en-US', shaders: window.EJS_SHADERS,
     disableDatabases: true, disableLocalStorage: true, cacheLimit: 0, volume: 0.45,
     defaultOptions: { webgl2Enabled: config.legacy ? 'disabled' : 'enabled', ejs_threads: 'disabled' },
@@ -290,6 +304,7 @@ async function start(config, callback) {
       saveSavFiles: false, loadSavFiles: false, cheat: false, restart: false, exitEmulation: false, netplay: false }
   };
   emptyMemcard = emptyMemcardBytes();
+  if (biosFile) note('engine.bios.personal', { name: biosFile.name, size: biosFile.size, type: biosFile.type });
   emulator = new window.EmulatorJS('#game', options); window.EJS_emulator = emulator;
   touchWatch = watchTouch({ key: PS1_TOUCH_KEY, emulator: () => (closed ? null : emulator) });
   window.EMUPERSO_editTouch = () => touchWatch.edit();
