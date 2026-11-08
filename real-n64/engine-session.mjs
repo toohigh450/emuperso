@@ -222,9 +222,14 @@ async function start(config, callback) {
       // correctif PS1 RC-1.16 : le dossier n'était créé que comme effet
       // secondaire de writeFile() lors de l'injection d'une batterie
       // existante). mkdir() est idempotent.
-      this.mkdir('/data'); this.mkdir('/data/saves'); this.mkdir('/data/saves/Mupen64Plus-Next');
-      // Preserve the vendor's mount/unmount lifecycle without its shared IDBFS.
+      // Le point de montage doit exister AVANT le mount (FS racine) ; le dossier
+      // du cœur est créé APRÈS dans le MEMFS monté, sinon il serait invisible.
+      this.mkdir('/data'); this.mkdir('/data/saves');
       this.FS.mount(this.FS.filesystems.MEMFS, {}, '/data/saves');
+      try {
+        if (this.FS.mkdirTree) this.FS.mkdirTree('/data/saves/Mupen64Plus-Next');
+        else this.mkdir('/data/saves/Mupen64Plus-Next');
+      } catch (err) { note('save.mkdir.failed', { message: err && err.message }); }
     }
     loadState() { note('state.unguarded.blocked', { source: 'vendor-wrapper' }); return false; }
     quickLoad() { note('state.unguarded.blocked', { source: 'quick-load' }); return false; }
