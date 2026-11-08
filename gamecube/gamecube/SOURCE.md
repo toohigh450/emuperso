@@ -9,3 +9,5 @@ Les fichiers de ce dossier sont un artefact compilé, pas une réécriture :
 - Démonstration : `../demos/swiss_r2073.dol` (Swiss, homebrew GPL-3.0, voir `../demos/swiss_r2073.LICENSE.txt` et `../demos/NOTICE.md`).
 
 Limites connues du build web Gecko : interpréteur uniquement (pas de JIT Cranelift dans le navigateur), WebGPU requis, aucun audio, pas d'états de sauvegarde, un seul boot par iframe (pas de redémarrage à chaud). Le plafond mémoire relevé ne garantit pas la vitesse : les images disque observées démarraient autour de 16–23 % de la vitesse native sur la machine de test.
+
+Mesures terrain (2026-11-07, test automatisé Chromium+WebGPU) : FFCC `.zip/.rvz` boote (« Jeu lancé »), ~10 i/s ≈ 16 % du natif pendant ~5 min, puis dégradation vers ~1 % — écran toujours noir après 9 min. Pokémon XD `.zip/.rvz` (~985 Mo) idem : moteur actif, aucune image visible en 10 min. Conclusion honnête : l'émulation tourne réellement mais les intros de jeux commerciaux mettent un temps très long à cette vitesse ; l'ALPHA prouve le boot, pas encore le jeu.
