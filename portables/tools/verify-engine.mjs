@@ -1,4 +1,7 @@
 // Vérification locale uniquement : aucun téléchargement ni extraction implicite.
+// Le chemin lu (createReadStream) vient uniquement de process.argv — outil CLI hors
+// ligne, jamais exposé au navigateur, aux ROM ni aux archives (finding Aikido
+// « file inclusion » écarté : aucune entrée non fiable possible).
 import {createHash} from 'node:crypto';
 import {createReadStream} from 'node:fs';
 import {readFile} from 'node:fs/promises';
