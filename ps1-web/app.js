@@ -290,7 +290,16 @@ async function launch(prepared, { state = null, battery, cheatList = [], input, 
   try {
     const config = input ?? normalizeInput(await inputDB.get(gameKey(prepared.metadata)).catch(() => null));
     candidate = await sessions.prepare(prepared, config, biosFile);
-    const stored = battery === undefined ? await optionalLoad(candidate.batteryIdentity, 1, 'battery') : null;
+    let stored = null;
+    if (battery === undefined) {
+      try { stored = await optionalLoad(candidate.batteryIdentity, 1, 'battery'); }
+      catch (error) {
+        // Coffre corrompu (E_INTEGRITY) : tenter le miroir localStorage ; échec conservé s'il est absent.
+        if (error.code !== 'E_INTEGRITY') throw error;
+        event('battery.vault.corrupt', { message: error.message });
+        if (!batteryLsRead(candidate.batteryIdentity)) throw error;
+      }
+    }
     const batteryBytes = battery === undefined ? newestBattery(stored, candidate.batteryIdentity) : battery;
     say('status', state ? 'Restauration dans une session neuve…' : 'Démarrage du jeu…');
     // B02 : aucune réinjection de cheats au démarrage. Les cheats restaurés (cheatList) sont confiés
