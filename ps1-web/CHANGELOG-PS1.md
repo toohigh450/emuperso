@@ -1,5 +1,28 @@
 # CHANGELOG — EMUPERSO PS1
 
+## RC-1.19-battery-fallback (persistance carte mémoire, 8 novembre 2026)
+
+Bug rapporté : sauvegarde en jeu OK (BIOS personnel), mais la sauvegarde
+« disparaissait » au relancement sans fermeture du navigateur.
+
+Diagnostic par sonde `tools/browser_persist_probe.py` (deux sessions réelles,
+marqueur 128 Kio) : **le moteur persiste correctement** — le `.srm` injecté est
+chargé en RAM au boot et le coffre IndexedDB fait son travail. Le maillon faible
+était la course au déchargement : `autoSaveBattery` au `pagehide`/`beforeunload`
+est asynchrone (IndexedDB) et peut être tué avant la fin de la transaction.
+
+- `app.js` : **filet synchrone `localStorage`** — après chaque écriture coffre
+  (manuelle et automatique), la carte est aussi copiée en base64 dans
+  `localStorage` (synchrone, survit au déchargement ; ~175 Kio). À la session
+  suivante, `newestBattery()` retient la version la plus récente entre le coffre
+  (`created_utc`) et le filet (`utc`). Échec silencieux si quota/mode privé.
+- `app.js` : écoute aussi `freeze` (Page Lifecycle) — arrive avant `pagehide`
+  quand l'onglet est gelé.
+- `tools/browser_persist_probe.py` : sonde de persistance bout-en-bout
+  (marqueur → coffre → relance → RAM session 2). Résultat :
+  `marker_in_session2_ram: true`.
+- `tools/browser_bootload_probe.py` : sonde boot-load `.srm`→RAM.
+
 ## RC-1.18-personal-bios (BIOS personnelle, 7 novembre 2026)
 
 Nouveau : chargement manuel d'un **BIOS PS1 personnel** (dump de la console de

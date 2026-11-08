@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 // Version de l'application — mettre à jour à chaque release
-const APP_VERSION = 'RC-1.18-personal-bios';
+const APP_VERSION = 'RC-1.19-battery-fallback';
 import { prepareDisc } from './disc-file.mjs';
 import { SaveStore, makeStateEnvelope } from './save-store.mjs';
 import { packStateBundle, unpackStateBundle } from './state-bundle.mjs';
@@ -171,12 +171,41 @@ ctl.subscribe(renderCheats);
 async function optionalLoad(identity, slot, kind, previous = false) {
   try { return await vault.load(identity, slot, { kind, previous }); } catch (error) { if (error.code === 'E_EMPTY') return null; throw error; }
 }
+// Filet synchrone de secours : au pagehide/beforeunload, la transaction
+// IndexedDB d'autoSaveBattery peut être tuée par le déchargement de page.
+// localStorage.setItem est synchrone et survit ; 128 Kio -> ~175 Kio base64.
+const batteryLsKey = id => 'emuperso-ps1-battery:' + [id.rom_sha256, id.engine_sha256, id.config_sha256, id.state_schema].join(':');
+function batteryLsWrite(identity, bytes) {
+  try {
+    let bin = ''; const CH = 8192;
+    for (let i = 0; i < bytes.length; i += CH) bin += String.fromCharCode(...bytes.subarray(i, i + CH));
+    localStorage.setItem(batteryLsKey(identity), JSON.stringify({ utc: new Date().toISOString(), b64: btoa(bin) }));
+  } catch { /* quota/mode privé : le coffre IndexedDB reste la voie principale */ }
+}
+function batteryLsRead(identity) {
+  try {
+    const raw = localStorage.getItem(batteryLsKey(identity)); if (!raw) return null;
+    const { utc, b64 } = JSON.parse(raw); if (!utc || !b64) return null;
+    const bin = atob(b64), bytes = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return { bytes, utc };
+  } catch { return null; }
+}
+// La carte la plus récente gagne : le coffre (enveloppe.created_utc) ou le
+// filet localStorage (utc), selon lequel a été écrit en dernier.
+function newestBattery(stored, identity) {
+  const fallback = batteryLsRead(identity);
+  if (!fallback) return stored?.bytes ?? null;
+  if (!stored?.bytes) return fallback.bytes;
+  return Date.parse(fallback.utc) > Date.parse(stored.envelope?.created_utc ?? '') ? fallback.bytes : stored.bytes;
+}
 async function saveBattery(force) {
   const current = sessions.current; if (!current) return;
   requireCaptureSafe();
   const bytes = current.api.captureBattery();
   if (!bytes) { if (force) say('save-note', 'Ce jeu n’a pas (encore) produit de carte mémoire ou de sauvegarde native.'); return; }
   await vault.put(current.batteryIdentity, 1, await makeStateEnvelope(bytes, current.batteryIdentity, { kind: 'battery', label: 'Carte mémoire' }));
+  batteryLsWrite(current.batteryIdentity, bytes);
   event('battery.saved', { bytes: bytes.length }); if (force) say('save-note', 'Carte mémoire enregistrée pour ce jeu.');
 }
 // Carte mémoire (bug « no memory card » / perte à la fermeture, Lesteem 2026-11-07) :
@@ -193,6 +222,7 @@ async function autoSaveBattery() {
     const bytes = current.api.captureBattery();
     if (!bytes?.length) return;
     await vault.put(current.batteryIdentity, 1, await makeStateEnvelope(bytes, current.batteryIdentity, { kind: 'battery', label: 'Carte mémoire' }));
+    batteryLsWrite(current.batteryIdentity, bytes);
     batteryAutoSavedAt = performance.now();
     event('battery.saved', { bytes: bytes.length, automatic: true });
     flushJournal();
@@ -203,6 +233,10 @@ async function autoSaveBattery() {
 document.addEventListener?.('visibilitychange', () => { if (document.visibilityState === 'hidden') void autoSaveBattery(); });
 window.addEventListener('pagehide', () => { void autoSaveBattery(); });
 window.addEventListener('beforeunload', () => { void autoSaveBattery(); });
+// Page Lifecycle : 'freeze' arrive avant pagehide quand l'onglet est gelé
+// (navigation mobile, changement d'onglet aggressif) — meilleure chance que
+// la transaction IndexedDB parte avant le gel.
+document.addEventListener?.('freeze', () => { void autoSaveBattery(); });
 async function refreshSlots() {
   if (!sessions.current) return;
   const slot = Number($('slot').value), row = (await vault.list(sessions.current.identity, { kind: 'state' })).find(r => r.slot === slot);
@@ -255,10 +289,11 @@ async function launch(prepared, { state = null, battery, cheatList = [], input, 
     const config = input ?? normalizeInput(await inputDB.get(gameKey(prepared.metadata)).catch(() => null));
     candidate = await sessions.prepare(prepared, config, biosFile);
     const stored = battery === undefined ? await optionalLoad(candidate.batteryIdentity, 1, 'battery') : null;
+    const batteryBytes = battery === undefined ? newestBattery(stored, candidate.batteryIdentity) : battery;
     say('status', state ? 'Restauration dans une session neuve…' : 'Démarrage du jeu…');
     // B02 : aucune réinjection de cheats au démarrage. Les cheats restaurés (cheatList) sont confiés
     // au contrôleur, qui ne les applique qu'après validation de l'édition et de la région.
-    await sessions.start(candidate, { battery: battery === undefined ? stored?.bytes ?? null : battery, state, cheats: [] });
+    await sessions.start(candidate, { battery: batteryBytes, state, cheats: [] });
   } catch (error) {
     if (candidate?.frame.isConnected && sessions.current !== candidate) await sessions.dispose(candidate);
     if (archiveClosed) {
