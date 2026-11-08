@@ -218,6 +218,83 @@ export function saveDataPrefix(discId) {
   return id ? id.replace('-', '') : null;
 }
 
+// --- Isolation des sauvegardes PSP par contenu -----------------------------------------
+// Le cœur range les sauvegardes dans PSP/SAVEDATA/<identifiant du disque> : deux contenus
+// différents partageant ce même identifiant (dump refait, hack non renuméroté) écrasent
+// les sauvegardes l'un de l'autre. Le lanceur ne peut pas renommer ce dossier (le cœur le
+// choisit), mais il contrôle la carte mémoire virtuelle : à chaque lancement, le dossier
+// canonique <identifiant> reçoit les sauvegardes du jeu courant et l'occupant précédent
+// est garé dans une case « ~<identifiant>~<empreinte8> ». Rien n'est jamais supprimé :
+// les anciennes sauvegardes restent accessibles dans leur case ou au prochain lancement
+// du jeu qui les a écrites.
+export const PSP_SAVE_MARKER = '.emuperso-owner';
+
+/** Case de rangement d'un contenu : « ~ULUS10041~a1b2c3d4 » — commence par « ~ » pour
+ *  ne jamais être prise pour un dossier de sauvegarde par les exports (préfixe = identifiant). */
+export function pspSaveNamespace(discId, hashHex) {
+  const prefix = saveDataPrefix(discId);
+  const h = String(hashHex || '').slice(0, 8).toLowerCase();
+  return prefix && /^[0-9a-f]{8}$/.test(h) ? `~${prefix}~${h}` : null;
+}
+
+/**
+ * Jeu « propriétaire » des sauvegardes existantes pour un identifiant de disque :
+ * le plus souvent lancé selon l'historique (les anciennes sauvegardes lui appartiennent
+ * vraisemblablement). Retourne le spaceId, ou null si l'historique ne départage pas.
+ */
+export function pspSaveOwnerHint(games, discId) {
+  const id = normalizeDiscId(discId);
+  if (!id) return null;
+  const peers = (games || []).filter((g) => g.system === 'psp' && normalizeDiscId(g.discId) === id);
+  if (!peers.length) return null;
+  const best = peers.reduce((a, b) => ((b.opens || 0) > (a.opens || 0) ? b : a));
+  return best.spaceId || null;
+}
+
+/**
+ * Échange les dossiers de sauvegarde PSP dans la carte mémoire virtuelle (FS de type
+ * Emscripten : analyzePath, mkdir, rename, readFile, writeFile). Appelé au montage de la
+ * carte mémoire, avant que le cœur lise les sauvegardes. cfg = { prefix, namespace, hash,
+ * adoptLegacy } (voir app.mjs). Ne supprime jamais rien : l'occupant précédent est garé.
+ */
+export function pspSwapSaveData(FS, cfg) {
+  const SAVEDATA = '/data/saves/PPSSPP/PSP/SAVEDATA';
+  const exists = (p) => { try { return !!FS.analyzePath(p).exists; } catch { return false; } };
+  const mkdirp = (p) => {
+    let d = '';
+    for (const part of p.split('/')) {
+      if (!part) continue;
+      d += '/' + part;
+      if (!exists(d)) FS.mkdir(d);
+    }
+  };
+  const marker = (dir) => {
+    try {
+      const b = FS.readFile(`${dir}/${PSP_SAVE_MARKER}`);
+      return b ? new TextDecoder().decode(b) : null;
+    } catch { return null; }
+  };
+  if (!exists(SAVEDATA)) mkdirp(SAVEDATA);
+  const root = `${SAVEDATA}/${cfg.prefix}`;
+  const mine = `${SAVEDATA}/${cfg.namespace}`;
+  const legacy = `${SAVEDATA}/~${cfg.prefix}~legacy`;
+  const occ = exists(root) ? marker(root) : null;
+  if (occ === cfg.hash) return; // déjà en place (rechargement, changement de moteur)
+  // Sans marqueur, le dossier canonique contient d'anciennes sauvegardes : le jeu désigné
+  // propriétaire (historique) les réclame, sinon elles sont garées pour lui.
+  const claim = occ === null && cfg.adoptLegacy;
+  if (exists(root) && !claim) {
+    const base = occ ? `~${cfg.prefix}~${occ}` : `~${cfg.prefix}~legacy`;
+    let target = `${SAVEDATA}/${base}`, n = 2;
+    while (exists(target)) { target = `${SAVEDATA}/${base}.${n}`; n++; }
+    FS.rename(root, target);
+  }
+  if (!exists(mine) && cfg.adoptLegacy && exists(legacy)) FS.rename(legacy, mine);
+  if (exists(mine) && !exists(root)) FS.rename(mine, root);
+  if (!exists(root)) FS.mkdir(root);
+  FS.writeFile(`${root}/${PSP_SAVE_MARKER}`, cfg.hash);
+}
+
 export const SAVE_ARCHIVE_LIMITS = { bytes: 64 * MiB, files: 2000 };
 
 /**
@@ -231,7 +308,7 @@ export function checkSaveArchive(files, prefix) {
   const folders = new Set();
   for (const f of files) {
     const parts = f.name.split('/');
-    if (f.name.includes('\\') || parts.some((p) => p === '' || p === '.' || p === '..') || parts.length < 2 || parts.length > 3) {
+    if (f.name.includes('\\') || parts.some((p) => p === '' || p === '.' || p === '..' || p.charAt(0) === '.') || parts.length < 2 || parts.length > 3) {
       return { ok: false, error: `Chemin refusé dans l’archive : « ${f.name} ». Attendu : <dossier de sauvegarde>/<fichier>, comme dans l’export de Portables.` };
     }
     if (!parts[0].toUpperCase().startsWith(prefix)) {

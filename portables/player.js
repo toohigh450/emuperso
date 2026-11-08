@@ -64,6 +64,10 @@
   var activeCodes = (boot.codes || []).slice(); // codes activés choisis avant le lancement
   // Carte mémoire PSP de ppsspp (dossier de sauvegarde du moteur, vérifié avec un vrai jeu).
   var SAVEDATA = '/data/saves/PPSSPP/PSP/SAVEDATA';
+  // Isolation des sauvegardes PSP par contenu : voir pspSwapSaveData (js/psp.mjs).
+  // Le dossier canonique <identifiant du disque> reçoit les sauvegardes du jeu courant ;
+  // l'occupant précédent est garé dans « ~<identifiant>~<empreinte> » — jamais rien de supprimé.
+  var pspLib = import('./js/psp.mjs');
   function manager() {
     var emulator = window.EJS_emulator;
     if (!emulator || !emulator.gameManager) throw new Error('Moteur pas encore prêt.');
@@ -111,7 +115,7 @@
       if (!gm.FS.analyzePath(SAVEDATA).exists) return out;
       function walk(dir, rel) {
         gm.FS.readdir(dir).forEach(function (name) {
-          if (name === '.' || name === '..') return;
+          if (name === '.' || name === '..' || name.charAt(0) === '.') return; // dossiers internes (marqueur d'occupant) hors export
           var path = dir + '/' + name, st = gm.FS.stat(path);
           if (gm.FS.isDir(st.mode)) walk(path, rel + name + '/');
           else out.push({ name: rel + name, bytes: gm.FS.readFile(path) });
@@ -189,7 +193,14 @@
           });
         });
       }
-      // PSP : fichier CWCheat écrit une fois la carte mémoire montée, avant que ppsspp lise le jeu.
+      // PSP : isolation des sauvegardes par contenu, puis fichier CWCheat, le tout avant
+      // que ppsspp ne lise le jeu (dossiers de sauvegarde et codes sont choisis au boot).
+      if (boot.pspSaveSwap) {
+        emulator.on('saveDatabaseLoaded', function (FS) {
+          pspLib.then(function (m) { m.pspSwapSaveData(FS, boot.pspSaveSwap); })
+            .catch(function (err) { console.error('Module PSP indisponible', err); });
+        });
+      }
       if (boot.pspCheats) {
         emulator.on('saveDatabaseLoaded', function (FS) {
           try {

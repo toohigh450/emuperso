@@ -18,7 +18,7 @@ import { createBrowserHost } from './player-host.mjs';
 import { migrateLegacySave, LEGACY_SAVE_SYSTEMS } from './save-migration.mjs';
 
 import { memoryPlan, pspMemoryPlan, MAX_INPUT_BYTES, MAX_ROM_BYTES, MiB } from './resources.mjs';
-import { analyzePsp, blobReader, PSP_EXTENSIONS, saveDataPrefix, checkSaveArchive, SAVE_ARCHIVE_LIMITS, pspCheatFile, PSP_PERFORMANCE, pspPerformanceOptions } from './psp.mjs';
+import { analyzePsp, blobReader, PSP_EXTENSIONS, saveDataPrefix, checkSaveArchive, SAVE_ARCHIVE_LIMITS, pspCheatFile, PSP_PERFORMANCE, pspPerformanceOptions, pspSaveNamespace, pspSaveOwnerHint } from './psp.mjs';
 import { validateDsBios, MAX_BIOS_ZIP } from './bios.mjs';
 import { REMOTE_ENGINE, LOADER_INTEGRITY, ENGINE_VERSION, PSP_ENGINE } from './engine.mjs';
 
@@ -467,6 +467,19 @@ async function openGame(file, options = {}) {
   const defaultControls = psp ? buildPspControls() : null;
   const pad = await padSettingsFor(analysis.system, key);
   const layoutTouch = touchLayout(analysis.system);
+  // PSP : le cœur range les sauvegardes sous PSP/SAVEDATA/<identifiant du disque>, identique
+  // pour tous les contenus partageant cet identifiant. Le joueur échange les dossiers à
+  // chaud (voir pspSwapSaveData) : chaque contenu a sa case « ~id~empreinte » et le
+  // canonique reçoit toujours les sauvegardes du jeu en cours — rien n'est supprimé.
+  let pspSaveSwap = null;
+  if (psp && analysis.discId) {
+    const namespace = pspSaveNamespace(analysis.discId, fp.hex);
+    const prefix = saveDataPrefix(analysis.discId);
+    if (namespace && prefix) {
+      const owner = pspSaveOwnerHint(await store.listGames(), analysis.discId);
+      pspSaveSwap = { prefix, namespace, hash: fp.hex.slice(0, 8), adoptLegacy: owner === spaceId };
+    }
+  }
   const engineStem = ejsGameName(analysis.title, core.coreId, fp.hex);
   // Limite du cœur (Mega Drive : 150 lignes) : les codes en trop ne partent pas au moteur.
   const bootCodes = limitActiveCodes(analysis.system, codes.filter((c) => c.enabled && !isPlaceholderCode(analysis.system, c.code)).map((c) => c.code));
@@ -493,6 +506,8 @@ async function openGame(file, options = {}) {
     coreOptions: psp ? perfOptions : null,
     // PSP : codes actifs écrits dans le fichier CWCheat du jeu avant son démarrage (voir pspCheatFile).
     pspCheats: psp ? pspCheatFile(analysis.discId, codes.filter((c) => c.enabled && !isPlaceholderCode('psp', c.code))) : null,
+    // PSP : plan d'échange des dossiers de sauvegarde par contenu (voir pspSwapSaveData).
+    pspSaveSwap,
     bios: core.bios,
     ejs: {
       EJS_core: core.ejsCore,

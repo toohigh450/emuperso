@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash, randomBytes } from 'node:crypto';
 import { deflateRawSync } from 'node:zlib';
-import { analyzePsp, detectPspFormat, parseSfo, normalizeDiscId, regionFromDiscId, blobReader, saveDataPrefix, PSP_MAX_BYTES } from '../js/psp.mjs';
+import { analyzePsp, detectPspFormat, parseSfo, normalizeDiscId, regionFromDiscId, blobReader, saveDataPrefix, pspSaveNamespace, pspSaveOwnerHint, pspSwapSaveData, PSP_SAVE_MARKER, PSP_MAX_BYTES } from '../js/psp.mjs';
 import { Sha256, fingerprintBlob, toHex } from '../js/hash.mjs';
 import { parseCheatCode, isPlaceholderCode } from '../js/codes.mjs';
 import { discIdOfCheatName, classifyCheatFiles, inferSystemFromPath, parseCht } from '../js/cheats.mjs';
@@ -179,6 +179,109 @@ test('PSP : identifiants de disque, régions et dossier de sauvegarde', () => {
   assert.equal(regionFromDiscId(null), 'inconnue');
   assert.equal(saveDataPrefix('ULUS-10041'), 'ULUS10041');
   assert.equal(parseSfo(new Uint8Array(10)), null);
+});
+
+test('PSP : isolation des sauvegardes par contenu — cases « ~id~empreinte » et propriétaire', () => {
+  // Deux contenus différents, même identifiant de disque : cases distinctes, jamais le canonique.
+  const a = pspSaveNamespace('ULUS-10041', 'a1b2c3d4e5f6');
+  const b = pspSaveNamespace('ULUS-10041', 'ffff99998888');
+  assert.equal(a, '~ULUS10041~a1b2c3d4');
+  assert.equal(b, '~ULUS10041~ffff9999');
+  assert.notEqual(a, b);
+  // Le préfixe « ~ » garantit que les cases garées ne matchent pas l'export
+  // (listSaveData retient les dossiers dont le nom COMMENCE par l'identifiant).
+  assert.equal(a.startsWith('ULUS10041'), false);
+  // Sans identifiant ou empreinte invalide : pas de case (comportement inchangé).
+  assert.equal(pspSaveNamespace(null, 'a1b2c3d4'), null);
+  assert.equal(pspSaveNamespace('ULUS-10041', 'zzzz'), null);
+  // Propriétaire des anciennes sauvegardes : le plus lancé selon l'historique.
+  const games = [
+    { system: 'psp', discId: 'ULUS-10041', spaceId: 'orig', opens: 12 },
+    { system: 'psp', discId: 'ULUS-10041', spaceId: 'hack', opens: 3 },
+    { system: 'psp', discId: 'UCUS-12345', spaceId: 'autre', opens: 99 },
+    { system: 'snes', discId: 'ULUS-10041', spaceId: 'pas-psp', opens: 50 },
+  ];
+  assert.equal(pspSaveOwnerHint(games, 'ULUS-10041'), 'orig');
+  assert.equal(pspSaveOwnerHint(games, 'UCUS-12345'), 'autre');
+  assert.equal(pspSaveOwnerHint(games, 'ULUS-99999'), null);
+  assert.equal(pspSaveOwnerHint([], 'ULUS-10041'), null);
+});
+
+// --- Échange des dossiers de sauvegarde (carte mémoire factice) -------------------------
+function fakeFs() {
+  const files = new Map(); // path -> Uint8Array (fichiers seuls, dossiers implicites)
+  const dirs = new Set(['/data', '/data/saves', '/data/saves/PPSSPP', '/data/saves/PPSSPP/PSP', '/data/saves/PPSSPP/PSP/SAVEDATA']);
+  const enc = new TextEncoder();
+  const norm = (p) => p.replace(/\/+$/, '');
+  const isDir = (p) => dirs.has(norm(p)) || [...files.keys()].some((f) => f.startsWith(norm(p) + '/'));
+  const put = (p, text) => files.set(norm(p), typeof text === 'string' ? enc.encode(text) : text);
+  return {
+    files, dirs, put,
+    analyzePath(p) { p = norm(p); return { exists: dirs.has(p) || files.has(p) || isDir(p) }; },
+    mkdir(p) { dirs.add(norm(p)); },
+    rename(a, b) {
+      a = norm(a); b = norm(b);
+      if (files.has(a)) { files.set(b, files.get(a)); files.delete(a); return; }
+      const pref = a + '/';
+      for (const [f, v] of [...files]) if (f.startsWith(pref)) { files.set(b + f.slice(a.length), v); files.delete(f); }
+      if (dirs.delete(a)) dirs.add(b);
+      for (const d of [...dirs]) if (d.startsWith(pref)) { dirs.delete(d); dirs.add(b + d.slice(a.length)); }
+    },
+    readFile(p) { const v = files.get(norm(p)); if (!v) throw new Error('absent'); return v; },
+    writeFile(p, bytes) { put(p, bytes); },
+    readdir(p) {
+      p = norm(p); const names = new Set();
+      for (const d of dirs) if (d.startsWith(p + '/')) names.add(d.slice(p.length + 1).split('/')[0]);
+      for (const f of files.keys()) if (f.startsWith(p + '/')) names.add(f.slice(p.length + 1).split('/')[0]);
+      return [...names];
+    },
+    isDir(p) { return isDir(p); },
+  };
+}
+const SD = '/data/saves/PPSSPP/PSP/SAVEDATA';
+const cfgA = { prefix: 'ULUS10041', namespace: '~ULUS10041~aaaa1111', hash: 'aaaa1111', adoptLegacy: true };
+const cfgB = { prefix: 'ULUS10041', namespace: '~ULUS10041~bbbb2222', hash: 'bbbb2222', adoptLegacy: false };
+
+test('PSP : échange des sauvegardes — legacy réclamée par le propriétaire, variantes garées puis restituées', () => {
+  const fs = fakeFs();
+  // État d'avant la mise à jour : anciennes sauvegardes dans le canonique, sans marqueur.
+  fs.put(`${SD}/ULUS10041/SYSDATA/ULUS10041.SFO`, 'save-original');
+  fs.put(`${SD}/ULUS10041/ULUS10041/USRDIR/test.dat`, 'save-original-2');
+
+  // 1) Le propriétaire (historique) lance : il réclame le canonique existant.
+  pspSwapSaveData(fs, cfgA);
+  assert.equal(fs.readFile(`${SD}/ULUS10041/SYSDATA/ULUS10041.SFO`) && new TextDecoder().decode(fs.readFile(`${SD}/ULUS10041/SYSDATA/ULUS10041.SFO`)), 'save-original');
+  assert.equal(new TextDecoder().decode(fs.readFile(`${SD}/ULUS10041/${PSP_SAVE_MARKER}`)), 'aaaa1111');
+  // 2) La variante lance : le canonique (saves de A) est garé sous son empreinte.
+  pspSwapSaveData(fs, cfgB);
+  assert.equal(new TextDecoder().decode(fs.readFile(`${SD}/~ULUS10041~aaaa1111/SYSDATA/ULUS10041.SFO`)), 'save-original');
+  assert.equal(new TextDecoder().decode(fs.readFile(`${SD}/ULUS10041/${PSP_SAVE_MARKER}`)), 'bbbb2222');
+  // La variante écrit SA sauvegarde dans le canonique.
+  fs.put(`${SD}/ULUS10041/HACK/USRDIR/hack.dat`, 'save-hack');
+  // 3) A relance : les saves de B sont garées, celles de A restituées.
+  pspSwapSaveData(fs, cfgA);
+  assert.equal(new TextDecoder().decode(fs.readFile(`${SD}/ULUS10041/SYSDATA/ULUS10041.SFO`)), 'save-original');
+  assert.equal(new TextDecoder().decode(fs.readFile(`${SD}/~ULUS10041~bbbb2222/HACK/USRDIR/hack.dat`)), 'save-hack');
+  assert.equal(new TextDecoder().decode(fs.readFile(`${SD}/ULUS10041/${PSP_SAVE_MARKER}`)), 'aaaa1111');
+  // 4) B relance à nouveau : restitution dans l'autre sens, toujours sans perte.
+  pspSwapSaveData(fs, cfgB);
+  assert.equal(new TextDecoder().decode(fs.readFile(`${SD}/ULUS10041/HACK/USRDIR/hack.dat`)), 'save-hack');
+  // 5) Rechargement du même jeu : no-op, pas de déplacement.
+  pspSwapSaveData(fs, cfgB);
+  assert.equal(new TextDecoder().decode(fs.readFile(`${SD}/ULUS10041/HACK/USRDIR/hack.dat`)), 'save-hack');
+});
+
+test('PSP : échange des sauvegardes — legacy garée pour le non-propriétaire, adoptée à son lancement', () => {
+  const fs = fakeFs();
+  fs.put(`${SD}/ULUS10041/SYSDATA/ULUS10041.SFO`, 'save-legacy');
+  // B (pas propriétaire) lance en premier : legacy garée, B démarre propre.
+  pspSwapSaveData(fs, cfgB);
+  assert.equal(new TextDecoder().decode(fs.readFile(`${SD}/~ULUS10041~legacy/SYSDATA/ULUS10041.SFO`)), 'save-legacy');
+  assert.equal(new TextDecoder().decode(fs.readFile(`${SD}/ULUS10041/${PSP_SAVE_MARKER}`)), 'bbbb2222');
+  // Le propriétaire A lance : il adopte la case legacy → ses anciennes saves reviennent.
+  pspSwapSaveData(fs, cfgA);
+  assert.equal(new TextDecoder().decode(fs.readFile(`${SD}/ULUS10041/SYSDATA/ULUS10041.SFO`)), 'save-legacy');
+  assert.equal(new TextDecoder().decode(fs.readFile(`${SD}/ULUS10041/${PSP_SAVE_MARKER}`)), 'aaaa1111');
 });
 
 test('PSP : intégration au lanceur (extension moteur, catalogue, refus .chd par analyzeRom)', () => {
