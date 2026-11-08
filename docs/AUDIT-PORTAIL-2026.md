@@ -67,9 +67,11 @@ Statut : **en cours** — audit statique + tests automatisés faits ; tests terr
 | SNES | Chrono Trigger (U) [!].smc 4 Mio | Snes9x | ✅ moteur prêt |
 | NES | Super Mario Bros. 3 [USA][!!].nes 384 Kio | FCEUmm | ✅ moteur prêt |
 | GB | Pokemon - Red Version.7z (109 versions) | Gambatte | ✅ sélecteur de version → extraction 7z → moteur prêt |
+| GBA (.7z) | Advance Wars.7z | mGBA | ✅ sélecteur → extraction → « ADVANCEWARSP », moteur prêt |
+| GBA (.gba) | Advance Wars (USA).gba 4 Mio | mGBA | ✅ fichier direct, moteur prêt |
 | Genesis | 688 Attack Sub.7z (5 versions) | Genesis Plus GX | ✅ sélecteur → extraction → moteur prêt |
 | Arcade | tehkanwc.zip (romset nom court) | MAME 2003-Plus | ✅ romset reconnu, moteur prêt |
-| DS | — | — | ⏸ aucune ROM DS dans la collection |
+| DS | — | — | ⏸ aucune ROM DS sur E:/D:/F: (recherche exhaustive .nds/.srl/.dsi) |
 | N64 | Charlie Blast's Territory (Europe).zip | mupen64plus-next | ✅ zip → boot → **rendu visible** (zone claire à l'écran) + **sauvegarde native écrite** (« Sauvegarde native conservée localement ») — sonde `real-n64/tools/browser_rom_probe.py` |
 | GBA | — | — | ⏸ pas de .gba isolé (pack 7z = ROM GB) |
 
