@@ -49,22 +49,49 @@ const cardDB = (() => {
   };
 })();
 let currentCardKey = null, currentCard = null, cardDirty = false;
+// Filet synchrone : cardDB (IndexedDB) peut être tué par le déchargement de
+// page sur pagehide — même risque que la carte PS1. localStorage.setItem est
+// synchrone et survit ; 2 Mio -> ~2,7 Mio base64 (quota ~5 Mio, try/catch).
+const cardLsKey = key => 'emuperso-gc-card:' + key;
+function cardLsWrite(key, bytes) {
+  try {
+    let bin = ''; const CH = 8192;
+    for (let i = 0; i < bytes.length; i += CH) bin += String.fromCharCode(...bytes.subarray(i, i + CH));
+    localStorage.setItem(cardLsKey(key), JSON.stringify({ utc: new Date().toISOString(), b64: btoa(bin) }));
+  } catch { /* quota/mode privé : IndexedDB reste la voie principale */ }
+}
+function cardLsRead(key) {
+  try {
+    const raw = localStorage.getItem(cardLsKey(key)); if (!raw) return null;
+    const { utc, b64 } = JSON.parse(raw); if (!utc || !b64) return null;
+    const bin = atob(b64), bytes = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return bytes.length === MEMCARD_BYTES ? { bytes, utc } : null;
+  } catch { return null; }
+}
 async function loadCard(key) {
   currentCardKey = key; currentCard = null; cardDirty = false;
+  let rec = null;
   try {
-    const rec = await cardDB.get(key);
-    if (rec && rec.bytes instanceof Uint8Array && rec.bytes.length === MEMCARD_BYTES) {
-      currentCard = rec.bytes;
-      $('card-status').textContent = `Carte mémoire : ${fmtSize(rec.bytes.length)} enregistrée (${new Date(rec.utc).toLocaleString('fr-FR')})`;
-      return;
-    }
+    const got = await cardDB.get(key);
+    if (got && got.bytes instanceof Uint8Array && got.bytes.length === MEMCARD_BYTES) rec = got;
   } catch { /* stockage indisponible : carte vierge */ }
+  const ls = cardLsRead(key);
+  if (ls && (!rec || Date.parse(ls.utc) > Date.parse(rec.utc || ''))) rec = { bytes: ls.bytes, utc: ls.utc };
+  if (rec) {
+    currentCard = rec.bytes;
+    $('card-status').textContent = `Carte mémoire : ${fmtSize(rec.bytes.length)} enregistrée (${new Date(rec.utc).toLocaleString('fr-FR')})`;
+    return;
+  }
   $('card-status').textContent = 'Carte mémoire : neuve (2 Mio vierges) — le jeu la formatera si besoin.';
 }
 function scheduleCardSave() { cardDirty = true; }
 async function flushCard() {
   if (!cardDirty || !currentCardKey || !currentCard) return;
   cardDirty = false;
+  // Le miroir synchrone part AVANT la transaction IndexedDB : il survit même
+  // si la page se décharge pendant l'écriture asynchrone.
+  cardLsWrite(currentCardKey, currentCard);
   try { await cardDB.set(currentCardKey, { bytes: currentCard, utc: new Date().toISOString() }); $('card-status').textContent = `Carte mémoire enregistrée (${fmtSize(currentCard.length)}).`; }
   catch { $('card-status').textContent = 'Carte mémoire : sauvegarde locale impossible (stockage navigateur).'; }
 }
