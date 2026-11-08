@@ -1,4 +1,4 @@
-// Non-régression du site assemblé (dist/) : accueil 8 consoles, liens, démos réelles de chaque console.
+// Non-régression du site assemblé (dist/) : accueil 13 systèmes, liens, démos réelles de chaque console.
 // Moteurs réels : CDN EmulatorJS pour les consoles Nintendo portables/NES/SNES, moteurs vendored pour N64/PS1.
 //   node tools/build-portail.mjs && PLAYWRIGHT_MODULE=… CHROMIUM_PATH=… node tools/test-portail.mjs [url]
 import { startPortail } from './serve-portail.mjs';
@@ -58,7 +58,11 @@ async function page(path, scope) {
   const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
   const p = await context.newPage();
   const errors = [];
-  p.on('pageerror', (e) => errors.push(e.message));
+  p.on('pageerror', (e) => {
+    // Headless : la wake lock est refusée, rejet bénin sans impact sur le test.
+    if (/Wake Lock permission request denied/i.test(e.message)) return;
+    errors.push(e.message);
+  });
   p.on('dialog', (d) => d.accept());
   const response = await p.goto(server.url + path);
   record(scope, `ouverture de /${path}`, !!response && response.ok(), `HTTP ${response && response.status()}`);
@@ -70,12 +74,12 @@ try {
   {
     const { p, context, errors } = await page('', 'accueil');
     const links = await p.locator('nav.grid a.card').evaluateAll((as) => as.map((a) => [a.querySelector('h3').textContent, a.getAttribute('href')]));
-    record('accueil', '8 consoles sur la même page', links.length === 8, links.map((l) => l[0]).join(', '));
+    record('accueil', '13 systèmes sur la même page', links.length === 13, links.map((l) => l[0]).join(', '));
     for (const [name, href] of links) {
       const status = await p.evaluate(async (u) => (await fetch(u, { cache: 'no-store' })).status, href);
       record('accueil', `lien ${name}`, status === 200, `${href} → HTTP ${status}`);
     }
-    for (const href of ['N64-Web-Lab-Phase1A.html', 'portables/DEMOS-LIBRES.md', 'docs/PORTAIL-8-CONSOLES.md']) {
+    for (const href of ['N64-Web-Lab-Phase1A.html', 'portables/DEMOS-LIBRES.md', 'docs/PORTAIL-8-CONSOLES.md', 'docs/CONTROLLER-V2.html']) {
       const status = await p.evaluate(async (u) => (await fetch(u, { cache: 'no-store' })).status, href);
       record('accueil', `lien de pied de page ${href}`, status === 200, `HTTP ${status}`);
     }
@@ -108,6 +112,16 @@ try {
     await p.getByRole('button', { name: 'Fermer le jeu', exact: true }).click();
     await p.locator('#slotEmpty').waitFor({ state: 'visible' });
     record(sys, 'fermeture propre (iframe moteur libérée)', (await p.locator('iframe').count()) === 0);
+    record(sys, 'aucune erreur JavaScript', errors.length === 0, errors.join(' | '));
+    await context.close();
+  }
+
+  // Sans démo fournie : présélection et isolation, sans prétendre valider un jeu.
+  for (const sys of ['psp', 'genesis', 'arcade', 'doom']) {
+    const { p, context, errors } = await page(`portables/?console=${sys}`, sys);
+    await p.waitForFunction(() => document.body.dataset.ready === 'true', null, { timeout: 60000 });
+    record(sys, 'console présélectionnée depuis l’accueil', (await p.locator('#catSystem').inputValue()) === sys);
+    record(sys, 'isolation inter-origines active (SharedArrayBuffer)', await p.evaluate(() => window.crossOriginIsolated === true && typeof SharedArrayBuffer === 'function'));
     record(sys, 'aucune erreur JavaScript', errors.length === 0, errors.join(' | '));
     await context.close();
   }

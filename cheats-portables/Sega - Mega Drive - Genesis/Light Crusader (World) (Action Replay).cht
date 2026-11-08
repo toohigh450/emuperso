@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Light Crusader (World) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Light%20Crusader%20%28World%29%20%28Action%20Replay%29.cht
+
+cheats = 3 
+
+cheat0_desc = "Fake Infinite Health"
+cheat0_code = "FFAA01:FF"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Health"
+cheat1_code = "FFD059:FF"
+cheat1_enable = false 
+
+cheat2_desc = "Fake No Health Some Enemies"
+cheat2_code = "FFAA03:00"
+cheat2_enable = false

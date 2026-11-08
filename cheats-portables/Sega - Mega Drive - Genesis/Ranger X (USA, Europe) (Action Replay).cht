@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Ranger X (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Ranger%20X%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Infinite Health"
+cheat0_code = "FFD723:63"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Power"
+cheat1_code = "FFD6FF:63"
+cheat1_enable = false 
+
+cheat2_desc = ""Power Generators" Remaining Modifier (Visual Only)"
+cheat2_code = "FFE653:XX"
+cheat2_enable = false 
+
+cheat3_desc = "Access Hidden Level"
+cheat3_code = "FFCC75:0E"
+cheat3_enable = false

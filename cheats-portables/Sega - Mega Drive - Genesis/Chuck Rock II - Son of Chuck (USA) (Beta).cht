@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Chuck Rock II - Son of Chuck (USA) (Beta)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Chuck%20Rock%20II%20-%20Son%20of%20Chuck%20%28USA%29%20%28Beta%29.cht
+
+cheats = 7
+
+cheat0_desc = "Infinite Lives"
+cheat0_code = "ALVT-EA94"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Energy"
+cheat1_code = "RFYA-E618"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Credits"
+cheat2_code = "ALWT-EA62"
+cheat2_enable = false
+
+cheat3_desc = "Freeze Time Continue"
+cheat3_code = "ALWT-EA4L"
+cheat3_enable = false
+
+cheat4_desc = "Skip Levels Pause Right+A And Moving The Character On The Screen Hold A+B+C And D-pad"
+cheat4_code = "RGXT-E6TR+RFMA-E6YG"
+cheat4_enable = false
+
+cheat5_desc = "Invincibility"
+cheat5_code = "RZYA-E6XA+RZRT-E6V0+RZ1A-E6XJ"
+cheat5_enable = false
+
+cheat6_desc = "Freeze Time Frog On Level The River Race"
+cheat6_code = "AXYA-GA2T+AMYA-GA32"
+cheat6_enable = false

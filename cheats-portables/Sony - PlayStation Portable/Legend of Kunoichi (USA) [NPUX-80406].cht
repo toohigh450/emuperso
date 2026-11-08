@@ -1,0 +1,15 @@
+# Recherche locale pour le jeu : Legend of Kunoichi (USA).cso (disque NPUX-80406, « Legend of Kunoichi™ »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Legend%20Of%20Kunoichi%20(Mini)%20%5BUS%5D%20%5BNPUX-80406%5D.cht
+
+cheats = "3"
+
+cheat0_desc = "Instant Win"
+cheat0_code =  "_L 0x20FE3BD0 0x0016E360"
+cheat1_desc = "Max Hits"
+cheat1_code =  "_L 0x20FE3BFC 0x00000063"
+cheat2_desc = "Max Score"
+cheat2_code =  "_L 0x20FE3BE4 0x05F5E0FF"

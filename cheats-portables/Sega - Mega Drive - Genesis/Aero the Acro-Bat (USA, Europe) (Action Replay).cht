@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Aero the Acro-Bat (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Aero%20the%20Acro-Bat%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Infinite Time (Minutes)"
+cheat0_code = "FF00D0:09"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Time (Seconds)"
+cheat1_code = "FF00D1:55"
+cheat1_enable = false 
+
+cheat2_desc = "Yellow Star Modifier"
+cheat2_code = "FF01AB:XX"
+cheat2_enable = false 
+
+cheat3_desc = "White Star Modifier"
+cheat3_code = "FF01AD:XX"
+cheat3_enable = false 
+
+cheat4_desc = "Go To End of Level"
+cheat4_code = "FF00EC:08"
+cheat4_enable = false 
+
+cheat5_desc = "Aero Walks Funny"
+cheat5_code = "FF010F:02"
+cheat5_enable = false

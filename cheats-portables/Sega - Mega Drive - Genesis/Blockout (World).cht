@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Blockout (World)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Blockout%20%28World%29.cht
+
+cheats = 4
+
+cheat0_desc = "Level 100"
+cheat0_code = "FF9EE9:0064"
+cheat0_enable = false
+
+cheat1_desc = "Cubes Don't Fall Automatically. You Have To Press Start"
+cheat1_code = "FF9EF5:000C"
+cheat1_enable = false
+
+cheat2_desc = "Cubes Don't Fall Automatically. You Have To Press Start"
+cheat2_code = "AL0T-CA68"
+cheat2_enable = false
+
+cheat3_desc = "Master Code"
+cheat3_code = "R19A-C606"
+cheat3_enable = false

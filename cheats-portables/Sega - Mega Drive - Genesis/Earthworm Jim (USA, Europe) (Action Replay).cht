@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Earthworm Jim (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Earthworm%20Jim%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Invulnerable"
+cheat0_code = "FFFBFF:34"
+cheat0_enable = false 
+
+cheat1_desc = "Invisible/Cannot Be Hit"
+cheat1_code = "FFFD28:42"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Ammo"
+cheat2_code = "FFFBF7:09+FFFBF6:09"
+cheat2_enable = false 
+
+cheat3_desc = "Vibrating Life Symbol"
+cheat3_code = "FFFD16:1C"
+cheat3_enable = false 
+
+cheat4_desc = "Freezes 1st Boss"
+cheat4_code = "FFAFC4:09"
+cheat4_enable = false 
+
+cheat5_desc = "Infinite Super Plasma Shots"
+cheat5_code = "FFFDED:0009"
+cheat5_enable = false

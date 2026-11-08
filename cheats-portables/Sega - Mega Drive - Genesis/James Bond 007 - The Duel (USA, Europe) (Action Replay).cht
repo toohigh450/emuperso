@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : James Bond 007 - The Duel (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/James%20Bond%20007%20-%20The%20Duel%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 6 
+
+cheat0_desc = "No Women To Save"
+cheat0_code = "FFBC16:0000"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Health"
+cheat1_code = "FFE0AE:0009"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Lives"
+cheat2_code = "FFF47A:04"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Clips"
+cheat3_code = "FFF47B:04"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Ammo"
+cheat4_code = "FFF47F:11"
+cheat4_enable = false 
+
+cheat5_desc = "Infinite Grenades"
+cheat5_code = "FFF481:02"
+cheat5_enable = false

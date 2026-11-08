@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Super Battleship - The Classic Naval Combat Game (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Super%20Battleship%20-%20The%20Classic%20Naval%20Combat%20Game%20%28USA%29.cht
+
+cheats = 7
+
+cheat0_desc = "Target Number Modifier P1"
+cheat0_code = "FFFFCA:0000"
+cheat0_enable = false
+
+cheat1_desc = "Enemies won't shoot at you or move during battle"
+cheat1_code = "ABBT-NA9T"
+cheat1_enable = false
+
+cheat2_desc = "Sink ships with 1 hit"
+cheat2_code = "RF1A-R6YY"
+cheat2_enable = false
+
+cheat3_desc = "Infinite main gun ammo"
+cheat3_code = "AJ1T-NA62"
+cheat3_enable = false
+
+cheat4_desc = "Infinite missiles"
+cheat4_code = "AJ2T-NA3J"
+cheat4_enable = false
+
+cheat5_desc = "Infinite torpedoes"
+cheat5_code = "AJ5T-NA7N"
+cheat5_enable = false
+
+cheat6_desc = "Light Cruisers start with twice as much ammo (24 shells and 4 missiles)"
+cheat6_code = "AXNT-BTBR"
+cheat6_enable = false

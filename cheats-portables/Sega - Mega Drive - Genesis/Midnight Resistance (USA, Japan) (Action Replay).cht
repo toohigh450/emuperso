@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Midnight Resistance (USA, Japan) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Midnight%20Resistance%20%28USA,%20Japan%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Infinite Lives P1"
+cheat0_code = "FF6451:09"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Hammers? P1"
+cheat1_code = "FF6457:09"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Chaingun Ammo P1"
+cheat2_code = "FF6463:75"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite 'Spreadgun' Ammo P1"
+cheat3_code = "FF6467:75"
+cheat3_enable = false 
+
+cheat4_desc = "Always Have Spreadgun"
+cheat4_code = "FF645A:02+FF645C:0C+FF6462:04+FF6466:04"
+cheat4_enable = false

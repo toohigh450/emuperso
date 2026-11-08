@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' blob:; script-src 'self' 'unsafe-eval' 'wasm-unsafe-eval' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; worker-src 'self' blob:; media-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>GameCube — EMUPERSO (EN TEST)</title>
+<style>
+  :root { --bg:#09121d; --panel:#152335; --text:#eff5fc; --muted:#b7c9dc; --mint:#91e5c7; --line:#37536c; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:16px/1.65 system-ui,sans-serif; background:radial-gradient(ellipse at top right,#143844,var(--bg) 65%); color:var(--text); min-height:100vh; }
+  main { max-width:1100px; margin:0 auto; padding:40px 24px 60px; }
+  a.back { color:var(--mint); text-decoration:none; font-size:14px; }
+  header { padding:18px 0 30px; }
+  h1 { font-size:clamp(30px,5vw,54px); line-height:1.12; letter-spacing:-1.5px; margin:20px 0; text-shadow:0 2px 12px #000; }
+  h2 { font-size:22px; line-height:1.4; }
+  p { color:var(--muted); }
+  header > h1, header > p { text-shadow:0 2px 12px #000; }
+  header > p { color:#e1eaf5; }
+  .brand-banner { margin:24px 0 0; border:1px solid var(--line); border-radius:14px; background:#07111f; overflow:hidden; }
+  .brand-banner img { display:block; width:100%; height:auto; max-height:270px; object-fit:contain; }
+  .badge { display:inline-block; padding:2px 10px; border-radius:999px; font-size:12px; font-weight:700; letter-spacing:.04em; }
+  .badge.test { background:#7c2d12; color:#fed7aa; border:1px solid #ea580c; }
+  .badge.alpha { background:#3b0764; color:#e9d5ff; border:1px solid #a855f7; }
+  .badge.ok { background:#14532d; color:#bbf7d0; border:1px solid #22c55e; }
+  .panel { background:rgba(18,31,48,.97); border:1px solid var(--line); border-radius:12px; box-shadow:0 12px 35px #0004; padding:25px; margin:20px 0; }
+  .row { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+  button { background:#254157; color:var(--text); border:1px solid #5e7b91; border-radius:7px; padding:12px 16px; font:inherit; font-size:13px; cursor:pointer; }
+  button:hover:not(:disabled) { border-color:var(--mint); background:#2c4c66; }
+  button:disabled { opacity:.5; cursor:not-allowed; }
+  button:focus-visible, a:focus-visible { outline:3px solid #f0c469; outline-offset:4px; }
+  button.primary { background:var(--mint); border-color:var(--mint); color:#102a24; font-weight:700; }
+  input[type=file] { display:none; }
+  #status { margin:10px 0 0; padding:12px; background:#102e2c; border-left:3px solid var(--mint); overflow-wrap:anywhere; }
+  #status.error { background:#3b2326; border-color:#ffa39b; color:#ffa39b; }
+  #player { position:relative; width:100%; aspect-ratio:40/33; background:#000; border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+  #player:empty { display:none; }
+  .player-frame { width:100%; height:100%; border:0; display:block; }
+  #log { margin-top:10px; max-height:180px; overflow:auto; font:12px/1.6 ui-monospace,Consolas,monospace; color:var(--muted); background:#0a1424; border:1px solid var(--line); border-radius:12px; padding:16px; overflow-wrap:anywhere; }
+  .log-line.warn { color:#f0b84f; }
+  .note { color:var(--muted); font-size:13px; }
+  .limits { columns:2; column-gap:24px; }
+  .limits li { margin:4px 0; }
+  @media (max-width:600px){ main{padding:20px 14px} .panel{padding:17px} .row button{flex:1 1 45%} }
+  @media (max-width:720px){ .limits{columns:1;} .brand-banner img{max-height:none} .brand-banner{margin-top:16px} }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="../">← Portail EMUPERSO</a>
+  <header>
+    <h1>Nintendo GameCube</h1>
+    <span class="badge test">EN TEST</span>
+    <span class="badge alpha">ALPHA</span>
+    <span id="webgpu-badge" class="badge ok" hidden>WebGPU détecté</span>
+  </header>
+
+  <figure class="brand-banner"><img src="assets/emuperso-banner.png" width="1942" height="809" alt="Paysage technologique original du laboratoire EMUPERSO, en bleu nuit et cyan." decoding="async"></figure>
+
+  <section class="panel">
+    <div class="row">
+      <button id="pick" type="button" class="primary">Choisir une image GameCube</button>
+      <input id="game-file" type="file" accept=".iso,.gcm,.rvz,.bin,.zip">
+      <button id="launch" type="button" disabled>Lancer</button>
+      <button id="stop" type="button" disabled>Fermer la session</button>
+    </div>
+    <p class="note">Formats : .iso, .gcm, .rvz, .bin ou un .zip qui en contient un (jusqu’à 1,5 Gio) — .dol (homebrew) est refusé, son chargement plante le moteur. Le fichier reste sur ce PC — rien n’est envoyé. La carte mémoire de 2 Mio est conservée dans ce navigateur, par jeu.</p>
+    <p id="status" role="status">Prêt.</p>
+    <p class="note" id="perf" hidden></p>
+    <p class="note" id="card-status">Carte mémoire : —</p>
+    <div class="row" style="margin-top:8px">
+      <button id="export-card" type="button">Exporter la carte mémoire (.mcr)</button>
+      <button id="import-card" type="button">Importer une carte mémoire</button>
+      <input id="card-file" type="file" accept=".mcr,.raw,.bin" hidden>
+    </div>
+  </section>
+
+  <div id="player"></div>
+  <div id="log" aria-live="polite"></div>
+
+  <section class="panel">
+    <h2>Limites connues — version ALPHA</h2>
+    <ul class="limits">
+      <li><strong>WebGPU requis</strong> : Chrome/Edge récent, Safari 26+ ou Chromium avec WebGPU. Sans WebGPU, rien ne démarre.</li>
+      <li><strong>Interprété, sans audio</strong> : pas de JIT Cranelift dans le navigateur ; les images disque observées tournaient autour de 16–23 % de la vitesse native sur la machine de test — beaucoup de jeux commerciaux seront trop lents ou injouables.</li>
+      <li><strong>Boots prouvés uniquement</strong> : le moteur démarre des images disque, mais la jouabilité complète n’est pas validée. Traite cette version comme un banc d’essai.</li>
+      <li><strong>Un seul boot par session</strong> : pas de redémarrage à chaud ni d’états de sauvegarde (sérialisation absente du moteur web).</li>
+      <li><strong>Carte mémoire 2 Mio</strong> : sauvegardes par jeu dans le navigateur ; export/import .mcr possible. Identifiée par l’ID de disque de l’image quand il est lisible (.iso/.gcm/.bin/.rvz et .zip), sinon par le nom de fichier ; les anciennes cartes au nom de fichier restent accessibles. La carte n’est pas relue à chaud : importe-la avant de lancer.</li>
+      <li><strong>Moteur</strong> : Gecko (ioncodes/gecko, GPL-3.0) compilé WebAssembly — voir <code>gamecube/SOURCE.md</code> pour la provenance exacte.</li>
+    </ul>
+  </section>
+</main>
+<script type="module" src="boot.mjs"></script>
+</body>
+</html>

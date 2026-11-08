@@ -6,7 +6,7 @@
 main{width:100%;min-width:0}section,.panel,.buttons,.player-panel,details,dl{min-width:0;max-width:100%}.buttons button{min-width:0;overflow-wrap:anywhere}p,strong,label,summary,.cheat-row span{overflow-wrap:anywhere}textarea{resize:vertical}
 
 /* Fan-art is decorative: never covers the game or interactive controls. */
-body{position:relative;isolation:isolate;background:#07111f}body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(rgba(5,12,23,.38),rgba(5,12,23,.66)),url("assets/gran-turismo-racing.webp") center center/cover no-repeat}.panel{background:rgba(18,31,48,.97);box-shadow:0 12px 35px #0004}.player-panel{background:#0a1424}.fusion-banner{margin:24px 0 0;border:1px solid #37536c;border-radius:14px;background:#07111f;overflow:hidden}.fusion-banner img{display:block;width:100%;height:auto;max-height:270px;object-fit:contain}.tag{display:inline-block;background:#091521d9;border:1px solid #37536c;padding:5px 9px;border-radius:6px}header>h1,header>p{text-shadow:0 2px 12px #000}header>p{color:#e1eaf5}@media(max-width:700px){body::before{background-position:center;background-size:auto 100%;opacity:.45}.panel{background:#122033}.fusion-banner img{max-height:none}.fusion-banner{margin-top:16px}}
+body{position:relative;isolation:isolate;background:#07111f}body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(rgba(5,12,23,.38),rgba(5,12,23,.66)),url("assets/gran-turismo-racing.webp") center center/cover no-repeat}.panel{background:rgba(18,31,48,.97);box-shadow:0 12px 35px #0004}.player-panel{background:#0a1424}.brand-banner{margin:24px 0 0;border:1px solid #37536c;border-radius:14px;background:#07111f;overflow:hidden}.brand-banner img{display:block;width:100%;height:auto;max-height:270px;object-fit:contain}.tag{display:inline-block;background:#091521d9;border:1px solid #37536c;padding:5px 9px;border-radius:6px}header>h1,header>p{text-shadow:0 2px 12px #000}header>p{color:#e1eaf5}@media(max-width:700px){body::before{background-position:center;background-size:auto 100%;opacity:.45}.panel{background:#122033}.brand-banner img{max-height:none}.brand-banner{margin-top:16px}}
 
 /* RC-1.13-claude.1 : une ligne lisible par cheat (provenance, format, etat, raison) */
 .cheat-list label.cheat-row{display:grid;grid-template-columns:auto 1fr;column-gap:10px;align-items:start}
@@ -14,3 +14,10 @@ body{position:relative;isolation:isolate;background:#07111f}body::before{content
 .cheat-row .cheat-meta{grid-column:2;color:var(--muted);font-size:12px;overflow-wrap:anywhere}
 .cheat-row.rejected .cheat-name{opacity:.7}
 .cheat-edition{padding:8px 12px;font-weight:600;border-bottom:1px solid var(--line)}
+/* Téléphone : zone de jeu à la taille de l'écran (portrait : image + commandes ; paysage : toute la hauteur). */
+@media (pointer:coarse) and (orientation:portrait){#game{height:calc(75vw + 370px);max-height:none}}
+@media (pointer:coarse) and (orientation:landscape) and (max-height:520px){main{padding:8px}.player-panel{padding:4px;margin:8px 0}#game{height:calc(100svh - 16px);max-height:none}}
+
+/* Fond d'écran d'époque EMUPERSO. */
+body::before { content: ""; position: fixed; inset: 0; z-index: 0; background: url('/bg/bg-ps1.jpg') center / cover no-repeat; opacity: .22; pointer-events: none; }
+body > * { position: relative; z-index: 1; }

@@ -1,0 +1,17 @@
+# Recherche locale pour le jeu : Crime Spree (Europe).cso (disque NPEZ-00136, « CRIME SPREE »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Crime%20Spree%20(Mini)%20%5BEU%5D%20%5BNPEZ-00136%5D.cht
+
+cheats = "4"
+
+cheat0_desc = "Complete Level on Pickup Money Bag"
+cheat0_code =  "_L 0x200180CC 0x8E050000"
+cheat1_desc = "Infinite Lives"
+cheat1_code =  "_L 0x2000D088 0x24040009 _L 0x2000D090 0xAC44001C"
+cheat2_desc = "Infinite Oil Usage"
+cheat2_code =  "_L 0x20014760 0x00000000"
+cheat3_desc = "Max Score on Pickup Money Bag"
+cheat3_code =  "_L 0x20016CB4 0x3C0405F6 _L 0x20016CB8 0x2484E0FF"

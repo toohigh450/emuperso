@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Mazin Wars (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Mazin%20Wars%20%28Europe%29.cht
+
+cheats = 2
+
+cheat0_desc = "Can select up to 40 continues at the Options screen	"
+cheat0_code = "FE5A-CACT"
+cheat0_enable = false
+
+cheat1_desc = "Can select up to 40 lives at the Options screen"
+cheat1_code = "FE5A-CAAR"
+cheat1_enable = false

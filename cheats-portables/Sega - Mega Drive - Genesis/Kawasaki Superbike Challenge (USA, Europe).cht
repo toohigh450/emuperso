@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Kawasaki Superbike Challenge (USA, Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Kawasaki%20Superbike%20Challenge%20%28USA,%20Europe%29.cht
+
+cheats = 6
+
+cheat0_desc = "Accelerate faster, and have a higher top speed."
+cheat0_code = "J6XA-8NGA+RTXA-8AGC"
+cheat0_enable = false
+
+cheat1_desc = "Accelerate much faster, and have a higher top speed."
+cheat1_code = "J6XA-8NGA+92XA-8AGC"
+cheat1_enable = false
+
+cheat2_desc = "When you hit an obstacle (bridge, sign, etc), you'll get back on the track faster."
+cheat2_code = "AJ2T-8A4N"
+cheat2_enable = false
+
+cheat3_desc = "Great Acceleration P1"
+cheat3_code = "FFF312:00FF"
+cheat3_enable = false
+
+cheat4_desc = "No Bike Damaged"
+cheat4_code = "FFF310:0009"
+cheat4_enable = false
+
+cheat5_desc = "No Bike Damaged"
+cheat5_code = "AJ7A-8A8C+BBDA-8A5A"
+cheat5_enable = false

@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : LHX Attack Chopper (World) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/LHX%20Attack%20Chopper%20%28World%29%20%28Action%20Replay%29.cht
+
+cheats = 3 
+
+cheat0_desc = "Infinite 20mm Chain"
+cheat0_code = "FFF1BD:FF"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Sidewinders"
+cheat1_code = "FFF1BF:FF"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Hellfires"
+cheat2_code = "FFF1C1:FF"
+cheat2_enable = false

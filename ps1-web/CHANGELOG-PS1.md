@@ -1,5 +1,103 @@
 # CHANGELOG — EMUPERSO PS1
 
+## RC-1.20-battery-mirror-order (8 novembre 2026)
+
+Correctif de la course au déchargement, deuxième passe : en RC-1.19 le miroir
+`localStorage` était écrit **après** `await vault.put` — si la page mourait
+pendant la transaction IndexedDB (pagehide/beforeunload/freeze), le miroir
+n'était jamais posé et la course persistait.
+
+- `app.js` : `batteryLsWrite` (synchrone) part désormais **avant**
+  `vault.put` dans `autoSaveBattery` et `saveBattery`. Le coffre IndexedDB
+  reste la voie principale ; le miroir est le filet de dernier recours.
+- `tools/browser_unload_probe.py` : sonde de déchargement réel — session 1
+  marqueur → `pagehide` → **IndexedDB supprimée** → reload → session 2.
+  Résultat : `marker_in_session2_ram_despite_empty_idb: true` — la carte
+  revient en RAM même coffre vide, grâce au seul miroir localStorage.
+
+## RC-1.19-battery-fallback (persistance carte mémoire, 8 novembre 2026)
+
+Bug rapporté : sauvegarde en jeu OK (BIOS personnel), mais la sauvegarde
+« disparaissait » au relancement sans fermeture du navigateur.
+
+Diagnostic par sonde `tools/browser_persist_probe.py` (deux sessions réelles,
+marqueur 128 Kio) : **le moteur persiste correctement** — le `.srm` injecté est
+chargé en RAM au boot et le coffre IndexedDB fait son travail. Le maillon faible
+était la course au déchargement : `autoSaveBattery` au `pagehide`/`beforeunload`
+est asynchrone (IndexedDB) et peut être tué avant la fin de la transaction.
+
+- `app.js` : **filet synchrone `localStorage`** — après chaque écriture coffre
+  (manuelle et automatique), la carte est aussi copiée en base64 dans
+  `localStorage` (synchrone, survit au déchargement ; ~175 Kio). À la session
+  suivante, `newestBattery()` retient la version la plus récente entre le coffre
+  (`created_utc`) et le filet (`utc`). Échec silencieux si quota/mode privé.
+- `app.js` : écoute aussi `freeze` (Page Lifecycle) — arrive avant `pagehide`
+  quand l'onglet est gelé.
+- `tools/browser_persist_probe.py` : sonde de persistance bout-en-bout
+  (marqueur → coffre → relance → RAM session 2). Résultat :
+  `marker_in_session2_ram: true`.
+- `tools/browser_bootload_probe.py` : sonde boot-load `.srm`→RAM.
+
+## RC-1.18-personal-bios (BIOS personnelle, 7 novembre 2026)
+
+Nouveau : chargement manuel d'un **BIOS PS1 personnel** (dump de la console de
+l'utilisateur). Un vrai BIOS désactive le BIOS HLE du cœur et améliore la
+compatibilité — notamment les jeux sensibles au timing comme *Future Cop
+L.A.P.D.*, dont le « no memory card » est un bug connu sur ému­lateurs
+(problème de détection carte, pas de sauvegarde : GT2 sauvegarde normalement,
+carte mémoire prouvée fonctionnelle de bout en bout par sondes navigateur).
+
+- `index.html`/`app.js` : sélecteur de fichier BIOS (512 Kio ou 4 Mio), statut
+  affiché, retrait possible. Le fichier est conservé dans IndexedDB **uniquement
+  sur ce PC** — jamais uploadé, jamais commité.
+- `session-controller.mjs` : le BIOS est transmis au moteur et entre dans
+  l'empreinte `config_sha256` des états (`bios: 'personal-file'` vs `'hle'`) —
+  un état HLE n'est pas proposé sous vrai BIOS. La carte mémoire reste
+  partagée (identité batterie inchangée).
+- `engine-session.mjs` : `biosUrl` passé à EmulatorJS après réencapsulation du
+  `File` dans le realm de l'iframe (le `instanceof Blob` d'EmulatorJS échouait
+  cross-realm et le BIOS n'était jamais écrit dans le MEMFS — bug trouvé par
+  sonde). Le cœur le dépose à `/SCPHxxxx.BIN`, `find_any_bios` le détecte.
+- Vérifié en vrai navigateur (tools/browser_bios_probe.py) : `found BIOS file`
+  puis `BIOS: 19951204, 'CEX-3000/1001/1002 by K.S.'` — le vrai BIOS boote.
+
+## RC-1.17-empty-memcard (carte vierge au boot, 7 novembre 2026)
+
+Suite du bug « no memory card » : la sonde navigateur (tools/browser_memcard_probe.py)
+a montré que `/data/saves/PCSX-ReARMed/` reste **vide** après le boot — le cœur
+n'écrit le `.srm` qu'à la capture (`saveSaveFiles()`), jamais au démarrage.
+Sans fichier au boot, le jeu voit « no memory card » et peut ne pas pouvoir
+formater : catch-22 résiduel après RC-1.16.
+
+- `empty-memcard.mjs` : carte mémoire vierge formatée de 128 Kio (en-tête « MC »,
+  structure standard PCSX-ReARMed), capturée sur le cœur réel puis embarquée en
+  base64 (les extensions `.srm` sont filtrées par build-portail et serve.py).
+- `engine-session.mjs` : `startGame()` injecte désormais la batterie du coffre
+  **ou**, à défaut, la carte vierge — le `.srm` existe donc toujours au boot.
+  Aucun changement de coffre, d'identité ou d'enveloppe.
+
+## RC-1.16-memcard-autosave (correctif carte mémoire, 7 novembre 2026)
+
+Bug rapporté par Lesteem (Discord, 17h45) : Future Cop L.A.P.D. affiche « no memory card »,
+sauvegarde impossible ; et la carte mémoire n'était capturée qu'au clic « Carte mémoire »,
+à un changement de jeu ou à un état enregistré — la fermer l'onglet l'effaçait.
+
+- engine-session.mjs : `mountFileSystems()` crée désormais aussi
+  `/data/saves/PCSX-ReARMed` avant le démarrage du moteur. Le cœur écrit son `.srm` dans ce
+  dossier ; à la première partie il n'existait pas (créé seulement comme effet secondaire de
+  `writeFile()` lors de l'injection d'une batterie existante), donc l'écriture native du jeu
+  échouait et `captureBattery()` retournait null. `mkdir()` du gestionnaire est idempotent.
+- app.js : capture automatique de la batterie du jeu en cours au masquage de la page
+  (`visibilitychange` → hidden, qui laisse le temps aux écritures IndexedDB) et à la
+  fermeture (`pagehide`, `beforeunload`), meilleur effort sans bloquer la fermeture.
+  Garde-fous inchangés : capture refusée si le moteur est en quarantaine, aucune écriture
+  si aucune carte n'a été produite, déduplication de 2 s entre déclencheurs.
+- Coffre, enveloppes, emplacements et identités : inchangés (mandat §3.c respecté).
+- Portage `emulateur-ps1` (alpha PS1) : NON effectué — en attente du GO de Karl (mandat §3.d).
+  Le même correctif s'applique : (a) ajouter le `mkdir` du dossier `PCSX-ReARMed` dans le
+  `mountFileSystems()` de la session moteur, (b) brancher la capture auto sur
+  `visibilitychange`/`pagehide`/`beforeunload` vers le coffre de l'alpha.
+
 ## RC-1.15-audit-candidate (contre-audits de RC-1.14)
 
 - R1 reproduit : refus mémoire après fermeture du jeu précédent. Contrôle conservateur déplacé avant capture/fermeture et répété après la confirmation ; aucun pari sur la récupération mémoire future.

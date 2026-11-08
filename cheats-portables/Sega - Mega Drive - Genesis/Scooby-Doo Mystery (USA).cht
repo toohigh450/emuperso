@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Scooby-Doo Mystery (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Scooby-Doo%20Mystery%20%28USA%29.cht
+
+cheats = 3
+
+cheat0_desc = "Boot Into Region Info Screen"
+cheat0_code = "AJBT-AA3J"
+cheat0_enable = false
+
+cheat1_desc = "Press Left on Main Menu to enable Debug Options in Pause Menu during gameplay"
+cheat1_code = "FF08BB:000B"
+cheat1_enable = false
+
+cheat2_desc = "Debug menu is always available in the pause menu"
+cheat2_code = "RGCT-A6WT"
+cheat2_enable = false

@@ -1,0 +1,23 @@
+# Recherche locale pour le jeu : Lost Regnum.cso (disque UCAS-40142, « LOST REGNUM ～魔窟的皇帝～ »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Lost%20Regnum%20-%20Makutsu%20No%20Koutei%20%5BAS%5D%20%5BUCAS-40142%5D.cht
+
+cheats = "7"
+
+cheat0_desc = "Ability Points Left"
+cheat0_code =  "_L 0x103D0D10 0x000003C8"
+cheat1_desc = "PLayer Size Mod"
+cheat1_code =  "_L 0x200E7D14 0x40000000"
+cheat2_desc = "Slot 4 100"
+cheat2_code =  "_L 0x003D4058 0x00000065"
+cheat3_desc = "Slot 5 100"
+cheat3_code =  "_L 0x003D408C 0x00000065"
+cheat4_desc = "Slot 6 100"
+cheat4_code =  "_L 0x003D40C0 0x00000065"
+cheat5_desc = "Slot 7 100"
+cheat5_code =  "_L 0x003D40F4 0x00000065"
+cheat6_desc = "Texture Size (Smaller = Better GFX)"
+cheat6_code =  "_L 0x200E7D58 0x40000000 _L 0x200E7D5C 0x40000000"

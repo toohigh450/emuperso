@@ -1,6 +1,7 @@
 // Fichiers de codes au format libretro (.cht) : lecture, association à une version précise du jeu.
 // Règles : aucun code n'est actif par défaut, aucun code n'est présenté comme vérifié en jeu,
 // et un fichier d'une autre version/région du même jeu n'est jamais appliqué sans choix explicite.
+import { parseRomName } from './romnames.mjs';
 
 export const CHEAT_FOLDER_ALIASES = {
   gb: 'game boy',
@@ -10,13 +11,16 @@ export const CHEAT_FOLDER_ALIASES = {
   // Dossiers de la base libretro : « Nintendo - Nintendo Entertainment System », « Nintendo - Super Nintendo… ».
   nes: 'nintendo entertainment system',
   snes: 'super nintendo entertainment system',
+  genesis: 'sega - mega drive - genesis',
+  // « Sony - PlayStation Portable » ; les noms de fichiers y finissent par « [US] [ULUS-10080] ».
+  psp: 'playstation portable',
 };
 
 /** Déduit la console d'après les dossiers du chemin (ex. « Nintendo - Game Boy Advance/… »). */
 export function inferSystemFromPath(path) {
   const parts = String(path || '').split(/[\\/]/).slice(0, -1);
   for (let i = parts.length - 1; i >= 0; i--) {
-    const norm = parts[i].toLowerCase().replace(/^nintendo\s*-\s*/, '').replace(/\s+/g, ' ').trim();
+    const norm = parts[i].toLowerCase().replace(/^(?:nintendo|sony)\s*-\s*/, '').replace(/\s+/g, ' ').trim();
     for (const [sys, alias] of Object.entries(CHEAT_FOLDER_ALIASES)) {
       if (norm === alias || norm === sys) return sys;
     }
@@ -55,11 +59,23 @@ export function cheatIdentity(text) {
   return { declared: lines.length > 0, sha256: hashes.every(Boolean) && unique.size === 1 ? [...unique][0] : null };
 }
 
-/** Le nom est une suggestion. Seule une empreinte déclarée peut identifier les octets. */
-export function classifyCheatFiles(romName, hex, files) {
+/** Identifiant de disque PSP à la fin d'un nom de fichier libretro (« … [US] [ULUS-10080].cht »), ou null. */
+export function discIdOfCheatName(name) {
+  const m = /\[([A-Z]{4}-\d{5})\]\s*(?:\.[^.]+)?$/i.exec(String(name || '').replace(/^.*[\\/]/, ''));
+  return m ? m[1].toUpperCase() : null;
+}
+
+/**
+ * Le nom est une suggestion. Seule une empreinte déclarée peut identifier les octets.
+ * PSP : discId (lu dans UMD_DATA.BIN ou PARAM.SFO) désigne le disque bien plus sûrement qu'un nom,
+ * mais pas sa révision : la correspondance reste une suggestion à confirmer (sameDisc).
+ */
+export function classifyCheatFiles(romName, hex, files, { discId = null } = {}) {
   const identified = files.filter((f) => f.romSha256 === hex && !f.reviewRequired);
-  const candidates = files.filter((f) => !f.identityDeclared && !f.romSha256);
-  return { identified, ...matchCheatFiles(romName, candidates) };
+  let candidates = files.filter((f) => !f.identityDeclared && !f.romSha256);
+  const sameDisc = discId ? candidates.filter((f) => discIdOfCheatName(f.name) === discId) : [];
+  if (sameDisc.length) candidates = candidates.filter((f) => !sameDisc.includes(f));
+  return { identified, sameDisc, ...matchCheatFiles(romName, candidates) };
 }
 
 export function linkedCheatValid(link, file, hex) {
@@ -77,9 +93,33 @@ export function normalizeName(name) {
   return s.replace(/\s+/g, ' ').toLowerCase();
 }
 
-/** Titre sans aucune parenthèse (région, version, appareil). */
+/** Titre sans parenthèses ni crochets (région, version, appareil ; noms No-Intro et GoodTools). */
 export function baseTitle(name) {
-  return normalizeName(name).replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim();
+  return normalizeName(name).replace(/\s*\([^)]*\)/g, '').replace(/\s*\[[^\]]*\]/g, '').replace(/\s+/g, ' ').trim();
+}
+
+/**
+ * Titre comparable malgré la ponctuation, les accents et « The » : GoodTools « A.S.P. Air Strike Patrol »
+ * et No-Intro « A.S.P. - Air Strike Patrol ». Même règle que le chargement automatique (cheat-autoload).
+ */
+export function looseTitle(name) {
+  return baseTitle(name).normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/^the\s+|,\s*the\b/g, ' ').replace(/[^a-z0-9]+/g, ' ').trim();
+}
+
+/**
+ * Nom de recherche des codes tiré de l'archive, quand la version à l'intérieur porte un titre tronqué
+ * (HackSets : « Aero the Acro-B2 [Europe][!].md » dans « Aero the Acro-Bat 2.7z ») : titre de l'archive
+ * suivi des étiquettes de la version choisie (région, [!]…). null si l'archive n'apporte rien de plus.
+ */
+export function archiveCheatName(romName, archiveName) {
+  if (!archiveName) return null;
+  const stem = String(archiveName).replace(/^.*[\\/]/, '').replace(/\.[^.]+$/, '');
+  const file = String(romName || '').replace(/^.*[\\/]/, '');
+  if (!looseTitle(stem) || looseTitle(stem) === looseTitle(file)) return null;
+  const ext = (file.match(/\.[^.]+$/) || [''])[0];
+  const tags = (file.slice(0, file.length - ext.length).match(/\s*(?:\([^)]*\)|\[[^\]]*\])/g) || []).join('');
+  return `${stem}${tags}${ext}`;
 }
 
 /**
@@ -89,13 +129,18 @@ export function baseTitle(name) {
  */
 export function matchCheatFiles(romName, files) {
   const full = normalizeName(romName);
-  const base = baseTitle(romName);
+  const loose = looseTitle(romName);
   const exact = [];
   const sameTitle = [];
   for (const f of files) {
     if (normalizeName(f.name) === full) exact.push(f);
-    else if (base && baseTitle(f.name) === base) sameTitle.push(f);
+    else if (loose && looseTitle(f.name) === loose) sameTitle.push(f);
   }
+  // Même titre : la même région que la ROM d'abord (Addams Family (U) → fichier (USA) avant (Europe)),
+  // puis le fichier sans nom d'appareil (les « (Action Replay) » contiennent souvent des modèles « ?? »).
+  const regions = new Set(parseRomName(String(romName).replace(/^.*[\\/]/, '')).regions);
+  const rank = (f) => (parseRomName(String(f.name)).regions.some((r) => regions.has(r)) ? 0 : 2) + (deviceLabel(f.name) ? 1 : 0);
+  sameTitle.sort((a, b) => rank(a) - rank(b));
   return { exact, sameTitle };
 }
 

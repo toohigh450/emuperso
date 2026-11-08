@@ -12,7 +12,7 @@ async function runtimeLock() {
 export class SessionController {
   constructor(container, report) { this.container = container; this.report = report; this.current = null; this.candidate = null; this.generation = 0; this.disposed = 0; }
   get emulator() { return (this.candidate ?? this.current)?.frame.contentWindow?.EJS_emulator; }
-  async prepare(prepared, input = DEFAULT_INPUT) {
+  async prepare(prepared, input = DEFAULT_INPUT, bios = null) {
     const id = ++this.generation, frame = document.createElement('iframe');
     frame.className = 'engine-frame'; frame.title = 'Session du jeu PS1'; frame.allow = 'autoplay; fullscreen; gamepad';
     frame.src = 'engine.html'; frame.hidden = true;
@@ -31,11 +31,12 @@ export class SessionController {
       if (!lock.files[corePath]) throw new Error('Empreinte du moteur sélectionné absente.');
       const identity = Object.freeze({ rom_sha256: prepared.metadata.canonical_sha256,
         engine_sha256: await fingerprintConfig({ core: lock.files[corePath], frontend: lock.files['data/src/emulator.js'], manager: lock.files['data/src/GameManager.js'] }),
-        config_sha256: await fingerprintConfig({ bios: 'hle', threads: false, legacy, adapter: 'isolated-memfs-v1', audio: 0.45, pad: input.analog }),
+        // Un BIOS réel change le timing : les états HLE ne sont pas compatibles avec lui.
+        config_sha256: await fingerprintConfig({ bios: bios ? 'personal-file' : 'hle', threads: false, legacy, adapter: 'isolated-memfs-v1', audio: 0.45, pad: input.analog }),
         state_schema: 'emuperso-ps1-state-v1' });
-      // La carte mémoire ne dépend pas du type de manette émulé : changer de manette ne l'isole pas.
+      // La carte mémoire ne dépend ni du type de manette ni du BIOS : elle reste partageable.
       const batteryIdentity = Object.freeze({ ...identity, config_sha256: await fingerprintConfig({ bios: 'hle', threads: false, legacy, adapter: 'isolated-memfs-v1', audio: 0.45 }) });
-      return { id, frame, api, identity, batteryIdentity, input, legacy, prepared, cheats: [] };
+      return { id, frame, api, identity, batteryIdentity, input, legacy, prepared, bios, cheats: [] };
     } catch (error) { frame.remove(); throw error; }
   }
   async start(candidate, { battery = null, state = null, cheats = [] } = {}) {
@@ -44,7 +45,7 @@ export class SessionController {
       if (previous) { await previous.api.pause(); previous.frame.hidden = true; }
       this.candidate = candidate; candidate.frame.hidden = false;
       const name = 'EMUPERSO_LOCAL_' + candidate.identity.rom_sha256 + '.' + candidate.prepared.metadata.filename_extension;
-      await candidate.api.start({ sessionId: candidate.id, file: candidate.prepared.file, legacy: candidate.legacy, gameName: name, battery, input: candidate.input }, (type, data) => {
+      await candidate.api.start({ sessionId: candidate.id, file: candidate.prepared.file, legacy: candidate.legacy, gameName: name, battery, input: candidate.input, ...(candidate.bios ? { bios: candidate.bios } : {}) }, (type, data) => {
         if (this.current?.id === candidate.id || this.candidate?.id === candidate.id) this.report(type, { ...data, session_generation: candidate.id });
       });
       if (state) await candidate.api.loadState(state);

@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Olympic Summer Games (USA, Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Olympic%20Summer%20Games%20%28USA,%20Europe%29.cht
+
+cheats = 3
+
+cheat0_desc = "Archery Points Maxed"
+cheat0_code = "FFF7DA:00FF"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Arrows (Archery)"
+cheat1_code = "FFF812:0009"
+cheat1_enable = false
+
+cheat2_desc = "Always Have A Score of 9 (Skeet)"
+cheat2_code = "FFF7DA:0009"
+cheat2_enable = false

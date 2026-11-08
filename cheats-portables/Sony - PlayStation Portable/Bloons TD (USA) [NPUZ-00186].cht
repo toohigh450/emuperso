@@ -1,0 +1,11 @@
+# Recherche locale pour le jeu : Bloons TD (USA).cso (disque NPUZ-00186, « BloonsTD »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Bloons%20TD%20(Mini)%20%5BUS%5D%20%5BNPUZ-00186%5D.cht
+
+cheats = "1"
+
+cheat0_desc = "Max Cash And Infinite Lives"
+cheat0_code =  "_L 0x20002000 0x240703E7 _L 0x20002004 0xAC870000 _L 0x20002008 0x3C0805F6 _L 0x2000200C 0x2508E0FF _L 0x20002010 0x0A20A664 _L 0x20002014 0xAC880000 _L 0x20029988 0x0A200800"

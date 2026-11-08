@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : T2 - Terminator 2 - Judgment Day (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/T2%20-%20Terminator%202%20-%20Judgment%20Day%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 3 
+
+cheat0_desc = "Infinite Health (Side Scrolling Levels - Ignore HUD)"
+cheat0_code = "FF2BD6:FF"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Ammo Rounds (Side Scrolling Levels)"
+cheat1_code = "FF0261:64"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Energy (Driving Levels)"
+cheat2_code = "FF017D:FF"
+cheat2_enable = false

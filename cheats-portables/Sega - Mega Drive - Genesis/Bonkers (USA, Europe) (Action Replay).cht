@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Bonkers (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Bonkers%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Level Highlighter"
+cheat0_code = "FF8D95:XX"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Bomb Time"
+cheat1_code = "FF892B:80"
+cheat1_enable = false 
+
+cheat2_desc = "No Rats Remaining In Museum & No Cars In Ma Tow Truck Stage"
+cheat2_code = "FF898B:00"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Hearts"
+cheat3_code = "FF8B35:87"
+cheat3_enable = false 
+
+cheat4_desc = "Infinite Lives"
+cheat4_code = "FF8B95:09"
+cheat4_enable = false 
+
+cheat5_desc = "Infinite Pink Balls (In Ma Tow Truck Stage)"
+cheat5_code = "FF8736:63"
+cheat5_enable = false 
+
+cheat6_desc = "Infinite Oil Spills (In Ma Tow Truck Stage)"
+cheat6_code = "FF8732:63"
+cheat6_enable = false

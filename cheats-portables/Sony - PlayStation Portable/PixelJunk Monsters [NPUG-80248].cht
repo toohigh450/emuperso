@@ -1,0 +1,33 @@
+# Recherche locale pour le jeu : PixelJunk Monsters.cso (disque NPUG-80248, « PixelJunk™ Monsters Deluxe »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/PixelJunk%20Monsters%20Deluxe%20(PlayStation%20Store)%20%5BUS%5D%20%5BNPUG-80248%5D.cht
+
+cheats = "12"
+
+cheat0_desc = "9 Green Orb Thingies"
+cheat0_code =  "_L 0x00D7C550 0x00000009"
+cheat1_desc = "99 Men"
+cheat1_code =  "_L 0x00963BA0 0x00000063"
+cheat2_desc = "9999 Money"
+cheat2_code =  "_L 0x10C43934 0x0000270F"
+cheat3_desc = "Infinite Coin"
+cheat3_code =  "_L 0x10DE0AB0 0x000000FA"
+cheat4_desc = "Infinite Herd"
+cheat4_code =  "_L 0x10963BA0 0x00000014"
+cheat5_desc = "Invincible"
+cheat5_code =  "_L 0x2003D26C 0x00000000"
+cheat6_desc = "Invincible (Off)"
+cheat6_code =  "_L 0x2003D26C 0x2463FFFF"
+cheat7_desc = "Many Gems!"
+cheat7_code =  "_L 0x10D7C550 0x000000FA"
+cheat8_desc = "Max Herd"
+cheat8_code =  "_L 0x29163BA0 0x00000063"
+cheat9_desc = "Max Herd v2"
+cheat9_code =  "_L 0x20963BA0 0x00000063"
+cheat10_desc = "Max Gems"
+cheat10_code =  "_L 0x1957C550 0x00000063"
+cheat11_desc = "Max Gems v2"
+cheat11_code =  "_L 0x20D7C550 0x00000063"

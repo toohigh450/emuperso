@@ -350,7 +350,7 @@ export function createCheatController({ getEngine, catalog, regions, stores, emi
     if (info.needs) {
       setMessage(fromMemory
         ? `⚠️ Édition mémorisée (${result.catalogTitle}, ${catalogRegion}) : confirmez ci-dessous que votre disque correspond avant d'activer.`
-        : `⚠️ Ces codes proviennent de l'édition ${catalogRegion} (${result.catalogTitle}). Confirmez ci-dessous avant d'activer.`, true);
+        : `⚠️ Ces codes proviennent de l'édition ${catalogRegion ? `${catalogRegion} (${result.catalogTitle})` : `« ${result.catalogTitle} »`}. Confirmez ci-dessous avant d'activer.`, true);
     } else if (fromMemory) {
       setMessage(`✅ Édition mémorisée reconnue (${result.catalogTitle}). ${cheats.length} code(s), tous désactivés par défaut. Choix précédent sur cet appareil.`);
     } else {

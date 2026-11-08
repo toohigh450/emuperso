@@ -10,14 +10,21 @@ const DIST = resolve(ROOT, 'dist');
 const config = JSON.parse(await readFile(join(ROOT, 'vercel.json'), 'utf8'));
 const TYPES = {
   '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css',
-  '.json': 'application/json', '.wasm': 'application/wasm', '.png': 'image/png', '.svg': 'image/svg+xml',
+  '.json': 'application/json', '.wasm': 'application/wasm', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml',
   '.md': 'text/markdown; charset=utf-8', '.txt': 'text/plain; charset=utf-8', '.data': 'application/octet-stream',
+  '.webmanifest': 'application/manifest+json', '.apk': 'application/vnd.android.package-archive',
 };
 const rules = config.headers.map((h) => ({ re: new RegExp(`^${h.source.replace('(.*)', '.*')}$`), headers: h.headers }));
 
 export function startPortail(port = 0) {
   const server = createServer(async (req, res) => {
-    let path = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+    if (!['GET', 'HEAD'].includes(req.method)) {
+      res.writeHead(405, { Allow: 'GET, HEAD' }).end(); return;
+    }
+    let path;
+    try { path = decodeURIComponent(new URL(req.url, 'http://localhost').pathname); }
+    catch { res.writeHead(400).end('URL invalide'); return; }
+    if (path.includes('\0')) { res.writeHead(400).end('URL invalide'); return; }
     let file = resolve(DIST, '.' + path);
     if (!file.startsWith(DIST + sep) && file !== DIST) { res.writeHead(403).end(); return; }
     try {

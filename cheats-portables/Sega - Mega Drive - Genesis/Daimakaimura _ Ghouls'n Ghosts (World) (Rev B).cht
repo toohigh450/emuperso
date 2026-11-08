@@ -1,0 +1,44 @@
+# Recherche locale pour la ROM : Daimakaimura _ Ghouls'n Ghosts (World) (Rev B)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Daimakaimura%20_%20Ghouls'n%20Ghosts%20%28World%29%20%28Rev%20B%29.cht
+
+cheats = 9
+
+cheat0_desc = "Change Title to Dai Makaimura"
+cheat0_code = "DTBA-AA58+4EAT-B0NR"
+cheat0_enable = false
+
+cheat1_desc = "Change Title to Dai Makaimura"
+cheat1_code = "DTBA-AA58+ZJAT-A8ER"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Lives"
+cheat2_code = "AKWT-AA5G"
+cheat2_enable = false
+
+cheat3_desc = "Invincibility"
+cheat3_code = "RYJA-C60G"
+cheat3_enable = false
+
+cheat4_desc = "Never Lose Armor"
+cheat4_code = "AWGA-AA4J+FAJA-DE0G"
+cheat4_enable = false
+
+cheat5_desc = "Switch To Japan Region"
+cheat5_code = "KABA-AA4W"
+cheat5_enable = false
+
+cheat6_desc = "Hit Anywhere"
+cheat6_code = "AAGT-CA9R"
+cheat6_enable = false
+
+cheat7_desc = "Hit Anywhere"
+cheat7_code = "AAGT-CA8Y"
+cheat7_enable = false
+
+cheat8_desc = "Master Code"
+cheat8_code = "EABA-AA3Y"
+cheat8_enable = false

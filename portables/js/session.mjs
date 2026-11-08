@@ -12,6 +12,9 @@ export class Session {
     this.state = 'idle'; // idle | starting | running | stopping
     this.current = null;
     this.handle = null;
+    // Jeton de session INTERNE (compteur ++), pas un secret : il invalide les callbacks
+    // asynchrones périmés d'un démarrage précédent. Jamais comparé à une entrée
+    // utilisateur — les « timing attacks » signalés par Aikido sont des faux positifs.
     this.token = 0;
     this.lastError = null;
     this.detail = '';

@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : RoadBlasters (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/RoadBlasters%20%28Japan%29.cht
+
+cheats = 3
+
+cheat0_desc = "Infinite Fuel Main"
+cheat0_code = "ADGT-AAF4"
+cheat0_enable = false
+
+cheat1_desc = "Invincibility"
+cheat1_code = "RFYT-A60L+BC4T-AA8G+C45A-AA4N"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Special Weapons"
+cheat2_code = "AC6T-AAFW+AC7T-AAAT+AC7T-AAC0+AC8A-AAAL"
+cheat2_enable = false

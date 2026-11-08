@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : ESPN National Hockey Night (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/ESPN%20National%20Hockey%20Night%20%28USA%29.cht
+
+cheats = 2
+
+cheat0_desc = "Team 1 Score Modifier (P1)"
+cheat0_code = "FF7CF8:0000"
+cheat0_enable = false
+
+cheat1_desc = "Team 2 Score Modifier (P2/CPU)"
+cheat1_code = "FF7D08:0000"
+cheat1_enable = false

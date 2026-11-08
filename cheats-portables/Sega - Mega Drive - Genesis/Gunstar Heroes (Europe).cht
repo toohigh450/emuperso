@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Gunstar Heroes (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Gunstar%20Heroes%20%28Europe%29.cht
+
+cheats = 5
+
+cheat0_desc = "Invincibility (Disable Hit Detection)"
+cheat0_code = "R04A-A60R+R03A-A6WN+RYJT-C6ZY+RYKA-C6VR"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Vitality"
+cheat1_code = "AL4T-AA3W+ATLT-CA5J+ATJT-CA7T"
+cheat1_enable = false
+
+cheat2_desc = "Keep Second Slot Weapon After The Death"
+cheat2_code = "AM0A-AA2W"
+cheat2_enable = false
+
+cheat3_desc = "Invincibility - Both Players (Blinking)"
+cheat3_code = "AM5A-AA3T"
+cheat3_enable = false
+
+cheat4_desc = "Master Code"
+cheat4_code = "AJBT-AA5R"
+cheat4_enable = false

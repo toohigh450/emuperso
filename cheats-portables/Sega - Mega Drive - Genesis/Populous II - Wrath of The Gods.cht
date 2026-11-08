@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Populous II - Wrath of The Gods
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Populous%20II%20-%20Wrath%20of%20The%20Gods.cht
+
+cheats = 7
+
+cheat0_desc = "Infinite Experience &quot;Points&quot;"
+cheat0_code = "FFF5BE:0009"
+cheat0_enable = false
+
+cheat1_desc = "Man Icon Maxed Out"
+cheat1_code = "FFF5B8:0049"
+cheat1_enable = false
+
+cheat2_desc = "Tree Icon Maxed Out"
+cheat2_code = "FFF5B8:000F"
+cheat2_enable = false
+
+cheat3_desc = "Globe Icon Maxed Out"
+cheat3_code = "FFF5BA:000F"
+cheat3_enable = false
+
+cheat4_desc = "Cloud Icon Maxed Out"
+cheat4_code = "FFF5BA:000F"
+cheat4_enable = false
+
+cheat5_desc = "Fire Icon Maxed Out"
+cheat5_code = "FFF5BC:000F"
+cheat5_enable = false
+
+cheat6_desc = "Waves Icon Maxed Out"
+cheat6_code = "FFF5BC:000F"
+cheat6_enable = false

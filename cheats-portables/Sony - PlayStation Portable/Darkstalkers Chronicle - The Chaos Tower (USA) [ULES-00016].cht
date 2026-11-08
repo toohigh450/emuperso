@@ -1,0 +1,21 @@
+# Recherche locale pour le jeu : Darkstalkers Chronicle - The Chaos Tower (USA).cso (disque ULES-00016, « DARKSTALKERS CHRONICLE THE CHAOS TOWER »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Darkstalkers%20Chronicle%20-%20The%20Chaos%20Tower%20%5BEU%5D%20%5BULES-00016%5D.cht
+
+cheats = "6"
+
+cheat0_desc = "Infinite HP (Player 1)"
+cheat0_code =  "_L 0x20800450 0x02400240"
+cheat1_desc = "Infinite SP (Player 1)"
+cheat1_code =  "_L 0x2080050A 0x00000090"
+cheat2_desc = "Infinite Time"
+cheat2_code =  "_L 0x20800109 0x00000063"
+cheat3_desc = "Play As Dark Talbain (Gallon)"
+cheat3_code =  "_L 0x00800782 0x00000012"
+cheat4_desc = "Player 1 Has Infinite Health"
+cheat4_code =  "_L 0xD3000000 0x0900015A _L 0x20800450 0x00000002 _L 0x20800452 0x00000002 _L 0xD2000000 0x00000000"
+cheat5_desc = "Player 2 Has No Health"
+cheat5_code =  "_L 0x20800850 0x00010001 _L 0x20800850 0x00010001 _L 0xD2000000 0x00000000"

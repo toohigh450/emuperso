@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Newman Haas IndyCar featuring Nigel Mansell (World) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Newman%20Haas%20IndyCar%20featuring%20Nigel%20Mansell%20%28World%29%20%28Action%20Replay%29.cht
+
+cheats = 6 
+
+cheat0_desc = "Low Timer (Minutes)"
+cheat0_code = "FFA1CD:00"
+cheat0_enable = false 
+
+cheat1_desc = "Low Timer (Seconds)"
+cheat1_code = "FFA1CE:00"
+cheat1_enable = false 
+
+cheat2_desc = "Low Timer (Micro-Seconds)"
+cheat2_code = "FFA1CF:00"
+cheat2_enable = false 
+
+cheat3_desc = "Have Excellent Acceleration P1"
+cheat3_code = "FFA397:04+FFA399:04"
+cheat3_enable = false 
+
+cheat4_desc = "Fake? Always In 1st"
+cheat4_code = "FFA367:01"
+cheat4_enable = false 
+
+cheat5_desc = "Fake? Lap Modifier"
+cheat5_code = "FFA33D:XX"
+cheat5_enable = false

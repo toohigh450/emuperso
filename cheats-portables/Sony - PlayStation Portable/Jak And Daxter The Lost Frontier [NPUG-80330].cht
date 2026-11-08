@@ -1,0 +1,41 @@
+# Recherche locale pour le jeu : Jak And Daxter The Lost Frontier.cso (disque NPUG-80330, « Jak & Daxter®: The Lost Frontier™ »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Jak%20%26%20Daxter%20-%20The%20Lost%20Frontier%20%5BUS%5D%20%5BNPUG-80330%5D.cht
+
+cheats = "16"
+
+cheat0_desc = "9999 Precursor Orbs"
+cheat0_code =  "_L 0x100EE74C 0x0000270F"
+cheat1_desc = "9999 Scrap"
+cheat1_code =  "_L 0x100EE750 0x0000270F"
+cheat2_desc = "Danger Coarse 1 (100000)"
+cheat2_code =  "_L 0x20F247A0 0x000186A0"
+cheat3_desc = "Danger Coarse 2 (100000)"
+cheat3_code =  "_L 0x20F247BC 0x000186A0"
+cheat4_desc = "Danger Coarse 3 (100000)"
+cheat4_code =  "_L 0x20F247D8 0x000186A0"
+cheat5_desc = "Glider-Man"
+cheat5_code =  "_L 0x012FB490 0x00000000"
+cheat6_desc = "Inf. Health (Dark Daxter)"
+cheat6_code =  "_L 0x211C968C 0x42C80000"
+cheat7_desc = "Infinite Blaster Gun Ammo"
+cheat7_code =  "_L 0x01713018 0x00000050"
+cheat8_desc = "Infinite Health"
+cheat8_code =  "_L 0x212FB64C 0x4F800000"
+cheat9_desc = "Infinite Health v2"
+cheat9_code =  "_L 0x212FB64C 0x04F80000"
+cheat10_desc = "Infinite Scatler Gun Ammo"
+cheat10_code =  "_L 0x01713040 0x0000001E"
+cheat11_desc = "Max Dark Eco"
+cheat11_code =  "_L 0x100EE74C 0x000003E7"
+cheat12_desc = "Max Dark Eco Daxter"
+cheat12_code =  "_L 0x011CA0B8 0x000000C8"
+cheat13_desc = "Max Precursor Orbs"
+cheat13_code =  "_L 0x100EE748 0x00000999"
+cheat14_desc = "Max Scraps"
+cheat14_code =  "_L 0x100EE750 0x0000270F"
+cheat15_desc = "Vulcan Fury Gun Inf. Ammo"
+cheat15_code =  "_L 0x11713068 0x0000012C"

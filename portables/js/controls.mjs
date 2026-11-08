@@ -42,6 +42,16 @@ const KEYBOARD_AND_PAD_DEFAULTS = {
 };
 
 /** Retourne la valeur à donner à EJS_defaultControls, ou null pour ne rien imposer. */
+/**
+ * PSP : commandes par défaut sans la touche de chargement rapide d'état (n° 25, « 2 »).
+ * Avec le cœur ppsspp nightly, charger un état fige le jeu (constaté le 2 novembre 2026).
+ */
+export function buildPspControls() {
+  const p0 = structuredClone(KEYBOARD_AND_PAD_DEFAULTS);
+  p0[25] = { value: '' };
+  return { 0: p0, 1: {}, 2: {}, 3: {} };
+}
+
 export function buildDefaultControls(profileId) {
   if (profileId !== 'positionnel') return null;
   const p0 = structuredClone(KEYBOARD_AND_PAD_DEFAULTS);

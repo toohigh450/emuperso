@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : ESPN Baseball Tonight (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/ESPN%20Baseball%20Tonight%20%28USA%29.cht
+
+cheats = 4
+
+cheat0_desc = "Strikes Modifier"
+cheat0_code = "FF40F4:0000"
+cheat0_enable = false
+
+cheat1_desc = "Outs Modifier"
+cheat1_code = "FF40F8:0000"
+cheat1_enable = false
+
+cheat2_desc = "Team 1 Score Modifier"
+cheat2_code = "FF005E:0000"
+cheat2_enable = false
+
+cheat3_desc = "Team 2 Score Modifier"
+cheat3_code = "FF0060:0000"
+cheat3_enable = false

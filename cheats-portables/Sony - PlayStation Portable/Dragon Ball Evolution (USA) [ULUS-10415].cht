@@ -1,0 +1,23 @@
+# Recherche locale pour le jeu : Dragon Ball Evolution (USA).cso (disque ULUS-10415, « DRAGONBALL: EVOLUTION »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Dragon%20Ball%20-%20Evolution%20%5BUS%5D%20%5BULUS-10415%5D.cht
+
+cheats = "7"
+
+cheat0_desc = "Fake Max Damage "
+cheat0_code =  "_L 0x2026E680 0x3B9AC9FF"
+cheat1_desc = "Fake No Damage To You "
+cheat1_code =  "_L 0x0026E7FC 0x00000000"
+cheat2_desc = "Game Save Battle Points Mod Max"
+cheat2_code =  "_L 0x210DC5BC 0x3B9AC9FF"
+cheat3_desc = "Game Save Zeny Mod Max"
+cheat3_code =  "_L 0x210DC5BC 0x3B9AC9FF"
+cheat4_desc = "Max Hit Count [You Hitting Enemy]"
+cheat4_code =  "_L 0x2026E68C 0x0001869F"
+cheat5_desc = "Max Zennie"
+cheat5_code =  "_L 0x201E121C 0x000F423F"
+cheat6_desc = "Zeny Max "
+cheat6_code =  "_L 0x201E121C 0x3B9AC9FF"

@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Marble Madness (USA, Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Marble%20Madness%20%28USA,%20Europe%29.cht
+
+cheats = 5
+
+cheat0_desc = "Freeze Time"
+cheat0_code = "RGYA-A60C"
+cheat0_enable = false
+
+cheat1_desc = "Freeze Time"
+cheat1_code = "FFB0CE:0063"
+cheat1_enable = false
+
+cheat2_desc = "Have Infinite Time"
+cheat2_code = "FFB0CE:0099"
+cheat2_enable = false
+
+cheat3_desc = "Have Insane Score P1"
+cheat3_code = "FFB12A:00FF+FFB12A:00FF"
+cheat3_enable = false
+
+cheat4_desc = "Master Code"
+cheat4_code = "R19T-R6Z8"
+cheat4_enable = false

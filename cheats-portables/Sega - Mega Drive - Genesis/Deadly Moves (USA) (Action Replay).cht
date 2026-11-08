@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Deadly Moves (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Deadly%20Moves%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Infinite Health P1"
+cheat0_code = "FF577A:3E"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Health P2"
+cheat1_code = "FF577B:3E"
+cheat1_enable = false 
+
+cheat2_desc = "Always Win P1"
+cheat2_code = "FF57CE:02"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Credits"
+cheat3_code = "FF5F2B:05"
+cheat3_enable = false

@@ -1,0 +1,19 @@
+# Recherche locale pour le jeu : Puzzle Scape (Europe).cso (disque NPEZ-00001, « Puzzle Scape Mini »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Puzzle%20Scape%20Mini%20(PlayStation%20Store)%20%5BEU%5D%20%5BNPEZ-00001%5D.cht
+
+cheats = "5"
+
+cheat0_desc = "Disable Timer"
+cheat0_code =  "_L 0x20346B80 0x00000000"
+cheat1_desc = "Level 1"
+cheat1_code =  "_L 0x20346C0C 0x00000001"
+cheat2_desc = "Level 99"
+cheat2_code =  "_L 0x20346C0C 0x00000063"
+cheat3_desc = "Max Power-Up"
+cheat3_code =  "_L 0x20346C1C 0x00000064"
+cheat4_desc = "Max Score"
+cheat4_code =  "_L 0x20347400 0x05F5E0FF"

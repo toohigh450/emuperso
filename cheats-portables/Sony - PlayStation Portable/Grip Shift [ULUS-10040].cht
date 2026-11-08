@@ -1,0 +1,25 @@
+# Recherche locale pour le jeu : Grip Shift.iso (disque ULUS-10040, « GRIPSHIFT™ »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/GripShift%20%5BUS%5D%20%5BULUS-10040%5D.cht
+
+cheats = "8"
+
+cheat0_desc = "________________[>>>FPS Cheats<<<]________________"
+cheat0_code =  "_L 0x00000000 0x00000000"
+cheat1_desc = "30 FPS [Default]"
+cheat1_code =  "_L 0x201243B0 0x2CA50002"
+cheat2_desc = "↑[#Force FPS To Run At 30 FPS -Original Value-]"
+cheat2_code =  "_L 0x00000000 0x00000000"
+cheat3_desc = "60 FPS"
+cheat3_code =  "_L 0x201243B0 0x2CA50001"
+cheat4_desc = "↑[#Force FPS To Run At 60 FPS]"
+cheat4_code =  "_L 0x00000000 0x00000000"
+cheat5_desc = "________________[>>>General Cheats<<<]________________"
+cheat5_code =  "_L 0x00000000 0x00000000"
+cheat6_desc = "Infinite Nitrous"
+cheat6_code =  "_L 0x6072EED0 0xFFFFFFFF _L 0x00020001 0x000001A0"
+cheat7_desc = "Max Stars"
+cheat7_code =  "_L 0x6072EED0 0x00000063 _L 0x00020001 0x00000024"

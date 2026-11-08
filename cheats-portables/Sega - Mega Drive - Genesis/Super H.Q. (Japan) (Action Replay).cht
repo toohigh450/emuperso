@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Super H.Q. (Japan) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Super%20H.Q.%20%28Japan%29%20%28Action%20Replay%29.cht
+
+cheats = 3 
+
+cheat0_desc = "Fake Infinite Time"
+cheat0_code = "FFBCD1:57"
+cheat0_enable = false 
+
+cheat1_desc = "Good Acceleration P1"
+cheat1_code = "FFBC59:FF"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Time"
+cheat2_code = "FFBC4F:39"
+cheat2_enable = false

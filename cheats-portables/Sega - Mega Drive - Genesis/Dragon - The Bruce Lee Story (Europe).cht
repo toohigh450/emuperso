@@ -1,0 +1,32 @@
+# Recherche locale pour la ROM : Dragon - The Bruce Lee Story (Europe)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Dragon%20-%20The%20Bruce%20Lee%20Story%20%28Europe%29.cht
+
+cheats = 6
+
+cheat0_desc = "Regional Lockout Bypass"
+cheat0_code = "EAAT-AY1T"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "AJJA-AA40"
+cheat1_enable = false
+
+cheat2_desc = "Disable Bosses"
+cheat2_code = "REWT-A6XT"
+cheat2_enable = false
+
+cheat3_desc = "Disable Bosses"
+cheat3_code = "FFBBBF:00FF"
+cheat3_enable = false
+
+cheat4_desc = "1 Hit Full Chi"
+cheat4_code = "FFBBBE:00FF"
+cheat4_enable = false
+
+cheat5_desc = "1 Hit Full Chi"
+cheat5_code = "RGNA-A6XA"
+cheat5_enable = false

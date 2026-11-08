@@ -1,4 +1,5 @@
-// Reconnaissance des consoles et lecture des en-têtes de ROM (NES, SNES, GB, GBC, GBA, DS).
+// Reconnaissance des consoles et lecture des en-têtes de ROM (NES, SNES, Genesis, GB, GBC, GBA, DS).
+// La PSP (images disque de plusieurs centaines de Mio) est analysée à part, par tranches : voir psp.mjs.
 // Module pur : aucune dépendance au navigateur, testable avec Node.
 
 const KiB = 1024;
@@ -21,6 +22,15 @@ export const SYSTEMS = {
     ejsCore: 'snes', // cœur snes9x ; manette tactile A/B/X/Y/L/R
     coreId: 'snes9x',
     maxBytes: 8 * MiB + 512, // ExHiROM 64 Mbit + en-tête de copieur
+    aspect: '4 / 3',
+  },
+  genesis: {
+    id: 'genesis',
+    label: 'Sega Genesis / Mega Drive',
+    exts: ['md', 'smd', 'gen'],
+    ejsCore: 'segaMD', // cœur genesis_plus_gx par défaut dans EmulatorJS ; pas de BIOS requis
+    coreId: 'genesis_plus_gx',
+    maxBytes: 16 * MiB, // inclut les homebrews et hacks étendus ; compatibilité du cœur à vérifier
     aspect: '4 / 3',
   },
   gb: {
@@ -59,7 +69,81 @@ export const SYSTEMS = {
     maxBytes: 1024 * MiB,
     aspect: '2 / 3',
   },
+  psp: {
+    id: 'psp',
+    label: 'PlayStation Portable',
+    exts: ['iso', 'cso', 'pbp'],
+    ejsCore: 'psp', // cœur ppsspp, version à fils d'exécution seulement (isolation COOP/COEP requise)
+    coreId: 'ppsspp',
+    maxBytes: 1800 * MiB, // UMD double couche
+    aspect: '16 / 9', // 480 × 272
+  },
+  arcade: {
+    id: 'arcade',
+    label: 'Arcade (MAME 2003-Plus / FBNeo)',
+    exts: [], // un romset arcade est un .zip de puces sans format reconnaissable : voir analyzeArcade
+    ejsCore: 'mame2003_plus',
+    coreId: 'mame2003_plus',
+    maxBytes: 256 * MiB,
+    aspect: '4 / 3',
+  },
 };
+
+// Cœurs arcade du moteur web : aucun MAME récent n'existe dans EmulatorJS. Un romset d'un MAME récent n'est
+// reconnu que s'il n'a pas changé depuis ; le lanceur essaie un cœur puis l'autre et retient celui qui marche.
+export const ARCADE_CORES = {
+  mame2003_plus: { ejsCore: 'mame2003_plus', label: 'MAME 2003-Plus' },
+  fbneo: { ejsCore: 'fbneo', label: 'FBNeo' },
+};
+export const ARCADE_CORE_ORDER = ['mame2003_plus', 'fbneo'];
+
+// DOOM (jeux PC de Karl, versions GOG) : PrBoom lit le .wad du jeu complet (IWAD). Il reconnaît le jeu à
+// son nom de fichier (doom2.wad, plutonia.wad…), qui ne doit donc pas changer.
+export const DOOM_IWADS = Object.freeze({
+  doom: 'DOOM', doom1: 'DOOM (shareware)', doomu: 'The Ultimate DOOM', doom2: 'DOOM II',
+  plutonia: 'Final DOOM : The Plutonia Experiment', tnt: 'Final DOOM : TNT Evilution', freedoom1: 'Freedoom 1', freedoom2: 'Freedoom 2',
+});
+SYSTEMS.doom = {
+  id: 'doom',
+  label: 'DOOM (PrBoom)',
+  exts: [],
+  ejsCore: 'prboom',
+  coreId: 'prboom',
+  maxBytes: 64 * MiB,
+  aspect: '4 / 3',
+};
+
+/** Fichier .wad : jeu complet (IWAD) accepté ; un niveau additionnel (PWAD) demande son jeu à côté. */
+export function analyzeWad(fileName, bytes) {
+  const name = String(fileName || '').replace(/^.*[\\/]/, '');
+  const stem = name.replace(/\.wad$/i, '').toLowerCase();
+  const magic = String.fromCharCode(...bytes.subarray(0, 4));
+  const result = { ok: false, fileName: name, ext: 'wad', size: bytes.length, system: 'doom', title: DOOM_IWADS[stem] || name, code: stem, region: 'inconnue', version: 0, headerOk: false, warnings: [], errors: [] };
+  if (magic === 'PWAD') result.errors.push('Ce .wad est un niveau additionnel (PWAD, par exemple un des Master Levels) : il ne se lance pas seul. Ouvre le jeu complet (doom2.wad…) ; les niveaux additionnels viendront plus tard.');
+  else if (magic !== 'IWAD') result.errors.push('Ce fichier n’est pas un .wad de DOOM.');
+  else if (bytes.length > SYSTEMS.doom.maxBytes) result.errors.push('Fichier trop gros pour le navigateur.');
+  else if (bytes.length < 12) result.errors.push('En-tête WAD incomplet.');
+  else {
+    const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+    const count = view.getInt32(4, true);
+    const directory = view.getInt32(8, true);
+    if (count <= 0 || directory < 12 || directory + count * 16 > bytes.length) {
+      result.errors.push('Répertoire WAD invalide ou tronqué.');
+    } else {
+      for (let i = 0; i < count; i++) {
+        const offset = view.getInt32(directory + i * 16, true);
+        const size = view.getInt32(directory + i * 16 + 4, true);
+        if (offset < 0 || size < 0 || offset + size > bytes.length) {
+          result.errors.push('Données WAD hors du fichier : archive invalide ou tronquée.');
+          break;
+        }
+      }
+    }
+  }
+  if (!result.errors.length && !DOOM_IWADS[stem]) result.warnings.push('Nom de fichier inhabituel : PrBoom reconnaît le jeu à son nom (doom.wad, doom2.wad, plutonia.wad, tnt.wad). Ne renomme pas le fichier.');
+  if (!result.errors.length) { result.ok = true; result.headerOk = true; }
+  return result;
+}
 
 // Cœurs DS proposés (le cœur choisi fait partie de l'espace de sauvegarde du jeu).
 export const DS_CORES = {
@@ -68,10 +152,10 @@ export const DS_CORES = {
   melonds: { ejsCore: 'melonds', label: 'melonDS (BIOS requis)', needsBios: true },
 };
 
-export const ROM_EXTENSIONS = new Set(['gb', 'gbc', 'gba', 'nds', 'nes', 'unf', 'unif', 'sfc', 'smc', 'swc', 'fig']);
+export const ROM_EXTENSIONS = new Set(['gb', 'gbc', 'gba', 'nds', 'nes', 'unf', 'unif', 'sfc', 'smc', 'swc', 'fig', 'md', 'smd', 'gen']);
 // Extensions d'origine douteuse acceptées seulement si l'en-tête est reconnu.
 export const LOOSE_EXTENSIONS = new Set(['bin', 'rom', 'sgb', 'dsi', 'srl']);
-const EXT_SYSTEM = { nes: 'nes', unf: 'nes', unif: 'nes', sfc: 'snes', smc: 'snes', swc: 'snes', fig: 'snes' };
+const EXT_SYSTEM = { nes: 'nes', unf: 'nes', unif: 'nes', sfc: 'snes', smc: 'snes', swc: 'snes', fig: 'snes', md: 'genesis', smd: 'genesis', gen: 'genesis' };
 // Formats connus mais refusés, avec une explication claire.
 export const UNSUPPORTED_FORMATS = {
   fds: 'Famicom Disk System (.fds) : demande le BIOS commercial disksys.rom, qui n’est ni fourni ni accepté ici.',
@@ -81,15 +165,28 @@ export const UNSUPPORTED_FORMATS = {
   spc: 'Fichier musical SNES (.spc) : ce n’est pas un jeu.',
   bs: 'Satellaview (.bs) : prise en charge incomplète, non proposée.',
   st: 'Sufami Turbo (.st) : demande le BIOS commercial de la cartouche de base, non proposé.',
+  '32x': 'Sega 32X (.32x) : cœur PicoDrive distinct, non intégré au lanceur Genesis.',
   ips: 'Patch .ips : applique-le d’abord à ta ROM avec un outil de patch, puis ouvre la ROM patchée.',
   bps: 'Patch .bps : applique-le d’abord à ta ROM avec un outil de patch, puis ouvre la ROM patchée.',
   ups: 'Patch .ups : applique-le d’abord à ta ROM avec un outil de patch, puis ouvre la ROM patchée.',
+  chd: 'CHD : le cœur PSP de cette version d’EmulatorJS ne lit pas ce format. Convertis-le en ISO avec chdman (« chdman extractdvd -i jeu.chd -o jeu.iso »), puis en CSO avec maxcso si tu veux gagner de la place. Garde l’original.',
+  zso: 'ZSO : le cœur PSP de cette version d’EmulatorJS ne lit pas ce format. Décompresse-le avec maxcso (--decompress) puis ouvre l’ISO ou recompresse-le en CSO.',
 };
+
+// BIOS, boot ROM et BIOS de copieurs (Super Wild Card…) rangés avec les jeux dans les collections :
+// ce ne sont pas des jeux. Le lanceur n'en fournit et n'en demande aucun (sauf melonDS, importé à part).
+const BIOS_NAME = /\[BIOS\]|\(BIOS\)|\bBIOS\b|\bboot ?rom\b|^(?:bios[79]|firmware|gba_bios|gb_bios|gbc_bios|sgb_bios|disksys)\.(?:bin|rom)$/i;
+export const BIOS_MESSAGE = 'Ce fichier est un BIOS (logiciel interne d’une console ou d’un copieur), pas un jeu : il ne se lance pas ici. Aucun BIOS n’est nécessaire pour ces consoles, sauf melonDS pour la DS, à importer à part dans l’onglet Moteur. Il reste sur ton appareil, rien n’est envoyé.';
+export function isBiosName(fileName) {
+  return BIOS_NAME.test(String(fileName || '').replace(/^.*[\\/]/, ''));
+}
 
 /** Extension à donner au cœur (certains cœurs choisissent leur chargeur d'après elle). */
 export function engineExtension(analysis) {
   if (analysis.system === 'nes') return analysis.format === 'UNIF' ? 'unf' : 'nes';
   if (analysis.system === 'snes') return analysis.copierHeader ? 'smc' : 'sfc';
+  if (analysis.system === 'genesis') return ['md', 'smd', 'gen'].includes(analysis.ext) ? analysis.ext : 'md';
+  if (analysis.system === 'psp') return analysis.format; // iso, cso ou pbp : ppsspp choisit son lecteur d'après l'extension
   return analysis.system;
 }
 
@@ -425,12 +522,42 @@ export function parseSnes(bytes) {
   return info;
 }
 
+// --- Sega Mega Drive / Genesis --------------------------------------------------
+// Aucun octet de ROM n'est réécrit. L'en-tête SEGA n'est pas une preuve d'authenticité
+// ou de compatibilité ; certaines traductions/homebrews utilisent d'autres signatures.
+// Les SMD interleavés gardent leur format : Genesis Plus GX les décode au chargement.
+const SEGA_MAGIC = [0x53, 0x45, 0x47, 0x41];
+export function parseGenesis(bytes, ext = 'md') {
+  const info = { warnings: [], errors: [], headerOk: false, region: 'inconnue', title: '', format: ext === 'smd' ? 'SMD' : 'Mega Drive' };
+  if (bytes.length < 0x200) {
+    info.errors.push('Fichier trop petit pour une cartouche Sega Mega Drive / Genesis (minimum 512 octets).');
+    return info;
+  }
+  if (!startsWithAt(bytes, 0x100, SEGA_MAGIC)) {
+    info.warnings.push(ext === 'smd'
+      ? 'Format SMD : en-tête SEGA non lisible sans désentrelacement ; validation du moteur requise.'
+      : 'Signature SEGA non reconnue : fichier non authentifié, lancement à vérifier.');
+    return info;
+  }
+  info.headerOk = true;
+  info.title = asciiAt(bytes, 0x150, 0x180) || asciiAt(bytes, 0x120, 0x150);
+  const flags = asciiAt(bytes, 0x1f0, 0x1f4).toUpperCase();
+  const regions = [];
+  if (flags.includes('J')) regions.push('Japon');
+  if (flags.includes('U')) regions.push('USA');
+  if (flags.includes('E')) regions.push('Europe');
+  if (regions.length) info.region = regions.join(', ');
+  if (regions.length === 1) info.video = regions[0] === 'Europe' ? 'PAL' : 'NTSC';
+  return info;
+}
+
 // --- Détection ------------------------------------------------------------------
 function detectByHeader(bytes) {
   if (startsWithAt(bytes, 0, INES_MAGIC) || startsWithAt(bytes, 0, UNIF_MAGIC)) return 'nes';
   if (startsWithAt(bytes, 0xc0, GBA_LOGO) && bytes.length >= 0x200) return 'nds';
   if (startsWithAt(bytes, 0x04, GBA_LOGO) && bytes.length >= 0xc0) return 'gba';
   if (startsWithAt(bytes, 0x104, GB_LOGO)) return bytes[0x143] === 0x80 || bytes[0x143] === 0xc0 ? 'gbc' : 'gb';
+  if (startsWithAt(bytes, 0x100, SEGA_MAGIC)) return 'genesis';
   return null;
 }
 
@@ -439,6 +566,23 @@ function detectByHeader(bytes) {
  * @param {string} fileName nom du fichier (ou de l'entrée ZIP)
  * @param {Uint8Array} bytes contenu brut
  */
+/**
+ * Romset arcade : un .zip confié tel quel au cœur, dont le nom court (« xxmissio.zip ») est celui du jeu
+ * pour MAME et FBNeo. Rien n'est extrait ni modifié ; un BIOS arcade (neogeo.zip…) est refusé comme ailleurs.
+ */
+export function analyzeArcade(fileName, bytes) {
+  const name = String(fileName || '').replace(/^.*[\\/]/, '');
+  const stem = name.replace(/\.zip$/i, '');
+  const result = { ok: false, fileName: name, ext: 'zip', size: bytes.length, system: 'arcade', title: stem, code: stem, region: 'inconnue', version: 0, headerOk: false, warnings: [], errors: [] };
+  if (!/\.zip$/i.test(name)) result.errors.push('Un jeu arcade s’ouvre tel quel, en .zip (nom court MAME, par exemple xxmissio.zip).');
+  else if (bytes.length < 22 || bytes[0] !== 0x50 || bytes[1] !== 0x4b) result.errors.push('Ce fichier n’est pas un .zip valide.');
+  else if (bytes.length > SYSTEMS.arcade.maxBytes) result.errors.push('Romset trop gros pour le navigateur (256 Mio au plus).');
+  else if (isBiosName(name) || /^(neogeo|pgm|cpzn1|cpzn2|naomi|awbios|decocass|skns|stvbios|konamigx|nss|playch10|megaplay|isgsm)\.zip$/i.test(name)) result.errors.push(BIOS_MESSAGE);
+  else if (!/^[a-z0-9_]{1,16}$/i.test(stem)) result.warnings.push('Nom de fichier inhabituel pour un romset : MAME et FBNeo reconnaissent le jeu à son nom court (par exemple xxmissio.zip). Ne renomme pas les fichiers.');
+  if (!result.errors.length) { result.ok = true; result.headerOk = true; }
+  return result;
+}
+
 export function analyzeRom(fileName, bytes) {
   const ext = extensionOf(fileName);
   const result = {
@@ -465,6 +609,10 @@ export function analyzeRom(fileName, bytes) {
     result.errors.push(UNSUPPORTED_FORMATS[ext]);
     return result;
   }
+  if (isBiosName(fileName)) {
+    result.errors.push(BIOS_MESSAGE);
+    return result;
+  }
   let system = null;
   if (EXT_SYSTEM[ext]) system = EXT_SYSTEM[ext];
   else if (ROM_EXTENSIONS.has(ext)) system = ext;
@@ -478,7 +626,7 @@ export function analyzeRom(fileName, bytes) {
   if (!system) {
     result.errors.push(
       ext
-        ? `Format « .${ext} » non reconnu. Formats acceptés : .nes, .unf, .sfc, .smc, .gb, .gbc, .gba, .nds (ou un .zip qui en contient un).`
+        ? `Format « .${ext} » non reconnu. Formats acceptés : .nes, .unf, .sfc, .smc, .md, .smd, .gen, .gb, .gbc, .gba, .nds (ou un .zip qui en contient un), et .iso, .cso, .pbp pour la PSP.`
         : 'Format de fichier non reconnu.'
     );
     return result;
@@ -548,6 +696,21 @@ export function analyzeRom(fileName, bytes) {
       mapperName: parsed.mapperName,
       battery: parsed.battery,
       video: parsed.timing,
+      headerOk: parsed.headerOk,
+    });
+    result.warnings.push(...parsed.warnings);
+  } else if (system === 'genesis') {
+    const parsed = parseGenesis(bytes, ext);
+    if (parsed.errors.length) {
+      result.errors.push(...parsed.errors);
+      return result;
+    }
+    Object.assign(result, {
+      title: stemOf(fileName), // inclure nom des hacks/traductions, pas seulement le titre interne
+      cartridgeTitle: parsed.title,
+      region: parsed.region,
+      video: parsed.video,
+      format: parsed.format,
       headerOk: parsed.headerOk,
     });
     result.warnings.push(...parsed.warnings);

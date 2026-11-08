@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : OutRun 2019 (World) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/OutRun%202019%20%28World%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Infinite Time (Tens Digit)"
+cheat0_code = "FFF350:09"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Time (Ones Digit)"
+cheat1_code = "FFF351:09"
+cheat1_enable = false 
+
+cheat2_desc = "Low Lap Time (Seconds)"
+cheat2_code = "FFF3E3:01"
+cheat2_enable = false 
+
+cheat3_desc = "Low Lap Time (Micro-Seconds)"
+cheat3_code = "FFF3E5:01"
+cheat3_enable = false 
+
+cheat4_desc = "Have Max Acceleration"
+cheat4_code = "FFF309:FF"
+cheat4_enable = false

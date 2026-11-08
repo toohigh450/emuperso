@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.emuperso.twa",
+      "sha256_cert_fingerprints": [
+        "B4:8B:56:9B:AC:04:5E:7D:BE:55:DA:13:48:25:AC:3E:09:2A:41:09:0B:42:F8:43:7B:18:67:B2:18:66:01:85"
+      ]
+    }
+  }
+]

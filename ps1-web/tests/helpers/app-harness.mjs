@@ -102,11 +102,15 @@ export function createFakeEngine() {
 export async function makeHarness({ appPath = 'app.js', catalogFile = 'data/psx-catalog.json' } = {}) {
   const elements = new Map();
   const getEl = (id, tag) => { if (!elements.has(id)) elements.set(id, new FakeEl(id, tag)); return elements.get(id); };
-  const document = { getElementById: id => getEl(id), createElement: tag => new FakeEl(null, tag) };
+  const document = { getElementById: id => getEl(id), createElement: tag => new FakeEl(null, tag), visibilityState: 'visible' };
   const idb = fakeIndexedDB();
-  const win = {};
+  // Écouteurs window/document enregistrés par le VRAI app.js (pagehide, visibilitychange…).
+  const listeners = { window: {}, document: {} };
+  const win = { addEventListener: (type, fn) => { (listeners.window[type] ??= []).push(fn); } };
+  document.addEventListener = (type, fn) => { (listeners.document[type] ??= []).push(fn); };
   const confirms = [];
-  const h = { elements, $: id => getEl(id), idb, confirms, engines: [], answerConfirm: true };
+  const h = { elements, $: id => getEl(id), idb, confirms, engines: [], answerConfirm: true, window: null, document, listeners,
+    dispatch(target, type, event = {}) { for (const fn of listeners[target][type] ?? []) fn({ type, ...event }); } };
   const realFetch = globalThis.fetch;
   globalThis.fetch = async url => {
     if (String(url).includes('psx-catalog.json')) { const text = readFileSync(ROOT + catalogFile, 'utf8'); return { ok: true, status: 200, text: async () => text }; }
@@ -147,6 +151,7 @@ export async function makeHarness({ appPath = 'app.js', catalogFile = 'data/psx-
   // Modules réels éventuellement requis par la version refactorée d'app.js.
   h.mods = mods;
   mods['./cheat-controller.mjs'] = await import('../../cheat-controller.mjs').catch(() => undefined);
+  mods['./touch-editor.mjs'] = await import('../../touch-editor.mjs');
 
   const source = readFileSync(ROOT + appPath, 'utf8')
     .replace(/^import\s*\{([^}]*)\}\s*from\s*'(\.\/[^']+)';?/gm, (_, names, spec) => `const {${names.replace(/\s+as\s+/g, ': ')}} = __mods['${spec}'];`)

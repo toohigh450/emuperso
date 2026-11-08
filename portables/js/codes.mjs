@@ -1,5 +1,5 @@
-// Codes de triche saisis à la main : validation, normalisation et décodage, NES et SNES.
-// Les formats acceptés sont ceux que lisent réellement les cœurs (fceumm et snes9x, fonction
+// Codes de triche saisis à la main : validation, normalisation et décodage, NES, SNES et PSP.
+// Les formats acceptés sont ceux que lisent réellement les cœurs (fceumm, snes9x et ppsspp, fonction
 // retro_cheat_set) : un code refusé ici serait ignoré en silence par le moteur.
 // Pour GB, GBC, GBA et DS, le format n'est pas contrôlé ici : le cœur décide.
 
@@ -20,6 +20,9 @@ export const CODE_FORMATS = {
     { id: 'par', label: 'Pro Action Replay (8 chiffres hexadécimaux)', example: '7E0DBE05' },
     { id: 'raw', label: 'Brut adresse:valeur', example: '7E0DBE:05' },
     { id: 'rawc', label: 'Brut adresse=comparaison?valeur', example: '7E0DBE=03?05' },
+  ],
+  psp: [
+    { id: 'cw', label: 'CWCheat (_L 0xAAAAAAAA 0xVVVVVVVV, une ligne par paire)', example: '_L 0x2024DA44 0x3F800000' },
   ],
 };
 
@@ -88,10 +91,38 @@ export function encodeSnesGameGenie(address, value) {
  * Analyse un code pour une console. Retourne { ok, code (forme envoyée au moteur), format, parts, error }.
  * Plusieurs codes peuvent être joints par « + » : chacun doit être valide.
  */
+// Les codes Action Replay DS et CWCheat PSP du catalogue dépassent souvent 400 caractères (jusqu'à
+// 15 049) : la limite reste un garde-fou contre un collage aberrant, pas une contrainte du moteur.
+export const MAX_CODE_LENGTH = 20000;
+
+/**
+ * Lignes de codes actives qu'un cœur supporte, mesurées sur la collection (une ligne = un morceau
+ * séparé par « + ») : Genesis Plus GX garde 150 lignes et plante au-delà (147 tiennent, 160 plantent,
+ * « table index is out of bounds ») ; FCEUmm (NES) tient 256 lignes et plante à 361 (« memory access
+ * out of bounds »). Les autres cœurs ont tenu plus de 700 lignes (PSP) ou 2 900 (DS).
+ */
+export const ENGINE_CODE_LINES = Object.freeze({ genesis: 150, nes: 256 });
+
+/** Codes actifs gardés dans l'ordre jusqu'à la limite du cœur ; dropped = codes laissés de côté. */
+export function limitActiveCodes(system, codes) {
+  const max = ENGINE_CODE_LINES[system];
+  if (!max) return { codes: codes.slice(), dropped: 0, max: null };
+  const kept = [];
+  let lines = 0;
+  for (const code of codes) {
+    const n = String(code).split('+').filter((p) => p.trim()).length || 1;
+    if (lines + n > max) continue;
+    kept.push(code);
+    lines += n;
+  }
+  return { codes: kept, dropped: codes.length - kept.length, max };
+}
+
 export function parseCheatCode(system, input) {
   const raw = String(input || '').trim();
   if (!raw) return { ok: false, error: 'Code vide.' };
-  if (raw.length > 400) return { ok: false, error: 'Code trop long (400 caractères maximum).' };
+  if (raw.length > MAX_CODE_LENGTH) return { ok: false, error: `Code trop long (${MAX_CODE_LENGTH} caractères maximum).` };
+  if (system === 'psp') return parsePspCode(raw);
   if (system !== 'nes' && system !== 'snes') {
     if (/[^\x20-\x7e]/.test(raw)) return { ok: false, error: 'Caractères non pris en charge dans le code.' };
     return { ok: true, code: raw, format: 'libre', parts: [{ text: raw, format: 'non contrôlé' }], unchecked: true };
@@ -136,9 +167,67 @@ function parseSnesPiece(piece) {
   return null;
 }
 
+// --- PSP (CWCheat) -------------------------------------------------------------------
+// ppsspp (retro_cheat_set) découpe le code sur les espaces et les « + », ignore les mots de deux
+// lettres (« _L ») et range le reste par paires adresse / valeur dans le fichier CWCheat du jeu.
+// Une ligne « _L 0x00000000 0x00000000 » ne fait rien d'utile : dans les fichiers libretro, c'est
+// un titre de section (« [>>>General Cheats<<<] ») ; elle écrirait 0 au début de la mémoire du jeu.
+function parsePspCode(raw) {
+  const words = raw.split(/[\s+]+/).filter(Boolean);
+  const values = [];
+  for (const w of words) {
+    if (/^_[A-Z]$/i.test(w)) {
+      if (w.toUpperCase() !== '_L') return { ok: false, error: `« ${w} » : seules les lignes « _L » (codes) sont acceptées, pas les en-têtes de fichier CWCheat.` };
+      continue;
+    }
+    const m = /^0x([0-9A-F]{8})$/i.exec(w);
+    if (!m) return { ok: false, error: `« ${w} » n’est pas une valeur CWCheat (0x suivi de 8 chiffres hexadécimaux). Format : ${CODE_FORMATS.psp[0].label}.` };
+    values.push(m[1].toUpperCase());
+  }
+  if (values.length === 0 || values.length % 2) return { ok: false, error: 'Code CWCheat incomplet : il faut des paires adresse / valeur (0xAAAAAAAA 0xVVVVVVVV).' };
+  const parts = [];
+  for (let i = 0; i < values.length; i += 2) {
+    parts.push({ text: `_L 0x${values[i]} 0x${values[i + 1]}`, format: 'CWCheat', address: null, value: null, compare: null });
+  }
+  const placeholder = values.every((v) => v === '00000000');
+  return { ok: true, code: parts.map((p) => p.text).join('+'), format: 'CWCheat', parts, placeholder,
+    ...(placeholder ? { note: 'Ligne de titre (aucun code) : ne pas activer.' } : {}) };
+}
+
+/** Vrai si le code n'est qu'un titre de section d'un fichier .cht (rien à activer). */
+export function isPlaceholderCode(system, code) {
+  const parsed = parseCheatCode(system, code);
+  return !!(parsed.ok && parsed.placeholder);
+}
+
 /** Description lisible : « $91D9 ← $AD si $xx ». */
 export function describeCode(parsed) {
   if (!parsed.ok) return parsed.error;
   return parsed.parts.map((p) => p.address == null ? `${p.text} (${p.format})` :
     `${p.format} : $${hex(p.address, p.address > 0xffff ? 6 : 4)} ← $${hex(p.value, 2)}${p.compare == null ? '' : ` si $${hex(p.compare, 2)}`}`).join(' ; ');
+}
+
+/**
+ * PSP : codes actifs qui écrivent une valeur différente à la même adresse (variantes exclusives,
+ * comme « Start At Level 1 » et « Start At Level 2 »). Seules les écritures simples CWCheat
+ * (types 0, 1 et 2 : 8, 16 et 32 bits) sont comparées. Retourne [[nomA, nomB, adresse], …].
+ */
+export function pspCodeConflicts(entries) {
+  const writes = new Map();
+  const out = [];
+  for (const e of entries) {
+    const values = String(e.code).match(/0x[0-9a-f]{8}/gi) || [];
+    for (let i = 0; i + 1 < values.length; i += 2) {
+      const word = parseInt(values[i].slice(2), 16) >>> 0;
+      if ((word >>> 28) > 2) break; // code conditionnel ou multiple : les lignes suivantes ne sont pas des adresses
+      const key = `${word >>> 28}:${(word & 0x0fffffff).toString(16)}`;
+      const value = values[i + 1].toUpperCase();
+      const seen = writes.get(key);
+      if (seen && seen.value !== value && seen.name !== e.name && !out.some((c) => c[0] === seen.name && c[1] === e.name)) {
+        out.push([seen.name, e.name, `0x${(0x08800000 + (word & 0x0fffffff)).toString(16).toUpperCase().padStart(8, "0")}`]);
+      }
+      if (!seen) writes.set(key, { value, name: e.name });
+    }
+  }
+  return out;
 }

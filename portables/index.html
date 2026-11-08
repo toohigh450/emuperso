@@ -3,25 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<title>Consoles Nintendo : NES, SNES, Game Boy, Color, Advance et DS</title>
+<meta name="color-scheme" content="dark">
+<title>EMUPERSO : Nintendo, Sega Genesis et PSP</title>
 <link rel="stylesheet" href="css/app.css">
 </head>
 <body data-state="idle">
 <header class="top">
-  <p class="crumb"><a href="../">← Accueil EMUPERSO (8 consoles)</a></p>
-  <h1>Consoles Nintendo <small>0.3.0 alpha.3</small></h1>
-  <p>NES, Super Nintendo, Game Boy, Game Boy Color, Game Boy Advance et DS dans Chrome. Un seul jeu à la fois.</p>
+  <p class="crumb"><a href="../">← Accueil EMUPERSO (10 consoles)</a></p>
+  <h1>Consoles Nintendo, Sega et PSP <small>alpha / essais</small></h1>
+  <p>NES, Super Nintendo, Sega Genesis / Mega Drive, Game Boy, Game Boy Color, Game Boy Advance, DS et PSP dans Chrome. Un seul jeu à la fois.</p>
+  <figure class="brand-banner"><img src="assets/emuperso-banner.png" width="1942" height="809" alt="Paysage technologique original du laboratoire EMUPERSO, en bleu nuit et cyan." decoding="async"></figure>
 </header>
 
-<p class="alpha-note">Version alpha : exporte tes sauvegardes avant les essais. Les tests réels et leurs limites sont dans TESTS-NES-SNES.md.</p>
+<p class="alpha-note">Version alpha : exporte tes sauvegardes avant les essais. Archives .zip et .7z acceptées : si elles contiennent plusieurs versions, tu choisis laquelle lancer. Sega 32X n’est pas encore pris en charge. Les tests réels restent à effectuer.</p>
 <p class="console-hint" id="consoleHint" hidden></p>
 <main class="layout">
   <section class="rail" aria-label="Jeu et réglages">
     <div class="slot" id="slot">
       <div class="slot-empty" id="slotEmpty">
         <p class="slot-title">La fente est vide</p>
-        <p class="muted">Choisis un fichier .nes, .sfc, .smc, .gb, .gbc, .gba, .nds ou un .zip qui en contient un. Tes fichiers sont lus localement et ne sont envoyés à aucun serveur. Le moteur tiers chargé depuis Internet peut y accéder.</p>
+        <p class="muted">Choisis un fichier .nes, .sfc, .smc, .md, .smd, .gen, .gb, .gbc, .gba, .nds ou un .zip qui en contient un, ou un jeu PSP .iso, .cso ou .pbp. Tes fichiers sont lus localement et ne sont envoyés à aucun serveur. Le moteur tiers chargé depuis Internet peut y accéder.</p>
         <button class="btn primary" id="pickGame" type="button">Choisir un jeu</button>
         <p class="muted small-text">Tu peux aussi glisser le fichier sur la page, ou ouvrir tout un dossier dans l’onglet Catalogue.</p>
       </div>
@@ -42,7 +43,7 @@
           <button class="btn danger" id="closeGame" type="button">Fermer le jeu</button>
         </div>
       </div>
-      <input type="file" id="romInput" accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.gb,.gbc,.gba,.nds,.sgb,.srl,.bin,.rom,.dsi,.zip,.7z,.fds" class="visually-hidden" tabindex="-1">
+      <input type="file" id="romInput" accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.md,.smd,.gen,.gb,.gbc,.gba,.nds,.sgb,.srl,.bin,.rom,.dsi,.zip,.7z,.fds,.32x,.iso,.cso,.pbp,.chd,.wad" class="visually-hidden" tabindex="-1">
     </div>
 
     <section class="demo-panel" aria-labelledby="demoHeading">
@@ -83,7 +84,7 @@
         <button class="btn" id="catFilesBtn" type="button">Choisir des fichiers</button>
       </div>
       <input type="file" id="catFolder" webkitdirectory multiple class="visually-hidden" tabindex="-1">
-      <input type="file" id="catFiles" multiple accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.gb,.gbc,.gba,.nds,.zip,.7z" class="visually-hidden" tabindex="-1">
+      <input type="file" id="catFiles" multiple accept=".nes,.unf,.unif,.sfc,.smc,.swc,.fig,.md,.smd,.gen,.gb,.gbc,.gba,.nds,.zip,.7z,.iso,.cso,.pbp" class="visually-hidden" tabindex="-1">
       <div id="catalogTools" hidden>
         <label class="field" for="catSearch">Rechercher</label>
         <input type="search" id="catSearch" placeholder="Titre du jeu" autocomplete="off">
@@ -93,10 +94,14 @@
               <option value="tous">Toutes</option>
               <option value="nes">NES</option>
               <option value="snes">Super Nintendo</option>
+              <option value="genesis">Sega Genesis / Mega Drive</option>
               <option value="gb">Game Boy</option>
               <option value="gbc">Game Boy Color</option>
               <option value="gba">Game Boy Advance</option>
               <option value="nds">Nintendo DS</option>
+              <option value="psp">PlayStation Portable</option>
+              <option value="arcade">Arcade (MAME 2003-Plus / FBNeo)</option>
+              <option value="doom">DOOM (PrBoom)</option>
             </select>
           </label>
           <label>Région
@@ -139,7 +144,7 @@
         <button class="btn small" id="saveExport" type="button">Exporter maintenant</button>
         <button class="btn small" id="saveImportBtn" type="button">Importer une sauvegarde</button>
       </div>
-      <input type="file" id="saveImport" accept=".sav,.srm,.sa1,.dsv,.bin" class="visually-hidden" tabindex="-1">
+      <input type="file" id="saveImport" accept=".sav,.srm,.sa1,.dsv,.bin,.zip" class="visually-hidden" tabindex="-1">
       <div id="saveMirror"></div>
       <h2>États de jeu</h2>
       <p class="muted small-text">Instantané complet de la partie, 4 emplacements par jeu. Remplacer un emplacement garde l’état précédent. Un état n’est lisible qu’avec la même ROM et le même cœur.</p>
@@ -159,7 +164,7 @@
         <label class="field" for="codeName">Nom du code</label>
         <input type="text" id="codeName" maxlength="80" autocomplete="off" placeholder="Vies infinies">
         <label class="field" for="codeValue">Code</label>
-        <input type="text" id="codeValue" maxlength="400" autocomplete="off" spellcheck="false" autocapitalize="characters" placeholder="SXIOPO ou C2AF-3D07 ou 7E0DBE05">
+        <input type="text" id="codeValue" maxlength="20000" autocomplete="off" spellcheck="false" autocapitalize="characters" placeholder="SXIOPO ou C2AF-3D07 ou 7E0DBE05">
         <p id="codeCheck" class="small-text" aria-live="polite"></p>
         <div class="actions">
           <button class="btn primary" type="submit">Ajouter (désactivé)</button>
@@ -185,9 +190,21 @@
     </section>
 
     <section class="panel" id="panelPad" role="tabpanel" aria-labelledby="tabPad" hidden>
-      <p class="muted">Profil de la manette Xbox 360 pour les prochains jeux ouverts. Le clavier et la manette restent utilisables dans tous les cas.</p>
-      <div id="controlProfiles" class="choices"></div>
-      <p class="muted small-text">Le profil positionnel est à valider avec ta manette.</p>
+      <p class="pad-status" id="padStatus">Aucune manette détectée. Branche-la ou appuie sur un de ses boutons.</p>
+      <label class="field" for="padSystem">Console réglée</label>
+      <select id="padSystem"></select>
+      <div id="padProfiles" class="choices"></div>
+      <label class="choice" for="padGameOnly"><input type="checkbox" id="padGameOnly" disabled> Réglage propre au jeu ouvert (sinon : toute la console)</label>
+      <label class="field" for="padDeadzone">Zone morte du stick : <output id="padDeadzoneOut">0,25</output></label>
+      <input type="range" id="padDeadzone" min="0.05" max="0.6" step="0.05">
+      <h2>Commandes tactiles</h2>
+      <label class="choice" for="padHideTouch"><input type="checkbox" id="padHideTouch"> Les cacher quand une manette est branchée (elles reviennent si elle se débranche)</label>
+      <label class="field" for="padTouchSize">Taille : <output id="padTouchSizeOut">100 %</output></label>
+      <input type="range" id="padTouchSize" min="0.6" max="1.6" step="0.1">
+      <label class="field" for="padTouchOpacity">Opacité : <output id="padTouchOpacityOut">85 %</output></label>
+      <input type="range" id="padTouchOpacity" min="0.2" max="1" step="0.05">
+      <div class="actions"><button class="btn small" id="padMove" type="button">Déplacer les boutons tactiles</button><button class="btn small" id="padReset" type="button">Rétablir les réglages par défaut</button></div>
+      <p class="muted small-text">Appliqué tout de suite au jeu en cours et retenu sur cet appareil. Les sauvegardes ne sont jamais touchées. PSP : ✕ ○ □ △, stick analogique et croix séparés à l’écran.</p>
       <h2>Clavier par défaut</h2>
       <table class="keys">
         <thead><tr><th>Touche</th><th>NES</th><th>SNES</th><th>GB / GBA / DS</th></tr></thead>
@@ -206,8 +223,12 @@
 
     <section class="panel" id="panelEngine" role="tabpanel" aria-labelledby="tabEngine" hidden>
       <p id="engineInfo" class="muted"></p>
-      <p class="muted small-text">Cœurs : FCEUmm (NES, GPL-2.0), Snes9x (SNES, licence Snes9x non commerciale), Gambatte (GB/GBC), mGBA (GBA), DeSmuME / melonDS (DS). Compatibilité détaillée et limites : COMPATIBILITE-NES-SNES.md.</p>
+      <p class="muted small-text">Cœurs : FCEUmm (NES, GPL-2.0), Snes9x (SNES, licence Snes9x non commerciale), Genesis Plus GX (Genesis, licence tierce), Gambatte (GB/GBC), mGBA (GBA), DeSmuME / melonDS (DS). Compatibilité détaillée et limites : COMPATIBILITE-NES-SNES.md.</p>
       <p class="muted small-text">ROM : plafond théorique 512 Mio, soumis au budget mémoire. Une ROM de 512 Mio est refusée si la mémoire déclarée est inconnue, 2 ou 4 Gio ; elle peut passer à 8 Gio sans jeu actif. Le budget ne mesure pas la RAM libre.</p>
+      <h2>Performance PSP</h2>
+      <p class="muted">Si un gros jeu PSP saccade (Gran Turismo…), essaie Équilibré puis Fluidité. Appliqué au prochain lancement du jeu.</p>
+      <div id="pspPerf" class="choices"></div>
+      <label class="choice" for="pspPerfGame"><input type="checkbox" id="pspPerfGame" disabled> Réglage propre au jeu PSP ouvert</label>
       <h2>Cœur DS</h2>
       <p class="muted">Changer de cœur crée un autre espace de sauvegarde pour le même jeu.</p>
       <div id="dsCores" class="choices"></div>
@@ -231,6 +252,7 @@
       </div>
     </div>
     <p id="status" role="status" aria-live="polite">Aucun jeu actif.</p>
+    <p class="actions"><button class="btn small" id="exportLog" type="button">Exporter le journal</button> <small class="muted">en cas de problème : derniers évènements, sans jeu ni sauvegarde</small></p>
   </section>
 </main>
 

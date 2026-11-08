@@ -1,0 +1,15 @@
+# Recherche locale pour le jeu : Atari Hits Remixed (USA).cso (disque ULUS-10325, « Atari Classics Evolved »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Atari%20Classics%20Evolved%20%5BUS%5D%20%5BULUS-10325%5D.cht
+
+cheats = "3"
+
+cheat0_desc = "Pong: Opponent Score 0"
+cheat0_code =  "_L 0x20345F90 0x00000000"
+cheat1_desc = "Pong: Your Score 11"
+cheat1_code =  "_L 0x20345F88 0x0000000B"
+cheat2_desc = "Score Increase"
+cheat2_code =  "_L 0x002C8140 0x0098967F"

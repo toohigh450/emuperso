@@ -1,17 +1,28 @@
 // SPDX-License-Identifier: MIT
 import { prepareLocalRom, prepareRomBytes } from './rom-file.mjs';
 import { readZipFile, prepareZipRom } from './zip-rom.mjs';
+import { read7zFile, prepare7zRom } from './rom-7z.mjs';
 import { SaveStore, makeStateEnvelope, verifyEnvelope, MAX_SAVE_BYTES, sha256 } from './save-store.mjs';
 import { SessionController } from './session-controller.mjs';
 import { readLegacyBattery } from './legacy-battery.mjs';
 import { packStateBundle, unpackStateBundle } from './state-bundle.mjs';
 import { romCheatIdentity, loadCheatCatalog, lookupCheats, resolveCheatCode, validateManualCheat } from './cheat-catalog.mjs';
+import { N64_PROFILES, normalizeN64Pad } from './n64-input.mjs';
 const $ = id => document.getElementById(id), records = [], vault = new SaveStore();
 let phase = 'idle', busy = false, reading = false, generation = 0, selected = null, activeRom = null, lock = null;
 let zipPending = null, importAbort = null, saveList = [], catalog = null, cheatRows = [], catalogTicket = 0;
 let sequence = 0, lastNativeHash = null;
 let recoveryPrepared = null;
 let operationDone = Promise.resolve();
+// Journal gardé sur cet appareil : après un plantage ou un rechargement de l'onglet, l'export contient
+// encore les évènements d'avant. Métadonnées seulement, comme le diagnostic.
+const JOURNAL_KEY = 'emuperso-n64-journal', pageLoadUtc = new Date().toISOString();
+let earlierRecords = []; try { earlierRecords = JSON.parse(localStorage.getItem(JOURNAL_KEY) || '[]').slice(-300); } catch { earlierRecords = []; }
+let journalTimer = 0;
+const clipRecord = r => { const text = JSON.stringify(r); return text.length > 2000 ? { utc: r.utc, type: r.type, data: text.slice(0, 2000) } : r; };
+function flushJournal() { clearTimeout(journalTimer); try { localStorage.setItem(JOURNAL_KEY, JSON.stringify([...earlierRecords, { utc: pageLoadUtc, type: 'page.load' }, ...records.map(clipRecord)].slice(-400))); } catch { /* stockage plein ou bloqué */ } }
+function keepJournal() { clearTimeout(journalTimer); journalTimer = setTimeout(flushJournal, 300); }
+const harmless = reason => reason?.name === 'NotAllowedError' || /not visible|wake ?lock|fullscreen|pointer ?lock|user gesture|play\(\) request/i.test(String(reason?.message ?? reason ?? ''));
 const sessions = new SessionController($('game'), (type, data) => {
   event(type, data);
   if (type === 'session.stage') {
@@ -19,6 +30,7 @@ const sessions = new SessionController($('game'), (type, data) => {
     status(labels[data.stage] ?? 'Opération en cours…');
   }
   if (type === 'gamepad.connected') $('gamepads').textContent = data.id;
+  if (type === 'input.pad') $('pad-status').textContent = data.id ? `Manette reconnue : ${data.id}` : 'Aucune manette détectée. Branche-la ou appuie sur un de ses boutons.';
   if (type === 'state.unguarded.blocked') status('Utilisez les boutons de sauvegarde vérifiée de l’application ; le chargement direct du moteur est désactivé.');
   if (type === 'config.change.blocked') status('Les paramètres du moteur restent fixes pour préserver la compatibilité des états.');
 });
@@ -26,6 +38,7 @@ Object.defineProperty(window, 'EJS_emulator', { configurable: true, get: () => s
 function event(type, data = {}) {
   records.push({ seq: ++sequence, utc: new Date().toISOString(), host_monotonic_ms: performance.now(), type, data });
   if (records.length > 600) records.shift(); $('log').textContent = JSON.stringify(records, null, 2);
+  keepJournal();
 }
 function status(message, error = false) { $('status').textContent = message; $('status').classList.toggle('error', error); }
 function saveStatus(message, error = false) { $('save-status').textContent = message; $('save-status').classList.toggle('error', error); }
@@ -192,7 +205,18 @@ $('rom-file').onchange = async eventObject => {
   selected = null; reading = true; identity(null); controls(); status('Lecture du fichier local…');
   try {
     let prepared;
-    if (/\.zip$/i.test(file.name)) {
+    if (/\.7z$/i.test(file.name)) {
+      // Archive 7z : même choix de version que pour un ZIP, puis seule la ROM choisie est gardée.
+      status('Lecture du contenu de l’archive 7z…');
+      const { archive, entries } = await read7zFile(file, { signal: controller.signal }); if (ticket !== generation) return;
+      event('rom.7z.inspected', { name: file.name, rom_count: entries.length });
+      if (entries.length > 1) {
+        zipPending = { archive, ticket, controller, entries, kind: '7z' };
+        for (const entry of entries) { const option = document.createElement('option'); option.value = String(entry.id); option.textContent = `${entry.name} — ${entry.size.toLocaleString('fr-FR')} octets`; $('zip-entry').appendChild(option); }
+        $('zip-choice-panel').hidden = false; status('Choisissez la ROM à préparer dans cette archive 7z.'); return;
+      }
+      prepared = await prepare7zRom(archive, entries[0].id, { signal: controller.signal }, entries);
+    } else if (/\.zip$/i.test(file.name)) {
       const archive = await readZipFile(file, { signal: controller.signal }); if (ticket !== generation) return;
       event('rom.zip.inspected', { ...archive.archive, rom_count: archive.entries.length });
       if (archive.entries.length > 1) {
@@ -209,7 +233,7 @@ $('rom-file').onchange = async eventObject => {
 $('zip-use').onclick = async () => {
   if (busy || reading || !zipPending) return;
   const pending = zipPending, id = Number($('zip-entry').value); clearZipChoice(); reading = true; controls();
-  try { const prepared = await prepareZipRom(pending.archive, id, { signal: pending.controller.signal }); if (pending.ticket === generation) acceptPrepared(prepared); }
+  try { const prepared = pending.kind === '7z' ? await prepare7zRom(pending.archive, id, { signal: pending.controller.signal }, pending.entries) : await prepareZipRom(pending.archive, id, { signal: pending.controller.signal }); if (pending.ticket === generation) acceptPrepared(prepared); }
   catch (error) { if (pending.ticket === generation) { event('rom.local.rejected', { code: error.code, message: error.message }); status(error.message, true); } }
   finally { if (pending.ticket === generation) { reading = false; controls(); } }
 };
@@ -429,13 +453,49 @@ function diagnostic() {
   return { schema: 'emuperso/real-engine-diagnostic/v2', scope: 'REAL_ENGINE_TRIAL_NOT_SYNTHETIC_LAB', warning: 'No ROM or save payload bytes in this diagnostic. Metadata can reveal game and cheat names.',
     host: { user_agent: navigator.userAgent, cross_origin_isolated: crossOriginIsolated }, phase, local_selection: selected ? { ...selected.metadata } : null, active_rom: activeRom ? { ...activeRom } : null,
     identity: sessions.current?.identity ?? null, session: sessions.diagnostic(), storage: { database: vault.databaseName }, cheats: { active: sessions.current?.cheats ?? [], tainted: sessions.current?.tainted ?? false }, saves: saveList,
-    rom_build: lock, contexts: (sessions.current?.api.snapshot().contexts ?? []).map(c => ({ state: c.state, sample_rate: c.sample_rate })), records: structuredClone(records) };
+    rom_build: lock, contexts: (sessions.current?.api.snapshot().contexts ?? []).map(c => ({ state: c.state, sample_rate: c.sample_rate })), records: structuredClone(records), earlier_records: earlierRecords };
 }
 $('export').onclick = () => downloadJSON(diagnostic(), 'EMUPERSO-moteur-reel-diagnostic.json');
 window.RealN64 = Object.freeze({ diagnostic, version: '0.5.0-rc2-safe-frame-capture', get engineWindow() { return (sessions.candidate ?? sessions.current)?.frame.contentWindow ?? null; } });
 setInterval(() => { audioStatus(); if (!busy && !reading && !zipPending && sessions.current) void operation(() => saveNative()); }, 15000);
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden' && !busy && !reading && !zipPending && sessions.current) void operation(() => saveNative()); });
-window.addEventListener('pagehide', () => { importAbort?.abort(); void sessions.current?.api.close(); });
+window.addEventListener('pagehide', () => { importAbort?.abort(); void sessions.current?.api.close(); flushJournal(); });
 window.addEventListener('error', error => { event('browser.error', { message: error.message }); status(error.message, true); });
-window.addEventListener('unhandledrejection', error => { event('browser.unhandledrejection', { message: String(error.reason) }); status(String(error.reason), true); });
+window.addEventListener('unhandledrejection', error => {
+  // Refus sans gravité (onglet caché, plein écran, wake lock…) : noté, sans message d'erreur rouge.
+  if (harmless(error.reason)) { error.preventDefault(); event('browser.refusal.ignored', { message: String(error.reason?.message ?? error.reason) }); return; }
+  event('browser.unhandledrejection', { message: String(error.reason) }); status(String(error.reason), true);
+});
+// --- Manette (mandat Controller V2) : réglage partagé avec la session du moteur par localStorage.
+const PAD_KEY = 'emuperso-n64-pad';
+function padSettings() { try { return normalizeN64Pad(JSON.parse(localStorage.getItem(PAD_KEY) || '{}')); } catch { return normalizeN64Pad({}); } }
+function renderPad() {
+  const cfg = padSettings();
+  for (const input of document.querySelectorAll('input[name=pad-profile]')) input.checked = input.value === cfg.profile;
+  $('pad-deadzone').value = String(cfg.deadzone); $('pad-deadzone-out').textContent = cfg.deadzone.toFixed(2).replace('.', ',');
+  $('pad-sensitivity').value = String(cfg.sensitivity); $('pad-sensitivity-out').textContent = `${Math.round(cfg.sensitivity * 100)} %`;
+  $('pad-hide-touch').checked = cfg.hideTouch;
+}
+function savePad() {
+  const checked = document.querySelector('input[name=pad-profile]:checked');
+  const cfg = normalizeN64Pad({ profile: checked?.value, deadzone: Number($('pad-deadzone').value), sensitivity: Number($('pad-sensitivity').value), hideTouch: $('pad-hide-touch').checked });
+  try { localStorage.setItem(PAD_KEY, JSON.stringify(cfg)); } catch { status('Réglage de manette non enregistré : stockage du navigateur indisponible.', true); }
+  event('input.profile.saved', { profile: cfg.profile }); renderPad();
+}
+// Boutons tactiles déplaçables : l'éditeur vit dans la page du moteur, où sont les boutons.
+$('pad-move').onclick = async () => {
+  const win = sessions.current?.frame.contentWindow;
+  if (!win?.EMUPERSO_editTouch) { status('Lance un jeu sur l’écran tactile pour déplacer ses boutons.'); return; }
+  status('Glisse les boutons dans la fenêtre du jeu, puis touche « Terminé ».'); $('game').scrollIntoView({ block: 'center' });
+  try { await win.EMUPERSO_editTouch(); status('Position des boutons tactiles enregistrée sur cet appareil.'); event('input.touch.moved'); } catch (error) { status(error.message, true); }
+};
+for (const p of Object.values(N64_PROFILES)) {
+  const label = document.createElement('label'); const input = document.createElement('input');
+  input.type = 'radio'; input.name = 'pad-profile'; input.value = p.id; input.onchange = savePad;
+  const strong = document.createElement('strong'); strong.textContent = p.label;
+  const small = document.createElement('small'); small.className = 'note'; small.textContent = ' — ' + p.description;
+  label.append(input, ' ', strong, small); $('pad-profiles').append(label, document.createElement('br'));
+}
+for (const id of ['pad-deadzone', 'pad-sensitivity', 'pad-hide-touch']) $(id).onchange = savePad;
+renderPad();
 event('page.open', { engine_started: false }); controls();

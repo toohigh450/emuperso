@@ -239,3 +239,22 @@ test('SNES : Cx4 (sous-type $10) reconnu, et en-tête ExHiROM préféré à la c
   assert.equal(e.layout, 'ExHiROM');
   assert.equal(e.checksumOk, true);
 });
+
+test('codes longs du catalogue (Action Replay DS, CWCheat PSP) acceptés ; collage aberrant refusé', () => {
+  const ds = Array.from({ length: 60 }, (_, i) => `D2000000+${String(i).padStart(8, '0')}`).join('+'); // ~1 100 caractères
+  assert.ok(ds.length > 400);
+  assert.equal(parseCheatCode('nds', ds).ok, true);
+  assert.equal(parseCheatCode('nds', 'A'.repeat(20001)).ok, false);
+});
+
+test('Mega Drive et NES : nombre de lignes de codes actives limité (au-delà le cœur plante)', async () => {
+  const { limitActiveCodes } = await import('../js/codes.mjs');
+  const many = Array.from({ length: 235 }, (_, i) => `FF${String(i).padStart(4, '0')}:0001`);
+  const r = limitActiveCodes('genesis', many);
+  assert.equal(r.codes.length, 150);
+  assert.equal(r.dropped, 85);
+  // Un code à deux lignes compte double ; les autres consoles ne sont pas limitées.
+  assert.equal(limitActiveCodes('genesis', ['A:1+B:2', ...many.slice(0, 149)]).codes.length, 149);
+  assert.equal(limitActiveCodes('nes', [...many, ...many]).codes.length, 256);
+  assert.equal(limitActiveCodes('snes', many).codes.length, 235);
+});

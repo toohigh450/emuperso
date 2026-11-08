@@ -1,0 +1,12 @@
+# Recherche locale pour la ROM : Turma da Monica na Terra dos Monstros (Brazil)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Turma%20da%20Monica%20na%20Terra%20dos%20Monstros%20%28Brazil%29.cht
+
+cheats = 1
+
+cheat0_desc = "Infinite Moedas (Gold"
+cheat0_code = "FF962E:00FF"
+cheat0_enable = false

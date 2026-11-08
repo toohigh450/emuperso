@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Barbie Vacation Adventure (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Barbie%20Vacation%20Adventure%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 2 
+
+cheat0_desc = "Infinite Time While Riding In Texas (Seconds)"
+cheat0_code = "FF3A37:00"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Time While Riding In Texas (Micro-Seconds)"
+cheat1_code = "FF3A41:00"
+cheat1_enable = false

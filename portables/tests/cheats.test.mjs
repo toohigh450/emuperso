@@ -49,6 +49,35 @@ test('association : même nom = exact ; autre région/version = jamais exact', (
   assert.deepEqual(m.sameTitle.map((f) => f.path), ['c']);
 });
 
+test('association : même titre malgré la ponctuation ou « The » (GoodTools contre No-Intro)', () => {
+  const files = [
+    { path: 'a', name: 'A.S.P. - Air Strike Patrol (USA).cht' },
+    { path: 'b', name: 'Legend of Zelda, The - A Link to the Past (USA).cht' },
+    { path: 'c', name: 'A.S.P. 2 (USA).cht' },
+  ];
+  assert.deepEqual(matchCheatFiles('A.S.P. Air Strike Patrol (U).smc', files).sameTitle.map((f) => f.path), ['a']);
+  assert.deepEqual(matchCheatFiles('The Legend of Zelda - A Link to the Past (U) [!].smc', files).sameTitle.map((f) => f.path), ['b']);
+});
+
+test('association : titre tronqué dans une archive HackSet → titre de l’archive, étiquettes de la version', async () => {
+  const { archiveCheatName, matchCheatFiles: match } = await import('../js/cheats.mjs');
+  assert.equal(archiveCheatName('Aero the Acro-B2 [Europe][!].md', 'Aero the Acro-Bat 2.7z'), 'Aero the Acro-Bat 2 [Europe][!].md');
+  assert.equal(archiveCheatName('6-P [USA][!].md', '6-Pak.7z'), '6-Pak [USA][!].md');
+  // Même titre (ponctuation ou « The » près) ou pas d'archive : rien à changer.
+  assert.equal(archiveCheatName('Addams Family [USA][Europe][!].md', 'Addams Family, The.7z'), null);
+  assert.equal(archiveCheatName('Sonic.md', null), null);
+  const alt = archiveCheatName('Aero the Acro-B2 [Europe][!].md', 'Aero the Acro-Bat 2.7z');
+  assert.deepEqual(match(alt, [{ path: 'a', name: 'Aero the Acro-Bat 2 (Europe).cht' }]).sameTitle.map((f) => f.path), ['a']);
+});
+
+test('association : même titre, la même région que la ROM proposée en premier', () => {
+  const files = [{ path: 'eu', name: 'Addams Family, The (Europe) (En,Fr,De).cht' }, { path: 'jp', name: 'Addams Family, The (Japan).cht' }, { path: 'us', name: 'Addams Family, The (USA).cht' }];
+  assert.equal(matchCheatFiles('Addams Family, The (U) [!].smc', files).sameTitle[0].path, 'us');
+  assert.equal(matchCheatFiles('Addams Family, The (E) [!].smc', files).sameTitle[0].path, 'eu');
+  const ar = [{ path: 'ar', name: 'Araiguma Rascal (Japan) (Action Replay).cht' }, { path: 'plain', name: 'Araiguma Rascal (Japan).cht' }];
+  assert.equal(matchCheatFiles('Araiguma Rascal (J).smc', ar).sameTitle[0].path, 'plain');
+});
+
 test('association : rien si la ROM a été renommée sans titre commun', () => {
   const m = matchCheatFiles('jeu.gba', [{ path: 'a', name: 'Zelda (USA).cht' }]);
   assert.equal(m.exact.length, 0);

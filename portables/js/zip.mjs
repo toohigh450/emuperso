@@ -88,6 +88,28 @@ async function inflateRaw(compressed, expectedSize) {
   return result;
 }
 
+async function readEntryData(view, zipBytes, entry, maxBytes) {
+  if (entry.flags & 0x1) throw new ZipError('ZIP chiffré : non pris en charge.');
+  if (entry.compressedSize === 0xffffffff || entry.size === 0xffffffff) throw new ZipError('ZIP64 non pris en charge.');
+  if (entry.size > maxBytes) throw new ZipError('Fichier trop gros dans le ZIP (limite mémoire dépassée).');
+  if (entry.localOffset + 30 > zipBytes.length) throw new ZipError('Entrée de ZIP hors du fichier.');
+  if (view.getUint32(entry.localOffset, true) !== 0x04034b50) throw new ZipError('Entrée de ZIP illisible.');
+  const nameLen = view.getUint16(entry.localOffset + 26, true);
+  const extraLen = view.getUint16(entry.localOffset + 28, true);
+  const dataStart = entry.localOffset + 30 + nameLen + extraLen;
+  if (dataStart + entry.compressedSize > zipBytes.length) throw new ZipError('Données ZIP tronquées.');
+  const raw = zipBytes.subarray(dataStart, dataStart + entry.compressedSize);
+
+  let data;
+  if (entry.method === 0) data = raw.slice();
+  else if (entry.method === 8) data = await inflateRaw(raw, entry.size);
+  else throw new ZipError(`Méthode de compression ZIP ${entry.method} non prise en charge.`);
+
+  if (data.length !== entry.size) throw new ZipError('Taille décompressée inattendue : ZIP corrompu.');
+  if (crc32(data) !== entry.crc) throw new ZipError('CRC32 incorrect : ZIP corrompu.');
+  return data;
+}
+
 export function isZip(bytes) {
   return bytes.length >= 4 && bytes[0] === 0x50 && bytes[1] === 0x4b && (bytes[2] === 0x03 || bytes[2] === 0x05);
 }
@@ -115,24 +137,69 @@ export async function extractFirst(zipBytes, accept, { name, maxBytes = 1024 * 1
   }
   const entry = name === undefined ? candidates[0] : candidates.find((e) => e.name === name);
   if (!entry) throw new ZipError('Jeu sélectionné introuvable dans le ZIP.');
-  if (entry.flags & 0x1) throw new ZipError('ZIP chiffré : non pris en charge.');
-  if (entry.compressedSize === 0xffffffff || entry.size === 0xffffffff) throw new ZipError('ZIP64 non pris en charge.');
-  if (entry.size > maxBytes) throw new ZipError('Jeu trop gros dans le ZIP (limite mémoire dépassée).');
-  if (entry.localOffset + 30 > zipBytes.length) throw new ZipError('Entrée de ZIP hors du fichier.');
-  if (view.getUint32(entry.localOffset, true) !== 0x04034b50) throw new ZipError('Entrée de ZIP illisible.');
-  const nameLen = view.getUint16(entry.localOffset + 26, true);
-  const extraLen = view.getUint16(entry.localOffset + 28, true);
-  const dataStart = entry.localOffset + 30 + nameLen + extraLen;
-  if (dataStart + entry.compressedSize > zipBytes.length) throw new ZipError('Données ZIP tronquées.');
-  const raw = zipBytes.subarray(dataStart, dataStart + entry.compressedSize);
-
-  let data;
-  if (entry.method === 0) data = raw.slice();
-  else if (entry.method === 8) data = await inflateRaw(raw, entry.size);
-  else throw new ZipError(`Méthode de compression ZIP ${entry.method} non prise en charge.`);
-
-  if (data.length !== entry.size) throw new ZipError('Taille décompressée inattendue : ZIP corrompu.');
-  if (crc32(data) !== entry.crc) throw new ZipError('CRC32 incorrect : ZIP corrompu.');
+  const data = await readEntryData(view, zipBytes, entry, maxBytes);
   const baseName = entry.name.replace(/^.*[\\/]/, '');
   return { name: baseName, bytes: data, otherCandidates: candidates.length - 1 };
+}
+
+/**
+ * Toutes les entrées d'un ZIP (sauvegardes PSP : un dossier par sauvegarde). Mêmes contrôles
+ * qu'extractFirst : pas de chiffrement ni de ZIP64, CRC32 vérifié, tailles plafonnées.
+ * @returns {Promise<Array<{name: string, bytes: Uint8Array}>>} chemins complets, sans dossiers vides
+ */
+export async function extractAll(zipBytes, { maxBytes = 64 * 1024 * 1024, maxFiles = 2000 } = {}) {
+  const view = new DataView(zipBytes.buffer, zipBytes.byteOffset, zipBytes.byteLength);
+  const entries = readEntries(view, zipBytes).filter((e) => !e.name.endsWith('/') && !e.name.startsWith('__MACOSX/'));
+  if (entries.length > maxFiles) throw new ZipError(`ZIP trop fourni (${entries.length} fichiers, maximum ${maxFiles}).`);
+  const out = [];
+  let total = 0;
+  for (const entry of entries) {
+    total += entry.size;
+    if (total > maxBytes) throw new ZipError('ZIP trop gros une fois décompressé.');
+    out.push({ name: entry.name, bytes: await readEntryData(view, zipBytes, entry, maxBytes) });
+  }
+  return out;
+}
+
+/** ZIP sans compression (méthode 0) : export de sauvegardes PSP lisible par tout outil d'archive. */
+export function buildZip(files, date = new Date()) {
+  const enc = new TextEncoder();
+  const time = (date.getHours() << 11) | (date.getMinutes() << 5) | (date.getSeconds() >> 1);
+  const day = ((date.getFullYear() - 1980) << 9) | ((date.getMonth() + 1) << 5) | date.getDate();
+  const locals = [];
+  const centrals = [];
+  let offset = 0;
+  for (const f of files) {
+    const name = enc.encode(f.name);
+    const crc = crc32(f.bytes);
+    const local = new Uint8Array(30 + name.length);
+    const lv = new DataView(local.buffer);
+    lv.setUint32(0, 0x04034b50, true); lv.setUint16(4, 20, true); lv.setUint16(6, 0x0800, true);
+    lv.setUint16(10, time, true); lv.setUint16(12, day, true); lv.setUint32(14, crc, true);
+    lv.setUint32(18, f.bytes.length, true); lv.setUint32(22, f.bytes.length, true); lv.setUint16(26, name.length, true);
+    local.set(name, 30);
+    const central = new Uint8Array(46 + name.length);
+    const cv = new DataView(central.buffer);
+    cv.setUint32(0, 0x02014b50, true); cv.setUint16(4, 20, true); cv.setUint16(6, 20, true); cv.setUint16(8, 0x0800, true);
+    cv.setUint16(12, time, true); cv.setUint16(14, day, true); cv.setUint32(16, crc, true);
+    cv.setUint32(20, f.bytes.length, true); cv.setUint32(24, f.bytes.length, true); cv.setUint16(28, name.length, true);
+    cv.setUint32(42, offset, true);
+    central.set(name, 46);
+    locals.push(local, f.bytes);
+    centrals.push(central);
+    offset += local.length + f.bytes.length;
+  }
+  const cdSize = centrals.reduce((n, c) => n + c.length, 0);
+  const end = new Uint8Array(22);
+  const ev = new DataView(end.buffer);
+  ev.setUint32(0, 0x06054b50, true); ev.setUint16(8, files.length, true); ev.setUint16(10, files.length, true);
+  ev.setUint32(12, cdSize, true); ev.setUint32(16, offset, true);
+  return concat([...locals, ...centrals, end]);
+}
+
+function concat(parts) {
+  const out = new Uint8Array(parts.reduce((n, p) => n + p.length, 0));
+  let p = 0;
+  for (const part of parts) { out.set(part, p); p += part.length; }
+  return out;
 }

@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Jewel Master (World) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Jewel%20Master%20%28World%29%20%28Action%20Replay%29.cht
+
+cheats = 3 
+
+cheat0_desc = "Have All 12 Rings (Read Note!)"
+cheat0_code = "FFC4DA:0101+FFC4DC:0101+FFC4DE:0101+FFC4E0:0101+FFC4E2:0101"
+cheat0_enable = false 
+
+cheat1_desc = "Invincibility"
+cheat1_code = "FFC5EC:001F"
+cheat1_enable = false 
+
+cheat2_desc = "Makes The Level 1 Flame Ring Stronger"
+cheat2_code = "FFC4C4:0003"
+cheat2_enable = false

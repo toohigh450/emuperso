@@ -1,0 +1,29 @@
+# Recherche locale pour le jeu : Earthshield (USA).cso (disque NPUX-80405, « EARTHSHIELD™ »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Earth%20Shield%20(Mini)%20%5BUS%5D%20%5BNPUX-80405%5D.cht
+
+cheats = "10"
+
+cheat0_desc = "Infinite Lives"
+cheat0_code =  "_L 0x201EBD34 0x00000000 _L 0x201EBD34 0x00000000 _L 0x00000038 0x00000003 _L 0xD2000000 0x00000000"
+cheat1_desc = "Infinite Lives"
+cheat1_code =  "_L 0x201EBD34 0x00000003 _L 0x00020000 0x00000038"
+cheat2_desc = "Infinite Lives v3"
+cheat2_code =  "_L 0x201EBD34 0x00000003 _L 0x00020001 0x00000038"
+cheat3_desc = "Instant Win"
+cheat3_code =  "_L 0x201EBD34 0x00000000 _L 0x201EBD34 0x00000000 _L 0x00000010 0x00000000 _L 0xD2000000 0x00000000"
+cheat4_desc = "Instant Win v2"
+cheat4_code =  "_L 0x201EBD34 0x00000000 _L 0x00020000 0x00000010"
+cheat5_desc = "Instant Win v3"
+cheat5_code =  "_L 0x201EBD34 0x00000000 _L 0x00020001 0x00000010"
+cheat6_desc = "Invincibility"
+cheat6_code =  "_L 0x2000AE88 0x03E00008"
+cheat7_desc = "Max Score"
+cheat7_code =  "_L 0x201EBD34 0x00000000 _L 0x201EBD34 0x00000000 _L 0x00000014 0x05F5E0FF _L 0xD2000000 0x00000000"
+cheat8_desc = "Max Score v2"
+cheat8_code =  "_L 0x201EBD34 0x05F5E0FF _L 0x00020000 0x00000014"
+cheat9_desc = "Max Score v3"
+cheat9_code =  "_L 0x201EBD34 0x05F5E0FF _L 0x00020001 0x00000014"

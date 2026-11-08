@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Dragon's Lair (USA) (Proto) (June, 1994)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Dragon's%20Lair%20%28USA%29%20%28Proto%29%20%28June,%201994%29.cht
+
+cheats = 7
+
+cheat0_desc = "Infinite Time"
+cheat0_code = "HT6A-BYSJ+HT6A-BYR6"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "ABPT-AAD6"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Energy"
+cheat2_code = "AB6T-AAHN"
+cheat2_enable = false
+
+cheat3_desc = "Invincibility (Disable Hit Detection)"
+cheat3_code = "RZ4A-A6ZE"
+cheat3_enable = false
+
+cheat4_desc = "High Jump"
+cheat4_code = "FF09C2:00FF"
+cheat4_enable = false
+
+cheat5_desc = "Infinite Controllable Jump + Jump In Mid Air (Multi-Jumps) 2 in 1"
+cheat5_code = "ABSA-AAA2"
+cheat5_enable = false
+
+cheat6_desc = "1 Hit Kill Enemies/Bosses"
+cheat6_code = "A38A-AA3J"
+cheat6_enable = false

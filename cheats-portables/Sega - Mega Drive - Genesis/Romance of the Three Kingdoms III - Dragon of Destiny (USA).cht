@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Romance of the Three Kingdoms III - Dragon of Destiny (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Romance%20of%20the%20Three%20Kingdoms%20III%20-%20Dragon%20of%20Destiny%20%28USA%29.cht
+
+cheats = 3
+
+cheat0_desc = "Soldiers Assigned To Zao Qian Modifier"
+cheat0_code = "FF4152:0000"
+cheat0_enable = false
+
+cheat1_desc = "Soldiers Assigned To Zhang Kai Modifier"
+cheat1_code = "FF39D2:0000"
+cheat1_enable = false
+
+cheat2_desc = "Unassigned Soldiers Modifier"
+cheat2_code = "FFCA9E:0000"
+cheat2_enable = false

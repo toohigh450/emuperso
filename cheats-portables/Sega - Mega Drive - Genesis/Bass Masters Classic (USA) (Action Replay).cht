@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : Bass Masters Classic (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Bass%20Masters%20Classic%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Character Modifier"
+cheat0_code = "FFA258:XX"
+cheat0_enable = false 
+
+cheat1_desc = "Fake Have Tons of Money"
+cheat1_code = "FFA262:99+FFA263:99+FFA264:99+FFA265:99"
+cheat1_enable = false 
+
+cheat2_desc = "Start With $1 Million"
+cheat2_code = "FFA262:01"
+cheat2_enable = false 
+
+cheat3_desc = "Set Time (Hour)"
+cheat3_code = "FFA20E:XX"
+cheat3_enable = false 
+
+cheat4_desc = "Set Time (Minutes)"
+cheat4_code = "FFA20F:XX"
+cheat4_enable = false

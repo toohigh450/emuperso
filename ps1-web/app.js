@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 // Version de l'application — mettre à jour à chaque release
-const APP_VERSION = 'RC-1.15-audit-candidate';
+const APP_VERSION = 'RC-1.20-battery-mirror-order';
 import { prepareDisc } from './disc-file.mjs';
 import { SaveStore, makeStateEnvelope } from './save-store.mjs';
 import { packStateBundle, unpackStateBundle } from './state-bundle.mjs';
@@ -9,12 +9,29 @@ import { normalizeInput } from './input-profile.mjs';
 import { PROFILES, DEFAULT_PROFILE_ID, resolveProfile } from './input-presets.mjs';
 import { findCheatsForGame, catalogMeta, loadCatalog, detectRegion, detectRegions, regionsCompatible, detectMod } from './cheat-catalog-psx.mjs';
 import { createCheatController, codeValid, gameKey } from './cheat-controller.mjs';
+import { readTouch, writeTouch } from './touch-editor.mjs';
 const $ = id => document.getElementById(id), vault = new SaveStore('emuperso-real-saves-v1-ps1'), records = [];
+// Le badge de version suit APP_VERSION : jamais de chaîne de version en dur dans le HTML.
+{ const tag = $('app-tag'); if (tag) tag.textContent = 'EMUPERSO · PS1 WEB · ' + APP_VERSION; }
 let selected = null, busy = false, meta = null, preparing = null, lastPrep = null;
 // Heuristique héritée de Claude ; ni borne de décompression, ni garantie mémoire.
 const ARCHIVE_MEMORY_FACTOR = 4.5, isArchiveName = name => /\.(rar|zip|7z)$/i.test(String(name ?? ''));
 const say = (id, text, error = false) => { $(id).textContent = text; $(id).classList.toggle('error', error); };
-function event(type, data = {}) { records.push({ utc: new Date().toISOString(), type, data }); if (records.length > 500) records.shift(); $('log').textContent = JSON.stringify(records.slice(-80), null, 1); }
+// Journal gardé sur cet appareil : après un plantage ou un rechargement de l'onglet, l'export contient
+// encore les évènements d'avant. Métadonnées seulement, comme le diagnostic.
+const JOURNAL_KEY = 'emuperso-ps1-journal', pageLoadUtc = new Date().toISOString();
+let earlierRecords = []; try { earlierRecords = JSON.parse(localStorage.getItem(JOURNAL_KEY) || '[]').slice(-300); } catch { earlierRecords = []; }
+let journalTimer = 0;
+const clipRecord = r => { const text = JSON.stringify(r); return text.length > 2000 ? { utc: r.utc, type: r.type, data: text.slice(0, 2000) } : r; };
+function flushJournal() { clearTimeout(journalTimer); try { localStorage.setItem(JOURNAL_KEY, JSON.stringify([...earlierRecords, { utc: pageLoadUtc, type: 'page.load' }, ...records.map(clipRecord)].slice(-400))); } catch { /* stockage plein ou bloqué */ } }
+const harmless = reason => reason?.name === 'NotAllowedError' || /not visible|wake ?lock|fullscreen|pointer ?lock|user gesture|play\(\) request/i.test(String(reason?.message ?? reason ?? ''));
+function event(type, data = {}) { records.push({ utc: new Date().toISOString(), type, data }); if (records.length > 500) records.shift(); $('log').textContent = JSON.stringify(records.slice(-80), null, 1); clearTimeout(journalTimer); journalTimer = setTimeout(flushJournal, 300); }
+window.addEventListener('pagehide', flushJournal);
+window.addEventListener('error', e => event('browser.error', { message: e.message }));
+window.addEventListener('unhandledrejection', e => {
+  if (harmless(e.reason)) { e.preventDefault(); event('browser.refusal.ignored', { message: String(e.reason?.message ?? e.reason) }); return; }
+  event('browser.unhandledrejection', { message: String(e.reason) });
+});
 const sessions = new SessionController($('game'), (type, data) => {
   event(type, data);
   if (type === 'state.unguarded.blocked') say('status', 'Utilisez les boutons de sauvegarde de l’application : le chargement direct du moteur est désactivé.');
@@ -26,7 +43,29 @@ const kv = name => {
   };
   return { get: key => run('readonly', s => s.get(key)), set: (key, value) => run('readwrite', s => s.put(value, key)) };
 };
-const cheatDB = kv('emuperso-ps1-cheats-v1'), inputDB = kv('emuperso-ps1-input-v1'), editionDB = kv('emuperso-ps1-editions-v1');
+const cheatDB = kv('emuperso-ps1-cheats-v1'), inputDB = kv('emuperso-ps1-input-v1'), editionDB = kv('emuperso-ps1-editions-v1'), biosDB = kv('emuperso-ps1-bios-v1');
+// BIOS PS1 personnelle (dump de la console de l'utilisateur, jamais uploadé).
+// Persistée en IndexedDB comme un Blob ; le cœur la cherche sous un nom
+// « scph* »/« ps* » de 512 Kio ou 4 Mio dans son répertoire système.
+let biosFile = null;
+function showBios() {
+  $('bios-status').textContent = biosFile
+    ? `BIOS chargé : ${biosFile.name} (${Math.round(biosFile.size / 1024)} Kio) — conservé sur ce PC`
+    : 'Aucun — BIOS émulé (HLE) du cœur utilisé';
+  $('clear-bios').hidden = !biosFile;
+}
+$('choose-bios').onclick = () => $('bios-file').click();
+$('bios-file').onchange = () => operation(async () => {
+  const file = $('bios-file').files[0]; $('bios-file').value = ''; if (!file) return;
+  if (![524288, 4194304].includes(file.size))
+    say('status', `Attention : ${file.name} fait ${Math.round(file.size / 1024)} Kio — un BIOS PS1 fait 512 Kio (ou 4 Mio). Le cœur risque de ne pas le reconnaître.`, true);
+  biosFile = file; await biosDB.set('file', file); showBios();
+  event('bios.personal.set', { name: file.name, size: file.size });
+});
+$('clear-bios').onclick = () => operation(async () => {
+  biosFile = null; await biosDB.set('file', null); showBios(); event('bios.personal.cleared');
+});
+biosDB.get('file').then(f => { if (f instanceof Blob) { biosFile = f; showBios(); event('bios.personal.restored', { name: f.name, size: f.size }); } }).catch(() => {});
 // Toute la logique d'état des cheats vit dans cheat-controller.mjs (RC-1.9) : app.js ne fait
 // que brancher le moteur, le catalogue, le stockage et l'affichage.
 const ctl = createCheatController({
@@ -132,14 +171,74 @@ ctl.subscribe(renderCheats);
 async function optionalLoad(identity, slot, kind, previous = false) {
   try { return await vault.load(identity, slot, { kind, previous }); } catch (error) { if (error.code === 'E_EMPTY') return null; throw error; }
 }
+// Filet synchrone de secours : au pagehide/beforeunload, la transaction
+// IndexedDB d'autoSaveBattery peut être tuée par le déchargement de page.
+// localStorage.setItem est synchrone et survit ; 128 Kio -> ~175 Kio base64.
+const batteryLsKey = id => 'emuperso-ps1-battery:' + [id.rom_sha256, id.engine_sha256, id.config_sha256, id.state_schema].join(':');
+function batteryLsWrite(identity, bytes) {
+  try {
+    let bin = ''; const CH = 8192;
+    for (let i = 0; i < bytes.length; i += CH) bin += String.fromCharCode(...bytes.subarray(i, i + CH));
+    localStorage.setItem(batteryLsKey(identity), JSON.stringify({ utc: new Date().toISOString(), b64: btoa(bin) }));
+  } catch { /* quota/mode privé : le coffre IndexedDB reste la voie principale */ }
+}
+function batteryLsRead(identity) {
+  try {
+    const raw = localStorage.getItem(batteryLsKey(identity)); if (!raw) return null;
+    const { utc, b64 } = JSON.parse(raw); if (!utc || !b64) return null;
+    const bin = atob(b64), bytes = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return { bytes, utc };
+  } catch { return null; }
+}
+// La carte la plus récente gagne : le coffre (enveloppe.created_utc) ou le
+// filet localStorage (utc), selon lequel a été écrit en dernier.
+function newestBattery(stored, identity) {
+  const fallback = batteryLsRead(identity);
+  if (!fallback) return stored?.bytes ?? null;
+  if (!stored?.bytes) return fallback.bytes;
+  return Date.parse(fallback.utc) > Date.parse(stored.envelope?.created_utc ?? '') ? fallback.bytes : stored.bytes;
+}
 async function saveBattery(force) {
   const current = sessions.current; if (!current) return;
   requireCaptureSafe();
   const bytes = current.api.captureBattery();
   if (!bytes) { if (force) say('save-note', 'Ce jeu n’a pas (encore) produit de carte mémoire ou de sauvegarde native.'); return; }
+  batteryLsWrite(current.batteryIdentity, bytes);
   await vault.put(current.batteryIdentity, 1, await makeStateEnvelope(bytes, current.batteryIdentity, { kind: 'battery', label: 'Carte mémoire' }));
   event('battery.saved', { bytes: bytes.length }); if (force) say('save-note', 'Carte mémoire enregistrée pour ce jeu.');
 }
+// Carte mémoire (bug « no memory card » / perte à la fermeture, Lesteem 2026-11-07) :
+// le .srm vit en MEMFS et n'atteignait le coffre qu'au clic « Carte mémoire », à un
+// changement de jeu ou à un état enregistré. Sans capture automatique, fermer l'onglet
+// après une sauvegarde en jeu l'effaçait. Meilleur effort : jamais bloquer la fermeture.
+let batteryAutoSaving = false, batteryAutoSavedAt = -Infinity;
+async function autoSaveBattery() {
+  const current = sessions.current;
+  if (!current || batteryAutoSaving || performance.now() - batteryAutoSavedAt < 2000) return;
+  batteryAutoSaving = true;
+  try {
+    requireCaptureSafe();
+    const bytes = current.api.captureBattery();
+    if (!bytes?.length) return;
+    // Le miroir synchrone part AVANT la transaction IndexedDB : il survit même
+    // si la page se décharge pendant vault.put (pagehide/beforeunload/freeze).
+    batteryLsWrite(current.batteryIdentity, bytes);
+    await vault.put(current.batteryIdentity, 1, await makeStateEnvelope(bytes, current.batteryIdentity, { kind: 'battery', label: 'Carte mémoire' }));
+    batteryAutoSavedAt = performance.now();
+    event('battery.saved', { bytes: bytes.length, automatic: true });
+    flushJournal();
+  } catch (error) {
+    event('battery.save.failed', { message: error?.message ?? String(error), automatic: true });
+  } finally { batteryAutoSaving = false; }
+}
+document.addEventListener?.('visibilitychange', () => { if (document.visibilityState === 'hidden') void autoSaveBattery(); });
+window.addEventListener('pagehide', () => { void autoSaveBattery(); });
+window.addEventListener('beforeunload', () => { void autoSaveBattery(); });
+// Page Lifecycle : 'freeze' arrive avant pagehide quand l'onglet est gelé
+// (navigation mobile, changement d'onglet aggressif) — meilleure chance que
+// la transaction IndexedDB parte avant le gel.
+document.addEventListener?.('freeze', () => { void autoSaveBattery(); });
 async function refreshSlots() {
   if (!sessions.current) return;
   const slot = Number($('slot').value), row = (await vault.list(sessions.current.identity, { kind: 'state' })).find(r => r.slot === slot);
@@ -190,12 +289,22 @@ async function launch(prepared, { state = null, battery, cheatList = [], input, 
   let candidate;
   try {
     const config = input ?? normalizeInput(await inputDB.get(gameKey(prepared.metadata)).catch(() => null));
-    candidate = await sessions.prepare(prepared, config);
-    const stored = battery === undefined ? await optionalLoad(candidate.batteryIdentity, 1, 'battery') : null;
+    candidate = await sessions.prepare(prepared, config, biosFile);
+    let stored = null;
+    if (battery === undefined) {
+      try { stored = await optionalLoad(candidate.batteryIdentity, 1, 'battery'); }
+      catch (error) {
+        // Coffre corrompu (E_INTEGRITY) : tenter le miroir localStorage ; échec conservé s'il est absent.
+        if (error.code !== 'E_INTEGRITY') throw error;
+        event('battery.vault.corrupt', { message: error.message });
+        if (!batteryLsRead(candidate.batteryIdentity)) throw error;
+      }
+    }
+    const batteryBytes = battery === undefined ? newestBattery(stored, candidate.batteryIdentity) : battery;
     say('status', state ? 'Restauration dans une session neuve…' : 'Démarrage du jeu…');
     // B02 : aucune réinjection de cheats au démarrage. Les cheats restaurés (cheatList) sont confiés
     // au contrôleur, qui ne les applique qu'après validation de l'édition et de la région.
-    await sessions.start(candidate, { battery: battery === undefined ? stored?.bytes ?? null : battery, state, cheats: [] });
+    await sessions.start(candidate, { battery: batteryBytes, state, cheats: [] });
   } catch (error) {
     if (candidate?.frame.isConnected && sessions.current !== candidate) await sessions.dispose(candidate);
     if (archiveClosed) {
@@ -332,7 +441,7 @@ $('export').onclick = () => {
   const inProgress = preparing && { stage: preparing.stage, bytes: preparing.bytes, size: preparing.size, elapsed_ms: Math.round(preparing.elapsed()), quiet_ms: Math.round(performance.now() - preparing.last) };
   const blob = new Blob([JSON.stringify({ app: 'emuperso-ps1-web ' + APP_VERSION, tested: false, exported_utc: new Date().toISOString(), env,
     preparation: { in_progress: inProgress || null, last: lastPrep },
-    game: meta && { name: meta.name, size: meta.size, serial: meta.serial, sha256: meta.canonical_sha256 }, session: sessions.diagnostic(), events: records }, null, 1)], { type: 'application/json' });
+    game: meta && { name: meta.name, size: meta.size, serial: meta.serial, sha256: meta.canonical_sha256 }, session: sessions.diagnostic(), events: records, earlier_events: earlierRecords }, null, 1)], { type: 'application/json' });
   const link = document.createElement('a'); link.href = URL.createObjectURL(blob); link.download = 'EMUPERSO-ps1-diagnostic.json'; link.click(); setTimeout(() => URL.revokeObjectURL(link.href), 5000);
 };
 const readInput = () => normalizeInput({ analog: $('in-analog').value, stickToDpad: $('in-dpad').checked, deadzone: Number($('in-dz').value), native: $('in-native').checked });
@@ -359,4 +468,14 @@ $('in-apply').onclick = () => operation(async () => {
   await inputDB.set(gameKey(meta), cfg); await launch(current.prepared, { input: cfg });
 });
 // Ancien catalogue vide supprimé (RC-1.0) — le catalogue PS1 est dans data/psx-catalog.json
+// Commandes tactiles (mandat Controller V2) : réglage de l'appareil, lu en direct par la page du moteur.
+const PS1_TOUCH_KEY = 'emuperso-ps1-touch';
+$('in-hide-touch').checked = readTouch(PS1_TOUCH_KEY).hideTouch;
+$('in-hide-touch').onchange = () => { try { writeTouch(PS1_TOUCH_KEY, { ...readTouch(PS1_TOUCH_KEY), hideTouch: $('in-hide-touch').checked }); } catch { say('status', 'Réglage non enregistré : stockage du navigateur indisponible.', true); } };
+$('in-move').onclick = async () => {
+  const win = sessions.current?.frame.contentWindow;
+  if (!win?.EMUPERSO_editTouch) { say('status', 'Lance un jeu sur l’écran tactile pour déplacer ses boutons.'); return; }
+  say('status', 'Glisse les boutons dans la fenêtre du jeu, puis touche « Terminé ».'); $('game').scrollIntoView({ block: 'center' });
+  try { await win.EMUPERSO_editTouch(); say('status', 'Position des boutons tactiles enregistrée sur cet appareil.'); event('input.touch.moved'); } catch (error) { say('status', error.message, true); }
+};
 show(null); renderCheats();

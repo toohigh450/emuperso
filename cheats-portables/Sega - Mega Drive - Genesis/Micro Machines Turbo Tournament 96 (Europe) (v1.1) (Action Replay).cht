@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Micro Machines Turbo Tournament 96 (Europe) (v1.1) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Micro%20Machines%20Turbo%20Tournament%2096%20%28Europe%29%20%28v1.1%29%20%28Action%20Replay%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Infinite Time (Minutes)"
+cheat0_code = "FFD634:00"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Time (Seconds)"
+cheat1_code = "FFD636:00"
+cheat1_enable = false 
+
+cheat2_desc = "0 Laps Remaining P1"
+cheat2_code = "FFD165:00"
+cheat2_enable = false 
+
+cheat3_desc = "All Computer-Controlled Racers Drive Against Walls"
+cheat3_code = "FFD0C1:09"
+cheat3_enable = false 
+
+cheat4_desc = "Blue Car Direction"
+cheat4_code = "FFD059:XX"
+cheat4_enable = false 
+
+cheat5_desc = "Yellow Car Direction"
+cheat5_code = "FFD05B:XX"
+cheat5_enable = false 
+
+cheat6_desc = "Green Car Direction"
+cheat6_code = "FFD05D:XX"
+cheat6_enable = false

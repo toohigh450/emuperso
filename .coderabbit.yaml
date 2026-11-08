@@ -1,0 +1,38 @@
+# CodeRabbit — configuration EMUPERSO
+# Reviews en français, code seulement (les bases de cheats sont des données, pas du code).
+language: "fr"
+
+reviews:
+  # On ignore les données et les images : 2 453 fichiers .cht + cheat.dat + images.
+  # Il reste ~120 fichiers de vrai code, sous la limite de 300 par review.
+  path_filters:
+    - "!cheats-portables/**"
+    - "!cheats-arcade/**"
+    - "!**/*.cht"
+    - "!**/*.dat"
+    - "!**/*.png"
+    - "!**/*.jpg"
+    - "!**/*.jpeg"
+    - "!**/*.gif"
+    - "!**/*.webp"
+    - "!**/*.ico"
+    - "!**/*.mp3"
+    - "!**/*.wav"
+  path_instructions:
+    - path: "ps1-web/**"
+      instructions: |
+        - Vérifier la persistance des sauvegardes (carte mémoire .srm, miroir localStorage, ordre d'écriture).
+        - Vérifier le chargement du BIOS personnel (jamais uploadé, local seulement).
+        - Les cheats ne doivent jamais être activés automatiquement.
+    - path: "gamecube/**"
+      instructions: |
+        - Vérifier l'identité de la carte mémoire (ID de disque, pas le nom de fichier).
+        - Vérifier le miroir localStorage (2 Mio) et la gestion du quota.
+    - path: "portables/**"
+      instructions: |
+        - Vérifier l'isolation des sauvegardes par jeu (SHA-256 du contenu, pas le nom de fichier).
+        - Les cheats ne doivent jamais être activés automatiquement.
+    - path: "real-n64/**"
+      instructions: |
+        - Vérifier la création du dossier de sauvegarde au premier lancement.
+        - Les cheats ne doivent jamais être activés automatiquement.

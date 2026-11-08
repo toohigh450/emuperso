@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : James 'Buster' Douglas Knockout Boxing (USA, Europe) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/James%20'Buster'%20Douglas%20Knockout%20Boxing%20%28USA,%20Europe%29%20%28Action%20Replay%29.cht
+
+cheats = 4 
+
+cheat0_desc = "Infinite Energy P1"
+cheat0_code = "FF84BD:FF"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Energy P2"
+cheat1_code = "FF853D:FF"
+cheat1_enable = false 
+
+cheat2_desc = "No Energy P1"
+cheat2_code = "FF84BD:00"
+cheat2_enable = false 
+
+cheat3_desc = "No Energy P2"
+cheat3_code = "FF853D:00"
+cheat3_enable = false

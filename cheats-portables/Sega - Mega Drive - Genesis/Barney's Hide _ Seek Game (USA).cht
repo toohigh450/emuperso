@@ -1,0 +1,40 @@
+# Recherche locale pour la ROM : Barney's Hide _ Seek Game (USA)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Barney's%20Hide%20_%20Seek%20Game%20%28USA%29.cht
+
+cheats = 8
+
+cheat0_desc = "Stage Modifier"
+cheat0_code = "FFDBFA:0003"
+cheat0_enable = false
+
+cheat1_desc = "Have All Kids Found"
+cheat1_code = "FFDBFC:0005+FFDBFE:0005+FFDC08:0005"
+cheat1_enable = false
+
+cheat2_desc = "Makes most of the intro screens go by MUCH faster"
+cheat2_code = "1BET-BAW6"
+cheat2_enable = false
+
+cheat3_desc = "Skip all intros"
+cheat3_code = "1BET-BCW6+AA0A-AABW"
+cheat3_enable = false
+
+cheat4_desc = "1 Present Worth 5"
+cheat4_code = "HGTA-BY16+HGTT-BYTC"
+cheat4_enable = false
+
+cheat5_desc = "1 Present Worth 5 (Alt)"
+cheat5_code = "HGWA-BYWA+HGWA-BYV4"
+cheat5_enable = false
+
+cheat6_desc = "1 Kid Worth 5"
+cheat6_code = "HGZA-BYW0+HGZA-BYW6"
+cheat6_enable = false
+
+cheat7_desc = "1 Kid Worth 5 (Alt)"
+cheat7_code = "HGZA-BYX2+HGZA-BYX8"
+cheat7_enable = false

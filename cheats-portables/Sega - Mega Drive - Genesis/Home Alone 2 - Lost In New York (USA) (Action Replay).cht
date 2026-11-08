@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Home Alone 2 - Lost In New York (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Home%20Alone%202%20-%20Lost%20In%20New%20York%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 2 
+
+cheat0_desc = "Infinite Health"
+cheat0_code = "FF9099:63"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "FF9115:09"
+cheat1_enable = false

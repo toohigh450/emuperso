@@ -1,0 +1,28 @@
+# Recherche locale pour la ROM : 3 Ninjas Kick Back (USA) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/3%20Ninjas%20Kick%20Back%20%28USA%29%20%28Action%20Replay%29.cht
+
+cheats = 5 
+
+cheat0_desc = "Infinite Lives Player 1"
+cheat0_code = "FFA3BF:0003"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives Player 2"
+cheat1_code = "FFA47F:0003"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Health Player 1"
+cheat2_code = "FFA3C5:0006"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Health Player 2"
+cheat3_code = "FFA485:0006"
+cheat3_enable = false 
+
+cheat4_desc = "Freeze Clock"
+cheat4_code = "FFA375:0099"
+cheat4_enable = false

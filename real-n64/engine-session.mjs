@@ -3,6 +3,8 @@
 import { inspectNativeState, makeRestoreWitness, compareRestoreWitness } from './native-state.mjs';
 import { sriValue, verifyRuntimeBytes } from './runtime-integrity.mjs';
 import { createFrameCapture, installRuntimeFrameHook } from './frame-capture.mjs';
+import { computeN64Inputs, normalizeN64Pad, pickPad, touchLayout } from './n64-input.mjs';
+import { watchTouch } from './touch-editor.mjs';
 const contexts = new Set();
 let emulator = null, romURL = null, closed = false, notify = () => {}, sessionId = null;
 let cheatFault = null;
@@ -107,7 +109,55 @@ async function play() {
   gm().toggleFastForward(0); gm().toggleSlowMotion(0); emulator.play();
   await resumeAudio();
 }
+// Manette EMUPERSO (mandat Controller V2) : profil lu dans localStorage (clé partagée avec la page),
+// changements appliqués en cours de partie par l'évènement « storage ». Les liaisons manette du moteur
+// sont vidées sauf en profil natif, pour éviter les doubles commandes ; le clavier n'est pas touché.
+export const N64_PAD_KEY = 'emuperso-n64-pad';
+export const N64_TOUCH_KEY = 'emuperso-n64-touch';
+let padRaf = 0, touchWatch = null;
+function readPadSettings() {
+  try { return normalizeN64Pad(JSON.parse(localStorage.getItem(N64_PAD_KEY) || '{}')); } catch { return normalizeN64Pad({}); }
+}
+function installN64Pad() {
+  let settings = readPadSettings(), saved = null, padId = null;
+  const sent = new Map();
+  const bindings = (native) => {
+    const controls = emulator.controls || {};
+    if (!native) {
+      if (!saved) saved = Object.entries(controls).map(([p, row]) => [p, Object.entries(row || {}).map(([i, c]) => [i, c && c.value2])]);
+      for (const row of Object.values(controls)) for (const c of Object.values(row || {})) if (c && c.value2 !== undefined) c.value2 = '';
+    } else if (saved) {
+      for (const [p, row] of saved) for (const [i, v] of row) if (controls[p]?.[i]) controls[p][i].value2 = v;
+      saved = null;
+    }
+  };
+  const release = () => { for (const [id, v] of sent) if (v) gm().simulateInput(0, Number(id), 0); sent.clear(); };
+  bindings(settings.profile === 'natif');
+  window.addEventListener('storage', (e) => {
+    if (e.key !== N64_PAD_KEY) return;
+    const before = settings.profile; settings = readPadSettings();
+    if (before !== settings.profile) { release(); bindings(settings.profile === 'natif'); }
+    note('input.profile', { profile: settings.profile });
+  });
+  const poll = () => {
+    if (closed) return;
+    padRaf = requestAnimationFrame(poll);
+    try {
+      const pad = pickPad(navigator.getGamepads ? navigator.getGamepads() : []);
+      if ((pad?.id ?? null) !== padId) { padId = pad?.id ?? null; note('input.pad', { id: padId }); }
+      const inputs = computeN64Inputs(pad, settings);
+      if (!inputs || !emulator.started) return;
+      for (const [id, value] of Object.entries(inputs)) if ((sent.get(id) || 0) !== value) { sent.set(id, value); gm().simulateInput(0, Number(id), value); }
+    } catch (error) { note('input.error', { message: error.message }); }
+  };
+  padRaf = requestAnimationFrame(poll);
+  // Tactile : masqué avec une manette (réglage de la page) et boutons déplaçables.
+  touchWatch = watchTouch({ key: N64_TOUCH_KEY, emulator: () => (closed ? null : emulator), hideTouch: () => settings.hideTouch });
+  window.EMUPERSO_editTouch = () => touchWatch.edit();
+  note('input.profile', { profile: settings.profile });
+}
 async function close() {
+  cancelAnimationFrame(padRaf); touchWatch?.stop();
   if (closed) return snapshot();
   closed = true;
   frameCapture.cancel();
@@ -166,9 +216,20 @@ async function start(config, callback) {
   const OriginalManager = window.EJS_GameManager;
   window.EJS_GameManager = class extends OriginalManager {
     async mountFileSystems() {
+      // Le cœur Mupen64Plus-Next écrit sa sauvegarde (.srm) dans
+      // /data/saves/Mupen64Plus-Next/<jeu>.srm. Sans ce dossier, la première
+      // partie ne peut pas écrire sa carte mémoire (même catch-22 que le
+      // correctif PS1 RC-1.16 : le dossier n'était créé que comme effet
+      // secondaire de writeFile() lors de l'injection d'une batterie
+      // existante). mkdir() est idempotent.
+      // Le point de montage doit exister AVANT le mount (FS racine) ; le dossier
+      // du cœur est créé APRÈS dans le MEMFS monté, sinon il serait invisible.
       this.mkdir('/data'); this.mkdir('/data/saves');
-      // Preserve the vendor's mount/unmount lifecycle without its shared IDBFS.
       this.FS.mount(this.FS.filesystems.MEMFS, {}, '/data/saves');
+      try {
+        if (this.FS.mkdirTree) this.FS.mkdirTree('/data/saves/Mupen64Plus-Next');
+        else this.mkdir('/data/saves/Mupen64Plus-Next');
+      } catch (err) { note('save.mkdir.failed', { message: err && err.message }); }
     }
     loadState() { note('state.unguarded.blocked', { source: 'vendor-wrapper' }); return false; }
     quickLoad() { note('state.unguarded.blocked', { source: 'quick-load' }); return false; }
@@ -200,7 +261,7 @@ async function start(config, callback) {
   romURL = URL.createObjectURL(new Blob([config.bytes], { type: 'application/octet-stream' }));
   const options = {
     gameUrl: romURL, dataPath: 'vendor/data/', system: 'mupen64plus_next', gameName: config.gameName,
-    startOnLoad: true, threads: false, language: 'en-US', shaders: window.EJS_SHADERS,
+    startOnLoad: true, threads: false, language: 'en-US', shaders: window.EJS_SHADERS, VirtualGamepadSettings: touchLayout(),
     disableDatabases: true, disableLocalStorage: true, cacheLimit: 0, volume: 0.45,
     defaultOptions: { webgl2Enabled: config.legacy ? 'disabled' : 'enabled', ejs_threads: 'disabled', 'mupen64plus-cpucore': 'pure_interpreter' },
     buttonOpts: { rightClick: false, saveState: false, loadState: false, quickSave: false, quickLoad: false,
@@ -223,6 +284,7 @@ async function start(config, callback) {
     if (actual !== expected) throw new Error('Chemin de sauvegarde native différent du chemin préparé.');
     note('battery.injected', { bytes: config.battery.length });
   }
+  installN64Pad();
   return snapshot();
 }
 function captureState() { return frameCapture.capture(); }

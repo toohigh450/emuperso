@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Krusty's Super Fun House (USA, Europe) (Rev A)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Krusty's%20Super%20Fun%20House%20%28USA,%20Europe%29%20%28Rev%20A%29.cht
+
+cheats = 7
+
+cheat0_desc = "Invincibility"
+cheat0_code = "R0BT-A6TL"
+cheat0_enable = false
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "AKTA-AA50"
+cheat1_enable = false
+
+cheat2_desc = "Infinite Balls"
+cheat2_code = "AKVA-AA3C"
+cheat2_enable = false
+
+cheat3_desc = "Invincibility "
+cheat3_code = "FF101B:0010"
+cheat3_enable = false
+
+cheat4_desc = "1 Shot Kill Some Enemies"
+cheat4_code = "ACCA-AA8R"
+cheat4_enable = false
+
+cheat5_desc = "Infinite Energy"
+cheat5_code = "FF0FF9:0064"
+cheat5_enable = false
+
+cheat6_desc = "Infinite Energy"
+cheat6_code = "AWCA-AA2E"
+cheat6_enable = false

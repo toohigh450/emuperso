@@ -1,0 +1,39 @@
+# Recherche locale pour le jeu : Platypus.cso (disque ULUS-10203, « Platypus »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Platypus%20%5BUS%5D%20%5BULUS-10203%5D.cht
+
+cheats = "15"
+
+cheat0_desc = "5 Credits"
+cheat0_code =  "_L 0x002D32D4 0x00000005"
+cheat1_desc = "15 Lives"
+cheat1_code =  "_L 0x002D32E0 0x0000000F"
+cheat2_desc = "High Score"
+cheat2_code =  "_L 0x202D32D8 0x10000172 _L 0x205F4150 0x10000172"
+cheat3_desc = "Infinite Lives"
+cheat3_code =  "_L 0x002D32E0 0x00000009"
+cheat4_desc = "Infinite Special Weapon Time"
+cheat4_code =  "_L 0x002D32EE 0x0000420B"
+cheat5_desc = "Infinite Special Weapon Usage"
+cheat5_code =  "_L 0x202D32EC 0x00000000"
+cheat6_desc = "Max Credits"
+cheat6_code =  "_L 0x202D32D4 0x00000009"
+cheat7_desc = "Max Lives"
+cheat7_code =  "_L 0x202D32E0 0x00000063"
+cheat8_desc = "Max Score"
+cheat8_code =  "_L 0x202D32D8 0x0098967F"
+cheat9_desc = "Weapon 2x Phaser (Fast)"
+cheat9_code =  "_L 0x002D32F4 0x00000005"
+cheat10_desc = "Weapon 2x Phaser (Standard)"
+cheat10_code =  "_L 0x002D32F4 0x00000004"
+cheat11_desc = "Weapon 4x Phaser"
+cheat11_code =  "_L 0x002D32F4 0x00000006"
+cheat12_desc = "Weapon Laser"
+cheat12_code =  "_L 0x002D32F4 0x0000000C"
+cheat13_desc = "Weapon Rockets"
+cheat13_code =  "_L 0x002D32F4 0x0000000A"
+cheat14_desc = "Weapon Shockwave"
+cheat14_code =  "_L 0x002D32F4 0x00000009"

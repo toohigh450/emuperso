@@ -1,0 +1,16 @@
+# Recherche locale pour la ROM : Tiny Toon Adventures - Acme All-Stars (USA, Europe, Korea) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Tiny%20Toon%20Adventures%20-%20Acme%20All-Stars%20%28USA,%20Europe,%20Korea%29%20%28Action%20Replay%29.cht
+
+cheats = 2 
+
+cheat0_desc = "Character Highlighter P1 (On Menu)"
+cheat0_code = "FFA071:XX"
+cheat0_enable = false 
+
+cheat1_desc = "Character Highlighter P2 (On Menu)"
+cheat1_code = "FFA0F1:XX"
+cheat1_enable = false

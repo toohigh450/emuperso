@@ -1,0 +1,36 @@
+# Recherche locale pour la ROM : Bare Knuckle III (Japan) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Bare%20Knuckle%20III%20%28Japan%29%20%28Action%20Replay%29.cht
+
+cheats = 7 
+
+cheat0_desc = "Infinite Energy"
+cheat0_code = "FFDF6C:0034"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives P1"
+cheat1_code = "FFDF8B:0005"
+cheat1_enable = false 
+
+cheat2_desc = "Infinite Energy P2"
+cheat2_code = "FFE06C:0032"
+cheat2_enable = false 
+
+cheat3_desc = "Infinite Lives P2"
+cheat3_code = "FFE08B:0005"
+cheat3_enable = false 
+
+cheat4_desc = "Hidden Level Select"
+cheat4_code = "FFFB01:0010"
+cheat4_enable = false 
+
+cheat5_desc = "Infinite Time In Level 6"
+cheat5_code = "FF88E2:0060"
+cheat5_enable = false 
+
+cheat6_desc = "Infinite Time For Robot Y"
+cheat6_code = "FF8850:59"
+cheat6_enable = false

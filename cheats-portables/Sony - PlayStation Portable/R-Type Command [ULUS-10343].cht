@@ -1,0 +1,19 @@
+# Recherche locale pour le jeu : R-Type Command.cso (disque ULUS-10343, « R-TYPE COMMAND »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/R-Type%20Command%20%5BUS%5D%20%5BULUS-10343%5D.cht
+
+cheats = "5"
+
+cheat0_desc = "Always 1P Turn"
+cheat0_code =  "_L 0x003873F4 0x00000000"
+cheat1_desc = "Inf.Days"
+cheat1_code =  "_L 0x20387404 0x00000001"
+cheat2_desc = "Inf.Materials"
+cheat2_code =  "_L 0x20464C00 0x0000270F _L 0x20464C04 0x0000270F _L 0x20464C08 0x0000270F"
+cheat3_desc = "Lots Of Resource 1"
+cheat3_code =  "_L 0x00464C00 0x000030D4"
+cheat4_desc = "Upgrade Points"
+cheat4_code =  "_L 0x20464C00 0x0000270F _L 0x20464C04 0x0000270F _L 0x20464C08 0x0000270F"

@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : Mazin Saga (Asia) (Action Replay)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Mazin%20Saga%20%28Asia%29%20%28Action%20Replay%29.cht
+
+cheats = 3 
+
+cheat0_desc = "Infinite Health"
+cheat0_code = "FFCDED:63"
+cheat0_enable = false 
+
+cheat1_desc = "Infinite Lives"
+cheat1_code = "FFEBD9:09"
+cheat1_enable = false 
+
+cheat2_desc = "Freeze P1 (Animation Modifier?)"
+cheat2_code = "FFCDE3:00"
+cheat2_enable = false

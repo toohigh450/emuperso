@@ -7,4 +7,6 @@ for(const file of readdirSync('js').filter(file=>file.endsWith('.mjs'))) {
 }
 const html=readFileSync('player.html','utf8');
 for(const match of html.matchAll(/<script>([\s\S]*?)<\/script>/g))new Script(match[1],{filename:'player.html'});
-console.log('PASS : syntaxe des modules et du script player.html.');
+// Script de la page du moteur, sorti de player.html pour la règle de sécurité (CSP) du lanceur.
+new Script(readFileSync('player.js','utf8'),{filename:'player.js'});
+console.log('PASS : syntaxe des modules et des scripts player.html et player.js.');

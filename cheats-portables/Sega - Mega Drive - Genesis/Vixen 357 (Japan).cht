@@ -1,0 +1,24 @@
+# Recherche locale pour la ROM : Vixen 357 (Japan)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/Vixen%20357%20%28Japan%29.cht
+
+cheats = 4
+
+cheat0_desc = "Master code"
+cheat0_code = "ALAT-AA4Y"
+cheat0_enable = false
+
+cheat1_desc = "Character level cheat"
+cheat1_code = "GTHA-CA3R+REHT-A6TE"
+cheat1_enable = false
+
+cheat2_desc = "Mack Ryan and Harry Gibson start a new game with 2500 HP (instead of 1150)"
+cheat2_code = "2TAT-EWFA"
+cheat2_enable = false
+
+cheat3_desc = "Mack Ryan and Harry Gibson start a new game with a much greater Move stat"
+cheat3_code = "GJAT-EAFG"
+cheat3_enable = false

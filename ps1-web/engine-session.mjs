@@ -3,10 +3,20 @@ import { findCoreOptionLine, coreOptionLists, coreOptionKeys, coreOptionCurrent 
 import { contentStartupError } from './startup-error.mjs';
 // One disposable browser realm per engine session. No ROM or save is uploaded.
 import { computeInputs, padType } from './input-profile.mjs';
+import { watchTouch } from './touch-editor.mjs';
+import { repairCue } from './cue-repair.mjs';
+import { emptyMemcardBytes } from './empty-memcard.mjs';
+// Tactile (mandat Controller V2) : masqué quand une manette est branchée, boutons déplaçables ; réglé par la page.
+export const PS1_TOUCH_KEY = 'emuperso-ps1-touch';
+let touchWatch = null;
 const contexts = new Set();
 let emulator = null, romURL = null, closed = false, notify = () => {}, sessionId = null;
 let startupFailure = null;
 let cheatsQuarantined = false;
+// Carte mémoire vierge formatée (128 Kio, structure PCSX « MC ») injectée quand
+// aucune batterie n'existe encore : sans fichier .srm au boot, le cœur démarre
+// sans carte et le jeu affiche « no memory card » sans pouvoir formater.
+let emptyMemcard = null; // rempli au démarrage de session (empty-memcard.mjs)
 function requireTrustedCheats() {
   if (cheatsQuarantined) throw new Error('Moteur en quarantaine : captures et réactivation refusées. Recréez une session saine.');
 }
@@ -88,7 +98,7 @@ async function play() {
 }
 async function close() {
   if (closed) return snapshot();
-  inputProfile = null; cancelAnimationFrame(inputRaf);
+  inputProfile = null; cancelAnimationFrame(inputRaf); touchWatch?.stop();
   if (emulator?.gameManager) {
     try { emulator.gameManager.resetCheat(); emulator.gameManager.toggleMainLoop(0); } catch {}
     try { emulator.Module.pauseMainLoop?.(); } catch {}
@@ -158,13 +168,29 @@ async function start(config, callback) {
       return originalCompression.call(this, data, message, fileCallback);
     const started = performance.now(); let files = 0, expandedBytes = 0;
     note('engine.archive.decompression.before', { compressed_bytes: data.byteLength, ...heap() });
+    // Les .cue sont remis au moteur en dernier, une fois tous les noms connus : une feuille dont les
+    // pistes ont été renommées dans l'archive est corrigée en mémoire (cue-repair.mjs).
+    const names = [], cues = [];
+    const fixCue = (name, bytes) => {
+      const dir = name.includes('/') ? name.slice(0, name.lastIndexOf('/') + 1) : '';
+      const siblings = names.filter((n) => n.startsWith(dir) && !n.slice(dir.length).includes('/')).map((n) => n.slice(dir.length));
+      const repaired = repairCue(new TextDecoder().decode(bytes), siblings);
+      if (!repaired) return bytes;
+      note('engine.cue.repaired', { cue: name.slice(dir.length), files: repaired.map });
+      return new TextEncoder().encode(repaired.text);
+    };
     const measuredCallback = (name, bytes) => {
-      files++; expandedBytes += bytes.byteLength;
+      files++; expandedBytes += bytes.byteLength; names.push(name);
+      if (/\.cue$/i.test(name)) { cues.push([name, bytes]); return; }
       return fileCallback(name, bytes);
     };
     try {
       const result = await originalCompression.call(this, data, message, typeof fileCallback === 'function' ? measuredCallback : fileCallback);
-      if (typeof fileCallback !== 'function') for (const bytes of Object.values(result)) { files++; expandedBytes += bytes.byteLength; }
+      for (const [name, bytes] of cues) fileCallback(name, fixCue(name, bytes));
+      if (typeof fileCallback !== 'function') for (const [name, bytes] of Object.entries(result)) {
+        files++; expandedBytes += bytes.byteLength; names.push(name);
+      }
+      if (typeof fileCallback !== 'function') for (const name of Object.keys(result)) if (/\.cue$/i.test(name)) result[name] = fixCue(name, result[name]);
       note('engine.archive.decompression.after', { compressed_bytes: data.byteLength, expanded_bytes: expandedBytes, files,
         ms: Math.round(performance.now() - started), peak_measured: false, ...heap() });
       return result;
@@ -178,7 +204,11 @@ async function start(config, callback) {
   // automatic IDBFS writes are replaced by a session-local MEMFS directory.
   const OriginalManager = window.EJS_GameManager;
   window.EJS_GameManager = class extends OriginalManager {
-    async mountFileSystems() { this.mkdir('/data'); this.mkdir('/data/saves'); }
+    // Le cœur PCSX-ReARMed écrit sa carte mémoire (.srm) dans
+    // /data/saves/PCSX-ReARMed/<jeu>.srm. Sans ce dossier, la première partie
+    // affiche « no memory card » et aucune capture n'est possible (bug Lesteem,
+    // 2026-11-07). mkdir() du gestionnaire est idempotent (try/catch interne).
+    async mountFileSystems() { this.mkdir('/data'); this.mkdir('/data/saves'); this.mkdir('/data/saves/PCSX-ReARMed'); }
     loadState() { note('state.unguarded.blocked', { source: 'vendor-wrapper' }); return false; }
     quickLoad() { note('state.unguarded.blocked', { source: 'quick-load' }); return false; }
     setVariable(option, value) {
@@ -218,12 +248,12 @@ async function start(config, callback) {
   };
   const originalStart = window.EmulatorJS.prototype.startGame;
   window.EmulatorJS.prototype.startGame = function() {
-    if (config.battery?.length) {
-      // Une archive place le jeu dans un sous-dossier (« Jeu (USA)/Jeu (USA).cue ») ; le cœur
-      // nomme la sauvegarde d'après le seul nom de fichier.
-      const stem = baseStem(this.fileName);
-      this.gameManager.writeFile('/data/saves/PCSX-ReARMed/' + stem + '.srm', new Uint8Array(config.battery));
-    }
+    // Le cœur n'écrit le .srm que lors d'une capture : sans fichier au boot, la
+    // carte mémoire est absente pour le jeu. On injecte la batterie du coffre,
+    // sinon la carte vierge (première utilisation).
+    const stem = baseStem(this.fileName);
+    const bytes = config.battery?.length ? new Uint8Array(config.battery) : emptyMemcard;
+    if (bytes?.length) this.gameManager.writeFile('/data/saves/PCSX-ReARMed/' + stem + '.srm', bytes);
     originalStart.call(this);
   };
   romURL = URL.createObjectURL(config.file);
@@ -233,15 +263,51 @@ async function start(config, callback) {
   // sinon setupKeys() plante sur this.controls[1] (undefined).
   // Joueur 0 = neutralisé (mapping custom) ; joueurs 1-3 = bindings natifs préservés.
   const defaultControllers = { 0: unbound, 1: {}, 2: {}, 3: {} };
+  // Commandes tactiles PS1 (mandat Controller V2) : le moteur affichait la manette générique Y/X/B/A, sans
+  // L1/R1/L2/R2. △ ○ ✕ □ (PCSX : △ = X, ○ = A, ✕ = B, □ = Y), croix, stick analogique, gâchettes, Select/Start ;
+  // sans Fast/Slow. Les profils de manette physique (input-presets.mjs) ne changent pas.
+  const PS1_TOUCH = [
+    { type: 'button', text: '△', id: 'triangle', location: 'right', left: 40, top: 0, bold: true, input_value: 9 },
+    { type: 'button', text: '□', id: 'square', location: 'right', left: 0, top: 40, bold: true, input_value: 1 },
+    { type: 'button', text: '○', id: 'circle', location: 'right', left: 81, top: 40, bold: true, input_value: 8 },
+    { type: 'button', text: '✕', id: 'cross', location: 'right', left: 40, top: 80, bold: true, input_value: 0 },
+    { type: 'dpad', id: 'dpad', location: 'left', left: '50%', top: '-40%', joystickInput: false, inputValues: [4, 5, 6, 7] },
+    { type: 'zone', id: 'stick', location: 'left', left: '40%', top: '120%', joystickInput: true, inputValues: [16, 17, 18, 19] },
+    { type: 'button', text: 'L1', id: 'l1', block: true, location: 'top', left: 10, top: -90, bold: true, input_value: 10 },
+    { type: 'button', text: 'L2', id: 'l2', block: true, location: 'top', left: 70, top: -90, bold: true, input_value: 12 },
+    { type: 'button', text: 'R2', id: 'r2', block: true, location: 'top', right: 135, top: -90, bold: true, input_value: 13 },
+    { type: 'button', text: 'R1', id: 'r1', block: true, location: 'top', right: 75, top: -90, bold: true, input_value: 11 },
+    { type: 'button', text: 'Select', id: 'select', location: 'center', left: -5, fontSize: 15, block: true, input_value: 2 },
+    { type: 'button', text: 'Start', id: 'start', location: 'center', left: 60, fontSize: 15, block: true, input_value: 3 },
+  ];
+  // Le BIOS arrive en File du realm parent : instanceof Blob/File échoue dans
+  // cette iframe et EmulatorJS sauterait downloadGameFile sans rien écrire.
+  // On réencapsule les octets dans un File local au moteur.
+  let biosFile = null;
+  if (config.bios) {
+    try {
+      const b = config.bios;
+      const bytes = typeof b.arrayBuffer === 'function' ? await b.arrayBuffer()
+        : b instanceof ArrayBuffer ? b
+        : b.buffer ? b.buffer.slice(b.byteOffset ?? 0, (b.byteOffset ?? 0) + b.byteLength) : null;
+      if (bytes) biosFile = new File([bytes], b.name || 'scph1001.bin', { type: b.type || 'application/octet-stream' });
+    } catch (error) { note('engine.bios.personal.failed', { message: String(error?.message || error) }); }
+  }
   const options = {
+    VirtualGamepadSettings: PS1_TOUCH,
     gameUrl: romURL, dataPath: 'vendor/data/', system: 'pcsx_rearmed', gameName: config.gameName,
+    ...(biosFile ? { biosUrl: biosFile } : {}),
     startOnLoad: true, ...(profile.native ? {} : { defaultControllers }), threads: false, language: 'en-US', shaders: window.EJS_SHADERS,
     disableDatabases: true, disableLocalStorage: true, cacheLimit: 0, volume: 0.45,
     defaultOptions: { webgl2Enabled: config.legacy ? 'disabled' : 'enabled', ejs_threads: 'disabled' },
     buttonOpts: { rightClick: false, saveState: false, loadState: false, quickSave: false, quickLoad: false,
       saveSavFiles: false, loadSavFiles: false, cheat: false, restart: false, exitEmulation: false, netplay: false }
   };
+  emptyMemcard = emptyMemcardBytes();
+  if (biosFile) note('engine.bios.personal', { name: biosFile.name, size: biosFile.size, type: biosFile.type });
   emulator = new window.EmulatorJS('#game', options); window.EJS_emulator = emulator;
+  touchWatch = watchTouch({ key: PS1_TOUCH_KEY, emulator: () => (closed ? null : emulator) });
+  window.EMUPERSO_editTouch = () => touchWatch.edit();
   emulator.storage.states = new window.EJS_DUMMYSTORAGE();
   emulator.on('ready', () => note('engine.ready'));
   emulator.on('start', () => note('engine.start.callback'));
@@ -274,6 +340,16 @@ async function start(config, callback) {
     note('battery.injected', { bytes: config.battery.length });
   }
   verifyInput(profile);
+  // Diagnostic manette : la gamepad API n'émet gamepadconnected que pour une
+  // connexion postérieure au chargement. Instantané de getGamepads() au démarrage
+  // et 1,5 s après, pour distinguer « manette absente » de « branchement raté ».
+  const padsSnapshot = () => ({ pads: [...(navigator.getGamepads?.() ?? [])].map(p => p ? {
+    id: p.id, mapping: p.mapping, connected: p.connected,
+    buttons: p.buttons?.length ?? 0, axes: p.axes?.length ?? 0,
+    pressed: [...(p.buttons ?? [])].filter(b => b.pressed).length,
+  } : null) });
+  note('input.pads.snapshot', padsSnapshot());
+  setTimeout(() => { if (!closed) note('input.pads.snapshot.delayed', padsSnapshot()); }, 1500);
   return snapshot();
 }
 function captureState() { requireTrustedCheats(); return new Uint8Array(gm().getState()); }

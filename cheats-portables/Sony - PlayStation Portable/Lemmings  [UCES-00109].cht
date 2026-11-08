@@ -1,0 +1,13 @@
+# Recherche locale pour le jeu : Lemmings .cso (disque UCES-00109, « LEMMINGS »)
+# Correspondance par identifiant de disque lu dans le jeu ; révision non garantie, octets non identifiés.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; les lignes « _L 0x00000000 0x00000000 » sont des titres de section.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sony%20-%20PlayStation%20Portable/Lemmings%20(Platinum)%20%5BEU%5D%20%5BUCES-00109%5D.cht
+
+cheats = "2"
+
+cheat0_desc = "98 Of Each"
+cheat0_code =  "_L 0x00E537EC 0x00000063"
+cheat1_desc = "99 Of Each Type"
+cheat1_code =  "_L 0x00E537D0 0x00000063 _L 0x00E537D4 0x00000063 _L 0x00E537D8 0x00000063 _L 0x00E537DC 0x00000063 _L 0x00E537E0 0x00000063 _L 0x00E537E4 0x00000063 _L 0x00E537E8 0x00000063 _L 0x00E537EC 0x00000063"

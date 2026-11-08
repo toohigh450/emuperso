@@ -45,7 +45,7 @@ def main():
             page.wait_for_function("document.getElementById('current').textContent !== 'Aucun'", timeout=60000)
             frame = page.frames[1]
             offset = frame.evaluate('''()=>{const h=window.EJS_emulator.gameManager.Module.HEAPU8,p=[0x68,0x24,0x57,0x13,0xab,0xcd,0xef,0x42];for(let i=0;i<h.length-p.length;i++)if(p.every((b,j)=>h[i+j]===b))return i;return null;}''')
-            assert offset is not None
+            if offset is None: raise RuntimeError('Motif de code de test introuvable dans la RAM du moteur.')
             frame.evaluate('''()=>{const m=window.EJS_emulator.gameManager;window.__trace=[];for(const name of ['setCheat','resetCheat']){const fn=m[name].bind(m);m[name]=(...a)=>{window.__trace.push({name,args:a});return fn(...a)}}}''')
             codes = [
                 ('slide16', '50000202 0001\n80011000 5678', [0x78, 0x56, 0x79, 0x56]),

@@ -1,0 +1,20 @@
+# Recherche locale pour la ROM : JuJu Densetsu (Japan) (En)
+# Correspondance nominale titre/région/révision ; octets non identifiés par cette déclaration.
+# Codes publics non testés en jeu ; confirmation manuelle dans Portables.
+# Tous les codes sont désactivés ; respecter les codes maîtres et choix exclusifs de la source.
+# Source : libretro/libretro-database ; CC BY-SA 4.0 ; commit 2fdd069d45883449cecf97deddd493492e77ff29
+# https://github.com/libretro/libretro-database/blob/2fdd069d45883449cecf97deddd493492e77ff29/cht/Sega%20-%20Mega%20Drive%20-%20Genesis/JuJu%20Densetsu%20%28Japan%29%20%28En%29.cht
+
+cheats = 3
+
+cheat0_desc = "Kill Bosses in one shot"
+cheat0_code = "PC4A-CEVG"
+cheat0_enable = false
+
+cheat1_desc = "Power Meter special weapon once the charge is always at maximum "
+cheat1_code = "AM2T-AA56"
+cheat1_enable = false
+
+cheat2_desc = "Untouchable - You can kill enemies jumping and spitting)))the only drawback cracking sound when you touch the enemy"
+cheat2_code = "R0RT-A6WL"
+cheat2_enable = false

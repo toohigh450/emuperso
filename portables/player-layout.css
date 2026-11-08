@@ -60,3 +60,14 @@
 .ejs_parent[data-portable-touch-controls] .ejs_virtualGamepad_right {
   bottom: 70px;
 }
+
+/* Taille des commandes tactiles réglable dans l'onglet Manette (variable posée par js/pad-input.mjs). */
+.ejs_virtualGamepad_parent > * { zoom: var(--emuperso-touch-size, 1); }
+
+/* Mode « déplacer les commandes tactiles » (js/pad-input.mjs). */
+.emuperso-touch-editor { position: fixed; inset: 0; z-index: 9999; touch-action: none; background: rgba(20, 24, 60, 0.25); outline: 3px dashed #e0457b; outline-offset: -3px; font: 15px system-ui, sans-serif; color: #fff; }
+.emuperso-touch-editor p { margin: 8px auto; max-width: 90%; text-align: center; background: rgba(0, 0, 0, 0.7); border-radius: 8px; padding: 6px 10px; }
+.emuperso-touch-editor div { display: flex; gap: 10px; justify-content: center; }
+.emuperso-touch-editor button { font: inherit; font-weight: 700; padding: 10px 18px; border-radius: 8px; border: 0; background: #e0457b; color: #fff; min-height: 44px; }
+.emuperso-touch-editor button[data-a="reset"] { background: #2b2f55; }
+.emuperso-moving { outline: 3px solid #e0457b; border-radius: 12px; }

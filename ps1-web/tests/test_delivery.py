@@ -14,4 +14,10 @@ class Delivery(unittest.TestCase):
         text=(ROOT/'style.css').read_text(encoding='utf-8')
         for value in re.findall(r'url\([\"\']?([^\)\"\']+)',text):
             if not value.startswith(('data:','http:','https:')):
-                self.assertTrue((ROOT/value).is_file(), 'Missing stylesheet asset: '+value)
+                # Les URL /bg/ appartiennent à la racine du portail assemblé,
+                # et non au dossier /ps1-web/ ni à la racine du disque Windows.
+                if value.startswith('/bg/'):
+                    asset = ROOT.parent/'portail'/value.lstrip('/')
+                else:
+                    asset = ROOT/value
+                self.assertTrue(asset.is_file(), 'Missing stylesheet asset: '+value)
