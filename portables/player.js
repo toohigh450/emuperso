@@ -140,7 +140,10 @@
         }
         gm.FS.writeFile(SAVEDATA + '/' + f.name, new Uint8Array(f.bytes));
       });
-      return entry.control.flush().then(function () { if (restart !== false) restartNextFrame(); });
+      return entry.control.flush().then(function (ok) {
+        if (!ok) throw new Error('Persistance non confirmée : la sauvegarde importée pourrait être perdue à la fermeture.');
+        if (restart !== false) restartNextFrame();
+      });
     },
     restart: function () { manager(); restartNextFrame(); },
     // Arcade : ouvre le menu de MAME 2003-Plus (L3), dont l'entrée « Cheat » liste les codes du jeu.
@@ -161,7 +164,7 @@
           var gm = manager();
           gm.saveSaveFiles();
           setTimeout(function () { resolve(false); }, 2000);
-          gm.FS.syncfs(false, function () { resolve(true); });
+          gm.FS.syncfs(false, function (err) { resolve(!err); });
         } catch (err) { console.error(err); resolve(false); }
       });
     },
