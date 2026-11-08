@@ -1,5 +1,20 @@
 # CHANGELOG — EMUPERSO PS1
 
+## RC-1.20-battery-mirror-order (8 novembre 2026)
+
+Correctif de la course au déchargement, deuxième passe : en RC-1.19 le miroir
+`localStorage` était écrit **après** `await vault.put` — si la page mourait
+pendant la transaction IndexedDB (pagehide/beforeunload/freeze), le miroir
+n'était jamais posé et la course persistait.
+
+- `app.js` : `batteryLsWrite` (synchrone) part désormais **avant**
+  `vault.put` dans `autoSaveBattery` et `saveBattery`. Le coffre IndexedDB
+  reste la voie principale ; le miroir est le filet de dernier recours.
+- `tools/browser_unload_probe.py` : sonde de déchargement réel — session 1
+  marqueur → `pagehide` → **IndexedDB supprimée** → reload → session 2.
+  Résultat : `marker_in_session2_ram_despite_empty_idb: true` — la carte
+  revient en RAM même coffre vide, grâce au seul miroir localStorage.
+
 ## RC-1.19-battery-fallback (persistance carte mémoire, 8 novembre 2026)
 
 Bug rapporté : sauvegarde en jeu OK (BIOS personnel), mais la sauvegarde
