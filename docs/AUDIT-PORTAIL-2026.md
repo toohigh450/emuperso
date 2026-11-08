@@ -2,7 +2,7 @@
 
 Branche : `feature/unified-controller-profiles` · Date : 2026-11-08
 Périmètre : portail + 13 systèmes (NES, SNES, GB, GBC, GBA, DS, N64, PS1, PSP, Genesis, Arcade, DOOM, GameCube ALPHA).
-Statut : **audit complet** — statique + tests automatisés + **tests terrain avec les vraies ROMs de Karl** (11/13 systèmes bootés ; DS sans ROM disponible, GameCube ALPHA à vitesse interpréteur).
+Statut : **audit complet** — statique + tests automatisés + **tests terrain avec les vraies ROMs de Karl** (12/13 systèmes bootés ; GameCube ALPHA à vitesse interpréteur).
 
 ## Correctifs livrés sur la branche
 
@@ -71,7 +71,7 @@ Statut : **audit complet** — statique + tests automatisés + **tests terrain a
 | GBA (.gba) | Advance Wars (USA).gba 4 Mio | mGBA | ✅ fichier direct, moteur prêt |
 | Genesis | 688 Attack Sub.7z (5 versions) | Genesis Plus GX | ✅ sélecteur → extraction → moteur prêt |
 | Arcade | tehkanwc.zip (romset nom court) | MAME 2003-Plus | ✅ romset reconnu, moteur prêt |
-| DS | — | — | ⏸ aucune ROM DS sur E:/D:/F: (recherche exhaustive .nds/.srl/.dsi) |
+| DS (.zip) | Mario Kart DS (Europe).zip 18,3 Mio | DeSmuME 2015 (sans BIOS) | ✅ « MARIOKARTDS », moteur prêt — Dr. Mario Express refusé proprement (DSiWare) |
 | N64 | Charlie Blast's Territory (Europe).zip | mupen64plus-next | ✅ zip → boot → **rendu visible** (zone claire à l'écran) + **sauvegarde native écrite** (« Sauvegarde native conservée localement ») — sonde `real-n64/tools/browser_rom_probe.py` |
 | GBA | — | — | ⏸ pas de .gba isolé (pack 7z = ROM GB) |
 
@@ -85,7 +85,7 @@ Note : les 404 console = `/favicon.ico` absent (cosmétique).
 
 ## Synthèse finale (2026-11-08)
 
-**Prouvé avec de vraies ROMs** : 11/13 systèmes bootent via le vrai pipeline (analyse → empreinte → cœur → moteur prêt), dont N64 avec rendu visible + sauvegarde native, PS1 avec BIOS personnel + carte mémoire, et Arcade/DOOM avec les vrais fichiers de Karl.
+**Prouvé avec de vraies ROMs** : 12/13 systèmes bootent via le vrai pipeline (analyse → empreinte → cœur → moteur prêt), dont N64 avec rendu visible + sauvegarde native, DS (Mario Kart DS / DeSmuME), PS1 avec BIOS personnel + carte mémoire, et Arcade/DOOM avec les vrais fichiers de Karl.
 
 **Bugs réels trouvés et corrigés par les tests terrain** :
 - PS1 RC-1.18 : BIOS personnel (SCPH1001) — Future Cop détecte la carte
@@ -94,7 +94,7 @@ Note : les 404 console = `/favicon.ico` absent (cosmétique).
 - Portails : look unifié, badge version dynamique, changelog détaillé, page contact
 
 **Limites honnêtes restantes** :
-- DS : aucune ROM disponible pour le test terrain (code audité, tests unitaires verts)
+- DS : boot prouvé (Mario Kart DS) ; melonDS non testé (exige un BIOS utilisateur)
 - GameCube : ALPHA — boots prouvés, ~16 %→1 % vitesse native, pas d'audio, pas de .dol, pas de .7z
 - Audio : non auditable en headless — à valider en jeu
 - Arcade : cœurs 2003/FBNeo seulement (romsets post-2003 partiellement reconnus)
