@@ -4,7 +4,7 @@ Usage: python tools/browser_portal_probe.py [base_url]
 import json, sys
 from playwright.sync_api import sync_playwright
 
-BASE = sys.argv[1] if len(sys.argv) > 1 else 'https://emuperso-git-feature-unified-controller-55789a-toohigh450-1311.vercel.app'
+BASE = sys.argv[1] if len(sys.argv) > 1 else 'http://127.0.0.1:8080'  # sert dist/ via tools/serve-portail.mjs
 out = {'errors': [], 'checks': {}}
 
 with sync_playwright() as p:

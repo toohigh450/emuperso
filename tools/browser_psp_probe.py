@@ -7,6 +7,8 @@ from pathlib import Path
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 
 ROOT = Path(__file__).resolve().parents[1] / 'dist'
+if len(sys.argv) < 2 or not Path(sys.argv[1]).is_file():
+    sys.exit('Usage: python tools/browser_psp_probe.py "D:\\chemin\\jeu.rom" [secondes] [console]')
 ROM = sys.argv[1]
 DURATION = int(sys.argv[2]) if len(sys.argv) > 2 else 240
 CONSOLE = sys.argv[3] if len(sys.argv) > 3 else 'psp'

@@ -2,7 +2,7 @@
 // Précondition (voir vercel.json) : ps1-web/dist et real-n64/dist construits par leurs propres outils,
 // qui téléchargent les moteurs verrouillés par SHA-256. Aucune ROM personnelle ni sauvegarde n'est copiée.
 //   node tools/build-portail.mjs
-import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, readFileSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, readFileSync, writeFileSync, openSync, readSync, closeSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { join, relative, sep, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -12,7 +12,7 @@ const OUT = join(ROOT, 'dist');
 // Dossiers jamais publiés tels quels : dépôt, dépendances, sorties, sources remplacées par leur dist.
 const SKIP_DIRS = new Set(['.git', '.github', 'node_modules', 'dist', '.vercel', 'ps1-web', 'real-n64', 'portail', 'cache', 'vendor', '__pycache__', '.python', 'roms', 'rom', 'games']);
 // Fichiers personnels possibles : refusés même s'ils traînent dans le dossier de construction.
-const PRIVATE = /\.(iso|cso|zso|bin|img|chd|pbp|cue|zip|rar|7z|sav|srm|state\d*|st\d+|mcr|mcd|z64|n64|v64|nes|unf|unif|sfc|smc|swc|fig|gba|gbc|gb|nds|smd|gen|mdx|32x|68k|wad|rom|sgb|dsi|srl)$/i;
+const PRIVATE = /\.(iso|cso|zso|bin|img|chd|pbp|cue|zip|rar|7z|sav|srm|state\d*|st\d+|mcr|mcd|z64|n64|v64|nes|unf|unif|sfc|smc|swc|fig|gba|gbc|gb|nds|smd|gen|mdx|32x|68k|wad|rom|sgb|dsi|srl|rvz|gcm|gcz|wbfs|wia|xci|nsp|nsz|dol)$/i;
 // Seules exceptions : les homebrews libres publiés exprès (licences dans portables/demos).
 const ALLOWED_ROMS = /^portables[\\/]demos[\\/]opensnes-[a-z0-9-]+\.sfc$|^portables[\\/]demos[\\/]opennes-snake\.nes$/;
 const ALLOWED_BUILT_ROMS = new Set(['ps1-web/homebrew/demo-emuperso-ps1.iso', 'real-n64/homebrew/fallback-open/demo-emuperso-open.z64']);
@@ -75,13 +75,31 @@ for (const app of ['ps1-web', 'real-n64']) {
 // figure pas : proposé au joueur, il donnerait zéro code après association. Même règle que parseCht
 // (portables/js/cheats.mjs) : au moins une ligne cheatN_code non vide.
 const hasCode = (text) => /^\s*cheat\d+_code\s*=\s*"?[^"\s]/im.test(text);
+// Scan par tranches de 256 Kio : un .cht peut être volumineux et le catalogue
+// n'a pas besoin de charger chaque fichier entier en mémoire.
+function fileHasCode(path) {
+  const CH = 256 * 1024;
+  const fd = openSync(path, 'r');
+  try {
+    const buf = Buffer.alloc(CH);
+    let carry = '', off = 0;
+    while (true) {
+      const n = readSync(fd, buf, 0, CH, off); off += n;
+      if (n === 0) return false;
+      const text = carry + buf.subarray(0, n).toString('utf8');
+      if (hasCode(text)) return true;
+      carry = text.slice(-256);
+      if (n < CH) return false;
+    }
+  } finally { closeSync(fd); }
+}
 const CHEAT_DIR = join(ROOT, 'cheats-portables');
 if (existsSync(CHEAT_DIR)) {
   const catalogue = {};
   for (const folder of readdirSync(CHEAT_DIR, { withFileTypes: true })) {
     if (!folder.isDirectory()) continue;
     catalogue[folder.name] = readdirSync(join(CHEAT_DIR, folder.name))
-      .filter((n) => n.toLowerCase().endsWith('.cht') && hasCode(readFileSync(join(CHEAT_DIR, folder.name, n), 'utf8'))).sort();
+      .filter((n) => n.toLowerCase().endsWith('.cht') && fileHasCode(join(CHEAT_DIR, folder.name, n))).sort();
   }
   const rel = join('cheats-portables', 'catalogue.json');
   writeFileSync(join(OUT, rel), JSON.stringify(catalogue));

@@ -7,6 +7,8 @@ from pathlib import Path
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 
 ROOT = Path(__file__).resolve().parents[1] / 'dist'
+if len(sys.argv) < 2 or not Path(sys.argv[1]).is_file():
+    sys.exit('Usage: python tools/browser_doom_probe.py "D:\\chemin\\DOOM2.WAD" [secondes]')
 ROM = sys.argv[1]
 DURATION = int(sys.argv[2]) if len(sys.argv) > 2 else 150
 
@@ -50,7 +52,9 @@ try:
         out['slot_title'] = page.locator('#gameTitle').inner_text() if page.locator('#gameTitle').count() else None
         out['game_core'] = page.locator('#gameCore').inner_text() if page.locator('#gameCore').count() else None
         out['iframes'] = page.locator('#playerMount iframe').count()
-        page.screenshot(path=str(ROOT.parent / 'tools' / 'shots' / 'doom-final.png'), full_page=False)
+        shot = ROOT.parent / 'tools' / 'shots' / 'doom-final.png'
+        shot.parent.mkdir(parents=True, exist_ok=True)
+        page.screenshot(path=str(shot), full_page=False)
         browser.close()
 finally:
     server.shutdown()
