@@ -28,11 +28,23 @@ if ('serviceWorker' in navigator) {
       date.textContent = e.date || '';
       var b = document.createElement('b');
       b.textContent = t.title || '';
-      var p = document.createElement('p');
-      p.textContent = t.text || '';
       li.appendChild(date);
       li.appendChild(b);
+      if (e.system || e.version) {
+        var meta = document.createElement('span');
+        meta.className = 'changelog-meta';
+        meta.textContent = [e.system, e.version].filter(Boolean).join(' · ');
+        li.appendChild(meta);
+      }
+      var p = document.createElement('p');
+      p.textContent = t.text || '';
       li.appendChild(p);
+      if (t.details) {
+        var det = document.createElement('p');
+        det.className = 'changelog-details';
+        det.textContent = t.details;
+        li.appendChild(det);
+      }
       list.appendChild(li);
     });
   }

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="EMUPERSO — Signaler un bug : console, jeu, étapes pour reproduire. Page statique, aucun envoi de données.">
+<title>Contact — EMUPERSO</title>
+<style>
+:root {
+  --bg: #0b111a; --panel: #131e2c; --panel-2: #172536; --line: #33445a;
+  --text: #edf4fc; --muted: #aabbcf; --mint: #8ce8c4; --amber: #f8d18a; --rose: #f2a3c0;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; background: url('/bg/bg-portal.jpg') center / cover no-repeat; opacity: .28; pointer-events: none; }
+body { background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, 'Segoe UI', sans-serif; min-height: 100vh; }
+a { color: var(--mint); }
+a:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
+header { padding: 34px 0 14px; position: relative; }
+.lang { position: absolute; top: 34px; right: 0; display: flex; gap: 6px; }
+.lang button { background: var(--panel); color: var(--muted); border: 1px solid var(--line); border-radius: 8px; padding: 4px 12px; font-size: .8rem; font-weight: 700; cursor: pointer; }
+.lang button[aria-pressed="true"] { color: var(--mint); border-color: var(--mint); }
+.brand { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.brand .logo { height: 68px; width: 68px; border-radius: 18px; box-shadow: 0 4px 24px rgba(0,0,0,.5); }
+.brand b { font-size: clamp(30px, 6vw, 44px); letter-spacing: -1px; color: var(--mint); font-weight: 900; }
+.brand span { color: var(--muted); font-size: 0.95rem; letter-spacing: 1.5px; text-transform: uppercase; }
+h1 { font-size: 1.6rem; margin: 26px 0 8px; }
+h2 { font-size: 1.05rem; letter-spacing: 0.5px; margin: 30px 0 12px; color: var(--amber); text-transform: uppercase; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+.panel p { margin: 8px 0; color: var(--muted); }
+.mailbtn { display: inline-block; background: var(--mint); color: #0b1410; font-weight: 700; text-decoration: none; padding: 12px 18px; border-radius: 10px; margin-top: 6px; }
+pre { background: #0d1520; border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; color: var(--text); font: 13px/1.55 ui-monospace, Consolas, monospace; white-space: pre-wrap; overflow-wrap: anywhere; margin: 10px 0 0; }
+.warn { border-color: var(--rose); }
+.warn p { color: var(--rose); }
+footer { margin: 40px 0 30px; color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><a href="/"><img src="/logo.png" alt="EMUPERSO" class="logo"></a><b>EMUPERSO</b><span data-i18n="header.subtitle">Portail rétro · 13 consoles</span></div>
+    <div class="lang" role="group" aria-label="Langue / Language">
+      <button type="button" data-lang-btn="fr" aria-pressed="true">FR</button>
+      <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+    </div>
+  </header>
+
+  <main>
+    <h1 data-i18n="contact.title">Contact — signaler un bug</h1>
+    <p data-i18n="contact.intro">Un bug, un crash, un comportement bizarre sur une console ? Écris à Karl — les signalements servent à corriger EMUPERSO.</p>
+
+    <section class="panel">
+      <h2 data-i18n="contact.email.title">Adresse de contact</h2>
+      <p data-i18n="contact.email.text">Envoie ton signalement par courriel à cette adresse (elle ouvre ton logiciel de messagerie) :</p>
+      <a class="mailbtn" href="mailto:emuperso.splendid404@passmail.com" data-i18n="contact.email.button">Écrire à emuperso.splendid404@passmail.com</a>
+    </section>
+
+    <section class="panel">
+      <h2 data-i18n="contact.template.title">Modèle de signalement de bug</h2>
+      <p data-i18n="contact.template.hint">Copie ce modèle dans ton courriel et remplis chaque ligne :</p>
+      <pre data-i18n="contact.template.text">Console / système :
+Jeu (nom + région si connu) :
+Ce qui s'est passé :
+Étapes pour reproduire :
+Capture d'écran (joindre si possible) :
+Navigateur / appareil :
+Version affichée (badge en haut de page) :</pre>
+    </section>
+
+    <section class="panel warn">
+      <h2 data-i18n="contact.rules.title">Règles</h2>
+      <p data-i18n="contact.rule1">Cette page est statique : rien n'est envoyé ni stocké par EMUPERSO — ton courriel part directement depuis ton logiciel de messagerie.</p>
+      <p data-i18n="contact.rule2">Ne jamais envoyer de ROM, de BIOS ou de sauvegarde par courriel : chacun apporte ses propres fichiers (BYOR), ils restent sur ton appareil.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="/" data-i18n="contact.back">← Retour au portail</a>
+  </footer>
+</div>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

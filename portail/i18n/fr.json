@@ -38,5 +38,18 @@
  "footer.archi": "Architecture du portail",
  "footer.controllers": "Manettes et commandes (Controller V2)",
  "card.play": "Jouer →",
- "changelog.title": "Nouveautés"
+ "changelog.title": "Nouveautés",
+ "contact.title": "Contact — signaler un bug",
+ "contact.intro": "Un bug, un crash, un comportement bizarre sur une console ? Écris à Karl — les signalements servent à corriger EMUPERSO.",
+ "contact.email.title": "Adresse de contact",
+ "contact.email.text": "Envoie ton signalement par courriel à cette adresse (elle ouvre ton logiciel de messagerie) :",
+ "contact.email.button": "Écrire à emuperso.splendid404@passmail.com",
+ "contact.template.title": "Modèle de signalement de bug",
+ "contact.template.hint": "Copie ce modèle dans ton courriel et remplis chaque ligne :",
+ "contact.template.text": "Console / système :\nJeu (nom + région si connu) :\nCe qui s'est passé :\nÉtapes pour reproduire :\nCapture d'écran (joindre si possible) :\nNavigateur / appareil :\nVersion affichée (badge en haut de page) :",
+ "contact.rules.title": "Règles",
+ "contact.rule1": "Cette page est statique : rien n'est envoyé ni stocké par EMUPERSO — ton courriel part directement depuis ton logiciel de messagerie.",
+ "contact.rule2": "Ne jamais envoyer de ROM, de BIOS ou de sauvegarde par courriel : chacun apporte ses propres fichiers (BYOR), ils restent sur ton appareil.",
+ "contact.back": "← Retour au portail",
+ "footer.contact": "Contact / signaler un bug"
 }

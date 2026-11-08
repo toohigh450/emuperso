@@ -1,6 +1,6 @@
 {
  "meta.description": "EMUPERSO: NES, SNES, Sega Genesis, Game Boy, Game Boy Color, Game Boy Advance, Nintendo DS, Nintendo 64, PlayStation and PlayStation Portable in Chrome, on desktop and phone.",
- "header.subtitle": "Retro portal · 13 consoles",
+ "header.subtitle": "Retro portal · 13 systems",
  "header.intro": "Play in Chrome on desktop or phone, no app to install and no account. Each console offers a free demo to try right away; your own games stay on your device.",
  "consoles.title": "Choose a console",
  "badge.new": "New",
@@ -38,5 +38,18 @@
  "footer.archi": "Portal architecture",
  "footer.controllers": "Controllers (Controller V2)",
  "card.play": "Play →",
- "changelog.title": "What's new"
+ "changelog.title": "What's new",
+ "contact.title": "Contact — report a bug",
+ "contact.intro": "A bug, a crash, weird behavior on a console? Write to Karl — reports are used to fix EMUPERSO.",
+ "contact.email.title": "Contact address",
+ "contact.email.text": "Send your report by email to this address (it opens your mail app):",
+ "contact.email.button": "Write to emuperso.splendid404@passmail.com",
+ "contact.template.title": "Bug report template",
+ "contact.template.hint": "Copy this template into your email and fill in every line:",
+ "contact.template.text": "Console / system:\nGame (name + region if known):\nWhat happened:\nSteps to reproduce:\nScreenshot (attach if possible):\nBrowser / device:\nDisplayed version (badge at the top of the page):",
+ "contact.rules.title": "Rules",
+ "contact.rule1": "This page is static: nothing is sent or stored by EMUPERSO — your email goes straight from your mail app.",
+ "contact.rule2": "Never send ROMs, BIOS files or saves by email: everyone brings their own files (BYOR), they stay on your device.",
+ "contact.back": "← Back to the portal",
+ "footer.contact": "Contact / report a bug"
 }

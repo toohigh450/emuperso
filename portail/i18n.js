@@ -38,7 +38,7 @@
     var request = ++languageRequest;
     if (LANGS.indexOf(lang) < 0) lang = 'fr';
     try { localStorage.setItem(KEY, lang); } catch (e) {}
-    fetch('i18n/' + lang + '.json', { cache: 'no-cache' }).then(function (r) {
+    fetch('/i18n/' + lang + '.json', { cache: 'no-cache' }).then(function (r) {
       if (!r.ok) throw new Error('i18n ' + r.status);
       return r.json();
     }).then(function (dict) {
