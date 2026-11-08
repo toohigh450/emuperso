@@ -538,6 +538,7 @@ async function openGame(file, options = {}) {
     title: analysis.title,
     fileName: rom.name,
     hash: fp.hex,
+    discId: analysis.discId || null,
     coreId: core.coreId,
     engineTitle,
     engineNamingVersion: legacyNaming ? 1 : 2,
@@ -549,7 +550,7 @@ async function openGame(file, options = {}) {
   // exports ZIP restent isolés par empreinte ; on avertit honnêtement.
   if (analysis.system === 'psp' && analysis.discId) {
     try {
-      const peers = (await store.listGames()).filter((g) => g.system === 'psp' && g.code === analysis.discId && g.spaceId !== spaceId);
+      const peers = (await store.listGames()).filter((g) => g.system === 'psp' && g.discId === analysis.discId && g.spaceId !== spaceId);
       if (peers.length) {
         game.warnings.push(`Attention : « ${peers[0].title || peers[0].fileName} » partage le même identifiant de disque (${analysis.discId}) avec un contenu différent. En jeu, les deux versions utilisent le même dossier de sauvegarde PSP et peuvent se marcher dessus ; les exports ZIP, eux, restent séparés par empreinte.`);
       }
