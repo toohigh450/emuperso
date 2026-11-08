@@ -58,6 +58,23 @@ Statut : **en cours** — audit statique + tests automatisés faits ; tests terr
 | `browser_portal_probe.py` (Chromium réel, alias testeurs) | vert : 13 consoles, EN TEST, contact FR/EN, changelog détails, 0 erreur console |
 | Test navigateur input PS1 (`browser_input.py`) | vert (gamepad synthétique → `simulateInput` OK) |
 
+## Tests terrain RÉELS avec les ROMs de Karl (2026-11-08, sonde `tools/browser_psp_probe.py` — param console générique)
+
+| Console | ROM réelle | Cœur | Résultat |
+|---|---|---|---|
+| DOOM | DOOM2.WAD (GOG, 13,9 Mio) | PrBoom | ✅ « DOOM II » reconnu, moteur prêt |
+| PSP | Ozma Wars (USA).cso 2,8 Mio | PPSSPP nightly + secours 4.2.3 | ✅ moteur prêt (COOP/COEP requis, en-têtes OK) |
+| SNES | Chrono Trigger (U) [!].smc 4 Mio | Snes9x | ✅ moteur prêt |
+| NES | Super Mario Bros. 3 [USA][!!].nes 384 Kio | FCEUmm | ✅ moteur prêt |
+| GBA | Pokemon - Red Version.7z | (en cours) | — |
+| Genesis | 688 Attack Sub.7z | (en cours) | — |
+
+Note : les 404 console = `/favicon.ico` absent (cosmétique).
+
+**Persistance prouvée en conditions de décharge réelle** (`ps1-web/tools/browser_unload_probe.py`) : marqueur 128 Kio → `pagehide` → **IndexedDB supprimée** → reload → `marker_in_session2_ram_despite_empty_idb: true`. Le miroir `localStorage` (RC-1.20, écrit avant `vault.put`) récupère la carte seul.
+
+**Carte mémoire GameCube** (`gamecube/tools/test-card-persist.py`) : import `.mcr` 2 Mio → `cardDB.set` en échec + IndexedDB tuée → reload → carte « 2 Mio enregistrée » restaurée depuis le seul miroir `localStorage` (`card_recovered_despite_empty_idb: true`).
+
 ## Problèmes ouverts
 
 1. **PS1 « no memory card » persiste en jeu** (signalé par Karl après RC-1.17) — **diagnostic profond effectué** :
