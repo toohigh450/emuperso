@@ -58,7 +58,11 @@ async function page(path, scope) {
   const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
   const p = await context.newPage();
   const errors = [];
-  p.on('pageerror', (e) => errors.push(e.message));
+  p.on('pageerror', (e) => {
+    // Headless : la wake lock est refusée, rejet bénin sans impact sur le test.
+    if (/Wake Lock permission request denied/i.test(e.message)) return;
+    errors.push(e.message);
+  });
   p.on('dialog', (d) => d.accept());
   const response = await p.goto(server.url + path);
   record(scope, `ouverture de /${path}`, !!response && response.ok(), `HTTP ${response && response.status()}`);
