@@ -143,6 +143,7 @@ function stopEngine() {
 }
 
 // --- UI ---
+$('pick').onclick = () => $('game-file').click();
 $('game-file').onchange = () => { $('launch').disabled = !$('game-file').files.length; say('Prêt.'); };
 $('launch').onclick = async () => {
   const file = $('game-file').files[0]; if (!file) return;
