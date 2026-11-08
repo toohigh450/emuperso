@@ -62,3 +62,7 @@ node_modules/
 *.key
 id_rsa*
 .vercel/
+
+# Artefacts de tests locaux : captures de sessions avec ROMs personnelles, jamais versionnés.
+gamecube/tools/shots/
+ps1-test-results/
