@@ -12,7 +12,7 @@ const OUT = join(ROOT, 'dist');
 // Dossiers jamais publiés tels quels : dépôt, dépendances, sorties, sources remplacées par leur dist.
 const SKIP_DIRS = new Set(['.git', '.github', 'node_modules', 'dist', '.vercel', 'ps1-web', 'real-n64', 'portail', 'cache', 'vendor', '__pycache__', '.python', 'roms', 'rom', 'games']);
 // Fichiers personnels possibles : refusés même s'ils traînent dans le dossier de construction.
-const PRIVATE = /\.(iso|cso|zso|bin|img|chd|pbp|cue|zip|rar|7z|sav|srm|state\d*|st\d+|mcr|mcd|z64|n64|v64|nes|unf|unif|sfc|smc|swc|fig|gba|gbc|gb|nds|smd|gen|mdx|32x|68k|wad|rom|sgb|dsi|srl|rvz|gcm|gcz|wbfs|wia|xci|nsp|nsz|dol)$/i;
+const PRIVATE = /\.(iso|cso|zso|bin|img|chd|pbp|cue|zip|rar|7z|sav|srm|state\d*|st\d+|mcr|mcd|z64|n64|v64|nes|unf|unif|sfc|smc|swc|fig|gba|gbc|gb|nds|smd|gen|mdx|32x|68k|wad|rom|sgb|dsi|srl|rvz|gcm|gcz|ciso|nfs|wbfs|wia|xci|nsp|nsz|dol)$/i;
 // Seules exceptions : les homebrews libres publiés exprès (licences dans portables/demos).
 const ALLOWED_ROMS = /^portables[\\/]demos[\\/]opensnes-[a-z0-9-]+\.sfc$|^portables[\\/]demos[\\/]opennes-snake\.nes$/;
 const ALLOWED_BUILT_ROMS = new Set(['ps1-web/homebrew/demo-emuperso-ps1.iso', 'real-n64/homebrew/fallback-open/demo-emuperso-open.z64']);
