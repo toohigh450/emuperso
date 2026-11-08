@@ -17,6 +17,10 @@ Statut : **en cours** — audit statique + tests automatisés faits ; tests terr
 | `e3ab41e` | Liens « ← Portail EMUPERSO » sur pages PS1 et N64 | endpoints 200 |
 | `e08fb58` | Uniformisation visuelle Portables sur le style N64 (thème sombre, bannière, panels mint) + badge PS1 dynamique (`APP_VERSION`) | 162 tests portables verts, capture navigateur OK |
 | `bf6b280` | `test-portail.mjs` : ignore le refus wake-lock headless | **77/77** |
+| `3c2b656` | GameCube : correction bouton « Choisir une image » (non câblé) | redéployé |
+| `5d25c11` | **RC-1.19** : persistance carte mémoire — sonde `browser_persist_probe.py` prouve que le moteur recharge bien le `.srm` en RAM au boot (`marker_in_session2_ram: true`) ; le maillon faible était la course IndexedDB au `pagehide` → **miroir synchrone `localStorage`** + événement `freeze` + `newestBattery()` au lancement | 82/82 tests Node |
+| `65d55fb` | `portail/changelog.json` : 4 entrées du 7 nov. (GameCube EN TEST, BIOS PS1, saves auto, look Portables) | — |
+| `b5e7ada` | **GameCube ALPHA** : page `/gamecube/` + carte portail « EN TEST » (Gecko/WASM + WebGPU, gcplayer, carte mémoire 2 Mio/jeu, tactile + manette) | boot réel FFCC .rvz prouvé en Chromium fenêtré (« Jeu lancé ») ; headless sans adaptateur WebGPU → message propre ; `.dol` = panic upstream Gecko (`system.rs` out-of-bounds) documenté |
 
 ## Vérifications négatives (zones auditées, saines)
 
@@ -48,11 +52,12 @@ Statut : **en cours** — audit statique + tests automatisés faits ; tests terr
    - `refresh_save_files` charge fichier→RAM et `cmd_savefiles` écrit RAM→fichier — round-trip prouvé par marqueur
    - HLE BIOS implémente les fonctions carte (`dev_card_*`, `_card_info/load/save`, `InitCARD`, `StartCARD`)
    - **Conclusion** : la mécanique sauvegarde fonctionne de bout en bout ; le « no memory card » vient du jeu qui ne détecte pas la carte (limite HLE BIOS / driver mcman noyau, ou bug spécifique du build wasm déployé v2.0.2). Pistes restantes : vrai BIOS utilisateur (`biosUrl` supporté par le moteur), build `mednafen_psx_hw`, rapport upstream EmulatorJS/PCSX-ReARMed.
-   - **Résolution partielle (RC-1.18)** : bug **connu du jeu** — *Future Cop L.A.P.D.* affiche « memory card not found » sur tous les émulateurs PS1 (thread Next Generation Emulation, même symptôme sous ePSXe). Correctif documenté : vrai BIOS + CPU 1x. **GT2 sauvegarde à l'infini** → carte mémoire fonctionnelle pour les autres jeux. RC-1.18 ajoute le chargement d'un **BIOS PS1 personnel** (fichier local, IndexedDB, jamais uploadé) — vérifié : `found BIOS file` + `BIOS: 19951204, 'CEX-3000/1001/1002 by K.S.'` en vrai navigateur. Reste à valider en jeu réel avec le BIOS de Karl.
+   - **Résolution (RC-1.18 + terrain)** : bug **connu du jeu** — *Future Cop L.A.P.D.* affiche « memory card not found » sur tous les émulateurs PS1 (thread Next Generation Emulation, même symptôme sous ePSXe). Correctif documenté : vrai BIOS + CPU 1x. **GT2 sauvegarde à l'infini** → carte mémoire fonctionnelle pour les autres jeux. RC-1.18 ajoute le chargement d'un **BIOS PS1 personnel** (fichier local, IndexedDB, jamais uploadé) — vérifié : `found BIOS file` + `BIOS: 19951204, 'CEX-3000/1001/1002 by K.S.'` en vrai navigateur. **Test terrain Karl (7 nov.)** : avec son `SCPH1001.BIN`, Future Cop détecte la carte (« no savegame found » = carte vide normale) et **la sauvegarde en jeu fonctionne**.
+   - **Perte au relancement sans fermeture navigateur (RC-1.19)** : sonde `browser_persist_probe.py` (2 sessions réelles, marqueur 128 Kio) → `marker_in_session2_ram: true` : le `.srm` est bien rechargé en RAM au boot et le coffre IndexedDB fonctionne. Cause probable : la transaction IndexedDB d'`autoSaveBattery` tuée par le déchargement de page. Correctif : miroir **synchrone `localStorage`** de la carte après chaque écriture coffre + écoute `freeze` + `newestBattery()` choisit la copie la plus récente au lancement. À revalider en terrain.
 2. **Tests terrain réels** : Future Cop save→fermeture→reouverture (avec/sans bouton), 2e jeu PS1, N64 save/reload, et démarrage/son/manette/sauvegarde des 11 autres consoles — nécessitent les ROMs de Karl.
 3. **Manette physique** : G7 Pro fonctionnelle après MAJ firmware + reboot (confirmé par Karl sur GT1/GT2) ; si récurrence, exporter diagnostic avec `input.pads.snapshot`.
 4. **Audio** : non audité en conditions réelles (tests headless ne valident pas le son).
-5. **GameCube web** : sur `feature/gamecube-web`, non fusionnée — absente du portail testeurs.
+5. **GameCube web** : intégré au portail testeurs depuis `b5e7ada` (page `/gamecube/`, carte « EN TEST ») — boots FFCC/Pokémon XD prouvés en vrai Chromium+WebGPU ; limites ALPHA affichées (pas d'audio, interpréteur, WebGPU requis, `.dol` panique upstream). En test terrain par Karl.
 6. **DOOM** : codes IDDQD/IDKFA non supportés en navigateur (documenté dans l'UI, `app.mjs:874`) — limitation connue, pas un bug.
 
 ## Règles respectées
