@@ -204,8 +204,8 @@ async function saveBattery(force) {
   requireCaptureSafe();
   const bytes = current.api.captureBattery();
   if (!bytes) { if (force) say('save-note', 'Ce jeu n’a pas (encore) produit de carte mémoire ou de sauvegarde native.'); return; }
-  await vault.put(current.batteryIdentity, 1, await makeStateEnvelope(bytes, current.batteryIdentity, { kind: 'battery', label: 'Carte mémoire' }));
   batteryLsWrite(current.batteryIdentity, bytes);
+  await vault.put(current.batteryIdentity, 1, await makeStateEnvelope(bytes, current.batteryIdentity, { kind: 'battery', label: 'Carte mémoire' }));
   event('battery.saved', { bytes: bytes.length }); if (force) say('save-note', 'Carte mémoire enregistrée pour ce jeu.');
 }
 // Carte mémoire (bug « no memory card » / perte à la fermeture, Lesteem 2026-11-07) :
@@ -221,8 +221,10 @@ async function autoSaveBattery() {
     requireCaptureSafe();
     const bytes = current.api.captureBattery();
     if (!bytes?.length) return;
-    await vault.put(current.batteryIdentity, 1, await makeStateEnvelope(bytes, current.batteryIdentity, { kind: 'battery', label: 'Carte mémoire' }));
+    // Le miroir synchrone part AVANT la transaction IndexedDB : il survit même
+    // si la page se décharge pendant vault.put (pagehide/beforeunload/freeze).
     batteryLsWrite(current.batteryIdentity, bytes);
+    await vault.put(current.batteryIdentity, 1, await makeStateEnvelope(bytes, current.batteryIdentity, { kind: 'battery', label: 'Carte mémoire' }));
     batteryAutoSavedAt = performance.now();
     event('battery.saved', { bytes: bytes.length, automatic: true });
     flushJournal();
