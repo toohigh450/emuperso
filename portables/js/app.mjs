@@ -542,6 +542,19 @@ async function openGame(file, options = {}) {
     engineTitle,
     engineNamingVersion: legacyNaming ? 1 : 2,
   });
+  // PSP : le dossier de sauvegarde du cœur découle de l'identifiant du disque
+  // (PSP/SAVEDATA/<discId>). Deux contenus différents partageant ce même
+  // identifiant (dump refait, hack non renuméroté) voient les MÊMES fichiers
+  // en jeu — le cœur ne peut pas les distinguer. Les copies miroir et les
+  // exports ZIP restent isolés par empreinte ; on avertit honnêtement.
+  if (analysis.system === 'psp' && analysis.discId) {
+    try {
+      const peers = (await store.listGames()).filter((g) => g.system === 'psp' && g.code === analysis.discId && g.spaceId !== spaceId);
+      if (peers.length) {
+        game.warnings.push(`Attention : « ${peers[0].title || peers[0].fileName} » partage le même identifiant de disque (${analysis.discId}) avec un contenu différent. En jeu, les deux versions utilisent le même dossier de sauvegarde PSP et peuvent se marcher dessus ; les exports ZIP, eux, restent séparés par empreinte.`);
+      }
+    } catch { /* liste des jeux indisponible : pas bloquant */ }
+  }
   await session.start(game, boot); // Le rendu déclenche les panneaux sans bloquer le prochain changement.
   // Codes du jeu cherchés sur le site et importés désactivés, sans attendre (voir cheat-autoload.mjs).
   autoloadCheats({ store, system: game.system, romName: game.fileName, altName: game.cheatAltName, discId: game.discId }).then(async (r) => {
