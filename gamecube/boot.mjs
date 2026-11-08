@@ -92,7 +92,7 @@ async function validateFile(file) {
 }
 
 // --- Boot : crée l'iframe gcplayer et lui fournit __portablesBoots ---
-let bootId = null, running = false;
+let bootId = null, running = false, perfTimer = null;
 async function launch(file, info) {
   stopEngine();
   $('player').replaceChildren();
@@ -129,10 +129,27 @@ async function launch(file, info) {
   frame.setAttribute('allowfullscreen', '');
   frame.src = `gcplayer.html?id=${encodeURIComponent(bootId)}`;
   $('player').appendChild(frame);
+  // Indicateur de vie : get_perf() = [fps, % vitesse native]. Interpréteur
+  // WASM sans JIT — ~16-23 % attendu ; les intros DVD peuvent mettre des
+  // minutes avant la première image sur les gros jeux.
+  const perfEl = $('perf');
+  clearInterval(perfTimer);
+  perfTimer = setInterval(() => {
+    try {
+      const entry = bootId && window.__portablesBoots && window.__portablesBoots[bootId];
+      const p = entry && entry.control && entry.control.getPerf && entry.control.getPerf();
+      if (perfEl && p && p[0] > 0) {
+        perfEl.hidden = false;
+        perfEl.textContent = `Moteur : ${p[0].toFixed(1)} fps · ${p[1].toFixed(0)} % de la vitesse native — interpréteur WASM, la lenteur est normale (les intros DVD peuvent prendre plusieurs minutes).`;
+      }
+    } catch {}
+  }, 2000);
   if (info.note) log('avertissement', info.note);
   log('etape', `Image : ${file.name} (${fmtSize(file.size)})`);
 }
 function stopEngine() {
+  clearInterval(perfTimer); perfTimer = null;
+  const perfEl = $('perf'); if (perfEl) perfEl.hidden = true;
   if (bootId && window.__portablesBoots) {
     const entry = window.__portablesBoots[bootId];
     delete window.__portablesBoots[bootId];
