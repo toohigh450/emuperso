@@ -38,8 +38,9 @@ try:
         page.goto(f'http://127.0.0.1:{port}/portables/?console=psp', wait_until='domcontentloaded')
         page.wait_for_timeout(2000)
         page.locator('#romInput').set_input_files(ROM)
+        started = False
         deadline = time.time() + DURATION
-        # Attendre que le moteur soit lance puis inspecter le MEMFS dans l'iframe.
+        # Attendre le moteur, cliquer « Démarrer », puis inspecter le MEMFS dans l'iframe.
         while time.time() < deadline and out['savedata'] is None:
             page.wait_for_timeout(5000)
             try:
@@ -48,6 +49,16 @@ try:
                 st = ''
             if st:
                 out['log'].append('STATUS: ' + st[:160])
+            if not started and 'Moteur prêt' in st:
+                for frame in page.frames:
+                    try:
+                        if frame.evaluate("!!document.querySelector('.ejs_start_button')"):
+                            frame.click('.ejs_start_button')
+                            started = True
+                            out['log'].append('START: Démarrer cliqué dans le moteur')
+                            break
+                    except Exception:
+                        pass
             for frame in page.frames:
                 if 'player' not in (frame.url or ''):
                     continue

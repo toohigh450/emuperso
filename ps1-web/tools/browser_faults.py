@@ -32,14 +32,15 @@ def main():
         page.wait_for_function("document.getElementById('current').textContent!=='Aucun'",timeout=60000)
         frame=page.frames[1]
         offset=frame.evaluate('''()=>{const h=window.EJS_emulator.gameManager.Module.HEAPU8,p=[0x68,0x24,0x57,0x13,0xab,0xcd,0xef,0x42];for(let i=0;i<h.length-p.length;i++)if(h[i]===p[0]&&p.every((b,j)=>h[i+j]===b))return i;return null;}''')
-        assert offset is not None
+        if offset is None: raise RuntimeError('Motif de code de test introuvable dans la RAM du moteur.')
         await_a=page.evaluate('''async()=>{const c=window.__cheatController;await c.addManual('Synthetic A','80011000 5678');await c.addManual('Synthetic B','80011004 ABCD');await c.confirmRegion();await c.toggle(0,true);return c.view();}''')
         frame.wait_for_function('i=>{const h=window.EJS_emulator.gameManager.Module.HEAPU8;return h[i]===0x78&&h[i+1]===0x56}',arg=offset,timeout=10000)
         native_value=lambda f,i:f.evaluate('i=>Array.from(window.EJS_emulator.gameManager.Module.HEAPU8.slice(i,i+6))',i)
         result['initial_ram']=native_value(frame,offset);result['checks']['native_positive']=result['initial_ram'][:2]==[0x78,0x56] and await_a['applied']==1
         # Keep a known snapshot with A already effective in RAM and in its metadata.
         page.locator('#state-save').click();page.wait_for_function("!document.getElementById('choose').disabled")
-        result['slots_before_fault']=page.evaluate(read_slots);assert len(result['slots_before_fault'])==2
+        result['slots_before_fault']=page.evaluate(read_slots)
+        if len(result['slots_before_fault'])!=2: raise RuntimeError('Deux emplacements de sauvegarde attendus avant la faute.')
         frame.evaluate('''()=>{const m=window.EJS_emulator.gameManager;window.__fault={set:m.setCheat.bind(m),reset:m.resetCheat.bind(m),calls:[],nativeAcceptedBeforeFailure:false};m.setCheat=(i,...args)=>{window.__fault.calls.push(i);const result=window.__fault.set(i,...args);if(i===1){window.__fault.nativeAcceptedBeforeFailure=true;throw new Error('SYNTHETIC exception after native setCheat(1)')}return result}}''')
         await_b=page.evaluate('''async()=>{await window.__cheatController.toggle(1,true);return window.__cheatController.view();}''')
         frame.evaluate('i=>window.EJS_emulator.gameManager.Module.HEAPU8.set([0x68,0x24],i)',offset)
