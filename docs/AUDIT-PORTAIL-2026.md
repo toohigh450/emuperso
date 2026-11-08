@@ -122,6 +122,25 @@ Note : les 404 console = `/favicon.ico` absent (cosmétique).
 5. **GameCube web** : intégré au portail testeurs depuis `b5e7ada` (page `/gamecube/`, carte « EN TEST ») — boots FFCC/Pokémon XD prouvés en vrai Chromium+WebGPU ; limites ALPHA affichées (pas d'audio, interpréteur, WebGPU requis, `.dol` panique upstream). En test terrain par Karl.
 6. **DOOM** : codes IDDQD/IDKFA non supportés en navigateur (documenté dans l'UI, `app.mjs:874`) — limitation connue, pas un bug.
 
+## Triage Aikido (2026-11-08) — verdicts
+
+| # | Finding | Verdict |
+|---|---------|---------|
+| 1 | Inclusion de fichier / traversée de chemin — `portables/tools/verify-engine.mjs:9` | **Faux positif** : `path` provient uniquement de `process.argv` ; outil CLI local d'intégrité, aucune entrée navigateur/réseau/ROM. Commentaire explicatif ajouté. |
+| 2 | Timing attack — `portables/js/session.mjs` (`this.token`) | **Faux positif** : compteur interne `++this.token` qui invalide les callbacks asynchrones périmés ; jamais comparé à une entrée utilisateur ni à un secret. `timingSafeEqual` inapproprié. Commentaire ajouté. |
+| 3 | SSRF — `ps1-web/tools/make_lock.py` et outillage | **Déjà mitigé** : allowlist `registry.npmjs.org` dans `make_lock.py`/`fetch_runtime.py` ; `setup-toolchain.py` lit une URL verrouillée (`toolchain-lock.json`) + vérifie le SHA-256 du téléchargement. Aucune URL contrôlée par l'utilisateur. |
+| 4 | Checkout GitHub Actions — jetons persistés | **Confirmé, corrigé** : `persist-credentials: false` ajouté aux `actions/checkout` de `portables-tests.yml` et `ps1-audit.yml` (aucun push authentifié dans ces workflows). Commit `d3fe227`. |
+| 5 | `assert` Python dans les outils de build/test (14 sous-findings, 6 fichiers) | **Confirmé partiellement, corrigé** : les asserts protégeaient de vraies invariants (taille boot ≤4032 o, empreintes SHA-256 d'artefacts, IDs/liens HTML uniques, motifs RAM). Tous remplacés par des `raise ValueError/RuntimeError` explicites — actifs même sous `PYTHONOPTIMIZE`. Commit `b22598c`. |
+| 6 | « Secrets » `PAD_KEY`/`N64_PAD_KEY = 'emuperso-n64-pad'` | **Faux positif** : noms de clés `localStorage` publiques (`getItem`/`setItem`/filtre d'événement de stockage), pas des API keys ni mots de passe. Aucune réécriture d'historique. |
+
+## Isolation PSP par SHA-256 — implémentée et prouvée (2026-11-08)
+
+- `portables/js/psp.mjs` : helpers purs `planSaveIsolation`/`swapSaveData` + `.emuperso-owner` ; `portables/player.js` appelle le swap au `saveDatabaseLoaded` ; `portables/js/app.mjs` calcule l'empreinte SHA-256 du fichier (ISO et CSO via lecture stream) et transmet le plan.
+- Stratégie : le cœur impose `SAVEDATA/<discId>` → la variante courante y est hissée ; les autres sont garées `~<discId>~<sha8>` ; le legacy sans marqueur est réclamé par le propriétaire historique (max `opens`) ou préservé sous `~legacy`. **Rien n'est jamais supprimé.**
+- Tests : `portables/tests/psp.test.mjs` — 165/165 (legacy, 2 variantes, aller-retour, reload idempotent, faux FS).
+- **Preuve moteur réel** (`tools/browser_psp_saves_probe.py`, CSO `20Q (Europe)` = `NPEZ00175`) : après clic « Démarrer », le MEMFS contient `SAVEDATA/NPEZ00175/` avec `.emuperso-owner` = `ca3f3760` (8 premiers hex du SHA-256 du contenu). Le marqueur n'apparaît pas dans les exports de sauvegarde.
+- Limite documentée : empreinte tronquée à 8 hex (32 bits) pour rester dans la limite de nom de dossier — collision improbable mais non nulle entre variantes du même discId.
+
 ## Règles respectées
 
 - Branche testeurs uniquement ; aucune fusion vers `main` sans GO explicite de Karl.
