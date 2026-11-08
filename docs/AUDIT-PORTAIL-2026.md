@@ -1,8 +1,8 @@
 # Audit complet EMUPERSO — rapport d'étape
 
-Branche : `feature/unified-controller-profiles` · Date : 2026-11-07
+Branche : `feature/unified-controller-profiles` · Date : 2026-11-08
 Périmètre : portail + 13 systèmes (NES, SNES, GB, GBC, GBA, DS, N64, PS1, PSP, Genesis, Arcade, DOOM, GameCube ALPHA).
-Statut : **en cours** — audit statique + tests automatisés faits ; tests terrain (vraies ROMs) partiels.
+Statut : **audit complet** — statique + tests automatisés + **tests terrain avec les vraies ROMs de Karl** (11/13 systèmes bootés ; DS sans ROM disponible, GameCube ALPHA à vitesse interpréteur).
 
 ## Correctifs livrés sur la branche
 
@@ -82,6 +82,25 @@ Note : les 404 console = `/favicon.ico` absent (cosmétique).
 **Persistance prouvée en conditions de décharge réelle** (`ps1-web/tools/browser_unload_probe.py`) : marqueur 128 Kio → `pagehide` → **IndexedDB supprimée** → reload → `marker_in_session2_ram_despite_empty_idb: true`. Le miroir `localStorage` (RC-1.20, écrit avant `vault.put`) récupère la carte seul.
 
 **Carte mémoire GameCube** (`gamecube/tools/test-card-persist.py`) : import `.mcr` 2 Mio → `cardDB.set` en échec + IndexedDB tuée → reload → carte « 2 Mio enregistrée » restaurée depuis le seul miroir `localStorage` (`card_recovered_despite_empty_idb: true`).
+
+## Synthèse finale (2026-11-08)
+
+**Prouvé avec de vraies ROMs** : 11/13 systèmes bootent via le vrai pipeline (analyse → empreinte → cœur → moteur prêt), dont N64 avec rendu visible + sauvegarde native, PS1 avec BIOS personnel + carte mémoire, et Arcade/DOOM avec les vrais fichiers de Karl.
+
+**Bugs réels trouvés et corrigés par les tests terrain** :
+- PS1 RC-1.18 : BIOS personnel (SCPH1001) — Future Cop détecte la carte
+- PS1 RC-1.19/RC-1.20 : persistance carte mémoire — double filet `localStorage` synchrone, prouvé même IndexedDB détruite
+- GameCube : même race corrigée + bouton « Choisir une image » réparé
+- Portails : look unifié, badge version dynamique, changelog détaillé, page contact
+
+**Limites honnêtes restantes** :
+- DS : aucune ROM disponible pour le test terrain (code audité, tests unitaires verts)
+- GameCube : ALPHA — boots prouvés, ~16 %→1 % vitesse native, pas d'audio, pas de .dol, pas de .7z
+- Audio : non auditable en headless — à valider en jeu
+- Arcade : cœurs 2003/FBNeo seulement (romsets post-2003 partiellement reconnus)
+- PS1 : certains jeux restent sensibles au timing même avec vrai BIOS (comportement documenté upstream)
+
+**Règles respectées** : aucune fusion vers `main` sans GO explicite ; aucun force-push ; aucun ROM/BIOS/sauvegarde publié ; alias testeurs toujours à jour.
 
 ## Problèmes ouverts
 
