@@ -1,5 +1,20 @@
 # CHANGELOG — EMUPERSO PS1
 
+## RC-1.17-empty-memcard (carte vierge au boot, 7 novembre 2026)
+
+Suite du bug « no memory card » : la sonde navigateur (tools/browser_memcard_probe.py)
+a montré que `/data/saves/PCSX-ReARMed/` reste **vide** après le boot — le cœur
+n'écrit le `.srm` qu'à la capture (`saveSaveFiles()`), jamais au démarrage.
+Sans fichier au boot, le jeu voit « no memory card » et peut ne pas pouvoir
+formater : catch-22 résiduel après RC-1.16.
+
+- `empty-memcard.mjs` : carte mémoire vierge formatée de 128 Kio (en-tête « MC »,
+  structure standard PCSX-ReARMed), capturée sur le cœur réel puis embarquée en
+  base64 (les extensions `.srm` sont filtrées par build-portail et serve.py).
+- `engine-session.mjs` : `startGame()` injecte désormais la batterie du coffre
+  **ou**, à défaut, la carte vierge — le `.srm` existe donc toujours au boot.
+  Aucun changement de coffre, d'identité ou d'enveloppe.
+
 ## RC-1.16-memcard-autosave (correctif carte mémoire, 7 novembre 2026)
 
 Bug rapporté par Lesteem (Discord, 17h45) : Future Cop L.A.P.D. affiche « no memory card »,

@@ -19,6 +19,7 @@ FILES = (
     'cheat-controller.mjs', 'core-options.mjs', 'disc-file.mjs',
     'input-presets.mjs', 'input-profile.mjs', 'region-evidence.mjs', 'touch-editor.mjs', 'cue-repair.mjs',
     'save-store.mjs', 'session-controller.mjs', 'startup-error.mjs',
+    'empty-memcard.mjs',
     'state-bundle.mjs', 'LICENSE', 'docs/runtime-lock.json',
     'docs/CANDIDATE-RC1.15.md', 'homebrew/demo-ps1.py',
     'homebrew/README.md', 'homebrew/LICENSE'

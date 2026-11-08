@@ -5,6 +5,7 @@ import { contentStartupError } from './startup-error.mjs';
 import { computeInputs, padType } from './input-profile.mjs';
 import { watchTouch } from './touch-editor.mjs';
 import { repairCue } from './cue-repair.mjs';
+import { emptyMemcardBytes } from './empty-memcard.mjs';
 // Tactile (mandat Controller V2) : masqué quand une manette est branchée, boutons déplaçables ; réglé par la page.
 export const PS1_TOUCH_KEY = 'emuperso-ps1-touch';
 let touchWatch = null;
@@ -12,6 +13,10 @@ const contexts = new Set();
 let emulator = null, romURL = null, closed = false, notify = () => {}, sessionId = null;
 let startupFailure = null;
 let cheatsQuarantined = false;
+// Carte mémoire vierge formatée (128 Kio, structure PCSX « MC ») injectée quand
+// aucune batterie n'existe encore : sans fichier .srm au boot, le cœur démarre
+// sans carte et le jeu affiche « no memory card » sans pouvoir formater.
+let emptyMemcard = null; // rempli au démarrage de session (empty-memcard.mjs)
 function requireTrustedCheats() {
   if (cheatsQuarantined) throw new Error('Moteur en quarantaine : captures et réactivation refusées. Recréez une session saine.');
 }
@@ -243,12 +248,12 @@ async function start(config, callback) {
   };
   const originalStart = window.EmulatorJS.prototype.startGame;
   window.EmulatorJS.prototype.startGame = function() {
-    if (config.battery?.length) {
-      // Une archive place le jeu dans un sous-dossier (« Jeu (USA)/Jeu (USA).cue ») ; le cœur
-      // nomme la sauvegarde d'après le seul nom de fichier.
-      const stem = baseStem(this.fileName);
-      this.gameManager.writeFile('/data/saves/PCSX-ReARMed/' + stem + '.srm', new Uint8Array(config.battery));
-    }
+    // Le cœur n'écrit le .srm que lors d'une capture : sans fichier au boot, la
+    // carte mémoire est absente pour le jeu. On injecte la batterie du coffre,
+    // sinon la carte vierge (première utilisation).
+    const stem = baseStem(this.fileName);
+    const bytes = config.battery?.length ? new Uint8Array(config.battery) : emptyMemcard;
+    if (bytes?.length) this.gameManager.writeFile('/data/saves/PCSX-ReARMed/' + stem + '.srm', bytes);
     originalStart.call(this);
   };
   romURL = URL.createObjectURL(config.file);
@@ -284,6 +289,7 @@ async function start(config, callback) {
     buttonOpts: { rightClick: false, saveState: false, loadState: false, quickSave: false, quickLoad: false,
       saveSavFiles: false, loadSavFiles: false, cheat: false, restart: false, exitEmulation: false, netplay: false }
   };
+  emptyMemcard = emptyMemcardBytes();
   emulator = new window.EmulatorJS('#game', options); window.EJS_emulator = emulator;
   touchWatch = watchTouch({ key: PS1_TOUCH_KEY, emulator: () => (closed ? null : emulator) });
   window.EMUPERSO_editTouch = () => touchWatch.edit();
