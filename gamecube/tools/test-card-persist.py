@@ -93,6 +93,17 @@ try:
         out['s2_card_status'] = launch_game()
         # Le statut « enregistree » apres IDB vide = recuperation via miroir LS.
         out['card_recovered_despite_empty_idb'] = 'enregistr' in out['s2_card_status'].lower()
+        # Verifie les octets : la carte relue doit contenir le motif 0x5A importe.
+        out['s2_memcard_marker'] = page.evaluate("""() => {
+          const boots = window.__portablesBoots || {};
+          const id = Object.keys(boots)[0];
+          if (!id) return null;
+          const mc = boots[id].boot.gc && boots[id].boot.gc.memcard;
+          if (!mc) return null;
+          for (let i = 4096; i < 8192; i++) if (mc[i] !== 0x5a) return { ok: false, bytes: mc.length, at: i };
+          return { ok: true, bytes: mc.length };
+        }""")
+        out['card_bytes_match_marker'] = bool(out['s2_memcard_marker'] and out['s2_memcard_marker'].get('ok'))
         browser.close()
 finally:
     server.shutdown()
