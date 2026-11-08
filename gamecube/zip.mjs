@@ -110,6 +110,43 @@ async function readEntryData(view, zipBytes, entry, maxBytes) {
   return data;
 }
 
+/**
+ * Préfixe d'une entrée ZIP sans la décompresser en entier (en-tête de disque
+ * GameCube : 0x20 octets pour .iso/.gcm/.bin, 0x78 pour .rvz). Pas de contrôle
+ * CRC — l'extraction complète reste vérifiée par extractFirst/l'appelant.
+ */
+export async function readEntryPrefix(zipBytes, entry, n) {
+  const view = new DataView(zipBytes.buffer, zipBytes.byteOffset, zipBytes.byteLength);
+  if (entry.flags & 0x1) throw new ZipError('ZIP chiffré : non pris en charge.');
+  if (entry.compressedSize === 0xffffffff || entry.size === 0xffffffff) throw new ZipError('ZIP64 non pris en charge.');
+  if (entry.localOffset + 30 > zipBytes.length) throw new ZipError('Entrée de ZIP hors du fichier.');
+  if (view.getUint32(entry.localOffset, true) !== 0x04034b50) throw new ZipError('Entrée de ZIP illisible.');
+  const nameLen = view.getUint16(entry.localOffset + 26, true);
+  const extraLen = view.getUint16(entry.localOffset + 28, true);
+  const dataStart = entry.localOffset + 30 + nameLen + extraLen;
+  if (dataStart + entry.compressedSize > zipBytes.length) throw new ZipError('Données ZIP tronquées.');
+  const raw = zipBytes.subarray(dataStart, dataStart + entry.compressedSize);
+  if (entry.method === 0) return raw.slice(0, Math.min(n, entry.size));
+  if (entry.method !== 8) throw new ZipError(`Méthode de compression ZIP ${entry.method} non prise en charge.`);
+  if (typeof DecompressionStream === 'undefined') return null;
+  const stream = new Blob([raw]).stream().pipeThrough(new DecompressionStream('deflate-raw'));
+  const reader = stream.getReader();
+  const chunks = [];
+  let length = 0;
+  try {
+    while (length < n) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      chunks.push(value);
+      length += value.length;
+    }
+  } finally { await reader.cancel().catch(() => {}); }
+  const out = new Uint8Array(Math.min(length, n));
+  let off = 0;
+  for (const c of chunks) { const take = Math.min(c.length, n - off); if (take <= 0) break; out.set(c.subarray(0, take), off); off += take; }
+  return out;
+}
+
 export function isZip(bytes) {
   return bytes.length >= 4 && bytes[0] === 0x50 && bytes[1] === 0x4b && (bytes[2] === 0x03 || bytes[2] === 0x05);
 }
