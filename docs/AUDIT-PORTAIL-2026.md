@@ -101,7 +101,9 @@ Note : les 404 console = `/favicon.ico` absent (cosmétique).
 - Arcade : cœurs 2003/FBNeo seulement (romsets post-2003 partiellement reconnus)
 - PS1 : certains jeux restent sensibles au timing même avec vrai BIOS (comportement documenté upstream)
 
-**Contre-audit CodeRabbit (PR #13, 24 findings) — traités** : mkdir MEMFS N64 après mount, build dist exclut .rvz/.gcm/.dol…, quota localStorage GC géré (éviction + échec visible), ID de disque lu aussi dans .rvz (en-tête GC à 0x58) et le préfixe ZIP, flush final de carte avant changement de jeu, import de carte clé sur le jeu sélectionné, bouton stop GC, .dol retiré des formats, badge traduit, divers nitpicks. **Partiel** : PSP même-discId — avertissement ajouté ; l'isolation par SHA-256 du dossier SAVEDATA PPSSPP est impossible sans patch du cœur (chemin dérivé du discId), documenté comme limite.
+**Contre-audit CodeRabbit (PR #13, 24 findings) — traités** : mkdir MEMFS N64 après mount, build dist exclut .rvz/.gcm/.dol…, quota localStorage GC géré (éviction + échec visible), ID de disque lu aussi dans .rvz (en-tête GC à 0x58) et le préfixe ZIP, flush final de carte avant changement de jeu, import de carte clé sur le jeu sélectionné, bouton stop GC, .dol retiré des formats, badge traduit, divers nitpicks. **Partiel** : PSP même-discId — avertissement ajouté ; l'isolation par SHA-256 du dossier SAVEDATA PPSSPP est impossible sans patch du cœur (chemin dérivé du discId), documenté comme limite. *(Résolu depuis : isolation par contenu implémentée — voir section dédiée ci-dessous.)*
+
+**Review CodeRabbit suivante (rv:5819341695, sur fb6ea2c) — traitée** : `writeSaveData` propage l'échec de `flush()` au lieu de redémarrer (`ff5ab7f`), erreur `syncfs` remontée au lieu de `true`, `E_INTEGRITY` du coffre PS1 laisse récupérer la carte via le miroir localStorage (`a991a38`), sonde GC compare les octets de la carte (`0877118`).
 
 **Règles respectées** : aucune fusion vers `main` sans GO explicite ; aucun force-push ; aucun ROM/BIOS/sauvegarde publié ; alias testeurs toujours à jour.
 
