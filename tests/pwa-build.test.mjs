@@ -29,7 +29,7 @@ test('assemblage isolé : ressources PWA copiées, secrets et jeux privés exclu
       put(app + '/dist/private/jeu.md', Buffer.alloc(512));
     }
     const excluded = ['.git', '.env', '.env.local', 'nested/.env.production', '.aws/credentials', '.ssh/id_rsa', '.codex/config.toml', 'nested/test.jks', 'test.keystore', 'test.p12', 'private.pem', 'EMUPERSO.apk', 'jeu.iso', 'jeu.gba', 'save.sav',
-      'private/jeu.nes', 'private/jeu.sfc', 'private/jeu.swc', 'private/jeu.fig', 'private/jeu.unf', 'private/jeu.unif', 'private/doom2.wad', 'private/save.state1', 'private/save.st0'];
+      'private/jeu.nes', 'private/jeu.sfc', 'private/jeu.swc', 'private/jeu.fig', 'private/jeu.unf', 'private/jeu.unif', 'private/doom2.wad', 'private/save.state1', 'private/save.st0', 'carte-memoire.raw', 'disque.rvz', 'disque.gcm'];
     for (const name of excluded) put(name, 'SECRET');
     put('portables/js/app.mjs', 'export const preserved = true;');
     const demos = ['portables/demos/opennes-snake.nes', 'portables/demos/opensnes-input.sfc'];
