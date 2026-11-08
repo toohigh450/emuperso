@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moteur GameCube</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #1b1940; overflow: hidden; }
+  body > canvas { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; }
+  #padLayer { position: fixed; inset: 0; z-index: 5; pointer-events: none; }
+  #padLayer[hidden] { display: none; }
+  .stick-pad { position: absolute; width: 34vmin; height: 34vmin; border-radius: 50%; background: rgba(255,255,255,.08); border: 2px solid rgba(255,255,255,.25); pointer-events: auto; touch-action: none; }
+  .stick-knob { position: absolute; left: 50%; top: 50%; width: 38%; height: 38%; margin: -19%; border-radius: 50%; background: rgba(255,255,255,.45); }
+  .main-stick { left: 3vmin; bottom: 3vmin; }
+  .c-stick { right: 3vmin; bottom: 3vmin; }
+  .pad-btn { position: absolute; width: 11vmin; height: 11vmin; border-radius: 50%; border: 2px solid rgba(255,255,255,.35); background: rgba(255,255,255,.12); color: #fff; font-weight: 700; pointer-events: auto; touch-action: none; }
+  .shoulder { width: 13vmin; height: 6vmin; border-radius: 8px; top: 1vmin; }
+  .dpad-btn { width: 9vmin; height: 9vmin; border-radius: 8px; left: 12vmin; }
+  .face { border-radius: 50%; }
+  .a { right: 6vmin; bottom: 8vmin; }
+  .b { right: 17vmin; bottom: 13vmin; }
+  .x { right: 17vmin; bottom: 3vmin; }
+  .y { right: 6vmin; bottom: 18vmin; }
+  .start { left: 50%; bottom: 2vmin; transform: translateX(-50%); width: 14vmin; height: 5vmin; border-radius: 8px; }
+  #padToggle { position: fixed; right: 1vmin; bottom: 1vmin; z-index: 6; }
+  #boot { position: fixed; inset: 0; z-index: 8; display: flex; align-items: center; justify-content: center; color: #fff; font: 16px system-ui; background: #1b1940; padding: 2rem; text-align: center; }
+</style>
+</head>
+<body>
+<div id="boot">Chargement du moteur GameCube…</div>
+<script type="module">
+import * as gecko from './gamecube/web.js';
+
+const $ = (id) => document.getElementById(id);
+const MEMCARD_BYTES = 2 * 1024 * 1024;
+const id = new URLSearchParams(location.search).get('id');
+const entry = window.parent && window.parent.__portablesBoots && window.parent.__portablesBoots[id];
+const boot = entry && entry.boot;
+const events = entry && entry.events;
+if (!entry || !boot || !events) { document.body.textContent = 'Session introuvable.'; throw new Error('Session introuvable.'); }
+
+let preparing = true;
+let running = false;
+const note = (kind, message) => { try { boot.onLog && boot.onLog(kind, message); } catch {} };
+const say = (text) => { const b = $('boot'); if (b) b.textContent = text; };
+
+// --- Entrées : gamepad + tactile vers set_pad_state (clavier physique = winit) ---
+const BUTTON_MASKS = {
+  'dpad-left': 0x0001, 'dpad-right': 0x0002, 'dpad-down': 0x0004, 'dpad-up': 0x0008,
+  z: 0x0010, r: 0x0020, l: 0x0040, a: 0x0100, b: 0x0200, x: 0x0400, y: 0x0800, start: 0x1000,
+};
+const CENTER = 128, MAX255 = 255;
+const pad = { sx: CENTER, sy: CENTER, cx: CENTER, cy: CENTER, lt: 0, rt: 0, buttons: 0 };
+function pushPad() {
+  try { gecko.set_pad_state(pad.sx, pad.sy, pad.cx, pad.cy, pad.lt, pad.rt, pad.buttons); } catch {}
+}
+const byte = (v) => Math.round(CENTER + Math.max(-1, Math.min(1, v)) * 127);
+function setButton(name, down) {
+  const mask = BUTTON_MASKS[name];
+  pad.buttons = down ? pad.buttons | mask : pad.buttons & ~mask;
+  if (name === 'l') pad.lt = down ? MAX255 : 0;
+  if (name === 'r') pad.rt = down ? MAX255 : 0;
+  pushPad();
+}
+function setStick(which, x, y) {
+  const bx = byte(x), by = byte(y);
+  if (which === 'main') { if (bx === pad.sx && by === pad.sy) return; pad.sx = bx; pad.sy = by; }
+  else { if (bx === pad.cx && by === pad.cy) return; pad.cx = bx; pad.cy = by; }
+  pushPad();
+}
+function releaseAll() {
+  pad.sx = pad.sy = pad.cx = pad.cy = CENTER; pad.lt = pad.rt = 0; pad.buttons = 0; pushPad();
+}
+
+const PAD_BUTTONS = [[0,'a'],[1,'b'],[2,'x'],[3,'y'],[8,'z'],[9,'start'],[12,'dpad-up'],[13,'dpad-down'],[14,'dpad-left'],[15,'dpad-right']];
+let gpLoop = 0;
+function startGamepad() {
+  if (gpLoop) return;
+  const poll = () => {
+    const gp = navigator.getGamepads && navigator.getGamepads().find((p) => p && p.connected);
+    if (gp) {
+      setStick('main', gp.axes[0] || 0, -(gp.axes[1] || 0));
+      setStick('c', gp.axes[2] || 0, -(gp.axes[3] || 0));
+      const lPull = Math.max(gp.buttons[4] && gp.buttons[4].pressed ? 1 : 0, gp.buttons[6] ? gp.buttons[6].value || 0 : 0);
+      const rPull = Math.max(gp.buttons[5] && gp.buttons[5].pressed ? 1 : 0, gp.buttons[7] ? gp.buttons[7].value || 0 : 0);
+      pad.lt = Math.round(Math.max(0, Math.min(1, lPull)) * MAX255);
+      pad.rt = Math.round(Math.max(0, Math.min(1, rPull)) * MAX255);
+      const setBit = (name, down) => { const m = BUTTON_MASKS[name]; const b = down ? pad.buttons | m : pad.buttons & ~m; if (b !== pad.buttons) { pad.buttons = b; pushPad(); } };
+      setBit('l', lPull >= 0.85); setBit('r', rPull >= 0.85);
+      for (const [i, name] of PAD_BUTTONS) setBit(name, !!(gp.buttons[i] && gp.buttons[i].pressed));
+    }
+    gpLoop = requestAnimationFrame(poll);
+  };
+  gpLoop = requestAnimationFrame(poll);
+}
+
+function stickEl(className, which) {
+  const el = document.createElement('div');
+  el.className = `stick-pad ${className}`;
+  const knob = document.createElement('span'); knob.className = 'stick-knob'; el.append(knob);
+  const move = (e) => {
+    const r = el.getBoundingClientRect(), radius = r.width / 2;
+    let dx = e.clientX - (r.left + radius), dy = e.clientY - (r.top + radius);
+    const len = Math.hypot(dx, dy);
+    if (len > radius) { dx = dx / len * radius; dy = dy / len * radius; }
+    knob.style.transform = `translate(${dx}px, ${dy}px)`;
+    const dead = len / radius < 0.15;
+    setStick(which, dead ? 0 : dx / radius, dead ? 0 : -dy / radius);
+  };
+  el.addEventListener('pointerdown', (e) => { el.setPointerCapture(e.pointerId); move(e); });
+  el.addEventListener('pointermove', (e) => { if (el.hasPointerCapture(e.pointerId)) move(e); });
+  const up = () => { knob.style.transform = ''; setStick(which, 0, 0); };
+  el.addEventListener('pointerup', up); el.addEventListener('pointercancel', up);
+  return el;
+}
+function btnEl(className, name, label) {
+  const el = document.createElement('button');
+  el.type = 'button'; el.className = `pad-btn ${className}`; el.textContent = label;
+  el.addEventListener('pointerdown', (e) => { el.setPointerCapture(e.pointerId); setButton(name, true); });
+  const off = () => setButton(name, false);
+  el.addEventListener('pointerup', off); el.addEventListener('pointercancel', off); el.addEventListener('contextmenu', (e) => e.preventDefault());
+  return el;
+}
+function buildTouch() {
+  const layer = document.createElement('div'); layer.id = 'padLayer';
+  layer.append(stickEl('main-stick', 'main'), stickEl('c-stick', 'c'));
+  const shoulders = [['l','shoulder','L'],['z','shoulder','Z'],['r','shoulder','R']];
+  for (const [name, cls, label] of shoulders) { const b = btnEl(cls, name, label); b.style.top = name === 'z' ? '7vmin' : '1vmin'; b.style[name === 'l' ? 'left' : 'right'] = '8vmin'; layer.append(b); }
+  for (const [name, cls, label, style] of [['a','face a','A',''],['b','face b','B',''],['x','face x','X',''],['y','face y','Y','']]) layer.append(Object.assign(btnEl(cls, name, label), {}));
+  for (const [dir, cls] of [['up','dpad-btn up'],['down','dpad-btn down'],['left','dpad-btn left'],['right','dpad-btn right']]) {
+    const b = btnEl(cls, `dpad-${dir}`, { up: '▲', down: '▼', left: '◀', right: '▶' }[dir]);
+    if (dir === 'up') b.style.top = '22vmin'; if (dir === 'down') b.style.top = '40vmin';
+    if (dir === 'left') b.style.left = '9vmin'; if (dir === 'right') b.style.left = '21vmin';
+    layer.append(b);
+  }
+  const start = btnEl('start', 'start', 'START'); layer.append(start);
+  const toggle = document.createElement('button'); toggle.id = 'padToggle'; toggle.type = 'button'; toggle.textContent = '🎮'; toggle.setAttribute('aria-label', 'Commandes tactiles');
+  toggle.addEventListener('click', () => { layer.hidden = !layer.hidden; });
+  layer.hidden = !window.matchMedia('(pointer: coarse)').matches;
+  document.body.append(layer, toggle);
+}
+
+// --- Mémoire carte : version + snapshot, flush vers le lanceur ---
+let lastCardVersion = -1;
+let cardChecked = false;
+function checkMemcard(force = false) {
+  try {
+    const v = gecko.memcard_version();
+    if (!force && !cardChecked && v === lastCardVersion) return;
+    if (!force && v === lastCardVersion && cardChecked) return;
+    lastCardVersion = v; cardChecked = true;
+    const card = gecko.get_memcard();
+    if (card && card.length === MEMCARD_BYTES && boot.onSaveUpdate) boot.onSaveUpdate({ save: card });
+  } catch (err) { note('erreur sauvegarde', String(err)); }
+}
+function startMemcardWatch() {
+  setInterval(() => checkMemcard(), 2000);
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') checkMemcard(true); });
+  window.addEventListener('pagehide', () => checkMemcard(true));
+}
+
+async function checkWebGpu() {
+  const gpu = navigator.gpu;
+  if (!gpu) return { ok: false, reason: 'Ce navigateur n’a pas WebGPU. Utilise Chrome/Edge récent, Safari 26+ ou un Chromium avec WebGPU activé.' };
+  try {
+    const adapter = await gpu.requestAdapter();
+    if (!adapter) return { ok: false, reason: 'WebGPU présent mais aucun adaptateur GPU disponible.' };
+  } catch (err) { return { ok: false, reason: `Demande d’adaptateur WebGPU refusée : ${String(err)}` }; }
+  return { ok: true };
+}
+async function fetchWasm(onProgress) {
+  const url = new URL('./gamecube/web_bg.wasm', import.meta.url);
+  const res = await fetch(url);
+  if (!res.ok || !res.body) throw new Error(`WASM indisponible (HTTP ${res.status})`);
+  const total = Number(res.headers.get('content-length')) || null;
+  const reader = res.body.getReader(); const chunks = []; let received = 0, last = -1;
+  for (;;) {
+    const { done, value } = await reader.read(); if (done) break;
+    chunks.push(value); received += value.byteLength;
+    const pct = total ? Math.floor(received * 100 / total) : null;
+    if (pct !== null && pct !== last && pct % 10 === 0) { last = pct; onProgress(pct); }
+  }
+  const bytes = new Uint8Array(received); let off = 0;
+  for (const c of chunks) { bytes.set(c, off); off += c.byteLength; }
+  return bytes;
+}
+
+entry.control = {
+  enginePath: 'gamecube/gecko-wasm-webgpu',
+  supportsStates: () => false,
+  getState: () => { throw new Error('États de jeu non pris en charge par Gecko web.'); },
+  loadState: () => { throw new Error('États de jeu non pris en charge par Gecko web.'); },
+  setCodes: () => {},
+  restart: () => { throw new Error('Le moteur GameCube web ne redémarre pas sans recharger la page : ferme puis rouvre le jeu.'); },
+  getSave: () => { const c = gecko.get_memcard(); return c && c.length === MEMCARD_BYTES ? new Uint8Array(c) : null; },
+  importSave: () => { throw new Error('Import GameCube : utilise le panneau Sauvegardes du lanceur (il rouvre le jeu).'); },
+  listSaveData: () => [],
+  writeSaveData: () => Promise.resolve(false),
+  screenshot: () => null,
+  flush: () => { checkMemcard(true); return Promise.resolve(true); },
+  getPerf: () => { try { return gecko.get_perf(); } catch { return [0, 0]; } },
+};
+
+window.addEventListener('error', (e) => {
+  note('erreur moteur', (preparing ? 'Pendant la préparation' : 'Pendant la partie') + (e.message ? ' : ' + e.message : ''));
+  if (preparing) events.onError('Erreur pendant la préparation du moteur GameCube.');
+});
+window.addEventListener('unhandledrejection', (e) => {
+  const reason = e.reason && (e.reason.message || e.reason);
+  note('erreur moteur', 'Promesse rejetée' + (reason ? ' : ' + reason : ''));
+  if (preparing) events.onError('Initialisation du moteur GameCube interrompue.');
+});
+
+async function main() {
+  say('Vérification de WebGPU…');
+  const gpu = await checkWebGpu();
+  if (!gpu.ok) { events.onError(gpu.reason); return; }
+  note('etape', 'WebGPU : adaptateur disponible.');
+
+  say('Lecture de l’image…');
+  const src = boot.rom.file || new Blob([boot.rom.bytes || new Uint8Array(0)]);
+  const bytes = new Uint8Array(await src.arrayBuffer());
+  note('etape', `Image lue : ${bytes.length} octets (${boot.rom.name}).`);
+  if (!bytes.length) { events.onError('Image vide.'); return; }
+
+  say('Téléchargement du moteur WASM…');
+  let wasm;
+  try { wasm = await fetchWasm((pct) => { say(`Téléchargement du moteur WASM… ${pct} %`); }); }
+  catch (err) { note('avertissement wasm', `Téléchargement manuel impossible (${err.message}) ; le chargeur WASM réessaie.`); }
+  note('etape', 'Initialisation WebAssembly…');
+  await gecko.default(wasm ? { module_or_path: wasm } : undefined);
+  note('etape', 'Moteur WASM initialisé.');
+
+  buildTouch();
+  startGamepad();
+  startMemcardWatch();
+  events.onReady();
+
+  const memcard = boot.gc && boot.gc.memcard && boot.gc.memcard.length === MEMCARD_BYTES ? new Uint8Array(boot.gc.memcard) : null;
+  if (boot.gc && boot.gc.memcard && boot.gc.memcard.length !== MEMCARD_BYTES) note('avertissement sauvegarde', 'Carte mémoire ignorée : taille différente de 2 Mio.');
+  say('Démarrage de l’émulateur…');
+  await new Promise((r) => setTimeout(r, 50));
+  gecko.start_emulator(bytes, boot.rom.name, null, memcard);
+  running = true; preparing = false;
+  events.onStart();
+  releaseAll();
+  try { document.querySelector('body > canvas')?.focus(); } catch {}
+  for (const delay of [400, 1200, 3000]) setTimeout(() => {
+    const canvas = document.querySelector('body > canvas');
+    if (canvas && canvas.width <= 8) { canvas.style.width = '99.9vw'; requestAnimationFrame(() => { canvas.style.width = '100vw'; }); }
+  }, delay);
+  say('');
+  const bootEl = $('boot'); if (bootEl) bootEl.remove();
+}
+
+main().catch((err) => {
+  console.error(err);
+  note('erreur moteur', String(err && err.stack || err));
+  events.onError(`Le moteur GameCube n’a pas démarré : ${err && err.message ? err.message : String(err)}`);
+});
+</script>
+</body>
+</html>

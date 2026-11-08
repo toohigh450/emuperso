@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
-<meta name="description" content="EMUPERSO : NES, SNES, Sega Genesis, Game Boy, Game Boy Color, Game Boy Advance, Nintendo DS, Nintendo 64, PlayStation et PlayStation Portable dans Chrome, sur ordinateur et téléphone.">
+<meta name="description" content="EMUPERSO : NES, SNES, Sega Genesis, Game Boy, Game Boy Color, Game Boy Advance, Nintendo DS, Nintendo 64, PlayStation, PlayStation Portable et GameCube (test) dans Chrome, sur ordinateur et téléphone.">
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#0d1117">
 <meta name="mobile-web-app-capable" content="yes">
@@ -14,7 +14,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
 <link rel="apple-touch-icon" href="/icon-192.png">
-<title>EMUPERSO — 12 consoles</title>
+<title>EMUPERSO — 13 consoles</title>
 <style>
 :root {
   --bg: #0b111a; --panel: #131e2c; --panel-2: #172536; --line: #33445a;
@@ -76,7 +76,7 @@ footer a { margin-right: 14px; }
 <body>
 <div class="wrap">
   <header>
-    <div class="brand"><img src="/logo.png" alt="EMUPERSO" class="logo"><b>EMUPERSO</b><span data-i18n="header.subtitle">Portail rétro · 12 consoles</span></div>
+    <div class="brand"><img src="/logo.png" alt="EMUPERSO" class="logo"><b>EMUPERSO</b><span data-i18n="header.subtitle">Portail rétro · 13 consoles</span></div>
     <div class="lang" role="group" aria-label="Langue / Language">
       <button type="button" data-lang-btn="fr" aria-pressed="true">FR</button>
       <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
@@ -155,6 +155,13 @@ footer a { margin-right: 14px; }
         <span class="tag">Sony · 2004</span>
         <h3>PlayStation Portable</h3>
         <p data-i18n="card.psp.desc">Moteur PPSSPP. Tes jeux .iso, .cso ou .pbp. Codes CWCheat par jeu, sauvegardes de carte mémoire et états. Ordinateur conseillé.</p>
+        <span class="go" data-i18n="card.play">Jouer →</span>
+      </a>
+      <a class="card" href="gamecube/">
+        <span class="badge alpha" title="Version alpha — en phase de tests">EN TEST</span>
+        <span class="tag">Nintendo · 2001</span>
+        <h3>GameCube</h3>
+        <p data-i18n="card.gamecube.desc">Moteur Gecko (WebAssembly/WebGPU, sans audio). ALPHA : boots prouvés, jouabilité non validée. WebGPU requis. Tes images .iso, .gcm, .rvz, .dol.</p>
         <span class="go" data-i18n="card.play">Jouer →</span>
       </a>
       <a class="card" href="portables/?console=arcade">
