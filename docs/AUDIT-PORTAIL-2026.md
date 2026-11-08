@@ -33,14 +33,29 @@ Statut : **en cours** — audit statique + tests automatisés faits ; tests terr
 - **Publication** : aucune ROM/BIOS/sauvegarde dans `dist/` ; build Vercel par whitelist ; suffixes privés bannis.
 - **Aucun `gamepad.connected` manquant côté code** : le chemin input est identique RC-1.15 → RC-1.17, prouvé par test navigateur réel.
 
-## Tests automatisés (état au 2026-11-07)
+## Audit P1/P2 — consoles, moteur, distribution (2026-11-08)
+
+- **Arcade** : romset `.zip` confié tel quel (nom court MAME/FBNeo), BIOS arcade refusé, double cœur `mame2003_plus` → `fbneo` avec verdict mémorisé par empreinte de romset (`arcade-core:<hex>`), `cheats-arcade/cheat.dat` (7,9 Mio, base MAME 2003-Plus) présent et référencé par l'UI. Les 3 cœurs (`mame2003_plus`, `fbneo`, `prboom`) + variantes thread/legacy confirmés présents sur le CDN EmulatorJS 4.2.3.
+- **DOOM** : `analyzeWad` valide magic `IWAD`/`PWAD`, bornes du répertoire et des offsets (anti-tronqué), taille ≤ 64 Mio, noms IWAD reconnus (`doom`, `doom2`, `plutonia`, `tnt`, `freedoom1/2`…) avec avertissement si nom inhabituel. PWAD refusé proprement. Codes IDDQD/IDKFA non supportés par PrBoom-web — documenté dans l'UI.
+- **Consoles portables (NES→PSP)** : pipeline unique `app.mjs` — analyse d'en-tête par système, formats non supportés refusés avec explication (`UNSUPPORTED_FORMATS` : FDS, Satellaview, 32X, patches .ips/.bps/.ups, CHD/ZSO PSP…), BIOS reconnus et refusés comme jeux, melonDS seul cœur DS exigeant un BIOS importé par l'utilisateur. Cœur DS choisi = fait partie de l'espace de sauvegarde (pas de migration intempestive).
+- **Saves portables** : `mirrorSave` + `spaceId` par jeu, flush iframe sur `visibilitychange`/`pagehide`/`destroy`, miroir IndexedDB 3 générations, migration GB/GBA/DS non destructive — déjà vérifié P0, confirmé par relecture.
+- **Controller V2** : profils natif/custom, `release()` au stop, deadzone — conforme au retour DuckStation (mapping Xbox→face standard).
+- **i18n** : 53 clés FR = 53 clés EN, carte GameCube + contact couverts ; sonde navigateur live : toggle EN de `/contact/` fonctionnel (« Contact — report a bug »), zéro erreur console.
+- **PWA/APK** : manifest + icônes maskable + `sw.js` (réseau prioritaire) ; `EMUPERSO.apk` (2,5 Mio) publié via `portail/android/` et **vérifié HTTP 200 en ligne** ; `assetlinks.json` présent.
+- **Contact/changelog** : `/contact/` vérifié en vrai navigateur sur l'alias testeurs — mailto exact `emuperso.splendid404@passmail.com`, template 7 champs, avertissement BYOR, aucun script inline (CSP-compatible). Changelog : 11 entrées, badges système/version + paragraphes détails rendus.
+- **GameCube** : voir section dédiée — perf mesurée (~16 %→1 % natif, écran noir ≥9 min sur FFCC/Pokémon XD), miroir `localStorage` synchrone pour la carte mémoire (même correctif que RC-1.19 PS1), cycle sauvegarder→fermer→rouvrir **à prouver en jeu** (aucun test automatisé ne peut forcer une écriture carte).
+- **Audio** : non auditable en headless — reste un point ouvert pour le test terrain.
+- **Cosmétique** : pas de wallpaper dédié `arcade`/`doom`/`gamecube` dans `portables/css/app.css` (GameCube a son propre fond ; Arcade/DOOM affichent le fond neutre). Page GameCube et PS1/N64 : français uniquement (cohérent avec le reste des consoles, i18n = niveau portail).
+
+## Tests automatisés (état au 2026-11-08)
 
 | Suite | Résultat |
 |---|---|
-| `tools/test-portail.mjs` (vrai navigateur, démos réelles) | **77/77** |
-| `portables` (node:test) | 162/162 |
-| `real-n64` | 91/91 |
-| `ps1-web` Node + Python | 193 + Python, tout vert |
+| `tools/test-portail.mjs` (vrai navigateur, démos réelles) | **77/77** (dernier run à `bf6b280` ; module playwright Node absent de l'env actuel — les chemins touchés depuis sont couverts par `browser_portal_probe.py`) |
+| `portables` (node:test) | **162/162** (rejoué 2026-11-08) |
+| `real-n64` | **91/91** (rejoué 2026-11-08) |
+| `ps1-web` Node | **82/82** (rejoué 2026-11-08) |
+| `browser_portal_probe.py` (Chromium réel, alias testeurs) | vert : 13 consoles, EN TEST, contact FR/EN, changelog détails, 0 erreur console |
 | Test navigateur input PS1 (`browser_input.py`) | vert (gamepad synthétique → `simulateInput` OK) |
 
 ## Problèmes ouverts
