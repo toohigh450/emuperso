@@ -248,3 +248,91 @@ body:not([data-state=idle]) .screen { touch-action: none; overscroll-behavior: c
 .version-picker .vp-file { opacity: 0.7; overflow-wrap: anywhere; }
 .version-picker .vp-actions { display: flex; gap: 10px; justify-content: flex-end; padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--line, #c9cbe0); }
 .version-picker .vp-actions .btn { min-height: 44px; }
+
+/* ============================================================
+   Uniformisation style N64 (thème sombre unique, même finition).
+   Surcharge additive : aucune règle fonctionnelle n'est retirée.
+   ============================================================ */
+:root {
+  --paper: #09121d;
+  --card: #152335;
+  --ink: #eff5fc;
+  --ink-soft: #b7c9dc;
+  --line: #37536c;
+  --accent: #91e5c7;
+  --accent-ink: #102a24;
+  --ok: #62d09c;
+  --warn: #f0b84f;
+  --err: #ff8f86;
+  --lcd: #3b4730;
+  --shell: #0a1424;
+  --shell-deep: #050c17;
+}
+body {
+  background: radial-gradient(ellipse at top right, #143844, #09121d 65%);
+  font: 16px/1.65 system-ui, sans-serif;
+}
+body::before { opacity: .22; }
+.top {
+  background: transparent;
+  color: #eff5fc;
+  padding: 18px 0 30px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.top .crumb a { color: #91e5c7; }
+.top h1 { font-size: clamp(30px, 5vw, 54px); line-height: 1.12; letter-spacing: -1.5px; margin: 20px 0; text-shadow: 0 2px 12px #000; }
+.top p { color: #e1eaf5; max-width: 70ch; text-shadow: 0 1px 8px #000; }
+.top p.crumb { text-shadow: none; }
+.brand-banner { margin: 24px 0 0; border: 1px solid #37536c; border-radius: 14px; background: #07111f; overflow: hidden; }
+.brand-banner img { display: block; width: 100%; height: auto; max-height: 270px; object-fit: contain; }
+.slot, .demo-panel, .panel {
+  background: rgba(18, 31, 48, .97);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 12px 35px #0004;
+}
+.slot { padding: 26px 18px 18px; }
+.demo-panel { padding: 25px; margin: 20px 0; }
+.panel { padding: 12px 2px; }
+.btn {
+  background: #254157;
+  border: 1px solid #5e7b91;
+  border-radius: 7px;
+  color: var(--ink);
+  padding: 12px 16px;
+  font-size: 13px;
+  min-height: 44px;
+}
+.btn:hover { border-color: #91e5c7; background: #2c4c66; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 700; }
+.btn.danger { color: var(--err); }
+.btn.small { padding: 6px 10px; min-height: 34px; font-size: 0.875rem; }
+:focus-visible { outline: 3px solid #f0c469; outline-offset: 4px; }
+.tabs { border-bottom: 1px solid var(--line); }
+.tabs [role=tab] { color: var(--ink-soft); }
+.tabs [role=tab][aria-selected=true] { color: var(--ink); border-bottom-color: var(--accent); }
+input[type=search], .filters select, .code-form input[type=text], select, textarea {
+  background: #102032;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+.cat-list { background: #102032; border: 1px solid var(--line); }
+.cat-row { border-bottom: 1px solid var(--line); }
+.keys th, .keys td { border-bottom: 1px solid var(--line); }
+.warnings { background: rgba(240, 184, 79, 0.16); color: var(--warn); }
+.console { background: var(--shell); }
+.screen { background: var(--shell-deep); }
+.screen-empty { background: var(--lcd); color: var(--shell-deep); }
+.drop-hint { background: rgba(5, 12, 23, 0.88); }
+.version-picker { border: 1px solid var(--line); }
+.version-picker .vp-search { background: #102032; color: var(--ink); border: 1px solid var(--line); }
+.version-picker .vp-actions { border-top: 1px solid var(--line); }
+.alpha-note { color: var(--ink-soft); }
+.console-hint { background: rgba(18, 31, 48, .97); border: 1px solid var(--line); color: var(--ink); }
+@media (max-width: 700px) {
+  .brand-banner { margin-top: 16px; }
+  .brand-banner img { max-height: none; }
+  .top { padding: 14px 0 20px; }
+}

@@ -11,6 +11,8 @@ import { findCheatsForGame, catalogMeta, loadCatalog, detectRegion, detectRegion
 import { createCheatController, codeValid, gameKey } from './cheat-controller.mjs';
 import { readTouch, writeTouch } from './touch-editor.mjs';
 const $ = id => document.getElementById(id), vault = new SaveStore('emuperso-real-saves-v1-ps1'), records = [];
+// Le badge de version suit APP_VERSION : jamais de chaîne de version en dur dans le HTML.
+{ const tag = $('app-tag'); if (tag) tag.textContent = 'EMUPERSO · PS1 WEB · ' + APP_VERSION; }
 let selected = null, busy = false, meta = null, preparing = null, lastPrep = null;
 // Heuristique héritée de Claude ; ni borne de décompression, ni garantie mémoire.
 const ARCHIVE_MEMORY_FACTOR = 4.5, isArchiveName = name => /\.(rar|zip|7z)$/i.test(String(name ?? ''));
