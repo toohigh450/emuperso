@@ -66,8 +66,14 @@ Statut : **en cours** — audit statique + tests automatisés faits ; tests terr
 | PSP | Ozma Wars (USA).cso 2,8 Mio | PPSSPP nightly + secours 4.2.3 | ✅ moteur prêt (COOP/COEP requis, en-têtes OK) |
 | SNES | Chrono Trigger (U) [!].smc 4 Mio | Snes9x | ✅ moteur prêt |
 | NES | Super Mario Bros. 3 [USA][!!].nes 384 Kio | FCEUmm | ✅ moteur prêt |
-| GBA | Pokemon - Red Version.7z | (en cours) | — |
-| Genesis | 688 Attack Sub.7z | (en cours) | — |
+| GB | Pokemon - Red Version.7z (109 versions) | Gambatte | ✅ sélecteur de version → extraction 7z → moteur prêt |
+| Genesis | 688 Attack Sub.7z (5 versions) | Genesis Plus GX | ✅ sélecteur → extraction → moteur prêt |
+| Arcade | tehkanwc.zip (romset nom court) | MAME 2003-Plus | ✅ romset reconnu, moteur prêt |
+| DS | — | — | ⏸ aucune ROM DS dans la collection |
+| N64 | Charlie Blast's Territory (Europe).zip | mupen64plus-next | ✅ zip → boot → **rendu visible** (zone claire à l'écran) + **sauvegarde native écrite** (« Sauvegarde native conservée localement ») — sonde `real-n64/tools/browser_rom_probe.py` |
+| GBA | — | — | ⏸ pas de .gba isolé (pack 7z = ROM GB) |
+
+**Isolation des sauvegardes par contenu — vérifiée sur vraies variantes** : deux versions de Chrono Trigger (`[!]` vs `[h1C]`) → empreintes SHA-256 différentes → `saveSpaceId` différents (`snes:snes9x:06d1…` vs `snes:snes9x:3f82…`). Un hack ne partage jamais la sauvegarde de l'original, ni deux dumps de la même cartouche. Même principe PS1 (`batteryIdentity` = rom_sha256 + moteur + config + schéma).
 
 Note : les 404 console = `/favicon.ico` absent (cosmétique).
 
