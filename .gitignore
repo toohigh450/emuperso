@@ -66,3 +66,7 @@ id_rsa*
 # Artefacts de tests locaux : captures de sessions avec ROMs personnelles, jamais versionnés.
 gamecube/tools/shots/
 ps1-test-results/
+
+tools/shots/
+real-n64/tools/shots/
+gamecube/tools/shots/
