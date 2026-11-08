@@ -1,7 +1,7 @@
 # Audit complet EMUPERSO — rapport d'étape
 
 Branche : `feature/unified-controller-profiles` · Date : 2026-11-07
-Périmètre : portail + 12 consoles web (NES, SNES, GB, GBC, GBA, DS, N64, PS1, PSP, Genesis, Arcade, DOOM).
+Périmètre : portail + 13 systèmes (NES, SNES, GB, GBC, GBA, DS, N64, PS1, PSP, Genesis, Arcade, DOOM, GameCube ALPHA).
 Statut : **en cours** — audit statique + tests automatisés faits ; tests terrain (vraies ROMs) partiels.
 
 ## Correctifs livrés sur la branche
