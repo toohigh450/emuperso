@@ -37,30 +37,31 @@
 <p><strong>Périmètre :</strong> portail + 13 systèmes (NES, SNES, GB, GBC, GBA, DS, N64, PS1, PSP, Genesis, Arcade, DOOM, GameCube ALPHA). Tests = navigateur Chromium réel (Playwright), vraies ROMs de la collection de Karl (~81 000 fichiers sur E:\roms et D:\roms). Aucun ROM/BIOS/sauvegarde n'a été uploadé ni commité — <code>set_input_files</code> local uniquement.</p>
 
 <div class="grid">
-  <div class="stat"><b>12/13</b><span>consoles bootées avec vraies ROMs</span></div>
-  <div class="stat"><b>2</b><span>bugs réels trouvés &amp; corrigés par les tests</span></div>
-  <div class="stat"><b>435+</b><span>tests automatisés verts (162+91+82+77+probes)</span></div>
+  <div class="stat"><b>13/13</b><span>des 13 systèmes testés avec vraies ROMs (GameCube en ALPHA)</span></div>
+  <div class="stat"><b>4</b><span>bugs réels trouvés &amp; corrigés par les tests</span></div>
+  <div class="stat"><b>412</b><span>tests unitaires verts (162+91+82+77) + sondes navigateur</span></div>
   <div class="stat"><b>12</b><span>entrées changelog détaillées FR/EN</span></div>
 </div>
 
-<h2>1. Tests terrain par console (vraies ROMs)</h2>
-<p class="meta">Sonde générique <code>tools/browser_psp_probe.py</code> (param console) + <code>real-n64/tools/browser_rom_probe.py</code>. « Moteur prêt » = le cœur WASM a initialisé l'émulation réelle.</p>
+<h2>1. Tests terrain par système (vraies ROMs)</h2>
+<p class="meta">Sondes <code>tools/browser_psp_probe.py</code> (param système), <code>real-n64/tools/browser_rom_probe.py</code>. « Moteur prêt » = le cœur WASM a initialisé l'émulation — ce n'est <b>pas</b> une validation de gameplay complet. Niveaux : initialisation ≠ rendu visible ≠ jeu confirmé.</p>
 <table>
-<tr><th>Console</th><th>ROM testée (chemin local)</th><th>Cœur utilisé</th><th>Résultat</th></tr>
-<tr><td><b>NES</b></td><td>Super Mario Bros. 3 [USA][!!].nes — 384 Kio</td><td>FCEUmm</td><td class="ok">✅ moteur prêt</td></tr>
-<tr><td><b>SNES</b></td><td>Chrono Trigger (U) [!].smc — 4 Mio</td><td>Snes9x</td><td class="ok">✅ moteur prêt</td></tr>
-<tr><td><b>GB</b></td><td>Pokemon - Red Version.7z — <b>109 versions dans l'archive</b></td><td>Gambatte</td><td class="ok">✅ sélecteur de version → extraction 7z → moteur prêt</td></tr>
-<tr><td><b>GBA (.7z)</b></td><td>Advance Wars.7z</td><td>mGBA</td><td class="ok">✅ « ADVANCEWARSP », moteur prêt</td></tr>
-<tr><td><b>GBA (.gba)</b></td><td>Advance Wars (USA).gba — 4 Mio</td><td>mGBA</td><td class="ok">✅ fichier direct, moteur prêt</td></tr>
-<tr><td><b>DS (.zip)</b></td><td>Mario Kart DS (Europe).zip — 18,3 Mio</td><td>DeSmuME 2015 (sans BIOS)</td><td class="ok">✅ « MARIOKARTDS », moteur prêt</td></tr>
-<tr><td><b>DS (négatif)</b></td><td>Dr. Mario Express.zip (DSiWare)</td><td>—</td><td class="ok">✅ refus propre « Jeu réservé à la DSi »</td></tr>
-<tr><td><b>Genesis</b></td><td>688 Attack Sub.7z — 5 versions</td><td>Genesis Plus GX</td><td class="ok">✅ sélecteur → extraction → moteur prêt</td></tr>
-<tr><td><b>PSP</b></td><td>Ozma Wars (USA).cso — 2,8 Mio</td><td>PPSSPP nightly + secours 4.2.3</td><td class="ok">✅ moteur prêt (COOP/COEP requis, OK)</td></tr>
-<tr><td><b>N64</b></td><td>Charlie Blast's Territory (Europe).zip — 1,1 Mio</td><td>mupen64plus-next</td><td class="ok">✅ <b>rendu visible à l'écran + sauvegarde native écrite</b></td></tr>
-<tr><td><b>PS1</b></td><td>Future Cop L.A.P.D. (.bin+.cue) + BIOS SCPH1001.BIN personnel</td><td>PCSX-ReARMed</td><td class="ok">✅ BIOS détecté (« CEX-3000/1001/1002 »), carte mémoire fonctionnelle, save en jeu OK (test Karl)</td></tr>
-<tr><td><b>DOOM</b></td><td>DOOM2.WAD (GOG) — 13,9 Mio</td><td>PrBoom</td><td class="ok">✅ « DOOM II » reconnu, moteur prêt</td></tr>
-<tr><td><b>Arcade</b></td><td>tehkanwc.zip (romset nom court)</td><td>MAME 2003-Plus</td><td class="ok">✅ romset reconnu, moteur prêt</td></tr>
-<tr><td><b>GameCube</b></td><td>FFCC + Pokemon XD (.zip/.rvz) — test headed Chromium+WebGPU</td><td>Gecko/WASM</td><td class="warn">⚠️ ALPHA : boots prouvés, ~16 %→1 % vitesse native, écran noir ≥9 min, pas d'audio</td></tr>
+<tr><th>Système</th><th>ROM testée (chemin local)</th><th>Cœur utilisé</th><th>Niveau atteint</th><th>Résultat</th></tr>
+<tr><td><b>NES</b></td><td>Super Mario Bros. 3 [USA][!!].nes — 384 Kio</td><td>FCEUmm</td><td>initialisation</td><td class="ok">✅ moteur prêt</td></tr>
+<tr><td><b>SNES</b></td><td>Chrono Trigger (U) [!].smc — 4 Mio</td><td>Snes9x</td><td>initialisation</td><td class="ok">✅ moteur prêt</td></tr>
+<tr><td><b>GB</b></td><td>Pokemon - Red Version.7z — <b>109 versions dans l'archive</b></td><td>Gambatte</td><td>initialisation</td><td class="ok">✅ sélecteur → extraction 7z → moteur prêt</td></tr>
+<tr><td><b>GBC</b></td><td>Pokemon - Crystal Version.7z (Hackset-GBC)</td><td>Gambatte</td><td>initialisation</td><td class="ok">✅ « PM_CRYSTAL », système « Game Boy Color », moteur prêt</td></tr>
+<tr><td><b>GBA (.7z)</b></td><td>Advance Wars.7z</td><td>mGBA</td><td>initialisation</td><td class="ok">✅ « ADVANCEWARSP », moteur prêt</td></tr>
+<tr><td><b>GBA (.gba)</b></td><td>Advance Wars (USA).gba — 4 Mio</td><td>mGBA</td><td>initialisation</td><td class="ok">✅ fichier direct, moteur prêt</td></tr>
+<tr><td><b>DS (.zip)</b></td><td>Mario Kart DS (Europe).zip — 18,3 Mio</td><td>DeSmuME 2015 (sans BIOS)</td><td>initialisation</td><td class="ok">✅ « MARIOKARTDS », moteur prêt — + DS déjà jouée par Karl (Pokemon)</td></tr>
+<tr><td><b>DS (négatif)</b></td><td>Dr. Mario Express.zip (DSiWare)</td><td>—</td><td>refus propre</td><td class="ok">✅ « Jeu réservé à la DSi »</td></tr>
+<tr><td><b>Genesis</b></td><td>688 Attack Sub.7z — 5 versions</td><td>Genesis Plus GX</td><td>initialisation</td><td class="ok">✅ sélecteur → extraction → moteur prêt</td></tr>
+<tr><td><b>PSP</b></td><td>Ozma Wars (USA).cso — 2,8 Mio</td><td>PPSSPP nightly + secours 4.2.3</td><td>initialisation</td><td class="ok">✅ moteur prêt (COOP/COEP requis, OK)</td></tr>
+<tr><td><b>N64</b></td><td>Charlie Blast's Territory (Europe).zip — 1,1 Mio</td><td>mupen64plus-next</td><td><b>rendu visible + sauvegarde native écrite</b></td><td class="ok">✅ niveau le plus élevé des tests</td></tr>
+<tr><td><b>PS1</b></td><td>Future Cop L.A.P.D. (.bin+.cue) + BIOS SCPH1001.BIN personnel</td><td>PCSX-ReARMed</td><td>jeu joué + save en jeu (Karl)</td><td class="ok">✅ BIOS détecté, carte OK, save fonctionne — persistance après fermeture à confirmer</td></tr>
+<tr><td><b>DOOM</b></td><td>DOOM2.WAD (GOG) — 13,9 Mio</td><td>PrBoom</td><td>initialisation</td><td class="ok">✅ « DOOM II » reconnu, moteur prêt</td></tr>
+<tr><td><b>Arcade</b></td><td>tehkanwc.zip (romset nom court)</td><td>MAME 2003-Plus</td><td>initialisation</td><td class="ok">✅ romset reconnu, moteur prêt</td></tr>
+<tr><td><b>GameCube</b></td><td>FFCC + Pokemon XD (.zip/.rvz) — headed Chromium+WebGPU</td><td>Gecko/WASM</td><td>boot expérimental</td><td class="warn">⚠️ ALPHA : ~16 %→1 % vitesse, écran noir ≥9 min, pas d'audio</td></tr>
 </table>
 <p class="meta">Note : les 404 console observés = <code>/favicon.ico</code> absent — cosmétique, non bloquant.</p>
 
@@ -74,7 +75,7 @@
 <li><b>RC-1.19</b> : miroir synchrone <code>localStorage</code> de la carte + écoute <code>freeze</code> + <code>newestBattery()</code> au lancement</li>
 <li><b>RC-1.20</b> : le miroir était écrit <b>après</b> <code>await vault.put</code> — trop tard si la page mourait pendant la transaction. Désormais le synchrone part <b>avant</b>.</li>
 </ul>
-<p><b>Preuve (<code>browser_unload_probe.py</code>) :</b> marqueur 128 Kio → <code>pagehide</code> → <b>IndexedDB supprimée entièrement</b> → reload → session 2 → <code>marker_in_session2_ram_despite_empty_idb: true</code>. La carte revient en RAM grâce au seul miroir localStorage.</p>
+<p><b>Preuve mécanisme (<code>browser_unload_probe.py</code>) :</b> marqueur 128 Kio → <code>pagehide</code> → <b>IndexedDB supprimée entièrement</b> → reload → session 2 → <code>marker_in_session2_ram_despite_empty_idb: true</code>. La carte revient en RAM grâce au seul miroir localStorage. <b>Ce que ça ne prouve pas :</b> la capture d'une vraie sauvegarde en jeu au bon moment ni sa relecture par le jeu après fermeture complète — le test d'acceptation reste : sauvegarder dans Future Cop → fermer l'onglet → rouvrir → charger la sauvegarde en jeu.</p>
 </div>
 <div class="card">
 <h3>Bug 2 — GameCube : même race sur la carte mémoire 2 Mio</h3>
@@ -90,11 +91,11 @@
 <p>Le <code>File</code> du realm parent échouait au test <code>instanceof Blob</code> dans l'iframe → le BIOS n'atteignait jamais MEMFS. Corrigé par réencapsulation dans le realm du moteur. Vérifié : le cœur log <code>found BIOS file</code> + <code>BIOS: 19951204, 'CEX-3000/1001/1002 by K.S.'</code>.</p>
 </div>
 
-<h2>3. Isolation des sauvegardes par contenu — vérifiée</h2>
-<p>Deux versions réelles de Chrono Trigger (<code>[!]</code> vs <code>[h1C]</code>) → empreintes SHA-256 différentes → <code>saveSpaceId</code> différents :</p>
+<h2>3. Isolation des sauvegardes par contenu</h2>
+<p><b>Portables (NES→PSP, N64, PS1)</b> : identité par empreinte SHA-256 du contenu. Deux versions réelles de Chrono Trigger (<code>[!]</code> vs <code>[h1C]</code>) → deux empreintes → deux <code>saveSpaceId</code> distincts. La preuve porte sur la <b>séparation des identités logiques</b> ; une écriture/relecture croisée n'a pas été exécutée — la formulation « jamais » serait trop absolue sans cet essai.</p>
 <pre>snes:snes9x:06d1c2b06b716052…  (version vérifiée)
 snes:snes9x:3f82b0b7ce181613…  (version hack)</pre>
-<p>Un hack ne partage <b>jamais</b> la sauvegarde de l'original, ni deux dumps de la même cartouche. Même principe PS1 (<code>batteryIdentity</code> = rom_sha256 + moteur + config + schéma d'état) et GameCube (carte par stem de fichier).</p>
+<p><b>GameCube</b> : la carte était initialement clé par le <b>nom de fichier</b> (point GPT-02 — deux images homonymes ou renommées partageaient la carte). Corrigé : les images disque portent un <b>ID unique dans leur en-tête</b> (6 caractères à 0x00, déjà lu par <code>gameCubeIdFromHead</code>) → clé <code>gc:ID</code>. Repli non destructif sur l'ancienne clé stem pour les cartes existantes (lecture seule, aucune migration destructive). Formats sans ID (.rvz, .dol, .zip) conservent la clé stem.</p>
 
 <h2>4. Suites de tests automatisés</h2>
 <table>
@@ -111,7 +112,7 @@ snes:snes9x:3f82b0b7ce181613…  (version hack)</pre>
 <li><b>Cheats</b> : seuls les codes <code>enabled</code> et non-placeholder partent au moteur ; autoload = suggestions jamais activées ; conflits PSP détectés ; arcade via <code>cheat.dat</code> MAME (7,9 Mio, 4 860 jeux) dans le menu du cœur.</li>
 <li><b>Sauvegardes portables</b> : flush iframe sur <code>visibilitychange</code>/<code>pagehide</code>/<code>destroy</code>, miroir IndexedDB 3 générations, migration GB/GBA/DS non destructive.</li>
 <li><b>Controller V2</b> : profils natif/custom, deadzone, <code>release()</code> au stop ; mapping Xbox→face standard cohérent avec le retour DuckStation.</li>
-<li><b>i18n</b> : 53 clés FR = 53 EN ; toggle contact vérifié en vrai navigateur ; portail « 13 consoles ».</li>
+<li><b>i18n</b> : 53 clés FR = 53 EN ; toggle contact vérifié en vrai navigateur ; portail « 13 systèmes ».</li>
 <li><b>PWA/APK</b> : manifest + icônes maskable + service worker réseau-prioritaire ; <code>EMUPERSO.apk</code> (2,5 Mio) HTTP 200 en ligne.</li>
 <li><b>Sécurité</b> : CSP stricte (pas de script inline — contact page vérifiée), aucun ROM/BIOS/sauvegarde dans <code>dist/</code> (build par whitelist), suffixes privés bannis.</li>
 <li><b>Contact</b> : page statique FR/EN, mailto exact, template de bug copiable, avertissement BYOR, aucune collecte.</li>
@@ -126,7 +127,7 @@ snes:snes9x:3f82b0b7ce181613…  (version hack)</pre>
 <tr><td>PS1 timing</td><td>Certains jeux sensibles au timing même avec vrai BIOS (comportement upstream documenté)</td><td class="na">limite connue</td></tr>
 <tr><td>Arcade</td><td>Cœurs 2003-Plus/FBNeo seulement — romsets post-2003 partiellement reconnus</td><td class="na">limite documentée</td></tr>
 <tr><td>DS melonDS</td><td>Non testé — exige un BIOS utilisateur (DeSmuME sans BIOS prouvé)</td><td class="na">non couvert</td></tr>
-<tr><td>Future Cop save→fermer→rouvrir</td><td>Mécanisme prouvé (IDB tuée → miroir → RAM) ; le test dans le jeu reste à faire par Karl</td><td class="warn">attendu</td></tr>
+<tr><td>Future Cop save→fermer→rouvrir</td><td>Mécanisme de récupération prouvé (IDB tuée → miroir → RAM) ; la validation en jeu reste à faire par Karl</td><td class="warn">attendu</td></tr>
 <tr><td>Cosmétique</td><td>Pas de wallpaper dédié arcade/doom ; pages consoles en français uniquement</td><td class="na">cosmétique</td></tr>
 </table>
 

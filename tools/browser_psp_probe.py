@@ -35,6 +35,14 @@ try:
         page.wait_for_timeout(2000)
         out['title'] = page.title()
         page.locator('#romInput').set_input_files(ROM)
+        # Archive multi-versions : le dialog version-picker propose la conseillée.
+        try:
+            page.wait_for_selector('dialog.version-picker', timeout=90000)
+            out['version_picker'] = True
+            page.locator('dialog.version-picker .btn.primary').click()
+            out['log'].append('VERSION-PICKER: version conseillée choisie')
+        except Exception:
+            out['version_picker'] = False
         deadline = time.time() + DURATION
         last = ''
         while time.time() < deadline:

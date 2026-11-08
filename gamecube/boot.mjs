@@ -69,15 +69,20 @@ function cardLsRead(key) {
     return bytes.length === MEMCARD_BYTES ? { bytes, utc } : null;
   } catch { return null; }
 }
-async function loadCard(key) {
+async function loadCard(key, legacyKey = null) {
   currentCardKey = key; currentCard = null; cardDirty = false;
+  // Identité par ID de disque quand l'en-tête le fournit (gc:XXXXXX) ; repli
+  // non destructif sur l'ancienne clé stem pour les cartes déjà enregistrées.
+  const keys = legacyKey && legacyKey !== key ? [key, legacyKey] : [key];
   let rec = null;
-  try {
-    const got = await cardDB.get(key);
-    if (got && got.bytes instanceof Uint8Array && got.bytes.length === MEMCARD_BYTES) rec = got;
-  } catch { /* stockage indisponible : carte vierge */ }
-  const ls = cardLsRead(key);
-  if (ls && (!rec || Date.parse(ls.utc) > Date.parse(rec.utc || ''))) rec = { bytes: ls.bytes, utc: ls.utc };
+  for (const k of keys) {
+    try {
+      const got = await cardDB.get(k);
+      if (got && got.bytes instanceof Uint8Array && got.bytes.length === MEMCARD_BYTES && (!rec || Date.parse(got.utc || '') > Date.parse(rec.utc || ''))) rec = { bytes: got.bytes, utc: got.utc };
+    } catch { /* stockage indisponible : carte vierge */ }
+    const ls = cardLsRead(k);
+    if (ls && (!rec || Date.parse(ls.utc) > Date.parse(rec.utc || ''))) rec = ls;
+  }
   if (rec) {
     currentCard = rec.bytes;
     $('card-status').textContent = `Carte mémoire : ${fmtSize(rec.bytes.length)} enregistrée (${new Date(rec.utc).toLocaleString('fr-FR')})`;
@@ -113,7 +118,9 @@ async function validateFile(file) {
   }
   if (ext === 'iso' || ext === 'gcm' || ext === 'bin') {
     const head = new Uint8Array(await file.slice(0, 0x20).arrayBuffer());
-    if (!gameCubeIdFromHead(head)) throw new Error('En-tête GameCube absent : le mot de magie à 0x1C ne correspond pas à une image de disque GameCube.');
+    const discId = gameCubeIdFromHead(head);
+    if (!discId) throw new Error('En-tête GameCube absent : le mot de magie à 0x1C ne correspond pas à une image de disque GameCube.');
+    return { romName: file.name, discId, note: '' };
   }
   return { romName: file.name, note: ext === 'rvz' ? 'Image RVZ compressée : en-tête non vérifiable, le moteur contrôle au chargement.' : ext === 'dol' ? 'DOL : homebrew/exécutable, sans en-tête de disque.' : '' };
 }
@@ -125,7 +132,11 @@ async function launch(file, info) {
   $('player').replaceChildren();
   $('log').replaceChildren();
   say('Préparation…');
-  await loadCard(stemOf(file.name));
+  // Carte identifiée par l'ID de disque de l'en-tête quand disponible
+  // (deux images homonymes ou renommées ne partagent plus la même carte) ;
+  // sinon par le nom de fichier comme avant. Repli non destructif sur l'ancienne clé.
+  const stem = stemOf(file.name);
+  await loadCard(info.discId ? `gc:${info.discId}` : stem, stem);
   const memcard = currentCard ? new Uint8Array(currentCard) : null;
   bootId = `gc${Date.now().toString(36)}`;
   window.__portablesBoots = window.__portablesBoots || {};

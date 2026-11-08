@@ -2,7 +2,7 @@
 
 Branche : `feature/unified-controller-profiles` · Date : 2026-11-08
 Périmètre : portail + 13 systèmes (NES, SNES, GB, GBC, GBA, DS, N64, PS1, PSP, Genesis, Arcade, DOOM, GameCube ALPHA).
-Statut : **audit complet** — statique + tests automatisés + **tests terrain avec les vraies ROMs de Karl** (12/13 systèmes bootés ; GameCube ALPHA à vitesse interpréteur).
+Statut : **audit complet** — statique + tests automatisés + **tests terrain avec les vraies ROMs de Karl** (13/13 systèmes testés ; GameCube ALPHA à vitesse interpréteur).
 
 ## Correctifs livrés sur la branche
 
@@ -67,15 +67,16 @@ Statut : **audit complet** — statique + tests automatisés + **tests terrain a
 | SNES | Chrono Trigger (U) [!].smc 4 Mio | Snes9x | ✅ moteur prêt |
 | NES | Super Mario Bros. 3 [USA][!!].nes 384 Kio | FCEUmm | ✅ moteur prêt |
 | GB | Pokemon - Red Version.7z (109 versions) | Gambatte | ✅ sélecteur de version → extraction 7z → moteur prêt |
+| GBC | Pokemon - Crystal Version.7z (Hackset-GBC) | Gambatte | ✅ « PM_CRYSTAL », système « Game Boy Color », moteur prêt |
 | GBA (.7z) | Advance Wars.7z | mGBA | ✅ sélecteur → extraction → « ADVANCEWARSP », moteur prêt |
 | GBA (.gba) | Advance Wars (USA).gba 4 Mio | mGBA | ✅ fichier direct, moteur prêt |
 | Genesis | 688 Attack Sub.7z (5 versions) | Genesis Plus GX | ✅ sélecteur → extraction → moteur prêt |
 | Arcade | tehkanwc.zip (romset nom court) | MAME 2003-Plus | ✅ romset reconnu, moteur prêt |
 | DS (.zip) | Mario Kart DS (Europe).zip 18,3 Mio | DeSmuME 2015 (sans BIOS) | ✅ « MARIOKARTDS », moteur prêt — Dr. Mario Express refusé proprement (DSiWare) |
 | N64 | Charlie Blast's Territory (Europe).zip | mupen64plus-next | ✅ zip → boot → **rendu visible** (zone claire à l'écran) + **sauvegarde native écrite** (« Sauvegarde native conservée localement ») — sonde `real-n64/tools/browser_rom_probe.py` |
-| GBA | — | — | ⏸ pas de .gba isolé (pack 7z = ROM GB) |
+| GBA | — | — | ✅ (ligne ci-dessus : .gba direct + .7z, deux chemins prouvés) |
 
-**Isolation des sauvegardes par contenu — vérifiée sur vraies variantes** : deux versions de Chrono Trigger (`[!]` vs `[h1C]`) → empreintes SHA-256 différentes → `saveSpaceId` différents (`snes:snes9x:06d1…` vs `snes:snes9x:3f82…`). Un hack ne partage jamais la sauvegarde de l'original, ni deux dumps de la même cartouche. Même principe PS1 (`batteryIdentity` = rom_sha256 + moteur + config + schéma).
+**Isolation des sauvegardes par contenu** : deux versions de Chrono Trigger (`[!]` vs `[h1C]`) → empreintes SHA-256 différentes → `saveSpaceId` différents (`snes:snes9x:06d1…` vs `snes:snes9x:3f82…`) — la preuve porte sur la séparation des identités logiques, une écriture/relecture croisée reste à exécuter. Même principe PS1 (`batteryIdentity` = rom_sha256 + moteur + config + schéma). **GameCube** : la carte était clé par le nom de fichier — corrigé pour utiliser l'**ID de disque** de l'en-tête (`gc:XXXXXX`, déjà lu par `gameCubeIdFromHead`) avec repli non destructif sur l'ancienne clé stem ; .rvz/.dol/.zip conservent le stem.
 
 Note : les 404 console = `/favicon.ico` absent (cosmétique).
 
@@ -85,12 +86,12 @@ Note : les 404 console = `/favicon.ico` absent (cosmétique).
 
 ## Synthèse finale (2026-11-08)
 
-**Prouvé avec de vraies ROMs** : 12/13 systèmes bootent via le vrai pipeline (analyse → empreinte → cœur → moteur prêt), dont N64 avec rendu visible + sauvegarde native, DS (Mario Kart DS / DeSmuME), PS1 avec BIOS personnel + carte mémoire, et Arcade/DOOM avec les vrais fichiers de Karl.
+**Prouvé avec de vraies ROMs** : 13/13 systèmes testés via le vrai pipeline (analyse → empreinte → cœur → moteur prêt), dont N64 avec rendu visible + sauvegarde native, DS (Mario Kart DS / DeSmuME), GBC distinct (Pokemon Crystal / Gambatte), PS1 avec BIOS personnel + carte mémoire, et Arcade/DOOM avec les vrais fichiers de Karl. « Moteur prêt » = initialisation du cœur, pas validation de gameplay complet (voir niveaux de preuve dans le rapport HTML).
 
 **Bugs réels trouvés et corrigés par les tests terrain** :
 - PS1 RC-1.18 : BIOS personnel (SCPH1001) — Future Cop détecte la carte
 - PS1 RC-1.19/RC-1.20 : persistance carte mémoire — double filet `localStorage` synchrone, prouvé même IndexedDB détruite
-- GameCube : même race corrigée + bouton « Choisir une image » réparé
+- GameCube : même race corrigée + bouton « Choisir une image » réparé + **carte mémoire identifiée par l'ID de disque** (en-tête, `gc:XXXXXX`) avec repli non destructif sur l'ancienne clé stem — corrige le risque GPT-02 (images homonymes/renommées partageaient la carte)
 - Portails : look unifié, badge version dynamique, changelog détaillé, page contact
 
 **Limites honnêtes restantes** :
